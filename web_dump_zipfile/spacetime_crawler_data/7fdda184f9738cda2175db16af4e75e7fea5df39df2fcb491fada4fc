@@ -1,0 +1,62 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2948¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 03 Jul 2017 23:40:38 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"b84-553724b5521d6"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 03:58:05 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY„<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SEAL - PATDroid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Reply-to" content="malek at uci dot edu">
+<meta http-equiv="Owner" content="Sam Malek">
+<meta name="Author" content="Sam Malek">
+<meta name="Generator" content="Emacs">
+<link rev="MADE" href="mailto:malek at uci dot edu">
+<link href="../../seal.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrapper">
+    
+<!-- *************** Beginning of content ****************** -->
+
+<h2>PATDroid: Permission-Aware Testing for Android</h2>
+
+<p>
+Recent introduction of a dynamic permission model in Android, allowing the users to grant and revoke permissions a at the installation of an app, has made it much harder to properly test apps. Since an app's behavior may change depending on the granted permissions, it needs to be tested under a wide range of granted permission combinations. At the state-of-the-art, in the absence of any automated tool support, a developer needs to either manually determine the interaction of tests and app permissions, or exhaustively re-execute tests for all possible permission combinations, thereby increasing the time and resources required to test apps and evaluate their results. 
+</p>
+<p>
+<b>PATDroid is a tool for efficiently testing an Android app while taking the impact of permissions on its behavior into account. </b>
+</p>
+
+<h3>Approach Overview</h3>
+<p>
+PATDroid performs a hybrid program analysis on both an app under test and its test suite to determine which tests should be executed on what permission combinations. 
+Our experimental results show that PATDroid can signicantly reduce the testing time and resources, yet achieve comparable code coverage and fault detection capability as exhaustively testing an app under all permission combinations. 
+</p>
+
+<img style="margin:10" ALT="[PATDroid picture]" height="250" src=./Overview><br>
+
+<h3>Using PATDroid in Action</h3>
+<p>Download PATDroid tool and user manual <a href="./PATDroid.zip">here</a>. 
+</p>
+
+<h3>Publications</h3>
+
+More details about PATDroid can be found in our publication:
+
+<ul class="paperlist">
+  <li><b>PATDroid: Permission-aware GUI Testing of Android</b><br> 
+     Alireza Sadeghi, Reyhaneh Jabbarvand, and Sam Malek<br>
+    <i>European Software Engineering Conference and ACM SIGSOFT Symposium on the Foundations of Software Engineering (ESEC/FSE), September 2017, Paderborn, Germany</i>
+    <!-- <br>[<a href="./2015TSE.pdf">PDF</a>] -->
+    </li> 
+</ul>
+
+
+<!-- ***************** End of content ****************** -->
+<br><br>
+<div style="float:left">
+            <a href="http://www.ics.uci.edu/~seal/"><img ALT="[seal's logo]" height="200" src=../../seal.png></a>
+</div>
+<div style="float:right">
+            <a href="http://www.ics.uci.edu"><img ALT="[uci's logo]" style="padding-top: 40px" height="100" src=../../uci.jpg></a>
+</div>
+</div>
+</body>Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

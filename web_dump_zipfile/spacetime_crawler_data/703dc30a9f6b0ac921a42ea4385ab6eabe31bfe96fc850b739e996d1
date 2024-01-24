@@ -1,0 +1,62 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC955¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 09 Oct 2007 01:03:25 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"3bb-43c04efa5d140"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 18:45:00 GMTKraw_content¢DtypeEvalueY»//  Examples for sets
+
+abstract sig Person {}
+one sig Ann, Bob, Chip //  A set of three people
+extends Person {}
+
+abstract sig Dog {}
+one sig Fido, Gruff, Hero //  A set of three dogs
+extends Dog {}
+
+pred show {}
+run show
+
+// assert noneInPerson {
+//   none in Person
+// }
+//  alloy gives compilation warning that this is always true
+
+// no, none
+pred noNone {
+  no none
+}
+run noNone
+
+// in
+assert personInUniv {
+  Person in univ
+}
+check personInUniv
+
+// +
+assert dogInUnion {
+  Dog in (Dog + Person)
+}
+check dogInUnion
+//  Interesting that alloy doesn't warn of this at compile time
+
+// assert noIntersection {
+//   no (Dog & Person)
+// }
+//  alloy gives compilation warning that this is always true
+
+// some, &
+pred someIntersection {
+  some (Dog & (Dog + Person))
+}
+run someIntersection
+
+// -
+pred someDifference {
+  some univ - Person
+}
+run someDifference
+
+// =
+assert dogsTheDifference {
+  Dog = ((Dog + Person) - Person)
+}
+check dogsTheDifference
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

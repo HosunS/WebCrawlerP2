@@ -1,0 +1,40 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1005¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 01 Mar 2012 01:52:10 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"3ed-4ba24b54aa680"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 19:45:48 GMTKraw_content¢DtypeEvalueYíimport java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class interactive_Player implements MancalaPlayer
+{
+private int player;
+private BufferedReader consoleInput;
+
+public interactive_Player (int playerNum) {
+  player = playerNum;
+  consoleInput = new BufferedReader(new InputStreamReader(System.in));
+}
+
+public int getMove(MancalaGameState gs) throws Exception {
+    return Integer.parseInt(consoleInput.readLine());
+}
+
+public Object postGameActions(MancalaGameState gs) {
+    if (!gs.checkEndGame()) return null;
+
+    // Make a copy to compute the final score
+    MancalaGameState gsCopy = gs.copy();
+    gsCopy.computeFinalScore();
+
+    if (gsCopy.getScore(player) > gsCopy.getScore(1-player))
+        System.out.println("You won!");
+    else if (gsCopy.getScore(player) < gsCopy.getScore(1-player)) 
+        System.out.println("You lost...");
+    else 
+        System.out.println("Game was a tie.");
+
+    return null;
+}
+
+public Object actionsBeforeDeletion() {
+    return null;
+}
+
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,34 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC743¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:53:08 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2e7-4da84bf5e2900"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:54:14 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYç/*
+  $Id$
+
+  Copyright (C) 2007 by The Regents of the University of California
+
+  Redistribution of this file is permitted under the terms of the
+  BSD license
+
+  Date: 01/30/2007
+  Author: Rares Vernica <rares (at) ics.uci.edu>
+*/
+
+#include "output.h"
+
+void writeString(const vector<string> &data, const string &filenameData)
+{
+  ofstream fileData(filenameData.c_str(), ios::out);
+  if (!fileData) {
+    cerr << "can't open output file \"" << filenameData << "\"" << endl;
+    exit(EXIT_FAILURE);
+  }
+
+  cerr << "writing \"" << filenameData << "\"...";
+  cerr.flush();
+  
+  for (vector<string>::const_iterator it = data.begin();
+       it !=  data.end(); ++it)
+    fileData << *it << endl;
+    
+  fileData.close();
+
+  cerr << "OK" << endl;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

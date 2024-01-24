@@ -1,0 +1,289 @@
+¶Ifinal_url¢DtypeEvaluex7https://www.ics.uci.edu/~kay/courses/i141/hw/asst5.htmlLhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE17091¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 26 Feb 2015 03:25:45 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"42c3-50ff54eae4040"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 05:50:38 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYB√<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+<HEAD>
+<TITLE>Information Retrieval Assignments</TITLE>
+<link href="http://www.ics.uci.edu/~kay/courses/31/mainstyle.css" rel="stylesheet" type="text/css" />
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<p><FONT size="2"  >INFX 141 / CS 121</FONT><FONT size="2"  > &bull; DAVID G. KAY &bull; UC IRVINE &bull; WINTER 2015</FONT></p>
+<p><FONT   SIZE=6>Assignment #5<br /><B>Search Engine</B></FONT>
+</p>
+<p>[Still subject to clarifying changes]</p>
+<p>Like the last assignment, this one comes in two alternative versions, a Developer version (appearing immediately
+below) and an Analyst version (appearing later in this document).  Both versions have milestones (intermediate deadlines),
+so mark your calendars and plan accordingly.</p>
+<p>
+You may do this assignment individually or in groups of 2 or 3. As before, the expectations of each size group
+are the same; shared labor is offset by communication and coordination costs.  All group members receive the
+same score except in truly extraordinary circumstances.  You may use Java or Python to write the software you need for either part; if you'd like to use other tools not mentioned here, check with us.
+Use Piazza for general questions whose answers can benefit everybody.
+</p>
+<p>&nbsp;</p>
+<p><b><u>DEVELOPER VERSION</u></b></p>
+<p>
+In this assignment you will develop an entire search engine for a large collection of books: those avaiable
+free from <a href="http://www.gutenberg.org/">Project Gutenberg</a>.  Here is a summary of the milestones:</p>
+
+
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=1 CELLSPACING=0>
+  
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP>&nbsp;</TD>
+    <TD WIDTH=8% VALIGN=TOP><FONT ><U>Due Date</U></FONT></TD>
+    <TD WIDTH=13% VALIGN=TOP><u>Description</u></TD>
+    <TD WIDTH=16% VALIGN=TOP><u>Deliverables</u></TD>
+    <TD WIDTH=6% VALIGN=TOP><FONT ><U>Points</U></FONT></TD>
+    <TD WIDTH=51% VALIGN=TOP><u>Evaluation Criteria</u></TD>
+  </TR>
+  <!--
+  <TR>
+    <TD VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style1 style11">0.</span></TD>
+    <TD VALIGN=TOP><span class="style1 style11">27 September</span></TD>
+    <TD VALIGN=TOP>&nbsp;</TD>
+  </TR> -->
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style12">M1</span></TD>
+    <TD WIDTH=8% VALIGN=TOP>23 February</TD>
+    <TD WIDTH=13% VALIGN=TOP>Get the data</TD>
+    <TD WIDTH=16% VALIGN=TOP>Screen shot (.jpg)</TD>
+    <TD WIDTH=6% VALIGN=TOP>10<span class="style1 style11"></span></TD>
+    <TD WIDTH=51% VALIGN=TOP>Were you able to get the data?</TD>
+  </TR>
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style11"></span> M2</TD>
+    <TD WIDTH=8% VALIGN=TOP>2 March</TD>
+    <TD WIDTH=13% VALIGN=TOP>Lucene up and running</TD>
+    <TD WIDTH=16% VALIGN=TOP>ZIP file with code</TD>
+    <TD WIDTH=6% VALIGN=TOP>20</TD>
+    <TD WIDTH=51% VALIGN=TOP>Were you able to get the demo up and running with the small changes? Did you provide a correct index?</TD>
+  </TR>
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style12">M3</span></TD>
+    <TD WIDTH=8% VALIGN=TOP><span class="style12">12 March</span></TD>
+    <TD WIDTH=13% VALIGN=TOP>Search engine</TD>
+    <TD WIDTH=16% VALIGN=TOP>Code and ZIP file with pictures </TD>
+    <TD WIDTH=6% VALIGN=TOP>20</TD>
+    <TD WIDTH=51% VALIGN=TOP>Were you able to index the entire collection? Does your search seem to work? Did you add the Author and Title fields?</TD>
+  </TR>
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style11"></span> M4</TD>
+    <TD WIDTH=8% VALIGN=TOP><span class="style12">12‚Äì16 March</span></TD>
+    <TD WIDTH=13% VALIGN=TOP>Demonstrations</TD>
+    <TD WIDTH=16% VALIGN=TOP>&nbsp;</TD>
+    <TD WIDTH=6% VALIGN=TOP>50</TD>
+    <TD WIDTH=51% VALIGN=TOP>Does your search engine work for the TA's queries? Do you understand how it works?</TD>
+  </TR>
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style12">Extra Credit</span></TD>
+    <TD WIDTH=8% VALIGN=TOP><span class="style12">12 March</span></TD>
+    <TD WIDTH=13% VALIGN=TOP>Extra credit Web UI</TD>
+    <TD WIDTH=16% VALIGN=TOP>Show at demo</TD>
+    <TD WIDTH=6% VALIGN=TOP>15</TD>
+    <TD WIDTH=51% VALIGN=TOP>Does the UI work?</TD>
+  </TR>
+</TABLE>
+
+<p>
+<p>[Developer] <b>M1. Get the data</b>
+<p>Get the entire collection of English ebooks from Project Gutenberg.
+The collection is available here as an ISO file: <a href="http://www.gutenberg.org/wiki/Gutenberg:The_CD_and_DVD_Project">http://www.gutenberg.org/wiki/Gutenberg:The_CD_and_DVD_Project</a> .  (Just download the contents of the April 2010 DVD; don't include earlier versions.)
+</p>
+<p>Deliverable:  A screen shot (in JPG form) showing the folder structure of the collection with evidence that it's located on your computer (i.e., a directory path should be displayed that includes your computer's name).
+</p>
+<p>[Developer] <b>M2. Get the Lucene demo up and running</b></p>
+<p>Download the <a href="http://lucene.apache.org/">Apache Lucene text search engine library</a> from
+<code>lucene.apache.org</code>.  Be sure to get the latest version, 4.10.3, and to download both (a) the package
+containing the source code, so you can see all the example code, and
+(b) the binary package so you don't need to build Lucene from scratch.  Place both packages in the same folder.
+If you'd like to try this in Python with the <a href="http://lucene.apache.org/pylucene/">PyLucene wrapper</a>,
+follow the additional instructions at
+<code>http://lucene.apache.org/pylucene/</code> (and note that according to their page, PyLucene is compatible with Java Lucine version 4.10.1).
+</p>
+<p>
+Once you have everything in place, navigate to the simple demo folder at <code>contrib/demo</code>.
+Own it‚Äîthat is, copy and paste the code to your own project. Then:
+<ol 1>
+<li>  
+Change the demo so that the Usage messages for both IndexFiles and SearchFiles ends with a smiley face :-)
+</li>
+<li>
+Run it over these 2 text files using IndexFiles. Then use the search program SearchFiles. The two test files can be found here: <a href="http://www.ics.uci.edu/~kay/courses/i141/hw/asst5-test-text-files.zip">
+<code>http://www.ics.uci.edu/~kay/courses/i141/hw/asst5-test-text-files.zip</code></a>.
+
+</li></ol>
+<p>Deliverable: the modified <code>IndexFiles.java</code> and <code>SearchFiles.java</code>, or the equivalent Python files, and the Lucene index folder (and its contents) for the couple of files in the test run. Zip the index folder. Add any additional files you need to convey information to the TA. </p>
+
+<p>[Developer] <b>M3. Search engine for the Gutenberg collection</b></p>
+<p>Make sure you understand the demo code in M2: Study the Lucene API and documentation.
+Here are some additional notes and requirements:
+</p>
+<ul>
+  <li>Ignore <CODE>ETEXT*</code> in the Gutenberg collection.</li>
+  <li>Study the raw data; you will notice that things aren't completely consistent.
+  Some books are provided in Rich Text Format, others are plan text, zipped.
+  Focus on the plain text books, i.e., the ones with the <code>.txt</code> extension that you find inside ZIP files.</li>
+  <li>Add Title and Author fields to your Lucene "Documents."  Include more fields you think will improve the
+  quality of search results.  (The challenge here is to devise how to scrape that information
+  out of the raw data.)</li>
+  <li>Boost matches in the Title and Author fields, and any other fields you see fit.</li>
+  <li><a href="https://github.com/DmitryKey/luke">Luke</a> is a very useful tool
+  for inspecting Lucene indexes; download it at <code>https://github.com/DmitryKey/luke</code>.
+  <!-- This may have to be recompiled.  www.ics.uci.edu/~lopes/teaching/inf142W13/assignments/lukeall.4.1.0.zpi</code>  -->
+ </li>
+  <li>To unzip files in Java, look at <code>java.util.zip</code>.
+</ul>
+<p>Deliverable:  Your source code as a Zip archive, plus one
+  or more screen shots (JPG) of your index as seen by Luke.
+  Make sure the picture(s) show the structure and the total number of documents in the index.</p>
+<p>[Developer] <b>M4. Demo</b></p>
+<p>Keep an eye out for a message arranging the demonstrations and follow the instructions in that message.</p>
+<p>[Developer] <b>Extra credit:  Give your search engine a Web UI</b></p>
+<p>Instead of a command line interface, let people search the index with a web interface.
+Use whatever web framework you're familiar with.  Tomcat is known to be a good container for Lucene apps.</p>
+<p>The extra credit work will be assessed during the live demo; there is no separate deliverable.
+If you choose to do it, make sure to tell the TA that you did it.
+</p>
+
+<br />
+<br />
+<p><b><u>ANALYST VERSION</u></b></p>
+<p>In this assignment you will develop a search engine for a collection of poems, specifically haiku.
+The collection you will search is the <a href="http://www.hsa-haiku.org/hendersonawards/henderson.htm">Harold
+G. Henderson Memorial Award Collection</a> available for free from the Haiku Society of America.
+This will be a physical search engine, not an electronic one, and <i>you</i> are going to be the agent
+of computation.  Here is a summary of the milestones:</p>
+
+<p>&nbsp;</p>
+<TABLE WIDTH=100% BORDER=1 CELLPADDING=1 CELLSPACING=0>
+<!--  <COL WIDTH=8% />
+  <COL WIDTH=15% />
+  <COL WIDTH=77% /> -->
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP>&nbsp;</TD>
+    <TD WIDTH=8% VALIGN=TOP><FONT ><U>Due Date</U></FONT></TD>
+    <TD WIDTH=13% VALIGN=TOP><u>Description</u></TD>
+    <TD WIDTH=16% VALIGN=TOP><u>Deliverables</u></TD>
+    <TD WIDTH=6% VALIGN=TOP><FONT ><U>Points</U></FONT></TD>
+    <TD WIDTH=51% VALIGN=TOP><u>Evaluation Criteria</u></TD>
+  </TR>
+  <!--
+  <TR>
+    <TD VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style1 style11">0.</span></TD>
+    <TD VALIGN=TOP><span class="style1 style11">27 September</span></TD>
+    <TD VALIGN=TOP>&nbsp;</TD>
+  </TR> -->
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style12">M1</span></TD>
+    <TD WIDTH=8% VALIGN=TOP>23 February</TD>
+    <TD WIDTH=13% VALIGN=TOP>Get the data</TD>
+    <TD WIDTH=16% VALIGN=TOP>PDF report</TD>
+    <TD WIDTH=6% VALIGN=TOP>10<span class="style1 style11"></span></TD>
+    <TD WIDTH=51% VALIGN=TOP>Were you able to get the data? Are the poems properly identified? Does the layout of the poems look as if it will work well for mechanical search?</TD>
+  </TR>
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style11"></span> M2</TD>
+    <TD WIDTH=8% VALIGN=TOP>2 March</TD>
+    <TD WIDTH=13% VALIGN=TOP>Build the Index</TD>
+    <TD WIDTH=16% VALIGN=TOP>PDF report</TD>
+    <TD WIDTH=6% VALIGN=TOP>20</TD>
+    <TD WIDTH=51% VALIGN=TOP>Is the index you provded correct: Does it map all words? Does it map the words to all poems in which they occur? Is TF-IDF computed correctly?</TD>
+  </TR>
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style12">M3</span></TD>
+    <TD WIDTH=8% VALIGN=TOP><span class="style12">12 March</span></TD>
+    <TD WIDTH=13% VALIGN=TOP>Search engine</TD>
+    <TD WIDTH=16% VALIGN=TOP>PDF report</TD>
+    <TD WIDTH=6% VALIGN=TOP>20</TD>
+    <TD WIDTH=51% VALIGN=TOP>Does your search produce the correct poems with the correct ranking? Does your mechanical search device exist, with pictures to prove it?</TD>
+  </TR>
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style11"></span> M4</TD>
+    <TD WIDTH=8% VALIGN=TOP><span class="style12">12‚Äì16 March</span></TD>
+    <TD WIDTH=13% VALIGN=TOP>Demonstrations</TD>
+    <TD WIDTH=16% VALIGN=TOP>&nbsp;</TD>
+    <TD WIDTH=6% VALIGN=TOP>50</TD>
+    <TD WIDTH=51% VALIGN=TOP>Are you able to search, given the TA's queries? Are your search results correct? Is your search process fast (shooting for 30 seconds for a three-term query)?</TD>
+  </TR>
+  <TR>
+    <TD WIDTH=6% VALIGN=TOP ALIGN=DECIMAL CHAR='.' CHAROFF=59><span class="style12">Extra Credit</span></TD>
+    <TD WIDTH=8% VALIGN=TOP><span class="style12">12 March</span></TD>
+    <TD WIDTH=13% VALIGN=TOP>Extra credit: better search</TD>
+    <TD WIDTH=16% VALIGN=TOP>Show at demo</TD>
+    <TD WIDTH=6% VALIGN=TOP>20</TD>
+    <TD WIDTH=51% VALIGN=TOP>Is your search able to retrieve documents containing words not in the query but related to it?</TD>
+  </TR>
+</TABLE>
+
+<p>&nbsp;</p>
+<p>[Analyst] <b>Overview</b></p>
+<p>Your "search engine" will be a physical one, which you will manipulate to carry out searches "by hand."
+We envision it something like this:</p>
+<p><img src="Rolodex.jpg" width="225" height="225" alt="Rolodex" longdesc="http://www.ics.uci.edu/~kay/courses/i141/hw/rolodex.jpg"><img src="binder.jpg" width="311" height="162" alt="Binder with tabs" longdesc="http://www.ics.uci.edu/~kay/courses/i141/hw/binder.jpg"></p>
+<p>&nbsp;</p>
+
+
+
+<p>At the end, you will show the TA the components of your engine and use it to search for specific
+queries the TA will give, e.g., "lawless mother cooking."
+When the TA gives you a query, you will play the computer's role:
+search the index, make some calculations, and produce a ranked list
+of poems. This is your search process; you are the computing agent.
+</p>
+<p>
+Your search should be as fast as possible and it should produce a ranked list of poems for each query,
+ordered by how well they satisfy the query (using TF-IDF as the scoring heuristic).
+</p>
+<p><b>Materials:</b> You will need:</p>
+<ul>
+<li>All the haiku [poems] on the page cited above.
+</li><li>
+A binder, sheets of white paper, and labels (possibly small Post-Its)
+</li><li>
+A rolodex, or another binder with tabs
+</li><li>
+A calculator or calculator app
+</li>
+</ul>
+<p><b>Construction:</b>
+The binder holds the collection of poems, one or more per sheet.
+Make sure to place identifiers on labels, sticking out past the page edge.
+You can decide what kind of identifier you need.  The rolodex (or second binder)
+holds the index to the words.
+</p>
+<p>[Analyst] <b>M1. Get the data</b></p>
+<p>Get the entire collection of haiku poems from the cited page and place them in a document.
+Make sure to give identifiers to all poems. This document will be the source of what you will be printing and filing in the binder. As such, think carefully about how many poems you place per page, and what kinds of identifiers you will use.
+</p><p>Deliverable: A PDF document with the collection of properly identified poems.</p>
+<p>[Analyst] <b>M2.  Build the index</b></p>
+<p>This is going to be the most time-consuming step of this project,
+so you should start it as early as possible, the first week of the project. Here is what you need to do:
+Scan through the poems and build an inverted index that maps words to poems. Do this in a document.
+Besides mapping words to poems, the index should also have the TF-IDF of the words in each poem. Consider doing a little bit of programming to help you compute all this data. (Partial credit will be given for incomplete indexes. If you show a complete index at milestone M4, your score for that milestone will improve.)</p>
+<p>Deliverable: A PDF document with the index.</p>
+<p>[Analyst] <b>M3. Physical search engine</b></p>
+Print and mount the poems document and the index document into the physical devices, i.e., the rolodex and the binder. Place the necessary labels.</p>
+<p>Deliverable: A PDF document that explains the search process for the query ‚Äúlawless mother cooking‚Äù. Include plenty of pictures of how your physical device is being used at each step. Explain the scoring process clearly.</p>
+<p>[Analyst] <b>M4. Demo</b></p>
+<p>Bring your physical devices to your appointment with the TA.</p>
+<p>[Analyst] <b>Extra credt: Word associations</b></p>
+<p>Sometimes people don‚Äôt know what they are searching for and use the wrong words. For example, users could say ‚Äúmother‚Äù when they really mean ‚Äúfather‚Äù or ‚Äúparent‚Äù; they could say ‚Äúwoods‚Äù for ‚Äúforest‚Äù, and so on.
+This collection of poems has several words that are associated with each other. Find those words and add their occurrences in the index in a way that makes sense.
+The goal is for you to index those associated words so that if a user searches, for example, for ‚Äúfather,‚Äù the poems that have occurrences of ‚Äúmother‚Äù will also be retrieved, possibly with a lower rank than poems with occurrences of ‚Äúfather‚Äù. (Do this not just for ‚Äúmother‚Äù and ‚Äúfather‚Äù but for several other words in the collection that are associated with each other.)
+The goal here is to capture the deeper semantics of concepts beyond the face value of words.
+The extra credit work will be assessed during the live demo, there is no separate deliverable. If you choose to do it, make sure to tell the TA that you did it.
+</p>
+
+
+  
+ 
+ 
+ 
+<HR />
+<FONT  ><A HREF="http://www.ics.uci.edu/~kay/">David G. Kay</A>, <a href=mailto:kay@uci.edu>kay@uci.edu</A> </FONT><span><br />
+<font size="2"  >
+<!-- #BeginDate format:fcAm1a -->Wednesday, February 25, 2015 7:25 PM<!-- #EndDate -->
+</font></span>
+</BODY>
+</HTML>
+
+Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

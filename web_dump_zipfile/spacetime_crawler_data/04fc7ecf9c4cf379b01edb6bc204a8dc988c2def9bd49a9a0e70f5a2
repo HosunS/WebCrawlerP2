@@ -1,0 +1,32 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC696¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 31 Jan 2014 01:04:26 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2b8-4f139c1575a80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 12:51:28 GMTKraw_content¢DtypeEvalueY¸
+public class ChicagoPizzaIngredientFactory 
+    implements PizzaIngredientFactory {
+
+    public Dough createDough() {
+        return new ThickCrustDough();
+    }
+
+    public Sauce createSauce() {
+        return new PlumTomatoSauce();
+    }
+
+    public Cheese createCheese() {
+        return new MozzarellaCheese();
+    }
+
+    public Veggie[] createVeggies() {
+        Veggie veggies[] = { new BlackOlives(), 
+                              new Spinach(), 
+                              new Eggplant() };
+        return veggies;
+    }
+
+    public Pepperoni createPepperoni() {
+        return new SlicedPepperoni();
+    }
+
+    public Clams createClams() {
+        return new FrozenClams();
+    }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

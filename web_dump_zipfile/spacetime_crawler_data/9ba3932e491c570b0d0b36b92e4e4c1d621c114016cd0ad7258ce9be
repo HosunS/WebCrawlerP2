@@ -1,0 +1,18 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC479¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 14 Jul 2006 16:36:24 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1df-4188d47fc1200"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 17:59:09 GMTKraw_content¢DtypeEvalueYß# Lab 2, Program 2
+#
+# Given a DNA sequence, count the number of gaps in the sequence.
+#
+# This program is very much like the program we wrote in class to
+# count the number of A's in a DNA sequence.  The only difference
+# is that we're counting '-' characters instead of 'a' characters.
+
+dnaSequence = "atcga-tgag-agctagcg-ata"
+
+gapCount = 0
+
+for c in dnaSequence:
+    if c == '-':
+        gapCount = gapCount + 1
+
+print "Number of gaps in sequence:", gapCount
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,231 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:07:55 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY?Ô
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: REALDISP Activity Recognition Dataset Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>REALDISP Activity Recognition Dataset Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/00305/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="#"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: The REALDISP dataset is devised to evaluate techniques dealing with the effects of sensor displacement in wearable activity recognition as well as to benchmark general activity recognition algorithms </p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate, Time-Series</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">1419</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Computer</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">120</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2014-07-25</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">35277</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Oresti Banos, Department of Computer Architecture and Computer Technology, University of Granada, <u>oresti <b>'@'</b> ugr.es</u> (<u>oresti.bl <b>'@'</b> gmail.com</u>)<br>Mate Attila Toth, Signal Processing Systems, TU Eindhoven, <u>A.M.Toth <b>'@'</b> tue.nl</u> <br>Oliver Amft, Signal Processing Systems, TU Eindhoven, <u>amft <b>'@'</b> tue.nl</u> <br></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">The REALDISP (REAListic sensor DISPlacement) dataset has been originally collected to investigate the effects of sensor displacement in the activity recognition process in real-world settings. It builds on the concept of ideal-placement, self-placement and induced-displacement. The ideal and mutual-displacement conditions represent extreme displacement variants and thus could represent boundary conditions for recognition algorithms. In contrast, self-placement reflects a users perception of how sensors could be attached, e.g., in a sports or lifestyle application. The dataset includes a wide range of physical activities (warm up, cool down and fitness exercises), sensor modalities (acceleration, rate of turn, magnetic field and quaternions) and participants (17 subjects). Apart from investigating sensor displacement, the dataset lend itself for benchmarking activity recognition techniques in ideal conditions.<br><br>----------------------------------------------------------------------------------------------------------------------<br>Dataset summary:<br>#Activities: 33 <br>#Sensors: 9<br>#Subjects: 17<br>#Scenarios: 3<br>----------------------------------------------------------------------------------------------------------------------<br><br>ACTIVITY SET:<br>A1: Walking  <br>A2: Jogging  <br>A3: Running  <br>A4: Jump up  <br>A5: Jump front & back  <br>A6: Jump sideways  <br>A7: Jump leg/arms open/closed  <br>A8: Jump rope  <br>A9: Trunk twist (arms outstretched)  <br>A10: Trunk twist (elbows bent)  <br>A11: Waist bends forward  <br>A12: Waist rotation  <br>A13: Waist bends (reach foot with opposite hand)  <br>A14: Reach heels backwards  <br>A15: Lateral bend (10_ to the left + 10_ to the right)<br>A16: Lateral bend with arm up (10_ to the left + 10_ to the right) <br>A17: Repetitive forward stretching <br>A18: Upper trunk and lower body opposite twist <br>A19: Lateral elevation of arms <br>A20: Frontal elevation of arms <br>A21: Frontal hand claps <br>A22: Frontal crossing of arms <br>A23: Shoulders high-amplitude rotation <br>A24: Shoulders low-amplitude rotation <br>A25: Arms inner rotation <br>A26: Knees (alternating) to the breast <br>A27: Heels (alternating) to the backside <br>A28: Knees bending (crouching) <br>A29: Knees (alternating) bending forward <br>A30: Rotation on the knees <br>A31: Rowing <br>A32: Elliptical bike <br>A33: Cycling <br><br>SENSOR SETUP:<br>Each sensor provides 3D acceleration (accX,accY,accZ), 3D gyro (gyrX,gyrY,gyrZ), 3D magnetic field orientation (magX,magY,magZ) and 4D quaternions (Q1,Q2,Q3,Q4). The sensors are identified according to the body part on which is placed respectively:<br><br>S1: left calf (LC)<br>S2: left thigh (LT)<br>S3: right calf (RC)<br>S4: right thigh (RT)<br>S5: back (BACK)<br>S6: left lower arm (LLA)<br>S7: left upper arm (LUA)<br>S8: right lower arm (RLA)<br>S9: right upper arm (RUA)<br><br>SCENARIOS:<br>The dataset contains information for three different scenarios depending on whether the sensors are positioned on predefined positions or placed by the users themselves.<br>- Ideal-placement or the default scenario. The sensors are positioned by the instructor on predefined locations within each body part. The data stemming from this scenario could be considered as the √¢‚Ç¨≈ìtraining set√¢‚Ç¨¬ù for supervised activity recognition systems.<br>- Self-placement. The user is asked to position a subset of the sensors themselves on the body parts specified by the instructor, but without providing any hint on how the sensors must be exactly placed. This scenario is devised to investigate some of the variability that may occur in the day-to-day usage of an activity recognition system, involving wearable or self-attached sensors. Normally, the self-placement will lead to on-body sensor setups that differ from the ideal-placement. Nevertheless, this difference may be minimal if the subject places the sensor close to the ideal position.<br>- Induced-displacement. An intentional mispositioning of sensors using rotations and translations with respect to the ideal placement is introduced by the instructor. One of the key interests of including this last scenario is to investigate how the performance of a certain method degrades as the system drifts far from the ideal setup.<br><br>A complete and illustrated description (including table of activities, sensor setup, etc.) of the dataset is provided in the documentation facilitated along with the dataset. Also, the papers presented in the section √¢‚Ç¨≈ìCitation Requests√¢‚Ç¨¬ù provide an insightful description of the dataset and the underlying theory.  <br></p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">The dataset comprises the readings of motion sensors recorded while users executed typical daily activities. The detailed format is described in the package. The attributes correspond to raw sensor readings. There is a total of 120 attributes:<br><br>Column 1: Timestamp in seconds<br>Column 2: Timestamp in microseconds<br>Column 3-15: [AccX, AccY, AccZ, GyrX, GyrY, Gyr, GyrZ, MagX, MagY, MagZ, Q1, Q2, Q3, Q4] of sensor S1<br>Column 16-28: [AccX, AccY, AccZ, GyrX, GyrY, Gyr, GyrZ, MagX, MagY, MagZ, Q1, Q2, Q3, Q4] of sensor S2<br>Column 29-41: [AccX, AccY, AccZ, GyrX, GyrY, Gyr, GyrZ, MagX, MagY, MagZ, Q1, Q2, Q3, Q4] of sensor S3<br>Column 42-54: [AccX, AccY, AccZ, GyrX, GyrY, Gyr, GyrZ, MagX, MagY, MagZ, Q1, Q2, Q3, Q4] of sensor S4<br>Column 55-67: [AccX, AccY, AccZ, GyrX, GyrY, Gyr, GyrZ, MagX, MagY, MagZ, Q1, Q2, Q3, Q4] of sensor S5<br>Column 68-80: [AccX, AccY, AccZ, GyrX, GyrY, Gyr, GyrZ, MagX, MagY, MagZ, Q1, Q2, Q3, Q4] of sensor S6<br>Column 91-93: [AccX, AccY, AccZ, GyrX, GyrY, Gyr, GyrZ, MagX, MagY, MagZ, Q1, Q2, Q3, Q4] of sensor S7<br>Column 94-106: [AccX, AccY, AccZ, GyrX, GyrY, Gyr, GyrZ, MagX, MagY, MagZ, Q1, Q2, Q3, Q4] of sensor S8<br>Column 107-119: [AccX, AccY, AccZ, GyrX, GyrY, Gyr, GyrZ, MagX, MagY, MagZ, Q1, Q2, Q3, Q4] of sensor S9<br>Column 120: Label (see activity set)<br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Banos, O., Toth M. A., Damas, M., Pomares, H., Rojas, I. Dealing with the effects of sensor displacement in wearable activity recognition. Sensors vol. 14, no. 6, pp. 9995-10023 (2014).<br><br>Banos, O., Galvez, J. M., Damas, M., Pomares, H., Rojas, I. Window size impact in activity recognition. Sensors, vol. 14, no. 4, pp. 6474-6499 (2014).<br><br>Banos, O., Galvez, J. M., Damas, M., Pomares, H., Rojas, I. Evaluating the effects of signal segmentation on activity recognition. Proceedings of the International Work-Conference on Bioinformatics and Biomedical Engineering (IWBBIO 2014), Granada, Spain, April 7-9, (2014).<br><br>Banos, O., Damas, M., Pomares, H., Rojas, I. Handling displacement effects in on-body sensor-based activity recognition. Proceedings of the 5th International Work-conference on Ambient Assisted Living an Active Ageing (IWAAL 2013), San Jose, Costa Rica, December 2-6, (2013).<br><br>Banos, O., Damas, M., Pomares, H., Rojas, I. Activity recognition based on a multi-sensor meta-classifier. Proceedings of the International Work Conference on Neural Networks (IWANN 2013), Tenerife, Spain, June 12-14, (2013). <br><br>Smith, Jeremiah, et al. 'Exploring concept drift using interactive simulations' IEEE International Conference on Pervasive Computing and Communications Workshops (PERCOM 2013), San Diego, USA, March 18-22, (2013).<br><br>Banos, O., Toth, M. A., Damas, M., Pomares, H., Rojas, I., Amft, O. A benchmark dataset to evaluate sensor displacement in activity recognition. Proceedings of the 14th International Conference on Ubiquitous Computing (Ubicomp 2012), Pittsburgh, USA, September 5-8, (2012).<br><br>Reyes-Ortiz, J.L., Luca Oneto, Albert Sam√†, Xavier Parra, Davide Anguita, Transition-Aware Human Activity Recognition Using Smartphones, Neurocomputing, (Online) 2015<br><br>Nguyen, L. T., Zeng, M., Tague, P., Zhang, J. (2015). Recognizing New Activities with Limited Training Data. In IEEE International Symposium on Wearable Computers (ISWC).<br><br>Wilson, J.; Najjar, N.; Hare, J.; Gupta, S., Human activity recognition using LZW-Coded Probabilistic Finite State Automata. In IEEE International Conference on Robotics and Automation (ICRA), 2015, pp.3018-3023<br><br>Punchoojit, Lumpapun, and Nuttanont Hongwarittorrn. "A Comparative Study on Sensor Displacement Effect on Realistic Sensor Displacement Benchmark Dataset." Recent Advances in Information and Communication Technology 2015. 97-106.</p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Use of this dataset in publications must be acknowledged by referencing the following publications:<br><br>Banos, O., Toth M. A., Damas, M., Pomares, H., Rojas, I. Dealing with the effects of sensor displacement in wearable activity recognition. Sensors vol. 14, no. 6, pp. 9995-10023 (2014).<br>Banos, O., Toth, M. A., Damas, M., Pomares, H., Rojas, I., Amft, O. A benchmark dataset to evaluate sensor displacement in activity recognition. Proceedings of the 14th International Conference on Ubiquitous Computing (Ubicomp 2012), Pittsburgh, USA, September 5-8, (2012).<br><br>We recommend to refer to this dataset as the 'REALDISP dataset' in publications. <br>We would appreciate if you send us an email (<u>oresti.bl <b>'@'</b> gmail.com</u>) to inform us of any publication using this dataset. <br></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

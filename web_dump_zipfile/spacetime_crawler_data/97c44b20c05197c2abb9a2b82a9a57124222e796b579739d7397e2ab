@@ -1,0 +1,538 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueä¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5936¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 10 Feb 2019 02:45:36 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 21 May 2007 12:42:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"4e6f-430fa44cbb240-gzip"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueMmax-age=21600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:45:36 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueyNo<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang='en' xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 12 April 2005), see www.w3.org" />
+
+  <title>XML Processing Model WG -- 3 May 2007</title>
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/StyleSheets/base.css" />
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/StyleSheets/public.css" />
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/2004/02/minutes-style.css" />
+  <meta content="XML Processing Model WG" name="Title" />
+  <meta content="text/html; charset=us-ascii" http-equiv=
+  "Content-Type" />
+</head>
+
+<body>
+  <p><a href="http://www.w3.org/"><img src=
+  "http://www.w3.org/Icons/w3c_home" alt="W3C" border="0" height=
+  "48" width="72" /></a></p>
+
+  <h1>XML Processing Model WG</h1>
+
+  <h2>Meeting 66, 3 May 2007</h2>
+
+  <p><a href=
+  'http://www.w3.org/XML/XProc/2007/05/03-agenda.html'>Agenda</a></p>
+
+  <p>See also: <a href="http://www.w3.org/2007/05/03-xproc-irc">IRC
+  log</a></p>
+
+  <h2><a name="attendees" id="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Norm, Mohamed, Alessandro, Paul, Henry, Andrew, Michael,
+      Alex</dd>
+
+      <dt>Regrets</dt>
+
+      <dd>Richard, Rui</dd>
+
+      <dt>Chair</dt>
+
+      <dd>Norm</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Norm</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Accept this agenda?</a></li>
+
+        <li><a href="#item02">Accept minutes from the previous
+        meeting?</a></li>
+
+        <li><a href="#item03">Next meeting: telcon 10 May
+        2007</a></li>
+
+        <li><a href="#item04">Open action items</a></li>
+
+        <li><a href="#item05">Options vs parameters</a></li>
+
+        <li><a href="#item06">p:tee proposal or alternate debugging
+        proposal</a></li>
+
+        <li><a href="#item07">Any other business</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  </ul>
+  <hr />
+
+  <div class="meeting">
+    <h3 id="item01">Accept this agenda?</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/2007/05/03-agenda.html">http://www.w3.org/XML/XProc/2007/05/03-agenda.html</a></p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item02">Accept minutes from the previous meeting?</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/2007/04/26-minutes.html">http://www.w3.org/XML/XProc/2007/04/04/26-minutes.html</a></p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item03">Next meeting: telcon 10 May 2007</h3>
+
+    <p class='phone'>We have regrets from Rui, Alessandro,
+    Michael</p>
+
+    <h3 id="item04">Open action items</h3>
+
+    <p class='phone'>Henry to propose a debugging alternative to
+    p:tee</p>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt; Completed.</p>
+
+    <p class='phone'>Alex to craft a proposal on serialization</p>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt; Continued.</p>
+
+    <h3 id="item05">Options vs parameters</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007May/0023.html">
+    http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007May/0023.html</a></p>
+
+    <p class='phone'><cite>Henry:</cite> I think Richard and I are
+    alike in being sympathetic to Jeni's use cases, we're getting
+    things out of proportion here.<br />
+    ... XSLT is the only step that uses parameters at all.<br />
+    ... The simplest possible mechanism which allows them to work
+    is therefore the best solution.<br />
+    ... I propose: <a href=
+    "http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007May/0061.html">
+    http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007May/0061.html</a><br />
+
+    ... Amended with the ability to unbind parameters.</p>
+
+    <p class='phone'><a href=
+    "http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007May/0061.html">
+    http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007May/0061.html</a></p>
+
+    <p class='phone'><cite>Henry:</cite> p:parameter is the only
+    thing there is to do with parameters.<br />
+    ... All you can do is give them a value or ungive them a value.
+    No namespace changing; no importing, no declaring.
+    Nothing.<br />
+    ... The analogy Richard draws is with the environment and shell
+    scripts.<br />
+    ... They're a single, global space and you can give them values
+    and take them away and that's it.<br />
+    ... All the proposals about options are correct, I'm only
+    arguing for a radically simpler parameter story.</p>
+
+    <p class='phone'><cite>Alex:</cite> We have three steps that
+    use parameters: XQuery and both XSLT's.<br />
+    ... I've been thinking about serialization parameters; we could
+    use parameters for that.<br />
+    ... I think there are a lot of things where parameters are
+    going to be useful.<br />
+    ... Including step types that we aren't defining.</p>
+
+    <p class='phone'><cite>Henry:</cite> I agree with the position
+    that Norm and Jeni agreed with is that the crucial thing about
+    them is that you don't know much about them<br />
+    ... The difference between what we have today and my proposal
+    is get rid of import-parameter and parameter declarations.</p>
+
+    <p class='phone'><cite>Alessandro:</cite> So import-parameters
+    is done automatically?</p>
+
+    <p class='phone'><cite>Henry:</cite> Yes, all the in-scope
+    parameters are always availble.</p>
+
+    <p class='phone'><cite>Alessandro:</cite> Why?</p>
+
+    <p class='phone'><cite>Henry:</cite> Because all of the
+    examples we've seen so far have import-parameters = "*"</p>
+
+    <p class='phone'><cite>Alex:</cite> And your implementation
+    always has all the parameters available.</p>
+
+    <p class='phone'><cite>Norm:</cite> And how does undeclare
+    work?</p>
+
+    <p class='phone'><cite>Henry:</cite> Making sure a parameter
+    doesn't have a value seems like a marginal case, but I'd read
+    &lt;p:parameter name="foo"/&gt; as an unbinding.</p>
+
+    <p class='phone'><cite>Alex:</cite> That's a little weird.</p>
+
+    <p class='phone'><cite>Henry:</cite> But value="" is perfectly
+    sensible.</p>
+
+    <p class='phone'><cite>Norm:</cite> My concern is that one of
+    the things I think XProc is going to be used for quite a bit is
+    chaining together multiple XSLT steps. And most stylesheet
+    authors put all their parameters in no namespace. So the
+    proposal you're making, Henry, begs for collisions.</p>
+
+    <p class='phone'><cite>Alex:</cite> Looking at your example,
+    the select="$per-page" will still be legal.</p>
+
+    <p class='phone'><cite>Henry:</cite> I think packaging up lots
+    of XSLT steps is something we're going to do a lot, but I
+    almost never use parameters from the command line for any of my
+    XSLT stylesheets.<br />
+    ... Doing so is a dodgy business. If you're writing a carefully
+    constructed pipeline to do a task, you'll know what the
+    parameters are.</p>
+
+    <p class='phone'><cite>Alex:</cite> You can solve the random
+    parameters from the command line use case with options or by
+    massaging the stylesheet as part of the pipeline.</p>
+
+    <p class='phone'><cite>Norm:</cite> I'm in favor of simple, and
+    I'm willing to float Henry's proposal to the public and see
+    what they say.</p>
+
+    <p class='phone'><cite>Henry:</cite> What I think this will
+    also really help our users. The way we were headed, with all
+    this duplication, looked parallel but wasn't. Users were going
+    to be baffled by the question of when do I use which.</p>
+
+    <p class='phone'><cite>Norm:</cite> I'm convinced that this
+    proposal is sufficiently simple that we should try it.</p>
+
+    <p class='phone'><cite>Alex:</cite> Me too.</p>
+
+    <p class='phone'><cite>Alessandro:</cite> Me too, but I'm
+    concerned about this automatic import of parameters.<br />
+    ... Why not just make users list all the parameters
+    explicitly?</p>
+
+    <p class='phone'><cite>Henry:</cite> What could possibly go
+    wrong from passing all the parameters?<br />
+    ... The only case that we're worried about is the case where
+    you know that there's a collision between two stylesheets in
+    the same pipeline.<br />
+    ... Alex pointed out that you can protect them if you know
+    that's the case.</p>
+
+    <p class='irc'>&lt;<cite>alexmilowski</cite>&gt; <a href=
+    "http://www.w3.org/XML/XProc/docs/langspec.html#dt-in-scope-parameters">
+    http://www.w3.org/XML/XProc/docs/langspec.html#dt-in-scope-parameters</a></p>
+
+    <p class='phone'><cite>Alex:</cite> You already have a set of
+    parameters in the environment. Then there's a derivation done
+    to compute the actual parameters for each step.<br />
+    ... The actual parameters are the same as the in-scope
+    parameters and you're done.<br />
+    ... The worst case is that you have to bind a bunch of extra
+    parameters.</p>
+
+    <p class='phone'><cite>Alessandro:</cite> I guess I'm not
+    worried about implementation, I'm just thinking about
+    programming languages.<br />
+    ... Generally when you call a function, you enumerate the
+    parameters that you're passing.</p>
+
+    <p class='phone'><cite>Henry:</cite> Exactly, that's what
+    options are for.</p>
+
+    <p class='phone'><cite>Alessandro:</cite> You don't usually
+    have all the parameters. It could be a security issue, there
+    are lots of reasons.</p>
+
+    <p class='phone'><cite>Henry:</cite> You have to declare the
+    options that you accept, you have to pass them explicitly, etc.
+    Parameters are this funny business that we only have because of
+    XSLT and its friends.</p>
+
+    <p class='irc'>&lt;<cite>Zakim</cite>&gt; MoZ, you wanted to
+    remind why we split options and parameters</p>
+
+    <p class='phone'><cite>Mohamed:</cite> I think we missed the
+    point about why we split options and parameters in the first
+    place.<br />
+    ... We were thinking about collisions between parameters that
+    were for steps and options that were for the pipeline
+    processor.</p>
+
+    <p class='phone'><cite>Henry:</cite> Options are in a separate
+    space; we've solved that problem.</p>
+
+    <p class='phone'><cite>Mohamed:</cite> I'm speaking options
+    declared in the spec.</p>
+
+    <p class='phone'><cite>Henry:</cite> But they're in a separate
+    space from the names of parameters; that's not going to
+    change.<br />
+    ... If there's a stylesheet that takes a parameter named
+    "filename", no option can collide with that.</p>
+
+    <p class='phone'><cite>Mohamed:</cite> Consider this example: I
+    have a pipeline with two XSLT steps. I want to make a parameter
+    that called "filename" for the two steps.</p>
+
+    <p class='phone'><cite>Henry:</cite> Then you write in each
+    step:</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; &lt;p:parameter
+    name='filename' value='$o1'/&gt;</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; &lt;p:parameter
+    name='filename' value='$o2'/&gt;</p>
+
+    <p class='phone'><cite>Henry:</cite> where o1 and o2 are
+    *options* that you pass to your pipeline.</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; and say runipipe
+    o1=x.xml o2=y.xml</p>
+
+    <p class='phone'><cite>Mohamed:</cite> The second point was
+    that one day in import parameter we might have an "except"
+    attribute.</p>
+
+    <p class='irc'>&lt;<cite>alexmilowski</cite>&gt; The only
+    feature we don't have is the one that Norm mentioned: Pass all
+    options in namespace A as parameters to XSLT A and all options
+    in namespace B as parameters to XSLT B.</p>
+
+    <p class='irc'>&lt;<cite>alexmilowski</cite>&gt; ...which is OK
+    by me.</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; &lt;p:unbind-parameter
+    name='foo'/&gt;</p>
+
+    <p class='phone'><cite>Henry:</cite> if you really, really want
+    to make sure that no parameter named foo gets into a particular
+    step, then you write something like p:unbind-parameter.<br />
+    ... I'd be happier if a I saw a use case.</p>
+
+    <p class='phone'><cite>Norm:</cite> I'd be happier to write it
+    up without that feature and see if the world demands it.</p>
+
+    <p class='phone'><cite>Henry:</cite> It's clear how we could
+    add it.</p>
+
+    <p class='phone'>Norm summarizes the proposal.</p>
+
+    <p class='phone'><cite>Alex:</cite> And sibling options cannot
+    refer to each other.</p>
+
+    <p class='phone'><cite>Norm:</cite> I understood that we have
+    no forward references.<br />
+    ... Let's make that a separate issue.<br />
+    ... Anyone not understand our current proposal wrt
+    options/parameters?</p>
+
+    <p class='phone'>No.</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <p class='phone'><cite>Norm:</cite> I propose to skip item 2;
+    Alex has an open action to propose something about
+    serialization; I think we should just put all these things in
+    that proposal.</p>
+
+    <p class='phone'><cite>Alex:</cite> I think we've accepted the
+    names unescape-markup and escape-markup, so I think we can drop
+    that issue.</p>
+
+    <p class='phone'><cite>Norm:</cite> good.</p>
+
+    <h3 id="item06">p:tee proposal or alternate debugging
+    proposal</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007Apr/0138.html">
+    http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007Apr/0138.html</a></p>
+
+    <p class='phone'>-&gt; <a href=
+    "http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007May/0060.html">
+    http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2007May/0060.html</a></p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; HST suggests that the
+    right strategy wrt the 'sibling options' question is to a) be
+    sure that wherever we allow an XPath expression in the spec.,
+    we specify the XPath context and b) the answer wrt options is
+    "the options in the inherited environment"</p>
+
+    <p class='phone'><cite>Henry:</cite> I raised the question of
+    whether a component was the right way to do this.<br />
+    ... Or to think of it more as an annotation.<br />
+    ... I offered two proposals.<br />
+    ... The question is, at which end do you want to do the
+    logging/journaling.<br />
+    ... One answer is: you do it at the place where the document
+    comes from.<br />
+    ... So you could add &lt;p:journal port="result"
+    href="someURI"/&gt;<br />
+    ... That doesn't require any changes, you just add that.<br />
+    ... The alternative is to go to the other end; on the input
+    binding you could add a journal attribute.</p>
+
+    <p class='irc'>&lt;p:pipe step="s1" port="result"
+    journal="someURI"/&gt;</p>
+
+    <p class='phone'><cite>Henry:</cite> The disadvantage is that
+    it requires you to put in a p:input with explicit names and
+    things because it can't all be defaulted.<br />
+    ... On balance, I think I favor the first over the
+    second.<br />
+    ... So there are three proposals: a new component, p:tee or
+    something; p:journal element in a step; or the journal
+    attribute which you can add to pipes.</p>
+
+    <p class='phone'><cite>Norm:</cite> Anyone else have an
+    opinion?</p>
+
+    <p class='phone'><cite>Alex:</cite> The advantage of the
+    builtin solution is that makes solving the sequence problem
+    easier.</p>
+
+    <p class='phone'><cite>Henry:</cite> The thing that swung me to
+    option 1 is that you have to add two elements and maybe a name
+    to use a journal attribute in a fully defaulted pipeline.</p>
+
+    <p class='phone'><cite>Norm:</cite> Does anyone favor Henry's
+    option 2 over his option 1?</p>
+
+    <p class='phone'>No one.</p>
+
+    <p class='phone'>Straw poll: Which do you prefer, the builtin
+    journaling solution or a letting a component do it?</p>
+
+    <p class='phone'><cite>Journaling:</cite> 6; Step: 1; 1 Abstain
+    (2 concur)</p>
+
+    <p class='phone'><cite>Norm:</cite> Anyone who can't live with
+    the journaling element?</p>
+
+    <p class='phone'>No.</p>
+
+    <p class='phone'><cite>Norm:</cite> And sequences?</p>
+
+    <p class='irc'>&lt;<cite>MoZ</cite>&gt; $p:position</p>
+
+    <p class='phone'><cite>Henry:</cite> I think we should provide
+    options that are always bound in an iteration and use attribute
+    value templates to let the user specify how to deal with
+    it.</p>
+
+    <p class='phone'><cite>Norm:</cite> We don't have AVTs. Do you
+    really want to add them for this?</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; href="'foo.xml'"</p>
+
+    <p class='phone'><cite>Henry:</cite> I'd be perfectly happy to
+    say that the value of the href is an XPath expression, but then
+    the 90% case is "'xxx'".</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt;
+    href="concat('foo',$p:position,'.xml')"</p>
+
+    <p class='phone'><cite>Norm:</cite> I have another:
+    implementation defined.</p>
+
+    <p class='phone'><cite>Henry:</cite> I can live with that, but
+    I think that having iteration and sequence number variables in
+    the environment is going to turn out to be hugely useful.</p>
+
+    <p class='phone'><cite>Norm:</cite> This is Mohamed's
+    p:position everywhere right?</p>
+
+    <p class='phone'><cite>Henry:</cite> Yes, but I think we're
+    also going to need named index iterations for nested
+    for-eaches.<br />
+    ... we need both.</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; for iteration step
+    name='foo', then an option p:foo_i is bound</p>
+
+    <p class='phone'><cite>Norm:</cite> I'm starting to feel like
+    functions are a better way to do this than automatic variable
+    bindings.</p>
+
+    <p class='phone'><cite>Mohamed:</cite> We have to figure out
+    what it means to evaluate an XPath expression on a
+    sequence.</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; &lt;p:input
+    select="foo"&gt;</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; &lt;p:pipe step='s'
+    port='p'/&gt;</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; &lt;/p:input&gt;</p>
+
+    <p class='phone'><cite>Mohamed:</cite> If we say that it's the
+    same as evaluating the expression over each document in the
+    sequence, then functions and variables are the same.</p>
+
+    <p class='phone'><cite>Norm:</cite> I'm still not sure I
+    understand.</p>
+
+    <p class='phone'><cite>Henry:</cite> At the end of the day,
+    what I want is a third variable or function which is unique per
+    pipeline evaluation episode.</p><a name="action01" id=
+    "action01"></a>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> Henry to write up all the
+    variables/functions he wants. [recorded in <a href=
+    "http://www.w3.org/2007/05/03-xproc-minutes.html#action01">http://www.w3.org/2007/05/03-xproc-minutes.html#action01</a>]</p>
+
+    <h3 id="item07">Any other business</h3>
+
+    <p class='phone'><cite>Henry:</cite> Are we meeting in
+    November?</p>
+
+    <p class='phone'><cite>Norm:</cite> I think we said yes, but
+    I'll double check.</p>
+
+    <p class='phone'>Adjourned.</p>
+  </div>
+
+  <h2><a name="ActionSummary" id="ActionSummary">Summary of Action
+  Items</a></h2><!-- Action Items -->
+  <strong>[NEW]</strong> <strong>ACTION:</strong> Henry to write up
+  all the variables/functions he wants. [recorded in <a href=
+  "http://www.w3.org/2007/05/03-xproc-minutes.html#action01">http://www.w3.org/2007/05/03-xproc-minutes.html#action01</a>]<br />
+
+  &nbsp;<br />
+  [End of minutes]<br />
+  <hr />
+
+  <address>
+    Minutes formatted by David Booth's <a href=
+    "http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">
+    scribe.perl</a> version 1.128 (<a href=
+    "http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br />
+    $Date: 2007/05/21 12:42:41 $
+  </address>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

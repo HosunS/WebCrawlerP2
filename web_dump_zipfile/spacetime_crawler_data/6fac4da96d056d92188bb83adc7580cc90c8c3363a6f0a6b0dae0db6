@@ -1,0 +1,466 @@
+¦Ifinal_url¢DtypeEvaluex;https://www.ics.uci.edu/~shz/courses/cs295/assignments/pa2/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE24396¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 03 Jun 2017 23:47:09 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"5f4c-55116e360e870"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 14:05:51 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY_L<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CS295 Programming Assignment 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Le styles -->
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/nori.css" rel="stylesheet">
+  <link href="../../css/jquery.fancybox.css" rel="stylesheet">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div style="display:none">
+    \[
+      \newcommand{\vx}{\mathbf{x}}
+      \newcommand{\vc}{\mathbf{c}}
+      \newcommand{\vy}{\mathbf{y}}
+      \newcommand{\vn}{\mathbf{n}}
+      \def\bold#1{\boldsymbol{ #1} }
+    \]
+  </div>
+  <div class="container">
+    <h1>
+      CS295 Realistic Image Synthesis<br>
+      <span style="font-size:26px">Programming Assignment 2. Monte Carlo Path Tracing and Multiple Importance Sampling</span>
+    </h1>
+    <p style="font-size:20px">
+      Instructor: <a href="http://shuangz.com">Shuang Zhao</a><br>
+      Due: Saturday May 20, 2017 (23:59pm Pacific Time)
+    </p>
+
+    <p>
+      <b>Credit:</b> The programming assignments of this course is based on <a href="https://wjakob.github.io/nori/">Nori</a>, an educational renderer created by <a href="http://rgl.epfl.ch/people/wjakob">Wenzel Jakob</a>.
+    </p>
+
+    <p>
+      Click <a href="pa2.zip">here</a> to download the scene files needed for this assignment.
+      Please unzip it to your <tt>nori/scenes/</tt> directory.
+    </p>
+
+    <h4>What to submit</h4>
+    <ul>
+      <li>
+        A report including results and discussions required by Part 1, 2, 3 and 4.
+      </li>
+      <li>
+        A zip package containing your <tt>nori/CMakeLists.txt</tt> file as well as full <tt>nori/include/</tt> and <tt>nori/src/</tt> directories.
+      </li>
+    </ul>
+
+    <div class="alert alert-danger" role="alert">
+      <b>Note</b>: since Nori has been actively used by a number of institutes for their rendering courses, please do NOT post your solution code online (even after the due date).
+    </div>
+
+    <!-- Part 1. Whitted-Style Ray Tracing -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#part1">Part 1. Whitted-style ray tracing</a>
+        </h4>
+      </div>
+      <div id="part1" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>
+              The first step of this assignment involves extending the distribution ray tracer you implemented for <a href="../pa1">Programming Assignment 1</a> to turn it into a <em>Whitted</em>-style ray tracer (named after Turner Whitted) that
+              is able to account for specular reflections.
+          </p>
+          <div class="row" style="margin: 30px">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-5">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/cbox_whitted.png"><img src="images/cbox_whitted.png"></a>
+                <div class="caption">
+                    A Cornell box containing a diffuse and a specular spheres
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>
+              Modify <code>src/whitted.cpp</code> as follows:
+          </p>
+          <ol>
+              <li>Once the surface position \(\vx\) is determined, check if the
+                  material is specular or diffuse (via <code>BSDF::isDiffuse()</code>).
+                  In the latter situation, simply fall back to your previous implementation.
+                  The specular case is treated specially: instead of sampling a
+                  position on a light source, invoke the specular surface's <code>BSDF::sample()</code>
+                  method to generate a reflected direction \(\omega_r\).
+                  Note that the BSDF of an intersection <tt>its</tt> can be obtained using the expression <code>its.mesh->getBSDF()</code>.
+                  <!--This will produce a new direction \(\omega_r\).--><br><br>
+              </li>
+              <li>
+                  Request an additional random number \(\xi\) from the sampler
+                  and then return the following radiance estimate from your
+                  rendering algorithm's <code>Li()</code> method:
+                  \[
+                  L_i(\vc, \omega_c) = \begin{cases}
+                  \frac{1}{0.95} L_i(\vx, \omega_r),&\text{if $\xi < 0.95$}\\
+                 0,&\text{otherwise}
+                  \end{cases}
+                  \]
+                  Note that this recursion continues for as long as the reflected rays hit specular surfaces.
+                  It ends when a diffuse surface is found where a single emitter sampling step is performed.
+                  As discussed in class, this so-called <em>Russian roulette</em> trick uses random number \(\xi\) to prevent the algorithm from getting stuck in an infinite sequences reflection events.
+              </li>
+          </ol>
+          <p>
+            Render the scene <code>scenes/pa2/cbox/cbox_whitted.xml</code> and include a comparison against our reference solution: <a href="images/cbox_whitted.exr"><tt>cbox_whitted.exr</tt></a>.
+          </p>
+        </div>
+      </div>
+    </div><!-- Part 1 -->
+
+    <!-- Part 2. Monte Carlo Sampling -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#part2">Part 2. Microfacet BRDF</a>
+        </h4>
+      </div>
+      <div id="part2" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div class="row" style="margin: 30px">
+            <div class="col-md-6">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/ajax-smooth.jpg"><img src="images/ajax-smooth.jpg"></a>
+                <div class="caption">
+                  The Ajax bust rendered with a relatively smooth (\(\alpha=0.08\)) microfacet BRDF.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/ajax-rough.jpg"><img src="images/ajax-rough.jpg"></a>
+                <div class="caption">
+                  The Ajax bust rendered with a relatively rough (\(\alpha=0.28\)) microfacet BRDF.
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>
+            In this part we will extend the rudimentary interface in <tt>microfacet.cpp</tt> into a full-fledge reflectance model based on the <em>microfacet theory</em>. This process is split into four parts:
+          </p>
+
+          <h4>Part 1.1: Evaluating the Beckmann distribution</h4>
+          <div class="row" style="margin: 30px">
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-5">
+                <div class="thumbnail" style="margin: 10px">
+                    <a class="fancybox" href="images/beckmann.png"><img src="images/beckmann.png"></a>
+                    <div class="caption">
+                        The Beckmann distribution plotted for different values of \(\alpha\).
+                    </div>
+                </div>
+            </div>
+          </div>
+          <p>
+            The <em>Beckmann</em> distribution models the probability density of normals on a random rough surface:
+
+            \[
+              D(\theta, \phi) = \underbrace{\frac{1}{2\pi}}_{\text{azimuthal part}}\ \cdot\ \underbrace{\frac{2 e^{\frac{-\tan^2{\theta}}{\alpha^2}}}{\alpha^2 \cos^3 \theta}}_{\text{longitudinal part}}\!\!\!.
+            \]
+
+            The density includes an extra cosine factor for normalization purposes so that
+
+            \[
+              \int_{0}^{2\pi}\int_0^{\frac{\pi}{2}} D(\theta, \phi)\sin\theta\,\mathrm{d}\theta\,\mathrm{d}\phi=1.
+            \]
+
+            Complete the function <code>Warp::squareToBeckmannPdf</code> in <code>warp.cpp</code> so that it evaluates \(D\) using the above definition.
+            The function takes a normalized Cartesian 3D vector \(\omega\) as input, whose components can be interpreted using the following spherical coordinate representations:
+
+            \[
+              \omega=\begin{pmatrix}
+                \sin\theta\cos\phi\\
+                \sin\theta\sin\phi\\
+                \cos\theta
+              \end{pmatrix}
+            \]
+
+            Take a look at the methods in the <code>Frame</code> class if you find yourself evaluating trigonometric functions in the body of <code>Warp::squareToBeckmannPdf</code>.
+          </p>
+
+          <h4>Part 1.2: Sampling the Beckmann distribution</h4>
+          <p>
+            Having implemented a way to query this distribution, we'll now want to generate points on the sphere that exactly follow the distribution.
+            Note how the \(D(\theta,\phi)\) is symmetric around the north pole (in other words: its spherical coordinate representation is <em>separable</em>). Sampling can thus be split into two steps:
+          </p>
+          <ol>
+            <li>
+               Uniformly sampling the azimuth \(\phi=2\pi\xi_1\) given a uniform variate \(\xi_1\).<br><br>
+            </li>
+            <li>
+              Mapping a second uniform variate \(\xi_2\) through the inverse CDF of \(D\)'s longitudinal part to obtain \(\theta\).<br><br>
+            </li>
+          </ol>
+          Follow these two steps and implement the resulting sampling technique in <code>Warp::squareToBeckmann</code>. Try running the statistical test implemented in the <tt>warptest</tt> executable -- your implementation should pass the tests for different values of \(\alpha\). You do not need to include the test results in your report, this is just for your own guidance.
+
+          <div class="alert alert-info" role="alert">
+            <b>Hint</b>: You might find integration by substitution useful, e.g. using the mappings \(x = \cos{\theta}\) and \(\tan^2{\theta} = \frac{1-x^2}{x^2}\). In addition this identity might come in handy:
+            \[
+              \int f'(x) ~ e^{~f(x)}\,\mathrm{d}x = e^{~f(x)} + C, \text{  for $C\in\mathbb{R}$}
+            \]
+          </div>
+
+          <h4>Part 1.3: Evaluating the Microfacet BRDF</h4>
+          <p>
+            The Microfacet BRDF in <code>src/microfacet.cpp</code> will be used to simulate platic-like materials. It consists of a linear blend between a diffuse BRDF (to simulate a potentially colored reflection from the interior of the material) and a rough dielectric microfacet BRDF (to simulate a non-colored specular reflection from the rough boundary). Implement <code>Microfacet::eval()</code> which evaluates the described microfacet BRDF for a given pair of directions in the local shading coordinate frame:
+
+            \[
+                f_r(\bold{\omega_i},\bold{\omega_o}) = \frac{k_d}{\pi} + {k_s} \frac{D(\bold{\omega_{h}})~
+                F\left({(\bold{\omega_h} \cdot \bold{\omega_i})}, \eta_{e},\eta_{i}\right)~
+                G(\bold{\omega_i},\bold{\omega_o},\bold{\omega_{h}})}{4 \cos{\theta_i} \cos{\theta_o}\cos\theta_h}, ~~
+                \bold{\omega_{h}} = \frac{\bold{\omega_i} + \bold{\omega_o}}{\left|\left|\bold{\omega_i} + \bold{\omega_o}\right|\right|_2}
+            \]
+
+            Here, \(k_d \in [0,1]^3\) is the RGB diffuse reflection coefficient, \(k_s = 1 - \max(k_d)\), \(F\) is the Fresnel reflection coefficient (check <tt>common.cpp</tt>), \(\eta_e\) is the exterior index of refraction and \(\eta_i\) is the interior index of refraction.
+            The various \(\cos\theta_k\) cosine factors relate to the angle that the corresponding direction \(\bold{\omega_k}\) makes with the Z axis in the local coordinate system.
+            The shadowing term uses the rational function approximation:
+            \[
+                G(\bold{\omega_i},\bold{\omega_o},\bold{\omega_{h}}) = G_1(\bold{\omega_i},\bold{\omega_{h}})~G_1(\bold{\omega_o},\bold{\omega_{h}}),
+            \]
+
+            \[
+                G_1(\bold{\omega_v},\bold{\omega_h}) = \chi^+\left(\frac{\bold{\omega_v}\cdot\bold{\omega_h}}{\bold{\omega_v}\cdot\bold{n}}\right)
+                \begin{cases}
+                    \frac{3.535b+2.181b^2}{1+2.276b+2.577b^2}, & b \lt 1.6, \\
+                    1,                      & \text{otherwise},
+                \end{cases} \\
+
+                b = (\alpha \tan{\theta_v})^{-1}, ~~
+
+                \chi^+(c) =
+                \begin{cases}
+                    1, & c > 0, \\
+                    0, & c \le 0,
+                \end{cases} \\
+
+            \]
+
+            where \(\theta_v\) is the angle between the surface normal \(\bold{n}\) and the \(\omega_v\) argument of \(G_1\).
+          </p>
+          <h4>Part 1.4: Sampling the Microfacet BRDF</h4>
+          <p>
+            In this part you will generate samples according to the following density function:
+            \[
+                k_s ~ D(\omega_h) ~ J_h + (1-k_s) \frac{\cos{\theta_o}}{\pi}
+            \]
+            where \(J_h = (4 (\omega_h \cdot \omega_o))^{-1}\)
+            is the Jacobian of the half direction mapping.
+
+            This an be done using the following sequence of steps:
+          </p>
+          <ol>
+            <li>Decide between a diffuse or a specular reflection by comparing a uniform variate \(\xi_1\) against \(k_s\)</li>
+            <li>Scale and potentially offset the uniform variate \(\xi_1\) so that it can be reused for a later sampling step</li>
+            <li>In the diffuse case, generate a cosine-weighted direction on the sphere following the approach in <tt>src/diffuse.cpp</tt></li>
+            <li>In the specular case:
+              <ol>
+                  <li>Sample a normal from the Beckmann distribution using the approach from Part 1.2</li>
+                  <li>Reflect the incident direction using this normal to generate an outgoing direction.</li>
+              </ol>
+            </li>
+          </ol>
+          <p>
+            Note that you will need to implement both <code>Microfacet::sample()</code> and <code>Microfacet::pdf()</code> to be able to run the following tests.
+          </p>
+
+          <h4>Validation</h4>
+          <p>
+            To obtain the full set of points for the previous exercises, you will need to validate the correctness of your code. The base code includes two XML files containing sequences of statistical tests that a correct implementation should be able to pass.
+            <ul>
+                <li><tt>scenes/pa2/tests/chi2test-microfacet.xml</tt>, </li>
+                <li><tt>scenes/pa2/tests/ttest-microfacet.xml</tt></li>
+            </ul>
+
+            Next, use your <tt>whitted</tt> integrator from the previous assignment to render a microfacet Ajax bust and ensure that you can match our references:
+
+            <ul>
+              <li>
+                <tt>scenes/pa2/ajax/ajax-rough.xml</tt> (reference: <a href="images/ajax-rough.exr">ajax-rough.exr</a>)
+              </li>
+              <li>
+                <tt>scenes/pa2/ajax/ajax-smooth.xml</tt> (reference: <a href="images/ajax-smooth.exr">ajax-smooth.exr</a>)
+              </li>
+            </ul>
+
+            The <tt>warptest</tt>GUI also contains a \(\chi^2\) test for both the Beckmann distribution and the complete BRDF model, but this is just to facilitate debugging and visualization; the XML files are the real validation benchmark. Mention in your report if running these tests produces any errors.
+          </p>
+        </div>
+      </div>
+    </div><!-- Part 2 -->
+
+    <!-- Part 3. Simple Path Tracer -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#part3">Part 3. Simple path tracer</a>
+        </h4>
+      </div>
+      <div id="part3" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div class="row" style="margin: 30px">
+            <div class="col-md-6">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/cbox_simple.png"><img src="images/cbox_simple.png"></a>
+                <div class="caption">
+                  The Cornell box rendered using the simple path tracer. Note the indirect illumination on the ceiling.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/veach_path_simple.png"><img src="images/veach_path_simple.png"></a>
+                <div class="caption">
+                  The Veach material test scene. Notice the significant variance for the top bar (shiniest) reflecting the largest light source. The path tracer with multiple importance sampling will address this issue.
+                </div>
+              </div>
+            </div>
+          </div>
+          <p>
+            In Part 1, you implemented a Whitted-style integrator that performed area light sampling on diffuse objects and BRDF sampling on specular objects. Now you'll extend this approach into a full path tracer that accounts for indirect illumination as well. We'll begin with a "simple" path tracer named <code>src/path_simple.cpp</code> that does not (yet) use <em>multiple importance sampling</em>. Part 4 involves adding MIS to create a full-featured path tracer that combines both sampling strategies to reduce variance.
+          </p>
+          <p>This simple path tracer differs from <code>src/whitted.cpp</code> in the following ways:</p>
+          <ol>
+            <li>When the camera ray hits a light source, the value returned by
+                <code>Li()</code> should include the emitted radiance to account for directly visible light sources.</li>
+            <li>Instead of sampling a position on the light source <em>or</em> the
+                BRDF, both are now done in each iteration. The direction sampled
+                from the BRDF is used to estimate the indirect illumination
+                component. This could be implemented using recursion, or more
+                efficiently using a loop.
+            </li>
+          </ol>
+          <p>
+            Use your implementation to render
+          </p>
+          <ol>
+            <li>The Cornell box in <code>scenes/pa2/cbox/cbox_simple.xml</code>
+                (reference: <a href="images/cbox_simple.exr">cbox_simple.exr</a>).</li>
+            <li>The Veach material test scene in <code>scenes/pa2/veach_mi/veach_path_simple.xml</code>
+                (reference: <a href="images/veach_path_simple.exr">veach_path_simple.exr</a>).</li>
+            <li>The table test scene in <code>scenes/pa2/table/table_path_simple.xml</code>
+                (reference: <a href="images/table_path_simple.exr">table_path_simple.exr</a>).</li>
+          </ol>
+          <p>
+            The first scene only uses diffuse and specular materials and can be used to test your path tracer if you didn't do Part 2 of this assignment yet. The latter two assume that the microfacet model BRDF is ready.
+          </p>
+        </div>
+      </div>
+    </div><!-- Part 2 -->
+
+    <!-- Part 4. Simple Path Tracer -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#part4">Part 4. Path tracer with multiple importance sampling</a>
+        </h4>
+      </div>
+      <div id="part4" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div class="row" style="margin: 30px">
+            <div class="col-md-6">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/table_path.png"><img src="images/table_path.png"></a>
+                <div class="caption">
+                    Table scene featuring a glass and a bowl modeled using microfacet materials.
+                </div>
+              </div>
+            </div>
+              <div class="col-md-6">
+                <div class="thumbnail" style="margin: 10px">
+                  <a class="fancybox" href="images/veach_path.png"><img src="images/veach_path.png"></a>
+                  <div class="caption">
+                    The Veach material test scene, now rendered using MIS.
+                  </div>
+                </div>
+              </div>
+          </div>
+          <p>
+              Following Part 3, extend your path tracer with multiple importance sampling (MIS). This specifically entails:
+          </p>
+          <ol>
+              <li>When generating a sample on a light source, determine the density of this
+                  sampling strategy. Also compute the density (using <code>BSDF::pdf()</code>) with which the BRDF sampling strategy <em>would hypothetically</em> have sampled the same direction.</li>
+              <li> Weight the contribution of the light source sample using the following formula
+                  known as the <em>balance heuristic</em>:
+                  \[
+                  w_\mathrm{Light}(p_\mathrm{Light}, p_\mathrm{BRDF}) = \frac{p_\mathrm{Light}}{p_\mathrm{Light} + p_\mathrm{BRDF}}.
+                  \]
+                  Remember that this only makes sense if both probabilities are expressed in
+                  the same <em>measure</em> (i.e. with respect to solid angles or unit area). This
+                  means that you will have convert one of them to the measure of the other (which one doesn't matter).
+              </li>
+              <li> When generating a BRDF sample (which would normally only be used to estimate
+                  the indirect illumination component), check if it hits a light source.
+                  In this case, also use this sample to estimate the <em>direct</em> illumination
+                  component at the current vertex.
+              </li>
+              <li>
+                  Once more, estimate the probability with which light source sampling <em>would hypothetically</em> have sampled this point, and weight the contribution of the sample using the balance heuristic:
+                  \[
+                  w_\mathrm{BRDF}(p_\mathrm{Light}, p_\mathrm{BRDF}) = \frac{p_\mathrm{BRDF}}{p_\mathrm{Light} + p_\mathrm{BRDF}}.
+                  \]
+                  Note the changed numerator in the above expression.
+              </li>
+          </ol>
+          <p>
+          Use your implementation to render
+          </p>
+          <ol>
+              <li>The Veach material test scene in <code>scenes/pa2/veach_mi/veach_path.xml</code>
+                  (reference: <a href="images/veach_path.exr">veach_path.exr</a>).</li>
+              <li>The table test scene in <code>scenes/pa2/table/table_path.xml</code>
+                  (reference: <a href="images/table_path.exr">table_path.exr</a>).</li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- Part 4 -->
+
+  </div><!-- container -->
+
+  <script type="text/javascript" src="../../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../js/prettify.js"></script>
+  <script type="text/javascript" src="../../js/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+  </script>
+
+  <script type="text/javascript">
+    !function ($) {
+      // $('a[href*=#]').on('click', function(event){
+      //   $('html,body').animate({scrollTop:$(this.hash + "-header").offset().top}, 500);
+      // });
+
+      $(".fancybox").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+      });
+
+      // $('.tooltips').tooltip({ selector: "span[rel=tooltip]" })
+
+      $("code").addClass("prettyprint");
+      $("code").addClass("lang-cpp");
+      prettyPrint();
+      MathJax.Hub.Typeset();
+    }(window.jQuery)
+  </script>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

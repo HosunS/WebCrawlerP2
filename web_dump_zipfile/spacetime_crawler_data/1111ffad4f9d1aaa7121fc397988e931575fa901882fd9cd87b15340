@@ -1,0 +1,31 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1421¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:06:11 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"be0-54c85e0e64f56-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:07:11 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYà<html>
+<head>
+<title>CompSci 161, Fall 2015, Homework 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1>CompSci 161, Fall 2015, Homework 3</h1>
+<ol>
+<li><p><i>[Modified from Goodrich &amp; Tamassia R-8.4-5]</i> Consider the modification of the deterministic version of the quick-sort algorithm so that, instead of selecting the last element in an $n$-element sequence as the pivot, we choose the element at index $\lfloor n/2\rfloor$, that is, an element in the middle of the sequence.</p>
+<ol type="a">
+<li><p>What is the running time of this version of quick-sort on a sequence that is already sorted? Use $O$-notation; you do not need to explain your answer.</p></li>
+<li><p>Describe an input sequence that would cause this version of quick-sort to run in $\Theta(n^2)$ time.</p></li>
+</ol></li>
+<li><p><i>[Modified from Goodrich &amp; Tamassia R-8.7]</i> Suppose that the in-place quicksort algorithm (Algorithm 8.9 in the textbook, or the same algorithm as presented in class) is executed on a sequence with duplicate elements. What happens in the partition step when all the elements of the input sequence are equal?</p></li>
+<li><p><i>[Modified from Goodrich &amp; Tamassia A-8.1]</i> Suppose that you are given a new hardware device that can merge $k>2$ different sorted lists of total size $n$ into a single sorted list in $O(n)$ time, independent of the value of $k$. Show that you can use this device to sort $n$ elements in $O(n\log n/\log k)$ time. (Hint: you may use the fact that $\log_k n=\log n/\log k$.)</p></li>
+<li><p>Define the "first drop problem", on an input array $A$ of $n$ numbers, to be the problem of finding the first position at which one number drops to a smaller number after it. More formally, the output should be the smallest index $i$ for which $A[i]>A[i+1]$, or  $i=n-1$ if no such index exists. For instance, on the input $[5,9,2,4,1]$ the output should be $1$, because the first drop is from the values $9$ to $2$, and the value $9$ occurs at position $A[1]$. But on the input $[1,2,4,5,9]$ there is no first drop and the output should be $4$. You may assume that no two input numbers are equal.</p>
+<ol type="a">
+<li><p>When $n=4$, how many different outcomes does the first drop problem have?</p></li>
+<li><p>Based only on your answer to part (a), and the $\lceil \log_2(\text{# outcomes})\rceil$ lower bound on the height of any binary comparison tree, how many comparisons would be necessary to correctly solve the first drop problem for $n=4$?</p></li>
+<li><p>Draw a comparison tree that uses as few comparisons as possible (in the worst case) to solve the first drop problem for $n=4$. How many comparisons in the worst case does your tree use?</p></li></ol></li>
+</ol>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

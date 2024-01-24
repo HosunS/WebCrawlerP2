@@ -1,0 +1,23 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC810¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:53:58 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"32a-4da84c2591980"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:09:54 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY*//*********************************************************************//
+//*		DISTANCE.H --- header file for computing edit distance        *//
+//*                                                                   *//
+//*Copyright (C) Michael Gilleland (http://www.merriampark.com/ld.htm)*//
+//*                                                                   *//
+//*********************************************************************//
+
+#ifndef DISTANCE1_H
+#define DISTANCE1_H
+
+class Distance1
+{
+  public:
+    int LD (char const *s, char const *t);
+  private:
+    int Minimum (int a, int b, int c);
+    int *GetCellPointer (int *pOrigin, int col, int row, int nCols);
+    int GetAt (int *pOrigin, int col, int row, int nCols);
+    void PutAt (int *pOrigin, int col, int row, int nCols, int x);
+};
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,94 @@
+¦Ifinal_url¢DtypeEvaluexDhttps://www.ics.uci.edu/~jacobson/ics45J/CodeSamples/ChatServer.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3027¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 10 Sep 2012 23:46:47 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"bd3-4c961921987c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 08:47:25 GMTKraw_content¢DtypeEvalueYÓ// ChatClient.java
+// Code Example: A Simple Socket Client and Server
+//
+// Written by Alex Thornton for Informatics 45 Spring 2010
+// Minor revisions by Norman Jacobson for ICS 45J Spring 2012 
+//
+// This is the server program.  It differs slightly from
+// the client, though a lot of the same ideas are here, e
+// specially once the two sides are connected.
+//
+// (If you haven't read the code and comments for the client 
+// yet, you should do that now: some things are explained
+// in the client code that are not explained here, to avoid 
+// explaining it twice.)
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Scanner;
+
+
+public class ChatServer
+{
+	public static void main(String[] args)
+	throws IOException
+	{
+		Scanner consoleIn = new Scanner(System.in);
+
+		// We don't ask the user what address they'd like to connect to; we
+		// only ask them for a port.  In particular, we're asking the user to
+		// tell us the port that they'd like to listen on.  Listening just 
+		// means waiting for someone to connect to the server's address on the
+		// same port.  When someone connects on that port, a socket is created
+		// and the conversation can proceed.
+		System.out.print("Listen port: ");
+		int port = Integer.parseInt(consoleIn.nextLine());
+
+		// A ServerSocket implements "listening."  We tell it
+		// what port to listen on when we create it.
+		ServerSocket serverSocket = new ServerSocket(port);
+		System.out.println("Waiting for connection...");
+
+		// We call accept() when we want the program to suspend until 
+		// a connection is made.  So, at this point, the server just 
+		/  waits until a client connects.
+		Socket socket = serverSocket.accept();
+
+		// Once accept() returns a Socket, there is a connection and the
+		// conversation can proceed.  The remaining code in this program is
+		// very similar to the client: the difference is that the server
+		// doesn't speak first.
+		System.out.println("Connection accepted!");
+		
+		Scanner socketIn = new Scanner(socket.getInputStream());
+		PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true);
+		
+		boolean done = false;
+		do
+		{
+			// Get a message from the client; if it's empty; we're done
+			String message = socketIn.nextLine();
+			if (message.length() == 0)
+			{
+				System.out.println("Client ended conversation");
+				done = true;
+			}
+			else
+			{
+				System.out.println("Message: " + message);
+			}
+			// Message received; send a response. If the 
+			// response is empty, we're done
+			if (!done)
+			{
+				System.out.print("Response: ");
+				String response = consoleIn.nextLine();
+
+				if (response.length() != 0)
+					socketOut.println(response);
+				else
+				{
+					System.out.println("Ending conversation");
+					socketOut.println("");
+					done = true;
+				}
+			}
+		} while (!done);
+
+		System.out.println("Closing connection");
+		socket.close();
+	}
+}
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

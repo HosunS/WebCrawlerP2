@@ -1,0 +1,246 @@
+¦Ifinal_url¢DtypeEvaluex9https://www.ics.uci.edu/~thornton/ics45c/Notes/Constness/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE17586¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 14 Jan 2019 23:38:30 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"44b2-57f738ac9c980"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 20:06:59 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYD²<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC
+ "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../../course.css" type="text/css" />
+
+<title>ICS 45C Winter 2019, Notes and Examples: Constness</title>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<p>
+ICS 45C Winter 2019 |
+<a href="../../index.html">News</a> |
+<a href="../../CourseReference.html">Course Reference</a> |
+<a href="../../Schedule.html">Schedule</a> |
+<a href="../../ProjectGuide">Project Guide</a> |
+<a href="../../Notes">Notes and Examples</a> |
+<a href="http://www.ics.uci.edu/~thornton/">About Alex</a>
+</p>
+
+<hr />
+
+</div>
+
+<div class="header">
+
+<p>ICS 45C Winter 2019<br />
+   Notes and Examples: Constness</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">The need for specifying constness</p>
+
+<p>We've seen many times this quarter that C++ is a language that takes the notion of types very seriously, and that it requires the same of you.  By encoding your intent &mdash; what type of value can be stored in a variable, what type of parameter can be passed to a function, and so on &mdash; the compiler is able to verify that intent statically, before the program is ever allowed to run.  If you write code that violates your own stated intent, what you've got is a program bug, so rather than allowing that bug to persist in a running program, C++ will require that you fix it before the program successfully compiles.</p>
+
+<p>C++ actually provides a much richer notation for describing types than you might first imagine.  While there is complexity in the notation, the benefit is that you're able to encode a lot of useful information about your intent, which helps not only a human reader, but also the compiler.</p>
+
+<p>One very useful concept included in C++'s type system is the ability to express your intent <i>not</i> to change a value.  Any attempt to change a value in places where you've said you wouldn't can then be reported as a compile-time error, as just another violation of your own stated intent; there's a really good chance that these are program bugs, so it's better to find out about them sooner rather than later.  As it turns out, when you promise not to change something, you can also enable the compiler to perform optimizations it might not otherwise be able to perform.  Since the compiler, too, is sure that a value won't change, it might be able to make profitable changes to the code it generates based on that assumption.</p>
+
+<p>There is a single keyword in C++ that embodies the concept of your intent not to change a value: <b>const</b>.  The <b>const</b> keyword can appear in a variety of contexts and it means subtly different things in each of them, but its meaning always centers around your intent not to introduce change, and your desire for protection against violating that intent.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Constant variables</p>
+
+<p>Declaring a variable whose value can't be changed is as simple as prepending the word <b>const</b> to its type.  Note that <b>const</b> is actually part of the variable's type.  For example, consider these two declarations:</p>
+
+<blockquote><pre>
+const int x = 3;
+const std::string name = "Boo";
+</pre></blockquote>
+
+<p>Like many of the more complex type declarations in C++, it's easiest to read these from right to left, so we would say that "x is an integer constant" and that "name is a string constant."  In both cases, we've given these variables a value at initialization, and it's important to note that this is a requirement for constant variables of the built-in types (like <b>int</b>, <b>double</b>, and <b>bool</b>).  Either way, once a constant variable has been initialized, its value can never be changed again, and any attempt to do so will result in a compile-time error, so these statements would be erroneous:</p>
+
+<blockquote><pre>
+x = 9;
+name = "Thornton";
+</pre></blockquote>
+
+<p>What you are and aren't allowed to do with a <b>const</b> variable depends partly on its type.  For a <b>const int</b>, the promise seems clear enough: You can read its value but not assign to it.  But for a <b>const std::string</b>, it's a bit murkier, because there are not only assignment operators, but other operators like <b>+=</b>, as well as member functions that you can call on them.  For example, consider the following examples; some of them are legal and some aren't.</p>
+
+<blockquote><pre>
+std::cout &lt;&lt; name &lt;&lt; std::endl;               // legal, because it only reads the value
+std::cout &lt;&lt; name.length() &lt;&lt; std::endl;      // legal, because it only obtains the value's length
+name += "Thornton";                           // illegal, because it changes the value
+name.clear();                                 // illegal, because it changes the value
+std::string copy = name;                      // legal, because it doesn't change the value, but only makes a copy of it
+copy.clear();                                 // legal, because it only changes the copy
+</pre></blockquote>
+
+<p>In all of these cases, the legality or lack thereof is driven by a single underlying factor: The value of <b>name</b> is not allowed to change.  So, of course, printing that value is legal because it doesn't change it.  Asking for its length doesn't change it, so that's fine, too.  Appending a string to it is problematic, because this modifies <b>name</b>.  The <b>clear</b> member function removes all characters from <b>name</b>, so that's a change and is, thus, illegal.  Making a copy of <b>name</b> into a separate variable called <b>copy</b> is fine, because <b>name</b> doesn't change, and we don't even have to promise not to change <b>copy</b>; any change to <b>copy</b> will affect only <b>copy</b>, but not <b>name</b>, so even clearing <b>copy</b> is fine.</p>
+
+<p>We'll see that there are some challenging details here, but, suffice it to say, the compiler is aware of the distinction between what operations are safe on constant values of properly-designed types.  One of the hallmarks of a properly-designed type is making that distinction, so we'll need to be aware of this when we design our own types, as well.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">On the viral nature of constness</p>
+
+<p>The bargain you're making with a <b>const</b> variable is not just about the variable; it's about the variable's <i>value</i>.  Let's make sure we understand exactly what bargain we're making with the compiler, because that's vital to being able to use <b>const</b> correctly.  When you include <b>const</b> in the type of a variable <b>x</b>, what you're saying to the compiler is this:</p>
+
+<ul>
+  <li><i>I want to be sure that I do not do anything that changes the value of <b>x</b>.  And if I do something that introduces even the possibility of <b>x</b>'s value changing, I expect you to report an error.</i></li>
+</ul>
+
+<p>The bit about introducing "even the possibility of <b>x</b>'s value changing" is important, because it limits things more than you might first consider.  There are ways to change the value of a variable <b>x</b> without assigning directly to it, particularly when you consider the effect of pointers and references, which allow you to do things like this:</p>
+
+<ul>
+  <li>Initialize a reference <b>r</b> so that it refers to the variable <b>x</b>, then assign a new value to <b>r</b>.</li>
+  <li>Point a pointer <b>p</b> to the variable <b>x</b> (i.e., store <b>x</b>'s address in <b>p</b>), then assign a new value to <b>*p</b>.</li>
+  <li>Pass <b>x</b> as an argument to a pass-by-reference parameter, then assign to that parameter within the function.</li>
+</ul>
+
+<p>So the compiler has to be more aggressive about enforcing the bargain than you might initially think.  Let's consider some of the following declarations and decide whether they're legal or illegal.</p>
+
+<blockquote><pre>
+const int x = 3;
+const int y = x;
+int z = x;
+const int w = z;
+int&amp; r = x;
+int* p = &amp;x;
+</pre></blockquote>
+
+<ul>
+  <li>The first one is, of course, legal; we're just giving the constant variable <b>x</b> the value 3.</li>
+  <li>Assigning <b>x</b> into the constant variable <b>y</b> is fine; <b>y</b> is now a separate copy of <b>x</b> that is separately guaranteed not to change (and, in fact, the compiler may even be able to optimize away the copy, since it knows that both are constant).</li>
+  <li>Assigning <b>x</b> into <b>z</b> is also perfectly legal, because even though we haven't promised not to change <b>z</b>, <b>z</b> is a separate copy of <b>x</b>'s value, so changing <b>z</b> subsequently will have no effect on <b>x</b>.</li>
+  <li>Assigning <b>z</b> into <b>w</b> is also legal, because even though we haven't promised not to change <b>z</b>, making a copy of it and storing it in <b>w</b> is fine, because changing <b>z</b> will have no effect on <b>w</b>, and because <i>not being able to</i> change <b>w</b> won't preclude us from changing <b>z</b> if we want to.</li>
+  <li>Referring <b>r</b> to <b>x</b> is illegal, because it would introduce the possibility of assigning into <b>r</b>, which would, in turn, change the constant value of <b>x</b>.</li>
+  <li>Pointing <b>p</b> to <b>x</b> is illegal, because it would introduce the possibility of assigning into <b>*p</b>, which would, in turn, change the constant value of <b>x</b>.</li>
+</ul>
+
+<p>What these examples show us is that <b>const</b> is difficult to introduce into a program in a halfway manner.  You either have to embrace the concept fully throughout your program &mdash; as we'll do in this course &mdash; or leave it aside altogether, but trying to mix code that is <b>const</b>-correct with code that isn't can be very difficult indeed, because you'll find yourself unable to pass <b>const</b>-protected arguments to functions that do not make the same promises about their parameters.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Using const with references</p>
+
+<p>Just as you can include <b>const</b> in the declaration of a type such as an <b>int</b>, you can also include <b>const</b> in the declaration of a reference type.  Syntactically, you do it the same way: by prepending the word <b>const</b> to the type.</p>
+
+<blockquote><pre>
+int x = 3;
+const int&amp; y = x;
+</pre></blockquote>
+
+<p>The first thing to consider is what we've stated is constant.  Reading the type declaration of <b>y</b> from right to left, we see that "<b>y</b> is a reference to an integer constant."  It's the integer that's constant here, not the reference.  (In truth, it's actually both, since references are effectively constant by definition; once you've referred a reference to an object, it's not permitted to later refer to another.)</p>
+
+<p>The second thing to consider is what we <i>haven't</i> stated is constant.  The declaration of <b>x</b> says that it's an integer, but makes no guarantees about its constness.  That means it'll be legal to modify <b>x</b> if we want, making it legal to assign it a new value, even though that will cause <b>y</b> to have a new value, too.</p>
+
+<p>The key thing to understand is that a reference to a constant doesn't necessarily guarantee that the value it refers to will never change; it simply guarantees that the <i>reference itself</i> will never be used to change the value.</p>
+
+<p>The ability to declare a reference to a constant solves a problem we had earlier: how to point a reference to a variable that's already <b>const</b>.  The solution is to use a reference with <b>const</b> in its type also.</p>
+
+<blockquote><pre>
+const int x = 3;
+const int&amp; y = x;
+</pre></blockquote>
+
+<p>It's legal to refer <b>y</b> to <b>x</b>.  Let's think about why:</p>
+
+<ul>
+  <li>We've promised not to do anything to change the value of the variable <b>x</b>.</li>
+  <li>We've introduced a reference <b>y</b> and referred it to <b>x</b>, but also made a promise not to use <b>y</b> to change the value it refers to.  <b>y</b> respects the same underlying promise as <b>x</b>, so this is allowed by the compiler.</li>
+</ul>
+
+<p class="subtitle">Parameters with <i>const</i> reference types</p>
+
+<p>As with many features in C++, when first confronted with the idea of a <b>const</b> reference type, you may wonder what practical usefulness it has.  It turns out that these are incredibly useful, because they allow us to bridge the gap between two things that we wanted, but couldn't yet achieve simultaneously.</p>
+
+<ul>
+  <li>Gaining the performance benefit of avoiding pass-by-value parameter passing, which is particularly important when objects are potentially expensive to copy (e.g., <b>std::string</b>s that might be quite long).</li>
+  <li>Maintaining the design benefit of <i>value semantics</i>, meaning that the function can't do anything to modify the value of the arguments we pass to it, even if we haven't spent the time to make a copy of them.</li>
+</ul>
+
+<p>Declaring a parameter's type to be a reference to a constant provides precisely this middle ground: The object is passed by reference, meaning that it's not copied, but the function guarantees that the object won't be changed.  For parameters of small, cheaply-copied types like <b>int</b>, this is not a step you would take.  But for a potentially large string, or a large or complex data structure, this is a hugely important technique.</p>
+
+<p>Consider, for example, a function that prints the characters of a string in reverse.  One way to implement that function might look like this:</p>
+
+<blockquote><pre>
+void printInReverse(const std::string&amp; s)
+{
+    for (int i = s.length() - 1; i &gt;= 0; --i)
+    {
+        std::cout << s[i];
+    }
+}
+</pre></blockquote>
+
+<p>There's no reason why this function should need to operate on a copy of the string passed into it, which might be quite large.  But there's also no reason why the function would ever make any change to the string that's passed to it.  The type <b>const std::string&amp;</b> captures this idea perfectly.</p>
+
+<p>There's one more useful wrinkle.  As we saw before, one thing you give up when you use pass-by-reference parameter passing is the ability to pass an rvalue as an argument.  This restriction is lifted for parameters with <b>const</b> reference types, since the problematic operation &mdash; changing an rvalue, which has no storage associated with it &mdash; is not an issue if the value can never be changed.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Using const with pointers</p>
+
+<p>The notion of constness becomes more complicated for pointers.  Recall that a pointer variable <b>p</b> gives you the ability to access two different things:</p>
+
+<ul>
+  <li>The address that the pointer points to, which you access by writing <b>p</b>.</li>
+  <li>The object stored at that address, which you access by writing <b>*p</b>.</li>
+</ul>
+
+<p>When you consider the effect that <b>const</b> might have on a pointer's type, you realize that there are four possibilities for what you might like to hold constant:</p>
+
+<ul>
+  <li>Nothing; either <b>p</b> or <b>*p</b> can change.  (This is the default for a pointer, when you don't specify <b>const</b> anywhere in the pointer's type.)</li>
+  <li>Hold the pointer <b>p</b> constant (i.e., you can't point it somewhere else), but allow <b>*p</b> to change.</li>
+  <li>Hold <b>*p</b> constant (i.e., you can't change the value the pointer points to), but allow <b>p</b> to be pointed somewhere else.</li>
+  <li>Hold both the pointer <b>p</b> and the value <b>*p</b> to be constant (i.e., you can't change the value the pointer points to, and you can't point it somewhere else).</li>
+</ul>
+
+<p>Given that we might like to say any of these things, the question is simply one of syntax.  How do we say these things?  The answer is that we have to put the word <b>const</b> in the correct places, and the trick lies in what we've learned about reading type declarations from right to left.  Consider these four type declarations:</p>
+
+<blockquote><pre>
+int* p;
+const int* q;
+int* const r;
+const int* const s;
+</pre></blockquote>
+
+<p>Reading these declarations from right to left, we see that these type declarations represent the four possibilities we might like to specify.</p>
+
+<ul>
+  <li><i><b>p</b> is a pointer to an <b>int</b>.</i>  Neither the pointer nor the value it points to are <b>const</b>-protected.</li>
+  <li><i><b>q</b> is a pointer to an <b>int</b> constant.</i>  The value that <b>q</b> points to cannot be changed via <b>q</b> (e.g., attempting to assign to <b>*q</b> will be an error), but <b>q</b> can be pointed somewhere else.</li>
+  <li><i><b>r</b> is a constant pointer to an <b>int</b>.</i>  It will be possible to modify the value <b>r</b> points to, but <b>r</b> cannot be pointed anywhere else.</li>
+  <li><i><b>s</b> is a constant pointer to an <b>int</b> constant.</i>  It will be illegal to change both <b>s</b> and <b>*s</b>.</li>
+</ul>
+
+<p>None of these is better than another; they all represent different constraints that we might reasonably want to express.  We'll see examples of these as we progress this quarter.</p>
+
+</div>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

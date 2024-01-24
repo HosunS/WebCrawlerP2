@@ -1,0 +1,238 @@
+¦Ifinal_url¢DtypeEvaluexThttps://www.ics.uci.edu/~jacobson/cs122b/Project/06-Phase3SuppSW/LEDAforPostgresql.cLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD8761¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 15 Nov 2008 03:29:58 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"2239-45bb1f5cc7980"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 06:01:26 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY"9/* Copyright (c) 2000 Timothy H. Keitt */
+/* Licence: GPL version 2 or higher (see http://www.gnu.org/) */
+
+/* Modified by Norman Jacobson to be compatible with Type 1 */
+/* C functions and to compile and link properly */
+/* with Visual Studio (Express) 90 on Windows XP */
+/* September 2008 */
+
+/* Minor typo in comments fixed by Norman Jacobson, November 2008 */
+
+/* Modifications to use 32 bit time, avoid BUILDING_DLL,
+ * ensure thet modules are declared as export (dllexport)
+ * and redefintion of PG_MODULE_MAGIC and PG_FUNC_INVO_V1
+ * to work properly in a Visal Studio C/Windows environment
+ * from an example posted to the postgres pgsql-general
+ * mailing list on 5 May 2008 by Craig Ringer
+ */
+
+/* To compile and link with Visual Studio 9.0, call up
+ * the Visual Studio 2008 command prompt
+ * (not the Windows console DOS window--the standard
+ * command prompt does not know where needed C libraries are)
+ * and issue
+ * cl /I<location of postgreSQL 8.3>\include\server
+      /I<location of postgreSQL 8.3>\include\server\port\win32
+      /c <path to this program>LEDAforPostgresql.c"
+ * link /DLL LEDAforPostgresql.obj <location of postgreSQL 8.3>\bin\postgres.lib
+ *
+ * Place resulting ldist.dll into <location of postrgreSQL 8.3>\lib
+ * to make it readily available to postgreSQL databases.
+ *
+ * Note fixes need to be made to pg_config_os.h and
+ * libintl.h added to <location of postgreSQL 8.3>/include/server/port/win32
+ * for linking to suceed; for details, see
+ * http://www.ics.uci.edu/~jacobson/cs122b/Project/03-Phase0.html
+ * and the Ringer email thread noted above.
+ */
+
+/* Use 32-bit timer (provided header file uses 64-bit timer, not
+ * compatible with Windows postgreSQL versions */
+
+#ifndef _USE_32BIT_TIME_T
+  #define _USE_32BIT_TIME_T
+#endif
+
+/* BUILDING_DLL causes the declarations in Pg's headers to be declared
+ * __declspec(dllexport) which will break DLL linkage. */
+#ifdef BUILDING_DLL
+  #error Do not define BUILDING_DLL when building extension libraries
+#endif
+
+/* Ensure that Pg_module_function and friends are declared __declspec(dllexport) */
+#ifndef BUILDING_MODULE
+  #define BUILDING_MODULE
+#endif
+
+#include "postgres.h"
+#include <string.h>
+#include "fmgr.h"
+#include "utils/geo_decls.h"
+
+/*--------------- BEGIN REDEFINITION OF PG MACROS -------------------
+ *
+ * These rewritten versions of PG_MODULE_MAGIC and PG_FUNCTION_INFO_V1
+ * declare the module functions as __declspec(dllexport) when building
+ * a module. They also provide PGMODULEEXPORT for exporting functions
+ * in user DLLs.
+ */
+#undef PG_MODULE_MAGIC
+#undef PG_FUNCTION_INFO_V1
+
+#define PGMODULEEXPORT __declspec (dllexport)
+
+#define PG_MODULE_MAGIC \
+PGMODULEEXPORT const Pg_magic_struct * \
+PG_MAGIC_FUNCTION_NAME(void) \
+{ \
+	static const Pg_magic_struct Pg_magic_data = PG_MODULE_MAGIC_DATA; \
+	return &Pg_magic_data; \
+} \
+extern int no_such_variable
+
+#define PG_FUNCTION_INFO_V1(funcname) \
+PGMODULEEXPORT const Pg_finfo_record *  \
+CppConcat(pg_finfo_,funcname) (void) \
+{ \
+	static const Pg_finfo_record my_finfo = { 1 }; \
+	return &my_finfo; \
+} \
+extern int no_such_variable
+
+/*--------------- END REDEFINITION OF PG MACROS -------------------*/
+
+#define STATIC_SIZE 32
+
+/* This must be changed if STATIC_SIZE is changed */
+static int4 static_array[STATIC_SIZE][STATIC_SIZE] = {
+{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18,
+19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31},
+{1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{11, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{13, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{17, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{20, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{21, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{22, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{23, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{27, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{28, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+{30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0}, {31, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0}};
+
+PG_MODULE_MAGIC;
+
+PG_FUNCTION_INFO_V1(LEDA);
+
+PGMODULEEXPORT Datum LEDA(PG_FUNCTION_ARGS)
+{
+    text *s1 = PG_GETARG_TEXT_P(0);
+    text *s2 = PG_GETARG_TEXT_P(1);
+
+/* Fast version for strings up to STATIC_SIZE characters */
+// int4 levenshtein_distance(text *s1, text *s2)
+
+ register int i, j, l, m, n, add, rows, columns;
+
+ columns = VARSIZE(s1) - VARHDRSZ + 1;
+ rows = VARSIZE(s2) - VARHDRSZ + 1;
+
+
+ /* Use slower dynamically allocated version for larger strings */
+ if (columns > STATIC_SIZE || rows > STATIC_SIZE)
+   // return levenshtein_distance_dynamic(s1, s2);
+   PG_RETURN_INT32(levenshtein_distance_dynamic(s1, s2));
+
+
+
+for (j=1; j<rows; ++j) { for (i=1; i<columns; ++i) {
+
+if (VARDATA(s1)[i-1] == VARDATA(s2)[j-1]) add=0; else add=1;
+
+m = 1 + static_array[j-1][i]; l = 1 + static_array[j][i-1]; n = add + static_array[j-1][i-1];
+
+static_array[j][i] = (m < l ? (m < n ? m : n): (l < n ? l : n));
+
+   } /* next column (i) */
+ } /* next row (j) */
+
+
+//return static_array[rows-1][columns-1];
+
+PG_RETURN_INT32(static_array[rows-1][columns-1]);
+
+
+} /* end levenshtein_distance(text *s1, text *s2) */
+
+int4
+levenshtein_distance_dynamic(text *s1, text *s2) { register int i, j, l, m, n, add, rows, columns, out;
+int4 *dynamic_array;
+
+ columns = VARSIZE(s1) - VARHDRSZ + 1;
+ rows = VARSIZE(s2) - VARHDRSZ + 1;
+
+
+ dynamic_array = (int4 *) palloc(rows * columns * sizeof(int4));
+ if (dynamic_array == NULL) return -1;
+
+
+for (i=0; i<columns; ++i) dynamic_array[i] = i; for (j=0; j<rows; ++j) dynamic_array[j*columns] = j;
+
+for (j=1; j<rows; ++j) { for (i=1; i<columns; ++i) {
+
+if (VARDATA(s1)[i-1] == VARDATA(s2)[j-1]) add=0; else add=1;
+
+m = 1 + dynamic_array[(j-1)*columns+i]; l = 1 + dynamic_array[j*columns+i-1]; n = add + dynamic_array[(j-1)*columns+i-1];
+
+     dynamic_array[j*columns+i] =
+	(m < l ? (m < n ? m : n): (l < n ? l : n));
+
+
+   } /* next column (i) */
+ } /* next row (j) */
+
+
+out = dynamic_array[(rows-1)*columns+columns-1];
+
+pfree(dynamic_array);
+
+return out;
+
+} /* end levenshtein_distance_dynamic(text *s1, text *s2) */
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

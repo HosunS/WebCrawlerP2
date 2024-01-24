@@ -1,0 +1,233 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:12:42 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY‹
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Communities and Crime Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Communities and Crime Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/communities/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/communities/communities.names"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: Communities within the United States. The data combines socio-economic data from the 1990 US Census, law enforcement data from the 1990 US LEMAS survey, and crime data from the 1995 FBI UCR.</p>
+     </td>
+     <td><img
+src="../assets/MLimages/Large183.jpg"
+hspace=20 vspace=10  /> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">1994</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Social</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">128</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2009-07-13</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Regression</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">Yes</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">219100</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Creator: Michael Redmond (<u>redmond <b>'@'</b> lasalle.edu</u>); Computer Science; La Salle University; Philadelphia, PA, 19141, USA<br>    -- culled from 1990 US Census, 1995 US FBI Uniform Crime Report, 1990 US Law Enforcement Management and Administrative Statistics Survey, available from ICPSR at U of Michigan.<br>  -- Donor: Michael Redmond (<u>redmond <b>'@'</b> lasalle.edu</u>); Computer Science; La Salle University; Philadelphia, PA, 19141, USA<br>  -- Date: July 2009</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">  Many variables are included so that algorithms that select or learn weights for attributes could be tested. However, clearly unrelated attributes were not included; attributes were picked if there was any plausible connection to crime (N=122), plus the attribute to be predicted (Per Capita Violent Crimes). The variables included in the dataset involve the community, such as the percent of the population considered urban, and the median family income, and involving law enforcement, such as per capita number of police officers, and percent of officers assigned to drug units. <br> <br> The per capita violent crimes variable was calculated using population and the sum of crime variables considered violent crimes in the United States: murder, rape, robbery, and assault. There was apparently some controversy in some states concerning the counting of rapes. These resulted in missing values for rape, which resulted in incorrect values for per capita violent crime. These cities are not included in the dataset. Many of these omitted communities were from the midwestern USA.<br><br>  Data is described below based on original values. All numeric data was normalized into the decimal range  0.00-1.00 using an Unsupervised, equal-interval binning method. Attributes retain their distribution and skew (hence for example the population attribute has a mean value of  0.06 because most communities are small). E.g. An attribute described as 'mean people per household' is actually the normalized (0-1) version of that value.<br><br>  The normalization preserves rough ratios of values WITHIN an attribute (e.g. double the value for double the population within the available precision - except for extreme values (all values more than 3 SD above the mean are normalized to 1.00; all values more than 3 SD below the mean are nromalized to  0.00)).<br><br>  However, the normalization does not preserve relationships between values BETWEEN attributes (e.g. it would not be meaningful to compare the value for whitePerCap with the value for blackPerCap for a community)<br><br>  A limitation was that the LEMAS survey was of the police departments with at least 100 officers, plus a random sample of smaller departments. For our purposes, communities not found in both census and crime datasets were omitted. Many communities are missing LEMAS data.<br><br>.arff header for Weka:<br><br>@relation crimepredict<br><br>@attribute state numeric<br>@attribute county numeric<br>@attribute community numeric<br>@attribute communityname string<br>@attribute fold numeric<br>@attribute population numeric<br>@attribute householdsize numeric<br>@attribute racepctblack numeric<br>@attribute racePctWhite numeric<br>@attribute racePctAsian numeric<br>@attribute racePctHisp numeric<br>@attribute agePct12t21 numeric<br>@attribute agePct12t29 numeric<br>@attribute agePct16t24 numeric<br>@attribute agePct65up numeric<br>@attribute numbUrban numeric<br>@attribute pctUrban numeric<br>@attribute medIncome numeric<br>@attribute pctWWage numeric<br>@attribute pctWFarmSelf numeric<br>@attribute pctWInvInc numeric<br>@attribute pctWSocSec numeric<br>@attribute pctWPubAsst numeric<br>@attribute pctWRetire numeric<br>@attribute medFamInc numeric<br>@attribute perCapInc numeric<br>@attribute whitePerCap numeric<br>@attribute blackPerCap numeric<br>@attribute indianPerCap numeric<br>@attribute AsianPerCap numeric<br>@attribute OtherPerCap numeric<br>@attribute HispPerCap numeric<br>@attribute NumUnderPov numeric<br>@attribute PctPopUnderPov numeric<br>@attribute PctLess9thGrade numeric<br>@attribute PctNotHSGrad numeric<br>@attribute PctBSorMore numeric<br>@attribute PctUnemployed numeric<br>@attribute PctEmploy numeric<br>@attribute PctEmplManu numeric<br>@attribute PctEmplProfServ numeric<br>@attribute PctOccupManu numeric<br>@attribute PctOccupMgmtProf numeric<br>@attribute MalePctDivorce numeric<br>@attribute MalePctNevMarr numeric<br>@attribute FemalePctDiv numeric<br>@attribute TotalPctDiv numeric<br>@attribute PersPerFam numeric<br>@attribute PctFam2Par numeric<br>@attribute PctKids2Par numeric<br>@attribute PctYoungKids2Par numeric<br>@attribute PctTeen2Par numeric<br>@attribute PctWorkMomYoungKids numeric<br>@attribute PctWorkMom numeric<br>@attribute NumIlleg numeric<br>@attribute PctIlleg numeric<br>@attribute NumImmig numeric<br>@attribute PctImmigRecent numeric<br>@attribute PctImmigRec5 numeric<br>@attribute PctImmigRec8 numeric<br>@attribute PctImmigRec10 numeric<br>@attribute PctRecentImmig numeric<br>@attribute PctRecImmig5 numeric<br>@attribute PctRecImmig8 numeric<br>@attribute PctRecImmig10 numeric<br>@attribute PctSpeakEnglOnly numeric<br>@attribute PctNotSpeakEnglWell numeric<br>@attribute PctLargHouseFam numeric<br>@attribute PctLargHouseOccup numeric<br>@attribute PersPerOccupHous numeric<br>@attribute PersPerOwnOccHous numeric<br>@attribute PersPerRentOccHous numeric<br>@attribute PctPersOwnOccup numeric<br>@attribute PctPersDenseHous numeric<br>@attribute PctHousLess3BR numeric<br>@attribute MedNumBR numeric<br>@attribute HousVacant numeric<br>@attribute PctHousOccup numeric<br>@attribute PctHousOwnOcc numeric<br>@attribute PctVacantBoarded numeric<br>@attribute PctVacMore6Mos numeric<br>@attribute MedYrHousBuilt numeric<br>@attribute PctHousNoPhone numeric<br>@attribute PctWOFullPlumb numeric<br>@attribute OwnOccLowQuart numeric<br>@attribute OwnOccMedVal numeric<br>@attribute OwnOccHiQuart numeric<br>@attribute RentLowQ numeric<br>@attribute RentMedian numeric<br>@attribute RentHighQ numeric<br>@attribute MedRent numeric<br>@attribute MedRentPctHousInc numeric<br>@attribute MedOwnCostPctInc numeric<br>@attribute MedOwnCostPctIncNoMtg numeric<br>@attribute NumInShelters numeric<br>@attribute NumStreet numeric<br>@attribute PctForeignBorn numeric<br>@attribute PctBornSameState numeric<br>@attribute PctSameHouse85 numeric<br>@attribute PctSameCity85 numeric<br>@attribute PctSameState85 numeric<br>@attribute LemasSwornFT numeric<br>@attribute LemasSwFTPerPop numeric<br>@attribute LemasSwFTFieldOps numeric<br>@attribute LemasSwFTFieldPerPop numeric<br>@attribute LemasTotalReq numeric<br>@attribute LemasTotReqPerPop numeric<br>@attribute PolicReqPerOffic numeric<br>@attribute PolicPerPop numeric<br>@attribute RacialMatchCommPol numeric<br>@attribute PctPolicWhite numeric<br>@attribute PctPolicBlack numeric<br>@attribute PctPolicHisp numeric<br>@attribute PctPolicAsian numeric<br>@attribute PctPolicMinor numeric<br>@attribute OfficAssgnDrugUnits numeric<br>@attribute NumKindsDrugsSeiz numeric<br>@attribute PolicAveOTWorked numeric<br>@attribute LandArea numeric<br>@attribute PopDens numeric<br>@attribute PctUsePubTrans numeric<br>@attribute PolicCars numeric<br>@attribute PolicOperBudg numeric<br>@attribute LemasPctPolicOnPatr numeric<br>@attribute LemasGangUnitDeploy numeric<br>@attribute LemasPctOfficDrugUn numeric<br>@attribute PolicBudgPerPop numeric<br>@attribute ViolentCrimesPerPop numeric<br><br>@data<br><br>  </p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">Attribute Information: (122 predictive, 5 non-predictive, 1 goal)<br>  -- state: US state (by number) - not counted as predictive above, but if considered, should be consided nominal (nominal) <br>  -- county: numeric code for county - not predictive, and many missing values (numeric)<br>  -- community: numeric code for community - not predictive and many missing values (numeric)<br>  -- communityname: community name - not predictive - for information only (string)<br>  -- fold: fold number for non-random 10 fold cross validation, potentially useful for debugging, paired tests - not predictive (numeric)<br>  -- population: population for community: (numeric - decimal)<br>  -- householdsize: mean people per household (numeric - decimal)<br>  -- racepctblack: percentage of population that is african american (numeric - decimal)<br>  -- racePctWhite: percentage of population that is caucasian (numeric - decimal)<br>  -- racePctAsian: percentage of population that is of asian heritage (numeric - decimal)<br>  -- racePctHisp: percentage of population that is of hispanic heritage (numeric - decimal)<br>  -- agePct12t21: percentage of population that is 12-21 in age (numeric - decimal)<br>  -- agePct12t29: percentage of population that is 12-29 in age (numeric - decimal)<br>  -- agePct16t24: percentage of population that is 16-24 in age (numeric - decimal)<br>  -- agePct65up: percentage of population that is 65 and over in age (numeric - decimal)<br>  -- numbUrban: number of people living in areas classified as urban (numeric - decimal)<br>  -- pctUrban: percentage of people living in areas classified as urban (numeric - decimal)<br>  -- medIncome: median household income (numeric - decimal)<br>  -- pctWWage: percentage of households with wage or salary income in 1989 (numeric - decimal)<br>  -- pctWFarmSelf: percentage of households with farm or self employment income in 1989 (numeric - decimal)<br>  -- pctWInvInc: percentage of households with investment / rent income in 1989 (numeric - decimal)<br>  -- pctWSocSec: percentage of households with social security income in 1989 (numeric - decimal)<br>  -- pctWPubAsst: percentage of households with public assistance income in 1989 (numeric - decimal)<br>  -- pctWRetire: percentage of households with retirement income in 1989 (numeric - decimal)<br>  -- medFamInc: median family income (differs from household income for non-family households) (numeric - decimal)<br>  -- perCapInc: per capita income (numeric - decimal)<br>  -- whitePerCap: per capita income for caucasians (numeric - decimal)<br>  -- blackPerCap: per capita income for african americans (numeric - decimal)<br>  -- indianPerCap: per capita income for native americans (numeric - decimal)<br>  -- AsianPerCap: per capita income for people with asian heritage (numeric - decimal)<br>  -- OtherPerCap: per capita income for people with 'other' heritage (numeric - decimal)<br>  -- HispPerCap: per capita income for people with hispanic heritage (numeric - decimal)<br>  -- NumUnderPov: number of people under the poverty level (numeric - decimal)<br>  -- PctPopUnderPov: percentage of people under the poverty level (numeric - decimal)<br>  -- PctLess9thGrade: percentage of people 25 and over with less than a 9th grade education (numeric - decimal)<br>  -- PctNotHSGrad: percentage of people 25 and over that are not high school graduates (numeric - decimal)<br>  -- PctBSorMore: percentage of people 25 and over with a bachelors degree or higher education (numeric - decimal)<br>  -- PctUnemployed: percentage of people 16 and over, in the labor force, and unemployed (numeric - decimal)<br>  -- PctEmploy: percentage of people 16 and over who are employed (numeric - decimal)<br>  -- PctEmplManu: percentage of people 16 and over who are employed in manufacturing (numeric - decimal)<br>  -- PctEmplProfServ: percentage of people 16 and over who are employed in professional services (numeric - decimal)<br>  -- PctOccupManu: percentage of people 16 and over who are employed in manufacturing (numeric - decimal)   ########<br>  -- PctOccupMgmtProf: percentage of people 16 and over who are employed in management or professional occupations (numeric - decimal)<br>  -- MalePctDivorce: percentage of males who are divorced (numeric - decimal)<br>  -- MalePctNevMarr: percentage of males who have never married (numeric - decimal)<br>  -- FemalePctDiv: percentage of females who are divorced (numeric - decimal)<br>  -- TotalPctDiv: percentage of population who are divorced (numeric - decimal)<br>  -- PersPerFam: mean number of people per family (numeric - decimal)<br>  -- PctFam2Par: percentage of families (with kids) that are headed by two parents (numeric - decimal)<br>  -- PctKids2Par: percentage of kids in family housing with two parents (numeric - decimal)<br>  -- PctYoungKids2Par: percent of kids 4 and under in two parent households (numeric - decimal)<br>  -- PctTeen2Par: percent of kids age 12-17 in two parent households (numeric - decimal)<br>  -- PctWorkMomYoungKids: percentage of moms of kids 6 and under in labor force (numeric - decimal)<br>  -- PctWorkMom: percentage of moms of kids under 18 in labor force (numeric - decimal)<br>  -- NumIlleg: number of kids born to never married (numeric - decimal)<br>  -- PctIlleg: percentage of kids born to never married (numeric - decimal)<br>  -- NumImmig: total number of people known to be foreign born (numeric - decimal)<br>  -- PctImmigRecent: percentage of _immigrants_ who immigated within last 3 years (numeric - decimal)<br>  -- PctImmigRec5: percentage of _immigrants_ who immigated within last 5 years (numeric - decimal)<br>  -- PctImmigRec8: percentage of _immigrants_ who immigated within last 8 years (numeric - decimal)<br>  -- PctImmigRec10: percentage of _immigrants_ who immigated within last 10 years (numeric - decimal)<br>  -- PctRecentImmig: percent of _population_ who have immigrated within the last 3 years (numeric - decimal)<br>  -- PctRecImmig5: percent of _population_ who have immigrated within the last 5 years (numeric - decimal)<br>  -- PctRecImmig8: percent of _population_ who have immigrated within the last 8 years (numeric - decimal)<br>  -- PctRecImmig10: percent of _population_ who have immigrated within the last 10 years (numeric - decimal)<br>  -- PctSpeakEnglOnly: percent of people who speak only English (numeric - decimal)<br>  -- PctNotSpeakEnglWell: percent of people who do not speak English well (numeric - decimal)<br>  -- PctLargHouseFam: percent of family households that are large (6 or more) (numeric - decimal)<br>  -- PctLargHouseOccup: percent of all occupied households that are large (6 or more people) (numeric - decimal)<br>  -- PersPerOccupHous: mean persons per household (numeric - decimal)<br>  -- PersPerOwnOccHous: mean persons per owner occupied household (numeric - decimal)<br>  -- PersPerRentOccHous: mean persons per rental household (numeric - decimal)<br>  -- PctPersOwnOccup: percent of people in owner occupied households (numeric - decimal)<br>  -- PctPersDenseHous: percent of persons in dense housing (more than 1 person per room) (numeric - decimal)<br>  -- PctHousLess3BR: percent of housing units with less than 3 bedrooms (numeric - decimal)<br>  -- MedNumBR: median number of bedrooms (numeric - decimal)<br>  -- HousVacant: number of vacant households (numeric - decimal)<br>  -- PctHousOccup: percent of housing occupied (numeric - decimal)<br>  -- PctHousOwnOcc: percent of households owner occupied (numeric - decimal)<br>  -- PctVacantBoarded: percent of vacant housing that is boarded up (numeric - decimal)<br>  -- PctVacMore6Mos: percent of vacant housing that has been vacant more than 6 months (numeric - decimal)<br>  -- MedYrHousBuilt: median year housing units built (numeric - decimal)<br>  -- PctHousNoPhone: percent of occupied housing units without phone (in 1990, this was rare!) (numeric - decimal)<br>  -- PctWOFullPlumb: percent of housing without complete plumbing facilities (numeric - decimal)<br>  -- OwnOccLowQuart: owner occupied housing - lower quartile value (numeric - decimal)<br>  -- OwnOccMedVal: owner occupied housing - median value (numeric - decimal)<br>  -- OwnOccHiQuart: owner occupied housing - upper quartile value (numeric - decimal)<br>  -- RentLowQ: rental housing - lower quartile rent (numeric - decimal)<br>  -- RentMedian: rental housing - median rent (Census variable H32B from file STF1A) (numeric - decimal)<br>  -- RentHighQ: rental housing - upper quartile rent (numeric - decimal)<br>  -- MedRent: median gross rent (Census variable H43A from file STF3A - includes utilities) (numeric - decimal)<br>  -- MedRentPctHousInc: median gross rent as a percentage of household income (numeric - decimal)<br>  -- MedOwnCostPctInc: median owners cost as a percentage of household income - for owners with a mortgage (numeric - decimal)<br>  -- MedOwnCostPctIncNoMtg: median owners cost as a percentage of household income - for owners without a mortgage (numeric - decimal)<br>  -- NumInShelters: number of people in homeless shelters (numeric - decimal)<br>  -- NumStreet: number of homeless people counted in the street (numeric - decimal)<br>  -- PctForeignBorn: percent of people foreign born (numeric - decimal)<br>  -- PctBornSameState: percent of people born in the same state as currently living (numeric - decimal)<br>  -- PctSameHouse85: percent of people living in the same house as in 1985 (5 years before) (numeric - decimal)<br>  -- PctSameCity85: percent of people living in the same city as in 1985 (5 years before) (numeric - decimal)<br>  -- PctSameState85: percent of people living in the same state as in 1985 (5 years before) (numeric - decimal)<br>  -- LemasSwornFT: number of sworn full time police officers (numeric - decimal)<br>  -- LemasSwFTPerPop: sworn full time police officers per 100K population (numeric - decimal)<br>  -- LemasSwFTFieldOps: number of sworn full time police officers in field operations (on the street as opposed to administrative etc) (numeric - decimal)<br>  -- LemasSwFTFieldPerPop: sworn full time police officers in field operations (on the street as opposed to administrative etc) per 100K population (numeric - decimal)<br>  -- LemasTotalReq: total requests for police (numeric - decimal)<br>  -- LemasTotReqPerPop: total requests for police per 100K popuation (numeric - decimal)<br>  -- PolicReqPerOffic: total requests for police per police officer (numeric - decimal)<br>  -- PolicPerPop: police officers per 100K population (numeric - decimal)<br>  -- RacialMatchCommPol: a measure of the racial match between the community and the police force. High values indicate proportions in community and police force are similar (numeric - decimal)<br>  -- PctPolicWhite: percent of police that are caucasian (numeric - decimal)<br>  -- PctPolicBlack: percent of police that are african american (numeric - decimal)<br>  -- PctPolicHisp: percent of police that are hispanic (numeric - decimal)<br>  -- PctPolicAsian: percent of police that are asian (numeric - decimal)<br>  -- PctPolicMinor: percent of police that are minority of any kind (numeric - decimal)<br>  -- OfficAssgnDrugUnits: number of officers assigned to special drug units (numeric - decimal)<br>  -- NumKindsDrugsSeiz: number of different kinds of drugs seized (numeric - decimal)<br>  -- PolicAveOTWorked: police average overtime worked (numeric - decimal)<br>  -- LandArea: land area in square miles (numeric - decimal)<br>  -- PopDens: population density in persons per square mile (numeric - decimal)<br>  -- PctUsePubTrans: percent of people using public transit for commuting (numeric - decimal)<br>  -- PolicCars: number of police cars (numeric - decimal)<br>  -- PolicOperBudg: police operating budget (numeric - decimal)<br>  -- LemasPctPolicOnPatr: percent of sworn full time police officers on patrol (numeric - decimal)<br>  -- LemasGangUnitDeploy: gang unit deployed (numeric - decimal - but really ordinal - 0 means NO, 1 means YES,  0.5 means Part Time)<br>  -- LemasPctOfficDrugUn: percent of officers assigned to drug units (numeric - decimal)<br>  -- PolicBudgPerPop: police operating budget per population (numeric - decimal)<br>  -- ViolentCrimesPerPop: total number of violent crimes per 100K popuation (numeric - decimal) GOAL attribute (to be predicted)<br><br>Summary Statistics:<br>			Min	Max	 Mean	 SD	Correl	Median	 Mode	Missing<br>population		0	1	 0.06	 0.13	 0.37	 0.02	 0.01	0<br>householdsize		0	1	 0.46	 0.16	-0.03	 0.44	 0.41	0<br>racepctblack		0	1	 0.18	 0.25	 0.63	 0.06	 0.01	0<br>racePctWhite		0	1	 0.75	 0.24	-0.68	 0.85	 0.98	0<br>racePctAsian		0	1	 0.15	 0.21	 0.04	 0.07	 0.02	0<br>racePctHisp		0	1	 0.14	 0.23	 0.29	 0.04	 0.01	0<br>agePct12t21		0	1	 0.42	 0.16	 0.06	 0.4	 0.38	0<br>agePct12t29		0	1	 0.49	 0.14	 0.15	 0.48	 0.49	0<br>agePct16t24		0	1	 0.34	 0.17	 0.10	 0.29	 0.29	0<br>agePct65up		0	1	 0.42	 0.18	 0.07	 0.42	 0.47	0<br>numbUrban		0	1	 0.06	 0.13	 0.36	 0.03	 0	0<br>pctUrban		0	1	 0.70	 0.44	 0.08	 1	 1	0<br>medIncome		0	1	 0.36	 0.21	-0.42	 0.32	 0.23	0<br>pctWWage		0	1	 0.56	 0.18	-0.31	 0.56	 0.58	0<br>pctWFarmSelf		0	1	 0.29	 0.20	-0.15	 0.23	 0.16	0<br>pctWInvInc		0	1	 0.50	 0.18	-0.58	 0.48	 0.41	0<br>pctWSocSec		0	1	 0.47	 0.17	 0.12	 0.475	 0.56	0<br>pctWPubAsst		0	1	 0.32	 0.22	 0.57	 0.26	 0.1	0<br>pctWRetire		0	1	 0.48	 0.17	-0.10	 0.47	 0.44	0<br>medFamInc		0	1	 0.38	 0.20	-0.44	 0.33	 0.25	0<br>perCapInc		0	1	 0.35	 0.19	-0.35	 0.3	 0.23	0<br>whitePerCap		0	1	 0.37	 0.19	-0.21	 0.32	 0.3	0<br>blackPerCap		0	1	 0.29	 0.17	-0.28	 0.25	 0.18	0<br>indianPerCap		0	1	 0.20	 0.16	-0.09	 0.17	 0	0<br>AsianPerCap		0	1	 0.32	 0.20	-0.16	 0.28	 0.18	0<br>OtherPerCap		0	1	 0.28	 0.19	-0.13	 0.25	 0	1<br>HispPerCap		0	1	 0.39	 0.18	-0.24	 0.345	 0.3	0<br>NumUnderPov		0	1	 0.06	 0.13	 0.45	 0.02	 0.01	0<br>PctPopUnderPov		0	1	 0.30	 0.23	 0.52	 0.25	 0.08	0<br>PctLess9thGrade		0	1	 0.32	 0.21	 0.41	 0.27	 0.19	0<br>PctNotHSGrad		0	1	 0.38	 0.20	 0.48	 0.36	 0.39	0<br>PctBSorMore		0	1	 0.36	 0.21	-0.31	 0.31	 0.18	0<br>PctUnemployed		0	1	 0.36	 0.20	 0.50	 0.32	 0.24	0<br>PctEmploy		0	1	 0.50	 0.17	-0.33	 0.51	 0.56	0<br>PctEmplManu		0	1	 0.40	 0.20	-0.04	 0.37	 0.26	0<br>PctEmplProfServ		0	1	 0.44	 0.18	-0.07	 0.41	 0.36	0<br>PctOccupManu		0	1	 0.39	 0.20	 0.30	 0.37	 0.32	0<br>PctOccupMgmtProf	0	1	 0.44	 0.19	-0.34	 0.4	 0.36	0<br>MalePctDivorce		0	1	 0.46	 0.18	 0.53	 0.47	 0.56	0<br>MalePctNevMarr		0	1	 0.43	 0.18	 0.30	 0.4	 0.38	0<br>FemalePctDiv		0	1	 0.49	 0.18	 0.56	 0.5	 0.54	0<br>TotalPctDiv		0	1	 0.49	 0.18	 0.55	 0.5	 0.57	0<br>PersPerFam		0	1	 0.49	 0.15	 0.14	 0.47	 0.44	0<br>PctFam2Par		0	1	 0.61	 0.20	-0.71	 0.63	 0.7	0<br>PctKids2Par		0	1	 0.62	 0.21	-0.74	 0.64	 0.72	0<br>PctYoungKids2Par	0	1	 0.66	 0.22	-0.67	 0.7	 0.91	0<br>PctTeen2Par		0	1	 0.58	 0.19	-0.66	 0.61	 0.6	0<br>PctWorkMomYoungKids	0	1	 0.50	 0.17	-0.02	 0.51	 0.51	0<br>PctWorkMom		0	1	 0.53	 0.18	-0.15	 0.54	 0.57	0<br>NumIlleg		0	1	 0.04	 0.11	 0.47	 0.01	 0	0<br>PctIlleg		0	1	 0.25	 0.23	 0.74	 0.17	 0.09	0<br>NumImmig		0	1	 0.03	 0.09	 0.29	 0.01	 0	0<br>PctImmigRecent		0	1	 0.32	 0.22	 0.17	 0.29	 0	0<br>PctImmigRec5		0	1	 0.36	 0.21	 0.22	 0.34	 0	0<br>PctImmigRec8		0	1	 0.40	 0.20	 0.25	 0.39	 0.26	0<br>PctImmigRec10		0	1	 0.43	 0.19	 0.29	 0.43	 0.43	0<br>PctRecentImmig		0	1	 0.18	 0.24	 0.23	 0.09	 0.01	0<br>PctRecImmig5		0	1	 0.18	 0.24	 0.25	 0.08	 0.02	0<br>PctRecImmig8		0	1	 0.18	 0.24	 0.25	 0.09	 0.02	0<br>PctRecImmig10		0	1	 0.18	 0.23	 0.26	 0.09	 0.02	0<br>PctSpeakEnglOnly	0	1	 0.79	 0.23	-0.24	 0.87	 0.96	0<br>PctNotSpeakEnglWell	0	1	 0.15	 0.22	 0.30	 0.06	 0.03	0<br>PctLargHouseFam		0	1	 0.27	 0.20	 0.38	 0.2	 0.17	0<br>PctLargHouseOccup	0	1	 0.25	 0.19	 0.29	 0.19	 0.19	0<br>PersPerOccupHous	0	1	 0.46	 0.17	-0.04	 0.44	 0.37	0<br>PersPerOwnOccHous	0	1	 0.49	 0.16	-0.12	 0.48	 0.45	0<br>PersPerRentOccHous	0	1	 0.40	 0.19	 0.25	 0.36	 0.32	0<br>PctPersOwnOccup		0	1	 0.56	 0.20	-0.53	 0.56	 0.54	0<br>PctPersDenseHous	0	1	 0.19	 0.21	 0.45	 0.11	 0.06	0<br>PctHousLess3BR		0	1	 0.50	 0.17	 0.47	 0.51	 0.53	0<br>MedNumBR		0	1	 0.31	 0.26	-0.36	 0.5	 0.5	0<br>HousVacant		0	1	 0.08	 0.15	 0.42	 0.03	 0.01	0<br>PctHousOccup		0	1	 0.72	 0.19	-0.32	 0.77	 0.88	0<br>PctHousOwnOcc		0	1	 0.55	 0.19	-0.47	 0.54	 0.52	0<br>PctVacantBoarded	0	1	 0.20	 0.22	 0.48	 0.13	 0	0<br>PctVacMore6Mos		0	1	 0.43	 0.19	 0.02	 0.42	 0.44	0<br>MedYrHousBuilt		0	1	 0.49	 0.23	-0.11	 0.52	 0	0<br>PctHousNoPhone		0	1	 0.26	 0.24	 0.49	 0.185	 0.01	0<br>PctWOFullPlumb		0	1	 0.24	 0.21	 0.36	 0.19	 0	0<br>OwnOccLowQuart		0	1	 0.26	 0.22	-0.21	 0.18	 0.09	0<br>OwnOccMedVal		0	1	 0.26	 0.23	-0.19	 0.17	 0.08	0<br>OwnOccHiQuart		0	1	 0.27	 0.24	-0.17	 0.18	 0.08	0<br>RentLowQ		0	1	 0.35	 0.22	-0.25	 0.31	 0.13	0<br>RentMedian		0	1	 0.37	 0.21	-0.24	 0.33	 0.19	0<br>RentHighQ		0	1	 0.42	 0.25	-0.23	 0.37	 1	0<br>MedRent			0	1	 0.38	 0.21	-0.24	 0.34	 0.17	0<br>MedRentPctHousInc	0	1	 0.49	 0.17	 0.33	 0.48	 0.4	0<br>MedOwnCostPctInc	0	1	 0.45	 0.19	 0.06	 0.45	 0.41	0<br>MedOwnCostPctIncNoMtg	0	1	 0.40	 0.19	 0.05	 0.37	 0.24	0<br>NumInShelters		0	1	 0.03	 0.10	 0.38	 0	 0	0<br>NumStreet		0	1	 0.02	 0.10	 0.34	 0	 0	0<br>PctForeignBorn		0	1	 0.22	 0.23	 0.19	 0.13	 0.03	0<br>PctBornSameState	0	1	 0.61	 0.20	-0.08	 0.63	 0.78	0<br>PctSameHouse85		0	1	 0.54	 0.18	-0.16	 0.54	 0.59	0<br>PctSameCity85		0	1	 0.63	 0.20	 0.08	 0.67	 0.74	0<br>PctSameState85		0	1	 0.65	 0.20	-0.02	 0.7	 0.79	0<br>LemasSwornFT		0	1	 0.07	 0.14	 0.34	 0.02	 0.02	1675<br>LemasSwFTPerPop		0	1	 0.22	 0.16	 0.15	 0.18	 0.2	1675<br>LemasSwFTFieldOps	0	1	 0.92	 0.13	-0.33	 0.97	 0.98	1675<br>LemasSwFTFieldPerPop	0	1	 0.25	 0.16	 0.16	 0.21	 0.19	1675<br>LemasTotalReq		0	1	 0.10	 0.16	 0.35	 0.04	 0.02	1675<br>LemasTotReqPerPop	0	1	 0.22	 0.16	 0.27	 0.17	 0.14	1675<br>PolicReqPerOffic	0	1	 0.34	 0.20	 0.17	 0.29	 0.23	1675<br>PolicPerPop		0	1	 0.22	 0.16	 0.15	 0.18	 0.2	1675<br>RacialMatchCommPol	0	1	 0.69	 0.23	-0.46	 0.74	 0.78	1675<br>PctPolicWhite		0	1	 0.73	 0.22	-0.44	 0.78	 0.72	1675<br>PctPolicBlack		0	1	 0.22	 0.24	 0.54	 0.12	 0	1675<br>PctPolicHisp		0	1	 0.13	 0.20	 0.12	 0.06	 0	1675<br>PctPolicAsian		0	1	 0.11	 0.23	 0.10	 0	 0	1675<br>PctPolicMinor		0	1	 0.26	 0.23	 0.49	 0.2	 0.07	1675<br>OfficAssgnDrugUnits	0	1	 0.08	 0.12	 0.34	 0.04	 0.03	1675<br>NumKindsDrugsSeiz	0	1	 0.56	 0.20	 0.13	 0.57	 0.57	1675<br>PolicAveOTWorked	0	1	 0.31	 0.23	 0.03	 0.26	 0.19	1675<br>LandArea		0	1	 0.07	 0.11	 0.20	 0.04	 0.01	0<br>PopDens			0	1	 0.23	 0.20	 0.28	 0.17	 0.09	0<br>PctUsePubTrans		0	1	 0.16	 0.23	 0.15	 0.07	 0.01	0<br>PolicCars		0	1	 0.16	 0.21	 0.38	 0.08	 0.02	1675<br>PolicOperBudg		0	1	 0.08	 0.14	 0.34	 0.03	 0.02	1675<br>LemasPctPolicOnPatr	0	1	 0.70	 0.21	-0.08	 0.75	 0.74	1675<br>LemasGangUnitDeploy	0	1	 0.44	 0.41	 0.12	 0.5	 0	1675<br>LemasPctOfficDrugUn	0	1	 0.09	 0.24	 0.35	 0	 0	0<br>PolicBudgPerPop		0	1	 0.20	 0.16	 0.10	 0.15	 0.12	1675<br>ViolentCrimesPerPop	0	1	 0.24	 0.23	 1.00	 0.15	 0.03	0<br><br>Distribution of the Goal Variable (Violent Crimes per Population):<br>   Range	Frequency<br>0.000-0.067	484<br>0.067-0.133	420<br>0.133-0.200	284<br>0.200-0.267	177<br>0.267-0.333	142<br>0.333-0.400	113<br>0.400-0.467	 59<br>0.467-0.533	 76<br>0.533-0.600	 57<br>0.600-0.667	 38<br>0.667-0.733	 37<br>0.733-0.800	 20<br>0.800-0.867	 23<br>0.867-0.933	 14<br>0.933-1.000	 50<br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">  No published results using this specific dataset. <br><br>  Related dataset used in Redmond and Baveja 'A data-driven software tool for enabling cooperative information sharing among police departments' in European Journal of Operational Research 141 (2002) 660-678; <br>  That article includes a description of the integration of the three sources of data, however, this data is normalized differently and more/different attributes are included.<br></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">  Please cite the UCI Machine Learning Repository, my sources and my related paper:<br><br>  U. S. Department of Commerce, Bureau of the Census, Census Of Population And Housing 1990 United States: Summary Tape File 1a & 3a (Computer Files), <br><br>  U.S. Department Of Commerce, Bureau Of The Census Producer, Washington, DC and Inter-university Consortium for Political and Social Research Ann Arbor, Michigan. (1992) <br><br>  U.S. Department of Justice, Bureau of Justice Statistics, Law Enforcement Management And Administrative Statistics (Computer File) U.S. Department Of Commerce, Bureau Of The Census Producer, Washington, DC and Inter-university Consortium for Political and Social Research Ann Arbor, Michigan. (1992) <br><br>  U.S. Department of Justice, Federal Bureau of Investigation, Crime in the United States (Computer File) (1995) <br><br>  Redmond, M. A. and A. Baveja: A Data-Driven Software Tool for Enabling Cooperative Information Sharing Among Police Departments. European Journal of Operational Research 141 (2002) 660-678. </p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

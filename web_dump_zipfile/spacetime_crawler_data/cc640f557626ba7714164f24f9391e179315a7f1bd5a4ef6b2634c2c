@@ -1,0 +1,87 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 01:55:43 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueY<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Dr. Rina Dechter @ UCI</title>
+  <link rel="Stylesheet" href="/%7Edechter/basic.css">
+</head>
+<body alink="#00aaaa" bgcolor="#ffffff" link="#008080" vlink="#008080">
+<!-- Begin Header -->[an error occurred while processing this directive]<!-- End Header --><!-- Begin Body --><br><br><center>
+<table width=90%>
+<tr>
+<td class=title>Publications & Technical Reports</td>
+<tr>
+  <td colspan=2><img width="100%" height="2"  src="/~dechter/images/black-fill.gif"></td>
+</tr>
+</tr>
+</table>
+</center> 
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="80%">
+  <tbody>
+    <tr valign="top">
+      <td><b>R243</b></td>
+<br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      <div class="title"><span style="font-weight: bold;">
+      Search Algorithms for Solving Queries on Graphical Models and the Importance of Pseudo-trees in their Complexity
+      </span></div>
+      <span style="font-weight: bold;">
+      HÃ©ctor Otero Mediero
+      </span><br>
+      <tt></tt></td>
+    </tr>
+  </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="80%">
+  <tbody>
+    <tr>
+      <td><br>
+      <div class="abstract"><b>Abstract</b><br>
+    	  <div style="text-align: justify;">
+	  Traditional search algorithms work on problems that can be modeled in a tree-like shape, this is, solving a problem
+corresponds to traversing the tree from the root to one of the leaves of the tree that represents a solution. Each
+one of the edges can be seen as a transition between different states of the problem where each state depends on
+the previous and the decision taken.
+Thereâ€™s a subset of these problems where we can identify subproblems which are independent from each other, in
+other words, the solutions of one donâ€™t depend on the other. Sometimes we can also identify equivalent subproblems
+that can be solved interchangeably. Consequently, itâ€™s interesting to have a graph than can model these relations
+and, later, algorithms that exploit them to solve the given problems. The models that capture these independencies
+are called AND/OR trees (or graphs depending on their connectivity) and yield solutions in the form of a sub-tree.
+An example modeled with a common search tree (which corresponds to an OR tree) has inherently larger size than
+an AND/OR tree since the later as it takes into account the subproblemsâ€™ independency. Intuitively we can think
+that an OR tree solves subproblems in a chain-like manner while AND/OR trees branches them out yielding a tree
+with a smaller height.
+As itâ€™ll be seen later, these graphs can be used to model inference problems (graphical models, in general) and
+exact and approximated algorithms have been implemented used to obtain the answers compute the answers to
+the most common queries. The modeling, solution and complexity of finding solutions to these problems are the
+subject of study of the present work. Orderings of variables and pseudo-trees, the underlying structures needed to
+construct the problemâ€™s space, will be studied as well due to their impact in the complexity of said algorithms. The
+new contributions of this work are the analysis of the trade-offs between the width and height of the pseudo-trees
+and the implementation of AND/OR Beam Search and Anytime AND/OR Beam Search as an attempt to tackle
+the weaknesses of some of the state-of-the-art algorithms.
+	  </div>
+      <br>
+      <a target="blank" href="r243.pdf">
+      <b>[pdf]</b></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<!-- End Body-->
+<!--- Begin Footer --><div id="footer"><centeR>
+<A HREF="http://www.ics.uci.edu">School of Information and Computer Science</A>
+<A HREF="http://www.uci.edu">University of California, Irvine, CA 92697-3435</a>
+<A HREF="http://www.ics.uci.edu/~dechter">Dr. Rina Dechter</A>
+
+<A HREF="mailto:dechter_at_ics.uci.edu">dechter at ics.uci.edu</A>
+
+</center></div><!--- End Footer -->
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

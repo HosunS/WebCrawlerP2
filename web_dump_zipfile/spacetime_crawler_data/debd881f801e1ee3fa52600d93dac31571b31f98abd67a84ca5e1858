@@ -1,0 +1,135 @@
+¦Ifinal_url¢DtypeEvaluex/https://www.ics.uci.edu/~skong2/pollen_BIC.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4517¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 02 Jun 2017 18:31:45 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"11a5-550fe5d8d2640"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 05:39:59 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY¥<html>
+<head>
+<title>automated pollen recognition system - Shu Kong (Aimery) - UC Irvine - Computer Vision</title>
+<link rel="icon" href="img/demo_BIC_medium.png" type="img/jpg">
+<style>
+h1 { padding : 0; margin : 0; }
+body { padding : 0; font-family : Arial; font-size : 16px; background-color : #EFEFEF; } /* background-image : url('bg.png');}*/
+#container { width : 1000px; margin : 20px auto;  background-color : #fff; padding : 50px; border : 1px solid #ccc; }
+#me { border : 0 solid black; margin-bottom : 0;}
+#sidebar { margin-left : 25px; border : 0 solid black; float : right; margin-bottom : 0;}
+#content { display : block; margin-right : 260px;}
+a { text-decoration : none; }
+a:hover { text-decoration : underline; }
+a:visited { color : blue; }
+a.invisible { color : inherit; text-decoration : inherit; }
+.publogo { margin-right : 10px; height: 50px; width: 50px; float : left; border : 0;}
+.publication { clear : left; padding-bottom : 0px;}
+.publication p { height : 60px; }
+.codelogo { margin-right : 10px; float : left; border : 0;}
+.code { clear : left; padding-bottom : 10px; vertical-align :middle;}
+.code .download a { display : block; margin : 0 15px; float : left;}
+<!-- #simpsons { margin : 5px auto; text-align : center; color : #B7B7B7; } -->
+<!-- 	#erdos { color : #999; text-align : center; font-size : 12px; } -->
+</style>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26193351-1']);
+	_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<div id="sidebar">
+<figure>
+<img src="http://www.ics.uci.edu/~skong2/img/fig_pollen_BIC_lowRes.png" id="me">
+<figcaption>which pollen species?</figcaption>
+</figure>
+<br>
+</div>
+
+<div id="content">
+<h1 align="center">Automated Pollen Recognition System</h1>
+
+
+<p align="center">
+          <a href="http://www.ics.uci.edu/~skong2/" target="_blank">Shu Kong</a>,
+          <a href="http://publish.illinois.edu/punyasena/" target="_blank">Derek Haselhorst</a>,
+          <a href="http://www.life.illinois.edu/plantbio/People/Faculty/Punyasena.htm" target="_blank">Surangi W. Punyasena</a>,
+          <a href="http://www.ics.uci.edu/~fowlkes/" target="_blank">Charless Fowlkes</a>
+</p>
+
+
+<p>
+<font color="red">Last update: June 6, 2017.</font>
+</p>
+
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/img/demo_BIC_highRes.png" alt="[pollenBIC]" width="700" />
+	    </center>
+<br><br>
+</div>
+
+
+
+
+This is about an automated pollen recognition system.
+The system automatically scans a sample with various z-plane (focus),
+detect pollen grains and segment them,
+and recognize the species.
+
+<p>
+Dataset, models and writeup will be uploaded.
+</p>
+
+<p>
+<b>keywords</b>: proposal detection, segmentation, detection, classification, deep learning, convolutional neural networks, multi-instance learning, fine-grained classification.
+
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/img/main041_cls_res50_alldata_avgPool_preSegMasking_softmax_net-epoch-29.mat_confusionMatrix_top26ClassByAccuracy.jpg" alt="[pollenBIC_confusionMatrix]" width="700" />
+	    </center>
+<br><br>
+</div>
+
+<p>
+[<a href="https://github.com/aimerykong/pollenDetClsSystem">github repo</a>]
+[<a href="http://www.ics.uci.edu/~skong2/pollen_BIC.html">dataset</a>]
+[<a href="http://www.ics.uci.edu/~skong2/pollen_BIC.html">models</a>]
+[<a href="http://www.ics.uci.edu/~skong2/pollen_BIC.html">report</a>]
+</p>
+
+
+
+<!--h2>Reference</h2>
+<ul>
+<li>
+<div class="publication">
+<p> <b>S. Kong</b>, C. Fowlkes, "<font color=#AF7817>Low-rank Bilinear Pooling for Fine-Grained Classification</font>",
+<a href="http://cvpr2017.thecvf.com/">CVPR</a>, 2017.
+<br>
+[<a href="lr_bilinear.html">project page</a>]
+[<a href="https://arxiv.org/abs/1611.05109">technical report</a>]
+[<a href="img/LRBP_abstract.pdf">abstract</a>]
+[<a href="https://github.com/aimerykong/Low-Rank-Bilinear-Pooling">demo</a>]
+[<a href="https://drive.google.com/open?id=0BxeylfSgpk1MOWt3U1U4WWdmSkk">model</a>]
+[<a href="img/LRBP_poster_v0.4.pdf">poster</a>]
+[<a href="img/fg_CV.pdf">slides</a>]
+</p>
+</div>
+</li-->
+
+</ul>
+
+<br clear="both">
+</div>
+</div>
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

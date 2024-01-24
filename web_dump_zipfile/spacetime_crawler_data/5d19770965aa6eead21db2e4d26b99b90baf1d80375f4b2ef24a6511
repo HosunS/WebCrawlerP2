@@ -1,0 +1,154 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE11373¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 15 Sep 2017 20:15:51 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"2c6d-559400f312de5"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 13:39:50 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY,m<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Report**
+
+
+# Related papers of Next-event Estimation (NEE)
+The idea of NEE or shadow rays is, to reuse the same path sample to sample light transport for different bounces. This is done by drawing explicit connections from every path vertex to the light source. This technique is very popular due to the performance improvements it brings.
+
+## Problem statement
+![](0830/1.png width=\pagewidth)
+Here light interacts with the material and refracts at the interface due to snells law of refraction. Therefore, direct connections are no longer valid which prevents straightforward application of NEE.
+
+## Straight-line approximation 
+![](0830/2.png width=\pagewidth)
+An easy solution is to just ignore the surface interaction with the light. This gives the so called straight‚Äêline approximation. It's biased but how bad it is??
+
+
+## Photon mapping [TODO]
+
+## Single scattering in participating media with triangle mesh boundaries
+![](0830/3.png width=\pagewidth)
+
+First a camera ray sample is found by random sampling. Then for each triangle of the bounding mesh, a valid point on the trangle is found using a newton‚Äêraphson style iterative solver.
+
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Walter Bruce, Shuang Zhao, Nicolas Holzschuch, and Kavita Bala. "Single scattering in refractive media with triangle mesh boundaries." Siggraph2009. [<a href="papers/a92-walter.pdf" target="_blank">pdf</a>]
+</div>
+
+## Accurate computation of single scattering in participating media with refractive boundaries
+![](0830/4.png width=\pagewidth)
+
+Extention of Walter09. Instead of sampling the camera ray position first, they first go over all triangles and for each triangle, compute the interval of influence on the camera ray. Then the camera ray position is sampled within that interval using regular sampling. Given the camera ray position, newtonraphson is used again to find the final position on the triangle. This improves the convergence behaviour because regular sampling is now only used within piecewise smooth integrands per triangle along the camera ray.
+
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Holzschuch Nicolas. "Accurate computation of single scattering in participating media with refractive boundaries." EG2015. [<a href="papers/Holzschuch-2015-Computer_Graphics_Forum.pdf" target="_blank">pdf</a>]
+</div>
+
+## Manifold Next Event Estimation (MNEE, Specular-diffuse-specular)
+![Pure path tracing (PT); path tracing with next event estimation and MIS (NEE); bidirectional path
+tracing (BDPT); energy redistribution path tracing (ERPT); primary sample space MLT both with NEE and MNEE as sampler (NEE+KMLT and MNEE+KMLT); half vector space light transport (HSLT); MNEE with full MIS and in the biased variant.](0830/5.png width=\pagewidth)
+
+MNEE draws inspiration from perturbation strategies used in Markov Chain Monte‚ÄêCarlo (MCMC) based rendering techniques such as MLT. They also follow the idea of finding a valid point on the surface. The key differences to the work by Walter and Holzschuch is that they represent the one bounce connection to the light in half vector space domain and use half vector space perturbation to find the point on the surface (HVSP). With HVSP, the one‚Äêbounce connection is represented in half‚Äêvector space domain where paths samples are identified by their start and end point and a generalized halfvector per inbetween vertex. So the one‚Äêbounce connection is sampled by sampling such a half‚Äêvector.
+
+(Some methods mentioned here are still not clear... [TODO])
+
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Hanika Johannes, Marc Droske, and Luca Fascione. "Manifold next event estimation." EGSR2015. [<a href="papers/Hanika_et_al-2015-Computer_Graphics_Forum.pdf" target="_blank">pdf</a>]
+</div>
+
+## Subdivision Next-Event Estimation (SNEE)
+![](0830/6.png width=\pagewidth)
+
+So common to all prior work is that idea of moving or finding a point on the surface which causes problems for highly detailed geometry. This is in contrast to this paper. They try to investigate the idea of moving the last point within the medium to find a valid 2‚Äêbounce connection to the light. For this we want to use the degree of freedom given by the subsurface scattering volume.
+
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Koerner David, Jan Nov√°k, Peter Kutz, Ralf Habel, and Wojciech Jarosz. "Subdivision next-event estimation for path-traced subsurface scattering." EGSR2016. [<a href="papers/koerner16subdivision.pdf" target="_blank">pdf</a>]
+</div>
+
+## Multiple Vertex Next Event Estimation (MVNEE, only medium, no surface)
+
+MVNEE can improve direct lighting calculation in homogeneous participating media by creating multiple-segment sub paths instead of one-segment connections. It's designed as an extension for existing multiple scattering rendering techniques in a Monte Carlo context. It's especially beneficial in forward scattering, optically dense media with the Henyey-Greenstein phase function. 
+
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Weber Pascal, Johannes Hanika, and Carsten Dachsbacher. "Multiple Vertex Next Event Estimation for Lighting in dense, forward‚Äêscattering Media." EG2017. [<a href="papers/Weber_et_al-2017-Computer_Graphics_Forum.pdf" target="_blank">pdf</a>]
+</div>
+
+## Manifold Exploration
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Wenzel Jakob and Steve Marschner "Manifold Exploration: A Markov Chain Monte Carlo technique for rendering scenes with difficult specular transport." Siggraph2012. [<a href="papers/manifolds-sg12.pdf" target="_blank">pdf</a>]
+</div>
+
+## Others
+
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Gkioulekas Ioannis, Bruce Walter, Edward H. Adelson, Kavita Bala, and Todd Zickler. "On the appearance of translucent edges." CVPR2015. [<a href="papers/lipaths.pdf" target="_blank">pdf</a>]
+</div>
+
+## useful links
+
+Benedikt Bitterli's project: <a href="http://noobody.org/is-report/advanced.html" target="_blank">The Tungsten Renderer</a>. Some discussion here. (Search: Noise reduction strategies)
+
+2D Light Transport:
+https://benedikt-bitterli.me/tantalum/tantalum.html
+
+3D Light Transport:
+http://www.snelly.net/
+
+## Comparison
+Method | Surface | Medium | scatter 
+---- |:----:|:----:|:----:
+PT   | Any | Any | Multiple
+Naive NEE  | - | - | multiple 
+[Walter09] | Smooth Dielectric | yes | single
+[Walter09]_ext | Smooth Dielectric | yes | single
+MNEE | rough dielectric | no/SDS | "single"
+SNEE | rough dielectric | yes | multiple
+MVNEE| no | yes |
+
+# 20170907
+
+## "Infinite" plane 
+![PT;Dielectric](0907/plane_dielectric_PT_spp10000.png width=\pagewidth) ![PT;Fake3](0907/plane_fake3dielectric_PT_spp100000.png width=\pagewidth) 
+![NNE;Dielectric](0907/plane_dielectric_NE_spp1000.png width=\pagewidth) ![NNE;Fake3](0907/plane_fake3dielectric_NE_spp1000.png width=\pagewidth) 
+
+
+# 20170829 Differnt fake dielectric with naive next-event (NNE) [modify]
+
+## Scene 1 (left to right: dielectric->fake2->fake3)
+![PT](0831/cbox_dielectric_spp10000.png width=\pagewidth) ![](0831/cbox_fake2dielectric_spp10000.png width=\pagewidth) ![](0831/cbox_fake3dielectric_spp10000.png width=\pagewidth)
+![NNE](0831/cbox_dielectric_nextevent_spp1000.png width=\pagewidth) ![](0831/cbox_fake2dielectric_nextevent_spp1000.png width=\pagewidth) ![](0831/cbox_fake3dielectric_nextevent_spp1000.png width=\pagewidth)
+
+## Scene 2 (left to right: dielectric->fake2->fake3)
+![PT](0831/simple_dielectric_spp100000.png width=\pagewidth) ![](0831/simple_fake2dielectric_spp10000.png width=\pagewidth) ![](0831/simple_fake3dielectric_spp10000.png width=\pagewidth)
+![NNE](0831/simple_dielectric_nextevent_spp1000.png width=\pagewidth) ![](0831/simple_fake2dielectric_nextevent_spp1000.png width=\pagewidth) ![](0831/simple_fake3dielectric_nextevent_spp1000.png width=\pagewidth)
+
+## Scene 3 (left to right: dielectric->fake2->fake3)
+![PT](0831/horse_dielectric_spp100000.png width=\pagewidth) ![](0831/horse_fake2dielectric_spp10000.png width=\pagewidth) ![](0831/horse_fake3dielectric_spp10000.png width=\pagewidth)
+![NNE](0831/horse_dielectric_nextevent_spp1000.png width=\pagewidth) ![](0831/horse_fake2dielectric_nextevent_spp1000.png width=\pagewidth) ![](0831/horse_fake3dielectric_nextevent_spp1000.png width=\pagewidth)
+
+
+# 20170824 Differnt fake dielectric with naive next-event (NNE)
+## Illustration
+![](0821/figure2.png width=\pagewidth)
+
+## Scene 1 (left to right: dielectric->fake1->fake2->fake3)
+![Anolog](0821/cbox_dielectric_spp10000.png width=\pagewidth) ![](0821/cbox_fake1dielectric_spp10000.png width=\pagewidth) ![](0821/cbox_fake2dielectric_spp10000.png width=\pagewidth) ![](0821/cbox_fake3dielectric_spp10000.png width=\pagewidth)
+![NNE](0817/cbox_dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/cbox_fake1dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/cbox_fake2dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/cbox_fake3dielectric_nextevent_spp1000.png width=\pagewidth)
+
+## Scene 2 (left to right: dielectric->fake1->fake2->fake3)
+![Anolog](0821/simple_dielectric_spp100000.png width=\pagewidth) ![](0821/simple_fake1dielectric_spp100000.png width=\pagewidth) ![](0821/simple_fake2dielectric_spp10000.png width=\pagewidth) ![](0821/simple_fake3dielectric_spp10000.png width=\pagewidth)
+![NNE](0817/simple_dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/simple_fake1dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/simple_fake2dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/simple_fake3dielectric_nextevent_spp1000.png width=\pagewidth)
+
+## Scene 3 (left to right: dielectric->fake1->fake2->fake3)
+![Anolog](0821/horse_dielectric_spp100000.png width=\pagewidth) ![](0821/horse_fake1dielectric_spp10000.png width=\pagewidth) ![](0821/horse_fake2dielectric_spp10000.png width=\pagewidth) ![](0821/horse_fake3dielectric_spp10000.png width=\pagewidth)
+![NNE](0817/horse_dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/horse_fake1dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/horse_fake2dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/horse_fake3dielectric_nextevent_spp1000.png width=\pagewidth)
+
+
+
+End.
+<a href="backup/report_20170830.html" target="_blank">Old Doc</a>
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

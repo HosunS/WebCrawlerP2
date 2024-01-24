@@ -1,0 +1,217 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD6480¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 02 Oct 2003 00:15:36 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1950-3c8a92599da00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:46:07 GMTKraw_content¢DtypeEvalueYPHash tables (chapter 11)
+
+Problem: dictionary
+    set(key,value)
+    get(key)
+    [also avail in Python, easy: len(), keys(), values()]
+
+general idea of hash table:
+    store key-value pairs in a table
+    use a hash function h(key) to tell where to look in the table
+
+    def set(key,value):
+        if table[h(key)] is None:
+            table[h(key)] = (key,value)
+        else...
+
+    def get(key):
+        if table[h(key)] is a pair (key,something)
+            return something
+        else...
+
+    important details omitted:
+        what is h?
+        what to do if table entry already occupied on set
+            (and how can get find keys that had this problem when set)
+
+        how big is the table?
+		load factor = number of stored items / table size 
+		close to 1 -> lots of collisions -> slower
+		larger -> faster but wastes more space
+		typically around 2
+
+	to maintain constant load factor:
+		rehashing: when load gets too high, make larger table
+			when load gets too low, reduce table size
+
+		e.g. maintain alpha in range [1/3,2/3]
+		double table size when alpha=2/3 (=>1/3)
+		halve table size when alpha=1/3 (=>2/3)
+		problem: sequence of insertions/deletions can
+		hover right at boundary, need some hysteresis
+
+		better: maintain alpha in range [1/5,4/5]
+		double table size when alpha=1/5 (=> 2/5)
+		halve table size when alpha=4/5 (=> 2/5)
+
+		charging scheme:
+			charge future time expenses against present operations
+			each insertion or deletion => charge 1 unit
+			resize of a size n table takes time O(n),
+				happens after at least n/5 ops since
+				previous resize => pay for it with charges
+			total time resizing = O(# operations charged)
+			so average resize time per operation = O(1)
+
+hash functions
+
+    standard theoretical assumption: h is random
+
+        any possible key is hashed to a location that is
+        uniformly random among all possible table locations
+	and independent of all other key locations
+
+	makes analysis (relatively) easy
+	impossible in practice
+	(would have to fill out table of possible keys
+	with randomly generated numbers, if could do that then
+	could just use keys as addresses directly)
+
+    standard practical choice: do something simple
+
+        interpret keys as (large) integers
+	use some numerical function to map them to smaller integer range
+	test empirically whether it works ok but drop theoretical analysis
+
+	book has some discussion of this
+	typical recommendation: key mod p, where p is a large prime
+	Python choice: key mod 2^k (book says this is bad)
+
+    recent theoretical work:
+	start with a small amount of randomness (e.g. choice of prime p)
+	devise easy-to-compute pseudorandom number generator
+		s.t. can prove that hash still works well
+
+collision strategies:
+
+	associative, k-way associative:
+		keep one or a constant number k of keys per location,
+		always replace one when set collides
+
+		so, not all key-value pairs are stored
+
+		can be useful anyway when missing keys can be recomputed
+		(e.g. cache for memory hierarchy, AI search)
+
+	perfect:
+		choose hash function in such a way that no two keys collide
+		can only be done when you know all keys in advance
+
+		e.g. if we have n numbers in range 0..N
+		then choosing h(x) = x mod p
+		for random p ~ max(2n, log N log log N)
+
+		if two keys have same value mod many primes
+		then (chinese remainder) they have same value
+		mod product of these primes,
+		but p chosen so product > N
+		=> w/high probability, no collisions
+
+		used for keywords in compilers
+
+		open source implementation gperf
+
+	chaining:
+		each hash location stores list of key,value pairs
+		hash lookup -> sequential search of list
+		hash set -> search list for prev value
+			or add new value to list
+
+		thm: if hash function is random,
+			expected time per op <= 1 + alpha.
+		(expected contrib from others = p(collide) = alpha/n)
+
+		note works well even when load factor > 1...
+
+		more generally can work out formula
+		for probability of hitting a chain of k items
+
+		expected worst case (longest chain)
+		for n items, constant load factor:
+			O(log n / log log n)
+
+	open addressing (used in python):
+
+		hash function maps each key to a probe sequence
+			location0, location1, ...
+
+		typical assumption: whole sequence is random
+
+		get(key):
+			follow probe sequence until
+			finding item or hitting empty location
+
+		set(key):
+			follow probe sequence until hitting empty loc,
+			put item there
+
+		to delete items:
+			place a special delete marker
+			(distinguishable from empty marker)
+
+			set(key,value) can safely replace delete markers
+			but get(key) treats them as nonempty collisions
+
+		thm:
+			expected time for set <= 1/(1 - alpha)
+			 = 1 + alpha + alpha^2 + ...
+
+		slightly worse than chaining but maybe avoiding extra list
+		objects makes up for it
+
+		expected worst case O(log n)
+		(last n/2 items have constant chance of colliding at
+		each step, w/prob. 1/n have >= c.log n collisions)
+
+	double chaining:
+		hash chaining, but hash each key to two locations
+		and put new item in the shorter of two chains
+		expected worst case O(log log n)
+
+	double hashing:
+		hash chaining, but store each chain as a
+		(very sparse) hash table
+		e.g. chain of k items => hash table of k^2 items
+
+		with some care gives constant worst case time
+		per search
+
+	robin hood hashing:
+		open addressing, but keep track of how many
+		probes were needed for each key
+
+		if adding new key, have made x probes,
+		and see a location where previous key has fewer probes,
+		put new key there and move previous key further
+		along its own probe sequence
+
+		expected worst case O(log log n)
+
+		http://www.fing.edu.uy/inco/pedeciba/bibliote/reptec/TR0212.pdf
+
+	blum filter:
+		keep track of a set of items (keys without values)
+		allowing positive errors
+			(erroneously think an item is in the set)
+		but not negative ones
+
+		converse (negative but not positive) can be handled
+		by associative hash
+
+		for n keys, store table of 2kn single bits
+		initially, all bits zero
+		for each keys, turn on k bits
+			(selected using random hash probe sequence)
+
+		to test if item is in the set,
+		check its probe sequence and make sure all bits are on
+		if so, report that it's in the set (may be incorrect)
+		if any bit is zero, report that it's not in (always correct)
+
+		# set bits <= kn, so p[any bit is set] <= 1/2
+		for any key not in the set, we check k
+		independent random positions,
+		so p[all checked bits are set] <= (1/2)^k
+
+		by choosing large enough k can make p[mistake] arb. small.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

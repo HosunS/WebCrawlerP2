@@ -1,0 +1,251 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD8369¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Dec 2018 00:02:49 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"20b1-57c4f38266fc2"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:45:43 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY ±<html>
+<head>
+<title>CS 190/264, Fall 2018</title>
+</head>
+<body bgcolor="d1f2eb  " text="000000"  style="font-family: verdana">
+<h2 align=center>CS 190/CS 264 <br> Quantum Computation <br> Fall 2018</h2>
+<br>
+<h3> Instructor </h3>
+Sandy Irani <br> 4042 Bren Hall
+<br>
+ irani@ics.uci.edu<br>
+ Office hours: Tues 1:00-1:50PM
+ <h3> Teaching Assistant </h3>
+ Pedro Matias <br>
+  pmatias@uci.edu<br/>
+  Please email Pedro if you have questions about homework grading.
+<h3> Class Times and Place</h3>
+MWF 2:00PM-2:50PM, DBH 1300
+<h3> Course Overview </h3>
+This course will provide an introduction to the field of quantum computation. We will start with a basic introduction to quantum mechanics from the perspective of quantum information. We will then develop computational models based on quantum mechanical principles and discuss applications such as quantum algorithms and quantum cryptography.
+<h3> Prerequisites </h3>
+Student should have had a course in linear algebra. At UCI, that would be ICS 6N or Math 3A. Some exposure to computational complexity (such as CS 162) is also recommended. Students with a strong background in either theoretical computer science, mathematics, or physics are welcome to attend. The course will be taught at an advanced undergraduate/early graduate level.
+
+<h3> Course Requirements </h3>
+There will be a total of eight  problem sets, due in lecture on Wednesday of weeks 2 through 10, except week 6.
+Each problem set will be posted in the table below by the end of the day on Wednesday, the week before it is due.
+There will be a midterm in class on Wednesday of week 6,
+and a final exam on Friday December 14 1:30-3:30PM.
+<p>
+<b> Homework Policies: </b>
+<p>
+I encourage you to work in small groups, but you must note your
+collaborators on the homework you turn in. In addition, you must
+write up your own solutions without any collaboration.
+<p>You may elect to take a two-day extension (until Friday 5PM) on  one of the homework assignments. Other assignments turned in late  (but before Friday 5PM)
+  will receive half credit.
+<p>
+You are also encouraged to put your solutions into LaTeX.
+Here is a template that you can use:
+<a href="hw_template.tex">
+Homework Template
+</a>.
+</p>
+
+  <b> Evaluation and Grades: </b>
+  <p>
+  The midterm is worth 15% and the final is worth 25% of your final grade. Each of the Homework
+  assignments is worth 7.5% of your final grade. </p>
+
+
+
+  <h3> Lecture Topics and Homework </h3>
+  <p>The list of topics is tentative for now.</p>
+
+  <table border>
+  <tr>
+
+  <th>
+  Week
+  </th>
+  <th>
+  Topic
+  </th>
+  <th>
+  Homework
+  </th>
+  <th>
+  Class notes
+  </th>
+  </tr>
+
+  <tr>
+  <td>
+  Week 1
+  </td>
+  <td>
+  <a href="notes/CourseOverview.pdf">Course Overview</a><br/>
+  <a href="notes/PostulatesOfQuantumMechanics.pdf">Postulates of Quantum Mechanics</a><br/>
+  <a href="notes/LinAlgHilbertSpaces.pdf">Linear Algebra - Hilbert Spaces</a><br/>
+  <a href="notes/LinearOperators.pdf">Linear Algebra - Linear Operators</a><br/>
+
+  </td>
+  <td align=center>
+  <a href="hw1.pdf">Homework 1</a><br/>
+  <a href="HW1_solutions.pdf">Homework 1 Solutions</a>
+  </td>
+  <td align=center>-</td>
+  </tr>
+
+  <tr>
+  <td>
+  Week2
+  </td>
+
+    <td><a href="notes/EigsAndMeasurement.pdf">Linear Algebra - Eigenvalues and Measurement</a><br/>
+      <a href="notes/TensorProducts.pdf">Tensor Products</a><br/>
+        <a href="notes/EPR.pdf">EPR Experiment</a>
+  <td align=center>
+  <a href="hw2.pdf">Homework 2</a><br/>
+  <a href="HW2_solutions.pdf">Homework 2 Solutions</a>
+  </td>
+  <td align=center>-</td>
+  </tr>
+
+  <tr>
+  <td>
+  Week3
+  </td>
+
+    <td>
+    <a href="notes/Teleportation.pdf">No Cloning Thm and Quantum Teleportation</a><br/>
+<a href="notes/CompClass.pdf">Quantum Complexity Classes</a>  </td>
+
+  <td align=center>
+  <a href="hw3.pdf">Homework 3</a><br/>
+  <a href="HW3_solutions.pdf">Homework 3 Solutions</a></td>
+  <td align=center>
+  -
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  Week 4
+  </td>
+  <td>
+    <a href="notes/DeutschJozsa.pdf">Deutsch-Jozsa Algorithm</a><br/>
+<a href="notes/Simons.pdf">Simon's Algorithm</a>
+  <td align=center>
+    <a href="hw4.pdf">Homework 4</a><br/>
+  <a href="HW4_solutions.pdf">Homework 4 Solutions</a><br/>
+  </td>
+  <td align=center>-</td>
+  </tr>
+
+  <tr>
+  <td>
+  Week 5
+  </td>
+  <td>
+  <a href="notes/QFT.pdf">Quantum Fourier Transform</a>
+  </td>
+  <td align=center>
+  -
+  </td>
+  <td align=center>-</td>
+  </tr>
+
+  <tr>
+  <td>
+  Week 6
+  </td>
+  <td>
+    <b>Midterm Wednesday, Nov 7</b><br/>
+  <a href="notes/FTprops.pdf">Properties of the Fourier Transform</a></td>
+  <td align=center>
+  <a href="hw5.pdf">Homework 5</a><br/>
+  <a href="HW5_solutions.pdf">Homework 5 Solutions</a><br/>
+  <a href="MidtermSolutions.pdf">Midterm Solutions</a>
+  </td>
+  <td align=center>-</td>
+  </tr>
+
+  <tr>
+  <td>
+  Week 7
+  </td>
+  <td>
+    <a href="notes/OrderFinding.pdf">Quantum Algorithm for Order Finding</a><br/>
+<a href="notes/Factoring.pdf">Reducing Factoring to Order Finding</a>
+  </td>
+  <td align=center>
+  <a href="hw6.pdf">Homework 6</a><br/>
+  <a href="HW6_solutions.pdf">Homework 6 Solutions</a>
+  </td>
+  <td align=center>-</td>
+  </tr>
+
+  <tr>
+  <td>
+  Week 8
+  </td>
+  <td>
+   <a href="notes/GroverSearch.pdf">Grover Search</a><br/>
+<a href="notes/SearchLowerBound.pdf">Lower Bound for Unstructured Search</a><br/>
+<a href="https://uci.yuja.com/V/Video?v=259026&node=1218651&a=395330942&autoplay=1">Wed Video Lecture, Part 1</a><br/>
+<a href="https://uci.yuja.com/V/Video?v=259027&node=1218652&a=1748673596&autoplay=1">Wed Video Lecture, Part 2</a><br/>
+<a href="https://uci.yuja.com/V/Video?v=259028&node=1218653&a=1145488926&autoplay=1">Wed Video Lecture, Part 3</a><br/>
+<a href="https://uci.yuja.com/V/Video?v=259029&node=1218662&a=1730994466&autoplay=1">Wed Video Lecture, Part 4</a>
+  </td>
+  <td align=center> <a href="hw7.pdf">Homework 7</a><br/>
+  <a href="HW7_solutions.pdf">Homework 7 Solutions</a></td>
+  <td align=center>-</td>
+  </tr>
+
+  <tr>
+  <td>
+  Week 9
+  </td>
+  <td>
+  <a href="notes/GenGroverSearch.pdf">Generalizing Grover Search</a><br/>
+<a href="notes/PhaseEstimation.pdf">Phase Estimation</a><br/>
+<a href="notes/ApproximateCounting.pdf">Approximate Counting</a>
+  </td>
+  <td align=center>
+  <a href="hw8.pdf">Homework 8 </a><br/>
+  <a href="HW8_solutions.pdf">Homework 8 Solutions</a>
+  </td>
+  <td align=center>-</td>
+  </tr>
+
+  <tr>
+  <td>
+  Week 10
+  </td>
+  <td>
+
+<a href="notes/ErrorCorrectionShor.pdf">Error Correction - Shor's 9-bit Code</a>
+
+  </td>
+  <td align=center>-
+  </td>
+  <td align=center>-</td>
+  </tr>
+
+
+
+
+
+  </table>
+
+<h3>Reading List</h3>
+<p>There is no required text for the course. I will post lecture notes after every class on the material covered. The following is a list of books and course notes that may be useful. At the beginning of each lecture, I will point to recommended references for the material to be presented.
+</p>
+<ul>
+  <li>Yonofsky and Mannucci, Quantum Computing for Computer Scientists</li>
+    <li>Nielsen and Chuang, Quantum Computation and Quantum Information</li>
+      <li>Kitaev, Shen and Vyalyi, Classical and Quantum Computation</li>
+        <li>Mermin, Quantum Computer Science</li>
+          <li>Umesh Vazirani's Course Notes on Quantum Computation: <a href="http://www.cs.berkeley.edu/~vazirani/quantum.html">link</a></li>
+            <li>John Preskill's Course Notes on Quantum Computation: <a href="http://www.theory.caltech.edu/~preskill/ph219/index.html#lecture">link</a></li>
+              <li>Scott Aaronson's Course Notes on Quantum Complexity Theory:<a href="http://stellar.mit.edu/S/course/6/fa08/6.896/materials.html">link</a></li>
+                <li>Scott Aaronson's Course Notes on Quantum Computing Since Democritus: <a href="http://www.scottaaronson.com/democritus/">link</a></li>
+                  <li>Qubits, Quantum Mechanics and Computers: Course Notes: <a href="http://www-inst.eecs.berkeley.edu/~cs191/fa08/">link</a></li>
+                    <li>Andrew Child's course on Quantum Algorithms: <a href="http://www.math.uwaterloo.ca/~amchilds/teaching/w08/co781.html">link</a></li>
+</ul>
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

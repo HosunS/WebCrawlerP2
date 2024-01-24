@@ -1,0 +1,92 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1918¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:53:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"77e-4da84bfb9b680"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 18:45:25 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY~//  
+// $Id$
+//
+// NFA.h: interface for the NFA class.
+//
+//  Copyright (C) 2004 - 2007 by The Regents of the University of
+//  California
+//
+// Redistribution of this file is permitted under the terms of the 
+// BSD license
+//
+// Date: October, 2004
+//
+// Author: 
+//          Liang Jin (liangj (at) ics.uci.edu)
+//
+
+#ifndef _NFA_
+#define _NFA_
+
+#if _MSC_VER > 1000
+#pragma once
+#endif // _MSC_VER > 1000
+
+#include "NFANode.h"
+#include "NFATransition.h"
+#include "parameters.h"
+#include "Trie.h"
+
+class Trie;
+struct TrieNode;
+
+class NFA  
+{
+public:
+	
+	/**The number of states in the NFA.*/
+	int Q;
+
+	/**Epsilon constant.*/
+	
+
+    /**The collection of nodes.*/
+	vector<NFANode*> nodes;
+
+	/**The final state nodes. (FI)*/
+	NFANode* finalStateNode;
+
+    /**The initial state nodes. (CIDA)*/
+    NFANode* initStateNode;
+
+    /**Flag denoting whether node numbers have been assigned (used in reset).*/
+    bool nodeNumbersAssigned;
+
+
+	NFA();
+	virtual ~NFA();
+
+	void assignNodeNumbers ();
+	NFA* clone();
+	void insertHead(NFANode* newInitNode);
+	void insertHead(char character);
+	void printMe();
+	void prepareForGraph();
+	NFANode* getNode(int index);
+	int nodeNum();
+	void ConvertFromTrie(Trie* trie);
+	void ConvertTrie(NFANode* parent, TrieNode* node, NFANode* finalstate, int level, Trie* trie);
+	void insertTo(NFANode* node, int level);
+
+
+	// add a horizontal edge
+	static void NFA::addHoriEdge(NFANode* fromNode, NFANode* toNode)
+	{
+		NFATransition* edge = new NFATransition(toNode, fromNode);
+		fromNode->branches.push_back(edge);
+		toNode->backBranches.push_back(edge);
+	}
+		
+	// add a vertical edge
+	static void NFA::addVetiEdge(NFANode* fromNode, NFANode* toNode)
+	{
+		NFATransition* edge = new NFATransition(toNode, fromNode);
+		fromNode->downBranches.push_back(edge);
+		toNode->upBranches.push_back(edge);
+	}
+
+};
+
+#endif 
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

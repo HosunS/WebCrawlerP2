@@ -1,0 +1,21 @@
+¦Ifinal_url¢DtypeEvaluexHhttps://www.ics.uci.edu/~wjohnson/BIDA/Ch13/WinBUGScodeExercise13-20.txtLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC626¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Sep 2010 01:19:36 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"272-48fa130ad1a00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:41:42 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYrmodel{
+	for(i in 1:324){
+		SEARCH[i] ~ dlnorm(mean[i],tau)I(LOWER[i],)
+		mean[i] <-mu+delta[ID[i]]
+		dummy[i] <- FIRSTLAST[i]+AGE[i]  # not used in simple analysis
+     }
+     for(i in 1:15){ delta[i] ~ dnorm(0,tau.d) }  # delta[15] is predictive
+	mu ~ dnorm(4.5,10)
+	tau <- 1/(sigma*sigma)
+	tau.d <- 1/(sigma.d*sigma.d)
+	sigma ~ dgamma(2.29,2.92)
+	sigma.d ~ dgamma(8.1,24.5)
+	mean.pred <- mu+delta[15]
+	t.pred ~ dlnorm(mean.pred,tau)
+	for(i in 2:100){ grid[i] <- i*2 }
+	grid[1] <- 0.01
+	for(i in 1:100){ d[i] <- exp(-0.5*pow(log(grid[i])-mean.pred,2)*tau)/(sqrt(2*3.14159/tau)*grid[i]) }
+}
+
+list(mu = 4, sigma=1, sigma.d=1);
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

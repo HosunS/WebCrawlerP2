@@ -1,0 +1,123 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 03:21:13 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueY<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML><HEAD>
+<TITLE> CompSci 161 Homework #2 </TITLE>
+</HEAD><BODY>
+<span style="color:#000000; font:16px Arial, Helvetica, sans-serif;">
+
+<H2 align=center> Homework #2</H2>
+
+<table border=1 cellspacing=0>
+<tr><th width="5%">#</th>
+    <th width="70%"><font color=red>required problems</font></th>
+    <th width="25%">topic</th>
+<tr><td align=center>1</td>
+    <td>GT Exercise R-3.3 on page 110
+      </td>
+    <td>lower bound</td>
+<tr><td align=center>2</td>
+    <td>GT Exercise C-8.5 on page 260
+<!--
+       <BR>Suppose we are given a sequence <I>S</I> of <I>n</I> elements,
+         each of which is colored red or blue.
+         Assuming <I>S</I> is represented as an array, give an in-place method for
+         ordering <I>S</I> so that all the blue elements are listed before all the
+         red elements.
+         Can you extend your approach to three colors?
+-->
+      </td>
+    <td>sorting</td>
+<tr><td align=center>3</td>
+    <td>CLRS Exercise 8.1-4 on page 194
+       <BR>Suppose that you are given a sequence of <I>n</I> elements to sort.
+         The input sequence consists of <I>n/k</I> subsequences,
+         each containing <I>k</I> elements.
+         The elements in a given subsequence are all smaller than the elements
+         in the succeeding subsequence and larger than the elements in the
+         preceding subsequence.
+         Thus, all that is needed to sort the whole sequence of length <I>n</I>
+         is to sort the <I>k</I> elements in each of the <I>n/k</I> subsequences.
+         Show an &Omega;(<I>n</I>&nbsp;lg&nbsp;<I>k</I>) lower bound on the
+         number of comparisons needed to solve this variant of the sorting algorithm.
+         (<I>Hint</I>: It is not rigorous to simply combine the lower bounds for the
+         individual subsequences.)
+        </td>
+    <td>sorting lower bound</td>
+</table>
+
+<p>
+
+<table border=1 cellspacing=0>
+<tr><th width="5%">#</th>
+    <th width="70%"><font color="#009900">suggested problems</font></th>
+    <th width="25%">topic</th>
+<tr><td align=center>4</td>
+    <td>GT Exercise C-8.3 on page 259
+<!--
+       <BR>Suppose we are given two <I>n</I>-element sorted sequences
+        <I>A</I> and <I>B</I> that should not be viewed as sets
+        (that is, <I>A</I> and <I>B</I> may contain duplicate entries).
+        Describe an <I>O</I>(<I>n</I>)-time method for computing a sequence
+        representing the set <I>A</I> &cup; <I>B</I> (with no duplicates).
+-->
+       </td>
+    <td>sorting</td>
+<tr><td align=center>5</td>
+    <td>Baase Exercise 1.50 on page 67<BR>
+      You have 70 coins that are all supposed to be gold coins of the same weight,
+      but you know that one coin is fake and weighs less than the others.
+      You have a balance scale; you can put any number of coins on each side of the
+      scale at one time, and it will tell you if the two sides weigh the same, or
+      which side is lighter if they don't weigh the same.
+      Outline an algorithm for finding the fake coin.
+      How many weighings will you do?
+      </td>
+    <td>search</td>
+<tr><td align=center>6</td>
+    <td>CLRS Exercise 8.1-3 on page 194
+      <BR>Show that there is no comparison sort whose running time is linear for at
+       least half of the <I>n</I>! inputs of length <I>n</I>.
+       What about a fraction of 1/<I>n</I> of the inputs of length <I>n</I>?
+       What about a fraction of 1/2^<I>n</I>?
+      </td>
+    <td>lower bound on sorting</td>
+<tr><td align=center>7<font color=blue>*</font></td>
+    <td>Baase Exercise 1.47 on page 66<BR>
+      The first <I>n</I> cells of the array <I>E</I> contain integers sorted in
+      increasing order.  The remaining cells all contain some very large integer
+      that we may think of as infinity (call it <I>maxint</I>).
+      The array may be arbitrarily large (you may think of it as infinte),
+      and <I>you don't know n</I>.
+      Give an algorithm to find the position of a given integer <I>x</I>
+      (<I>x</I> &lt; <I>maxint</I>) in the array in <I>O</I>(log <I>n</I>) time.
+      </td>
+    <td>searching unknown sized array</td>
+<tr><td align=center>8<font color=blue>*</font></td>
+    <td>Baase Exercise 4.59a on page 218<BR>
+      <I>E</I> is an array containing <I>n</I> integers, and we want to find the
+      maximum sum for a contiguous subsequence of elements of <I>E</I>.
+      (If all elements of a sequence are negative, the maximum contiguous
+      subsequence is the empty sequence with sum equal to zero.)
+      For example, consider sequence
+      <center>38, -62, 47, -33, 28, 13, -18, -46, 8, 21, 12, -53, 25.</center>
+      The <I>maximum subsequence sum</I> for this array is 55
+      and it occurs in positions 3 through 6 (inclusive).
+      <P>
+      Give a linear-time algorithm that finds the maximum subsequence sum in an array.
+      </td>
+    <td>maximum profit window in 2D</td>
+<tr><td align=center>9<font color=blue>*</font></td>
+    <td>Consider a rectangular array.<BR>
+        Sort the elements in each row into increasing order.<BR>
+        Next sort the elements in each column into increasing order.<BR>
+        Prove that the elements in each row remain sorted.
+    </td>
+    <td>shellsort basis</td>
+</table>
+
+<HR>
+
+<small>Last modified: Jan  7, 2018</small>
+</span>
+</BODY></HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,35 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC722¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 22 Feb 2018 07:03:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2d2-565c7a32cf5d8"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 04:32:49 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÒ/** @file   test_rand.c
+ ** @author Andrea Vedaldi
+ ** @breif  Test vl/random.h
+ **/
+
+#include <stdio.h>
+#include <assert.h>
+
+#include <vl/random.h>
+
+int
+main (int argc VL_UNUSED, char *argv[] VL_UNUSED)
+{
+  int i ;
+  vl_uint32 init [4] = {0x123, 0x234, 0x345, 0x456} ;
+  VlRand rand ;
+  vl_rand_init (&rand) ;
+
+  vl_rand_seed_by_array (&rand, init, sizeof(init)/sizeof(init[0])) ;
+
+  printf("1000 outputs of vl_rand_uint32()\n");
+  for (i=0; i<1000; i++) {
+    printf("%10" VL_FL_INT32 "u ", vl_rand_uint32(&rand));
+    if (i%5==4) printf("\n");
+  }
+
+  printf("\n1000 outputs of vl_rand_real2()\n");
+  for (i=0; i<1000; i++) {
+    printf("%10.8f ", vl_rand_real2(&rand));
+    if (i%5==4) printf("\n");
+  }
+
+  return 0;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

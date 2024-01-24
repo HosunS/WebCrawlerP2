@@ -1,0 +1,21 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC275¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 05 Feb 2019 17:59:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"113-581295f9a2e93"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 14:32:02 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY#include "avr.h"
+
+void
+avr_init(void)
+{
+  WDTCR = 15;
+}
+
+void
+avr_wait(unsigned short msec)
+{
+  TCCR0 = 3;
+  while (msec--) {
+    TCNT0 = (unsigned char)(256 - (XTAL_FRQ / 64) * 0.001);
+    SET_BIT(TIFR, TOV0);
+    WDR();
+    while (!GET_BIT(TIFR, TOV0));
+  }
+  TCCR0 = 0;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,10 @@
+¦Ifinal_url¢DtypeEvaluexJhttps://www.ics.uci.edu/~irani/f04-h22/lab6/IllegalTimeValueException.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC274¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 29 Oct 2004 15:15:19 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"112-3e79786df6fc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 11:41:29 GMTKraw_content¢DtypeEvalueY
+// to be thrown when trying to set a time value to be a non-positive number
+public class IllegalTimeValueException extends NumberFormatException {
+
+    public IllegalTimeValueException()
+    {
+        super(" Any value of time must be a positive integer");
+    }
+}
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,28 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1096¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 05 Feb 1999 18:24:36 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"448-3432231f1a100"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 04:37:08 GMTKraw_content¢DtypeEvalueYH
++--------------------------------------------------------------------+
+| VALtargt.README File Description                                   |
++--------------------------------------------------------------------+
+
+o This file contains the target fields that were left out of the 
+  validation data set that was sent to the KDD-CUP-98 participants. 
+  These fields were used by the KDD-CUP-98 Committee to evaluate the 
+  accuracy of the predictions submitted by the participants. 
+ 
+o The file is in comma delimited format and contains 96,367 records 
+  and the following 3 fields: 
+
+  CONTROLN     Control number (unique record identifier)
+
+  TARGET_B     Target Variable: Binary Indicator for Response to the 
+               97NK Mailing
+
+  TARGET_D     Target Variable: Donation Amount (in $) associated 
+               with the Response to the 97NK Mailing
+
+  The first/header row of the file contains the field names.
+
+o The field CONTROLN will be used as the match key to merge these
+  3 fields into the original validation data set (file name:
+  cup98VAL.txt)
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

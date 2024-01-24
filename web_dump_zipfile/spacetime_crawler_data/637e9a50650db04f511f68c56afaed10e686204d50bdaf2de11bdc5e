@@ -1,0 +1,26 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC746¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 21 Jun 2014 23:26:01 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2ea-4fc60eed77440"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 20:43:11 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYê// **** Bit Count **** //
+//The bit counting algorithm was adapted from the GBoost software. Details can be found from
+//Wan et al. 2010 AJHG 87(3): p. 325-340.
+
+typedef unsigned long long uint64;
+
+int bitCount(uint64 i)
+{
+	i = i - ((i >> 1) & 0x5555555555555555);
+	i = (i & 0x3333333333333333) + ((i >> 2) & 0x3333333333333333);
+	i = (i + (i >> 4)) & 0x0f0f0f0f0f0f0f0f;
+	i = i + (i >> 8);
+	i = i + (i >> 16);
+	i = i + (i >> 32);
+	return (int)i & 0x7f;
+}
+
+static unsigned char wordbits[65536];// { bitcounts of ints between 0 and 65535 };
+
+// compute number of 1s in 64 bit string
+static int popcount( uint64 i )
+{
+	return( wordbits[i&0xFFFF] + wordbits[(i>>16)&0xFFFF] + wordbits[(i>>32)&0xFFFF] + wordbits[i>>48]);
+}
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

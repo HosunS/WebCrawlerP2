@@ -1,0 +1,46 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2090¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 02 Mar 2018 02:53:28 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"82a-5666514b734df"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 15:24:22 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY*<!DOCTYPE html>
+<html>
+<head>
+<title>Theory Seminar, March 2, 2018</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<a href="/~theory/"><img src="http://www.ics.uci.edu/~theory/logo/CATOC2.jpg"
+alt="Center for Algorithms and Theory of Computation"></a>
+<h2><a href="/~theory/269/">CS 269S, Winter 2018: Theory Seminar</a><br>
+Bren Hall, Room 1423, 1pm</h2>
+<hr />
+<h2>March 2, 2018:</h2>
+<h1>Time-Space Trade-Offs for Computing Euclidean Minimum Spanning Trees</h1>
+<h2>Jordan Jorgensen</h2>
+
+<p>In the limited-workspace model, we assume that the input of size $n$
+lies in a random access read-only memory. The output has to be reported
+sequentially, and it cannot be accessed or modified. In addition, there
+is a read-write workspace of $O(s)$ words, where $s\in\{1,\dots,n\}$ is
+a given parameter. In a time-space trade-off, we are interested in how
+the running time of an algorithm improves as $s$ varies from $1$ to $n$.
+We present a time-space trade-off for computing the Euclidean minimum
+spanning tree ($\mathrm{EMST}$) of a set $V$ of $n$ sites in the
+plane. We present an algorithm that computes $\mathrm{EMST}(V)$ using
+$O\bigl(n^3\tfrac{\log s}{s^2}\bigr)$ time and $O(s)$ words of
+workspace. Our algorithm uses the fact that $\mathrm{EMST}(V)$ is a
+subgraph of the bounded-degree relative neighborhood graph of $V$, and
+applies Kruskal's MST algorithm on it. To achieve this with limited
+workspace, we introduce a compact representation of planar graphs,
+called an $s$-net which allows us to manipulate its component structure
+during the execution of the algorithm.</p>
+
+<p>(Based on <a href="https://arxiv.org/abs/1712.06431">a paper by Bahareh Banyassady, Luis Barba, and Wolfgang Mulzer from LATIN 2018</a>.)</p>
+
+</body></html>
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

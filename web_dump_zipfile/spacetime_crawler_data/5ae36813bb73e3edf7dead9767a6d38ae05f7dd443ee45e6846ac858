@@ -1,0 +1,553 @@
+¶Ifinal_url¢DtypeEvaluexBhttps://news.uci.edu/2018/10/08/making-a-donor-powered-difference/Lhttp_headers¢DtypeEvalueê¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD9514¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueLX-Powered-ByAv¢DtypeEvalueJPHP/7.0.33¢Ak¢DtypeEvalueXStrict-Transport-SecurityAv¢DtypeEvaluePmax-age=63072000¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueItimeout=2¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDLinkAv¢DtypeEvalueXi<https://news.uci.edu/wp-json/>; rel="https://api.w.org/", <https://news.uci.edu/?p=36709>; rel=shortlink¢Ak¢DtypeEvalueOX-UA-CompatibleAv¢DtypeEvalueGIE=edge¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX#no-store, no-cache, must-revalidate¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 03:11:50 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzipKraw_content¢DtypeEvalueYô9<!DOCTYPE html>
+<html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link rel="icon" type="image/x-icon" href="//web.communications.uci.edu/assets/2015/img/favicon.ico">
+    <link rel="apple-touch-icon" href="//web.communications.uci.edu/assets/2015/img/webclip-icon.png">
+
+    <title>Making a donor-powered difference | UCI News | UCI</title>
+
+    <title>Making a donor-powered difference &#8211; UCI News</title>
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/news.uci.edu\/wp-includes\/js\/wp-emoji.js?ver=4.9.8","twemoji":"https:\/\/news.uci.edu\/wp-includes\/js\/twemoji.js?ver=4.9.8"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/*
+	 * Create a canvas element for testing native browser support
+	 * of emoji.
+	 */
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Check if two sets of Emoji characters render the same.
+	 *
+	 * @param set1 array Set of Emoji characters.
+	 * @param set2 array Set of Emoji characters.
+	 * @returns {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "flag" or "emoji".
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 55356, 56826, 55356, 56819 ],
+					[ 55356, 56826, 8203, 55356, 56819 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447 ],
+					[ 55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447 ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * She's the hero Emoji deserves, but not the one it needs right now.
+				 *
+				 * To test for support, try to render a new emoji (female superhero),
+				 * then compare it to how it would look if the browser doesn't render it correctly
+				 * (superhero + female sign).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[55358, 56760, 9792, 65039],
+					[55358, 56760, 8203, 9792, 65039]
+				);
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='uci-wp-video-embeder-styles-css'  href='https://news.uci.edu/wp-content/plugins/uci-wp-video-embedder/video-embed.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='cj-authorship-front-css'  href='https://news.uci.edu/wp-content/plugins/cj-authorship/css/style.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='cj-rl-front-css'  href='https://news.uci.edu/wp-content/plugins/cj-related-links/css/front.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='sharify-font-css'  href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400' type='text/css' media='all' />
+<link rel='stylesheet' id='uciseventeen-child-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/theme-styles/uciseventeen.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap3-uci-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/theme-styles/Bootstrap3-UCI-theme/css/bootstrap3-uci.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap3-accessibility-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/theme-styles/Bootstrap3-UCI-theme/css/bootstrap3-uci-accessibility/bootstrap3-uci-accessibility.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='main-style-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/style.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='uciseventeen-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen/style.css?ver=0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='uci-slideshow-frontend-css'  href='https://news.uci.edu/wp-content/plugins/uci-wp-slideshow/uci-slideshow/uci-slideshow.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='uci-slideshow-no-bootstrap-css'  href='https://news.uci.edu/wp-content/plugins/uci-wp-slideshow/uci-slideshow/uci-slideshow-no-bootstrap.css?ver=4.9.8' type='text/css' media='all' />
+<script type='text/javascript' src='https://news.uci.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/plugins/uci-wp-video-embedder/video-embed.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/js/jquery-match-height/dist/jquery.matchHeight-min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/js/jquery.imgpreload/dist/jquery.imgpreload.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/js/uciseventeen/height-matching.js?ver=4.9.8'></script>
+<link rel='https://api.w.org/' href='https://news.uci.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://news.uci.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://news.uci.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='New faculty faces' href='https://news.uci.edu/2018/10/08/new-faculty-faces-3/' />
+<link rel='next' title='UCI study: Reduced Sierra Nevada snowmelt runoff to threaten California agriculture' href='https://news.uci.edu/2018/10/08/uci-study-reduced-sierra-nevada-snowmelt-runoff-to-threaten-california-agriculture/' />
+<meta name="generator" content="WordPress 4.9.8" />
+<link rel="canonical" href="https://news.uci.edu/2018/10/08/making-a-donor-powered-difference/" />
+<link rel='shortlink' href='https://news.uci.edu/?p=36709' />
+<link rel="alternate" type="application/json+oembed" href="https://news.uci.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnews.uci.edu%2F2018%2F10%2F08%2Fmaking-a-donor-powered-difference%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://news.uci.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnews.uci.edu%2F2018%2F10%2F08%2Fmaking-a-donor-powered-difference%2F&#038;format=xml" />
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NP3KPCC');
+
+// Auto-wrap non-bootstrap code in a container
+jQuery(function($) {
+	if (!$('.page main .container').length && !$('.page main .container-fluid').length) {
+		$('main').addClass('container');
+	}
+});</script>
+	    <meta name="description" content="Philanthropic support lets researcher translate ‚Äòwacky ideas‚Äô into real-world results">
+
+<!-- START - Facebook Open Graph, Google+ and Twitter Card Tags 1.6.3 -->
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="UCI News"/>
+<meta property="og:title" content="Making a donor-powered difference"/>
+<meta itemprop="name" content="Making a donor-powered difference"/>
+<meta property="og:url" content="https://news.uci.edu/2018/10/08/making-a-donor-powered-difference/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-10-08T10:26:04+00:00"/>
+	<meta property="article:modified_time" content="2018-10-08T10:26:04+00:00" />
+<meta property="og:updated_time" content="2018-10-08T10:26:04+00:00" />
+<meta property="article:section" content="Faculty"/>
+<meta property="article:section" content="Features"/>
+<meta property="article:section" content="ICS"/>
+<meta property="article:section" content="Research"/>
+<meta property="og:description" content="Philanthropic support lets researcher translate ‚Äòwacky ideas‚Äô into real-world results"/>
+<meta itemprop="description" content="Philanthropic support lets researcher translate ‚Äòwacky ideas‚Äô into real-world results"/>
+<meta property="og:image" content="https://news.uci.edu/wp-content/uploads/2018/10/Hayes_0646_lr_sz-720x480.jpg"/>
+<meta itemprop="image" content="https://news.uci.edu/wp-content/uploads/2018/10/Hayes_0646_lr_sz-720x480.jpg"/>
+<!-- END - Facebook Open Graph, Google+ and Twitter Card Tags -->
+
+</head>
+<body class="post">
+
+<!-- skip to main nav -->
+<nav aria-label="Skip to" id="skip-to">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a class="sr-only sr-only-focusable" href="#content-main">Skip to main content</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- primary nav -->
+<nav aria-label="Primary navigation" class="navbar navbar-inverse" id="nav-primary">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#nav-primary-items"
+                    data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle primary navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://uci.edu/">UCI <span class="sr-only">homepage</span></a>
+        </div>
+        <div id="nav-primary-items" class="collapse navbar-collapse"><ul id="menu-main-menu" class="nav navbar-nav"><li  id="menu-item-69" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-69 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/art-and-humanities/">Arts & Humanities</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Arts & Humanities</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/arts/">Arts</a></li>
+<li><a href="https://news.uci.edu/category/humanities/">Humanities</a></li>
+</ul>
+</li>
+<li  id="menu-item-70" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70 nav-item btn-group clearfix link-only"><a class="btn" href="https://news.uci.edu/category/athletics/">Athletics</a></li>
+<li  id="menu-item-71" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-71 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/campus-life/">Campus Life</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Campus Life</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/campus-life/administration/">Administration</a></li>
+<li><a href="https://news.uci.edu/category/campus-life/students/">Students</a></li>
+</ul>
+</li>
+<li  id="menu-item-72" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-72 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/health/">Health</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Health</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/health/hospital/">Hospital</a></li>
+<li><a href="https://news.uci.edu/category/health/public-health/">Public Health</a></li>
+<li><a href="https://news.uci.edu/category/health/nursing/">Nursing</a></li>
+<li><a href="https://news.uci.edu/category/health/school-of-medicine/">School of Medicine</a></li>
+<li><a href="https://news.uci.edu/category/health/pharmaceutical-sciences/">Pharmaceutical Science</a></li>
+</ul>
+</li>
+<li  id="menu-item-73" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-73 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/science-and-tech/">Science & Tech</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Science & Tech</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/science-and-tech/environment-and-energy/">Environment/Energy</a></li>
+</ul>
+</li>
+<li  id="menu-item-74" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-74 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/society-and-community/">Society & Community</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Society & Community</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/society-and-community/education/">Education</a></li>
+</ul>
+</li>
+</ul></div>    </div>
+</nav>
+
+<header>
+        <div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8" id="wordmark">
+                <a href="https://news.uci.edu"><img width="302" height="75" src="https://news.uci.edu/wp-content/uploads/2018/04/news-wordmark.png" class="attachment-full size-full" alt="UCI News" /></a>            </div>
+            <div class="col-sm-12 col-md-4" id="search">
+                <form action="https://search.uci.edu/" class="form-inline" method="get">
+    <input name="collection" type="hidden" value="uci_news">
+    <label class="sr-only" for="search-text">Search</label>
+    <input class="form-control" id="search-text" name="q" placeholder="Search..." type="text">
+    <div class="btn-group">
+        <button class="btn btn-default" name="type" type="submit" value="Web">Web</button>
+        <button class="btn btn-default" name="type" type="submit" value="People">People</button>
+    </div>
+</form>
+            </div>
+        </div>
+    </div>
+</div>
+    </header>
+
+<hr>
+
+<!--<nav aria-label="breadcrumbs" id="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                            </div>
+        </div>
+    </div>
+</nav> -->
+
+<main id="content-main">
+    <div class="content container">
+    <div class="row">
+        <div class="col-md-8 clearfix article article-column-wrap">
+            <h1 class="page-heading">Making a donor-powered difference</h1>
+
+            <h2 class="page-subheadline">Philanthropic support lets researcher translate ‚Äòwacky ideas‚Äô into real-world results</h2>
+
+            <div class="page-date">
+                
+	by Daisy Murguia, UCI | 
+
+                October 8, 2018            </div>
+
+                            <div class="portrait-header">
+                    <img src="https://news.uci.edu/wp-content/uploads/2018/10/Hayes_0646_lr_sz-768x1167.jpg" alt="Making a donor-powered difference" class="img-responsive">												<div class="caption">Private research funding ‚Äúallows flexibility in a way that most other funding sources do not,‚Äù says Gillian Hayes, UCI‚Äôs Robert A. &amp; Barbara L. Kleist Chair in Informatics, who develops assistive and educational technologies for ‚Äúthose who don‚Äôt have a voice, the underrepresented and the underserved.‚Äù
+
+Steve Zylius / UCI</div>
+					                </div>
+            
+            <div class="page-content clearfix"><p>Professor Gillian Hayes is a risk-taker. Her pursuit of what she calls ‚Äúwacky ideas‚Äù has resulted in products that improve quality of life for the disabled and those caring for them: a remotely controlled harness that lets blind children go canoeing; an app to store medical records for children with autism that saves parents time and simplifies interaction with doctors; an app that teaches and reminds autistic youth about common hygiene practices.</p>
+<p>Government funding for experimental research benefiting such niche markets is scarce. Instead, Hayes, the Robert A. &amp; Barbara L. Kleist Chair in Informatics at UCI, and her graduate students depend on donors, foundations and corporations. Their supporters include the Robert Wood Johnson Foundation, Google, Autism Speaks and Microsoft.</p>
+<p>Hayes is particularly thankful for the philanthropic aid she‚Äôs received from private sources, such as the Kleists, which has allowed her to ‚Äútake risks on things that I wouldn‚Äôt do otherwise, like some of my research projects.‚Äù</p>
+<p>This type of funding tends to foster collaboration, and Hayes happily interacts with her donors via monthly meetings, weekly phone calls and daily emails. Their insights help her calibrate her work for maximum impact in the daily lives of the disabled.</p>
+<p>‚ÄúI think Bob [Kleist] and I have a shared vision of the world in which technology should be used to assist those who don‚Äôt have a voice, the underrepresented and the underserved,‚Äù Hayes says.</p>
+<p>‚ÄúWe‚Äôre also partnering closely with local organizations,‚Äù she adds, ‚Äúwhich means we need to be adaptable and agile in our response to their needs and input. Foundation funding allows flexibility in a way that most other funding sources do not.‚Äù</p>
+<p>The connections Hayes makes with her backers have even led her to become an entrepreneur. She is chief science officer at Tiwahe Technology, a high-tech design and consulting firm specializing in autism and other assistive and educational technologies.</p>
+<p>But at UCI, her focus is on translating sometimes unconventional ideas into solutions for real-world problems ‚Äì work made possible by the generosity of private supporters.</p>
+<p>‚ÄúPhilanthropic aid is an incredibly powerful gift,‚Äù Hayes says. ‚ÄúIt not only enables our lab research, but also helps our engagement with communities around Orange County and beyond that serve those with autism, severe visual impairments and more.‚Äù</p>
+<div class="sharify-container"><ul><li class="sharify-btn-twitter">
+								<a title="Tweet on Twitter" href="https://twitter.com/intent/tweet?text=Making+a+donor-powered+difference: https://news.uci.edu/2018/10/08/making-a-donor-powered-difference/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+									<span class="sharify-icon"><i class="sharify sharify-twitter"></i></span>
+									<span class="sharify-title">Tweet</span>
+								</a>
+							</li><li class="sharify-btn-facebook">
+								<a title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fnews.uci.edu%2F2018%2F10%2F08%2Fmaking-a-donor-powered-difference%2F" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+									<span class="sharify-icon"><i class="sharify sharify-facebook"></i></span>
+									<span class="sharify-title">Share</span>
+									<span class="sharify-count">0</span>
+								</a>
+							</li><li class="sharify-btn-reddit">
+								<a title="Submit to Reddit" href="http://reddit.com/submit?url=https://news.uci.edu/2018/10/08/making-a-donor-powered-difference/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=950,height=450,toolbar=0'); return false;">
+									<span class="sharify-icon"><i class="sharify sharify-reddit"></i></span>
+									<span class="sharify-title">Reddit</span>
+								</a>
+							</li><li class="sharify-btn-gplus">
+								<a title="Share on Google+" href="http://plus.google.com/share?url=https://news.uci.edu/2018/10/08/making-a-donor-powered-difference/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+									<span class="sharify-icon"><i class="sharify sharify-gplus"></i></span>
+									<span class="sharify-title">+1</span>
+								</a>
+							</li><li class="sharify-btn-linkedin">
+								<a title="Share on Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://news.uci.edu/2018/10/08/making-a-donor-powered-difference/&title=Making a donor-powered difference" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}" >
+									<span class="sharify-icon"><i class="sharify sharify-linkedin"></i></span>
+									<span class="sharify-title">LinkedIn</span>
+									<span class="sharify-count">0</span>
+								</a>
+							</li><li class="sharify-btn-email">
+								<a title="Share via mail" href="mailto:?subject=Making a donor-powered difference&body=Hey, checkout this web page: - https://news.uci.edu/2018/10/08/making-a-donor-powered-difference/">
+									<span class="sharify-icon"><i class="sharify sharify-mail"></i></span>
+									<span class="sharify-title">Email</span>
+								</a>
+							</li></ul></div></div>
+            <div class="related-posts"><h2>Related Posts</h2><div class="media"><div class="media-left"><a href="https://news.uci.edu/2018/01/17/dosher-solingen-honored-by-national-academy-of-sciences-for-research-achievements/"><img src="https://news.uci.edu/wp-content/uploads/2018/01/Dosher_180116_01-270x180.jpg" alt="Dosher, Solingen honored by National Academy of Sciences for research achievements" class="img-responsive"></a></div><div class="media-body"><a href="https://news.uci.edu/2018/01/17/dosher-solingen-honored-by-national-academy-of-sciences-for-research-achievements/"><p class="media-heading">Dosher, Solingen honored by National Academy of Sciences for research achievements</p></a><p><time>January 17, 2018</div></div><div class="media"><div class="media-left"><a href="https://news.uci.edu/2017/04/11/uci-air-quality-symposium-will-mark-designation-of-rowland-hall-as-historic-landmark/"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><img src="https://news.uci.edu/wp-content/uploads/2018/05/uci-news-placeholder-default-270x180.jpg" class="img-responsive" alt=""></body></html>
+</a></div><div class="media-body"><a href="https://news.uci.edu/2017/04/11/uci-air-quality-symposium-will-mark-designation-of-rowland-hall-as-historic-landmark/"><p class="media-heading">UCI air quality symposium will mark designation of Rowland Hall as historic landmark</p></a><p><time>April 11, 2017</div></div><div class="media"><div class="media-left"><a href="https://news.uci.edu/2018/01/24/mellon-grant/"><img src="https://news.uci.edu/wp-content/uploads/2018/01/goldberg_161011_01_sz-270x180.jpg" alt="UC receives $10 million Mellon Foundation grant to support advanced humanities research" class="img-responsive"></a></div><div class="media-body"><a href="https://news.uci.edu/2018/01/24/mellon-grant/"><p class="media-heading">UC receives $10 million Mellon Foundation grant to support advanced humanities research</p></a><p><time>January 24, 2018</div></div><div class="media"><div class="media-left"><a href="https://news.uci.edu/2016/11/03/proteins-secreted-by-beneficial-gut-microbes-shown-to-inhibit-salmonella-invasive-e-coli/"><img src="https://news.uci.edu/wp-content/uploads/2016/11/raffatellu_image-270x180.jpg" alt="Proteins secreted by beneficial gut microbes shown to inhibit salmonella, invasive E. coli" class="img-responsive"></a></div><div class="media-body"><a href="https://news.uci.edu/2016/11/03/proteins-secreted-by-beneficial-gut-microbes-shown-to-inhibit-salmonella-invasive-e-coli/"><p class="media-heading">Proteins secreted by beneficial gut microbes shown to inhibit salmonella, invasive E. coli</p></a><p><time>November 3, 2016</div></div></div>        </div>
+        <aside class="col-md-4 sidebar-right no-print">
+            
+
+<div class="widget widget_cj_related_links_widget" id="cj_related_links_widget-3"><div class="widget-text wp_widget_plugin_box">
+<h3 class="widget-title">Related Links</h3>    <ul class="list-group">
+                <li class="list-group-item">
+            <div>
+                <a id="related-link-1" href="http://www.gillianhayes.com">Gillian Hayes&rsquo; website</a>
+            </div>
+            <div class="list-url">http://www.gillianhayes.com</div>
+        </li>
+                <li class="list-group-item">
+            <div>
+                <a id="related-link-2" href="http://www.star-uci.org">Gillian Hayes&rsquo; research group</a>
+            </div>
+            <div class="list-url">http://www.star-uci.org</div>
+        </li>
+                <li class="list-group-item">
+            <div>
+                <a id="related-link-3" href="https://www.informatics.uci.edu">UCI Department of Informatics</a>
+            </div>
+            <div class="list-url">https://www.informatics.uci.edu</div>
+        </li>
+                <li class="list-group-item">
+            <div>
+                <a id="related-link-4" href="https://www.ics.uci.edu">UCI Donald Bren School of Information &amp; Computer Sciences</a>
+            </div>
+            <div class="list-url">https://www.ics.uci.edu</div>
+        </li>
+            </ul>
+</div>
+</div><div class="widget widget_neatly-recent-posts" id="neatly-recent-posts-2"><h3 class="widget-title">Recent Posts</h3>                    <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/02/08/uci-and-national-lab-researchers-see-lifelike-ion-differentiation-in-synthetic-nanopores/"><img src="https://news.uci.edu/wp-content/uploads/2019/02/SyntheticNanopore-270x180.jpg" alt="UCI and national lab researchers see lifelike ion differentiation in synthetic nanopores" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/02/08/uci-and-national-lab-researchers-see-lifelike-ion-differentiation-in-synthetic-nanopores/">UCI and national lab researchers see lifelike ion differentiation in synthetic nanopores</a></h5>
+                
+                                <p class="rp-date rp-info">February 8, 2019</p>
+                
+	                        </div>
+          </div>
+          
+                              <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/02/07/social-sciences-dean-receives-capital-one-grant-to-study-ai-in-financial-services/"><img src="https://news.uci.edu/wp-content/uploads/2019/02/billmaurer2016_880-270x180.jpg" alt="Social sciences dean Bill Maurer is awarded grant to study use of AI in financial services" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/02/07/social-sciences-dean-receives-capital-one-grant-to-study-ai-in-financial-services/">Social sciences dean Bill Maurer is awarded grant to study use of AI in financial services</a></h5>
+                
+                                <p class="rp-date rp-info">February 7, 2019</p>
+                
+	                        </div>
+          </div>
+          
+                              <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/02/06/improved-land-management-project-co-led-by-uci-gets-4-6-million-in-state-funding/"><img src="https://news.uci.edu/wp-content/uploads/2019/02/Yosemite_smaller-270x180.jpg" alt="Improved land management project co-led by UCI gets $4.6 million in state funding" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/02/06/improved-land-management-project-co-led-by-uci-gets-4-6-million-in-state-funding/">Improved land management project co-led by UCI gets $4.6 million in state funding</a></h5>
+                
+                                <p class="rp-date rp-info">February 6, 2019</p>
+                
+	                        </div>
+          </div>
+          
+                              <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/02/06/safeguarding-the-first-amendment/"><img src="https://news.uci.edu/wp-content/uploads/2019/02/main_Gillman_litj_srz2477-copy-270x180.jpg" alt="Safeguarding the First Amendment" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/02/06/safeguarding-the-first-amendment/">Safeguarding the First Amendment</a></h5>
+                
+                                <p class="rp-date rp-info">February 6, 2019</p>
+                
+	                        </div>
+          </div>
+          
+          </div><div class="widget widget_cj_tag_links" id="cj_tag_links-2"><h3 class="widget-title">Keywords</h3><ul class="list-group"><li class="list-group-item"><a href="https://news.uci.edu/tag/autism/" class="" rel="tag">autism</a></li><li class="list-group-item"><a href="https://news.uci.edu/tag/donations/" class="" rel="tag">donations</a></li><li class="list-group-item"><a href="https://news.uci.edu/tag/endowed-chair/" class="" rel="tag">endowed chair</a></li><li class="list-group-item"><a href="https://news.uci.edu/tag/informatics/" class="" rel="tag">informatics</a></li><li class="list-group-item"><a href="https://news.uci.edu/tag/innovation/" class="" rel="tag">Innovation</a></li><li class="list-group-item"><a href="https://news.uci.edu/tag/philanthropy/" class="" rel="tag">philanthropy</a></li><li class="list-group-item"><a href="https://news.uci.edu/tag/research/" class="" rel="tag">research</a></li></ul></div>        </aside>
+    </div>
+</div>
+
+    
+    
+</main>
+<footer>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0">
+                                        <div class="menu-footer-column-one-container"><ul id="menu-footer-column-one"><li id="menu-item-84" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-84"><a href="https://www.facebook.com/UCIrvine">Facebook</a></li>
+<li id="menu-item-85" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-85"><a href="https://twitter.com/UCIrvine">Twitter</a></li>
+<li id="menu-item-86" class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-86"><a href="http://www.youtube.com/ucirvinenews">YouTube</a></li>
+<li id="menu-item-87" class="flickr menu-item menu-item-type-custom menu-item-object-custom menu-item-87"><a href="http://www.flickr.com/photos/ucirvine/">Flickr</a></li>
+<li id="menu-item-88" class="storify menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a href="http://storify.com/ucirvine">Storify</a></li>
+</ul></div>                                                        </div>
+                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0">
+                                            <div class="menu-footer-column-two-container"><ul id="menu-footer-column-two"><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90"><a href="http://today.uci.edu/">UCI Today</a></li>
+<li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91"><a href="http://search.uci.edu/">UCI Search</a></li>
+</ul></div>                                                        </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0">
+                                        <div class="menu-footer-column-three-container"><ul id="menu-footer-column-three"><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92"><a href="http://forms.communications.uci.edu/uci-feedback/">Feedback</a></li>
+<li id="menu-item-93" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93"><a href="http://uci.edu/privacy/">Privacy Notice</a></li>
+</ul></div>                                                        </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
+                    <address>
+                        <span>Strategic Communications & Public Affairs</span><br><span>120 Theory, Suite 100</span><br><span>Irvine, CA 92697-5615</span><br><span>949-824-6922</span><br>                    </address>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <a href="//uci.edu/copyright"><small>¬© 2019 UC Regents</small></a>
+        </div>
+    </div>
+</div>
+</footer>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/plugins/sharify/admin/inc/sharifycounts.js?ver=1.4'></script>
+<script type='text/javascript' src='//code.jquery.com/jquery-2.1.4.min.js?ver=0.1'></script>
+<script type='text/javascript' src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js?ver=0.1'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen/assets/theme-styles/Bootstrap3-UCI-theme/js/bootstrap-uci-extensions.js?ver=0.1'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/plugins/uci-wp-slideshow/uci-slideshow/uci-slideshow.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-includes/js/wp-embed.js?ver=4.9.8'></script>
+</body>
+</html>Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

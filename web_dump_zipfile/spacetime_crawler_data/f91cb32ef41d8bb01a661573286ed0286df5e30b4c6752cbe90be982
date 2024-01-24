@@ -1,0 +1,618 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‹¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3069¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueUApache/2.4.7 (Ubuntu)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 17 Sep 2015 00:12:58 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"6818-51fe64704f680-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 21:15:42 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueJtext/plainKraw_content¢DtypeEvalueYh$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/28532.java 454 470
+/home/jeff/BigCloneBench/sample/default/28532.java 1684 1702
+----------------------------------------
+    public void test24() throws Exception {
+        String data = "1\r\n\r\n1";
+        CsvReader reader = CsvReader.parse(data);
+        reader.setUseTextQualifier(false);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(1L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test138() throws Exception {
+        CsvReader reader = CsvReader.parse("1;; ;1");
+        reader.setRecordDelimiter(';');
+        Assert.assertTrue(reader.getSkipEmptyRecords());
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("", reader.get(0));
+        Assert.assertEquals(1L, reader.getCurrentRecord());
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(2L, reader.getCurrentRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/2669827.java 154 162
+/home/jeff/BigCloneBench/sample/selected/150134.java 54 63
+----------------------------------------
+        public String toString() {
+            StringBuffer sb = new StringBuffer("URL: ");
+            sb.append(m_strURL);
+            sb.append(", Start: ");
+            sb.append(m_nIdxStart);
+            sb.append(", End: ");
+            sb.append(m_nIdxEnd);
+            return sb.toString();
+        }
+
+----------------------------------------
+    public String toString() {
+        StringBuffer sb = new StringBuffer();
+        sb.append("{");
+        sb.append("read: ");
+        sb.append(readCount);
+        sb.append(", write: ");
+        sb.append(writeCount);
+        sb.append("}");
+        return sb.toString();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/122249.java 334 353
+/home/jeff/BigCloneBench/sample/default/11754.java 149 165
+----------------------------------------
+    public void test16() throws Exception {
+        String data = "\r\r\n1\r";
+        CsvReader reader = CsvReader.parse(data);
+        reader.setDelimiter('\r');
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("", reader.get(0));
+        Assert.assertEquals("", reader.get(1));
+        Assert.assertEquals("", reader.get(2));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(3, reader.getColumnCount());
+        Assert.assertEquals("\r\r", reader.getRawRecord());
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals("", reader.get(1));
+        Assert.assertEquals(1L, reader.getCurrentRecord());
+        Assert.assertEquals(2, reader.getColumnCount());
+        Assert.assertEquals("1\r", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test4() throws Exception {
+        String data = "1\r2";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("2", reader.get(0));
+        Assert.assertEquals(1L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("2", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        Assert.assertEquals("", reader.getRawRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/2236931.java 180 209
+/home/jeff/BigCloneBench/sample/selected/1585812.java 70 89
+----------------------------------------
+    public static String getData(String url) {
+        try {
+            u = new URL(url);
+            uc = (HttpURLConnection) u.openConnection();
+            uc.setDoOutput(true);
+            uc.setRequestProperty("Host", "www.mediafire.com");
+            uc.setRequestProperty("Connection", "keep-alive");
+            uc.setRequestProperty("Referer", "http://mediafire.com/");
+            uc.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.112 Safari/535.1");
+            uc.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+            uc.setRequestProperty("Accept-Encoding", "html");
+            uc.setRequestProperty("Accept-Language", "en-US,en;q=0.8");
+            uc.setRequestProperty("Accept-Charset", "ISO-8859-1,utf-8;q=0.7,*;q=0.3");
+            uc.setRequestProperty("Cookie", ukeycookie + ";" + skeycookie + ";" + usercookie);
+            uc.setRequestMethod("GET");
+            uc.setInstanceFollowRedirects(false);
+            br = new BufferedReader(new InputStreamReader(uc.getInputStream()));
+            String temp = "", k = "";
+            while ((temp = br.readLine()) != null) {
+                k += temp;
+            }
+            br.close();
+            u = null;
+            uc = null;
+            return k;
+        } catch (Exception e) {
+            System.out.println("exception : " + e.toString());
+            return "";
+        }
+    }
+
+----------------------------------------
+    public static void setHttpHeader(String cookie) {
+        try {
+            uc = (HttpURLConnection) u.openConnection();
+            uc.setDoOutput(true);
+            uc.setRequestProperty("Host", "filefactory.com");
+            uc.setRequestProperty("Connection", "keep-alive");
+            uc.setRequestProperty("Referer", "http://filefactory.com/");
+            uc.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 5.1) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.112 Safari/535.1");
+            uc.setRequestProperty("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8");
+            uc.setRequestProperty("Accept-Encoding", "html");
+            uc.setRequestProperty("Accept-Language", "en-US,en;q=0.8");
+            uc.setRequestProperty("Accept-Charset", "ISO-8859-1,utf-8;q=0.7,*;q=0.3");
+            uc.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+            uc.setRequestProperty("Cookie", cookie);
+            uc.setRequestMethod("POST");
+            uc.setInstanceFollowRedirects(false);
+        } catch (Exception e) {
+            System.out.println("ex" + e.toString());
+        }
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/419020.java 1037 1048
+/home/jeff/BigCloneBench/sample/selected/588446.java 1129 1142
+----------------------------------------
+        public InputStream(java.io.InputStream in, int options) {
+            super(in);
+            this.breakLines = (options & DONT_BREAK_LINES) != DONT_BREAK_LINES;
+            this.encode = (options & ENCODE) == ENCODE;
+            this.bufferLength = encode ? 4 : 3;
+            this.buffer = new byte[bufferLength];
+            this.position = -1;
+            this.lineLength = 0;
+            this.options = options;
+            this.alphabet = getAlphabet(options);
+            this.decodabet = getDecodabet(options);
+        }
+
+----------------------------------------
+        public OutputStream(java.io.OutputStream out, int options) {
+            super(out);
+            this.breakLines = (options & DONT_BREAK_LINES) != DONT_BREAK_LINES;
+            this.encode = (options & ENCODE) == ENCODE;
+            this.bufferLength = encode ? 3 : 4;
+            this.buffer = new byte[bufferLength];
+            this.position = 0;
+            this.lineLength = 0;
+            this.suspendEncoding = false;
+            this.b4 = new byte[4];
+            this.options = options;
+            this.alphabet = getAlphabet(options);
+            this.decodabet = getDecodabet(options);
+        }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/211182.java 202 210
+/home/jeff/BigCloneBench/sample/selected/2308223.java 181 189
+----------------------------------------
+    public double[] getColumnPackedCopy() {
+        double[] vals = new double[m * n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                vals[i + j * m] = A[i][j];
+            }
+        }
+        return vals;
+    }
+
+----------------------------------------
+    public double[][] getArrayCopy() {
+        double[][] C = new double[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                C[i][j] = A[i][j];
+            }
+        }
+        return C;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/793117.java 170 176
+/home/jeff/BigCloneBench/sample/selected/939512.java 106 111
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_op_get_qos(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        org.omg.CORBA.portable.OutputStream out = null;
+        org.omg.CosNotification.Property[] _ob_r = get_qos();
+        out = handler.createReply();
+        org.omg.CosNotification.QoSPropertiesHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_att_get_lifetime_filter(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        org.omg.CosNotifyFilter.MappingFilter _ob_r = lifetime_filter();
+        org.omg.CORBA.portable.OutputStream out = handler.createReply();
+        org.omg.CosNotifyFilter.MappingFilterHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/80832.java 656 667
+/home/jeff/BigCloneBench/sample/default/73729.java 234 245
+----------------------------------------
+    public void test36() throws Exception {
+        String data = "\"some \\stuff\"";
+        CsvReader reader = CsvReader.parse(data);
+        reader.setEscapeMode(CsvReader.ESCAPE_MODE_BACKSLASH);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("some stuff", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("\"some \\stuff\"", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test9() throws Exception {
+        String data = "1\r\n";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        Assert.assertEquals("", reader.getRawRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/2081974.java 85 92
+/home/jeff/BigCloneBench/sample/selected/751919.java 185 196
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_op_add_filter(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        org.omg.CORBA.portable.OutputStream out = null;
+        org.omg.CosNotifyFilter.Filter _ob_a0 = org.omg.CosNotifyFilter.FilterHelper.read(in);
+        int _ob_r = add_filter(_ob_a0);
+        out = handler.createReply();
+        org.omg.CosNotifyFilter.FilterIDHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_op_remove_filter(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        org.omg.CORBA.portable.OutputStream out = null;
+        try {
+            int _ob_a0 = org.omg.CosNotifyFilter.FilterIDHelper.read(in);
+            remove_filter(_ob_a0);
+            out = handler.createReply();
+        } catch (org.omg.CosNotifyFilter.FilterNotFound _ob_ex) {
+            out = handler.createExceptionReply();
+            org.omg.CosNotifyFilter.FilterNotFoundHelper.write(out, _ob_ex);
+        }
+        return out;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/211182.java 551 559
+/home/jeff/BigCloneBench/sample/selected/2308223.java 642 649
+----------------------------------------
+    public Matrix minusEquals(Matrix B) {
+        checkMatrixDimensions(B);
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                A[i][j] = A[i][j] - B.A[i][j];
+            }
+        }
+        return this;
+    }
+
+----------------------------------------
+    public Matrix timesEquals(double s) {
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                A[i][j] = s * A[i][j];
+            }
+        }
+        return this;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/62853.java 234 245
+/home/jeff/BigCloneBench/sample/default/11754.java 590 601
+----------------------------------------
+    public void test9() throws Exception {
+        String data = "1\r\n";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        Assert.assertEquals("", reader.getRawRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test32() throws Exception {
+        String data = "\"Mac \"The Knife\" Peter\",\"Boswell, Jr.\"";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("Mac ", reader.get(0));
+        Assert.assertEquals("Boswell, Jr.", reader.get(1));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(2, reader.getColumnCount());
+        Assert.assertEquals("\"Mac \"The Knife\" Peter\",\"Boswell, Jr.\"", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/119807.java 264 274
+/home/jeff/BigCloneBench/sample/default/73729.java 382 392
+----------------------------------------
+    public void test11() throws Exception {
+        String data = "\"July 4th, 2005\"";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("July 4th, 2005", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("\"July 4th, 2005\"", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test19() throws Exception {
+        String data = "1\r\n";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/62853.java 382 392
+/home/jeff/BigCloneBench/sample/default/22303.java 762 773
+----------------------------------------
+    public void test19() throws Exception {
+        String data = "1\r\n";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test41() throws Exception {
+        String data = "double\\\\\\\\double backslash";
+        CsvReader reader = CsvReader.parse(data);
+        reader.setUseTextQualifier(false);
+        reader.setEscapeMode(CsvReader.ESCAPE_MODE_BACKSLASH);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("double\\\\double backslash", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/1008771.java 896 902
+/home/jeff/BigCloneBench/sample/selected/1008771.java 933 939
+----------------------------------------
+    public int isAJavaSeisPath() {
+        if (_status == NORMAL) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+----------------------------------------
+    public int getNumDimensions() {
+        if (_status != NORMAL) {
+            return 0;
+        } else {
+            return _js.getNumDimensions();
+        }
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/62853.java 395 405
+/home/jeff/BigCloneBench/sample/default/80832.java 321 331
+----------------------------------------
+    public void test20() throws Exception {
+        String data = "1\n";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test15() throws Exception {
+        String data = "\"data \r\n here\"";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("data \r\n here", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("\"data \r\n here\"", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/2290446.java 175 180
+/home/jeff/BigCloneBench/sample/selected/2508249.java 52 58
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_att_get_max_follow_policy(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        FollowOption _ob_r = max_follow_policy();
+        org.omg.CORBA.portable.OutputStream out = handler.createReply();
+        FollowOptionHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_op_get_typed_supplier(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        org.omg.CORBA.portable.OutputStream out = null;
+        org.omg.CORBA.Object _ob_r = get_typed_supplier();
+        out = handler.createReply();
+        out.write_Object(_ob_r);
+        return out;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/106112.java 206 217
+/home/jeff/BigCloneBench/sample/default/106112.java 546 557
+----------------------------------------
+    public void test7() throws Exception {
+        String data = "1\r";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        Assert.assertEquals("", reader.getRawRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test29() throws Exception {
+        String data = "\"double\\\"\\\"double quotes\"";
+        CsvReader reader = CsvReader.parse(data);
+        reader.setEscapeMode(CsvReader.ESCAPE_MODE_BACKSLASH);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("double\"\"double quotes", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("\"double\\\"\\\"double quotes\"", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/22303.java 382 392
+/home/jeff/BigCloneBench/sample/default/106112.java 656 667
+----------------------------------------
+    public void test19() throws Exception {
+        String data = "1\r\n";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test36() throws Exception {
+        String data = "\"some \\stuff\"";
+        CsvReader reader = CsvReader.parse(data);
+        reader.setEscapeMode(CsvReader.ESCAPE_MODE_BACKSLASH);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("some stuff", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("\"some \\stuff\"", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/122249.java 334 353
+/home/jeff/BigCloneBench/sample/default/28532.java 507 526
+----------------------------------------
+    public void test16() throws Exception {
+        String data = "\r\r\n1\r";
+        CsvReader reader = CsvReader.parse(data);
+        reader.setDelimiter('\r');
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("", reader.get(0));
+        Assert.assertEquals("", reader.get(1));
+        Assert.assertEquals("", reader.get(2));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(3, reader.getColumnCount());
+        Assert.assertEquals("\r\r", reader.getRawRecord());
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals("", reader.get(1));
+        Assert.assertEquals(1L, reader.getCurrentRecord());
+        Assert.assertEquals(2, reader.getColumnCount());
+        Assert.assertEquals("1\r", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test27() throws Exception {
+        String data = "\"1\",Bruce\r\n\"2\n\",Toni\r\n\"3\",Brian\r\n";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals("Bruce", reader.get(1));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(2, reader.getColumnCount());
+        Assert.assertEquals("\"1\",Bruce", reader.getRawRecord());
+        Assert.assertTrue(reader.skipRecord());
+        Assert.assertEquals("\"2\n\",Toni", reader.getRawRecord());
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("3", reader.get(0));
+        Assert.assertEquals("Brian", reader.get(1));
+        Assert.assertEquals(1L, reader.getCurrentRecord());
+        Assert.assertEquals(2, reader.getColumnCount());
+        Assert.assertEquals("\"3\",Brian", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

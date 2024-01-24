@@ -1,0 +1,38 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1877¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 29 Jan 2019 20:35:11 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"755-5809ebadc579f"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 20:45:48 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYU<!DOCTYPE html>
+<html>
+<head>
+<title>Theory Seminar, February 1, 2019</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<a href="/~theory/"><img src="http://www.ics.uci.edu/~theory/logo/CATOC2.jpg"
+alt="Center for Algorithms and Theory of Computation"></a>
+<h2><a href="/~theory/269/">CS 269S, Winter 2019: Theory Seminar</a><br>
+Bren Hall, Room 1423, 1pm</h2>
+<hr />
+<h2>Februaru 1, 2019:</h2>
+<h1>Graph Reconstruction and Verification
+</h1>
+<h2>Pedro Matias</h2>
+
+<p>
+How efficiently can we find an unknown graph using distance or shortest path queries between its vertices? We assume that the unknown graph G is connected, unweighted, and has bounded degree. In the reconstruction problem, the goal is to find the graph G. In the verification problem, we are given a hypothetical graph Äœ and want to check whether G is equal to Äœ.
+We provide a randomized algorithm for reconstruction using Ã•(n^{3/2}) distance queries, based on Voronoi cell decomposition. Next, we analyze natural greedy algorithms for reconstruction using a shortest path oracle and also for verification using either oracle, and show that their query complexity is n^{1+o(1)}. We further improve the query complexity when the graph is chordal or outerplanar. Finally, we show some lower bounds, and consider an approximate version of the reconstruction problem.
+</p>
+
+<p>
+Paper by Sampath Kannan, Claire Mathieu and Hang Zhou [TALG 18]
+<a href="https://dl.acm.org/citation.cfm?id=3199606">
+https://dl.acm.org/citation.cfm?id=3199606</a>
+</p>
+
+</body></html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

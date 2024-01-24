@@ -1,0 +1,24 @@
+¦Ifinal_url¢DtypeEvaluex/http://cybert.ics.uci.edu/dialog/normalization/Lhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:33:25 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYe
+
+<p><a href="/help/" class"fg-button ui-state-default ui-corner-all">View Complete Help</a></p>
+
+
+
+
+
+<div class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+  <h2 class="ui-widget-header">Normalization and Low-Value Handling (Optional)</h2>
+  <p>
+    The statistical analyses performed by Cyber-T assumes that the data are approximately normal.  
+    This is often not the case with raw microarray (or other high-throughput) data.
+    A common technique is to take the natural log (<i>ln</i>) of the data before processing.
+    However, this approach has several drawbacks, mainly dealing with the inability to handle negative values.
+    An alternative approach called VSN is based on the <i>asinh</i> transform 
+    and an assumption of a majority of genes being non-differentially expressed [<a href="/help/#references">12</a>].
+    The webserver allows for pre-processing with optional low value thresholding or offsetting, and optional Log or 
+    VSN normalizations.  If a Log or VSN normalization is chosen, some plots displaying the effect of the normalization
+    are generated.
+  </p>
+</div>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

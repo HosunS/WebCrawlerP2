@@ -1,0 +1,129 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE16778¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX2attachment; filename=cs222p-2017-fall-project1.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=efeea39668cf3688e6dcc51e; expires=Wed, 08 May 2019 05:59:05 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 05:59:05 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueYAŠ[[PageOutline]]
+
+= Project 1 for CS222P =
+  '''Deadline: Tuesday, week 2, Oct 10, 2017, 11:45 pm, on EEE.'''Â [[BR]][[BR]]'''Note that students are required to work individually on project 1.'''
+
+== Introduction ==
+In project 1, you will implement a very simple paged file (PF) manager. It builds up the basic file system required for continuing with projects 2,3 and 4. The PF component provides classes and methods for managing files and pages in files. In addition, you will implement the first few operations for a record-based file (RBF) manager (which you will continue working on in part 2 of the project) on top of your basic paged file system. This document aims at providing you with the necessary information required to start project 1.
+
+== Goal ==
+The goal of project 1 is threefold:
+
+ * Get (re)familiar with a C/C++ development environment.
+ * Implement a simple paged file system.
+ * Implement a few operations of a record-oriented (a.k.a. tuple-oriented) file system.
+
+The detailed description of the project itself is inÂ [wiki:cs222p-2017-fall-project1-description Project 1 Description].
+
+== Overview of Steps ==
+ * Set up the development environment.
+ * Download and deploy the codebase of Project 1.
+ * Finish the development of Project 1.
+
+== Detailed Instructions ==
+'''1. Set up the development environment'''
+
+ * '''[https://grape.ics.uci.edu/wiki/public/wiki/cs222p-2017-fall-mac-setup-guide Mac Setup Guide]'''
+
+ * '''Windows Setup Guide'''
+    * We don't recommend you to develop directly under Windows because of potential compatibility issues. 
+    * A good alternative is to develop under a Linux Virtual Machine, here's guide to [https://www.lifewire.com/install-ubuntu-linux-windows-10-steps-2202108 install Ubuntu on Windows VirtualBox]
+    * If you still want to use Windows, here's guide to [https://www.ics.uci.edu/~pattis/common/handouts/mingweclipse/mingw.html install MinGW] and [https://www.ics.uci.edu/~pattis/common/handouts/mingweclipse/eclipse.html use eclipse]
+
+* '''Use Linux environment to test your code'''
+
+  You can develop on your own machine with Eclipse or your favorite IDE and other tools, BUT you should make sure you code will work on a Linux Machine (or a Linux virtual machine). The assistants will be using a Linux machine to test and grade the assignment. To this end, students should follow the standard C library and common C++ libraries, e.g., STL, to implement your project, and make sure your code is GCC/G++ compilable. You can also use C++11 features (https://gcc.gnu.org/projects/cxx0x.htmlÂ ) if you wish. Please make sure that you do not call any platform specific functions, such as Windows-specific APIs in your projects. 
+
+  Before submitting your code, you '''should''' test it under a Linux environment. The code that can be compiled on your machine won't always compile and run correctly under Linux. 
+
+  The easiest way is to use [https://www.ics.uci.edu/computing/linux/hosts.php ICS openlab hosts]. You can use your '''ICS account''' to connect to openlab by using "ssh <your ics username>@openlab.ics.uci.edu". For Windows users, you can use [https://www.ssh.com/ssh/putty/windows/ Putty]
+
+  You can also use Virtual Machines such asÂ [https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/6_0 VMware Player]Â ,Â and [https://www.virtualbox.org/wiki/Downloads VirtualBox]Â . To install Linux on VMWare Player, visitÂ http://partnerweb.vmware.com/GOSIG/Ubuntu_16_04_LTS.htmlÂ . If you would like to useÂ !VirtualBoxÂ , visit[http://www.wikihow.com/Install-Ubuntu-on-VirtualBox http://www.wikihow.com/Install-Ubuntu-on-VirtualBox]Â .
+
+
+'''2. Download and deploy the codebase of Project 1'''
+
+ * Download the '''[attachment:codebase.zip codebase of Project 1]'''.Â  Unzip the file.
+
+  Please download theÂ Â onto your own computer. Unzip the file.
+
+ * Follow the '''[https://grape.ics.uci.edu/wiki/public/wiki/cs222p-2017-fall-project1-create-project Guide to Deploy the codebase]''' to deploy project1 in Eclipse and run the test cases.
+
+
+'''3. Finish the development of Project 1'''
+
+  We have seen the results of running the code in codebase. But, since the implementation of the methods is empty, you cannot manage any files yet. Please finish the implementation in pfm.cc as well as the following methods in rbfm.cc (besides the constructor and destructor): 1) insertRecord. 2) readRecord. 3) printRecord. The remaining methods are not required for part 1 of the project; instead you will implement them as part of part 2 of the project. Please write your own test cases to test your code. You are responsible for anticipating other things that might go wrong that we haven't provided public tests for, just as you would be if you were building a DBMS in an industrial setting.Â [[BR]]
+
+  You may find these functions useful:Â http://www.cplusplus.com/reference/clibrary/cstdio/
+
+== Submission Instructions ==
+The following are requirements on your submission.Â '''Points will likely be deducted if they are not followed.'''
+
+ * '''Suppress any debug messages that you put in your code. Only the original messages in the test cases should be printed.'''
+ * Write a short report to briefly describe the implementation (key design choices) of your paged file and record-based file system layers. Please provide a text file rather than a PDF, Word Document, or other non-text format. Do not use RTF format.
+ * In your report, clearly mention your development environment - operating system and gcc version. (e.g., OS - Ubuntu 16.04 64 bit, GCC - 5.4)
+ * Submit the source code under the "rbf" folder. Make sure you do a "make clean" first, and do NOT include any useless files (such as binary files and data files). You must make sure your makefile runs properly!
+ * Please organize your project according to the following directory hierarchy:
+
+  project1-''Â studentID''Â / codebase / {rbf, makefile.inc, readme.txt, project1-report.txt} where the rbf folder includes your source code and the makefile.
+
+  (e.g., project1-12345678 / codebase / {rbf, makefile.inc, readme.txt, project1-report.txt})
+
+  Your folder structure should look like this picture:Â [[BR]][[Image(final_folder_structure_example.jpg)]]
+
+ * Compress project1-''studentID''Â into a SINGLE zip file named "project1-''studentID''.zip" (e.g., project1-12345678.zip).
+ * PutÂ [attachment:test.sh this script]Â and the zip file under the same directory. Run it to verify that your project can be properly unzipped and tested (using your own makefile.inc and rbftest.cc when you are testing the script). If the script doesn't work correctly, it's likely that your folder organization doesn't meet the above requirements. Our grading will be done by automatically done by running the script. The usage of the script is:
+
+{{{
+    ./test.sh ''project1-studentID''
+
+}}}
+ * '''IMPORTANT: Again, you need to make sure that your script works under Linux, as the assistants will use Linux to grade your assignment. Also, suppress any debug messages that you put in your code. Only the original messages in the test cases should be printed.'''
+ * Upload the zip file "project1-''studentID''.zip" to EEE. (e.g., project1-12345678.zip)
+
+== Testing ==
+Please use the codes inside the codebase. Note that these test cases will be used to grade your project partially, but we also have our own private test cases. This is by no means an exhaustive test suite. You should add more cases to this and test your code thoroughly!
+
+Note: Again, this is not the complete suite we will use to test your codebase -- just a sample of it.
+
+== Grading Rubrics ==
+Please see the grading rubricÂ [wiki:cs222-2016-fall-project1-grading here].
+
+== Q & A ==
+ * '''Q1''': What is the purpose of the make file if the project runs in eclipse?Â [[BR]]'''A''': Eclipse is able to generate a makefile for your project automatically. If you don't specify any makefile to Eclipse, by default it will generate a makefile and use it to build the project. You can find that makefile under "Debug/" folder. We have provided a makefile for students who don't use Eclipse to build their projects. Eclipse users, however, can also configure things to let Eclipse build projects by following the makefile in our codebase. Please read this post for detailed instructions:Â http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.cdt.doc.user/concepts/cdt_c_makefile.htm. Note that it's OK if you don't build your project in Eclipse by using the makefile provided in our codebase, but you have to make sure that we can build your submitted project in command line by using 'make'. If you don't add any new source files to the project, you shouldn't need many modifications to our makefile.Â [http://www.gnu.org/software/make/manual/make.html Here]Â is a tutorial for the 'make' tool. You can refer to it if you do decide to change the makefile.
+
+ * '''Q2''': Consider a case where Page 3 of the file is full but Page 2 is partially filled and the user wants to append data? Now, if the size of the data that he or she wants to write is more than the available space on Page 2, what is the expected action to be taken? Do we just fit in whatever data we can and truncate the rest, OR completely disallow the user from making such a write?Â [[BR]]'''A''':Â !AppendPage() always happens to the end of the file, so this scenario can't arise. The number of file bytes affected by each page operation is always PAGE_SIZE. The paged file system layer always deals in pages -- nothing more and nothing less.
+
+ * '''Q3''': Is it fine if I do the file handling in C++ using the binary mode of read/write?Â [[BR]]'''A''': You should indeed use the binary mode!
+
+ * '''Q4''': Why is the access specifier of the constructor and destructor of the classÂ !PagedFileManagerÂ set to be "protected"?Â [[BR]]'''A''': TheÂ !PagedFileManagerÂ is a singleton class, which means only ONE instance ofÂ !PagedFileManagerÂ is allowed. You cannot instantiate the class by calling its constructor. Instead you should get an instance of the class by calling the Instance() function ofÂ !PagedFileManager. The Instance() function has been implemented for you in pfm.cc. The same applies to theÂ !RecordBasedFileManager.
+
+ * '''Q5''': As for pages, if I understand correctly, the !Read/Write/AppendPageÂ functions are operating on these files, and if you want to write the 3rd page (page number: 2) of a file, you'd seek 8K bytes into the file and start writing the data. Is this correct, or am I misunderstanding the concept of pages?[[BR]]'''A''':
+   * Read reads a page that has to already exist[[BR]]
+   * Append adds a new page at the end of the file[[BR]]
+   * Write overwrites a page that has to already exist[[BR]]To write to the 3rd page of a file, the file should already have at least 2 pages (page numbers: 0,1) that contain valid data. Then you can either append data to 3rd page if it doesn't exist, or overwrite the 3rd page if it already exists. Please do not leave "holes" in files by writing past EOF. We won't allow the case of appending garbage pages to happen.
+
+ * '''Q6''': Since I need to change the path of codebase in makefile.inc to test the project, do I need to change it back when I submit the zip file?Â [[BR]]'''A''': No, you don't need to change back, but you need to instead make sure the path isÂ '''relative'''Â so that the test.sh script will also work on another machine.
+
+ * '''Q7''': When inserting a tuple, do we only have to consider insertion of the new tuple at the end of the last page? Or do we have to be able to support insertion in whatever free space may exist among all the current pages?[[BR]]'''A''': You should first try to insert the record on the last (currently existing) page. If that fails, you should then try to find the first page with sufficient space available (e.g., looking from the beginning of the file). If none exists, then (and only then) should you append a new page to hold the new tuple.
+
+ * '''Q8''': What's the data format for data being passed to insertRecord?Â [[BR]]'''A''': The API format for insertRecord is as follows: Suppose you have five fields and their types are varchar(20), integer, varchar(20), real, and string. If a record is ("Tom", 25, "UCIrvine", 3.1415, 100), then the format of the record should be: [1 byte for the null-indicators for the fields: bit 00000000] [4 bytes for the length 3] [3 bytes for the string "Tom"] [4 bytes for the integer value 25] [4 bytes for the length 8] [8 bytes for the string "UCIrvine"] [4 bytes for the float value 3.1415] [4 bytes for the integer value 100]. Note that integer and real type fields do not have an associated length value in front of them; this is because each of these types always occupies 4 bytes.
+
+  The first part of the input containsÂ ''n''Â bytes for passing the null information about each of the incoming record's fields. The valueÂ ''n''Â can be calculated by using this formula: ceil(number of fields in a record / 8). For example, in this case, since there are 5 fields, the size of "n" can be calculated by ceil(5/8) = 1. If there are 20 fields, the size will be ceil(20/8) = 3. The left-most bit in the first byte corresponds to the first field. The right-most bit in the first byte corresponds to the eighth field. If there are more than eight fields, the left-most bit in the second byte corresponds to the ninth field and so on.
+
+  If a field value is NULL, the corresponding bit in the null bit vector will be set to 1. For example, if we have a record ("Tom", 25, NULL, NULL, 100) whose third attribute and fourth attribute are NULL, the first part containsÂ ''00110000''Â as the bit pattern in one byte. The actual byte representation will be: [1 byte for the null-indicators for the fields: 00110000] [4 bytes for the length 3] [3 bytes for the string "Tom"] [4 bytes for the integer value 25] [4 bytes for the integer value 100]. Note that there are no values to represent NULL values in the actual data. You MUST follow this API format!
+
+  NOTE: This API data format is just intended for passing data into the insertRecord(). This does not mean that the internal representation of your record should be the same as this format -- in fact, it almost certainly will not be! (On-page record formatting options will be covered in lecture, and your project should make good choices for what it does based on what you learn in class.)
+
+ * '''Q9''': Can we assume that a record can fit on a page (i.e., the size of a record < the predefined page size)?Â [[BR]]'''A''': Yes. You can assume that a record can fit on a page.
+
+== Platform Q & A ==
+ * '''Q1''': Do I have to use a specific OS platform?Â [[BR]]'''A''': You can implement your code on any operating system where g++ works, such as Windows or Linux. However, you cannot use any platform specific APIs. And once again, note that the assistants will use a Linux machine to grade your code. Please make sure that your code works on Linux!
+
+ * '''Q2''': I am a Windows user. How do I test my code on Linux?Â [[BR]]'''A''': First, you could test your code by logging into your ICS account and uploading your code to your home directory. For details, refer toÂ http://www.ics.uci.edu/computing/linux/hosts.php. Another way is to install a VM such as VMware Player orÂ !VirtualBoxÂ on Windows and install the Linux OS in that VM. Refer to the "Try Linux VM to test your code" section in this document.
+
+ * '''Q3''': After downloading the codebase and setting it up in Eclipse, I can not execute it. How can I execute it?Â [[BR]]'''A''': On Windows, if you see the error message - "Info: Nothing to build for cs222", then put "g++ -static-libgcc -static-libstdc++" as the value in Command by visiting Project -> Properties -> Tool Settings -> MinGW C++ Linker.Â [[BR]]On Mac OS X, if you see this error message - "Launch failed, binary not found", check the "Mach-O 64 Parser is selected" option by visiting Project > Properties > C/C++ Build > Settings > Binary Parsers. OR, click "Debug"/"cs222" and click "Run" in case you chose Cross GCC.
+
+ * '''Q4''': How do I enable GDB debugging feature on OS X?Â [[BR]]'''A''': It's not a simple process. Refer to this page:Â https://grape.ics.uci.edu/wiki/public/wiki/cs222p-2017-fall-mac-setup-guide
+
+ * '''Q5''': Which gcc version should I use?Â [[BR]]'''A''': The reader(s) will use gcc 5.4 to grade your code. If you use a different version, please write it on your report. Also, note that OS X doesn't provide gcc as the default compiler. Rather, it provides clang as the default compiler. You can check it by executing "gcc --version" command. Please test your code using standard gcc on Linux.Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,808 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‹¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2678¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 09 Feb 2020 20:39:09 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 03 Feb 2009 06:32:22 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX'"596a-461fdd56aa980;50c0c614b02c0-gzip"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvaluePmax-age=31536000¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:39:09 GMT¢Ak¢DtypeEvalueXAccess-Control-Allow-OriginAv¢DtypeEvalueA*¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueOapplication/xmlKraw_content¢DtypeEvalueyYj<?xml version="1.0"?>
+<grammar ns="http://www.w3.org/2003/04/emma"
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+ <!-- EMMA 1.0 schema (20070618)                           -
+    -                                                      -
+    - Copyright 1998-2007 W3C (MIT, ERCIM, Keio),          -
+    - All Rights Reserved. Permission to use, copy,        -
+    - modify and distribute the EMMA schema and its        -
+    - accompanying documentation for any purpose and       -
+    - without fee is hereby granted in perpetuity,         -
+    - provided that the above copyright notice and this    -
+    - paragraph appear in all copies. The copyright        -
+    - holders make no representation about the suitability -
+    - of the schema for any purpose. It is provided        -   
+    - "as is" without expressed or implied warranty.       -->
+   <start>
+      <!-- emma content model -->
+      <element name="emma">
+         <attribute name="version">
+            <data type="string"/>
+         </attribute>
+         <interleave>
+            <optional>
+               <ref name="Derivation"/>
+            </optional>
+            <optional>
+               <ref name="Info"/>
+            </optional>
+            <zeroOrMore>
+               <ref name="Grammar"/>
+		</zeroOrMore>
+            <zeroOrMore>
+               <ref name="Model"/>
+            </zeroOrMore>
+            <zeroOrMore>
+               <ref name="Endpoint-info"/>
+            </zeroOrMore>
+            <choice>
+               <ref name="Interpretation"/>
+               <ref name="One-of"/>
+               <ref name="Group"/>
+               <ref name="Sequence"/>
+            </choice>
+         </interleave>
+      </element>
+   </start>
+
+   <!-- EMMA structural elements -->
+
+   <define name="Interpretation">
+      <!-- interpretation content model -->
+      <element name="interpretation">
+         <optional>
+            <ref name="Uninterpreted"/>
+         </optional>
+         <optional>
+            <ref name="No-input"/>
+         </optional>
+         <ref name="Group.attribs"/>
+         <interleave>
+            <zeroOrMore>		
+               <ref name="Derived-from"/>
+            </zeroOrMore>
+            <optional>
+               <ref name="Info"/>
+            </optional>
+            <optional>
+               <choice>
+                  <ref name="Lattice"/>
+                  <ref name="Literal"/>
+                  <oneOrMore>
+                     <ref name="Application"/>
+                  </oneOrMore>
+               </choice>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+
+   <define name="One-of">
+      <!-- one-of content model -->
+      <element name="one-of">
+         <ref name="Group.attribs"/>
+         <optional>
+            <attribute name="disjunction-type">
+               <choice>
+                  <value type="NMTOKEN">understanding</value>
+	          <value type="NMTOKEN">multi-device</value>
+      	          <value type="NMTOKEN">recognition</value>
+                  <value type="NMTOKEN">multi-process</value>
+               </choice>
+            </attribute>
+         </optional>
+         <interleave>
+            <zeroOrMore>
+               <ref name="Derived-from"/>
+            </zeroOrMore>
+            <optional>
+               <ref name="Info"/>
+            </optional>
+            <oneOrMore>
+                <choice>
+                   <ref name="Interpretation"/>
+                   <ref name="One-of"/>
+                   <ref name="Group"/>          
+                   <ref name="Sequence"/>
+                </choice>
+            </oneOrMore>
+         </interleave>
+      </element>
+   </define>
+
+   <define name="Group">
+      <!-- group content model -->
+      <element name="group">
+         <ref name="Group.attribs"/>
+         <interleave>
+            <zeroOrMore>
+               <ref name="Derived-from"/>
+            </zeroOrMore>
+            <optional>
+               <ref name="Info"/>
+            </optional>
+       	    <optional>
+               <ref name="Group-info"/>
+	    </optional>
+            <oneOrMore>
+                <choice>
+                   <ref name="Interpretation"/>
+                   <ref name="One-of"/>
+                   <ref name="Group"/>          
+                   <ref name="Sequence"/>
+                </choice>
+            </oneOrMore>
+         </interleave>
+      </element>
+   </define>
+
+   <define name="Group-info">
+      <!-- group-info content model -->
+      <element name="group-info">
+         <choice>
+            <attribute name="ref">
+               <data type="anyURI"/>
+            </attribute>
+            <oneOrMore>
+               <ref name="Application"/>
+            </oneOrMore>
+         </choice>
+      </element>
+   </define>
+
+   <define name="Sequence">
+      <!-- sequence content model -->
+      <element name="sequence">
+         <ref name="Group.attribs"/>
+         <interleave>
+	    <zeroOrMore>
+               <ref name="Derived-from"/>
+	    </zeroOrMore>
+	    <optional>
+               <ref name="Info"/>
+	    </optional>
+            <oneOrMore>
+               <choice>
+                  <ref name="Interpretation"/>
+                  <ref name="One-of"/>
+                  <ref name="Group"/>
+                  <ref name="Sequence"/>
+               </choice>
+            </oneOrMore>
+         </interleave>
+      </element>
+   </define>
+
+   <define name="Lattice">
+      <!-- lattice content model -->
+      <element name="lattice">
+         <optional>
+            <ref name="Time-ref-anchor-point"/>
+         </optional>
+         <optional>
+            <ref name="Time-ref-uri"/>
+         </optional>
+         <attribute name="final">
+            <list>
+               <oneOrMore>
+                  <data type="nonNegativeInteger"/>
+               </oneOrMore>
+            </list>
+         </attribute>
+         <attribute name="initial">
+            <data type="nonNegativeInteger"/>
+         </attribute>
+         <interleave>
+            <oneOrMore>
+               <ref name="Arc"/>
+            </oneOrMore>
+            <zeroOrMore>
+               <ref name="Node"/>              
+            </zeroOrMore>
+         </interleave>
+      </element>
+   </define>
+
+   <define name="Arc">
+      <!-- arc content model -->
+      <element name="arc">
+         <optional>
+            <ref name="Source"/>
+         </optional>
+         <optional>
+            <ref name="Mode"/>
+         </optional>
+         <optional>
+            <ref name="Medium"/>
+         </optional>
+         <optional>
+            <ref name="Lang"/>
+         </optional>
+         <optional>
+            <ref name="Cost"/>
+         </optional>
+         <optional>
+            <ref name="Confidence"/>
+         </optional>
+         <optional>
+            <ref name="Duration"/>
+         </optional>
+         <optional>
+            <ref name="Offset-to-start"/>
+         </optional>
+         <optional>
+            <ref name="End"/>
+         </optional>
+         <optional>
+            <ref name="Start"/>
+         </optional>
+         <attribute name="to">
+            <data type="nonNegativeInteger"/>
+         </attribute>
+         <attribute name="from">
+            <data type="nonNegativeInteger"/>
+         </attribute>
+         <interleave>
+            <optional>
+               <choice>
+                  <ref name="Application"/>
+                  <text/>
+               </choice>
+            </optional>
+            <optional>
+               <ref name="Info"/>
+            </optional>
+         </interleave>
+      </element>
+   </define>
+
+   <define name="Node">
+      <!-- node content model -->
+      <element name="node">
+         <optional>
+            <ref name="Cost"/>
+         </optional>
+         <optional>
+            <ref name="Confidence"/>
+         </optional>
+         <attribute name="node-number">
+           <data type="nonNegativeInteger"/>
+         </attribute>
+         <optional>
+           <ref name="Info"/>
+         </optional>
+      </element>
+   </define>
+
+   <define name="Literal">
+      <!-- literal content model -->
+      <element name="literal">
+         <text/>
+	</element>
+   </define>
+
+   <define name="Application">
+      <!-- any except emma ns content model -->
+      <element>
+         <anyName>
+            <except>
+               <nsName ns="http://www.w3.org/2003/04/emma"/>
+            </except>
+         </anyName>
+         <zeroOrMore>
+	    <attribute>
+               <anyName>
+                  <except>
+                     <nsName ns="http://www.w3.org/2003/04/emma"/>
+                  </except>
+               </anyName>
+	    </attribute>
+         </zeroOrMore>
+         <optional>
+            <ref name="Model-ref"/>
+         </optional>
+         <optional>
+            <ref name="Endpoint-info-ref"/>
+         </optional>
+         <optional>
+            <ref name="Cost"/>
+         </optional>
+         <optional>
+            <ref name="Verbal"/>
+         </optional>
+         <optional>
+            <ref name="Function"/>
+         </optional>
+         <optional>
+            <ref name="Mode"/>
+         </optional>
+         <optional>
+            <ref name="Medium"/>
+         </optional>
+         <optional>
+            <ref name="Duration"/>
+         </optional>
+         <optional>
+            <ref name="Offset-to-start"/>
+         </optional>
+         <optional>
+            <ref name="Time-ref-anchor-point"/>
+         </optional>
+         <optional>
+            <ref name="Time-ref-uri"/>
+         </optional>
+         <optional>
+            <ref name="End"/>
+         </optional>
+         <optional>
+            <ref name="Start"/>
+         </optional>
+         <optional>
+            <ref name="Source"/>
+         </optional>
+         <optional>
+            <ref name="Confidence"/>
+         </optional>
+         <optional>
+            <ref name="Media-type"/>
+         </optional>
+         <optional>
+            <ref name="Signal-size"/>
+         </optional>
+         <optional>
+            <ref name="Signal"/>
+         </optional>
+         <optional>
+            <ref name="Lang"/>
+         </optional>
+         <optional>
+            <ref name="Tokens"/>
+         </optional>
+         <optional>
+            <ref name="Hook"/>
+         </optional>
+         <zeroOrMore>
+	    <choice>
+	       <text/>
+	       <ref name="Application"/>
+	    </choice>
+         </zeroOrMore>
+      </element>
+   </define>
+
+   <define name="Model">
+      <!-- model content model -->
+      <element name="model">
+         <choice>
+            <attribute name="ref">
+               <data type="anyURI"/>
+            </attribute>
+            <oneOrMore>
+               <ref name="Application"/>
+            </oneOrMore>
+         </choice>
+         <attribute name="id">
+            <data type="ID"/>
+         </attribute>
+      </element>
+   </define>
+
+   <define name="Derived-from">
+      <!-- derived-from content model -->
+      <element name="derived-from">
+         <optional>
+            <attribute name="composite">
+               <data type="boolean"/>
+            </attribute>
+         </optional>
+         <attribute name="resource">
+            <data type="anyURI"/>
+         </attribute>
+      </element>
+   </define>
+
+   <define name="Derivation">
+      <!-- derivation content model -->
+      <element name="derivation">
+         <oneOrMore>
+            <choice>
+               <ref name="Interpretation"/>
+               <ref name="One-of"/>
+               <ref name="Sequence"/>
+               <ref name="Group"/>
+            </choice>
+         </oneOrMore>
+      </element>
+   </define>
+
+   <define name="Grammar">
+      <!-- grammar content model -->
+      <element name="grammar">
+         <attribute name="ref">
+            <data type="anyURI"/>
+         </attribute>
+         <attribute name="id">
+            <data type="ID"/>
+         </attribute>
+      </element>
+   </define>
+
+   <define name="Info">
+      <!-- info content model -->
+      <element name="info">
+         <optional>
+            <attribute name="id">
+               <data type="ID"/>
+            </attribute>
+         </optional>
+         <oneOrMore>
+            <ref name="Application"/>
+         </oneOrMore>
+      </element>
+   </define>
+
+   <define name="Endpoint-info">
+      <!-- endpoint-info content model -->
+      <element name="endpoint-info">
+         <attribute name="id">
+            <data type="ID"/>
+         </attribute>
+         <oneOrMore>
+            <ref name="Endpoint"/>
+         </oneOrMore>
+      </element>
+   </define>
+
+   <define name="Endpoint">
+      <!-- endpoint content model -->
+      <element name="endpoint">
+         <optional>
+            <ref name="Mode"/>
+         </optional>
+         <optional>
+            <ref name="Medium"/>
+         </optional>
+         <optional>
+            <ref name="Media-type"/>
+         </optional>
+         <optional>
+            <ref name="Service-name"/>
+         </optional>
+         <optional>
+            <ref name="Endpoint-pair-ref"/>
+         </optional>
+         <optional>
+            <ref name="Port-type"/>
+         </optional>
+         <optional>
+            <ref name="Port-num"/>
+         </optional>
+         <optional>
+            <ref name="Message-id"/>
+         </optional>
+         <optional>
+            <ref name="Endpoint-address"/>
+         </optional>
+         <optional>
+            <ref name="Endpoint-role"/>
+         </optional>
+         <attribute name="id">
+             <data type="ID"/>
+         </attribute>
+         <oneOrMore>
+            <ref name="Application"/>
+         </oneOrMore>
+      </element>
+   </define>
+
+   <!-- group attributes -->
+
+   <define name="Group.attribs">
+        <optional>
+            <ref name="Dialog-turn"/>
+        </optional>
+        <optional>
+            <ref name="Model-ref"/>
+        </optional>
+        <optional>
+            <ref name="Endpoint-info-ref"/>
+        </optional>
+        <optional>
+            <ref name="Grammar-ref"/>
+        </optional>
+        <optional>
+            <ref name="Cost"/>
+        </optional>
+        <optional>
+            <ref name="Verbal"/>
+        </optional>
+        <optional>
+            <ref name="Function"/>
+        </optional>
+        <optional>
+            <ref name="Mode"/>
+        </optional>
+        <optional>
+            <ref name="Medium"/>
+        </optional>
+        <optional>
+            <ref name="Duration"/>
+        </optional>
+        <optional>
+            <ref name="Offset-to-start"/>
+        </optional>
+        <optional>
+            <ref name="Time-ref-anchor-point"/>
+        </optional>
+        <optional>
+            <ref name="Time-ref-uri"/>
+        </optional>
+        <optional>
+            <ref name="End"/>
+        </optional>
+        <optional>
+            <ref name="Start"/>
+        </optional>
+        <optional>
+            <ref name="Source"/>
+        </optional>
+        <optional>
+            <ref name="Confidence"/>
+        </optional>
+        <optional>
+            <ref name="Media-type"/>
+        </optional>
+        <optional>
+            <ref name="Signal-size"/>
+        </optional>
+        <optional>
+            <ref name="Signal"/>
+        </optional>
+        <optional>
+            <ref name="Lang"/>
+        </optional>
+        <optional>
+            <ref name="Process"/>
+        </optional>
+        <optional>
+            <ref name="Tokens"/>
+        </optional>
+        <attribute name="id">
+            <data type="ID"/>
+        </attribute>
+   </define>
+
+   <!-- EMMA annotation attributes -->
+
+   <define name="Tokens">
+      <attribute name="tokens" ns="http://www.w3.org/2003/04/emma">
+         <data type="string"/>
+      </attribute>
+   </define>
+
+   <define name="Process">
+      <attribute name="process" ns="http://www.w3.org/2003/04/emma">
+         <data type="anyURI"/>
+      </attribute>
+   </define>
+
+   <define name="No-input">
+      <attribute name="no-input" ns="http://www.w3.org/2003/04/emma">
+         <data type="boolean"/>
+      </attribute>
+   </define>
+
+   <define name="Uninterpreted">
+      <attribute name="uninterpreted" ns="http://www.w3.org/2003/04/emma">
+         <data type="boolean"/>
+      </attribute>
+   </define>
+
+   <define name="Lang">
+      <attribute name="lang" ns="http://www.w3.org/2003/04/emma">
+         <data type="language"/>
+      </attribute>
+   </define>
+
+   <define name="Signal">
+      <attribute name="signal" ns="http://www.w3.org/2003/04/emma">
+         <data type="anyURI"/>
+      </attribute>
+   </define>
+
+   <define name="Signal-size">
+      <attribute name="signal-size" ns="http://www.w3.org/2003/04/emma">
+         <data type="nonNegativeInteger"/>
+      </attribute>
+   </define>
+
+   <define name="Media-type">
+      <attribute name="media-type" ns="http://www.w3.org/2003/04/emma">
+         <data type="string"/>
+      </attribute>
+   </define>
+
+   <define name="Confidence">
+      <attribute name="confidence" ns="http://www.w3.org/2003/04/emma">
+         <data type="decimal">
+            <param name="minInclusive">0.0</param>
+            <param name="maxInclusive">1.0</param>
+         </data>
+      </attribute>
+   </define>
+
+   <define name="Source">
+      <attribute name="source" ns="http://www.w3.org/2003/04/emma">
+         <data type="anyURI"/>
+      </attribute>
+   </define>
+
+   <!-- Timestamp annotations -->
+
+   <define name="Start">
+      <attribute name="start" ns="http://www.w3.org/2003/04/emma">
+         <data type="unsignedLong"/>
+      </attribute>
+   </define>
+
+   <define name="End">
+      <attribute name="end" ns="http://www.w3.org/2003/04/emma">
+         <data type="unsignedLong"/>
+      </attribute>
+   </define>
+
+   <define name="Time-ref-uri">
+       <attribute name="time-ref-uri" ns="http://www.w3.org/2003/04/emma">
+          <data type="anyURI"/>
+       </attribute>
+   </define>
+
+   <define name="Time-ref-anchor-point">
+      <attribute name="time-ref-anchor-point" ns="http://www.w3.org/2003/04/emma">
+         <choice>
+            <value type="NMTOKEN">start</value>
+            <value type="NMTOKEN">end</value>
+         </choice>
+      </attribute>
+   </define>
+
+   <define name="Offset-to-start">
+        <attribute name="offset-to-start" ns="http://www.w3.org/2003/04/emma">
+            <data type="integer"/>
+        </attribute>
+   </define>
+
+   <define name="Duration">
+      <attribute name="duration" ns="http://www.w3.org/2003/04/emma">
+         <data type="nonNegativeInteger"/>
+      </attribute>
+   </define>
+
+   <!-- Medium, mode, and function annotations -->
+
+   <define name="Medium">
+      <attribute name="medium" ns="http://www.w3.org/2003/04/emma">
+         <list>
+            <oneOrMore>
+               <choice>
+                  <value type="NMTOKEN">tactile</value>
+                  <value type="NMTOKEN">visual</value>
+                  <value type="NMTOKEN">acoustic</value>
+               </choice>
+            </oneOrMore>
+         </list>
+      </attribute>
+   </define>
+
+   <define name="Mode">
+      <attribute name="mode" ns="http://www.w3.org/2003/04/emma">
+         <data type="NMTOKENS"/>
+      </attribute>
+   </define>
+
+   <define name="Function">
+      <attribute name="function" ns="http://www.w3.org/2003/04/emma">
+         <data type="string"/>
+      </attribute>
+   </define>
+
+   <define name="Verbal">
+      <attribute name="verbal" ns="http://www.w3.org/2003/04/emma">
+         <data type="boolean"/>
+      </attribute>
+   </define>
+
+   <define name="Hook">
+      <attribute name="hook" ns="http://www.w3.org/2003/04/emma">
+         <data type="string"/>
+      </attribute>
+   </define>
+
+   <define name="Cost">
+      <attribute name="cost" ns="http://www.w3.org/2003/04/emma">
+         <data type="decimal">
+            <param name="minInclusive">0.0</param>
+            <param name="maxInclusive">10000000</param>
+         </data>
+      </attribute>
+   </define>
+
+   <!-- Endpoint annotations -->
+
+   <define name="Endpoint-role">
+      <attribute name="endpoint-role" ns="http://www.w3.org/2003/04/emma">
+         <choice>
+            <value type="NMTOKEN">router</value>
+            <value type="NMTOKEN">reply-to</value>
+            <value type="NMTOKEN">source</value>
+            <value type="NMTOKEN">sink</value>
+         </choice>
+      </attribute>
+   </define>
+
+   <define name="Endpoint-address">
+      <attribute name="endpoint-address" ns="http://www.w3.org/2003/04/emma">
+         <data type="anyURI"/>
+      </attribute>
+   </define>
+
+   <define name="Port-type">
+      <attribute name="port-type" ns="http://www.w3.org/2003/04/emma">
+         <data type="QName"/>
+      </attribute>
+   </define>
+
+   <define name="Port-num">
+      <attribute name="port-num" ns="http://www.w3.org/2003/04/emma">
+         <data type="nonNegativeInteger"/>
+      </attribute>
+   </define>
+
+   <define name="Message-id">
+      <attribute name="message-id" ns="http://www.w3.org/2003/04/emma">
+          <data type="anyURI"/>
+      </attribute>
+   </define>
+
+   <define name="Service-name">
+      <attribute name="service-name" ns="http://www.w3.org/2003/04/emma">
+         <data type="string"/>
+      </attribute>
+   </define>
+
+   <define name="Endpoint-pair-ref">
+      <attribute name="endpoint-pair-ref" ns="http://www.w3.org/2003/04/emma">
+         <data type="anyURI"/>
+      </attribute>
+   </define>
+
+   <!-- Emma element reference annotations -->
+
+   <define name="Endpoint-info-ref">
+      <attribute name="endpoint-info-ref" ns="http://www.w3.org/2003/04/emma">
+         <data type="IDREF"/>
+      </attribute>
+   </define>
+
+   <define name="Grammar-ref">
+      <attribute name="grammar-ref" ns="http://www.w3.org/2003/04/emma">
+         <data type="IDREF"/>
+      </attribute>
+   </define>
+
+   <define name="Model-ref">
+      <attribute name="model-ref" ns="http://www.w3.org/2003/04/emma">
+         <data type="IDREF"/>
+      </attribute>
+   </define>
+
+   <!-- Dialog-turn annotation -->
+
+   <define name="Dialog-turn">
+      <attribute name="dialog-turn" ns="http://www.w3.org/2003/04/emma">
+         <data type="string"/>
+      </attribute>
+   </define>
+</grammar>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

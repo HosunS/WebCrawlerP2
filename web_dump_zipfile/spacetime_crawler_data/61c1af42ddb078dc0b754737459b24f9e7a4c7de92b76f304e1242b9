@@ -1,0 +1,20 @@
+¦Ifinal_url¢DtypeEvaluex5https://www.ics.uci.edu/~eppstein/261/w11-hw5-key.txtLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC219¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 15 Mar 2011 00:32:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"1db-49e7a8f497f80-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 21:55:49 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÛ1. No, because there is no inverse operation to minimization.
+
+2.
+    node = x
+    while node != null:
+        if node.left == null:
+            leftheight = -1
+        else:
+            leftheight = node.left.height
+        if node.right == null:
+            rightheight = -1
+        else:
+            rightheight = node.right.height
+        node.height = 1 + max(leftheight, rightheight)
+        node = node.parent
+
+3.
+    def jump(x,i):
+        return unrank(rank(x) + i)
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,58 @@
+¦Ifinal_url¢DtypeEvaluex)https://www.ics.uci.edu/~eppstein/m2html/Lhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC895¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 18 Jul 1998 04:20:45 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"6f9-33336dc282140-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 04:23:51 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYù<HTML><HEAD>
+<TITLE>m2html: Convert email to HTML</TITLE>
+<META name="Owner" value="eppstein">
+<META name="Reply-To" value="eppstein@ics.uci.edu">
+</HEAD><BODY>
+
+<H1>m2html: Convert email to HTML</H1>
+<!--#config timefmt="%d %h %Y, %T %Z" -->
+<HR><P>
+
+This directory contains C++ code
+for a program to convert mail files
+(piped to standard input, in emacs rmail or unix mail format)
+to reasonably nice-looking HTML.
+It separates out headers from text,
+reformats the headers, identifies email addresses and embedded URLs,
+and converts reserved characters (angle brackets and ampersand).
+<P>
+Free to a good home.
+Use at your own risk.
+For an example of its output,
+see some messages of mine
+on <A HREF="http://www.ics.uci.edu/~eppstein/junkyard/tripack.html">triangle
+packing</A> from 
+<A HREF="http://www.ics.uci.edu/~eppstein/junkyard/tripack.html">The
+Geometry Junkyard</A>.
+<P>
+Files in this directory:
+
+<UL><LI><A HREF="m2html.c"><TT><B>m2html.c</B></TT></A>:
+The mail email conversion program.
+<P>
+
+<LI><A HREF="lineb.c"><TT><B>lineb.c</B></TT></A>:
+This file implements a simple
+"buffer" class suitable for holding an unknown quantity of text.
+<P>
+
+<LI><A HREF="lineb.h"><TT><B>lineb.h</B></TT></A>:
+Declarations for <TT>lineb.c</TT>.
+<P>
+
+<LI><A HREF="makefile"><TT><B>makefile</B></TT></A>:
+Control file for compiling the <TT>m2html</TT> program.
+<P>
+
+<LI><A HREF="m2html.shar"><TT><B>m2html.shar</B></TT></A>:
+Contents of this directory in one UNIX "shar" format archive.
+</UL>
+
+<P><HR><P>
+<A HREF="/~eppstein/software.html">Downloadable software</A> by
+<A HREF="/~eppstein/">David Eppstein</A>,
+<A HREF="/">Dept. Information & Computer Science</A>,
+<A HREF="http://www.uci.edu/">UC Irvine</A><BR>
+<SMALL>Last update: <!--#flastmod file="index.html" --></SMALL>
+</BODY></HTML>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

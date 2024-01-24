@@ -1,0 +1,161 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:17:59 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueYm<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+  <head>
+    <title>
+    charless c. fowlkes - uc irvine - computer vision
+    </title>
+    <meta name="keywords" value="publications charless c. fowlkes homepage computer vision natural image statistics segmentation">
+    <link rel="STYLESHEET" href="https://www.ics.uci.edu/~fowlkes/linkage.css" type="text/css">   
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-23283073-1']);
+          _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                          })();
+
+                          </script>
+  </head>
+  <body bgcolor="#333333" text="#FFFFFF" link="#99CC99" alink="#FFFFFF" vlink="#99CC99">
+   <font face="Arial,Helvetica,Lucida">
+   <div class="sidebar">
+     <div class="sidebar2">
+         <br>
+
+<center>
+<a href="" style="color:#999999"> 
+<img src="http://www.ics.uci.edu/~fowlkes/images/mug3.jpg" alt="mugshot"></a></center>
+<h3>charless c. fowlkes</h3>
+professor<br>
+computer science<br>
+uc irvine<br>
+<br>
+fowlkes@ics.uci<br>
+4076 dbh <br>
+949.824.6945<br>
+<br>
+<a href="http://www.uci.edu/">uci</a> : <a href="http://www.ics.uci.edu/computerscience/">cs</a> : <a href="http://vision.ics.uci.edu">vision group</a><br>
+<p></p>
+
+     </div>
+     <div class="sidebar2">
+  <a href="http://www.ics.uci.edu/~fowlkes/">home</a><br>
+  <a href="http://www.ics.uci.edu/~fowlkes/publications.html">publications</a><br>
+  <a href="http://www.ics.uci.edu/~fowlkes/presentations.html">presentations</a><br>
+  <a href="http://www.ics.uci.edu/~fowlkes/software.html">software</a><br>
+  <a href="http://www.ics.uci.edu/~fowlkes/cv.pdf">cv</a><br>
+</div>
+
+   </div>
+ 
+   <div class="content">
+        <br><br><br>
+        <!--<img style="float:right" src="bioshapes.png">-->
+        <H3> Building Strong Geometric Priors for Total Scene Understanding </H3>
+        <Br>
+        The overarching goal of this NSF funded project (<a
+        href="http://nsf.gov/awardsearch/showAward?AWD_ID=1618806">IIS-1618806</a>)
+        is to develop integrated models for fusing recognition and geometric image understanding<p>
+
+        This project is exploring how capabilities for geometric image understanding
+        can change the way people approach the problem of automatically interpreting
+        the semantic content of individual photos or videos. By developing algorithms
+        for accurately localizing cameras from images that integrate other sources of
+        geo-spatial data, such as 3D models of buildings and maps of urban areas, the
+        project aims to significantly improve the ability of computer vision systems to
+        understand image content. Utilizing strong prior information for scene
+        understanding has a wide range of important practical applications. An
+        assistive robot providing elderly care in a home should leverage knowledge of
+        the appearance and location of objects in its immediate environment while
+        adapting to changes on multiple time scales (a coffee cup sitting on the table
+        moves much more frequently than the table itself). A network of self-driving
+        cars could benefit significantly from dynamically updated urban maps built from
+        the stream of data collected by the cars and other cameras (e.g., adapting
+        behavior to a temporary lane closure that changes typical car and pedestrian
+        traffic patterns). The project involves students in research spanning a range
+        of traditional disciplines and is engaging a wider audience across the UC
+        Irvine campus in understanding and applying these technologies to novel social
+        and scientific applications.<p>
+
+        This research investigates an alternate approach in which scene priors
+        (including affordances and semantic attributes) are represented in 3D
+        geo-spatial model coordinates rather than in 2D image space. Incorporating
+        geometric context into scene understanding has largely been pursued under very
+        weak prior assumptions on scene geometry and camera pose. Importantly, the
+        research allows for direct integration of non-visual data such as GIS maps. The
+        project is developing the appropriate algorithms and datasets to integrating
+        such data along with a continual stream of images to produce a strong,
+        temporally-evolving (4D) scene prior that can improve accuracy of camera pose
+        estimation, monocular geometry, object detection and semantic segmentation.<p>
+
+
+
+        <br>
+        <br>
+        <br>
+
+        Publications:<br>
+
+        <br>
+        <br>
+          M. Lee, C. Fowlkes,
+          "Spacetime Localization and Mapping", to appear,
+          <a href="http://iccv2017.thecvf.com/" style="color:#BBBBFF">ICCV</a>, Venice, (October 2017).
+          <a href="papers/lf-iccv2017.pdf">[pdf]</a>
+          <br><br>
+
+          S. Kong, C. Fowlkes, "Recurrent Scene Parsing with Perspective Understanding in the Loop", Technical Report, (May 2017)
+          <a href="http://arxiv.org/abs/1705.07238" style="color:#BBBBFF">arXiv:1705.07238</a>
+          <a href="papers/kf-recurrentdepthparse.pdf">[pdf]</a>
+          <br><br>
+
+          S. Kong, C. Fowlkes, "Low-rank Bilinear Pooling for Fine-Grained Classification",
+          <a href="http://cvpr2017.thecvf.com/" style="color:#BBBBFF">CVPR</a>, (July 2017).
+          <a href="http://arxiv.org/abs/1611.05109" style="color:#BBBBFF">arXiv:1611.05109</a>
+          <a href="papers/kf-lowrankbilinear.pdf">[pdf]</a>
+          <br><br>
+
+          R. Diaz, C. Fowlkes, "Cluster-wise Ratio Tests for Fast Camera Localization",
+          <a href="https://www.eecis.udel.edu/wiki/vims/index.php/Main/OdometryandComputerVision"
+          style="color:#BBBBFF">Int. Workshop on Visual Odometry and Computer Vision Applications Base don Location Clues, CVPR</a>, (July 2017).
+          <a href="http://arxiv.org/abs/1612.01689" style="color:#BBBBFF">arXiv:1612.01689</a>
+          <a href="papers/df_localization.pdf">[pdf]</a>
+          <br><br>
+
+          S. Wang, S. Wolf, C. Fowlkes, J. Yarkony, "Tracking Objects with Higher Order Interactions using Delayed Column Generation",
+          <a href="http://www.aistats.org/" style="color:#BBBBFF">AISTATS</a>, (April 2017).
+          <a href="http://arxiv.org/abs/1512.02413" style="color:#BBBBFF">arXiv:1512.02413</a>
+          <a href="papers/wwfy-dualtracking.pdf">[pdf]</a>
+          <br><br>
+
+          R. Diaz, M. Lee, J. Schubert, C. Fowlkes,
+          "Lifting GIS Maps into Strong Geometric Context"
+          <a href="http://www.wacv16.org/">WACV 2016</a>
+          <a href="http://arxiv.org/abs/1507.03698" style="color:#BBBBFF">arXiv:1507.03698</a>
+          <a href="papers/dlsf_gis_wacv16.pdf">[pdf]</a>
+          <br> <br>
+
+          R. D&iacute;az, S. Hallman, C. Fowlkes, "Detecting Dynamic Objects with Multi-View Background Subtraction",
+          <a href="http://iccv2013.org/">ICCV</a>, Sydney, Australia (December 2013).
+          <a href="papers/dhf-iccv13.pdf">[pdf]</a>
+          <br>
+          <br>
+
+          R. D&iacute;az, S. Hallman, C. Fowlkes, "Multi-View Background Subtraction for Object Detection",
+          <a href="http://sunw.csail.mit.edu/" style="color:#DDDDFF"  >Scene Understanding Workshop</a>, Portland, OR, (June 2013).
+          <br>
+          <br>
+
+
+    <br><br>
+Any opinions, findings, and conclusions or recommendations expressed in this material are those of the
+authors and do not necessarily reflect the views of the National Science Foundation.
+    </div>
+    </font>
+  </body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

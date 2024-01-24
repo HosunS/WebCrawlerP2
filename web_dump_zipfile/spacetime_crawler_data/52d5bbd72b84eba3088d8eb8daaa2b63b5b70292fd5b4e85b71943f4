@@ -1,0 +1,13 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC724¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 14 Oct 2011 01:12:45 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"57a-4af37f4627d40-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 05:06:50 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYz1. We say that an ordinary Bloom filter, representing a given set S of items, operates correctly if, for every x, the result of querying x meets the following conditions:
+- If x belongs to S, then the result of the query must be true
+- If x does not belong to S, then the result of the query may or may not be true.
+Describe a data structure that always uses O(1) space (regardless of the size of S) and that meets these two conditions. Would your data structure be useful in place of a Bloom filter? Why or why not?
+
+
+2. Suppose we choose a hash function h(x), where x is an integer from 1 to n, as follows: we find a large randomly-chosen prime number P, and define h(x) = (x mod P) mod N. Is this function 1-independent? Why or why not?
+
+
+3. Suppose we are n different sets S_i, with total size N = sum |S_i|, and that we wish to estimate the Jaccard index for every pair of sets, with an average estimation error of epsilon. Write down, using O-notation as a function of n, N, and epsilon, the time that it would take to perform this estimation using the variant of the MinHash technique that uses a single hash function.
+
+(Recall that achieving estimation error epsilon requires finding approximately 1/epsilon^2 representative elements for each set. Be sure to include both the time to compute the MinHash representatives of the sets and the time to compare pairs of sets in your overall bound.)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

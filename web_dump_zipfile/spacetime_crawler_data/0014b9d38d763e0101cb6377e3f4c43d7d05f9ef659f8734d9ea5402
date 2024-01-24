@@ -1,0 +1,24 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueSContent-dispositionAv¢DtypeEvalueXinline; filename="load_wpbc.m"¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.4.18 (Ubuntu)¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 04:28:13 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=UTF-8Kraw_content¢DtypeEvalueYrand('state',0); randn('state',0);
+
+fid=fopen('wpbc.txt');
+wpbc=textscan(fid,'%d%s%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%f%s%s%s%s','Delimiter',',');
+recur = [wpbc{2}{:}];
+
+X=[1+0*wpbc{3},wpbc{4:33}];  
+y=wpbc{3}';
+
+%could filter by outcome, but we won't for the assignment
+%no=find(recur=='N');
+%yes=find(recur=='R');
+%X=X(no,:); y=y(no);
+
+ind=randperm(size(X,1));
+keep=round(.8*size(X,1));
+Xtrain = X(ind(1:keep),:);
+Xtest = X(ind(keep+1:end),:);
+ytrain=y(ind(1:keep));
+ytest=y(ind(keep+1:end));
+
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,39 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC810¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 20 May 2010 15:53:42 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"737-4870894284d80-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 04:33:32 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY7For the following problems, we will use the directed graph G, with
+vertices s, a, b, c, and t, and the following edges:
+- an edge from s to a with capacity 10
+- an edge from s to c with capacity 5
+- an edge from a to b with capacity 8
+- an edge from b to c with capacity 4
+- an edge from b to t with capacity 3
+- an edge from c to a with capacity 2
+- an edge from c to t with capacity 6
+
+(1) Suppose that we have a flow from s to t in G that sends two units of
+flow along a single path s-c-a-b-t. Draw the residual graph for this
+flow. [NOTE: an earlier version of the homework said that the path was
+s-c-a-b-c -- that was a typo.]
+
+(2) What is the shortest augmenting path in the residual graph?
+
+(3) Find and show a maximum flow from s to t and a minimum cut
+separating s to t. The total amount of flow (that is, the amount of flow
+on the edges going out of s, or on the edges going in to t) and the
+total amount of the cut (the total capacity of the edges from the s side
+of the cut to the t side of the cut) should be equal -- what are these
+values?
+
+(4) Suppose that it is near the end of the baseball season. Each of the
+four teams in the American League West (the Angels, the Athletics, the
+Mariners, and the Rangers) has three more games to play, one against
+each other team. The Angels can win the division if they win all three
+of their games and each other team wins at most one other game.
+
+(a) Draw a maximum flow problem in which the maximum flows correspond to
+scenarios in which the Angels can win the division. Your flow problem
+should have a source vertex, a vertex for each of the non-Angel games,
+and a vertex for each other team; the flow amount from a game vertex to
+a team vertex should be 1 in a scenario where that team wins that game,
+and 0 otherwise.
+
+(b) Can the Angels still win, or have they already been eliminated?
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

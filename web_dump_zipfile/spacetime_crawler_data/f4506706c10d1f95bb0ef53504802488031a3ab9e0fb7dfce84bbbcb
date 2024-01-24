@@ -1,0 +1,37 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC728¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 04 Feb 2014 23:44:09 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2d8-4f19d376ea440"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 09:53:36 GMTKraw_content¢DtypeEvalueYØ
+
+public class Tuner {
+	String description;
+	Amplifier amplifier;
+	double frequency;
+	
+	public Tuner(String description, Amplifier amplifier) {
+		this.description = description;
+	}
+ 
+	public void on() {
+		System.out.println(description + " on");
+	}
+ 
+	public void off() {
+		System.out.println(description + " off");
+	}
+ 
+	public void setFrequency(double frequency) {
+		System.out.println(description + " setting frequency to " + frequency);
+		this.frequency = frequency;
+	}
+ 
+	public void setAm() {
+		System.out.println(description + " setting AM mode");
+	}
+ 
+	public void setFm() {
+		System.out.println(description + " setting FM mode");
+	}
+  
+        public String toString() {
+                return description;
+        }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

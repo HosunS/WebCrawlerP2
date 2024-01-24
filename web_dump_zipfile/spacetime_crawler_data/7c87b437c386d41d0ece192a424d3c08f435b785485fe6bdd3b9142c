@@ -1,0 +1,54 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC915¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:38:59 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"7e4-3158ec96c76c0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:56:19 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYä// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Programmer interface for closest pair data structures
+// (maintain a set of points and find two distinct points at minimum distance).
+//
+// Actual implementations will be subclassed from this outline.
+
+#ifndef CLOSEST_PAIRS_H
+#define CLOSEST_PAIRS_H
+
+#include "Distances.h"
+
+// For instrumentation purposes, we keep track of the
+// number of times each data structure operation is performed.
+// Initial values in the constructor also count as insertions.
+//
+// We don't update these values in the base class's stub constructor
+// because that might screw up the counts when it is automatically called.
+//
+extern unsigned long gInsertions;
+extern unsigned long gDeletions;
+extern unsigned long gPairs;
+
+class ClosestPairs {
+ public:
+ 	virtual ~ClosestPairs() { ; }
+ 	ClosestPairs(long npoints, long max_points, Distance & d) { ; }
+ 		// Constructor takes as args number of points currently in struc,
+ 		// max number that will ever be in struc, and how to measure distances.
+ 		// Initially the point set consists of points represented by
+ 		// the numbers 0, 1, 2, ..., npoints - 2, npoints - 1.
+ 	
+ 	virtual void operator += (point) { gInsertions++; }
+ 		// Procedure to include another point in the data structure.
+ 		// The effect is undefined if the given point is already in the struc.
+ 	
+ 	virtual void operator -= (point) { gDeletions++; }
+ 		// Procedure to remove a point from the data structure.
+ 		// The effect is undefined if the given point isn't in the struc.
+
+ 	virtual double operator() (point & a, point & b) { gPairs++; }
+ 		// Find the two closest points and return them in the given var args
+ 		// Return the distance between them (to avoid caller having to recompute)
+ 	
+ 	// and now two functions for informing the CP data struc that although
+ 	// the points are unchanged, the distance function has been changed
+ 	virtual void UpdatePoint(point) { ; }
+ 	virtual void UpdateDistance(point,point) { ; }
+};
+
+#endif
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

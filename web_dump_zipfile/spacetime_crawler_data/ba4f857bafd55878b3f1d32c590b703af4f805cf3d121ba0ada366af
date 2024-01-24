@@ -1,0 +1,186 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7624¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 11 Aug 2009 18:45:59 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1dc8-470e21d0aa7c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 07:22:21 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYÈ<H1>LDAP Services and Self Managed Workstations:</H1>
+
+Ever since it's original deployment in 2004 the BSICS LDAP server has been available to any host inside the ICS network.  There is plenty of security and access controls in place that control the availability of sensitive information.  At the same time there is plenty of information in there that may be useful to self-supported clients.  Where the specific client configuration is left to the self-supported admin, this document sets forth guidelines for accessing the LDAP server.<P>
+
+If you have a special LDAP needs or recomendations on how it can be more useful to your research, please let us know.  We want to provide enough service through LDAP to make it a resource for the entire community.<P>
+
+<H3>Before you Begin</H3>
+<UL>
+Make sure you can unconfigure any changes that you make.  Plan out the changes, note the changes and make sure that you have a backout plan.  An easy method, short of reinstallation, is knowing how to boot up into single user mode and removing any changes that you made.  BSICS Computing Support will not be able to help you recover your system.<P>
+</UL>
+
+<H3>BSICS LDAP Server:</H3>
+<UL>
+
+	The LDAP server is a cluster of three computers running Sun Directory Server Enterprise Edition on Solaris 10.  The computers are load balanced through the names ldap.ics.uci.edu.<P>
+
+	The encrypted server is available to Linux clients as ldaps.ics.uci.edu via port 636.<P>
+
+	The unencrypted LDAP port, port 389, is available via the hostname ldap.ics.uci.edu. <P> 
+
+</UL>
+<H3>Services Provided:</H3>
+
+<UL>
+	The most obvious uses of the LDAP server are for user authentication, address books.  Lookups for most of the databases in nsswitch.conf are also available, including auto_homes and eventually other automount maps.  
+
+
+<H4>Examples of Use:</H4>
+
+	We can think of a couple of reasons that users would like to get into the LDAP server.  But 
+	A couple of examples:<P
+<UL>
+<LI>Shared Research Computing:  Using ICS logins, the researchers need not create account for each user they want to have access to the system.  
+<LI>Control Access via Netgroup:  Netgroups can be used to turn user access off and on in the /etc/passwd file.
+<LI>  CVS Repositories:  Researchers can use ICS LDAP authentication to share and protect CVS Repositories.  
+<LI>  Software Library:  Self-supported users of the <A HREF=http://support.ics.uci.edu/self-support/icslib.html>BSICS Software Library</A> will soon be able able to configure their automounters to query the LDAP server directly.
+</UL>
+
+<H3>Configuring Linux to access LDAP</H3>
+<UL>
+
+Different kinds of use require different levels of configuration.  Some applications may take LDAP configurations, others may use system level LDAP configurations.  For example, the Thunderbird address book can access the LDAP server directly without using any OS configuration while the automounter relies on settings in the ldap.conf file.  Hopefully we can provide enough information here to satisfy both kinds of clients.<P>
+
+<H4>Basic LDAP server information</H4>
+
+<UL>LDAP Server:  <B>ldap.ics.uci.edu</B>
+<LI>Unencrypted LDAP </LI>
+<UL>
+<LI>Server:  ldap.ics.uci.edu
+<LI>URI:  ldap://ldap.ics.uci.edu
+<LI>Port 389
+<LI>Traffic is not encrypted
+</UL>
+<LI>ldap.ics.uci.edu</LI>
+<UL>
+<LI>Server:  ldap.ics.uci.edu
+<LI>URI:  ldaps://ldap.ics.uci.edu
+<LI>Port: 636 
+<LI>Traffic is not encrypted
+</UL>
+<P>
+</UL>
+<H4>Confirm Openldap Client is Installed</H4>
+
+<UL>
+	Our experience is strictly with OpenLDAP clients for Linux.  If your version of Linux uses an alternate package you will need to interpret these directions appropriately.<P>
+
+
+
+Start by making sure you have the openldap package installed (or equivalent ldap client).   Refer to your OS release documentation for the specifics on how to do this and what packages need to be installed. <P>
+ 
+Information on openldap can be found:  <A HREF="http://www.openldap.org"> http://www.openldap.org</A> <P>
+</UL>
+
+<H4>Configure /etc/openldap/ldap.conf</H4>
+
+<UL>
+<B>Configure the /etc/openldap/ldap.conf file:</B>
+
+Read the manpage for ldap.conf on your system for specific information.<P>
+
+Copy the /etc/openldap/ldap.conf from any BSICS Linux host to use as a guide.<B>NOTE:</B>  This configuratoni directly taken from BSICS Linux hosts may eclipse some local login accounts that you have. <P>
+
+We strongly encourage just copying the ldap.conf file straight from an ICS Linux host to get the whole list of associated comments.  
+
+<PRE>
+
+		If you choose to configure your own, we recommend the following settings:
+
+    uri ldaps://ldaps.ics.uci.edu
+		base dc=ics,dc=uci,dc=edu
+		ssl on
+		tls_checkpeer no
+		TLS_REQCERT never
+		tsl_ciphers HIGH:MEDIUM:+SSLv2:RSA
+		pam_member_attribute memberuid
+		pam_filter objectclass=posixAccount
+		pam_login_attribute uid
+		pam_password crypt
+		# Root can login if no LDAP
+		# You may add additional entries for other local users
+		nss_initgroups_ignoreusers root
+		bind_policy soft 
+		bind_timelimit 1 
+		timelimit 60 
+		idle_timelimit 300 
+		nss_reconnect_tries 2 
+		nss_reconnect_sleeptime 1 
+		nss_reconnect_maxsleeptime 4
+		nss_reconnect_maxconntries 2
+		#
+		nss_base_passwd      ou=People,dc=ics,dc=uci,dc=edu?sub
+		nss_base_shadow      ou=People,dc=ics,dc=uci,dc=edu?sub
+		nss_base_group       ou=Group,dc=ics,dc=uci,dc=edu?one
+		nss_base_hosts       ou=Hosts,dc=ics,dc=uci,dc=edu?one
+		nss_base_services    ou=Services,dc=ics,dc=uci,dc=edu?one
+		nss_base_networks    ou=Networks,dc=ics,dc=uci,dc=edu?one
+		nss_base_protocols   ou=Protocols,dc=ics,dc=uci,dc=edu?one
+		nss_base_rpc         ou=Rpc,dc=ics,dc=uci,dc=edu?one
+		nss_base_ethers      ou=Ethers,dc=ics,dc=uci,dc=edu?one
+		nss_base_netmasks    ou=Networks,dc=ics,dc=uci,dc=edu?ne
+		nss_base_bootparams  ou=Ethers,dc=ics,dc=uci,dc=edu?one
+		nss_base_aliases     ou=Aliases,dc=ics,dc=uci,dc=edu?one
+		nss_base_netgroup    ou=Netgroup,dc=ics,dc=uci,dc=edu?sub
+</PRe>
+
+</UL>
+<H3> Configure the /etc/nsswitch.conf</H3>
+<UL>
+
+For any name service that you would like to use LDAP for, update the nsswitch.conf file.<P>
+
+If you want to use netgroups to control access to the system, set up compatibility mode:<P>
+<PRE>
+
+			passwd:  compat
+			passwd_compat:  ldap
+</PRE>
+
+		Otherwise the syntax is pretty base,<P>
+<PRE>
+
+			#service:  files ldap
+			services:  files ldap
+			networks:  files ldap
+  			...
+
+</PRE>
+			
+There is not support for netmaks, bootparams, publickey or automount.  Also, you probably don't want to use LDAP for sendmail (we never tested it) so settins for these should be:  <P>
+<PRE>
+			service:  files		
+</PRE>
+</UL>
+<H3> Configuring PAM</H3>
+<UL> 
+
+
+LDAP will need to be enabled in PAM for authentication against the LDAP server to work.  <P>
+It's possible that your system comes preconfigured.  See the man pages for pam for more information (`man pam`) on your specific system.<P>
+
+On ICS gentoo installations, PAM is configured by adding the following to system-auth:<P>
+<PRE>
+
+			system-auth:auth       sufficient   pam_ldap.so use_first_pass  
+			system-auth:account    [default=bad success=ok user_unknown=ignore] pam_ldap.so
+			system-auth:password   sufficient   pam_ldap.so use_authtok
+			system-auth:session    optional     pam_ldap.so
+</PRE>
+
+		(Take a look at our pam.d files, they are world readable).
+
+   
+   </UL>
+ 
+<H3>Additional Resources:</H3>
+<UL>
+<LI><A HREF=http://www.sun.com/dsee>Sun Directory Server</A>
+<LI><A HREF=http://www.openldap.org>OpenLDAP</A>
+<LI><A HREF=http://www.centos.org/docs/5/html/Deployment_Guide-en-US>CentOS5 Deployment Guide</A>:
+<LI><A HREF=http://gentoo-wiki.com/>Gentoo Wiki</A>
+
+</UL>
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,48 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3462¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueXAattachment; filename=cs222p-2017-fall-project1-create-project.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=11cc6857ba0b46f72d052e3e; expires=Thu, 09 May 2019 20:49:25 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 20:49:25 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueY†'''Download and deploy the codebase of Project 1''' 
+
+* '''Download the codebase of Project 1'''Â [[BR]]
+
+  Please download theÂ [attachment:codebase.zip codebase]Â onto your own computer. Unzip the file.
+
+ * '''Deploy the codebase'''
+
+ * '''If you are developing in Eclipse'''[[BR]]
+
+  Read the readme.txt under codebase.[[BR]]
+
+  Create a new C++ project named "cs222" in Eclipse. If you are using a Mac, select MacOSX GCC in the project setup.[[BR]]
+
+  Create a folder named "src" under cs222, and another folder named "rbf" under src.
+
+  Copy pfm.h, pfm.cc, rbfm.h, rbfm.cc, rbftest1.cc through rbftest12.cc from "codebase/rbf" under the rbf folder you have just created.[[BR]]
+
+  There are 13 test cases, and each of these test cases is a stand-alone application that contains its own main() method, so Eclipse cannot compile the test cases properly when they are together. The simplest fix is to comment out all other test cases except the test that you are working on. For example, if you are working on rbftest1.cc, put block comments in the rbftest2.cc through rbftest12.cc files. Or, alternatively, you can only include one rbftestXX.cc file at a time. That way, you can test the 13 cases one by one. Yet another option is setting multiple targets for the 13 test cases. Refer to this guide if you would like to set targets for each of the 13 test cases:Â http://tinyguides.blogspot.com/2013/04/multiple-binaries-in-single-eclipse-cdt.htmlÂ . That is, you would need to create 13 targets (rbftest1, ... rbftest12) and each test case should not be included when compiling the other test cases.
+
+  At this point, your project structure is similar to this picture (created by using MacOSX GCC toolchain) :[[BR]][[Image(eclipse_project1_picture.jpg)]]
+
+  Compile a test by doing Project -> Build All. After the cs222 binary is created in a test folder, Right click the binary and click "Run As"/"Run Configurations" and register your test case as an application.Â [[Image(eclipse_project1_run_as_configuration.jpg)]]
+
+  On Windows, if you see this error message - "Info: Nothing to build for cs222", put "g++ -static-libgcc -static-libstdc++" as the value in Command by visiting Project -> Properties -> Tool Settings -> MinGW C++ Linker.
+
+  On Mac OS X, if you see this error message - "Launch failed, binary not found", check the "Mach-O 64 Parser is selected" option by visiting Project > Properties > C/C++ Build > Settings > Binary Parsers. OR, click "Debug"/"cs222" and click "Run" if you chose Cross GCC.
+
+  After you confirm that all test cases work properly, you can use the command-line tool to compile and test your code. In the end, the assistants will use the automated test script to test your code.
+  
+  '''Enable C++ 11 on Eclipse'''
+  If you want to use C++ 11 (or higher) features, you can enable in the Project property.  Right click project -> Properties -> C/C++ Build -> Settings. Click GCC C++ Compiler, append {{{ -std=c++11 }}} to the command. Click MacOS X C++ Linker, also append {{{ -std=c++11 }}} to the command. It should look like this: :[[BR]][[Image(eclipse_cpp_11.png)]]
+
+ * '''If you are not using Eclipse'''Â [[BR]]
+
+  Read the readme.txt under ./codebase/.[[BR]]
+
+  Go to the codebase, and modify the CODEROOT in makefile.inc properly.Â [[BR]]
+
+  Go to folder "rbf", and type in:
+
+  make clean[[BR]]
+
+  make[[BR]]
+
+  ./rbftest1[[BR]]
+
+  You will be able to see the output.Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

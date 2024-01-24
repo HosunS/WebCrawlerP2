@@ -1,0 +1,25 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC421¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 11 Mar 2018 02:18:21 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1a5-56719a3a69540"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 19:20:56 GMTKraw_content¢DtypeEvalueY¥# songs.py
+
+
+class Song:
+    pass
+
+
+class SongCollection:
+    def __init__(self):
+        self._songs = []
+        self._count = 0
+
+
+    def size(self) -> int:
+        return self._count
+
+
+    def add(self, song_to_add: Song) -> None:
+        self._songs.append(song_to_add)
+        self._count += 1
+
+
+    def contains(self, song_to_find: Song) -> bool:
+        return song_to_find in self._songs
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

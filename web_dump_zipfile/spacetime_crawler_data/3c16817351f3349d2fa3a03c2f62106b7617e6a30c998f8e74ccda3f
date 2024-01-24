@@ -1,0 +1,53 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1313¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Feb 2006 21:58:30 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"521-40c3b7ad18d80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 22:18:33 GMTKraw_content¢DtypeEvalueY!/**
+Name: Cameron Lewis
+Student ID: 16254966
+**/
+
+//class Salaried constructs objects that can be used to print paychecks and
+//personal information about salaried employees
+class Salaried extends Employee
+{
+	//the name of the employee
+	private String name;
+
+	//the annual salary for a specified employee
+	private int salary;
+
+	//the pay for this employee before the tax
+	private int grossPay;
+
+	//the amount of money subtracted from the grossPay after taxes
+	private int tax;
+
+	//creates a Salaried object and initializes name and salary
+	public Salaried(String n, int s)
+	{
+		super(n);
+		name = n;
+		salary = s;
+
+	}
+
+	//creates a Paycheck object using @param hoursWorked so that the paycheck can be printed for a specific employee
+	public Paycheck createWeeklyPaycheck(int hoursWorked)
+	{
+		grossPay = salary / 52;
+		tax = grossPay / 5;
+		Employee emp = new Salaried(name, salary);
+		Paycheck oneWeek = new Paycheck(emp, hoursWorked, grossPay, tax);
+		return oneWeek;
+	}
+
+	//used to print the information about a specific employee
+	public String toString()
+	{
+		String s = "";
+
+		s += String.format("%-20s", name);
+		s += String.format("%-10s", "Salary");
+		s += String.format("%-15s: %s\n", "Yearly Salary", CurrencyFormat.format(salary));
+
+		return s;
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

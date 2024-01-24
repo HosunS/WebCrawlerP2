@@ -1,0 +1,30 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC721¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 27 Sep 2018 16:11:32 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2d1-576dc97a2497b"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 00:56:15 GMTKraw_content¢DtypeEvalueYÑlibrary(tidyverse)
+essaydata <- read_csv("H://HAL//Courses/Stat210/essay.csv")
+describe <- function(x){c(mean=mean(x),sd=sqrt(var(x)),quantile(x))}
+essay <- data.matrix(essaydata)
+intrinsic <- essay[1:24,2]
+extrinsic <- essay[25:47,2]
+describe(intrinsic)
+describe(extrinsic)
+hist(intrinsic)
+hist(extrinsic)
+
+all <- c(intrinsic, extrinsic)
+randdist <- rep(0,1000)
+for (i in (1:1000)) {
+  id <- sample(c(1:47),24)
+  int <- all[id]
+  ext <- all[-id]
+  randdist[i] <- mean(int) - mean(ext)
+}
+hist(randdist)
+obs <- mean(intrinsic) - mean(extrinsic)
+abline(v=obs)
+sum(abs(randdist) > obs)
+
+qqnorm(intrinsic)
+qqnorm(extrinsic)
+t.test(intrinsic,extrinsic)
+t.test(intrinsic,extrinsic,var.equal=TRUE)
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

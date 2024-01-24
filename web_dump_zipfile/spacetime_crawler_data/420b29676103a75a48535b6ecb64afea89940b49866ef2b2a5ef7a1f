@@ -1,0 +1,51 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1593¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Oct 2005 05:58:12 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"639-4026f9c322500"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 18:31:36 GMTKraw_content¢DtypeEvalueY9// Employee.java
+//
+// ICS H22 Fall 2005
+// Lab 2: The Price You Pay
+//
+// Employee is an abstract class that defines methods that are common to
+// all kinds of employees.  In this case, all employees have a name, all
+// can be converted to a String representation, and all can have a weekly
+// paycheck created for them.
+//
+// You may not modify this class.
+
+
+public abstract class Employee
+{
+	// The name of the employee
+	private String name;
+
+
+	// The constructor takes a name as a parameter and uses it to initialize
+	// the employee's name.
+	public Employee(String name)
+	{
+		this.name = name;
+	}
+
+
+	// getName() returns the name of this employee.  (Note that the name field
+	// is private, meaning that no code outside of this class -- even the code
+	// in the subclasses of Employee! -- will be able to access it.  So, in
+	// the subclasses, you'll need to call getName() whenever you want to get
+	// the name of the employee.)
+	public String getName()
+	{
+		return name;
+	}
+
+
+	// createWeeklyPaycheck() creates and returns a weekly paycheck for this
+	// employee, given the number of hours that were worked this week.  You'll
+	// need to write a version of this method in each of your subclasses.
+	public abstract Paycheck createWeeklyPaycheck(int hoursWorked);
+
+
+	// toString() returns a String representation of this employee.  Different
+	// kinds of employees will have somewhat different String representations.
+	// You'll need to write a version of this method in each of your
+	// subclasses.
+	public abstract String toString();
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,37 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3166¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 15 Jun 2017 21:02:01 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"c5e-55205fae96a36"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 18:44:39 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY^
+################### folder names and associated input files #############
+SAMPLE_1\REP_1	/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/Wt1-hind1-paired.fastq:/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/Wt1-hind2-paired.fastq
+SAMPLE_1\REP_2	/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/Wt2-hind1-paired.fastq:/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/Wt2-hind2-paired.fastq
+SAMPLE_1\REP_3	/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/Wt3-hind1-paired.fastq:/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/Wt3-hind2-paired.fastq
+SAMPLE_1\REP_4	/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/Wt4-hind1-paired.fastq:/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/Wt4-hind2-paired.fastq
+SAMPLE_2\REP_1	/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/KO1-hind1-paired.fastq:/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/KO1-hind2-paired.fastq
+SAMPLE_2\REP_2	/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/KO2-hind1-paired.fastq:/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/KO2-hind2-paired.fastq
+SAMPLE_2\REP_3	/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/KO3-hind1-paired.fastq:/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/KO3-hind2-paired.fastq
+SAMPLE_2\REP_4	/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/KO4-hind1-paired.fastq:/cbcl/forouzme/Projects/PolyA/embryonicpenn/fixed-data/paired/KO4-hind2-paired.fastq
+#########################################################################
+
+############################# MATS Report #############################
+======================================================================
+EventType	NumEvents.JC.only	SigEvents.JC.only	NumEvents.JC+readsOnTarget	SigEvents.JC+readsOnTarget
+======================================================================
+SE	33738	133 (71:62)	34244	145 (80:65)
+MXE	4998	70 (28:42)	5064	114 (50:64)
+A5SS	12445	144 (66:78)	12467	161 (72:89)
+A3SS	18980	209 (95:114)	18999	214 (100:114)
+RI	3786	122 (66:56)	3806	134 (66:68)
+======================================================================
+################# Report Legend ################
+EventType: Type of AS event
+	SE: Skipped exon
+	MXE: Mutually exclusive exon
+	A5SS: Alternative 5' splice site
+	A3SS: Alternative 3' splice site
+	RI: Retained intron
+NumEvents.JC.only: total number of events detected using Junction Counts only
+SigEvents.JC.only: number of significant events detected using Junction Counts only
+	The numbers in the parentheses (n1:n2) indicate the number of significant events that have higher inclusion level for SAMPLE_1 (n1) or for SAMPLE_2 (n2)
+NumEvents.JC+readsOnTarget: total number of events detected using both Junction Counts and reads on target
+SigEvents.JC+readsOnTarget: number of significant events detected using both Junction Counts and reads on target
+	The numbers in the parentheses (n1:n2) indicate the number of significant events that have higher inclusion level for SAMPLE_1 (n1) or for SAMPLE_2 (n2)
+################################################
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

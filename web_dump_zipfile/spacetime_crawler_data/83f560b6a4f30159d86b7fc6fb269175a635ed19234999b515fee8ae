@@ -1,0 +1,243 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5566¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:53:08 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"15be-4da84bf5e2900"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:54:38 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY¾/*
+  $Id$
+
+  Copyright (C) 2007 by The Regents of the University of California
+
+  Redistribution of this file is permitted under the terms of the 
+  BDS license
+
+  Date: 01/30/2007
+  Author: Rares Vernica <rares (at) ics.uci.edu>
+*/
+
+#include "misc.h"
+#include "input.h"
+
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <cmath>
+
+unsigned pow(unsigned x, unsigned y) 
+{
+  unsigned r = 1;
+  while (y > 0) {
+    r *= x;
+    y--;
+  }
+  return r;
+}
+
+vector<vector<unsigned> > subsets(unsigned n, unsigned k) 
+{
+  if (k == 0) {
+    cerr << "subsets: k cannot be 0" << endl;
+    exit(EXIT_FAILURE);
+  }
+  vector<vector<unsigned> > subs;
+  vector<unsigned> sub(k);
+
+  unsigned i;
+  for (i = 0; i < k; i++)
+    sub[i] = i;
+  subs.push_back(sub);
+
+  while (sub[0] < n - k) {
+    for (i = 0; i < k; i++)
+      if (sub[k - i - 1] < n - i - 1)
+        break;
+    i = k - i - 1;
+    sub[i]++;
+    i++;
+    for (; i < k; i++)
+      sub[i] = sub[i - 1] + 1;
+    subs.push_back(sub);
+  }
+
+  return subs;
+}
+
+string utosh(unsigned i) 
+{
+  string str;
+  if (i < 1000)
+    str = utos(i);
+  else if (i < 1000000)
+    str = utos(i / 1000.) + "k";
+  else
+    str = utos(i / 1000000.) + "m";
+  return str;
+}
+
+UnsignedSeq::UnsignedSeq(unsigned initialValue): value(initialValue)
+{
+}
+
+unsigned UnsignedSeq::operator() ()
+{
+  return value++;
+}
+
+string removeExt(const string filename)
+{
+  const string exts[] = {"txt", "bin"};
+  for (unsigned i = 0; i < sizeof(exts) / sizeof(string); i++)
+    if (filename.substr(filename.size() - 4) == "." + exts[i])
+      return filename.substr(0, filename.size() - 4);
+  return filename;
+}
+
+void writeerror(const string filename) 
+{
+  cerr << "can't write to file \"" << filename << "\"" << endl;
+  exit(EXIT_FAILURE);
+}
+
+void readerror(const string filename) 
+{
+  cerr << "can't read from file \"" << filename << "\"" << endl;
+  exit(EXIT_FAILURE);
+}
+
+void genZipfDist(unsigned distinctValues, unsigned zipfSkew, double valFreqs[]) {
+  double divisor = 0;
+  for(unsigned i = 1; i <= distinctValues; i++)
+    divisor += 1.0 / (double) pow((double)i, (double)zipfSkew);
+
+  for(unsigned i = 1; i <= distinctValues; i++)
+    valFreqs[i-1] = ( 1.0 / (double) pow((double)i, (double)zipfSkew) ) / divisor;
+}
+
+void enlargeDataset(const char* targetFile, 
+		    const char* inputFile, 
+		    unsigned targetSize,
+		    unsigned minErrors,
+		    unsigned maxErrors, 
+		    unsigned trueRand) {
+
+  if(trueRand) srand(time(NULL));
+  else srand(150);
+
+  unsigned maxStrLength = 1000;
+
+  vector<string> dictionary;
+  readString(dictionary, inputFile, targetSize, maxStrLength);	
+
+  cout << "GENERATING DICTIONARY" << endl;
+  unsigned originalSize = dictionary.size();
+  while(dictionary.size() < targetSize) {
+    // read original strings and introduce errore
+    for(unsigned i = 0; i < originalSize; i++) {
+      string newString = dictionary.at(i);
+
+      // introduce errors
+      unsigned errors = (rand() % (maxErrors-minErrors)) + maxErrors;
+      for(unsigned j = 0; j < errors; j++) {
+	unsigned pos = rand() % newString.size();
+	unsigned op = rand() % 3;
+	switch(op) {
+	  // deletion 
+	case 0: {
+	  if(newString.size() > 1) {
+	    const string del = "";
+	    newString.replace(pos, 1, del);
+	  }
+	} break;
+
+	  // insertion
+	case 1: {
+	  unsigned c = (rand() % (128-33)) + 33;
+	  char newChar[2];
+	  newChar[0] = c;
+	  newChar[1] = '\0';
+	  newString.insert(pos, newChar);	  
+	} break;
+
+	  // substitution
+	case 2: {
+	  if(newString.size() > 0) {
+	    unsigned c = (rand() % (128-33)) + 33;
+	    char newChar[2];
+	    newChar[0] = c;
+	    newChar[1] = '\0';
+	    newString.replace(pos, 1, newChar);
+	  }
+	} break;
+
+	}
+      }
+      
+      // push to dictionary vector
+      dictionary.push_back(newString);
+    }    
+  }
+
+  cout << "WRITING TO " << targetFile << endl;
+  unsigned perc = 0;
+
+  ofstream fp;
+  fp.open(targetFile, ios::out);
+
+  for(unsigned i = 0; i < dictionary.size(); i++) {
+    fp << dictionary.at(i) << endl;    
+    perc = (unsigned)ceil( (double)(i+1) / (double)dictionary.size()*100 );
+    cout << perc << "%" << "\r";
+  }
+  cout << endl << "ALL DONE!" << endl;
+
+  fp.close();
+}
+
+// calculate checksum
+unsigned checksum(const string& s) {
+  unsigned sum = 0;
+  for(unsigned i = 0; i < s.size(); i++) {
+    unsigned val = (unsigned)s[i];
+    if(val > CHECKSUM_MAX_ASCII)
+      sum += CHECKSUM_MAX_ASCII;  
+    else
+      sum += val;
+  }
+
+  return sum;
+}
+
+void linearRegression(const vector<float>& xvals, const vector<float>& yvals, float& slope, float& intercept) {
+  float sumX = 0.0f;
+  float sumY = 0.0f;
+  float sumXY = 0.0f;
+  float sumXSquare = 0.0f;
+  unsigned n = xvals.size();
+
+  for(unsigned i = 0; i < n; i++) {
+    sumX += xvals.at(i);
+    sumY += yvals.at(i);
+    sumXY += xvals.at(i) * yvals.at(i);
+    sumXSquare += xvals.at(i) * xvals.at(i);
+  }  
+
+  slope = (n*sumXY - sumX*sumY) / (n*sumXSquare - sumX*sumX); 
+  intercept = (sumY - slope*sumX) / (float)n;
+}
+
+// factorial function
+// returns an integer so only SMALL factorials are supported, watch out for overflow
+unsigned factorial(unsigned n) {
+  unsigned result = 1;
+  for(unsigned i = n; i > 1; i--)
+    result *= i;
+  return result;  
+}
+
+float binomialDistrib(unsigned k, unsigned n, float p, bool cumulative) {
+  if(cumulative) {
+    float res = 0.0;
+    for(unsigned i = k; i <= n; i++)
+      res += factorial(n)/(factorial(n-i)*factorial(i))*pow((float)p,(float)i)*pow((float)(1-p),(float)(n-i));
+    return res;
+  }
+  else {
+    return factorial(n)/(factorial(n-k)*factorial(k))*pow((float)p,(float)k)*pow((float)(1-p),(float)(n-k));
+  }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

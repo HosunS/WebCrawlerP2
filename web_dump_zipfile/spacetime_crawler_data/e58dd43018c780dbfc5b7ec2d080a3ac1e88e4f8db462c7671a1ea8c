@@ -1,0 +1,232 @@
+¦Ifinal_url¢DtypeEvaluex'https://support.ics.uci.edu/ics.system/Lhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5160¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueX2PHPSESSID=2122a7018b35d521cb1d5e11a01c9b04; path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX>no-store, no-cache, must-revalidate, post-check=0, pre-check=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 11:11:08 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY(
+<head>
+
+<title>Bren School ICS Announcements</title>
+
+
+
+
+<style type="text/css">
+
+   .central-wrapping li {
+                          width: 17em;
+                          float: left;
+                        }
+
+</style>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+<link rel="stylesheet" type="text/css" href="print.css"  media="print">
+
+<link rel="stylesheet" type="text/css" href="cavendish_content.css" title="Cavendish" media="screen">
+<link rel="stylesheet" type="text/css" href="template.css"  media="screen">
+<link rel="stylesheet" type="text/css" href="cavendish_template.css" title="Cavendish" media="screen">
+
+<link rel="stylesheet" href="tabber.css" TYPE="text/css" MEDIA="screen">
+
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+/* Optional: Temporarily hide the "tabber" class so it does not "flash"
+   on the page as plain HTML. After tabber runs, the class is changed
+   to "tabberlive" and it will appear. */
+
+document.write('<style type="text/css">.tabber{display:none;}<\/style>');
+/*==================================================
+  Set the tabber options (must do this before including tabber.js)
+  ==================================================*/
+var tabberOptions = {
+
+  'cookie':"tabber", /* Name to use for the cookie */
+
+  'onLoad': function(argsObj)
+  {
+    var t = argsObj.tabber;
+    var i;
+
+    /* Optional: Add the id of the tabber to the cookie name to allow
+       for multiple tabber interfaces on the site.  If you have
+       multiple tabber interfaces (even on different pages) I suggest
+       setting a unique id on each one, to avoid having the cookie set
+       the wrong tab.
+    */
+    if (t.id) {
+      t.cookie = t.id + t.cookie;
+    }
+
+    /* If a cookie was previously set, restore the active tab */
+    i = parseInt(getCookie(t.cookie));
+    if (isNaN(i)) { return; }
+    t.tabShow(i);
+    /*
+    alert('getCookie(' + t.cookie + ') = ' + i);
+   */
+  },
+
+  'onClick':function(argsObj)
+  {
+    var c = argsObj.tabber.cookie;
+    var i = argsObj.index;
+    /*
+       alert('setCookie(' + c + ',' + i + ')');
+     */
+    setCookie(c, i);
+  }
+};
+
+
+
+/*==================================================
+  Cookie functions
+  ==================================================*/
+function setCookie(name, value, expires, path, domain, secure) {
+    document.cookie= name + "=" + escape(value) +
+        ((expires) ? "; expires=" + expires.toGMTString() : "") +
+        ((path) ? "; path=" + path : "") +
+        ((domain) ? "; domain=" + domain : "") +
+        ((secure) ? "; secure" : "");
+}
+
+function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + "=";
+    var begin = dc.indexOf("; " + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    } else {
+        begin += 2;
+    }
+    var end = document.cookie.indexOf(";", begin);
+    if (end == -1) {
+        end = dc.length;
+    }
+    return unescape(dc.substring(begin + prefix.length, end));
+}
+
+function deleteCookie(name, path, domain) {
+    if (getCookie(name)) {
+        document.cookie = name + "=" +
+            ((path) ? "; path=" + path : "") +
+            ((domain) ? "; domain=" + domain : "") +
+            "; expires=Thu, 01-Jan-70 00:00:01 GMT";
+    }
+}
+
+
+
+
+
+
+
+    
+
+function showBody(arr,fld,i)
+{
+
+        document.getElementById(fld).innerHTML=arr;
+}
+
+
+var systemArr = new Array();
+
+
+
+
+
+var softwareArr = new Array();
+
+
+
+
+
+var announcementsArr = new Array();
+
+
+
+
+
+
+
+</script>
+<script type="text/javascript" src="tabber.js"></script>
+
+
+<div id="container">
+
+        <DIV id="header">
+
+            <center><a href="" title="Return to home page" accesskey="1" class='announce'><b>ICS Computing Support Announcements</b></a>
+            </center>
+
+
+            <DIV CLASS="white top-right "><a href="feed.xml"><span class='white'>RSS</span></a>&nbsp;</DIV>
+
+
+        </DIV>
+
+
+
+
+
+   <TABLE BORDER=0 ALIGN=CENTER WIDTH=100%>
+      <TR>
+        <TD STYLE='background-color: #F0F0F8; color: #010102; '>
+            <div class='tabber'>
+
+
+                 <div class='tabbertab'>
+                    <h2>System Downtime</h2>
+
+             <TABLE BORDER=0 CELLPADDING=5 WIDTH=100%>
+                <TR>
+                    <TD>
+
+There are currently no announcements of this type.system<PRE></PRE>
+                        </TD>
+                    </TR>
+                </TABLE>
+</div>
+
+
+                 <div class='tabbertab'>
+                    <h2>Software</h2>
+
+             <TABLE BORDER=0 CELLPADDING=5 WIDTH=100%>
+                <TR>
+                    <TD>
+
+There are currently no announcements of this type.software<PRE></PRE>
+                        </TD>
+                    </TR>
+                </TABLE>
+</div>
+
+
+                 <div class='tabbertab'>
+                    <h2>General Announcements</h2>
+
+             <TABLE BORDER=0 CELLPADDING=5 WIDTH=100%>
+                <TR>
+                    <TD>
+
+There are currently no announcements of this type.announcements<PRE></PRE>
+                        </TD>
+                    </TR>
+                </TABLE>
+</div>
+
+
+         </div>
+</TD></TR></TABLE>
+
+</div>
+
+
+</body>Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

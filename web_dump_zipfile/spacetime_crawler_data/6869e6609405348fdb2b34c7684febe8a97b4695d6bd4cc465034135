@@ -1,0 +1,532 @@
+¶Ifinal_url¢DtypeEvaluexYhttps://news.uci.edu/2018/12/12/uci-health-names-chad-t-lefteris-chief-operating-officer/Lhttp_headers¢DtypeEvalueê¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD9791¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueLX-Powered-ByAv¢DtypeEvalueJPHP/7.0.33¢Ak¢DtypeEvalueXStrict-Transport-SecurityAv¢DtypeEvaluePmax-age=63072000¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueItimeout=2¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDLinkAv¢DtypeEvalueXi<https://news.uci.edu/wp-json/>; rel="https://api.w.org/", <https://news.uci.edu/?p=37915>; rel=shortlink¢Ak¢DtypeEvalueOX-UA-CompatibleAv¢DtypeEvalueGIE=edge¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX#no-store, no-cache, must-revalidate¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 00:03:04 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzipKraw_content¢DtypeEvalueYò◊<!DOCTYPE html>
+<html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link rel="icon" type="image/x-icon" href="//web.communications.uci.edu/assets/2015/img/favicon.ico">
+    <link rel="apple-touch-icon" href="//web.communications.uci.edu/assets/2015/img/webclip-icon.png">
+
+    <title>UCI Health names Chad T. Lefteris chief operating officer | UCI News | UCI</title>
+
+    <title>UCI Health names Chad T. Lefteris chief operating officer &#8211; UCI News</title>
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/news.uci.edu\/wp-includes\/js\/wp-emoji.js?ver=4.9.8","twemoji":"https:\/\/news.uci.edu\/wp-includes\/js\/twemoji.js?ver=4.9.8"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/*
+	 * Create a canvas element for testing native browser support
+	 * of emoji.
+	 */
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Check if two sets of Emoji characters render the same.
+	 *
+	 * @param set1 array Set of Emoji characters.
+	 * @param set2 array Set of Emoji characters.
+	 * @returns {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "flag" or "emoji".
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 55356, 56826, 55356, 56819 ],
+					[ 55356, 56826, 8203, 55356, 56819 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447 ],
+					[ 55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447 ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * She's the hero Emoji deserves, but not the one it needs right now.
+				 *
+				 * To test for support, try to render a new emoji (female superhero),
+				 * then compare it to how it would look if the browser doesn't render it correctly
+				 * (superhero + female sign).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[55358, 56760, 9792, 65039],
+					[55358, 56760, 8203, 9792, 65039]
+				);
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='uci-wp-video-embeder-styles-css'  href='https://news.uci.edu/wp-content/plugins/uci-wp-video-embedder/video-embed.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='cj-authorship-front-css'  href='https://news.uci.edu/wp-content/plugins/cj-authorship/css/style.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='cj-rl-front-css'  href='https://news.uci.edu/wp-content/plugins/cj-related-links/css/front.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='sharify-font-css'  href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400' type='text/css' media='all' />
+<link rel='stylesheet' id='uciseventeen-child-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/theme-styles/uciseventeen.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap3-uci-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/theme-styles/Bootstrap3-UCI-theme/css/bootstrap3-uci.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap3-accessibility-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/theme-styles/Bootstrap3-UCI-theme/css/bootstrap3-uci-accessibility/bootstrap3-uci-accessibility.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='main-style-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/style.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='uciseventeen-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen/style.css?ver=0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='uci-slideshow-frontend-css'  href='https://news.uci.edu/wp-content/plugins/uci-wp-slideshow/uci-slideshow/uci-slideshow.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='uci-slideshow-no-bootstrap-css'  href='https://news.uci.edu/wp-content/plugins/uci-wp-slideshow/uci-slideshow/uci-slideshow-no-bootstrap.css?ver=4.9.8' type='text/css' media='all' />
+<script type='text/javascript' src='https://news.uci.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/plugins/uci-wp-video-embedder/video-embed.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/js/jquery-match-height/dist/jquery.matchHeight-min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/js/jquery.imgpreload/dist/jquery.imgpreload.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/js/uciseventeen/height-matching.js?ver=4.9.8'></script>
+<link rel='https://api.w.org/' href='https://news.uci.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://news.uci.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://news.uci.edu/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Biomedical engineering professor is named fellow of the National Academy of Inventors' href='https://news.uci.edu/2018/12/11/uci-biomedical-engineering-professor-named-2018-national-academy-of-inventors-fellow/' />
+<link rel='next' title='Growing up digital' href='https://news.uci.edu/2018/12/17/growing-up-digital/' />
+<meta name="generator" content="WordPress 4.9.8" />
+<link rel="canonical" href="https://news.uci.edu/2018/12/12/uci-health-names-chad-t-lefteris-chief-operating-officer/" />
+<link rel='shortlink' href='https://news.uci.edu/?p=37915' />
+<link rel="alternate" type="application/json+oembed" href="https://news.uci.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnews.uci.edu%2F2018%2F12%2F12%2Fuci-health-names-chad-t-lefteris-chief-operating-officer%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://news.uci.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fnews.uci.edu%2F2018%2F12%2F12%2Fuci-health-names-chad-t-lefteris-chief-operating-officer%2F&#038;format=xml" />
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NP3KPCC');
+
+// Auto-wrap non-bootstrap code in a container
+jQuery(function($) {
+	if (!$('.page main .container').length && !$('.page main .container-fluid').length) {
+		$('main').addClass('container');
+	}
+});</script>
+	    <meta name="description" content="Executive held key leadership roles at UNC Health Care; will help UCI Health maintain operational excellence while expanding its community presence ">
+
+<!-- START - Facebook Open Graph, Google+ and Twitter Card Tags 1.6.3 -->
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="UCI News"/>
+<meta property="og:title" content="UCI Health names Chad T. Lefteris chief operating officer"/>
+<meta itemprop="name" content="UCI Health names Chad T. Lefteris chief operating officer"/>
+<meta property="og:url" content="https://news.uci.edu/2018/12/12/uci-health-names-chad-t-lefteris-chief-operating-officer/"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-12-12T15:51:53+00:00"/>
+	<meta property="article:modified_time" content="2018-12-13T08:28:18+00:00" />
+<meta property="og:updated_time" content="2018-12-13T08:28:18+00:00" />
+<meta property="article:section" content="Campus News"/>
+<meta property="article:section" content="Health"/>
+<meta property="article:section" content="Hospital"/>
+<meta property="og:description" content="Executive held key leadership roles at UNC Health Care; will help UCI Health maintain operational excellence while expanding its community presence"/>
+<meta itemprop="description" content="Executive held key leadership roles at UNC Health Care; will help UCI Health maintain operational excellence while expanding its community presence"/>
+<meta property="og:image" content="https://news.uci.edu/wp-content/uploads/2018/12/9B7A6978a-720x480.jpg"/>
+<meta itemprop="image" content="https://news.uci.edu/wp-content/uploads/2018/12/9B7A6978a-720x480.jpg"/>
+<!-- END - Facebook Open Graph, Google+ and Twitter Card Tags -->
+
+</head>
+<body class="post">
+
+<!-- skip to main nav -->
+<nav aria-label="Skip to" id="skip-to">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a class="sr-only sr-only-focusable" href="#content-main">Skip to main content</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- primary nav -->
+<nav aria-label="Primary navigation" class="navbar navbar-inverse" id="nav-primary">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#nav-primary-items"
+                    data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle primary navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://uci.edu/">UCI <span class="sr-only">homepage</span></a>
+        </div>
+        <div id="nav-primary-items" class="collapse navbar-collapse"><ul id="menu-main-menu" class="nav navbar-nav"><li  id="menu-item-69" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-69 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/art-and-humanities/">Arts & Humanities</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Arts & Humanities</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/arts/">Arts</a></li>
+<li><a href="https://news.uci.edu/category/humanities/">Humanities</a></li>
+</ul>
+</li>
+<li  id="menu-item-70" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70 nav-item btn-group clearfix link-only"><a class="btn" href="https://news.uci.edu/category/athletics/">Athletics</a></li>
+<li  id="menu-item-71" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-71 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/campus-life/">Campus Life</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Campus Life</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/campus-life/administration/">Administration</a></li>
+<li><a href="https://news.uci.edu/category/campus-life/students/">Students</a></li>
+</ul>
+</li>
+<li  id="menu-item-72" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-has-children menu-item-72 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/health/">Health</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Health</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/health/hospital/">Hospital</a></li>
+<li><a href="https://news.uci.edu/category/health/public-health/">Public Health</a></li>
+<li><a href="https://news.uci.edu/category/health/nursing/">Nursing</a></li>
+<li><a href="https://news.uci.edu/category/health/school-of-medicine/">School of Medicine</a></li>
+<li><a href="https://news.uci.edu/category/health/pharmaceutical-sciences/">Pharmaceutical Science</a></li>
+</ul>
+</li>
+<li  id="menu-item-73" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-73 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/science-and-tech/">Science & Tech</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Science & Tech</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/science-and-tech/environment-and-energy/">Environment/Energy</a></li>
+</ul>
+</li>
+<li  id="menu-item-74" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-74 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/society-and-community/">Society & Community</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Society & Community</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/society-and-community/education/">Education</a></li>
+</ul>
+</li>
+</ul></div>    </div>
+</nav>
+
+<header>
+        <div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8" id="wordmark">
+                <a href="https://news.uci.edu"><img width="302" height="75" src="https://news.uci.edu/wp-content/uploads/2018/04/news-wordmark.png" class="attachment-full size-full" alt="UCI News" /></a>            </div>
+            <div class="col-sm-12 col-md-4" id="search">
+                <form action="https://search.uci.edu/" class="form-inline" method="get">
+    <input name="collection" type="hidden" value="uci_news">
+    <label class="sr-only" for="search-text">Search</label>
+    <input class="form-control" id="search-text" name="q" placeholder="Search..." type="text">
+    <div class="btn-group">
+        <button class="btn btn-default" name="type" type="submit" value="Web">Web</button>
+        <button class="btn btn-default" name="type" type="submit" value="People">People</button>
+    </div>
+</form>
+            </div>
+        </div>
+    </div>
+</div>
+    </header>
+
+<hr>
+
+<!--<nav aria-label="breadcrumbs" id="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                            </div>
+        </div>
+    </div>
+</nav> -->
+
+<main id="content-main">
+    <div class="content container">
+    <div class="row">
+        <div class="col-md-8 clearfix article article-column-wrap">
+            <h1 class="page-heading">UCI Health names Chad T. Lefteris chief operating officer</h1>
+
+            <h2 class="page-subheadline">Executive held key leadership roles at UNC Health Care; will help UCI Health maintain operational excellence while expanding its community presence </h2>
+
+            <div class="page-date">
+                
+                December 12, 2018            </div>
+
+                            <div class="portrait-header">
+                    <img src="https://news.uci.edu/wp-content/uploads/2018/12/9B7A6978a-768x1049.jpg" alt="UCI Health names Chad T. Lefteris chief operating officer" class="img-responsive">												<div class="caption">Chad T. Lefteris has been named COO of UCI Health, overseeing daily business operations of Orange County‚Äôs only academic medical center.</div>
+					                </div>
+            
+            <div class="page-content clearfix"><p><strong>Orange, Calif., Dec. 12, 2018 ‚Äî </strong>Chad T. Lefteris, an executive with deep experience in integrated and academic health systems, was named chief operating officer for UCI Health, the patient-care organization of the University of California, Irvine. He will join UCI Health on Dec. 17, 2018, reporting to Richard J. Gannotta, Chief Executive Officer, UCI Health System.</p>
+<p>‚ÄúChad led complex, academic health systems to success in highly competitive markets,‚Äù said Gannotta. ‚ÄúWe look forward to utilizing his experience as we bring UCI‚Äôs innovative expertise and top-quality care to people throughout Orange County.¬† Chad will play a critical role in maintaining our prominence as the region‚Äôs leading provider of complex clinical care and the only academic medical center.‚Äù</p>
+<p>In his new role, Lefteris will oversee the daily business operations of the UCI Medical Center, which includes a hospital and several specialty units, along with other UCI-operated health care centers throughout Orange County. ¬†He will be responsible for administrative functions, including general and ancillary support services, facilities management, design and construction, and special projects.</p>
+<p>‚ÄúUCI Health plays a critical role in the sixth most-populous county in the United States,‚Äù said Lefteris. ‚ÄúI‚Äôm excited to serve an organization that cares for the health needs of the people of this diverse, dynamic region. UCI Health has an enviable level of prominence and I look forward helping the team drive growth, improve operations, and advance patient care.‚Äù</p>
+<p>Lefteris is currently vice president of operations of UNC REX Healthcare, a private, not-for-profit health care system that is a key component of Chapel Hill, North Carolina-based UNC Health Care. He is responsible for the oncology service line, which includes 13 service locations, generates top decile patient satisfaction, and accounts for one-third of the organization‚Äôs net income. He also supervises multiple operations and support services departments, ranging from patient experience and clinical engineering to facilities and construction. Under Lefteris‚Äô leadership, UNC REX has won numerous national awards for both construction and food service.</p>
+<p>Other positions at UNC Health Care included vice president, support services for UNC REX Healthcare and administrative director of operations for UNC Medical Center, a 795-bed academic medical center and the health system‚Äôs flagship hospital.</p>
+<p>Lefteris received his bachelor&#8217;s degree in business administration/health care management from Appalachian State University and his masters of health administration from Medical University of South Carolina.</p>
+<p><strong><a href="http://www.ucirvinehealth.org/about/">UCI Health</a></strong> comprises the clinical enterprise of the University of California, Irvine. Patients can access UCI Health at primary and specialty care offices across Orange County and at its main campus, UCI Medical Center in Orange, California. The 417-bed acute care hospital provides tertiary and quaternary care, ambulatory and specialty medical clinics, and behavioral health and rehabilitation services. UCI Medical Center features Orange County‚Äôs only National Cancer Institute-designated comprehensive cancer center, high-risk perinatal/neonatal program and American College of Surgeons-verified Level I adult and Level II pediatric trauma center and regional burn center. It is the primary teaching hospital for the UCI School of Medicine. UCI Health serves a region of nearly 4 million people in Orange County, western Riverside County and southeast Los Angeles County. Follow us on <a href="https://www.facebook.com/UCIrvineHealth">Facebook</a> and <a href="https://twitter.com/UCIrvineHealth">Twitter</a>.</p>
+<p><strong>About the University of California, Irvine:¬†</strong>Founded in 1965, UCI is the youngest member of the prestigious Association of American Universities. The campus has produced three Nobel laureates and is known for its academic achievement, premier research, innovation and anteater mascot. Led by Chancellor Howard Gillman, UCI has more than 30,000 students and offers 192 degree programs. It‚Äôs located in one of the world‚Äôs safest and most economically vibrant communities and is Orange County‚Äôs second-largest employer, contributing $5 billion annually to the local economy. For more on UCI, visit¬†<a href="http://www.uci.edu/">www.uci.edu</a>.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<div class="sharify-container"><ul><li class="sharify-btn-twitter">
+								<a title="Tweet on Twitter" href="https://twitter.com/intent/tweet?text=UCI+Health+names+Chad+T.+Lefteris+chief+operating+officer: https://news.uci.edu/2018/12/12/uci-health-names-chad-t-lefteris-chief-operating-officer/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+									<span class="sharify-icon"><i class="sharify sharify-twitter"></i></span>
+									<span class="sharify-title">Tweet</span>
+								</a>
+							</li><li class="sharify-btn-facebook">
+								<a title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fnews.uci.edu%2F2018%2F12%2F12%2Fuci-health-names-chad-t-lefteris-chief-operating-officer%2F" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+									<span class="sharify-icon"><i class="sharify sharify-facebook"></i></span>
+									<span class="sharify-title">Share</span>
+									<span class="sharify-count">0</span>
+								</a>
+							</li><li class="sharify-btn-reddit">
+								<a title="Submit to Reddit" href="http://reddit.com/submit?url=https://news.uci.edu/2018/12/12/uci-health-names-chad-t-lefteris-chief-operating-officer/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=950,height=450,toolbar=0'); return false;">
+									<span class="sharify-icon"><i class="sharify sharify-reddit"></i></span>
+									<span class="sharify-title">Reddit</span>
+								</a>
+							</li><li class="sharify-btn-gplus">
+								<a title="Share on Google+" href="http://plus.google.com/share?url=https://news.uci.edu/2018/12/12/uci-health-names-chad-t-lefteris-chief-operating-officer/" onclick="window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;">
+									<span class="sharify-icon"><i class="sharify sharify-gplus"></i></span>
+									<span class="sharify-title">+1</span>
+								</a>
+							</li><li class="sharify-btn-linkedin">
+								<a title="Share on Linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https://news.uci.edu/2018/12/12/uci-health-names-chad-t-lefteris-chief-operating-officer/&title=UCI Health names Chad T. Lefteris chief operating officer" onclick="if(!document.getElementById('td_social_networks_buttons')){window.open(this.href, 'mywin','left=50,top=50,width=600,height=350,toolbar=0'); return false;}" >
+									<span class="sharify-icon"><i class="sharify sharify-linkedin"></i></span>
+									<span class="sharify-title">LinkedIn</span>
+									<span class="sharify-count">0</span>
+								</a>
+							</li><li class="sharify-btn-email">
+								<a title="Share via mail" href="mailto:?subject=UCI Health names Chad T. Lefteris chief operating officer&body=Hey, checkout this web page: - https://news.uci.edu/2018/12/12/uci-health-names-chad-t-lefteris-chief-operating-officer/">
+									<span class="sharify-icon"><i class="sharify sharify-mail"></i></span>
+									<span class="sharify-title">Email</span>
+								</a>
+							</li></ul></div></div>
+            <div class="related-posts"><h2>Related Posts</h2><div class="media"><div class="media-left"><a href="https://news.uci.edu/2017/06/26/silent-partners-in-improving-o-c-healthcare/"><img src="https://news.uci.edu/wp-content/uploads/2017/06/Chao-Family-Lecture-012-270x180.jpg" alt="Silent partners in improving O.C. healthcare" class="img-responsive"></a></div><div class="media-body"><a href="https://news.uci.edu/2017/06/26/silent-partners-in-improving-o-c-healthcare/"><p class="media-heading">Silent partners in improving O.C. healthcare</p></a><p><time>June 26, 2017</div></div><div class="media"><div class="media-left"><a href="https://news.uci.edu/2018/06/11/richard-j-gannotta-tapped-to-head-uci-health/"><img src="https://news.uci.edu/wp-content/uploads/2018/06/Gannotta_180525_0216_sz-270x180.jpg" alt="Richard J. Gannotta tapped to head UCI Health" class="img-responsive"></a></div><div class="media-body"><a href="https://news.uci.edu/2018/06/11/richard-j-gannotta-tapped-to-head-uci-health/"><p class="media-heading">Richard J. Gannotta tapped to head UCI Health</p></a><p><time>June 11, 2018</div></div></div>        </div>
+        <aside class="col-md-4 sidebar-right no-print">
+            
+
+<div class="widget"><h3 class="widget-title">Contact Information</h3><ul class="list-group"><li class="list-group-item"><div>John Murray</div><div>714-456-7759</div><div>jdmurray@uci.edu</div></li></ul></div><div class="widget widget_cj_related_links_widget" id="cj_related_links_widget-3"><div class="widget-text wp_widget_plugin_box">
+<h3 class="widget-title">Related Links</h3>    <ul class="list-group">
+                <li class="list-group-item">
+            <div>
+                <a id="related-link-1" href="http://www.ucihealth.org">UCI Health</a>
+            </div>
+            <div class="list-url">http://www.ucihealth.org</div>
+        </li>
+            </ul>
+</div>
+</div><div class="widget widget_neatly-recent-posts" id="neatly-recent-posts-2"><h3 class="widget-title">Recent Posts</h3>                    <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/01/29/pacific-life-foundation-2-million-gift-supports-uci-lifevest-financial-literacy-program/"><img src="https://news.uci.edu/wp-content/uploads/2019/01/UCI-PacLife-Gift_5x7_2019-01-23-270x180.jpg" alt="$2 million from Pacific Life will support UCI&#8217;s LIFEvest financial literacy program for teens" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/01/29/pacific-life-foundation-2-million-gift-supports-uci-lifevest-financial-literacy-program/">$2 million from Pacific Life will support UCI&#8217;s LIFEvest financial literacy program for teens</a></h5>
+                
+                                <p class="rp-date rp-info">January 29, 2019</p>
+                
+	                        </div>
+          </div>
+          
+                              <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/01/29/uci-is-no-1-uc-choice-for-californias-college-bound-high-school-graduates/"><img src="https://news.uci.edu/wp-content/uploads/2019/01/convocation_180924_0190_sz-270x180.jpg" alt="UCI is No. 1 UC choice for California‚Äôs college-bound high school graduates" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/01/29/uci-is-no-1-uc-choice-for-californias-college-bound-high-school-graduates/">UCI is No. 1 UC choice for California‚Äôs college-bound high school graduates</a></h5>
+                
+                                <p class="rp-date rp-info">January 29, 2019</p>
+                
+	                        </div>
+          </div>
+          
+                              <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/01/28/professor-emerita-of-history-awarded-top-honor-in-field-of-u-s-foreign-relations/"><img src="https://news.uci.edu/wp-content/uploads/2019/01/rosenberg_100628_03a_sz-270x180.jpg" alt="Professor emerita of history is awarded top honor in field of American foreign relations" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/01/28/professor-emerita-of-history-awarded-top-honor-in-field-of-u-s-foreign-relations/">Professor emerita of history is awarded top honor in field of American foreign relations</a></h5>
+                
+                                <p class="rp-date rp-info">January 28, 2019</p>
+                
+	                        </div>
+          </div>
+          
+                              <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/01/28/ezra-klein-vox-co-founder-and-editor-at-large-to-deliver-peltason-lecture-at-uci/"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><img src="https://news.uci.edu/wp-content/uploads/2018/05/uci-news-placeholder-default-270x180.jpg" class="media-object" alt=""></body></html>
+</a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/01/28/ezra-klein-vox-co-founder-and-editor-at-large-to-deliver-peltason-lecture-at-uci/">Ezra Klein, Vox co-founder and editor-at-large, to deliver Peltason Lecture at UCI</a></h5>
+                
+                                <p class="rp-date rp-info">January 28, 2019</p>
+                
+	                        </div>
+          </div>
+          
+          </div><div class="widget widget_cj_tag_links" id="cj_tag_links-2"><h3 class="widget-title">Keywords</h3><ul class="list-group"><li class="list-group-item"><a href="https://news.uci.edu/tag/healthcare/" class="" rel="tag">healthcare</a></li><li class="list-group-item"><a href="https://news.uci.edu/tag/uci-health/" class="" rel="tag">UCI Health</a></li></ul></div>        </aside>
+    </div>
+</div>
+
+    
+    
+</main>
+<footer>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0">
+                                        <div class="menu-footer-column-one-container"><ul id="menu-footer-column-one"><li id="menu-item-84" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-84"><a href="https://www.facebook.com/UCIrvine">Facebook</a></li>
+<li id="menu-item-85" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-85"><a href="https://twitter.com/UCIrvine">Twitter</a></li>
+<li id="menu-item-86" class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-86"><a href="http://www.youtube.com/ucirvinenews">YouTube</a></li>
+<li id="menu-item-87" class="flickr menu-item menu-item-type-custom menu-item-object-custom menu-item-87"><a href="http://www.flickr.com/photos/ucirvine/">Flickr</a></li>
+<li id="menu-item-88" class="storify menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a href="http://storify.com/ucirvine">Storify</a></li>
+</ul></div>                                                        </div>
+                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0">
+                                            <div class="menu-footer-column-two-container"><ul id="menu-footer-column-two"><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90"><a href="http://today.uci.edu/">UCI Today</a></li>
+<li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91"><a href="http://search.uci.edu/">UCI Search</a></li>
+</ul></div>                                                        </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0">
+                                        <div class="menu-footer-column-three-container"><ul id="menu-footer-column-three"><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92"><a href="http://forms.communications.uci.edu/uci-feedback/">Feedback</a></li>
+<li id="menu-item-93" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93"><a href="http://uci.edu/privacy/">Privacy Notice</a></li>
+</ul></div>                                                        </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
+                    <address>
+                        <span>Strategic Communications & Public Affairs</span><br><span>120 Theory, Suite 100</span><br><span>Irvine, CA 92697-5615</span><br><span>949-824-6922</span><br>                    </address>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <a href="//uci.edu/copyright"><small>¬© 2019 UC Regents</small></a>
+        </div>
+    </div>
+</div>
+</footer>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/plugins/sharify/admin/inc/sharifycounts.js?ver=1.4'></script>
+<script type='text/javascript' src='//code.jquery.com/jquery-2.1.4.min.js?ver=0.1'></script>
+<script type='text/javascript' src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js?ver=0.1'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen/assets/theme-styles/Bootstrap3-UCI-theme/js/bootstrap-uci-extensions.js?ver=0.1'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/plugins/uci-wp-slideshow/uci-slideshow/uci-slideshow.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-includes/js/wp-embed.js?ver=4.9.8'></script>
+</body>
+</html>Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

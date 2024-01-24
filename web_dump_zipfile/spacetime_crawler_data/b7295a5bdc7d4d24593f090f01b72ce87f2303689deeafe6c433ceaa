@@ -1,0 +1,136 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2692¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Jan 2019 21:54:42 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"1b84-57fc28ef1d037-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:36:02 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY„<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head>
+<title>David Eppstein - Publications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<h1>David Eppstein - Publications</h1>
+<hr><p>
+<h2>
+Publications with 
+<a href="//compgeom.cs.uiuc.edu/~jeffe/">
+Jeff Erickson
+</a>
+</h2>
+<ul>
+<li><b>New algorithms for minimum measure simplices and one-dimensional
+weighted Voronoi diagrams</b>.<br>
+D. Eppstein and 
+<a href="//compgeom.cs.uiuc.edu/~jeffe/">
+J. Erickson</a>.<br>
+<a href="tr.html">Tech. Rep. 92-55</a>, ICS, UCI, 1992.
+<p>
+Looks at space complexity of finding minimum simplices &ndash; solves the problem in
+O(<i>n</i><sup>2</sup>) space and O(<i>n<sup>d</sup></i>) time
+(matching the best known time bounds)
+or in linear space at the expense of an additional log in time.
+Also finds one-dimensional multiplicatively weighted Voronoi diagrams in
+linear time for sorted inputs (O(<i>n</i> log <i>n</i>) was known).
+<p>(<a href="/~eppstein/bibs/eppstein.html#New algorithms for minimum measure simplices and one-dimensional weighted Voronoi diagrams">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/New-algorithms-for-minimum-measure-simplices-and-one-dimensional-weighted-Voronoi-diagrams.html">Citations</a> &ndash;
+<a href="//compgeom.cs.uiuc.edu/~jeffe/pubs/simplex.html">Jeff's pub list entry</a>)
+<p>
+<li><b>Iterated nearest neighbors and finding minimal polytopes</b>.<br>
+D. Eppstein and 
+<a href="//compgeom.cs.uiuc.edu/~jeffe/">J. Erickson</a>.<br>
+Tech. Rep. 92-71, ICS, UCI, 1992.<br>
+<a href="//portal.acm.org/citation.cfm?id=313612">
+<i>4th ACM-SIAM Symp. Discrete Algorithms,</i> Austin, 1993, pp. 64&ndash;73</a>.<br>
+<a href="//compgeom.cs.uiuc.edu/~jeffe/pubs/pdf/small.pdf"><i>Disc. Comp. Geom.</i> 11: 321&ndash;350, 1994</a>.
+<p>
+Showed that for various optimization criteria, the
+optimal polygon containing <i>k</i> of <i>n</i>
+points must be near one of the points, hence one can transform
+time bounds involving several factors of <i>n</i>
+to bounds linear in <i>n</i> but polynomial in <i>k.</i>
+Used as a subroutine are data structures for finding several
+<a href="geom-nn.html">nearest neighbors</a> in rectilinear metric spaces, and
+algorithms for finding the
+<a href="geom-deep.html">deepest point in an arrangement</a> of cubes or
+spheres.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Iterated nearest neighbors and finding minimal polytopes">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Iterated-nearest-neighbors-and-finding-minimal-polytopes.html">Citations</a> &ndash;
+<a href="//compgeom.cs.uiuc.edu/~jeffe/pubs/small.html">Jeff's pub list entry</a> &ndash;
+<a href="//citeseer.ist.psu.edu/erickson94iterated.html">CiteSeer</a>)
+<p>
+<li><b>Raising roofs, crashing cycles, and playing pool: applications of
+a data structure for finding pairwise interactions</b>.<br>
+D. Eppstein and 
+<a href="//compgeom.cs.uiuc.edu/~jeffe/">J. Erickson</a>.<br>
+<a href="//portal.acm.org/citation.cfm?id=276891">
+<i>14th ACM Symp. Comp. Geom.,</i> Minneapolis, 1998, pp. 58&ndash;67</a>.<br>
+<i>Disc. Comp. Geom.</i> 22 (4): 569&ndash;592, 1999 (special issue for SCG 1998).
+<p>
+We use my dynamic closest pair data structure
+from "<a href="p-dynmst.html">Dynamic Euclidean minimum
+spanning trees</a>" to detect collisions among a collection of moving
+objects in sublinear time per collision.  As one application, we can
+construct the <a href="geom-ss.html">straight skeleton</a> of Aichholzer et al (and the mitered
+offset curves from which it is defined) in subquadratic time.
+<p>(<a href="//compgeom.cs.uiuc.edu/~jeffe/pubs/cycles.html">Jeff's publications page and copy of the journal version</a> &ndash; 
+<a href="/~eppstein/bibs/eppstein.html#Raising roofs, crashing cycles, and playing pool: applications of a data structure for finding pairwise interactions">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Raising-roofs-crashing-cycles-and-playing-pool-applications-of-a-data-structure-for-finding-pairwise-interactions.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein98raising.html">CiteSeer</a>)
+<p>
+<li><b>Vertex-unfoldings of simplicial manifolds</b>.<br>
+<a href="//erikdemaine.org/">E. Demaine</a>,
+D. Eppstein,
+<a href="//compgeom.cs.uiuc.edu/~jeffe/">J. Erickson</a>,
+<a href="//www.georgehart.com/">G. Hart</a>, and
+<a href="//cs.smith.edu/~orourke/">J. O'Rourke</a>.<br>
+Tech. Reps. 071 and 072, Smith College, 2001.<br>
+<a href="//arxiv.org/abs/cs.CG/0107023">arXiv:cs.CG/0107023</a> and
+<a href="//arxiv.org/abs/cs.CG/0110054">cs.CG/0110054</a>.<br>
+<a href="//portal.acm.org/citation.cfm?id=513429">
+<i>18th ACM Symp. Comp. Geom.,</i> Barcelona, 2002, pp. 237&ndash;243</a>.<br>
+<i>Discrete Geometry: In honor of W. Kuperberg's 60th birthday</i>,
+Pure and Appl. Math. 253, Marcel Dekker, pp. 215&ndash;228, 2003.
+<p>
+We unfold any polyhedron with triangular faces into a planar layout in
+which the triangles are disjoint and are connected in a sequence from
+vertex to vertex
+<p>
+(<a href="//www.ics.uci.edu/~eppstein/bibs/eppstein.html#Vertex-unfoldings
+of simplicial polyhedra">BibTeX</a> &ndash;
+<a href="//compgeom.cs.uiuc.edu/~jeffe/pubs/vunfold.html">Jeff's
+pubs page</a>)
+<p>
+<li><b>Flipping cubical meshes</b>.<br>
+<a href="//www.parc.xerox.com/csl/members/bern/">M. Bern</a>
+D. Eppstein, and
+<a href="//compgeom.cs.uiuc.edu/~jeffe/">J. Erickson</a>.<br>
+<a href="//arxiv.org/abs/cs.CG/0108020">arXiv:cs.CG/0108020</a>.<br>
+10th Int. Meshing Roundtable, Newport Beach, 2001, pp. 19&ndash;29.<br>
+<i>Engineering with Computers</i> 18 (3): 173&ndash;187, 2002.
+<p>
+We examine <i>flips</i> in which a set of mesh cells connected in a
+similar pattern to a subset of faces of a cube or hypercube is replaced
+by cells in the pattern of the complementary subset.
+We show that certain flip types preserve geometric realizability of a
+mesh, and use this to study the question of whether every topologically
+meshable domain is geometrically meshable.  We also study flip graph
+connectivity, and prove that the flip graph of quadrilateral meshes has
+exactly two connected components.
+<p>
+Note that the Meshing Roundtable version was by Bern and Eppstein.
+Erickson was added as a co-author during the revisions for the journal version.
+<p>
+(<a href="BerEpp-IMR-01.pdf">Slides</a> &ndash;
+<a href="//www.ics.uci.edu/~eppstein/bibs/eppstein.html#Flipping cubical meshes">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Flipping-cubical-meshes.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/bern01flipping.html">CiteSeer</a>)
+<p>
+</ul>
+
+<hr><p>
+<a href="auth.html">Co-authors</a> &ndash;
+<a href="/~eppstein/pubs/">Publications</a> &ndash;
+<a href="/~eppstein/">David Eppstein</a> &ndash;
+<a href="/~theory/">Theory Group</a> &ndash;
+<a href="/">Inf. &amp; Comp. Sci.</a> &ndash;
+<a href="//www.uci.edu/">UC Irvine</a>
+<p>
+<small>Semi-automatically <a href="filter.html">filtered</a>
+from a common source file.</small>
+</body></html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

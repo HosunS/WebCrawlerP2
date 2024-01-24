@@ -1,0 +1,128 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3079¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:53:58 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"c07-4da84c2591980"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 14:17:45 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY//  
+// $Id: NFANode.cpp 5027 2010-02-18 19:41:48Z rares $
+//
+//  Copyright (C) 2004 - 2007 by The Regents of the University of
+//  California
+//
+// Redistribution of this file is permitted under the terms of the 
+// BSD license
+//
+// Date: October, 2004
+//
+// Author: 
+//          Liang Jin <liangj (at) ics.uci.edu>
+//
+
+#include "stdafx.h"
+#include "NFANode.h"
+#include <string>
+#include <iostream>
+#include "parameters.h"
+//#include <vector>
+
+NFANode::NFANode (char name, bool finalState, bool initState)
+{
+	this->name = name;
+	this->finalState = finalState;
+    this->initState = initState;
+	//branches = new vector();
+    //backBranches = new vector();
+    //downBranches = new vector();
+    //upBranches = new vector();
+}
+
+NFANode::NFANode (char name, bool finalState, bool initState, int level)
+{
+	this->name = name;
+	this->finalState = finalState;
+    this->initState = initState;
+	this->level = level;
+	//branches = new vector();
+    //backBranches = new vector();
+    //downBranches = new vector();
+    //upBranches = new vector();
+}
+
+
+NFANode::~NFANode ()
+{
+	int i;
+	for(i = 0; i < this->branches.size(); i++)
+		delete (NFATransition*)branches[i];
+	
+	//for(i = 0; i < this->backBranches.size(); i++)
+	//	delete (NFATransition*)backBranches[i];
+
+	for(i = 0; i < this->upBranches.size(); i++)
+		delete (NFATransition*)upBranches[i];
+
+	//for(i = 0; i < this->downBranches.size(); i++)
+	//	delete (NFATransition*)downBranches[i];
+}
+
+void NFANode::printMe()
+{
+	int i;
+
+    cout << "**********Node Info********************" << endl;
+    cout << "number\t\t" << nodeNumber << "\t";
+    if ( initState){
+        cout << "init state\t";
+    }
+    if (finalState){
+        cout << "final state\t";
+    }
+    cout << endl;
+    cout << "name\t\t"+name << endl;
+
+    cout << "to edge:\t\t" << endl;
+    for(i=0; i<branches.size(); i++){
+		((NFATransition*)branches[i])->printMe(TO);
+    }
+
+    cout << "back edge:\t\t" << endl;
+    for(i=0; i<backBranches.size(); i++){
+
+        ((NFATransition*)backBranches[i])->printMe(BACK);
+    }
+    cout << endl;
+}
+
+
+void NFANode::printMeAll()
+{
+	int i;
+    cout << "**********Node Info********************" << endl;
+    cout << "number\t\t" << nodeNumber << "\t";
+    if ( initState){
+		cout << "init state\t";
+    }
+    if (finalState){
+        cout << "final state\t";
+    }
+    cout << endl;
+    cout << "name\t\t"+name << endl;
+
+    cout << "to edge:\t\t" << endl;
+    for(i=0; i<branches.size(); i++){
+        ((NFATransition*)branches[i])->printMe(TO);
+    }
+
+    cout << "back edge:\t\t" << endl;
+    for(i=0; i<backBranches.size(); i++){
+
+        ((NFATransition*)backBranches[i])->printMe(BACK);
+    }
+
+    cout << "down edge:\t\t" << endl;
+    for(i=0; i<downBranches.size(); i++){
+        ((NFATransition*)downBranches[i])->printMe(DOWN);
+    }
+
+    cout << "up edge:\t\t" << endl;
+    for(i=0; i<upBranches.size(); i++){
+        ((NFATransition*)upBranches[i])->printMe(UP);
+    }
+    cout << endl;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

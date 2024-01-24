@@ -1,0 +1,154 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7149¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 25 Jan 2019 16:12:47 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1bed-5804a990a3b72"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 11:32:07 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYí# Setup
+c-->from importlib import reload
+c-->import q2solution
+c-->reload(q2solution)
+c-->from q2solution import expand_re, match_params_args
+c-->import re
+
+# Read/Test Regular Expression Patterns (read from repattern files)
+c-->p1a = open('repattern1a.txt').read().rstrip()
+c-->print('   ...Testing the pattern p1a: ',p1a)
+
+# The following text should match the pattern
+!=-->re.match(p1a,'m')-->None
+!=-->re.match(p1a,'gf')-->None
+!=-->re.match(p1a,'Ggs')-->None
+!=-->re.match(p1a,'GGgd')-->None
+!=-->re.match(p1a,'GGGGGGGGGGGGGGGGGGGGGGGGGGgd')-->None
+!=-->re.match(p1a,'Sm')-->None
+!=-->re.match(p1a,'SGgs')-->None
+
+# The following text should NOT match the pattern
+==-->re.match(p1a,'mf')-->None
+==-->re.match(p1a,'Gm')-->None
+==-->re.match(p1a,'gGm')-->None
+==-->re.match(p1a,'GGm')-->None
+==-->re.match(p1a,'SSm')-->None
+==-->re.match(p1a,'GSs')-->None
+
+# Read/Test Regular Expression Patterns (read from repattern files)
+c-->p1b = open('repattern1b.txt').read().rstrip()
+c-->print('   ...Testing the pattern p1b: ',p1b)
+
+# The following text should match the pattern, and provide the shown groups
+==-->re.match(p1b,'m').groups()-->(None, None, None, 'm')
+==-->re.match(p1b,'gf').groups()-->(None, '', 'g', 'f')
+==-->re.match(p1b,'Ggs').groups()-->(None, 'G', 'g', 's')
+==-->re.match(p1b,'GGgd').groups()-->(None, 'GG', 'g', 'd')
+==-->re.match(p1b,'GGGGGGGgd').groups()-->(None, 'GGGGGGG', 'g', 'd')
+==-->re.match(p1b,'Sm').groups()-->('S', None, None, 'm')
+==-->re.match(p1b,'SGgs').groups()-->('S', 'G', 'g', 's')
+
+# The following text should NOT match the pattern
+==-->re.match(p1b,'mf')-->None
+==-->re.match(p1b,'Gm')-->None
+==-->re.match(p1b,'gGm')-->None
+==-->re.match(p1b,'SSm')-->None
+==-->re.match(p1b,'GSs')-->None
+
+# Read/Test Regular Expression Patterns (read from repattern files)
+c-->p2 = open('repattern2.txt').read().rstrip()
+c-->print('   ...Testing the pattern p2: ',p2)
+
+# The following text should match the pattern
+!=-->re.match(p2,'')-->None
+!=-->re.match(p2,'n')-->None
+!=-->re.match(p2,'d')-->None
+!=-->re.match(p2,'*n')-->None
+!=-->re.match(p2,'n,d,d,n')-->None
+!=-->re.match(p2,'n,d,*n,d,d')-->None
+!=-->re.match(p2,'d,n,*n')-->None
+
+# The following text should NOT match the pattern
+==-->re.match(p2,'*d')-->None
+==-->re.match(p2,'nd')-->None
+==-->re.match(p2,'*n,*n')-->None
+==-->re.match(p2,'*nd')-->None
+==-->re.match(p2,'n,d*n,d')-->None
+==-->re.match(p2,'*n,d,d,*n')-->None
+
+
+# Testing expand_re
+c-->pd = dict(digit=r'[0-9]', integer=r'[=-]?#digit##digit#*')
+c-->expand_re(pd)
+==-->dict(pd.items())-->{'digit': '[0-9]', 'integer': '[=-]?(?:[0-9])(?:[0-9])*'}
+c-->pd = dict(int=r'[+-]?[0-9]+', int_range =r'#int#(..#int#)?', int_list  =r'#int_range#(,#int_range#)*', int_set =r'{#int_list#?}')
+c-->expand_re(pd)
+==-->dict(pd.items())-->{'int': '[+-]?[0-9]+', 'int_range': '(?:[+-]?[0-9]+)(..(?:[+-]?[0-9]+))?', 'int_list': '(?:(?:[+-]?[0-9]+)(..(?:[+-]?[0-9]+))?)(,(?:(?:[+-]?[0-9]+)(..(?:[+-]?[0-9]+))?))*', 'int_set': '{(?:(?:(?:[+-]?[0-9]+)(..(?:[+-]?[0-9]+))?)(,(?:(?:[+-]?[0-9]+)(..(?:[+-]?[0-9]+))?))*)?}'}
+c-->pd = dict(f='#e#',alpha='x',b='#alpha#',e='#d#',c='#b#',d='#c#',g='#f#')
+c-->expand_re(pd)
+==-->dict(pd.items())-->{'alpha': 'x', 'b': '(?:x)', 'c': '(?:(?:x))', 'd': '(?:(?:(?:x)))', 'e': '(?:(?:(?:(?:x))))', 'f': '(?:(?:(?:(?:(?:x)))))', 'g': '(?:(?:(?:(?:(?:(?:x))))))'}
+
+# Read/Test Regular Expression Patterns (read from repattern files)
+c-->p4a = open('repattern4a.txt').read().rstrip()
+c-->print('   ...Testing the pattern p4a: ',p4a)
+
+# The following text should match the pattern, and provide the shown groups
+==-->re.match(p4a,'15').groupdict()-->{'name': None, 'value': '15'}
+==-->re.match(p4a,'x=15').groupdict()-->{'name': 'x', 'value': '15'}
+==-->re.match(p4a,'X=12').groupdict()-->{'name': 'X', 'value': '12'}
+==-->re.match(p4a,'x=-12345').groupdict()-->{'name': 'x', 'value': '-12345'}
+==-->re.match(p4a,'x_ab_5=18').groupdict()-->{'name': 'x_ab_5', 'value': '18'}
+==-->re.match(p4a,'_a_b_c_12_=12').groupdict()-->{'name': '_a_b_c_12_', 'value': '12'}
+
+# The following text should NOT match the pattern
+==-->re.match(p4a,'x')-->None
+==-->re.match(p4a,'*x')-->None
+==-->re.match(p4a,'3x')-->None
+==-->re.match(p4a,'x 12')-->None
+==-->re.match(p4a,'x -1')-->None
+==-->re.match(p4a,'=12')-->None
+==-->re.match(p4a,'x=')-->None
+==-->re.match(p4a,'x =12')-->None
+==-->re.match(p4a,'x= 12')-->None
+
+# Read/Test Regular Expression Patterns (read from repattern files)
+c-->p4b = open('repattern4b.txt').read().rstrip()
+c-->print('   ...Testing the pattern p4b: ',p4b)
+
+# The following text should match the pattern, and provide the shown groups
+==-->re.match(p4b,'x').groupdict()-->{'star': None, 'name': 'x', 'value': None}
+==-->re.match(p4b,'*x').groupdict()-->{'star': '*', 'name': 'x', 'value': None}
+==-->re.match(p4b,'X=12').groupdict()-->{'star': None, 'name': 'X', 'value': '12'}
+==-->re.match(p4b,'x=-12345').groupdict()-->{'star': None, 'name': 'x', 'value': '-12345'}
+==-->re.match(p4b,'x_ab_5').groupdict()-->{'star': None, 'name': 'x_ab_5', 'value': None}
+==-->re.match(p4b,'_a_b_c_12_').groupdict()-->{'star': None, 'name': '_a_b_c_12_', 'value': None}
+==-->re.match(p4b,'_123S').groupdict()-->{'star': None, 'name': '_123S', 'value': None}
+
+# The following text should NOT match the pattern
+==-->re.match(p4b,'x*')-->None
+==-->re.match(p4b,'3')-->None
+==-->re.match(p4b,'3x')-->None
+==-->re.match(p4b,'x 12')-->None
+==-->re.match(p4b,'x -1')-->None
+==-->re.match(p4b,'x=')-->None
+==-->re.match(p4b,'=12')-->None
+==-->re.match(p4b,'x =12')-->None
+==-->re.match(p4b,'x= 12')-->None
+
+# Testing match_param_args
+#   Testing name-only parameters and positional arguments
+==-->match_params_args('','')-->{}
+==-->match_params_args('a','1')-->{'a': 1}
+==-->match_params_args('a,b,c','1,2,3')-->{'a': 1, 'b': 2, 'c': 3}
+^-->match_params_args('a,b','1,2,3')-->AssertionError
+^-->match_params_args('a,b,c','1,2')-->AssertionError
+
+#   Testing *name parameter too
+==-->match_params_args('*args','')-->{'args': ()}
+==-->match_params_args('*args','1')-->{'args': (1,)}
+==-->match_params_args('*args','1,2')-->{'args': (1, 2)}
+==-->match_params_args('a,b,*args','1,2')-->{'a': 1, 'b': 2, 'args': ()}
+==-->match_params_args('a,b,*args','1,2,3,4')-->{'a': 1, 'b': 2, 'args': (3, 4)}
+
+#   Testing named argument too
+==-->match_params_args('a,b,*args,c,d','1,2,3,4,c=5,d=6')-->{'a': 1, 'b': 2, 'args': (3, 4), 'c': 5, 'd': 6}
+==-->match_params_args('a,b,*args,c,d','1,2,3,4,d=6,c=5')-->{'a': 1, 'b': 2, 'args': (3, 4), 'c': 5, 'd': 6}
+^-->match_params_args('a,b,*args,c,d','1,2,3,4,d=5')-->AssertionError
+^-->match_params_args('a,b,*args,c,d','1,2,3,4,x=5')-->AssertionError
+^-->match_params_args('a,b,*args,c,d','1,2,3,4,c=5,d=6,a=7')-->AssertionError
+
+#   Testing default-value arguments too
+==-->match_params_args('a=1,b=2,c=4','c=5,b=6,a=7')-->{'b': 6, 'a': 7, 'c': 5}
+==-->match_params_args('a=1,b','b=2')-->{'b': 2, 'a': 1}
+==-->match_params_args('a,b,*args,c=5,d=6','1,2,3,4,d=5')-->{'a': 1, 'b': 2, 'args': (3, 4), 'c': 5, 'd': 5}Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

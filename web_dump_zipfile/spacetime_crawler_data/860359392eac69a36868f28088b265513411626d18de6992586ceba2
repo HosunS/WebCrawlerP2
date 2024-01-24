@@ -1,0 +1,279 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvaluePContent-LanguageAv¢DtypeEvalueEen-US¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueX=JSESSIONID=5ED30F2E16CD9FD409C391707B3CDEBC; Path=/; HttpOnly¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueUApache/2.2.3 (Oracle)¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 06:28:17 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=UTF-8Kraw_content¢DtypeEvaluey4¨<!DOCTYPE html>
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+<head>
+  <title>University of California, Davis | UC Davis</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <link rel="stylesheet" href="css/style.css" media="all" />
+<style>
+
+p.privacy {
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  width: 85%;
+}
+</style>
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="css/no-query.css" media="all" />
+  <![endif]-->
+
+  <!-- proxima nova -->
+  <script src="//use.typekit.net/bkh4ofy.js"></script>
+  <script>try{Typekit.load();}catch(e){}</script>
+  <!-- end proxima nova -->
+
+  <script src="js/scripts.js"></script>
+<script src="/directory/scripts/wppdscript.js" type="text/javascript"></script>
+</head>
+<body class="body">
+<div class="page">
+  <!-- Begin .header -->
+  <header class="l-header header" role="banner">
+    <div class="header__img-bg">
+      <a href="#nav" class="nav-toggle js-nav-toggle">
+        <span class="nav-toggle__icon nav-toggle__icon--menu">Menu</span>
+      </a>
+      <div class="l-container">
+      <a href="https://www.ucdavis.edu/" class="site-logo"><img src="images/uc-logo-white.svg" class="logo" alt="UC Davis Logo" /></a>
+      </div>
+    </div>
+    <div class="l-navbar navbar menu--closed">
+      <div class="l-container--navigation off-canvas off-canvas--left">
+        <div class="off-canvas__container">
+          <div class="l-search-popup">
+          <button class="search-popup__open js-search-popup__open">Open</button>
+
+          <form action="#" method="post" class="search-popup">
+            <button class="search-popup__close"><span class="search-popup__close-icon">Close</span></button>
+            <div class="search-popup__container">
+              <input type="text" name="search" class="search-popup__input" placeholder="Search">
+              <label for="search" class="search-popup__label">Search</label>
+              <div class="search-popup__buttons">
+                <input type="submit" value="Pages" class="search-popup__submit">
+                <input type="submit" value="People" class="search-popup__submit">
+                <input type="submit" value="Departments" class="search-popup__submit">
+              </div>
+            </div>
+          </form>
+          </div>
+        <nav class="primary-nav">
+          <ul class="menu" data-menu-name="main-menu">
+            <li><a href="https://www.ucdavis.edu/about/">About Us</a></li>
+            <li><a href="https://www.ucdavis.edu/admission/">Admissions</a></li>
+            <li><a href="https://www.ucdavis.edu/academics/">Academics</a></li>
+            <li><a href="https://www.ucdavis.edu/research/">Research</a></li>
+            <li><a href="https://www.ucdavis.edu/campus-life/">Campus Life</a></li>
+            <li><a href="https://www.ucdavis.edu/news/">News</a></li>
+          </ul>
+        </nav><!--end .nav-->
+          <div class="l-quick-links">
+          <h2><a href="#" class="quick-links__title">Quick Links<span class="submenu-toggle"><span class="submenu-toggle__icon">+</span></span></a></h2>
+          <nav class="quick-links is-hidden--visually" tabindex="1">
+            <ul class="menu" data-menu-name="menu-quick-links">
+              <li><a href="https://www.ucdavis.edu/">UC Davis</a></li>
+            </ul>
+          </nav><!--end .quick-nav-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- End .header -->
+
+  <div class="l-main" role="main">
+
+    <div class="page-title">
+      <h1 class="page-title__title category-brand__text--knock-out">UC Davis Directory</h1>
+    </div>
+
+    <div class="l-container">
+
+      <div class="l-content">
+	  
+	  <div class="panel-pane box--large">
+			  <script type="text/javascript">
+				var submit;
+				function doSearch(form)
+				{
+					var searchURL;
+					switch(submit.value) {
+						case "people":
+							searchURL="http://directory.ucdavis.edu/search/directory_results.shtml?filter="+form.search.value;
+							break;
+						case "departments":
+							searchURL="http://directory.ucdavis.edu/DeptListingSearchResults.htm?filter="+form.search.value;
+							break;
+						default:
+							searchURL="https://www.ucdavis.edu/search/google/"+form.search.value;
+					}
+					window.location.href=searchURL;
+					return false;
+				}
+
+				function doClicked(button)
+				{
+  					submit=button;
+				}
+			  </script>
+			  <form action="#" class="search-directory" onsubmit="return doSearch(this);">
+				<input type="text" name="search" placeholder="search" class="search-directory__input" autofocus >
+				<input type="submit" value="pages" class="search-directory__submit" onclick="doClicked(this);">
+				<input type="submit" value="people" class="search-directory__submit" onclick="doClicked(this);">
+				<input type="submit" value="departments" class="search-directory__submit" onclick="doClicked(this);">
+			  </form>
+			</div>
+			<div class="panel-pane bg-transparent align-center">
+			  <ul class="list--pipe">
+				<li><a href="http://directory.ucdavis.edu/">Visit The UC Davis Directory</a></li>
+				<!--<li><a href="http://directory.ucdavis.edu/">See All Departments</a></li>-->
+			  </ul>
+			</div>
+			
+        <div class="panel-pane box">
+          <!-- ********** Main content ********** -->
+						<div id="main_section" role="main">
+							<!-- Center column (primary content) -->
+							<div id="center_column">
+								<div id="center_column_inner_wrap">
+									
+									<br />
+									<div class="quick-summary align-right">
+										<h2 class="quick-summary__title">Supplementary Information</h2>
+										<ul class="quick-summary__list">
+											<li><a href="javascript:helpMenu('/listings/viewApproverHelp.do#single');">
+													People listing help </a></li>
+											<li>Building, department, office, and title abbreviations
+													<br /> ( <a href="CampusAbbreviations.pdf">CampusAbbreviations.pdf</a>)</li>
+											<li><a href="/listings/index.jpf?mothraid=edit"
+												target="_blank"> Update my directory listing </a></li>
+											<li><a href="/listings/index.jpf?mothraid=edit"
+												target="_blank"> Update my department listing </a></li>
+											<li><a href="https://warnme.ucdavis.edu/"> Update
+													my WarnMe information </a></li>
+											<li><a href="http://directory-test2.ucdavis.edu/PeopleSearch.htm">How to search people</a></li>
+											<li><a href="http://directory-test2.ucdavis.edu/DeptListingSearch.htm">How to search departments </a></li>
+										</ul>
+									
+									</div>
+										
+									<div>
+									<h2 class="first">The UC Davis Online Directory</h2>
+									<p> The UC Davis Online Directory contains public contact information for individuals
+ 										and departments on the UC Davis campus and at UC Davis Health in Sacramento. 
+ 										Directory information is publicly searchable from the main <a href="https://www.ucdavis.edu"><font size="3" color="navy">UC Davis website</font> </a>
+ 										and is also shared by the campus operator via (530) 752&#45;1011 or &quot;0&quot; from a Davis campus telephone. </p> 
+ 
+									<p> UC Davis faculty and staff are encouraged to update their public directory information, and if preferred, 
+										limit search to UC Davis affiliated computers only. </p>
+									<h2 class="first">The Printed Campus Directory</h2>
+									<p>Published in early 2008, the 2008&#45;2009 Centennial
+										Edition was the last printed UC Davis Campus Directory. The
+										publication was discontinued upon the availability of the
+										online version. The move online saves money and paper, and the
+										electronic format lets people update their listings anytime,
+										which keeps the directory more accurate.</p>
+									<h2 class="first">Directory Approvers</h2>
+									<p>The individual and department contact information in the
+										online directory is maintained by directory approvers. Updates
+										to contact information for individuals may be initiated by
+										each individual, but it must be approved by department and
+										campus&#45;wide directory approvers before becoming available
+										to the public. Updates to department contact information are
+										submitted by each department&#39;s directory approver to
+										Directory Services in IET - Communications Resources for
+										campus departments or the Telecommunications Office at the UC
+										Davis Health System for Sacramento campus departments.</p>
+									
+									<!--<p><strong>Privacy Notice:</strong> This campus directory is the property of <a href="https://www.ucdavis.edu"><font size="3" color="navy">University of California, Davis.</font> </a> To protect the privacy of individuals listed herein, in accordance with the State of California Information Practices Act, this directory may not be used, rented, distributed, or sold for commercial purposes.</p>-->
+									
+								</div>
+								</div>
+							</div>
+							<!-- End center column -->
+						</div>
+						<!-- ********** End main content ********** -->
+
+        </div>
+      </div><!--end .l-content-->
+        
+    </div>
+		
+  </div><!--End role=main-->
+<p class="privacy"><strong>Privacy Notice:</strong> This campus directory is the property of <a href="https://www.ucdavis.edu"><font size="3" color="navy">University of California, Davis.</font> </a> To protect the privacy of individuals listed herein, in accordance with the State of California Information Practices Act, this directory may not be used, rented, distributed, or sold for commercial purposes.</p>
+  <!-- Begin Footer -->
+  <footer class="l-footer footer" role="contentinfo">
+    <div class="l-container">
+      <div class="pack pack--small footer__navs">
+        <div class="pack__item">
+        <div class="footer-nav">
+          <div class="footer-nav__logo">
+    <a href="https://www.ucdavis.edu/"><img src="images/uc-logo-gold.svg" class="logo " alt="UC Davis Logo" /></a>
+          </div>
+          <ul class="menu" data-menu-name="menu-footer-primary">
+            <li><a href="https://www.ucdavis.edu/">UC Davis</a></li>
+          </ul>
+        </div>        </div>
+        <div class="pack__item">
+          <div class="footer-nav">
+            <h2 class="footer-nav__title">Students</h2>
+            <ul class="menu" data-menu-name="menu-footer-students">
+              <li><a href="https://www.ucdavis.edu/">UC Davis</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pack__item">
+          <div class="footer-nav">
+            <h2 class="footer-nav__title">Alumni</h2>
+            <ul class="menu" data-menu-name="menu-footer-alumni">
+              <li><a href="https://www.ucdavis.edu/">UC Davis</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pack__item">
+          <div class="footer-nav">
+            <h2 class="footer-nav__title">Faculty</h2>
+            <ul class="menu" data-menu-name="menu-footer-faculty">
+              <li><a href="https://www.ucdavis.edu/">UC Davis</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pack__item">
+          <div class="footer-nav">
+            <h2 class="footer-nav__title">Staff</h2>
+            <ul class="menu" data-menu-name="menu-footer-staff">
+              <li><a href="https://www.ucdavis.edu/">UC Davis</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-spacer">
+        <hr class="footer-spacer__hr hr-invert">
+        <div class="footer-spacer__logo">
+          <a href="http://www.ucdavisaggies.com/?utm_source=UC-Davis-Homesite&utm_medium=Footer&utm_campaign=UC-Davis-Athletic-Mark-Footer-Link-to-Athletics"><img src="images/c-horse.svg" class="logo" alt="UC Davis Athletics Logo" /></a>
+        </div>
+      </div>
+
+    <div class="copyright">
+      <p><a href="https://www.ucdavis.edu/">University of California, Davis</a>, One Shields Avenue, Davis, CA 95616 | <a href="tel:15307521011">530-752-1011</a></p>
+      <ul class="list--pipe">
+        <li><a href="https://www.ucdavis.edu/emergency/">Emergency Services</a> | <a href="https://www.ucdavis.edu/help/">Help</a> | <a href="http://contact.ucdavis.edu/www_contact/">Questions or comments?</a></li>
+        <li><a href="https://www.ucdavis.edu/help/privacy-accessibility.html">Privacy &amp; Accessibility</a></li>
+        <li><a href="http://occr.ucdavis.edu/poc/?utm_source=UC-Davis-Homesite&utm_medium=Footer&utm_campaign=UC-Davis-Footer-Link-to-Principles-of-Community">Principles of Community</a></li>
+        <li><a href="https://www.ucdavis.edu/sitemap/">Sitemap</a></li>
+      </ul>
+      <p>Copyright Â© The Regents of the University of California, Davis campus. All rights reserved.</p>
+      <p><a href="http://www.universityofcalifornia.edu/?utm_source=UC-Davis-Homesite&utm_medium=Footer&utm_campaign=UC-Davis-Footer-Link-to-UCOP">University of California</a></p>
+    </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+</div>
+
+	</body>
+</html>Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

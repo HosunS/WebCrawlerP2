@@ -1,0 +1,64 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1488¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 01 Aug 2006 15:43:24 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"5d0-419f6a395df00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:12:05 GMTKraw_content¢DtypeEvalueYÐdef readSequencesFromFastaFile(filename):
+    fastaFile = open(filename)
+
+    sequenceList = []
+
+    readingSequence = False
+
+    for line in fastaFile:
+        line = line[0 : len(line) - 1]
+
+        if readingSequence:
+            if line[0] == '>':
+                readingSequence = False
+                sequenceList.append(sequence)
+            else:
+                sequence = sequence + line
+
+        else:
+            if line[0] != ';' and line[0] != '>':
+                readingSequence = True
+                sequence = line
+
+    sequenceList.append(sequence)
+
+    fastaFile.close()
+
+    return sequenceList
+
+
+def countNucleotides(sequence, sequenceNumber):
+    aCount = 0
+    cCount = 0
+    tCount = 0
+    gCount = 0
+
+    for c in sequence:
+        if c == 'A':
+            aCount = aCount + 1
+        elif c == 'C':
+            cCount = cCount + 1
+        elif c == 'T':
+            tCount = tCount + 1
+        elif c == 'G':
+            gCount = gCount + 1
+
+    print "Counts in sequence number", sequenceNumber
+    print "    Number of A's:", aCount
+    print "    Number of C's:", cCount
+    print "    Number of T's:", tCount
+    print "    Number of G's:", gCount
+    
+
+
+filename = raw_input("Enter name of FASTA file: ")
+
+sequences = readSequencesFromFastaFile(filename)
+
+sequenceNumber = 1
+
+for sequence in sequences:
+    countNucleotides(sequence, sequenceNumber)
+    sequenceNumber = sequenceNumber + 1
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

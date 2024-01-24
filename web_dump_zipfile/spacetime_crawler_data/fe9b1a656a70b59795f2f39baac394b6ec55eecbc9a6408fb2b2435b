@@ -1,0 +1,94 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueä¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1668¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 10 Feb 2019 02:40:56 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 05 Feb 2009 15:58:09 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"f3c-4622df87f8640-gzip"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueMmax-age=21600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:40:56 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvaluey<<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>XProc Agenda 05 Feb 2009</title>
+  <link rel="stylesheet" type="text/css" href="http://www.w3.org/XML/XProc/style/agenda.css"/>
+<style type="text/css">
+.warning { margin-left: 0.5in;
+           margin-right: 0.5in;
+	   padding-left: 15px;
+	   padding-right: 15px;
+	   border: solid black 1px;
+           background-color: #FFAAAA;
+	   font-weight: bold;
+         }
+</style>
+</head>
+<body>
+<h1>XProc Agenda
+<span class="date" title="2009-02-05">05 Feb 2009</span></h1>
+
+<p>Meeting 136.</p>
+
+<p>The XML Processing Model (XProc) WG will meet on Thursday,
+05 Feb 2009 at
+<a href="http://www.timeanddate.com/worldclock/fixedtime.html?month=02&amp;day=05&amp;year=2009&amp;hour=11&amp;min=0&amp;sec=0&amp;p1=43">11:00a EST</a>
+(08:00a PST, 16:00GMT, 17:00CET, 01:00JST+, 09:30p India) 
+for one hour on the W3C Zakim Bridge,
+<a href="tel:+1-617-761-6200">+1-617-761-6200</a> (or
+<a href="tel:+33-4-89-06-34-99">+33-4-89-06-34-99</a> or
+<a href="tel:+44-117-370-6152">+44-117-370-6152</a>),
+passcode
+<a href="tel:97762#">97762#</a> ("XPROC").</p>
+
+<p>XProc uses the
+<a href="irc://irc.w3.org:6665/#xproc">#xproc</a> IRC channel on
+<code>irc.w3.org:6665</code> (or via the
+<a href="http://www.w3.org/2001/01/cgi-irc">web interface</a>).
+The IRC channel is used for managing
+agendas, minutes, and other aspects of the teleconference, so please
+join us there if at all possible.</p>
+
+<p>See the <a href="http://www.w3.org/XML/Processing/">XProc WG</a> page
+for pointers to current documents and other information. If you have
+additions to the agenda, please email them to the WG list before the
+start of the telcon.</p>
+
+<ol>
+<li class="agendum">Administrivia
+  <ol>
+    <li class="agendum">Roll call.</li>
+    <li class="agendum">Accept this
+<a href="http://www.w3.org/XML/XProc/2009/02/05-agenda.html">agenda</a>.
+    </li>
+    <li class="agendum">Accept the
+<a href="http://www.w3.org/XML/XProc/2009/01/29-minutes.html">minutes</a>
+of 29 Jan 2009.</li>
+    <li class="agendum">Next meeting: 12 Feb 2009.</li>
+    <li class="agendum">Review of open actions
+    <ul>
+      <li>ACTION-2009-01-29-01: Mohamed to review Widgets 1.0: Packaging and Configuration</li>
+      <li>ACTION-2009-01-29-02: Norm to clarify when the select expression applies on an input.</li>
+    </ul>
+    </li>
+  </ol>
+</li>
+<li class="agendum">Technical
+  <ol>
+    <li class="agendum">Review of
+      <a href="../../2008/11/cr-comments/">comments</a> received so far on our CR.
+      <br/>
+      We'll begin with the ones listed below, please review them before the meeting starts:
+      <ol>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C031">031. Redefining standard steps</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C059">059. ‚ÄúDocument sequence‚Äù</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C077">077. Required serialization methods</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C080">080. Content model of c:multipart</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C081">081. c:/request/@send-authorization</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C083">083. http-request: if detail is true, XML is not parsed?</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C084">084. Handling of ‚Äònon-XProc' pipeline sources</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C086">086. err:XS0010/err:XS0031</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C087">087. Ordering of steps in a subpipeline</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C089">089. Conflicting content-type information for body parts</a></li>
+	<li><a href="/XML/XProc/2008/11/cr-comments/#C090">090. p:hash and xml:base</a></li>
+      </ol>
+    </li>
+  </ol>
+</li>
+<li class="agendum">Any other business</li>
+</ol>
+
+<address>$Author: NormanWalsh $<br/>
+Last revised $Date: 2009/02/05 15:58:09 $</address>
+
+</body>
+</html>Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

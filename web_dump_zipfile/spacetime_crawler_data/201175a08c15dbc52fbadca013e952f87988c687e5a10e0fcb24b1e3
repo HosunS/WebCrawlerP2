@@ -1,0 +1,95 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1960¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Feb 2006 21:58:24 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"7a8-40c3b7a760000"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 18:31:32 GMTKraw_content¢DtypeEvalueY¨/**
+Name: Cameron Lewis
+Student ID: 16254966
+**/
+
+// PayrollMenu.java
+//
+// ICS H22 Fall 2005
+// Lab 2: The Price You Pay
+//
+// This class is provided as-is, to give you an example of input using the
+// new Scanner class in Java 5.0.  I expect you to use this class, without
+// modification, in your program.
+//
+// To use this class, first create an object of the class.  Whenever you want
+// to show the menu, call the show() method on it.  Whenever you want to ask
+// the user to choose a command, call the getNextCommand() method, which will
+// return a PayrollCommand object that represents the user's choice.
+
+
+import java.util.Scanner;
+
+
+public class PayrollMenu
+{
+	private Scanner scanner;
+
+
+	public PayrollMenu()
+	{
+		scanner = new Scanner(System.in);
+	}
+
+
+	public void show()
+	{
+		System.out.println();
+		System.out.println("Main Menu");
+		System.out.println("---------");
+		System.out.println("[A]dd Employee");
+		System.out.println("[R]emove Employee");
+		System.out.println("[S]how Employees");
+		System.out.println("[D]o Weekly Payroll");
+		System.out.println("[Q]uit");
+		System.out.println();
+	}
+
+
+	public PayrollCommand getNextCommand()
+	{
+		PayrollCommand command = null;
+
+		do
+		{
+			System.out.print("Enter command: ");
+
+			String s = scanner.nextLine();
+
+			if (s.length() > 0)
+			{
+				switch (s.toUpperCase().charAt(0))
+				{
+				case 'A':
+					command = PayrollCommand.ADD_EMPLOYEE;
+					break;
+
+				case 'R':
+					command = PayrollCommand.REMOVE_EMPLOYEE;
+					break;
+
+				case 'S':
+					command = PayrollCommand.SHOW_EMPLOYEES;
+					break;
+
+				case 'D':
+					command = PayrollCommand.DO_WEEKLY_PAYROLL;
+					break;
+
+				case 'Q':
+					command = PayrollCommand.QUIT;
+					break;
+
+				default:
+					System.out.println("  invalid command; try again");
+				}
+			}
+		}
+		while (command == null);
+
+		System.out.println();
+
+		return command;
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

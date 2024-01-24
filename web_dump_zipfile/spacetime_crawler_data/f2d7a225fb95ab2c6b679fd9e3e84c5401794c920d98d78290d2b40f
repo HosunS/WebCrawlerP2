@@ -1,0 +1,122 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4648¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 26 Nov 2018 23:11:00 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1228-57b997242ce01"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 01:02:14 GMTKraw_content¢DtypeEvalueY(
+library(tidyverse)
+datainput <- read_csv("H://HAL/Courses/Stat210//creatinine.csv")
+# datainput <- read_csv("D://Stat210//creatinine.csv")
+creatinine <- data.frame(datainput)
+
+#
+# data set focused on building a predictive model for creatinine clearance (expensive to measure)
+# using age, weight and serum creatinine (cheap to measure) as predictors
+#
+# example illustrates a thorough analysis including outlier, transformation of response, and 
+# partial regression leverage plots to address nonlinearity
+# 
+
+# id = id number of patient
+# clearance = creatinine clearance (related to kidney function)
+# age = age in years
+# weight = weight in kg
+# serum.cre = measure of creatinine in blood (cheap)
+
+# delete a few cases with missing data
+creatinine <- creatinine[1:28,]
+
+plot(creatinine$age, creatinine$clearance, type="p")
+plot(creatinine$weight, creatinine$clearance, type="p")
+plot(creatinine$serum.cre, creatinine$clearance, type="p")
+
+# fit regression
+creat_reg <- lm(clearance ~ age + weight + serum.cre, data=creatinine)
+summary(creat_reg)
+# obtain and save standardized residuals and other diagnostics
+creat_reg$stdres <- rstandard(creat_reg)
+
+# check assumptions - residuals vs fitted values
+ggplot() +
+  geom_point(data=creatinine, mapping=aes(x=creat_reg$fitted.values, y=creat_reg$stdres)) 
+# check assumptions - normality
+qqnorm(creat_reg$stdres)
+
+#
+# delete major outlier
+#
+creatinine2 <- creatinine[-27,]
+plot(creatinine2$age, creatinine2$clearance, type="p")
+plot(creatinine2$weight, creatinine2$clearance, type="p")
+plot(creatinine2$serum.cre, creatinine2$clearance, type="p")
+
+# fit regression
+creat2_reg <- lm(clearance ~ age + weight + serum.cre, data=creatinine2)
+summary(creat2_reg)
+# obtain and save standardized residuals and other diagnostics
+creat2_reg$stdres <- rstandard(creat2_reg)
+
+# check assumptions - residuals vs fitted values
+ggplot() +
+  geom_point(data=creatinine2, mapping=aes(x=creat2_reg$fitted.values, y=creat2_reg$stdres)) 
+# check assumptions - normality
+qqnorm(creat2_reg$stdres)
+
+#
+# see evidence of non constant variance (try log of the response)
+#
+creatinine2$logclear <- log(creatinine2$clearance)
+plot(creatinine2$age, creatinine2$logclear, type="p")
+plot(creatinine2$weight, creatinine2$logclear, type="p")
+plot(creatinine2$serum.cre, creatinine2$logclear, type="p")
+
+# fit regression
+creat2_reg <- lm(logclear ~ age + weight + serum.cre, data=creatinine2)
+summary(creat2_reg)
+# obtain and save standardized residuals and other diagnostics
+creat2_reg$stdres <- rstandard(creat2_reg)
+
+# check assumptions - residuals vs fitted values
+ggplot() +
+  geom_point(data=creatinine2, mapping=aes(x=creat2_reg$fitted.values, y=creat2_reg$stdres)) 
+# check assumptions - normality
+qqnorm(creat2_reg$stdres)
+
+# partial regression leveral plot for each variable
+# for age ...
+age.res <- residuals(lm(age ~ weight + serum.cre, data=creatinine2))
+y.res <- residuals(lm(logclear ~ weight + serum.cre, data=creatinine2))
+plot(age.res,y.res,type="p")
+# for weight ...
+wt.res <- residuals(lm(weight ~ age + serum.cre, data=creatinine2))
+y.res <- residuals(lm(logclear ~ age + serum.cre, data=creatinine2))
+plot(wt.res,y.res,type="p")
+# for serum creatinine 
+ser.res <- residuals(lm(serum.cre ~ age + weight, data=creatinine2))
+y.res <- residuals(lm(logclear ~ age + weight, data=creatinine2))
+plot(ser.res,y.res,type="p")
+
+# suggests log(weight) may be more appropriate
+#
+creatinine2$logweight <- log(creatinine2$weight)
+
+# fit regression
+creat2_reg <- lm(logclear ~ age + logweight + serum.cre, data=creatinine2)
+summary(creat2_reg)
+# obtain and save standardized residuals and other diagnostics
+creat2_reg$stdres <- rstandard(creat2_reg)
+
+# check assumptions - residuals vs x, residuals vs fitted values
+ggplot() +
+  geom_point(data=creatinine2, mapping=aes(x=creat2_reg$fitted.values, y=creat2_reg$stdres)) 
+# check assumptions - normality
+qqnorm(creat2_reg$stdres)
+
+# partial regression leveral plot for each variable
+# for age ...
+age.res <- residuals(lm(age ~ logweight + serum.cre, data=creatinine2))
+y.res <- residuals(lm(logclear ~ logweight + serum.cre, data=creatinine2))
+plot(age.res,y.res,type="p")
+# for logweight ...
+wt.res <- residuals(lm(logweight ~ age + serum.cre, data=creatinine2))
+y.res <- residuals(lm(logclear ~ age + serum.cre, data=creatinine2))
+plot(wt.res,y.res,type="p")
+# for serum creatinine 
+ser.res <- residuals(lm(serum.cre ~ age + logweight, data=creatinine2))
+y.res <- residuals(lm(logclear ~ age + logweight, data=creatinine2))
+plot(ser.res,y.res,type="p")Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

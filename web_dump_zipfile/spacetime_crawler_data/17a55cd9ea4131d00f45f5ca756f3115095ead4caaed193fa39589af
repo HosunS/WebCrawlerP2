@@ -1,0 +1,339 @@
+¦Ifinal_url¢DtypeEvaluex1https://www.ncbi.nlm.nih.gov/WebSub/?tool=genbankLhttp_headers¢DtypeEvalue‘¢Ak¢DtypeEvaluePX-XSS-ProtectionAv¢DtypeEvalueM1; mode=block¢Ak¢DtypeEvalueINCBI-PHIDAv¢DtypeEvalueX$801037C4C5E479410000000000000001.m_1¢Ak¢DtypeEvalueWContent-Security-PolicyAv¢DtypeEvalueXupgrade-insecure-requests¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXancbi_sid=801037C4C5E47941_0000SID; domain=.nih.gov; path=/; expires=Sun, 09 Feb 2020 03:23:00 GMT¢Ak¢DtypeEvalueXStrict-Transport-SecurityAv¢DtypeEvalueX,max-age=31536000; includeSubDomains; preload¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvaluePtimeout=1, max=9¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueHNCBI-SIDAv¢DtypeEvalueX801037C4C5E47941_0000SID¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueOX-UA-CompatibleAv¢DtypeEvalueGIE=Edge¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueGprivate¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 03:23:00 GMT¢Ak¢DtypeEvalueOReferrer-PolicyAv¢DtypeEvalueXorigin-when-cross-origin¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueY;<!DOCTYPE html 
+	  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>BankIt</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="galert_type" content="submission"/>
+    <meta name="ncbi_app" content="websub"/>
+    <meta name="ncbi_db" content="genbank"/>
+     <script type="text/javascript">
+         var ncbi_startTime = new Date();
+     </script>
+    <link href="https://www.ncbi.nlm.nih.gov/coreweb/styles/header_footer.css" rel="stylesheet" type="text/css" />
+    <link href="css/bankit.css" rel="stylesheet" type="text/css" title="default" />
+    <link href="css/tabmenu.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" id="sugstyle"
+      href="https://www.ncbi.nlm.nih.gov/coreweb/styles/ncbisuggest.css"
+      type="text/css" />
+    <script type="text/javascript" src="js/addremove.12.13.js"></script>
+    <script type="text/javascript" src="js/cssQuery-p.12.13.js"></script>
+    <script type="text/javascript" src="js/messages.12.13.js"></script>
+    <script 
+       type="text/javascript"
+       src="https://www.ncbi.nlm.nih.gov/core/lw/2.0/js/utils.1.js"></script>
+     <script type="text/javascript" src="/core/jig/1.14.8/js/jig.min.js"></script>
+  </head>
+  <body>
+      <!-- global alert component -->
+    <script type="text/javascript">
+        jQuery.getScript("/core/alerts/alerts.js",
+                         function() {
+                         galert(['#head', 'body > *:nth-child(1)'])
+                         });
+    </script>
+    <!-- script that gathers initial form values -->
+    <script type="text/javascript">
+      $ = jQuery;
+      function pinger_set_pdid(pdid_val) {
+        $('head').append('<meta name="ncbi_pdid" content="' + pdid_val + '"/>');
+      }
+      $(document).ready(function() {
+        function gather_form_values() {
+          if ($(':input:file').length) {
+            return $(':input:visible').serialize() + '&' + $(':input:file').val();
+          } else {
+          return $(':input:visible').serialize();
+          }
+        }
+        initial_values = gather_form_values();
+        $(".id_redirect").bind("click", function(event) {
+          if (initial_values != gather_form_values()) {
+            if (confirm('You have modified data. Do you want to proceed without saving?'))
+            {
+              location = $(this).attr("href");
+            }
+          } else { 
+            location = $(this).attr("href");
+          }
+          event.preventDefault();
+        });
+        
+        // re-enable the internal stops warning if this is a CDS page
+        var feat_name_id = $('input[name="feat_name_id"]').val();
+        if( feat_name_id == "CDS" ) {
+          $(':input').change( reenable_cds_warnings );
+        }
+        if( feat_name_id == "tRNA" ) {
+            $(':input').change( reenable_anticodon_warnings );
+        }
+      });
+    </script>
+    <script type="text/javascript">
+    if (typeof (jQuery) != 'undefined') {
+        (function ($) {
+            $(function () {           
+                var min = Math.ceil(1);
+                var max = Math.floor(100000);
+                var randomNum = Math.floor(Math.random() * (max - min)) + min;
+                var surveyUrl = "/projects/Gene/portal/surveys/seqdbui-survey.js?rando=" + randomNum.toString();
+                $.getScript(surveyUrl, function () {
+                    try {
+                        ncbi.seqDbUISurvey.init();   
+                    } catch (err) {
+                        console.info(err);
+                    }
+                }).fail(function (jqxhr, settings, exception) {
+                    console.info('Cannot load survey script', jqxhr);
+                });;
+            });
+        })(jQuery);
+    };
+    </script>
+    <!-- Header -->
+    <!-- accesskey is "3" because that's what the NCBI home page uses -->
+    <a accesskey="3" href="#maincontent" class="skipnav"
+       tabindex="0" title="Skip to the content"> Skip to main content</a>
+    <div id="head">
+      <dl id="logo">
+        <dt><a href="/" title="NCBI Home">National Center for Biotechnology Information</a></dt>
+        <dd>
+        </dd>
+      </dl>
+      <p id="project">
+        <a href="./index.cgi?tool=genbank"><img src="css/bankitbanner1.jpg" alt="GenBank Submissions" /></a> 
+      </p>
+
+      <div id="logged">
+        
+      </div>
+      <div id="nav">&nbsp;</div>
+    </div>
+    <!-- end of Header -->
+
+    <!-- Content -->
+    <div id="maincontent">
+
+<span>
+  <noscript>
+    <h3>
+      <strong class="error">This application requires javascript.  Please enable javascript in your browser's settings!</strong>
+    </h3>
+  </noscript>
+  <script type="text/javascript">
+                  pinger_set_pdid('home-genbank');
+                </script>
+  <div class="signin">
+    <div style="background-color:#FFFFE0">
+      <a href="?form=login&amp;tool=genbank">
+        <strong>Sign in to use BankIt</strong>
+      </a>
+    </div>
+    <br />
+  </div>
+  <div xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" class="top">
+    <table border="0">
+      <tr border="0">
+        <td width="125" border="0">
+          <span>
+            <div>
+              <strong style="color:#ea8f08">Help Topics</strong>
+            </div>
+            <br />
+            <div>
+              <a href="html/requirements.html">Submission Requirements</a>
+            </div>
+            <br />
+            <div>
+              <a href="https://www.ncbi.nlm.nih.gov/books/NBK51157">GenBank Submissions Handbook</a>
+            </div>
+            <br />
+            <div>
+              <strong>Annotation Examples</strong>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#mrna">mRNA sequence</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#prok">Prokaryotic gene</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#euka">Eukaryotic gene</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#prom">Promoter region</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#viral">Viral sequence</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#hiv1">HIV-1</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#trans">Transposon or insertion sequence</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#micro">Microsatellite sequence</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#repeat">Repeat regions</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#pseudo">Pseudogene</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#fusion">Translocation and/or fusion protein</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#clone">Cloning vector</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#gapseq">Gapped Sequence</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#popset">Phylogenetic or population set</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#est">EST submissions</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#gss">GSS submissions</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#sts">STS submissions</a>
+            </div>
+            <br />
+            <div>
+              <a href="html/annot_examples.html#htgs">HTGs</a>
+            </div>
+            <br />
+          </span>
+        </td>
+        <td border="0">
+          <div style="background-color:#FDDEF4; padding:0.5em">
+            <strong>
+  Submitters with a qq.com email address are not receiving mail from NCBI.
+  If you are using a qq.com email address, please provide an additional (alternative)
+  email address from a different domain to ensure that we are able to communicate with you.
+              </strong>
+          </div>
+          <br />
+          <div style="background-color:rgba(173,255,47,1.0); padding:0.5em">
+            Submit
+            <strong>ribosomal RNA (rRNA), rRNA-ITS, or
+              Influenza sequences</strong> here:
+              <a link="link_to_sp_genbank" href="https://submit.ncbi.nlm.nih.gov/subs/genbank/">Submission Portal</a></div>
+          <br />
+<!--
+          <div style="background-color:rgba(255,250,0,0.3); padding:0.5em">
+            <strong>Webinar on "How to Submit Your 16S rRNA Data to NCBI"</strong>.<br/>
+            For live demonstration please   
+            <a
+              href="https://attendee.gotowebinar.com/register/5473132869205757955?source=BankIt">register
+              for the NCBI webinar</a>
+            which will be held on Wed, Mar 29, 2017 12:00 PM - 12:30 PM EDT
+          </div>
+          <br/>
+          //-->
+          <div>
+            If you have any questions about using the BankIt sequence
+            submission tool, send an email to GenBank User services at: 
+            <a href="mailto:info@ncbi.nlm.nih.gov?subject='BankIt'">info@ncbi.nlm.nih.gov</a>
+            and use 'BankIt' and <strong>your BankIt ID#</strong> in the subject line.
+          </div>
+          <br />
+          <div>
+            Use BankIt for all standard GenBank submissions, <strong>except</strong>:
+            <br /><ul><li>Use <a href="https://submit.ncbi.nlm.nih.gov/subs/genbank/">Submission Portal</a> if you are submitting ribosomal RNA (rRNA), rRNA-ITS, or Influenza sequences.</li><li>Use <a href="https://submit.ncbi.nlm.nih.gov/subs/wgs/">Submission Portal-Genomes</a> (WGS or complete) if you are submitting genome data.</li><li>Use <a href="https://submit.ncbi.nlm.nih.gov/subs/tsa/">Submission Portal-TSA</a> if you are submitting Transcriptome Shotgun Assembly data.</li><li>Use <a href="https://submit.ncbi.nlm.nih.gov/subs/sra/">Submission Portal-SRA</a> if you are submitting Sequence Read Archive data.</li><li>Use <a href="https://www.ncbi.nlm.nih.gov/Sequin/">Sequin</a> if you are submitting sequences with an alignment.</li></ul></div>
+          <h2>What is needed to submit a sequence through BankIt?</h2>
+          <div>
+            (See <a href="html/requirements.html">Submission Requirements</a> page for more detail)
+            <br /><br /><ul><li>registration through the MyNCBI Login System (register on Sign in page through link above)</li><li>sequence data can be either cut-and-pasted as text or uploaded
+                as file (multiple sequences must be in a <a href="html/help/fasta.html">FASTA</a> format)</li><li>date for public release (immediate or at a specified future
+                date)</li><li>basic information (authors and a working title) for a
+                corresponding reference paper</li><li>name(s) of the organism(s) from which the sequence data were isolated
+                and any other related <a href="html/help/genbank-source-table.html#modifiers">descriptive data</a></li><li>sequence features (for example: CDS, gene, rRNA, tRNA, with
+                nucleotide intervals and product names)</li></ul></div>
+          <h2>GenBank Sequence Submission Policy</h2>
+          <div>
+            <ol>
+              <li>the GenBank database is intended for new sequence data that is
+                determined by and annotated by the submitter</li>
+              <li>sequences built or derived from other GenBank primary data
+                intended for the 
+                <a href="https://www.ncbi.nlm.nih.gov/Genbank/TPA.html">Third Party Annotation</a> 
+                (TPA) database may be submitted through BankIt</li>
+              <li>the following types of submissions are <strong>NOT</strong> acceptable:</li>
+              <ul>
+                <li>sequences less than 200 nucleotides long, unless they represent
+                  complete exons, non-coding RNAs (ncRNAs), microsatellites or ancient DNA</li>
+                <li>non-contiguous sequences that have been artificially joined;
+                  for example, multiple exons without their intervening introns or
+                  without a 'gap' of internal NNNs representing any missing
+                  sequence</li>
+                <li>primer-only sequences</li>
+                <li>protein-only sequences</li>
+                <li>single sequences that are a mix of molecule types, such as mix
+                  of genomic and mRNA sequence data</li>
+                <li>sequences without a physical counterpart (consensus sequences)</li>
+              </ul>
+            </ol>
+          </div>
+          <h2>Updates to Sequences that are already submitted</h2>
+          <div>
+            BankIt does not have an update option. Please see
+            <a href="https://www.ncbi.nlm.nih.gov/Genbank/update.html">options for
+              updating</a> a submitted or existing GenBank record.
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</span>
+    </div>
+    <!-- end of Content -->
+
+    <!-- Footer -->
+    <div id="ncbifooter">
+        <div id="footer-contents-right">
+            <a href="https://www.nih.gov" title="NIH" class="nih_img_link">NIH
+            </a> <a href="https://www.nlm.nih.gov" title="NLM" class="nlm_img_link">NLM</a> <a href="https://www.hhs.gov" title="DHHS" class="dhhs_img_link">DHHS</a> <a href="https://www.usa.gov" title="USA.gov" class="usagov_img_link">USA.gov</a>
+            
+        </div>
+        <div id="footer-contents-left">
+            <a href="https://www.ncbi.nlm.nih.gov/About/glance/contact_info.html">Contact</a> | <a href="https://www.ncbi.nlm.nih.gov/About/disclaimer.html">Copyright</a> | <a href="https://www.ncbi.nlm.nih.gov/About/disclaimer.html#disclaimer">Disclaimer</a> | <a href="https://www.nlm.nih.gov/privacy.html">Privacy</a> | <a href="https://www.nlm.nih.gov/accessibility.html">Accessibility</a>
+            
+            <p class="address">
+                National Center for Biotechnology Information , US National Library of Medicine<br/>
+                8600 Rockville Pike , Bethesda, MD USA 20894
+            </p>
+            <!--this will come when we learn how to do it <p class="updateinfo">
+                Last Updated: LAST UPDATED DATE GOES HERE
+            </p>-->
+        </div>
+    </div>
+    <!-- end of Footer -->
+    <script type="text/javascript"
+src="/portal/portal3rc.fcgi/rlib/js/InstrumentOmnitureBaseJS/InstrumentNCBIConfigJS/InstrumentNCBIBaseJS/InstrumentPageStarterJS.js">
+    </script>
+  </body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

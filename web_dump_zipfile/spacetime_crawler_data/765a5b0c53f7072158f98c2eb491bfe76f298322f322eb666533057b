@@ -1,0 +1,677 @@
+¶Ifinal_url¢DtypeEvaluex$http://www.w3.org/TR/voice-tts-reqs/Lhttp_headers¢DtypeEvalueç¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7995¢Ak¢DtypeEvaluePContent-LocationAv¢DtypeEvalueMOverview.html¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 09 Feb 2020 20:44:50 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 02 Oct 2017 10:22:20 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"61e1-55a8dbfe68f00-gzip"¢Ak¢DtypeEvalueDLinkAv¢DtypeEvalueXÆ<https://www.w3.org/TR/1999/WD-voice-tts-reqs-19991223/>;rel="canonical", <https://timetravel.mementoweb.org/w3c/timegate/http://www.w3.org/TR/voice-tts-reqs/>;rel="timegate"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvaluePmax-age=31536000¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:44:50 GMT¢Ak¢DtypeEvalueXAccess-Control-Allow-OriginAv¢DtypeEvalueA*¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=iso-8859-1Kraw_content¢DtypeEvalueya·<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=iso-8859-1">
+<title>Speech Synthesis Markup Requirements for Voice Markup
+Languages</title>
+<style type="text/css">
+body { 
+font-family: sans-serif;
+margin-left: 10%; 
+margin-right: 5%; 
+color: black;
+background-color: white;
+background-attachment: fixed;
+background-image: url(http://www.w3.org/StyleSheets/TR/WD.gif);
+background-position: top left;
+background-repeat: no-repeat;
+font-family: Tahoma, Verdana, "Myriad Web", Syntax, sans-serif;
+}
+.unfinished {  font-style: normal; background-color: #FFFF33}
+.dtd-code {  font-family: monospace;
+ background-color: #dfdfdf; white-space: pre;
+ border: #000000; border-style: solid;
+ border-top-width: 1px; border-right-width: 1px;
+ border-bottom-width: 1px; border-left-width: 1px; }
+p.copyright {font-size: smaller}
+h2,h3 {margin-top: 1em;}
+.extra { font-style: italic; color: #338033 }
+code {
+    color: green;
+    font-family: monospace;
+    font-weight: bold;
+}
+.example {
+    border: solid green;
+    border-width: 2px;
+    color: green;
+    font-weight: bold;
+    margin-right: 5%;
+    margin-left: 0;
+}
+.bad  {
+    border: solid red;
+    border-width: 2px;
+    margin-left: 0;
+    margin-right: 5%;
+    color: rgb(192, 101, 101);
+}
+div.navbar { text-align: center; }
+div.contents {
+    background-color: rgb(204,204,255);
+    padding: 0.5em;
+    border: none;
+    margin-right: 5%;
+}
+table {
+    margin-left: -4%;
+    margin-right: 4%;
+    font-family: sans-serif;
+    background: white;
+    border-width: 2px;
+    border-color: white;
+  }
+th { font-family: sans-serif; background: rgb(204, 204, 153) }
+td { font-family: sans-serif; background: rgb(255, 255, 153) }
+.tocline { list-style: none; }
+</style>
+<link rel="stylesheet" type="text/css" href= 
+"http://www.w3.org/StyleSheets/TR/W3C-WD.css">
+</head>
+<body>
+<div class="head">
+<p><a href="http://www.w3.org/"><img class="head" src= 
+"http://www.w3.org/Icons/WWW/w3c_home.gif" alt="W3C"></a></p>
+
+<h1 class="head">Speech Synthesis Markup Requirements<br>
+for Voice Markup Languages</h1>
+
+<h3 class="notoc">W3C Working Draft <i>23 December 1999</i></h3>
+
+<dl>
+<dt>This version:</dt>
+
+<dd><a href="http://www.w3.org/TR/1999/WD-voice-tts-reqs-19991223">
+http://www.w3.org/TR/1999/WD-voice-tts-reqs-19991223</a></dd>
+
+<dt>Latest version:</dt>
+
+<dd><a href=
+"http://www.w3.org/TR/voice-tts-reqs">
+http://www.w3.org/TR/voice-tts-reqs</a></dd>
+
+<dt>Previous version:</dt>
+
+<dd><a href= 
+"http://www.w3.org/Voice/Group/1999/tts-reqs-19991118.html">
+http://www.w3.org/Voice/Group/1999/tts-reqs-19991118</a></dd>
+
+<dt>Editor:</dt>
+
+<dd>Andrew Hunt</dd>
+</dl>
+
+<p class="copyright"><a href= 
+"http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">
+Copyright</a> &#169; 1999 <a href="http://www.w3.org/">
+W3C</a><sup>&#174;</sup> (<a href=
+"http://www.lcs.mit.edu/">MIT</a>, <a href=
+"http://www.inria.fr/">INRIA</a>, <a href=
+"http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. <abbr
+title="World Wide Web Consortium">W3C</abbr> <a href= 
+"http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">
+liability</a>, <a href= 
+"http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">
+trademark</a>, <a href= 
+"http://www.w3.org/Consortium/Legal/copyright-documents">document
+use</a> and <a href= 
+"http://www.w3.org/Consortium/Legal/copyright-software">software
+licensing</a> rules apply.</p>
+
+<hr>
+</div>
+
+<h2 class="notoc">Abstract</h2>
+
+<p>The W3C Voice Browser working group aims to develop
+specifications to enable access to the Web using spoken
+interaction. This document is part of a set of requirements
+studies for voice browsers, and provides details of the
+requirements for markup used for speech synthesis.</p>
+
+<h2>Status of this document</h2>
+
+<p>This document describes the requirements for markup used for
+speech synthesis, as a precursor to starting work on
+specifications. Related requirement drafts are linked from the <a
+href="/TR/1999/WD-voice-intro-19991223">introduction</a>. The
+requirements are being released as working drafts but are not
+intended to become proposed recommendations.</p>
+
+<p>This specification is a Working Draft of the Voice Browser working
+group for review by W3C members and other interested parties.  This is
+the first public version of this document. It is a draft document and
+may be updated, replaced, or obsoleted by other documents at any
+time. It is inappropriate to use W3C Working Drafts as reference
+material or to cite them as other than "work in progress".</p>
+
+<p>Publication as a Working Draft does not imply endorsement by
+the W3C membership, nor of members of the Voice Browser working
+groups. This is still a draft document and may be updated,
+replaced or obsoleted by other documents at any time. It is
+inappropriate to cite W3C Working Drafts as other than "work in
+progress."</p>
+
+<p>This document has been produced as part of the <a href= 
+"http://www.w3.org/Voice/">W3C Voice Browser Activity</a>,
+following the procedures set out for the <a href= 
+"http://www.w3.org/Consortium/Process/">W3C Process</a>. The
+authors of this document are members of the <a href= 
+"http://www.w3.org/Voice/Group">Voice Browser Working Group</a>.
+This document is for public review. Comments should be sent to
+the public mailing list &lt;<a href=
+"mailto:www-voice@w3.org">www-voice@w3.org</a>&gt; (<a href= 
+"http://www.w3.org/Archives/Public/www-voice/">archive</a>) by
+14th January 2000.</p>
+
+<p>A list of current W3C Recommendations and other technical
+documents can be found at <a href="http://www.w3.org/TR">
+http://www.w3.org/TR</a>.</p>
+
+<h2>0. Introduction</h2>
+
+<p>The main goal of this subgroup is to establish a prioritized
+list of requirements for speech synthesis markup which any
+proposed markup language should address. This document addresses
+both procedure and requirements for the specification
+development. The requirements are addressed in separate sections
+on <a href="#design">Design Criteria</a>, <a href=
+"#architecture">Architecture and Integration</a>, <a href= 
+"#text-content">Text Content</a>, <a href="#rendering">
+Speech-Specific Rendering</a>, and <a href="#miscellaneous">
+Miscellaneous</a> followed by links to <a href=
+"#further-reading">Further Reading Material</a>.</p>
+
+<h3> 0.1 Process</h3>
+
+<p>The specification development process will consist of the
+following steps:</p>
+
+<ol>
+<li>Collect requirements on speech synthesis markup and
+prioritize those requirements.</li>
+
+<li>Distribute requirements to, and take feedback from, relevant
+groups working on specific markup languages for speech
+synthesis.</li>
+
+<li>Develop a specification based on the requirements for
+delivery to the W3C Voice Browser Working Group.</li>
+</ol>
+
+<!--
+<h3> 0.2 Terminology</h3>
+
+There is some variance in the use of terminology in the speech synthesis
+community.  The following definitions establish a common understanding
+for this document.
+
+<br>
+<br>
+<table border cellpadding=3 >
+<tr>
+<td><b>Voice Browser</b></td> 
+<td> A device which interprets a (voice) markup language and is capable of
+generating voice output and/or interpreting voice input, and possibly other
+input/output modalities.
+</tr>
+
+<tr>
+<td><b>Speech Synthesis</b></td> 
+<td> The process of automatic generation of speech output from data input
+which may include plain text, formatted text or binary objects.  </td>
+</tr>
+
+<tr>
+<td><b>Text-To-Speech</b></td> 
+<td> The process of automatic generation of speech output from text
+or annotated text input. </td>
+</tr>
+
+</table>
+--><!--
+<p>
+The requirements for speech synthesis markup are annotated with the
+following priorities.  If a feature is deferred from the initial
+specification to a future release, consideration may be given to 
+leaving open a path for future incorporation of the feature.
+--><!--
+<br>
+<br>
+<table border cellpadding=3 >
+<tr>
+<td><b>Must have</b></td> 
+<td> The first official specification must define the feature.
+</tr>
+
+<tr>
+<td><b>Should have</b></td> 
+<td> The first official specification should define the feature
+if feasible but may defer it until a future release.  </td>
+</tr>
+
+<tr>
+<td><b>Nice to have</b></td> 
+<td> The first official specification may define the feature
+if time permits, however, its priority is low. </td>
+</tr>
+
+<tr>
+<td><b>Future revision</b></td> 
+<td> It is not intended that the first official specification
+include the feature.  </td>
+</tr>
+
+</table>
+--><a name="design"></a>
+<p></p>
+
+<h2>1. Design Criteria</h2>
+
+<p>The markup language for speech synthesis will be developed
+within the following broad design criteria. They are ordered from
+higher to lower priority. In the event that two goals conflict,
+the higher priority goal takes precedence. Specific technical
+requirements are addressed in the following sections.</p>
+
+<ol>
+<li>The markup language for speech synthesis will enable
+consistent control of voice output by speech synthesizers for use
+in voice browsing and in other contexts. Consistent rendering of
+speech synthesis markup should be possible across multiple
+platforms and multiple speech synthesis implementations.</li>
+
+<li>The markup language for speech synthesis will be an XML
+Application and shall be interoperable with relevant W3C
+specifications (see the <a href="#html-req"> interoperability
+requirements</a> for details).</li>
+
+<li>The markup language for speech synthesis should be
+appropriate for speech output from a wide range of computer
+applications with varying speech content (see the <a href= 
+"#app-req">application requirements</a> for details).</li>
+
+<li>The markup language for speech synthesis will be
+internationalized to enable speech output of a large number of
+languages (see the <a href="#lang-req"> mono-lingual</a> and <a
+href="#multi-lang-req">multi-lingual</a> requirements).</li>
+
+<li>It should be easy to automatically <span class="diff">
+generate, author by hand</span> and process documents using the
+markup language for speech synthesis.</li>
+
+<li>All features of the markup language for speech synthesis
+should be implementable with existing, generally available
+technology. Anticipated capabilities should be considered to
+ensure future extensibility (but are not required to be covered
+in the specification).</li>
+
+<li>The number of optional features in the markup language for
+speech synthesis will be kept to an absolute minimum, ideally
+zero. For optional features, it is highly desirable that a
+reasonable rendering behavior be available when not implemented
+fully by a speech synthesizer. (See also the <a href= 
+"#compliance-req">compliance requirement</a>.)</li>
+
+<li>Documents written in the markup language for speech synthesis
+should be human-legible and reasonably clear and the
+specification should avoid unnecessary terseness.</li>
+
+<li>The element set should avoid unnecessary differences with
+HTML, XHTML, ACSS and other relevant specifications. (See also
+the <a href="#html-req"> interoperability requirements</a>.)</li>
+
+<li>The markup language for speech synthesis specification should
+be prepared quickly, where appropriate deriving from existing,
+applied specifications.</li>
+</ol>
+
+<a name="architecture"></a>
+<p></p>
+
+<h2>2. Architecture and Integration</h2>
+
+<a name="html-req"></a>
+<p></p>
+
+<h3>2.1 Speech generation from HTML, XHTML, DOM, XSL, ACSS etc.
+(must have)</h3>
+
+<p>It must be practical to generate speech synthesis output from
+a wide range of existing document representations. Most
+importantly speech output from HTML, HTML plus ACSS/CSS, XHTML,
+XML plus XSL, and DOM must be possible. <a name="app-req">
+</a></p>
+
+<h3>2.2 Speech generation from application (must have)</h3>
+
+<p>It must be practical <span class="diff">for a wide range of
+applications to automatically generate speech synthesis
+output</span>. Key examples include voice browsers, email
+readers, web browsers, and accessibility applications.</p>
+
+<h3>2.3 Integration with other Voice Markup (must have)</h3>
+
+<p>The speech synthesis markup must be interoperable with other
+relevant specifications developed by the W3C Voice Browser
+Working Group. It must be possible to embed speech synthesis
+markup into the dialog markup for prompt generation and other
+spoken output. It must be possible to utilize pronunciations
+defined in a standard pronunciation format. It must be possible
+to utilize speech synthesis markup for universal access. (See
+also <a href="#event-generation">5.2 Event generation</a>.) <a
+name="mono-modal-req"></a></p>
+
+<h3>2.4 Mono-modal output (must have)</h3>
+
+<p>The speech synthesis markup must be appropriate in the context
+of an audio-output-only (mono-modal) user interaction. <a name= 
+"multi-modal-req"></a></p>
+
+<h3>2.5 Multi-modal output (must have)</h3>
+
+<p>The speech synthesis markup must be appropriate in the context
+of an multi-modal system output, most importantly, in combination
+with visual output. Where appropriate, synchronization of speech
+and other output should be supported with SMIL or a related
+standard. (Also see <a href="#event-generation">5.2 Event
+generation</a>.) <a name="text-content"></a></p>
+
+<h2>3. Text Content</h2>
+
+<a name="struct-req"></a>
+<p></p>
+
+<h3>3.1 Document Structure (must have)</h3>
+
+<p>The speech synthesis markup must support the ability to
+indicate document structure in a way that is instructive to a
+speech synthesizer for rendering the document. <span class=
+"diff">The specification must provide a well-defined set of
+document structure elements</span>. At a minimum, it must be
+possible to mark paragraph and sentence structures. <span class= 
+"diff">Dialog types and other structural elements with
+distinctive spoken style will be considered in the specification
+process</span>. <a name="lang-req"></a></p>
+
+<h3>3.2 Mono-lingual document (must have)</h3>
+
+<p>The speech synthesis markup must support the ability to
+incorporate and render text of a single language in a single
+document and to mark the language content appropriately. <a name= 
+"multi-lang-req"></a></p>
+
+<h3>3.3 Multi-lingual document (should have)</h3>
+
+<p>The speech synthesis markup may support the ability to
+incorporate and render text of more than one language in a single
+document where those languages are supported by the speech
+synthesizer. The levels in document structure in which language
+change is permitted would be determined during the specification
+process as the definition of the speech synthesis document
+structure emerges.</p>
+
+<h3>3.4 Phonemic pronunciations (must have)</h3>
+
+<p>The speech synthesis markup must provide the ability to
+specify pronunciation entities as sequences of phonemes. Phonetic
+pronunciation models may also be considered.</p>
+
+<h3>3.5 Reference to externally defined pronunciations (should
+have)</h3>
+
+<p>The speech synthesis markup may support the ability to
+reference extenally defined pronunciation or lexicon documents.
+In particular, if the Voice Browser Working Group defines a
+lexicon format it must be possible to reference it from the
+speech synthesis markup. [In the absence of a Working Group
+proposal, there are no obvious candidates for standard externally
+referencable lexicon formats.]</p>
+
+<h3>3.6 Out-of-vocabulary handling (Nice to have)</h3>
+
+<p>The speech synthesis markup may support a mechanism to request
+particular handling of out-of-vocabulary text or other
+unpronunciable text. [This may instead be an API design issue and
+out of the scope of these Speech Synthesis Markup
+Requirements.]</p>
+
+<h3>3.7 Acoustic-phonetic sequences (should have)</h3>
+
+<p>The speech synthesis markup may provide a mechanism to exactly
+specify the desired acoustic-phonetic rendering of a given text
+segment. This may be accomplished with a sequence of high-level
+phonetic and phonemic symbols, accompanied by a detailed acoustic
+information for rendering the phonetic and phonemic symbols such
+as duration, pitch movement, intensity, etc.</p>
+
+<h3>3.8 Special text constructs (must have)</h3>
+
+<p>The speech synthesis markup must provide the ability to mark a
+set of common text constructs that require special handling by
+speech synthesizers. The list should include dates, times,
+numbers, phone numbers, currency amounts, URLs, postal addresses
+and measures. A mechanism should also be provided to indicate
+locale or other information that enables a speech synthesizer to
+incorporate dates and other locale-sensitive constructs.</p>
+
+<h3>3.9 Spelling - literal output (must have)</h3>
+
+<p>The speech synthesis markup must provide the ability to mark
+regions of text for "spelled" or literal output, as appropriate
+to the text language.</p>
+
+<h3>3.10 Non-speech output (must have)</h3>
+
+<p>The speech synthesis markup must provide the ability to
+incorporate non-speech audio output. This may include references
+to audio files (e.g. wave and MIDI files) that are linked inline.
+This may also include generation of a set of defined audio
+samples such as touch-tone or other commonly used prompt
+sounds.</p>
+
+<h3>3.11 Within document natural language generation (future
+revision)</h3>
+
+<p>The speech synthesis markup may provide a mechanism to allow
+on-the-fly generation/modification of output text. For example,
+based on dialog context or based on what a user said to a dialog
+system, the speech output may choose the appropriate verb/noun to
+echo the user's spoken words. Another example could be the use of
+style sheets to apply style rules to control how things like
+dates are transformed before being spoken. <a name="rendering">
+</a></p>
+
+<h2>4. Speech-Specific Rendering</h2>
+
+<h3>4.1 Speaking voice control (must have)</h3>
+
+<p>The speech synthesis markup must provide the ability to
+indicate a speaking voice for a document or for regions of text
+within a document. A set of common speaking voice (or speech
+font) characteristics must be defined and <span class="diff">may
+include gender, age, name and instance selection (where multiple
+voices have common characteristics; e.g. two male voices)</span>.
+<!-- Deleted 1999/11/09 --> <!--
+<h3>4.2 Speaking voice characteristics (nice to have)</h3> 
+
+<p>The speech synthesis markup may provide a mechanism for
+applying variants to a speaking voice such as breathiness or
+richness.  It may be a significant challenge to identify and
+define characteristics that are commonly agreed upon and can
+be consistently implemented by different speech synthesis systems.
+--></p>
+
+<h3>4.2 Emphasis (must have)</h3>
+
+<p>The speech synthesis markup must provide the ability to mark
+words and other regions of text for spoken emphasis (also
+referred to as prominence or stress).</p>
+
+<h3>4.3 Intonation control (should have)</h3>
+
+<p>The speech synthesis markup may provide the ability to mark
+words and other regions of text with intonational characteristics
+including boundary tones (rise or fall at sentence/phrase end)
+and sentential intonation (movements across
+phrases/sentences).</p>
+
+<h3>4.4 Acoustic prosodics (must have)</h3>
+
+<p>The speech synthesis markup must provide the ability to mark
+regions of text with acoustic characteristics such as pitch,
+pitch range, speaking rate and volume.</p>
+
+<h3>4.5 Synchronized facial animation (nice to have)</h3>
+
+<p>The speech synthesis markup may provide the ability to mark
+text with features that enhance synchronized facial animation.
+Features may include positions of physical facial features (e.g.
+lip rounding, jaw position, eye brow movements), timing data, and
+expressions (e.g. smile).</p>
+
+<h3>4.6 Spatial audio (nice to have)</h3>
+
+<p>The speech synthesis markup may provide a mechanism for
+generating spatial audio (also known as 3D audio). For instance,
+this could request that the voice output be in the upper-right
+quadrant forward of the listener. It may also allow the voice
+location to shift over time. <a name="miscellaneous"></a></p>
+
+<h2>5. Miscellaneous</h2>
+
+<a name="compliance-req"></a>
+<p></p>
+
+<h3>5.1 Compliance Definition (must have)</h3>
+
+<p>The specification must address the issue of compliance by
+defining the sets of features that must be implemented for a
+system to be considered compliant with the specification. Where
+appropriate, compliance criteria may be defined with variants for
+different contexts or environments. <a name="event-generation">
+</a></p>
+
+<h3>5.2 Event generation (must have)</h3>
+
+<p>The speech synthesis markup may provide methods to mark points
+in text output or segments of text output to generate callbacks,
+event notification or other information that can be used to track
+progress of text output, that determine timing and location of
+barge-in for an appropriate resume, that can be used to trigger
+other activities, or that can be used to synchronize speech
+output with other output modalities. The mechanisms by which
+event notifications are issues are outside the scope of the
+speech synthesis markup specification. (See also, <a href= 
+"#multi-modal-req">Integration with SMIL</a>).</p>
+
+<h3>5.3 Pause/resume behavior (should have)</h3>
+
+<p>The speech synthesis markup specification may define behavior
+of implementations with respect to pausing and resuming audio
+output. Beyond the typical instant stop/start model (a tape
+player paradigm) some consideration could be given to specifying
+word boundaries or other locations where pausing is reasonable
+for a listener. Similarly, the markup may enable a mechanism to
+indicate appropriate locations to resume output that may be
+different from the pause location. [These capabilities may be
+more of an environment of API issue than a markup issue.]</p>
+
+<h3>5.4 Comments (must have)</h3>
+
+<p>The speech synthesis markup must support a mechanism for
+inline comments. [Presumably the parent markup language, e.g.
+XML, will provide such a mechanism.]</p>
+
+<h3>5.5 Engine extensibility (should have)</h3>
+
+<p>The speech synthesis markup may need to define a mechanism by
+which specific speech synthesizer implementations can provide
+enhancements or non-standard extensions without affecting the
+core specification behavior. <a name="further-reading"></a></p>
+
+<h2 class="diff">6. Further Reading Material</h2>
+
+<p class="diff">The following resources are related to the Speech
+Synthesis Markup Language requirements and specification.</p>
+
+<dl class="diff">
+<dt><a href="http://www.research.att.com/~rws/Sable.v1_0.htm">
+SABLE</a></dt>
+
+<dd><a href="http://www.research.att.com/~rws/Sable.v1_0.htm">
+(http://www.research.att.com/~rws/Sable.v1_0.htm)</a><br>
+SABLE is a markup language for controlling text to speech
+engines. It has evolved out of work on combining three existing
+text to speech languages: SSML, STML and JSML. Implementations
+are available for the Bell Labs synthesizer and in the Festvial
+speech synthesizer. The following are two of the papers written
+about SABLE and its applications:<br>
+<br>
+ 
+
+<ul>
+<li><a href="http://www.research.att.com/~rws/SABPAP/sabpap.htm">
+SABLE: A Standard for TTS Markup</a>, Sproat et. al. <a href= 
+"http://www.research.att.com/~rws/SABPAP/sabpap.htm">
+(http://www.research.att.com/~rws/SABPAP/sabpap.htm)</a></li>
+
+<li><a href="http://www.bell-labs.com/project/tts/csssable.html">
+SABLE: an XML-based Aural Display List For The WWW</a>, Sproat
+and Raman. <a href= 
+"http://www.bell-labs.com/project/tts/csssable.html">
+(http://www.bell-labs.com/project/tts/csssable.html)</a></li>
+</ul>
+</dd>
+
+<dt><br>
+<a href= 
+"http://java.sun.com/products/java-media/speech/forDevelopers/JSML/index.html">
+Java Speech API Markup Language</a></dt>
+
+<dd><a href= 
+"http://java.sun.com/products/java-media/speech/forDevelopers/JSML/index.html">
+(http://java.sun.com/products/java-media/speech/forDevelopers/JSML/index.html)</a><br>
+
+ JSML is an XML specification for controlling text-to-speech
+engines. Implementations are available from IBM, Lernout &amp;
+Hauspie and in the Festival speech synthesis platform and in
+other implementations of the Java Speech API.</dd>
+
+<dt><br>
+<a href= 
+"http://www.cstr.ed.ac.uk/publications/1997/Sproat_1997_a.ps">Spoken
+Text Markup Language</a></dt>
+
+<dd><a href= 
+"http://www.cstr.ed.ac.uk/publications/1997/Sproat_1997_a.ps">
+(http://www.cstr.ed.ac.uk/publications/1997/Sproat_1997_a.ps)</a><br>
+
+ STML is an SGML language for controlling text to speech engines
+developed jointly by Bell Laboratories and by the Centre for
+Speech Technology Research, Edinburgh University.</dd>
+
+<dt><br>
+<a href="http://www.microsoft.com/iit/">Microsoft Speech API
+Control Codes</a></dt>
+
+<dd><a href="http://www.microsoft.com/iit/">
+(http://www.microsoft.com/iit/)</a><br>
+SAPI defines a set of inline control codes for manipulating
+speech output by SAPI speech synthesizers.</dd>
+
+<dt><br>
+<a href="http://www.voicexml.com/">VoiceXML Prompts</a></dt>
+
+<dd><a href="http://www.voicexml.com/">
+(http://www.voicexml.com/)</a><br>
+The Voice XML specification for dialog systems development
+includes a set of prompt elements for generating speech synthesis
+and other audio output that are very similar to elements of JSML
+and SABLE.</dd>
+</dl>
+<script src="https://www.w3.org/scripts/TR/fixup.js"></script></body>
+</html>
+
+Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

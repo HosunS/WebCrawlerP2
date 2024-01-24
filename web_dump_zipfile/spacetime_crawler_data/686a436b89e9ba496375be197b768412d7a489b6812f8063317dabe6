@@ -1,0 +1,140 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueSContent-dispositionAv¢DtypeEvalueX#inline; filename="CS274a_HW3soln.m"¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.4.18 (Ubuntu)¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 17:25:22 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=UTF-8Kraw_content¢DtypeEvalueYfunction HW3soln
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ rand('state',0); randn('state',0);
+ K = 5; 
+ Ttrue = [
+     0.5757    0.0248    0.0208    0.0003    0.3153
+     0.0187    0.3267    0.3863    0.0001    0.5612
+     0.0390    0.1143    0.3810    0.1040    0.0067  
+     0.1056    0.0946    0.0490    0.5666    0.0000
+     0.2610    0.4396    0.1629    0.3290    0.1168
+     ];
+ pi = ones(K,1)/K;
+ 
+ Otrue{1}.mu = [ 1  1]'; Otrue{1}.Sig=[.25   0 ;   0 .25];
+ Otrue{2}.mu = [-1  1]'; Otrue{2}.Sig=[.25  .15 ;  .15 .25];
+ Otrue{3}.mu = [ 1 -1]'; Otrue{3}.Sig=[.25 -.18 ; -.18 .25];
+ Otrue{4}.mu = [ 0  0]'; Otrue{4}.Sig=[.07    0 ;   0 .07];
+ Otrue{5}.mu = [-1 -1]'; Otrue{5}.Sig=[.25   -.1 ;   -.1 .25];
+ 
+ % Simulate hidden states:
+ N=1000; D=2;
+ z=zeros(1,N); x=zeros(D,N);
+ z(1) = find( cumsum(pi)>rand , 1,'first');
+ 
+ for t=2:N,
+   z(t) = find( cumsum(Ttrue(:,z(t-1))) > rand, 1,'first');
+ end;
+ 
+ for t=1:N,
+   x(:,t) = Otrue{z(t)}.mu + sqrtm( Otrue{z(t)}.Sig )*randn(2,1);
+ end;
+ 
+ % If you want to visualize the data set, you can use:
+ %
+ %figure(3); axis([-2,2,-2,2]); hold on;
+ %colors = 'rgbmc';
+ %for t=1:N,
+ %  plot(x(1,t),x(2,t),[colors(z(t)),'.']); %pause(.25);
+ %end;
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ T = rand(K,K); T=T./repmat(sum(T,1),[K,1]);
+ O = Otrue;
+ for k=1:K, O{k}.mu=randn(2,1); O{k}.Sig=2*eye(2); end;
+ nIter=50; LL=zeros(1,nIter);
+ for iter=1:nIter,
+   [pi,T,O,LL(iter)] = EMstep(x,pi,T,O);
+   emPlot(x,z,T,O);
+   figure(2); plot(1:iter,LL(1:iter)); ax=axis; ax(2)=nIter; axis(ax);
+ end;
+pause;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ T = rand(K,K); T=T./repmat(sum(T,1),[K,1]);
+ for k=1:K, O{k}.mu=Otrue{k}.mu+.25*randn(D,1); O{k}.Sig=.25*eye(2); end;
+ nIter=50; LL=zeros(1,nIter);
+ for iter=1:nIter,
+   [pi,T,O,LL(iter)] = EMstep(x,pi,T,O);
+   emPlot(x,z,T,O);
+   figure(2); plot(1:iter,LL(1:iter)); ax=axis; ax(2)=nIter; axis(ax);
+ end;
+T,
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+function emPlot(x,z,T,O)
+  figure(1); axis([-2,2,-2,2]); hold off;   % plot the data in different colors
+  colors = 'rgbmc';
+  for t=1:size(x,2),
+    plot(x(1,t),x(2,t),[colors(z(t)),'.']); 
+	  hold on;
+  end;
+  
+  theta = 0:.1:2*pi;                        % plot the current Gaussian models
+  pts = 2*[sin(theta);cos(theta)];          % by showing the two-sigma radius
+  for k=1:length(O),
+    xy = sqrtm(O{k}.Sig)*pts + repmat(O{k}.mu,[1,length(pts)]);
+	  plot(xy(1,:),xy(2,:),'k-');
+  end;
+
+
+
+function [LL,alph,beta,obs]=forwardBackward(data,pi,T,O)
+  nStates = length(O); nTime = size(data,2);
+  obs = zeros(nStates,nTime); alph=obs; beta=obs; prob=obs;
+  for i=1:nStates
+    obs(i,:) = mvnpdf(data',O{i}.mu',O{i}.Sig); % evaluate data for Gaussian i: N(data(:,j) ; O{i}.mu, O{i}.Sig)
+  end;
+  TT=T';
+  alph(:,1) = pi .* obs(:,1); %... initialize alpha recursion, alpha = p(z1)*p(x1|z1)
+  tmp=sum(alph(:,1));  % calculate p(x_1) = \sum p(x_1|z_1) p(z_1)
+  LL=log(tmp); alph(:,1) = alph(:,1)./tmp;  % and normalize for numerical reasons
+  for t=2:nTime        % compute p(zt|x1..xt) and logl = p(X).
+    alph(:,t) = (T*alph(:,t-1)) .* obs(:,t); % ... continue alpha recursion
+    tmp=sum(alph(:,t));
+    LL = LL + log(tmp); alph(:,t) = alph(:,t)./tmp;
+  end;
+  beta(:,nTime) = ones(size(pi)); %... initialize beta recursion
+  for t=nTime-1:-1:1    % compute p(xT...xt+1|zt) 
+    beta(:,t) = TT*(beta(:,t+1).*obs(:,t+1)); %... continue beta recursion
+    beta(:,t) = beta(:,t)./sum(beta(:,t));  % normalize 
+  end;
+
+
+function [pi,T,O,LL]=EMstep(data,pi,T,O)
+  D=size(data,1); N=size(data,2); K=length(O);
+  [LL,alpha,beta,obs] = forwardBackward(data,pi,T,O); LL,
+
+  % Compute the marginal probabilities
+  Ez = zeros(K,N); Ez2 = zeros(K,K,N);
+  for t=1:N,
+    Ez(:,t) = alpha(:,t) .* beta(:,t);
+    Ez(:,t) = Ez(:,t)./sum(Ez(:,t));  % normalize
+  end;
+  % and pairwise probabilities
+  for t=2:N,
+    Ez2(:,:,t) = T .* ((obs(:,t).*beta(:,t))*alpha(:,t-1)');% ... fill in pairwise probabilities (see slide)
+    Ez2(:,:,t) = Ez2(:,:,t)./sum(sum(Ez2(:,:,t)));  % normalize
+  end;
+
+  % Maximize ECLL over parameters  
+  for k=1:K,
+    nK = sum(Ez(k,:));
+		%tmp = ones(D,1)*Ez(k,:);
+    O{k}.mu = sum( (ones(D,1)*Ez(k,:)) .* data ,2)/nK; % ...
+		dtmp = data - repmat(O{k}.mu,[1,N]);
+		O{k}.Sig = ((ones(D,1)*Ez(k,:)/nK).*dtmp)*dtmp';
+    %O{k}.Sig = ((ones(D,1)*Ez(k,:)) .* data)*data'/nK; % ...
+  end;
+  T = sum(Ez2,3);  % ...
+  T = T./repmat(sum(T,1),[K,1]); % ...
+
+  %[LLnew,alpha,beta,obs] = forwardBackward(data,pi,T,O); LLnew, LLnew-LL,
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

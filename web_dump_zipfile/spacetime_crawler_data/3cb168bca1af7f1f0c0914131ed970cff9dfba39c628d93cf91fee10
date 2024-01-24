@@ -1,0 +1,3406 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:22:48 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html;charset=Shift_JIS¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueWApache/2.2.15 (Red Hat)Kraw_content¢DtypeEvalueYÔÏ<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>
+Kyoto Stock Center (DGRC), Kyoto Institute of Technology
+</title>
+
+
+<!-- pin info -->
+<meta name="application-name" content="Kyoto Stock Center (DGRC)">
+<meta name="msapplication-starturl" content="/stocks/">
+<!-- icon -->
+<link rel="shortcut icon" href="/stocks/images/favicon.ico">
+
+<style type="text/css">
+body {
+padding-top: 130px;  // for navbar fixed top
+padding-bottom: 40px;
+background-color: #f3f2eb;
+}
+
+
+.container {
+margin: 0 auto;
+max-width: 1000px;
+}
+
+.kyotoflybgcolor {
+background-color: #f3f2eb;
+}
+
+.kyotoflytopcolor {
+background-color: #2f3946;
+}
+
+.navbar-form pull-right{
+color: #ffffff;
+}
+
+/* Custom container */
+
+.container {
+margin: 0 auto;
+}
+.container > hr {
+margin: 60px 0;
+}
+
+.navbar .navbar-inner .brand{
+/*
+  font-weight: bold;
+*/
+  font-size: 18px;
+}
+
+.navbar .navbar-inner {
+padding: 0;
+}
+.navbar .nav {
+margin: 0;
+}
+
+/*
+.navbar .nav li {
+display: table-cell;
+float: none;
+}
+*/
+
+.navbar .nav li a {
+border-left: 1px solid rgba(192,192,192,.75);
+border-right: 0;
+/*
+border-right: 1px solid rgba(192,192,192,.75);
+*/
+text-align: left;
+}
+
+.navbar .nav>li>a{
+  font-size: 14px;
+/*
+  font-weight: bold;
+*/
+}
+
+.navbar .nav .dropdown-menu li a {
+border-left: 0;
+}
+
+/* navbar is table-cell, but dropdown is not table-cell 
+.navbar .nav li .dropdown-menu li
+{
+display: block;
+}
+*/
+
+.lowerpanel, .searchmain {
+	background-color: #ffffff;
+	border-width: 1px;
+	border-color: #e8e6d8;
+	border-style: solid;
+}
+.tab-content{
+	background-color:#fcffff;
+	border-radius: 5px;
+}
+  </style>
+
+<style type="text/css">
+FONT size setting A:link {
+	COLOR: #145391; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #145391; TEXT-DECORATION: none
+}
+A:active {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+A {
+	TEXT-DECORATION: none
+}
+.jsub {
+	FONT-SIZE: 16px
+}
+.jjjj {
+	FONT-SIZE: 14px
+}
+.jjj {
+	FONT-SIZE: 12px
+}
+.jj {
+	FONT-SIZE: 10px
+}
+.eee {
+	FONT-SIZE: 12px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.jsub {
+	FONT-SIZE: 14px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+</style>
+
+<script language="JavaScript">
+<!--
+function logout(url, uid){
+    var newwin;
+    var que = '?UID=';
+    var out = '&LOGOUT=1'
+    var url2 = url + que + uid + out;
+    newwin = open(url2, "logout", "menubar=no,toolbar=no,resizable=yes");
+}
+function logout_ed(url){
+    var newwin;
+    var out = '?LOGOUT=1'
+    var url2 = url + out;
+    newwin = open(url2, "logout_ed", "menubar=no,toolbar=no,resizable=yes");
+}
+function login(url){
+    var newwin;
+    uid = get_uid();
+    pass = get_pass();
+    var que = '?UID=';
+    var and = '&PASSWD=';
+    var url2 = url + que + uid + and + pass;
+    newwin = open(url2, "login", "menubar=no,toolbar=no,resizable=yes");
+}
+function login_ed(url){
+    var newwin;
+    eid = get_eid();
+    pass = get_pass();
+    var que = '?EID=';
+    var and = '&PASSWD=';
+    var url2 = url + que + eid + and + pass;
+    newwin = open(url2, "login_ed", "menubar=no,toolbar=no,resizable=yes");
+}
+function get_eid(){
+    var eid;
+    eid = document.login_form.EID.value;
+    return eid;
+}
+function get_uid(){
+    var uid;
+    uid = document.login_form.UID.value;
+    return uid;
+}
+function get_pass(){
+    var pass;
+    pass = document.login_form.PASSWD.value;
+    return pass;
+}
+-->
+</script>
+
+<!-- Bootstrap -->
+
+
+<link rel="stylesheet" href="/stocks/bootstrap/css/bootstrap.kyotofly.css">
+<link rel="stylesheet" href="/stocks/bootstrap/css/bootstrap-responsive.css">
+<link rel="stylesheet" href="/stocks/bootstrap/css/kyotofly2.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- smart phone -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+<!--       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> -->
+    <![endif]-->
+
+  </head>
+
+<body bgcolor="#f3f2eb">
+<div class="kyotoflybgcolor">
+
+<!-- Navigation Bar -->
+<div class="navbar">
+ <div class="navbar navbar-fixed-top">
+  <div class="kyotoflybgcolor">
+
+<table style="border-collapse: separate;border-spacing: 0px; width:100%;">
+ <tr>
+  <td>
+   <a href="http://kyotofly.kit.jp/stocks/"><img src="/stocks/images/kyotofly-logo.png"><img src="/stocks/images/kyoto-kyoto.png"></a>
+  </td>
+  <td style="text-align: center;">
+   <img src="/stocks/images/kyoto-dgrc-houses-large.png">
+  </td>
+  <td align="right" valign="bottom">
+<!--   <td style="text&#45;align: right;"> -->
+   <form method="POST" name="login_form" action="/cgi-bin/stocks/usrmenu.cgi"  target="_blank">
+   <table style="border-collapse: separate;border-spacing: 0px;">
+   <font style="color:#777777;">
+    <tr>
+     <td align="left">
+
+
+
+      ID
+     </td>
+     <td>
+      <input class="input-mini" name="UID" maxlength="4" placeholder="DGRC ID" type="text">
+     </td>
+    </tr>
+    <tr>
+     <td align="left">
+      PWD
+     </td>
+     <td>
+      <input class="input-mini" name="PASSWD" placeholder="Password" type="password">
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td align="left">
+      <input value="Login" onclick="login('/cgi-bin/stocks/user_regist.cgi')" class="btn" type="button">
+
+		
+     </td>
+    </tr>
+   </font>
+   </table> 
+   </form>
+  </td>
+ </tr>
+   </table>
+
+
+
+  <div class="navbar-inner">
+    <div class="container">
+
+   <a class="brand" href="http://www.dgrc.kit.ac.jp/">Kyoto DGGR</a>
+
+   <ul class="nav">
+    <li>	 
+	 <a href="http://kyotofly.kit.jp/stocks/">&nbsp;HOME&nbsp;</a>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-search icon-white"></i>
+	 Advanced Search
+	 </a>
+      <ul class="dropdown-menu">
+       <li><a href="http://kyotofly.kit.jp/cgi-bin/stocks/data_search.cgi">Search Form</a></li>
+       <li class="divider"></li>
+       <li> <a href="/cgi-bin/stocks/search_res_dl.cgi">Download All Stock List</a></li> 
+      </ul>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-check icon-white"></i>
+	 Getting Started
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://kyotofly.kit.jp/stocks/howtoregister.html">Registration</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/guidance.html#payment">Fees and Payment</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/import_permit.html">Import Permit</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/guidance.html#shipping_schedule">Shipping Schedule</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/guidance.html">Guidance</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/dgrcqandae.php">Qs &amp; As</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/documents/AcquisitionPolicy_E.html">Acquisition Policy</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/documents/HowToDonateStocks_E.html">How to Donate Stocks</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/documents/AcquisitionPolicy_J.html">Acquisition Policy (J)</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/documents/HowToDonateStocks_J.html">How to Donate Stocks (J)</a></li>
+	  <li class="divider"></li>
+
+	  <li><a href="http://kyotofly.kit.jp/stocks/disclaimer.html">Disclaimer</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://kyotofly.kit.jp/cgi-bin/stocks/password_reminder.cgi">Get a Password Again</a></li>
+	 </ul>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-leaf icon-white"></i>
+	 NBRP Drosophila
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://fruitfly.jp/fly/flystock/physicalMap/chromosomeList.jsp" target="_blank">Genome Viewer</a></li>
+	  <li><a href="http://www.shigen.nig.ac.jp/fly/nigfly/" target="_blank">NIG-Fly</a></li>
+	  <li><a href="http://kyotofly.kit.jp/ehime/" target="_blank">Ehime-Fly</a></li>
+	  <li><a href="http://www.shigen.nig.ac.jp/fly/kyorin/" target="_blank">Kyorin-Fly</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://www.nbrp.jp/" target="_blank">National BioResource Project</a></li>
+	 </ul>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-star  icon-white"></i>
+	 Other Links
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://flystocks.bio.indiana.edu/" target="_blank">Bloomington Drosophila Stock Center</a></li>
+	  <li><a href="http://flybase.org/" target="_blank">FlyBase</a></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/%7Ejdd/" target="_blank">JDD</a></li>
+	 </ul>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-pencil icon-white"></i>
+	 Contact Us
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://kyotofly.kit.jp/cgi-bin/stocks/webmail_usr.cgi">Send a Message</a></li>
+	  <li><a href="http://rrc.nbrp.jp/gatewayAction.do?speciesId=5&target=Entry" target="_blank">Reference Feedback (RRC)</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/about/index.html">About Us</a></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/research/index.html">Research</a></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/news/news-en/index.html">News</a></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/contact/index.html">Maps &amp; Directions</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/en/" target="_blank">Department of Drosophila Genomics and Genetic Resources</a></li>
+	  <li><a href="http://www.kit.ac.jp/english/" target="_blank">Kyoto Instiute of Technology</a></li>
+	 </ul>
+    </li>
+    <li class="dropdown">
+	 <a>&nbsp;</a> <!-- dummy -->
+    </li>
+   </ul>
+
+   <ul class="nav pull-right">
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-info-sign icon-white"></i>
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href=""><i class="icon-exclamation-sign"></i>&nbsp;
+	       DGRC ID: Issued 4-digit number, as 1111</a></li>
+	  <li><a href=""><i class="icon-exclamation-sign"></i>&nbsp;
+	       Password (PWD): Issued,
+	       consisted of random characters and numbers,
+	       not easy to memorize
+	       </a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://kyotofly.kit.jp/cgi-bin/stocks/password_reminder.cgi">Get a Password Again</a></li>
+	 </ul>
+	 </li>
+   </ul>
+   
+
+
+   </div><!-- /.navbar-inner -->
+  </div><!-- /.container -->
+ </div><!-- /.kyotoflybgcolor -->
+ </div><!-- /.navbar navbar-fixed-top -->
+</div><!-- /.navbar -->
+
+
+<!-- End of Navigation Bar -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+
+<!--
+Main Search Form
+-->
+<div class="container">
+<div class="row">
+<div class="span1"></div>
+<div class="span8">
+
+
+  <center>
+
+<!- Search tab start -->
+
+    <ul class="nav nav-tabs">
+    <li class="active"><a href="#Simple" data-toggle="tab">Simple</a></li>
+    <li><a href="#StockNum" data-toggle="tab">Stock#</a></li>
+    <li><a href="#GeneSymbol" data-toggle="tab">Gene Symbol</a></li>
+    <li><a href="#Insertionsite" data-toggle="tab">Insertion Site</a></li>
+    <li><a href="#Cytolocation" data-toggle="tab">Cytolocation</a></li>
+    <!-- <li><a href="#RelatedGene" data&#45;toggle="tab">Related Gene</a></li> -->
+    <li><a href="#Expression" data-toggle="tab">Expression</a></li>
+    <!-- <li><a href="#Chromosome" data&#45;toggle="tab">Chromosome</a></li> -->
+    <!-- <li><a href="#OriginalNum" data&#45;toggle="tab">Original#</a></li> -->
+    <li><a href="#Download" data-toggle="tab">Download</a></li>
+    </ul>
+
+    <div id="SearchTab" class="tab-content">
+    <div class="tab-pane fade in active" id="Simple">
+    <p>&nbsp;</p>
+    <div style="font-size:xx-large">   
+    <strong>
+    Search
+    </strong>
+    </div>
+    <p>&nbsp;</p>
+    <form class="form-search" action="/cgi-bin/stocks/search_res_list.cgi" method="POST" name="myform">
+    <input class="input-xxlarge search-query" name="KEYWOD" placeholder="input gene symbols, a stock number, any keywords" type="text">
+    <input value="Partly" name="searchtype" type="hidden">
+    <br>Exclude <input class="input-xlarge search-query" name="NOTWORD" placeholder="input keywords excluded from results" type="text">
+    <br>Search Method 
+    <select name="SRC_TP">
+     <option value="AND" selected="selected">AND</option>
+     <option value="OR">OR</option>
+    </select>
+   <p>&nbsp;</p>
+    <input value="Partly" name="searchtype" type="hidden">
+    <button type="submit" class="btn">Go</button>
+    </form>
+    </div>
+
+    <div class="tab-pane fade" id="StockNum">
+    <form class="form-search" action="/cgi-bin/stocks/search_res_list.cgi" method="POST" name="myform">
+    <p>&nbsp;</p>
+    <div style="font-size:x-large">   
+    Stock Number
+    </div>
+    <p>&nbsp;</p>
+    <textarea name="DG_NUM" cols="60" rows="4" placeholder= 
+    "Use 6 digit numbers only (example 123456). &#13;&#10;Separate numbers by space, comma, semicolon or new line" class="form-control"></textarea>
+    <p>&nbsp;</p>
+    <button type="submit" class="btn">Search</button>
+    </form>
+    </div>
+
+    <div class="tab-pane fade" id="OriginalNum">
+    <form class="form-search" action="http://kyotofly.kit.jp/cgi-bin/stocks/search_res_list.cgi" method="POST" name="myform">
+    <p>&nbsp;</p>
+    <div style="font-size:x-large">   
+    Original Number
+    </div>
+    <p>&nbsp;</p>
+    <input class="input-xxlarge search-query" name="OR_NUM" placeholder="input original number(s) or symbol(s)" type="text">
+    <button type="submit" class="btn">Search</button>
+    </form>
+    </div>
+
+    <div class="tab-pane fade" id="Insertionsite">
+    <form class="form-search" action="http://kyotofly.kit.jp/cgi-bin/stocks/search_res_list.cgi" method="POST" name="myform">
+    <p>&nbsp;</p>
+    <div style="font-size:x-large">   
+    Insertion site (cytological region) 
+    </div>
+    <p>&nbsp;</p>
+    <input name="P__FRM" size="2" placeholder="95">&nbsp;-&nbsp;<input name="P___TO" size="2" placeholder="99">
+    <button type="submit" class="btn">Search</button>
+    </form>
+    </div>
+
+    <div class="tab-pane fade" id="Cytolocation">
+    <form class="form-search" action="http://kyotofly.kit.jp/cgi-bin/stocks/search_res_list.cgi" method="POST" name="myform">
+    <p>&nbsp;</p>
+    <div style="font-size:x-large">   
+    Chromosome abberation breakpoints
+    </div>
+    <p>&nbsp;</p>
+    <input name="CL_FRM" size="2" placeholder="95">&nbsp;-&nbsp;<input name="CL__TO" size="2" placeholder="99">
+    <button type="submit" class="btn">Search</button>
+    </form>
+    </div>
+
+    <div class="tab-pane fade" id="RelatedGene">
+    <form class="form-search" action="http://kyotofly.kit.jp/cgi-bin/stocks/search_res_list.cgi" method="POST" name="myform">
+    <p>&nbsp;</p>
+    <div style="font-size:x-large">   
+    Related Gene
+    (partial match, case-sensitive)    
+    </div>
+    <p>&nbsp;</p>
+    <input class="input-xxlarge search-query" name="RE_GEN" placeholder="input gene symbols" type="text"> 
+    <br>Exclude <input class="input-xlarge search-query" name="GENOTWORD" placeholder="input keywords excluded from results" type="text">
+    <p>&nbsp;</p>
+    <button type="submit" class="btn">Search</button>
+    </form>
+    </div>
+
+    <div class="tab-pane fade" id="Chromosome">
+    <form class="form-search" action="http://kyotofly.kit.jp/cgi-bin/stocks/search_res_list.cgi" method="POST" name="myform">
+    <p>&nbsp;</p>
+    <div style="font-size:x-large">   
+    Chromosome
+    </div>
+    <p>&nbsp;</p>
+    <input class="input-xxlarge search-query" name="CHROMO" placeholder="input chromosome number you are interested in" type="text">
+    <button type="submit" class="btn">Search</button>
+    </form>
+    </div>
+
+    <div class="tab-pane fade" id="GeneSymbol">
+    <form class="form-search" action="http://kyotofly.kit.jp/cgi-bin/stocks/search_res_list.cgi" method="POST" name="myform">
+    <p>&nbsp;</p>
+    <div style="font-size:x-large">   
+    Gene Symbols in Genotype (case-sensitive)
+    </div>
+    <p>&nbsp;</p>
+    <input class="input-xxlarge search-query" name="GE_SYM" placeholder="gene symbols in stock genotype: case-sensitive search" type="text">
+    <br>Exclude <input class="input-xlarge search-query" name="NOTWORD" placeholder="input keywords excluded from results" type="text">
+    <p>&nbsp;</p>
+    <button type="submit" class="btn">Search</button>
+    </form>
+    </div>
+
+
+    <div class="tab-pane fade" id="Expression">
+    <form class="form-search" action="http://kyotofly.kit.jp/cgi-bin/stocks/search_res_list.cgi" method="POST" name="myform">
+    <p>&nbsp;</p>
+    <div style="font-size:x-large">   
+    Expression/Phenotype
+    </div>
+    <p>&nbsp;</p>
+    <table border="1" cellpadding="6" cellspacing="1" width="90%">
+     <tbody>                
+     <tr>
+      <td nowrap="nowrap"><b>Embryo</b></td>
+      <td><input name="EMBRYO"></td>
+     </tr>
+     <tr>
+      <td nowrap="nowrap"><b>Larvae</b></td>
+      <td><input name="LARVAE"></td>
+     </tr>
+     <tr>
+      <td nowrap="nowrap"><b>Adult</b></td>
+      <td><input name="ADU_LT"></td>
+     </tr>
+     <tr>
+      <td nowrap="nowrap"><b>Lethality</b></td>
+      <td>
+       <select name="LETHAL">
+	<option value="" selected="selected">---Select--</option>
+	<option value="S">Semi-lethal</option>
+	<option value="L">lethal</option>
+       </select>
+      </td>
+     </tr>
+     <tr>
+      <td><b>Photo available</b></td>
+      <td>
+       <input name="PHOTOE" value="1" type="checkbox">Embryo<br>
+       <input name="PHOTOL" value="1" type="checkbox">Larval<br>
+       <input name="PHOTOA" value="1" type="checkbox">Adult
+      </td>
+     </tr>
+     </tbody>                
+     </table>
+    <p>&nbsp;</p>
+    <button type="submit" class="btn">Search</button>
+    </form>
+    </div>
+
+    <div class="tab-pane fade" id="Download">
+    <p>&nbsp;</p>
+    <p>
+    <div style="font-size:x-large">   
+    <a href="https://kyotofly.kit.jp/cgi-bin/stocks/search_res_dl.cgi">
+    Download All Stock List
+    </a>
+    </div>
+    </p>
+    </div>
+
+    <p>&nbsp;</p>
+    </div>
+
+
+</div>
+
+<div class="span1"></div>
+
+</div>
+
+  </center>
+<p>&nbsp;</p>
+<!- Search tab End -->
+
+</div>
+<!--
+End
+Main Search Form
+-->
+
+
+<!--
+Lower Panel
+-->
+
+<div class="container">
+ <div class="lowerpanel"><!-- colour settings -->
+  <div class="row-fluid">
+   <div class="span8">
+
+
+<table width="100%" bgcolor="#ffffff" cellpadding="5" cellspacing="0">
+ <tbody>
+
+ <tr bgcolor="#b9e2ff">
+  <td class="jsub" nowrap="nowrap" align="center"  bgcolor="#ffffff">
+   <font style="color:#303d5b; font-size:150%">
+   <b>Predefined Subsets</b>
+   </font>
+  </td>
+ </tr><tr>
+  <td>
+</td><!-- dummy space -->
+ </tr>
+ </tbody>
+</table>
+
+
+<!--
+Lower Panel . Left 
+-->
+    <div class="container-fluid">
+     <div class="row-fluid">
+      <div class="span6">
+<p>
+<a href="/cgi-bin/stocks/search_res_dl.cgi" class="btn btn-primary btn-lg" role="button">
+   <font style="color:#ffffff">
+Download All Stock List
+   </font>
+</a>
+</p>
+
+<table class="table table-bordered" width="100%" cellpadding="6" cellspacing="1">
+ <tbody>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/younggenes.html">
+   Young genes
+   </a>
+   </b>
+  </td>
+  <td>
+   Young genes with mutant or insertion stocks 
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/disease_ontology.html">
+   Disease Ontology
+   </a>
+   </b>
+  </td>
+  <td>
+   Strains of Which Mutation and/or Insertion Is Related to Human Disease
+  </td>
+ </tr>
+
+
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/miRNA.html">
+   miRNA
+   </a>
+   </b>
+  </td>
+  <td>
+   miRNA knockout and UAS miRNA collections
+  </td>
+ </tr>
+
+
+
+
+
+
+
+
+
+ </tbody>
+</table>
+
+<table class="table table-bordered" width="100%" cellpadding="6" cellspacing="1">
+ <tbody>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/NP_lines.html">
+   NP lines
+   </a>
+   </b>
+  </td>
+  <td>
+   GAL4 enhancer trap lines
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/GAL4.html">
+   GAL4 / GAL80
+   </a>
+   </b>
+  </td>
+  <td>
+   Stage- and/or tissue-specific, or non-specific expression
+   of GAL4 / GAL80 blocks GAL4 activity
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/GS_lines.html">
+   GS lines
+   </a>
+   </b>
+  </td>
+  <td>
+   Gene Search System: Forced expression induced by GAL4
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/LA_lines.html">
+   LA lines
+   </a>
+   </b>
+  </td>
+  <td>
+   Mae-UAS.6.11 Insertions: Misexpression induced by GAL4
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/UAS.html">
+   UAS
+   </a>
+   </b>
+  </td>
+  <td>
+   UAS responders
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+
+<table class="table table-bordered" width="100%" cellpadding="6" cellspacing="1">
+ <tbody>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/FlyTrap.html">
+   FlyTrap
+   </a>
+   </b>
+  </td>
+  <td>
+   GFP fusion protein expression lines (Protein Trap)
+  </td>
+ </tr>
+ 
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/CPTI.html">
+   CPTI
+   </a>
+   </b>
+  </td>
+  <td>
+   Cambridge Protein Trap Insertion<br>
+   YFP fusion protein expression lines
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/GFP_YFP_RFP_etc.html">
+   GFP, YFP, RFP etc.
+   </a>
+   </b>
+  </td>
+  <td>
+   Fluorescent protein insertion lines
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+<table class="table table-bordered" width="100%" cellpadding="6" cellspacing="1">
+ <tbody>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/phiC31.html">
+   phiC31 (&phi;C31)
+   </a>
+   </b>
+  </td>
+  <td>
+   phiC31 Integration System Components
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/P_element_mutagenesis.html">
+   P element mutagenesis 	
+   </a>
+   </b>
+  </td>
+  <td>
+   P element mutagenesis starter kits and controls
+  </td>
+ </tr>
+ </tbody>
+</table>
+   
+<table class="table table-bordered" width="100%" cellpadding="6" cellspacing="1">
+ <tbody>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/Wild_type_stocks.html">
+   Wild type stocks
+   </a>
+   </b>
+  </td>
+  <td>
+   Wild type stocks of <i>D. melanogaster</i>
+  </td>
+ </tr>
+
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/Other_species.html">
+   Other species
+   </a>
+   </b>
+  </td>
+  <td>
+   Species other than <i>D. melanogaster</i>
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+      </div><!-- span6 -->
+
+<!-- 	 Predefined subsets left ends -->
+<!-- 	 Predefined subsets right -->
+
+      <div class="span6">
+
+<table class="table table-bordered" width="100%" cellpadding="6" cellspacing="1">     
+ <tbody>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/MARCM.html">
+   MARCM
+   </a>
+   </b>
+  </td>
+  <td>
+   Mosaic Analysis with a Repressible Cell Marker system
+  </td>
+ </tr>
+
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/EMS_X_lethals.html">
+   EMS X lethals
+   </a>
+   </b>
+  </td>
+  <td>
+   X lethal lines with FRT from Bellen's lab
+  </td>
+</tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/FRT-lethal.html">
+   FRT-lethal (BruinFly)
+   </a>
+   </b>
+  </td>
+  <td>
+   Lethal lines with FRT and ey-FLP
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/FRT.html">
+   FRT
+   </a>
+   </b>
+  </td>
+  <td>
+   FRT (FLP recombination target) strains
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/FRT.html">
+   FLP
+   </a>
+   </b>
+  </td>
+  <td>
+   Flipase producing lines
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+<table class="table table-bordered" width="100%" cellpadding="6" cellspacing="1">
+ <tbody>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/DrosDel.html">
+   DrosDel lines
+   </a>
+   </b>
+  </td>
+  <td>
+   Deletion lines generated by FRT-mediated recombination
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/Deficiency_Kits.html">
+   Deficiency Kits
+   </a>
+   </b>
+  </td>
+  <td>
+   Selected deficiency strains
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/Deficiencies.html">
+   Deficiencies
+   </a>
+   </b>
+  </td>
+  <td>
+   Genome wide deficiencies
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/RSlines.html">
+   RS lines
+   </a>
+   </b>
+  </td>
+  <td>
+   FRT-carrying insertions can be used as docking sites
+  </td>
+ </tr>
+ </tbody>
+</table>
+
+<table class="table table-bordered" width="100%" cellpadding="6" cellspacing="1">
+ <tbody>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/Duplication_Kit_1.html">
+   Duplication Kit   1 
+   </a>
+   </b>
+  </td>
+  <td>
+   Selected duplication strains for the X chromosome
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/TYA.html">
+   T(1;Y) &amp; T(Y;A)
+   </a>
+   </b>
+  </td>
+  <td>
+   Translocations between X and Y, or between Y and autosomes
+  </td>
+ </tr>
+ </tbody>
+</table>
+      
+<table class="table table-bordered" width="100%" cellpadding="6" cellspacing="1">
+ <tbody>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/Mapping.html">
+   Mapping
+   </a>
+   </b>
+  </td>
+  <td>
+   Marker strains useful for recombination (classical) mapping
+  </td>
+ </tr>
+ <tr bgcolor="#ffffff">
+  <td width="25%" bgcolor="#f3f2eb">
+   <b>
+   <a href="http://kyotofly.kit.jp/stocks/documents/Balancers.html">
+   Balancers
+   </a>
+   </b>
+  </td>
+  <td>
+   Stocks carrying balancer(s)
+  </td>
+ </tr>
+ </tbody>
+</table>
+     <!--  Predefined subsets right ends -->
+
+      </div><!-- span6 -->
+      </div><!-- row-fluid -->
+    </div><!-- container-fluid -->
+   </div><!-- span8 -->
+
+<!--
+End 
+Lower Panel . Left 
+-->
+
+<!--
+Lower Panel . Right
+-->
+   <div class="span4">
+
+<!-- 	 Announcement Table Start  -->
+
+<!-- main table : announcement start -->
+<!-- dummy space -->
+<table width="87%" cellpadding="5" cellspacing="0" border="0">
+ <tr>
+  <td class="jsub" nowrap="nowrap" style ="background-color: #ffffff; height:1px;"></td>
+ </tr>
+</table>
+
+<table width="87%" cellpadding="5" cellspacing="0" style="border: 1px #efb7c7 solid; border-top: 2px #ca3454 solid;">
+<!-- <table width="87%" border="0" cellpadding="5" cellspacing="0"> -->
+
+ <tbody>
+ <tr>
+  <td class="jsub" nowrap="nowrap" style ="background-color: #f9f3f5; color: #f31e5a; border-bottom: 1px #efb7c7 solid;">
+<!--   <td class="jsub" nowrap="nowrap" bgcolor="#486e99"> -->
+<!--   <td class="jsub" nowrap="nowrap" bgcolor="#b9e2ff"> -->
+   &nbsp;
+   <b>
+<!-- 	 <font color="#333333"> -->
+	 Announcement  (01/07/2019)
+   </b>
+  </td>
+ </tr>
+ <tr>
+  <td valign="top" bgcolor="#ffffff">
+   
+<style type="text/css">
+h5:before {
+   content: url(/stocks/images/title-bg.gif);
+   &nbsp;
+}
+
+
+td {
+line-height:normal;
+}
+</style> 
+
+
+
+                   <!--        
+
+        <H4>End-of-year Shipping and <br>Winter Holidays</h3>
+
+<table border="1" cellspacing="0" align="center">
+
+ <tr>
+
+  <td>Final shipment:  </td>
+
+  <td align="right">19 December 2018</td>
+
+ </tr>
+
+ <tr>
+
+  <td>Order deadline: </td>
+
+  <td align="right">13 December 2018<br>3:00 p.m. (GMT)</td>
+
+ </tr>
+
+ <tr>
+
+  <td colspan=2 align="center" bgcolor="#660000"><font
+
+color="#FFFFFF"><i>Holiday Shipment Closing</i></font></td>
+
+ </tr>
+
+ <tr>
+
+  <td>First shipment: </td>
+
+  <td align="right">9 January 2019</td>
+
+</table>
+
+<p>
+
+Orders received after 13 December 2018 3:00 p.m. (GMT) 
+
+will be shipped on 9 January 2019. <br>
+
+<div align="right">22 October 2018</div>
+
+ -->
+
+                   <!--        
+
+                                                <h5>
+
+<font color="red">
+
+System Maintenance
+
+</font>
+
+</h5> 
+
+<center>
+
+From 00:00 20 October 2018 GMT<br>[9:00 20 October 2018 JST]<br>
+
+<br>
+
+To 10:00 20October 2018 GMT<br>[19:00 20 October 2018 JST]<br>
+
+</center>
+
+<br>
+
+<p>The services of all of the Internet service of 
+
+the Kyoto Institute of Technology, including website, email and others,
+
+will be temporarily suspended 
+
+during the period of time stated above to a scheduled system
+
+maintenance.<br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">12 October 2018</div>
+
+ -->
+
+                                    <!--        
+
+
+
+                                                <h5>
+
+<font color="red">
+
+Summer Holidays
+
+</font>
+
+</h5> 
+
+<center>
+
+From 11 August 2018<br>
+
+<br>
+
+To 19 August 2018<br>
+
+</center>
+
+<br>
+
+<p>Orders received after 2 August 2018 3:00 p.m. (GMT) 
+
+will be shipped on 22 August 2018. <br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">10 July 2018</div>
+
+ -->
+
+
+
+                            <!--        
+
+                                                       <h5>
+
+<font color="red">
+
+Acceptance of orders will be suspended due to system maintenance
+
+</font>
+
+</h5> 
+
+<center>
+
+From evening on 19 April 2018<br>
+
+<br>
+
+To morning on 27 April 2018<br>
+
+</center>
+
+<br>
+
+<p>
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">30 March 2018</div>
+
+ -->
+
+
+
+                    <!--        
+
+                                <h5>
+
+<font color="red">
+
+Spring Holidays
+
+</font>
+
+</h5> 
+
+<center>
+
+From 28 April 2018<br>
+
+<br>
+
+To 6 May 2018<br>
+
+</center>
+
+<br>
+
+<p>Orders received after 19 April 2018 3:00 p.m. (GMT) 
+
+will be shipped on 9 May 2018. <br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">30 March 2018</div>
+
+ -->
+
+                      
+
+           <!--        
+
+<H4>End-of-year Shipping and <br>Winter Holidays</h3>
+
+<table border="1" cellspacing="0" align="center">
+
+ <tr>
+
+  <td>Final shipment:  </td>
+
+  <td align="right">6 December 2017</td>
+
+ </tr>
+
+ <tr>
+
+  <td>Order deadline: </td>
+
+  <td align="right">30 November 2017<br>3:00 p.m. (GMT)</td>
+
+ </tr>
+
+ <tr>
+
+  <td colspan=2 align="center" bgcolor="#660000"><font
+
+color="#FFFFFF"><i>Holiday Shipment Closing</i></font></td>
+
+ </tr>
+
+ <tr>
+
+  <td>First shipment: </td>
+
+  <td align="right">10 January 2018</td>
+
+</table>
+
+<p>
+
+Orders received after 30 November 2017 3:00 p.m. (GMT) 
+
+will be shipped on 10 January 2018. <br>
+
+<div align="right">29 November 2017</div>
+
+ -->
+
+
+
+           <!--        
+
+                                        <h5>
+
+<font color="red">
+
+System Maintenance
+
+</font>
+
+</h5> 
+
+<center>
+
+From 23:30 20 October 2017 GMT<br>[8:30 21 October 2017 JST]<br>
+
+<br>
+
+To 10:30 21 October 2017 GMT<br>[19:30 21 October 2017 JST]<br>
+
+</center>
+
+<br>
+
+<p>The services of all of the Internet service of 
+
+the Kyoto Institute of Technology, including website, email and others,
+
+will be temporarily suspended 
+
+during the period of time stated above to a scheduled system
+
+maintenance.<br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">17 October 2017</div>
+
+ -->
+
+
+
+   <!-- 
+
+                                        <h5>
+
+<font color="red">
+
+System Maintenance
+
+</font>
+
+</h5> 
+
+<center>
+
+From 1:00 14 August 2017 GMT<br>[10:00 14 August 2017 JST]<br>
+
+<br>
+
+To 11:00 15 August 2017 GMT<br>[20:00 15 August 2017 JST]<br>
+
+</center>
+
+<br>
+
+<p>The services of all of the Internet service of 
+
+the Kyoto Institute of Technology, including website, email and others,
+
+will be temporarily suspended 
+
+during the period of time stated above to a scheduled system
+
+maintenance.<br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">10 August 2017</div>
+
+ -->
+
+                                                                                                      
+
+  <!-- 
+
+                                        <h5>
+
+<font color="red">
+
+<h3>Acceptance of orders will be suspended due to system maintenance</h3>
+
+</font>
+
+</h5> 
+
+<center>
+
+From 8:00 20 July 2017 GMT<br>[17:00 20 July 2017 JST]<br>
+
+<br>
+
+To 0:30 21 July 2017 GMT<br>[9:30 21 July 2017 JST]<br>
+
+</center>
+
+<br>
+
+<p>
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">20 July 2017</div>
+
+ -->
+
+
+
+   <!-- 
+
+                                        <h5>
+
+<font color="red">
+
+Summer Holidays
+
+</font>
+
+</h5> 
+
+<center>
+
+From 11 August 2017<br>
+
+<br>
+
+To 17 August 2017<br>
+
+</center>
+
+<br>
+
+<p>Orders received after 3 August 2017 3:00 p.m. (GMT) 
+
+will be shipped on 23 August 2017. <br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">5 July 2017</div>
+
+ -->
+
+
+
+<p>
+
+
+
+<h5>&#160;New Fee Structure From August 2017</H5>
+
+
+
+<table align="center" border="1">
+
+
+
+  <tbody>
+
+
+
+    <tr>
+
+
+
+     <th>(JPY)
+
+
+
+     </th>
+
+
+
+     <th>Japan
+
+
+
+     </th>
+
+
+
+     <th>Overseas
+
+
+
+     </th>
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+
+      <td>Handling fees per stock</td>
+
+
+
+      <td style="text-align:right">200</td>
+
+
+
+      <td style="text-align:right">195</td>
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+
+      <td>Handling fees per package </td>
+
+
+
+      <td style="text-align:right">1275</td>
+
+
+
+      <td style="text-align:right">1425</td>
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+
+      <td>Postage per package</td>
+
+
+
+      <td colspan="2" style="text-align:center">
+
+
+
+       (actual cost)
+
+
+
+      </td>
+
+
+
+    </tr>
+
+
+
+  </tbody>
+
+
+
+</table>
+
+
+
+<br>
+
+<a href="https://kyotofly.kit.jp/stocks/guidance.html#payment">See "Fees and Payment"</a>
+
+<br>
+
+
+
+
+
+
+
+        <!-- 
+
+                                <h5>
+
+<font color="red">
+
+Spring Holidays
+
+</font>
+
+</h5> 
+
+<center>
+
+From 27 April 2017<br>
+
+<br>
+
+To 7 May 2017<br>
+
+</center>
+
+<br>
+
+<p>Orders received after 20 April 2017 3:00 p.m. (GMT) 
+
+will be shipped on 10 May 2017. <br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">12 April 2017</div>
+
+ -->
+
+ 
+
+       <!-- 
+
+                                <h5>
+
+<font color="red">
+
+Spring Holidays
+
+</font>
+
+</h5> 
+
+<center>
+
+From 27 April 2017<br>
+
+<br>
+
+To 7 May 2017<br>
+
+</center>
+
+<br>
+
+<p>Orders received after 20 April 2017 3:00 p.m. (GMT) 
+
+will be shipped on 10 May 2017. <br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">12 April 2017</div>
+
+ -->
+
+         <!--        
+
+<H4>End-of-year Shipping and <br>Winter Holidays</h3>
+
+<table border="1" cellspacing="0" align="center">
+
+ <tr>
+
+  <td>Final shipment:  </td>
+
+  <td align="right">7 December 2016</td>
+
+ </tr>
+
+ <tr>
+
+  <td>Order deadline: </td>
+
+  <td align="right">1 December 2016<br>3:00 p.m. (GMT)</td>
+
+ </tr>
+
+ <tr>
+
+  <td colspan=2 align="center" bgcolor="#660000"><font
+
+color="#FFFFFF"><i>Holiday Shipment Closing</i></font></td>
+
+ </tr>
+
+ <tr>
+
+  <td>First shipment: </td>
+
+  <td align="right">11 January 2017</td>
+
+</table>
+
+<p>
+
+Orders received after 1 December 2016 3:00 p.m. (GMT) 
+
+will be shipped on 11 January 2017. <br>
+
+<div align="right">21 November 2016</div>
+
+ -->
+
+<!-- 
+
+                                <h5>
+
+<font color="red">
+
+System Maintenance
+
+</font>
+
+</h5> 
+
+<center>
+
+From 23:30 21 October 2016 GMT<br>[8:30 22 October 2016 JST]<br>
+
+<br>
+
+To 10:30 22 October 2016 GMT<br>[19:30 22 October 2016 JST]<br>
+
+</center>
+
+<br>
+
+<p>The services of all of the Internet service of 
+
+the Kyoto Institute of Technology, including website, email and others,
+
+will be temporarily suspended 
+
+during the period of time stated above to a scheduled system
+
+maintenance.<br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">19 October 2016</div>
+
+-->
+
+
+
+
+
+                       <!--
+
+                                                                        <h5>
+
+<font color="red">
+
+System Maintenance
+
+</font>
+
+</h5> 
+
+<center>
+
+<table border="0">
+
+<tr>
+
+<td>
+
+From  
+
+</td>
+
+<td>
+
+&#160; 
+
+</td>
+
+<td>
+
+16 June 2016  
+
+9:00 GMT [18:00 JST] 
+
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+
+To  
+
+</td>
+
+<td>
+
+&#160; 
+
+</td>
+
+<td>
+
+24 June 2016  
+
+1:00 GMT [10:00 JST]
+
+</td>
+
+</tr>
+
+</table>
+
+</center>
+
+ <br>
+
+<p>You can search stocks but cannot order them 
+
+during the period of time stated above to a scheduled system
+
+maintenance.<br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">15 June 2016</div>
+
+
+
+-->
+
+
+
+
+
+                       <!--
+
+<H4>End-of-year Shipping and <br>Winter Holidays</h3>
+
+<table border="1" cellspacing="0" align="center">
+
+ <tr>
+
+  <td>Final shipment:  </td>
+
+  <td align="right">11 December 2013</td>
+
+ </tr>
+
+ <tr>
+
+  <td>Order deadline: </td>
+
+  <td align="right">5 December 2013<br>3:00 p.m. (GMT)</td>
+
+ </tr>
+
+ <tr>
+
+  <td colspan=2 align="center" bgcolor="#660000"><font
+
+color="#FFFFFF"><i>Holiday Shipment Closing</i></font></td>
+
+ </tr>
+
+ <tr>
+
+  <td>First shipment: </td>
+
+  <td align="right">8 January 2014</td>
+
+</table>
+
+<p>
+
+Orders received after 5 December 2013 3:00 p.m. (GMT) 
+
+will be shipped on 8 January 2014. 
+
+-->
+
+<!-- <h5>
+
+<font color="red">
+
+System Maintenance
+
+</font>
+
+</h5> 
+
+<center>
+
+24 October 2014<br>
+
+From 0:00 GMT [9:00 JST] <br>
+
+To 10:00 GMT [19:00 JST] <br>
+
+</center>
+
+&#160;<br>
+
+<p>The services of all of the Internet service of 
+
+the Kyoto Institute of Technology, including website, email and others,
+
+will be temporarily suspended 
+
+during the period of time stated above to a scheduled system
+
+maintenance.<br> 
+
+We apologize for the inconvenience and would appreciate your
+
+understanding.<br>
+
+<div align="right">15 October 2015</div>
+
+-->
+
+<style type="text/css"><!-- H3, H4 {background-color: #ffdab9;}--></style> 
+
+
+
+<!--
+
+
+
+<h4>Deadline Moved Forward: 6 hours</h4>
+
+
+
+Order deadline is 
+
+
+
+<b><font color="#FF2800">08:59 on 20 March 2014</font></b> (GMT),
+
+
+
+6 hours earlier than usual. 
+
+
+
+-->
+
+
+
+<!--<h5>&#160;IMPORTANT: Acceptance of orders will be suspended due to system
+
+maintenance</h5>
+
+
+
+From: <b><font color="#FF2800">09:00 on 20 March 2014</font></b> (GMT)<br>
+
+
+
+To: <b><font color="#FF2800">05:00 on 1 April 2014</font></b> (GMT)<br>
+
+-->
+
+<!--
+
+<h5> 10 August 2015: System Maintenance</h5>
+
+You can search stocks but cannot order.<br>
+
+-->
+
+<!--
+
+No shipping is scheduled on <br>
+
+
+
+<b><font color="#FF2800">2 April 2014</font></b>.<br>
+
+-->
+
+<!--
+
+Thank you for your understanding.<br>
+
+
+
+<div align="right">6 August 2015</div> 
+
+-->
+
+
+
+<a 
+
+
+
+class="twitter-timeline"  
+
+
+
+height="333"
+
+
+
+data-link-color="#ffff00"
+
+
+
+data-chrome="nofooter"
+
+
+
+data-border-color="#efb7c7" // default "#cc0000"
+
+
+
+href="https://twitter.com/kyotofly"  
+
+
+
+data-widget-id="345376015331233792">
+
+
+
+Tweets by @kyotofly
+
+
+
+</a>
+
+
+
+
+
+
+
+<script>
+
+
+
+!function(d,s,id){
+
+
+
+
+
+
+
+  var js, fjs=d.getElementsByTagName(s)[0],
+
+p=/^http:/.test(d.location)?'http':'https';
+
+
+
+    if(!d.getElementById(id)){
+
+
+
+      js=d.createElement(s);
+
+
+
+      js.id=id;
+
+
+
+      js.src=p+"://platform.twitter.com/widgets.js";
+
+
+
+      fjs.parentNode.insertBefore(js,fjs);
+
+
+
+    }
+
+
+
+} 
+
+
+
+(document,"script","twitter-wjs");
+
+
+
+</script>
+
+
+
+<p>
+
+
+
+<!-- 
+
+
+
+<h5>&#160;New Fee Structure From April 2014</H5>
+
+
+
+<!-- We are pleased to announce that Kyoto Institute of Technology has -->
+
+
+
+<!-- made a new contract with a company providing credit card payment -->
+
+
+
+<!-- service and therefore that handling fees are down by 7 JPY per -->
+
+
+
+<!-- stock.  This will be effective on April 1, 2013. -->
+
+
+
+<!-- <p> -->
+
+
+
+<!-- 
+
+
+
+<table align="center" border="1">
+
+
+
+  <tbody>
+
+
+
+    <tr>
+
+
+
+     <th>(JPY)
+
+
+
+     </th>
+
+
+
+     <th>Japan
+
+
+
+     </th>
+
+
+
+     <th>Overseas
+
+
+
+     </th>
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+
+      <td>Handling fees per stock</td>
+
+
+
+      <td style="text-align:right">200</td>
+
+
+
+      <td style="text-align:right">195</td>
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+
+      <td>Handling fees per package </td>
+
+
+
+      <td style="text-align:right">1275</td>
+
+
+
+      <td style="text-align:right">1375</td>
+
+
+
+    </tr>
+
+
+
+    <tr>
+
+
+
+      <td>Postage per package</td>
+
+
+
+      <td colspan="2" style="text-align:center">
+
+
+
+       (actual cost)
+
+
+
+<!--<a href="http://kyotofly.kit.jp/stocks/postalinfo.html">Postal rate for
+
+each destination</a>-->
+
+
+
+<!-- <a href="http://kyotofly.kit.jp/stocks/postalinfo_ja.html"
+
+target=_blank>Japan</a><br> -->
+
+
+
+<!-- <a href="http://kyotofly.kit.jp/stocks/postalinfo_en.html"
+
+target=_blank>Overseas</a> -->
+
+
+
+      </td>
+
+
+
+    </tr>
+
+
+
+  </tbody>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+<h5>&#160;Users in USA</h5>
+
+
+
+Import permit was changed by USDA. 
+
+
+
+If you have a courtesy permit and a Letter of No Jurisdiction, 
+
+please upload both of the document during order process.<br />
+
+<!-- please send us both of the document to us by email.<br />-->
+
+
+
+If you have a courtesy permit, but have not a Letter of No Jurisdiction, 
+
+
+
+please send us a real Blue/White label. <br />
+
+
+
+If you have a standard permit, please send us a real Blue/White or Red/White label.<br />
+
+
+
+<div align="right">
+
+
+
+1 April 2014
+
+
+
+</div>
+
+
+
+
+
+
+
+<!--
+
+
+
+<h4>No Shipment on 1 May to Users in Japan</h4>
+
+
+
+To avoid the possibility of delay in delivery before holidays,
+
+
+
+we will not ship fly stock to the users in Japan on the 1st of May 2013.
+
+
+
+If you would like to ship your order on the 1st of May, please let us know.
+
+
+
+We will ship stocks to the users outside Japan as usual.
+
+
+
+-->
+
+
+
+
+
+
+
+<!--
+
+
+
+<h3>No Shipment During Winter Holidays</h3>
+
+
+
+<p> 
+
+
+
+<table border="1" align="center">
+
+
+
+ <tr>
+
+
+
+  <td bgcolor="#660000"><font color="#FFFFFF">From</font></td>
+
+
+
+  <td>Dec-20-2010</td>
+
+
+
+  <td bgcolor="#660000"><font color="#FFFFFF">To</font></td>
+
+
+
+  <td>Jan-12-2011</td>
+
+
+
+ </tr>
+
+
+
+</table>
+
+
+
+</p>
+
+
+
+
+
+
+
+<h3>Acceptance of orders will be suspended due to system maintenance</h3>
+
+
+
+From <b><font color="red">17:00 on Dec-17-2010</font></b> to <b><font
+
+
+
+ color="red">13:00 on Jan-12-2011</font></b> (Japan Standard Time)
+
+
+
+-->
+
+
+
+
+
+
+
+<!-- --><!-- Page updated: 28 October 2010 
+
+
+
+--><!-- 12:00 on 16-August-2010 ~ 18:00 on 18-August-2010 (Japan Standard
+
+Time) 
+
+
+
+--><!-- Page updated: 12 August 2010 --></p>
+
+
+
+
+
+
+
+<h5>&#160;Top Page Updated</H5>
+
+Search forms have been separated into tabs and located on the top page. 
+
+<div align="right">12 April 2017</div>
+
+<!-- 
+
+Drop-down menu was installed.
+
+<div align="right">2 April 2012</div>
+
+-->
+
+
+
+
+
+<!--16-jan-2012-->
+
+
+
+<h5>&#160;Fly Delivery by Express Mail System (EMS)</H5>
+
+
+
+The fly stocks are admitted by Japan Post Service Co., Ltd. to be delivered
+
+
+
+by Express Mail Service (EMS): a traceable courier service to some
+
+
+
+countries. EMS provides Item Numbers to trace packages, and significantly
+
+
+
+fast delivery. Please select Air Mail or EMS to send fly stocks. 
+
+
+
+<!-- For
+
+
+
+details, see New Fee System below.
+
+
+
+-->
+
+
+
+<br>
+
+
+
+<!--16-jan-2012 end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>&#160;Improved! Advanced Search</H5>
+
+
+
+<!-- Predefined sebset was updated. -->
+
+
+
+You can search for stocks using 
+
+
+
+<a href="http://kyotofly.kit.jp/stocks/GETDB/getdb.html">GETDB</a>
+
+
+
+type search boxes. 
+
+
+
+Start at 
+
+
+
+<!-- Have a look at the -->
+
+
+
+<a href="http://kyotofly.kit.jp/cgi-bin/stocks/data_search.cgi">
+
+
+
+the Advanced Search
+
+
+
+<!-- page -->
+
+
+
+</a>. 
+
+
+
+<div align="right">9 April 2010</div><!-- Page updated: 17 June 2009 --> 
+
+
+
+
+
+
+
+<!--
+
+
+
+<h3>Stocks from the Szeged Stock Centre are Now Available</h3>
+
+
+
+More than 1,500 lines from Szeged Stock Centre are open to the public.<br>
+
+
+
+The stocks open to the public today are some part of RS lines. 
+
+
+
+The rest of the Szeged stocks will appear soon.<br>
+
+
+
+<a href=
+
+
+
+"http://kyotofly.kit.jp/cgi-bin/stocks/search_res_list.cgi?DB_NUM=1&PREDEF=Szeged" 
+
+
+
+rel="nofollow">>>> Stock list</a>
+
+
+
+<div align="right">3 February 2010</div>
+
+
+
+-->
+
+
+
+
+
+
+
+<!--
+
+
+
+<h3>Need your feed back!</h3>
+
+
+
+Please feed back on your papers published.
+
+
+
+<br>
+
+
+
+You can easily feedback by input of Pubmed ID of your paper at 
+
+
+
+<a href="http://www.shigen.nig.ac.jp/rrc/gatewayAction.do?speciesId=5"
+
+target="_blank">
+
+
+
+Research Resource Circulation</a>. Papers without Pubmed ID are also
+
+acceptable.
+
+
+
+<br>        
+
+
+
+<br>
+
+
+
+-->
+
+
+
+
+
+
+
+<!--        
+
+
+
+<h3><a href="http://kyotofly.kit.jp/stocks/documents/CPTI.html">
+
+
+
+CPTI: Cambridge Protein Trap Insertion</a> lines are now available</h3>
+
+
+
+CPTI, YFP fusion protein expression lines are created by UK
+
+
+
+laboratories using a hybrid piggyBac/P-element protein trap construct
+
+
+
+with 3xFLAG-Strep-venus-Strep. 
+
+
+
+<br>
+
+
+
+<a
+
+href="http://kyotofly.kit.jp/cgi-bin/stocks/search_res_list.cgi?DB_NUM=1&PREDEF=ProteinTrapCamb"
+
+
+
+ rel="nofollow">>>> Stock list</a>
+
+
+
+<div align="right">13 November 2009</div>
+
+
+
+-->       
+
+
+
+<!--
+
+
+
+<br>        
+
+
+
+<h3>Annual fee per active account (2009) will be charged for your
+
+
+
+order</h3>
+
+
+
+The annual fee for each Active Account is JPY 1,430 and is charged 
+
+
+
+<fontcolor="purple"><strong>when the first time flies are 
+
+
+
+shipped</strong></font> in the Japanese fiscal year, which is from April to 
+
+
+
+March of the next year.  The annual fee accompanies other fees, such as stock 
+
+
+
+costs, handling fee and postage. The new fiscal year begins April 1st, so 
+
+
+
+orders that start shipping on April 1st, 2009 will include the annual fee.<br>
+
+
+
+Thank your for your cooperation and understanding.
+
+
+
+<br>
+
+
+
+<br>
+
+
+
+-->
+
+
+
+<!--
+
+
+
+<h3><font color="#ee0088">NEW!</font>DrosDel and MARCM stocks are now
+
+available</h3>
+
+
+
+All collection of <b>DrosDel</b> at Cambridge University had been transferred
+
+to DGRC, 
+
+
+
+and a large collection of <b>MARCM</b> stocks 
+
+
+
+from Prof. Luo's at Stanford University had been set up here. 
+
+
+
+They will be started to be sent out to the researchers who requested 
+
+
+
+<strong>through this WEB site</strong>.  
+
+
+
+MARCM stocks will be deposited more and the collection will expand extensively
+
+this year.
+
+
+
+<br>
+
+
+
+<br>
+
+
+
+-->
+
+
+
+
+
+
+
+<!--
+
+
+
+<h3>SNP information for DGRC stocks</h3>
+
+
+
+Now available at <a href="http://kyotofly.kit.jp/stocks/genome2007/"
+
+
+
+target="_blank"> http://kyotofly.kit.jp/stocks/genome2007/</a>. 
+
+
+
+You can see SNPs in a hundred genes found in 32 strains of <i>D.
+
+
+
+melanogaster</i> maintained in DGRC, Kyoto, and 5 <i>D. simulans</i>, 2 <i>D.
+
+
+
+sechellia</i> and 1 <i>D. mauritiana</i> strains. 
+
+
+
+-->
+
+
+
+
+
+
+
+<!-- The page is written in <i>Japanese</i>. -->
+
+
+
+<br>
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+
+<h3>
+
+
+
+No Shipment During <font color="#006400">Christmas</font> <font
+
+color="FF0000">and</font> 
+
+
+
+<font color="#B8860B">New Year</font> Holidays
+
+
+
+
+
+
+
+</h3>
+
+
+
+
+
+
+
+<p> 
+
+
+
+<table border="1" align="center">
+
+
+
+ <tr>
+
+
+
+  <td bgcolor="#660000"><font color="#FFFFFF">From</font></td>
+
+
+
+  <td>24 December 2008</td>
+
+
+
+  <td bgcolor="#660000"><font color="#FFFFFF">To</font></td>
+
+
+
+  <td>14 January 2009</td>
+
+
+
+ </tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+<p> See also <a
+
+href="http://kyotofly.kit.jp/stocks/guidance.html#shipping_schedule">
+
+
+
+Shipping Schedule</a>.
+
+
+
+<p>
+
+
+
+-->
+
+
+
+<!--
+
+
+
+<h3>Requirement of import permit</h3>Users in the USA, Australia, New Zealand
+
+
+
+and Taiwan should note that wedo not send Drosophila stocks without "import
+
+
+
+permit" or "label(s)". We recommend you to arrange the import permits before
+
+
+
+you make orders from us.<br>You can find the information at the webpage of the
+
+
+
+Bloomington Stock Center of Indiana University (<A
+
+
+
+HREF="http://flystocks.bio.indiana.edu/Regulatory/import.htm"
+
+
+
+target=_blank>http://flystocks.bio.indiana.edu/Regulatory/import.htm</A>).<br><br> 
+
+
+
+-->
+
+
+
+<!--
+
+
+
+<h3>Shipment by EMS courier service and ordinary air mail at yourchoice</h3>
+
+
+
+The fly stocks will be sent by EMS (Express Mail Service: a traceablecourier
+
+
+
+service run by the Post Office in some countries) as defaultinstead of
+
+
+
+ordinary air mail, because EMS provides Item Numbers withwhich users can trace
+
+
+
+on the web where the fly stocks are, and manyusers request to use the EMS. In
+
+
+
+terms of shipping cost EMS is moreexpensive. For example, shipping 5 stocks to
+
+
+
+USA is 330 JPY by air mailwhereas 1,200 JPY by EMS (see <A
+
+
+
+href="/stocks/postalinfo.html"target=_blank>Postage Rate</A>).If you would
+
+
+
+prefer your stock packageto be sent by ordinary air mail (note that you cannot
+
+
+
+trace thepackage), please indicate your choice to "Air Mail".<br><br>
+
+
+
+-->
+
+
+
+<!--
+
+
+
+<h3>Assorted GS stocks discarded</h3>Some of GS stocks and other P-element
+
+
+
+insertion lines were discarded as planned. Refreshed GS stocks will be
+
+
+
+available in the very near future. See <a
+
+
+
+href="http://kyotofly.kit.jp/stocks/documents/discard2007.html">the original
+
+
+
+announcement</a> and <a
+
+
+
+href="http://kyotofly.kit.jp/stocks/discardflies.html">the list for discarded
+
+
+
+stocks</a>.<br>
+
+
+
+-->
+
+
+
+      
+
+
+
+                    
+
+
+
+                    
+
+
+
+                    
+
+                    
+
+                    
+
+
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+
+	</td>
+	</tr>
+	</table>
+
+
+   </div><!-- span4 -->
+<!--
+End 
+Lower Panel . Right
+-->
+
+  </div><!-- row -->
+ </div><!-- lowerpanel -->
+</div><!-- container -->
+
+<!-- 
+End 
+Lower Panel
+-->
+
+<footer>
+
+<!-- footer banner table start -->
+<br>
+
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#ebe4d2; background-image:url(/stocks/images/bg-footer.png); background-repeat:no-repeat; background-position:center bottom;">
+  <tbody>
+  <tr style="background-color:#ebe4d2;">
+   <td colspan="4" style="height: 3px;">
+   </td>
+  </tr>
+  <tr style="background-color:#ffffff;">
+   <td colspan="4" style="height:1px;"></td>
+  </tr>
+  <tr>
+   <td align="left" valign="center" width="3%" height="130">&nbsp;</td>
+   <td align="left" valign="center">
+    <font style="color:#b2afa5; font-size:x-small;">
+    <b>Copyright &copy; KYOTO Stock Center (DGRC), Kyoto Institute of Technology<br>All rights reserved</b></font></td>
+    <td nowrap="nowrap" valign="bottom" align="right">
+     KYOTO Stock Center (DGRC) participates in the 
+     <b><a href="http://www.nbrp.jp/" target="_blank">
+     National BioResource Project "Drosophila"
+     </a></b> <!-- started in 2002. -->
+    </td>
+   <td align="left" valign="center" width="1%">&nbsp;</td>
+  </tr>
+  </tbody>
+</table>
+<!-- footer banner table end -->
+
+</footer>
+
+</div><!-- mybgcolor -->
+
+<!-- Bootstrap -->
+<script src="/stocks/jquery/jquery-1.9.1.min.js"></script>
+<script src="/stocks/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

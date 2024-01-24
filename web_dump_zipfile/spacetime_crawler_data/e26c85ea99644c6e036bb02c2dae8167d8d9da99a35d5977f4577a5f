@@ -1,0 +1,46 @@
+¦Ifinal_url¢DtypeEvaluex@https://www.ics.uci.edu/~jacobson/cs122b/Project/04-JDBCex1.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1568¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 02 Oct 2007 21:13:02 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"620-43b8904af5380"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 00:48:06 GMTKraw_content¢DtypeEvalueY // JDBC Example - printing a database's metadata
+// Coded by Chen Li/Kirill Petrov Winter, 2005
+// Slightly revised for ICS185 Spring 2005, by Norman Jacobson
+// Slightly revised for CS122B Spring 2007, by Norman Jacobson
+
+
+import java.sql.*;				// Enable SQL processing
+
+public class JDBCex1
+{
+
+	public static void main(String[] arg) throws Exception
+	{
+
+		// Incorporate postgreSQL driver
+		Class.forName("org.postgresql.Driver").newInstance();
+
+		// Connect to the test database
+		Connection connection =
+			DriverManager.getConnection("jdbc:postgresql://localhost/moviedb", "testuser", "testpass");
+
+		// Create an execute an SQL statement to select all of table"Stars" records
+		Statement select = connection.createStatement();
+		ResultSet result = select.executeQuery("Select * from stars");
+
+		// Get metatdata from stars; print # of attributes in table
+		System.out.println("The results of the query");
+		ResultSetMetaData metadata = result.getMetaData();
+		System.out.println("There are " + metadata.getColumnCount() + " columns");
+
+		// Print type of each attribute
+		for (int i = 1; i <= metadata.getColumnCount(); i++)
+			System.out.println("Type of column "+ i + " is " + metadata.getColumnTypeName(i));
+
+		// print table's contents, field by field
+		while (result.next())
+		{
+			System.out.println("Id = " + result.getInt(1));
+			System.out.println("Name = " + result.getString(2) + result.getString(3));
+			System.out.println("DOB = " + result.getString(4));
+			System.out.println("photoURL = " + result.getString(5));
+			System.out.println();
+		}
+	}
+}
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

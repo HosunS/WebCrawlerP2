@@ -1,0 +1,176 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE11605¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueX°trac_form_token=49da07b90761f780a066ee5b; httponly; Path=/wiki/public, trac_session=d02dca97b0cf35b81e072e0f; expires=Mon, 29 Apr 2019 10:13:14 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXFri, 01 Jan 1999 00:00:00 GMT¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueOmust-revalidate¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 29 Jan 2019 10:13:14 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=utf-8Kraw_content¢DtypeEvalueY-U<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      cs122b-2017-winter-project5-mysql-master-slave â€“ Public
+    </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--[if IE]><script type="text/javascript">
+      if (/^#__msie303:/.test(window.location.hash))
+        window.location.replace(window.location.hash.replace(/^#__msie303:/, '#'));
+    </script><![endif]-->
+        <link rel="search" href="/wiki/public/search" />
+        <link rel="help" href="/wiki/public/wiki/TracGuide" />
+        <link rel="alternate" href="/wiki/public/wiki/cs122b-2017-winter-project5-mysql-master-slave?format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="tracwysiwyg.base" href="/wiki/public" />
+        <link rel="start" href="/wiki/public/wiki" />
+        <link rel="stylesheet" href="/wiki/public/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/tracwysiwyg/wysiwyg.css" type="text/css" />
+        <link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/common/css/trac.css" /><link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/tracwysiwyg/editor.css" />
+        <link rel="shortcut icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+    <style id="trac-noscript" type="text/css">.trac-noscript { display: none !important }</style>
+    <script type="text/javascript">
+      var _tracwysiwyg={};
+    </script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/jquery.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/babel.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/trac.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/search.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/folding.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/tracwysiwyg/wysiwyg.js"></script>
+    <script type="text/javascript">
+      jQuery("#trac-noscript").remove();
+      jQuery(document).ready(function($) {
+        $(".trac-autofocus").focus();
+        $(".trac-target-new").attr("target", "_blank");
+        setTimeout(function() { $(".trac-scroll").scrollToTop() }, 1);
+        $(".trac-disable-on-submit").disableOnSubmit();
+      });
+    </script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://www.ics.uci.edu/"><img src="/wiki/public/chrome/site/ics.jpg" alt="ICS Logo" height="67" width="128" /></a>
+      </div>
+      <form id="search" action="/wiki/public/search" method="get">
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="/wiki/public/login">Login</a></li><li><a href="/wiki/public/prefs">Preferences</a></li><li class="last"><a href="/wiki/public/about">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="/wiki/public/wiki">wiki:</a><a class="pathentry" href="/wiki/public/wiki/cs122b-2017-winter-project5-mysql-master-slave" title="View cs122b-2017-winter-project5-mysql-master-slave">cs122b-2017-winter-project5-mysql-master-slave</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+        <ul>
+          <li class="first"><a href="/wiki/public/wiki/WikiStart">Start Page</a></li><li><a href="/wiki/public/wiki/TitleIndex">Index</a></li><li class="last"><a href="/wiki/public/wiki/cs122b-2017-winter-project5-mysql-master-slave?action=history">History</a></li>
+        </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          <div id="wikipage" class="trac-content"><h3 id="MySQLMaster-SlaveReplication">MySQL Master-Slave Replication</h3>
+<p>
+This tutorial shows how to setup a MySQL cluster on AWS that includes a master and a slave.  Reads can be sent to any of the two instances, and writes have to be sent to the master instance.
+</p>
+<ol><li>Setup two new AWS instances:
+<ol class="lowerroman"><li>Create two new AWS instances identical to your previous instance used to run Fabflix. We call these "instance 2" (as the master) and "instance 3"' (as the slave). We assume their public IPs  are 2.2.2.2 and 3.3.3.3, and their internal AWS IPs are 172.2.2.2 and 172.3.3.3, respectively.
+</li><li>Add new rules in their security group(s) to open their <tt>MYSQL/Aurora</tt> type to each other using their AWS internal IP.
+</li></ol></li><li>Watch <a class="ext-link" href="https://www.youtube.com/watch?v=JXDuVypcHNA"><span class="icon">â€‹</span>this video</a> to have a good understanding of this feature.  The following steps are mainly based on those instructions in the video.
+</li><li>Set up the master instance.
+<ol class="lowerroman"><li>SSH to the master instance. Run the following command to install MySQL server.
+<pre class="wiki">master-shell&gt; sudo apt-get update
+master-shell&gt; sudo apt-get install mysql-server
+</pre></li><li>Edit the <tt>/etc/mysql/my.cnf</tt> file and set the <tt>bind-address</tt> to <strong>0.0.0.0</strong>. Also, uncomment the lines of <tt>server-id</tt> and <tt>log_bin</tt> properties.
+</li><li>Restart the MySQL service.
+<pre class="wiki">master-shell&gt; sudo service mysql restart
+</pre></li><li>Login to the MySQL console. Create a new user and give it the permission for replicating the database:<br />
+<pre class="wiki">master-shell&gt; mysql -u root -p
+master-mysql&gt; create user 'repl'@'%' identified by 'slavepassword';
+master-mysql&gt; grant replication slave on *.* to 'repl'@'%' ;
+</pre></li><li>Run the following command in MySQL console to get the status about the master MySQL:<br />
+<pre class="wiki">master-mysql&gt; show master status;
+</pre>Keep the values of the <tt>File</tt> and <tt>Position</tt> columns, as they are needed in the next step. For example, these values are <tt>mysql-bin.000001</tt> and <tt>337</tt>.
+</li></ol></li><li>Set up the slave instance:
+<ol class="lowerroman"><li>SSH to the slave instance. Run the following commands to install MySQL server.
+<pre class="wiki">slave-shell&gt; sudo apt-get update
+slave-shell&gt; sudo apt-get install mysql-server
+</pre></li><li>Edit the <tt>/etc/mysql/my.cnf</tt> file and set the <tt>bind-address</tt> to <strong>0.0.0.0</strong>. Also, uncomment the <tt>server-id</tt> property and use value 2. Do <strong>not</strong> uncomment the <tt>log_bin</tt> property.
+</li><li>Restart the MySQL service.
+<pre class="wiki">slave-shell&gt; sudo service mysql restart
+</pre></li><li>Login to the MySQL console and let the slave know about the master server:<br />
+<pre class="wiki">slave-shell&gt; mysql -u root -p
+slave-mysql&gt; CHANGE MASTER TO MASTER_HOST='172.2.2.2', MASTER_USER='repl', MASTER_PASSWORD='slavepassword', MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=337;
+</pre>Note that the values used for <tt>MASTER_LOG_FILE</tt> and <tt>MASTER_LOG_POS</tt> are the ones from the last step.
+</li><li>Start the MySQL slave:<br />
+<pre class="wiki">slave-mysql&gt; start slave;
+slave-mysql&gt; show slave status;
+</pre>It should show "Slave_IO_State: Waiting for master to send event".
+</li></ol></li><li>Test if the synchronization works:
+<ol class="lowerroman"><li>On the master instance, create a database with a table with a tuple:
+<pre class="wiki">master-shell&gt; mysql -u root -p
+master-mysql&gt; create database pets;
+master-mysql&gt; use pets;
+master-mysql&gt; create table pets(name varchar(20)); 
+master-mysql&gt; insert into pets values ("fluffy");
+</pre></li><li>On the slave instance, check if the data has been propagated from the master:
+<pre class="wiki">slave-shell&gt; mysql -u root -p
+slave-mysql&gt; show databases;
+slave-mysql&gt; use pets;
+slave-mysql&gt; show tables; 
+slave-mysql&gt; select * from pets;
+</pre>We should be able to see the database, table, and record on this instance propagated from the master.  If so, congratulations!
+</li></ol></li><li>Create moviedb on the master instance:
+<ol class="lowerroman"><li>Populate moviedb on master instance using "create_table.sql" and "data.sql" (You have done this many times)
+</li><li>On the slave instance, check if the data is automatically propagated:
+<pre class="wiki">slave-shell&gt; mysql -u root -p
+slave-mysql&gt; use moviedb; show tables;
+</pre></li></ol>Note: The propagation is only from the master to the slave, not the other way around.  To test it, you can insert some records to a table in the slave database, and check if it's propagated to the master instance.  It should NOT!
+</li></ol><p>
+<strong>Note: When you restart your AWS instances, the IP addresses of your instances could change. At this time, you need to reset the master address on the slave instance to re-connect them. However, note that MASTER_LOG_FILE and MASTER_LOG_POS could change, and thus you need to check the master status again.</strong>
+</p>
+<pre class="wiki">master-mysql&gt; show master status;
+slave-mysql&gt; stop slave;
+slave-mysql&gt; CHANGE MASTER TO MASTER_HOST='172.2.2.2', MASTER_USER='repl', MASTER_PASSWORD='slavepassword', MASTER_LOG_FILE='mysql-bin.000001', MASTER_LOG_POS=337;
+slave-mysql&gt; start slave;
+</pre></div>
+          
+          <div class="trac-modifiedby">
+            <span><a href="/wiki/public/wiki/cs122b-2017-winter-project5-mysql-master-slave?action=diff&amp;version=9" title="Version 9 by chenli">Last modified</a> <a class="timeline" href="/wiki/public/timeline?from=2017-03-08T22%3A01%3A34-08%3A00&amp;precision=second" title="See timeline at Mar 8, 2017 10:01:34 PM">23 months ago</a></span>
+            <span class="trac-print">Last modified on Mar 8, 2017 10:01:34 PM</span>
+          </div>
+        
+        
+      </div>
+      
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="/wiki/public/wiki/cs122b-2017-winter-project5-mysql-master-slave?format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/wiki/public/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="/wiki/public/about"><strong>Trac 1.0.13</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

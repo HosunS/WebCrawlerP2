@@ -1,0 +1,18 @@
+¦Ifinal_url¢DtypeEvaluex1https://www.ics.uci.edu/~yamingy/cocktail_demo2.rLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC408¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 22 Mar 2010 16:21:16 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"198-48266161b3700"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 06:41:04 GMTKraw_content¢DtypeEvalueY˜print("A demonstration of the cocktail algorithm for D-optimal designs (approximate theory)");
+print("model: y ~ 1 + t + t^2 + t^3 + t^4");
+print("design variable: 0<t<3 discretized");
+
+n=20;
+## m=5;
+t=3*(1:n)/n;
+X=cbind(1, t, t^2, t^3, t^4);    
+
+source('cocktail.r');
+w=cocktail(X)[[1]];
+
+print("output:");
+print("optimal support points t(i)");
+print(t[w>0]);
+print("optimal weights w(i)");
+print(w[w>0]);
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

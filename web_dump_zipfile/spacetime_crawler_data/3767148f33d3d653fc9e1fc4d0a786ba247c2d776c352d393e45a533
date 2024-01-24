@@ -1,0 +1,97 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4883¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 13 Aug 2018 22:51:47 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1313-57358f02ca934"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:06:26 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SEAL - DELDroid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Reply-to" content="malek at uci dot edu">
+<meta http-equiv="Owner" content="Sam Malek">
+<meta name="Author" content="Sam Malek">
+<meta name="Generator" content="Emacs">
+<link rev="MADE" href="mailto:malek at uci dot edu">
+<link href="../../seal.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-90537774-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+<div class="wrapper">
+<!-- *************** Beginning of content ****************** -->
+
+<h2>DELDROID: Determination and Enforcement of Least-Privilege Architecture in Android</h2>
+
+<p>
+DELDroid is an automated system for determination of least privilege architecture in Android and its enforcement at runtime. 
+A key contribution of our approach is the ability to limit the privileges granted to apps without the need to modify them.
+<p>
+DELDroid utilizes static program analysis techniques to extract the exact privileges each component needs for providing its functionality. 
+A <i>Multiple-Domain Matrix</i> representation of the system's architecture is then used to automatically analyze the security posture of the system and derive its least-privilege architecture. 
+<p>
+A security architect can further adapt the architecture to establish the proper privileges for each component. 
+Our experiments on hundreds of real-world apps corroborate DELDroid's ability in effective enforcement of least privilege architecture and detection of security vulnerabilities with negligible overhead. 
+</p>
+
+<h3>Approach Overview</h3>
+<img style="margin:10" ALT="[DELDroid]" height="500" src=./deldroid_approach.png><br>
+<h3>Presentation</h3>
+  <iframe src="//www.slideshare.net/slideshow/embed_code/key/kyMT325SJdHr4P" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/MahmoudHammad23/deldroid-determination-enforcement-of-least-privilege-architecture-in-android" title="DELDroid: Determination &amp; Enforcement of Least Privilege Architecture in AnDroid" target="_blank">DELDroid: Determination &amp; Enforcement of Least Privilege Architecture in AnDroid</a> </strong> from <strong><a href="https://www.slideshare.net/MahmoudHammad23" target="_blank">Mahmoud Hammad</a></strong> </div>
+
+  <h3>Android Apps and Evaluation Results</h3>
+  <ul class="paperlist">
+  <li>Android apps and experimental results are available in <a href="https://personalmicrosoftsoftware-my.sharepoint.com/personal/hammadm_personalmicrosoftsoftware_uci_edu/_layouts/15/guestaccess.aspx?guestaccesstoken=SWIk3GDzXTJYns5SRs1UqY6AGZsGgjyfAOltenSJYus%3d&docid=0094aae993f0d454c98da88d36439396c&rev=1" target="_blank">Excel Online</a></li>
+  </ul>
+  
+<h3>Implementation</h3>
+<ul class="paperlist">
+<li>
+DELDroid project source code is available on <a href="https://github.com/mhammad2/DELDroid" target="_blank">GitHub</a>.
+</li>
+<li>
+git clone https://mhammad2@bitbucket.org/mhammad2/covert_deldroid.git
+</li>
+<li>
+<a href="http://www.ics.uci.edu/~seal/projects/deldroid/./IC3_CC_DELDroid_DB_Scheme.sql">IC3 MySQL Database</a>
+</li>
+<li>
+<a href="http://www.ics.uci.edu/~seal/projects/deldroid/ArchManager.apk">ArchManager Android app</a>
+</li>
+<li>
+<a href="./icsa17_system_bullhead_eca_resources.img">Modified Android framework (Bullhead system image for Nexus 5X) [788MB]</a>
+</li>
+<li>
+<a href="./generic_system_eca_resources.img">Modified Android framework (System image for Android emulator) [1.5GB]</a>
+</li>
+</ul>
+
+<h3>Publication</h3>
+<ul class="paperlist">
+    <li><b>Determination and Enforcement of Least-Privilege Architecture in Android</b><br> 
+    Mahmoud Hammad, Hamid Bagheri, and Sam Malek<br>
+    <i>International Conference of Software Architecture (ICSA 2017), Gothenburg, Sweden, April 2017. (22% acceptance rate)</i>
+    <br>[<a href="./deldroid_icsa_17.pdf">PDF</a>]
+    </li> 
+</ul>
+
+
+
+<!-- ***************** End of content ****************** -->
+<br><br><br><br>
+<div style="float:left">
+            <a href="http://www.ics.uci.edu/~seal/"><img ALT="[seal's logo]" height="200" src=../../seal.png></a>
+</div>
+<div style="float:right">
+            <a href="http://www.ics.uci.edu"><img ALT="[uci's logo]" style="padding-top: 40px" height="100" src=../../uci.jpg></a>
+</div> 
+</div>
+</body>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

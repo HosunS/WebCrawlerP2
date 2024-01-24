@@ -1,0 +1,104 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4195¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 11 Aug 2009 18:45:59 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1063-470e21d0aa7c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 07:22:23 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYc<H2>BSICS Software Library</H2>
+
+
+In 2006 Computing Support began offering the same access to the BSICS Software Servers to unsupported hosts that the supported hosts have. <P>
+
+There are a couple of restrictions to the access:
+<UL>
+<LI>The client host has to run a compatible operating system 
+<LI>The client host has to have a static campus IP address
+<LI>Most software is needs to be under /pkg or /opt
+</UL>	
+
+<B>NOTE:</B>  We would like to make our efforts at maintaining a software library as useful for as much of the community as possible.  Along these lines, feel free to send suggestions about packages that you feel would be useful in the library.  We would also consider including user installed packages if the binaries could be moved into the /pkg hierarchy.<P>
+
+
+
+<H3>Conditions:</H3>
+
+We do need to reserve the right to revoke access to clients that, through the use of the library, negatively impact the experience of other users.   And the program will need to be shutdown in the event that it becomes unmanagable, insecure or otherwise problematic.  
+
+<P>
+<HR>
+<H3>What you need to do</H3>
+<UL>
+<LI>Request access: Send an email to helpdesk@ics.uci.edu with the hostname of the computer.
+<LI>Configure and troubleshoot your workstation to mount the software library.
+</UL>
+<HR>
+<H3>How it works:</H3>
+<B>NOTE:</B>  Always check the man pages on utilites for information specific toyour system.  The information we provide here is simply a guideline and may not work for your specific host.
+<P>
+Upon recieving a request for access to the software library, we add the hostname of your computer to a netgroup.  After about an hour, and probably before you recive confirmation from us, you will have access to the NFS shares that contain the software library for BSICS Solaris and Linux hosts.
+<UL>
+<H4>The NFS shares:</H4>
+
+<UL><LI>	soft1,soft2:/software_tank/packages-linux
+<LI>	soft1,soft2:/software_tank/packages-solaris
+<LI>soft1,soft2:/software_tank/packages
+</UL>
+
+<H4>The Hosts:</H4>
+
+<P>
+The Software Library is hosted on two Solaris 10 x86 NFS servers, soft1 and soft2.  One is a backup of the other and they both contain mirror copies of the library. <P>
+
+<UL><LI>soft1(.ics.uci.edu><LI>soft2(.ics.uci.edu)</UL>
+
+<H4>The Shares:</H4>
+
+There are three shares.  Two of them are legacy and are slowing being phased out.  
+
+<UL>
+<LI>	
+packages:  
+<UL>
+<LI> Linux and Solaris, unified and keyed on the $ARCH var in automount.
+<LI> Everything installed in the past year is here.
+<LI>mountpint:  /pkg
+</UL>
+<LI>packages-linux:  
+<UL>
+<LI> legacy Linux only packages
+<LI> mountpiont:  /opt
+</UL>
+</UL>
+<UL>
+<LI>packages-solaris:
+<UL>
+<LI>legacy Solaris only packages
+<LI>mountpoint: /opt
+</UL>
+</UL>
+<P>
+<H4>Configuring the Client:</H4>
+
+The NFS shares need to be mounted under the appropriate directory in the root of the workstation, either /pkg or /opt as noted above.    
+
+The NFS shares can be mounted through the automounter on demand or at boot by entries in the /etc/fstab.<P>
+
+<UL>
+<LI><h4>Automounter</H4>
+
+We'll be building out the <A HREF=http://support.ics.uci.edu/self-support/linux_ldap.html>LDAP server</A> in the spring quarter/earlyer summer of 2008 so that users can point the automounter at that in order to get a current automount map.  Check back soon.<P>
+
+In the meantime, setup your automounter.  Then grab the auto.pkg or auto.opt file from /etc/autofs on any BSICS Linux host.  <P>
+
+<B>TIP:</B>  We recommend spending the time to set this up.  You will need to use this method if have your own packages in /opt or /pkg.  Commercial packages frequently default to install in /opt.<P>
+
+<LI><H4>Mount at boot method</H4>
+
+This is the easier, but less configurable of the two methods.  This method could also cause problems for yoru workstation if the server is unavailable<P>
+
+Drop  a line similar to the following into the /etc/fstab:<P>
+
+soft2:/software_tank/packages/gsu /pkg/gsu nfs 	hard,intr
+</UL>
+</UL>
+<P>
+<HR>
+This concludes our guidelines for setting up the service.  Troubleshooting is left to the self-supported administrator but feel free to send mail to helpdesk if you have any questions or think something is misconfigured on our end.
+
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

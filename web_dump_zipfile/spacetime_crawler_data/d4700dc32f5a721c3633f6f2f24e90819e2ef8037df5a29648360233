@@ -1,0 +1,960 @@
+�Ifinal_url�DtypeLhttp_headers�DtypeEvalue��Ak�DtypeEvalueNContent-LengthAv�DtypeEvalueE43152�Ak�DtypeEvalueXStrict-Transport-SecurityAv�DtypeEvalueX#max-age=31536000; includeSubdomains�Ak�DtypeEvalueVX-Content-Type-OptionsAv�DtypeEvalueGnosniff�Ak�DtypeEvaluePContent-LanguageAv�DtypeEvalueBen�Ak�DtypeEvalueGExpiresAv�DtypeEvalueXSun, 10 Feb 2019 09:46:58 GMT�Ak�DtypeEvalueDVaryAv�DtypeEvalueOAccept-Language�Ak�DtypeEvalueFServerAv�DtypeEvalueOGoogle Frontend�Ak�DtypeEvalueMLast-ModifiedAv�DtypeEvalueXFri, 07 Dec 2018 00:11:02 GMT�Ak�DtypeEvaluePX-XSS-ProtectionAv�DtypeEvalueA0�Ak�DtypeEvalueUX-Cloud-Trace-ContextAv�DtypeEvalueX 40a93ee7239d239b42e36c9b7dab51b5�Ak�DtypeEvalueMCache-ControlAv�DtypeEvalueX%must_revalidate, public, max-age=3600�Ak�DtypeEvalueDDateAv�DtypeEvalueXSun, 10 Feb 2019 08:46:58 GMT�Ak�DtypeEvalueOX-Frame-OptionsAv�DtypeEvalueJSAMEORIGIN�Ak�DtypeEvalueGAlt-SvcAv�DtypeEvalueX%quic=":443"; ma=2592000; v="44,43,39"�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueXtext/html; charset=utf-8Kraw_content�DtypeEvalueY��
+
+
+
+
+
+<!DOCTYPE html><html lang="en"
+      class=""><head><script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script><meta charset="utf-8"><meta name="xsrf_token" content="sJf9hZzHfd7Y-TjogyakwSxHjZKnSZMHQ4_LCUhPTyQ6MTU0OTc4ODQxODA5OTY1Mg" /><link rel="canonical" href="https://developers.google.com/+/web/samples/javascript"><link rel="alternate" href="https://developers.google.com/+/web/samples/javascript" hreflang="en"><link rel="alternate" href="https://developers.google.cn/+/web/samples/javascript" hreflang="en-cn"><link rel="alternate" href="https://developers.google.com/+/web/samples/javascript" hreflang="x-default"><link rel="shortcut icon" href="https://developers.google.cn/_static/83a13d8b48/images/favicon.png"><link rel="apple-touch-icon" href="https://developers.google.cn/_static/83a13d8b48/images/touch-icon.png"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet"
+      
+      href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"
+      ><link rel="stylesheet"
+        href="https://developers.google.cn/_static/83a13d8b48/css/devsite-google-red.css"><script src="https://developers.google.cn/_static/83a13d8b48/js/jquery-bundle.js"></script><meta property="og:site_name" content="Google Developers"><meta property="og:type" content="website"><meta property="og:url" content="https://developers.google.com/+/web/samples/javascript"><meta property="og:locale" content="en"><script>
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'zh-cn';
+  </script><title>Quick-start sample app for JavaScript &nbsp;|&nbsp; Google+ Platform for Web
+      &nbsp;|&nbsp; Google Developers</title><meta property="og:title" content="Quick-start sample app for JavaScript &nbsp;|&nbsp; Google+ Platform for Web
+      &nbsp;|&nbsp; Google Developers"><link rel="stylesheet" href="https://developers.google.cn/+/css/plus.css" type="text/css" /><link href="https://plus.google.com/110967630299632321627" rel="publisher" /></head><body class="
+               devsite-doc-page
+               
+               
+               
+               devsite-header-no-upper-tabs
+               "
+        data-family="endorsed"
+        
+        
+        
+        id="top_of_page"><div class="devsite-wrapper"><div class="devsite-top-section-wrapper
+            "><header class="devsite-top-section nocontent"><div class="devsite-top-logo-row-wrapper-wrapper"><div class="devsite-top-logo-row-wrapper"><div class="devsite-top-logo-row devsite-full-site-width"><button type="button" class="devsite-expand-section-nav devsite-header-icon-button
+                                       button-flat material-icons gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Hamburger menu"></button><div class="devsite-product-name-wrapper"><a class="devsite-product-name-link gc-analytics-event"
+       href="https://developers.google.cn/+/"
+       data-category="Site-Wide Custom Events"
+       data-label="Project logo (header)"><img src="https://developers.google.cn/site-assets/logo-google-plus.svg" class="devsite-product-logo"
+               alt="Google+ Platform"></a><span class="devsite-product-name"><ul class="devsite-breadcrumb-list"><li class="devsite-breadcrumb-item"><a href="https://developers.google.cn/+/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Upper Header"
+       data-value="1">
+    
+    
+      
+        Google+ Platform
+      
+    
+    
+    </a></li><li class="devsite-breadcrumb-item"><div class="devsite-breadcrumb-guillemet material-icons"></div><a href="https://developers.google.cn/+/web/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Upper Header"
+       data-value="2">
+    
+    
+      Web
+    
+    
+    </a></li></ul></span></div><div class="devsite-header-upper-tabs"></div><form class="devsite-search-form"
+                action="https://developers.google.cn/s/results/"
+                method="GET"
+                id="top-search"
+                search-placeholder='搜索'><div id="searchbox" class="devsite-searchbox"><input placeholder='搜索'
+         
+         type="text"
+         class="devsite-search-field devsite-search-query"
+         name="q"
+         value=""
+         autocomplete="off"
+         
+         aria-label="搜索框"
+         ><div class="devsite-search-image material-icons"></div></div><input type="hidden"
+       name="p"
+       id="search_project"
+       value="/+/web/"
+       data-project-name="Google+ Platform for Web"
+       data-project-path="/+/web/"
+       data-query-match=""><input type="hidden" class="suggest-project" value="Google+ Platform for Web" /><div class="suggest-project-metadata" data-home_url="/+/" data-path="/+/" data-name="Google+ Platform" ></div></form><a class="devsite-header-link devsite-top-button button gc-analytics-event"
+               
+               href="https://developers.google.cn/products/"
+               
+               data-category="Site-Wide Custom Events"
+               data-label="Site header link"
+               track-type="globalNav"
+               track-name="所有产品"
+               track-metadata-position="nav"
+               track-metadata-eventDetail='nav'><div class="devsite-header-link-icon material-icons">
+                  list
+                </div><div class="devsite-header-link-label">所有产品</div></a><button type="button" class="devsite-search-button devsite-header-icon-button button-flat
+                                       material-icons"></button></div></div></div><div class="devsite-collapsible-section"><div class="devsite-header-background devsite-full-site-width"><div class="devsite-doc-set-nav-row devsite-full-site-width"><nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper"><ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll"><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.cn/+/web/"
+           class=" devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: 首页"
+         >
+          首页
+        </a></li><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.cn/+/web/+1button/"
+           class=" devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: 指南"
+         >
+          指南
+        </a></li><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.cn/+/web/api/javascript"
+           class=" devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: 参考网页"
+         >
+          参考网页
+        </a></li><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.cn/+/web/samples/javascript"
+           class="devsite-doc-set-nav-active devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           aria-label="示例, selected"
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: 示例"
+         >
+          示例
+        </a></li><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.cn/+/web/support"
+           class=" devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: 支持"
+         >
+          支持
+        </a></li></ul></nav></div></div></div></header><script>
+    if (window.jQuery) {
+      $(document).ready(function() {
+        if (window.devsite && window.devsite.search) {
+          
+          window.devsite.search.init('zh-cn')
+        }
+      });
+    }
+  </script></div><div id="gc-wrapper"itemscope itemtype="http://schema.org/Article"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Google+ Platform for Web&quot;, &quot;dimension5&quot;: &quot;zh-cn&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-24532603-11&quot;}"><script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "US", "language": {"requested": "zh-cn", "served": "en"}, "projectName": "Google+ Platform for Web", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+
+      
+        <div class="devsite-site-mask"></div>
+        
+  
+
+
+<nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+  
+  <div class="devsite-nav-responsive-tabs-panel">
+    
+      
+
+
+
+<nav class="devsite-nav-responsive-tabs devsite-nav">
+  <ul class="devsite-nav-list">
+  
+
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <a 
+             href="https://developers.google.cn/+/web/"
+           
+           class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                  "
+           
+           data-category="Site-Wide Custom Events" data-label="Responsive Tab: 首页">
+          首页
+        </a>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <a 
+             href="https://developers.google.cn/+/web/+1button/?nav=true"
+           
+           class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                  "
+           
+           data-category="Site-Wide Custom Events" data-label="Responsive Tab: 指南">
+          指南
+        </a>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <a 
+             href="https://developers.google.cn/+/web/api/javascript?nav=true"
+           
+           class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                  "
+           
+           data-category="Site-Wide Custom Events" data-label="Responsive Tab: 参考网页">
+          参考网页
+        </a>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title
+                     devsite-nav-active gc-analytics-event"
+              data-category="Site-Wide Custom Events" data-label="Responsive Tab: 示例"
+              tabindex="0">
+          示例
+        </span>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <a 
+             href="https://developers.google.cn/+/web/support?nav=true"
+           
+           class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                  "
+           
+           data-category="Site-Wide Custom Events" data-label="Responsive Tab: 支持">
+          支持
+        </a>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      <a href="https://developers.google.cn/products/"
+         class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+         data-label="Responsive Tab: all_products"
+         >
+        所有产品
+      </a>
+    </li>
+  
+  </ul>
+</nav>
+
+
+    
+  </div>
+  
+  
+  <div class="devsite-nav-responsive-sidebar-panel">
+    
+    <div class="devsite-nav-responsive-back" tabindex="0"></div>
+    
+    <nav class="devsite-nav-responsive-sidebar">
+      
+      
+    </nav>
+  </div>
+  
+  
+</nav>
+
+
+        <div class="devsite-main-content clearfix">
+
+        
+        
+          <div class="devsite-banner devsite-banner-announcement
+                    ">
+            <div class="devsite-banner-inner">
+            Google+ APIs will be shut down on March 7, 2019. This includes Google+ Sign-in and OAuth token requests with Google+ scopes. <a href="/+/api-shutdown">Learn more</a>.<p>Google+ integrations for <a href="/+/web">web</a> and <a href="/+/mobile/android">mobile apps</a> will also cease to function March 7, 2019. <a href="/+/integrations-shutdown">Learn more</a>. <p>This will be a progressive shutdown, with intermittent failures starting as early as January 28, 2019.
+
+            </div>
+          </div>
+        
+
+        
+  
+  
+    
+    
+      
+  <nav class="devsite-section-nav devsite-nav nocontent">
+    <ul class="devsite-nav-list"><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" aria-label="Quickstart Client, click to expand/collapse" role="link">Quickstart Client</span><li class="devsite-nav-item devsite-nav-active"><a href="https://developers.google.cn/+/web/samples/javascript" class="devsite-nav-title">JavaScript</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" aria-label="Quickstart Client-Server, click to expand/collapse" role="link">Quickstart Client-Server</span><li class="devsite-nav-item"><a href="https://developers.google.cn/+/web/samples/csharp" class="devsite-nav-title">C# / .NET</a></li><li class="devsite-nav-item"><a href="https://developers.google.cn/+/web/samples/go" class="devsite-nav-title">Go</a></li><li class="devsite-nav-item"><a href="https://developers.google.cn/+/web/samples/java" class="devsite-nav-title">Java</a></li><li class="devsite-nav-item"><a href="https://developers.google.cn/+/web/samples/php" class="devsite-nav-title">PHP</a></li><li class="devsite-nav-item"><a href="https://developers.google.cn/+/web/samples/python" class="devsite-nav-title">Python</a></li><li class="devsite-nav-item"><a href="https://developers.google.cn/+/web/samples/ruby" class="devsite-nav-title">Ruby</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" aria-label="Haiku+, click to expand/collapse" role="link">Haiku+</span><li class="devsite-nav-item"><a href="https://developers.google.cn/+/web/samples/haiku-java" class="devsite-nav-title">Java</a></li><li class="devsite-nav-item"><a href="https://developers.google.cn/+/web/samples/haiku-php" class="devsite-nav-title">PHP</a></li></li></ul>
+  </nav>
+
+    
+
+    
+  <nav class="devsite-page-nav devsite-nav"></nav>
+
+
+      <article class="devsite-article">
+        <article class="devsite-article-inner">
+  
+          
+  
+
+
+<div class="devsite-rating-container
+            "><div class="devsite-rating-stars"><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="1" data-category="Site-Wide Custom Events" data-label="Star Rating 1"
+         track-metadata-score="1" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="网站内容评分：1 星（最高 5 星）"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="2" data-category="Site-Wide Custom Events" data-label="Star Rating 2"
+         track-metadata-score="2" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="网站内容评分：2 星（最高 5 星）"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="3" data-category="Site-Wide Custom Events" data-label="Star Rating 3"
+         track-metadata-score="3" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="网站内容评分：3 星（最高 5 星）"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="4" data-category="Site-Wide Custom Events" data-label="Star Rating 4"
+         track-metadata-score="4" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="网站内容评分：4 星（最高 5 星）"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="5" data-category="Site-Wide Custom Events" data-label="Star Rating 5"
+         track-metadata-score="5" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="网站内容评分：5 星（最高 5 星）"></div></div><div class="devsite-rating-description"></div><div class="devsite-rating-internal"><span class="devsite-rating-stats"></span></div></div><script>
+  $(document).ready(function() {
+    devsite.ratings.init(
+      document.querySelectorAll('#devsite-feedback-project'), false
+      
+    );
+  });
+</script>
+
+
+  
+  <nav class="devsite-breadcrumb-nav devsite-nav">
+    
+
+
+<ul class="devsite-breadcrumb-list">
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <a href="https://developers.google.cn/products/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="1">
+    
+    
+      产品
+    
+    
+    </a>
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <div class="devsite-breadcrumb-guillemet material-icons"></div>
+    
+    
+    <a href="https://developers.google.cn/+/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="2">
+    
+    
+      Google+ Platform
+    
+    
+    </a>
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <div class="devsite-breadcrumb-guillemet material-icons"></div>
+    
+    
+    <a href="https://developers.google.cn/+/web/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="3">
+    
+    
+      Web
+    
+    
+    </a>
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <div class="devsite-breadcrumb-guillemet material-icons"></div>
+    
+    
+    <a href="https://developers.google.cn/+/web/samples/javascript" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="4">
+    
+    
+      示例
+    
+    
+    </a>
+    
+  </li>
+  
+</ul>
+
+  </nav>
+  
+  
+  <h1 itemprop="name" class="devsite-page-title">
+    Quick-start sample app for JavaScript
+  </h1>
+  
+  
+  <nav class="devsite-page-nav-embedded devsite-nav"></nav>
+  
+  <div class="devsite-article-body clearfix
+            "
+       itemprop="articleBody">
+    
+    
+
+<p>
+  This quick-start sample app is built in JavaScript and lets you
+  get started with the Google+ platform in a few minutes. The app demonstrates:
+  <ul>
+    <li>Using the <a href="https://developers.google.cn/+/web/signin/">Google+ Sign-In button</a> to get an
+        OAuth 2.0 refresh token.</li>
+    <li>Exchanging the refresh token for an access token.</li>
+    <li>Making Google+ API requests with the access token, including getting a
+        list of people that the user has circled.</li>
+    <li>Disconnecting the app from the user's Google account and revoking
+        tokens.</li>
+  </ul>
+</p>
+
+
+<h2 id="system_requirements">System requirements</h2>
+
+<ul>
+<li>A simple web server, such as <a href="http://docs.python.org/2/library/simplehttpserver.html">Python’s built-in web server</a>.</li>
+</ul>
+
+<h2 id="step_1_enable_the_google_api">Step 1: Enable the Google+ API</h2>
+
+<p>Create a Google API Console project, OAuth 2.0 client ID, and register your
+JavaScript origins:</p>
+
+
+
+
+
+
+
+
+
+
+
+<ol>
+  <li>
+    Go to the <a href="https://console.developers.google.com/project/_/apiui/apis/library" target="dev-console">Google API Console
+    <img src="https://developers.google.cn/+/mobile/images/OpenInNewWindow14x14.png"></a>.
+  </li>
+  <li>
+    
+    From the project drop-down, select an existing
+    <a href="https://support.google.com/cloud/answer/6158853" target="help">project
+    <img src="https://developers.google.cn/+/mobile/images/OpenInNewWindow14x14.png"></a>,
+    or create a new one by selecting <b>Create a new project</b>.
+      
+    
+    <p class="note" style="margin: .5em 0 .5em;">
+        <b>Note:</b>  Use a single project to hold all platform instances of your app
+        (Android, iOS, web, etc.), each with a different Client ID.
+    </p>
+      
+  </li>
+
+  <li>
+    Enable the <b>Google+ API</b> service:
+    <ol>
+      <li>In the list of Google APIs, search for the <b>Google+ API</b> service.</li>
+      <li>Select <b>Google+ API</b> from the results list.</li>
+      <li>Press the <b>Enable API</b> button. Wait for the API to be enabled.</li>
+    </ol>
+    This action adds the service to the <b>Enabled APIs</b> tab, which you can access
+    by selecting <b>APIs &amp; Services</b> on the left menu.
+    
+    You can turn off the Google Cloud services.
+      
+  </li>
+ 
+  <li>
+    In the sidebar under "APIs &amp; Services", select <b>Credentials</b>, then select
+    the <b>OAuth consent screen</b> tab.
+    <ol>
+      <li>
+        Choose an <b>Email Address</b>, specify a <b>Product Name</b>, and
+        press <b>Save</b>.
+      </li>
+    </ol>
+  </li>
+  
+  <li>
+    In the <b>Credentials</b> tab, select the <b>Create credentials</b> drop-down list,
+    and choose <b>OAuth client ID</b>.</li>
+  <li>
+    Under <b class="uitext">Application type</b>, select <b>Web application</b>.
+    <br />
+    Register the origins from which your app is allowed to access the Google APIs,
+    as follows. An origin is a unique combination of protocol, hostname, and port.
+    <ol>
+      
+      <li>
+        In the <b class="uitext">Authorized JavaScript origins</b> field, enter the origin
+        for your app. You can enter multiple origins to allow for your app to run on different
+        protocols, domains, or subdomains. You cannot use wildcards. In the example below,
+        the second URL could be a production URL.
+
+<pre class="prettyprint">
+http://localhost:4567
+https://myproductionurl.example.com
+</pre>
+ 
+      </li>
+       
+      
+      <li>
+        The <b class="uitext">Authorized redirect URI</b> field does not require
+        a value. Redirect URIs are not used with JavaScript APIs.
+      </li>
+        
+      <li>
+        Press the <b>Create</b> button.
+      </li>
+    </ol>
+  </li>
+  
+  <li>
+    From the resulting <b class="uitext">OAuth client dialog box</b>,
+    copy the <b class="uitext">Client ID</b>
+    
+    and <b class="uitext">Client secret</b>.
+    
+    The Client ID lets your app access enabled Google APIs.
+  </li>
+   
+   
+   
+</ol>
+
+
+<h2 id="step_2_set_up_the_quick-start_app">Step 2: Set up the JavaScript quick-start app</h2>
+
+<ol>
+<li><p>Get the latest version of the quick-start. One way is to use git to clone
+the <a href="https://github.com/googleplus/gplus-quickstart-javascript">application repository</a>.</p>
+<pre class="prettyprint"><code>git clone https://github.com/googleplus/gplus-quickstart-javascript.git
+</code></pre>
+<p>Or, <a href="https://github.com/googleplus/gplus-quickstart-javascript/archive/master.zip"> download the application as a
+zip file</a>, and extract the library and quick-start code:</p>
+<pre class="prettyprint"><code>wget https://github.com/googleplus/gplus-quickstart-javascript/archive/master.zip -o gplus-quickstart-javascript.zip
+unzip gplus-quickstart-javascript.zip
+</code></pre></li>
+<li><p>Change directory into the quick-start app</p>
+<pre class="prettyprint"><code>cd gplus-quickstart-javascript
+</code></pre></li>
+<li><p>Edit <code>index.html</code>, and replace <code>YOUR_CLIENT_ID</code> with the value that you
+generated in Step 1.</p></li>
+</ol>
+
+<h2 id="step_3_run_the_quick-start_app">Step 3: Run the quick-start app</h2>
+
+<p>After you have set up your Google API Console project and configured the quick-start app,
+the app is ready to run.</p>
+
+<p>Because you registered <code>http://localhost:4567</code> as an <strong>Authorized JavaScript origin</strong>
+in the Google API Console (in step 1), you will run the sample from that
+location.</p>
+
+<ol>
+<li><p>Now you need to start a server. For example:</p>
+<pre class="prettyprint"><code>python -m SimpleHTTPServer 4567
+</code></pre></li>
+<li><p>Browse to your quick-start app, which by default is at
+<a href="http://localhost:4567" target="_blank">http://localhost:4567</a>.</p></li>
+</ol>
+
+<p>After you sign in, the application uses the JavaScript client library to retrieve your
+profile, as well as the people visible to the app.</p>
+
+<p>Clicking <strong>Disconnect from Google+</strong> results in the server making a call to
+Google to revoke the refresh token. The server then removes any data that it
+acquired from Google about the user to disconnect the app and
+<a href="https://developers.google.cn/+/policies#personal-information">follow the developer policies</a>.</p>
+
+
+  
+  </div>
+  
+
+  
+        
+  
+
+
+
+
+
+
+
+        
+<div class="devsite-content-footer nocontent">
+  
+  
+    <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see our <a href="https://developers.google.cn/terms/site-policies">Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  
+
+  
+    
+    <p class="devsite-content-footer-date" itemprop="datePublished"
+       content="2018-12-07T00:11:02.885049">
+      
+      上次更新日期：十二月 7, 2018
+    </p>
+  
+
+</div>
+
+        </article>
+      </article>
+  
+
+        </div>
+      
+
+<footer class="devsite-footer-linkboxes nocontent
+               
+               devsite-footer-linkboxes-with-sites"><nav class="devsite-full-site-width"><ul class="devsite-footer-linkboxes-list"><li class="devsite-footer-linkbox "><h3 class="devsite-footer-linkbox-heading">Terms</h3><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="https://developers.google.cn/terms/api-services-user-data-policy"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox"
+               >
+                Google API Services: User Data Policy
+            </a></li></ul></li><li class="devsite-footer-linkbox devsite-footer-linkbox-backup"><h3 class="devsite-footer-linkbox-heading">计划</h3><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="//www.womentechmakers.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Women Techmakers"
+               >
+                Women Techmakers
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//developers.google.cn/agency/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Agency"
+               >
+                Agency Program
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//developers.google.cn/groups/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Groups"
+               >
+                GDG
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//developers.google.cn/experts/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Experts"
+               >
+                Google Developers Experts
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//developers.google.cn/startups/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Startups"
+               >
+                Startup Launchpad
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//userresearch.google.com?reserved=0&utm_source=developers.google.com&Q_Language=en&utm_medium=own_srch&utm_campaign=Global-developers&utm_term=0&utm_content=0&productTag=clou&campaignDate=nov18&pType=devel&referral_code=js564523"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer User Studies"
+               >
+                User Studies
+            </a></li></ul></li><li class="devsite-footer-linkbox devsite-footer-linkbox-backup"><h3 class="devsite-footer-linkbox-heading">开发者控制台</h3><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="//console.developers.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Google Developers Console"
+               >
+                Google API Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//console.cloud.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Google Cloud Platform Console"
+               >
+                Google Cloud Platform Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//play.google.com/apps/publish/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Google Play Console"
+               >
+                Google Play Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//console.firebase.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Firebase Console"
+               >
+                Firebase Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//console.actions.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Actions on Google Console"
+               >
+                Actions on Google Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//cast.google.com/publish/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Cast SDK Developer Console"
+               >
+                Cast SDK Developer Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//chrome.google.com/webstore/developer/dashboard"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Chrome Web Store Developer Dashboard"
+               >
+                Chrome Web Store Dashboard
+            </a></li></ul></li><li class="devsite-footer-linkbox devsite-footer-linkbox-sites"><a href="https://developers.google.cn/"
+           class="gc-analytics-event devsite-footer-linkbox-logo-link"
+           data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link"><img class="devsite-footer-linkbox-logo"
+               src="https://developers.google.cn/_static/83a13d8b48/images/redesign-14/lockup-color-knockout.png"
+               alt="Google Developers"></a><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="//developer.android.google.cn/index.html"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Android Link"
+               >
+                Android
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//developer.chrome.com/home"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Chrome Link"
+               >
+                Chrome
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//firebase.google.cn"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Firebase Link"
+               >
+                Firebase
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//cloud.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Cloud Link"
+               >
+                Google Cloud Platform
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//developers.google.cn/products/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Products Link"
+               >
+                所有产品
+            </a></li></ul></li></ul></nav></footer><footer class="devsite-utility-footer"><nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width"><div class="devsite-utility-footer-nav-left"><form class="devsite-utility-footer-language" action="https://developers.google.cn/i18n/setlang/"
+            method="post"><input type="hidden" name="xsrf_token" value="sJf9hZzHfd7Y-TjogyakwSxHjZKnSZMHQ4_LCUhPTyQ6MTU0OTc4ODQxODA5OTY1Mg" /><input type="hidden" name="next" value="/+/web/samples/javascript"><select class="devsite-utility-footer-language-select kd-select" name="language"
+                track-type="languageSelector" track-name="click"><option value="id"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="id"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="id">
+            Bahasa Indonesia
+          </option><option value="de"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="de"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="de">
+            Deutsch
+          </option><option value="en"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="en"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="en">
+            English
+          </option><option value="es"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="es"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="es">
+            español
+          </option><option value="fr"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="fr"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="fr">
+            français
+          </option><option value="pt-br"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="pt-br"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="pt-br">
+            Português Brasileiro
+          </option><option value="ru"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="ru"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="ru">
+            Русский
+          </option><option value="ja"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="ja"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="ja">
+            日本語
+          </option><option value="zh-cn"
+                 selected="selected" 
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="zh-cn"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="zh-cn">
+            简体中文
+          </option><option value="ko"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="ko"
+                track-metadata-original-language="zh-cn"
+                track-metadata-selected-language="ko">
+            한국어
+          </option></select></form><span class="devsite-utility-footer-links"><a class="devsite-utility-footer-link gc-analytics-event"
+           href="https://developers.google.cn/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer terms link"
+           data-footer-link-id="terms"
+           >条款
+         </a><a class="devsite-utility-footer-link gc-analytics-event"
+           href="//policies.google.cn/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer privacy link"
+           data-footer-link-id="privacy"
+           
+           data-cookie-policy="//policies.google.cn/technologies/cookies"
+           >隐私权
+         </a></span></div></nav></footer><div class="devsite-feedback-dialog devsite-dialog"><div class="devsite-dialog-contents"><h3>发送以下问题的反馈：</h3><div class="devsite-feedback-item"><a data-type="documentation" class="gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Docs Feedback Image"
+           track-type="feedback" track-name="feedbackDocIcon" track-metadata-position="header"><div class="devsite-feedback-item-icon-container"><div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs
+                        material-icons"></div></div></a><div class="devsite-feedback-item-name">
+          
+          此网页
+        </div><div class="devsite-feedback-item-description"><a data-type="documentation" tabindex="0" class="gc-analytics-event"
+             data-category="Site-Wide Custom Events" data-label="Docs Feedback Text"
+             track-type="feedback" track-name="feedbackDocText" track-metadata-position="header">
+            
+            文档反馈
+          </a></div></div><div class="devsite-feedback-item"><a data-type="product" tabindex="0" class="gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Product Feedback Image"
+           track-type="feedback" track-name="feedbackProductIcon" track-metadata-position="header"
+         ><img src="https://developers.google.cn/site-assets/logo-google-plus.svg"
+                 class="devsite-feedback-item-icon"
+                 alt="Google+ Platform for Web"></a><div class="devsite-feedback-item-name">
+        Google+ Platform for Web
+        </div><div class="devsite-feedback-item-description"><a data-type="product" tabindex="0" class="gc-analytics-event"
+             data-category="Site-Wide Custom Events" data-label="Product Feedback Text"
+             track-type="feedback" track-name="feedbackProductText" track-metadata-position="header"
+           >
+            
+            产品反馈
+          </a></div></div></div><div class="devsite-dialog-buttons"><button type="button" class="devsite-feedback-cancel button-white gc-analytics-event"
+              data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button"
+              track-type="feedback" track-name="cancelFeedbackButton"
+              track-metadata-position="header">
+        
+        取消
+      </button></div></div><script>
+  $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '74502',
+        'bucket': '',
+        'context': '',
+        'version': 'devsite-20190208-r00-rc01.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'zh-cn',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+  </script></div><script async defer src="//www.gstatic.com/feedback/api.js"></script><script src="https://developers.google.cn/_static2/83a13d8b48/jsi18n/"></script><script src="https://developers.google.cn/_static/83a13d8b48/js/script_foot_closure__zh_cn.js"></script><script src="https://developers.google.cn/_static/83a13d8b48/js/script_foot.js"></script><script>
+        (function($) {
+          
+          devsite.devsite.Init($, {'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 1, 'SITE_NAME': 'devsite_china', 'FULL_SITE_SEARCH_ENABLED': 0, 'ENABLE_CLOUDTRACK': 0, 'VTAGS_ENABLED': 0, 'HISTORY_ENABLED': 0, 'SIDEBAR_MINI_ENABLED': 0, 'VERSION_HASH': '83a13d8b48', 'SCRIPTSAFE_DOMAIN': 'google-developers.gonglchuangl.net', 'ENABLE_BLOCKED_LINK_TOOLTIP': 1, 'ALLOWED_HOSTS': ['.android.com', '.appspot.com', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 1},
+                               '[]','zh-cn',
+                               true, '',
+                               {"8e03e230de0bd8a6fe173fdf172e8b3f": true, "8de7a048f21618359bd37f5ce44be073": false, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true, "098dafe57affddc137df300142652cfd": false}, '/+/web/',
+                               'https://developers.google.cn/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+
+      </script><script>
+      $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+      </script></div><span id="devsite-request-elapsed" data-request-elapsed="488.302946091"></span></body></html>
+Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

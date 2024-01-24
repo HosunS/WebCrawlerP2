@@ -1,0 +1,96 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4361¢Ak¢DtypeEvalueLX-Robots-TagAv¢DtypeEvalueGnoindex¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueYDokuWiki=e01ab698957044cc3e40a3a1c7b39587; path=/; HttpOnly, DW68700bfd16c2027de7de74a5a8202a6f=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; httponly, FCK_media=%2Flib%2Fplugins%2Fckgedit%2Ffckeditor%2Fuserfiles%2Fimage%2F; path=/, FCK_NmSp=software%3Aarem; path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX>no-store, no-cache, must-revalidate, post-check=0, pre-check=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 00:52:16 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY	<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <title>software:arem</title>
+<meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="index,follow"/>
+<meta name="keywords" content="software,arem"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Machine Learning and Bioinformatics Lab"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/doku.php/software/arem?do=index" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=software"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/doku.php/software/arem?do=export_xhtml"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/doku.php/software/arem?do=export_raw"/>
+<link rel="canonical" href="http://cbcl.ics.uci.edu/doku.php/software/arem"/>
+<link rel="stylesheet" type="text/css" href="/lib/exe/css.php?t=centered-cbcl&amp;tseed=b2d22e40d8432f9a51d287dc38bdd86a"/>
+<!--[if gte IE 9]><!-->
+<script type="text/javascript">/*<![CDATA[*/var NS='software';var JSINFO = {"id":"software:arem","namespace":"software","confirm_delete":"Are you sure you want to delete this page?","doku_base":"\/","cg_rev":"","dw_version":49.5,"chrome_version":0,"hide_captcha_error":"none","ckg_dbl_click":"","ckg_canonical":0,"doku_url":"http:\/\/cbcl.ics.uci.edu\/","has_wrap":"Wrap","wrapDiv":"WRAP","wrapSpan":"wrap","ckgEdPaste":"off","rel_links":0,"isadmin":0,"isauth":0,"move_renameokay":false,"htmlok":1};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="/lib/exe/jquery.php?tseed=23f888679b4f1dc26eef34902aca964f"></script>
+<script type="text/javascript" charset="utf-8" src="/lib/exe/js.php?t=centered-cbcl&amp;tseed=b2d22e40d8432f9a51d287dc38bdd86a"></script>
+<script type="text/x-mathjax-config">/*<![CDATA[*/MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+        displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+        processEscapes: true
+    }
+});
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML.js"></script>
+<!--<![endif]-->
+
+    <script type="text/javascript">
+    //<![CDATA[ 
+    function LoadScript( url )
+    {
+     document.write( '<scr' + 'ipt type="text/javascript" src="' + url + '"><\/scr' + 'ipt>' ) ;        
+
+    }
+   function LoadScriptDefer( url )
+    {
+     document.write( '<scr' + 'ipt type="text/javascript" src="' + url + '" defer><\/scr' + 'ipt>' ) ;        
+
+    }
+//]]> 
+
+ </script>
+</head>
+<body>
+<div class="dokuwiki export">
+
+<h3 class="sectionedit1" id="arem">AREM</h3>
+<div class="level3">
+
+</div>
+
+<h5 id="aremaligning_chip-seq_reads_by_expectation-maximization">AREM: Aligning ChIP-seq reads by Expectation-Maximization.</h5>
+<div class="level5">
+
+</div>
+
+<h5 id="description">Description</h5>
+<div class="level5">
+
+<p>
+AREM takes the classic peak calling algorithm used in MACS 1.4 (including an empirically optimal tag shift and a locally-adjusted poissonian statistical model for tag enrichment) and adds a component for realigning ambigously mapping reads.  A probabilistic model assigns reads to regions that are more likely to be peaks (having higher enrichment).
+</p>
+
+</div>
+
+<h5 id="paper">Paper</h5>
+<div class="level5">
+
+<p>
+For additional information, see our paper in RECOMB 2011 (D Newkirk, J Biesinger, A Chon, K Yokomori, X Xie, 2011) or download a copy <a href="http://www.ics.uci.edu/~xhx/publications/arem_recomb.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/publications/arem_recomb.pdf" rel="nofollow">here</a>.
+</p>
+
+</div>
+
+<h5 id="code">Code</h5>
+<div class="level5">
+
+<p>
+Regular releases of the software are pushed to the sourceforge page: <a href="http://sourceforge.net/projects/arem/" class="urlextern" title="http://sourceforge.net/projects/arem/" rel="nofollow">http://sourceforge.net/projects/arem/</a>
+</p>
+
+<p>
+The development version of the code is available at: <a href="https://github.com/jakebiesinger/AREM" class="urlextern" title="https://github.com/jakebiesinger/AREM" rel="nofollow">https://github.com/jakebiesinger/AREM</a>
+</p>
+
+</div>
+</div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

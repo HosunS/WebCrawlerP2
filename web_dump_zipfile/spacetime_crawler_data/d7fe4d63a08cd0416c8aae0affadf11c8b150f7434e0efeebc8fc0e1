@@ -1,0 +1,46 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1691¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 18 Apr 2010 06:33:17 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"69b-4847d05078540"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 06:45:28 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYŸ1. Title of Database
+Automatic transcription of read out document subset of Reuters-21578
+
+2. Data Type
+Text
+
+3. Abstract
+This dataset is created by reading out 200 files from the 10 largest Reuters 
+classes and using an Automatic Speech Recognition system to create 
+corresponding transcriptions.
+
+4. Sources
+   (a) Original owners of database (name/snail address/phone/email/homepage)
+
+Shourya Roy
+shourya.roy 'at' gmail.com
+and
+Shantanu Godbole
+shantanu 'at' godbole.net
+
+5. Data Characteristics
+This data was created by selecting 20 files each from the 10 largest classes 
+in the Reuters-21578 collection 
+(http://www.daviddlewis.com/resources/testcollections/reuters21578/). 
+The files were read out by 3 Indian speakers and an Automatic Speech 
+Recognition (ASR) system was used to generate the transcripts. More about the 
+ASR system can be found in [1]. Such a dataset will be really helpful to 
+study the effect of speech recognition noise on text mining algorithms. 
+The first work which refered to this dataset was on noisy text classification[2].
+
+7. Data Format
+There are 10 directories labeled by the topic name. 
+Each contains 20 files of transcriptions.
+
+References
+[1] L. R. Bahl, S. Balakrishnan-Aiyer, J. Bellegarda, M. Franz,
+P. Gopalakrishnan, D. Nahamoo, M. Novak, M. Padmanabhan,
+M. Picheny, and S. Roukos,
+Performance of the IBM large vocabulary continuous speech recognition system on
+the ARPA wall street journal task. 
+In Proc. of ICASSP ï¿½95,
+pages 41ï¿½44, Detroit, MI, 1995.
+[2] S. Agarwal, S. Godbole, D. Punjani and S. Roy,
+How Much Noise is too Much: A Study in Automatic Text Classification",
+In Proc. of ICDM 2007
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

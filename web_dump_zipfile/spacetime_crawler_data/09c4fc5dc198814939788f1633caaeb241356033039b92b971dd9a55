@@ -1,0 +1,516 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE23471¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 28 Jan 2019 17:38:47 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"5baf-58088262b9d13"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 07:07:18 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY[Ø<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ardalan Amiri Sani</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body data-gr-c-s-loaded="true">
+<div id="main_body">
+    <table width="100%" height=125>
+        <tr>
+            <td>
+                <h1>CompSci 143A: Principles of Operating System</h1>
+                <p>
+                    <b>Instructor:</b> <a href="http://www.ics.uci.edu/~ardalan/">Ardalan Amiri Sani</a><br/>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <div id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lectures.html">Lectures</a></li>
+            <li><a href="homework.html">Homework</a></li>
+            <li><a href="discussions.html">Discussions</a></li>
+            <li><a href="reading.html">Reading</a></li>
+            <li><a href="project.html">Project</a></li>
+        </ul>
+    </div>
+
+    <h2 id="pintos-project-setup">Pintos Project Setup</h2>
+
+    <p>To develop the Pintos projects, you'll need two essential sets of tools:</p>
+    <ul>
+        <li>80x86 cross-compiler toolchain for 32-bit architecture including a C compiler,
+            assembler, linker, and debugger.
+        </li>
+        <li>x86 emulator, QEMU or Bochs</li>
+    </ul>
+
+    <p>Your Openlab accounts have all the tools needed to build Pintos and the Bochs emulator.
+       Here are the instructions to do this</p>
+
+    <!-- step 1 -->
+    <p> 1. Create ‚ÄúPintos‚Äù directory in home directory:
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ mkdir Pintos</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- step 2 -->
+    <p> 2. Get pintos from git in this directory:
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ cd Pintos
+$ git clone https://github.com/trusslab/pintos.git</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- step 3 -->
+    <p> 3. Create ‚Äúbochs‚Äù directory in ‚ÄúPintos‚Äù directory:
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ mkdir bochs</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- step 4 -->
+    <p> 4. Go into pintos/src/misc/: 
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ cd pintos/src/misc/</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- step 5 -->
+    <p> 5. To build and install bochs, execute::
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ ./bochs-2.6.2-build.sh ~/Pintos/bochs</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- step 6 -->
+    <p> 6. Create ‚Äúbin‚Äù and ‚Äúmisc‚Äù directories inside ‚Äúpintos‚Äù directory::
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ cd ~/Pintos/pintos/
+$ mkdir bin
+$ mkdir misc</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- step 7 -->
+    <p> 7. Build utils:
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ cd ~/Pintos/pintos/src/utils/
+$ make</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- step 8 -->
+    <p> 8. Copy/install files:
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ cp backtrace pintos Pintos.pm pintos-gdb pintos-set-cmdline pintos-mkdisk setitimer-helper squish-pty squish-unix ~/Pintos/pintos/bin/
+$ cp ~/Pintos/pintos/src/misc/gdb-macros ~/Pintos/pintos/misc/</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- step 9 -->
+    <p> 9. Update path. add the following lines to the ~/.bashrc file, e.g., using the vim text editor ($ vim ~/.bashrc):
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>export PATH=$PATH:~/Pintos/pintos/bin/
+export PATH=$PATH:~/Pintos/bochs/bin/</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- step 10 -->
+    <p> 10. Reload ~/.bashrc:
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ source ~/.bashrc</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <p>Besides the lab machines, you may want to work on the projects on your own machines to be more
+        productive.
+	If you have a Linux distrobution OS (e.g., Ubuntu), you can use the instructions above for your own machine too.
+	If you have successfully followed the instructions so far, you do not need to continue.
+	
+    <p>The rest of this page contains more instructions to help you with the setup of the core development
+        environment needed for Pintos on your own machines. They are intended for Unix and
+        Mac OS machines. If you are running Windows, we recommend you to run a virtual machine with Linux
+        or you will have to setup <a href="http://www.cygwin.com/">Cygwin</a> first. This guide, and
+        the course in general, assumes you are familiar with Unix commands.</p>
+
+    <h3 id="compiler-toolchain">Compiler toolchain</h3>
+
+    <p>The compiler toolchain are a collection of tools that turns source code into
+        executable binaries for a target architecture. Pintos is written in C and
+        x86 assembly, and runs on 32-bit 80x86 machines. So we will need the C compiler (<code
+                class="highlighter-rouge">gcc</code>),
+        assembler (<code class="highlighter-rouge">as</code>), linker (<code
+                class="highlighter-rouge">ld</code>)
+        and debugger (<code class="highlighter-rouge">gdb</code>).</p>
+
+    <p>If you are using a Linux machine, it is likely equipped with the compiler toolchain already.
+        But it should support 32-bit x86 architecture. A quick test of the support is to run
+        <code class="highlighter-rouge">objdump -i | grep elf32-i386</code> in the terminal. If it returns
+        matching lines, your
+        system‚Äôs default tool chain supports the target <em class="text-success">so you can skip this
+            section</em>.
+        Otherwise, you will need to build the toolchain from source. If you are using MacOS,
+        you have to build the toolchain from source because MacOS‚Äôs object file format is
+        not ELF that we need (and the <code class="highlighter-rouge">objdump -i</code> test won‚Äôt work).
+    </p>
+
+    <p>When you are building the toolchain from source, to distinguish the new toolchain
+        from your system‚Äôs default one, you should add a <code class="highlighter-rouge">i386-elf-</code>
+        prefix
+        to the build
+        target, <em>e.g.</em>, <code class="highlighter-rouge">i386-elf-gcc</code>, <code
+                class="highlighter-rouge">i386-elf-as</code>.</p>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <strong>Note</strong>
+        </div>
+        <div class="panel-body">
+            <b>We've provided a script (<code
+                    class="highlighter-rouge">pintos/src/misc/toolchain-build.sh</code>)
+                that automates the following building instructions. So you can just run the script and
+                modify your PATH setting after the build finishes. The script has been tested on
+                recent version of Ubuntu, Mac OS and Fedora.</b>
+        </div>
+    </div>
+
+    <ul>
+        <li><strong>Prerequisite</strong>:
+            <ul>
+                <li>standard build tools including <code class="highlighter-rouge">make</code>, <code
+                        class="highlighter-rouge">gcc</code>, etc.. For Ubuntu, they are the
+                    <code class="highlighter-rouge">build-essential</code> package.
+                </li>
+                <li>in building GDB, you may encounter errors due to missing the ncurses and textinfo
+                    libraries. For Ubuntu, you can install them with <code class="highlighter-rouge">sudo
+                        apt-get install libncurses5-dev texinfo</code>.
+                </li>
+            </ul>
+        </li>
+        <li>Directory and environment variables:
+            First, create a setup directory (e.g., <code class="highlighter-rouge">~/318/toolchain</code>)
+            and
+            subdirectories that
+            look like this:
+            <div class="language-bash highlighter-rouge"><pre class="highlight"><code>/path/to/setup
+‚îú‚îÄ‚îÄ build
+‚îú‚îÄ‚îÄ x86_64
+‚îî‚îÄ‚îÄ src
+</code></pre>
+            </div>
+
+            <p>Then, set the environment variables (remember to replace <code
+                    class="highlighter-rouge">/path/to/setup</code>
+                with the
+                <em>full path</em> to the actual setup directory you‚Äôve created, e.g., <code
+                        class="highlighter-rouge">SWD=/home/ryan/318/toolchain</code>).</p>
+            <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span
+                    class="gp">$ </span><span
+                    class="nv">SWD</span><span class="o">=</span>/path/to/setup
+<span class="gp">$ </span><span class="nv">PREFIX</span><span class="o">=</span><span class="nv">$SWD</span>/x86_64
+<span class="gp">$ </span><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span
+                        class="nv">$PREFIX</span>/bin:<span class="nv">$PATH</span>
+<span class="gp">$ </span><span class="nb">export </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span
+                        class="nv">$PREFIX</span>/lib:<span class="nv">$LD_LIBRARY_PATH</span>
+</code></pre>
+            </div>
+            <p>For Mac users, the last command is <code class="highlighter-rouge">export
+                DYLD_LIBRARY_PATH=$PREFIX/lib:$DYLD_LIBRARY_PATH</code> instead.</p>
+        </li>
+        <li>GNU binutils:
+            <ul>
+                <li><strong>Download</strong>:
+                    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span
+                            class="gp">$ </span><span class="nb">cd</span> <span class="nv">$SWD</span>/src
+<span class="gp">$ </span>wget https://ftp.gnu.org/gnu/binutils/binutils-2.27.tar.gz <span class="o">&amp;&amp;</span> tar xzf binutils-2.27.tar.gz
+</code></pre>
+                    </div>
+                </li>
+                <li><strong>Build</strong>:
+                    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span
+                            class="gp">$ </span>mkdir -p <span class="nv">$SWD</span>/build/binutils <span
+                            class="o">&amp;&amp;</span> <span class="nb">cd</span> <span
+                            class="nv">$SWD</span>/build/binutils
+<span class="gp">$ </span>../../src/binutils-2.27/configure --prefix<span class="o">=</span><span
+                                class="nv">$PREFIX</span> --target<span class="o">=</span>i386-elf <span
+                                class="se">\</span>
+--disable-multilib --disable-nls --disable-werror
+<span class="gp">$ </span>make -j8
+<span class="gp">$ </span>make install
+</code></pre>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>GCC:
+            <ul>
+                <li><strong>Download</strong>:
+                    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span
+                            class="gp">$ </span><span class="nb">cd</span> <span class="nv">$SWD</span>/src
+<span class="gp">$ </span>wget https://ftp.gnu.org/gnu/gcc/gcc-6.2.0/gcc-6.2.0.tar.bz2 <span class="o">&amp;&amp;</span> tar xjf gcc-6.2.0.tar.bz2
+<span class="gp">$ </span><span class="nb">cd</span> <span class="nv">$SWD</span>/src/gcc-6.2.0 <span class="o">&amp;&amp;</span> contrib/download_prerequisites
+</code></pre>
+                    </div>
+                </li>
+                <li><strong>Build</strong>:
+                    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span
+                            class="gp">$ </span>mkdir -p <span class="nv">$SWD</span>/build/gcc <span
+                            class="o">&amp;&amp;</span> <span
+                            class="nb">cd</span> <span class="nv">$SWD</span>/build/gcc
+<span class="gp">$ </span>../../src/gcc-6.2.0/configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span> --target<span
+                                class="o">=</span>i386-elf <span class="se">\</span>
+--disable-multilib --disable-nls --disable-werror --disable-libssp <span class="se">\</span>
+--disable-libmudflap --with-newlib --without-headers --enable-languages<span class="o">=</span>c,c++
+<span class="gp">$ </span>make -j8 all-gcc 
+<span class="gp">$ </span>make install-gcc
+<span class="gp">$ </span>make all-target-libgcc
+<span class="gp">$ </span>make install-target-libgcc
+</code></pre>
+                    </div>
+                </li>
+            </ul>
+        </li>
+        <li>GDB:
+            <ul>
+                <li><strong>Download</strong>:
+                    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span
+                            class="gp">$ </span><span class="nb">cd</span> <span class="nv">$SWD</span>/src
+<span class="gp">$ </span>wget https://ftp.gnu.org/gnu/gdb/gdb-7.9.1.tar.xz  <span class="o">&amp;&amp;</span> tar xJf gdb-7.9.1.tar.xz
+</code></pre>
+                    </div>
+                </li>
+                <li><strong>Build</strong>:
+                    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span
+                            class="gp">$ </span>mkdir -p <span class="nv">$SWD</span>/build/gdb <span
+                            class="o">&amp;&amp;</span> <span
+                            class="nb">cd</span> <span class="nv">$SWD</span>/build/gdb
+<span class="gp">$ </span>../../src/gdb-7.9.1/configure --prefix<span class="o">=</span><span class="nv">$PREFIX</span> --target<span
+                                class="o">=</span>i386-elf --disable-werror
+<span class="gp">$ </span>make -j8
+<span class="gp">$ </span>make install
+</code></pre>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <b>Note</b>
+        </div>
+        <div class="panel-body">
+            After building and installing the toolchain, you need to make sure they are in
+            the PATH. Put <code class="highlighter-rogue">export PATH=/path/to/swd/x86_64/bin:$PATH</code>
+            to the end of your terminal config file (e.g., <code
+                class="highlighter-rogue">.bash_profile</code>)
+            so that they are set automatically when you login. Remember to replace
+            <code class="highlighter-rogue">/path/to/swd/x86_64/bin</code> with the actual path,
+            e.g., <code class="highlighter-rogue">~/318/toolchain/x86_64/bin</code>. You may also
+            want to delete the source and build directories in <code>/path/to/swd/{src,build}</code>
+            to save space.
+        </div>
+    </div>
+
+    <h3 id="x86-emulator">x86 Emulator</h3>
+
+    <ul>
+        <li><strong>QEMU</strong>:
+            <ul>
+                <li>QEMU is modern and fast. You can either install it from the package repository or
+                    build it from <a href="https://www.qemu.org/download/">source</a>. For Ubuntu: <code
+                            class="highlighter-rouge">sudo apt-get install qemu libvirt-bin</code>.
+                    For MacOS: <code class="highlighter-rouge">brew install qemu</code>.
+                </li>
+            </ul>
+        </li>
+        <li><strong>Bochs</strong>:
+            <ul>
+                <li>
+                    <p>Bochs is slower than QEMU but provides full emulation (i.e., higher accuracy).
+                        For Lab 1, we will use Bochs as the default emulator and for Lab 2-4, we will
+                        use QEMU as the default emulator. Nevertheless, nothing will prevent you from using
+                        one or another for all the labs. There are some bugs in Bochs that should be fixed
+                        when using it with Pintos. Thus, we need to install Bochs from source, and apply
+                        the patches that we have provided under <code class="highlighter-rouge">pintos/src/misc/bochs*.patch</code>.
+                        We will
+                        build two versions of Bochs: one, simply named <code
+                                class="highlighter-rouge">bochs</code>, with the GDB stub enabled, and the
+                        other, named <code class="highlighter-rouge">bochs-dbg</code>, with the built-in
+                        debugger enabled.</p>
+                </li>
+                <li>
+                    <p>Version 2.6.2 has been tested to work with Pintos. Newer version of Bochs has
+                        not been tested. <span class="text-info">We have provided a build script
+<code>pintos/src/misc/bochs-2.6.2-build.sh</code> that will download, patch and
+build two versions of the Bochs for you. But you need to make sure X11 and its
+library is installed. For Mac OS, you should install <a href="https://www.xquartz.org/">XQuartz</a>.
+For Ubuntu, you should have <code class="highlighter-rouge">libx11-dev</code> and <code class="highlighter-rouge">libxrandr-dev</code> installed.</span>
+                    </p>
+
+                    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>  pintos/src/misc/bochs-2.6.2-build.sh /path/to/swd/x86_64
+</code></pre>
+                    </div>
+                    <p>(replace <code class="highlighter-rouge">/path/to/swd/x86_64</code> with the actual
+                        directory path)</p>
+                </li>
+                <li>
+                    <p>After build succeeds, make sure the <code class="highlighter-rouge">bochs</code> or
+                        <code
+                                class="highlighter-rouge">bochs-db</code> are in PATH. You
+                        can verify the install with <code class="highlighter-rouge">bochs --version</code>.
+                    </p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 id="pintos-utility-tools">Pintos Utility Tools</h3>
+    <p>The Pintos source distribution comes with a few handy scripts that you will be
+        using frequently. They are located within <code class="highlighter-rouge">src/utils/</code>. The
+        most
+        important one is
+        the <code class="highlighter-rouge">pintos</code> Perl script, which you will be using to start and
+        run
+        tests
+        in pintos. You need to make sure it can be found in your PATH environment
+        variable. In addition, the <code class="highlighter-rouge">src/misc/gdb-macros</code> is provided
+        with a
+        number of
+        GDB macros that you will find useful when you are debugging Pintos. The <code
+                class="highlighter-rouge">pintos-gdb</code>
+        is a wrapper around the <code class="highlighter-rouge">i386-elf-gdb</code> that reads this macro
+        file
+        at start.
+        It assumes the macro file resides in <code class="highlighter-rouge">../misc</code>.</p>
+
+    <p>The example commands to do the above setup for the Pintos utilities are:
+        (replace <code class="highlighter-rouge">/path/to/swd/x86_64</code> with the actual directory path)
+    </p>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span
+            class="gp">$ </span><span
+            class="nb">cd </span>pintos/src/utils <span class="o">&amp;&amp;</span> make
+<span class="gp">$ </span>cp backtrace pintos Pintos.pm pintos-gdb pintos-set-cmdline pintos-mkdisk setitimer-helper squish-pty squish-unix /path/to/swd/x86_64/bin
+<span class="gp">$ </span>mkdir /path/to/swd/x86_64/misc
+<span class="gp">$ </span>cp pintos/src/misc/gdb-macros /path/to/swd/x86_64/misc
+</code></pre>
+    </div>
+
+    <h3 id="others">Others</h3>
+    <ul>
+        <li>Required: <a href="http://www.perl.org/">Perl</a>. Version 5.8.0 or later.</li>
+        <li>Recommended:
+            <ul>
+                <li><a href="http://ctags.sourceforge.net/">ctags</a></li>
+                <li><a href="http://cscope.sourceforge.net/">cscope</a></li>
+                <li><a href="https://cgdb.github.io/">cgdb</a></li>
+                <li><a href="https://github.com/scrooloose/nerdtree">NERDTree</a></li>
+                <li><a href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a>.</li>
+            </ul>
+        </li>
+        <li>Optional:
+            <ul>
+                <li>GUI IDEs like <a href="https://eclipse.org/cdt">Eclipse CDT</a> or <a
+                        href="http://www.jetbrains.com/clion">clion</a>.
+                    The instructor has not tried them. Vim or Emacs plus the standard Unix development
+                    tools would suffice for the course. But if you can‚Äôt live without GUI IDEs. You
+                    may explore the setup yourself (potential
+                    <a href="https://uchicago-cs.github.io/mpcs52030/pintos_eclipse.html">reference</a>) and
+                    let us know if they are helpful!
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h4 id="mac-users">Mac Users</h4>
+    <p>The original Pintos was mainly developed and tested for Linux (Debian
+        and Ubuntu in particular) and Solaris. It has some issues to run
+        on Mac OS. We have fixed a number of issues and provided scripts
+        to make it run more smoothly with Mac OS. They should be working mostly.
+        But one caveat that you should be aware of is that the <code class="highlighter-rouge">setitimer</code> system
+        call
+        (used by the <code class="highlighter-rouge">pintos</code> script to control runtime of tests) in Mac OS seems
+        to have some bug,
+        which may trigger premature timeout when using <code class="highlighter-rouge">pintos</code> with <code
+                class="highlighter-rouge">--qemu</code>. To work around
+        this, you can either use the Bochs simulator <code class="highlighter-rouge">--bochs</code> instead (modify the
+        <code class="highlighter-rouge">src/{threads,userprog,vm,filesys}/Make.vars</code>) or increase the timeout
+        passed to
+        <code class="highlighter-rouge">pintos</code> (e.g., change TIMEOUT in <code class="highlighter-rouge">src/tests/Make.tests</code>
+        to 400).</p>
+
+
+    <!--<footer class="site-footer">-->
+        <!--<hr>-->
+        <!--<div class="wrapper">-->
+            <!--Ryan Huang | Last updated 2019-01-06 13:58:14 -0500.-->
+        <!--</div>-->
+    <!--</footer>-->
+
+</div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

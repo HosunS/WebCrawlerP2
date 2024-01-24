@@ -1,0 +1,231 @@
+�Ifinal_url�DtypeLhttp_headers�DtypeEvalue��Ak�DtypeEvalueDDateAv�DtypeEvalueXTue, 05 Feb 2019 09:31:19 GMT�Ak�DtypeEvalueQTransfer-EncodingAv�DtypeEvalueGchunked�Ak�DtypeEvalueJConnectionAv�DtypeEvalueEclose�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueXtext/html; charset=UTF-8�Ak�DtypeEvalueFServerAv�DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content�DtypeEvalueY*�
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: NoisyOffice Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>NoisyOffice Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/00318/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="#"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: Corpus intended to do cleaning (or binarization) and enhancement of noisy grayscale printed text images using supervised learning methods. Noisy images and their corresponding ground truth provided.</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">216</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Computer</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">216</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2015-01-03</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification, Regression</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">52771</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">M.J. Castro-Bleda (1), S. España-Boquera (1), J. Pastor-Pellicer (1), F. Zamora-Martinez (2) <br><u>mcastro <b>'@'</b> dsic.upv.es</u>, <u>sespana <b>'@'</b> dsic.upv.es</u>, <u>jpastor <b>'@'</b> dsic.upv.es</u>, <u>francisco.zamora <b>'@'</b> uch.ceu.es</u><br><br>(1) Departamento de Sistemas Informáticos  y Computación, Universitat Politècnica  de València, Valencia, Spain<br>(2) Departamento de Ciencias Físicas, Matemáticas y de la Computación, Universidad CEU Cardenal Herrera, Alfara del Patriarca, València, Spain</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">AIMS AND PURPOSES<br><br>This corpus is intended to do cleaning (or binarization) and enhancement of noisy grayscale printed text images using supervised learning methods. To this end, noisy images and their corresponding cleaned or binarized ground truth are provided. Double resolution ground truth images are also provided in order to test superresolution methods.<br><br>CORPUS DIRECTORIES STRUCTURE<br><br>SimulatedNoisyOffice folder has been prepared for training, validation and test of supervised methods. RealNoisyOffice folder is provided for subjective evaluation.<br><br>.<br>|-- RealNoisyOffice<br>|   |-- real_noisy_images_grayscale<br>|   `-- real_noisy_images_grayscale_doubleresolution<br>`-- SimulatedNoisyOffice<br>    |-- clean_images_binaryscale<br>    |-- clean_images_grayscale<br>    |-- clean_images_grayscale_doubleresolution<br>    `-- simulated_noisy_images_grayscale<br><br>RealNoisyOffice<br>- real_noisy_images_grayscale: 72 grayscale images of scanned 'noisy' images.<br>- real_noisy_images_grayscale_doubleresolution: idem, double resolution.<br><br>SimulatedNoisyOffice<br>- simulated_noisy_images_grayscale: 72 grayscale images of scanned 'simulated noisy' images for training, validation and test.<br>- clean_images_grayscale_doubleresolution: Grayscale ground truth of the images with double resolution.<br>- clean_images_grayscale: Grayscale ground truth of the images with smoothing on the borders (normal resolution).<br>- clean_images_binary: Binary ground truth of the images (normal resolution).<br><br>DESCRIPTION<br><br>Every file is a printed text image following the pattern FontABC_NoiseD_EE.png:<br><br>A) Size of the font: footnote size (f), normal size (n) o large size (L).<br><br>B) Font type: typewriter (t), sans serif (s) or roman (r). <br><br>C) Yes/no emphasized font (e/m).<br><br>D) Type of noise: folded sheets (Noise f), wrinkled sheets (Noise w), coffee stains (Noise c), and footprints (Noise p).<br><br>E) Data set partition: training (TR), validation (VA), test (TE), real (RE).<br><br>For each type of font, one type of Noise: 17 files * 4 types of noise = 72 images.<br><br>OTHER INFORMATION<br><br>200 ppi => normal resolution<br>400 ppi => double resolution<br></p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">The format of each file is the following: Grayscale PNG files (<a href="http://en.wikipedia.org/wiki/Portable_Network_Graphics">[Web Link]</a>). The ground truth is also provided as grayscale PNG files, and for the binary version the values are saturated to 0 and 255.</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">J. L. Adelantado­Torres, J. Pastor­Pellicer, and M. J. Castro­Bleda. Una aplicación móvil para la captura y<br>mejora de imágenes de textos, in: V Jornadas TIMM (Tratamiento de la Información Multilingüe y<br>Multimodal), Red temática TIMM (Tratamiento de Información Multilingüe y Multimodal), Sevilla, 2014. <br>M. J. Castro­Bleda, S. España­Boquera and F. Zamora­Martinez. Encyclopedia of Artificial Intelligence,<br>chapter Behaviour­based Clustering of Neural Networks, pages 144­151, Information Science Reference,<br>2009. <br>F. Zamora­Martinez, S. España­Boquera and M. J. Castro­Bleda. Behaviour­based Clustering of Neural<br>Networks applied to Document Enhancement, in: Computational and Ambient Intelligence, pages 144­151,<br>Springer, 2007.</p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please refer to the Machine Learning Repository's citation policy <a href="http://archive.ics.uci.edu/ml/citation_policy.html">[Web Link]</a>.<br><br>For the database:<br><br>F. Zamora-Martinez, S. España-Boquera and M. J. Castro-Bleda, Behaviour-based Clustering of Neural Networks applied to Document Enhancement, in: Computational and Ambient Intelligence, pages 144-151, Springer, 2007.</p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

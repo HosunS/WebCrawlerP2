@@ -1,0 +1,29 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC620¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 24 Apr 2011 04:32:37 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"4c5-4a1a2949e0340-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 04:51:33 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÅ1. f, e, b, c, d
+
+
+2. No, because edges e->c, e->b, f->c, and f->b would not go from earlier in the list to later in the list.
+
+
+3. 3 layers
+
+e   f
+| X |
+c   b
+ \ /
+  d   a
+
+
+4. Same as 3.
+
+
+5. e, f, a, c, b, d
+(there are many other valid answers, but a, e, and f must be the first three items and b and c must be the next two.)
+
+
+6. (Not graded, because I gave the wrong definition of the layering algorithm in class and didn't correct the mistake until after the homeworks were turned in.)
+
+The correct layering algorithm processes the vertices in the reverse of a topological ordering, placing each one as low as possible. So d goes on the bottom layer. b and c both go on the next-to-bottom layer, because they have to go higher than b. Then (for the topological ordering from question 5) a is placed next, and is free to go on the bottom layer, so it does. Finally, f and then e are placed, and they have to go above b and c for two reasons: they have edges to b and c, and the layer containing b and c is full. So we get the drawing that I already gave as the answer to question 3.
+
+
+7. a, e, and f could all be first, because they have no incoming edges. a or d could be last, because they have no outgoing edges.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

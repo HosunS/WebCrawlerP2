@@ -1,0 +1,382 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 21:10:00 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYd<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=mat&task=&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Classification</a> <font color=red>(62)</font><br><a href='datasets.html?format=mat&task=reg&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Regression</a> <font color=red>(19)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Clustering</a></font> <font color=red>(16)</font><br><a href='datasets.html?format=mat&task=other&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Other</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b>  - <a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=clu&att=cat&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Categorical</a> <font color=red>(0)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Numerical</a></font> <font color=red>(16)</font><br><a href='datasets.html?format=mat&task=clu&att=mix&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Mixed</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=mvar&sort=taskUp&view=table'>Multivariate</a> <font color=red>(13)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=uvar&sort=taskUp&view=table'>Univariate</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=seq&sort=taskUp&view=table'>Sequential</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=ts&sort=taskUp&view=table'>Time-Series</a> <font color=red>(4)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=text&sort=taskUp&view=table'>Text</a> <font color=red>(3)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=dt&sort=taskUp&view=table'>Domain-Theory</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=other&sort=taskUp&view=table'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=clu&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Life Sciences</a> <font color=red>(2)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=phys&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Physical Sciences</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=comp&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>CS / Engineering</a> <font color=red>(4)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=soc&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Social Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=bus&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Business</a> <font color=red>(3)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=game&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=other&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Other</a> <font color=red>(5)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=less10&numIns=100to1000&type=&sort=taskUp&view=table'>Less than 10</a> <font color=red>(5)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=taskUp&view=table'>10 to 100</a> <font color=red>(7)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=greater100&numIns=100to1000&type=&sort=taskUp&view=table'>Greater than 100</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=&type=&sort=taskUp&view=table'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=less100&type=&sort=taskUp&view=table'>Less than 100</a> <font color=red>(2)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>100 to 1000</a></font> <font color=red>(16)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Greater than 1000</a> <font color=red>(33)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b> - <a href='datasets.html?format=&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Matrix</a></font> <font color=red>(16)</font><br><a href='datasets.html?format=nonmat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Non-Matrix</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>16</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskDown&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=&numIns=100to1000&type=&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/User+Knowledge+Modeling"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/User+Knowledge+Modeling">User Knowledge Modeling</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">It is the real dataset about the students' knowledge status about the subject of Electrical DC Machines. The dataset had been obtained from Ph.D. Thesis.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">403&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Wholesale+customers"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Wholesale+customers">Wholesale customers</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set refers to clients of a wholesale distributor. It includes the annual spending in monetary units (m.u.) on diverse product categories&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">440&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Perfume+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Perfume+Data">Perfume Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of odors of 20 different perfumes. Data was obtained by using a handheld odor meter (OMX-GR sensor) per second for 28 seconds period.&nbsp;</p></td> -->
+			<td><p class="normal">Univariate, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">560&nbsp;</p></td>
+			<td><p class="normal">2&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Dow+Jones+Index"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dow+Jones+Index">Dow Jones Index</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains weekly data for the Dow Jones Industrial Index.  It has been used in computational investing research.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">750&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Synthetic+Control+Chart+Time+Series"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Synthetic+Control+Chart+Time+Series">Synthetic Control Chart Time Series</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of synthetically generated control charts.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">600&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/gene+expression+cancer+RNA-Seq"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/gene+expression+cancer+RNA-Seq">gene expression cancer RNA-Seq</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This collection of data is part of the RNA-Seq (HiSeq) PANCAN data set, it is a random extraction of gene expressions of patients having different types of tumor: BRCA, KIRC, COAD, LUAD and PRAD.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">801&nbsp;</p></td>
+			<td><p class="normal">20531&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Libras+Movement"><img src="assets/MLimages/SmallLarge181.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Libras+Movement">Libras Movement</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set contains 15 classes of 24 instances each. Each class references to a hand movement type in LIBRAS (Portuguese
+name 'Lï¿½ngua BRAsileira de Sinais', oficial brazilian signal language).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">360&nbsp;</p></td>
+			<td><p class="normal">91&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Absenteeism+at+work"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Absenteeism+at+work">Absenteeism at work</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The database was created with records of absenteeism at work from July 2007 to July 2010 at a courier company in Brazil.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">740&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/BuddyMove+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/BuddyMove+Data+Set">BuddyMove Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">User interest information extracted from user reviews published in holidayiq.com about various types of point of interests in South India&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">249&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Travel+Reviews"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Travel+Reviews">Travel Reviews</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Reviews on destinations in 10 categories mentioned across East Asia. Each traveler rating is mapped as Excellent(4), Very Good(3), Average(2), Poor(1), and Terrible(0) and average rating is used.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">980&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/seeds"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/seeds">seeds</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Measurements of geometrical properties of kernels belonging to three different varieties of wheat. A soft X-ray technique and GRAINS package were used to construct all seven, real-valued attributes.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">210&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Tennis+Major+Tournament+Match+Statistics"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Tennis+Major+Tournament+Match+Statistics">Tennis Major Tournament Match Statistics</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a collection of 8 files containing the match statistics for both women and men at the four major tennis tournaments of the year 2013. Each file has 42 columns and a minimum of 76 rows.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">127&nbsp;</p></td>
+			<td><p class="normal">42&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/DrivFace"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/DrivFace">DrivFace</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The DrivFace contains images sequences of subjects while driving in real scenarios. It is composed of 606 samples of 640Ã—480, acquired over different days from 4 drivers with several facial features.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">606&nbsp;</p></td>
+			<td><p class="normal">6400&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Water+Treatment+Plant"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Water+Treatment+Plant">Water Treatment Plant</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Multiple classes predict plant state&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">527&nbsp;</p></td>
+			<td><p class="normal">38&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Sales_Transactions_Dataset_Weekly"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Sales_Transactions_Dataset_Weekly">Sales_Transactions_Dataset_Weekly</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Contains weekly purchased quantities of 800 over products over 52 weeks. Normalised values are provided too.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">811&nbsp;</p></td>
+			<td><p class="normal">53&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Mturk+User-Perceived+Clusters+over+Images"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Mturk+User-Perceived+Clusters+over+Images">Mturk User-Perceived Clusters over Images</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset was collected by Shan-Hung Wu and DataLab members at NTHU, Taiwan. There're 325 user-perceived clusters from 100 users and their corresponding descriptions.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">180&nbsp;</p></td>
+			<td><p class="normal">500&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

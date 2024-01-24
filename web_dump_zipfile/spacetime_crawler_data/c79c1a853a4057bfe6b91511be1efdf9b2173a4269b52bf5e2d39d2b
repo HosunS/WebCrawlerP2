@@ -1,0 +1,449 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE19406¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 12 Aug 2018 06:57:25 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"4bce-573377d426cf3"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 09:43:04 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYKÎ<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .slidecontainer {
+        width: 100%;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 100px;
+        height: 20px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+
+    .slider:hover {
+        opacity: 1;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+        background: #4CAF50;
+        cursor: pointer;
+    }
+    th {
+        text-align: left;
+    }    
+  </style>
+</head>
+
+<body>
+  <table style="width:512px">
+  <tr>  
+  <th>
+    <img id="img" width="256" height="256">
+
+    <div class="slidecontainer">
+      <input type="range" min="1.1" max="1.7" value="1.1" step="0.2" class="slider" id="range_eta">
+      &eta; (1.1~1.7): <font color="red"><b><span id="value_eta"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.1" value="0.01" step="0.03" class="slider" id="range_alphaT">
+      &alpha;1 (0.01~0.1): <font color="red"><b><span id="value_alphaT"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.1" value="0.01" step="0.03" class="slider" id="range_alphaB">
+      &alpha;2 (0.01~0.1): <font color="red"><b><span id="value_alphaB"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.6" max="1.5" value="0.6" step="0.3" class="slider" id="range_sigmaT">
+      &sigma;t (0.6~1.5): <font color="red"><b><span id="value_sigmaT"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0" max="0.9" value="0" step="0.3" class="slider" id="range_g">
+      g (0~0.9): <font color="red"><b><span id="value_g"></span></b></font>
+    </div>
+  </th>
+
+  <th>
+    <img id="img_2" width="256" height="256">
+
+    <div class="slidecontainer">
+      <input type="range" min="1.1" max="1.7" value="1.1" step="0.2" class="slider" id="range_eta_2">
+      &eta; (1.1~1.7): <font color="red"><b><span id="value_eta_2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.1" value="0.01" step="0.03" class="slider" id="range_alphaT_2">
+      &alpha;1 (0.01~0.1): <font color="red"><b><span id="value_alphaT_2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.1" value="0.01" step="0.03" class="slider" id="range_alphaB_2">
+      &alpha;2 (0.01~0.1): <font color="red"><b><span id="value_alphaB_2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.6" max="1.5" value="0.6" step="0.3" class="slider" id="range_sigmaT_2">
+      &sigma;t (0.6~1.5): <font color="red"><b><span id="value_sigmaT_2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0" max="0.9" value="0" step="0.3" class="slider" id="range_g_2">
+      g (0~0.9): <font color="red"><b><span id="value_g_2"></span></b></font>
+    </div>
+  </th>
+  </tr>
+
+  <tr>
+  <th>
+    <img id="aniso_img" width="256" height="256">
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.01" value="0.01" step="0.01" class="slider" id="range_aniso_alpha1">
+      &alpha;1U (.01): <font color="red"><b><span id="value_aniso_alpha1"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.01" value="0.01" step="0.01" class="slider" id="range_aniso_alpha2">
+      &alpha;1V (.01): <font color="red"><b><span id="value_aniso_alpha2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.22" value="0.01" step="0.07" class="slider" id="range_aniso_alpha3">
+      &alpha;2U (.01~.22): <font color="red"><b><span id="value_aniso_alpha3"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.22" value="0.01" step="0.07" class="slider" id="range_aniso_alpha4">
+      &alpha;2V (.01~.22): <font color="red"><b><span id="value_aniso_alpha4"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0" max="150" value="0" step="30" class="slider" id="range_aniso_ori">
+      Ori (0~150): <font color="red"><b><span id="value_aniso_ori"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.07" value="0.01" step="0.02" class="slider" id="range_aniso_stddev">
+      Std (.01~.07): <font color="red"><b><span id="value_aniso_stddev"></span></b></font>
+    </div>
+  </th>
+
+  <th>
+    <img id="aniso_img_2" width="256" height="256">
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.01" value="0.01" step="0.01" class="slider" id="range_aniso_alpha1_2">
+      &alpha;1U (.01): <font color="red"><b><span id="value_aniso_alpha1_2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.01" value="0.01" step="0.01" class="slider" id="range_aniso_alpha2_2">
+      &alpha;1V (.01): <font color="red"><b><span id="value_aniso_alpha2_2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.22" value="0.01" step="0.07" class="slider" id="range_aniso_alpha3_2">
+      &alpha;2U (.01~.22): <font color="red"><b><span id="value_aniso_alpha3_2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.22" value="0.01" step="0.07" class="slider" id="range_aniso_alpha4_2">
+      &alpha;2V (.01~.22): <font color="red"><b><span id="value_aniso_alpha4_2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0" max="150" value="0" step="30" class="slider" id="range_aniso_ori_2">
+      Ori (0~150): <font color="red"><b><span id="value_aniso_ori_2"></span></b></font>
+    </div>
+
+    <div class="slidecontainer">
+      <input type="range" min="0.01" max="0.07" value="0.01" step="0.02" class="slider" id="range_aniso_stddev_2">
+      Std (.01~.07): <font color="red"><b><span id="value_aniso_stddev_2"></span></b></font>
+    </div>
+  </th>  
+  </tr>
+
+  </table>
+
+
+  <script>
+
+    var img = document.getElementById("img");
+    img.src = "dataset1/1.1_0.01_0.6_0_0.01.png";
+
+    var eta_this = 1.1;
+    var alphaT_this = 0.01; 
+    var alphaB_this = 0.01;
+    var sigmaT_this = 0.6;
+    var g_this = 0;
+
+    var slider_eta = document.getElementById("range_eta");
+    var output_eta = document.getElementById("value_eta");
+    output_eta.innerHTML = slider_eta.value;
+
+    var slider_alphaT = document.getElementById("range_alphaT");
+    var output_alphaT = document.getElementById("value_alphaT");
+    output_alphaT.innerHTML = slider_alphaT.value;
+
+    var slider_alphaB = document.getElementById("range_alphaB");
+    var output_alphaB = document.getElementById("value_alphaB");
+    output_alphaB.innerHTML = slider_alphaB.value;
+
+    var slider_sigmaT = document.getElementById("range_sigmaT");
+    var output_sigmaT = document.getElementById("value_sigmaT");
+    output_sigmaT.innerHTML = slider_sigmaT.value;
+
+    var slider_g = document.getElementById("range_g");
+    var output_g = document.getElementById("value_g");
+    output_g.innerHTML = slider_g.value;
+
+    slider_eta.oninput = function() {
+      eta_this = this.value;
+      output_eta.innerHTML = eta_this;
+      img.src = "dataset1/" + eta_this + "_" + alphaT_this + "_" + sigmaT_this + "_" + g_this + "_" + alphaB_this + ".png";    
+    }
+
+    slider_alphaT.oninput = function() {
+      alphaT_this = this.value;
+      output_alphaT.innerHTML = alphaT_this;
+      img.src = "dataset1/" + eta_this + "_" + alphaT_this + "_" + sigmaT_this + "_" + g_this + "_" + alphaB_this + ".png";
+    }
+
+    slider_alphaB.oninput = function() {
+      alphaB_this = this.value;
+      output_alphaB.innerHTML = alphaB_this;
+      img.src = "dataset1/" + eta_this + "_" + alphaT_this + "_" + sigmaT_this + "_" + g_this + "_" + alphaB_this + ".png";    
+    }
+
+    slider_sigmaT.oninput = function() {
+      sigmaT_this = this.value;
+      output_sigmaT.innerHTML = sigmaT_this;
+      img.src = "dataset1/" + eta_this + "_" + alphaT_this + "_" + sigmaT_this + "_" + g_this + "_" + alphaB_this + ".png";    
+    }
+
+    slider_g.oninput = function() {
+      g_this = this.value;
+      output_g.innerHTML = g_this;
+      img.src = "dataset1/" + eta_this + "_" + alphaT_this + "_" + sigmaT_this + "_" + g_this + "_" + alphaB_this + ".png";    
+    }
+
+    var img_2 = document.getElementById("img_2");
+    img_2.src = "dataset1/1.1_0.01_0.6_0_0.01.png";
+
+    var eta_this_2 = 1.1;
+    var alphaT_this_2 = 0.01; 
+    var alphaB_this_2 = 0.01;
+    var sigmaT_this_2 = 0.6;
+    var g_this_2 = 0;
+
+    var slider_eta_2 = document.getElementById("range_eta_2");
+    var output_eta_2 = document.getElementById("value_eta_2");
+    output_eta_2.innerHTML = slider_eta_2.value;
+
+    var slider_alphaT_2 = document.getElementById("range_alphaT_2");
+    var output_alphaT_2 = document.getElementById("value_alphaT_2");
+    output_alphaT_2.innerHTML = slider_alphaT_2.value;
+
+    var slider_alphaB_2 = document.getElementById("range_alphaB_2");
+    var output_alphaB_2 = document.getElementById("value_alphaB_2");
+    output_alphaB_2.innerHTML = slider_alphaB_2.value;
+
+    var slider_sigmaT_2 = document.getElementById("range_sigmaT_2");
+    var output_sigmaT_2 = document.getElementById("value_sigmaT_2");
+    output_sigmaT_2.innerHTML = slider_sigmaT_2.value;
+
+    var slider_g_2 = document.getElementById("range_g_2");
+    var output_g_2 = document.getElementById("value_g_2");
+    output_g_2.innerHTML = slider_g_2.value;
+
+    slider_eta_2.oninput = function() {
+      eta_this_2 = this.value;
+      output_eta_2.innerHTML = eta_this_2;
+      img_2.src = "dataset1/" + eta_this_2 + "_" + alphaT_this_2 + "_" + sigmaT_this_2 + "_" + g_this_2 + "_" + alphaB_this_2 + ".png";    
+    }
+
+    slider_alphaT_2.oninput = function() {
+      alphaT_this_2 = this.value;
+      output_alphaT_2.innerHTML = alphaT_this_2;
+      img_2.src = "dataset1/" + eta_this_2 + "_" + alphaT_this_2 + "_" + sigmaT_this_2 + "_" + g_this_2 + "_" + alphaB_this_2 + ".png";
+    }
+
+    slider_alphaB_2.oninput = function() {
+      alphaB_this_2 = this.value;
+      output_alphaB_2.innerHTML = alphaB_this_2;
+      img_2.src = "dataset1/" + eta_this_2 + "_" + alphaT_this_2 + "_" + sigmaT_this_2 + "_" + g_this_2 + "_" + alphaB_this_2 + ".png";    
+    }
+
+    slider_sigmaT_2.oninput = function() {
+      sigmaT_this_2 = this.value;
+      output_sigmaT_2.innerHTML = sigmaT_this_2;
+      img_2.src = "dataset1/" + eta_this_2 + "_" + alphaT_this_2 + "_" + sigmaT_this_2 + "_" + g_this_2 + "_" + alphaB_this_2 + ".png";    
+    }
+
+    slider_g_2.oninput = function() {
+      g_this_2 = this.value;
+      output_g_2.innerHTML = g_this_2;
+      img_2.src = "dataset1/" + eta_this_2 + "_" + alphaT_this_2 + "_" + sigmaT_this_2 + "_" + g_this_2 + "_" + alphaB_this_2 + ".png";    
+    }
+
+    var aniso_img = document.getElementById("aniso_img");
+    aniso_img.src = "dataset2/0.01_0.01_0.01_0.01_0_0.01.png";
+
+    var aniso_alpha1_this = 0.01;
+    var aniso_alpha2_this = 0.01; 
+    var aniso_alpha3_this = 0.01;
+    var aniso_alpha4_this = 0.01; 
+    var aniso_ori_this = 0;
+    var aniso_stddev_this = 0.01;
+
+    var slider_aniso_alpha1 = document.getElementById("range_aniso_alpha1");
+    var output_aniso_alpha1 = document.getElementById("value_aniso_alpha1");
+    output_aniso_alpha1.innerHTML = slider_aniso_alpha1.value;
+
+    var slider_aniso_alpha2 = document.getElementById("range_aniso_alpha2");
+    var output_aniso_alpha2 = document.getElementById("value_aniso_alpha2");
+    output_aniso_alpha2.innerHTML = slider_aniso_alpha2.value;
+
+    var slider_aniso_alpha3 = document.getElementById("range_aniso_alpha3");
+    var output_aniso_alpha3 = document.getElementById("value_aniso_alpha3");
+    output_aniso_alpha3.innerHTML = slider_aniso_alpha3.value;
+
+    var slider_aniso_alpha4 = document.getElementById("range_aniso_alpha4");
+    var output_aniso_alpha4 = document.getElementById("value_aniso_alpha4");
+    output_aniso_alpha4.innerHTML = slider_aniso_alpha4.value;
+
+    var slider_aniso_ori = document.getElementById("range_aniso_ori");
+    var output_aniso_ori = document.getElementById("value_aniso_ori");
+    output_aniso_ori.innerHTML = slider_aniso_ori.value;
+
+    var slider_aniso_stddev = document.getElementById("range_aniso_stddev");
+    var output_aniso_stddev = document.getElementById("value_aniso_stddev");
+    output_aniso_stddev.innerHTML = slider_aniso_stddev.value;
+
+
+    slider_aniso_alpha1.oninput = function() {
+      aniso_alpha1_this = this.value;
+      output_aniso_alpha1.innerHTML = aniso_alpha1_this;
+      aniso_img.src = "dataset2/" + aniso_alpha1_this + "_" + aniso_alpha2_this + "_" + aniso_alpha3_this + "_" + aniso_alpha4_this + "_" + aniso_ori_this + "_" + aniso_stddev_this + ".png";    
+    }
+
+    slider_aniso_alpha2.oninput = function() {
+      aniso_alpha2_this = this.value;
+      output_aniso_alpha2.innerHTML = aniso_alpha2_this;
+      aniso_img.src = "dataset2/" + aniso_alpha1_this + "_" + aniso_alpha2_this + "_" + aniso_alpha3_this + "_" + aniso_alpha4_this + "_" + aniso_ori_this + "_" + aniso_stddev_this + ".png";    
+     }
+
+    slider_aniso_alpha3.oninput = function() {
+      aniso_alpha3_this = this.value;
+      output_aniso_alpha3.innerHTML = aniso_alpha3_this;
+      aniso_img.src = "dataset2/" + aniso_alpha1_this + "_" + aniso_alpha2_this + "_" + aniso_alpha3_this + "_" + aniso_alpha4_this + "_" + aniso_ori_this + "_" + aniso_stddev_this + ".png";    
+    }
+
+    slider_aniso_alpha4.oninput = function() {
+      aniso_alpha4_this = this.value;
+      output_aniso_alpha4.innerHTML = aniso_alpha4_this;
+      aniso_img.src = "dataset2/" + aniso_alpha1_this + "_" + aniso_alpha2_this + "_" + aniso_alpha3_this + "_" + aniso_alpha4_this + "_" + aniso_ori_this + "_" + aniso_stddev_this + ".png";    
+    }
+
+    slider_aniso_ori.oninput = function() {
+      aniso_ori_this = this.value;
+      output_aniso_ori.innerHTML = aniso_ori_this;
+      aniso_img.src = "dataset2/" + aniso_alpha1_this + "_" + aniso_alpha2_this + "_" + aniso_alpha3_this + "_" + aniso_alpha4_this + "_" + aniso_ori_this + "_" + aniso_stddev_this + ".png";    
+    }
+
+    slider_aniso_stddev.oninput = function() {
+      aniso_stddev_this = this.value;
+      output_aniso_stddev.innerHTML = aniso_stddev_this;
+      aniso_img.src = "dataset2/" + aniso_alpha1_this + "_" + aniso_alpha2_this + "_" + aniso_alpha3_this + "_" + aniso_alpha4_this + "_" + aniso_ori_this + "_" + aniso_stddev_this + ".png";    
+    }
+
+    var aniso_img_2 = document.getElementById("aniso_img_2");
+    aniso_img_2.src = "dataset2/0.01_0.01_0.01_0.01_0_0.01.png";
+
+    var aniso_alpha1_this_2 = 0.01;
+    var aniso_alpha2_this_2 = 0.01; 
+    var aniso_alpha3_this_2 = 0.01;
+    var aniso_alpha4_this_2 = 0.01; 
+    var aniso_ori_this_2 = 0;
+    var aniso_stddev_this_2 = 0.01;
+
+    var slider_aniso_alpha1_2 = document.getElementById("range_aniso_alpha1_2");
+    var output_aniso_alpha1_2 = document.getElementById("value_aniso_alpha1_2");
+    output_aniso_alpha1_2.innerHTML = slider_aniso_alpha1_2.value;
+
+    var slider_aniso_alpha2_2 = document.getElementById("range_aniso_alpha2_2");
+    var output_aniso_alpha2_2 = document.getElementById("value_aniso_alpha2_2");
+    output_aniso_alpha2_2.innerHTML = slider_aniso_alpha2_2.value;
+
+    var slider_aniso_alpha3_2 = document.getElementById("range_aniso_alpha3_2");
+    var output_aniso_alpha3_2 = document.getElementById("value_aniso_alpha3_2");
+    output_aniso_alpha3_2.innerHTML = slider_aniso_alpha3_2.value;
+
+    var slider_aniso_alpha4_2 = document.getElementById("range_aniso_alpha4_2");
+    var output_aniso_alpha4_2 = document.getElementById("value_aniso_alpha4_2");
+    output_aniso_alpha4_2.innerHTML = slider_aniso_alpha4_2.value;
+
+    var slider_aniso_ori_2 = document.getElementById("range_aniso_ori_2");
+    var output_aniso_ori_2 = document.getElementById("value_aniso_ori_2");
+    output_aniso_ori_2.innerHTML = slider_aniso_ori_2.value;
+
+    var slider_aniso_stddev_2 = document.getElementById("range_aniso_stddev_2");
+    var output_aniso_stddev_2 = document.getElementById("value_aniso_stddev_2");
+    output_aniso_stddev_2.innerHTML = slider_aniso_stddev_2.value;
+
+
+    slider_aniso_alpha1_2.oninput = function() {
+      aniso_alpha1_this_2 = this.value;
+      output_aniso_alpha1_2.innerHTML = aniso_alpha1_this_2;
+      aniso_img_2.src = "dataset2/" + aniso_alpha1_this_2 + "_" + aniso_alpha2_this_2 + "_" + aniso_alpha3_this_2 + "_" + aniso_alpha4_this_2 + "_" + aniso_ori_this_2 + "_" + aniso_stddev_this_2 + ".png";    
+    }
+
+    slider_aniso_alpha2_2.oninput = function() {
+      aniso_alpha2_this_2 = this.value;
+      output_aniso_alpha2_2.innerHTML = aniso_alpha2_this_2;
+      aniso_img_2.src = "dataset2/" + aniso_alpha1_this_2 + "_" + aniso_alpha2_this_2 + "_" + aniso_alpha3_this_2 + "_" + aniso_alpha4_this_2 + "_" + aniso_ori_this_2 + "_" + aniso_stddev_this_2 + ".png";    
+     }
+
+    slider_aniso_alpha3_2.oninput = function() {
+      aniso_alpha3_this_2 = this.value;
+      output_aniso_alpha3_2.innerHTML = aniso_alpha3_this_2;
+      aniso_img_2.src = "dataset2/" + aniso_alpha1_this_2 + "_" + aniso_alpha2_this_2 + "_" + aniso_alpha3_this_2 + "_" + aniso_alpha4_this_2 + "_" + aniso_ori_this_2 + "_" + aniso_stddev_this_2 + ".png";    
+    }
+
+    slider_aniso_alpha4_2.oninput = function() {
+      aniso_alpha4_this_2 = this.value;
+      output_aniso_alpha4_2.innerHTML = aniso_alpha4_this_2;
+      aniso_img_2.src = "dataset2/" + aniso_alpha1_this_2 + "_" + aniso_alpha2_this_2 + "_" + aniso_alpha3_this_2 + "_" + aniso_alpha4_this_2 + "_" + aniso_ori_this_2 + "_" + aniso_stddev_this_2 + ".png";    
+    }
+
+    slider_aniso_ori_2.oninput = function() {
+      aniso_ori_this_2 = this.value;
+      output_aniso_ori_2.innerHTML = aniso_ori_this_2;
+      aniso_img_2.src = "dataset2/" + aniso_alpha1_this_2 + "_" + aniso_alpha2_this_2 + "_" + aniso_alpha3_this_2 + "_" + aniso_alpha4_this_2 + "_" + aniso_ori_this_2 + "_" + aniso_stddev_this_2 + ".png";    
+    }
+
+    slider_aniso_stddev_2.oninput = function() {
+      aniso_stddev_this_2 = this.value;
+      output_aniso_stddev_2.innerHTML = aniso_stddev_this_2;
+      aniso_img_2.src = "dataset2/" + aniso_alpha1_this_2 + "_" + aniso_alpha2_this_2 + "_" + aniso_alpha3_this_2 + "_" + aniso_alpha4_this_2 + "_" + aniso_ori_this_2 + "_" + aniso_stddev_this_2 + ".png";    
+    }
+
+  </script>
+</body>
+
+
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

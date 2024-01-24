@@ -1,0 +1,32 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC594¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 01 Dec 2011 01:49:40 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"45c-4b2fe10cab500-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 05:06:56 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY\1. The load factor is 0.4
+
+
+2. (a) No, because the parent-child pairs 10-9 and 10-7 are out of order.
+
+(b)
+
+             1
+           / | \
+          /  |  \
+         /   |   \
+        /    |    \
+       /     |     \
+      /      |      \
+    2        10      3
+  / | \     / \
+15  9  7  21   23
+
+
+3. (a) O(n^3 log log n)
+   (b) O(n^3)
+
+
+4. There was some controversy over this question, concerning whether one should eliminate duplicate keys or not. With duplicates eliminated, one possible solution has 8,19,56,79 at the top level node, with three children: keys 8,10,17 in the first child, keys 19,33,41 in the second child, keys 56,75,78 in the third child, and keys 79,81,85 in the fourth child. There are many other valid solutions.
+
+
+5. Linear probing. The problem didn't ask for an explanation, but the explanation is that linear probing will typically only use one external memory access per search (all of the cells it accesses are likely to be in the same cache line or the same page of virtual memory) while the other strategies will average more than one access per search.
+
+
+6. Two double rotations.
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

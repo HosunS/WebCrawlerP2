@@ -1,0 +1,182 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD6918¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 07 Aug 2004 18:08:12 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1b06-3e1144452bb00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 04:27:01 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYREADME for Dynamo Middleware 0.1
+
+NOTES: 
+	sections are in CAPS
+	sub-sections are in Mixed Caps
+
+OVERVIEW
+	The Dynamo Middleware Framework coupled with the PA-API DVS  implamentation provides
+	a unique method of distributed cross layer power adaptation.  Because of the youth
+	of this project there are some restrictions of how this framework has to be utilized
+	and the convinence of using the PA-API DVS implamentation.  The Middleware framework
+	right now is constructed as a standalone program that runs the application and 
+	middleware levels as threads that communicate via shared memory calls.  The PA-API
+	DVS solution currently has to be built into the application layer to utilize the DVS
+	features.  These restrictions will be adressed in subsiquent releases along with 
+	improvements of the responce time from the DVS scaling.
+
+Whats Needed:
+	Arm tool chain arm-linux/2.95.3
+	Dynamo Middleware Package
+	[demo only]
+	ARM X11 libraries
+	
+DISCRIPTION OF FILES
+	[please refer to API page for further details]
+	
+Short Discription
+	
+	libDynamoMiddlewareARM.h - header file to the middleware ARM libraries
+	libDynamoMiddleware.h - header file to the middleware libraries for the proxy
+	dyncommunication.h - header describing shared information between proxy and device
+	proxy.h - contains places to define application thread etc more on this later
+	device.h - contains places to define application thread etc more on this later
+	
+Detailed Discription
+	
+	dyncommunication.h 
+	This is used by both proxy and device to coordinate proxy and device IP addresses and Port 
+	information.  This file should also be used for any structures being shared by the proxy and
+	device to communicate.
+	
+	proxy.h
+	This file contains the middleware communication methods.  These would be where you might
+	want to preform system querys analysis and adaption recomindations though this could be 
+	done in your main application and passed to these methods using the shared memory functions 
+	provided. This is also where you would specify the application thread so it can be started 
+	when the middleware is started. [see limitations for the reason for this inconvenance]
+	
+	device.h
+	This file contains the middleware communication methods.  These would be where you might
+	want to preform system querys and adaptions though this could be done in your main 
+	application and passed to these methods using the shared memory functions provided.
+	This is also where you would specify the application thread so it can be started when the 
+	middleware is started. [see limitations for the reason for this inconvenance]
+
+CONFIGURE & COMPILE
+
+Configuration
+	[note there is an example application in dynamo/middleware/exampleapp
+	details on how to compile that one are located in the directory]
+	
+	file structure:
+		Dynamo
+			middleware
+				lib
+			paapi
+				user-level [user level dvs]
+				kernel-level [kernel level dvs]
+				linux-ipaq-v0.6.1 [with dvs]
+	
+	Step 1: Configuring the Make Process
+		Open Dynamo\config.mk
+		
+		find and modify
+			4: LOCAL_PATH = /root/releases/dynamo_mw_1.0
+		to the path of the dynamo directory
+		
+		[optional step if your going to compile the sample application]
+		find and modify
+			7: ARM_X11     = /usr/local/arm/X11R6
+		to the path of your local arm X11 libraries
+		
+		find and modify if nessisary
+			10: LINUXKERNELSRC	= /usr/src/linux/kernel
+		to the /path/to/your/proxy/linuxdistro/src/ that is used by the proxy
+	
+	Step 2: Updating Header Files
+		There are 3 files that need to be modified to use the Dynamo Middleware Framework
+		these are device.c [middleware on your client device] proxy.c [middleware on the 
+		proxy device] dyncommunication.c [shared information between proxy and device].
+		
+		device.h
+			58: void* applicationThread; 
+			points to the applicaton thread
+			
+			63: void mwSendThreadFunction 
+			Is the sending function of the middleware.  This is where we performed the system
+			querying and prepared the structure to be sent to the proxy.  This function
+			enters a loop and send a datagram to the proxy every SEND_SLEEP_TIME seconds.
+			TO IMPLAMENT: modify the internals of the while loop [specified in the code] to
+			perform the actions that are needed to gather information for the proxy
+			
+			85: mwReciveThreadFunction
+			Is the recive function of the middleware.  This is where we would perform and actions
+			upon information recived back from the proxy.
+			TO IMPLAMENT: modify the internals of the while loop [specified in the code] to
+			perform the actions based on the information recived from the proxy
+		
+		proxy.h
+			58: void* applicationThread; 
+			points to the applicaton thread
+			
+			63: void mwSendThreadFunction 
+			Is the sending function of the middleware.  This is where the proxy would send any
+			information that it has prepared for the client device ie change to x level.  This 
+			function enters a loop and send a datagram to the proxy every SEND_SLEEP_TIME 
+			seconds.
+			TO IMPLAMENT: modify the internals of the while loop [specified in the code] to
+			perform the actions that are needed to inform the client device to perform action y.
+			
+			85: mwReciveThreadFunction
+			Is the recive function of the middleware.  This is where we would perform and actions
+			upon information recived from the client ie. modifying a stream of video to 
+			accomidate for power level x.
+			TO IMPLAMENT: modify the internals of the while loop [specified in the code] to
+			perform the actions based on the information recived from the client.
+		
+		dyncommunication.h
+			[all define's and structures can be modified in this header file]
+			
+			25: #define SEND_SLEEP_TIME
+			defines the length of time between the sending of datagram packets
+			
+			31: #define MOBILEIP
+			defines the mobile device's IP address
+			
+			36: #define MOBILEPORT
+			defines the port on the mobile device to connect to
+			
+			42: #define PROXYIP
+			defines the proxy's IP address
+			
+			47: #define PROXYPORT
+			defines the port on the proxy to connect to
+			
+			56: #define KEY
+			defines the key to create the semaphores and shared memory around
+			
+			67: struct Dyn_Device2Proxy_Comm
+			defines the communication structure between the device -> proxy
+			
+			77: struct Dyn_Proxy2Device_Comm
+			defines the communication structure between the device -> proxy
+	
+	Step 3: Finish modifying header files with algorithms for adapation
+	
+	Step 4: Making the Kernel
+		
+		Goto to dynamo/paapi/linux-ipaq-v0.6.1 file
+		
+		Run: 
+			make clean
+			make depends; make zImage
+			
+			When the compile is finished there will be a files arch/arm/boot/zImage.
+			Copy the zImage into "/boot/zImage-paapi" then link zImage to the new zImage
+			ln -s /boot/zImage-paapi /boot/zImage
+	
+	Step 5: Making the PA-API libraries
+		Goto dynamo/paapi/user-level
+		
+		run make
+		
+	Step 6: Making The Middleware
+		Goto dynamo/middleware
+		
+		run make
+		
+	Step 7: Upload to the respective devices
+	
+
+			Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

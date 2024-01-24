@@ -1,0 +1,374 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueä¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3954¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 10 Feb 2019 02:40:36 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 12 Aug 2008 18:54:24 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"322a-45447cce7d800-gzip"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueMmax-age=21600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:40:36 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvaluey2*<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang='en' xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 12 April 2005), see www.w3.org" />
+
+  <title>XML Processing Model WG -- 29 May 2008</title>
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/StyleSheets/base.css" />
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/StyleSheets/public.css" />
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/2004/02/minutes-style.css" />
+  <meta content="XML Processing Model WG" name="Title" />
+  <meta content="text/html; charset=utf-8" http-equiv=
+  "Content-Type" />
+</head>
+
+<body>
+  <p><a href="http://www.w3.org/"><img src=
+  "http://www.w3.org/Icons/w3c_home" alt="W3C" border="0" height=
+  "48" width="72" /></a></p>
+
+  <h1>XML Processing Model WG</h1>
+
+  <h2>29 May 2008</h2>
+
+  <p><a href=
+  'http://www.w3.org/XML/XProc/2008/05/29-agenda'>Agenda</a></p>
+
+  <p>See also: <a href="http://www.w3.org/2008/05/29-xproc-irc">IRC
+  log</a></p>
+
+  <h2><a name="attendees" id="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Norm, Henry, Richard, Murray, Rui, Alex, Michael,
+      Mohamed</dd>
+
+      <dt>Regrets</dt>
+
+      <dd>Vojtech, Paul, Andrew</dd>
+
+      <dt>Chair</dt>
+
+      <dd>Norm</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Norm</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Accept this agenda?</a></li>
+
+        <li><a href="#item02">Accept minutes from the previous
+        meeting?</a></li>
+
+        <li><a href="#item03">Next meeting: telcon 5 June
+        2008</a></li>
+
+        <li><a href="#item04">Last call status</a></li>
+
+        <li><a href="#item05">p:filter</a></li>
+
+        <li><a href="#item06">Changes to p:hash</a></li>
+
+        <li><a href="#item07">C14N</a></li>
+
+        <li><a href="#item08">XSLTMatchPattern
+        clarifications</a></li>
+
+        <li><a href="#item09">Add a limit option to
+        p:count</a></li>
+
+        <li><a href="#item10">Any other business</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  </ul>
+  <hr />
+
+  <div class="meeting">
+    <h3 id="item01">Accept this agenda?</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/2008/05/29-agenda">http://www.w3.org/XML/XProc/2008/05/29-agenda</a></p>
+
+    <p class='phone'>Accepted</p>
+
+    <h3 id="item02">Accept minutes from the previous meeting?</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/2008/05/15-xproc-minutes.html">http://www.w3.org/2008/05/15-xproc-minutes.html</a></p>
+
+    <p class='phone'><cite>Norm:</cite> The substance was PSVI
+    support which I think we sorted as best we can before a new
+    draft.</p>
+
+    <p class='phone'><cite>Henry:</cite> My action is still
+    outstanding, but I don't think that should get in the
+    way.<br />
+    ... To look for things that point outside the subtree.</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item03">Next meeting: telcon 5 June 2008</h3>
+
+    <p class='phone'>Regrets from Paul.</p>
+
+    <h3 id="item04">Last call status</h3>
+
+    <p class='phone'><cite>Norm:</cite> We need to decide when
+    we're ready.<br />
+    ... I think we're just about there, just the PSVI stuff I
+    think.<br />
+    ... Can anyone think of anything we need to deal with
+    first?</p>
+
+    <p class='phone'>None heard.</p>
+
+    <p class='phone'><cite>Henry:</cite> It wouldn't be a bad idea
+    to solicit feedback from our readers.</p><a name="action01" id=
+    "action01"></a>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> Henry to setup an xproc developers
+    list at w3.org [recorded in <a href=
+    "http://www.w3.org/2008/05/29-xproc-minutes.html#action01">http://www.w3.org/2008/05/29-xproc-minutes.html#action01</a>]</p>
+
+    <p class='phone'><cite>Murray:</cite> The GRDDL WG is finished,
+    I made a point of ensuring that there was a comment in the
+    GRDDL spec that pointed to XProc.<br />
+    ... I wonder whether in of this groups work there is an example
+    of an XProc script that takes an XML document and turns it into
+    triples.</p>
+
+    <p class='phone'><cite>Norm:</cite> I don't think we have one,
+    but there's nothing to prevent us from creating one.</p>
+
+    <p class='phone'><cite>Alex:</cite> Do you have a specific
+    example in mind?</p>
+
+    <p class='phone'><cite>Murray:</cite> No, but I think it should
+    be as simple as possible.</p>
+
+    <p class='phone'><cite>Norm:</cite> It would be nice if it did
+    more than XSLT.</p>
+
+    <p class='phone'><cite>Murray:</cite> All it has to do is some
+    validation and run some RDFy kind of tool over the result.</p>
+
+    <p class='phone'><cite>Alex:</cite> Is there an example in the
+    GRDDL spec?</p>
+
+    <p class='phone'><cite>Murray:</cite> Yes, there are a few.</p>
+
+    <p class='phone'><cite>Norm:</cite> There's certainly room for
+    more examples in the spec, and that would be a good one.<br />
+    ... So, coming back to last call.<br />
+    ... I was thinking along these lines: LC mid June, CR late
+    July, PR in mid September?</p>
+
+    <h3 id="item05">p:filter</h3>
+
+    <p class='phone'><cite>Mohamed:</cite> Today we can have select
+    on p:input, which is static.<br />
+    ... I have some use cases where I need to pass an XPath
+    expression to a step where the expression is constructed by the
+    pipeline.<br />
+    ...p: load is symmetric with p:document, it would be nice to
+    have p:filter symetric to select on input.</p>
+
+    <p class='phone'><cite>Norm:</cite> And this is a select
+    expression not a match because if you wanted a match you'd just
+    use split-sequence and ignore the non-matched parts.</p>
+
+    <p class='phone'><cite>Henry:</cite> I'm confused. In what
+    sense is p:input static, if I had an expression in a variable
+    why wouldn't that work?</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; HST: What is wrong with
+    &lt;p:input select="$foo"/&gt;</p>
+
+    <p class='phone'><cite>Mohamed:</cite> That gives you the
+    string of $foo, but doesn't use it to select parts of the
+    document.</p>
+
+    <p class='irc'>&lt;<cite>ht</cite>&gt; Right, what you want is,
+    as it were, &lt;p:input&gt;&lt;p:option name="select"
+    value="$foo"/&gt;&lt;/p:input&gt;</p>
+
+    <p class='phone'><cite>Richard:</cite> $foo is a string which
+    isn't a node set so it's an error.<br />
+    ... We don't require the node set to come from the document,
+    which is a little surprising.</p>
+
+    <p class='phone'><cite>Murray:</cite> So $foo in an argument
+    should be evaluated to what it is.</p>
+
+    <p class='phone'><cite>Richard:</cite> The select expression si
+    $foo, and its value is teh value of $foo and it must be a
+    string.<br />
+    ... And that's an error.</p>
+
+    <p class='phone'>Some discussion of the meaning of evaulated
+    select expressions.</p>
+
+    <p class='phone'><cite>Henry:</cite> We could make select into
+    an option.</p>
+
+    <p class='phone'><cite>Norm:</cite> I think that would be
+    really confusing.</p>
+
+    <p class='irc'>&lt;<cite>richard</cite>&gt; we could just add a
+    function to our xpath extensions, like exslt's dyn:evaluate</p>
+
+    <p class='phone'><cite>Mohamed:</cite> The only thing that
+    bothers me about that is, what's the context of the
+    evaluation.<br />
+    ... I think the simplest, most compatible thing is to add
+    p:filter.</p>
+
+    <p class='phone'><cite>Murray:</cite> In a bourne shell, you
+    can put something you want evaluated inside single quotes.</p>
+
+    <p class='irc'>&lt;<cite>richard</cite>&gt; (backquotes)</p>
+
+    <p class='phone'><cite>Murray:</cite> I wonder whether a simple
+    syntax solution would be a result.</p>
+
+    <p class='phone'><cite>Proposal:</cite> add p:filter as Mohamed
+    suggests</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <p class='phone'><cite>Richard:</cite> Required or
+    optional?</p>
+
+    <p class='phone'><cite>Mohamed:</cite> p:load is required,
+    right?</p>
+
+    <p class='phone'><cite>Norm:</cite> yes.<br />
+    ... I think this is small enough and providing fairly core
+    functionality, I'd make it required.</p>
+
+    <p class='phone'><cite>Proposal:</cite> required?</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item06">Changes to p:hash</h3>
+
+    <p class='phone'>Norm attempts to summarize the hash
+    changes.</p>
+
+    <p class='phone'><cite>Mohamed:</cite> It's an optional step,
+    so we can make it a bit stronger. For security reasons, sha1
+    and md5 are on the way out.<br />
+    ... Security considerations will require more options.<br />
+    ... And it's also valuable to provide crc even though it's not
+    secure, it's widely used.</p>
+
+    <p class='phone'><cite>Norm:</cite> I'm sympathetic because I
+    had reservations about the particularly narrow slice I made
+    when I first proposed p:hash.</p>
+
+    <p class='phone'><cite>Proposal:</cite> change p:hash along the
+    lines suggested by Mohamed</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item07">C14N</h3>
+
+    <p class='phone'><cite>Norm:</cite> Mohamed proposoes a c14n
+    step, we could also do it on serialization.</p>
+
+    <p class='phone'><cite>Henry:</cite> C14N specifies what a
+    string looks like.<br />
+    ... It seems like we'd need this on the serialization
+    options.<br />
+    ... Otherwise you can't output a C14N string form an XProc
+    processor.<br />
+    ... You could have p:c14n, but it would be too
+    limiting.</p><a name="action02" id="action02"></a>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> Mohamed to propose serialization
+    changes to support C14N. [recorded in <a href=
+    "http://www.w3.org/2008/05/29-xproc-minutes.html#action02">http://www.w3.org/2008/05/29-xproc-minutes.html#action02</a>]</p>
+
+    <h3 id="item08">XSLTMatchPattern clarifications</h3>
+
+    <p class='phone'><cite>Norm:</cite> We need to say something
+    about id(), key() the namespace axis, etc.</p>
+
+    <p class='phone'><cite>Richard:</cite> key() is added by
+    XSLT.<br />
+    ... The namespace axis isn't a problem for XPath 1 processors
+    because they must implement it.<br />
+    ... The other things are the functions added by XSLT.</p>
+
+    <p class='phone'><cite>Norm:</cite> On further consideration, I
+    think id() is probably ok</p>
+
+    <p class='phone'><cite>Richard:</cite> I would have thought
+    that none of these things would be expected to work.</p>
+
+    <p class='phone'><cite>Norm:</cite> Well, match patterns come
+    from XSLT, so you might expect them to work there</p><a name=
+    "action03" id="action03"></a>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> Norm to investigate the functions
+    added by XSLT and draft some prose for the spec [recorded in
+    <a href=
+    "http://www.w3.org/2008/05/29-xproc-minutes.html#action03">http://www.w3.org/2008/05/29-xproc-minutes.html#action03</a>]</p>
+
+    <h3 id="item09">Add a limit option to p:count</h3>
+
+    <p class='phone'>Mohamed summarizes.</p>
+
+    <p class='phone'><cite>Proposed:</cite> add a limit option to
+    p:count along the lines Mohamed suggested</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item10">Any other business</h3>
+
+    <p class='phone'>Adjourned.</p>
+  </div>
+
+  <h2><a name="ActionSummary" id="ActionSummary">Summary of Action
+  Items</a></h2><!-- Action Items -->
+  <strong>[NEW]</strong> <strong>ACTION:</strong> Henry to setup an
+  xproc developers list at w3.org [recorded in <a href=
+  "http://www.w3.org/2008/05/29-xproc-minutes.html#action01">http://www.w3.org/2008/05/29-xproc-minutes.html#action01</a>]<br />
+
+  <strong>[NEW]</strong> <strong>ACTION:</strong> Mohamed to
+  propose serialization changes to support C14N. [recorded in
+  <a href=
+  "http://www.w3.org/2008/05/29-xproc-minutes.html#action02">http://www.w3.org/2008/05/29-xproc-minutes.html#action02</a>]<br />
+
+  <strong>[NEW]</strong> <strong>ACTION:</strong> Norm to
+  investigate the functions added by XSLT and draft some prose for
+  the spec [recorded in <a href=
+  "http://www.w3.org/2008/05/29-xproc-minutes.html#action03">http://www.w3.org/2008/05/29-xproc-minutes.html#action03</a>]<br />
+
+  &nbsp;<br />
+  [End of minutes]<br />
+  <hr />
+
+  <address>
+    Minutes formatted by David Booth's <a href=
+    "http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">
+    scribe.perl</a> version 1.133 (<a href=
+    "http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br />
+    $Date: 2008/08/12 18:54:24 $
+  </address>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

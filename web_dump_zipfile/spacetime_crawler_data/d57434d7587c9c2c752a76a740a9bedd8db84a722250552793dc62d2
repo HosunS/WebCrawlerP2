@@ -1,0 +1,46 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2339¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 05 Jun 1997 00:09:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"923-31323c968be80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 21:33:35 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY	#
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Attributes</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Attributes</H1> 
+ <P><UL>
+<LI><H2>Requirement
+</H2>
+<UL>
+<LI>An HTTP Registry
+<LI>Set & Retrieve Individual Attributes
+<LI>No Collisions
+</UL></UL><UL>
+<LI><H2>Suggested Implementation - Headers & Methods</H2>
+</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld006.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld008.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld007.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+ <FONT size=4><STRONG> Notes: </FONT></STRONG>
+  <HR SIZE=3> <P> <UL>
+We often find that we need to be able to associate generic bits of information with a particular URL. This is especially true of versioning systems which often need to record system specific information. A generic arbitrarily extensible attribute system will answer this need without requiring the implementation of a whole raft of new headers. In other words, a HTTP delivered URL specific registry.
+<BR></UL><UL>
+Such a registry is likely to grow quite large and thus it is not feasible for it to be sent with every message. Furthermore it is likely that at any one time a program will only be interested in a few entries in the registry. Thus we need a means to not just retrieve and set the entire registry but also to retrieve and set specific elements within it. In addition, for the sake of efficiency, these registry actions should be attachable to any method.
+</UL><UL>
+There also exists the problem of name space collisions. Central administration of the name space would prove burdensome. A combination of assigned prefixes and randomly generated IDs seems a cleaner solution. However we should also specify a common subset of attributes in order to facilitate communication.
+</UL><UL>
+Finally while we need attribute headers for efficiency, attributes become even more powerful if we have an attribute method. This allows us to perform attribute modification independently of other actions.</UL> </P> 
+
+</Body>
+</HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

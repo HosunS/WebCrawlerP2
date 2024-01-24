@@ -1,0 +1,194 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE10291¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 26 Jul 2018 20:26:05 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"2833-571eccdf40224"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:08:54 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY(3<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SEAL - DELDroid</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Reply-to" content="hammadm at uci dot edu">
+<meta http-equiv="Owner" content="Mahmoud Hammad">
+<meta name="Author" content="Mahmoud Hammad">
+<meta name="Generator" content="Emacs">
+<link rev="MADE" href="mailto:hammadm at uci dot edu">
+<link href="../../seal.css" rel="stylesheet" type="text/css">
+
+<style>
+h1 {
+    background-color: #cbe1f4;
+}
+
+h2 {
+    background-color: lightblue;
+}
+h3 {
+    background-color: lightgreen;
+}
+h4 {
+    background-color: lightgreen;
+}
+
+.box {
+  width: 70%;
+    padding: 10px;
+    border: 5px solid #ff4040;
+    margin: 0;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 520px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<div class="wrapper">
+<!-- *************** Beginning of content ****************** -->
+
+<div alighn="center">
+<h1><center>SALMA: Self-Protection of Android Systems from Inter-Component Communication Attacks</center></h1>
+</div>
+
+<b>Jump to ...</b>
+<ul>
+  <li><a href="#pub">Publication</a></li>
+  <li><a href="#slides">Presentation</a></li>
+  <li><a href="#intro">Introduction</a></li>
+  <li><a href="#eval">Evaluation</a></li>
+  <li><a href="#imp">Implementation</a></li>
+</ul>
+
+
+<div id="pub"><center><h2>Publication</h2></center></div>
+
+Mahmoud Hammad, Joshua Garcia, and Sam Malek.<br/>
+SALMA: Self-Protection of Android Systems from Inter-Component Communication Attacks.<br/>
+The 33rd IEEE/ACM International Conference on Automated Software Engineering (ASE 2018), September 2018, Montpellier, France. (20% acceptance rate) <a href="../../publications/2018_ASE_salma.pdf">[PDF]</a>
+
+<div id="slides"><center><h2>Presentation</h2></center></div>
+<center>
+  <iframe src="//www.slideshare.net/slideshow/embed_code/key/GOjAJyNEQHLUQl" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/MahmoudHammad23/ase2018-salma" title="SALMA: Self-Protection of Android Systems from Inter-Component Communication Attacks." target="_blank">SALMA: Self-Protection of Android Systems from Inter-Component Communication Attacks.</a> </strong> from <strong><a href="https://www.slideshare.net/MahmoudHammad23" target="_blank">Mahmoud Hammad</a></strong> </div>
+</center>
+
+<div id="intro"><center><h2>Introduction</h2></center></div>
+<div>
+<p>
+    The current security mechanisms for Android apps, both static and dynamic analysis approaches, are insufficient for detection and prevention of the increasingly dynamic and sophisticated security attacks.
+<p>
+    Static analysis approaches suffer from false positives whereas dynamic analysis approaches suffer from false negatives. Moreover, they all lack the ability to efficiently analyze systems with incremental changes---such as adding/removing apps, granting/revoking permissions, and dynamic components' communications.
+    Each time the system changes, the entire analysis needs to be repeated, making the existing approaches inefficient for practical use.
+  <p>  
+    To mitigate their shortcomings, we have developed SALMA, a novel self-protecting Android software system that monitors itself and adapts its behavior at runtime to prevent a wide-range of security risks.
+    SALMA maintains a precise architectural model, represented as a Multiple-Domain-Matrix, and incrementally and efficiently analyzes an Android system in response to incremental system changes.
+    The maintained architecture is used to reason about the running Android system. 
+    Every time the system changes, SALMA determines (1) the impacted part of the system, and (2) the subset of the security analyses that need to be performed, thereby greatly improving the performance of the approach. Our experimental results on hundreds of real-world apps corroborate SALMA's scalability and efficiency as well as its ability to detect and prevent security attacks at runtime with minimal disruption.
+
+    <div><center>
+        <figure>
+      <img width="50%" src="./res/approach.png" alt="Overview of SALMA">
+      <figcaption>Overview of SALMA</figcaption>
+      </figure>
+    </center></div>
+    
+</div>
+
+<div  id="eval"><center><h2>Evaluation</h2></center></div>
+<center><h3>Efficiency</h3></center>
+<div>
+    Every time an app is added to the system, SALMA incrementally analyzes the system whereas DELDROID, a complete analysis approach,  reanalyzes the entire system. As illustrated in the figure below, the analysis time of SALMA takes, on average, 2 seconds to incrementally analyze an Android system whenever a new app is installed. On the other hand, DELDROID  takes, on average, 75 seconds.
+</div>
+<div><center>
+    <figure>
+  <img width="70%" src="./res/add.png" alt="">
+  <figcaption>The analysis time of SAlMA against the complete analysis approach over an increasing size of Android bundle due to ADD_APP event.</figcaption>
+  </figure>
+</center></div>
+
+<div>
+    Similarly, the figure below contains box-and-whisker plots comparing the analysis time of each approach with a decreasing number of apps, i.e., in response to the removing apps system events. We started with a bundle of 150 apps, then we removed one app at a time until the system contains 120 apps. The average analysis time of SALMA is 0.2 seconds while the average analysis time of DELDROID  is 35.3 seconds.
+</div>
+<div><center>
+    <figure>
+  <img width="70%" src="./res/remove.png" alt="">
+  <figcaption>The analysis time of SAlMA against the complete analysis approach over a decreasing size Android bundle due to REMOVE_APP event.</figcaption>
+  </figure>
+</center></div>
+
+<div>
+    We also measured the efficiency of SALMA on all other events (grant/revoke permissions, dynamically added interactions).  To that end, we randomly considered 100 different transactions of each event type to be considered only at runtime for an Android system with 100 apps randomly selected from the app datasets.  For example, in the cases of grant a permission or revoke a permission, we randomly selected 100 permissions required by various apps to be revoked from these apps and then to be granted at a later time.  Regarding new explicit communication or new implicit communication events, for each event, we randomly selected 100 communications to be added only at runtime, i.e., these communications have been removed from the initial system's model.  Finally, since the studied Android system with 100 apps contains 80 database interactions (40 data access and 40 data manipulation requests), we considered all of these interactions to be added at runtime.  The total number of transactions considered for this experiment is 480 events.  The box-and-whisker plots in the below figure compares the efficiency of SALMA with DELDroid for each event. SALMA takes, on average across all events, 1.6 milliseconds (0.0016 seconds) while DELDroid takes, on average across all events, 63.8 seconds.
+</div>
+<div><center>
+    <figure>
+  <img width="70%" src="./res/other_ops.png" alt="">
+  <figcaption>The analysis time of SAlMA against the complete analysis approach on a bundle of 100 apps over a variety of system events.</figcaption>
+  </figure>
+</center></div>
+
+<center><h3>Disruption</h3></center>
+<div>
+    <p>Applying security policies at runtime can cause disruption to the app's benign functionality. SALMA minimizes the disruption by only preventing the malicious communication instead of (1) revoking permissions of the vulnerable app or (2) preventing the installation of the vulnerable app as suggested by other approaches in the literature.
+
+    <p>The figure below compares the three different permission-induced prevention mechanisms. The diagram shows that SALMA has 0.4% disruption, meaning that SALMA does not disturb components from providing their services except in one identical custom permission case. In that case, SALMA created a security policy to revoke a custom permission from the malicious app so it will not be able to access the vulnerable app. On the other hand, the install-time approach performs the worst (100%), as it does not allow installation of a vulnerable app. Finally, revoking permissions at runtime to prevent permission-induced attacks would result, on average per app, in 32%disruption. Meaning that, on average, 32% of the components in a vulnerable app will not be able to provide their full services due to the lack of required permissions even though some of these components are not vulnerable or involved in any vulnerability. Moreover, revoking permissions from apps at runtime lead to crashes or unexpected behaviors due to inappropriate handling of dynamic permissions in Android.
+</div>
+<div><center>
+    <figure>
+  <img width="70%" src="./res/disruption.png" alt="">
+  <figcaption>The disruption result of each app.</figcaption>
+  </figure>
+</center></div>
+
+
+<center><h3>Security attacks detection and prevention</h3></center>
+<div>
+
+</div>
+<div><center>
+    <figure>
+  <img width="70%" src="./res/detect_prevent.png" alt="">
+  <figcaption>The ability of SALMA in detecting and preventing security attacks comparing to the state-of-the-art approaches.</figcaption>
+  </figure>
+</center></div>
+
+
+
+<div  id="imp"><center><h2>Implementation</h2></center></div>
+<div>
+    <a href="https://github.com/HammadMahmoud">Github</a>
+</div>
+
+
+
+<hr/>
+<!-- ***************** End of content ****************** -->
+<br><br><br><br>
+<div style="float:left">
+            <a href="http://www.ics.uci.edu/~seal/"><img ALT="[seal's logo]" height="200" src=../../seal.png></a>
+</div>
+<div style="float:right">
+            <a href="http://www.ics.uci.edu"><img ALT="[uci's logo]" style="padding-top: 40px" height="100" src=../../uci.jpg></a>
+</div> 
+</div>
+</body>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

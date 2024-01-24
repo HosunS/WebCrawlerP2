@@ -1,0 +1,39 @@
+¦Ifinal_url¢DtypeEvaluexKhttps://www.ics.uci.edu/~jacobson/ics21/CodeSamples/MouseAppletAdapter.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC702¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 04 Dec 2009 05:56:18 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2be-479e0c430a480"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 05:59:34 GMTKraw_content¢DtypeEvalueY¾// MouseApplet.java applet for ICS21/80J
+
+// By N. Jacobson 11/02 to demonstrate event handling via adapters
+
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+
+public class MouseAppletAdapter extends Applet
+{
+	Rectangle box;
+
+	public MouseApplet()
+	{
+		box = new Rectangle(100,100,20,30);
+	}
+
+	public void init()
+	{
+		class MouseHandler extends MouseAdapter
+		{
+			public void mousePressed(MouseEvent event)
+			{
+				int x = event.getX();
+				int y = event.getY();
+				box.setLocation(x,y);
+				repaint();
+			}
+		}
+
+		addMouseListener(new MouseHandler());
+	}
+
+	public void paint(Graphics g)
+	{
+		Graphics2D g2 = (Graphics2D)g;
+		g2.draw(box);
+	}
+}Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

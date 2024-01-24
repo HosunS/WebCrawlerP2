@@ -1,0 +1,162 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4777¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 22 Dec 2018 16:49:25 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"12a9-57d9f2572d62d"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:29:53 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY©<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SpArcFiRe VM: Setup the VM</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  width: 100%;
+  height: 100%
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 5px;
+  text-align: center;
+  font-size: 15px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 20%; 
+  background: #ccc;
+  height: 2400px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 80%;
+  background-color: #f1f1f1;
+  height: 2400px;
+
+  
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 5px;
+  text-align: center;
+  color: white;
+}
+
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: auto;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+
+
+
+<h1>
+
+					  <a id="" href="https://www.ics.uci.edu/~wschallo/sparcfire/getting-started.html" target="_parent" style="color: white; text-decoration: none;">
+        <img src="http://sparcfire.ics.uci.edu/img/sparcfire-logo-white.png" alt="SpArcFiRe logo" width="60" height="60"align="center"/>
+						SpArcFiRe Virtual Machine
+   
+</a>
+				</h1>
+</header>
+
+<section>
+  <nav>
+  	<h4>Quick Navigation:</h4>
+    <ul>
+      <li><a href="https://www.ics.uci.edu/~wschallo/sparcfire/getting-started.html">Getting Started</a></li>
+      <li><a href="https://www.ics.uci.edu/~wschallo/sparcfire/setup-vm.html">Setup the Virtual Machine</a></li>
+      <li><a href="https://www.ics.uci.edu/~wschallo/sparcfire/run-sparcfire.html">Running SpArcFiRe</a></li>
+    </ul>
+    <h4>More Links:</h4>
+    <ul>
+      <li><a href="http://sparcfire.ics.uci.edu/">SpArcFiRe Web Interface</a></li>
+      <li><a href="https://www.ics.uci.edu/~wayne/SpArcFiRe/DavisHayes2014-SpArcFiRe.pdf">SpArcFiRe Paper</a></li>
+    </ul>
+  </nav>
+  
+
+    <article>
+    <h1>Setup the Virtual Machine</h1>
+    <p>We will now setup the virtual machine by doing the following: </p>
+	<ol>
+  		<li>Select New
+        	<p><img src="https://www.ics.uci.edu/~wschallo/sparcfire/images/oracle_vm_new.png" alt="SpArcFiRe logo" width="500" height="300"align="center"/></p>
+        </li>
+  		<li>For name type "sparcfire", for Type select "Linux", for Version select "Ubuntu (64-bit). Then select "Next"
+        	<p><img src="https://www.ics.uci.edu/~wschallo/sparcfire/images/oracle_vm_name.png" alt="SpArcFiRe logo" width="300" height="400"align="center"/></p>
+        </li>
+        <li>Select how much memory to allocate (the default should be sufficent). Then select "Next".
+        	<p><img src="https://www.ics.uci.edu/~wschallo/sparcfire/images/oracle_vm_memory.png" alt="SpArcFiRe logo" width="300" height="400"align="center"/></p>
+        </li>
+        <li>Select "Use an existing Virtual Hard Drive Disk". Then Click on the folder icon.
+        	<p><img src="https://www.ics.uci.edu/~wschallo/sparcfire/images/oracle_vm_harddrive.png" alt="SpArcFiRe logo" width="300" height="500"align="center"/></p>
+        </li>
+        <li>Navigate to where you saved the Virtual Machine (from getting started). Select it, then click open.
+        	<p><img src="https://www.ics.uci.edu/~wschallo/sparcfire/images/oracle_vm_select_vdi.png" alt="SpArcFiRe logo" width="500" height="300"align="center"/></p>
+        </li>
+        <li>Finally click "Create"</li>
+	</ol>
+    
+    <p>You should now be abe to see a virtual machine named "sparcfire" in the VM Manager. If you do, I have good news... you are now ready to run SpArcFiRe!</p>
+    
+  
+	<div style="width:500px; margin:0 auto;">
+    <div style="float: left; width: 225px"> 
+        	<form id="thistoo" action="https://www.ics.uci.edu/~wschallo/sparcfire/getting-started.html">
+            	<input type="submit" name = "" value=" < Previous: Getting Started" >
+        	</form>
+    	</div>
+    	<div style="float: right; width: 225px"> 
+        	<form id="thistoo" action="https://www.ics.uci.edu/~wschallo/sparcfire/run-sparcfire.html">
+            	<input type="submit" name = "" value="Next: Running SpArcFiRe >" >
+        	</form>
+    	</div>
+	</div>
+  </article>
+
+  
+</section>
+
+
+<footer>
+
+<p>Contact us at: whayes@uci.edu</p>
+
+
+
+</footer>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

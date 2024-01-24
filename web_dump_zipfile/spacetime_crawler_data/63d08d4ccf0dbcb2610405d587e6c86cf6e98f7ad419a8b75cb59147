@@ -1,0 +1,38 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC728¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 22 Feb 2018 07:03:13 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2d8-565c7a3240e36"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 03:46:20 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYØ/** @file   check.h
+ ** @brief  Unit test utilties
+ ** @author Andrea Vedaldi
+ **/
+
+#ifndef __CHECK_H__
+#define __CHECK_H__
+
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+static void
+check_impl (int condition,
+            const char * file,
+            int line,
+            const char * format, ...)
+{
+  va_list args;
+  va_start(args, format) ;
+  if (! condition) {
+    fprintf(stderr, "%s:%d: check failed: ", file, line) ;
+    vfprintf(stderr, format, args) ;
+    fprintf(stderr, "\n") ;
+    exit (1) ;
+  }
+  va_end(args) ;
+}
+
+#define check(condition, ...) \
+check_impl(condition, __FILE__, __LINE__, "" __VA_ARGS__)
+
+#define check_signoff() \
+fprintf(stdout, "%s passed\n", __FILE__)
+
+/* __CHECK_H__ */
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,57 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1359¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 22 Jan 1990 18:56:33 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"22e9fb6b-54f-23fbdda0bda40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 07:59:53 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYO/* ========================================================================= 
+   David W. Aha
+   8-14-87 (Mom's Birthday)
+   An example for EBG
+
+   This is a reproduction of the safe-to-stack domain theory and training
+   example as reproduced by Armand Prieditis and Jack Mostow in their  AAAI
+   1987 paper on PROLEARN.
+   ========================================================================= */
+
+/* Domain Theory */
+safe_to_stack(X,Y) :- lighter(X,Y).
+safe_to_stack(X,Y) :- not(fragile(Y)).
+
+lighter(X,Y) :-
+   weight(X,Weight1),
+   weight(Y,Weight2),
+   less_than(Weight1,Weight2).
+
+weight(Object,Weight) :-
+   volume(Object,Volume),
+   density(Object,Density),
+   product(Volume,Density,Weight).
+
+weight(Endtable,500) :-
+   isa(Endtable,endtable).
+
+/* Training Example. */
+on(box1,table1).
+volume(box1,10).
+isa(box1,box).
+isa(table1,endtable).
+color(box1,red).
+color(table1,blue).
+density(box1,10).
+product(10,10,100).
+less_than(100,500).
+
+/* Query. */
+query :- explain_and_store((safe_to_stack(box1,table1)),
+                       (safe_to_stack(Box1,Table1))).
+
+query_check :-
+  Beforec is cputime,
+  Beforeh is heapused,
+  safe_to_stack(box1,table1),
+  Afterc is cputime,
+  Afterh is heapused,
+  Diffc is Afterc - Beforec,
+  Diffh is Afterh - Beforeh,
+  write('Cputime used: '),
+  write(Diffc),
+  nl,
+  write('Heapused: '),
+  write(Diffh),
+  nl.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,26 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC725¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:40:17 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2d5-3158ece12a640"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:56:29 GMTKraw_content¢DtypeEvalueYÕ// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Random binary values with two-adic valuation
+// distance = 1/(2^i) where i=index of least significant differing bit
+
+#include "TwoAdic.h"
+#include "Random.h"
+#include "Error.h"
+
+TwoAdic::TwoAdic(unsigned long np) : PointSet(np)
+{
+	values = new unsigned long[np];
+	if (values == 0) error("TwoAdic: can't allocate table of values");
+	while (np > 0) values[--np] = RandomLong();
+}
+
+TwoAdic::~TwoAdic() { delete values; }
+
+double TwoAdic::operator() (point i, point j)
+{
+	gDistances++;
+	unsigned long x = values[i]^values[j];	// get differing bits
+	x ^= x - 1;					// turn into 2^{i+1}-1 where i=least sig diff
+	return 2.0 / ((double) x + 1.0);
+}Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

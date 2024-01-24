@@ -1,0 +1,48 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1350¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Feb 2006 23:13:28 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"546-40c3c86eb9600"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 21:09:53 GMTKraw_content¢DtypeEvalueYFimport java.io.*;
+import java.util.*;
+
+//NAME: Danish Khan
+//STUDENT ID: 47324012
+//NAME: Adam Su
+//STUDENT ID: 23628358
+
+// Company.java
+//
+// ICS H22 Winter 2006
+// Lab 3: The automatic tester for the Payroll application
+//
+// This class contains the main() method for your program.
+// It reads the input file whose name is specified in args[0]
+// and runs the Payroll application on this input file.
+
+// !!!
+// This code should not be modified!!!
+// !!!
+
+
+public class Company
+{	
+	public static void main(String[] args)
+	{
+// The call to Payroll(args[0]) below assumes that the
+// Payroll class includes a constructor that can store 
+// the name of the text file in the Payroll object it creates.
+// In particular, the Payroll class should probably include
+// an instance variable which stores this file name. 
+// This instance variable can be then accessed by the modified
+// go() method executed on the Payroll object referred
+// to by the variable p
+// If you find this convienient, you can assume that the number
+// of employees specified in the input file does not exceed 100.
+
+		Payroll p = new Payroll(args[0]);
+			System.out.println("");
+			System.out.println("ICS H22 Lab 3: The Price You Pay");
+			System.out.println("Danish Khan and Adam Su");
+			System.out.println("");
+		p.go();
+	}
+
+}
+	
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

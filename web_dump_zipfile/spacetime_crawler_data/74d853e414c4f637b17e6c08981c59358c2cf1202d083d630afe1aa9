@@ -1,0 +1,53 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC894¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 25 Jan 2012 19:06:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"37e-4b75ef7614b00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 13:41:34 GMTKraw_content¢DtypeEvalueY~import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class SongCollectionTest
+{
+	private SongCollection collection;
+
+
+	@Before
+	public void createEmptyCollection()
+	{
+		collection = new SongCollection();
+	}
+
+
+	@Test	
+	public void sizeOfNewCollectionIsZero()
+	{
+		assertEquals(0, collection.size());
+	}
+	
+
+	@Test	
+	public void afterAddingOneSongTheSizeIsOne()
+	{
+		Song song = createSong();
+		collection.add(song);
+		assertEquals(1, collection.size());
+	}
+
+
+	@Test
+	public void sizeGrowsAccuratelyAsSongsAreAdded()
+	{
+		for (int i = 1; i <= 10; i++)
+		{
+			collection.add(createSong());
+			assertEquals(i, collection.size());
+		}
+	}
+
+
+	@Test
+	public void afterAddingSongToCollectionTheCollectionContainsTheSong()
+	{
+		Song s = createSong();
+		collection.add(s);
+		assertTrue(collection.contains(s));
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,50 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1644¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 03 May 1990 22:52:18 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"22e9fcd3-66c-247b0eb204c80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 06:16:29 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYlThis readme file gives an overview of the code used for LT.
+
+The directory CODE contains all of the code needed to run lt.  The files have
+the following contents and uses:
+
+OLDCODE is a directory which contains early versions of LT which were made 
+	superfluous for some reason or other.
+
+PROBS   contains problems from principia mathematica. 
+		p2 holds problems from chapters 2 and 3.
+		chs4and5 holds problems from chapters 4 and 5.
+
+comp_gen_lt  	compares the generality of two sets of learned theorems.
+
+do_tex	     	loads files to generate tables in LaTeX format from a 
+		saved state.
+
+foreign		is used by tabular2 to load the foreign math functions from
+		math.c
+
+logic		is a quick and dirty theorem prover that uses a generate
+		and test algorithm to explore all truth values.  
+
+make_driver	creates a file that runs all of the problems in a given order.
+		It does not do anything, except generate calls to lt/2 in
+		one of the running versions of LT. 
+
+math.c		is a list of c functions needed for computation of statistics
+		for tabular2
+
+math.o 		is the object file from math.c
+
+pstart		is the precedences required to interpret the logic symbols
+
+tabular2	generates tables in LaTeX format from a saved state.
+
+lt		is the running version of LT.  It has no implies restriction,
+		and assumes no provens.  There are some minor variations on
+		this program found in this directory as well.  They are:
+		
+		no_assume_lt, which does not assume non-provens.
+		imp_lt,  which has the implies restriction, but assumes
+				non-provens.
+		inst_lt, which does not learn instances,
+				has no implies restriction, and assumes
+				non-provens?
+
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

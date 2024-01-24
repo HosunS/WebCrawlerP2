@@ -1,0 +1,22 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC516¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 14 Jul 2006 16:21:45 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"204-4188d13979840"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:56:31 GMTKraw_content¢DtypeEvalueY# Lab 2, Program 1
+#
+# Given a DNA sequence, find out whether there is a gap.
+#
+# This is one solution to the problem, which involves first counting
+# the number of gaps, then deciding whether there were any gaps by
+# seeing if the count is more than zero.
+
+dnaSequence = "atcgatgagagctagcgata"
+
+gapCount = 0
+
+for c in dnaSequence:
+    if c == '-':
+        gapCount = gapCount + 1
+
+if gapCount > 0:
+    print "There is a gap in the sequence."
+else:
+    print "There is no gap in the sequence."
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

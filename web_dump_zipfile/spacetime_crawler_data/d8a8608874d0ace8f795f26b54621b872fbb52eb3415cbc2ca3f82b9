@@ -1,0 +1,72 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2690¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 18 Oct 2018 22:15:49 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"a82-57888211537c5"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 03:28:42 GMTKraw_content¢DtypeEvalueY
+‚# hierarchical logistic regression - rat data from BDA Section 5.1
+# rat.y = vector y values for rat data
+# rat.n = vector n values for rat data
+rat.y <- c(0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,
+           2,1,5,2,5,3,2,7,7,3,3,2,9,10,4,4,4,4,4,4,
+           4,10,4,4,4,5,11,12,5,5,6,5,6,6,6,6,16,15,15,9)
+rat.n <- c(20,20,20,20,20,20,20,19,19,19,19,18,18,17,20,20,20,20,19,19,
+           18,18,25,24,23,20,20,20,20,20,20,10,49,19,46,27,17,49,47,20,
+           20,13,48,50,20,20,20,20,20,20,20,48,19,19,19,22,46,49,20,20,
+           23,19,22,20,20,20,52,47,46,24)
+#
+# 
+# logpost4 is a function to evaluate the log posterior on the 
+#          log(alpha/beta), log(alpha+beta)  parameterization
+logpost4 <- function(u, v)  { a <- (exp(u) * exp(v))/(exp(u) + 1);
+b <- exp(v)/(exp(u) + 1);
+J <- length(rat.y);
+x <- J * (lgamma(a + b) - lgamma(a) - lgamma(b)) + log(a) + log(b) - 
+  2.5 * log(a + b);
+for(i in (1:J)) {
+  x <- x + lgamma(a + rat.y[i]) + lgamma(b + rat.n[i] - rat.y[i]) -
+    lgamma(a + b + rat.n[i]) }
+x }
+
+# set up grid
+x4 <- c(-230:-130)/100
+y4 <- c(100:500)/100
+
+# evaluate grid 
+z <- outer(x4,y4,logpost4)
+# exponentiate log posterior (set maximum to be one)
+z2 <- exp(z - max(z))
+# contour plot
+contour(x4,y4,z2,levels=c(0.05,0.15,0.25,0.35,0.45,0.55,0.65,0.75,0.85,0.95))
+
+# sample from posterior distn
+z2 <- z2/sum(z2)
+p.x <- apply(z2,1,sum)
+newx <- sample(x4,1000,replace=T,prob=p.x)
+
+xid <- (newx+2.31)*100 
+newy <- rep(0,1000)
+for (i in (1:1000)) newy[i] <- sample(y4,1,prob=z2[xid[i],]/sum(z2[xid[i],]))
+
+# transform sample to get samples of alpha and beta
+newa <- (exp(newx)*exp(newy))/(exp(newx)+1)
+newb <- exp(newy)/(exp(newx)+1)
+
+# simulate theta for subset of the experiments
+newth1 <- rbeta(1000,newa+rat.y[1],newb+rat.n[1]-rat.y[1])
+newth32 <- rbeta(1000,newa+rat.y[32],newb+rat.n[32]-rat.y[32])
+newth33 <- rbeta(1000,newa+rat.y[33],newb+rat.n[33]-rat.y[33])
+newth67 <- rbeta(1000,newa+rat.y[67],newb+rat.n[67]-rat.y[67])
+newth70 <- rbeta(1000,newa+rat.y[70],newb+rat.n[70]-rat.y[70])
+
+output <- cbind(newa,newb,newth1,newth32,newth33,newth67,newth70)
+apply(output,2,describe)
+
+#
+# Stan analysis with two types of priors 
+library(rstan)
+a = 1
+b = 4
+m = 0
+v = 3
+rats.data <- list(y=rat.y, n=rat.n, N=length(rat.y), a=a, b=b, m=m, v=v)
+stan_fit_inf <- stan(file="H://HAL//Courses//Stat225//rats_hierbetabinom)inf.stan",data=rats.data, iter=1000, chains=4)
+print(stan_fit_inf)
+rats.data2 <- list(y=rat.y, n=rat.n, N=length(rat.y))
+stan_fit_def <- stan(file="H://HAL//Courses//Stat225//rats_hierbetabinom_def.stan",data=rats.data2, iter=1000, chains=4)
+print(stan_fit_def)Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

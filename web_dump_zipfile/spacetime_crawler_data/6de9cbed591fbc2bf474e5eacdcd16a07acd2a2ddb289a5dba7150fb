@@ -1,0 +1,74 @@
+¦Ifinal_url¢DtypeEvaluexHhttps://www.ics.uci.edu/~jacobson/cs122b/Project/05-ShowSessionInfo.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2071¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 16 Oct 2008 21:28:34 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"817-4596587ef0480"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 02:07:30 GMTKraw_content¢DtypeEvalueY// ShowSession.java servlet -- example use of session methods and info
+// Chen Li, ICS 185 Winter 2005
+// Minor updates (to use Java 5.0 features) by N. Jacobson for ICS185 Spring 2005
+// Minor polishing by N. Jacobson for CS122B Spring 2007
+
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.net.*;
+import java.util.*;
+
+public class ShowSessionInfo extends HttpServlet
+{
+  public void doGet(HttpServletRequest request, HttpServletResponse response)
+  throws ServletException, IOException
+  {
+    // Tell browser we have a text web page
+    response.setContentType("text/html");
+
+    // Set up an output stream to the browser window
+    PrintWriter out = response.getWriter();
+
+    // Request session info
+    HttpSession session = request.getSession();
+
+    // Welcome new or returning user; update session count
+    String heading;
+    int accessCount;
+    Object status = session.getAttribute("accessCount");
+    if (status == null)
+    {
+      heading = "Welcome";
+      accessCount = 0;
+    }
+    else
+    {
+      heading = "Welcome Back";
+      accessCount = (Integer)status + 1;
+    }
+
+    session.setAttribute("accessCount", accessCount);
+    out.println("<BODY BGCOLOR=\"#FDF5E6\">\n" +
+		"<H1 ALIGN=\"CENTER\">" + heading + "</H1>\n" +
+		"<H2>Information on Your Session:</H2>\n" +
+		"<TABLE BORDER=1 ALIGN=\"CENTER\">\n" +
+		"<TR BGCOLOR=\"#FFAD00\">\n" +
+		"  <TH>Info Type<TH>Value\n" +
+		"<TR>\n" +
+		"  <TD>ID\n" +
+		"  <TD>" + session.getId() + "\n" +
+		"<TR>\n" +
+		"  <TD>Creation Time\n" +
+		"  <TD>" + new Date(session.getCreationTime()) + "\n" +
+		"<TR>\n" +
+		"  <TD>Time of Last Access\n" +
+		"  <TD>" + new Date(session.getLastAccessedTime()) + "\n" +
+		"<TR>\n" +
+		"  <TD>Number of Previous Accesses\n" +
+		"  <TD>" + accessCount + "\n" +
+		"</TR>"+
+		"</TABLE>\n");
+
+    out.println("</BODY></HTML>");
+  }
+
+// Handle GET and POST requests identically
+  public void doPost(HttpServletRequest request, HttpServletResponse response)
+  throws ServletException, IOException
+  {
+    	doGet(request, response);
+  }
+}
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

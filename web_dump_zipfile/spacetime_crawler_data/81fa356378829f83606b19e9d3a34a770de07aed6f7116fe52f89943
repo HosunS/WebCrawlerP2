@@ -1,0 +1,19 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC574¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 02 Jul 1998 21:10:55 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"23e-332031b5555c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 09:46:37 GMTKraw_content¢DtypeEvalueY>// David Eppstein, UC Irvine, 11 Jun 1997
+//
+// Netscape makes Label take a lot of room. Attempt to hack around it.
+
+import java.awt.*;
+import gui.*;
+
+class ThinLabel extends Label {
+	ThinLabel(String s) { super(s); }
+	public Dimension minimumSize() {
+		Dimension d = super.minimumSize();
+    	FontMetrics metric = PatchFontMetrics.patch(getFontMetrics(getFont()));
+//    	return new Dimension(d.width, metric.getHeight()+1);
+		return new Dimension(d.width, 15);
+	}
+	public Dimension preferredSize() { return minimumSize(); }
+	public void update(Graphics g) { paint(g); }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

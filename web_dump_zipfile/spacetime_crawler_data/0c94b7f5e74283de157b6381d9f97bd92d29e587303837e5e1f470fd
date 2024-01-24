@@ -1,0 +1,64 @@
+¦Ifinal_url¢DtypeEvaluex3https://www.ics.uci.edu/~kay/courses/i42/hw/cat.txtLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC697¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 20 Feb 2012 21:17:20 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2b9-4b96bd1d6d800"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 03:07:39 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY¹Cats and Dogs Grammar in RSG Form
+
+The original grammar in conventional form:
+	S -> NP VP
+	NP -> Art N
+	Art -> a | the
+	N -> cat | dog
+	VP -> V NP
+	V -> ate | chased | saw
+
+We didn't address spaces in class;
+here's the grammar with spaces explicit:
+	S -> NP SPACE VP
+	NP -> Art SPACE N
+	Art -> a | the
+	N -> cat | dog
+	VP -> V SPACE NP
+	V -> ate | chased | saw
+	SPACE -> \x20
+(Hexadecimal 20 is the space character.  
+So is \040 (the octal equivalent).)
+
+{
+[S]
+[NP] [SPACE] [VP]
+}
+
+{
+[NP]
+[Art] [SPACE] [N]
+}
+
+{
+[Art]
+a
+the
+}
+
+{
+[N]
+cat
+dog
+}
+
+{
+[VP]
+[V] [SPACE] [NP]
+}
+
+{
+[V]
+ate
+chased
+saw
+}
+
+{
+[SPACE]
+\x20
+}
+You could also just insert \x20 literally
+in all the places where [SPACE] occurs.
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

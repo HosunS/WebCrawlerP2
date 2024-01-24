@@ -1,0 +1,150 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5164¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 29 Nov 2018 01:56:20 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"142c-57bc3fd306388"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 05:40:01 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY,<html>
+<head>
+<title> Image Reconstruction using Predictive Filter Flow - Shu Kong (Aimery) - UC Irvine - Computer Vision</title>
+<link rel="icon" href="image/pff_icon_smallSize.png" type="img/jpg">
+<style>
+h1 { padding : 0; margin : 0; }
+body { padding : 0; font-family : Arial; font-size : 16px; background-color : #EFEFEF; } /* background-image : url('bg.png');}*/
+#container { width : 1024px; margin : 20px auto;  background-color : #fff; padding : 50px; border : 1px solid #ccc; }
+#me { border : 0 solid black; margin-bottom : 0;}
+#sidebar { margin-left : 25px; border : 0 solid black; float : right; margin-bottom : 0;}
+#content { display : block; margin-right : 260px;}
+a { text-decoration : none; }
+a:hover { text-decoration : underline; }
+a:visited { color : blue; }
+a.invisible { color : inherit; text-decoration : inherit; }
+.publogo { margin-right : 10px; height: 50px; width: 50px; float : left; border : 0;}
+.publication { clear : left; padding-bottom : 0px;}
+.publication p { height : 60px; }
+.codelogo { margin-right : 10px; float : left; border : 0;}
+.code { clear : left; padding-bottom : 10px; vertical-align :middle;}
+.code .download a { display : block; margin : 0 15px; float : left;}
+<!-- #simpsons { margin : 5px auto; text-align : center; color : #B7B7B7; } -->
+<!-- 	#erdos { color : #999; text-align : center; font-size : 12px; } -->
+</style>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26193351-1']);
+	_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<div id="sidebar">
+<figure>
+<img src="http://www.ics.uci.edu/~skong2/image2/pff_icon_mediumSize.png" id="me" width="200">
+<figcaption>per-pixel twist</figcaption>
+</figure>
+<br>
+</div>
+
+<div id="content">
+<h1 align="center">Image Reconstruction with Predictive Filter Flow</h1>
+
+
+<p align="center">
+          <a href="http://www.ics.uci.edu/~skong2/" target="_blank">Shu Kong</a>, 
+          <a href="http://www.ics.uci.edu/~fowlkes/" target="_blank">Charless Fowlkes</a>
+</p>
+
+
+<p>
+<font color="red">Last update: Nov. 28, 2018.</font>
+</p>
+We propose a simple, interpretable framework for solving a wide range of image
+reconstruction problems such as denoising and deconvolution.  Given a
+corrupted input image, the model synthesizes a spatially varying linear filter
+which, when applied to the input image, reconstructs the desired output. The
+model parameters are learned using supervised or self-supervised training.
+We test this model on three tasks: non-uniform motion blur removal,
+lossy-compression artifact reduction and single image super resolution.  We
+demonstrate that our model substantially outperforms state-of-the-art methods
+on all these tasks and is significantly faster than optimization-based
+approaches to deconvolution.  Unlike models that directly predict output pixel
+values, the predicted filter flow is controllable and interpretable, which we
+demonstrate by visualizing the space of predicted filters for different tasks.
+
+<p>
+<b>keywords</b>: 
+inverse problem, spatially-variant blind deconvolution, low-level vision, non-uniform motion blur removal, compression artifact removal, 
+single image super-resolution, filter flow, interpretable model, per-pixel twist, self-supervised learning, image distribution learning.
+
+<ul>
+<li>
+<div class="publication">
+<p> <b>S. Kong</b>, C. Fowlkes, "<font color=#AF7817>Image Reconstruction with Predictive Filter Flow</font>", <a href="https://arxiv.org/abs/1811.11482">arXiv:1811.11482</a>, 2018.
+<br>
+[<a href="https://www.ics.uci.edu/~skong2/pff.html">project page</a>]
+[<a href="https://www.ics.uci.edu/~skong2/slides/kf_ff_arxiv2018.pdf">high-res paper (44MB)</a>]
+[<a href="https://github.com/aimerykong/predictive-filter-flow">github</a>]
+[<a href="https://github.com/aimerykong/predictive-filter-flow/blob/master/task01_deblur.ipynb">demo</a>]
+[<a href="https://github.com/aimerykong/predictive-filter-flow/tree/master/libs_deblur">models</a>]
+[slides][poster]
+</p>
+</div>
+</li>
+</ul>
+
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/image2/pff_demo_motion_deblur.png" alt="[lng_lat_ecef]" width="1000" />
+	    </center>
+<br><br>
+</div>
+</ul>
+
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/image2/pff_demo_jpeg.png" alt="[lng_lat_ecef]" width="800" />
+	    </center>
+<br><br>
+</div>
+</ul>
+
+
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/image2/pff_demo_SISR.png" alt="[lng_lat_ecef]" width="800" />
+	    </center>
+<br><br>
+</div>
+</ul>
+
+
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/image2/pff_demo_analysisFF.png" alt="[lng_lat_ecef]" width="800" />
+	    </center>
+<br><br>
+</div>
+</ul>
+
+
+
+
+
+<br clear="both">
+</div>
+</div>
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,661 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueå¢Ak¢DtypeEvalueIExpect-CTAv¢DtypeEvalueXWmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueY-__cfduid=d03ea3d96ef7b9595a454f4b922fdd25e1549788289; expires=Mon, 10-Feb-20 08:44:49 GMT; path=/; domain=.acm.org; HttpOnly, JSESSIONID=D28D10234F4F985C3AC370F0E00A30D8.mags; Path=/; Secure; HttpOnly, CFID=18137652; Path=/, CFTOKEN=8d5ac663bee69d1b%2D61CE0A76%2DCE7F%2DF509%2D4B073C748E94A235; Path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 01 Jan 1970 00:00:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueJcloudflare¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX.no-cache, no-store, must-revalidate, max-age=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:44:50 GMT¢Ak¢DtypeEvalueFCF-RAYAv¢DtypeEvalueT4a6d4bc8fe23934e-SJC¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=utf-8Kraw_content¢DtypeEvalueYÇ¥<!DOCTYPE html>
+<html>
+<head><script type="text/javascript">/* <![CDATA[ */_cf_loadingtexthtml="<img alt=' ' src='/cf_scripts/scripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/cf_scripts/scripts/ajax";
+_cf_jsonprefix='//';
+_cf_websocket_port=0;
+_cf_flash_policy_port=0;
+_cf_clientid='04D0E34F4A08DE5E513EE6D7B1ED1297';/* ]]> */</script><script type="text/javascript" src="/cf_scripts/scripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/ajax/package/cfajax.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/cfform.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/masks.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/cfformhistory.js"></script>
+<meta charset="UTF-8">
+<title></title>
+<meta name="keywords" content="" />
+<meta name="article_id" content="81100311898" />
+<meta property="og:title" content="Ubiquity: " />
+<meta property="og:description" content="Ubiquity, information everywhere" />
+<meta property="og:image" content="https://ubiquity.acm.org/siteimages/fb_ubiquity_logo.jpg" />
+<link href="https://ubiquity.acm.org/primarytemplatefiles/style.css" rel="stylesheet" type="text/css" />
+<link href="https://ubiquitydev.acm.org/primarytemplatefiles/print.css" type="text/css" rel="stylesheet" media="print" />
+<script language="javascript">
+  function addbookmark(){
+		
+	if (document.all) {
+		window.external.AddFavorite(window.location.href,document.title);
+	} 
+	else {
+		alert("Use CTRL-D to add a bookmark in your Browser.");
+	}
+}
+</script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js-common/base.js" type="text/javascript" language="javascript"></script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js-common/utility.js" type="text/javascript" language="javascript"></script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js/cssmenus.js" type="text/javascript" language="javascript"></script>
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/css/horizontal.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/skins/TopNav/menus.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">/* <![CDATA[ */
+			ColdFusion.Ajax.importTag('CFFORM');
+		/* ]]> */</script>
+<script type="text/javascript">/* <![CDATA[ */
+			if (window.ColdFusion) ColdFusion.required['add_email']=true;
+		/* ]]> */</script>
+<script type="text/javascript">
+<!--
+    _CF_checkCFForm_1 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element add_email required check
+        if( _CF_hasValue(_CF_this['add_email'], "TEXT", false ) )
+        {
+            //form element add_email 'EMAIL' validation checks
+            if (!_CF_checkEmail(_CF_this['add_email'].value, true))
+            {
+                _CF_onError(_CF_this, "add_email", _CF_this['add_email'].value, "Please enter a properly formatted E-mail address");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "add_email", _CF_this['add_email'].value, "Please enter a properly formatted E-mail address");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/css/vertical.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/skins/ubiquityleft/menus.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div class="outer-container">
+<div id="masthead">
+<a class="home" href="/"><img src="/siteimages/acm_logo.png" alt="acm - an acm publication" /></a>
+<input type="text" class="st-default-search-input">
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','jqznesdyZkdNbMyHJYXG','2.0.0');
+</script>
+</div>
+<div id="nav-wrapper">
+<div id="nav-container">
+<div class="ktcssmenu savvynav_TopNav"><div class="kthorizontal ktopts_showtimeout_100 ktopts_hidetimeout_100 ktopts_imgreplace_no ktopts_imgreplacestyle_img ktopts_imgdir_ ktopts_imgnames_">
+<ul class='lev1 clearfix'><li class="lev1 pos1 lev1_pos1 first lev1_first"><a href="/index.cfm" class="lev1 pos1 lev1_pos1 first lev1_first" target="_self">HOME</a></li>
+<li class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren"><a href="/about_ubiquity.cfm" class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren" target="_self">OVERVIEW</a><ul class='lev2'><li class="lev2 pos1 lev2_pos1 first lev2_first"><a href="/about_ubiquity.cfm" class="lev2 pos1 lev2_pos1 first lev2_first" target="_self">ABOUT UBIQUITY</a></li>
+<li class="lev2 pos2 lev2_pos2"><a href="/topic_areas.cfm" class="lev2 pos2 lev2_pos2" target="_self">TOPIC AREAS</a></li>
+<li class="lev2 pos3 lev2_pos3"><a href="/meet_the_editors.cfm" class="lev2 pos3 lev2_pos3" target="_self">EDITORIAL BOARD</a></li>
+<li class="lev2 pos4 lev2_pos4"><a href="/submissions.cfm" class="lev2 pos4 lev2_pos4" target="_self">CONTRIBUTE TO UBIQUITY</a></li>
+<li class="lev2 pos5 lev2_pos5"><a href="/organizesymposium.cfm" class="lev2 pos5 lev2_pos5" target="_self">ORGANIZE A SYMPOSIUM</a></li>
+<li class="lev2 pos6 lev2_pos6"><a href="/becomeaneditor.cfm" class="lev2 pos6 lev2_pos6" target="_self">BECOME AN EDITOR</a></li>
+<li class="lev2 pos7 lev2_pos7"><a href="/permissions.cfm" class="lev2 pos7 lev2_pos7" target="_self">PERMISSIONS</a></li>
+<li class="lev2 pos8 lev2_pos8"><a href="/contactus.cfm" class="lev2 pos8 lev2_pos8" target="_self">CONTACT US</a></li>
+<li class="lev2 pos9 lev2_pos9 last lev2_last"><a href="https://www.acm.org" class="lev2 pos9 lev2_pos9 last lev2_last" target="_new">ABOUT ACM</a></li>
+</ul></li>
+<li class="lev1 pos3 lev1_pos3"><a href="https://blog.ubiquity.acm.org/" class="lev1 pos3 lev1_pos3" target="_new"><span class="__cf_email__" data-cfemail="b3f1fffcf4f3e6f1fae2e6fae7ea">[email&#160;protected]</span></a></li>
+<li class="lev1 pos4 lev1_pos4"><a href="/symposia.cfm" class="lev1 pos4 lev1_pos4" target="_self">SYMPOSIA</a></li>
+<li class="lev1 pos5 lev1_pos5"><a href="/leaders.cfm" class="lev1 pos5 lev1_pos5" target="_self">INNOVATORS</a></li>
+<li class="lev1 pos6 lev1_pos6"><a href="/communication.cfm" class="lev1 pos6 lev1_pos6" target="_self">COMMUNICATION</a></li>
+<li class="lev1 pos7 lev1_pos7"><a href="/pitch.cfm" class="lev1 pos7 lev1_pos7" target="_self">MAKE A PITCH</a></li>
+<li class="lev1 pos8 lev1_pos8 haschildren lev1_haschildren"><a href="/archives.cfm?volume=all" class="lev1 pos8 lev1_pos8 haschildren lev1_haschildren" target="_self">PAST ISSUES</a><ul class='lev2'><li class="lev2 pos10 lev2_pos10"><a href="/interviews.cfm" class="lev2 pos10 lev2_pos10" target="_self">INTERVIEWS</a></li>
+<li class="lev2 pos11 lev2_pos11 last lev2_last"><a href="/commentaries.cfm" class="lev2 pos11 lev2_pos11 last lev2_last" target="_self">COMMENTARIES</a></li>
+</ul></li>
+</ul></div></div>
+</div> </div>
+<div id="content-container">
+<div class="col1" id="leftcolumn">
+<div class="email-alerts">
+<div id="layoutsu" style="">
+<div id="cf_layoutarea14715006377787943" style="overflow:hidden;">
+<div id="emailsignup">
+<strong>EMAIL ALERTS</strong><br />
+Receive email notification of new articles by entering your email address here:
+<form id="email-alerts-signup" action="newssignup.cfm" method="post" target="_blank" onsubmit="return ColdFusion.Ajax.checkForm(this, _CF_checkCFForm_1,'cf_layoutarea14715006377787943')">
+<fieldset>
+<input name="add_email" type="text" class="text" id="add_email" />
+<input class="text" id="list_name" name="list_name" type="hidden" value="UBIQUITY" />
+<button type="submit" value="Sign Up" class="submit">
+<span>SIGN UP</span>
+</button>
+</fieldset>
+<input type='text' style='display:none' /></form>
+</div>
+</div>
+</div>
+</div> <div class="ktcssmenu savvynav_ubiquityleft"><div class="ktvertical ktopts_showtimeout_100 ktopts_hidetimeout_100 ktopts_imgreplace_no ktopts_imgreplacestyle_img ktopts_imgdir_ ktopts_imgnames_">
+<ul class='lev1 clearfix'><li class="lev1 pos1 lev1_pos1 first lev1_first"><a href="https://ubiquity.acm.org/submissions.cfm" class="lev1 pos1 lev1_pos1 first lev1_first" target="_new">CALL FOR CONTRIBUTIONS</a></li>
+<li class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren"><a href="/index.cfm" class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren" target="_self">BROWSE BY...</a><ul class='lev2'><li class="lev2 pos1 lev2_pos1 first lev2_first"><a href="/archives.cfm" class="lev2 pos1 lev2_pos1 first lev2_first" target="_self">VOLUME</a></li>
+<li class="lev2 pos2 lev2_pos2"><a href="/authors.cfm" class="lev2 pos2 lev2_pos2" target="_self">AUTHOR</a></li>
+<li class="lev2 pos3 lev2_pos3"><a href="/commentaries.cfm" class="lev2 pos3 lev2_pos3" target="_self">COMMENTARIES</a></li>
+<li class="lev2 pos4 lev2_pos4"><a href="/interviews.cfm" class="lev2 pos4 lev2_pos4" target="_self">INTERVIEWS</a></li>
+<li class="lev2 pos5 lev2_pos5 haschildren lev2_haschildren"><a href="/collections.cfm" class="lev2 pos5 lev2_pos5 haschildren lev2_haschildren" target="_self">COLLECTIONS</a><ul class='lev3'><li class="lev3 pos1 lev3_pos1 first lev3_first"><a href="/collections.cfm?id=81337494686" class="lev3 pos1 lev3_pos1 first lev3_first" target="_self">PHILIP YAFEE</a></li>
+<li class="lev3 pos2 lev3_pos2"><a href="/collections.cfm?id=81100132467" class="lev3 pos2 lev3_pos2" target="_self">JOHN STUCKEY</a></li>
+<li class="lev3 pos3 lev3_pos3"><a href="/collections.cfm?id=81100570644" class="lev3 pos3 lev3_pos3" target="_self">ESPEN ANDERSEN</a></li>
+<li class="lev3 selected pos4 lev3_pos4"><a href="/collections.cfm?id=81100311898" class="lev3 selected pos4 lev3_pos4" target="_self">GOUTAM KUMAR SAHA</a></li>
+<li class="lev3 pos5 lev3_pos5 last lev3_last"><a href="/aboutcollections.cfm" class="lev3 pos5 lev3_pos5 last lev3_last" target="_self">ABOUT COLLECTIONS</a></li>
+</ul></li></ul></li>
+<li class="lev1 pos3 lev1_pos3 last lev1_last"><a href="https://www.acm.org/publications" class="lev1 pos3 lev1_pos3 last lev1_last" target="_new">BROWSE OTHER ACM PUBLICATIONS</a></li>
+</ul></div></div>
+<ul id="user-actions" class="clearfix">
+<li class="first"><a class="add-website" href="javascript:addbookmark()" )>ADD THIS WEBSITE</a></li>
+<li><a class="rss" href="/feeds/latestitems.xml" target="_blank">RSS FEED</a></li>
+<li><a class="feedback" href="contactus.cfm">SEND US FEEDBACK</a></li>
+<li><a class="print" href="javascript:window.print()">PRINT THIS PAGE</a></li>
+</ul>
+</div>
+<div id="main-content" class="col2">
+<div id="articleListing">
+<div class="excerpt">
+<div class="subheader"><h2>Goutam Kumar Saha Collection</h2></div>
+</div>
+<div id="currentissue">
+<ul>
+<li>
+<a href="article.cfm?id=1576101">Mind Hygiene for All: A Concept Map</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+April 2009
+</div>
+<div>
+Maintaining mental sharpness and clarity is important to most everyone, and doing so is valuable for maintaining our professional edge. But we are under assault from many directions with challenges that can interfere with mental sharpness. Some of the challenges are familiar; others hide in the background. What are these challenges and what can we do about them? Goutam Saha has a very concise summary of everything contributing to mental hygiene, including the challenges and actions to meet them. He expresses this with mind maps, which themselves contribute to mental clarity.
+<a href="index.cfm?page=article&id=1576101">
+<a href="article.cfm?id=1576101">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1399613">Software-Based Fault Tolerance: Concept Map-Based Learning</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+June 2008
+</div>
+<div>
+This paper aims to visually describe the important concepts of software-based fault tolerance and the relationships thereof using a concept map.
+<a href="index.cfm?page=article&id=1399613">
+<a href="article.cfm?id=1399613">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1376145">Software-Implemented Fault Detection Approaches</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+May 2008
+</div>
+<div>
+A comparative study on various software-implemented fault detection approaches has been briefly described in a tabular form
+<a href="index.cfm?page=article&id=1376145">
+<a href="article.cfm?id=1376145">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1348484">Understanding software testing concepts</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+February 2008
+</div>
+<div>
+Software testing concepts have been briefly described in this article. Readers would find it easier to understand fundamental concepts of software testing by going through a concept map thereof. Software testing is itself a discipline as well as a process. Software development is nothing but a process of coding functionality in order to meet the defined end-user requirements. We can think of software testing as an iterative process, which consists of Tests Designing, Tests Execution, Problems Identifying and Problem Fixing, for validating functionality and as well as for attempting the software break. Software testing aims to find problems and to fix them for improving software quality. Software testing may represent 40% of a software development budget. Basic methods of performing software testing include Manual Testing and Automated Testing. Manual software testing is the process of manually testing software (having the possible forms for example, user interfaces navigation, information submission, or attempt to hack the software or database etc.), carried out by an individual or individuals. Manual software testing is labor-intensive and slow. On the other hand, automated software testing is a process of creating test scripts, which can be run then automatically, repetitively, and through a number of iterations. Automated software testing helps us to minimize the variability of results, speed up the testing process, increase test coverage (that is, the number of different things tested), and ultimately provide greater confidence in the quality of the software being tested.
+<a href="index.cfm?page=article&id=1348484">
+<a href="article.cfm?id=1348484">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1322467">Understanding dependable computing concepts</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+November 2007
+</div>
+<div>
+<p>This work aims to visually describe the important concepts of a dependable computing system and the relationships between the concepts. The concept map here for dependable computing system concepts would help us for easier and meaningful understanding of this emerging important research topic of computer science and engineering. Readers here won't feel tired of reading long text horizontally lines after lines for conceptualizing this much research and interesting topic.</p>
+<a href="index.cfm?page=article&id=1322467">
+<a href="article.cfm?id=1322467">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1295290">Web ontology language (OWL) and semantic web</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+September 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1295290">
+<a href="article.cfm?id=1295290">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1286467">Single version fault tolerant web services</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+July 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1286467">
+<a href="article.cfm?id=1286467">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1286461">Business intelligence computing issues</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+June 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1286461">
+<a href="article.cfm?id=1286461">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1279685">Fault tolerance in web services</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+March 2006
+</div>
+<div>
+<p>This paper demonstrates how to design a fault tolerant web application that relies on an affordable redundancy in data and function using Simple Object Access Protocol (SOAP). The proposed approach relies on a Single-Version fault tolerance model without using multiple versions or the N-Version fault tolerance model. The work aims to design a more dependable and reliable Web Service system at no extra cost on multiple versions.</p>
+<a href="index.cfm?page=article&id=1279685">
+<a href="article.cfm?id=1279685">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1276165">Replicated instruction based fault tolerant computing</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+June 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1276165">
+<a href="article.cfm?id=1276165">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1241853">Self-healing Software</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+March 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1241853">
+<a href="article.cfm?id=1241853">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1195938">Software fault avoidance issues</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+November 2006
+</div>
+<div>
+This article aims to discuss various issues of software fault avoidance. Software fault avoidance aims to produce fault free software through various approaches having the common objective of reducing the number of latent defects in software programs.
+<a href="index.cfm?page=article&id=1195938">
+<a href="article.cfm?id=1195938">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1164067">Software implemented fault tolerance: The ESVP approach</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+August 2006
+</div>
+<div>
+This short paper describes a low cost technique for gaining software implemented fault tolerance without using design diversity based N versions redundancy in both software and hardware. The proposed approach uses an enhanced single-version programming (ESVP) scheme for an application that executes on a single machine. ESVP employs triplicate application program along with multistage voting at inputs and outputs in order to tolerate single-point operational faults in input data, output data, an individual processing module and in an individual voting module through error masking. It is not aimed to tolerate software design bugs. This is a useful tool for designing a reliable low-cost application system.
+<a href="index.cfm?page=article&id=1164067">
+<a href="article.cfm?id=1164067">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1147995">Software based fault tolerance: a survey</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+July 2006
+</div>
+<div>
+<a href="index.cfm?page=article&id=1147995">
+<a href="article.cfm?id=1147995">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1143395">Application semantic driven assertions toward fault tolerant computing</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+June 2006
+</div>
+<div>
+Based on semantics of an application processing logic, we find out the most critical and sensitive parts of an application and we derive set of conditions or assertions among the various diagnostic checkpoint variables and we enhance the processing logic to enable it to detect run-time various operational or environmental faults toward fault tolerant computing. This paper examines how a single-version algorithm can establish software based fault tolerance by designing in thoughtful software based execution-time checks in a computing application. The algorithm developed here relies on various assertions that are derived from the semantics of an application. Various diagnostic assertive checkpoints have been derived based on an application's semantics. This work is not intended to correct bit-errors using conventional error correction codes. Errors have been detected through checkpoints and periodical execution of an application with known test data and verification of observed result with known result thereof. Electrical transients or small particles hitting the circuit, often cause random errors or faults in data and program flow. The manuscript describes an algorithm that allows the detection and recovery of transient or operational failures in software on a specific problem, just by using one version of a software program running on just one machine. This approach does not aim to tolerate software design bugs. This algorithmic approach uses various run-time signatures and validation thereof in order to detect faults.
+<a href="index.cfm?page=article&id=1143395">
+<a href="article.cfm?id=1143395">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1127026">Parsing Bengali text: an intelligent approach</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+April 2006
+</div>
+<div>
+<a href="index.cfm?page=article&id=1127026">
+<a href="article.cfm?id=1127026">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1117694">A low-cost testing for transient faults</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+January 2006
+</div>
+<div>
+Unconventional and low - cost software implemented testing technique for processor transient faults are briefly discussed here. On-line signatures of the Processor Status Register have been used here for detecting transient faults.
+<a href="index.cfm?page=article&id=1117694">
+<a href="article.cfm?id=1117694">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1115546">Software fault tolerance through run-time fault detection</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+December 2005
+</div>
+<div>
+Electrical transients often disrupt the proper functioning of a program. It causes the errors in program flow, data, program codes, or processor registers. The aim of this article is to detect transient faults as quickly as possible in order to prevent functions being performed wrongly or data being lost, during the execution of an application program. Recovery work is initiated immediately after the detection of errors for gaining high software fault tolerance and dependable computing. Transient errors are detected here, on tracing the presence of an odd processor status word (PSW) during the execution time of a computing application.
+<a href="index.cfm?page=article&id=1115546">
+<a href="article.cfm?id=1115546">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1103044">A novel 3-tier XML schematic approach for web page translation</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+November 2005
+</div>
+<div>
+The proposed 3-Tier XML schematic approach is to demonstrate how to embed syntactic, semantic and computational linguistic metadata information in the structure of an XML document and how the various markups help in Internationalization and Localization processes toward faster and more meaningful machine translation of Web contents from one human language to another human language. In this approach, an XML content author needs to embed a source human language specific metadata information in an XML document. Various markups used in this novel 3-Tier XML Schematic approach are very useful for the machine translation of a web content. This is a significant step forward toward better internationalization and localization of web pages as well.
+<a href="index.cfm?page=article&id=1103044">
+<a href="article.cfm?id=1103044">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1103070">Software-Based Fault Tolerant Computing</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+November 2005
+</div>
+<div>
+This paper describes how to design a software-based fault tolerant application using microprocessor (MP), in order to tolerate the burst errors in memory. This approach may be called a single -- version scheme (SVS). The SVS relies on a single version application program which is enhanced with self-checking code redundancy to tolerate memory burst errors that are difficult to correct during the run-time of an application. Conventionally, the other software based approaches can detect a few bit errors (in memory) only towards fail-stop kind of fault tolerance against transient bit errors. Reed Solomon codes are mainly effective for burst errors in coding of audio Compact Disks at offline only. The proposed online technique does not need multiple versions of software and multiple machines. This approach employs only two copies of the application software running on one machine only. Two copies of the enhanced version version of an application are used here for online error detection and tolerance thereof as well. This is an effective low-cost online tool for hardening a microprocessor-based industrial computing system or for on-chip DRAM applications using an affordable code and time redundancy against the burst errors in processor memory. The SVS aims to provide a non-fail-stop kind of fault tolerance against burst errors. This approach supplements the Error Correcting Codes (ECC) in memory system also, against both the transient and permanent bit errors in memory.
+<a href="index.cfm?page=article&id=1103070">
+<a href="article.cfm?id=1103070">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1103082">Software implemented fault tolerance through data error recovery</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+September 2005
+</div>
+<div>
+This paper examines how a new software-implemented data error recovery scheme can be so effective in comparison to conventional Error Correction Codes (ECC) during the execution time of an application. The proposed algorithm is three times faster than the conventional software-implemented ECC and application program designers can easily implement the proposed scheme because of its simplicity while designing their fault tolerant applications at no extra hardware cost. The proposed software-implemented scheme for execution-time data-error detection and correction relies on threefold replication of application data set as a basis for fault tolerance.
+<a href="index.cfm?page=article&id=1103082">
+<a href="article.cfm?id=1103082">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1088432">The E2B machine translation: a new approach to HLT</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+August 2005
+</div>
+<div>
+This article describes a new approach to machine translator that translates English text into Bangla text with disambiguation. The translated Bengali text in English scripts is also useful for learning Bengali or Bangla language as a foreign language. At the same time the Bengali rural people who do not know English language well can understand the English matter with the translated output. The proposed approach is a new one that uses both the rule-based and transformation-based machine translation schemes along with three level parsing approaches. This is a significant contribution towards creation of a low-cost Human Language Technology (HLT). About two hundred million people in the West Bengal, Tripura (two states in India) and in Bangladesh (a country), speak and write Bangla as their first language. This English to Bangla (E2B)-ANUBAD or translator system or E2B takes a paragraph of English sentences as input sentences and produces equivalent Bangla sentences. The E2B-ANUBAD system compries of a preprocessor, morphological parser, semantic parser using English word ontology for context disambiguation, an electronic lexicon associated with grammatical information and a discourse processor. It also employs a lexical disambiguation analyzer. This system does not rely on a stochastic approach. Rather, it is based on a special kind of hybrid architecture of transformer and rule-based NLE architectures along with various linguistic knowledge components of both English and Bangla for creation of a low-cost HLT.
+<a href="index.cfm?page=article&id=1088432">
+<a href="article.cfm?id=1088432">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1086449">Transient software fault tolerance using single-version algorithm</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+August 2005
+</div>
+<div>
+<a href="index.cfm?page=article&id=1086449">
+<a href="article.cfm?id=1086449">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1066336">A software fix towards fault-tolerant computing</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+May 2005
+</div>
+<div>
+This article describes a low cost software technique for transient fault detection and fault tolerance in a processing system. The random errors caused by potential transients, Electrical Fast Transients (EFT) can be controlled by this proposed technique. Transient errors, if present, are detected and then necessary recovery action can be taken for attaining higher system reliability and tolerance thereof. It is a very cost effective tool for the application design engineers than the traditional expensive hardware fixes, or N-Version programming.
+<a href="index.cfm?page=article&id=1066336">
+<a href="article.cfm?id=1066336">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1008538">Software-based computing security and fault tolerance</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+June 2004
+</div>
+<div>
+This article delineates a software approach to establish computing security and fault tolerance in various computing systems. This low-cost approach is useful to tolerate malicious code modifications and transient faults without additional costs for hardware and extra software versions.
+<a href="index.cfm?page=article&id=1008538">
+<a href="article.cfm?id=1008538">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=985602">Beyond the conventional techniques of software fault tolerance</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+January 2004
+</div>
+<div>
+This short article describes a low cost and unconventional technique for gaining software fault tolerance without using N-modular redundancy in both hardware and software.
+<a href="index.cfm?page=article&id=985602">
+<a href="article.cfm?id=985602">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=964689">Transient software fault tolerance through recovery</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+September 2003
+</div>
+<div>
+A low-cost and effective solution for developing transient fault tolerant application software based on a single-version program
+<a href="index.cfm?page=article&id=964689">
+<a href="article.cfm?id=964689">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=948944">Fault management in mobile computing</a><br />
+<div class="by_line">
+by
+Goutam Kumar Saha
+<br>
+October 2003
+</div>
+<div>
+Business people on the go need portability and mobility in their computing environments. However, such mobile environments often suffer from transient faults. This article discusses how to manage faults in order to get better availability for small wireless devices.
+<a href="index.cfm?page=article&id=948944">
+<a href="article.cfm?id=948944">...</a>
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19262769-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</div>
+</div>
+<div id="footer">
+<ul class="clearfix">
+<li>
+<a class="first" href="index.cfm">HOME</a></li>
+<li>
+<a href="commentaries.cfm">COMMENTARIES</a></li>
+<li>
+<a href="interviews.cfm?volume=all">INTERVIEWS</a></li>
+<li>
+<a href="aboutcollections.cfm">COLLECTIONS</a></li>
+<li>
+<a href="symposia.cfm">SYMPOSIA</a></li>
+<li>
+<a href="archives.cfm?volume=all">ARCHIVES</a></li>
+<li>
+<a href="http://blog.acm.org/ubiquity" target="_blank">BLOGS</a></li>
+<li>
+<a href="about_ubiquity.cfm">UBIQUITY</a></li>
+<li>
+<a href="contactus.cfm">CONTACT</a></li>
+<li>
+<a href="https://www.acm.org/join" target="_blank">JOIN ACM</a></li>
+</ul>
+<div style="color: #C1C1C1; padding-top: 1em;">ACM &copy; 2019</div>
+</div>
+</div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

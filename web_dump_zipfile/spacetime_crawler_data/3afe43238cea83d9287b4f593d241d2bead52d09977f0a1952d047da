@@ -1,0 +1,112 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2863¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:54:13 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"b2f-4da84c33dfb40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 14:33:55 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY//*
+  $Id$
+
+  Copyright (C) 2007 by The Regents of the University of California
+	
+  Redistribution of this file is permitted under
+  the terms of the BSD license
+    
+  Date: 09/17/2007
+  Author: Alexander Behm <abehm (at) ics.uci.edu>
+*/
+
+#include <cstring>
+
+#include "statsutil.h"
+
+StatsUtil::
+StatsUtil(TimeFormat t) {
+  resetFilterTreeStats(&filterTreeStats);
+  resetSearchStats(&searchStats);
+  tformat = t;
+}
+
+      
+void 
+StatsUtil::
+resetFilterTreeStats(FilterTreeStats* target) {
+  memset(target, 0, sizeof(FilterTreeStats));
+}
+
+void 
+StatsUtil::
+resetSearchStats(SearchStats* target) {
+  memset(target, 0, sizeof(SearchStats));
+}
+
+double
+StatsUtil::
+getTimeMeasurement(TimeFormat format) {
+  unsigned totalTime = (t2.tv_sec - t1.tv_sec) * 1000000 + (t2.tv_usec - t1.tv_usec);
+  double tval = 0;
+
+  switch(format) {
+  case TFSEC: tval = static_cast<double>(totalTime) / 1000000; break;
+  case TFMSEC: tval = static_cast<double>(totalTime) / 1000; break;
+  case TFUSEC: tval = static_cast<double>(totalTime); break;
+  }
+
+  return tval;
+}
+
+double
+StatsUtil::
+getTimeMeasurement() {
+  unsigned totalTime = (t2.tv_sec - t1.tv_sec) * 1000000 + (t2.tv_usec - t1.tv_usec);
+  double tval = 0;
+
+  switch(tformat) {
+  case TFSEC: tval = static_cast<double>(totalTime) / 1000000; break;
+  case TFMSEC: tval = static_cast<double>(totalTime) / 1000; break;
+  case TFUSEC: tval = static_cast<double>(totalTime); break;
+  }
+
+  return tval;
+}
+
+void 
+StatsUtil::
+addSearchStats(SearchStats* target) {
+  target->thresholdTime += searchStats.thresholdTime;
+  target->preprocessTime += searchStats.preprocessTime;
+  target->mergeTime += searchStats.mergeTime;
+  target->postprocessTime += searchStats.postprocessTime;
+  target->totalSearchTime += searchStats.totalSearchTime;
+  target->candidateStrings += searchStats.candidateStrings;
+  target->panicTime += searchStats.panicTime;
+  target->numberPanics += searchStats.numberPanics;
+  target->threshold += searchStats.threshold;  
+}
+
+void 
+StatsUtil::
+avgSearchStats(SearchStats* target, float n) {
+  target->thresholdTime /= n;
+  target->preprocessTime /= n;
+  target->mergeTime /= n;
+  target->postprocessTime /= n;
+  target->totalSearchTime /= n;
+  target->candidateStrings /= n;
+  target->panicTime /= n;
+  target->threshold /= n;  
+  //target->numberPanics = (unsigned) ceil( (float)target->numberPanics / n );
+}
+
+void 
+StatsUtil::
+writeSearchStats(ofstream& fp_out, FilterTreeStats* fts, SearchStats* ss) {
+  fp_out 
+    << fts->dictionarySize << ";" 
+    << fts->maxChildren << ";"
+    << ss->thresholdTime << ";"
+    << ss->preprocessTime << ";"
+    << ss->mergeTime << ";"
+    << ss->postprocessTime << ";"
+    << ss->panicTime << ";"
+    << ss->totalSearchTime << ";"
+    << ss->candidateStrings << ";"
+    //<< ss->numberPanics << endl;
+    << ss->numberPanics << ";"
+    << fts->buildFilterTreeTime << endl;  
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

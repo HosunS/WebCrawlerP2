@@ -1,0 +1,77 @@
+¦Ifinal_url¢DtypeEvaluex/https://www.ics.uci.edu/~theory/269/140425.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2943¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:08:51 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"b7f-54c85ea75e2e4"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 00:39:35 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+<title>Theory Seminar, April 25, 2013</title>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<a href="/~theory/"><img src="http://www.ics.uci.edu/~theory/logo/CATOC2.jpg"></a>
+<h2><a href="/~theory/269/">CS 269S, Spring 2014: Theory Seminar</a><br>
+ICS Building, Room 243, 1pm
+
+<hr />
+April 25, 2013:</h2>
+<h1>
+New dynamics in geometric data structures
+</h1>
+<h2>
+Joe Simons
+</h2>
+
+<p>
+We study geometric data structures for spatio-temporal data: geometric
+objects which change over time.  In particular, we design data
+structures for fundamental geometric problems in the following four data
+models: 
+<ul>
+<li>
+In the retroactive model, we maintain a timeline for the historical
+sequence of updates to the data structure, and every update has an
+associated time stamp.  Unlike the standard dynamic model, in which we
+only allow query and update operations against the current state of the
+data structure, in the retroactive model, we also allow operations to be
+performed ``in the past''.  We describe fully retroactive dynamic data
+structures for approximate range reporting and approximate nearest
+neighbor reporting. 
+</li>
+<li>
+In the windowed model, we take an event-based approach, where each
+geometric object corresponds to an event that occurs at an instance in
+time, and queries are performed with respect to an interval in the
+timeline.  We consider time-windowed queries for skylines in
+$\mathbf{R}^d$, convex hulls in $\mathbf{R}^2$ and proximity based
+queries in $\mathbf{R}^d$.
+</li>
+<li>
+In the set-difference model, we maintain a dynamic set (or multiple
+sets) of items such that two subsets can be efficiently compared.  We
+introduce the problem of performing set-difference range queries, where
+answers to queries are set-theoretic symmetric differences between sets
+of items in two geometric ranges.  We describe a general framework for
+answering such queries based on a novel use of data-streaming sketches
+we call <i>signed symmetric-difference</i> sketches.  
+</li>
+<li>
+In the local-update model, we maintain a set of geometric objects such
+that the speed of updates is parameterized by how dramatically the
+update changes the object. When the updated object is similar to the old
+object in size and location, we desire to surpass known lower bounds for
+more general updates.  We study planar point location in a collection of
+disjoint fat regions, and investigate the complexity of local updates.
+We design a linear size data structure that allows for insertions,
+deletions, and queries in logarithmic time, and allows for local updates
+in sub-logarithmic time on a pointer machine. 
+</li></ul>
+</p>
+
+</body>
+</html>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,52 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1361¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 15 Jun 2016 20:53:37 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"551-5355750ce215c"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 12:24:47 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYQ##########################
+ChIP-seq Pipeline
+##########################
+
+
+1. Alignment
+module load bowtie/1.0.0
+bowtie [reference_genome_idx] -q [input.fastq] -n 2 -m 1 -S > [output.sam]
+
+
+2. Prepare sorted bam files
+module load samtools/1.1
+samtools view -b [input.sam] > [output.bam] 
+samtools sort -T [temp.file] -o [output.sorted.bam] [input.bam]
+
+
+3. Generate bigwigs
+# deeptools/bamCoverage
+bamCoverage -b [input.bam] --normalizeUsingRPKM --ignoreDuplicates -p 32 -of bigwig -o [output.bw]
+
+
+4. Call peaks
+# MACS2.1.0.20150731  
+module load enthought_python/7.3.2
+macs2 callpeak -t [input.sam] -c [control.sam] -g hs -n [output.name] --outdir [output.path]
+
+
+5. Annotation
+# HOMER(v4.8, 1-13-2016)
+module load perl/5.16.2
+module load enthought_python/7.3.2
+annotatePeaks.pl [input.peak.bed] Ref-hg19 > [output.annotatedpeaks.txt]
+
+
+6. NGSplot - common
+# produce common ngs.plots
+ngs.plot.r -G hg19 -R genebody -C [input.sorted.bam] -O [output.name] -T [label.on.graph]
+
+
+7. NGSplot - associated
+7.1 
+# extract the genelist for ngs.plot.r
+# NR is built-in variable for number of rows so it is here to skip the header 
+awk '{if(NR>1)print}' [input.annotatedpeaks] | cut -f 16 > [output.genelist]
+7.2
+# produce associated ngs.plot
+module load R
+ngs.plot.r -G hg19 -R genebody -E [input.genelist] -C [input.sorted.bam] -O [output.name] -T [label.on.graph]
+
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,100 @@
+¦Ifinal_url¢DtypeEvaluex-http://cybert.ics.uci.edu/dialog/file_format/Lhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 22:14:25 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYî
+
+<p><a href="/help/" class"fg-button ui-state-default ui-corner-all">View Complete Help</a></p>
+
+
+
+
+
+<div id="file-format-wrapper" class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+  <h2 class="ui-widget-header">File Format</h2>
+  <p>
+    The format expected is 
+    essentially the output of a spreadsheet file in ASCII or plain text with the
+    values delimited by tabs, commas, or spaces. If your data are in Excel or a similar spreadsheet program,
+    they should be saved as text files and delimited by tabs, commas, or spaces. 
+    Make sure that your labels (gene names) do not include whatever you choose.
+  </p>
+  <p>
+    Comments can be inserted anywhere in the text as long as the comment lines are prefixed by a '#' because
+    the underlying R code will ignore command lines beginning with #. Column headings must be removed unless
+    they are preficed by a # sign or specifically excluded by identifying which is data start row. 
+    Do note that having the # sign in the middle of a line without prefixing the line with a # will 
+    result in errors. For example, please ensure that none of the gene names (in the label column) have a
+    # in them.
+  </p>
+  <p>
+    Missing values are coded as 'NA' (not 'na' - case matters) and values below background are coded as zero
+    (&quot;0&quot;) 
+  </p> 
+  <p>
+    There must be at least one label column.  And columns for the same condition must be contiguous.  
+    Examples are given below for each analysis type.
+  </p>
+  <h4>Unpaired two-conditions data</h4>
+  <p>
+    For this type of analysis, where the first condition is a control, and second condition is an experimental, 
+    columns should be in this order:
+    <!--  For example, for an <strong>unpaired two-conditions</strong> analysis that involved a 
+          control and experimental conditions, the columns should be in this order:-->
+  </p>
+    <pre>
+    Label, ControlReplicate1, ControlReplicate2, ExperimentalReplicate1, ExperimentalReplicate2</pre>
+  <p>
+    Of course, you can have more than two control or experimental replicates, but they must be contiguous.
+    You cannot have (for example) control columns, then experimental columns, the control columns again.
+  </p>
+  <p>
+    Here's an example file:
+  </p> 
+  <pre>
+    # here's a comment
+    # and another, and the line below is also a comment which is OK to insert
+    # Label ContColumn1 ContColumn2 ExpColumn1 ExpColumn2
+    # the real data starts just after this line 
+    GH01040 0.81888287 0.98072154 1.16866872 1.38928931
+    GH01059 0.87158715 0.9766095 1.05333957 1.18938903
+    # comments can be interspersed as long as the line begins with a '#'
+    GH01066 0.8881064 0.45129639 0.79107254 0.90903492
+    GH01085 0.53412245 0.84194019 0.95338764 1.22393455</pre>
+  <h4>Paired two-conditions data</h4>
+  <p>
+    For paired data, you must upload raw measurements of two conditions with an equal number
+    of replicates.
+    Please see the <a href="/help/#pairs">Pairs Help Section</a> for more details of 
+    when and why a Paired analysis is appropriate.
+  </p>
+  <p>
+    With raw measurements, columns should be in the following order:
+  </p>
+  <pre>
+    Label, Cond1Repl1, Cond1Repl2, Cond2Repl1, Cond2Repl2</pre>
+  <p>
+    This means that Cond1Repl1 will be <strong>paired</strong> with Cond2Repl1, 
+    and similarly Cond1Repl2 will be <strong>paired</strong> with Cond2Repl2.  
+    Of course, you can have more than two columns per condition, but the number of columns in each condition 
+    <strong>must</strong> be equal.  The Unpaired two conditions data example file from above works as an 
+    example for this type of data.
+  </p>
+  <h4>Multiple conditions data</h4>
+  <p>For this type of data, the columns for each condition should be contiguous.
+    For example with three conditions having two replicates each, columns should be in the following order: </p>
+  <pre>
+    Label, Cond1Repl1, Cond1Repl2, Cond2Repl1, Cond2Repl2, Cond3Repl1, Cond3Repl2</pre>
+  <p>
+    Again, you could have more than three conditions or more than two replicates each, but columns from the same 
+    condition need to be next to one another.  Here is an example file:
+  </p>
+  <pre>
+    # here's a comment
+    # and another, and the line below is also a comment which is OK to insert
+    # Label Cond1Column1 Cond1Column2 Cond2Column1 Cond2Column2 Cond3Column1 Cond3Column2
+    # the real data starts just after this line 
+    GH01040 0.81888287 0.98072154 1.16866872 1.38928931 1.78923471 1.65654518
+    GH01059 0.87158715 0.9766095 1.05333957 1.18938903 1.54621312 0.99854211
+    # comments can be interspersed as long as the line begins with a '#'
+    GH01066 0.8881064 0.45129639 0.79107254 0.90903492 1.46541311 1.64659878
+    GH01085 0.53412245 0.84194019 0.95338764 1.22393455 0.89154451 0.87973211</pre>  
+</div>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

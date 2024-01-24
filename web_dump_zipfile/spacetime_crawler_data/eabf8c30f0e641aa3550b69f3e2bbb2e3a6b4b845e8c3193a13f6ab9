@@ -1,0 +1,242 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‹¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1707¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueUApache/2.4.7 (Ubuntu)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 25 Aug 2015 06:27:28 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"283e-51e1cd3fc5400-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 20:23:16 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueJtext/plainKraw_content¢DtypeEvalueY(H$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/2483148.java 79 84
+/home/jeff/BigCloneBench/sample/selected/382940.java 116 122
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_att_get_MyAdmin(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        ConsumerAdmin _ob_r = MyAdmin();
+        org.omg.CORBA.portable.OutputStream out = handler.createReply();
+        ConsumerAdminHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_op_get_current_time(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        org.omg.CORBA.portable.OutputStream out = null;
+        String _ob_r = get_current_time();
+        out = handler.createReply();
+        org.omg.DsObservationAccess.TimeStampHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/49267.java 284 295
+/home/jeff/BigCloneBench/sample/default/94364.java 509 525
+----------------------------------------
+    public boolean pstep(int thread, int printMode, boolean skip_prolog) {
+        int addr = reg.hardwareIP();
+        boolean stillrunning;
+        boolean over_branch = false;
+        breakpoint bpSaved = bpset.lookup(addr);
+        threadstep.setStepBreakpoint(thread, over_branch, skip_prolog);
+        if (bpSaved != null) bpset.clearBreakpoint(bpSaved);
+        stillrunning = continueCheckingForSignal(thread, printMode, false);
+        threadstep.clearStepBreakpoint(thread);
+        if (stillrunning && bpSaved != null) bpset.setBreakpoint(bpSaved);
+        return stillrunning;
+    }
+
+----------------------------------------
+    public boolean pcontinue(int thread, int printMode, boolean allThreads) {
+        int addr = reg.hardwareIP();
+        boolean over_branch = false;
+        boolean stillrunning;
+        boolean skip_prolog = false;
+        breakpoint bpSaved = bpset.lookup(addr);
+        if (bpSaved != null) {
+            System.out.println("pcontinue: saving current breakpoint " + VM.intAsHexString(addr));
+            threadstep.setStepBreakpoint(thread, over_branch, skip_prolog);
+            bpset.clearBreakpoint(bpSaved);
+            stillrunning = continueCheckingForSignal(thread, PRINTNONE, false);
+            threadstep.clearStepBreakpoint(thread);
+            bpset.setBreakpoint(bpSaved);
+        }
+        stillrunning = continueCheckingForSignal(thread, printMode, allThreads);
+        return stillrunning;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/67669.java 940 952
+/home/jeff/BigCloneBench/sample/default/11754.java 382 392
+----------------------------------------
+    public void test51() throws Exception {
+        String data = "\"\\xfa\\u0afa\\xFA\\u0AFA\"";
+        CsvReader reader = CsvReader.parse(data);
+        reader.setUseTextQualifier(true);
+        reader.setEscapeMode(CsvReader.ESCAPE_MODE_BACKSLASH);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("ÃƒÂºÃ Â«ÂºÃƒÂºÃ Â«Âº", reader.get(0));
+        Assert.assertEquals("\"\\xfa\\u0afa\\xFA\\u0AFA\"", reader.getRawRecord());
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test19() throws Exception {
+        String data = "1\r\n";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/default/22303.java 382 392
+/home/jeff/BigCloneBench/sample/default/59932.java 925 937
+----------------------------------------
+    public void test19() throws Exception {
+        String data = "1\r\n";
+        CsvReader reader = CsvReader.parse(data);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("1", reader.get(0));
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertEquals("1", reader.getRawRecord());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+    public void test50() throws Exception {
+        String data = "\\n\\r\\t\\b\\f\\e\\v\\a\\z\\d065\\o101\\101\\x41\\u0041";
+        CsvReader reader = CsvReader.parse(data);
+        reader.setUseTextQualifier(false);
+        reader.setEscapeMode(CsvReader.ESCAPE_MODE_BACKSLASH);
+        Assert.assertTrue(reader.readRecord());
+        Assert.assertEquals("\n\r\t\b\fzAAAAA", reader.get(0));
+        Assert.assertEquals("\\n\\r\\t\\b\\f\\e\\v\\a\\z\\d065\\o101\\101\\x41\\u0041", reader.getRawRecord());
+        Assert.assertEquals(0L, reader.getCurrentRecord());
+        Assert.assertEquals(1, reader.getColumnCount());
+        Assert.assertFalse(reader.readRecord());
+        reader.close();
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/2636968.java 81 90
+/home/jeff/BigCloneBench/sample/selected/100172.java 127 134
+----------------------------------------
+    public Matrix(int m, int n, double s) {
+        this.m = m;
+        this.n = n;
+        A = new double[m][n];
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                A[i][j] = s;
+            }
+        }
+    }
+
+----------------------------------------
+    public static Matrix zero(int m, int n) {
+        Matrix A = new Matrix(m, n);
+        double[][] X = A.getArray();
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) X[i][j] = 0.0;
+        }
+        return A;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/708312.java 86 91
+/home/jeff/BigCloneBench/sample/selected/1656760.java 170 176
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_att_get_MyType(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        ProxyType _ob_r = MyType();
+        org.omg.CORBA.portable.OutputStream out = handler.createReply();
+        ProxyTypeHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_op_get_all_filters(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        org.omg.CORBA.portable.OutputStream out = null;
+        int[] _ob_r = get_all_filters();
+        out = handler.createReply();
+        org.omg.CosNotifyFilter.FilterIDSeqHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/127068.java 845 855
+/home/jeff/BigCloneBench/sample/selected/127068.java 1669 1681
+----------------------------------------
+    public Matrix ebeDivide(Matrix B) {
+        checkMatrixDimensions(B);
+        Matrix X = new Matrix(m, n);
+        double[][] C = X.getArray();
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                C[i][j] = A[i][j] / B.A[i][j];
+            }
+        }
+        return X;
+    }
+
+----------------------------------------
+    public Matrix sumRows() {
+        Matrix X = new Matrix(1, n);
+        double[][] C = X.getArray();
+        double s = 0;
+        for (int j = 0; j < n; j++) {
+            s = 0;
+            for (int i = 0; i < m; i++) {
+                s = s + A[i][j];
+            }
+            C[0][j] = s;
+        }
+        return X;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/1544487.java 79 84
+/home/jeff/BigCloneBench/sample/selected/2356990.java 108 113
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_att_get_MyAdmin(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        ConsumerAdmin _ob_r = MyAdmin();
+        org.omg.CORBA.portable.OutputStream out = handler.createReply();
+        ConsumerAdminHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_att_get_max_list(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        int _ob_r = max_list();
+        org.omg.CORBA.portable.OutputStream out = handler.createReply();
+        out.write_ulong(_ob_r);
+        return out;
+    }
+
+----------------------------------------
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+/home/jeff/BigCloneBench/sample/selected/2356990.java 115 120
+/home/jeff/BigCloneBench/sample/selected/382940.java 72 77
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_att_get_max_match_card(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        int _ob_r = max_match_card();
+        org.omg.CORBA.portable.OutputStream out = handler.createReply();
+        out.write_ulong(_ob_r);
+        return out;
+    }
+
+----------------------------------------
+    private org.omg.CORBA.portable.OutputStream _OB_att_get_naming_service(org.omg.CORBA.portable.InputStream in, org.omg.CORBA.portable.ResponseHandler handler) {
+        org.omg.CosNaming.NamingContext _ob_r = naming_service();
+        org.omg.CORBA.portable.OutputStream out = handler.createReply();
+        org.omg.DsObservationAccess.NamingContextHelper.write(out, _ob_r);
+        return out;
+    }
+
+----------------------------------------
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

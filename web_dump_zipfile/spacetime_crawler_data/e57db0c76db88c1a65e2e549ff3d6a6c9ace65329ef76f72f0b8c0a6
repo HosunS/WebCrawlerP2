@@ -1,0 +1,210 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:21:50 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYG:<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Classification</a> <font color=red>(31)</font><br><a href='datasets.html?format=&task=reg&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Regression</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=clu&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Clustering</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=other&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Other</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b>  - <a href='datasets.html?format=&task=&att=&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=cat&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Categorical</a> <font color=red>(10)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Numerical</a></font> <font color=red>(33)</font><br><a href='datasets.html?format=&task=&att=mix&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Mixed</a> <font color=red>(11)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Multivariate</a> <font color=red>(30)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=uvar&sort=attUp&view=list'>Univariate</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=seq&sort=attUp&view=list'>Sequential</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=ts&sort=attUp&view=list'>Time-Series</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=text&sort=attUp&view=list'>Text</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=dt&sort=attUp&view=list'>Domain-Theory</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=other&sort=attUp&view=list'>Other</a> <font color=red>(1)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b> - <a href='datasets.html?format=&task=&att=num&area=&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Life Sciences</a></font> <font color=red>(33)</font><br><a href='datasets.html?format=&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Physical Sciences</a> <font color=red>(25)</font><br><a href='datasets.html?format=&task=&att=num&area=comp&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>CS / Engineering</a> <font color=red>(48)</font><br><a href='datasets.html?format=&task=&att=num&area=soc&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Social Sciences</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=&att=num&area=bus&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Business</a> <font color=red>(13)</font><br><a href='datasets.html?format=&task=&att=num&area=game&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Game</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=&att=num&area=other&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Other</a> <font color=red>(22)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b> - <a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=&type=&sort=attUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=less10&numIns=&type=&sort=attUp&view=list'>Less than 10</a> <font color=red>(18)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>10 to 100</a></font> <font color=red>(33)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=greater100&numIns=&type=&sort=attUp&view=list'>Greater than 100</a> <font color=red>(11)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=less100&type=&sort=attUp&view=list'>Less than 100</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=100to1000&type=&sort=attUp&view=list'>100 to 1000</a> <font color=red>(19)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=greater1000&type=&sort=attUp&view=list'>Greater than 1000</a> <font color=red>(12)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Matrix</a> <font color=red>(24)</font><br><a href='datasets.html?format=nonmat&task=&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Non-Matrix</a> <font color=red>(9)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>33</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=&type=&sort=attUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Breast+Cancer+Wisconsin+%28Original%29">Breast Cancer Wisconsin (Original)</a></b>: Original Wisconsin Breast Cancer Database</p><p class="normal">2. <b><a href="datasets/Breast+Tissue">Breast Tissue</a></b>: Dataset with electrical impedance measurements of freshly excised tissue samples from the breast.</p><p class="normal">3. <b><a href="datasets/Breast+Cancer+Coimbra">Breast Cancer Coimbra</a></b>: Clinical features were observed or measured for 64 patients with breast cancer and 52 healthy controls. </p><p class="normal">4. <b><a href="datasets/ILPD+%28Indian+Liver+Patient+Dataset%29">ILPD (Indian Liver Patient Dataset)</a></b>: This data set contains 10 variables that are age, gender, total Bilirubin, direct Bilirubin, total proteins, albumin, A/G ratio, SGPT, SGOT and Alkphos.</p><p class="normal">5. <b><a href="datasets/Fertility">Fertility</a></b>: 100 volunteers provide a semen sample analyzed according to the WHO 2010 criteria. Sperm concentration are related to socio-demographic data, environmental factors, health status, and life habits</p><p class="normal">6. <b><a href="datasets/EEG+Eye+State">EEG Eye State</a></b>: The data set consists of 14 EEG values and a value indicating the eye state.</p><p class="normal">7. <b><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals">EEG Steady-State Visual Evoked Potential Signals</a></b>: This database consists on 30 subjects performing Brain Computer Interface for Steady State Visual Evoked Potentials (BCI-SSVEP). </p><p class="normal">8. <b><a href="datasets/Thoracic+Surgery+Data">Thoracic Surgery Data</a></b>: The data is dedicated to classification problem related to the post-operative life expectancy in the lung cancer patients: class 1 - death within one year after surgery, class 2 - survival.</p><p class="normal">9. <b><a href="datasets/Diabetic+Retinopathy+Debrecen+Data+Set">Diabetic Retinopathy Debrecen Data Set</a></b>: This dataset contains features extracted from the Messidor image set to predict whether an image contains signs of diabetic retinopathy or not. </p><p class="normal">10. <b><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Children++">Autistic Spectrum Disorder Screening Data for Children  </a></b>: Children screening data for autism suitable for classification and predictive tasks </p><p class="normal">11. <b><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Adolescent+++">Autistic Spectrum Disorder Screening Data for Adolescent   </a></b>: Autistic Spectrum Disorder Screening Data for Adolescent. This dataset is related to classification and predictive tasks.</p><p class="normal">12. <b><a href="datasets/Anuran+Calls+%28MFCCs%29">Anuran Calls (MFCCs)</a></b>: Acoustic features extracted from syllables of anuran (frogs) calls, including the family, the genus, and the species labels (multilabel). </p><p class="normal">13. <b><a href="datasets/Parkinsons">Parkinsons</a></b>: Oxford Parkinson's Disease Detection Dataset</p><p class="normal">14. <b><a href="datasets/Cardiotocography">Cardiotocography</a></b>: The dataset consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) features on cardiotocograms classified by expert obstetricians.</p><p class="normal">15. <b><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29">KEGG Metabolic Relation Network (Directed)</a></b>: KEGG Metabolic pathways modeled as directed relation network. Variety of graphical features presented.</p><p class="normal">16. <b><a href="datasets/Parkinson+Speech+Dataset+with++Multiple+Types+of+Sound+Recordings">Parkinson Speech Dataset with  Multiple Types of Sound Recordings</a></b>: The training data belongs to 20 Parkinson's Disease (PD) patients and 20 healthy subjects. From all subjects, multiple types of sound recordings (26) are taken.</p><p class="normal">17. <b><a href="datasets/Parkinsons+Telemonitoring">Parkinsons Telemonitoring</a></b>: Oxford Parkinson's Disease Telemonitoring Dataset</p><p class="normal">18. <b><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29">KEGG Metabolic Reaction Network (Undirected)</a></b>: KEGG Metabolic pathways modeled as un-directed reaction network. Variety of graphical features presented.</p><p class="normal">19. <b><a href="datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">Breast Cancer Wisconsin (Diagnostic)</a></b>: Diagnostic Wisconsin Breast Cancer Database</p><p class="normal">20. <b><a href="datasets/Breast+Cancer+Wisconsin+%28Prognostic%29">Breast Cancer Wisconsin (Prognostic)</a></b>: Prognostic Wisconsin Breast Cancer Database</p><p class="normal">21. <b><a href="datasets/Cervical+cancer+%28Risk+Factors%29">Cervical cancer (Risk Factors)</a></b>: This dataset focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records.</p><p class="normal">22. <b><a href="datasets/Abscisic+Acid+Signaling+Network">Abscisic Acid Signaling Network</a></b>: The objective is to determine the set of boolean rules that describe the interactions of the nodes within this plant signaling network.  The dataset includes 300 separate boolean pseudodynamic simulations using an asynchronous update scheme. </p><p class="normal">23. <b><a href="datasets/SPECTF+Heart">SPECTF Heart</a></b>: Data on cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient classified into two categories: normal and abnormal.</p><p class="normal">24. <b><a href="datasets/HCC+Survival">HCC Survival</a></b>: Hepatocellular Carcinoma dataset (HCC dataset) was collected at a University Hospital in Portugal. It contains real clinical data of 165 patients diagnosed with HCC.</p><p class="normal">25. <b><a href="datasets/Diabetes+130-US+hospitals+for+years+1999-2008">Diabetes 130-US hospitals for years 1999-2008</a></b>: This data has been prepared to analyze factors related to readmission as well as other 
+
+outcomes pertaining to patients with diabetes.</p><p class="normal">26. <b><a href="datasets/Lung+Cancer">Lung Cancer</a></b>: Lung cancer data; no attribute definitions</p><p class="normal">27. <b><a href="datasets/Z-Alizadeh+Sani">Z-Alizadeh Sani</a></b>: It was collected for CAD diagnosis.</p><p class="normal">28. <b><a href="datasets/extention+of+Z-Alizadeh+sani+dataset">extention of Z-Alizadeh sani dataset</a></b>: It was collected for CAD diagnosis.</p><p class="normal">29. <b><a href="datasets/One-hundred+plant+species+leaves+data+set">One-hundred plant species leaves data set</a></b>: Sixteen samples of leaf each of one-hundred plant species. For each sample, a shape descriptor, fine scale margin and texture histogram are given.</p><p class="normal">30. <b><a href="datasets/Early+biomarkers+of+Parkinson%92s+disease+based+on+natural+connected+speech">Early biomarkers of Parkinsonï¿½s disease based on natural connected speech</a></b>: Predict a pattern of neurodegeneration in the dataset of speech features obtained from patients with early untreated Parkinsonâ€™s disease and patients at high risk developing Parkinsonâ€™s disease.</p><p class="normal">31. <b><a href="datasets/Quality+Assessment+of+Digital+Colposcopies">Quality Assessment of Digital Colposcopies</a></b>: This dataset explores the subjective quality assessment of digital colposcopies.</p><p class="normal">32. <b><a href="datasets/Quadruped+Mammals">Quadruped Mammals</a></b>:  The file animals.c is a data generator of structured instances representing quadruped animals</p><p class="normal">33. <b><a href="datasets/Mice+Protein+Expression">Mice Protein Expression</a></b>: Expression levels of 77 proteins measured in the cerebral cortex of 8 classes of control and Down syndrome mice exposed to context fear conditioning, a task used to assess associative learning.</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

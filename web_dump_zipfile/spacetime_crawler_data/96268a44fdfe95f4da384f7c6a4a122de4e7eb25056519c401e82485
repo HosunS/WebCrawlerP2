@@ -1,0 +1,294 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 00:39:31 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYNá
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Statlog (Image Segmentation) Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Statlog (Image Segmentation) Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/statlog/segment/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/statlog/segment/segment.doc"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: This dataset is an image segmentation database similar to a database already present in the repository (Image segmentation database) but in a slightly different form.</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">2310</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">19</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">1990-11-01</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">No</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">51275</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Creators: <br><br>Vision Group, University of Massachusetts<br><br>Donor: <br><br>Vision Group (Carla Brodley, <u>brodley <b>'@'</b> cs.umass.edu</u>)</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">The instances were drawn randomly from a database of 7 outdoor images.  The images were handsegmented to create a classification for every pixel.  <br><br>Each instance is a 3x3 region.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">1.  region-centroid-col:  the column of the center pixel of the region.<br>2.  region-centroid-row:  the row of the center pixel of the region.<br>3.  region-pixel-count:  the number of pixels in a region = 9.<br>4.  short-line-density-5:  the results of a line extractoin algorithm that counts how many lines of length 5 (any orientation) with low contrast, less than or equal to 5, go through the region.<br>5.  short-line-density-2:  same as short-line-density-5 but counts lines of high contrast, greater than 5.<br>6.  vedge-mean:  measure the contrast of horizontally adjacent pixels in the region.  There are 6, the mean and standard deviation are given.  This attribute is used as a vertical edge detector.<br>7.  vegde-sd:  (see 6)<br>8.  hedge-mean:  measures the contrast of vertically adjacent pixels. Used for horizontal line detection. <br>9.  hedge-sd: (see 8).<br>10. intensity-mean:  the average over the region of (R + G + B)/3<br>11. rawred-mean: the average over the region of the R value.<br>12. rawblue-mean: the average over the region of the B value.<br>13. rawgreen-mean: the average over the region of the G value.<br>14. exred-mean: measure the excess red:  (2R - (G + B))<br>15. exblue-mean: measure the excess blue:  (2B - (G + R))<br>16. exgreen-mean: measure the excess green:  (2G - (R + B))<br>17. value-mean:  3-d nonlinear transformation of RGB. (Algorithm can be found in Foley and VanDam, Fundamentals of Interactive Computer Graphics)<br>18. saturatoin-mean:  (see 17)<br>19. hue-mean:  (see 17)<br><br>Classes: <br>1 = brickface, <br>2 = sky, <br>3 = foliage, <br>4 = cement, <br>5 = window, <br>6 = path, <br>7 = grass.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">N/A</p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Anthony K H Tung and Xin Xu and Beng Chin Ooi. <a
+href="http://rexa.info/paper/3c1b37ca3a2f0825890509a5ff17081cf012fffd">CURLER: Finding and Visualizing Nonlinear Correlated Clusters</a>. SIGMOD Conference. 2005.  [<a
+href="../support/Statlog+(Image+Segmentation)#3c1b37ca3a2f0825890509a5ff17081cf012fffd">View Context</a>].<br><br>Xiaoli Z. Fern and Carla Brodley. <a
+href="http://rexa.info/paper/426e712ef75473927e172cd8d75299a5c9037bd6">Cluster Ensembles for High Dimensional Clustering: An Empirical Study</a>. Journal of Machine Learning Research n, a. 2004.  [<a
+href="../support/Statlog+(Image+Segmentation)#426e712ef75473927e172cd8d75299a5c9037bd6">View Context</a>].<br><br>Aristidis Likas and Nikos A. Vlassis and Jakob J. Verbeek. <a
+href="http://rexa.info/paper/d293cd6bea79dd218c3a9e76177d026bf1d581f5">The global k-means clustering algorithm</a>. Pattern Recognition, 36. 2003.  [<a
+href="../support/Statlog+(Image+Segmentation)#d293cd6bea79dd218c3a9e76177d026bf1d581f5">View Context</a>].<br><br>Manoranjan Dash and Huan Liu and Peter Scheuermann and Kian-Lee Tan. <a
+href="http://rexa.info/paper/865daf468f10c99d290f47cc77c2a1c463e001ce">Fast hierarchical clustering and its validation</a>. Data Knowl. Eng, 44. 2003.  [<a
+href="../support/Statlog+(Image+Segmentation)#865daf468f10c99d290f47cc77c2a1c463e001ce">View Context</a>].<br><br>Adil M. Bagirov and John Yearwood. <a
+href="http://rexa.info/paper/4e69e64b6902aa2a91b5cda5a69eb6b030ac12c4">A new nonsmooth optimization algorithm for clustering</a>. Centre for Informatics and Applied Optimization, School of Information Technology and Mathematical Sciences, University of Ballarat.  [<a
+href="../support/Statlog+(Image+Segmentation)#4e69e64b6902aa2a91b5cda5a69eb6b030ac12c4">View Context</a>].<br><br>K. A. J Doherty and Rolf Adams and Neil Davey. <a
+href="http://rexa.info/paper/06d7cfa086a7ed2a236674fa2ea7271dfacf9a54">Non-Euclidean Norms and Data Normalisation</a>. Department of Computer Science, University of Hertfordshire, College Lane.  [<a
+href="../support/Statlog+(Image+Segmentation)#06d7cfa086a7ed2a236674fa2ea7271dfacf9a54">View Context</a>].<br><br>Michael Lindenbaum and Shaul Markovitch and Dmitry Rusakov. <a
+href="http://rexa.info/paper/9a0080df56f0a8fb004723a7dece29109bc316ce">Selective Sampling Using Random Field Modelling</a>.  [<a
+href="../support/Statlog+(Image+Segmentation)#9a0080df56f0a8fb004723a7dece29109bc316ce">View Context</a>].<br><br>James Tin and Yau Kwok. <a
+href="http://rexa.info/paper/c495658301b0128f01553cf69d64ab348a217d67">Moderating the Outputs of Support Vector Machine Classifiers</a>. Department of Computer Science Hong Kong Baptist University Hong Kong.  [<a
+href="../support/Statlog+(Image+Segmentation)#c495658301b0128f01553cf69d64ab348a217d67">View Context</a>].<br><br>Thomas T. Osugi and M. S. <a
+href="http://rexa.info/paper/208ec47695794498051a25cd425bc385a9d19602">EXPLORATION-BASED ACTIVE MACHINE LEARNING</a>. Faculty of The Graduate College at the University of Nebraska In Partial Fulfillment of Requirements.  [<a
+href="../support/Statlog+(Image+Segmentation)#208ec47695794498051a25cd425bc385a9d19602">View Context</a>].<br><br>Nikos A. Vlassis and Aristidis Likas. <a
+href="http://rexa.info/paper/e65031293b77aadf555fd232a960cbd8a3fe739a">A greedy EM algorithm for Gaussian mixture</a>. Intelligent Autonomous Systems, IAS.  [<a
+href="../support/Statlog+(Image+Segmentation)#e65031293b77aadf555fd232a960cbd8a3fe739a">View Context</a>].<br><br>Amund Tveit. <a
+href="http://rexa.info/paper/51d0dcaced0a60e995d1d228b618f89c00aab45b">Empirical Comparison of Accuracy and Performance for the MIPSVM classifier with Existing Classifiers</a>. Division of Intelligent Systems Department of Computer and Information Science, Norwegian University of Science and Technology.  [<a
+href="../support/Statlog+(Image+Segmentation)#51d0dcaced0a60e995d1d228b618f89c00aab45b">View Context</a>].<br><br>Je Scott and Mahesan Niranjan and Richard W. Prager. <a
+href="http://rexa.info/paper/d8a0c5fd34dede91f5241e9b9dca0626f6969c0d">Realisable Classifiers: Improving Operating Performance on Variable Cost Problems</a>. Cambridge University Department of Engineering.  [<a
+href="../support/Statlog+(Image+Segmentation)#d8a0c5fd34dede91f5241e9b9dca0626f6969c0d">View Context</a>].<br><br>C. Titus Brown and Harry W. Bullen and Sean P. Kelly and Robert K. Xiao and Steven G. Satterfield and John G. Hagedorn and Judith E. Devaney. <a
+href="http://rexa.info/paper/48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">Visualization and Data Mining in an 3D Immersive Environment: Summer Project 2003</a>.  [<a
+href="../support/Statlog+(Image+Segmentation)#48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">View Context</a>].<br><br>Adil M. Bagirov and Alex Rubinov and A. N. Soukhojak and John Yearwood. <a
+href="http://rexa.info/paper/50b9babac023b426f1531a4265076bea534d121e">Unsupervised and supervised data classification via nonsmooth and global optimization</a>. School of Information Technology and Mathematical Sciences, The University of Ballarat.  [<a
+href="../support/Statlog+(Image+Segmentation)#50b9babac023b426f1531a4265076bea534d121e">View Context</a>].<br><br>K. A. J Doherty and Rolf Adams and Neil Davey. <a
+href="http://rexa.info/paper/716db199e5f006b8b564ef192177f08d5edefe9b">Unsupervised Learning with Normalised Data and Non-Euclidean Norms</a>. University of Hertfordshire.  [<a
+href="../support/Statlog+(Image+Segmentation)#716db199e5f006b8b564ef192177f08d5edefe9b">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Anthony K H Tung and Xin Xu and Beng Chin Ooi. <a
+href="http://rexa.info/paper/3c1b37ca3a2f0825890509a5ff17081cf012fffd">CURLER: Finding and Visualizing Nonlinear Correlated Clusters</a>. SIGMOD Conference. 2005.  [<a
+href="../support/Statlog+(Image+Segmentation)#3c1b37ca3a2f0825890509a5ff17081cf012fffd">View Context</a>].<br><br>Xiaoli Z. Fern and Carla Brodley. <a
+href="http://rexa.info/paper/426e712ef75473927e172cd8d75299a5c9037bd6">Cluster Ensembles for High Dimensional Clustering: An Empirical Study</a>. Journal of Machine Learning Research n, a. 2004.  [<a
+href="../support/Statlog+(Image+Segmentation)#426e712ef75473927e172cd8d75299a5c9037bd6">View Context</a>].<br><br>Aristidis Likas and Nikos A. Vlassis and Jakob J. Verbeek. <a
+href="http://rexa.info/paper/d293cd6bea79dd218c3a9e76177d026bf1d581f5">The global k-means clustering algorithm</a>. Pattern Recognition, 36. 2003.  [<a
+href="../support/Statlog+(Image+Segmentation)#d293cd6bea79dd218c3a9e76177d026bf1d581f5">View Context</a>].<br><br>Manoranjan Dash and Huan Liu and Peter Scheuermann and Kian-Lee Tan. <a
+href="http://rexa.info/paper/865daf468f10c99d290f47cc77c2a1c463e001ce">Fast hierarchical clustering and its validation</a>. Data Knowl. Eng, 44. 2003.  [<a
+href="../support/Statlog+(Image+Segmentation)#865daf468f10c99d290f47cc77c2a1c463e001ce">View Context</a>].<br><br>Adil M. Bagirov and John Yearwood. <a
+href="http://rexa.info/paper/4e69e64b6902aa2a91b5cda5a69eb6b030ac12c4">A new nonsmooth optimization algorithm for clustering</a>. Centre for Informatics and Applied Optimization, School of Information Technology and Mathematical Sciences, University of Ballarat.  [<a
+href="../support/Statlog+(Image+Segmentation)#4e69e64b6902aa2a91b5cda5a69eb6b030ac12c4">View Context</a>].<br><br>K. A. J Doherty and Rolf Adams and Neil Davey. <a
+href="http://rexa.info/paper/06d7cfa086a7ed2a236674fa2ea7271dfacf9a54">Non-Euclidean Norms and Data Normalisation</a>. Department of Computer Science, University of Hertfordshire, College Lane.  [<a
+href="../support/Statlog+(Image+Segmentation)#06d7cfa086a7ed2a236674fa2ea7271dfacf9a54">View Context</a>].<br><br>Michael Lindenbaum and Shaul Markovitch and Dmitry Rusakov. <a
+href="http://rexa.info/paper/9a0080df56f0a8fb004723a7dece29109bc316ce">Selective Sampling Using Random Field Modelling</a>.  [<a
+href="../support/Statlog+(Image+Segmentation)#9a0080df56f0a8fb004723a7dece29109bc316ce">View Context</a>].<br><br>James Tin and Yau Kwok. <a
+href="http://rexa.info/paper/c495658301b0128f01553cf69d64ab348a217d67">Moderating the Outputs of Support Vector Machine Classifiers</a>. Department of Computer Science Hong Kong Baptist University Hong Kong.  [<a
+href="../support/Statlog+(Image+Segmentation)#c495658301b0128f01553cf69d64ab348a217d67">View Context</a>].<br><br>Thomas T. Osugi and M. S. <a
+href="http://rexa.info/paper/208ec47695794498051a25cd425bc385a9d19602">EXPLORATION-BASED ACTIVE MACHINE LEARNING</a>. Faculty of The Graduate College at the University of Nebraska In Partial Fulfillment of Requirements.  [<a
+href="../support/Statlog+(Image+Segmentation)#208ec47695794498051a25cd425bc385a9d19602">View Context</a>].<br><br>Nikos A. Vlassis and Aristidis Likas. <a
+href="http://rexa.info/paper/e65031293b77aadf555fd232a960cbd8a3fe739a">A greedy EM algorithm for Gaussian mixture</a>. Intelligent Autonomous Systems, IAS.  [<a
+href="../support/Statlog+(Image+Segmentation)#e65031293b77aadf555fd232a960cbd8a3fe739a">View Context</a>].<br><br>Amund Tveit. <a
+href="http://rexa.info/paper/51d0dcaced0a60e995d1d228b618f89c00aab45b">Empirical Comparison of Accuracy and Performance for the MIPSVM classifier with Existing Classifiers</a>. Division of Intelligent Systems Department of Computer and Information Science, Norwegian University of Science and Technology.  [<a
+href="../support/Statlog+(Image+Segmentation)#51d0dcaced0a60e995d1d228b618f89c00aab45b">View Context</a>].<br><br>Je Scott and Mahesan Niranjan and Richard W. Prager. <a
+href="http://rexa.info/paper/d8a0c5fd34dede91f5241e9b9dca0626f6969c0d">Realisable Classifiers: Improving Operating Performance on Variable Cost Problems</a>. Cambridge University Department of Engineering.  [<a
+href="../support/Statlog+(Image+Segmentation)#d8a0c5fd34dede91f5241e9b9dca0626f6969c0d">View Context</a>].<br><br>C. Titus Brown and Harry W. Bullen and Sean P. Kelly and Robert K. Xiao and Steven G. Satterfield and John G. Hagedorn and Judith E. Devaney. <a
+href="http://rexa.info/paper/48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">Visualization and Data Mining in an 3D Immersive Environment: Summer Project 2003</a>.  [<a
+href="../support/Statlog+(Image+Segmentation)#48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">View Context</a>].<br><br>Adil M. Bagirov and Alex Rubinov and A. N. Soukhojak and John Yearwood. <a
+href="http://rexa.info/paper/50b9babac023b426f1531a4265076bea534d121e">Unsupervised and supervised data classification via nonsmooth and global optimization</a>. School of Information Technology and Mathematical Sciences, The University of Ballarat.  [<a
+href="../support/Statlog+(Image+Segmentation)#50b9babac023b426f1531a4265076bea534d121e">View Context</a>].<br><br>K. A. J Doherty and Rolf Adams and Neil Davey. <a
+href="http://rexa.info/paper/716db199e5f006b8b564ef192177f08d5edefe9b">Unsupervised Learning with Normalised Data and Non-Euclidean Norms</a>. University of Hertfordshire.  [<a
+href="../support/Statlog+(Image+Segmentation)#716db199e5f006b8b564ef192177f08d5edefe9b">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please refer to the Machine Learning
+Repository's <a href="../citation_policy.html">citation policy</a></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

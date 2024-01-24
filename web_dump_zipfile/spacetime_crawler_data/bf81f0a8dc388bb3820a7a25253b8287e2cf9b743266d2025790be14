@@ -1,0 +1,45 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1470¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 25 Jan 2006 06:32:56 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"5be-40b2908cc1600"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 19:01:44 GMTKraw_content¢DtypeEvalueY¾//********************************************************************
+//  Employee.java       Author: Lewis/Loftus
+//
+//  Represents a general paid employee.
+//********************************************************************
+
+public class Employee extends StaffMember
+{
+   protected String socialSecurityNumber;
+   protected double payRate;
+   
+   //-----------------------------------------------------------------
+   //  Constructor: Sets up this employee with the specified
+   //  information.
+   //-----------------------------------------------------------------
+   public Employee (String eName, String eAddress, String ePhone,
+                    String socSecNumber, double rate)
+   {
+      super (eName, eAddress, ePhone);
+
+      socialSecurityNumber = socSecNumber;
+      payRate = rate;
+   }
+
+   //-----------------------------------------------------------------
+   //  Returns information about an employee as a string.
+   //-----------------------------------------------------------------
+   public String toString()
+   {
+      String result = super.toString();
+
+      result += "\nSocial Security Number: " + socialSecurityNumber;
+
+      return result;
+   }
+
+   //-----------------------------------------------------------------
+   //  Returns the pay rate for this employee.
+   //-----------------------------------------------------------------
+   public double pay()
+   {
+      return payRate;
+   }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

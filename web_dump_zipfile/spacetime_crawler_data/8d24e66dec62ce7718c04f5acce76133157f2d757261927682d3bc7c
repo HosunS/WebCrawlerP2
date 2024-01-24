@@ -1,0 +1,215 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 13:07:38 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYj…<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Classification</a></font> <font color=red>(77)</font><br><a href='datasets.html?format=&task=reg&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Regression</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=clu&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Clustering</a> <font color=red>(13)</font><br><a href='datasets.html?format=&task=other&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Other</a> <font color=red>(7)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=cat&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Categorical</a> <font color=red>(10)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Numerical</a> <font color=red>(50)</font><br><a href='datasets.html?format=&task=cla&att=mix&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Mixed</a> <font color=red>(14)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=&sort=taskUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Multivariate</a></font> <font color=red>(77)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=uvar&sort=taskUp&view=list'>Univariate</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=seq&sort=taskUp&view=list'>Sequential</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=ts&sort=taskUp&view=list'>Time-Series</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=text&sort=taskUp&view=list'>Text</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=dt&sort=taskUp&view=list'>Domain-Theory</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=other&sort=taskUp&view=list'>Other</a> <font color=red>(1)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b> - <a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Life Sciences</a></font> <font color=red>(77)</font><br><a href='datasets.html?format=&task=cla&att=&area=phys&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Physical Sciences</a> <font color=red>(27)</font><br><a href='datasets.html?format=&task=cla&att=&area=comp&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>CS / Engineering</a> <font color=red>(101)</font><br><a href='datasets.html?format=&task=cla&att=&area=soc&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Social Sciences</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=cla&att=&area=bus&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Business</a> <font color=red>(17)</font><br><a href='datasets.html?format=&task=cla&att=&area=game&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Game</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Other</a> <font color=red>(37)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=less10&numIns=&type=mvar&sort=taskUp&view=list'>Less than 10</a> <font color=red>(17)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=10to100&numIns=&type=mvar&sort=taskUp&view=list'>10 to 100</a> <font color=red>(45)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=greater100&numIns=&type=mvar&sort=taskUp&view=list'>Greater than 100</a> <font color=red>(10)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=less100&type=mvar&sort=taskUp&view=list'>Less than 100</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=100to1000&type=mvar&sort=taskUp&view=list'>100 to 1000</a> <font color=red>(44)</font><br><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=greater1000&type=mvar&sort=taskUp&view=list'>Greater than 1000</a> <font color=red>(26)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Matrix</a> <font color=red>(62)</font><br><a href='datasets.html?format=nonmat&task=cla&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=list'>Non-Matrix</a> <font color=red>(15)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>77</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=mvar&sort=taskUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Abalone">Abalone</a></b>: Predict the age of abalone from physical measurements</p><p class="normal">2. <b><a href="datasets/Reuters+RCV1+RCV2+Multilingual%2C+Multiview+Text+Categorization+Test+collection">Reuters RCV1 RCV2 Multilingual, Multiview Text Categorization Test collection</a></b>: This test collection contains feature characteristics of documents originally written in five different languages and their translations, over a common set of 6 categories. </p><p class="normal">3. <b><a href="datasets/Arrhythmia">Arrhythmia</a></b>: Distinguish between the presence and absence of cardiac arrhythmia and classify it in one of the 16 groups.</p><p class="normal">4. <b><a href="datasets/Audiology+%28Original%29">Audiology (Original)</a></b>: Nominal audiology dataset from Baylor</p><p class="normal">5. <b><a href="datasets/Audiology+%28Standardized%29">Audiology (Standardized)</a></b>: Standardized version of the original audiology database</p><p class="normal">6. <b><a href="datasets/EEG+Eye+State">EEG Eye State</a></b>: The data set consists of 14 EEG values and a value indicating the eye state.</p><p class="normal">7. <b><a href="datasets/Breast+Cancer">Breast Cancer</a></b>: Breast Cancer Data (Restricted Access)</p><p class="normal">8. <b><a href="datasets/Breast+Cancer+Wisconsin+%28Original%29">Breast Cancer Wisconsin (Original)</a></b>: Original Wisconsin Breast Cancer Database</p><p class="normal">9. <b><a href="datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">Breast Cancer Wisconsin (Diagnostic)</a></b>: Diagnostic Wisconsin Breast Cancer Database</p><p class="normal">10. <b><a href="datasets/Thoracic+Surgery+Data">Thoracic Surgery Data</a></b>: The data is dedicated to classification problem related to the post-operative life expectancy in the lung cancer patients: class 1 - death within one year after surgery, class 2 - survival.</p><p class="normal">11. <b><a href="datasets/LSVT+Voice+Rehabilitation">LSVT Voice Rehabilitation</a></b>: 126 samples from 14 participants, 309 features. Aim: assess whether voice rehabilitation treatment lead to phonations considered 'acceptable' or 'unacceptable' (binary class classification problem).</p><p class="normal">12. <b><a href="datasets/Wilt">Wilt</a></b>: High-resolution Remote Sensing data set (Quickbird). Small number of training samples of diseased trees, large number for other land cover. Testing data set from stratified random sample of image.</p><p class="normal">13. <b><a href="datasets/Contraceptive+Method+Choice">Contraceptive Method Choice</a></b>: Dataset is a subset of the 1987 National Indonesia Contraceptive Prevalence Survey.</p><p class="normal">14. <b><a href="datasets/Covertype">Covertype</a></b>: Forest CoverType dataset</p><p class="normal">15. <b><a href="datasets/Dermatology">Dermatology</a></b>: Aim for this dataset is to determine the type of Eryhemato-Squamous Disease.</p><p class="normal">16. <b><a href="datasets/Echocardiogram">Echocardiogram</a></b>: Data for classifying if patients will survive for at least one year after a heart attack</p><p class="normal">17. <b><a href="datasets/Ecoli">Ecoli</a></b>: This data contains protein localization sites</p><p class="normal">18. <b><a href="datasets/Haberman%27s+Survival">Haberman's Survival</a></b>: Dataset contains cases from study conducted on the survival of patients who had undergone surgery for breast cancer</p><p class="normal">19. <b><a href="datasets/Heart+Disease">Heart Disease</a></b>: 4 databases: Cleveland, Hungary, Switzerland, and the VA Long Beach</p><p class="normal">20. <b><a href="datasets/Hepatitis">Hepatitis</a></b>: From G.Gong: CMU; Mostly Boolean or numeric-valued attribute types; Includes cost data (donated by Peter Turney)</p><p class="normal">21. <b><a href="datasets/Horse+Colic">Horse Colic</a></b>: Well documented attributes; 368 instances with 28 attributes (continuous, discrete, and nominal); 30% missing values</p><p class="normal">22. <b><a href="datasets/Iris">Iris</a></b>: Famous database; from Fisher, 1936</p><p class="normal">23. <b><a href="datasets/Lung+Cancer">Lung Cancer</a></b>: Lung cancer data; no attribute definitions</p><p class="normal">24. <b><a href="datasets/Lymphography">Lymphography</a></b>: This lymphography domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia.  (Restricted access)</p><p class="normal">25. <b><a href="datasets/Mushroom">Mushroom</a></b>: From Audobon Society Field Guide; mushrooms described in terms of physical characteristics; classification: poisonous or edible</p><p class="normal">26. <b><a href="datasets/Diabetic+Retinopathy+Debrecen+Data+Set">Diabetic Retinopathy Debrecen Data Set</a></b>: This dataset contains features extracted from the Messidor image set to predict whether an image contains signs of diabetic retinopathy or not. </p><p class="normal">27. <b><a href="datasets/HIV-1+protease+cleavage">HIV-1 protease cleavage</a></b>: The data contains lists of octamers (8 amino acids) and a flag (-1 or 1) depending on whether HIV-1 protease will cleave in the central position (between amino acids 4 and 5).</p><p class="normal">28. <b><a href="datasets/Forest+type+mapping">Forest type mapping</a></b>: Multi-temporal remote sensing data of a forested area in Japan. The goal is to map different forest types using spectral data.</p><p class="normal">29. <b><a href="datasets/Post-Operative+Patient">Post-Operative Patient</a></b>: Dataset of patient features</p><p class="normal">30. <b><a href="datasets/Primary+Tumor">Primary Tumor</a></b>: From Ljubljana Oncology Institute</p><p class="normal">31. <b><a href="datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions">Smartphone-Based Recognition of Human Activities and Postural Transitions</a></b>: Activity recognition data set built from the recordings of 30 subjects performing basic activities and postural transitions while carrying a waist-mounted smartphone with embedded inertial sensors.
+</p><p class="normal">32. <b><a href="datasets/Quadruped+Mammals">Quadruped Mammals</a></b>:  The file animals.c is a data generator of structured instances representing quadruped animals</p><p class="normal">33. <b><a href="datasets/Soybean+%28Large%29">Soybean (Large)</a></b>: Michalski's famous soybean disease database</p><p class="normal">34. <b><a href="datasets/Soybean+%28Small%29">Soybean (Small)</a></b>: Michalski's famous soybean disease database</p><p class="normal">35. <b><a href="datasets/SPECT+Heart">SPECT Heart</a></b>: Data on cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient classified into two categories: normal and abnormal.</p><p class="normal">36. <b><a href="datasets/SPECTF+Heart">SPECTF Heart</a></b>: Data on cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient classified into two categories: normal and abnormal.</p><p class="normal">37. <b><a href="datasets/Thyroid+Disease">Thyroid Disease</a></b>: 10 separate databases from Garavan Institute</p><p class="normal">38. <b><a href="datasets/Yeast">Yeast</a></b>: Predicting the Cellular Localization Sites of Proteins</p><p class="normal">39. <b><a href="datasets/Zoo">Zoo</a></b>: Artificial, 7 classes of animals</p><p class="normal">40. <b><a href="datasets/Cervical+cancer+%28Risk+Factors%29">Cervical cancer (Risk Factors)</a></b>: This dataset focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records.</p><p class="normal">41. <b><a href="datasets/Quality+Assessment+of+Digital+Colposcopies">Quality Assessment of Digital Colposcopies</a></b>: This dataset explores the subjective quality assessment of digital colposcopies.</p><p class="normal">42. <b><a href="datasets/Statlog+%28Heart%29">Statlog (Heart)</a></b>: This dataset is a heart disease database similar to a database already present in the repository (Heart Disease databases) but in a slightly different form</p><p class="normal">43. <b><a href="datasets/Mammographic+Mass">Mammographic Mass</a></b>: Discrimination of benign and malignant mammographic masses based on BI-RADS attributes and the patient's age.</p><p class="normal">44. <b><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Children++">Autistic Spectrum Disorder Screening Data for Children  </a></b>: Children screening data for autism suitable for classification and predictive tasks </p><p class="normal">45. <b><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Adolescent+++">Autistic Spectrum Disorder Screening Data for Adolescent   </a></b>: Autistic Spectrum Disorder Screening Data for Adolescent. This dataset is related to classification and predictive tasks.</p><p class="normal">46. <b><a href="datasets/Arcene">Arcene</a></b>: ARCENE's task is to distinguish cancer versus normal patterns from mass-spectrometric data. This is a two-class classification problem with continuous input variables. This dataset is one of 5 datasets of the NIPS 2003 feature selection challenge.</p><p class="normal">47. <b><a href="datasets/HCC+Survival">HCC Survival</a></b>: Hepatocellular Carcinoma dataset (HCC dataset) was collected at a University Hospital in Portugal. It contains real clinical data of 165 patients diagnosed with HCC.</p><p class="normal">48. <b><a href="datasets/Dorothea">Dorothea</a></b>: DOROTHEA is a drug discovery dataset. Chemical compounds represented by structural molecular features must be classified as active (binding to thrombin) or inactive. This is one of 5 datasets of the NIPS 2003 feature selection challenge.</p><p class="normal">49. <b><a href="datasets/Parkinsons">Parkinsons</a></b>: Oxford Parkinson's Disease Detection Dataset</p><p class="normal">50. <b><a href="datasets/Acute+Inflammations">Acute Inflammations</a></b>: The data was created by a medical expert as a data set to test the expert system, 
+which will perform the presumptive diagnosis of two diseases of the urinary system.
+</p><p class="normal">51. <b><a href="datasets/p53+Mutants">p53 Mutants</a></b>: The goal is to model mutant p53 transcriptional activity (active vs inactive) based on data extracted from biophysical simulations.
+</p><p class="normal">52. <b><a href="datasets/Demospongiae">Demospongiae</a></b>: Marine sponges of the Demospongiae class classification domain.</p><p class="normal">53. <b><a href="datasets/Breast+Tissue">Breast Tissue</a></b>: Dataset with electrical impedance measurements of freshly excised tissue samples from the breast.</p><p class="normal">54. <b><a href="datasets/Cardiotocography">Cardiotocography</a></b>: The dataset consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) features on cardiotocograms classified by expert obstetricians.</p><p class="normal">55. <b><a href="datasets/Breast+Cancer+Coimbra">Breast Cancer Coimbra</a></b>: Clinical features were observed or measured for 64 patients with breast cancer and 52 healthy controls. </p><p class="normal">56. <b><a href="datasets/PubChem+Bioassay+Data">PubChem Bioassay Data</a></b>: These highly imbalanced bioassay datasets are from the differing types of screening that can be performed using HTS technology. 21 datasets were created from 12 bioassays.</p><p class="normal">57. <b><a href="datasets/Early+biomarkers+of+Parkinson%E2%80%99s+disease+based+on+natural+connected+speech+Data+Set+">Early biomarkers of Parkinsonâ€™s disease based on natural connected speech Data Set </a></b>: .</p><p class="normal">58. <b><a href="datasets/ILPD+%28Indian+Liver+Patient+Dataset%29">ILPD (Indian Liver Patient Dataset)</a></b>: This data set contains 10 variables that are age, gender, total Bilirubin, direct Bilirubin, total proteins, albumin, A/G ratio, SGPT, SGOT and Alkphos.</p><p class="normal">59. <b><a href="datasets/Daphnet+Freezing+of+Gait">Daphnet Freezing of Gait</a></b>: This dataset contains the annotated readings of 3 acceleration sensors at the hip and leg of Parkinson's disease patients that experience freezing of gait (FoG) during walking tasks.
+</p><p class="normal">60. <b><a href="datasets/MicroMass">MicroMass</a></b>: A dataset to explore machine learning approaches for the identification of microorganisms from mass-spectrometry data.</p><p class="normal">61. <b><a href="datasets/Diabetes+130-US+hospitals+for+years+1999-2008">Diabetes 130-US hospitals for years 1999-2008</a></b>: This data has been prepared to analyze factors related to readmission as well as other 
+
+outcomes pertaining to patients with diabetes.</p><p class="normal">62. <b><a href="datasets/Mice+Protein+Expression">Mice Protein Expression</a></b>: Expression levels of 77 proteins measured in the cerebral cortex of 8 classes of control and Down syndrome mice exposed to context fear conditioning, a task used to assess associative learning.</p><p class="normal">63. <b><a href="datasets/Epileptic+Seizure+Recognition">Epileptic Seizure Recognition</a></b>: This dataset is a pre-processed and re-structured/reshaped version of a very commonly used dataset featuring epileptic seizure detection. </p><p class="normal">64. <b><a href="datasets/gene+expression+cancer+RNA-Seq">gene expression cancer RNA-Seq</a></b>: This collection of data is part of the RNA-Seq (HiSeq) PANCAN data set, it is a random extraction of gene expressions of patients having different types of tumor: BRCA, KIRC, COAD, LUAD and PRAD.</p><p class="normal">65. <b><a href="datasets/Anuran+Calls+%28MFCCs%29">Anuran Calls (MFCCs)</a></b>: Acoustic features extracted from syllables of anuran (frogs) calls, including the family, the genus, and the species labels (multilabel). </p><p class="normal">66. <b><a href="datasets/SCADI">SCADI</a></b>: First self-care activities dataset based on ICF-CY.</p><p class="normal">67. <b><a href="datasets/seeds">seeds</a></b>: Measurements of geometrical properties of kernels belonging to three different varieties of wheat. A soft X-ray technique and GRAINS package were used to construct all seven, real-valued attributes.</p><p class="normal">68. <b><a href="datasets/Breast+Cancer+Wisconsin+%28Prognostic%29">Breast Cancer Wisconsin (Prognostic)</a></b>: Prognostic Wisconsin Breast Cancer Database</p><p class="normal">69. <b><a href="datasets/Parkinson+Speech+Dataset+with++Multiple+Types+of+Sound+Recordings">Parkinson Speech Dataset with  Multiple Types of Sound Recordings</a></b>: The training data belongs to 20 Parkinson's Disease (PD) patients and 20 healthy subjects. From all subjects, multiple types of sound recordings (26) are taken.</p><p class="normal">70. <b><a href="datasets/Cuff-Less+Blood+Pressure+Estimation">Cuff-Less Blood Pressure Estimation</a></b>: This Data set provides preprocessed and cleaned vital signals which can be used in designing algorithms for cuff-less estimation of the blood pressure.</p><p class="normal">71. <b><a href="datasets/Early+biomarkers+of+Parkinson%92s+disease+based+on+natural+connected+speech">Early biomarkers of Parkinsonï¿½s disease based on natural connected speech</a></b>: Predict a pattern of neurodegeneration in the dataset of speech features obtained from patients with early untreated Parkinsonâ€™s disease and patients at high risk developing Parkinsonâ€™s disease.</p><p class="normal">72. <b><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals">EEG Steady-State Visual Evoked Potential Signals</a></b>: This database consists on 30 subjects performing Brain Computer Interface for Steady State Visual Evoked Potentials (BCI-SSVEP). </p><p class="normal">73. <b><a href="datasets/Fertility">Fertility</a></b>: 100 volunteers provide a semen sample analyzed according to the WHO 2010 criteria. Sperm concentration are related to socio-demographic data, environmental factors, health status, and life habits</p><p class="normal">74. <b><a href="datasets/Tamilnadu+Electricity+Board+Hourly+Readings">Tamilnadu Electricity Board Hourly Readings</a></b>: This data can be effectively produced the result to fewer parameter of the Load profile can be reduced in the Database  </p><p class="normal">75. <b><a href="datasets/Drug+Review+Dataset+%28Drugs.com%29">Drug Review Dataset (Drugs.com)</a></b>: The dataset provides patient reviews on specific drugs along with related conditions and a 10 star patient rating reflecting overall patient satisfaction.</p><p class="normal">76. <b><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29">KEGG Metabolic Relation Network (Directed)</a></b>: KEGG Metabolic pathways modeled as directed relation network. Variety of graphical features presented.</p><p class="normal">77. <b><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29">KEGG Metabolic Reaction Network (Undirected)</a></b>: KEGG Metabolic pathways modeled as un-directed reaction network. Variety of graphical features presented.</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

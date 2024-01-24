@@ -1,0 +1,114 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:31:55 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/html¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE10939¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXUserLand Frontier/9.5-WinNTKraw_content¢DtypeEvaluey*»<html>
+  <head><title>RSS 0.92</title>
+  <META NAME="ROBOTS" CONTENT="NOODP">
+  </head>
+  
+  <body bgcolor="FFFFFF" text="000000" link="0000FF" vlink="800080" alink="FF0000">
+    <center>
+      <table cellspacing="0" cellpadding="0" border="0">
+        <tr>
+          <td colspan="5">
+            <p>
+            <a href="http://www.userland.com/"><img src="http://legacystatic1.userland.com/snImages/userland.gif" width="138" height="14" border="0"></a><p>
+            <a href="http://backend.userland.com/"><img src="http://backend.userland.com/picture$11" height="30" width="344" border="0" alt="backenduserlandcom: "></a><br>
+            <i>How to hook into UserLand.Com through XML, XML-RPC and SOAP.</i>
+            </td>
+          </tr>
+        <tr height="25"><td colspan="3">&nbsp;</td></tr>
+        <tr>
+          <td valign="top" align="right"><b><a href="http://www.w3.org/TR/1998/REC-xml-19980210" class="navigatorLink">XML</a></b><p><b><a href="/1999/10/03" class="navigatorLink">About</a></b><p><b><a href="/" class="navigatorLink">Home</a></b><p><b><a href="http://www.rssboard.org/rss-specification" class="navigatorLink">RSS</a></b><p><b><a href="http://www.opml.org/spec" class="navigatorLink">OPML</a></b><p><b><a href="http://www.xml-rpc.com/" class="navigatorLink">XML-RPC</a></b><p><b><a href="http://www.soapware.org/" class="navigatorLink">SOAP</a></b><p><br><br><table border="0" cellpadding="0" cellspacing="0" bgcolor="#000000">
+	<tr bgcolor="black">
+		<td>
+			<table border="0" cellpadding="3" cellspacing="1" bgcolor="black">
+				<tr>
+					<td valign="top" align="right" bgcolor="black">
+						<font color="ivory" size="-1"><b>Members</b></font>
+						</td>
+					</tr>
+				<tr>
+					<td valign="top" align="right" bgcolor="ivory">
+						<font size="-1">
+							<a href="http://login.userland.com/signUp">Join Now</a><br>
+							</font>
+						</td>
+					</tr>
+				<tr>
+					<td valign="top" align="right" bgcolor="ivory">
+						<font size="-1">
+							<a href="http://login.userland.com/">Login</a><br>
+							</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</td>
+          <td width="10">&nbsp;</td>
+          <td width="1" bgcolor="gray"><img src="http://static8.userland.com/rack1/images/backend/space.gif" height="1" width="1" alt=""></td>
+          <td width="10">&nbsp;</td>
+          <td valign="top" width="600">
+            <h2>RSS 0.92</h2>
+            <b>New version available, October 2002<a name="newVersionAvailableOctober2002">&nbsp;</a><a href="#newVersionAvailableOctober2002" title="Permanent link to 'New version available, October 2002' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	<a href="http://blogs.law.harvard.edu/tech/rss">RSS 2.0</a> is the current version. It is upward compatible with 0.92, that is any 0.92 source is also a valid 2.0 source.<br><br>
+<b>Philosophy<a name="philosophy">&nbsp;</a><a href="#philosophy" title="Permanent link to 'Philosophy' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	RSS is a Web content syndication format.<br><br>
+<b>How 0.92 relates to 0.91<a name="how092RelatesTo091">&nbsp;</a><a href="#how092RelatesTo091" title="Permanent link to 'How 0.92 relates to 0.91' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	RSS 0.92 is upward-compatible with <a href="http://backend.userland.com/stories/rss091">RSS 0.91</a>. <br><br>
+	Every new feature of 0.92 is optional, meaning that a 0.91 file is also a valid 0.92 file.<br><br>
+<b>Example<a name="example">&nbsp;</a><a href="#example" title="Permanent link to 'Example' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	Here is a <a href="http://static.userland.com/gems/backend/gratefulDead.xml ">RSS 0.92 file</a> that illustrates many of the features described on this page.<br><br>
+<b>&lt;language&gt; is optional<a name="ltlanguagegtIsOptional">&nbsp;</a><a href="#ltlanguagegtIsOptional" title="Permanent link to '&lt;language&gt; is optional' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	In 0.91, the &lt;language&gt; element is required. In 0.92 it is optional. <br><br>
+	Why? If a channel is formed from various input sources there's no way to know that it's going to only contain a single language.<br><br>
+<b>All sub-elements of &lt;item&gt; are optional<a name="allSubelementsOfLtitemgtAreOptional">&nbsp;</a><a href="#allSubelementsOfLtitemgtAreOptional" title="Permanent link to 'All sub-elements of &lt;item&gt; are optional' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	In 0.91, &lt;link> and &lt;title> are required sub-elements of &lt;item> and &lt;description> is optional. <br><br>
+	In 0.92, all sub-elements of &lt;item> are optional. <br><br>
+	Why? When a RSS file reflects the content of a weblog or "blog" site, the structure required by previous versions of RSS was often impossible to synthesize. For example, there is no actual limit on the number of links a weblog item can have. <br><br>
+	Further, 0.92 allows entity-encoded HTML in the &lt;description> of an item, to reflect actual practice by bloggers, who are often proficient HTML coders. <br><br>
+<b>&lt;source&gt; sub-element of &lt;item&gt;<a name="ltsourcegtSubelementOfLtitemgt">&nbsp;</a><a href="#ltsourcegtSubelementOfLtitemgt" title="Permanent link to '&lt;source&gt; sub-element of &lt;item&gt;' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	&lt;source&gt; is a new optional sub-element of &lt;item&gt;.<br><br>
+	Its value is the name of the RSS channel that the item came from, derived from its &lt;title>. It has one required attribute, url, which links to the XMLization of the source.<br><br>
+	<code>&lt;source url="http://www.myapplemenu.com/cgi-bin/surfView.cgi?category=applesurf&mainfull=1000&fmt=scripting&template=scripting">AppleSurf&lt;/source></code><br><br>
+	The purpose of this element is to propogate credit for links, to publicize the sources of news items. <br><br>
+<b>&lt;enclosure&gt; sub-element of &lt;item&gt;<a name="ltenclosuregtSubelementOfLtitemgt">&nbsp;</a><a href="#ltenclosuregtSubelementOfLtitemgt" title="Permanent link to '&lt;enclosure&gt; sub-element of &lt;item&gt;' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	&lt;enclosure&gt; is a new optional sub-element of &lt;item&gt;.<br><br>
+	It has three required attributes. url says where the enclosure is located, length says how big it is in bytes, and type says what its type is, a standard MIME type.<br><br>
+	The url must be an http url.<br><br>
+	<code>&lt;enclosure url="http://www.scripting.com/mp3s/weatherReportSuite.mp3" length="12216320" type="audio/mpeg" /&gt;</code><br><br>
+	A use-case narrative for this element is <a href="http://www.thetwowayweb.com/payloadsforrss">here</a><br><br>
+<b>&lt;category&gt; sub-element of &lt;item&gt;<a name="ltcategorygtSubelementOfLtitemgt">&nbsp;</a><a href="#ltcategorygtSubelementOfLtitemgt" title="Permanent link to '&lt;category&gt; sub-element of &lt;item&gt;' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	&lt;category&gt; is a new optional sub-element of &lt;item&gt;.<br><br>
+	It has one optional attribute, domain, a string that identifies a categorization taxonomy. <br><br>
+	The value of the element is a forward-slash-separated string that identifies a hierarchic location in the indicated taxonomy. Processors may establish conventions for the interpretation of categories. Two examples are provided below:<br><br>
+	<code>&lt;category domain="http://www.superopendirectory.com/">standards/xsl/implementations&lt;/category></code><br><br>
+	<code>&lt;category domain="http://www.fool.com/cusips">MSFT&lt;/category></code><br><br>
+<b>&lt;cloud&gt; sub-element of &lt;channel&gt;<a name="ltcloudgtSubelementOfLtchannelgt">&nbsp;</a><a href="#ltcloudgtSubelementOfLtchannelgt" title="Permanent link to '&lt;cloud&gt; sub-element of &lt;channel&gt;' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	&lt;cloud> is a new optional sub-element of &lt;channel>. It specifies a Web service that supports the rssCloud interface which can be implemented in HTTP-POST, XML-RPC or SOAP 1.1. <br><br>
+	Its purpose is to allow processes to register with a cloud to be notified of updates to the channel. <br><br>
+	<code>&lt;cloud domain="data.ourfavoritesongs.com" port="80" path="/RPC2" registerProcedure="ourFavoriteSongs.rssPleaseNotify" protocol="xml-rpc"/></code><br><br>
+	A full explanation of this element and the rssCloud interface is <a href="http://www.thetwowayweb.com/soapmeetsrss">here</a>.<br><br>
+<b>All limits are eliminated<a name="allLimitsAreEliminated">&nbsp;</a><a href="#allLimitsAreEliminated" title="Permanent link to 'All limits are eliminated' in archive."><img src="http://www.scripting.com/images/leftArrow.gif" height="9" width="11" border="0"></a></b><br><br>
+	In RSS 0.91 various elements are restricted to 500 or 100 characters. There can be no more than 15 &lt;items> in a 0.91 &lt;channel>. <br><br>
+	There are no string-length or XML-level limits in RSS 0.92. <br><br>
+	Processors may impose their own limits, and generators may have preferences that say no more than a certain number of &lt;item>s can appear in a channel, or that strings are limited in length.<br><br><p>
+
+<p><a href="http://backend.userland.com/discuss/msgReader$110"><img src="http://www.scripting.com/gifs/cowskull.gif" height="18" width="22" border="0"></a><p>
+
+            <p>
+            </td>
+        <tr>
+          <td colspan="5">
+            <br><br><hr size="1" noshade>Last update: Sunday, August 24, 2003 at 6:27:17 PM Pacific.<br><br><a href="http://www.manilasites.com/" title="Manila is an Internet server application that allows groups of writers, designers and graphics people to manage full-featured, high performance web sites through an easy-to-use browser interface."><img src="/mainResponderResources/userlandIcons/thisIsAManilaSite2" width="88" height="31" border="0" alt="This is a Manila site."></a>
+            </td>
+          </tr>
+        </table>
+      </center>
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-3582156-2";
+urchinTracker();
+</script>
+    </body>
+  </html>Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

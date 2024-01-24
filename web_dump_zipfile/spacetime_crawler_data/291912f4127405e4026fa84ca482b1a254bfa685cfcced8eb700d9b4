@@ -1,0 +1,30 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1415¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueXCattachment; filename=cs122b-2019-winter-project1-import-project.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=cc530adb6c4e69c0a86572c9; expires=Tue, 07 May 2019 19:29:38 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 19:29:38 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueY‡= Import the example projects to Eclipse =
+
+This page will walk through the steps to import the project1-star-example web Project to Eclipse. Most of the web app examples throughout the quarter will be hosted on Github and will be using maven.
+
+== To import the project to Eclipse ==
+
+1. Go to [https://github.com/UCI-Chenli-teaching/project1-star-example project1-star-example]. Use "git clone https://github.com/UCI-Chenli-teaching/project1-star-example.git" in the command line to clone the project. You can also just Download the zip file.
+
+2. Open Eclipse -> right click -> import -> import -> under "Maven" -> choose Existing Maven project. 
+[[Image(eclipse_import.png)]]
+
+[[Image(import_maven.png)]]
+
+3. For "Root Directory", click "Browse" and select this repository's folder. Click "Finish".
+
+[[Image(choose_directory.png)]]
+
+4. In "Java Resources" folder, open src->(default package)->!StarServlet.java. Change the mysql username and password and make sure you have the moviedb database.
+
+
+== To Export the WAR file == 
+
+You can either generate the WAR file from the Eclipse or from the command line using Maven.
+
+Export using Eclipse: Right click project -> export -> WAR file.
+
+Export using maven in command line:  Go to your project folder first, then do {{{ mvn clean}}}, then do {{{ mvn package}}}
+Your WAR file should be in the {{{ target/project1-star-example.war }}}
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

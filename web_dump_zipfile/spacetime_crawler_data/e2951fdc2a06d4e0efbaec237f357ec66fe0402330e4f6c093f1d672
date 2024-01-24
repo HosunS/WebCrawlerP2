@@ -1,0 +1,256 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE15772¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueX°trac_form_token=ed2e781d0e2152a0f42f34aa; httponly; Path=/wiki/public, trac_session=fed7c671eb5683ce507ebb21; expires=Thu, 09 May 2019 21:00:11 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXFri, 01 Jan 1999 00:00:00 GMT¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueOmust-revalidate¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 21:00:11 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=utf-8Kraw_content¢DtypeEvalueY=œ<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      cs222-2018-fall-setup-gdb-on-macos (diff) â€“ Public
+    </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--[if IE]><script type="text/javascript">
+      if (/^#__msie303:/.test(window.location.hash))
+        window.location.replace(window.location.hash.replace(/^#__msie303:/, '#'));
+    </script><![endif]-->
+        <link rel="search" href="/wiki/public/search" />
+        <link rel="help" href="/wiki/public/wiki/TracGuide" />
+        <link rel="up" href="/wiki/public/wiki/cs222-2018-fall-setup-gdb-on-macos?action=history" title="Page history" />
+        <link rel="start" href="/wiki/public/wiki" />
+        <link rel="stylesheet" href="/wiki/public/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/common/css/diff.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/tracwysiwyg/wysiwyg.css" type="text/css" />
+        <link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/common/css/trac.css" /><link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/tracwysiwyg/editor.css" />
+        <link rel="tracwysiwyg.base" href="/wiki/public" />
+        <link rel="shortcut icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+    <style id="trac-noscript" type="text/css">.trac-noscript { display: none !important }</style>
+    <script type="text/javascript">
+      var _tracwysiwyg={};
+    </script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/jquery.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/babel.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/trac.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/search.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/diff.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/tracwysiwyg/wysiwyg.js"></script>
+    <script type="text/javascript">
+      jQuery("#trac-noscript").remove();
+      jQuery(document).ready(function($) {
+        $(".trac-autofocus").focus();
+        $(".trac-target-new").attr("target", "_blank");
+        setTimeout(function() { $(".trac-scroll").scrollToTop() }, 1);
+        $(".trac-disable-on-submit").disableOnSubmit();
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" href="/wiki/public/chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://www.ics.uci.edu/"><img src="/wiki/public/chrome/site/ics.jpg" alt="ICS Logo" height="67" width="128" /></a>
+      </div>
+      <form id="search" action="/wiki/public/search" method="get">
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="/wiki/public/login">Login</a></li><li><a href="/wiki/public/prefs">Preferences</a></li><li class="last"><a href="/wiki/public/about">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+        <ul>
+          <li class="first"><span class="missing">&larr; Previous Change</span></li><li><a href="/wiki/public/wiki/cs222-2018-fall-setup-gdb-on-macos?action=history" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+        </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="/wiki/public/wiki/cs222-2018-fall-setup-gdb-on-macos?version=0">Initial Version</a> and
+          <a href="/wiki/public/wiki/cs222-2018-fall-setup-gdb-on-macos?version=1">Version 1</a> of
+          <a href="/wiki/public/wiki/cs222-2018-fall-setup-gdb-on-macos">cs222-2018-fall-setup-gdb-on-macos</a>
+      </h1>
+      <form method="post" id="prefs" action="/wiki/public/wiki/cs222-2018-fall-setup-gdb-on-macos?version=1"><div><input type="hidden" name="__FORM_TOKEN" value="ed2e781d0e2152a0f42f34aa" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="1" />
+          <input type="hidden" name="old_version" value="0" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            Sep 28, 2018 2:00:12 PM (<a class="timeline" href="/wiki/public/timeline?from=2018-09-28T14%3A00%3A12-07%3A00&amp;precision=second" title="See timeline at Sep 28, 2018 2:00:12 PM">4 months</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          cluo8
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="/wiki/public/wiki/cs222-2018-fall-setup-gdb-on-macos?version=1">cs222-2018-fall-setup-gdb-on-macos</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version currently edited">
+                    <a href="#L1">
+                      v1</a>
+                  </th>
+                  <th title="Version 1">
+                    <a href="/wiki/public/wiki/cs222-2018-fall-setup-gdb-on-macos?version=1#L1">
+                      v1</a>
+                  </th>
+                  <td>Â </td>
+                </tr>
+              </thead>
+            <tbody class="add">
+                  <tr class="first">
+                          <th>Â </th><th>1</th><td class="r"><ins>{{{#!div style="background-color:rgb(237,222,222)"</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>2</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>3</th><td class="r"><ins>== Setup GDB on MacOS ==</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>4</th><td class="r"><ins>This guide details the set up of the GDB debugger on MacOS High Sierra 10.13.6. It works as of Sep 26th, 2018. Please be alerted it is not straightforward to do this. If you spend too much time but still cannot make GDB work properly on your MacOS, an intermediate solution is to install a LinuxVM to do the development.</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>5</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>6</th><td class="r"><ins>1. Install homebrew (a package manager for mac). `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>7</th><td class="r"><ins>2. Install GDB 8.0.1. Be alerted that the latest GDB version(8.11) cannot work properly with MacOS because of some bugs. Instead, we have to explicitly install an older version of GDB.</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>8</th><td class="r"><ins>&nbsp; &nbsp; * `brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/9ec9fb27a33698fc7636afce5c1c16787e9ce3f3/Formula/gdb.rb`[[br]]</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>9</th><td class="r"><ins>&nbsp; &nbsp; * `brew pin gdb`</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>10</th><td class="r"><ins>3. Type `gdb --version`, make sure you find the version is 8.0.1.</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>11</th><td class="r"><ins>4. Type `echo "set startup-with-shell off" &gt;&gt; ~/.gdbinit`</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>12</th><td class="r"><ins>5. Certify the installed gdb</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>13</th><td class="r"><ins>&nbsp; &nbsp;* Open Keychain Access (an app under Utilities folder)</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>14</th><td class="r"><ins>&nbsp; &nbsp;* In menu, open Keychain Access &gt; Certificate Assistant &gt; Create a certificate</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>15</th><td class="r"><ins>&nbsp; &nbsp;* Give it a name (e.g. gdb-cert). Identity type: Self Signed Root. Certificate type: Code Signing. Check: let me override defaults.</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>16</th><td class="r"><ins>&nbsp; &nbsp;* Continue until "specify a location for..."</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>17</th><td class="r"><ins>&nbsp; &nbsp;* Set Keychain location to System</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>18</th><td class="r"><ins>&nbsp; &nbsp;* Create certificate and close Certificate Assistant.</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>19</th><td class="r"><ins>&nbsp; &nbsp;* Find certificate (e.g., gdb-cert) in System keychain.</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>20</th><td class="r"><ins>&nbsp; &nbsp;* Double click the certificate</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>21</th><td class="r"><ins>&nbsp; &nbsp;* Expand Trust, set Code signing to always trust</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>22</th><td class="r"><ins>&nbsp; &nbsp;* Restart taskgated in terminal: killall taskgated</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>23</th><td class="r"><ins>&nbsp; &nbsp;* Codesign gdb using your certificate: `codesign -fs gdb-cert /usr/local/bin/gdb`</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>24</th><td class="r"><ins>6. Now let's check whether GDB works. Open eclipse, right click your project `cs222`, and click Debug As -&gt; Debug Configurations. Add your main program (one of the test cases), and configure the path of the GDB properly (typically its under /usr/local/bin/gdb, and command file is /Users/username/.gdbinit). Finally click Debug to see if works.</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>25</th><td class="r"><ins>[[Image(gdb.png, 800px)]]</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>26</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>27</th><td class="r"><ins>7. If you see your program stops at the first line of the main function, and you can use Step Into (F5), Step Over (F6) etc. properly, then your GDB is now working properly! Congratulations!</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>28</th><td class="r"><ins>8. Otherwise, let's try this step to disable the SIP (system integrity projection) of MacOS. Note: disabling SIP could result in security leaks of your system, and you should decide whether to continue based on your own risk!</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>29</th><td class="r"><ins>&nbsp; * Shut down your mac and restart in recovery mode (hold down command+R until apple logo appears)</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>30</th><td class="r"><ins>&nbsp; * Open terminal window</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>31</th><td class="r"><ins>&nbsp; * Modify System Integrity Protection to allow debugging: `csrutil enable --without debug`</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>32</th><td class="r"><ins>&nbsp; * Reboot your Mac</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>33</th><td class="r"><ins>9. Go back to step 6 to try again. It should work now, but it still doesn't work, you can checkout some other materials. [https://stackoverflow.com/questions/49001329/gdb-doesnt-work-on-macos-high-sierra-10-13-3/49104154#49104154 Stackoverflow] [https://gist.github.com/danisfermi/17d6c0078a2fd4c6ee818c954d2de13c Setup GDB on MacOS]. If it still doesn't work, maybe it's better to switch to a linux virtual machine.</ins></td>
+                  </tr><tr>
+                          <th>Â </th><th>34</th><td class="r"><ins></ins></td>
+                  </tr><tr class="last">
+                          <th>Â </th><th>35</th><td class="r"><ins>}}}</ins></td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/wiki/public/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="/wiki/public/about"><strong>Trac 1.0.13</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

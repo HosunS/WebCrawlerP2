@@ -1,0 +1,334 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueå¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2986¢Ak¢DtypeEvaluePX-xss-protectionAv¢DtypeEvalueM1; mode=block¢Ak¢DtypeEvalueVX-content-type-optionsAv¢DtypeEvalueGnosniff¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXKBugzilla_login_request_cookie=Obi1ReoLH3; path=/bugzilla/; HttpOnly; Secure¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueUApache/2.4.7 (Ubuntu)¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueCViaAv¢DtypeEvalueQ1.1 bz.apache.org¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:58:39 GMT¢Ak¢DtypeEvalueOX-frame-optionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY-j<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Reporting and Charting Kitchen</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="data/assets/6bfc2b674a611cfdf9a0edcb0a5d6fbf.css?1538602460" rel="stylesheet" type="text/css">
+
+<link href="data/assets/117e56f7b51d43b9b3950693e5dec8a6.css?1538602249" rel="stylesheet" type="text/css">
+
+    
+<script type="text/javascript" src="data/assets/1b4e898422a669ab82b604a2c23edce5.js?1538602460"></script>
+
+    <script type="text/javascript">
+    <!--
+        YAHOO.namespace('bugzilla');
+        YAHOO.util.Event.addListener = function (el, sType, fn, obj, overrideContext) {
+               if ( ("onpagehide" in window || YAHOO.env.ua.gecko) && sType === "unload") { sType = "pagehide"; };
+               var capture = ((sType == "focusin" || sType == "focusout") && !YAHOO.env.ua.ie) ? true : false;
+               return this._addListener(el, this._getType(sType), fn, obj, overrideContext, capture);
+         };
+        if ( "onpagehide" in window || YAHOO.env.ua.gecko) {
+            YAHOO.util.Event._simpleRemove(window, "unload", 
+                                           YAHOO.util.Event._unload);
+        }
+        
+        function unhide_language_selector() { 
+            YAHOO.util.Dom.removeClass(
+                'lang_links_container', 'bz_default_hidden'
+            ); 
+        } 
+        YAHOO.util.Event.onDOMReady(unhide_language_selector);
+
+        
+        var BUGZILLA = {
+            param: {
+                cookiepath: '\/bugzilla\/',
+                maxusermatches: 1000
+            },
+            constant: {
+                COMMENT_COLS: 80
+            },
+            string: {
+                
+
+                attach_desc_required:
+                    "You must enter a Description for this attachment.",
+                component_required:
+                    "You must select a Component for this bug.",
+                description_required:
+                    "You must enter a Description for this bug.",
+                short_desc_required:
+                    "You must enter a Summary for this bug.",
+                version_required:
+                    "You must select a Version for this bug."
+            }
+        };
+
+    // -->
+    </script>
+<script type="text/javascript" src="data/assets/d41d8cd98f00b204e9800998ecf8427e.js?1538602460"></script>
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="ASF Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body 
+        class="bz-apache-org-bugzilla yui-skin-sam">
+
+  <div id="header"><div id="banner">
+  </div>
+
+    <div id="titles">
+      <span id="title">ASF Bugzilla &ndash; Reporting and Charting Kitchen</span>
+
+
+    </div>
+
+
+    <div id="common_links"><ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_top" name="no_redirect" value="0">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_top");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_top" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_top"></form>
+  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li></li>
+
+
+  <li>
+        <span class="separator">| </span>
+        <a href="https://bugzilla.readthedocs.org/en/5.0/using/reports-and-charts.html" target="_blank">Help</a>
+      </li>
+    
+      <li id="new_account_container_top">
+        <span class="separator">| </span>
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+      </li>
+
+    <li id="mini_login_container_top">
+  <span class="separator">| </span>
+  <a id="login_link_top" href="report.cgi?GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_top')">Log In</a>
+
+  <form action="report.cgi" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_top">
+    <input id="Bugzilla_login_top" required
+           name="Bugzilla_login" class="bz_login"
+        type="email" placeholder="Email Address">
+    <input class="bz_password" name="Bugzilla_password" type="password"
+           id="Bugzilla_password_top" required
+           placeholder="Password">
+      <input type="checkbox" id="Bugzilla_remember_top" 
+             name="Bugzilla_remember" value="on" class="bz_remember"
+             checked>
+      <label for="Bugzilla_remember_top">Remember</label>
+    <input type="hidden" name="Bugzilla_login_token"
+           value="">
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_top">
+    <a href="#" onclick="return hide_mini_login_form('_top')">[x]</a>
+  </form>
+</li>
+
+
+  <li id="forgot_container_top">
+    <span class="separator">| </span>
+    <a id="forgot_link_top" href="report.cgi?GoAheadAndLogIn=1#forgot"
+       onclick="return show_forgot_form('_top')">Forgot Password</a>
+    <form action="token.cgi" method="post" id="forgot_form_top"
+          class="mini_forgot bz_default_hidden">
+      <label for="login_top">Login:</label>
+      <input name="loginname" size="20" id="login_top" required
+          type="email" placeholder="Your Email Address">
+      <input id="forgot_button_top" value="Reset Password" type="submit">
+      <input type="hidden" name="a" value="reqpw">
+      <input type="hidden" id="token_top" name="token"
+             value="1549789119-JP5jYH8_Rrbn6XU3tJ0nGTa49b5uz2xmisUtArgfjE4">
+      <a href="#" onclick="return hide_forgot_form('_top')">[x]</a>
+    </form>
+  </li>
+</ul>
+  </li>
+
+  
+
+
+
+
+  
+</ul>
+    </div>
+  </div>
+
+  <div id="bugzilla-body">
+
+<p>
+  Bugzilla allows you to view and track the state of the bug database in
+  all manner of exciting ways.
+</p>
+
+<h2>Current State</h2>
+
+<ul>
+  <li id="report_search">
+    <strong><a href="query.cgi">Search</a></strong> -
+    list sets of bugs.
+  </li>
+  <li id="report_tabular">
+    <strong>
+      <a href="query.cgi?format=report-table">Tabular reports</a>
+    </strong> -
+    tables of bug counts in 1, 2 or 3 dimensions, as HTML or CSV.
+  </li>
+    <li id="report_graphical">
+      <strong>
+        <a href="query.cgi?format=report-graph">Graphical reports</a>
+      </strong> -
+      line graphs, bar and pie charts.
+    </li>
+  <li id="report_duplicates">
+    <strong><a href="duplicates.cgi">Duplicates</a></strong> -
+    list of most frequently reported bugs.
+  </li>
+</ul>
+
+  <h2>Change Over Time</h2>
+
+  <ul>
+      <li id="old_charts">
+        <strong><a href="reports.cgi">Old Charts</a></strong> - 
+        plot the status and/or resolution of bugs against
+        time, for each product in your database.
+      </li>
+  </ul>
+
+</div>
+
+    <div id="footer">
+      <div class="intro"></div>
+
+  This is <b>ASF Bugzilla</b>: the Apache Software Foundation bug system. In case
+  of problems with the functioning of ASF Bugzilla, please contact
+  <a href="mailto:bugzilla-admin@apache.org">bugzilla-admin@apache.org</a>.
+  <b>Please Note:</b> this e-mail address is <b>only</b> for reporting problems
+  with ASF Bugzilla. Mail about any other subject will be silently
+  ignored.
+<ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_bottom" name="no_redirect" value="0">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_bottom");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_bottom" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_bottom"></form>
+  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li></li>
+
+
+  <li>
+        <span class="separator">| </span>
+        <a href="https://bugzilla.readthedocs.org/en/5.0/using/reports-and-charts.html" target="_blank">Help</a>
+      </li>
+    
+      <li id="new_account_container_bottom">
+        <span class="separator">| </span>
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+      </li>
+
+    <li id="mini_login_container_bottom">
+  <span class="separator">| </span>
+  <a id="login_link_bottom" href="report.cgi?GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_bottom')">Log In</a>
+
+  <form action="report.cgi" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_bottom">
+    <input id="Bugzilla_login_bottom" required
+           name="Bugzilla_login" class="bz_login"
+        type="email" placeholder="Email Address">
+    <input class="bz_password" name="Bugzilla_password" type="password"
+           id="Bugzilla_password_bottom" required
+           placeholder="Password">
+      <input type="checkbox" id="Bugzilla_remember_bottom" 
+             name="Bugzilla_remember" value="on" class="bz_remember"
+             checked>
+      <label for="Bugzilla_remember_bottom">Remember</label>
+    <input type="hidden" name="Bugzilla_login_token"
+           value="">
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_bottom">
+    <a href="#" onclick="return hide_mini_login_form('_bottom')">[x]</a>
+  </form>
+</li>
+
+
+  <li id="forgot_container_bottom">
+    <span class="separator">| </span>
+    <a id="forgot_link_bottom" href="report.cgi?GoAheadAndLogIn=1#forgot"
+       onclick="return show_forgot_form('_bottom')">Forgot Password</a>
+    <form action="token.cgi" method="post" id="forgot_form_bottom"
+          class="mini_forgot bz_default_hidden">
+      <label for="login_bottom">Login:</label>
+      <input name="loginname" size="20" id="login_bottom" required
+          type="email" placeholder="Your Email Address">
+      <input id="forgot_button_bottom" value="Reset Password" type="submit">
+      <input type="hidden" name="a" value="reqpw">
+      <input type="hidden" id="token_bottom" name="token"
+             value="1549789119-JP5jYH8_Rrbn6XU3tJ0nGTa49b5uz2xmisUtArgfjE4">
+      <a href="#" onclick="return hide_forgot_form('_bottom')">[x]</a>
+    </form>
+  </li>
+</ul>
+  </li>
+
+  
+
+
+
+
+  
+</ul>
+
+      <div class="outro"></div>
+    </div>
+
+  </body>
+</html>Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

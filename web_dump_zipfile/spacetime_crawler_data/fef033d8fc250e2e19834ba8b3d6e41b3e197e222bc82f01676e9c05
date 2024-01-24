@@ -1,0 +1,25 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1916¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX9attachment; filename=cs222p-2017-fall-mac-setup-guide.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=13498b3fae5578137b0215fa; expires=Tue, 07 May 2019 02:18:00 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 02:18:00 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueY|
+== == '''Mac Setup Guide''' == ==
+This page will guide you how to setup C++ development environment on Mac using Eclipse and how to set gdb for debugging purposes.
+
+== '''Setup development environment using Eclipse'''==
+1: Install [https://itunes.apple.com/us/app/xcode/id497799835?mt=12 Xcode] from Mac App Store. After the installation is finished, open it and it will start installing additional necessary things. 
+
+2: Open terminal, type "xcode-select --install". Follow the prompts to let it install necessary components (Xcode Command Line Tools)
+
+3: Download and install [http://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/oxygen/1.RC4/eclipse-cpp-oxygen-1-rc4-macosx-cocoa-x86_64.dmg Eclipse for C/C++] for Mac OS X. Note: for mac users who have updated to Mac OS X High Sierra, please follow the exact link to download Oxygen 1.RC4, since it fixes a bug that won't let you run C/C++ programs in Eclipse in High Sierra.
+
+4: Test if it works by creating a new C++ project in Eclipse. Select '''MacOSX GCC''' instead of Cross GCC.
+
+You can check [http://www.ics.uci.edu/~pattis/common/handouts/macmingweclipse/eclipse.html this page] if you need more detailed instructions.
+
+
+
+
+== '''Mac: Set up GDB for debugging purposes'''==
+
+This process is pretty complicated, but GDB can help a lot when debugging.
+
+Follow this [https://www.thomasvitale.com/how-to-setup-gdb-and-eclipse-to-debug-c-files-on-macos-sierra/ set up gdb on mac guide] to set up gdb. This guide is up-to-date with the latest Mac OS version and will work. 
+
+If you are unclear about some steps, you can also take a look at this [https://www.ics.uci.edu/~pattis/common/handouts/macmingweclipse/allexperimental/mac-gdb-install.html outdated guide] that won't work anymore, but still provides useful information. If this outdated guide says different things, please follow the first guide.Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

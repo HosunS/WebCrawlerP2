@@ -1,0 +1,54 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1717¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 25 Jan 2006 06:33:10 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"6b5-40b2909a1b580"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 18:30:46 GMTKraw_content¢DtypeEvalueYµ//********************************************************************
+//  Sorting.java       Author: Lewis/Loftus
+//
+//  Demonstrates the selection sort and insertion sort algorithms.
+//********************************************************************
+
+public class Sorting
+{
+   //-----------------------------------------------------------------
+   //  Sorts the specified array of objects using the selection
+   //  sort algorithm.
+   //-----------------------------------------------------------------
+   public static void selectionSort (Comparable[] list)
+   {
+      int min;
+      Comparable temp;
+
+      for (int index = 0; index < list.length-1; index++)
+      {
+         min = index;
+         for (int scan = index+1; scan < list.length; scan++)
+            if (list[scan].compareTo(list[min]) < 0)
+               min = scan;
+
+         // Swap the values
+         temp = list[min];
+         list[min] = list[index];
+         list[index] = temp;
+      }
+   }
+
+   //-----------------------------------------------------------------
+   //  Sorts the specified array of objects using the insertion
+   //  sort algorithm.
+   //-----------------------------------------------------------------
+   public static void insertionSort (Comparable[] list)
+   {
+      for (int index = 1; index < list.length; index++)
+      {
+         Comparable key = list[index];
+         int position = index;
+
+         //  Shift larger values to the right
+         while (position > 0 && key.compareTo(list[position-1]) < 0)
+         {
+            list[position] = list[position-1];
+            position--;
+         }
+            
+         list[position] = key;
+      }
+   }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

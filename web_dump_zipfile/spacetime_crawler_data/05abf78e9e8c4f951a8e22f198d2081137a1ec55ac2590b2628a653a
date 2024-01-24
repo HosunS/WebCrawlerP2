@@ -1,0 +1,161 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:45:33 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueY´<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML><HEAD>
+<TITLE> CompSci 165: Project in Algorithms and Data Structures
+</TITLE>
+</HEAD><BODY>
+<span style="color:#000000; font:16px Arial, Helvetica, sans-serif;">
+
+<center>
+<H2> CompSci 165: Project in Algorithms and Data Structures
+    <BR> Spring 2018 </H2>
+</center>
+
+<UL>
+  <LI> <B>Description</B>
+   <UL>
+     <LI> Design, implementation, execution, and analysis of algorithms
+     <BR> Based on material from ICS 46 and CompSci 161, plus some more
+          advanced topics
+     <LI> There are 3 required projects, no homework, and no examinations
+     <LI> The programming language is C for the first two projects and C/C++ for the third
+     <LI> <B>Prerequisite</B>: CompSci 161 / CSE 161
+   </UL>
+<P>
+
+  <LI> <B>Class Meetings</B>
+   <UL>
+     <LI> Lectures M W F 11-11:50am in SSL 270
+     <BR> &nbsp; &nbsp; &nbsp; &nbsp; discuss the theory behind the projects,
+               as well as some implementation concerns
+     <LI> The class meets only sporadically during the quarter,
+          typically a couple of times for each of the projects
+<!--
+     <LI> <B><font color=blue>The next class meeting will be on Friday, May 25</font></B>
+-->
+     <LI> One-on-one discussions with the instructor
+               are available throughout the quarter
+   </UL>
+<P>
+
+  <LI> <B>Instructor</B>
+   <UL>
+     <LI> Dan Hirschberg &nbsp; &mdash; &nbsp; <tt>dan</tt> (at) <tt>ics.uci.edu</tt>
+     <BR> Office hours:&nbsp; in DBH 4226, by appointment
+     <LI> Teaching Assistant
+       <BR> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        Jordan Jorgensen &mdash; <tt>jajorgen</tt> (at) <tt>uci.edu</tt>
+     <LI> Grading Assistant
+       <BR> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        Avinash Nath Aita &mdash; <tt>aaita</tt> (at) <tt>uci.edu</tt>
+<!--
+        TBD
+-->
+   </UL>
+<P>
+
+  <LI> <B>Add/drop Policy</B>
+  <UL>
+    <LI> No adds or drops are permitted after Week 1
+  </UL>
+<P>
+
+  <LI> <B><a href="schedule.html">Schedule</a></B>
+<P>
+
+<!--
+  <LI> <B><a href="coursegrade.html">Course Grading</a></B>
+<P>
+-->
+
+  <LI> <B><a href="notes">Notes</a></B>
+<P>
+
+  <LI> <B>Projects</B>
+   <UL>
+   <LI> <a href="compilers.html">Compiler considerations</a> for CompSci 165
+   <LI> <a href="http://www.ics.uci.edu/computing/linux/hosts.php">Student access to ICS Linux machines</a>
+   <LI> Some projects need to measure <a href="TIME/index.html">time</a> usage
+   <LI> Many projects need a random number generator;&nbsp;
+        I recommend using <a href="dshrandom.c"><tt>dshrandom.c</tt></a>
+   <LI> Do you know the meanings of and distinction between precision and accuracy?
+<P>
+  Access to project specifications and team registration is limited to enrolled students.
+  <BR>The user name is your UCInetID <small>(in ALL CAPITAL LETTERS)</small>
+  and the password is your student ID number.
+  <BR><small>( Students adding during week 1 may experience a 1-2 day delay for access credentials to be updated. )</small>
+<P>
+
+  <LI> <B><a href="projeval.html">Team Registration and Project Submission/Evaluation</a></B>
+  <LI> <B><a href="PROJECTS/cs165s2018.html">Spring 2018 Projects</a></B>
+   </UL>
+
+<OL>
+<!--
+<LI> <I><small>Search trees -- not given this quarter</small></I>
+<LI> <I><small>File discrepancy -- not given this quarter</small></I>
+<LI> <I><small>Matrix multiplication -- not given this quarter</small></I>
+<LI> <I><small>Road distances -- not given this quarter</small></I>
+<LI> <I><small>Image morphing -- not given this quarter</small></I>
+<LI> <a href="PROJECTS/BST/2bst.htm">Binary search trees</a> &ndash; Normal, AVL, Splay, Optimal
+     <BR>investigate the relative efficiencies of trees grown by these 4 approaches
+<LI> <a href="PROJECTS/SEARCH/1search.htm">Search algorithms</a> &ndash;
+     needs my routine <a href="fillin.c"><tt>fillin.c</tt></a>
+     to make a juicy value distribution
+<LI> <a href="PROJECTS/PRIME/prime.html">Project 2</a> &ndash; primality testing
+
+ -->
+<!--
+<LI> <a href="PROJECTS/SELECT/index.html">Project 1</a> &ndash; selection of <I>k</I> largest
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	<a href="Results1.txt">Student Results</a>
+<LI> <a href="PROJECTS/MAJORITY/index.html">Project 2</a> &ndash; majority using group counts
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	&nbsp; &nbsp;
+	<a href="Results2.txt">Student Results</a>
+<LI> <a href="PROJECTS/COMPRESS/index.html">Project 3</a> &ndash; file compression
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	&nbsp; &nbsp; &nbsp; &nbsp;
+	&nbsp; &nbsp; &nbsp;
+	<a href="Results3.txt">Results</a>
+ -->
+</OL>
+<P>
+  <LI> <B>Grading</B>
+    <UL>
+      <LI> three projects, each scored on scale 0-100
+      <LI> the lowest score counts 20% toward the final course average
+      <LI> the two higher scores each count 40% toward the final course average
+      <LI> 1% extra for submitting course evaluations
+    </UL>
+
+<P>
+  <LI> <B>Communication</B> <span style="font-size: 16px; font-weight: 100">&mdash; If you send me email with course-related questions...</span>
+    <UL>
+      <LI> Include the string "CompSci 165:" at the start of the subject line
+      <LI> Include your name and UCI Student number in the message
+      <LI> If you are not writing from your official UCI email address,
+           please cc your official UCI email address
+    </UL>
+    (This protocol enables me to weed out requests for help
+            on problems from non-UCI students.)
+<P>
+
+  <LI> <B> Discussion Board </B>
+  <UL>
+  <LI> Students can discuss matters related to this course on
+       <a href="https://piazza.com/uci/spring2018/cs165">Piazza</a>
+  </UL>
+<P>
+
+</UL>
+
+<HR>
+
+<small>Last modified: May 25, 2018</small>
+</span>
+</BODY></HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

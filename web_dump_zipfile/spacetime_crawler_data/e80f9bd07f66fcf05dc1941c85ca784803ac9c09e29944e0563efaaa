@@ -1,0 +1,101 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1878¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Jan 2019 21:54:42 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"1215-57fc28ef51fdb-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 20:21:10 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head>
+<title>David Eppstein - Publications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<h1>David Eppstein - Publications</h1>
+<hr><p>
+<h2>
+Publications with 
+<a href="//robotics.stanford.edu/users/guibas/bio.html">
+Leonidas J. Guibas
+</a>
+</h2>
+<ul>
+<li><b>The centroid of points with approximate weights</b>.<br>
+<a href="//www.parc.xerox.com/csl/members/bern/">M. Bern</a>,
+D. Eppstein, 
+<a href="//robotics.stanford.edu/users/guibas/bio.html">L. J. Guibas</a>,
+J. Hershberger, 
+<a href="//www.cs.ucsb.edu/~suri/">S. Suri</a>, and 
+<a href="//www.wwnet.net/~janc/">J. Wolter</a>.<br>
+<a href="BerEppGui-ESA-95.ps.gz"><i>3rd Eur. Symp. Algorithms,</i>
+Corfu, 1995</a>.<br>
+Springer, <i>Lecture Notes in
+Comp. Sci.</i> 979, 1995, pp. 460&ndash;472.
+<p>
+Given a set of points with weights that are not known precisely,
+but are known to fall within some range, considers the possible
+weighted centroids arising from different choices of weights
+in each range.  The combinatorics of this problem are closely
+connected with those of
+<a href="geom-zono.html">zonotopes</a>.
+<p>(<a href="/~eppstein/bibs/eppstein.html#The centroid of points with approximate weights">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/The-centroid-of-points-with-approximate-weights.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/bern95centroid.html">CiteSeer</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=739636">ACM DL</a>)
+<p>
+<li><b>Application Challenges to Computational Geometry</b>.<br>
+The
+<a href="a-cgitf.html">
+Computational Geometry Impact Task Force
+</a>
+Report.<br>
+<a href="//ncstrl.cs.princeton.edu/expand.php3?id=TR-521-96">Tech.
+Rep. TR-521-96</a>, Princeton University, April 1996.<br>
+Advances in Discrete and Computational Geometry &ndash; Proc. 1996 AMS-IMS-SIAM
+Joint Summer Research Conf. Discrete and Computational Geometry: Ten
+Years Later, Contemporary Mathematics 223, Amer. Math. Soc., 1999, pp. 407&ndash;423.
+<p>(<a href="//fano.ics.uci.edu/cites/Document/Application-challenges-to-computational-geometry.html">Citations</a>)
+<p>
+<li><b>Parametric and kinetic minimum spanning trees</b>.<br>
+<a href="//www.cs.duke.edu/~pankaj/">P. K. Agarwal</a>,
+D. Eppstein,
+<a href="//robotics.stanford.edu/users/guibas/bio.html">L. J. Guibas</a>,
+and
+<a href="//www.henzinger.com/monika/">M. R. Henzinger</a>.<br>
+<a href="AgaEppGui-FOCS-98.pdf">
+<i>39th IEEE Symp. Foundations of Comp. Sci.</i>, 1998, pp. 596&ndash;605.</a>.
+<p>
+We describe algorithms for maintaining the
+<a href="mst.html">minimum spanning tree</a> in a graph
+in which the edge weights are piecewise linear functions of time that
+may change unpredictably.  We solve the problem in time
+O(n<sup>2/3</sup> polylog n)
+per combinatorial change to the tree for general graphs, and in time
+O(n<sup>1/4</sup> polylog n) per combinatorial change to the tree for planar graphs.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Parametric and kinetic minimum spanning trees">BibTeX</a> &ndash;
+<a href="AgaEppGui-FOCS-98-slides.pdf">FOCS '98 talk slides</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Parametric-and-kinetic-minimum-spanning-trees.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/agarwal98parametric.html">CiteSeer</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=796402">ACM DL</a>)
+<p>
+<li><b>Emerging challenges in computational topology</b>.<br>
+<a href="//www.parc.xerox.com/csl/members/bern/">M. Bern</a>,
+D. Eppstein, et al.<br>
+<a href="//arXiv.org/abs/cs.CG/9909001">arXiv:cs.CG/9909001</a>.<br>
+<p>
+This is the report from the ACM Workshop on Computational Topology
+run by Marshall and myself in Miami Beach, June 1999.
+It details goals, current research, and recommendations
+in this emerging area of collaboration between computer science and
+mathematics.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Emerging challenges in computational topology">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Emerging-challenges-in-computational-topology.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/bern99emerging.html">CiteSeer</a>)
+<p>
+</ul>
+
+<hr><p>
+<a href="auth.html">Co-authors</a> &ndash;
+<a href="/~eppstein/pubs/">Publications</a> &ndash;
+<a href="/~eppstein/">David Eppstein</a> &ndash;
+<a href="/~theory/">Theory Group</a> &ndash;
+<a href="/">Inf. &amp; Comp. Sci.</a> &ndash;
+<a href="//www.uci.edu/">UC Irvine</a>
+<p>
+<small>Semi-automatically <a href="filter.html">filtered</a>
+from a common source file.</small>
+</body></html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

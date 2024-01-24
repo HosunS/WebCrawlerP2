@@ -1,0 +1,67 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4218¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX8attachment; filename=cs122b-2019-winter-project1-git.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=a8ea79f467e56ad94d0b8f4b; expires=Sat, 04 May 2019 15:25:50 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 15:25:50 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueYzSuppose the CS122B team 999 contains 2 members (Bob and Alice). We will see how they use Git to collaborate in the CS122B class.
+
+Setting up Git:
+
+ 1. Each student creates a github account, and shares his/her github username with the CS122B staff on this [https://docs.google.com/spreadsheets/d/1Nmx75Oh0yf8S4BbqQJsGPdWuIJCqAooMkh1YHc1qzpU/edit#gid=0 spreadsheet].
+ 1. The staff will send each of them an invitation to join the â€œUCI-chenli-teachingâ€ organization. Both accept the invitation and are added to the organisation.
+ 1. Bob creates a repository called â€œcs122b-spring18-team-999â€ on Github.com under this organization. Make sure to make it â€œprivateâ€ (default setting). The repository is initially empty.
+
+Using Git:
+
+ 1. On his local machine, Bob installs a Git client by following the instructions [https://git-scm.com/book/en/v2/Getting-Started-Installing-Git here].
+ 1. He then does the following:
+
+{{{
+shell> mkdir mycs122b-projects
+shell> cd mycs122b-projects
+shell> git init
+shell> echo "Cool project" > README.md          - creates a README file
+shell> git status          - check the status of the repository
+shell> git add README.md          - The file is initially untracked by Git. 'git add' moves it to staged.
+shell> git status           - check the status of the repository after staging the file
+shell> git commit -m "First Commit"          - The staged files are committed locally.
+shell> git status          - check the status of the repository after committing the file
+}}}
+ 3. The local repository now has to be linked to the remote repository. For that Bob does the following:
+
+{{{
+shell> git remote add origin git@github.com:UCI-Chenli-teaching/cs122b-spring18-team-999.git 
+shell> git push -u origin master
+}}}
+ 4. Bob now wants to start on project 1. He creates a new branch from the master branch for this task.
+
+{{{
+shell> git branch            - This command is used to check which branch you are on and what branches are there in your repository. master should be highlighted as you are on master branch. 
+shell> git checkout -b bob-feature1            - This command creates a new branch and copies all the code from the previous (i.e. master in our case) branch into the new branch. 
+shell> mkdir project1 
+shell> cd project1 
+shell> echo "SELECT * FROM stars" > mysql-script.sql 
+shell> git add mysql-script.sql 
+shell> git commit -m "added mysql command"   - commits changes locally to bob-feature1 
+shell> git push --set-upstream origin bob-feature1   - creates a remote tracking branch for the local bob-feature1 branch
+}}}
+ 5. Alice wants to contribute too. First Bob needs to invite Alice as a contributor to this repository on the Github web site.  Then she can see the repository. She does the following:
+
+{{{
+shell> mkdir gitclones 
+shell> cd gitclones 
+shell> git clone https://<Alice's username>@github.com/UCI-Chenli-teaching/cs122b-spring18-team-999.git             - brings the repository onto her local machine 
+shell> cd cs122b-spring18-team-999 
+shell> git checkout bob-feature1             - She is initially on master branch. This statement changes her branch bob-feature1 branch. She can now see project 1 code and does the required changes. 
+shell> cd project1
+MODIFY THE FILE add mysql-script.sql
+shell> git add mysql-script.sql 
+shell> git status
+shell> git config  user.email "alince@alice.com"
+shell> git config  user.name "Alice Smith"
+shell> git commit -m "minor changes" 
+shell> git push             - pushes the commit to bob-feature1 remote branch
+}}}
+ 6. Bob wants to continue coding. Before proceeding to modify any files, he needs to do 'git pull' so that the local branch pulls the latest code from the remote branch.  In particular, Bob does:
+
+{{{
+shell> git branch        - to see which branch he is on. He sees he is on bob-feature1 branch. 
+shell> git pull             - pulls the latest code. Bob now sees the changes that Alice pushed.
+}}}
+
+7. Bob and Alice can also use github to create a pull request from the `bob-feature1` branch to the `master` branch to do code reviews. Check this [https://www.youtube.com/watch?v=oFYyTZwMyAg video] to learn this process.Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

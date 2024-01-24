@@ -1,0 +1,214 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 04:45:33 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYE‡<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Classification</a> <font color=red>(118)</font><br><a href='datasets.html?format=mat&task=reg&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Regression</a> <font color=red>(37)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Clustering</a></font> <font color=red>(26)</font><br><a href='datasets.html?format=mat&task=other&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Other</a> <font color=red>(6)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=clu&att=cat&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Categorical</a> <font color=red>(2)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Numerical</a> <font color=red>(21)</font><br><a href='datasets.html?format=mat&task=clu&att=mix&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Mixed</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=&sort=attUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Multivariate</a></font> <font color=red>(26)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=uvar&sort=attUp&view=list'>Univariate</a> <font color=red>(2)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=seq&sort=attUp&view=list'>Sequential</a> <font color=red>(6)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=ts&sort=attUp&view=list'>Time-Series</a> <font color=red>(8)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=text&sort=attUp&view=list'>Text</a> <font color=red>(5)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=dt&sort=attUp&view=list'>Domain-Theory</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=other&sort=attUp&view=list'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=clu&att=&area=life&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Life Sciences</a> <font color=red>(7)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=phys&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Physical Sciences</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=comp&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>CS / Engineering</a> <font color=red>(7)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=soc&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Social Sciences</a> <font color=red>(2)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=bus&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Business</a> <font color=red>(2)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=game&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=other&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Other</a> <font color=red>(6)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b> - <a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=&numIns=&type=mvar&sort=attUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=less10&numIns=&type=mvar&sort=attUp&view=list'>Less than 10</a> <font color=red>(17)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>10 to 100</a></font> <font color=red>(26)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=greater100&numIns=&type=mvar&sort=attUp&view=list'>Greater than 100</a> <font color=red>(13)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=less100&type=mvar&sort=attUp&view=list'>Less than 100</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=100to1000&type=mvar&sort=attUp&view=list'>100 to 1000</a> <font color=red>(7)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=greater1000&type=mvar&sort=attUp&view=list'>Greater than 1000</a> <font color=red>(18)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b> - <a href='datasets.html?format=&task=clu&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Matrix</a></font> <font color=red>(26)</font><br><a href='datasets.html?format=nonmat&task=clu&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=list'>Non-Matrix</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>26</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=attUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Travel+Reviews">Travel Reviews</a></b>: Reviews on destinations in 10 categories mentioned across East Asia. Each traveler rating is mapped as Excellent(4), Very Good(3), Average(2), Poor(1), and Terrible(0) and average rating is used.</p><p class="normal">2. <b><a href="datasets/UJIIndoorLoc-Mag">UJIIndoorLoc-Mag</a></b>: The UJIIndoorLoc-Mag is an indoor localization database to test Indoor Positioning System that rely on Earth's magnetic field variations.</p><p class="normal">3. <b><a href="datasets/Educational+Process+Mining+%28EPM%29%3A+A+Learning+Analytics+Data+Set">Educational Process Mining (EPM): A Learning Analytics Data Set</a></b>: Educational Process Mining data set is built from the recordings of 115 subjects' activities through a logging application while learning with an educational simulator.</p><p class="normal">4. <b><a href="datasets/BLE+RSSI+Dataset+for+Indoor+localization+and+Navigation">BLE RSSI Dataset for Indoor localization and Navigation</a></b>: This dataset contains RSSI readings gathered from an array of Bluetooth Low Energy (BLE) iBeacons in a real-world and operational indoor environment for localization and navigation purposes.</p><p class="normal">5. <b><a href="datasets/Heterogeneity+Activity+Recognition">Heterogeneity Activity Recognition</a></b>: The Heterogeneity Human Activity Recognition (HHAR) dataset from Smartphones and Smartwatches is a dataset devised to benchmark human activity recognition algorithms (classification, automatic data segmentation, sensor fusion, feature extraction, etc.) in real-world contexts; specifically, the dataset is gathered with a variety of different device models and use-scenarios, in order to reflect sensing heterogeneities to be expected in real deployments.</p><p class="normal">6. <b><a href="datasets/Online+Shoppers%92+Purchasing+Intention+Dataset">Online Shoppersï¿½ Purchasing Intention Dataset</a></b>: Of the 12,330 sessions in the dataset,
+84.5% (10,422) were negative class samples that did not
+end with shopping, and the rest (1908) were positive class
+samples ending with shopping.</p><p class="normal">7. <b><a href="datasets/Absenteeism+at+work">Absenteeism at work</a></b>: The database was created with records of absenteeism at work from July 2007 to July 2010 at a courier company in Brazil.</p><p class="normal">8. <b><a href="datasets/Anuran+Calls+%28MFCCs%29">Anuran Calls (MFCCs)</a></b>: Acoustic features extracted from syllables of anuran (frogs) calls, including the family, the genus, and the species labels (multilabel). </p><p class="normal">9. <b><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29">KEGG Metabolic Relation Network (Directed)</a></b>: KEGG Metabolic pathways modeled as directed relation network. Variety of graphical features presented.</p><p class="normal">10. <b><a href="datasets/Tarvel+Review+Ratings">Tarvel Review Ratings</a></b>: Google reviews on attractions from 24 categories across Europe are considered. Google user rating ranges from 1 to 5 and average user rating per category is calculated.</p><p class="normal">11. <b><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29">KEGG Metabolic Reaction Network (Undirected)</a></b>: KEGG Metabolic pathways modeled as un-directed reaction network. Variety of graphical features presented.</p><p class="normal">12. <b><a href="datasets/Turkiye+Student+Evaluation">Turkiye Student Evaluation</a></b>: This data set contains a total 5820 evaluation scores provided by students from Gazi University in Ankara (Turkey). There is a total of 28 course specific questions and additional 5 attributes.</p><p class="normal">13. <b><a href="datasets/Water+Treatment+Plant">Water Treatment Plant</a></b>: Multiple classes predict plant state</p><p class="normal">14. <b><a href="datasets/MoCap+Hand+Postures">MoCap Hand Postures</a></b>: 5 types of hand postures from 12 users were recorded using unlabeled markers attached to fingers of a glove in a motion capture environment. Due to resolution and occlusion, missing values are common.</p><p class="normal">15. <b><a href="datasets/Motion+Capture+Hand+Postures">Motion Capture Hand Postures</a></b>: 5 types of hand postures from 12 users were recorded using unlabeled markers on fingers of a glove in a motion capture environment. Due to resolution and occlusion, missing values are common.</p><p class="normal">16. <b><a href="datasets/Tennis+Major+Tournament+Match+Statistics">Tennis Major Tournament Match Statistics</a></b>: This is a collection of 8 files containing the match statistics for both women and men at the four major tennis tournaments of the year 2013. Each file has 42 columns and a minimum of 76 rows.</p><p class="normal">17. <b><a href="datasets/Sponge">Sponge</a></b>: Data on sponges; Attributes in spanish</p><p class="normal">18. <b><a href="datasets/Gesture+Phase+Segmentation">Gesture Phase Segmentation</a></b>: The dataset is composed by features extracted from 7 videos with people gesticulating, aiming at studying Gesture Phase Segmentation. It contains 50 attributes divided into two files for each video.</p><p class="normal">19. <b><a href="datasets/wiki4HE">wiki4HE</a></b>: Survey of faculty members from two Spanish universities on teaching uses of Wikipedia</p><p class="normal">20. <b><a href="datasets/Sales_Transactions_Dataset_Weekly">Sales_Transactions_Dataset_Weekly</a></b>: Contains weekly purchased quantities of 800 over products over 52 weeks. Normalised values are provided too.</p><p class="normal">21. <b><a href="datasets/Diabetes+130-US+hospitals+for+years+1999-2008">Diabetes 130-US hospitals for years 1999-2008</a></b>: This data has been prepared to analyze factors related to readmission as well as other 
+
+outcomes pertaining to patients with diabetes.</p><p class="normal">22. <b><a href="datasets/US+Census+Data+%281990%29">US Census Data (1990)</a></b>: The USCensus1990raw data set contains a one percent sample of the Public Use Microdata Samples (PUMS) person records drawn from the full 1990 census sample.</p><p class="normal">23. <b><a href="datasets/Plants">Plants</a></b>: Data has been extracted from the USDA plants database. It contains all plants (species and genera) in the database and the states of USA and Canada where they occur.</p><p class="normal">24. <b><a href="datasets/Mice+Protein+Expression">Mice Protein Expression</a></b>: Expression levels of 77 proteins measured in the cerebral cortex of 8 classes of control and Down syndrome mice exposed to context fear conditioning, a task used to assess associative learning.</p><p class="normal">25. <b><a href="datasets/Libras+Movement">Libras Movement</a></b>: The data set contains 15 classes of 24 instances each. Each class references to a hand movement type in LIBRAS (Portuguese
+name 'Lï¿½ngua BRAsileira de Sinais', oficial brazilian signal language).</p><p class="normal">26. <b><a href="datasets/Grammatical+Facial+Expressions">Grammatical Facial Expressions</a></b>: This dataset supports the development of models that make possible to interpret Grammatical Facial Expressions from Brazilian Sign Language (Libras).</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

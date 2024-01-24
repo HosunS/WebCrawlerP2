@@ -1,0 +1,22 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC327¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:39:35 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"204-3158ecb91c7c0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 13:48:24 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 20 Apr 1997
+//
+// Negate distance function to turn minimization into maximization problem
+
+#ifndef NEGATION_H
+#define NEGATION_H
+
+#include "PointSet.h"
+
+class Negation : public PointSet {
+	PointSet & base;
+	
+ public:
+ 	Negation(unsigned long n, PointSet & b) : PointSet(n), base(b) { ; }
+ 	~Negation() { delete &base; }
+ 	double operator() (point a, point b) { return -base(a,b); }
+ 	void interact(point a, point b) { base.interact(a,b); }
+};
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

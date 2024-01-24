@@ -1,0 +1,25 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC549¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 10 Oct 2017 04:57:19 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"225-55b2a2447e9c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 18:16:56 GMTKraw_content¢DtypeEvalueY%# sum_numbers1.py
+#
+# ICS 32A Fall 2017
+# Code Example
+#
+# This function sums the numbers in a flat list of integers.  By "flat list",
+# I mean that the list no sublists (i.e., every element is an integer).
+
+def sum_numbers(numlist: [int]) -> int:
+    '''Adds up the integers in a list of integers'''
+
+    total = 0
+
+    for num in numlist:
+        total += num
+
+    return total
+
+
+
+assert(sum_numbers([1, 2, 3, 4, 5]) == 15)
+assert(sum_numbers([5, 8, 9, 3]) == 25)
+assert(sum_numbers([4]) == 4)
+assert(sum_numbers([]) == 0)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

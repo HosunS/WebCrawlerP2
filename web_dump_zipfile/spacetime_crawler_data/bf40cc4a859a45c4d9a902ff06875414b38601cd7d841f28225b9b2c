@@ -1,0 +1,15 @@
+¦Ifinal_url¢DtypeEvaluex=https://www.ics.uci.edu/~wjohnson/BIDA/Ch10/DogMixedModel.txtLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC382¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Sep 2010 01:18:07 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"17e-48fa12b5f11c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:39:18 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY~model{
+  for(i in 1:30){
+    Conc[i] ~ dnorm(mu[i], tau)
+    mu[i] <- beta[Treatment[i]] + b[Dog[i]]
+  }
+  for(i in 1:10){ b[i] ~ dnorm(0,taub) }
+  for(i in 1:3){ beta[i] ~ dnorm(0,0.01) } 
+  taub <- 1/(sigmab*sigmab)
+  tau ~ dgamma(0.01,0.01)
+  sigmab ~ dunif(0,100)
+  sigma <- 1/sqrt(tau)
+  diff12 <- beta[2] - beta[1]
+  diff13 <- beta[3] - beta[1]
+  diff23 <- beta[3] - beta[2]
+}Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

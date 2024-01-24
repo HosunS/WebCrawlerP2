@@ -1,0 +1,17 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC526¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 03 Oct 2018 21:45:07 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"20e-57759f3acbca5"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 01:02:18 GMTKraw_content¢DtypeEvalueYinstall.packages("tidyverse")
+library(tidyverse)
+datainput <- read_csv("H://HAL//Courses/Stat210/chicinsur.csv")
+chicago <- data.frame(datainput)
+
+apply(chicago,2,describe)
+round(cor(chicago), 3)
+plot(chicago$pctmin,chicago$newpol)
+plot(chicago$fires,chicago$newpol)
+plot(chicago$thefts,chicago$newpol)
+plot(chicago$pctold, chicago$newpol)
+plot(chicago$income, chicago$newpol)
+
+ggplot(data=chicago) +
+  geom_point(mapping=aes(x=pctmin, y=newpol, color=income)) +
+  geom_smooth(mapping=aes(x=pctmin, y=newpol))
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

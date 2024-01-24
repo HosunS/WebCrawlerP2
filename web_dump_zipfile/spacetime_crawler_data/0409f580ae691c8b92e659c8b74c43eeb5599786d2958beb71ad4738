@@ -1,0 +1,210 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 08:22:46 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYT∫<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Classification</a> <font color=red>(349)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Regression</a> <font color=red>(96)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Clustering</a> <font color=red>(84)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Other</a></font> <font color=red>(55)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=other&att=cat&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Categorical</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=other&att=num&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Numerical</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=other&att=mix&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Mixed</a> <font color=red>(12)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=mvar&sort=dateUp&view=list'>Multivariate</a> <font color=red>(23)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Univariate</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=seq&sort=dateUp&view=list'>Sequential</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=ts&sort=dateUp&view=list'>Time-Series</a> <font color=red>(10)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=text&sort=dateUp&view=list'>Text</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=dt&sort=dateUp&view=list'>Domain-Theory</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=other&sort=dateUp&view=list'>Other</a> <font color=red>(13)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=other&att=&area=life&numAtt=&numIns=&type=&sort=dateUp&view=list'>Life Sciences</a> <font color=red>(10)</font><br><a href='datasets.html?format=&task=other&att=&area=phys&numAtt=&numIns=&type=&sort=dateUp&view=list'>Physical Sciences</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=other&att=&area=comp&numAtt=&numIns=&type=&sort=dateUp&view=list'>CS / Engineering</a> <font color=red>(16)</font><br><a href='datasets.html?format=&task=other&att=&area=soc&numAtt=&numIns=&type=&sort=dateUp&view=list'>Social Sciences</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=other&att=&area=bus&numAtt=&numIns=&type=&sort=dateUp&view=list'>Business</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=other&att=&area=game&numAtt=&numIns=&type=&sort=dateUp&view=list'>Game</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=other&att=&area=other&numAtt=&numIns=&type=&sort=dateUp&view=list'>Other</a> <font color=red>(15)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=other&att=&area=&numAtt=less10&numIns=&type=&sort=dateUp&view=list'>Less than 10</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=10to100&numIns=&type=&sort=dateUp&view=list'>10 to 100</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=greater100&numIns=&type=&sort=dateUp&view=list'>Greater than 100</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=less100&type=&sort=dateUp&view=list'>Less than 100</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=100to1000&type=&sort=dateUp&view=list'>100 to 1000</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=greater1000&type=&sort=dateUp&view=list'>Greater than 1000</a> <font color=red>(19)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=other&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Matrix</a> <font color=red>(18)</font><br><a href='datasets.html?format=nonmat&task=other&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Non-Matrix</a> <font color=red>(37)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>55</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Chess+%28Domain+Theories%29">Chess (Domain Theories)</a></b>: 6 different domain theories for generating legal moves of chess</p><p class="normal">2. <b><a href="datasets/Bach+Chorales">Bach Chorales</a></b>: Time-series data based on chorales; challenge is to learn generative grammar; data in Lisp</p><p class="normal">3. <b><a href="datasets/Diabetes">Diabetes</a></b>: This diabetes dataset is from AIM '94</p><p class="normal">4. <b><a href="datasets/DGP2+-+The+Second+Data+Generation+Program">DGP2 - The Second Data Generation Program</a></b>: Generates application domains based on specific parameters, number of features, and proportion of positive to negative examples</p><p class="normal">5. <b><a href="datasets/EBL+Domain+Theories">EBL Domain Theories</a></b>: Assorted small-scale domain theories</p><p class="normal">6. <b><a href="datasets/ICU">ICU</a></b>: Data set prepared for the use of participants for the 1994 AAAI Spring Symposium on Artificial Intelligence in Medicine.</p><p class="normal">7. <b><a href="datasets/Logic+Theorist">Logic Theorist</a></b>: All code for Logic Theorist</p><p class="normal">8. <b><a href="datasets/Prodigy">Prodigy</a></b>: Assorted domains like blocksworld, eightpuzzle, and schedworld.</p><p class="normal">9. <b><a href="datasets/Qualitative+Structure+Activity+Relationships">Qualitative Structure Activity Relationships</a></b>: Two sets of datasets are given: pyrimidines and triazines</p><p class="normal">10. <b><a href="datasets/Undocumented">Undocumented</a></b>: Various datasets without documentation (feel free to explore!)</p><p class="normal">11. <b><a href="datasets/MSNBC.com+Anonymous+Web+Data">MSNBC.com Anonymous Web Data</a></b>: This data describes the page visits of users who visited msnbc.com on September 28, 1999. Visits are recorded at the level of URL category (see description) and are recorded in time order.</p><p class="normal">12. <b><a href="datasets/UNIX+User+Data">UNIX User Data</a></b>: This file contains 9 sets of sanitized user data drawn from the command histories of 8 UNIX computer users at Purdue over the course of up to 2 years.</p><p class="normal">13. <b><a href="datasets/Connectionist+Bench+%28Nettalk+Corpus%29">Connectionist Bench (Nettalk Corpus)</a></b>: The file "nettalk.data" contains a list of 20,008 English words, along with a phonetic transcription for each word. The task is to train a network to produce the proper phonemes</p><p class="normal">14. <b><a href="datasets/Economic+Sanctions">Economic Sanctions</a></b>: Domain Theory on Economic Sanctions; Undocumented</p><p class="normal">15. <b><a href="datasets/Protein+Data">Protein Data</a></b>: Undocumented</p><p class="normal">16. <b><a href="datasets/Labor+Relations">Labor Relations</a></b>: From Collective Bargaining Review</p><p class="normal">17. <b><a href="datasets/Cloud">Cloud</a></b>: Little Documentation</p><p class="normal">18. <b><a href="datasets/Liver+Disorders">Liver Disorders</a></b>: BUPA Medical Research Ltd. database donated by Richard S. Forsyth</p><p class="normal">19. <b><a href="datasets/Kinship">Kinship</a></b>: Relational dataset</p><p class="normal">20. <b><a href="datasets/Function+Finding">Function Finding</a></b>: Cases collected mostly from investigations in physical science; intention is to evaluate function-finding algorithms</p><p class="normal">21. <b><a href="datasets/Othello+Domain+Theory">Othello Domain Theory</a></b>: Used in research to generate features for an inductive learning system</p><p class="normal">22. <b><a href="datasets/Statlog+Project">Statlog Project</a></b>: Various Databases: Vehicle silhouttes, Landsat Sattelite, Shuttle, Australian Credit Approval, Heart Disease, Image Segmentation, German Credit</p><p class="normal">23. <b><a href="datasets/Student+Loan+Relational">Student Loan Relational</a></b>: Student Loan Relational Domain</p><p class="normal">24. <b><a href="datasets/Moral+Reasoner">Moral Reasoner</a></b>: Horn-clause model that qualitatively simulates moral reasoning; Theory includes negated literals</p><p class="normal">25. <b><a href="datasets/Document+Understanding">Document Understanding</a></b>: Five concepts, expressed as predicates, to be learned</p><p class="normal">26. <b><a href="datasets/Mobile+Robots">Mobile Robots</a></b>: Learning concepts from sensor data of a mobile robot; set of data sets</p><p class="normal">27. <b><a href="datasets/Anonymous+Microsoft+Web+Data">Anonymous Microsoft Web Data</a></b>: Log of anonymous users of www.microsoft.com; predict areas of the web site a user visited based on data on other areas the user visited.</p><p class="normal">28. <b><a href="datasets/Pioneer-1+Mobile+Robot+Data">Pioneer-1 Mobile Robot Data</a></b>: This dataset contains time series sensor readings of the Pioneer-1 mobile robot. The data is broken into "experiences" in which the robot takes action for some period of time and experiences a control</p><p class="normal">29. <b><a href="datasets/Pseudo+Periodic+Synthetic+Time+Series">Pseudo Periodic Synthetic Time Series</a></b>: This data set is designed for testing indexing schemes in time series databases. The data appears highly periodic, but never exactly repeats itself.</p><p class="normal">30. <b><a href="datasets/El+Nino">El Nino</a></b>: The data set contains oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific.</p><p class="normal">31. <b><a href="datasets/Internet+Usage+Data">Internet Usage Data</a></b>: This data contains general demographic information on internet users in 1997.</p><p class="normal">32. <b><a href="datasets/Corel+Image+Features">Corel Image Features</a></b>: This dataset contains image features extracted from a Corel image collection. Four sets of features are available based on the color histogram, color histogram layout, color moments, and co-occurence</p><p class="normal">33. <b><a href="datasets/Movie">Movie</a></b>: This data set contains a list of over 10000 films including many older, odd, and cult films. There is information on actors, casts, directors, producers, studios, etc.</p><p class="normal">34. <b><a href="datasets/Twenty+Newsgroups">Twenty Newsgroups</a></b>: This data set consists of 20000 messages taken from 20 newsgroups.</p><p class="normal">35. <b><a href="datasets/Coil+1999+Competition+Data">Coil 1999 Competition Data</a></b>: This data set is from the 1999 Computational Intelligence and Learning (COIL) competition. The data contains measurements of river chemical concentrations and algae densities.</p><p class="normal">36. <b><a href="datasets/EEG+Database">EEG Database</a></b>: This data arises from a large study to examine EEG correlates of genetic predisposition to alcoholism. It contains measurements from 64 electrodes placed on the scalp sampled at 256 Hz</p><p class="normal">37. <b><a href="datasets/IPUMS+Census+Database">IPUMS Census Database</a></b>: This data set contains unweighted PUMS census data from the Los Angeles and Long Beach areas for the years 1970, 1980, and 1990.</p><p class="normal">38. <b><a href="datasets/Entree+Chicago+Recommendation+Data">Entree Chicago Recommendation Data</a></b>: This data contains a record of user interactions with the Entree Chicago restaurant recommendation system.</p><p class="normal">39. <b><a href="datasets/E.+Coli+Genes">E. Coli Genes</a></b>: Data giving characteristics of each ORF (potential gene) in the E. coli genome. Sequence, homology (similarity to other genes) and structural information, and function (if known) are provided.</p><p class="normal">40. <b><a href="datasets/M.+Tuberculosis+Genes">M. Tuberculosis Genes</a></b>:  Data giving characteristics of each ORF (potential gene) in the M. tuberculosis bacterium. Sequence, homology (similarity to other genes) and structural information, and function (if known) are provided</p><p class="normal">41. <b><a href="datasets/NSF+Research+Award+Abstracts+1990-2003">NSF Research Award Abstracts 1990-2003</a></b>: This data set consists of (a) 129,000 abstracts describing NSF awards for basic research, (b) bag-of-word data files extracted from the abstracts, (c) a list of words used for indexing the bag-of-word</p><p class="normal">42. <b><a href="datasets/CalIt2+Building+People+Counts">CalIt2 Building People Counts</a></b>: This data comes from the main door of the CalIt2 building at UCI.</p><p class="normal">43. <b><a href="datasets/Dodgers+Loop+Sensor">Dodgers Loop Sensor</a></b>: Loop sensor data was collected for the Glendale on ramp for the 101 North freeway in Los Angeles</p><p class="normal">44. <b><a href="datasets/Abscisic+Acid+Signaling+Network">Abscisic Acid Signaling Network</a></b>: The objective is to determine the set of boolean rules that describe the interactions of the nodes within this plant signaling network.  The dataset includes 300 separate boolean pseudodynamic simulations using an asynchronous update scheme. </p><p class="normal">45. <b><a href="datasets/Opinosis+Opinion+%26frasl%3B+Review">Opinosis Opinion &frasl; Review</a></b>: This dataset contains sentences extracted from user reviews on a given topic. Example topics are ‚Äúperformance of Toyota Camry‚Äù and ‚Äúsound quality of ipod nano‚Äù. </p><p class="normal">46. <b><a href="datasets/OpinRank+Review+Dataset">OpinRank Review Dataset</a></b>: This data set contains user reviews of cars and and hotels collected from Tripadvisor (~259,000 
+reviews) and Edmunds (~42,230 reviews).   </p><p class="normal">47. <b><a href="datasets/Restaurant+%26+consumer+data">Restaurant & consumer data</a></b>: The dataset was obtained from a recommender system prototype. The task was to generate a top-n list of restaurants according to the consumer preferences. </p><p class="normal">48. <b><a href="datasets/QtyT40I10D100K">QtyT40I10D100K</a></b>: Since there is no numerical sequential data stream available in standard data sets, this data set is generated from the original T40I10D100K data set</p><p class="normal">49. <b><a href="datasets/Predict+keywords+activities+in+a+online+social+media">Predict keywords activities in a online social media</a></b>: The data from Twitter was collected during 360 consecutive days. It was done by querying 1497 English keywords sampled from Wikipedia. This dataset is proposed in a Learning to rank setting.</p><p class="normal">50. <b><a href="datasets/EMG+dataset+in+Lower+Limb">EMG dataset in Lower Limb</a></b>: 3 different exercises: sitting, standing and walking in the muscles: biceps femoris, vastus medialis, rectus femoris and semitendinosus addition to goniometry in the exercises.</p><p class="normal">51. <b><a href="datasets/SIFT10M">SIFT10M</a></b>: In SIFT10M, each data point is a SIFT feature which is extracted from Caltech-256 by the open source VLFeat library. The corresponding patches of the SIFT features are provided.</p><p class="normal">52. <b><a href="datasets/UbiqLog+%28smartphone+lifelogging%29">UbiqLog (smartphone lifelogging)</a></b>: UbiqLog is the smartphone lifelogging tool that runs on the smartphone of 35 users for about 2 months. 
+</p><p class="normal">53. <b><a href="datasets/KASANDR">KASANDR</a></b>: KASANDR is a novel, publicly available collection for recommendation systems that records the behavior of customers of the European leader in e-Commerce advertising, Kelkoo. </p><p class="normal">54. <b><a href="datasets/Eco-hotel">Eco-hotel</a></b>: This dataset includes Online Textual Reviews from both online (e.g., TripAdvisor) and offline (e.g., Guests' book) sources from the Areias do Seixo Eco-Resort.</p><p class="normal">55. <b><a href="datasets/PANDOR">PANDOR</a></b>: PANDOR is a novel and publicly available dataset for online recommendation provided by Purch (http://www.purch.com/). </p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

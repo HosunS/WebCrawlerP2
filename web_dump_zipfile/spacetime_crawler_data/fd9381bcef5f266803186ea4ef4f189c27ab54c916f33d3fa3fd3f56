@@ -1,0 +1,47 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1211¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:06:27 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"951-54c85e1db97ab-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 03:06:25 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY	Q<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>CompSci 263, Winter 2017, Homework 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1>CompSci 263, Winter 2017, Homework 4</h1>
+<p>The 3SAT$_{\le k}$ problem takes as input a pair $(F,k)$ where $F$ is a 3-CNF formula and $k$ is an integer parameter, and seeks a truth assignment to the variables of $F$ that satisfies $F$ and has at most $k$ true variables.
+It is NP-complete (because when $k$ is big it is just 3SAT). We saw in class that, assuming the exponential time hypothesis, it cannot be solved in time
+$n^{o(k)}$ where $n$ is the number of variables in $F$. Therefore, it is
+probably not fixed-parameter tractable with its natural parameter. In these
+problems we consider the problem 2SAT$_{\le k}$, defined in the same way
+from 2-CNF formulas.</p>
+<ol>
+<li><p>Prove that 2SAT$_{\le k}$ is NP-complete. (Hint: reduce from
+vertex cover.)</p></li>
+<li><p>Prove that, for formulas $F$ in which all clauses have at least
+one negated variable, the instance $(F,k)$ of 2SAT$_{\le k}$ can be
+solved in polynomial time.</p></li>
+<li><p>Describe a backtracking algorithm that solves 2SAT$_{\le k}$ in
+fixed-parameter time. (Hint: Use problem (2) to show that, if the
+problem cannot be solved directly, it contains a substructure that
+forces some variables to be positive, and recurse on the different ways
+to satisfy that substructure.) What is the time for your
+algorithm?</p></li>
+<li><p>Describe a kernelization algorithm that solves 2SAT$_{\le k}$ in
+fixed-parameter time. The kernelization part of your algorithm
+should run in polynomial time and should transform the problem into
+an equivalent problem (the kernel) whose size is bounded by a
+function of $k$. (Hint: try to adapt one of the known kernels for
+vertex cover.) What is the size of your kernel?</p></li>
+<li><p>If you apply your kernelization and then run your backtracking
+algorithm on the resulting kernel, what is the running time of the
+resulting hybrid algorithm?</p></li>
+</ol>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

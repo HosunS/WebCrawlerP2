@@ -1,0 +1,32 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÜ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC397¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 25 Jan 2012 19:07:58 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"18d-4b75efb505f80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 13:41:44 GMTKraw_content¢DtypeEvalueYçimport java.util.ArrayList;
+
+
+public class SongCollection
+{
+	private ArrayList<Song> songs;
+
+	
+	public SongCollection()
+	{
+		songs = new ArrayList<Song>();
+	}
+	
+	
+	public int size()
+	{
+		return songs.count();
+	}
+
+
+	public void add(Song songToAdd)
+	{
+		songs.add(songToAdd);
+	}
+
+
+	public boolean contains(Song songToFind)
+	{
+		return songs.contains(songToFind);
+	}
+}
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

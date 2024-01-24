@@ -1,0 +1,585 @@
+¶Ifinal_url¢DtypeEvaluex(https://news.uci.edu/tag/howard-gillman/Lhttp_headers¢DtypeEvalueê¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7975¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueLX-Powered-ByAv¢DtypeEvalueJPHP/7.0.33¢Ak¢DtypeEvalueXStrict-Transport-SecurityAv¢DtypeEvaluePmax-age=63072000¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueItimeout=2¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDLinkAv¢DtypeEvalueX9<https://news.uci.edu/wp-json/>; rel="https://api.w.org/"¢Ak¢DtypeEvalueOX-UA-CompatibleAv¢DtypeEvalueGIE=edge¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX#no-store, no-cache, must-revalidate¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 00:06:55 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzipKraw_content¢DtypeEvalueYäﬂ<!DOCTYPE html>
+<html lang="en-US" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://ogp.me/ns/fb#">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+
+    <link rel="icon" type="image/x-icon" href="//web.communications.uci.edu/assets/2015/img/favicon.ico">
+    <link rel="apple-touch-icon" href="//web.communications.uci.edu/assets/2015/img/webclip-icon.png">
+
+    <title>UCI News | UCI</title>
+
+    <title>Howard Gillman &#8211; UCI News</title>
+<link rel='dns-prefetch' href='//code.jquery.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="UCI News &raquo; Howard Gillman Tag Feed" href="https://news.uci.edu/tag/howard-gillman/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"wpemoji":"https:\/\/news.uci.edu\/wp-includes\/js\/wp-emoji.js?ver=4.9.8","twemoji":"https:\/\/news.uci.edu\/wp-includes\/js\/twemoji.js?ver=4.9.8"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/*
+	 * Create a canvas element for testing native browser support
+	 * of emoji.
+	 */
+	var canvas = document.createElement( 'canvas' );
+	var context = canvas.getContext && canvas.getContext( '2d' );
+
+	/**
+	 * Check if two sets of Emoji characters render the same.
+	 *
+	 * @param set1 array Set of Emoji characters.
+	 * @param set2 array Set of Emoji characters.
+	 * @returns {boolean} True if the two sets render the same.
+	 */
+	function emojiSetsRenderIdentically( set1, set2 ) {
+		var stringFromCharCode = String.fromCharCode;
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set1 ), 0, 0 );
+		var rendered1 = canvas.toDataURL();
+
+		// Cleanup from previous test.
+		context.clearRect( 0, 0, canvas.width, canvas.height );
+		context.fillText( stringFromCharCode.apply( this, set2 ), 0, 0 );
+		var rendered2 = canvas.toDataURL();
+
+		return rendered1 === rendered2;
+	}
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "flag" or "emoji".
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var isIdentical;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * Test for UN flag compatibility. This is the least supported of the letter locale flags,
+				 * so gives us an easy test for full support.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly ([U] + [N]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 55356, 56826, 55356, 56819 ],
+					[ 55356, 56826, 8203, 55356, 56819 ]
+				);
+
+				if ( isIdentical ) {
+					return false;
+				}
+
+				/*
+				 * Test for English flag compatibility. England is a country in the United Kingdom, it
+				 * does not have a two letter locale code but rather an five letter sub-division code.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (black flag emoji + [G] + [B] + [E] + [N] + [G]).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[ 55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447 ],
+					[ 55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447 ]
+				);
+
+				return ! isIdentical;
+			case 'emoji':
+				/*
+				 * She's the hero Emoji deserves, but not the one it needs right now.
+				 *
+				 * To test for support, try to render a new emoji (female superhero),
+				 * then compare it to how it would look if the browser doesn't render it correctly
+				 * (superhero + female sign).
+				 */
+				isIdentical = emojiSetsRenderIdentically(
+					[55358, 56760, 9792, 65039],
+					[55358, 56760, 8203, 9792, 65039]
+				);
+				return ! isIdentical;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.defer = script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'flag', 'emoji' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='uci-wp-video-embeder-styles-css'  href='https://news.uci.edu/wp-content/plugins/uci-wp-video-embedder/video-embed.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='cj-authorship-front-css'  href='https://news.uci.edu/wp-content/plugins/cj-authorship/css/style.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='cj-rl-front-css'  href='https://news.uci.edu/wp-content/plugins/cj-related-links/css/front.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='sharify-font-css'  href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400' type='text/css' media='all' />
+<link rel='stylesheet' id='uciseventeen-child-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/theme-styles/uciseventeen.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap3-uci-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/theme-styles/Bootstrap3-UCI-theme/css/bootstrap3-uci.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap3-accessibility-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/theme-styles/Bootstrap3-UCI-theme/css/bootstrap3-uci-accessibility/bootstrap3-uci-accessibility.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='main-style-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen-child/style.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='uciseventeen-css'  href='https://news.uci.edu/wp-content/themes/uciseventeen/style.css?ver=0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='uci-slideshow-frontend-css'  href='https://news.uci.edu/wp-content/plugins/uci-wp-slideshow/uci-slideshow/uci-slideshow.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='uci-slideshow-no-bootstrap-css'  href='https://news.uci.edu/wp-content/plugins/uci-wp-slideshow/uci-slideshow/uci-slideshow-no-bootstrap.css?ver=4.9.8' type='text/css' media='all' />
+<script type='text/javascript' src='https://news.uci.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/plugins/uci-wp-video-embedder/video-embed.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/js/jquery-match-height/dist/jquery.matchHeight-min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/js/jquery.imgpreload/dist/jquery.imgpreload.min.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen-child/assets/js/uciseventeen/height-matching.js?ver=4.9.8'></script>
+<link rel='https://api.w.org/' href='https://news.uci.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://news.uci.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://news.uci.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.8" />
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NP3KPCC');
+
+// Auto-wrap non-bootstrap code in a container
+jQuery(function($) {
+	if (!$('.page main .container').length && !$('.page main .container-fluid').length) {
+		$('main').addClass('container');
+	}
+});</script>
+	    <meta name="description" content="Releases, features, advisories, briefs and coverage regarding UC Irvine">
+
+<!-- START - Facebook Open Graph, Google+ and Twitter Card Tags 1.6.3 -->
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="UCI News"/>
+<meta property="og:title" content="Howard Gillman"/>
+<meta itemprop="name" content="Howard Gillman"/>
+<meta property="og:url" content="https://news.uci.edu/tag/howard-gillman/"/>
+<meta property="og:type" content="article"/>
+<meta property="og:description" content="Releases, features, advisories, briefs and coverage regarding UC Irvine"/>
+<meta itemprop="description" content="Releases, features, advisories, briefs and coverage regarding UC Irvine"/>
+<meta property="og:image" content="https://news.uci.edu/wp-content/uploads/2018/10/newfaculty_180925_0007_lr_sz-720x480.jpg"/>
+<meta itemprop="image" content="https://news.uci.edu/wp-content/uploads/2018/10/newfaculty_180925_0007_lr_sz-720x480.jpg"/>
+<!-- END - Facebook Open Graph, Google+ and Twitter Card Tags -->
+
+</head>
+<body class="category">
+
+<!-- skip to main nav -->
+<nav aria-label="Skip to" id="skip-to">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a class="sr-only sr-only-focusable" href="#content-main">Skip to main content</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- primary nav -->
+<nav aria-label="Primary navigation" class="navbar navbar-inverse" id="nav-primary">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button aria-expanded="false" class="navbar-toggle collapsed" data-target="#nav-primary-items"
+                    data-toggle="collapse" type="button">
+                <span class="sr-only">Toggle primary navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://uci.edu/">UCI <span class="sr-only">homepage</span></a>
+        </div>
+        <div id="nav-primary-items" class="collapse navbar-collapse"><ul id="menu-main-menu" class="nav navbar-nav"><li  id="menu-item-69" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-69 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/art-and-humanities/">Arts & Humanities</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Arts & Humanities</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/arts/">Arts</a></li>
+<li><a href="https://news.uci.edu/category/humanities/">Humanities</a></li>
+</ul>
+</li>
+<li  id="menu-item-70" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70 nav-item btn-group clearfix link-only"><a class="btn" href="https://news.uci.edu/category/athletics/">Athletics</a></li>
+<li  id="menu-item-71" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-71 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/campus-life/">Campus Life</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Campus Life</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/campus-life/administration/">Administration</a></li>
+<li><a href="https://news.uci.edu/category/campus-life/students/">Students</a></li>
+</ul>
+</li>
+<li  id="menu-item-72" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-72 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/health/">Health</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Health</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/health/hospital/">Hospital</a></li>
+<li><a href="https://news.uci.edu/category/health/public-health/">Public Health</a></li>
+<li><a href="https://news.uci.edu/category/health/nursing/">Nursing</a></li>
+<li><a href="https://news.uci.edu/category/health/school-of-medicine/">School of Medicine</a></li>
+<li><a href="https://news.uci.edu/category/health/pharmaceutical-sciences/">Pharmaceutical Science</a></li>
+</ul>
+</li>
+<li  id="menu-item-73" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-73 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/science-and-tech/">Science & Tech</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Science & Tech</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/science-and-tech/environment-and-energy/">Environment/Energy</a></li>
+</ul>
+</li>
+<li  id="menu-item-74" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-74 nav-item btn-group clearfix link-dropdown"><a class="btn" href="https://news.uci.edu/category/society-and-community/">Society & Community</a><button aria-expanded="false" class="btn navbar-btn dropdown-toggle" data-toggle="dropdown" type="button"><span class="sr-only">Toggle dropdown: Society & Community</span><span class="toggle-container"><span aria-hidden="true" class="glyphicon toggle-icon"></span></span></button> 
+<ul class="dropdown-menu" >
+<li><a href="https://news.uci.edu/category/society-and-community/education/">Education</a></li>
+</ul>
+</li>
+</ul></div>    </div>
+</nav>
+
+<header>
+        <div id="masthead">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-8" id="wordmark">
+                <a href="https://news.uci.edu"><img width="302" height="75" src="https://news.uci.edu/wp-content/uploads/2018/04/news-wordmark.png" class="attachment-full size-full" alt="UCI News" /></a>            </div>
+            <div class="col-sm-12 col-md-4" id="search">
+                <form action="https://search.uci.edu/" class="form-inline" method="get">
+    <input name="collection" type="hidden" value="uci_news">
+    <label class="sr-only" for="search-text">Search</label>
+    <input class="form-control" id="search-text" name="q" placeholder="Search..." type="text">
+    <div class="btn-group">
+        <button class="btn btn-default" name="type" type="submit" value="Web">Web</button>
+        <button class="btn btn-default" name="type" type="submit" value="People">People</button>
+    </div>
+</form>
+            </div>
+        </div>
+    </div>
+</div>
+    </header>
+
+<hr>
+
+<!--<nav aria-label="breadcrumbs" id="breadcrumbs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                            </div>
+        </div>
+    </div>
+</nav> -->
+
+<main id="content-main">    <div class="container category">
+        <div class="row">
+            <div class="col-md-8">
+				                    <div>
+						<h1>Howard Gillman</h1>													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2018/10/08/new-faculty-faces-3/">
+			<img src="https://news.uci.edu/wp-content/uploads/2018/10/newfaculty_180925_0007_lr_sz-768x512.jpg" alt="New faculty faces" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2018/10/08/new-faculty-faces-3/"><h2>New faculty faces</h2></a>
+		</div>
+        <div class="post-meta post-excerpt">Hiring of 78 educators goes a long way toward strategic plan goal of adding 250 by 2021</div>
+        <div class="post-meta post-date">October 8, 2018</div>
+	</div>
+</div>
+													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2018/04/30/uc-leaders-assure-anaheim-high-school-students-that-a-uc-education-is-within-reach/">
+			<img src="https://news.uci.edu/wp-content/uploads/2018/04/anaheimHS_180427_1075_sz-768x511.jpg" alt="Gillman, Napolitano assure Anaheim High students that a UC education is within reach" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2018/04/30/uc-leaders-assure-anaheim-high-school-students-that-a-uc-education-is-within-reach/"><h2>Gillman, Napolitano assure Anaheim High students that a UC education is within reach</h2></a>
+		</div>
+        <div class="post-meta post-excerpt"></div>
+        <div class="post-meta post-date">April 30, 2018</div>
+	</div>
+</div>
+													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2017/11/21/chancellor-gillman-named-to-hispanic-association-of-colleges-universities-board/">
+			<img src="https://news.uci.edu/wp-content/uploads/2017/09/chancellor-gillman-1-copy-768x507.jpg" alt="Chancellor Gillman named to governing board of Hispanic Association of Colleges &amp; Universities" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2017/11/21/chancellor-gillman-named-to-hispanic-association-of-colleges-universities-board/"><h2>Chancellor Gillman named to governing board of Hispanic Association of Colleges &amp; Universities</h2></a>
+		</div>
+        <div class="post-meta post-excerpt"></div>
+        <div class="post-meta post-date">November 21, 2017</div>
+	</div>
+</div>
+													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2017/01/23/uci-receives-record-setting-100000-applications-for-fall-2017/">
+			<img src="https://news.uci.edu/wp-content/uploads/2016/12/involvementfair_160919_07-768x512.jpg" alt="104,000 students can&#8217;t be wrong!" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2017/01/23/uci-receives-record-setting-100000-applications-for-fall-2017/"><h2>104,000 students can&#8217;t be wrong!</h2></a>
+		</div>
+        <div class="post-meta post-excerpt">UCI receives record number of applications for fall 2017</div>
+        <div class="post-meta post-date">January 23, 2017</div>
+	</div>
+</div>
+													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2017/01/03/ronald-cortez-to-join-uci-as-vice-chancellor-for-administrative-business-services/">
+			<img src="https://news.uci.edu/wp-content/uploads/2017/01/cortez5R-8x10-high-res-768x960.jpg" alt="Ronald Cortez to join UCI as vice chancellor for administrative &amp; business services" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2017/01/03/ronald-cortez-to-join-uci-as-vice-chancellor-for-administrative-business-services/"><h2>Ronald Cortez to join UCI as vice chancellor for administrative &amp; business services</h2></a>
+		</div>
+        <div class="post-meta post-excerpt">Experienced leader will oversee campus‚Äôs daily business operations</div>
+        <div class="post-meta post-date">January 3, 2017</div>
+	</div>
+</div>
+													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2016/12/12/uci-launches-center-for-critical-korean-studies/">
+			<img src="https://news.uci.edu/wp-content/uploads/2016/12/Koreacenter_161202_01_sz-768x512.jpg" alt="UCI launches Center for Critical Korean Studies" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2016/12/12/uci-launches-center-for-critical-korean-studies/"><h2>UCI launches Center for Critical Korean Studies</h2></a>
+		</div>
+        <div class="post-meta post-excerpt">Unit will foster interdisciplinary research, international collaboration</div>
+        <div class="post-meta post-date">December 12, 2016</div>
+	</div>
+</div>
+													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2016/12/08/student-population-growth-at-uci-spurs-construction-of-high-tech-classroom-facility/">
+			<img src="https://news.uci.edu/wp-content/uploads/2016/12/classroomoffcbldg-768x471.jpg" alt="Student population growth at UCI spurs construction of high-tech classroom facility" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2016/12/08/student-population-growth-at-uci-spurs-construction-of-high-tech-classroom-facility/"><h2>Student population growth at UCI spurs construction of high-tech classroom facility</h2></a>
+		</div>
+        <div class="post-meta post-excerpt">New learning space is part of fast-paced campus building boom</div>
+        <div class="post-meta post-date">December 8, 2016</div>
+	</div>
+</div>
+													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2016/09/27/new-faculty-faces/">
+			<img src="https://news.uci.edu/wp-content/uploads/2016/09/newprofs_160919_01_sz-768x512.jpg" alt="New faculty faces" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2016/09/27/new-faculty-faces/"><h2>New faculty faces</h2></a>
+		</div>
+        <div class="post-meta post-excerpt">Hiring of 100 educators goes long way toward satisfying strategic plan goal of 250</div>
+        <div class="post-meta post-date">September 27, 2016</div>
+	</div>
+</div>
+													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2016/09/13/uci-ranked-9th-among-nations-public-universities-by-u-s-news-world-report/">
+			<img src="https://news.uci.edu/wp-content/uploads/2016/09/irvine-1-768x512.jpg" alt="UCI ranked 9th among nation‚Äôs public universities by U.S. News &amp; World Report" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2016/09/13/uci-ranked-9th-among-nations-public-universities-by-u-s-news-world-report/"><h2>UCI ranked 9th among nation‚Äôs public universities by U.S. News &amp; World Report</h2></a>
+		</div>
+        <div class="post-meta post-excerpt">Campus also receives high marks for low student debt, serving veterans</div>
+        <div class="post-meta post-date">September 13, 2016</div>
+	</div>
+</div>
+													<div class="row post-item">
+	<div class="col-md-4">
+		<a href="https://news.uci.edu/2016/09/06/uci-among-sierra-magazines-top-10-cool-schools-for-seventh-consecutive-year/">
+			<img src="https://news.uci.edu/wp-content/uploads/2016/02/garden_151030_07_sz-e1456784653306-768x512.jpg" alt="UCI among Sierra magazine‚Äôs top 10 ‚ÄòCool Schools‚Äô for seventh consecutive year" class="img-responsive">		</a>
+	</div>
+	<div class="col-md-8">
+		<div class="post-meta post-title">
+			<a href="https://news.uci.edu/2016/09/06/uci-among-sierra-magazines-top-10-cool-schools-for-seventh-consecutive-year/"><h2>UCI among Sierra magazine‚Äôs top 10 ‚ÄòCool Schools‚Äô for seventh consecutive year</h2></a>
+		</div>
+        <div class="post-meta post-excerpt">Energy, transportation scores make campus highest-ranked comprehensive university</div>
+        <div class="post-meta post-date">September 6, 2016</div>
+	</div>
+</div>
+						                    </div>
+                    <div class="pagination"><div class="text-center"><nav><ul class="pagination"><li class="disabled hidden-xs"><span><span aria-hidden="true">Page 1 of 5</span></span></li><li class="active"><span>1 <span class="sr-only">(current)</span></span>
+    </li><li><a href='https://news.uci.edu/tag/howard-gillman/page/2/'>2</a></li><li><a href='https://news.uci.edu/tag/howard-gillman/page/3/'>3</a></li><li><a href='https://news.uci.edu/tag/howard-gillman/page/4/'>4</a></li><li><a href='https://news.uci.edu/tag/howard-gillman/page/5/'>5</a></li></ul></nav></div></div>
+				            </div>
+            <aside class="col-md-4 archive-sidebar">
+                
+
+<div class="widget widget_neatly-recent-posts" id="neatly-recent-posts-2"><h3 class="widget-title">Recent Posts</h3>                    <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/01/29/pacific-life-foundation-2-million-gift-supports-uci-lifevest-financial-literacy-program/"><img src="https://news.uci.edu/wp-content/uploads/2019/01/UCI-PacLife-Gift_5x7_2019-01-23-270x180.jpg" alt="$2 million from Pacific Life will support UCI&#8217;s LIFEvest financial literacy program for teens" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/01/29/pacific-life-foundation-2-million-gift-supports-uci-lifevest-financial-literacy-program/">$2 million from Pacific Life will support UCI&#8217;s LIFEvest financial literacy program for teens</a></h5>
+                
+                                <p class="rp-date rp-info">January 29, 2019</p>
+                
+	                        </div>
+          </div>
+          
+                              <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/01/29/uci-is-no-1-uc-choice-for-californias-college-bound-high-school-graduates/"><img src="https://news.uci.edu/wp-content/uploads/2019/01/convocation_180924_0190_sz-270x180.jpg" alt="UCI is No. 1 UC choice for California‚Äôs college-bound high school graduates" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/01/29/uci-is-no-1-uc-choice-for-californias-college-bound-high-school-graduates/">UCI is No. 1 UC choice for California‚Äôs college-bound high school graduates</a></h5>
+                
+                                <p class="rp-date rp-info">January 29, 2019</p>
+                
+	                        </div>
+          </div>
+          
+                              <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/01/28/professor-emerita-of-history-awarded-top-honor-in-field-of-u-s-foreign-relations/"><img src="https://news.uci.edu/wp-content/uploads/2019/01/rosenberg_100628_03a_sz-270x180.jpg" alt="Professor emerita of history is awarded top honor in field of American foreign relations" class="media-object"></a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/01/28/professor-emerita-of-history-awarded-top-honor-in-field-of-u-s-foreign-relations/">Professor emerita of history is awarded top honor in field of American foreign relations</a></h5>
+                
+                                <p class="rp-date rp-info">January 28, 2019</p>
+                
+	                        </div>
+          </div>
+          
+                              <div class="media">
+            <div class="media-left">
+                <a href="https://news.uci.edu/2019/01/28/ezra-klein-vox-co-founder-and-editor-at-large-to-deliver-peltason-lecture-at-uci/"><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><img src="https://news.uci.edu/wp-content/uploads/2018/05/uci-news-placeholder-default-270x180.jpg" class="media-object" alt=""></body></html>
+</a>
+            </div>
+            <div class="media-body">
+                                <h5 class="media-heading rp-title"><a href="https://news.uci.edu/2019/01/28/ezra-klein-vox-co-founder-and-editor-at-large-to-deliver-peltason-lecture-at-uci/">Ezra Klein, Vox co-founder and editor-at-large, to deliver Peltason Lecture at UCI</a></h5>
+                
+                                <p class="rp-date rp-info">January 28, 2019</p>
+                
+	                        </div>
+          </div>
+          
+          </div>            </aside>
+        </div>
+    </div>
+</main>
+<footer>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0">
+                                        <div class="menu-footer-column-one-container"><ul id="menu-footer-column-one"><li id="menu-item-84" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-84"><a href="https://www.facebook.com/UCIrvine">Facebook</a></li>
+<li id="menu-item-85" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-85"><a href="https://twitter.com/UCIrvine">Twitter</a></li>
+<li id="menu-item-86" class="youtube menu-item menu-item-type-custom menu-item-object-custom menu-item-86"><a href="http://www.youtube.com/ucirvinenews">YouTube</a></li>
+<li id="menu-item-87" class="flickr menu-item menu-item-type-custom menu-item-object-custom menu-item-87"><a href="http://www.flickr.com/photos/ucirvine/">Flickr</a></li>
+<li id="menu-item-88" class="storify menu-item menu-item-type-custom menu-item-object-custom menu-item-88"><a href="http://storify.com/ucirvine">Storify</a></li>
+</ul></div>                                                        </div>
+                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0">
+                                            <div class="menu-footer-column-two-container"><ul id="menu-footer-column-two"><li id="menu-item-90" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-90"><a href="http://today.uci.edu/">UCI Today</a></li>
+<li id="menu-item-91" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-91"><a href="http://search.uci.edu/">UCI Search</a></li>
+</ul></div>                                                        </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-6">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-0 col-md-6 col-md-offset-0">
+                                        <div class="menu-footer-column-three-container"><ul id="menu-footer-column-three"><li id="menu-item-92" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-92"><a href="http://forms.communications.uci.edu/uci-feedback/">Feedback</a></li>
+<li id="menu-item-93" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-93"><a href="http://uci.edu/privacy/">Privacy Notice</a></li>
+</ul></div>                                                        </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
+                    <address>
+                        <span>Strategic Communications & Public Affairs</span><br><span>120 Theory, Suite 100</span><br><span>Irvine, CA 92697-5615</span><br><span>949-824-6922</span><br>                    </address>
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <a href="//uci.edu/copyright"><small>¬© 2019 UC Regents</small></a>
+        </div>
+    </div>
+</div>
+</footer>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/plugins/sharify/admin/inc/sharifycounts.js?ver=1.4'></script>
+<script type='text/javascript' src='//code.jquery.com/jquery-2.1.4.min.js?ver=0.1'></script>
+<script type='text/javascript' src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js?ver=0.1'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/themes/uciseventeen/assets/theme-styles/Bootstrap3-UCI-theme/js/bootstrap-uci-extensions.js?ver=0.1'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-content/plugins/uci-wp-slideshow/uci-slideshow/uci-slideshow.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://news.uci.edu/wp-includes/js/wp-embed.js?ver=4.9.8'></script>
+</body>
+</html>Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

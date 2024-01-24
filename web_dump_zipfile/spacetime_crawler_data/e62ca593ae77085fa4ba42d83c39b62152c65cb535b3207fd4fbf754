@@ -1,0 +1,211 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE17129¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX4attachment; filename=cs122b-2018-spring-project3.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=be5ed8f0bd6ee53e1a76bed0; expires=Thu, 09 May 2019 22:51:22 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 22:51:22 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueYBé[[PageOutline]]
+
+= CS122B Project 3: reCaptcha, HTTPS, Stored Procedure, XML Parsing =
+'''Due: Week 7 Thursday, 05/17/2018 11:45 pm. Due on Github.'''
+
+= Tasks =
+ 1. (Optional) [#RegisterDomain Register a domain name for Fabflix]
+ 1. [#reCAPTCHA Adding reCAPTCHA to Project 2]
+ 1. [#HTTPS Adding HTTPS to Project 2]
+ 1. [#PreparedStatement Use PreparedStatement in the query]
+ 1. [#Encryption Update Encrypted password in database]
+ 1. [#Dashboard Implementing a Dashboard using Stored Procedure]
+ 1. [#XMLParsing Importing large XML data files into the Fabflix database]
+
+----
+[[Span(id=RegisterDomain)]]
+
+== Task 1 (Optional): Register a domain name for Fabflix ==
+If you are tired of using an IP address to visit your AWS instance and want to make it "real," you can register a domain name from a registrar company such as [http://godaddy.com Godaddy]. Then use the AWS instance to do the hosting.  Now we are open for real business!
+
+----
+
+== Improve the security of the Fabflix website ==
+
+A real business needs to treat security issues seriously. In the following 4 tasks, you will improve the security of your website in project 2 in various ways: 
+ - reCAPTCHA enhances security by preventing bots and only allowing real human users. 
+ - HTTPS enhances security by securing the process when the client sends sensitive information to the server.
+ - Encrypting the password improves security in the case of your database gets attacked, the hacker won't be able to get the real sensitive information, such as password.
+ - Use prepared statements can help prevent a very common kind of attack: SQL injection attack.
+
+
+[[Span(id=reCAPTCHA)]]
+
+== Task 2: Adding reCAPTHA to Project 2 ==
+Improve the user-authentication process of project 2 by adding a module that verifies real users and blocks bots.
+
+ 1. Go to [https://github.com/UCI-Chenli-teaching/project3-recaptcha-example project3-recaptcha-example],  follow the README instructions on the Github Page the code.
+ 1. Get a [https://www.google.com/recaptcha/intro/index.html reCAPTCHA] from Google. Add {{{ public IP of your AWS instance }}} and {{{ localhost }}} to the domain.  You will get a ''secret key'' and a ''site key''.
+ 1. Test the page http://localhost:8080/project3-recaptcha-example to see if reCAPTHA works.
+ 1. Apply the same logic to your project 2 by making the necessary changes on the login frontend and backend logic.
+
+Note that if you AWS instance is restarted, the public IP will change, and you need to add the new IP to Google reCAPTHA console as well.
+
+[[Span(id=HTTPS)]]
+
+== Task 3: Adding HTTPS to Project 2 ==
+HTTPS makes your website substantially more secure from hacking and other security breaches. HTTPS makes sure that the client can safely send sensitive data to your server without the risk of leaking the data in the transfer process.
+
+See this [http://tecadmin.net/configure-ssl-certificate-in-tomcat/ reference] on how to configure Tomcat to enable HTTPS connections.
+
+Step 1: On your AWS instance, use the following command to create a keystore to be used by Tomcat. Remember what password you use for the keystore. Our example uses "changeit".
+
+In the following steps, "/home/ubuntu/tomcat" is an example of your tomcat installation directory on AWS. You need to replace it with your own directory.
+
+
+{{{
+sudo keytool -genkey -alias fabflix -keyalg RSA -keystore /home/ubuntu/tomcat/keystore
+
+}}}
+Step 2: Uncomment the `Connector` tag in `/home/ubuntu/tomcat/server.xml`, which has port="8443" and defines an SSL HTTP/1.1 connector. Modify it and use the following configuration:
+
+{{{
+<Connector port="8443" 
+ protocol="HTTP/1.1"
+ connectionTimeout="20000"
+ redirectPort="8443"
+ SSLEnabled="true"
+ scheme="https"
+ secure="true"
+ sslProtocol="TLS"
+ keystoreFile=" /home/ubuntu/tomcat/keystore"
+ keystorePass="changeit" />
+}}}
+Step 3: Restart tomcat:
+
+{{{
+go to your tomcat directory. Do "./bin/shutdown.sh" then "./bin/startup.sh"
+}}}
+At this point, https://[YOUR_IP]:8443/manager/html should also an entry point to Tomcat. Note that it uses the secure kind of http (https) and a different port, which is 8443 by default. Make sure to open the port 8443 on your AWS instance.
+
+Step 4: Limit a Tomcat application to HTTPS only. Currently, http://YOUR_IP:8080/manager/html entry (which uses HTTP) is still open. In order to disable HTTP and enable HTTPS only, change your !TomcatFormReCaptcha application's web.xml by adding the following code before the "</web-app>" tag:
+
+{{{
+<security-constraint>
+ <web-resource-collection>
+    <web-resource-name>HTTPSOnly</web-resource-name>
+    <url-pattern>/*</url-pattern>
+ </web-resource-collection>
+ <user-data-constraint>
+    <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+ </user-data-constraint>
+</security-constraint>
+}}}
+This setting will force all HTTP requests to this application to get redirected to the corresponding HTTPS URL. Reload the application to see if the redirection works for the URL http://YOUR_IP:8080/TomcatFormReCaptcha/. Read this [http://www.itworld.com/article/2769041/development/how-to-configure-tomcat-to-always-require-https.html reference] on more details about how to configure Tomcat to always require HTTPS.
+
+Step 5: Make necessary changes to your project 2 to use HTTPS always with HTTP disabled.
+
+
+[[Span(id=PreparedStatement)]]
+
+== Task 4: Use prepared statements in your server code when sending a query ==
+
+Previously, we generate the SQL query by concatenating the parameter value with a template string, then it will be passed to the database to be compiled and executed. This string manipulation approach leaves us very vulnerable to [https://www.wordfence.com/learn/how-to-prevent-sql-injection-attacks/ SQL Injection Attack]. We can prevent this by using {{{ PreparedStatement }}}. !PreparedStatement  pre-compiles the sql template and when database executes the query, it treats the parameters as values, without messing it with the SQL query itself.
+
+You can learn !PreparedStatement  at [https://docs.oracle.com/javase/tutorial/jdbc/basics/prepared.html Using Prepared Statements] and [http://tutorials.jenkov.com/jdbc/preparedstatement.html JDBC: PreparedStatement - Jenkov Tutorials]
+
+Change all the queries in your project 2 involving specifying any parameter from user input to use  {{{ PreparedStatement }}}.
+
+[[Span(id=Encryption)]]
+
+== Task 5: Update user password in database from plain text to Encrypted password ==
+
+This task will show you how update the plain text password to encrypted password and store it in the database. The client (frontend) will still pass the plain text password to the server, (this is okay because we have HTTPS), the server will then compare the plain text password with the encrypted password stored in the database.
+
+The current moviedb.customers table stores plain text password. We have provided you a Java program you can directly run to update them with the encrypted password. We use [http://www.jasypt.org/ Java Simplified Encryption] library to do the encryption. 
+
+1. Go to [https://github.com/UCI-Chenli-teaching/project3-encryption-example project3-encryption-example] to download and deploy the project. `
+2. On your local machine, import the project into Eclipse, and run {{{ UpdateSecurePassword.java }}} This program will read all the passwords from the existing moviedb.customers table, encrypt them, and update the table with the encrypted passwords. 
+3. One AWS, also run {{{ UpdateSecurePassword.java }}} to update the database on AWS. Note that you should only run this program **once**. If you need to re-run it, you need to re-populate the customers table with the plain text password.
+4. {{{ VerifyPassword.java }}} shows you how to verify the user's email and password against the encrypted password stored in the database.
+5. Change your login modules in project 2 to verify user email/password based on {{{ VerifyPassword.java }}}.
+
+
+----
+
+[[Span(id=Dashboard)]]
+
+== Task 6: Implementing a Dashboard using Stored Procedure ==
+Step 1: To store information about Fabflix's employees, create a new table called '''  employees'''   with the following attributes:
+
+{{{
+email varchar(50) primary key
+password varchar(20) not null
+fullname varchar(100)
+}}}
+Step 2: Insert an employee with **classta@''email.edu''**, **classta**, and **TA CS122B** as its email, password, and fullname respectively. Use the same technique in the encrypted password section to encrypt the password here.
+
+Step 3: Setup an entry point https://YOUR_IP:8443/fabflix/_dashboard   that uses HTTPS. It allows employees to login with a valid email and password to access a dashboard.
+
+Step 4: Allow a logged-in employee to do the following operations using this dashboard.  (You can reuse part of your code in Project 1.)
+
+ * Inserting a new star into the database. Star name is required, birth year is optional.
+ * Providing the metadata of the database; in particular, show the name of each table and, for each table, each attribute and its type.
+
+Step 5: Write a stored procedure called ''  add_movie''  .  Its arguments include all the required fields of the movie, a ''  single''   star (star name) and a ''  single''   genre (genre name). (The reason we don't want to pass multiple stars and genres is  that the current MySQL implementation doesn't allow stored procedures to  take an array argument.) 
+
+Step 6: In the dashboard implemented in Step 4, add one more feature that allows an employee to add information related to a movie, including a single star and a single genre.  The UI should allow the employee to provide the information, and the backend should call the stored procedure '' add_movie''  created above.
+
+
+=== Remarks: ===
+1. The added new stars and movies should be accessible and searchable from the project 2 webpage. 
+2. In the case of adding a new star, in case that the star have the same name and birth year, you can treat them as a new person and create a new record.
+3. In the case of adding a new movie:
+  if the star or genre already exists, you should link them to the movie. In the case of two star records with the same name, you can link any of them.
+  if the star or genre doesn't exist, you should create it and then link it to to the movie. (star birth year is optional and can be leaved to null)
+  All necessary {{{ stars_in_movies }}} and {{{ genres_in_movies }}} records should also be created. The procedure should output informative status messages to the user as it performs the task
+  A movie is identified by (title, year, director) A movie with same title and year, but not same director is considered as as a different movie.
+  If the added movie already exists, you should show a corresponding message, and no changes to the database are made.
+
+
+----
+[[Span(id=XMLParsing)]]
+
+== Task 7: Importing large XML data files into the Fabflix database ==
+The goal of this task is to use a new source of data to increase the content size of the Fabflix movie database.
+
+You can find the raw version of this new data source in [attachment:wiki:cs122b-2018-winter-project3:stanford-movies.tar.gz this package]. The main source of these files is [http://infolab.stanford.edu/pub/movies/dtd.html here]. Before starting to use these files, it is highly recommended to check the main source and read [http://infolab.stanford.edu/pub/movies/doc.html its documentation] to get a better understanding of this dataset.
+
+Particularly, you are required to parse the files `mains243.xml` and `casts124.xml` to add new `movies`, `stars`, and `genres` to the Fabflix database (i.e., on top of what you already have in the database). If needed, the `stars_in_movies` and `genres_in_movies` tables should also be updated accordingly. Also, for each XML file in this package, there is a DTD file to be used to understand/validate the structure of that XML file.
+
+Please note that in this project it is expected that, if needed, you make reasonable decisions on how to use this new data source. The files are not clean and you may find inconsistencies in them. In such cases, do not be surprised. Make reasonable decisions. Such issues are very common in many real applications.  You can use the following high-level description regarding the mapping of the XML tag attributes to the Fabflix database schema that was given in [https://grape.ics.uci.edu/wiki/public/wiki/cs122b-2018-winter-project1 project 1].
+
+As shown in Figure 1, the root tag in the file `mains243.xml` is `<movies>`, which consists of several instances of the tag `<directorfilms>`. Each `<directorfilms>` contains the information of a director, along with his/her movies, each movie being an instance of the tag `<film>`. It is clear where to find the values of all the columns of the movies table. Furthermore, each <film> has a list of ''assigned categories ''in a `<cats>` tag (i.e., each category as a `<cat>` tag). The value of the `<cat>` tag corresponds to the genre name in the `genres` table of the Fabflix database. If a `<cat>` does not exist in the `genres` table, a new genre must be added, and the `genres_in_movies` table must be updated accordingly.
+
+[[Image(wiki:cs122b-2018-winter-project3:films_structure.png)]]  '''Figure 1.'''
+
+For updating the `stars` and `stars_in_movies` tables, you should use the content of the file `casts124.xml`, which is shown in a high-level view in Figure 2.
+
+[[Image(wiki:cs122b-2018-winter-project3:casts_structure.png)]] '''Figure 2.'''
+
+Similar to the `<movies>` tag, the content of the `<casts>` tag, which is the root of the file `casts124.xml`, is also grouped by the movie directors. You can find the information of the star-movie connections in the instances of the `<m>` tag. In this tag, the film is identified using the `<f>` tag, which links to the `<fid> `tag of the `<film>` tag in the main file. Tag `<m>` also gives you the `stagename` of the actor of this relation in a tag called `<a>`. The `stagename` helps you connect this `stars_in_movies` record to the right star record. The stars to be added to the `stars` table are parsed out of the file `actors63.xml`.
+
+Although there are many libraries for parsing XML, there are two main approaches towards this problem: (1) SAX: event-based XML parsing and (2) DOM: using a tree-based object model for parsing XML. In SAX, the library '''moves''' through the XML tags and makes calls to ''event-handler functions'' that are implemented by the developer. In DOM, the developer is free to move on ''a tree of objects'' that is made available by the library, each object corresponding to an ''entity'' in the XML tree (e.g., a tag). You are free to choose between either of SAX or DOM approaches to parse the document. For examples, look [http://totheriver.com/learn/xml/code/SAXParserExample.java here for SAX] and [http://totheriver.com/learn/xml/code/DomParserExample.java here for DOM]. You can find [http://totheriver.com/learn/xml/xmltutorial.html#7 here], the instructions and files needed to run these examples.
+
+=== Requirements: ===
+ * '''XML parsing''': You should write a Java program to parse the XML files and insert the new data to the existing moviedb database. The new movie data should be searchable in the project 2 search page.
+ * '''Performance Tuning''': A naive implementation of your program is expected to be slow. Come up with at least two optimization techniques to reduce the running time of your program. Write an itemized, brief report accessible to describe your optimizations, and the corresponding time reductions. Put this optimization report in your Github repository in a text format, such as plain text (.txt), markdown (.md), or PDF.
+
+[[BR]]
+
+=== Remarks: ===
+ * In case of inconsistencies between the provided data with respect to the relational schema, make sure your program does not crash. The inconsistent data must be reported to the user (print the element name and node value) and your program should resume processing.
+ * Use NULL for missing values when inserting records into the database.
+ * For inconsistent values with the schema (like non-integer values for volume or roman numbers ) you can treat them as NULL.
+ * For entries with multiple ISBN/publishers/etc, only use one of them.
+ * Keep track of duplicate entries like multiple occurrences of same movies/actors and insert them only once.
+ * Make sure the encoding of your parser is ISO-8859-1. You can ignore any special character that cannot be handled with this encoding.
+
+----
+[[Span(id=DeploymentOnAWS)]]
+
+== Deployment On AWS and Submissions ==
+
+The same as before, use Github for your project 3 code and deploy on AWS.
+
+
+----
+[[Span(id=Grading)]]
+
+== Demonstration and Grading Criteria ==
+The same ss before, '''You are required to demonstrate  this project''', and time is '''15 minutes''' per team. Please refer to this [https://docs.google.com/spreadsheets/d/1PcwItuueewQhftvHRllkgDgkHYNfmxR_a8dJyD8qDCE/edit?usp=sharing Grading checklist] for detailed criteria.Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,1004 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE10770¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 26 Jul 2002 05:56:56 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"8524-3a6a771047a00-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 03:11:43 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY…$/*
+** glider -- output some known gliders for given totalistic life-like ca rules
+** David Eppstein, UC Irvine, 5 Mar 1998
+**
+** Note this doesn't search for gliders, it just outputs ones already
+** found by other programs.  My searches for gliders to list here have
+** not been thorough -- if one rule has more gliders than another, it
+** may mean that it's easier to find gliders for it, but it also may
+** merely mean that I used more powerful search tools on it.  For the
+** same reason, the profusion of high speed, low period gliders is not
+** so much because such gliders are more likely to exist (I don't think
+** they are) but because they're much easier to find.
+**
+** The output is in "run length encoded" format -- empty cells are
+** indicated by "b", full cells by "o", line breaks by "$", and multiple
+** copies of any of these characters can be indicated by prefacing them
+** with a decimal number (for instance "4b" is short for "bbbb").
+**
+** A "glider" is a pattern (in a cellular automaton) that stays bounded
+** in size but that is unbounded in location.  Any glider must form a
+** pattern that repeats periodically, at each repetition moving a
+** certain distance horizontally and/or vertically.  That distance
+** divided by the period is known as the "speed" of the glider, and must
+** be a rational number.  We call a speed of one unit of distance per
+** time step "c" because that's the fastest speed any object (or
+** information) can travel in a cellular automaton (at least, with the
+** 8-unit neighborhood used here).
+**
+** The automata considered here are "totalistic" -- what each cell does
+** depends only on the number of full cells among its eight nearest
+** neighbors.  For instance in the most famous of these automata,
+** "Life", a cell changes from empty to full if it has three full
+** neighbors and stays full if it has two or three full neighbors.  We
+** indicate this by a code of the form "Bxx/Sxx" where the xx's are
+** digits from 0 to 8; a digit in the B section indicates a number of
+** neighbors causing a cell to be born (change from empty to full) and a
+** digit in the S section indicates a number of neighbors causing a cell
+** to survive (stay full).  The code for Life is B3/S23.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#ifndef GLIDERDB
+#define GLIDERDB "/Math/Cellular Automata/Webster/Application/glider.db"
+#endif
+
+#define MAX_GDB_LINE_LENGTH 1000000
+
+#define MAX_RLE_LINE_LENGTH 72
+
+/* HACK TO MAKE WORK WITH MAC LINE TERMINATION! */
+int my_fgets(char * buf, int BUFLEN, FILE * f) {
+  int n = 0; int c;
+  while (n < BUFLEN - 1 && (c = fgetc(f)) != EOF) {
+    if (c == '\r') c = '\n';
+    buf[n++] = c;
+    if (c == '\n') break;
+  }
+  buf[n] = 0;
+  return n;
+}
+#define fgets my_fgets
+
+enum { by_num, by_size, by_period, by_vel } map_type = by_num;
+
+typedef unsigned long rule;
+
+struct Glider {
+  rule zeros, ones;	 /* bits that must be zero or one in CA rule spec */
+  short x, y;
+  short period, dx, dy;
+  short halfPeriod;
+  char *rle;			/* what to output if spec matches */
+  char *name;
+  char *disco;
+  struct Glider * next;
+};
+
+struct Glider *firstGlider = 0;
+struct Glider *lastGlider = 0;
+int numGliders = 0;
+
+void printRule(rule r) {
+  int i;
+  printf("B");
+  for (i = 0; i < 9; i++) if (r & (1 << (9+i))) putchar(i+'0');
+  printf("/S");
+  for (i = 0; i < 9; i++) if (r & (1 << i)) putchar(i+'0');
+}
+
+/* encode sets of rules (input as bitvectors of forced ones and forced zeros in rule codes)
+   as single 32-bit words, such that set can be compared for specificity:
+   if one set is a subset of another, then the bits of the encoding of one will be a
+   subset of the bits of the encoding of the other.
+   
+   The obvious way to do this would be to make a single bitvector of the forced ones and zeros,
+   but this would have 36 bits and not fit in a single word.  Instead, we use a tricky encoding,
+   where exactly two of the top four bits are on, and specify which type of rule set we are
+   looking at: B0, B01, B01/S7, B2, B3, or B23.  It is assumed that all gliders match exactly
+   one of these six possibilities (actually, we don't know any B23 gliders).  The remaining 28
+   bits of the encoding specify the remaining forced ones and zeros of the rule. */
+
+#define PACKZB(bits) (((bits&0774000)>>4) | (bits & 0177))
+#define PACKZ(code,ones,zeros) ((code<<28) | (PACKZB(ones)<<14) | PACKZB(zeros))
+
+#define PACKNB(bits) (((bits&0760000)>>4) | (bits & 0777))
+#define PACKN(code,ones,zeros) ((code<<28) | (PACKNB(ones)<<14) | PACKNB(zeros))
+
+rule packRule(rule ones, rule zeros) {
+	if (((zeros | ones) & 03600) == 03600) { /* all of B01/S78 fixed */
+		if ((ones & 03600) == 01000) return PACKZ(0x3,ones,zeros); /* B0 */
+		if ((ones & 03600) == 03000) return PACKZ(0x5,ones,zeros); /* B01 */
+		if ((ones & 03600) == 03200) return PACKZ(0x6,ones,zeros); /* B01/S7 */
+	}
+    if (((zeros | ones) & 017000) == 017000) {	/* all of B0123 fixed */
+		if ((ones & 017000) == 04000) return PACKN(0x9,ones,zeros);	/* B2 */
+		if ((ones & 017000) == 010000) return PACKN(0xa,ones,zeros); /* B3 */
+		if ((ones & 017000) == 014000) return PACKN(0xc,ones,zeros); /* B23 */
+	}
+	fprintf(stderr,"packRule: unexpected input, ones=0%o, zeros=0%o\n",ones,zeros);
+	exit(1);
+}
+
+#define UNPACKZ(x) x = (((x & 037600)<<4) | (x & 0177))
+#define UNPACKN(x) x = (((x & 037000)<<4) | (x & 0777))
+
+void badPackCode(rule packedRule) {
+	fprintf(stderr, "bad code 0x%x for packed rule %o\n",((packedRule>28)&0xf),packedRule);
+	exit(1);
+}
+
+void putRule(rule packedRule) {
+	rule ones = (packedRule>>14)&037777;
+	rule zeros = packedRule&037777;
+	int code = (packedRule>>28) & 0xf;
+	int j;
+	
+	if (code & 8) {	/* B2,B3,B23 */
+		UNPACKN(ones);
+		UNPACKN(zeros);
+		if (code == 0x9) { ones |= 04000; zeros |= 013000; }
+		else if (code == 0xa) { ones |= 010000; zeros |= 07000; }
+		else if (code == 0xc) { ones |= 014000; zeros |= 03000; }
+		else badPackCode(packedRule);
+	} else {
+		UNPACKZ(ones);
+		UNPACKZ(zeros);
+		if (code == 0x3) { ones |= 01000; zeros |= 02600; }
+		else if (code == 0x5) { ones |= 03000; zeros |= 00600; }
+		else if (code == 0x6) { ones |= 03200; zeros |= 00400; }
+		else badPackCode(packedRule);
+	}
+	for (j = 0; j < 9; j++) {
+		rule b = 1 << (j+9);
+		if (zeros & b) putchar('-');
+		else if (ones & b) putchar('X');
+		else putchar(' ');
+	}
+	printf("  ");
+	for (j = 0; j < 9; j++) {
+		rule s = 1 << j;
+		if (zeros & s) putchar('-');
+		else if (ones & s) putchar('X');
+		else putchar(' ');
+	}
+	printf("\n");
+}
+
+int gcd(int a, int b) {
+	if (a < 0) return gcd(-a,b);
+	else if (b < 0) return gcd(a,-b);
+	else if (b == 0) return a;
+	else return gcd(b,a%b);
+}
+
+void printGlider(struct Glider * g, int gn, rule r) {
+	char * s = g->rle;
+	int maxd, factor;
+	
+	if (g->name) printf("#C The %s (glider %d), ", g->name, gn);
+	else printf("#C Glider %d, ", gn);
+	maxd = g->dx;
+	if (g->dy > g->dx) maxd = g->dy;
+	factor = gcd(maxd,g->period);
+	
+	if (maxd/factor > 1) printf("%d", maxd/factor);
+	printf("c/%d ", g->period/factor);
+	
+	
+	if (g->dx == g->dy) printf("diagonal");
+	else if (g->dx == 0 || g->dy == 0) printf("orthogonal");
+	else {
+		int mind = g->dx, slopefactor;
+		if (g->dy < g->dx) mind = g->dy;
+		slopefactor = gcd(mind,maxd);
+		if (mind == slopefactor) printf("slope %d", maxd/mind);
+		else printf("slope %d/%d", maxd/slopefactor, mind/slopefactor);
+	}
+	if (g->halfPeriod) printf(" (period %d/2)\n", g->period);
+	else if (factor > 1) printf(" (period %d)\n", g->period);
+	else putchar('\n');
+
+	if (g->disco) printf("#C Discovered by %s\n", g->disco);
+
+	printf("#C\n#C B012345678 S012345678\n#C  ");
+	putRule(packRule(g->ones,g->zeros));
+	printf("#C\nx = %d, y = %d, rule = ", g->x, g->y);
+	printRule(r);
+	
+	/* now break RLE stuff into managable sized lines */
+	while (strlen(s) > MAX_RLE_LINE_LENGTH) {
+		int i;
+		char * t = s + MAX_RLE_LINE_LENGTH;
+		while (isdigit(*(t-1))) t--;
+		putchar('\n');
+		for (i = 0; i < t-s; i++) putchar(s[i]);
+		s = t;
+	}
+	printf("\n%s\n", s);
+}
+
+void nthGlider(int n) {
+	int i = n;
+	struct Glider * g = firstGlider;
+	if (i <= 0 || i > numGliders) {
+		fprintf(stderr,"only %d gliders are known\n", numGliders);
+		exit(1);
+  	}
+  	while (--i > 0) g = g->next;
+	printGlider(g, n, g->ones);
+	exit(0);
+}
+
+/* is rule off by one from more general pattern? if so return that one bit */
+rule offByOne(rule r, rule pat) {
+  rule x = pat &~ r;
+  if (x & (x-1)) return 0; /* more than one bit off */
+  return ((x << 16) | (x >> 16)) & r;
+}
+
+rule * ruleList = 0;
+int ruleListLength = 0; 
+
+void addRule(rule r) {
+  int i = 0;
+  rule b;
+  
+	if (ruleList == 0) {
+		ruleList = malloc(numGliders * sizeof(rule));
+		if (ruleList == 0) {
+			printf("Out of memory for ruleList!\n");
+			exit(0);
+		}
+	} 
+
+  while (i < ruleListLength) {
+    if ((ruleList[i] &~ r) == 0) return; /* too specific, ignore */
+    else if ((ruleList[i] & r) == r) /* more general, del more specific rule */
+      ruleList[i] = ruleList[--ruleListLength];
+    else if ((b = offByOne(r,ruleList[i])) != 0) {
+      r &=~ b;	/* generalize rule */
+      i = 0;
+    } else if ((b = offByOne(ruleList[i],r)) != 0) {	/* generalize other way */
+      b = ruleList[i] &~ b;	/* find more general rule */
+      ruleList[i] = ruleList[--ruleListLength];	/* remove specific */
+      addRule(b);		/* add back in as more general */
+      i = 0;			/* go back to the rule we started with */
+    } else i++;
+  }
+  ruleList[ruleListLength++] = r;
+}
+
+
+#define gray(r) ((r) ^ ((r) >> 1))
+
+inline rule unGray(rule r) {
+	r ^= r>>1;
+	r ^= r>>2;
+	r ^= r>>4;
+	r ^= r>>8;
+	r ^= r>>16;
+	return r;
+}
+
+int compareRules(const void * p, const void * q)
+{
+    rule pr = unGray(*(rule *)p);
+    rule qr = unGray(*(rule *)q);
+    if (pr<qr) return -1;
+    else if (pr>qr) return 1;
+    else return 0;
+}
+
+int matchNum = 0;
+int matchDen = 0;
+char matchDir = 0;
+
+int fastDiag = 0;
+int speedLimit = 0;
+
+int gliderMatch(char * pattern, struct Glider *g) {
+	char gDir;
+	int maxd, div;
+	
+	if (pattern == 0) return 1;	/* trivial pattern */
+	
+	if (matchDir == 0) {
+		/* parse pattern to set up match parameters */
+		if (*pattern == 'p' || *pattern == 'P') {
+			map_type = by_period;
+			pattern++;
+		} else if (*pattern == 's' || *pattern == 'S') {
+			map_type = by_size;
+			pattern++;
+		} else if (*pattern == 'n' || *pattern == 'N') {
+			map_type = by_num;
+			pattern++;
+		} else if (*pattern == 'v' || *pattern == 'V') {
+			map_type = by_vel;
+			pattern++;
+		}
+		while (*pattern >= '0' && *pattern <= '9') {
+			matchNum = matchNum * 10 + (*pattern - '0');
+			pattern++;
+		}
+		if (*pattern == 'c') {
+			if (matchNum <= 0) matchNum = 1;
+			pattern++;
+		}
+		if (*pattern == '/') pattern++;
+		while (*pattern >= '0' && *pattern <= '9') {
+			matchDen = matchDen * 10 + (*pattern - '0');
+			pattern++;
+		}
+		while (*pattern == ' ') pattern++;
+		if (*pattern != '\0') matchDir = *pattern;
+		else matchDir = '*';
+	}
+	if (matchDir == 'd' && matchDen > 0 && matchDen < matchNum*4) fastDiag = 1;
+	if (matchDen > 0 && (matchDen <= matchNum*2 || (matchDir == 'd' && matchDen <= matchNum*3)))
+		speedLimit = 1;
+	if (g == 0) return 1;	/* test call to get pattern set up */
+
+	if (g->dx == g->dy) gDir = 'd';	/* diagonal */
+	else if (g->dx == 0 || g->dy == 0) gDir = 'o';	/* orthogonal */
+	else gDir = 'k';	/* knight's move and other slopes */
+	if (matchDir != gDir && matchDir != '*') return 0;
+	
+	maxd = g->dx;
+	if (g->dy > g->dx) maxd = g->dy;
+	div = gcd(maxd,g->period);
+	if (matchNum > 0 && matchNum != maxd/div) return 0;
+	
+	if (matchDen > 0 && matchDen != g->period/div) return 0;
+	return 1;
+}
+
+void listRules(char * dir) {
+	int i;
+	struct Glider * g;
+	if (dir == 0)
+		printf("Totalistic rules for which gliders are known:\n\n");
+	else
+		printf("Totalistic rules for which %s gliders are known:\n\n", dir);
+	printf("    B012345678 S012345678\n");
+
+	for (g = firstGlider; g != 0; g = g->next)
+		if (gliderMatch(dir,g))
+			addRule(packRule(g->ones, g->zeros));
+
+	qsort(ruleList,ruleListLength,sizeof(rule),compareRules);
+	for (i = 0; i < ruleListLength; i++) {
+		printf("     ");
+		putRule(ruleList[i]);
+	}
+	exit(0);
+}
+
+/* find redundant gliders */
+
+#define SUBSETQ(x,y) ((x&y) == x)
+
+void printStats(struct Glider * g) {
+	printf("%dx%d %d,%dc/%d ", g->x, g->y, g->dx, g->dy, g->period);
+	printRule(g->ones);
+	printf(" - ");
+	printRule(g->ones |~ g->zeros);
+	printf("\n");
+}
+
+void redundant() {
+	struct Glider *g, *gg;
+	int gn, ggn;
+	int foundAny = 0;
+	for (g = firstGlider, gn = 1; g != 0; g = g->next, gn++) {
+		for (gg = firstGlider, ggn = 1; gg != 0; gg = gg->next, ggn++) {
+			int ghp = (g->halfPeriod? 2 : 1);
+			int gghp = (gg->halfPeriod? 2 : 1);
+			if (SUBSETQ(gg->ones,g->ones) &&
+				 SUBSETQ(gg->zeros,g->zeros) &&
+				 g != gg && g->period/ghp == gg->period/gghp &&
+				 ((g->dx/ghp == gg->dx/gghp && g->dy/ghp == gg->dy/gghp) ||
+				  (g->dx/ghp == gg->dy/gghp && g->dy/ghp == gg->dx/gghp)) &&
+				 (gg->ones != g->ones || gg->zeros != g->zeros || ggn<gn))
+			{
+				printf("\nGlider %d is made redundant by glider %d.\n", gn, ggn);
+				printStats(gg); printStats(g);
+				foundAny = 1;
+				break;	/* escape inner loop */
+			}
+		}
+	}
+	if (!foundAny) printf("No redundant gliders.\n");
+	exit(0);
+}
+
+int reverse(int i) {
+	int j;
+	int result = 0;
+	for (j = 0; j <= 8; j++)
+		if (i & (1<<j)) result |= 1 << (8-j);
+	return result;
+}
+
+/* return either 0 or a string explaining why no gliders for this rule */
+char * findExcuse(rule r) {
+	if (r & (1 << 9)) return 0;	/* B0 patterns are a weird special case */
+	else if (r & (1 << 10))
+		return "with B1, any pattern expands in all directions";
+	else if (!(r & ((1 << 11) | (1 << 12))))
+		return "without B2 or B3, pattern can't escape bounding box";
+	else if ((r & 017) == 017)
+		return "with S0123, trailing edge of pattern can not die";
+
+/*
+		// More detailed explanation:
+		// There are two different cases, according to whether B2 or B3 is set.
+		//
+		// Case with B2:
+		//  Let (x,y) be the position of the live cell minimizing x
+		//  with ties broken by minimizing y among all live cells (x,y) minimizing x.
+		//  (So (x,y) is the most extreme live cell in some orthogonal direction.)
+		//  Then the only neighbors it has can be (x,y+1) (x+1,y-1) (x+1,y) (x+1,y+1),
+		//  and (x,y) can only die if all four of these are live.
+		//  But in that case, a new point would be born at (x-1,y).
+		//  So the bounding box of the pattern can never shrink and it can't be a glider.
+		//
+		// Case with B3:
+		//  Let (x,y) be the position of the live cell maximizing x+y
+		//  with ties broken by minimizing x among all live cells (x,y) maximizing x+y.
+		//  (So (x,y) is the most extreme live cell in some diagonal direction.)
+		//  Then the only neighbors it has can be (x-1,y) (x-1,y-1) (x,y-1) (x+1,y-1),
+		//  and (x,y) can only die if all four of these are live.
+		//  But in that case, a new point would be born at (x+1,y).
+		//  So the bounding diamond of the pattern can never shrink and it can't be a glider.
+*/
+	else if ((r & 014001) == 014001)
+		return "with B23/S0, trailing edge of pattern can not die";
+/*
+		// In more detail:
+		// Let (x,y) be the live cell minimizing x; among such cells choose the minimum y.
+		// If the pattern is to move, there must be a phase at which all cells on columns
+		// x or lower die and no new ones are born.
+		// But if (x,y+1) is live, (x-1,y) and (x-1,y+1) will be born.
+		// If (x,y+2) is live, (x-1,y+1) will be born.
+		// If (x+1,y) is live, the only way to prevent (x,y-1) from being born would be for
+		// it to have four or more live neighbors, (x,y) (x+1,y) (x+1,y-1) (x+1,y-2);
+		// but then (x,y-2) would be born since it has either two or three neighbors.
+		// If (x+1,y-1) is live and (x+1,y) is dead, (x,y-1) will be born.
+		// If (x+1,y+1) is live and (x+1,y) is dead, (x,y+1) will be born.
+		// So in all cases, if (x,y) has a live neighbor, a cell on column x or x-1 is born.
+		// But if it has no live neighbors, it survives itself.
+		// So in no case can the bounding box shrink.
+*/
+	else if ((r & 0176) == 0176)
+		return "with S123456, connected patterns can not shrink";
+/*
+		// In more detail:
+		// Suppose a pattern has no two adjacent live cells in any phase; then it can
+		// not have three adjacent cells on the leading edge, so (with B3) can't grow.
+		// Nor can it have two adjacent cells on the leading diagonal, so (with B2) can't grow.
+		// On the other hand, suppose a pattern has two adjacent live cells; let (x,y)
+		// be the leftmost (smallest x) live cell with a live neighbor.  If the pattern is
+		// to move, (x,y) must sometime stop being such a cell.  It can't do so by dieing
+		// (it has too few neighbors) so instead all its neighbors must die.  But if
+		// (x,y-1) or (x,y+1) is a neighbor, it also stays alive.  Otherwise, if (x+1,y)
+		// is a neighbor, it has at most six neighbors and also stays alive.  Finally, if
+		// (x+1,y-1) or (x+1,y+1) is a neighbor (and the previous cells aren't) it has
+		// at most six neighbors and stays alive.
+		//
+		// Note that there exist connected patterns in B34678/S12346 and B35678/S123457
+		// that die in two steps, so both S5 and S6 are essential in this argument
+		// unless we make further assumptions about which birth rules are set.
+*/
+	else if ((r & 030076) == 030076)
+		return "with B34/S12345, connected patterns can not shrink";
+/*
+		// In more detail:
+		// The same argument above applies to disconnected patterns, so again assume
+		// (x,y) is the leftmost live cell with a live neighbor.  If more than one such cell
+		// exists, let (x,y) be the one with the smallest y coordinate. Again, note that
+		// (if all neighbors of (x,y) are to die) neither (x,y-1) nor (x,y+1) can be live.
+		//
+		// CASE I: suppose that (x+1,y) is live.  Then both of (x+1,y+1) or (x+1,y-1)
+		// would also be live, or (x+1,y) would survive.  To avoid a birth at (x,y-1)
+		// (which already has three neighbors), the only possibility is that there are at
+		// least five neighbors; these can only be (x+1,y-2) and (x-1,y-2), where (x-1,y-2)
+		// is an isolated point.  But then we must have a birth at (x,y-2) (since it has
+		// either three or four neighbors) and (x+1,y-2) must survive (since it has no neighbors
+		// on row x).  So again there would be a connected cell on row x.
+		//
+		// CASE II: (x+1,y) is dead.  By symmetry, we can assume (x+1,y+1) is alive.
+		// Then if it is to die, it must have all five remaining neighbors; but then
+		// (x,y+1) would have four neighbors and would be born next to (x,y).
+*/
+	else if ((r & 070036) == 070036)
+		return "with B345/S1234, connected patterns can not shrink";
+/*
+		// In more detail:
+		// Let (x,y) be the connected live cell maximizing y, and among all such cells
+		// minimizing x.  Then it has at most four neighbors, and survives; if in the
+		// next generation it again has a neighbor, the bounding box of connected cells
+		// can not shrink.
+		//
+		// CASE I: (x+1,y) is live.  Then it has at most five neighbors, and to die
+		// must have all five; but then (x+1,y+1) has between three and five neighbors
+		// and is born next generation.
+		//
+		// CASE II: (x+1,y-1) is live (or symmetrically (x-1,y-1).  Then (x+1,y) has
+		// two dead neighbors shared with (x,y), and can't have all six remaining neighbors
+		// live because that would put a connected live cell in column y+1 contradicting
+		// the selection of (x,y).  So if (x+1,y) is not to be born, (x,y-1) and (x+2,y-1)
+		// must be dead and (x+1,y-1) survives.
+		//
+		// CASE III: The only remaining possible neighbor for (x,y) is (x,y-1).
+		// But (if no previous case occurred) this has at most four neighbors and survives.
+*/
+	else if ((r & 04374) == 0374)
+		return "with S234567 and without B2, can't escape bounding diamond without immortal triangle";
+/*
+		// In more detail, let (x,y) be a point belonging to a triangle,
+		// minimizing x+y among all such points.  Then in at least one of the triangles
+		// containing (x,y), all points have at most seven neighbors.
+		// So the bounding diamond of the points in triangles can not shrink.
+		
+		// Note triangles or more general 2-connected blocks are NOT immortal in B3/S23456:
+		// x = 15, y = 6, rule = B3/S23456
+		// obobo5bobobo$obobo5bobobo$2bobobobobobo$2bobob3obobo$4bob3obo$4bobobobo!
+
+*/
+	else if ((r & 064077) == 0)
+		return "without one of B245/S012345, can't escape bounding diamond";
+/*
+		// In more detail:
+		// Let cell x be two steps outside the bounding diamond D,
+		// and the first cell at this distance to become alive.
+		// Then in the previous generation, there must be a triangle
+		// of neighbors of x, two of which are one step outside D and one of which is in D
+		// (the remaining five neighbors of x are all two or more steps outside D).
+		// Before x is born, any cell outside D immediately dies, so the two outside
+		// neighbors of x must be newly born.  Then the third neighbor must also be
+		// newly born, because two generations before x is born it wouldn't have enough
+		// neighbors to survive.
+		//
+		// But a simple case analysis shows that no such triangle can be born at once:
+		// there are only three remaining possibilities for the live neighbors of the
+		// two outside triangle vertices, and if these three possibilities are all live,
+		// the third vertex has four or five neighbors, too many for a birth.
+*/
+	else if (fastDiag && (r & 04060) == 0)
+		return "diagonal speed limit is c/4 without one of B2/S45";
+/*
+		// I got this proof (originally from JHC) via S. Silver.
+		// Consider the live cell maximizing x+y.  To increase x+y in B3 rules,
+		// you have to have a triangle of three live cells.  To increase it
+		// twice in a row, you need a W shape that will produce a triangle in
+		// the next generation.  But without S4 or S5 the W's center cell will die.
+		// So a pattern that moves (a,b) units/period requires period >= 2a+2b.
+*/
+	else if (fastDiag && (r & 04770) == 0770)
+		return "fast diagonal growth impossible without creating immortal cross";
+/*
+		// As above, increasing x+y twice in a row requires a W shape.  But
+		// the three central cells of the W plus the two new cells form a live region
+		// in which each cell has three or more live neighbors in the same region;
+		// none of these cells can ever die.
+*/
+	else if (speedLimit && (r & 04036) == 0)
+		return "speed >= c/2 (or c/3 diagonal) impossible without one of B2/S1234";
+/*
+		// Let (x,y) be a live cell maximizing x+2y, and (among these) having a larger value
+		// of y than any (x+2y)-maximizer in any previous generation. Note that (with speed
+		// c/2 or c/3diag, B3 rules) max(x+2y) must increase by exactly one in each generation.
+		// Then (x,y) can only be born from a line of three live neighbors:
+		// (x-1,y-1), (x,y-1), and (x+1,y-1).  If (x,y-1) survived from the previous
+		// generation, then it had at most four neighbors (since it was a (x+2y)-maximizer)
+		// and at least one neighbor (so (x+1,y-1) could have been born), and the rule
+		// must have one of S1234.  If (x,y-1) was newly born, then (x+1,y-1) must have come
+		// from a similar line of three neighbors (x,y-2), (x+1,y-2), (x+2,y-2) and so on
+		// ad infinitum ad absurdum.
+*/
+	else return 0;
+}
+
+#define Bgray(i) (reverse(gray(i)) | (1 << 3))
+
+#define minBit(i) ((i) &~ ((i)-1))
+
+/* show chart of known gliders - 2nd arg zero for b3, nonzero for b2 */
+#define RELEVANT(x) (((x) & 017000) == (twosies? 04000 : 010000))
+#define RULETABSIZE (1<<14)
+#define RULETABINDEX(x) ((((x)&0760000)>>4) | ((x)&0777))
+
+void countGliders(char * dir, int twosies) {
+	int i, j, b;
+	struct Glider * g;
+
+	/* precompute table of numbers -- much faster than scanning all gliders for all rules */
+	static short nGliders[RULETABSIZE];
+	for (i = 0; i < RULETABSIZE; i++) nGliders[i] = 0;
+	for (g = firstGlider; g != 0; g = g->next) {
+		if (!gliderMatch(dir, g)) continue;
+		i = g->ones;
+		if (!RELEVANT(i)) continue;
+		j = i | (~g->zeros & 0777777);
+		if (i == j) b = 1;
+		else b = minBit(g->ones ^ j);
+		while (i <= j) {
+			int idx = RULETABINDEX(i);
+			if ((g->ones &~ i) != 0) i += minBit(g->ones &~ i);
+			else if ((i &~ j) != 0) i += minBit(i &~ j);
+			else {
+				if (map_type == by_num) nGliders[idx]++;
+				else if (map_type == by_period && g->period > nGliders[idx]) nGliders[idx] = g->period;
+				else if (map_type == by_size) {
+					int x = g->x;
+					if (x < g->y) x = g->y;
+					if (nGliders[idx] <= 0 || x < nGliders[idx]) nGliders[idx] = x;
+				} else if (map_type == by_vel && nGliders[idx] < 10) {
+					static struct Glider ** vels = 0;
+					int k;
+					int gg = gcd(gcd(g->dx,g->dy),g->period);
+					if (vels == 0) {
+						vels = malloc(RULETABSIZE*16*sizeof(struct Glider *));
+						if (vels == 0) {
+							printf("Unable to allocate velocity table!\n");
+							exit(0);
+						}
+					}
+					for (k = 0; k < nGliders[idx]; k++) {
+						struct Glider * q = vels[(idx<<4)+k];
+						int qg = gcd(gcd(q->dx,q->dy),q->period);
+						if (g->period/gg == q->period/qg &&
+						((g->dx/gg == q->dx/qg && g->dy/gg == q->dy/qg) ||
+						(g->dx/gg == q->dy/qg && g->dy/gg == q->dx/qg)))
+						break;
+					}
+					if (k >= nGliders[idx]) {
+						vels[(idx<<4)+k] = g;
+						nGliders[idx]++;
+					}
+				}
+				i += b;
+				
+			}
+		}
+	}
+
+	printf("\n            ");
+	for (i = 0; i < 32; i++) printf(" B");
+	for (j = 3; j <= 8; j++) {
+		printf("\n            ");
+		for (i = 0; i < 32; i++)
+			if (j == 3 && twosies) printf(" 2");
+			else if (Bgray(i) & (1 <<j)) printf(" %d", j);
+			else printf("  ");
+	}
+	printf("\n            ");
+	for (i = 0; i < 32; i++) printf("--");
+	
+	for (j = 0; j <= 0777; j++) {
+		int gj = reverse(gray(j));
+		printf("\nS");
+		for (i = 0; i < 9; i++)
+			if(gj & (1 << i)) printf("%d", i); else printf(" ");
+		printf(" :");
+		for (i = 0; i < 32; i++) {
+			int idx;
+			rule r = (Bgray(i) << 9) + gj;
+			if (twosies) r ^= 014000;
+			idx = RULETABINDEX(r);
+			if (nGliders[idx] > 9) printf(" X");
+			else if (nGliders[idx] > 0) printf(" %d", nGliders[idx]);
+			else if (findExcuse(r) != 0)
+				printf("  ");
+			else printf(" .");
+		}
+	}
+	putchar('\n');
+	fflush(stdout);
+	exit(0);
+}
+
+/* output all known gliders */
+void listGliders(char * dir) {
+	struct Glider * g;
+	int gn, n = 0;
+	for (g = firstGlider, gn=1; g != 0; g = g->next, gn++)
+		if (gliderMatch(dir, g)) {
+			if (n++) printf("\n");
+			printGlider(g, gn, g->ones);
+		}
+	if (n == 0) printf("No gliders are known.\n");
+	exit(0);
+}
+
+/* output gliders in symmetric rules */
+
+int symRule(struct Glider * g)
+{
+    rule r = 0;
+    int i;
+    for (i = 0; i < 9; i++) {
+    	int b = 1 << (9+i);
+    	int s = 1 << (8-i);
+    	if ((g->ones & b) || (g->zeros & s)) r |= b;
+		else r |= s;
+	}
+    if ((r & g->ones) != g->ones || (r & g->zeros)) return 0;
+    return r;
+}
+
+void listSym() {
+	struct Glider * g;
+	int gn, n = 0;
+	for (g = firstGlider, gn=1; g != 0; g = g->next, gn++)
+		if (symRule(g)) {
+			if (n++) printf("\n");
+			printGlider(g, gn, ~symRule(g));
+		}
+	exit(0);
+}
+
+void usage()
+{
+  fprintf(stderr,"usage:\n");
+  fprintf(stderr,"  glider n        to output the nth known glider\n");
+  fprintf(stderr,"  glider B3/S23   to list known gliders for those rules\n");
+  fprintf(stderr,"  glider -string  to list rules having gliders with matching speed and direction\n");
+  fprintf(stderr,"  glider @string  to chart matching gliders for each rule with B2\n");
+  fprintf(stderr,"  glider #string  to chart matching gliders for each rule with B3\n");
+  fprintf(stderr,"  glider +        to list redundant gliders\n");
+  fprintf(stderr,"  glider *        to list all gliders\n\n");
+  fprintf(stderr,"options for -, @, and # (multiple options must be in the given order):\n");
+  fprintf(stderr,"  n               to chart counts of the number of known gliders (the default)\n"); 
+  fprintf(stderr,"  p               to chart the maximum known glider period\n"); 
+  fprintf(stderr,"  s               to chart the minimum known glider size\n"); 
+  fprintf(stderr,"  MMc/NN          to chart only gliders with the given speed\n"); 
+  fprintf(stderr,"  d               to chart only gliders that move diagonally\n"); 
+  fprintf(stderr,"  k               to chart only gliders that move at a knights move or other off-slope\n"); 
+  fprintf(stderr,"  o               to chart only gliders that move orthogonally\n"); 
+  exit(1);
+}
+
+rule parseRule(char *s) {
+  int shift = -1;	/* flag for no shift seen yet */
+  rule r = 0;
+  while (*s != 0) {
+    switch(*s) {
+    case 'b': case 'B': shift = 9; break;
+    case 's': case 'S': shift = 0; break;
+    case '/': break;
+
+    case '0': case '1': case '2': case '3': case '4':
+    case '5': case '6': case '7': case '8': case '9':
+      if (shift < 0) nthGlider(atoi(s)); 
+      r |= 1 << (shift + *s - '0');
+      break;
+      
+    case '*':
+    	if (shift < 0) {
+      	if (*++s == '\0') listGliders(0);
+      	else listGliders(s);
+    	} else usage();
+    	break;
+      
+    case '#':
+    	if (shift < 0) {
+      	if (*++s == '\0') countGliders(0,0);
+      	else countGliders(s,0);
+    	} else usage();
+    	break;
+
+    case '@':
+    	if (shift < 0) {
+      	if (*++s == '\0') countGliders(0,1);
+      	else countGliders(s,1);
+    	} else usage();
+    	break;
+
+    case '+':
+    	if (shift < 0 && *++s == '\0') redundant();
+    	else usage();
+    	break;
+    	
+    case 'x':
+    	listSym();
+
+    case '-':
+      if (shift < 0) {
+      	if (*++s == '\0') listRules(0);
+      	else listRules(s);
+      }
+    default: usage();
+    }
+    s++;
+  }
+  return r;
+}
+
+int nGliders = 0;
+void testGlider(rule r, struct Glider * g, int gn) {
+	if ((g->ones &~ r) != 0 || (g->zeros & r) != 0) return;
+	if (nGliders++ > 0) printf("\n");
+	printGlider(g,gn,r);
+}
+
+char * readString() {
+	static char buf[1024];
+	char *s = buf;
+	int i = 0;
+	char c;
+	
+	fprintf(stderr,"Rule, number, or \'-\': ");
+	while ((c = getchar()) != '\n')
+		if (i++ < 1023) *s++ = c;
+	*s++ = '\0';
+	return buf;
+}
+
+char lineBuf[MAX_GDB_LINE_LENGTH];
+
+void badDB(char * arg) {
+	printf("Database file has bad format, glider %d: %s!\nLine:\n\n%s",
+			 numGliders, arg, lineBuf);
+	exit(0);
+}
+
+void readGliderDB() {
+	FILE * f = fopen(GLIDERDB,"r");
+	if (ferror(f)) {
+		printf("Unable to open glider database!\n");
+		exit(0);
+	}
+	while (!feof(f) && !ferror(f) && fgets(lineBuf, MAX_GDB_LINE_LENGTH, f) != 0) {
+		char * s = lineBuf;
+		struct Glider * g;
+		int rl;
+
+		while (*s == ' ') s++;
+		if (*s == '\0' || *s == '\n' || *s == '#') continue;
+		
+		/* make new glider */
+		g = malloc(sizeof(struct Glider));
+		if (g == 0) {
+			printf("Out of memory for glider %d!\n", ++numGliders);
+			exit(0);
+		}
+		if (firstGlider == 0) firstGlider = g;
+		else lastGlider->next = g;
+		lastGlider = g;
+		g->next = 0;
+		numGliders++;
+
+		/* read name */
+		rl = 0;
+		while (s[rl] != ':' && s[rl] != '\0') rl++;
+		if (rl == 0) g->name = 0;
+		else {
+			g->name = malloc(rl+1);
+			if (g->name == 0) {
+				fprintf(stderr,"No memory for glider: %s\n", s);
+				exit(0);
+			}
+			memcpy(g->name, s, rl);
+			g->name[rl] = '\0';
+			s += rl;
+		}
+		if (*s++ != ':') badDB("missing colon after name");
+
+		/* read discoverer */
+		rl = 0;
+		while (s[rl] != ':' && s[rl] != '\0') rl++;
+		if (rl == 0) g->disco = 0;
+		else {
+			g->disco = malloc(rl+1);
+			if (g->disco == 0) {
+				fprintf(stderr,"No memory for glider: %s\n", s);
+				exit(0);
+			}
+			memcpy(g->disco, s, rl);
+			g->disco[rl] = '\0';
+			s += rl;
+		}
+		while (*s != ':' && *s != '\0') s++;	/* skip disco */
+		
+		/* parse rules */
+		if (*s++ != ':') badDB("missing colon after discoverer");
+		if (*s++ != 'B') badDB("missing B in first rule");
+		g->ones = 0;
+		while (*s >= '0' && *s <= '8') g->ones |= 1 << (9 + *s++ - '0');
+		if (*s++ != '/') badDB("missing slash in first rule");
+		if (*s++ != 'S') badDB("missing S in first rule");
+		while (*s >= '0' && *s <= '8') g->ones |= 1 << (*s++ - '0');
+		g->zeros = 0777777;
+		if (*s++ != ':') badDB("missing colon after first rule");
+		if (*s++ != 'B') badDB("missing B in second rule");
+		while (*s >= '0' && *s <= '8') g->zeros &=~ (1 << (9 + *s++ - '0'));
+		if (*s++ != '/') badDB("missing slash in second rule");
+		if (*s++ != 'S') badDB("missing S in second rule");
+		while (*s >= '0' && *s <= '8') g->zeros &=~ (1 << (*s++ - '0'));
+		if ((g->zeros & g->ones) != 0) badDB("first rule is not subset of second");
+		
+		/* parse period and other numbers */
+		if (*s++ != ':') badDB("missing colon after rules");
+		g->period = 0;
+		while (*s >= '0' && *s <= '9')
+			g->period = g->period * 10 + *s++ - '0';
+		if (*s == '/') {
+			s++;
+			while (*s >= '0' && *s <= '9') s++;
+			g->halfPeriod = 1;
+		} else g->halfPeriod = 0;
+		if (*s++ != ':') badDB("missing colon after period");
+		g->dx = 0;
+		if (*s == '-') s++;	/* ignore sign */
+		while (*s >= '0' && *s <= '9')
+			g->dx = g->dx * 10 + *s++ - '0';
+		if (*s++ != ':') badDB("missing colon after dx");
+		g->dy = 0;
+		if (*s == '-') s++;	/* ignore sign */
+		while (*s >= '0' && *s <= '9')
+			g->dy = g->dy * 10 + *s++ - '0';
+		if (*s++ != ':') badDB("missing colon after dy");
+		g->x = 0;
+		while (*s >= '0' && *s <= '9')
+			g->x = g->x * 10 + *s++ - '0';
+		if (*s++ != ':') badDB("missing colon after x");
+		g->y = 0;
+		while (*s >= '0' && *s <= '9')
+			g->y = g->y * 10 + *s++ - '0';
+			
+		/* parse RLE and copy into safe place */
+		if (*s++ != ':') badDB("missing colon after y");
+		rl = 0;
+		while (s[rl] != '!' && s[rl] != '\0') rl++;
+		if (s[rl] != '!') badDB("missing excl at end of rle");
+		g->rle = malloc(rl+2);
+		if (g->rle == 0) {
+			printf("Out of memory for glider %d data!\n", numGliders);
+			exit(0);
+		}
+		memcpy(g->rle, s, rl+1);
+		g->rle[rl+1] = '\0';
+	}
+}
+
+int main(int ac, char **av) {
+	char * arg;
+	struct Glider * g;
+	rule r;
+	int gn;
+
+	if (ac < 2) arg = readString();
+	else if (ac == 2) arg = av[1];
+	else usage();
+	
+	readGliderDB();
+
+	r = parseRule(arg);
+	if ((r & 01400) == 01400) {	/* B0 and S8? */
+		rule rr = r;
+		int i;
+		r = 0;
+		for (i = 0; i < 18; i++)
+			if ((rr & (1 << i)) == 0) r |= (1 << (17-i));
+		printRule(rr);
+		printf(" is a disguised form of ");
+		printRule(r);
+		printf(".\n\n");
+	}
+	
+	for (g = firstGlider,gn=1; g != 0; g = g->next,gn++)
+		testGlider(r,g,gn);
+
+	if (nGliders == 0) {
+		char * s = findExcuse(r);
+		if (s == 0) printf("No gliders are known.\n");
+		else printf("No gliders can exist: %s.\n", s);
+	}
+	return 0;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,383 @@
+¦Ifinal_url¢DtypeEvaluex'http://link.ucop.edu/category/wellness/Lhttp_headers¢DtypeEvalue•¢Ak¢DtypeEvalueGX-TimerAv¢DtypeEvalueXS1549690812.427535,VS0,VE568¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE11988¢Ak¢DtypeEvalueCViaAv¢DtypeEvalueX1.1 varnish, 1.1 varnish¢Ak¢DtypeEvalueGX-CacheAv¢DtypeEvalueJMISS, MISS¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueKX-Served-ByAv¢DtypeEvalueX%cache-mdw17344-MDW, cache-lax8635-LAX¢Ak¢DtypeEvalueMX-Styx-Req-IdAv¢DtypeEvalueX%styx-c0060fc8f09c79bb67e6cb8991f28f0c¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueNX-Tec-Api-RootAv¢DtypeEvalueX-http://link.ucop.edu/wp-json/tribe/events/v1/¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueXAccept-Encoding, Cookie, Cookie¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueXX-Pantheon-Styx-HostnameAv¢DtypeEvalueXstyx-fe4-a-769ff885-7xt9j¢Ak¢DtypeEvalueQX-Tec-Api-VersionAv¢DtypeEvalueBv1¢Ak¢DtypeEvaluePX-Tec-Api-OriginAv¢DtypeEvalueThttp://link.ucop.edu¢Ak¢DtypeEvalueDLinkAv¢DtypeEvalueX9<http://link.ucop.edu/wp-json/>; rel="https://api.w.org/"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueSpublic, max-age=600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:40:12 GMT¢Ak¢DtypeEvalueLX-Cache-HitsAv¢DtypeEvalueD0, 0¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueEnginx¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueCAgeAv¢DtypeEvalueA0Kraw_content¢DtypeEvaluey¥Ó<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+  <meta http-equiv="X-UA-Compatible" content="text/html"/>
+  
+  
+  <title>Wellness  |  Link: UCOP&#039;s e-newsletter | Stay Informed. Stay Connected.</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="robots" content="index, follow" />
+		
+	    
+    <meta name="viewport" content="width=1024,maximum-scale=1.0" />
+
+  <link rel="stylesheet" type="text/css" href="http://link.ucop.edu/wp-content/themes/initiator/includes/css/colabs-css.css"/>
+  <link rel="stylesheet" type="text/css" href="http://link.ucop.edu/wp-content/themes/uclink2013/style.css?v=1.1" media="all" />
+  
+  <link rel="pingback" href="http://link.ucop.edu/xmlrpc.php" />
+  
+  <link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Link: UCOP&#039;s e-newsletter &raquo; Feed" href="http://link.ucop.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Link: UCOP&#039;s e-newsletter &raquo; Comments Feed" href="http://link.ucop.edu/comments/feed/" />
+<link rel="alternate" type="text/calendar" title="Link: UCOP&#039;s e-newsletter &raquo; iCal Feed" href="http://link.ucop.edu/events/?ical=1" />
+<link rel="alternate" type="application/rss+xml" title="Link: UCOP&#039;s e-newsletter &raquo; Wellness Category Feed" href="http://link.ucop.edu/category/wellness/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/link.ucop.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.3"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='nivoslider-css'  href='http://link.ucop.edu/wp-content/plugins/nivo-slider/scripts/nivo-slider/nivo-slider.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='jquery.prettyphoto-css'  href='http://link.ucop.edu/wp-content/plugins/wp-video-lightbox/css/prettyPhoto.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='video-lightbox-css'  href='http://link.ucop.edu/wp-content/plugins/wp-video-lightbox/wp-video-lightbox.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='http://link.ucop.edu/wp-includes/css/dist/block-library/style.min.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='DOPTG_JScrollPaneStyle-css'  href='http://link.ucop.edu/wp-content/plugins/doptg/libraries/gui/css/jquery.jscrollpane.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='DOPTG_ThumbnailGalleryStyle-css'  href='http://link.ucop.edu/wp-content/plugins/doptg/assets/gui/css/jquery.dop.ThumbnailGallery.css?ver=5.0.3' type='text/css' media='all' />
+<link rel='stylesheet' id='gglcptch-css'  href='http://link.ucop.edu/wp-content/plugins/google-captcha/css/gglcptch.css?ver=1.35' type='text/css' media='all' />
+<script type='text/javascript' src='http://link.ucop.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://link.ucop.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://link.ucop.edu/wp-content/plugins/wp-video-lightbox/js/jquery.prettyPhoto.js?ver=3.1.4'></script>
+<script type='text/javascript' src='http://link.ucop.edu/wp-content/plugins/wp-video-lightbox/js/video-lightbox.js?ver=3.1.4'></script>
+<script type='text/javascript' src='http://link.ucop.edu/wp-content/plugins/doptg/libraries/js/jquery.mousewheel.js?ver=5.0.3'></script>
+<script type='text/javascript' src='http://link.ucop.edu/wp-content/plugins/doptg/libraries/js/jquery.jscrollpane.min.js?ver=5.0.3'></script>
+<script type='text/javascript' src='http://link.ucop.edu/wp-content/plugins/doptg/assets/js/jquery.dop.ThumbnailGallery.js?ver=5.0.3'></script>
+<script type='text/javascript' src='http://link.ucop.edu/wp-content/themes/initiator/includes/js/jquery.sooperfish.js?ver=5.0.3'></script>
+<script type='text/javascript' src='http://link.ucop.edu/wp-content/themes/initiator/includes/js/jquery.flexslider-min.js?ver=5.0.3'></script>
+<script type='text/javascript' src='http://link.ucop.edu/wp-content/themes/initiator/includes/js/zero.js?ver=5.0.3'></script>
+<link rel='https://api.w.org/' href='http://link.ucop.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://link.ucop.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://link.ucop.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.0.3" />
+<meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="http://link.ucop.edu"><link rel="https://theeventscalendar.com/" href="http://link.ucop.edu/wp-json/tribe/events/v1/" />
+<!-- Theme version -->
+<meta name="generator" content="Initiator 1.6.3" />
+<meta name="generator" content="CoLabsFramework 1.7.9" />
+	
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://link.ucop.edu/feed/" />
+	<link rel="pingback" href="http://link.ucop.edu/xmlrpc.php" />
+	<link rel="alternate" type="text/xml" title="RSS .92" href="http://link.ucop.edu/feed/rss/" />
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="http://link.ucop.edu/feed/atom/" />
+	
+<!--[if IE 6]>
+<script type="text/javascript" src="http://link.ucop.edu/wp-content/themes/initiator/includes/js/pngfix.js"></script>
+<![endif]-->
+<!--[if IE 7]>
+<link href="http://link.ucop.edu/wp-content/themes/initiator/includes/css/ie7.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<link type="text/css" rel="stylesheet" href="http://link.ucop.edu/wp-content/plugins/1.3.2-Most-Viewed-Commented-Posts-Widget/style.css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+		<style type="text/css" id="wp-custom-css">
+			.logo-150 {
+    width: 120px;
+    padding: 0 0 10px 15px; 
+}
+
+.promoportal {background: #ff8f28}		</style>
+	<!-- Alt Stylesheet -->
+<link href="http://link.ucop.edu/wp-content/themes/initiator/styles/default.css" rel="stylesheet" type="text/css" />
+
+<!-- Custom Favicon -->
+<link rel="shortcut icon" href="http://link.ucop.edu/wp-content/themes/initiator/images/logo16.png"/>
+
+<!-- CoLabs Shortcodes CSS -->
+<link href="http://link.ucop.edu/wp-content/themes/initiator/functions/css/shortcodes.css" rel="stylesheet" type="text/css" />
+
+<!-- Custom Stylesheet -->
+<link href="http://link.ucop.edu/wp-content/themes/uclink2013/custom/custom.css" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<!--   placeholders js file for forms to show up in IE8  -->
+<script type="text/javascript" src="http://link.ucop.edu/wp-content/themes/uclink2013/js/placeholders.min.js"></script> 
+
+<!--   UC Favicon  -->
+<link rel="shortcut icon" href="http://link.ucop.edu/wp-content/themes/uclink2013/images/uc.ico">
+
+<!-- GOOGLE ANALYTICS -->
+<script type="text/javascript">    var _gaq = _gaq || [];   _gaq.push(['_setAccount', 'UA-12778620-4']);   _gaq.push(['_trackPageview']);    (function() {     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);   })();</script>
+
+  
+</head>
+<body class="archive category category-wellness category-91 tribe-no-js tribe-bar-is-disabled unknown">
+ <div class="container">
+        <div class="header row">
+            <div class="column col8">
+				<a href="http://link.ucop.edu/"><img src="http://link.ucop.edu/wp-content/themes/uclink2013/images/logo.png" alt="Link: UCOP&#039;s e-newsletter" /></a>				<p>Stay Informed. Stay Connected.</p>                
+            </div>
+            <div class="column col4">
+                <div id="search" class="box-search">
+                   <form role="search" method="get" id="searchform" action="http://link.ucop.edu/" >
+    <label for="searchform" class="screenReader">Search:</label>
+    <input type="text" value="" name="s" id="s" />
+    <input type="submit" id="searchsubmit" value="Search" />
+    </form>                </div>
+            </div>
+        </div>
+        
+        <div class="navigation row">
+            <div class="menu-main-container"><ul id="menu-main" class="menu"><li id="menu-item-42125" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/">Home</a></li>
+<li id="menu-item-42127" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">Calendar</a>
+<ul class="sub-menu">
+	<li id="menu-item-42129" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/events/">View Calendar</a></li>
+	<li id="menu-item-42131" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://link.ucop.edu/calendar/submit-calendar-event/">Submit Calendar Event</a></li>
+	<li id="menu-item-42133" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://link.ucop.edu/calendar/calendar-submission-guidelines/">Calendar Guidelines</a></li>
+</ul>
+</li>
+<li id="menu-item-42135" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">10-Second Bio</a>
+<ul class="sub-menu">
+	<li id="menu-item-42137" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://link.ucop.edu/submit-your-10-second-bio/">Submit 10-Second Bio</a></li>
+	<li id="menu-item-42139" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="http://link.ucop.edu/category/10-second-bio/">Bio Archives</a></li>
+</ul>
+</li>
+<li id="menu-item-42143" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://link.ucop.edu/classes-and-workshops/">Classes and Workshops</a></li>
+<li id="menu-item-42145" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://link.ucop.edu/about/">About</a></li>
+<li id="menu-item-42141" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://link.ucop.edu/archives/">Archives</a></li>
+</ul></div>        </div><!-- .navigation --> 
+		<div class="main row">
+			
+            <div class="content column col8">
+				<div class="breadcrumbs">
+				<a href="http://link.ucop.edu">Home</a> &raquo; <span class="current">Wellness</span>				</div><!-- .breadcrumbs -->
+				                				<div class="post">
+                    <div class="column col3">
+						<a href="http://link.ucop.edu/2019/02/05/understanding-anxiety-from-boredom-to-burnout/" title="Stigma-Free UC presents: Anxiety â€” from boredom to burnout"><img src="http://link.ucop.edu/wp-content/uploads/2019/02/iStock_000002244527Small-130x83.jpg" alt=""  class="colabs-image img-feat" /></a>                        <p class="entry-meta">
+                            5 February 2019 <img src="http://link.ucop.edu/wp-content/themes/initiator/images/date-icon.png" alt="" /><br/>
+                            
+                            <a href="http://link.ucop.edu/category/events/" rel="category tag">Events</a>, <a href="http://link.ucop.edu/category/featured/" rel="category tag">Featured</a>, <a href="http://link.ucop.edu/category/wellness/" rel="category tag">Wellness</a><img src="http://link.ucop.edu/wp-content/themes/initiator/images/folder-icon.png" alt="" /><br/>
+                        </p>
+                    </div>
+                    <div class="column col9">
+                        <h2 class="entry-header"><a href="http://link.ucop.edu/2019/02/05/understanding-anxiety-from-boredom-to-burnout/">Stigma-Free UC presents: Anxiety â€” from boredom to burnout</a></h2>
+                        <div class="entry-content">
+                            <p>Everyone experiences stress and anxiety sometimes. But what can you do to improve your mental health, and how do you know when itâ€™s time to seek help? Join Dr. Robert Bota of UC Irvine for an informative webinar on Feb. 19. </p>                        </div>
+                    </div>
+                </div><!-- .post -->
+                <hr class="separator" />
+                				<div class="post">
+                    <div class="column col3">
+						<a href="http://link.ucop.edu/2019/02/05/breast-cancer-discover-your-environmental-risks/" title="Breast cancer: Discover your environmental risks"><img src="http://link.ucop.edu/wp-content/uploads/2019/01/PeggyReynolds.jpg" alt=""  class="colabs-image img-feat" /></a>                        <p class="entry-meta">
+                            5 February 2019 <img src="http://link.ucop.edu/wp-content/themes/initiator/images/date-icon.png" alt="" /><br/>
+                            
+                            <a href="http://link.ucop.edu/category/events/" rel="category tag">Events</a>, <a href="http://link.ucop.edu/category/wellness/" rel="category tag">Wellness</a><img src="http://link.ucop.edu/wp-content/themes/initiator/images/folder-icon.png" alt="" /><br/>
+                        </p>
+                    </div>
+                    <div class="column col9">
+                        <h2 class="entry-header"><a href="http://link.ucop.edu/2019/02/05/breast-cancer-discover-your-environmental-risks/">Breast cancer: Discover your environmental risks</a></h2>
+                        <div class="entry-content">
+                            <p>On Thursday, Feb. 21, the Presidentâ€™s Advisory Committee on the Status of Women welcomes UCSF professor and epidemiologist Peggy Reynolds, Ph.D. This brown-bag conversation will take place at UCOP Oakland and via Zoom conferencing.</p>                        </div>
+                    </div>
+                </div><!-- .post -->
+                <hr class="separator" />
+                				<div class="post">
+                    <div class="column col3">
+						<a href="http://link.ucop.edu/2019/02/05/feb-21-blood-drive/" title="Feb. 21: Donate blood and help save lives"><img src="http://link.ucop.edu/wp-content/uploads/2019/02/20331122-20331122.jpg" alt=""  class="colabs-image img-feat" /></a>                        <p class="entry-meta">
+                            5 February 2019 <img src="http://link.ucop.edu/wp-content/themes/initiator/images/date-icon.png" alt="" /><br/>
+                            
+                            <a href="http://link.ucop.edu/category/community/" rel="category tag">Community</a>, <a href="http://link.ucop.edu/category/wellness/" rel="category tag">Wellness</a><img src="http://link.ucop.edu/wp-content/themes/initiator/images/folder-icon.png" alt="" /><br/>
+                        </p>
+                    </div>
+                    <div class="column col9">
+                        <h2 class="entry-header"><a href="http://link.ucop.edu/2019/02/05/feb-21-blood-drive/">Feb. 21: Donate blood and help save lives</a></h2>
+                        <div class="entry-content">
+                            <p>The American Red Cross recently reissued its emergency call for blood donationsÂ after severe winter weather and the government shutdown reduced lifesaving donations. It's easy to make a difference. Schedule an appointment around the corner from the Franklin Building, or at a branch near you.</p>                        </div>
+                    </div>
+                </div><!-- .post -->
+                <hr class="separator" />
+                				<div class="post">
+                    <div class="column col3">
+						<a href="http://link.ucop.edu/2019/02/05/indulgence-versus-delayed-gratification/" title="Walking the line between indulgence and delayed gratification"><img src="http://link.ucop.edu/wp-content/uploads/2019/02/uc_merced_day1-39.jpg" alt=""  class="colabs-image img-feat" /></a>                        <p class="entry-meta">
+                            5 February 2019 <img src="http://link.ucop.edu/wp-content/themes/initiator/images/date-icon.png" alt="" /><br/>
+                            
+                            <a href="http://link.ucop.edu/category/uc-news/" rel="category tag">UC News</a>, <a href="http://link.ucop.edu/category/wellness/" rel="category tag">Wellness</a><img src="http://link.ucop.edu/wp-content/themes/initiator/images/folder-icon.png" alt="" /><br/>
+                        </p>
+                    </div>
+                    <div class="column col9">
+                        <h2 class="entry-header"><a href="http://link.ucop.edu/2019/02/05/indulgence-versus-delayed-gratification/">Walking the line between indulgence and delayed gratification</a></h2>
+                        <div class="entry-content">
+                            <p>If youâ€™re the type of person who likes to save objects or experiences for a future occasion, you may wish to rethink your strategy. Giving in to some indulgences may offer you a better experience.</p>                        </div>
+                    </div>
+                </div><!-- .post -->
+                <hr class="separator" />
+                				<div class="post">
+                    <div class="column col3">
+						<a href="http://link.ucop.edu/2019/01/21/tips-to-help-you-survive-cold-and-flu-season/" title="Tips to help you survive cold and flu season"><img src="http://link.ucop.edu/wp-content/uploads/2018/11/Fight-flu-blog-roll.jpg" alt=""  class="colabs-image img-feat" /></a>                        <p class="entry-meta">
+                            21 January 2019 <img src="http://link.ucop.edu/wp-content/themes/initiator/images/date-icon.png" alt="" /><br/>
+                            
+                            <a href="http://link.ucop.edu/category/did-you-know/" rel="category tag">Did You Know?</a>, <a href="http://link.ucop.edu/category/wellness/" rel="category tag">Wellness</a><img src="http://link.ucop.edu/wp-content/themes/initiator/images/folder-icon.png" alt="" /><br/>
+                        </p>
+                    </div>
+                    <div class="column col9">
+                        <h2 class="entry-header"><a href="http://link.ucop.edu/2019/01/21/tips-to-help-you-survive-cold-and-flu-season/">Tips to help you survive cold and flu season</a></h2>
+                        <div class="entry-content">
+                            <p>The holidays are over, and itâ€™s back to all your usual responsibilities â€” until you and your family are hit by the onslaught of cold and flu season. </p>                        </div>
+                    </div>
+                </div><!-- .post -->
+                <hr class="separator" />
+                				<div class="post">
+                    <div class="column col3">
+						<a href="http://link.ucop.edu/2019/01/07/how-to-rethink-your-new-years-resolutions-according-to-science/" title="How to rethink your New Year&#8217;s resolutions (according to science)"><img src="http://link.ucop.edu/wp-content/uploads/2019/01/carousel_resolutions-130x83.jpg" alt="Writing New Year's resolutions"  class="colabs-image img-feat" /></a>                        <p class="entry-meta">
+                            7 January 2019 <img src="http://link.ucop.edu/wp-content/themes/initiator/images/date-icon.png" alt="" /><br/>
+                            
+                            <a href="http://link.ucop.edu/category/uncategorized/" rel="category tag">Spotlight</a>, <a href="http://link.ucop.edu/category/wellness/" rel="category tag">Wellness</a><img src="http://link.ucop.edu/wp-content/themes/initiator/images/folder-icon.png" alt="" /><br/>
+                        </p>
+                    </div>
+                    <div class="column col9">
+                        <h2 class="entry-header"><a href="http://link.ucop.edu/2019/01/07/how-to-rethink-your-new-years-resolutions-according-to-science/">How to rethink your New Year&#8217;s resolutions (according to science)</a></h2>
+                        <div class="entry-content">
+                            <p>Have you ever failed at keeping a New Year&#8217;s resolution? You&#8217;re joining a sizeable crowd. Itâ€™s challenging to make a change in our behavior â€” but Eric Spangenberg is here to help.
+Professor Spangenberg, the</p>                        </div>
+                    </div>
+                </div><!-- .post -->
+                <hr class="separator" />
+                				<div class="post">
+                    <div class="column col3">
+						<a href="http://link.ucop.edu/2019/01/07/ww-wellness-workshops-kick-off-thursday-january-10/" title="WW Wellness Workshops kick off Thursday, Jan. 10"><img src="http://link.ucop.edu/wp-content/uploads/2018/11/carousel_WW-Wellness-workshop-130x83.jpg" alt=""  class="colabs-image img-feat" /></a>                        <p class="entry-meta">
+                            7 January 2019 <img src="http://link.ucop.edu/wp-content/themes/initiator/images/date-icon.png" alt="" /><br/>
+                            
+                            <a href="http://link.ucop.edu/category/classes-workshops/" rel="category tag">Classes &amp; Workshops</a>, <a href="http://link.ucop.edu/category/community/" rel="category tag">Community</a>, <a href="http://link.ucop.edu/category/op-news/" rel="category tag">OP News</a>, <a href="http://link.ucop.edu/category/uncategorized/" rel="category tag">Spotlight</a>, <a href="http://link.ucop.edu/category/wellness/" rel="category tag">Wellness</a><img src="http://link.ucop.edu/wp-content/themes/initiator/images/folder-icon.png" alt="" /><br/>
+                        </p>
+                    </div>
+                    <div class="column col9">
+                        <h2 class="entry-header"><a href="http://link.ucop.edu/2019/01/07/ww-wellness-workshops-kick-off-thursday-january-10/">WW Wellness Workshops kick off Thursday, Jan. 10</a></h2>
+                        <div class="entry-content">
+                            <p>A new year means a new opportunity to get healthy, and you can start new habits right at UCOP. A WW (Weight Watchers) workplace Wellness Workshop will kick off in Oakland on Thursday, Jan.</p>                        </div>
+                    </div>
+                </div><!-- .post -->
+                <hr class="separator" />
+                				<div class="post">
+                    <div class="column col3">
+						<a href="http://link.ucop.edu/2019/01/07/stigma-free-uc-finding-your-words/" title="Stigma-Free UC: Finding Your Words"><img src="http://link.ucop.edu/wp-content/uploads/2019/01/blog_Balan.jpg" alt="Dr. Balan"  class="colabs-image img-feat" /></a>                        <p class="entry-meta">
+                            7 January 2019 <img src="http://link.ucop.edu/wp-content/themes/initiator/images/date-icon.png" alt="" /><br/>
+                            
+                            <a href="http://link.ucop.edu/category/events/" rel="category tag">Events</a>, <a href="http://link.ucop.edu/category/uncategorized/" rel="category tag">Spotlight</a>, <a href="http://link.ucop.edu/category/wellness/" rel="category tag">Wellness</a><img src="http://link.ucop.edu/wp-content/themes/initiator/images/folder-icon.png" alt="" /><br/>
+                        </p>
+                    </div>
+                    <div class="column col9">
+                        <h2 class="entry-header"><a href="http://link.ucop.edu/2019/01/07/stigma-free-uc-finding-your-words/">Stigma-Free UC: Finding Your Words</a></h2>
+                        <div class="entry-content">
+                            <p>Join us on Thursday, Jan. 24 at 11 a.m., to hear Yener Balan, MD, discuss Kaiser Permanente's Find Your Words campaign. </p>                        </div>
+                    </div>
+                </div><!-- .post -->
+                <hr class="separator" />
+                 
+				                <!-- Gunakan struktur html ini untuk membuat pagination -->
+                <div class="pagination colabs-pagination"><span aria-current='page' class='page-numbers current'>1</span>
+<a class='page-numbers' href='http://link.ucop.edu/category/wellness/page/2/'>2</a>
+<span class="page-numbers dots">&hellip;</span>
+<a class='page-numbers' href='http://link.ucop.edu/category/wellness/page/4/'>4</a>
+<a class="next page-numbers" href="http://link.ucop.edu/category/wellness/page/2/">Next &raquo;</a></div><!-- .pagination -->
+            </div>
+			
+           
+                <div class="sidebar column col4">
+<div id="black-studio-tinymce-2" class="upcoming-events widget widget_black_studio_tinymce"><h4 class="widget-title">Upcoming Events</h4> <div class="textwidget"><h3>Monday, Feb. 11</h3>
+Fireside Chat with Provost & Executive Vice President Michael Brown<br>
+
+<h3>Wednesday, Feb. 13</h3>
+- Flex Jobs, Remote Work & the Gig Economy<br>
+- OP Staff Assembly monthly meeting<br>
+
+<h3>Thursday, Feb. 14</h3>
+- BSFO Guest Speaker Series: Author Mary Ellen Butler<br>
+- Lakeside Speakeasy Toastmasters<br>
+- My UC Career Workshop
+
+
+<div><a class="calendar-button" href="/events/">View full calendar</a></div></div></div><div id="black-studio-tinymce-14" class="JobsBoard widget widget_black_studio_tinymce"><div class="textwidget"><div style="background-color:#ffb511;padding:20px">
+<h3 style="margin:0;padding:0"><a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'Gratitude Grams']);" href="https://sp.ucop.edu/sites/er/thanks/default.aspx">Send a Gratitude Gram</a></h3>
+<p>Say thank you to a UCOP colleague</p>
+</div>
+</div></div><div id="black-studio-tinymce-12" class="widget widget_black_studio_tinymce"><div class="textwidget"><div class="promoportal">
+<div style="width:150px;height:150px;overflow:hidden;float:left;margin-right:20px">
+<a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'UC store']);" href="https://www.ucopstore.com/"><img src="http://link.ucop.edu/wp-content/uploads/2018/07/shirt-150x150-e.png" alt="uc store t-shirt" width="150" height="150" class="alignnone size-full wp-image-38635" /></a>
+</div>
+<div style="height:126px;padding:12px 20px">
+<h3 style="margin:0;padding:0"><a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'UC store']);" href="https://www.ucopstore.com/" style="line-height:25px">Shop the UC Store</a></h3>
+<p><a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'UC store']);" href="https://www.ucopstore.com/" style="font-size:14px">Your home for the latest UC apparel and gear &raquo;</a></div>
+</div>
+</div></div><div id="black-studio-tinymce-8" class="pres-newsletter widget widget_black_studio_tinymce"><div class="textwidget"><div style="padding:0;margin:0;font-size:0;height:141px;width:304px;overflow:hidden"><a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'Stay in touch with Janet']);" style="padding:0;margin:0" href="http://ucop.edu/president/subscribe.html" target="_blank"><img alt="pres_newsletter_link_thumb" src="http://link.ucop.edu/wp-content/uploads/2014/07/pres_newsletter_link_thumb.jpg" width="304" height="141" border="0" /></a></div>
+<div style="background-color: #212121;padding: 12px 20px 15px;margin: 0">
+<h3 style="margin:0 0 5px"><a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'Stay in touch with Janet']);" style="color: #fff;margin: 0;padding: 0" href="http://ucop.edu/president/subscribe.html" target="_blank">Stay in touch with Janet</a></h3>
+<a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'Stay in touch with Janet']);" style="color: #fff;padding:0;margin:0" href="http://ucop.edu/president/subscribe.html" target="_blank">Click here Â»</a></div></div></div><div id="black-studio-tinymce-9" class="JobsBoard widget widget_black_studio_tinymce"><div class="textwidget"><div style="background-color:#ffb511">
+<div style="width:100px;height:100px;overflow:hidden;float:left;margin-right:20px">
+<a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'Job openings at UCOP']);" href="http://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=OP&multiple_locations=0&search="><img src="http://link.ucop.edu/wp-content/uploads/2014/08/jobs_thumb.jpg" alt="jobs_thumb" width="100" height="100" class="alignnone size-full wp-image-38635" /></a>
+</div>
+<div style="height:76px;padding:12px 20px"><h3 style="margin:0;padding:0"><a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'Job openings at UCOP']);" href="http://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=OP&multiple_locations=0&search=">Job openings at UCOP</a></h3>
+<a onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'Job openings at UCOP']);" href="http://jobs.universityofcalifornia.edu/site/advancedsearch?keywords=&Campus%5Bcampus_id%5D=OP&multiple_locations=0&search=">Click here &raquo;</a></div>
+</div></div></div><div id="black-studio-tinymce-6" class="submit-bio widget widget_black_studio_tinymce"><div class="textwidget"><h3><a title="Submit 10-Second Bio" href="http://link.ucop.edu/submit-your-10-second-bio/" onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'Submit 10 sec bio']);">Submit a 10-second bio</a></h3>
+<p>Introduce yourself to the OP community &#8212; it takes just a few minutes.</p>
+<hr />
+<h3><a title="Submit a Shout-Out" href="http://link.ucop.edu/submit-a-shout-out/" onClick="_gaq.push(['_trackEvent', 'Widgets', 'Click', 'Submit shout-out']);">Submit a shout-out</a></h3>
+<p>Want to say thank you to a colleague? Take a moment to say so in Link.</p></div></div><div id="black-studio-tinymce-7" class="side-links widget widget_black_studio_tinymce"><h4 class="widget-title">Links</h4> <div class="textwidget"><p><a href="http://www.ucop.edu/">UCOP website</a></p>
+<p><a href="http://ucnet.universityofcalifornia.edu/index.html">UCnet</a></p>
+<p><a href="http://www.universityofcalifornia.edu/">UC website</a></p>
+<p><a href="http://www.ucop.edu/navigating-ucop/resources/">Navigating UCOP</a></p></div></div></div><!-- .sidebar -->
+            
+</div> <!-- end main -->
+        
+        <div class="footer row">
+            <div class="column col5 ">
+            
+            <a href="http://link.ucop.edu"><img src="http://link.ucop.edu/wp-content/themes/uclink2013/images/logo-footer.png" alt="Link: UCOP&#039;s e-newsletter" />
+            </a>
+            
+            </div>
+            <div class="column col7 soc">
+                
+                <!-- HIDE SOCIAL ICONS  
+                <a href="https://www.facebook.com/universityofcalifornia"><img src="http://link.ucop.edu/wp-content/themes/initiator/images/fb.png" alt="" /></a>
+                <a href="https://twitter.com/UC_Newsroom"><img src="http://link.ucop.edu/wp-content/themes/initiator/images/tw.png" alt="" /></a>
+                
+                <a href="http://plus.google.com"><img src="http://link.ucop.edu/wp-content/themes/initiator/images/gp.png" alt="" /></a>
+                <a href="http://www.youtube.com/"><img src="http://link.ucop.edu/wp-content/themes/initiator/images/yt.png" alt="" /></a>
+               -->
+               <a href="http://link.ucop.edu/feed/"><img src="http://link.ucop.edu/wp-content/themes/initiator/images/rss.png" alt="Subscribe to RSS feed" /></a>
+               
+                
+            </div>
+            
+            <hr class="separator"/>
+            <div class="menu-footer-container"><ul id="menu-footer" class="column col9 copy"><li id="menu-item-42147" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42147"><a href="/">Home</a></li>
+<li id="menu-item-42149" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42149"><a href="/events/">View Calendar</a></li>
+<li id="menu-item-42151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42151"><a href="http://link.ucop.edu/submit-your-10-second-bio/">Submit 10-Second Bio</a></li>
+<li id="menu-item-42153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42153"><a href="http://link.ucop.edu/classes-and-workshops/">Classes and Workshops</a></li>
+<li id="menu-item-42157" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42157"><a href="http://link.ucop.edu/about/">About</a></li>
+<li id="menu-item-42155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42155"><a href="http://link.ucop.edu/archives/">Archives</a></li>
+</ul></div>            
+            <div class="column col3 copy r">&copy; The Regents of the University of California</div>
+        </div>
+    </div>
+<script type="text/javascript">
+  jQuery(window).load(function(){
+    jQuery(document).on("mouseover", ".nivo-control", function(e){jQuery(e.currentTarget).click()});
+	jQuery(document).on("mousedown touchend", ".nivo-control", function(e){ jQuery("#nivoslider-42091 a")[jQuery(e.currentTarget).attr("rel")].click() });
+	
+ jQuery(document).on("focus", '#menu-main li', function(e){jQuery(e.currentTarget).mouseover();});
+ jQuery(document).on("blur", '#menu-main li', function(e){jQuery(e.currentTarget).mouseleave();});
+ 
+ jQuery(document).on("focus", ".captions-area a", function(e){jQuery(".nivo-control")[jQuery(e.currentTarget).attr("rel")].click()});
+  });
+</script>
+ 		<script>
+		( function ( body ) {
+			'use strict';
+			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+		} )( document.body );
+		</script>
+		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done"}};/* ]]> */ </script><script type='text/javascript' src='http://link.ucop.edu/wp-includes/js/wp-embed.min.js?ver=5.0.3'></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"979ed39622","applicationID":"12103883","transactionName":"NFQGYhMFDEZQBUNZCg0eJVUVDQ1bHgdFUw0KRwE=","queueTime":0,"applicationTime":481,"atts":"GBMFFFsfH0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>				Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

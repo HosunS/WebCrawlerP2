@@ -1,0 +1,181 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÜ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5789¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 08 Feb 2006 07:14:44 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"169d-40c4340106100"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 14:30:43 GMTKraw_content¢DtypeEvalueYù// NAME: Liane Nakamura
+// STUDENT ID: 25806927
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.io.*;
+
+//Payroll.java
+//
+//ICS H22 Fall 2005
+//Lab 2: The Price You Pay
+//
+//This class should contain the majority of the code for your user interface.
+//To help you get started, I've included a little bit of code:
+//
+//* In the constructor, I've created three objects that you'll need in
+//various places: a Scanner to read input, a PayrollMenu (see
+//PayrollMenu.java for more information about that), and an
+//ArrayList<Employee> that you should use to store all of the employees.
+//
+//You should start by adding code to the go() method that displays the menu,
+//asks the user for the next command, and processes that command.  (Be aware
+//that the PayrollMenu object can do some of this work for you.  See the
+//PayrollMenu.java file for more information before you proceed.)
+
+
+
+
+
+public class Payroll
+{
+    private Scanner scanner;
+    private ArrayList<Employee> employees;
+    
+    public Payroll(String fileName)
+    {
+        try 
+        {
+            File file = new File(fileName);
+            scanner = new Scanner(file);
+            System.out.println("File successfully read!");
+            System.out.println("Starting Employee program...");
+            // Program assumes everything in input file is correct.
+        } 
+        catch (FileNotFoundException e) 
+        {
+            System.out.println("Input file not found!");
+            System.exit(1);
+        }
+        employees = new ArrayList<Employee>();
+    }
+    
+    
+    public void go()
+    {
+        welcome();
+        while (scanner.hasNext()) 
+        {
+            String command = scanner.nextLine();  // Read instruction
+            
+            // ADD EMPLOYEES
+            if (command.equals("AddEmployee")) 
+                addEmployees();
+
+            // REMOVE EMPLOYEES
+            else if (command.equals("RemoveEmployee"))
+                removeEmployees();
+            
+            // SHOW EMPLOYEES
+            else if (command.equals("ShowEmployees")) 
+                showEmployees();
+            
+            // WEEKLY PAYROLL
+            else if (command.equals("WeeklyPayroll")) 
+                weeklyPayroll();
+        }
+        
+        
+    }
+    
+    
+    // addEmployees auxiliary method
+    public void addEmployees() 
+    {
+        String name = scanner.next() + " " + scanner.next();    // Read name
+        scanner.nextLine();                                     // Clear line
+        
+        for (Employee e : this.employees)                       // Checks to see if name is already in file
+        {
+            if (name.equals(e.getName())) 
+            {
+                System.out.println("Error:  Employee " + name + " already in file");
+                System.out.println("        Please fix your input file and try again.");
+                System.exit(1);
+            }
+        }
+        
+        String type = scanner.nextLine();                       // Read type of employee
+        double wage = scanner.nextDouble();                     // Read wage
+        int wageCents = (int) (wage * 100);                     // Convert wage into cents
+        
+        if (type.equals("Hourly"))                              // Make Hourly employee
+        {  
+            Employee employee = new EmployeeHourly(name, wageCents);
+            employees.add(employee);
+        }
+        else if (type.equals("Salaried"))                       // Make Salaried employee
+        {
+            Employee employee = new EmployeeSalary(name, wageCents);
+            employees.add(employee);
+        }
+        else if (type.equals("Contract"))                       // Make Contract employee
+        {
+            Employee employee = new EmployeeContract(name, wageCents);
+            employees.add(employee);
+        }
+        System.out.println(name + " successfully added!");
+    }
+    
+    
+    // removeEmployees auxiliary function
+    public void removeEmployees() 
+    {
+        String name = scanner.next() + " " + scanner.next();
+        int counter = 0;
+        for (Employee e : this.employees)
+        {
+            counter = counter + 1;
+            if (name.equals(e.getName())) 
+            {
+                this.employees.remove(e);
+                System.out.println(name + " successfully removed!");
+                break;
+            }
+            else if (this.employees.size() == counter){
+                System.out.println("Sorry, " + name + " is not in the list.  Nothing removed.");
+            }
+        }
+    }
+    
+    
+    // showEmployees auxiliary function
+    public void showEmployees() 
+    {
+        System.out.println("\nAll Employees:");
+        for (Employee e : this.employees)
+        {
+            System.out.println(e);
+        }
+    }
+    
+    
+    // weeklyPayroll auxiliary function
+    public void weeklyPayroll() 
+    {
+        System.out.println("\nPrinting weekly payroll:");
+        int employeesSize = employees.size();
+        for (int i = 0; i < employeesSize; i++) 
+        {
+            String name = scanner.next() + " " + scanner.next();
+            int numOfHours = scanner.nextInt();
+            
+            for (Employee e : this.employees)
+            {
+                if (name.equals(e.getName())) 
+                {
+                    System.out.println(e.createWeeklyPaycheck(numOfHours));
+                }
+            }
+        }
+    }
+    
+    
+    
+    private void welcome()
+    {
+        System.out.println();
+        System.out.println("ICS H22 Lab 3: The Price You Pay");
+        System.out.println ();
+    }
+}Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

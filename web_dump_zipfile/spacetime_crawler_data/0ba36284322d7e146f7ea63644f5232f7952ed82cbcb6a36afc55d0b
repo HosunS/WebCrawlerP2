@@ -1,0 +1,64 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1744¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 09 Jun 2017 22:28:28 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"6d0-5518e7d04d083"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 12:54:29 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYÐ<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**CS216 Image Understanding**
+	**Instructor: Charless Fowlkes**
+	*Yu Guo (26642334)*
+	*05/30/2017*
+
+# Single scale detector output
+
+## Template extracted from 1 positive example
+
+### Template
+![](results/1-1.png width=\pagewidth) 
+
+### Test image 1
+![](results/1-2.png width=\pagewidth) 
+
+### Test image 2
+![](results/1-3.png width=\pagewidth)
+
+## template which is average of 5 positive examples
+
+### Template
+![](results/2-1.png width=\pagewidth) 
+
+### Test image 1
+![](results/2-2.png width=\pagewidth) 
+
+### Test image 2
+![](results/2-3.png width=\pagewidth)
+
+## template which is average of 5 positive examples minus average of 100 negative examples
+
+### Template
+![](results/3-1.png width=\pagewidth) 
+
+### Test image 1
+![](results/3-2.png width=\pagewidth) 
+
+### Test image 2
+![](results/3-3.png width=\pagewidth)
+
+# Multi-scale detector output using whichever template works the best
+
+### Template
+![](results/4-1.png width=100) 
+
+### Test image 1
+![](results/4-2.png width=\pagewidth) 
+
+### Test image 2
+![Here just using 1 positive template can detect two asigns (different scales) on this image.](results/4-3.png width=\pagewidth)
+
+
+Comparing to first assignment, instead of using color intensity, we are using edge information to do object detection. Edge is more robostic since we are considering relative color rather than absoluted color.
+
+End.
+
+<!-- Markdeep: -->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style>
+<script src="markdeep.min.js"></script>
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
+<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

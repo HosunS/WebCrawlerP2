@@ -1,0 +1,26 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC536¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:40:01 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"218-3158ecd1e8240"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 21:37:45 GMTKraw_content¢DtypeEvalueY// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Generate table of random distances
+
+#include "RandDist.h"
+#include "Random.h"
+
+RandomDistance::RandomDistance(unsigned long np) : PointSet(np)
+{
+	seed = RandomLong();
+}
+
+double RandomDistance::operator() (point i, point j)
+{
+	gDistances++;
+	if (i > j) {		// switch order to make distance symmetric
+		point k = i;
+		i = j;
+		j = k;
+	}
+	SeedRandom(seed ^ i);		// seed randomization w/point indices
+	SeedRandom(RandomLong() ^ j);
+	return RandomDouble();
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

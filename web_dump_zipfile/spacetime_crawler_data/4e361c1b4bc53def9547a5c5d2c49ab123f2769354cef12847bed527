@@ -1,0 +1,261 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7751¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:53:15 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1e47-4da84bfc8f8c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 11:27:26 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueyG/*
+  $Id: ftsearcherabs.h 4025 2008-10-01 00:01:14Z abehm $
+
+  Copyright (C) 2007 by The Regents of the University of California
+	
+  Redistribution of this file is permitted under
+  the terms of the BSD license
+    
+  Date: 09/17/2007
+  Author: Alexander Behm <abehm (at) ics.uci.edu>
+*/
+
+#ifndef _ftsearcherabs_h_
+#define _ftsearcherabs_h_
+
+#include "ftindexerabs.h"
+#include "statsutil.h"
+#include "filtertypes.h"
+#include "filtertreenode.h"
+#include "common/query.h"
+
+template<class FtSearcherConcrete>
+struct FtSearcherTraits;
+
+template <class FtSearcherConcrete>
+class FtSearcherAbs {
+public:
+  typedef FtSearcherTraits<FtSearcherConcrete> TraitsType;
+  typedef typename TraitsType::FtIndexer FtIndexer;
+  typedef typename TraitsType::Merger Merger;
+
+  typedef FtIndexerTraits<FtIndexer> IndexerTraitsType;  
+  typedef typename IndexerTraitsType::InvList InvList;
+  
+protected:  
+  unsigned mergeThreshold;
+  GramGen* gramGen;
+  StatsUtil sutilLocal;
+  
+  Merger* merger;
+  FtIndexer* ftIndexer;
+  
+  void getAffectedLeavesRec(FilterTreeNode<InvList>* node,
+			    const Query& query,
+			    const vector<unsigned>& queryGramCodes,
+			    const vector<AbstractFilter*>* filterTypes,
+			    const unsigned filterId,
+			    vector<FilterTreeNode<InvList>*>& leaves);
+  
+  void searchLeafNodePanic(FilterTreeNode<InvList>* leaf,
+			   const Query& query,
+			   vector<unsigned>& resultStringIDs,
+			   StatsUtil* sutil = NULL);
+  
+  void postProcess(const Query& query,
+		   const vector<unsigned>& candidates, 
+		   vector<unsigned>& resultStringIDs,
+		   StatsUtil* sutil = NULL);
+
+  void processLeaves(const vector<FilterTreeNode<InvList>*>& leaves,
+		     const Query& query,
+		     const vector<unsigned>& queryGramCodes,
+		     vector<unsigned>& resultStringIDs,
+		     StatsUtil* sutil) {
+    static_cast<FtSearcherConcrete*>(this)->processLeaves_Impl(leaves, 
+							       query, 
+							       queryGramCodes,
+							       resultStringIDs,
+							       sutil);
+  }
+  
+public:
+  FtSearcherAbs(Merger* m, FtIndexer* indexer = NULL);
+  
+  void search(const Query& query, vector<unsigned>& resultStringIDs, StatsUtil* sutil = NULL);  
+  void setFtIndexer(FtIndexer* ftIndexer) { this->ftIndexer = ftIndexer; if(ftIndexer) gramGen = ftIndexer->getGramGen(); }
+};
+
+template<class FtSearcherConcrete>
+FtSearcherAbs<FtSearcherConcrete>::
+FtSearcherAbs(Merger* m, FtIndexer* indexer) {
+  merger = m;
+  ftIndexer = indexer;
+  if(ftIndexer) gramGen = ftIndexer->getGramGen();
+}
+
+template<class FtSearcherConcrete>
+void 
+FtSearcherAbs<FtSearcherConcrete>::
+getAffectedLeavesRec(FilterTreeNode<InvList>* node,
+		     const Query& query,
+		     const vector<unsigned>& queryGramCodes,
+		     const vector<AbstractFilter*>* filterTypes,
+		     const unsigned filterId,
+		     vector<FilterTreeNode<InvList>*>& leaves) {
+  
+  if(node->isLeaf) leaves.push_back(node);
+  else {
+    if(filterTypes->size() > 0) {
+      AbstractFilter* filter = filterTypes->at(filterId);
+      
+      // get the bounds for this filter
+      unsigned lbound, ubound;
+      query.sim.getFilterBounds(query.str,
+				query.threshold,
+				filter->getType(),
+				lbound,
+				ubound);
+      
+      vector<pair<unsigned, FilterTreeNode<InvList>* > >& children = node->children;
+      // nodeLbound and nodeUbound denote upper and lower bound of node that we are looking at
+      unsigned nodeLbound, nodeUbound;    
+      nodeLbound = filter->getFilterLbound();
+      // for all children check if we need to recurse into them
+      for(unsigned i = 0; i < children.size(); i++) {
+	// selectively recurse into children, 
+	// i.e. recurse into all nodes that overlap with [lbound, ubound]
+	nodeUbound = children.at(i).first;
+	if(lbound <= nodeUbound && ubound >= nodeLbound) {
+	  getAffectedLeavesRec(children.at(i).second,
+			       query,
+			       queryGramCodes,
+			       filterTypes,
+			       filterId+1,
+			       leaves);
+	}      
+	
+	nodeLbound = nodeUbound;
+      }
+    }
+    else {
+      leaves.push_back(node->children.at(0).second);
+    }
+  }
+}
+
+template<class FtSearcherConcrete>
+void 
+FtSearcherAbs<FtSearcherConcrete>::
+searchLeafNodePanic(FilterTreeNode<InvList>* leaf,
+		    const Query& query,
+		    vector<unsigned>& resultStringIDs,
+		    StatsUtil* sutil) { 
+  
+  if(sutil) sutil->startTimeMeasurement();
+
+  if(ftIndexer->filterTypes.size() > 0) {
+    // search the stringids in this leaf if there are any
+    if(leaf->distinctStringIDs) {
+      string dictString;
+      InvList* stringIDs = leaf->distinctStringIDs->getArray();
+      for(unsigned i = 0; i < stringIDs->size(); i++) {
+	unsigned stringId = stringIDs->at(i);      
+	ftIndexer->strContainer->retrieveString(dictString, stringId);
+	if ( query.sim(dictString, query.str, query.threshold))
+	  resultStringIDs.push_back(stringId);
+      }
+    }
+  }
+  else {
+    // search all stringids
+    string dictString;
+    for(unsigned i = 0; i < ftIndexer->strContainer->size(); i++) {    
+      ftIndexer->strContainer->retrieveString(dictString, i);
+      if ( query.sim(dictString, query.str, query.threshold))
+	resultStringIDs.push_back(i);
+    }
+  }
+  
+  if(sutil) {
+    sutil->stopTimeMeasurement();
+    sutil->searchStats.panicTime += sutil->getTimeMeasurement();
+    sutil->searchStats.numberPanics++;
+  }
+}
+
+template<class FtSearcherConcrete>
+void 
+FtSearcherAbs<FtSearcherConcrete>::
+search(const Query& query,
+       vector<unsigned>& resultStringIDs,
+       StatsUtil* sutil) {
+  
+  // create gram codes from query
+  vector<unsigned> queryGramCodes;
+  gramGen->decompose(query.str, queryGramCodes);
+  vector<AbstractFilter*>* filterTypes = &ftIndexer->filterTypes;
+  if(sutil) {
+    sutil->startTimeMeasurement();
+    mergeThreshold = query.sim.getMergeThreshold(query.str, 
+						 queryGramCodes, 
+						 query.threshold);
+    sutil->stopTimeMeasurement();
+    sutil->searchStats.thresholdTime = sutil->getTimeMeasurement();
+    if((signed)mergeThreshold > 0) sutil->searchStats.threshold = mergeThreshold;
+    else sutil->searchStats.threshold = 0.0;
+  }
+  else {
+    mergeThreshold = query.sim.getMergeThreshold(query.str, 
+						 queryGramCodes, 
+						 query.threshold);
+  }    
+  
+  // get affected leaves and process them
+  vector<FilterTreeNode<InvList>*> leaves;
+  getAffectedLeavesRec(ftIndexer->filterTreeRoot,
+		       query,
+		       queryGramCodes,
+		       filterTypes,
+		       0,
+		       leaves);
+  
+  processLeaves(leaves,
+		query,
+		queryGramCodes,
+		resultStringIDs,
+		sutil);
+  
+  if(sutil) {
+    sutil->searchStats.totalSearchTime = 
+      sutil->searchStats.thresholdTime +
+      sutil->searchStats.preprocessTime +
+      sutil->searchStats.mergeTime +
+      sutil->searchStats.postprocessTime +
+      sutil->searchStats.panicTime;
+  }
+}
+
+template<class FtSearcherConcrete>
+void 
+FtSearcherAbs<FtSearcherConcrete>::
+postProcess(const Query& query,
+	    const vector<unsigned>& candidates, 
+	    vector<unsigned>& resultStringIDs,
+	    StatsUtil* sutil) {
+
+  if(sutil) {
+    sutil->startTimeMeasurement();
+    for(unsigned i = 0; i < candidates.size(); i++) {
+      unsigned stringId = candidates.at(i);      
+      string dictString;
+      this->ftIndexer->strContainer->retrieveString(dictString, stringId);
+      if (query.sim(dictString, query.str, query.threshold))
+	resultStringIDs.push_back(stringId);
+    }        
+    sutil->stopTimeMeasurement();
+    sutil->searchStats.postprocessTime += sutil->getTimeMeasurement();
+  }
+  else {
+    for(unsigned i = 0; i < candidates.size(); i++) {
+      unsigned stringId = candidates.at(i);      
+      string dictString;
+      this->ftIndexer->strContainer->retrieveString(dictString, stringId);
+      if (query.sim(dictString, query.str, query.threshold))
+	resultStringIDs.push_back(stringId);
+    }           
+  }
+}
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

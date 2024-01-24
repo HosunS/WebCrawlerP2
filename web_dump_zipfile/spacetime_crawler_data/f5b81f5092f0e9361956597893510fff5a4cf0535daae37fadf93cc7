@@ -1,0 +1,32 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC572¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:39:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"423-3158ecbed5540-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 19:06:55 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY#// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Programmer interface for generation of point sets
+// Actual implementations will be subclassed from this outline.
+//
+// Distances are defined by subclassing PointSet from Distance.
+// We also define a function interact() which performs certain pairwise
+// interactions between points, depending on the intended application.
+
+#ifndef POINT_SET_H
+#define POINT_SET_H
+
+#include "Distances.h"
+
+class PointSet : public Distance {
+ public:
+ 	PointSet(unsigned long npoints) { ; }
+ 	virtual ~PointSet() { ; }
+ 	
+ 	virtual void interact(point, point) { ; }
+ 		// For agglomerative clustering, the two args are assumed to represent
+ 		// clusters of some sort. This function is assumed to merge the two
+ 		// clusters in a single one, which replaces the first point; the
+ 		// effects on the second point are undefined.
+ 		//
+ 		// For cheapest insertion TSP heuristic, the two points are assumed to
+ 		// represent an edge and a vertex, and are both replaced by new edges.
+};
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,217 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 22:41:53 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYY’<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Classification</a></font> <font color=red>(51)</font><br><a href='datasets.html?format=&task=reg&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Regression</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=clu&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Clustering</a> <font color=red>(15)</font><br><a href='datasets.html?format=&task=other&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Other</a> <font color=red>(15)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=cat&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Categorical</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=cla&att=num&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Numerical</a> <font color=red>(29)</font><br><a href='datasets.html?format=&task=cla&att=mix&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Mixed</a> <font color=red>(7)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=mvar&sort=nameUp&view=list'>Multivariate</a> <font color=red>(37)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=uvar&sort=nameUp&view=list'>Univariate</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=seq&sort=nameUp&view=list'>Sequential</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=ts&sort=nameUp&view=list'>Time-Series</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=text&sort=nameUp&view=list'>Text</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=dt&sort=nameUp&view=list'>Domain-Theory</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=other&sort=nameUp&view=list'>Other</a> <font color=red>(2)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b> - <a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=&sort=nameUp&view=list'>Life Sciences</a> <font color=red>(93)</font><br><a href='datasets.html?format=&task=cla&att=&area=phys&numAtt=&numIns=&type=&sort=nameUp&view=list'>Physical Sciences</a> <font color=red>(32)</font><br><a href='datasets.html?format=&task=cla&att=&area=comp&numAtt=&numIns=&type=&sort=nameUp&view=list'>CS / Engineering</a> <font color=red>(127)</font><br><a href='datasets.html?format=&task=cla&att=&area=soc&numAtt=&numIns=&type=&sort=nameUp&view=list'>Social Sciences</a> <font color=red>(14)</font><br><a href='datasets.html?format=&task=cla&att=&area=bus&numAtt=&numIns=&type=&sort=nameUp&view=list'>Business</a> <font color=red>(22)</font><br><a href='datasets.html?format=&task=cla&att=&area=game&numAtt=&numIns=&type=&sort=nameUp&view=list'>Game</a> <font color=red>(7)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Other</a></font> <font color=red>(51)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=less10&numIns=&type=&sort=nameUp&view=list'>Less than 10</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=10to100&numIns=&type=&sort=nameUp&view=list'>10 to 100</a> <font color=red>(28)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=greater100&numIns=&type=&sort=nameUp&view=list'>Greater than 100</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=less100&type=&sort=nameUp&view=list'>Less than 100</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>100 to 1000</a> <font color=red>(22)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=greater1000&type=&sort=nameUp&view=list'>Greater than 1000</a> <font color=red>(21)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Matrix</a> <font color=red>(35)</font><br><a href='datasets.html?format=nonmat&task=cla&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=list'>Non-Matrix</a> <font color=red>(16)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>51</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=&sort=nameUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Activity+Recognition+from+Single+Chest-Mounted+Accelerometer">Activity Recognition from Single Chest-Mounted Accelerometer</a></b>: The dataset collects data from a wearable accelerometer mounted on the chest. The dataset is intended for Activity Recognition research purposes.</p><p class="normal">2. <b><a href="datasets/Audit+Data">Audit Data</a></b>: Exhaustive one year non-confidential data in the year 2015 to 2016 of firms is collected from the Auditor Office of India to build a predictor for classifying suspicious firms.</p><p class="normal">3. <b><a href="datasets/Australian+Sign+Language+signs">Australian Sign Language signs</a></b>: This data consists of sample of Auslan (Australian Sign Language) signs. Examples of 95 signs were collected from five signers with a total of 6650 sign samples.</p><p class="normal">4. <b><a href="datasets/Australian+Sign+Language+signs+%28High+Quality%29">Australian Sign Language signs (High Quality)</a></b>: This data consists of sample of Auslan (Australian Sign Language) signs. 27 examples of each of 95 Auslan signs were captured from a native signer using high-quality position trackers</p><p class="normal">5. <b><a href="datasets/AutoUniv">AutoUniv</a></b>: AutoUniv is an advanced data generator for classifications tasks. The aim is to reflect the nuances and heterogeneity of real data.  Data can be generated in .csv, ARFF or C4.5 formats.</p><p class="normal">6. <b><a href="datasets/Bach+Choral+Harmony">Bach Choral Harmony</a></b>: The data set is composed of 60 chorales (5665 events) by J.S. Bach (1675-1750).
+Each event of each chorale is labelled using 1 among 101 chord labels and described
+through 14 features.</p><p class="normal">7. <b><a href="datasets/Badges">Badges</a></b>: Badges labeled with a "+" or "-" as a function of a person's name</p><p class="normal">8. <b><a href="datasets/BuddyMove+Data+Set">BuddyMove Data Set</a></b>: User interest information extracted from user reviews published in holidayiq.com about various types of point of interests in South India</p><p class="normal">9. <b><a href="datasets/Car+Evaluation">Car Evaluation</a></b>: Derived from simple hierarchical decision model, this database may be useful for testing constructive induction and structure discovery methods.</p><p class="normal">10. <b><a href="datasets/Chronic_Kidney_Disease">Chronic_Kidney_Disease</a></b>: This dataset can be used to predict the chronic kidney disease and it can be collected from the hospital nearly 2 months of period.</p><p class="normal">11. <b><a href="datasets/CMU+Face+Images">CMU Face Images</a></b>: This data consists of 640 black and white face images of people taken with varying pose (straight, left, right, up), expression (neutral, happy, sad, angry), eyes (wearing sunglasses or not), and size</p><p class="normal">12. <b><a href="datasets/Connectionist+Bench+%28Vowel+Recognition+-+Deterding+Data%29">Connectionist Bench (Vowel Recognition - Deterding Data)</a></b>: Speaker independent recognition of the eleven steady state vowels of British English using a specified training set of lpc derived log area ratios.</p><p class="normal">13. <b><a href="datasets/Dexter">Dexter</a></b>: DEXTER is a text classification problem in a bag-of-word representation. This is a two-class classification problem with sparse continuous input variables. This dataset is one of five datasets of the NIPS 2003 feature selection challenge.
+</p><p class="normal">14. <b><a href="datasets/Firm-Teacher_Clave-Direction_Classification">Firm-Teacher_Clave-Direction_Classification</a></b>: The data are binary attack-point vectors and their clave-direction class(es) according to the partido-alto-based paradigm.</p><p class="normal">15. <b><a href="datasets/Flags">Flags</a></b>: From Collins Gem Guide to Flags, 1986</p><p class="normal">16. <b><a href="datasets/Folio">Folio</a></b>: 20 photos of leaves for each of 32 different species.</p><p class="normal">17. <b><a href="datasets/Geographical+Original+of+Music">Geographical Original of Music</a></b>: Instances in this dataset contain audio features extracted from 1059 wave files. The task associated with the data is to predict the geographical origin of music.
+</p><p class="normal">18. <b><a href="datasets/Gesture+Phase+Segmentation">Gesture Phase Segmentation</a></b>: The dataset is composed by features extracted from 7 videos with people gesticulating, aiming at studying Gesture Phase Segmentation. It contains 50 attributes divided into two files for each video.</p><p class="normal">19. <b><a href="datasets/Hill-Valley">Hill-Valley</a></b>: Each record represents 100 points on a two-dimensional graph. When plotted in order (from 1 through 100) as the Y co-ordinate, the points will create either a Hill (a ï¿½bumpï¿½ in the terrain) or a Valley (a ï¿½dipï¿½ in the terrain).</p><p class="normal">20. <b><a href="datasets/ICMLA+2014+Accepted+Papers+Data+Set">ICMLA 2014 Accepted Papers Data Set</a></b>: This data set compromises the metadata for the 2014 ICMLA conference's accepted papers, including ID, paper titles, author's keywords, abstracts and sessions in which they were exposed.</p><p class="normal">21. <b><a href="datasets/Image+Segmentation">Image Segmentation</a></b>: Image data described by high-level numeric-valued attributes, 7 classes</p><p class="normal">22. <b><a href="datasets/Japanese+Vowels">Japanese Vowels</a></b>: This dataset records 640 time series of 12 LPC cepstrum coefficients taken from nine male speakers.</p><p class="normal">23. <b><a href="datasets/Legal+Case+Reports">Legal Case Reports</a></b>: A textual corpus of 4000 legal cases for automatic summarization and citation analysis. For each document we collect catchphrases, citations sentences, citation catchphrases and citation classes.</p><p class="normal">24. <b><a href="datasets/Lenses">Lenses</a></b>: Database for fitting contact lenses</p><p class="normal">25. <b><a href="datasets/Libras+Movement">Libras Movement</a></b>: The data set contains 15 classes of 24 instances each. Each class references to a hand movement type in LIBRAS (Portuguese
+name 'Lï¿½ngua BRAsileira de Sinais', oficial brazilian signal language).</p><p class="normal">26. <b><a href="datasets/Madelon">Madelon</a></b>: MADELON is an artificial dataset, which was part of the NIPS 2003 feature selection challenge. This is a two-class classification problem with continuous input variables. The difficulty is that the problem is multivariate and highly non-linear. </p><p class="normal">27. <b><a href="datasets/Meta-data">Meta-data</a></b>: Meta-Data was used in order to give advice about which classification method is appropriate for a particular dataset (taken from results of Statlog project).</p><p class="normal">28. <b><a href="datasets/MONK%27s+Problems">MONK's Problems</a></b>: A set of three artificial domains over the same attribute space; Used to test a wide range of induction algorithms</p><p class="normal">29. <b><a href="datasets/News+Aggregator">News Aggregator</a></b>: References to news pages collected from an web aggregator in the period from 10-March-2014 to 10-August-2014. The resources are grouped into clusters that represent pages discussing the same story.</p><p class="normal">30. <b><a href="datasets/Pittsburgh+Bridges">Pittsburgh Bridges</a></b>: Bridges database that has original and numeric-discretized datasets</p><p class="normal">31. <b><a href="datasets/QSAR+biodegradation">QSAR biodegradation</a></b>: Data set containing values for 41 attributes (molecular descriptors) used to classify 1055 chemicals into 2 classes (ready and not ready biodegradable).</p><p class="normal">32. <b><a href="datasets/Record+Linkage+Comparison+Patterns">Record Linkage Comparison Patterns</a></b>: Element-wise comparison of records with personal data from a record linkage setting. The task is to decide from a comparison pattern whether the underlying records belong to one person.</p><p class="normal">33. <b><a href="datasets/Reuters-21578+Text+Categorization+Collection">Reuters-21578 Text Categorization Collection</a></b>: This is a collection of documents that appeared on Reuters newswire in 1987. The documents were assembled and indexed with categories.</p><p class="normal">34. <b><a href="datasets/seismic-bumps">seismic-bumps</a></b>: The data describe the problem of high energy (higher than 10^4 J) seismic bumps forecasting in a coal 
+mine. Data come from two of longwalls located in a Polish coal mine.</p><p class="normal">35. <b><a href="datasets/Sentence+Classification">Sentence Classification</a></b>: Contains sentences from the abstract and introduction of 30 articles annotated with a modified Argumentative Zones annotation scheme. These articles come from biology, machine learning and psychology.</p><p class="normal">36. <b><a href="datasets/Sentiment+Labelled+Sentences">Sentiment Labelled Sentences</a></b>: The dataset contains sentences labelled with positive or negative sentiment.</p><p class="normal">37. <b><a href="datasets/Spoken+Arabic+Digit">Spoken Arabic Digit</a></b>: This dataset contains timeseries of mel-frequency cepstrum coefficients (MFCCs) corresponding to spoken Arabic digits.  Includes data from 44 male and 44 female native Arabic speakers.</p><p class="normal">38. <b><a href="datasets/Statlog+%28Image+Segmentation%29">Statlog (Image Segmentation)</a></b>: This dataset is an image segmentation database similar to a database already present in the repository (Image segmentation database) but in a slightly different form.</p><p class="normal">39. <b><a href="datasets/Statlog+%28Vehicle+Silhouettes%29">Statlog (Vehicle Silhouettes)</a></b>: 3D objects within a 2D image by application of an ensemble of shape feature extractors to the 2D silhouettes of the objects.</p><p class="normal">40. <b><a href="datasets/StoneFlakes">StoneFlakes</a></b>: Stone flakes are waste products of the stone tool production in
+the prehistoric era. The variables are means of geometric and
+stylistic features of the flakes contained in different inventories.</p><p class="normal">41. <b><a href="datasets/Synthetic+Control+Chart+Time+Series">Synthetic Control Chart Time Series</a></b>: This data consists of synthetically generated control charts.</p><p class="normal">42. <b><a href="datasets/Tarvel+Review+Ratings">Tarvel Review Ratings</a></b>: Google reviews on attractions from 24 categories across Europe are considered. Google user rating ranges from 1 to 5 and average user rating per category is calculated.</p><p class="normal">43. <b><a href="datasets/Teaching+Assistant+Evaluation">Teaching Assistant Evaluation</a></b>: The data consist of evaluations of teaching performance; scores are "low", "medium", or "high"</p><p class="normal">44. <b><a href="datasets/Tennis+Major+Tournament+Match+Statistics">Tennis Major Tournament Match Statistics</a></b>: This is a collection of 8 files containing the match statistics for both women and men at the four major tennis tournaments of the year 2013. Each file has 42 columns and a minimum of 76 rows.</p><p class="normal">45. <b><a href="datasets/Trains">Trains</a></b>: 2 data formats (structured, one-instance-per-line)</p><p class="normal">46. <b><a href="datasets/Travel+Reviews">Travel Reviews</a></b>: Reviews on destinations in 10 categories mentioned across East Asia. Each traveler rating is mapped as Excellent(4), Very Good(3), Average(2), Poor(1), and Terrible(0) and average rating is used.</p><p class="normal">47. <b><a href="datasets/Turkiye+Student+Evaluation">Turkiye Student Evaluation</a></b>: This data set contains a total 5820 evaluation scores provided by students from Gazi University in Ankara (Turkey). There is a total of 28 course specific questions and additional 5 attributes.</p><p class="normal">48. <b><a href="datasets/University">University</a></b>: Data in original (LISP-readable) form</p><p class="normal">49. <b><a href="datasets/University+of+Tehran+Question+Dataset+2016+%28UTQD.2016%29">University of Tehran Question Dataset 2016 (UTQD.2016)</a></b>: Persian questions gathered from a jeopardy game broadcasted on Iranian national television. </p><p class="normal">50. <b><a href="datasets/User+Identification+From+Walking+Activity">User Identification From Walking Activity</a></b>: The dataset collects data from an Android smartphone positioned in the chest pocket from 22 participants walking in the wild over a predefined path. 
+</p><p class="normal">51. <b><a href="datasets/USPTO+Algorithm+Challenge%2C+run+by+NASA-Harvard+Tournament+Lab+and+TopCoder++++Problem%3A+Pat">USPTO Algorithm Challenge, run by NASA-Harvard Tournament Lab and TopCoder    Problem: Pat</a></b>: Data used for USPTO Algorithm Competition. Contains drawing pages from US patents with manually labeled figure and part labels.</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

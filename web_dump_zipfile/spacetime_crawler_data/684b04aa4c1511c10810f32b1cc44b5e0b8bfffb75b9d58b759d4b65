@@ -1,0 +1,57 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2168¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 03 May 1990 22:52:17 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"22e9fcea-878-247b0eb110a40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 17:57:16 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYx/*-------------------------------------------------------------- 
+	match(X,Y) will match two expressions, by matching the
+	parts of those expressions.  It does this by decoding 
+	implications, as well as applying DeMorgan's Law.  The 
+	cuts are present to allow only one match per call, as
+	we are not interested in variants.
+
+	The strangeness in match2 is to
+	prevent us from building infinite structures during matching.
+	Clauses 3 and 4 do an occurs check while matching.
+----------------------------------------------------------------*/
+match(X,Y)	:- decode(X, V), decode(Y, W), match2(V, W).
+
+% decode
+% NOTE: It would be interesting to see how performance changes
+% if decode is allowed to strip off double negations.
+% If this is attempted, it should be easier and safer to do it
+% in a second pass, rather than trying to incorporate it in decode.
+
+% Base cases.
+
+decode(P, P)	:- atom(P), !.
+decode(P, P)	:- var(P), !.
+
+% Pass negations and disjunctions through.
+
+decode(~P, ~Q)		:- decode(P, Q), !.
+decode(P or Q, R or S)	:- decode(P, R), decode(Q, S), !.
+
+% Decode defined connectives.
+
+decode(P and Q, R)	:- decode( ~(~P or ~Q), R), !.
+decode(P => Q, R)	:- decode( ~P or Q, R), !.
+decode(P <==> Q, R)	:- decode((P=>Q) and (Q=>P), R), !.
+decode(P, Q)		:- write('SYNTAX ERROR encountered in decode'), !.
+
+% Match decoded expressions.
+% This assumes that axioms and known theorems are expressed
+% in terms of PROLOG variables but problems are expressed in terms of
+% constants (lower case PROLOG atoms like p, q).
+% This is because we don't want to specialize the problem but we're
+% willing to specialize the knowledge we apply in order to solve it.
+
+match2(P, Q)                    :- atom(P), P = Q, !.
+match2(P, Q)                    :- var(P), P == Q, !.
+match2(P, Q)                    :- var(P), collectvars(Q,[],U),
+					(strict_member(P,U) -> (!, fail) ;
+					( P = Q, !)).
+match2(Q, P)                    :- var(P), collectvars(Q,[],U),
+					(strict_member(P,U) -> (!, fail) ;
+					( P = Q, !)).
+
+% Strip off connectives that occur on both sides.
+
+match2(~P1,~P2) 		:- match2(P1,P2), !.
+match2(P1 or Q1, P2 or Q2) 	:- match2(P1,P2), match2(Q1,Q2),!.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,432 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 03:20:03 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY|<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Classification</a> <font color=red>(16)</font><br><a href='datasets.html?format=mat&task=reg&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Regression</a> <font color=red>(10)</font><br><a href='datasets.html?format=mat&task=clu&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Clustering</a> <font color=red>(5)</font><br><a href='datasets.html?format=mat&task=other&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Other</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=cat&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Categorical</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=&att=num&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Numerical</a> <font color=red>(20)</font><br><a href='datasets.html?format=mat&task=&att=mix&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Mixed</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=instUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=mvar&sort=instUp&view=table'>Multivariate</a> <font color=red>(86)</font><br><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=uvar&sort=instUp&view=table'>Univariate</a> <font color=red>(2)</font><br><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=seq&sort=instUp&view=table'>Sequential</a> <font color=red>(13)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Time-Series</a></font> <font color=red>(21)</font><br><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=text&sort=instUp&view=table'>Text</a> <font color=red>(6)</font><br><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=dt&sort=instUp&view=table'>Domain-Theory</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=other&sort=instUp&view=table'>Other</a> <font color=red>(2)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=&area=life&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Life Sciences</a> <font color=red>(2)</font><br><a href='datasets.html?format=mat&task=&att=&area=phys&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Physical Sciences</a> <font color=red>(4)</font><br><a href='datasets.html?format=mat&task=&att=&area=comp&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>CS / Engineering</a> <font color=red>(12)</font><br><a href='datasets.html?format=mat&task=&att=&area=soc&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Social Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=&att=&area=bus&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Business</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=&att=&area=game&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=&att=&area=other&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Other</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b> - <a href='datasets.html?format=mat&task=&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=instUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=less10&numIns=greater1000&type=ts&sort=instUp&view=table'>Less than 10</a> <font color=red>(9)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>10 to 100</a></font> <font color=red>(21)</font><br><a href='datasets.html?format=mat&task=&att=&area=&numAtt=greater100&numIns=greater1000&type=ts&sort=instUp&view=table'>Greater than 100</a> <font color=red>(13)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=&type=ts&sort=instUp&view=table'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=less100&type=ts&sort=instUp&view=table'>Less than 100</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=100to1000&type=ts&sort=instUp&view=table'>100 to 1000</a> <font color=red>(5)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Greater than 1000</a></font> <font color=red>(21)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Matrix</a></font> <font color=red>(21)</font><br><a href='datasets.html?format=nonmat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=table'>Non-Matrix</a> <font color=red>(5)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>21</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=taskUp&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=instDown&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/Hybrid+Indoor+Positioning+Dataset+from+WiFi+RSSI%2C+Bluetooth+and+magnetometer"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Hybrid+Indoor+Positioning+Dataset+from+WiFi+RSSI%2C+Bluetooth+and+magnetometer">Hybrid Indoor Positioning Dataset from WiFi RSSI, Bluetooth and magnetometer</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset was created for the comparison and evaluation of hybrid indoor positioning methods. The dataset presented contains data from W-LAN and Bluetooth interfaces, and Magnetometer. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1540&nbsp;</p></td>
+			<td><p class="normal">65&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Ozone+Level+Detection"><img src="assets/MLimages/SmallLarge172.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Ozone+Level+Detection">Ozone Level Detection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two ground ozone level data sets are included in this collection. One is the eight hour peak set (eighthr.data), the other is the one hour peak set (onehr.data). Those data were collected from 1998 to 2004 at the Houston, Galveston and Brazoria area.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2536&nbsp;</p></td>
+			<td><p class="normal">73&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Australian+Sign+Language+signs+%28High+Quality%29"><img src="assets/MLimages/SmallLarge114.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Australian+Sign+Language+signs+%28High+Quality%29">Australian Sign Language signs (High Quality)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of sample of Auslan (Australian Sign Language) signs. 27 examples of each of 95 Auslan signs were captured from a native signer using high-quality position trackers&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2565&nbsp;</p></td>
+			<td><p class="normal">22&nbsp;</p></td>
+			<td><p class="normal">2002&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Vicon+Physical+Action+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Vicon+Physical+Action+Data+Set">Vicon Physical Action Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The Physical Action Data Set includes 10 normal and 10 aggressive physical actions that measure the human activity. The data have been collected by 10 subjects using the Vicon 3D tracker.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">3000&nbsp;</p></td>
+			<td><p class="normal">27&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/SML2010"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SML2010">SML2010</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is collected from a monitor system mounted in a domotic house. It corresponds to approximately 40 days of monitoring data.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series, Text&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">4137&nbsp;</p></td>
+			<td><p class="normal">24&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/BLE+RSSI+Dataset+for+Indoor+localization+and+Navigation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/BLE+RSSI+Dataset+for+Indoor+localization+and+Navigation">BLE RSSI Dataset for Indoor localization and Navigation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains RSSI readings gathered from an array of Bluetooth Low Energy (BLE) iBeacons in a real-world and operational indoor environment for localization and navigation purposes.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">6611&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Australian+Sign+Language+signs"><img src="assets/MLimages/SmallLarge114.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Australian+Sign+Language+signs">Australian Sign Language signs</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of sample of Auslan (Australian Sign Language) signs. Examples of 95 signs were collected from five signers with a total of 6650 sign samples.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Real&nbsp;</p></td>
+			<td><p class="normal">6650&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals">EEG Steady-State Visual Evoked Potential Signals</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This database consists on 30 subjects performing Brain Computer Interface for Steady State Visual Evoked Potentials (BCI-SSVEP). &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">9200&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Air+Quality"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Air+Quality">Air Quality</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Contains the responses of a gas multisensor device deployed on the field in an Italian city. Hourly responses averages are recorded along with gas concentrations references from a certified analyzer. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">9358&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Gesture+Phase+Segmentation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gesture+Phase+Segmentation">Gesture Phase Segmentation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset is composed by features extracted from 7 videos with people gesticulating, aiming at studying Gesture Phase Segmentation. It contains 50 attributes divided into two files for each video.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">9900&nbsp;</p></td>
+			<td><p class="normal">50&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/EEG+Eye+State"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/EEG+Eye+State">EEG Eye State</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set consists of 14 EEG values and a value indicating the eye state.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">14980&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/UJIIndoorLoc-Mag"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/UJIIndoorLoc-Mag">UJIIndoorLoc-Mag</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The UJIIndoorLoc-Mag is an indoor localization database to test Indoor Positioning System that rely on Earth's magnetic field variations.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">40000&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Beijing+PM2.5+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Beijing+PM2.5+Data">Beijing PM2.5 Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This hourly data set contains the PM2.5 data of US Embassy in Beijing. Meanwhile, meteorological data from Beijing Capital International Airport are also included. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">43824&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/PM2.5+Data+of+Five+Chinese+Cities"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/PM2.5+Data+of+Five+Chinese+Cities">PM2.5 Data of Five Chinese Cities</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This hourly data set contains the PM2.5 data in Beijing, Shanghai, Guangzhou, Chengdu and Shenyang. Meanwhile, meteorological data for each city are also included.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">52854&nbsp;</p></td>
+			<td><p class="normal">86&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/News+Popularity+in+Multiple+Social+Media+Platforms"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/News+Popularity+in+Multiple+Social+Media+Platforms">News Popularity in Multiple Social Media Platforms</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Large data set of news items and their respective social feedback on multiple platforms: Facebook, Google+ and LinkedIn.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series, Text&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">93239&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Buzz+in+social+media+"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Buzz+in+social+media+">Buzz in social media </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data-set contains examples of buzz events from two different social networks: Twitter, and Tom's Hardware, a forum network focusing on new technology with more conservative dynamics.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series, Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression, Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">140000&nbsp;</p></td>
+			<td><p class="normal">77&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Educational+Process+Mining+%28EPM%29%3A+A+Learning+Analytics+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Educational+Process+Mining+%28EPM%29%3A+A+Learning+Analytics+Data+Set">Educational Process Mining (EPM): A Learning Analytics Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Educational Process Mining data set is built from the recordings of 115 subjects' activities through a logging application while learning with an educational simulator.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">230318&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Gas+sensors+for+home+activity+monitoring"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gas+sensors+for+home+activity+monitoring">Gas sensors for home activity monitoring</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">100 recordings of a sensor array under different conditions in a home setting: background, wine and banana presentations. The array includes 8 MOX gas sensors, and humidity and temperature sensors.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">919438&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/PAMAP2+Physical+Activity+Monitoring"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/PAMAP2+Physical+Activity+Monitoring">PAMAP2 Physical Activity Monitoring</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The PAMAP2 Physical Activity Monitoring dataset contains data of 18 different physical activities, performed by 9 subjects wearing 3 inertial measurement units and a heart rate monitor.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">3850505&nbsp;</p></td>
+			<td><p class="normal">52&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Heterogeneity+Activity+Recognition"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Heterogeneity+Activity+Recognition">Heterogeneity Activity Recognition</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The Heterogeneity Human Activity Recognition (HHAR) dataset from Smartphones and Smartwatches is a dataset devised to benchmark human activity recognition algorithms (classification, automatic data segmentation, sensor fusion, feature extraction, etc.) in real-world contexts; specifically, the dataset is gathered with a variety of different device models and use-scenarios, in order to reflect sensing heterogeneities to be expected in real deployments.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">43930257&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29">WESAD (Wearable Stress and Affect Detection)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">WESAD (Wearable Stress and Affect Detection) contains data of 15 subjects during a stress-affect lab study, while wearing physiological and motion sensors.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">63000000&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

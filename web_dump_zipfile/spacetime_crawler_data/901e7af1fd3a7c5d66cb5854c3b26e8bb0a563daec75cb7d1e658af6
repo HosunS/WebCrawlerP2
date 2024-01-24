@@ -1,0 +1,693 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 01:00:39 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYÈš<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Classification</a></font> <font color=red>(47)</font><br><a href='datasets.html?format=&task=reg&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Regression</a> <font color=red>(15)</font><br><a href='datasets.html?format=&task=clu&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Clustering</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=other&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Other</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b>  - <a href='datasets.html?format=&task=cla&att=&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=cat&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Categorical</a> <font color=red>(7)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Numerical</a></font> <font color=red>(47)</font><br><a href='datasets.html?format=&task=cla&att=mix&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Mixed</a> <font color=red>(16)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=mvar&sort=typeUp&view=table'>Multivariate</a> <font color=red>(39)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=uvar&sort=typeUp&view=table'>Univariate</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=seq&sort=typeUp&view=table'>Sequential</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=ts&sort=typeUp&view=table'>Time-Series</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=text&sort=typeUp&view=table'>Text</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=dt&sort=typeUp&view=table'>Domain-Theory</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=other&sort=typeUp&view=table'>Other</a> <font color=red>(1)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Life Sciences</a> <font color=red>(18)</font><br><a href='datasets.html?format=&task=cla&att=num&area=phys&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Physical Sciences</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=cla&att=num&area=comp&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>CS / Engineering</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=cla&att=num&area=soc&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Social Sciences</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=num&area=bus&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Business</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=num&area=game&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=other&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Other</a> <font color=red>(8)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b> - <a href='datasets.html?format=&task=cla&att=num&area=&numAtt=&numIns=100to1000&type=&sort=typeUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=less10&numIns=100to1000&type=&sort=typeUp&view=table'>Less than 10</a> <font color=red>(17)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>10 to 100</a></font> <font color=red>(47)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=100to1000&type=&sort=typeUp&view=table'>Greater than 100</a> <font color=red>(16)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=&type=&sort=typeUp&view=table'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=less100&type=&sort=typeUp&view=table'>Less than 100</a> <font color=red>(1)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>100 to 1000</a></font> <font color=red>(47)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=greater1000&type=&sort=typeUp&view=table'>Greater than 1000</a> <font color=red>(72)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Matrix</a> <font color=red>(34)</font><br><a href='datasets.html?format=nonmat&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=table'>Non-Matrix</a> <font color=red>(13)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>47</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=typeDown&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=taskUp&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=100to1000&type=&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/Connectionist+Bench+%28Vowel+Recognition+-+Deterding+Data%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Connectionist+Bench+%28Vowel+Recognition+-+Deterding+Data%29">Connectionist Bench (Vowel Recognition - Deterding Data)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Speaker independent recognition of the eleven steady state vowels of British English using a specified training set of lpc derived log area ratios.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">528&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Las+Vegas+Strip"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Las+Vegas+Strip">Las Vegas Strip</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset includes quantitative and categorical features from online reviews from 21 hotels located in Las Vegas Strip, extracted from TripAdvisor (http://www.tripadvisor.com).&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">504&nbsp;</p></td>
+			<td><p class="normal">20&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/extention+of+Z-Alizadeh+sani+dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/extention+of+Z-Alizadeh+sani+dataset">extention of Z-Alizadeh sani dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">It was collected for CAD diagnosis.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">303&nbsp;</p></td>
+			<td><p class="normal">59&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Z-Alizadeh+Sani"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Z-Alizadeh+Sani">Z-Alizadeh Sani</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">It was collected for CAD diagnosis.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">303&nbsp;</p></td>
+			<td><p class="normal">56&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Autism+Screening+Adult"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Autism+Screening+Adult">Autism Screening Adult</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Autistic Spectrum Disorder Screening Data for Adult. This dataset is related to classification and predictive tasks.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">704&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Wisconsin+%28Original%29"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Wisconsin+%28Original%29">Breast Cancer Wisconsin (Original)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Original Wisconsin Breast Cancer Database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">699&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Wisconsin+%28Prognostic%29"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Wisconsin+%28Prognostic%29">Breast Cancer Wisconsin (Prognostic)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Prognostic Wisconsin Breast Cancer Database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">198&nbsp;</p></td>
+			<td><p class="normal">34&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">Breast Cancer Wisconsin (Diagnostic)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Diagnostic Wisconsin Breast Cancer Database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">569&nbsp;</p></td>
+			<td><p class="normal">32&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Thoracic+Surgery+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Thoracic+Surgery+Data">Thoracic Surgery Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data is dedicated to classification problem related to the post-operative life expectancy in the lung cancer patients: class 1 - death within one year after surgery, class 2 - survival.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">470&nbsp;</p></td>
+			<td><p class="normal">17&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Leaf"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Leaf">Leaf</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset consists in a collection of shape and texture features extracted from digital images of leaf specimens originating from a total of 40 different plant species.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">340&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Glass+Identification"><img src="assets/MLimages/SmallLarge42.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Glass+Identification">Glass Identification</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From USA Forensic Science Service; 6 types of glass; defined in terms of their oxide content (i.e. Na, Fe, K, etc)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">214&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Tennis+Major+Tournament+Match+Statistics"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Tennis+Major+Tournament+Match+Statistics">Tennis Major Tournament Match Statistics</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a collection of 8 files containing the match statistics for both women and men at the four major tennis tournaments of the year 2013. Each file has 42 columns and a minimum of 76 rows.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">127&nbsp;</p></td>
+			<td><p class="normal">42&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Ionosphere"><img src="assets/MLimages/SmallLarge52.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Ionosphere">Ionosphere</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Classification of radar returns from the ionosphere&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">351&nbsp;</p></td>
+			<td><p class="normal">34&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Student+Performance"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Student+Performance">Student Performance</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Predict student performance in secondary education (high school). &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">649&nbsp;</p></td>
+			<td><p class="normal">33&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Chronic_Kidney_Disease"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Chronic_Kidney_Disease">Chronic_Kidney_Disease</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset can be used to predict the chronic kidney disease and it can be collected from the hospital nearly 2 months of period.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">400&nbsp;</p></td>
+			<td><p class="normal">25&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Mesothelioma%E2%80%99s+disease+data+set+"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Mesothelioma%E2%80%99s+disease+data+set+">Mesotheliomaâ€™s disease data set </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Mesotheliomaâ€™s disease data set were prepared at Dicle University Faculty of Medicine in Turkey.
+Three hundred and twenty-four Mesothelioma patient data. In the dataset, all samples have 34 features.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">324&nbsp;</p></td>
+			<td><p class="normal">34&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/SPECTF+Heart"><img src="assets/MLimages/SmallLarge45.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SPECTF+Heart">SPECTF Heart</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data on cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient classified into two categories: normal and abnormal.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">267&nbsp;</p></td>
+			<td><p class="normal">44&nbsp;</p></td>
+			<td><p class="normal">2001&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/GPS+Trajectories"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/GPS+Trajectories">GPS Trajectories</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset has been feed by Android app called Go!Track. It is available at Goolge Play Store(https://play.google.com/store/apps/details?id=com.go.router). &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">163&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Wine"><img src="assets/MLimages/SmallLarge109.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Wine">Wine</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Using chemical analysis determine the origin of wines&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">178&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">1991&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Cervical+cancer+%28Risk+Factors%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cervical+cancer+%28Risk+Factors%29">Cervical cancer (Risk Factors)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">858&nbsp;</p></td>
+			<td><p class="normal">36&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Quality+Assessment+of+Digital+Colposcopies"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Quality+Assessment+of+Digital+Colposcopies">Quality Assessment of Digital Colposcopies</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset explores the subjective quality assessment of digital colposcopies.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">287&nbsp;</p></td>
+			<td><p class="normal">69&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Early+biomarkers+of+Parkinson%92s+disease+based+on+natural+connected+speech"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Early+biomarkers+of+Parkinson%92s+disease+based+on+natural+connected+speech">Early biomarkers of Parkinsonï¿½s disease based on natural connected speech</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Predict a pattern of neurodegeneration in the dataset of speech features obtained from patients with early untreated Parkinsonâ€™s disease and patients at high risk developing Parkinsonâ€™s disease.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">130&nbsp;</p></td>
+			<td><p class="normal">65&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Statlog+%28Vehicle+Silhouettes%29"><img src="assets/MLimages/SmallLarge149.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28Vehicle+Silhouettes%29">Statlog (Vehicle Silhouettes)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">3D objects within a 2D image by application of an ensemble of shape feature extractors to the 2D silhouettes of the objects.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">946&nbsp;</p></td>
+			<td><p class="normal">18&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Connectionist+Bench+%28Sonar%2C+Mines+vs.+Rocks%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Connectionist+Bench+%28Sonar%2C+Mines+vs.+Rocks%29">Connectionist Bench (Sonar, Mines vs. Rocks)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The task is to train a network to discriminate between sonar signals bounced off a metal cylinder and those bounced off a roughly cylindrical rock.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">208&nbsp;</p></td>
+			<td><p class="normal">60&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Children++"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Children++">Autistic Spectrum Disorder Screening Data for Children  </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Children screening data for autism suitable for classification and predictive tasks &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">292&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Adolescent+++"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Adolescent+++">Autistic Spectrum Disorder Screening Data for Adolescent   </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Autistic Spectrum Disorder Screening Data for Adolescent. This dataset is related to classification and predictive tasks.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">104&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/HCC+Survival"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/HCC+Survival">HCC Survival</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Hepatocellular Carcinoma dataset (HCC dataset) was collected at a University Hospital in Portugal. It contains real clinical data of 165 patients diagnosed with HCC.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">165&nbsp;</p></td>
+			<td><p class="normal">49&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/CSM+%28Conventional+and+Social+Media+Movies%29+Dataset+2014+and+2015"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/CSM+%28Conventional+and+Social+Media+Movies%29+Dataset+2014+and+2015">CSM (Conventional and Social Media Movies) Dataset 2014 and 2015</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">12 features categorized as conventional and social media features. Both conventional features, collected from movies databases on Web as well as social media features(YouTube,Twitter).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">217&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Parkinsons"><img src="assets/MLimages/SmallLarge174.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Parkinsons">Parkinsons</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Oxford Parkinson's Disease Detection Dataset&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">197&nbsp;</p></td>
+			<td><p class="normal">23&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Breast+Tissue"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Tissue">Breast Tissue</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Dataset with electrical impedance measurements of freshly excised tissue samples from the breast.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">106&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Optical+Interconnection+Network+"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Optical+Interconnection+Network+">Optical Interconnection Network </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains 640 performance measurements from a simulation of 2-Dimensional Multiprocessor Optical Interconnection Network. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">640&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Coimbra"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Coimbra">Breast Cancer Coimbra</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Clinical features were observed or measured for 64 patients with breast cancer and 52 healthy controls. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">116&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Audit+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Audit+Data">Audit Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Exhaustive one year non-confidential data in the year 2015 to 2016 of firms is collected from the Auditor Office of India to build a predictor for classifying suspicious firms.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">777&nbsp;</p></td>
+			<td><p class="normal">18&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/ILPD+%28Indian+Liver+Patient+Dataset%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/ILPD+%28Indian+Liver+Patient+Dataset%29">ILPD (Indian Liver Patient Dataset)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains 10 variables that are age, gender, total Bilirubin, direct Bilirubin, total proteins, albumin, A/G ratio, SGPT, SGOT and Alkphos.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">583&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Fertility"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Fertility">Fertility</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">100 volunteers provide a semen sample analyzed according to the WHO 2010 criteria. Sperm concentration are related to socio-demographic data, environmental factors, health status, and life habits&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">100&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Climate+Model+Simulation+Crashes"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Climate+Model+Simulation+Crashes">Climate Model Simulation Crashes</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Given Latin hypercube samples of 18 climate model input parameter values, predict climate model simulation crashes and determine the parameter value combinations that cause the failures.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">540&nbsp;</p></td>
+			<td><p class="normal">18&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Libras+Movement"><img src="assets/MLimages/SmallLarge181.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Libras+Movement">Libras Movement</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set contains 15 classes of 24 instances each. Each class references to a hand movement type in LIBRAS (Portuguese
+name 'Lï¿½ngua BRAsileira de Sinais', oficial brazilian signal language).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">360&nbsp;</p></td>
+			<td><p class="normal">91&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Sports+articles+for+objectivity+analysis"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Sports+articles+for+objectivity+analysis">Sports articles for objectivity analysis</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">1000 sports articles were labeled using Amazon Mechanical Turk as objective or subjective. The raw texts, extracted features, and the URLs from which the articles were retrieved are provided.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1000&nbsp;</p></td>
+			<td><p class="normal">59&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Travel+Reviews"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Travel+Reviews">Travel Reviews</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Reviews on destinations in 10 categories mentioned across East Asia. Each traveler rating is mapped as Excellent(4), Very Good(3), Average(2), Poor(1), and Terrible(0) and average rating is used.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">980&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/MHEALTH+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/MHEALTH+Dataset">MHEALTH Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The MHEALTH (Mobile Health) dataset is devised to benchmark techniques dealing with human behavior analysis based on multimodal body sensing.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">120&nbsp;</p></td>
+			<td><p class="normal">23&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Japanese+Vowels"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Japanese+Vowels">Japanese Vowels</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset records 640 time series of 12 LPC cepstrum coefficients taken from nine male speakers.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">640&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Robot+Execution+Failures"><img src="assets/MLimages/SmallLarge138.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Robot+Execution+Failures">Robot Execution Failures</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains force and torque measurements on a robot after failure detection. Each failure is characterized by 15 force/torque samples collected at regular time intervals&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">463&nbsp;</p></td>
+			<td><p class="normal">90&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Absenteeism+at+work"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Absenteeism+at+work">Absenteeism at work</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The database was created with records of absenteeism at work from July 2007 to July 2010 at a courier company in Brazil.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">740&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Behavior+of+the+urban+traffic+of+the+city+of+Sao+Paulo+in+Brazil"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Behavior+of+the+urban+traffic+of+the+city+of+Sao+Paulo+in+Brazil">Behavior of the urban traffic of the city of Sao Paulo in Brazil</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The database was created with records of behavior of the urban traffic of the city of Sao Paulo in Brazil.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">135&nbsp;</p></td>
+			<td><p class="normal">18&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Paper+Reviews"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Paper+Reviews">Paper Reviews</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This sentiment analysis data set contains scientific paper reviews from an international conference on computing and informatics. The task is to predict the orientation or the evaluation of a review.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">405&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Dow+Jones+Index"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dow+Jones+Index">Dow Jones Index</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains weekly data for the Dow Jones Industrial Index.  It has been used in computational investing research.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">750&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Planning+Relax"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Planning+Relax">Planning Relax</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset concerns with the classification of two mental stages from recorded EEG signals: Planning (during imagination of motor act) and Relax state. &nbsp;</p></td> -->
+			<td><p class="normal">Univariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">182&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

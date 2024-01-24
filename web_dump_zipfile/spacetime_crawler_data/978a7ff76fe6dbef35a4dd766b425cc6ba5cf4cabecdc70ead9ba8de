@@ -1,0 +1,144 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5341¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 26 Jan 2019 00:59:12 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"14dd-58051f3a5f800"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 12:33:44 GMTKraw_content¢DtypeEvalueYÝ# two_d_lists.py
+#
+# ICS 32 Winter 2019
+# Code Example
+#
+# This module demonstrates a few examples of functions that operate on
+# two-dimensional lists in a handful of ways.
+
+
+
+
+# The sum_all function takes a two-dimensional list of integers, such
+# as [[1, 2, 3], [4, 5, 6], [7, 8, 9]], and returns the sum of all the
+# integers in that list.  Note that this is a special case of the
+# sum_recursive function we wrote in an earlier code example, and that
+# we could theoretically use recursion to solve it, but if we're in a
+# situation where we *know* that we have a two-dimensional list, it's
+# better for us to use a more straightforward algorithm that solves
+# the problem we know we have.
+
+def sum_all(x: [[int]]) -> int:
+    # Before we're seen any of the integers, our sum so far is 0.
+    the_sum = 0
+
+    # Loop through all of the sublists.  In each one, loop through
+    # the integers in that sublist.  For each of those integers, add
+    # them to our running sum.
+    for i in x:
+        for j in i:
+            the_sum += j
+
+    # Return the sum when we're finished.
+    return the_sum
+
+# sum_all ends up being an example of the simplest pattern for processing
+# a two-dimensional list.  All we needed were the elements in the sublists;
+# we had no need to know their index, to modify them, or to include certain
+# ones but not others.
+
+
+
+
+# The increment_all function takes a two-dimensional list of integers, such
+# as [[1, 2, 3], [4, 5, 6], [7, 8, 9]], and adds 1 to each of the integers.
+# The change is made to the list passed in as a parameter, as opposed to
+# creating and returning a new list.  So, for example:
+#
+#     >>> a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+#     >>> increment_all(a)
+#     >>> a
+#     [[2, 3, 4], [5, 6, 7], [8, 9, 10]]
+#
+# Since the list is being modified in place, this function has no return
+# value.
+
+def increment_all(x: [[int]]) -> None:
+    # In this example, we're going to need to modify the list.  We won't
+    # be able to do that by simply visiting each value in the sublists;
+    # we'll need to assign new values back into the list, which means
+    # that we'll need to know the indices.
+    #
+    # The only other trick is to be sure we handle the fact that the
+    # list might not be a "square" (i.e., the sublists may not have the
+    # same number of elements as the outer list does), and it might not
+    # even be a "rectangle" (i.e., different sublists might have different
+    # numbers of elements), so we'll have to separately check the length
+    # of each sublist in our inner loop.
+
+    for i in range(len(x)):
+        for j in range(len(x[i])):
+            x[i][j] += 1
+
+# The way to understand how this function works is to figure out what
+# the values of i and j will be as you work through the loops.  Assuming
+# a 3x3 list:
+#
+#     i = 0, j = 0
+#     i = 0, j = 1
+#     i = 0, j = 2
+#     i = 1, j = 0
+#     i = 1, j = 1
+#     i = 1, j = 2
+#     i = 2, j = 0
+#     i = 2, j = 1
+#     i = 2, j = 2
+#
+# For each of those combinations (in that order), x[i][j] will be incremented.
+# That covers every element in the two-dimensional list.
+#
+# Work out on your own that this also handles the following inputs correctly,
+# by writing the sequence of i/j combinations as I did above:
+#
+#     [[1, 2], [3, 4], [5, 6]]
+#     [[1, 2, 3], [4, 5, 6]]
+#     [[1, 2], [3, 4, 5, 6], [7], [8, 9, 10]]
+
+
+
+
+# Finally, we wrote a function increment_diagonal, which took a two-dimensional
+# list of integers and incremented all of the elements on the "diagonal" of
+# the two-dimensional list, while leaving the others untouched.  By "diagonal",
+# I mean the first element of the first sublist, the second element of the
+# second sublist, and so on.  Writing the list in a particular way makes the
+# "diagonalness" clearer:
+#
+#     [[1, 2, 3],
+#      [4, 5, 6],
+#      [7, 8, 9]]
+#
+# In this case, we want to increment 1 (the first element of the first sublist),
+# 5 (the second element of the second sublist), and 9 (the third element of
+# the third sublist).
+#
+# Where this function gets a little bit tricky is that the list may not be
+# "square" and it may not be "rectangular".  For example, given this input:
+#
+#     [[1, 2], [3, 4, 5], [6], [7, 8, 9, 10]]
+#
+# we would want to increment:
+#
+# * 1 (the first element of the first sublist)
+# * 4 (the second element of the second sublist)
+# * 10 (the fourth element of the fourth sublist)
+#
+# but to do nothing with the third element of the third sublist, since it
+# doesn't exist (the third sublist has only one element).
+
+def increment_diagonal(x: [[int]]) -> None:
+    # We need only one loop, as opposed to two, because the sequence of
+    # indices we want is: x[0][0], x[1][1], x[2][2], etc.  The index in the
+    # two dimensions never vary independently in this problem.
+    #
+    # The "if" statement is there to be sure that the i-th sublist has
+    # enough elements in it.
+
+    for i in range(len(x)):
+        if i < len(x[i]):
+            x[i][i] += 1
+
+# Work through a couple of interesting examples, by writing out the sequence
+# of i values (and whether the "if" statement is True or False in each case),
+# to be sure you understand why this solves the problem correctly.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

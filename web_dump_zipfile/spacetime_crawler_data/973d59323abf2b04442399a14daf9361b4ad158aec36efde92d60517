@@ -1,0 +1,211 @@
+¶Ifinal_url¢DtypeEvaluex+http://mondego.ics.uci.edu/projects/dejavu/Lhttp_headers¢DtypeEvalueã¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3530¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueQtimeout=5, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueUApache/2.4.7 (Ubuntu)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 21 May 2018 17:16:37 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"2944-56cba76dfa8a1-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 21:25:44 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueY)l<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109926351-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-109926351-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>D√É¬©j√É¬†Vu</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/blog-post.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div> -->
+            <!-- Collect the nav links, forms, and other content for toggling
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div> -->
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+
+                <!-- Blog Post -->
+
+                <!-- Title -->
+                <h1>D√É¬©j√É¬†Vu: A Map of Code Duplicates on GitHub</h1>
+
+                <!-- Author 
+                <p class="lead">
+                    by <a href="#">A group of good people</a>
+                </p>-->
+
+                <!-- <hr> -->
+
+                <!-- Date/Time 
+                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+                -->
+                <hr>
+
+                <!-- Preview Image -->
+                <img class="img-responsive" src="image.jpg" alt="Software" style="width:900px;height:300px;">
+
+                <hr>
+
+                <!-- Post Content -->
+                <p class="lead">Code cloning is serious and ubiquitous. Are you affected?</p>
+                <p>This work analyzes a corpus of 4.5 million million non-fork projects hosted on GitHub representing over 428 million files written in Java, C++, Python, and JavaScript.</p>
+                <p>We found that this corpus has a mere 85 million unique files. In other words, 70% of the code on GitHub consists of clones of previously created files.</p>
+                <p>We have created a mapping between file clones in four languages: Java, C++, JavaScript and Python. This is useful systems built on open source software as well as for researchers interested in analyzing large code bases.</p>
+                <p>In this website you can find how to access the code clone mapping, through a web service or direct access to a database, how to download the clone mapping and how to access the source code used to create it.</p>
+
+                <hr>
+
+                <p class="lead">D√É¬©j√É¬†Vu Web App</p>
+                <p>We provide a <a href="http://dejavu.ics.uci.edu" target="_blank">web-service</a> for clones information retrieval and easy source code/projects/datasets analysis.</p>
+                <p>This service is ongoing work and depends on community feedback. We are happy to implement functionalities you require.</p>
+
+                <hr>
+
+                <p class="lead">Access to the Code Clone Mapping</p>
+                <p>You can directly download the data for each language individually:</p>
+
+                <ul>
+                    <li> <a href="raw_data/java_db_clones_dump.tgz"> Java download </a> <strong><font color="red"> 6.3Gb </font></strong></li>
+                    <li> <a href="raw_data/js_db_clones_dump.tgz"> JavaScript download </a> <strong><font color="red"> 54Gb </font></strong></li>
+                    <li> <a href="raw_data/python_db_clones_dump.tgz"> Python download </a> <strong><font color="red"> 2.1Gb </font></strong></li>
+                    <li> <a href="raw_data/cpp_db_clones_dump.tgz"> C++ download </a> <strong><font color="red"> 3.7Gb </font></strong></li>
+                </ul>
+
+                <p>If you want access to the dumps through a different process we will do our best to suit your needs (come visit us and bring a hard drive!). Contact us, we like to talk.</font></strong></p>
+
+                <hr>
+
+                <!-- Blog Comments -->
+                <p class="lead">Software used to create the Clone Mapping</p>
+                <p>The software used to create this mapping can be found on GitHub <a href="https://github.com/Mondego/SourcererCC" target="_blank">here</a> and <a href="https://github.com/PRL-PRG/dejavu-artifact" target="_blank">here</a>.</p>
+                <p>We also created an artifact in the form of a <a href="https://www.virtualbox.org" target="_blank">VirtualBox</a> virtual machine, which provides a quick access to the pipeline through a guided tutorial, and can be found <a href="OOPSLA_final.ova" download>here</a>. The password is <strong>p</strong>. <strong><font color="red"> 8.7Gb </font></strong></p>
+
+                <hr>
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Teams</h4>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <ul class="list-unstyled">
+                                <li><a href="http://mondego.ics.uci.edu/" target="_blank">Mondego Group @ UC Irvine</a>
+                                </li>
+                                <li><a href="https://prl-prg.github.io/" target="_blank">PRL-PRG @ CTU in Prague</a>
+                                </li>
+                                <!--
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                <li><a href="#">Category Name</a>
+                                </li>
+                                -->
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- /.row -->
+                </div>
+
+                <!-- Side Widget Well -->
+                <div class="well">
+                    <h4>Quick Information</h4>
+                    <p>You can find the accepted paper <a href="https://dl.acm.org/citation.cfm?id=3133908" target="_blank">here</a>.</p>
+                    <p>This website supports a research project about code cloning on GitHub, accepted for publication at <a href="https://2017.splashcon.org/event/splash-2017-oopsla-d-j-vu-a-map-of-code-duplicates-on-github" target="_blank">OOPSLA'17</a> (Distinguished Award at OOPSLA).</p>
+                </div>
+
+                <div class="well">
+					<iframe src="https://www.youtube.com/embed/4M-ASEpVOaY" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+				<div class="well">
+                    <h4>As seen on the press:</h4>
+					<ul>
+  						<li><a href="https://blog.acolyer.org/2017/11/20/dejavu-a-map-of-code-duplicates-on-github/" target="_blank">the morning paper</a></li>
+  						<li><a href="https://www.bleepingcomputer.com/news/software/82-percent-of-the-code-on-github-consists-of-clones-of-previously-created-files/" target="_blank">BLEEPINGCOMPUTER</a></li>
+  						<li><a href="https://www.theregister.co.uk/2017/11/21/github_duplicate_code/" target="_blank">The Register</a></li>
+						<li><a href="https://developers.slashdot.org/story/17/11/23/2352233/more-than-half-of-github-is-duplicate-code-researchers-find/" target="_blank">Slashdot</a></li>
+						<li><a href="https://www.developpez.com/actu/175363/GitHub-des-chercheurs-estiment-que-plus-de-la-moitie-des-codes-ecrits-en-Java-Python-C-Cplusplus-et-JavaScript-sont-dupliques/" target="_blank">Developpez</a> (in French)</li>
+						<li><a href="https://www.opennet.ru/opennews/art.shtml?num=47596" target="_blank">OpenNET</a> (in Russian)</li>
+						<li><a href="https://www.toutiao.com/a6491879685222302221/" target="_blank">Toutiao</a> (in Chinese)</li>
+						<li><a href="http://www.sohu.com/a/206363660_114760" target="_blank">Sohu</a> (in Chinese)</li>
+					</ul>
+                </div>
+
+				<div class="well">
+					<blockquote class="twitter-tweet" data-lang="pt"><p lang="en" dir="ltr">Today, √¢¬Ä¬úThe Morning Paper√¢¬Ä¬ù looks at √¢¬Ä¬úD√É¬©j√É¬†vu: A Map of Code Duplicates on Github,√¢¬Ä¬ù from OOPSLA √¢¬Ä¬ô17, which analyzes &quot;482 million files written in Java, C++, Python, and JavaScript. W.√¢¬Ä¬ù<br><br>Read in √¢¬Ä¬úThe Morning Paper√¢¬Ä¬ù: <a href="https://t.co/VG1lWDVt8D">https://t.co/VG1lWDVt8D</a><br><br>Read the paper: <a href="https://t.co/4GCauHzvmG">https://t.co/4GCauHzvmG</a> <a href="https://t.co/Quk6LCmVqX">pic.twitter.com/Quk6LCmVqX</a></p>&mdash; Official ACM (@TheOfficialACM) <a href="https://twitter.com/TheOfficialACM/status/932666397804593152?ref_src=twsrc%5Etfw">20 de novembro de 2017</a></blockquote>
+					<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; UCI, PRL-PRG, 2017</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
+
+Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

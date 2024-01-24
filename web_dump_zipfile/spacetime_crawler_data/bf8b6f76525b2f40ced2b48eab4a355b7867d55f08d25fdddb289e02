@@ -1,0 +1,99 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1048¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 09 Feb 2007 07:13:02 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"418-42905e3e73b80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 12:02:39 GMTKraw_content¢DtypeEvalueYFacile grammar, by Alex Thornton
+
+The start variable is [program].
+
+{
+[program]
+[statement] NL . NL ;
+[statement] NL [program] ;
+[statement] NL [program] ;
+[statement] NL [program] ;
+[statement] NL [program] ;
+[statement] NL [program] ;
+[statement] NL [program] ;
+[statement] NL [program] ;
+[statement] NL [program] ;
+[statement] NL [program] ;
+[statement] NL [program] ;
+}
+
+{
+[statement]
+LET [variableName] [number] ;
+PRINT [variableName] ;
+GOTO [number] ;
+END ;
+ADD [variableName] [number] ;
+SUB [variableName] [number] ;
+MUL [variableName] [number] ;
+DIV [variableName] [number] ;
+IF [variableName] [comparisonOp] [number] THEN [number] ;
+GOSUB [number] ;
+RETURN ;
+}
+
+{
+[variableName]
+A ;
+B ;
+C ;
+D ;
+E ;
+F ;
+G ;
+H ;
+I ;
+J ;
+K ;
+L ;
+M ;
+N ;
+O ;
+P ;
+Q ;
+R ;
+S ;
+T ;
+U ;
+V ;
+W ;
+X ;
+Y ;
+Z ;
+}
+
+{
+[number]
+0 ;
+1 ;
+2 ;
+3 ;
+4 ;
+5 ;
+6 ;
+7 ;
+8 ;
+9 ;
+10 ;
+11 ;
+12 ;
+13 ;
+14 ;
+15 ;
+16 ;
+17 ;
+18 ;
+19 ;
+20 ;
+}
+
+{
+[comparisonOp]
+< ;
+> ;
+<= ;
+>= ;
+= ;
+<> ;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

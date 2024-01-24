@@ -1,0 +1,102 @@
+¦Ifinal_url¢DtypeEvaluex/https://www.ics.uci.edu/~dchudova/278/Main.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3879¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Dec 1999 00:56:15 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"f27-35b0b1a59e9c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 16:26:29 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY'<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Generator" content="Microsoft Word 97">
+   <meta name="Template" content="F:\MSOFFICE\OFFICE\html.dot">
+   <meta name="GENERATOR" content="Mozilla/4.7 [en] (WinNT; U) [Netscape]">
+   <title>ICS 278 Data Mining, Fall99, Final Project Reports</title>
+</head>
+<body text="#000000" bgcolor="#F3F9FE" link="#FF0000" vlink="#800000">
+
+<center>
+<h1>
+Classification and discovery of local patterns in transactional data</h1></center>
+
+<center>
+<h2>
+<font color="#0000FF"><a href="http://www.ics.uci.edu/~dchudova">Darya
+Chudova</a></font></h2></center>
+
+<hr>
+<h2>
+Introduction</h2>
+This is a summary of a final project for ICS 278 (Data Mining) at UC Irvine,
+taught by <a href="http://www.ics.uci.edu/~smyth">Professor Padhraic Smyth
+</a>in
+Fall 1999. For more details on this project please read the <a href="http://www.ics.uci.edu/~dchudova/278/Report.html">full
+final project report</a>.
+<p>
+<hr>
+<h2>
+Background on the Data Set</h2>
+The transactional data I used for the project reflect the purchases that
+occurred during the two year period in the large chain retail stores. There
+is a total of ~500,000 transactional records that correspond to ~190,000
+different customers. The data were supplied by one of the commercial firms
+and is thus considered confidential.
+<p>
+<hr>
+<h2>
+Description of the Task</h2>
+I aimed at classification and discovery of local patterns in the transactional
+data. The labels for classification were assigned based on how often the
+customer made purchases in the store over a two year period. The input
+data were constructed as a frequency of purchases made by each customer
+in a department or alternatively as a relative customer's spending in the
+department. The data set consisted of 8150 examples with 55 continuous
+attributes. The input data were built using a subset of 50000 transactions.
+<p>
+<hr>
+<h2>
+Description of the Data Mining Algorithm</h2>
+I used decision tree induction algorithm <a href="http://www.ics.uci.edu/~mlearn/ml_programs/Programs.html">C5.0</a>
+available as an ICS module. C5.0 decision trees create piece wise constant
+decision boundaries in the original attribute space. I also used C5.0 to
+produce a set of local ruled based on the decision trees.
+<p>
+<hr>
+<h2>
+Experimental Methodology</h2>
+I used cross validation to estimate performance of the classifier on the
+unseen data. For a total&nbsp; of 8150 examples, I used 10 folds, with
+each fold preserving the proportion of negative and positive examples found
+in the original full data set. To estimate <a href="Report.html#ClassificationResults">the
+performance of decision trees</a>, I looked at CV error, standard deviation
+of CV error, false negative, and false positive rate. To estimate the quality
+of local rules, I looked at the total number of rules, rule length, and
+rule confidence.
+<p>
+<hr>
+<h2>
+Results and Interpretation</h2>
+<a href="Report.html#ClassificationResults">Classification</a>
+<p>High generalization ability of classifier is supported by the following
+results:
+<ul>
+<li>
+High average CV accuracy</li>
+
+<li>
+Low variance of classification accuracy across folds</li>
+</ul>
+<a href="Report.html#LocalRules">Local Rules</a>
+<ul>
+<li>
+Good generalization ability: an average of 45 rules for ~7000 patterns</li>
+
+<li>
+Relatively <a href="Report.html#RuleLength">short rules</a>: most of the
+rules don't involve more than 3-4 departments</li>
+
+<li>
+<a href="Report.html#RuleConfidence">High confidence</a> of rules: half
+the rules have a confidence greater than 0.95</li>
+</ul>
+See also <a href="Report.html#Extensions">possible extensions of work</a>
+<br>
+<hr WIDTH="100%">
+<br>A full archive of the project can be found at <a href="278Report.zip">278Report.zip</a>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

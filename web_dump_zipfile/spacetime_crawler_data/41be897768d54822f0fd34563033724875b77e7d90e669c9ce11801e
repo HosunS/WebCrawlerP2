@@ -1,0 +1,512 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE16636¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:54:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"40fc-4da84c34d3d80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 02:39:04 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY@ü/*
+  $Id: statsgen.h 4025 2008-10-01 00:01:14Z abehm $
+
+  Copyright (C) 2007 by The Regents of the University of California
+	
+  Redistribution of this file is permitted under
+  the terms of the BSD license
+    
+  Date: 09/17/2007
+  Author: Alexander Behm <abehm (at) ics.uci.edu>
+*/
+
+#ifndef _statsgen_h_
+#define _statsgen_h_
+
+#include "statsutil.h"
+#include "ftindexersimple.h"
+#include "ftsearchermem.h"
+
+#include "common/gramgen.h"
+#include "common/simmetric.h"
+
+#include "util/looptimer.h"
+
+using namespace std;
+using namespace tr1;
+
+extern void genZipfDist(unsigned distinctVals, unsigned skew, double valFreqs[]);
+extern void readString(vector<string> &data, const string &filenameData, unsigned count, unsigned maxLineLen);
+
+enum QueriesDistribution {
+  QD_UNIFORM,
+  QD_ZIPF
+};
+
+class StatsGenConfig {
+ public:
+  StatsGenConfig();
+  
+  GramGen* gramGen;
+  vector<AbstractFilter*> filterTypes;      
+  
+  unsigned dictSizeStart, dictSizeStop, dictSizeStep;
+  unsigned numberQueries;
+  unsigned fanoutStart, fanoutStop, fanoutStep;
+  
+  SimMetric* simMetric;
+  float simThreshold;
+
+  unsigned maxStrLength;
+
+  string dictDataFile;
+  
+  QueriesDistribution queriesDistrib;
+  unsigned distinctQueries;
+  unsigned numberRuns;
+  bool queriesFromDict;
+    
+  unsigned zipfSkew;
+
+  string outputFile;
+
+  StatsUtil sutil;
+
+  bool saveQueryResults;
+  string queryResultsOutputFile;
+
+  bool overrideWorkload;
+  string workloadFile;
+
+  bool rebuildIndexEveryRun;
+
+  void setDictSize(unsigned start, unsigned stop, unsigned step) { dictSizeStart = start; dictSizeStop = stop; dictSizeStep = step; }
+  void setFanout(unsigned start, unsigned stop, unsigned step) { fanoutStart = start; fanoutStop = stop, fanoutStep = step; }  
+  void setMaxStrLength(const unsigned max) { maxStrLength = max; }
+  void setDictDataFile(const string& dataFile) { dictDataFile = dataFile; }
+  void setOutputFile(const char* file) { outputFile = string(file); }
+  void setQueriesDistribution(QueriesDistribution qd) { queriesDistrib = qd; }
+  void setDistinctQueries(unsigned d) {distinctQueries = d; }
+  void setNumberQueries(unsigned numberQueries) { this->numberQueries = numberQueries; }
+  void setNumberRuns(unsigned r) { numberRuns = r; }
+  void setZipfSkew(unsigned s) {zipfSkew = s; }
+  void setSimMetric(SimMetric* metric, const float threshold) { simMetric = metric; simThreshold = threshold; }
+  void setGramGen(GramGen* gramGenerator) { gramGen = gramGenerator; }
+  void setSaveQueryResults(bool b) { saveQueryResults = b; }
+  void setQueryResultsOutputFile(const string& s) { queryResultsOutputFile = s; }
+  void addFilter(AbstractFilter* f) { filterTypes.push_back(f); }
+  void clearFilters();  
+  void setRebuildIndexEveryRun(bool b) { rebuildIndexEveryRun = b; }
+
+  ~StatsGenConfig(){ clearFilters(); }
+};
+
+// function template for creating any stringcontainer with default initialization
+template<class T> 
+T* createDefaultStringContainer();
+
+// function template for creating any stringcontainer with default initialization
+template<class T> 
+T* createDefaultStringContainer(StatsGenConfig* config);
+
+template<class StatsGenConcrete>
+struct StatsGenTraits;
+
+template<class StatsGenConcrete>
+class StatsGenAbs {
+public:
+  typedef StatsGenTraits<StatsGenConcrete> TraitsType;
+  typedef typename TraitsType::FtIndexer FtIndexer;
+  typedef typename TraitsType::FtSearcher FtSearcher;
+    
+  typedef FtIndexerTraits<FtIndexer> IndexerTraitsType;
+  typedef typename IndexerTraitsType::StringContainer StringContainer;
+  typedef typename IndexerTraitsType::InvList InvList;    
+  
+  typedef FtSearcherTraits<FtSearcher> SearcherTraitsType;
+  typedef typename SearcherTraitsType::Merger Merger;
+  
+protected:
+  StatsGenConfig* config;
+  Merger* merger;
+
+  void setFilters(FtIndexer* ftixer);
+
+  void fillWorkload(StringContainer* strContainer, vector<string>& workload);
+  void fillWorkloadNormal(StringContainer* strContainer, vector<string>& workload);
+  void fillWorkloadZipf(StringContainer* strContainer, vector<string>& workload);  
+
+  // this one must be overridden by the actual statsgen
+  void setIndexerAndSearcher(StringContainer* strContainer,
+			     const unsigned ftFanout) {
+    static_cast<StatsGenConcrete*>(this)->setIndexerAndSearcher_Impl(strContainer,
+								     ftFanout);
+  }
+  
+ public:
+  StatsGenAbs(){}
+  StatsGenAbs(StatsGenConfig config) { this->config = config; }
+  
+  void generateWorkloads(unsigned distinctQueries, unsigned workloadSize);
+  void genWloadSameZipf(vector<string>& dictionary, unsigned distinctQueries, unsigned workloadSize);
+  void genWloadDiffZipf(vector<string>& dictionary, unsigned distinctQueries, unsigned workloadSize);
+  void genWloadSameNormal(vector<string>& dictionary, unsigned distinctQueries, unsigned workloadSize);
+  void genWloadDiffNormal(vector<string>& dictionary, unsigned distinctQueries, unsigned workloadSize);
+  
+  FtIndexer* ftIndexer;
+  FtSearcher* ftSearcher;
+  
+  void setMerger(Merger* merger) { this->merger = merger; }
+  
+  // generate stats on approximate string search
+  void generate();       
+};
+
+
+template<class FtIndexer, class FtSearcher>
+class StatsGen;
+
+template<class TFtIndexer, class TFtSearcher>
+struct StatsGenTraits<StatsGen<TFtIndexer, TFtSearcher> > {
+  typedef TFtIndexer FtIndexer;
+  typedef TFtSearcher FtSearcher;
+};
+
+template <class FtIndexer = FtIndexerSimple<>, class FtSearcher = FtSearcherMem<> >
+class StatsGen 
+  : public StatsGenAbs<StatsGen<FtIndexer, FtSearcher> > {  
+
+public:
+  typedef FtIndexerTraits<FtIndexer> IndexerTraitsType;
+  typedef typename IndexerTraitsType::StringContainer StringContainer;
+  typedef typename IndexerTraitsType::InvList InvList;    
+  
+  StatsGen(StatsGenConfig* config) { this->config = config; }
+  
+  void setIndexerAndSearcher_Impl(StringContainer* strContainer,
+				  const unsigned ftFanout) {
+    cout << "THIS SPECIALIZATION HAS NOT BEEN IMPLEMENTED YET!" << endl;
+  }
+};
+
+// partial specialization to handle uncompressed indexer
+template<class FtSearcher, class StringContainer, class InvList >
+class StatsGen<FtIndexerSimple<StringContainer, InvList>, FtSearcher> 
+  : public StatsGenAbs<StatsGen<FtIndexerSimple<StringContainer, InvList>, FtSearcher> > {  
+  
+ public:
+  typedef FtIndexerSimple<StringContainer, InvList> indexer;
+
+  StatsGen(StatsGenConfig* config) { this->config = config; }
+
+  void setIndexerAndSearcher_Impl(StringContainer* strContainer,
+				  const unsigned ftFanout) {  
+
+    StatsGenConfig* config = this->config;
+    this->ftIndexer = new indexer(strContainer, config->gramGen, config->maxStrLength, ftFanout);
+    this->ftSearcher = new FtSearcher(this->merger, this->ftIndexer);      
+  }
+};
+
+template<class StatsGenConcrete>
+void 
+StatsGenAbs<StatsGenConcrete>::
+setFilters(FtIndexer* ftixer) {
+  for(unsigned i = 0; i < this->config->filterTypes.size(); i++) {
+    ftixer->addFilter(this->config->filterTypes.at(i)->clone());
+  }
+}
+
+template<class StatsGenConcrete>
+void
+StatsGenAbs<StatsGenConcrete>::
+generate() {
+  StatsGenConfig* config = this->config;    
+
+  ofstream fpSearch;
+  fpSearch.open(config->outputFile.c_str(), ios::out);
+  
+  ofstream fpQueryResults;
+  if(config->saveQueryResults) fpQueryResults.open(config->queryResultsOutputFile.c_str(), ios::out);
+
+  StatsUtil sutil(TFMSEC);
+
+  unsigned workloadSize = config->numberQueries;
+
+  SearchStats totalSearchStats;
+
+  LoopTimer loopTimer;
+
+  // read dictionary with different sizes, perform batch data generation and write data to file
+  for(unsigned dict = config->dictSizeStart; dict <= config->dictSizeStop; dict += config->dictSizeStep) {    
+    StringContainer* strContainer = createDefaultStringContainer<StringContainer>(config);
+    strContainer->fillContainer(config->dictDataFile.c_str(), dict, config->maxStrLength);
+
+    vector<string> workload;
+    fillWorkload(strContainer, workload);
+    
+    // check to see if workload has been manually overridden
+    if(config->overrideWorkload) {
+      workload.clear();
+      readString(workload, config->workloadFile, workloadSize, config->maxStrLength);	  
+    }
+    
+    for(unsigned fanout = config->fanoutStart; fanout <= config->fanoutStop; fanout += config->fanoutStep) {
+      sutil.resetSearchStats(&totalSearchStats);
+      sutil.resetFilterTreeStats(&sutil.filterTreeStats);      
+      
+      cout << endl;
+      cout << "---- STARTING EXPERIMENT ----" << endl;
+      cout << "DICTIONARY SIZE: " << dict << endl;
+      cout << "FANOUT:          " << fanout << endl;
+      cout.flush();
+      for(unsigned runs = 0; runs < config->numberRuns; runs++) {	  
+	
+	if(config->rebuildIndexEveryRun || runs == 0) {
+	  setIndexerAndSearcher(strContainer, fanout);
+	  setFilters(ftIndexer);
+	  cout << "BUILDING INDEX..." << endl;
+	  ftIndexer->buildIndex(true, &sutil);
+	}
+	
+	char message[100];
+	sprintf(message, "EXECUTING QUERIES RUN %d/%d", runs+1, config->numberRuns);
+	loopTimer.begin(message, workload.size());
+	for(unsigned q = 0; q < workload.size(); q++) {                            	    	  
+	  sutil.resetSearchStats(&sutil.searchStats);
+	  vector<unsigned> results;
+	  Query query(workload.at(q), *(config->simMetric), config->simThreshold);
+	  ftSearcher->search(query, results, &sutil);
+	  sutil.addSearchStats(&totalSearchStats);	
+	  
+	  // only output query results once (they should not change for multiple runs)
+	  if(config->saveQueryResults && runs == 0) {	    
+	    fpQueryResults << workload.at(q) << endl;
+	    for(unsigned res = 0; res < results.size(); res++) 
+	      fpQueryResults << results.at(res) << " ";
+	    fpQueryResults << endl;
+	  }
+	  
+	  loopTimer.next();
+	}	 	  	  
+	loopTimer.end();
+	
+	if(config->rebuildIndexEveryRun) {
+	  delete ftSearcher;
+	  delete ftIndexer;
+	}
+      }
+      if(!config->rebuildIndexEveryRun) {
+	delete ftSearcher;
+	delete ftIndexer;
+      }
+      
+      cout << endl;
+      
+      sutil.filterTreeStats.maxChildren = fanout;
+      sutil.avgSearchStats(&totalSearchStats, workloadSize * config->numberRuns);
+      sutil.writeSearchStats(fpSearch, &sutil.filterTreeStats, &totalSearchStats);      
+    }
+    
+    delete strContainer;
+  }
+  if(config->saveQueryResults) fpQueryResults.close();
+  
+  fpSearch.close();
+}
+
+template<class StatsGenConcrete>
+void
+StatsGenAbs<StatsGenConcrete>::
+fillWorkload(StringContainer* strContainer, vector<string>& workload) {   
+  if(config->numberQueries > 0 && config->distinctQueries > 0) {
+    switch(config->queriesDistrib) {
+    case QD_UNIFORM: fillWorkloadNormal(strContainer, workload); break;
+    case QD_ZIPF: fillWorkloadZipf(strContainer, workload); break;
+    }
+  }
+}
+
+template<class StatsGenConcrete>
+void 
+StatsGenAbs<StatsGenConcrete>::
+fillWorkloadNormal(StringContainer* strContainer, vector<string>& workload) {
+  srand(150);
+  unsigned workloadSize = config->numberQueries;
+  unsigned numberOccurences = workloadSize / config->distinctQueries;
+  
+  for(unsigned i = 0; i < config->distinctQueries; i++) {    
+    unsigned stringIndex = (strContainer->size() < 100000) ? rand() % strContainer->size() : rand() % 100000;
+    for(unsigned j = 0; j < numberOccurences; j++) {
+      string tmp;
+      strContainer->retrieveString(tmp, stringIndex);
+      workload.push_back(tmp);    
+    }
+  }
+}
+
+template<class StatsGenConcrete>
+void 
+StatsGenAbs<StatsGenConcrete>::
+fillWorkloadZipf(StringContainer* strContainer, vector<string>& workload) {
+  srand(150);
+
+  unsigned workloadSize = config->numberQueries;  
+
+  vector<unsigned> stringIndexes;
+
+  double valFreqs[config->distinctQueries];
+  genZipfDist(config->distinctQueries, config->zipfSkew, valFreqs);
+
+  for(unsigned i = 0; i < config->distinctQueries; i++) {
+    unsigned numberOccurences = (unsigned) floor( (double)workloadSize * valFreqs[i] );
+    unsigned stringIndex = (strContainer->size() < 100000) ? rand() % strContainer->size() : rand() % 100000;
+    stringIndexes.push_back(stringIndex);    
+    for(unsigned j = 0; j < numberOccurences; j++) {
+      string tmp;
+      strContainer->retrieveString(tmp, stringIndex);
+      workload.push_back(tmp);    
+    }
+  }
+
+  unsigned remaining = workloadSize - workload.size();
+  unsigned next = 0;
+  for(unsigned i = 0; i < remaining; i++) {
+    string tmp;
+    strContainer->retrieveString(tmp, stringIndexes.at(next));
+    workload.push_back(tmp);
+    next++;
+    if(next >= stringIndexes.size()) next = 0;
+  }
+}
+
+template<class StatsGenConcrete>
+void 
+StatsGenAbs<StatsGenConcrete>::
+generateWorkloads(unsigned distinctQueries, unsigned workloadSize) {
+  cout << "GENERATING WORKLOADS" << endl;
+  vector<string> dictionary;
+  readString(dictionary, config->dictDataFile, 1000000, 250);	
+
+  cout << "SAME ZIPF" << endl;
+  genWloadSameZipf(dictionary, distinctQueries, workloadSize);
+  cout << "DIFF ZIPF" << endl;
+  genWloadDiffZipf(dictionary, distinctQueries, workloadSize); 
+  cout << "SAME NORMAL" << endl;
+  genWloadSameNormal(dictionary, distinctQueries, workloadSize); 
+  cout << "DIFF NORMAL" << endl;
+  genWloadDiffNormal(dictionary, distinctQueries, workloadSize); 
+
+  cout << "ALL DONE!" << endl;
+}
+
+template<class StatsGenConcrete>
+void 
+  StatsGenAbs<StatsGenConcrete>::
+genWloadDiffZipf(vector<string>& dictionary, unsigned distinctQueries, unsigned workloadSize) {
+  srand(150);
+
+  vector<string> workload;
+  vector<unsigned> stringIndexes;
+
+  double valFreqs[config->distinctQueries];
+  genZipfDist(config->distinctQueries, config->zipfSkew, valFreqs);
+
+  for(unsigned i = 0; i < config->distinctQueries; i++) {
+    unsigned numberOccurences = (unsigned) floor( (double)workloadSize * valFreqs[i] );
+    unsigned stringIndex = rand() % 100000 + 100000;
+    stringIndexes.push_back(stringIndex);    
+    for(unsigned j = 0; j < numberOccurences; j++)
+      workload.push_back(dictionary.at(stringIndex));    
+  }
+
+  unsigned remaining = workloadSize - workload.size();
+  unsigned next = 0;
+  for(unsigned i = 0; i < remaining; i++) {
+    workload.push_back(dictionary.at(stringIndexes.at(next)));
+    next++;
+    if(next >= stringIndexes.size()) next = 0;
+  }
+
+  ofstream fpOut;
+  fpOut.open("queries_diff_zipf.txt", ios::out);
+  for(unsigned i = 0; i < workload.size(); i++)
+    fpOut << workload.at(i) << endl;
+
+  fpOut.close();
+}
+
+template<class StatsGenConcrete>
+void 
+StatsGenAbs<StatsGenConcrete>::
+genWloadSameZipf(vector<string>& dictionary, unsigned distinctQueries, unsigned workloadSize) {
+  srand(150);
+  
+  vector<string> workload;
+  vector<unsigned> stringIndexes;
+
+  double valFreqs[config->distinctQueries];
+  genZipfDist(config->distinctQueries, config->zipfSkew, valFreqs);
+
+  for(unsigned i = 0; i < config->distinctQueries; i++) {
+    unsigned numberOccurences = (unsigned) floor( (double)workloadSize * valFreqs[i] );
+    unsigned stringIndex = rand() % 100000;
+    stringIndexes.push_back(stringIndex);    
+    for(unsigned j = 0; j < numberOccurences; j++)
+      workload.push_back(dictionary.at(stringIndex));    
+  }
+
+  unsigned remaining = workloadSize - workload.size();
+  unsigned next = 0;
+  for(unsigned i = 0; i < remaining; i++) {
+    workload.push_back(dictionary.at(stringIndexes.at(next)));
+    next++;
+    if(next >= stringIndexes.size()) next = 0;
+  }
+
+  ofstream fpOut;
+  fpOut.open("queries_same_zipf.txt", ios::out);
+  for(unsigned i = 0; i < workload.size(); i++)
+    fpOut << workload.at(i) << endl;
+
+  fpOut.close();
+}
+
+template<class StatsGenConcrete>
+void 
+StatsGenAbs<StatsGenConcrete>::
+genWloadSameNormal(vector<string>& dictionary, unsigned distinctQueries, unsigned workloadSize) {
+  srand(150);
+
+  vector<string> workload;
+  unsigned numberOccurences = workloadSize / distinctQueries;
+  
+  for(unsigned i = 0; i < distinctQueries; i++) {    
+    unsigned stringIndex = rand() % 100000;
+    for(unsigned j = 0; j < numberOccurences; j++)
+      workload.push_back(dictionary.at(stringIndex));    
+  }
+
+  ofstream fpOut;
+  fpOut.open("queries_same_normal.txt", ios::out);
+  for(unsigned i = 0; i < workload.size(); i++)
+    fpOut << workload.at(i) << endl;
+
+  fpOut.close();
+}
+
+template<class StatsGenConcrete>
+void 
+StatsGenAbs<StatsGenConcrete>::
+genWloadDiffNormal(vector<string>& dictionary, unsigned distinctQueries, unsigned workloadSize) {
+  srand(150);
+
+  vector<string> workload;
+  unsigned numberOccurences = workloadSize / distinctQueries;
+  
+  for(unsigned i = 0; i < distinctQueries; i++) {    
+    unsigned stringIndex = rand() % 100000 + 100000; 
+    for(unsigned j = 0; j < numberOccurences; j++)
+      workload.push_back(dictionary.at(stringIndex));    
+  }
+
+  ofstream fpOut;
+  fpOut.open("queries_diff_normal.txt", ios::out);
+  for(unsigned i = 0; i < workload.size(); i++)
+    fpOut << workload.at(i) << endl;
+
+  fpOut.close();
+}
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

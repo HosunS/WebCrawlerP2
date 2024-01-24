@@ -1,0 +1,88 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2547¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 13 Nov 2003 00:24:50 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"9f3-3cbf62bf4f880"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:43:02 GMTKraw_content¢DtypeEvalueY	óLeast common ancestor problem
+
+Problem statement
+
+History:
+	Harel (ICS grad student) & Tarjan, 1984
+	Schieber-Vishkin simplification 1988
+	...more work e.g. parallel algorithms...
+	Bender & Farach-Colton 2000
+		(linked to on course web page)
+
+Range minimization problem statement
+    with integer range endpoints, or (next week) integer searching strux
+
+Cartesian tree = heap-ordered binary tree on input sequence
+
+    Range min = LCA(endpoints) in Cartesian tree
+	build tree by inserting in sorted order, then
+	    values earlier than LCA don't split endpoints
+	    LCA does split them (so is in range)
+	    values later than LCA are larger
+
+    Efficient construction of Cartesian tree
+
+	parent(x) = larger of nearest smaller values on left,right
+
+	def nearest_smaller(L):
+	    make empty stack
+	    for x in L:
+		while stack and stack top > x:
+		    pop stack
+		left neighbor of x = stack top
+
+Example: 3,1,4,0,5,9,2,6
+
+
+Conversion in the other direction: LCA->Range min
+Given tree T
+form arrays:
+	E[i] = i'th node in Euler tour of T
+		E for Euler
+	L[i] = level of i'th node in tour
+		L for level
+	R[i] = pos of 1st occurrence of tree node i in the tour	
+		R for representative
+
+	then: LCA[x,y] = shallowest node of tour between R[x] and R[y]
+		(tour visits path and some descendants, descs are lower)
+
+		= E[z] where z = argmin_{min(R[x],R[y]) <= i <= max} L[i]
+
+
+This is a special range min problem!
+Levels change by +/- 1 at each step
+
+From now on, consider this special problem on array X[i] of n numbers
+
+Solutions:
+    - array Q[x,y] stores answer (X[i],i) for query x,y
+	space O(n^2), query time O(1)
+
+    - array QQ[x,i], 0<=i<=log n, stores A[x,x+2^i]
+	space O(n log n), query time 1:
+		let 2^i <= y-x <= 2^{i+1}
+		then Q[x,y] = min(QQ[x,i], QQ[y-2^i,i])
+
+    - partition X into 2n/log n blocks of <= (log n/2) values each
+	let A[i] = min(block i)
+	
+	to handle query x<y where x and y are in DIFFERENT blocks:
+		find min(rest of x's block) [precompute for each x]
+		find min(start of y's block) [precompute for each y]
+		use QQ on array A (space O(n), time O(1))
+
+	to handle queries within a single block:
+	    normalize each block by subtracting first block value
+		(so block value sequence goes 0, +-1, ...)
+		doesn't change block value
+
+	    2^{(log n)/2} = sqrt n possible different blocks
+		(binary choice +/- 1 for each value)
+	
+	    precompute table of all possible blocks,
+		use Q solution for each precomputed block,
+		make index pointing from each data block to its
+			precomputed solution
+		space O(sqrt n log n), time O(1)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

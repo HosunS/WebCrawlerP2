@@ -1,0 +1,505 @@
+¶Ifinal_url¢DtypeEvaluex/https://math.nist.gov/~JBernal/JBernal_Sft.htmlLhttp_headers¢DtypeEvalueç¢Ak¢DtypeEvaluePX-XSS-ProtectionAv¢DtypeEvalueM1; mode=block¢Ak¢DtypeEvalueVX-Content-Type-OptionsAv¢DtypeEvalueGnosniff¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueXStrict-Transport-SecurityAv¢DtypeEvalueX#max-age=31536000; includeSubDomains¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX)Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 18 Jul 2018 20:46:47 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"60d9-5714c29480b06"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:24:10 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY`Ÿ<HTML>
+<TITLE>Selected Developed Software</TITLE>
+<BODY>
+<H1>Selected Developed Software</H1>
+<P>
+<HR>
+<P>
+
+The research software provided on this web site ("software") is provided by
+NIST as a public service. You may use, copy and distribute copies of the
+software in any medium, provided that you keep intact this entire notice.
+You may improve, modify and create derivative works of the software or any
+portion of the software, and you may copy and distribute such modifications
+or works. Modified works should carry a notice stating that you changed the
+software and should note the date and nature of any such change. Please
+explicitly acknowledge the National Institute of Standards and Technology
+as the source of the software.
+<P>
+
+The software is expressly provided "AS IS." NIST MAKES NO WARRANTY OF ANY
+KIND, EXPRESS, IMPLIED, IN FACT OR ARISING BY OPERATION OF LAW, INCLUDING,
+WITHOUT LIMITATION, THE IMPLIED WARRANTY OF MERCHANTABILITY, FITNESS FOR
+A PARTICULAR PURPOSE, NON-INFRINGEMENT AND DATA ACCURACY. NIST NEITHER
+REPRESENTS NOR WARRANTS THAT THE OPERATION OF THE SOFTWARE WILL BE
+UNINTERRUPTED OR ERROR-FREE, OR THAT ANY DEFECTS WILL BE CORRECTED. NIST
+DOES NOT WARRANT OR MAKE ANY REPRESENTATIONS REGARDING THE USE OF THE
+SOFTWARE OR THE RESULTS THEREOF, INCLUDING BUT NOT LIMITED TO THE
+CORRECTNESS, ACCURACY, RELIABILITY, OR USEFULNESS OF THE SOFTWARE.
+<P>
+
+You are solely responsible for determining the appropriateness of using and
+distributing the software and you assume all risks associated with its use,
+including but not limited to the risks and costs of program errors,
+compliance with applicable laws, damage to or loss of data, programs or
+equipment, and the unavailability or interruption of operation. This software
+is not intended to be used in any situation where a failure could cause risk
+of injury or damage to property. The software was developed by NIST employees.
+NIST employee contributions are not subject to copyright protection within
+the United States.
+<P>
+<HR>
+<P>
+
+<P>
+<DT>
+<B>Fast Dynamic Programming Sofware for pairwise elastic registration of curves:</B></DT>
+<P>
+
+<LI><I>Fast_Dynamic_Programming.zip</I>, zip file with copies of
+implementation of Algorithm adapt-DP as Fortran files (a Matlab Fortran mex
+file and a Python compatible Fortran file) for execution with Matlab/Python,
+Matlab/Python test file for executing adapt-DP Matlab Fortran mex file and
+Python compatible Fortran file, respectively, example data files, usage
+intructions in README files, etc. Algorithm adapt-DP
+is based on DP (dynamic programming) restricted to an adapting strip for
+computing in linear time optimal diffeomorphisms for elastic registration
+of curves. Description of Algorithm adapt-DP can be found in 
+"Fast Dynamic Programming for Elastic Registration of Curves", Proceedings
+of the 2nd International Workshop on Differential Geometry in
+Computer Vision and Machine Learning (DIFF-CVML'16) in conjunction with
+Computer Vision Pattern Recognition Conference (CVPR) 2016, Las Vegas,
+Nevada, June 26-July 1, 2016.
+<A HREF="Fast_Dynamic_Programming.zip">
+[zip file]</A>.
+<P>
+
+<P>
+<DT>
+<B>Karcher mean computation Sofware for elastic registration of curves using
+Fast Dynamic Programming:</B></DT>
+<P>
+
+<LI><I>Karcher_mean_computation.zip</I>, zip file with copies of
+implementation of Algorithm adapt-DP as a Matlab Fortran mex file for
+execution with Matlab, Matlab file for executing adapt-DP Matlab Fortran
+mex file repeatedly for computing Karcher mean of set of functions, example
+data files for the functions, usage intructions in README file, etc.
+Algorithm adapt-DP is based on DP (dynamic programming) restricted to an
+adapting strip for computing in linear time optimal diffeomorphisms for
+elastic registration of curves. Description of Algorithm adapt-DP can be
+found in "Fast Dynamic Programming for Elastic Registration of Curves",
+Proceedings of the 2nd International Workshop on Differential Geometry in
+Computer Vision and Machine Learning (DIFF-CVML'16) in conjunction with
+Computer Vision Pattern Recognition Conference (CVPR) 2016, Las Vegas,
+Nevada, June 26-July 1, 2016. Program for computing Karcher mean is based
+on a program obtained from website of the Florida State University
+Statistical Shape Analysis and Modeling Group. See README file for simple
+and complex demonstrations of codes.
+<A HREF="Karcher_mean_computation.zip">
+[zip file]</A>.
+<P>
+
+<P>
+<DT>
+<B>Exact Arithmetic Sofware:</B></DT>
+<P>
+
+<LI><I>exacta2.f</I>, Fortran 77 program for presenting examples
+of how exact arithmetic routines are used to carry out certain
+geometrical computations in 2-d Euclidean space.
+<A HREF="exacta2.f.gz">
+[Source code]</A>.
+<P>
+
+
+<LI><I>exacta3.f</I>, Fortran 77 program for presenting examples
+of how exact arithmetic routines are used to carry out certain
+geometrical computations in 3-d Euclidean space.
+In preparation.
+<A HREF="exacta3.f.gz">
+[Source code]</A>.
+<P>
+
+<P>
+<DT>
+<B>2-D and 3-D Delaunay, Regular, Voronoi, Power constructs Sofware:</B></DT>
+<P>
+
+<LI><I>deltri.f</I>, double precision Fortran 77 program for
+reading/computing a 2-dimensional Delaunay triangulation for
+a set of points, and for accomplishing any of the following tasks
+as desired: inserting an additional set of points and/or a set
+of line segments into current (Constrained) Delaunay triangulation
+and obtaining a (Constrained) Delaunay triangulation that contains
+the inserted points and/or line segments; deleting a set of points
+that are vertices in the current (Constrained) Delaunay triangulation
+and obtaining a (Constrained) Delaunay triangulation that does not
+contain the deleted points; computing circumcenters of triangles
+(Voronoi vertices) in final (Constrained) Delaunay triangulation.
+In addition, if Voronoi vertices are computed and Delaunay triangulation
+is unconstrained (no inserted line segments), the corresponding
+Voronoi diagram is well defined, and then program can be used
+for inserting edges of a rectangle into Voronoi diagram (a rectangle
+that contains in its interior set of points for which Voronoi
+diagram is defined) so that parts of Voronoi cells outside rectangle
+(in particular unbounded cells) are clipped by these edges.
+Input coordinates of points can have as many as 14 significant
+figures with as many as 9 significant figures to either the left
+or the right of the decimal point. Exact arithmetic is used when
+necessary.
+If a prompt file does not exist the program will create
+a file that can be used as such in order to avoid user intervention
+in subsequent executions of the program.
+<A HREF="deltri.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>pltvor.f</I>, double precision Fortran 77 program for
+producing data files and script file for plotting Voronoi diagram
+of a set of points with matlab. It is assumed that an unconstrained
+Delaunay triangulation for the set has already been computed using
+program deltri above. It is also assumed that the Voronoi vertices of
+the Voronoi diagram of the set were also computed with deltri. From
+the output files of program deltri the program here produces data
+files and script file vorplot.m that when executed with matlab creates
+from the data files a plot of the Voronoi diagram. If as described for
+program deltri above, the Voronoi diagram has been clipped by the
+edges of a rectangle, files for plotting the clipped Voronoi diagram
+will be produced by this program. If a prompt file does not exist the
+program will create a file that can be used as such in order to avoid
+user intervention in subsequent executions of the program.
+<A HREF="pltvor.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>pltdel.f</I>, double precision Fortran 77 program for
+producing data file and script file for plotting a constrained or
+unconstrained Delaunay triangulation of a set of points with matlab.
+It is assumed that a Delaunay triangulation for the set has already
+been computed using program deltri above. From the output files of
+program deltri the program here produces data file and script file
+delplot.m that when executed with matlab creates from the data file
+a plot of the Delaunay triangulation. If as described for program
+deltri above, during the execution of deltri an unconstrained Delaunay
+was computed and the associated Voronoi diagram was clipped by the
+edges of a rectangle, the files produced by this program will be for
+plotting the Delaunay triangulation minus some triangles that are
+eliminated because of the clipping. Accordingly, the plotted
+triangulation may not be convex.  If a prompt file does not exist the
+program will create a file that can be used as such in order to avoid
+user intervention in subsequent executions of the program.
+<A HREF="pltdel.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>arelen.f</I>, double precision Fortran 77 program for computing
+areas of Voronoi cells in the Voronoi diagram of a set of points in
+2-dimensional space, lengths of faces of these cells, and the
+distances obtained by computing for each face the distance between the
+two points in the set that define the face (inter-neighbor distances).
+It is assumed that an unconstrained Delaunay triangulation for the set
+has already been computed using program deltri above. It is also assumed
+that the Voronoi vertices of the Voronoi diagram of the set were also
+computed with deltri.
+<A HREF="arelen.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>dynvor.f</I>, double precision Fortran 77 program for computing
+Delaunay triangulations and Voronoi diagrams of dynamic data, i. e., of a
+set of moving points in 2-d space. Currently program is set up to handle
+999 or fewer input files making up dynamic data. Each input data set
+contains the same number of distinct data points (no duplicates)
+in the plane. Each time an input data set is read the current Delaunay
+triangulation and Voronoi diagram are updated on a local basis, i. e.,
+taking into account only those points that have moved. If the percentage
+of points that have moved is too high then the whole Delaunay
+triangulation and Voronoi diagram are computed. Exact arithmetic is
+used when necessary.
+<A HREF="dynvor.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>pltdyn.f</I>, double precision Fortran 77 program for producing
+data files and script file for plotting with matlab in the form of a
+movie Voronoi diagrams of dynamic data, i. e., of a set of moving
+points in 2-d space. It is assumed that another existing program,
+program dynvor, has been executed thus producing the Delaunay
+triangulations and Voronoi diagrams of the dynamic data and the
+corresponding output files. From the output files of program dynvor
+the program here produces data files and script file dynplot.m that
+when executed with matlab creates from the data files a movie of the
+plots of the Voronoi diagrams of the dynamic data in the order in which
+program dynvor reads the input data files that define the dynamic data.
+Note that during the execution of dynplot.m with matlab the return key
+should be pressed each time the execution pauses.
+<A HREF="pltdyn.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>dynamic_input_data.zip</I>, 100 sample input dynamic data sets
+for programs dynvor.f and pltdyn.f for testing purposes: pn001,
+pn002, ..., pn100.
+<A HREF="dynamic_input_data.zip">
+[Sample data]</A>.
+<P>
+
+<LI><I>aggres.f</I>, double precision Fortran 77 program for computing
+an estimate of the surface of an aggregate as a power crust from a
+point cloud obtained from the surface of the aggregate. Besides a power
+crust of the object, the program also produces the area of the power
+crust and the volume of the solid it encloses. Here an aggregate is
+defined as an object in 3-dimensional space that has no holes and
+contains its center of mass in its interior. Output file with power crust
+information will be formatted for the purpose of plotting the power crust
+with matlab and a script for processing this file with matlab and
+obtaining the plot of the power crust is included in the main routine of
+the code. Actually the requirement in the definition of an aggregate about
+the center of mass can be ignored if a point is known that lies in the
+interior of the object at a reasonable distance from the surface.
+Exact arithmetic is used when necessary.
+<A HREF="aggres.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>regtet.f</I>, double precision Fortran 77 program for computing
+with incremental topological flipping a Regular tetrahedralization for
+a set of points in 3-dimensional space. Input coordinates and weights
+of points can have as many as 14 significant figures with as many as
+9 significant figures to either the left or the right of the decimal
+point. In the absence of weights the program computes a Delaunay
+tetrahedralization. A Regular tetrahedralization is the dual of a Power
+diagram. It is essentially a Delaunay tetrahedralization for a set of
+points with weights. In this program artificial points are handled
+lexicographically. Exact arithmetic is used when necessary. As a result
+this program is both fast and robust. If a prompt file does not exist
+the program will create a file that can be used as such in order to
+avoid user intervention in subsequent executions of the program.
+<A HREF="regtet.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>ragtat.f</I>,
+same as program regtet.f above but with the option of either computing
+from scratch a Regular/Delaunay tetrahedralization for a set of points
+in 3-d space or inserting a new set of points in 3-d space into an
+existing Regular/Delaunay tetrahedralization. If a prompt file does not
+exist the program will create a file that can be used as such in order
+to avoid user intervention in subsequent executions of the program.
+<A HREF="ragtat.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>pwrvtx.f</I>, double precision Fortran 77 program for computing
+the Power/Voronoi vertices and unbounded edges for a set of points in
+3-dimensional space from a Regular/Delaunay tetrahedralization for the
+set. It is assumed that a Regular/Delaunay tetrahedralization for the set
+has already been computed using program regtet/ragtat above with logical
+variable artfcl set to .false.. The output tetrahedron list from
+regtet/ragtat is then used as input for this program. As in the case of
+regtet/ragtat, exact arithmetic is used when necessary. The lengths of
+input coordinates and weights follow the same rules as when using
+regtet/ragtat.
+<A HREF="pwrvtx.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>volare.f</I>, double precision Fortran 77 program for computing
+volumes of Power/Voronoi cells in the Power/Voronoi diagram of a set of
+points in 3-dimensional space, areas of facets of these cells, and the
+distances obtained by computing for each facet the distance between the
+two points in the set that define the facet (inter-neighbor distances).
+It is assumed that a Regular/Delaunay tetrahedralization for the set has
+already been computed using program regtet/ragtat above with logical
+variable artfcl set to .false.. It is also assumed that the Power/Voronoi
+vertices of the Power/Voronoi diagram of the set have already been
+computed using program pwrvtx above with the output tetrahedron list
+from regtet/ragtat as input. The output Power/Voronoi vertex and
+tetrahedron lists from pwrvtx are then used as input for this program.
+<A HREF="volare.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>dtread.f</I>, double precision Fortran 77 program for exhibiting
+how output data produced by program volare above must be read and used.
+All done in a friendly way.
+<A HREF="dtread.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>fctvtx.f</I>, double precision Fortran 77 program for identifying
+vertices of each facet of each Power/Voronoi cell in the Power/Voronoi
+diagram of a set of points in 3-dimensional space. It is assumed programs
+regtet/ragtat, pwrvtx have been executed as described above,
+thus producing the corresponding output files.
+<A HREF="fctvtx.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>fvread.f</I>, double precision Fortran 77 program for exhibiting
+how output data produced by program fctvtx above must be read and used.
+It is also assumed program volare has been executed as described above.
+All done in a friendly way.
+<A HREF="fvread.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>pwrtet.f</I>, double precision Fortran 77 program for doing 3D
+nearest point searches. It identifies Power cells in the Power
+diagram of a 3-dimensional set of points S that contain points in a
+3-dimensional set R. In other words, for each point in R this program
+finds a point in S that is as Power close to the point in R as any
+other point in S. If no weights are present then it identifies Voronoi
+cells in the Voronoi diagram of S that contain points in R. In
+addition, this program determines where with respect to the convex hull
+of S the points in R are located. It is assumed that a Regular/Delaunay
+tetrahedralization for S has already been computed using program regtet
+above with logical variable artfcl set to .true.. The output tetrahedron
+list from regtet is then used as input for this program. As in the case
+of regtet, exact arithmetic is used when necessary. The lengths of input
+coordinates and weights follow the same rules as when using regtet.
+The program is based on an algorithm for constructing Regular
+tetrahedralizations with incremental topological flipping.
+However no actual flippings take place. Given a point in R,
+if weights are present a weight is assigned to the point so that 
+the Power cell of the point in the Power diagram of S together
+with the point contains the point. The program then goes through
+the motions of inserting the point into the Regular/Delaunay
+tetrahedralization for S without actually doing it. This way a
+subset of points in S is identified that contains what would be
+the Voronoi/Power neighbors of the point in the Voronoi/Power
+diagram of S together with the point. The desired point in S
+is then a point in this subset closest to the the point in R
+in the Power sense. If weights are present care is taken in
+choosing the weight assigned to the point in R so that it is as
+small as possible.
+<A HREF="pwrtet.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>tritet.f</I>, double precision Fortran 77 program for
+inserting a set of 2-dimensional triangles into a tetrahedralization.
+The resulting tetrahedralization is then constrained by the triangles.
+Topological flipping is used whenever possible in order to obtain the
+desired tetrahedralization. Steiner points are used as a last resort.
+Since the insertion of the 2-d triangles causes the resulting
+tetrahedralization to be partitioned into regions having pair-wise
+disjoint interiors, on output tetrahedra are marked according to
+the region they belong to. Regions are numbered either arbitrarily
+by program or as requested by user. If requested by user the volume of
+each region is computed. In this program exact arithmetic is used when
+necessary.
+<A HREF="tritet.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>pntloc.f</I>, double precision Fortran 77 program for
+locating points in a tetrahedralization by moving in a straight
+line to each point from a point whose location is known.
+In this program exact arithmetic is used when necessary.
+<A HREF="pntloc.f.gz">
+[Source code]</A>.
+<P>
+
+<P>
+<DT>
+<B>Other Sofware:</B></DT>
+<P>
+
+<LI><I>km_anyd.f</I>, double precision Fortran 77 program for
+computing k-means clustering of a set of points in any dimension.
+If a rectangle in the form of a 2-d rectangular grid can be
+associated with the input points, the option exists for creating
+a txt file of k-means cluster indices on the rectangular grid
+that can then be used as input to create an image with imagej of
+the rectangle partitioned into clusters.
+<A HREF="km_anyd.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>em_anyd.f</I>, double precision Fortran 77 program for
+computing k-Gaussian mixture clustering of a set of points in
+any dimension with EM (Expectation Maximization) algorithm.
+If a rectangle in the form of a 2-d rectangular grid can be
+associated with the input points, the option exists for creating
+a txt file of k-Gaussian mixture cluster indices on the rectangular
+grid that can then be used as input to create an image with imagej
+of the rectangle partitioned into clusters. If the program does not
+produce a satisfactory k-Gaussian mixture clustering, it is
+recommended that a k-means clustering be computed instead with
+program km_anyd.f above.
+<A HREF="em_anyd.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>spline.f</I>, single precision Fortran 77 program for
+computing cubic spline interpolation under the "not a knot"
+condition. Results from this program appear to be exactly the
+same as those obtained with the matlab spline function. Program
+is based on original code in Slatec package obtained from Guide
+to Available Mathematical Software (GAMS) web site at the
+National Institute of Standards and Technology.
+<A HREF="spline.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>neurbt.f</I>,
+has been replaced by sagrad.f below.
+<P>
+
+<LI><I>sagrad.f</I>, Fortran 77 program for computing neural networks for
+classification using batch learning. Neural network training is based on
+a combination of simulated annealing and a scaled conjugate gradient
+algorithm, the latter a variation of the traditional conjugate gradient
+method. User intervention required. At different times during the
+execution of the training process, in order to provide the user with the
+option of getting out of a possibly bad run of the process, user will be
+asked to decide on whether or not to terminate current run of the training
+process. If the run is terminated then user will be asked to decide on
+whether program should stop or do a new cold start of the training process.
+Training process consists of essentially three steps that involve the
+scaled conjugate gradient algorithm and simulated annealing versions of
+low and high intensity. The low-intensity version of simulated annealing
+(in first step) is used for the (re)initialization of weights required
+to (re)start the scaled conjugate gradient algorithm (in second step)
+the first time and each time thereafter that it shows insufficient progress
+in reaching a possibly local minimum; the high-intensity version of
+simulated annealing (in third step) exploits intensively weight space for
+a possible global solution, and is used once the scaled conjugate gradient
+algorithm has possibly reduced the squared error considerably but becomes
+stuck at a local minimum or flat area of weight space. With user
+intervention, before the third step is executed (at most once), the first
+two steps, one following the other, may be executed several times in hopes
+that the scaled conjugate gradient algorithm in the second step will
+eventually compute a reasonable solution (squared error for solution close
+enough to zero, i.e., less than some tolerance). The scaled conjugate
+gradient algorithm in the second step uses as its initial solution the
+output weights from the last execution of the low-intensity simulated
+annealing in the first step. On the other hand, the low-intensity simulated
+annealing in the first step uses as input the best weights found so far
+among all executions of the scaled conjugate gradient algorithm in the
+second step except at the start of the execution of the process. At the
+start of the execution of the process the low-intensity simulated annealing
+in the first step uses as input weights that are randomly generated in the
+interval (-1,1). It should be noted that all executions of the low-intesity
+simulated annealing in the first step tend to produce good initial
+solutions for the scaled conjugate gradient algorithm in the second step.
+However it is the first execution of the low-intensity simulated annealing
+in the first step that usually reduces considerably the squared error while
+all others usually produce no reduction at all. Eventually, as the first
+two steps are repeatedly executed, either a reasonable solution is found
+and the process is terminated, or the third step, which involves an
+execution of the high-intensity simulated annealing followed by an
+execution of the scaled conjugate gradient algorithm, is executed one time
+in hopes of finding a reasonable solution. Note that even if a reasonable
+solution has been found by executing only the first two steps, user can
+still direct training process to go to the third step perhaps for a better
+solution. Note as well that it may take several cold starts of the training
+process before a reasonable solution is obtained. Such a solution should
+then be tested for quality by applying the corresponding neural network on
+independent sample patterns of known classification.
+<A HREF="sagrad.f.gz">
+[Source code]</A>.
+<P>
+
+<LI><I>sagrad_data.zip</I>,
+Data for testing sagrad program as it appears in publication about
+sagrad program.
+<A HREF="sagrad_data.zip">
+[sagrad data]</A>.
+<P>
+
+</BODY>
+</HTML>
+Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

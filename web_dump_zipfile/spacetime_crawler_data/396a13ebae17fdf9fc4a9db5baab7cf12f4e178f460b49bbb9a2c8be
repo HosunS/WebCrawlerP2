@@ -1,0 +1,165 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3499¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:06:11 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"1fda-54c85e0e63017-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:07:09 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYÚ<?xml version="1.0" encoding="utf8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+  <title>Algorithms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>CS/CSE 161, Fall 2015:<br> Design and Analysis of Algorithms</h1>
+
+<hr>
+
+<h2>Instructors and office hours</h2>
+<p>The course will be taught by <a href="/~eppstein/">David
+Eppstein</a>, eppstein@uci.edu (office hours Tues 2:30 &ndash; 3:30 and
+Weds 3:30 &ndash; 4:30 in Bren 4082). The teaching
+assistants are <a href="http://www.ics.uci.edu/~jlam2/">Jenny Lam</a>
+(office hours MWF 9:00 &ndash; 10:00 in Bren 4011)
+and <a href="mailto:siluy@uci.edu">Silu Yang</a>
+(office hours Tues 6:30 &ndash; 7:30 and Thurs 12:30 &ndash; 1:30 in
+Bren 4011). We also have three readers.
+
+<h2>Lectures and discussions</h2>
+<p>The course meets for lectures Mondays, Wednesdays, and
+Fridays, from 2:00 &ndash; 2:50, in the Howard Schneiderman (Biology) Lecture Hall, Room 100A. In addition there
+are discussion sections, Mondays and Wednesdays 6:00 &ndash; 6:50 in SSH 100
+and Tuesdays and Thursdays 8:00 &ndash; 8:50 in ELH 100. Students are expected
+to be enrolled in one of the two discussion sections and to attend
+discussions regularly. At the discussion
+sections, the teaching assistant will go over homework and midterm
+solutions, give additional examples of topics covered in the lecture,
+and be available to answer questions.</p>
+
+<p>Lecture materials will not be distributed to the class; instead, you are encouraged to attend the lecture yourself and take your own notes. Recording the lectures for your own personal use is allowed, but other uses of recorded lectures (including making them available online) is forbidden.</p>
+
+<h2>Textbook</h2>
+<p>The course text will be "Algorithm Design and Applications" by
+Goodrich and Tamassia (Wiley, 2015;
+see <a href="http://www.wiley.com/WileyCDA/Section/id-825796.html">publisher
+site for special direct student purchase price</a>).
+Students are expected to own a copy and to read the relevant chapters
+and sections. The official version of the textbook is the one sold in
+the bookstore. Most homework problems will be assigned from this text.
+If you are using a different version (e.g., an
+international version, or the older text by the same authors), then it is your responsibility to make sure you
+are doing the correct homework problems.</p>
+
+<h2>Homework and grading policy</h2>
+<p>Coursework will consist of weekly homeworks (typically due on Fridays and posted on this page before the start of class on Monday of the week it is due)
+as well as two midterms and a comprehensive final exam. The overall
+grade will be determined 10% from homework, 25% from each midterm, and
+40% from the final.</p>
+
+<p>Group work on homeworks is permitted; each student
+should turn in his or her own copy of the homeworks. Some of the
+homework problems will ask you to perform calculations or trace the
+steps of an algorithm; you are welcome to use computer programs
+to solve these problems rather than doing everything by hand.
+Each week's
+homework assignment will be given on this web page. Homework is due by
+9:00pm on Fridays and must be turned in through dropbox
+on eee. No late
+homework will be accepted. Homework must be typed, and formatted as a
+pdf file. Handwritten homework or homeworks in other formats will not be
+graded. Students who add the class after the start of quarter will be
+responsible for turning in all earlier homeworks by the following
+Friday. The lowest homework score of the quarter will be dropped from
+the course average.</p>
+
+<p>For the UCI honesty policy, please see <a href="http://honesty.uci.edu/">honesty.uci.edu</a>. Students who are caught cheating in this class (for instance by copying exam solutions or allowing other students to copy from them) risk getting an F in the class or other disciplinary action as allowed by this policy.</p>
+
+<h2>Tentative Schedule</h2>
+
+<dl>
+<dt><b>Week 0:</b></dt>
+<dd>Sep. 25: Organizational meeting, review of O-notation (Jenny Lam)</dd>
+<br/>
+<dt><b>Week 1: Data structures</b></dt>
+<dd>Homework 1, due 9:00pm on Friday, Oct. 2: R-1.2, R-1.3, R-1.8, R-2.1</dd>
+<dd>Sep. 28: Priority queues and heapsort (Chapter 5)</dd>
+<dd>Sep. 30: Hashing with linear probing (Chapter 6)</dd>
+<dd>Oct. 2: Nearest neighbor searching with balanced trees (Chapter 4)</dd>
+<br/>
+<dt><b>Week 2: Comparison sorting</b></dt>
+<dd>Homework 2, due 9:00pm on Friday, Oct. 9: R-4.2, R-5.11, A-5.1, R-6.5</dd>
+<dd>Oct. 5: Merge sort (Chapter 8)</dd>
+<dd>Oct. 7: Comparison sorting lower bounds (Chapter 8)</dd>
+<dd>Oct. 11: Quick sort (Chapter 8)</dd>
+<br/>
+<dt><b>Week 3: Selection and integer sorting</b></dt>
+<dd><a href="f15-hw3.html">Homework 3, due 9:00pm on Friday, Oct. 16</a></dd>
+<dd>Oct. 12: Quickselect (Chapter 9)</dd>
+<dd>Oct. 14: Bucket sort and stability (Chapter 9)</dd>
+<dd>Oct. 16: Radix sort (Chapter 9)</dd>
+<br/>
+<dt><b>Week 4: Midterm; integer arithmetic</b></dt>
+<dd>Homework 4, due 9:00pm on Friday, Oct. 23: R-9.2, C-9.4, C-9.9, C-9.10</dd>
+<dd>Oct. 19: MIDTERM ONE</dd>
+<dd>Oct. 21: Karatsuba multiplication (Chapter 11)</dd>
+<dd>Oct. 23: Modular exponentiation and RSA encryption (Chapter 24)</dd>
+<br/>
+<dt><b>Week 5: Graph representation and traversal</b></dt>
+<dd>Homework 5, due 9:00pm on Friday, Oct. 30: R-11.2, R-11.4, R-24.5, C-24.6</dd>
+<dd>Oct. 26: Graph representation (Chapter 13)</dd>
+<dd>Oct. 28: Depth first search and strong connectivity (Chapter 13)</dd>
+<dd>Oct. 30: Directed acyclic graphs and topological ordering (Chapter 13)</dd>
+<br/>
+<dt><b>Week 6: Shortest paths and minimum spanning trees</b></dt>
+<dd>Homework 6, due 9:00pm on Friday, Nov. 6: R-13.2, R-13.4, R-13.6, R-13.7</dd>
+<dd>Nov. 2: DAG and Bellman&ndash;Ford shortest paths (Chapter 14)</dd>
+<dd>Nov: 4: Dijkstra's algorithm (Chapter 14)</dd>
+<dd>Nov. 6: Minimum spanning trees (Chapter 15)</dd>
+<br/>
+<dt><b>Week 7: Midterm; dynamic programming</b></dt>
+<dd>Homework 7, due 9:00pm on Friday, Nov.13: C-14.2, C-14.4, R-15.9, R-15.10</dd>
+<dd>Nov. 9: MIDTERM TWO</dd>
+<dd>Nov. 11: VETERANS DAY HOLIDAY</dd>
+<dd>Nov. 13: Dynamic programming for Fibonacci numbers and other recurrences (Chapter 12)</dd>
+<br/>
+<dt><b>Week 8: Dynamic programming applications</b></dt>
+<dd>Homework 8, due 9:00pm on Wednesday, Nov. 25: R-12.4, R-12.8,
+  C-12.3, A-12.1</dd>
+<dd>Nov. 16: Finding optimal game strategies (Chapter 12)</dd>
+<dd>Nov. 18: Longest common subsequences (Chapter 12)</dd>
+<dd>Nov. 20: The knapsack problem (Chapters 10 and 12)</dd>
+<br/>
+<dt><b>Week 9: Computational geometry</b></dt>
+<dd>Nov. 23: Convex hulls (Chapter 22)</dd>
+<dd>Nov. 25: Closest pairs (Chapter 22)</dd>
+<dd>Nov. 27: THANKSGIVING HOLIDAY</dd>
+<br/>
+<dt><b>Week 10:</b></dt>
+<dd>Homework 9, due 9:00pm on Friday, Dec. 4: R-22.6, R-22.8, C-22.1, C-22.5</dd>
+<dd>Nov. 30: Streaming algorithms (not in text;
+see <a href="http://dmac.rutgers.edu/Workshops/WGUnifyingTheory/Slides/cormode.pdf">Graham
+Cormode's slides on finding frequent items</a> and
+the <a href="https://en.wikipedia.org/wiki/Reservoir_sampling">Wikipedia
+article on reservoir sampling</a>)</dd>
+<dd>Dec. 2: NP-completeness (Chapter 17)</dd>
+<dd>Dec. 4: Approximation algorithms (Chapter 18)</dd>
+<br/>
+<dt><b>Final exam:</b></dt>
+<dd>Dec. 11 (Friday), 1:30 - 3:30 (per <a href="https://www.reg.uci.edu/calendars/finals/schedule-201516.html">schedule</a>)
+</dl>
+
+<h2>Other Course-Related Information</h2>
+
+The following material is from previous years' offerings of ICS 161.
+Some of these offerings were based on different texts (Baase and
+Cormen-Leiserson-Rivest), and covered a somewhat different range of
+topics.  You may find this material useful, but it is not required
+reading.</li>
+
+<ul><li><a href="syl.html">Lecture notes from Winter 1996</a></li>
+<li><a href="exams/">Sample exams from Winter 1998 and Spring
+2005</a></li>
+<li><a href="python/">Python
+implementations of various algorithms</a>, <a
+href="/~eppstein/PADS/">more Python algorithm implementations</a>, and
+<a
+href="http://aspn.activestate.com/ASPN/Cookbook/Python?kwd=Algorithms">
+still more Python algorithms</a>.</li>
+</ul>
+</body>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

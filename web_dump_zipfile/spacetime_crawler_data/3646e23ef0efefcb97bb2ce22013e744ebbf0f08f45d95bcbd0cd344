@@ -1,0 +1,198 @@
+¦Ifinal_url¢DtypeEvaluex4https://www.ics.uci.edu/~goodrich/teach/cs162/notes/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5285¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 13 Mar 2018 23:16:21 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"14a5-5675372592e61"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 13:19:56 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY¥<html>
+
+<head>
+<title> Course Notes - CS 162 - Formal Languages and Automata Theory</title>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+
+<center>
+
+<h2> 
+Course Notes - CS 162 - Formal Languages and Automata Theory</h2>
+</center>
+
+<p>
+The following documents outline the notes for the course CS 162
+Formal Languages and Automata Theory.
+Much of this material is taken from notes for Jeffrey Ullman's 
+course, Introduction to Automata and Complexity Theory, at Stanford University.
+
+<p>
+Note: Some of the notes are in PDF format.
+Viewing these files requires the use of a
+<a href="http://www.adobe.com/products/acrobat/readstep.html">
+PDF Reader</a>.
+
+<h3>Notes by Lecture Schedule</h3>
+
+<ul>
+<li><b>1:</b>
+
+Introduction. Finite Automata and DFAs.
+<ul>
+<li> <a href="intro.pdf"> Why Study Automata?</a>,
+<a href="intro.ppt">Powerpoint</a></li>
+<li> <a href="fa1.pdf"> Finite Automata</a>,
+<a href="fa1.ppt">Powerpoint</a></li>
+<li> <a href="fa2.pdf"> DFAs</a>,
+<a href="fa2.ppt">Powerpoint</a></li>
+</ul>
+
+<li><b>2:</b>
+
+Regular Expressions and Regular Languages.  
+</li>
+<ul>
+<li> <a href="fa3.pdf"> NFAs</a>,
+<a href="fa3.ppt">Powerpoint</a></li>
+<li> <a href="re1.pdf"> Regular Expressions</a>,
+<a href="re1.pptx">Powerpoint</a></li>
+<li> <a href="http://www.cs.columbia.edu/~tal/3261/fall07/handout/egrep_mini-tutorial.htm"> About regular expressions in <b>egrep</b></a>
+and
+<a href="http://dinosaur.compilertools.net/lex/"> Lex</a>
+(for reference and applications of REs)
+<li> <a href="rs1.pdf"> Regular Languages Decision Properties</a>,
+<a href="rs1.ppt">Powerpoint</a></li>
+</ul>
+
+<li>
+<b>3:</b>
+Regular and Context-Free Languages.
+</li>
+<ul>
+<li> <a href="pl.pdf"> The Pumping Lemma</a>,
+<a href="pl.ppt">Powerpoint</a></li>
+<li> <a href="rm.pdf"> Regular Language Equivalence and DFA Minimization</a>,
+<a href="rm.ppt">Powerpoint</a></li>
+<li> <a href="rs2.pdf"> Regular Language Closure Properties</a>,
+<a href="rs2.ppt">Powerpoint</a></li>
+<li> <a href="cfl1.pdf">Context-Free Grammars</a>,
+<a href="cfl1.ppt">Powerpoint</a></li>
+<li> <a href="cfl2.pdf">Parse Trees</a>,
+<a href="cfl2.ppt">Powerpoint</a></li>
+<li> <a href="http://dinosaur.compilertools.net/yacc/"> YACC</a> 
+(for reference and application of CFGs)
+</ul>
+
+<li>
+<b>4:</b>
+
+CFLs and Push-Down Autamata.
+</li>
+<ul>
+<li> <a href="pda1.pdf"> Push-Down Automata </a>,
+<a href="pda1.ppt">Powerpoint</a></li>
+<li> <a href="pda2.pdf"> Equivalence of PDAs and CFGs </a>,
+<a href="pda2.ppt">Powerpoint</a></li>
+<li> <a href="cfl3.pdf">Chomsky Normal Form</a>,
+<a href="cfl3.ppt">Powerpoint</a></li>
+<li> <a href="cfl4.pdf">Pumping Lemma for CFLs</a>,
+<a href="cfl4.ppt">Powerpoint</a></li>
+</ul>
+
+<li>
+<b>5:</b>
+Decision Problems for CFLs. 
+
+</li>
+<ul>
+<li> <font color="RED"><b>Midterm I</b></font><br> </li>
+<li> <a href="cfl5.pdf">Decision Properties and Parsing (CYK) Algorithm</a>,
+<a href="cfl5.ppt">Powerpoint</a></li>
+<li> <a href="http://people.cs.nctu.edu.tw/~wgtzeng/courses/FL2013SpringUnder/CYK%20algorithm.pdf">More on the CYK Algorithm</a>
+</ul>
+
+<li>
+<b>6:</b>
+Turing Machines.
+</li>
+<ul>
+<li> <a href="tm1.pdf"> Turing Machines</a>,
+<a href="tm1.ppt">Powerpoint</a></li>
+<li> <a href="turing2.pdf"> Turing Machines Examples</a></li>
+<li> <a href="tm2.pdf"> "Programming" Turing Machines</a>,
+<a href="tm2.ppt">Powerpoint</a></li>
+</ul>
+
+
+<li>
+<b>7:</b>
+Decidability. 
+</li>
+<ul>
+<li> <a href="tm3.pdf"> Undecidable Problems</a>,
+<a href="tm3.ppt">Powerpoint</a></li>
+<li> <a href="tm4.pdf"> Rice's Theorem</a>,
+<a href="tm4.ppt">Powerpoint</a> </li>
+</ul>
+
+<li>
+<b>8:</b>
+Time complexity. P and NP.
+NP-completeness. 
+</li>
+<ul>
+<li> <font color="RED"><b>Midterm II</b></font><br> </li>
+<li> <a href="pnp1.pdf"> P and NP</a>,
+<a href="pnp1.ppt">Powerpoint</a></li>
+<li> <a href="NPComplete.pdf"> NP-Completeness</a>,
+<a href="NPComplete.pptx">Powerpoint</a></li>
+<li> <a href="pnp2.pdf"> Satisfiability</a>,
+<a href="pnp2.ppt">Powerpoint</a></li>
+<li> <a href="NPComplete2.pdf"> More NP-Completeness</a>,
+<a href="NPComplete2.pptx">Powerpoint</a></li>
+</ul>
+
+<li>
+<b>9:</b>
+
+NP-completeness, continued. Polynomial-time reductions.
+</li>
+<ul>
+<li> <a href="NP_Complete_Reductions.pdf"> NP-Complete Reductions</a>,
+<a href="NP_Complete_Reductions.ppt">Powerpoint</a>
+<li> <a href="pnp3.pdf"> More NP-Complete Reductions</a>,
+<a href="pnp3.ppt">Powerpoint</a></li>
+</li>
+<!--
+<li> <a href="Approximation.pdf"> Approximation Algorithms</a>,
+<a href="Approximation.pptx">Powerpoint</a></li>
+-->
+</ul>
+
+<li>
+<b>10:</b>
+Cryptography.
+Space complexity.
+</li>
+<ul>
+<li> <a href="../../cs260P/notes/Crypto.pdf"> Cryptography</a> </li>
+<li> <a href="../../cs260P/notes/Numerical.pdf"> Numerical Algorithms</a> </li>
+<li> <a href="../../cs260P/notes/RSA.pdf"> The RSA Cryptosystem</a> </li>
+<!--
+<li> <a href="../../cs260P/notes/InfoSec.pdf"> Information Security</a> </li>
+-->
+<li> <a href="Space.pdf"> Space Complexity and Interactive Proofs</a>,
+<a href="Space.pptx">Powerpoint</a></li>
+<!--
+<li> <a href="pnp4.pdf"> PSPACE-Complete Reductions</a>,
+<a href="pnp4.ppt">Powerpoint</a></li>
+-->
+</ul>
+
+
+</ul>
+
+<P>
+<hr>
+<br>
+<ADDRESS>
+<a href="http://www.ics.uci.edu/~goodrich/">
+Michael T. Goodrich</a><BR>
+Department of Computer Science<BR>
+University of California, Irvine, CA 92697-3435 USA<BR>
+</ADDRESS>
+</BODY></HTML>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,251 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4677¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Jan 2019 21:54:45 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"338b-57fc28f1e6e04-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 04:50:37 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY3‹<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head>
+<title>David Eppstein - Publications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<h1>David Eppstein - Publications</h1>
+<hr><p>
+<h2>
+Nearest neighbors
+</h2>
+<ul>
+<li><b>Iterated nearest neighbors and finding minimal polytopes</b>.<br>
+D. Eppstein and 
+<a href="//compgeom.cs.uiuc.edu/~jeffe/">J. Erickson</a>.<br>
+Tech. Rep. 92-71, ICS, UCI, 1992.<br>
+<a href="//portal.acm.org/citation.cfm?id=313612">
+<i>4th ACM-SIAM Symp. Discrete Algorithms,</i> Austin, 1993, pp. 64&ndash;73</a>.<br>
+<a href="//compgeom.cs.uiuc.edu/~jeffe/pubs/pdf/small.pdf"><i>Disc. Comp. Geom.</i> 11: 321&ndash;350, 1994</a>.
+<p>
+Showed that for various optimization criteria, the
+optimal polygon containing <i>k</i> of <i>n</i>
+points must be near one of the points, hence one can transform
+time bounds involving several factors of <i>n</i>
+to bounds linear in <i>n</i> but polynomial in <i>k.</i>
+Used as a subroutine are data structures for finding several
+<a href="geom-nn.html">nearest neighbors</a> in rectilinear metric spaces, and
+algorithms for finding the
+<a href="geom-deep.html">deepest point in an arrangement</a> of cubes or
+spheres.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Iterated nearest neighbors and finding minimal polytopes">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Iterated-nearest-neighbors-and-finding-minimal-polytopes.html">Citations</a> &ndash;
+<a href="//compgeom.cs.uiuc.edu/~jeffe/pubs/small.html">Jeff's pub list entry</a> &ndash;
+<a href="//citeseer.ist.psu.edu/erickson94iterated.html">CiteSeer</a>)
+<p>
+<li><b>Dynamic Euclidean minimum spanning trees and extrema of binary functions</b>.<br>
+D. Eppstein.<br>
+<a href="tr.html">Tech. Rep. 92-05</a>, ICS, UCI, 1992.<br>
+<a href="tr.html">Tech. Rep. 92-88</a>, ICS, UCI, 1992.<br>
+<a href="Epp-DCG-95.pdf"><i>Disc. Comp. Geom.</i> 13: 111&ndash;122, 1995</a>.
+<p>
+Shows that bichromatic nearest neighbors can be maintained under point
+insertion and deletion essentially as quickly as known solutions to the
+post office problem, and that the
+<a href="mst.html">minimum spanning tree</a> can be
+maintained in the same time except for an additive O(sqrt <i>n</i>) needed for
+solving the corresponding graph problem.
+TR 92-88's title was actually "Fully dynamic maintenance of Euclidean
+minimum spanning trees and maxima of decomposable functions".
+TR 92-05's title left out the part about maxima; that version gave a slower
+algorithm superseded by the result in 92-88.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Dynamic Euclidean minimum spanning trees and extrema of binary functions">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Dynamic-Euclidean-minimum-spanning-trees-and-extrema-of-binary-functions.html">Citations</a> &ndash;
+<a href="/~eppstein/projects/pairs/">Closest pair project page</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein95dynamic.html">CiteSeer</a>)
+<p>
+<li><b>Dynamic algorithms for half-space reporting, proximity problems, and
+geometric minimum spanning trees</b>.<br>
+<a href="//www.cs.duke.edu/~pankaj/">P.K. Agarwal</a>,
+D. Eppstein, and
+<a href="//www.ms.mff.cuni.cz/acad/kam/matousek/">J. Matou&#353;ek</a>.<br>
+<a href="AgaEppMat-FOCS-92.pdf"><i>33rd IEEE Symp. Foundations of
+Comp. Sci.,</i> Pittsburgh, 1992, pp. 80&ndash;89</a>.
+<p>
+This conference paper merged my results from
+"<a href="p-dynmst.html">Dynamic Euclidean minimum
+spanning trees</a>" with results of my co-authors on nearest neighbors
+and halfspace range searching.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Dynamic algorithms for half-space reporting, proximity problems, and geometric minimum spanning trees">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Dynamic-algorithms-for-half-space-reporting-proximity-problems-and-geometric-minimum-spanning-trees.html">Citations</a>)
+<p>
+<li><b>Algorithms for proximity problems in higher dimensions</b>.<br>
+<a href="//www.middlebury.edu/~dickerso/">
+M. T. Dickerson</a> and D. Eppstein.<br>
+<a href="//doi.org/10.1016/0925-7721(95)00009-7">
+<i>Comp. Geom. Theory &amp; Applications</i> 5: 277&ndash;291, 1996</a>.
+<p>
+Combines a method from
+"<a href="p-pgood.html">Provably good mesh generation</a>" for
+finding sparse high-dimensional Delaunay triangulations,
+a method of Dickerson, Drysdale, and Sack
+["<a href="//www.middlebury.edu/~dickerso/research/enum.html">Simple
+algorithms for enumerating interpoint distances</a>", IJCGA 1992]
+for using Delaunay
+triangulations to search for nearest neighbors,
+and a method of Frederickson for speeding up tree-based searches.
+The results are fast algorithms for several proximity problems
+such as finding the <i>k</i> nearest neighbors to each point
+in a given point set.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Algorithms for proximity problems in higher dimensions">BibTeX</a> &ndash;
+<a href="DicEpp-CGTA-96.pdf">Full paper</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Algorithms-for-proximity-problems-in-higher-dimensions.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/dickerson96algorithms.html">CiteSeer</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=236474">ACM DL</a>)
+<p>
+<li><b>Parallel construction of quadtrees and quality triangulations</b>.<br>
+<a href="//www.parc.xerox.com/csl/members/bern/">M. Bern</a>,
+D. Eppstein, and 
+<a href="//www-sal.cs.uiuc.edu/~steng/">S.-H. Teng</a>.<br>
+<a href="BerEppTen-WADS-93.pdf"><i>3rd Worksh. Algorithms and Data
+Structures,</i> Montreal, 1993</a>.<br>
+Springer, <i>Lecture Notes in
+Comp. Sci.</i> 709, 1993, pp. 188&ndash;199.<br>
+Tech. Rep. 614, MIT Lab. for Comp. Sci., 1994.<br>
+<a href="BerEppTen-IJCGA-99.pdf"><i>Int. J. Comp. Geom. &amp; Appl.</i>
+9 (6): 517&ndash;532, 1999.</a>
+<p>
+A parallelization of the quadtree constructions in
+"<a href="p-pgood.html">Provably good mesh generation</a>",
+in an integer model of computation, based on a technique of
+sorting the input points using values formed by shuffling the binary
+representations of the coordinates.
+A side-effect is an efficient construction for the "fair split tree"
+hierarchical clustering method used by Callahan and Kosaraju for various
+nearest neighbor problems.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Parallel construction of quadtrees and quality triangulations">BibTeX</a> &ndash;
+<a href="//www.CiteSeer.com/eppstein93parallel.html">CiteSeer</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Parallel-construction-of-quadtrees-and-quality-triangulations.html">Citations</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=672684">ACM DL</a>)
+<p>
+<li><b>The diameter of nearest neighbor graphs</b>.<br>
+D. Eppstein.<br>
+<a href="Epp-TR-92-76.pdf">Tech. Rep. 92-76</a>, ICS, UCI, 1992.
+<p>
+Any connected nearest neighbor forest
+with diameter <i>D</i> has O(<i>D</i><sup>6</sup>) vertices.  This was
+later further
+improved to O(<i>D</i><sup>5</sup>) and merged with results of Paterson
+and Yao into "<a href="p-nn.html">On nearest neighbor graphs</a>".
+<p>(<a href="/~eppstein/bibs/eppstein.html#The diameter of nearest neighbor graphs">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/The-diameter-of-nearest-neighbor-graphs.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein92diameter.html">CiteSeer</a>)
+<p>
+<li><b>On nearest-neighbor graphs</b>.<br>
+D. Eppstein,
+<a href="//www.dcs.warwick.ac.uk/~msp/">M. S. Paterson</a>,
+and F. F. Yao.<br>
+<a href="EppPatYao-DCG-97.pdf"><i>Disc. Comp. Geom.</i> 17: 263&ndash;282, 1997</a>.
+<p>
+Paterson and Yao presented a paper at ICALP showing among other things
+that any connected nearest neighbor forest
+with diameter <i>D</i> has O(<i>D</i><sup>9</sup>) vertices.
+This paper is the journal version; my contribution consists
+of improving that bound to O(<i>D</i><sup>5</sup>), which is tight.
+<p>(<a href="/~eppstein/bibs/eppstein.html#On nearest neighbor graphs">BibTeX</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein97nearestneighbor.html">CiteSeer</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/On-nearest-neighbor-graphs.html">Citations</a>)
+<p>
+<li><b>Algorithms for stable matching and clustering in a grid</b>.<br>
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>, and
+N. Mamano.<br>
+<a href="//arxiv.org/abs/1704.02303">arXiv:1704.02303</a><br>
+<i>Proc. 18th International Workshop on Combinatorial Image Analysis
+(IWCIA 2017)</i>, Plovdiv, Bulgaria, 2017.<br>
+<a href="//doi.org/10.1007/978-3-319-59108-7_10">Springer, <i>Lecture Notes in
+Comp. Sci.</i> 10256 (2017), pp. 117&ndash;131</a>.
+<p>
+Motivated by redistricting, we consider geometric variants of the stable
+matching problem in which points (such as the pixels of a discretization
+of the unit square) are to be matched to a smaller number of centers
+such that each center has the same number of matches and no match is
+unstable with respect to Euclidean distances. We show how to solve such
+problems in polylogarithmic time per matched point, experiment with
+practical heuristics for solving these problems, and test methods for
+moving the centers to improve the shape of the matched regions.
+<p>
+<li><b>Defining equitable geographic districts in road networks via stable matching</b>.<br>
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>,
+D. Korkmaz, and
+N. Mamano.<br>
+<a href="//arxiv.org/abs/1706.09593">arXiv:1706.09593</a><br>
+<a href="//doi.org/10.1145/3139958.3140015"><i>Proc. 25th ACM SIGSPATIAL Int. Conf. Advances
+in Geographic Information Systems (ACM SIGSPATIAL 2017)</i>,
+Redondo Beach, California, pp. 52:1&ndash;52:4</a>.<br>
+<p>
+We cluster road networks (modeled as planar graphs, or more generally as
+graphs obeying a separator theorem) with a given set of cluster centers,
+by matching graph vertices to centers stably according to distance: no
+unmatched vertex and center should have smaller distances than the
+matched pairs for the same points. We provide a separator-based data
+structure for dynamic nearest neighbor queries in planar or separated
+graphs, which allows the optimal stable clustering to be constructed in
+time <i>O</i>(<i>n</i><sup>3/2</sup>log&nbsp;<i>n</i>).
+We also experiment with heuristics for fast practical construction of
+this clustering.
+<p>
+<li><b>Reactive proximity data structures for graphs</b>.<br>
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>, and
+N. Mamano.<br>
+<a href="//arxiv.org/abs/1803.04555">arXiv:1803.04555</a>.<br>
+<i>Proc. 13th Latin American Theoretical Informatics Symposium (LATIN
+2018)</i>, Buenos Aires, Argentina.<br>
+<a href="//doi.org/10.1007/978-3-319-77404-6_56">Springer, <i>Lecture Notes in
+Comp. Sci.</i> 10807 (2018), pp. 777&ndash;789</a>.
+<p>
+We develop data structures for solving nearest neighbor queries for
+dynamic subsets of vertices in a planar graph, or more generally for a
+graph in any graph class with small separators (polynomial expansion).
+<p>
+<li><b>Stable-matching Voronoi diagrams:
+combinatorial complexity and algorithms</b>.<br>
+<a href="//www.cs.technion.ac.il/~barequet/">G. Barequet</a>,
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>, and
+N. Mamano.<br>
+<a href="//arxiv.org/abs/1804.09411">arXiv:1804.09411</a><br>
+<i>Proc. 45th International Colloquium on Automata, Languages, and
+Programming (ICALP 2018)</i>, Prague.<br>
+<a href="//doi.org/10.4230/LIPIcs.ICALP.2018.89">Leibniz International
+Proceedings in Informatics (LIPIcs) 107, pp. 89:1&ndash;89:14</a>.<br>
+<p>
+The stable-matching Voronoi diagram of a collection of point sites in
+the plane, each with a specified area, is a collection of disjoint
+regions of the plane, one for each site and having the specified area,
+so that no pair of a point and a site are closer to each other than to
+the farthest other site and point that they may be matched to.
+We prove nearly-matching upper and lower bounds on the combinatorial
+complexity of these diagrams and provide algorithms that can compute them
+in a polynomial number of primitive steps.
+<p>
+<li><b>Stable-matching Voronoi diagrams</b>.<br>
+D. Eppstein.<br>
+Invited talk at 21st Japan Conference on Discrete and Computational Geometry, Graphs, and Games (JCDCG<sup>3</sup>), Manila, Philippines, 2018.<br>
+<p>
+We survey the results from several of my earlier papers:
+<a href="p-stablegrid.html">Algorithms for stable matching and clustering in a grid</a>,
+<a href="p-stableroad.html">Defining equitable geographic districts in
+road networks via stable matching</a>,
+<a href="p-graphnn.html">Reactive proximity data structures for graphs</a>, and
+<a href="p-smvd.html">Stable-matching Voronoi diagrams:
+combinatorial complexity and algorithms</a>.
+<p>
+(<a href="Epp-JCDCG3-18-slides.pdf">Slides</a>)
+<p>
+</ul>
+
+<hr><p>
+<a href="geom.html">Geometry</a> &ndash;
+<a href="/~eppstein/pubs/">Publications</a> &ndash;
+<a href="/~eppstein/">David Eppstein</a> &ndash;
+<a href="/~theory/">Theory Group</a> &ndash;
+<a href="/">Inf. &amp; Comp. Sci.</a> &ndash;
+<a href="//www.uci.edu/">UC Irvine</a>
+<p>
+<small>Semi-automatically <a href="filter.html">filtered</a>
+from a common source file.</small>
+</body></html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

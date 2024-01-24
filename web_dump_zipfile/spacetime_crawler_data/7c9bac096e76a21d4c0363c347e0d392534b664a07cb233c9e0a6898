@@ -1,0 +1,37 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueŠ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2451¢Ak¢DtypeEvalueLX-Robots-TagAv¢DtypeEvalueGnoindex¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueXattachment; filename=data.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueYDokuWiki=603de544985ab5f938da60b45299d299; path=/; HttpOnly, DW68700bfd16c2027de7de74a5a8202a6f=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; httponly, FCK_media=%2Flib%2Fplugins%2Fckgedit%2Ffckeditor%2Fuserfiles%2Fimage%2F; path=/, FCK_NmSp=data; path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX>no-store, no-cache, must-revalidate, post-check=0, pre-check=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 22:54:39 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=utf-8Kraw_content¢DtypeEvalueY	“===== DANN data =====
+
+The raw data can be found here [[http://krishna.gs.washington.edu/martin/download/cadd_training/]]. The real SNV, insertion and deletion samples sum up to 16,627,775. We randomly sample equal number of simutation samples (SNV, insertion and deletion), combine with the real data, and get a dataset of 33,255,550 samples. 
+
+This dataset is transormed into svmlight format with script impute2svmlight.py, which is provided by Dr. Martin Kircher (the author of CADD paper), and the python package [[https://github.com/mblondel/svmlight-loader|svmlight-loader]]. We roughly partition the dataset into 80% for training, 10% for validation and 10% for testing. Their svmlight files are here: 
+
+
+
+===== tree-hmm sample .bam's from chr19 =====
+
+tree-hmm sample data from the ENCODE human project [[http://cbcl.ics.uci.edu/public_data/tree-hmm-sample-data|http://cbcl.ics.uci.edu/public_data/tree-hmm-sample-data]]
+
+===== LRH-1 ChIP-seq Data =====
+
+Our ChIP-seq analysis of LRH-1 can be found at: [[http://cbcl.ics.uci.edu/public_data/LRH-1|http://cbcl.ics.uci.edu/public_data/LRH-1]]
+
+===== FXR ChIP-seq Data =====
+
+[[http://cbcl.ics.uci.edu/public_data/FXR/|http://cbcl.ics.uci.edu/public_data/FXR/]]
+
+===== SREBP-2 ChIP-seq Data =====
+
+ChipSeq was performed on SREBP-2 and peaks were called using [[http://web.me.com/kaestnerlab1/GLITR/|GLITR]].  We also re-analyzed SREBP-1 using GLITR. Supplemental Tables, Figures, and datasets are available: [[http://cbcl.ics.uci.edu/public_data/SREBP2/|SREBP2]]
+
+===== SREBP-1 ChIP-seq Data =====
+
+Included here is ChIP-Seq raw and processed data from:
+
+//Genome-wide analysis of SREBP-1 binding in mouse liver chromatin reveals a preference for promoter proximal binding to a new motif.// PNAS 2009 106:13765-13769; Young-Kyo Seo, Hansook Kim Chong, Aniello M. Infante, Seung-Soon Im, Xiaohui Xie, and Timothy F. Osborne
+
+    * Raw sequence data (raw_data/%%*%%_sequence.txt) was processed using eland to create raw/%%*%%_eland_multi.txt
+    * ChipSeq-mini 2.0 (http:<nowiki>//</nowiki>woldlab.caltech.edu/html/software, now part of the ERANGE package) was used to process the eland files and produce the processed/%%*%%.bed files.
+    * IgG files are for the control run, SREBP1 files are after fasting and refeeding. See paper for details.
+
+    - [[http://cbcl.ics.uci.edu/public_data/SREBP1/processed/|Processed Data]]
+    - [[http://cbcl.ics.uci.edu/public_data/SREBP1/raw_data/|Raw Data]]
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

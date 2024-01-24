@@ -1,0 +1,960 @@
+¶Ifinal_url¢DtypeEvaluewhttps://deals.gdgt.com/Lhttp_headers¢DtypeEvalueí¢Ak¢DtypeEvalueFStatusAv¢DtypeEvalueF200 OK¢Ak¢DtypeEvalueLX-Request-IdAv¢DtypeEvalueX$9a6173f7-43f8-43aa-a441-c1ef98249af3¢Ak¢DtypeEvaluePX-XSS-ProtectionAv¢DtypeEvalueM1; mode=block¢Ak¢DtypeEvalueVX-Content-Type-OptionsAv¢DtypeEvalueGnosniff¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueYYv5_stackshops_session_production=UmpqSmtBMmt2SHQ0eE84SUhoaVMwVWowbkNud0RlcE5uTG1WeVBXZXltZFZjc2xhRWgralp0UjR1WFhwSmYyNGVtay8rYWhmRGxEVVFXZzZzZTU1dXJOR3lLazFIL2hHSkdPWWJSVzQzNXNzMFFrTkhJNVJPQkdhdjJ5VkJWaHRmMmR1V1ZHWDNFTXZydEd0bDNlMXlBPT0tLWpiUVZzZk9YMGZqZ2o4RW9oZmR2dmc9PQ%3D%3D--920414511158a8ce5e83e8f33ce0c19bfb19c4e5; path=/; secure; HttpOnly¢Ak¢DtypeEvalueXStrict-Transport-SecurityAv¢DtypeEvalueX#max-age=15552000; includeSubDomains¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueIX-RuntimeAv¢DtypeEvalueH0.038912¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueLnginx/1.12.1¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX$W/"8af9ac7890cfb6455abb0eb753770203"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX#max-age=0, private, must-revalidate¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 29 Jan 2019 17:36:34 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8¢Ak¢DtypeEvalueXAccess-Control-Allow-OriginAv¢DtypeEvalueA*Kraw_content¢DtypeEvalueYÙﬂ<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"02bf0a7962","applicationID":"131593373","transactionName":"dl4KRhNdXFwDQRhKWEFUS1sPVlVI","queueTime":0,"applicationTime":38,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<!-- Page hiding snippet (recommended)  -->
+<style>.async-hide { opacity: 0 !important} </style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+})(window,document.documentElement,'async-hide','dataLayer',1000,
+{'GTM-P2BQKM':true});</script>
+<title>
+  GDGT Deals
+</title>
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://deals.gdgt.com/feed.rss" />
+<meta
+  name="description"
+  content="GDGT Deals scours the web for the newest software, gadgets &amp; web services. Explore our giveaways, bundles, Pay What You Want deals &amp; more." >
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cdnp3.stackassets.com/3daf3cffab4ff9b8b11cb3363888f26b3ec3fc71/store/003df1807fb047223cc1988be2f36f5b614ec6408d1d1d54994b7fc1e3b2/favicon.png" />
+<link rel="apple-touch-icon" type="image/x-icon" href="https://cdnp3.stackassets.com/3daf3cffab4ff9b8b11cb3363888f26b3ec3fc71/store/003df1807fb047223cc1988be2f36f5b614ec6408d1d1d54994b7fc1e3b2/favicon.png" />
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" media="all" href="https://shops1.stackassets.com/assets/classic-29808bd7c2df9e9014c09cf3439dd558e42df2b2a53075bf809c68b2286b0f27.css" />
+  <link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700" />
+
+
+<style>.publisher-engadget .brand-primary,.publisher-engadget .shopping-cart-icon.active,.publisher-engadget .my-account-container .nav-tabs li a.active,.publisher-engadget #sc-nyop-buttons .btn-default.active .fa-circle,.publisher-engadget input[type=radio]:checked+label:before,.publisher-engadget input[type=checkbox]:checked+label:before,.publisher-engadget .upsell-cta--checked::before,.publisher-engadget .footer .newsletter .btn-default,.publisher-engadget .js-cart-item-remove:hover,.publisher-engadget .mobile-search-icon.active .search-input-icon,.publisher-engadget .search-input:focus+.search-input-icon{color:#00b0ff}@media (min-width: 992px){.publisher-engadget .navbar-master .nav-item-container:hover .nav-item-link,.publisher-engadget .navbar-master .nav-item-link:hover{border-color:#00b0ff;color:#00b0ff !important}}.publisher-engadget #sc-nyop-leaderboard tr:first-child td:first-child strong,.publisher-engadget .table>tbody>tr.active td,.publisher-engadget .table>tbody>tr.active:hover td,.publisher-engadget .sc-form-group .bar:before,.publisher-engadget .sc-form-group .bar:after,.publisher-engadget .checkout .edit-address-bar,.publisher-engadget .footer-newsletter .btn-primary,.publisher-engadget .navbar.navbar-master .dropdown-nav-switcher .nav-item-link,.publisher-engadget .navbar.navbar-master .dropdown-nav-switcher.open .nav-item-link{background-color:#00b0ff}.publisher-engadget .address-verification-modal .btn-primary{background-color:#00b0ff}.publisher-engadget .address-verification-modal .btn-primary:hover{background-color:#009ee6}.publisher-engadget .table-hover>tbody>tr:hover,.publisher-engadget .active .shipping-address,.publisher-engadget .active .billing-address{background-color:#dbf4ff}.publisher-engadget .sc-product-thumbnails .product-thumbnail.active,.publisher-engadget input[type=radio]:checked+label:before,.publisher-engadget input[type=checkbox]:checked+label:before,.publisher-engadget .btn-selectable.active,.publisher-engadget .active .shipping-address,.publisher-engadget .active .billing-address{border-color:#00b0ff}.publisher-engadget .hello-bar{background-color:#2B2D32}.publisher-engadget .hello-bar a{color:#ABABAD}.publisher-engadget .alert-notification{background-color:#2b2d32;border-color:#131517;color:#ababad}.publisher-engadget .alert-notification hr{border-top-color:#080809}.publisher-engadget .alert-notification .alert-link{color:#919194}.publisher-engadget .navbar-default,.publisher-engadget .search-input,.publisher-engadget .navbar-collapse{background-color:#FFFFFF}.publisher-engadget .search-input-icon,.publisher-engadget .shopping-cart-icon,.publisher-engadget .navbar-default .navbar-nav>li>a,.publisher-engadget .navbar-default .navbar-nav>li>a:hover,.publisher-engadget .nav-item-link,.publisher-engadget .dropdown-menu>li>a,.publisher-engadget .dropdown-menu>li>a:hover,.publisher-engadget .navbar-default .navbar-nav>.open>a{color:#2B2D32}.publisher-engadget .navbar-default .navbar-toggle .icon-bar{background-color:#2B2D32}@media (max-width: 991px){.publisher-engadget .menu-list>li>a,.publisher-engadget .menu-list>li>.subnav-menu-label,.publisher-engadget .menu-list .subnav-menu-items a,.publisher-engadget .menu-list>li>a:hover{color:#2B2D32;background:none}}.publisher-engadget .navbar-toggle .icon-cart{font-size:1.7em}.publisher-engadget .navbar-toggle .search-input-icon{font-size:1.4em}@media (max-width: 991px){.publisher-engadget .navbar-default .nav-item,.publisher-engadget .navbar-default .subnav-menu,.publisher-engadget .navbar-default .subnav-menu-items{border:0;border-top:1px solid #d5d7db}.publisher-engadget .navbar-default .nav-item.open{border-color:transparent}.publisher-engadget .navbar-default .nav-item:first-child{border:0}}.publisher-engadget .navbar-search .search-input,.publisher-engadget .navbar-search-mobile .search-input{color:#2B2D32;border:1px solid #d5d7db}.publisher-engadget .shopping-cart-total .badge{background-color:#f41e37}.publisher-engadget #sc-hero-unit{background-image:url("https://cdnp0.stackassets.com/1f82260faca8a3e14bb78fd6d14bd07b8e18169d/store/fd7f47f88132fbf400d8e97ac20c67d54653e50fa91105c35eef5bc35221/2016_tech_blackfriday_hero_home.gif")}.publisher-engadget #sc-hero-unit.giveaway-no-banner{background-image:none}.primary-color{color:#00b0ff !important}.active.primary-border-color-active{border-color:#00b0ff !important}.primary-border-color-active:hover{border-color:#66d0ff !important}.primary-border-top{border-top-color:#00b0ff !important}.active.primary-border-top-active{border-top-color:#00b0ff !important}.primary-border-left{border-left-color:#00b0ff !important}.active.primary-border-left-active{border-left-color:#00b0ff !important}.primary-border-bottom{border-bottom-color:#00b0ff !important}.active.primary-border-bottom-active{border-bottom-color:#00b0ff !important}.primary-border-right{border-right-color:#00b0ff !important}.active.primary-border-right-active{border-right-color:#00b0ff !important}.buy-now-column .loyalty-callout{color:#00b0ff}.loyalty-callout--bar{background-color:#00b0ff}@media (min-width: 993px){.loyalty-callout--bar{background-color:#fff;color:#00b0ff}}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+  window['optimizely'] = window['optimizely'] || [];
+  window['optimizely'].push(["customTag", "LoggedIn", false]);
+</script>
+<script src="//cdn.optimizely.com/js/74647825.js"></script>
+<script src="https://shops1.stackassets.com/assets/shared-178e39bdb70b420a918ed588bf4172e270dc8aa76ed55b131ce6a9a30a39bf18.js"></script>
+<!--[if lte IE 9]>
+  <script src="https://shops1.stackassets.com/assets/jquery.html5-placeholder-shim-fd57d1a7d62d64d8cfd7af63ec58c8db8248e7709cac024b6946c984d31e9b7d.js"></script>
+  <script>
+    $.placeholder.shim();
+  </script>
+<![endif]-->
+
+<script src="https://www.google.com/recaptcha/api.js" async="async" defer="defer"></script>
+<script src="https://assets.jetlore.com/js/jlranker.js"></script>
+
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="lcOwoC6C1U1Afbv8iC/5USB1fCK/okrMqGlJ9Bp//6z3H/WXeA9RUFbZhb9QJc4J6dTNms6SyMgEA9D5DnEEng==" />
+
+
+    <!-- Quantcast Tag, part 1 -->
+    <script type="text/javascript">
+      var _qevents = _qevents || [];
+      (function() {
+       var elem = document.createElement('script');
+       elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+       elem.async = true;
+       elem.type = "text/javascript";
+       var scpt = document.getElementsByTagName('script')[0];
+       scpt.parentNode.insertBefore(elem, scpt);
+      })();
+    </script>
+
+    <script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', '358413294509065');
+  fbq('track', "PageView");</script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=358413294509065&ev=PageView&noscript=1"
+  /></noscript>
+
+
+<script type="text/javascript">
+  window.fbq = window.fbq || (function(){});
+  window._fbq = window._fbq || [];
+</script>
+
+<script type="text/javascript">
+  window.dataLayer = [{
+    publisherId: '185',
+    affiliateId: '',
+    appEnvironment: 'production',
+    showEmailCapture: 'true'
+  }];
+
+  window.SC.code.analytics = {
+    customDimension: function(index, name, value) {
+      gtmPayload = {};
+      gtmPayload['dimension' + index] = value;
+      dataLayer.push(gtmPayload);
+    },
+
+    analyticsEvent: function(category, action, opt_label, opt_value, opt_noninteractive) {
+      // ensure value is integer. We encountered weird analytics behavior if decimals are sent
+      integer_value = Math.round(opt_value) || undefined
+
+      dataLayer.push({
+        'event': 'analyticsEvent',
+        'eventCategory': category,
+        'eventAction': action,
+        'eventLabel': opt_label,
+        'eventValue': integer_value,
+        'eventNonInt': opt_noninteractive
+      });
+    },
+
+    analyticsSocial: function(socialNetwork, socialAction, opt_socialTarget, opt_page) {
+      dataLayer.push({
+        'event': 'social',
+        'socialNetwork': socialNetwork,
+        'socialAction': socialAction,
+        'socialTarget': opt_socialTarget,
+        'socialPagePath': opt_page
+      });
+    },
+
+    analyticsVPV: function(virtualPageName) {
+      dataLayer.push({
+        'event': 'analyticsVPV',
+        'vpvName': virtualPageName
+      });
+    },
+
+    analyticsClearVPV: function() {
+      dataLayer.push({
+        'event': 'analyticsVPV',
+        'vpvName': undefined
+      });
+    },
+
+    analyticsForm: function(f, el) {
+      var formName = f;
+      var elName = el.name || el.id || el.type;
+      var category = 'interaction';
+      var action = 'form: ' + formName;
+      var label = elName + ':' + el.type;
+
+      // Google Tag Manager
+      analyticsEvent(category, action, label);
+    }
+  };
+
+  $(document).ready(function() {
+    window.SC.dataLayer.enqueue('SCDataLayer', 'USER_VISITS', { previouslyPurchasedProducts: 'false' });
+
+
+  });
+</script>
+
+
+
+
+<script type="text/javascript">
+var _user_id = '';
+var _session_id = '8034e2d3ffa18e235e779cdee2ead0f2';
+
+var _sift = window._sift = window._sift || [];
+_sift.push(['_setAccount', 'ef01e3d959']);
+_sift.push(['_setUserId', _user_id]);
+_sift.push(['_setSessionId', _session_id]);
+_sift.push(['_trackPageview']);
+(function() {
+  function ls() {
+    var e = document.createElement('script');
+    e.type = 'text/javascript';
+    e.async = true;
+    e.src = ('https:' === document.location.protocol ? 'https://' : 'http://') + 'cdn.siftscience.com/s.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(e, s);
+  }
+  if (window.attachEvent) {
+    window.attachEvent('onload', ls);
+  } else {
+    window.addEventListener('load', ls, false);
+  }
+})();
+</script>
+
+
+<input type="hidden" class="js-jetlore-constructor-tag" id="user_email" value="">
+
+  </head>
+  <body id="stacksocial-wrapper" class="publisher-engadget" ng-app="stackApp" ng-class="[cartStateBodyClass]">
+    <a href="https://iar40lbead.execute-api.us-east-1.amazonaws.com/ProdStage" rel="nofollow" style="display: none" aria-hidden="true">nofollow</a>
+    <script type="text/javascript">
+  // dimension1 is reserved for legacy PartnerType and is unused
+  window.SC.code.analytics.customDimension(2, 'User Status', "logged_out");
+
+    window.SC.code.analytics.customDimension(3, "Publisher", "GDGT");
+    window.SC.code.analytics.customDimension(4, "Publisher Persona", "General Tech News");
+
+
+
+
+
+</script>
+
+    <!-- StackCommerce GTM Container -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P2BQKM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P2BQKM');
+  </script>
+
+
+    <input type="hidden" name="current_publisher" id="current_publisher" value="185" data-name="GDGT" data-checkout-upsell-top-id="17409" data-checkout-upsell-bottom-id="9426" />
+
+    <input type="hidden" name="current_user_favorites" id="current_user_favorites" data-sale-ids="[]" data-sales-url="https://deals.gdgt.com/v0/sales" />
+    <input type="hidden" name="api_url" id="api_url" value="https://deals.gdgt.com/" />
+    <input type="hidden" name="current_cart" id="current_cart" data-current-cart="{&quot;items&quot;:[]}" />
+    <input type="hidden" name="publisher_upsell_sales" id="publisher_upsell_sales" data-sales="[{&quot;from_jetlore&quot;:true},{&quot;from_jetlore&quot;:true},{&quot;from_jetlore&quot;:true},{&quot;from_jetlore&quot;:true}]" data-max-quantity="4" />
+    <?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" display="none" version="1.1">
+  <defs>
+    <symbol id="icon-heart" viewBox="0 0 75 75">
+      <path class="path1" d="M18,38.5L36.2,57c0.3,0.3,0.8,0.5,1.3,0.5c0.5,0,1-0.2,1.3-0.5l9.1-9.2c3-3.1,6.1-6.1,9.1-9.2c4.7-4.8,4.7-12.6,0-17.4c-2.3-2.3-5.4-3.6-8.7-3.6c-3.3,0-6.4,1.3-8.7,3.6l-2,2l-2-2.1c-2.3-2.3-5.4-3.6-8.7-3.6c-3.3,0-6.4,1.3-8.7,3.6C13.3,25.9,13.3,33.7,18,38.5z M20.7,23.5c1.7-1.7,3.8-2.6,6.1-2.6c2.3,0,4.4,0.9,6.1,2.6l3.4,3.4c0.3,0.3,0.8,0.5,1.3,0.5c0.5,0,1-0.2,1.3-0.5l3.3-3.4c1.7-1.7,3.8-2.6,6.1-2.6c2.3,0,4.4,0.9,6.1,2.6c3.4,3.5,3.4,9.1,0,12.6L37.5,53.2l-0.1-0.1l-16.7-17C17.3,32.6,17.3,27,20.7,23.5z" />
+    </symbol>
+
+    <symbol id="icon-circle-heart" viewBox="0 0 75 75">
+      <path class="path1" d="M23.1,40.5 L36.525,54.6 C36.75,54.825 37.125,54.975 37.5,54.975 C37.875,54.975 38.25,54.825 38.475,54.6 L45.15,47.55 C47.4,45.225 49.65,42.825 51.825,40.5 C55.35,36.825 55.35,30.825 51.825,27.15 C50.1,25.35 47.85,24.375 45.375,24.375 C42.9,24.375 40.65,25.35 38.925,27.15 L37.425,28.725 L35.925,27.15 C34.2,25.35 31.95,24.375 29.475,24.375 C27,24.375 24.75,25.35 23.025,27.15 C19.65,30.9 19.65,36.825 23.1,40.5 Z M25.05,29.025 C26.25,27.75 27.9,27 29.55,27 C31.2,27 32.85,27.675 34.05,29.025 L36.525,31.65 C36.75,31.875 37.125,32.025 37.5,32.025 C37.875,32.025 38.25,31.875 38.475,31.65 L40.95,29.025 C42.15,27.75 43.8,27 45.45,27 C47.1,27 48.75,27.675 49.95,29.025 C52.5,31.65 52.5,36 49.95,38.7 L37.5,51.825 L37.425,51.675 L25.05,38.7 C22.5,36 22.5,31.725 25.05,29.025 Z"></path>
+      <path class="path2" d="M37.5,74.625 C17.025,74.625 0.375,57.975 0.375,37.5 C0.375,17.025 17.025,0.375 37.5,0.375 C57.975,0.375 74.625,17.025 74.625,37.5 C74.625,57.975 57.975,74.625 37.5,74.625 Z M37.5,2.625 C18.3,2.625 2.625,18.3 2.625,37.5 C2.625,56.7 18.3,72.375 37.5,72.375 C56.7,72.375 72.375,56.7 72.375,37.5 C72.375,18.3 56.7,2.625 37.5,2.625 Z"></path>
+    </symbol>
+
+    <symbol id="icon-circle-heart-filled" viewBox="0 0 75 75">
+      <path class="path1" d="M23.1,40.5 L36.525,54.6 C36.75,54.825 37.125,54.975 37.5,54.975 C37.875,54.975 38.25,54.825 38.475,54.6 L45.15,47.55 C47.4,45.225 49.65,42.825 51.825,40.5 C55.35,36.825 55.35,30.825 51.825,27.15 C50.1,25.35 47.85,24.375 45.375,24.375 C42.9,24.375 40.65,25.35 38.925,27.15 L37.425,28.725 L35.925,27.15 C34.2,25.35 31.95,24.375 29.475,24.375 C27,24.375 24.75,25.35 23.025,27.15 C19.65,30.9 19.65,36.825 23.1,40.5 Z"></path>
+      <path class="path2" d="M37.5,74.625 C17.025,74.625 0.375,57.975 0.375,37.5 C0.375,17.025 17.025,0.375 37.5,0.375 C57.975,0.375 74.625,17.025 74.625,37.5 C74.625,57.975 57.975,74.625 37.5,74.625 Z M37.5,2.625 C18.3,2.625 2.625,18.3 2.625,37.5 C2.625,56.7 18.3,72.375 37.5,72.375 C56.7,72.375 72.375,56.7 72.375,37.5 C72.375,18.3 56.7,2.625 37.5,2.625 Z"></path>
+    </symbol>
+
+    <symbol id="icon-cart" viewBox="0 0 75 75">
+      <path class="path1" d="M47.8,52.5c1.3,0,2.3,1,2.3,2.3c0,1.3-1,2.3-2.3,2.3s-2.3-1-2.3-2.3C45.5,53.5,46.5,52.5,47.8,52.5z M30.4,52.5c1.3,0,2.3,1,2.3,2.3c0,1.3-1,2.3-2.3,2.3c-1.3,0-2.3-1-2.3-2.3C28.1,53.5,29.1,52.5,30.4,52.5z M47.8,49.1c-3.2,0-5.8,2.6-5.8,5.8c0,3.2,2.6,5.8,5.8,5.8s5.8-2.6,5.8-5.8C53.6,51.7,50.9,49.1,47.8,49.1z M30.4,49.1c-3.2,0-5.8,2.6-5.8,5.8c0,3.2,2.6,5.8,5.8,5.8s5.8-2.6,5.8-5.8C36.2,51.7,33.6,49.1,30.4,49.1z M23.2,23.8h34.5L55,35.4l-26.3,2.1L23.2,23.8z M11.4,14.6c-1,0-1.7,0.8-1.7,1.7s0.8,1.7,1.7,1.7h5.8c2.9,7.1,5.7,14.2,8.5,21.2l-2.6,6.3c-0.2,0.5-0.2,1.2,0.2,1.6c0.3,0.5,0.9,0.8,1.4,0.8h28.9c0.9,0,1.8-0.8,1.8-1.7c0-0.9-0.8-1.7-1.8-1.7H27.3l1.5-3.6l27.8-2.2c0.7-0.1,1.4-0.6,1.6-1.3l3.5-15c0.2-1-0.7-2.1-1.7-2.1H21.8l-1.9-4.7c-0.3-0.6-0.9-1.1-1.6-1.1H11.4z" />
+    </symbol>
+
+    <symbol id="icon-search" viewBox="0 0 75 75">
+      <path class="path1" d="M34.1,17.5c-4.4,0-8.6,1.7-11.7,4.9c-3.1,3.1-4.9,7.3-4.9,11.7c0,4.4,1.7,8.6,4.9,11.7c3.1,3.1,7.3,4.9,11.7,4.9c3.7,0,7.2-1.2,10.1-3.5l0.2-0.2l10,10c0.7,0.7,1.9,0.7,2.6,0c0.7-0.7,0.7-1.9,0-2.6v0l-10-10l0.2-0.2c5.1-6.6,4.5-16-1.4-21.9C42.6,19.2,38.5,17.5,34.1,17.5 M43.2,43.2c-2.4,2.4-5.7,3.8-9.1,3.8h0c-3.4,0-6.7-1.3-9.1-3.8c-2.4-2.4-3.8-5.7-3.8-9.1c0-3.4,1.3-6.7,3.8-9.1c2.4-2.4,5.7-3.8,9.1-3.8c3.4,0,6.7,1.3,9.1,3.8c2.4,2.4,3.8,5.7,3.8,9.1S45.6,40.7,43.2,43.2" />
+    </symbol>
+
+    <symbol id="icon-ships-fast" viewBox="0 0 100 100">
+      <path class="st0" d="M30.1,39.2L30.1,39.2l-12.3,0c0,0,0,0,0,0c-0.3,0-0.7,0.1-0.9,0.4c-0.2,0.2-0.4,0.6-0.4,0.9
+        c0,0.3,0.1,0.7,0.4,0.9c0.2,0.2,0.6,0.4,0.9,0.4l12.3,0c0.4,0,0.7-0.1,0.9-0.4c0.3-0.2,0.4-0.6,0.4-0.9c0-0.3-0.1-0.7-0.4-0.9
+        C30.8,39.3,30.5,39.2,30.1,39.2z"/>
+      <path class="st0" d="M31.1,35.2c0.3-0.2,0.4-0.6,0.4-0.9c0-0.3-0.1-0.7-0.4-0.9c-0.3-0.2-0.6-0.4-0.9-0.4l0,0l0,0H8.3
+        c-0.4,0-0.7,0.1-0.9,0.4C7.1,33.6,7,33.9,7,34.3c0,0.3,0.1,0.7,0.4,0.9c0.3,0.2,0.6,0.4,0.9,0.4l0,0l0,0h21.8
+        C30.5,35.6,30.8,35.4,31.1,35.2z"/>
+      <path class="st0" d="M75.4,36.1l-0.1-0.5c-0.4-1.5-1.9-2.6-3.4-2.6H38.4c-2,0-3.6,1.6-3.6,3.6v21.7c0,2,1.6,3.6,3.6,3.6h4.4l0.1,0.5
+        c0.8,2.7,3.3,4.6,6.2,4.6c2.8,0,5.4-1.9,6.2-4.6l0.1-0.5h17.6l0.1,0.5c0.8,2.7,3.4,4.6,6.2,4.6c2.8,0,5.4-1.9,6.2-4.6l0.1-0.5h4.5
+        c1.5,0,2.8-1.3,2.8-2.8V48.9c0-1.5-1.3-2.8-2.8-2.8h-0.7L89,45.1c-0.7-1.4-1.5-3.1-2.5-4.7c-0.7-1.2-1.4-2.1-2.1-2.8
+        c-0.7-0.8-1.5-1.5-2.8-1.5H75.4z M53,60.6c0,2.2-1.7,3.9-3.9,3.9c-2.2,0-3.9-1.7-3.9-3.9c0-2.2,1.7-3.9,3.9-3.9
+        C51.4,56.7,53,58.4,53,60.6L53,60.6z M72.8,59.3H55.5l-0.1-0.5c-0.8-2.8-3.3-4.7-6.2-4.7c-2.8,0-5.4,1.9-6.2,4.7l-0.1,0.5h-4.4
+        c-0.5,0-1-0.5-1-1V36.6c0-0.6,0.4-1,1-1l33.4,0c0.5,0,1,0.5,1,1V59.3z M79.4,64.4c-2.2,0-3.9-1.7-3.9-3.9c0-2.2,1.8-3.9,3.9-3.9
+        c2.3,0.1,3.9,1.7,3.9,3.9C83.3,62.8,81.6,64.4,79.4,64.4z M90.4,48.7v10.6h-4.7l-0.1-0.5c-0.6-2.8-2.9-4.5-6.2-4.6
+        c-1,0-2.1,0.3-3,0.7l-1,0.5v-6.7H90.4z M82.6,39.3c0.5,0.5,1.1,1.4,1.7,2.4c0.6,1,1.2,2.1,1.9,3.5l0.5,1H75.4v-7.5h6.1l0.2,0
+        l0.2,0.1C82,38.9,82.3,39,82.6,39.3z"/>
+    </symbol>
+
+  </defs>
+</svg>
+
+
+    <div class="container-wrapper">
+      <div class="container-site">
+        <script>
+  window.current_publisher_code = "engadget";
+</script>
+
+<div class="hello-bar js-hello-bar hidden-xs hidden-sm">
+  <div class="container">
+      <div class="pull-left">
+        <a class="back-link" href="http://engadget.com">
+          <i class='fa fa-sm fa-chevron-left back-to-publisher'></i> back to engadget.com
+</a>      </div>
+
+
+      <div class="">
+        <a class="hello-bar-text js-hello-bar" data-sale-slug="radix-tech-domain-10-year-subscription" data-track-click="{&quot;category&quot;:&quot;HelloBar&quot;,&quot;label&quot;:&quot;link&quot;}" impression_list="hello bar" href="/newest-sales">
+          Check out the latest trending products on sale today!
+          <i class="fa fa-chevron-right"></i>
+</a>      </div>
+
+    <a class="referal-link" data-track-click="{&quot;category&quot;:&quot;HelloBar&quot;,&quot;label&quot;:&quot;refer link&quot;}" href="/user/credits">
+      Give $10,
+      Get $10
+</a>  </div>
+</div>
+
+<nav id="main-navbar"
+  class="navbar navbar-default navbar-fixed-top navbar-master js-navbar-master"
+  role="navigation"
+  data-navbar>
+
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle navbar-menu-button pull-left" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar icon-bar-middle"></span>
+        <span class="icon-bar icon-bar-middle"></span>
+        <span class="icon-bar icon-bar-middle"></span>
+      </button>
+
+      <div class="navbar-toggle mobile-cart-icon mini-cart">
+        <mini-cart-button></mini-cart-button>
+      </div>
+
+      <div class="navbar-toggle mobile-search-icon js-toggleSearchNav">
+        <svg class="svg-icon search-input-icon">
+          <use xlink:href="#icon-search"></use>
+        </svg>
+      </div>
+
+      <div class="navbar-brand-container">
+        <a class="navbar-brand" href="/">
+            <img class="navbar-logo hidden-xs hidden-sm" alt="GDGT" src="https://cdnp0.stackassets.com/8a87d67f3750ec81603a6860d715ba55a91e63ba/store/4df0d067a3e4123b2c7b8d743887dd5e42f2dbad95230f5b5c6d86422031/6dad99a76aa3349e33cc78590a74a9a81dd5cf63_logo_main.png" />
+
+    <img class="navbar-logo hidden-md hidden-lg" alt="GDGT" src="https://cdnp3.stackassets.com/890dc2db07742ce88dac851426ce160173f0cf30/store/32b67d938ebe05db79bd61bfdad044202a9b0aaf7c8da9c79609fa0de96f/15f52b30b954dd9b964b404fbdc66254c9e9cfc1_logo_main_mobile.png" />
+
+</a>      </div>
+    </div>
+
+    <div class="navbar-collapse">
+      <div class="navbar-center">
+        <div class="hidden-xs hidden-sm navbar-search">
+          <form class="form-inline js-search-form" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+            <div class="search-container">
+              <input type="text" name="query" id="query" value="" placeholder="Search" class="search-input" required="required" />
+              <i class="fa fa-search search-input-icon"></i>
+            </div>
+</form>        </div>
+
+        <ul class="nav navbar-nav navbar-right nav-account hidden-xs hidden-sm">
+          <li class="heart-icon-nav">
+            <a class="nav-account-link js-wishlist-nav" href="/user?show=home-tab">
+              <svg class="svg-icon">
+                <use xlink:href="#icon-heart"></use>
+              </svg>
+</a>          </li>
+          <li class="cart-icon-nav">
+            <mini-cart-button></mini-cart-button>
+          </li>
+            <li>
+    <a class="nav-account-link" href="/sign_in?source=signup_page">Login</a>
+  </li>
+
+        </ul>
+      </div>
+
+      
+<ul class="nav navbar-nav navbar-main js-navbar-main nav-5-items">
+  
+    
+
+      
+
+          <li class="nav-item ">
+            <a class="nav-item-link" href="/best-sellers">Best Sellers</a>
+          </li>
+      
+
+          <li class="dropdown nav-item nav-item-container js-mobile-dropdown ">
+            <a class="mobile-dropdown-toggle nav-item-link js-root-menu-item" role="button" href="#">
+              Categories
+</a>            <div class="dropdown-menu mega-menu" role="menu">
+              <div class="container">
+                <ul class="list-unstyled menu-list">
+                    
+                      <li class="subnav-menu subnav-menu-group dropdown js-mobile-dropdown">
+                          <a class="subnav-menu-label js-child-menu-item mobile-dropdown-toggle" href="/collections/online-courses">
+                            Online Courses
+</a>
+                          <ul class="list-unstyled js-nav-filters">
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/online-courses/development">
+                                      Development
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/online-courses/it-security">
+                                      IT + Security
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/online-courses/business">
+                                      Business
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/online-courses/photography">
+                                      Photography
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/online-courses/marketing">
+                                      Marketing
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/online-courses/design">
+                                      Design
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/online-courses/self">
+                                      Self
+</a>                                  </li>
+                          </ul>
+                      </li>
+                    
+                      <li class="subnav-menu subnav-menu-group dropdown js-mobile-dropdown">
+                          <a class="subnav-menu-label js-child-menu-item mobile-dropdown-toggle" href="/collections/gear-gadgets">
+                            Gear + Gadgets
+</a>
+                          <ul class="list-unstyled js-nav-filters">
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/gear-gadgets/sound">
+                                      Sound
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/gear-gadgets/power">
+                                      Power
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/gear-gadgets/connected-devices">
+                                      Connected Devices
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/gear-gadgets/diy">
+                                      DIY
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/gear-gadgets/mobile">
+                                      Mobile
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/gear-gadgets/photography">
+                                      Photography
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/gear-gadgets/gaming-toys">
+                                      Gaming + Toys
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/gear-gadgets/auto">
+                                      Auto
+</a>                                  </li>
+                          </ul>
+                      </li>
+                    
+                      <li class="subnav-menu subnav-menu-group dropdown js-mobile-dropdown">
+                          <a class="subnav-menu-label js-child-menu-item mobile-dropdown-toggle" href="/collections/lifestyle">
+                            Lifestyle
+</a>
+                          <ul class="list-unstyled js-nav-filters">
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/lifestyle-vices">
+                                      Vices
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/lifestyle/accessories">
+                                      Accessories
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/lifestyle/everyday-carry">
+                                      Everyday Carry
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/lifestyle/home">
+                                      Home
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/watches">
+                                      Watches
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/lifestyle/travel">
+                                      Travel
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/lifestyle/fitness">
+                                      Fitness
+</a>                                  </li>
+                          </ul>
+                      </li>
+                    
+                      <li class="subnav-menu subnav-menu-group dropdown js-mobile-dropdown">
+                          <a class="subnav-menu-label js-child-menu-item mobile-dropdown-toggle" href="/collections/software">
+                            Apps + Software
+</a>
+                          <ul class="list-unstyled js-nav-filters">
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/software/security">
+                                      Security
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/software/utilities">
+                                      Utilities
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/software/productivity">
+                                      Productivity
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/software/backup-storage">
+                                      Backup + Storage
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/software/entertainment">
+                                      Entertainment
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/software/design">
+                                      Design
+</a>                                  </li>
+                          </ul>
+                      </li>
+                    
+                      <li class="subnav-menu subnav-menu-group dropdown js-mobile-dropdown">
+                          <a class="subnav-menu-label js-child-menu-item mobile-dropdown-toggle" href="/collections/design-assets">
+                            Designer Assets
+</a>
+                          <ul class="list-unstyled js-nav-filters">
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/design-assets/icons-vectors">
+                                      Icons + Vectors
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/design-assets/themes-templates">
+                                      Themes + Templates
+</a>                                  </li>
+                          </ul>
+                      </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+      
+
+          <li class="dropdown nav-item nav-item-container js-mobile-dropdown ">
+            <a class="mobile-dropdown-toggle nav-item-link js-root-menu-item" role="button" href="#">
+              Collections
+</a>            <div class="dropdown-menu mega-menu" role="menu">
+              <div class="container">
+                <ul class="list-unstyled menu-list">
+                    
+                      <li class="subnav-menu subnav-menu-group dropdown js-mobile-dropdown">
+                          <span class="subnav-menu-label mobile-dropdown-toggle">
+                            Interests
+                          </span>
+
+                          <ul class="list-unstyled js-nav-filters">
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/shop-by-interest-apple-mac">
+                                      Apple / Mac
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/shop-by-interest-science">
+                                      Science
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/shop-by-specialization-developer">
+                                      Developer
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/shop-by-interest-android">
+                                      Android
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/gamer">
+                                      Gamer
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/shop-by-specialization-designer">
+                                      Designer
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/hacking">
+                                      Hacking
+</a>                                  </li>
+                          </ul>
+                      </li>
+                    
+                      <li class="subnav-menu subnav-menu-group dropdown js-mobile-dropdown">
+                          <span class="subnav-menu-label mobile-dropdown-toggle">
+                            Featured
+                          </span>
+
+                          <ul class="list-unstyled js-nav-filters">
+                              
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/lifetime-deals">
+                                      Lifetime Subscriptions
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/pay-what-you-want">
+                                      Pay What You Want
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/international">
+                                      International
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/citizengoods-exclusives">
+                                      Exclusive Deals
+</a>                                  </li>
+                          </ul>
+                      </li>
+                    
+                      <li class="subnav-menu subnav-menu-group dropdown js-mobile-dropdown">
+                          <span class="subnav-menu-label mobile-dropdown-toggle">
+                            Staff Picks
+                          </span>
+
+                          <ul class="list-unstyled js-nav-filters">
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/tag-cyber-security">
+                                      VPNs &amp; Cyber Security
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/drones">
+                                      Drones
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/under-20">
+                                      Under $20
+</a>                                  </li>
+                              
+                                  <li class="subnav-menu-items">
+                                    <a class="js-third-level-menu-item" href="/collections/citizengoods-subscriptions">
+                                      Subscriptions
+</a>                                  </li>
+                              
+                          </ul>
+                      </li>
+                </ul>
+              </div>
+            </div>
+          </li>
+      
+
+          <li class="nav-item ">
+            <a class="nav-item-link" href="/free">Free</a>
+          </li>
+      
+
+          <li class="nav-item ">
+            <a class="nav-item-link" href="/giveaways">Giveaways</a>
+          </li>
+
+  <li class="nav-username-placeholder hidden-sm hidden-xs">
+      Login
+  </li>
+
+  <li class="nav-item visible-xs visible-sm">
+  <a class="nav-item-link" href="/user?show=home-tab">Wishlist</a>
+</li>
+  <li class="nav-item visible-xs visible-sm">
+    <a class="nav-item-link" href="/sign_in?source=signup_page">Login</a>
+  </li>
+
+</ul>
+
+    </div>
+  </div>
+
+  <div id="search-dropdown-bar"
+    class="hidden-md hidden-lg navbar-search-mobile container js-search-dropdown-bar">
+    <form class="form-inline js-search-form" action="/search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <input type="text" name="query" id="mobile-search-box" value="" placeholder="Search" class="form-control search-input js-mobile-search-box" />
+</form>  </div>
+
+  
+</nav>
+
+<div id="main-navbar-phantom" class="js-main-navbar-phantom"></div>
+<div class="mobile-nav-overlay"></div>
+
+
+<mini-cart></mini-cart>
+
+        
+
+        <div class="site-contents ">
+          
+<a class="sc-hero-unit-container-default" impression_list="hero unit" data-track-click="{&quot;category&quot;:&quot;hero unit&quot;}" href="/collections/gear-gadgets">
+
+  <div id="sc-hero-unit">
+    <header class="hero-unit-homepage-header">
+      <h1>New Year, New Gear</h1>
+      <h4>Get yourself some new tech toys</h4>
+        <div class="btn btn-lg btn-cta">
+          Shop Now
+        </div>
+    </header>
+  </div>
+</a>
+
+<div class="container js-intelligent-module-homepage intelligent-modules-container">
+  
+      <div data-columns="4" data-title="Featured Collections" data-index-url="/collections" data-name="Collections" data-module-type="CollectionsIntelligentModule" data-entries="[{&quot;id&quot;:944,&quot;name&quot;:&quot;New Year New You 2019&quot;,&quot;url&quot;:&quot;/collections/new-year-new-you-2019&quot;,&quot;picture_attributes&quot;:{&quot;im_4_column_image&quot;:{&quot;source_tags&quot;:[{&quot;media&quot;:&quot;(max-width: 599px)&quot;,&quot;srcset&quot;:&quot;https://cdnp0.stackassets.com/95ca334e99d137169e398001ed581b0e505af69a/store/opt/596/417/67fb22ee674d893142799fe3095be088bd8060f2265656edda992c63f4e0/MF_NewYou.jpg&quot;},{&quot;media&quot;:&quot;(min-width: 600px) and (max-width: 991px)&quot;,&quot;srcset&quot;:&quot;https://cdnp0.stackassets.com/d0d0d0c6e08d32d16ed615a955e9f45afcac5003/store/opt/555/417/67fb22ee674d893142799fe3095be088bd8060f2265656edda992c63f4e0/MF_NewYou.jpg&quot;}],&quot;img_tag&quot;:{&quot;src&quot;:&quot;https://cdnp0.stackassets.com/8f7ca0432eeb51f9590e7465b4f7ae59b3f938db/store/opt/263/211/67fb22ee674d893142799fe3095be088bd8060f2265656edda992c63f4e0/MF_NewYou.jpg&quot;,&quot;alt&quot;:&quot;&quot;}}}},{&quot;id&quot;:945,&quot;name&quot;:&quot;New Year New Skills 2019&quot;,&quot;url&quot;:&quot;/collections/new-year-new-skills-2019&quot;,&quot;picture_attributes&quot;:{&quot;im_4_column_image&quot;:{&quot;source_tags&quot;:[{&quot;media&quot;:&quot;(max-width: 599px)&quot;,&quot;srcset&quot;:&quot;https://cdnp2.stackassets.com/e0c16a35782045d7ca46499310b153c3d6f23aa1/store/opt/596/417/0758c94c2740325a2212ae8255b4d0563035e132f5ff6617e21beab67b9b/MF_NewSkills.jpg&quot;},{&quot;media&quot;:&quot;(min-width: 600px) and (max-width: 991px)&quot;,&quot;srcset&quot;:&quot;https://cdnp2.stackassets.com/38d6a0d69468e691d78befe0706719c69effeb53/store/opt/555/417/0758c94c2740325a2212ae8255b4d0563035e132f5ff6617e21beab67b9b/MF_NewSkills.jpg&quot;}],&quot;img_tag&quot;:{&quot;src&quot;:&quot;https://cdnp2.stackassets.com/4b81c729819a2733aa56cd29f89b1801371208a1/store/opt/263/211/0758c94c2740325a2212ae8255b4d0563035e132f5ff6617e21beab67b9b/MF_NewSkills.jpg&quot;,&quot;alt&quot;:&quot;&quot;}}}},{&quot;id&quot;:946,&quot;name&quot;:&quot;New Year New Gear 2019&quot;,&quot;url&quot;:&quot;/collections/new-year-new-gear_2019&quot;,&quot;picture_attributes&quot;:{&quot;im_4_column_image&quot;:{&quot;source_tags&quot;:[{&quot;media&quot;:&quot;(max-width: 599px)&quot;,&quot;srcset&quot;:&quot;https://cdnp1.stackassets.com/5b67db94218c88aef8b0306b82498dccb81beb27/store/opt/596/417/d9cd6fa05a686d2539c621704ff5bfc622520e108367ffb5ff7c9fbec9bd/MF_NewGear.jpg&quot;},{&quot;media&quot;:&quot;(min-width: 600px) and (max-width: 991px)&quot;,&quot;srcset&quot;:&quot;https://cdnp1.stackassets.com/70d628cc807a371b20491de6705d590cf2e71d54/store/opt/555/417/d9cd6fa05a686d2539c621704ff5bfc622520e108367ffb5ff7c9fbec9bd/MF_NewGear.jpg&quot;}],&quot;img_tag&quot;:{&quot;src&quot;:&quot;https://cdnp1.stackassets.com/1a15b4080b1514b0c8b7b5de714539b2234187b8/store/opt/263/211/d9cd6fa05a686d2539c621704ff5bfc622520e108367ffb5ff7c9fbec9bd/MF_NewGear.jpg&quot;,&quot;alt&quot;:&quot;&quot;}}}},{&quot;id&quot;:947,&quot;name&quot;:&quot;New Year New Goals 2019&quot;,&quot;url&quot;:&quot;/collections/new-year-new-goals-2019&quot;,&quot;picture_attributes&quot;:{&quot;im_4_column_image&quot;:{&quot;source_tags&quot;:[{&quot;media&quot;:&quot;(max-width: 599px)&quot;,&quot;srcset&quot;:&quot;https://cdnp0.stackassets.com/200847b54d5693a4397478f39fca445f36101b5e/store/opt/596/417/b1513c3e3df529f97bd0e63dc9041fdbc0eaa45b40f97f18bfd59304ff3e/MF_NewGoals.jpg&quot;},{&quot;media&quot;:&quot;(min-width: 600px) and (max-width: 991px)&quot;,&quot;srcset&quot;:&quot;https://cdnp0.stackassets.com/d3093f132f654ab45d45a95501e73a68d9f0bca1/store/opt/555/417/b1513c3e3df529f97bd0e63dc9041fdbc0eaa45b40f97f18bfd59304ff3e/MF_NewGoals.jpg&quot;}],&quot;img_tag&quot;:{&quot;src&quot;:&quot;https://cdnp0.stackassets.com/92ac36f4c8e90f37cac1fe0993b05a3e81cb5153/store/opt/263/211/b1513c3e3df529f97bd0e63dc9041fdbc0eaa45b40f97f18bfd59304ff3e/MF_NewGoals.jpg&quot;,&quot;alt&quot;:&quot;&quot;}}}}]" class="intelligent-module js-intelligent-module collections-intelligent-module "></div>
+      <div data-columns="4" data-title="Best Sellers" data-index-url="/best-sellers" data-module-type="SalesIntelligentModule" data-entries="/v0/search/sales?per_page=8&amp;publisher_id=185&amp;random=false&amp;sort=best_sellers" class="intelligent-module js-intelligent-module sales-intelligent-module "></div>
+      <div data-columns="4" data-title="Newest Sales" data-index-url="/newest-sales" data-module-type="SalesIntelligentModule" data-entries="/v0/search/sales?per_page=8&amp;publisher_id=185&amp;random=false&amp;sort=newest" class="intelligent-module js-intelligent-module sales-intelligent-module "></div>
+      <div data-columns="1" data-title="Pay What You Want" data-index-url="/pay-what-you-want" data-module-type="SaleWithProductList" data-entries="/v0/search/sales?per_page=1&amp;publisher_id=185&amp;random=true&amp;sale_types%5B%5D=NYOP+-+Full&amp;sort=ending_soonest" class="intelligent-module js-intelligent-module sale-with-product-list "></div>
+      <div data-columns="2" data-title="Bundles" data-index-url="/bundles" data-module-type="SalesIntelligentModule" data-entries="/v0/search/sales?per_page=2&amp;publisher_id=185&amp;random=true&amp;sale_types%5B%5D=Bundle&amp;sort=newest" class="intelligent-module js-intelligent-module sales-intelligent-module "></div>
+      <div data-columns="4" data-title="Ending Soon" data-index-url="/ending-soon" data-module-type="SalesIntelligentModule" data-entries="/v0/search/sales?per_page=12&amp;publisher_id=185&amp;random=false&amp;sort=ending_soonest" class="intelligent-module js-intelligent-module sales-intelligent-module "></div>
+</div>
+
+<div class="hidden-xs">
+  <a href data-toggle="#stacksocial-wrapper" id="back-to-top" class="anchor-link hidden-phone">
+    <i class="icon-pushup"></i>
+  </a>
+</div>
+
+
+        </div>
+      </div>
+
+      
+  <footer id="footer" class="footer">
+    <div class="container">
+
+      <div class="footer-menus-row row">
+        <div class="col-md-5">
+          <div class="footer-newsletter">
+  <h5 class="footer-title footer-newsletter-title">Sign up & get 10% Off</h5>
+
+  <form class="clearfix form-inline" role="form" action="/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="DTUmrXIjZBc/TEeaLuzMRavLM4YfDvZ5nDXu00XLpWky7wBiDF9HQPojEhavK9YZbg0CRG31c8I3XTSWkOdShg==" />
+    <div class="clearfix js-mailcheck-container">
+      <input type="hidden" name="source" id="source" value="Footer" />
+      <label for="signup-newsletter" class="sr-only">Email address</label>
+      <input type="email" name="email" id="signup-newsletter" class="form-control js-email-field" placeholder="Email" />
+
+      <button type="submit" class="btn-primary">
+        Sign up
+      </button>
+    </div>
+
+    <span class="newsletter-legend">
+      *New customers only. Offer lasts 30 days. See Terms.
+    </span>
+</form></div>
+
+        </div>
+
+        <div class="col-md-7 footer-menus footer-menus-vendor">
+          <div class="row">
+            <div class="col-xs-4">
+  <h4 class="footer-title">My Account</h4>
+
+  <ul class="list-unstyled">
+    <li>
+      <a href="/user?show=profile-tab">Profile</a>
+    </li>
+    <li>
+      <a href="/user?show=account-tab">Account</a>
+    </li>
+    <li>
+      <a href="/user/purchases">Purchases</a>
+    </li>
+    <li>
+      <a href="/user/credits">Credits</a>
+    </li>
+    <li>
+      <a href="/user?show=preferences-tab">Preferences</a>
+    </li>
+  </ul>
+</div>
+
+<div class="col-xs-4">
+  <h4 class="footer-title">Support</h4>
+
+  <ul class="list-unstyled">
+    <li>
+      <a target="_blank" href="https://support.stackcommerce.com/hc/en-us/requests/new?persona=General+Tech+News&amp;publisher_id=185&amp;publisher_logo=https%3A%2F%2Fcdnp0.stackassets.com%2F8a87d67f3750ec81603a6860d715ba55a91e63ba%2Fstore%2F4df0d067a3e4123b2c7b8d743887dd5e42f2dbad95230f5b5c6d86422031%2F6dad99a76aa3349e33cc78590a74a9a81dd5cf63_logo_main.png&amp;source=lower+footer+contact+link">Contact</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://support.stackcommerce.com/hc/en-us/?persona=General+Tech+News&amp;publisher_id=185&amp;publisher_logo=https%3A%2F%2Fcdnp0.stackassets.com%2F8a87d67f3750ec81603a6860d715ba55a91e63ba%2Fstore%2F4df0d067a3e4123b2c7b8d743887dd5e42f2dbad95230f5b5c6d86422031%2F6dad99a76aa3349e33cc78590a74a9a81dd5cf63_logo_main.png&amp;source=lower+footer+FAQs+link">FAQs</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://support.stackcommerce.com/hc/en-us/categories/360000641992-Shipping?persona=General+Tech+News&amp;publisher_id=185&amp;publisher_logo=https%3A%2F%2Fcdnp0.stackassets.com%2F8a87d67f3750ec81603a6860d715ba55a91e63ba%2Fstore%2F4df0d067a3e4123b2c7b8d743887dd5e42f2dbad95230f5b5c6d86422031%2F6dad99a76aa3349e33cc78590a74a9a81dd5cf63_logo_main.png&amp;source=lower+footer+shipping+link">Shipping</a>
+    </li>
+    <li>
+      <a target="_blank" href="https://support.stackcommerce.com/hc/en-us/categories/360000641952-Refund-and-Return-Policy?persona=General+Tech+News&amp;publisher_id=185&amp;publisher_logo=https%3A%2F%2Fcdnp0.stackassets.com%2F8a87d67f3750ec81603a6860d715ba55a91e63ba%2Fstore%2F4df0d067a3e4123b2c7b8d743887dd5e42f2dbad95230f5b5c6d86422031%2F6dad99a76aa3349e33cc78590a74a9a81dd5cf63_logo_main.png&amp;source=lower+footer+returns+link">Returns</a>
+    </li>
+    <li><a href="/terms">Terms</a></li>
+    <li><a href="/privacy">Privacy</a></li>
+  </ul>
+</div>
+
+
+              <div class="col-xs-12 col-sm-4 footer-vendor-section">
+  <hr class="visible-xs">
+
+  <h4 class="footer-title">Are you a vendor?</h4>
+  <p class="footer-subtitle">Get exclusive coverage to the world's top publisher sites through the StackCommerce network.</p>
+
+  <a class="pub-footer-link primary-color" target="_blank" href="https://www.stackcommerce.com/vendors">Learn More</a>
+
+  <div class="powered-by">
+  <h6>Powered By</h6>
+
+  <a target="_blank" href="https://stackcommerce.com/">
+    <img alt="StackCommerce" src="https://shops1.stackassets.com/assets/core/logo-light-531c09dd9744d199c151749553ae71f8db7a185f827067726cb82077cd377411.svg" />
+</a></div>
+
+
+  <div class="hidden-xs pub-copyright">
+    <p>Copyright &copy; 2019 StackCommerce. All Rights Reserved.</p>
+  </div>
+
+  <div class="bbb-badge-container">
+  <a id="bbblink"
+    class="sehzbus bbb-badge"
+    target="_blank" href="https://www.bbb.org/losangelessiliconvalley/business-reviews/online-retailer/stackcommerce-in-venice-ca-1013267#bbbseal"
+    title="StackCommerce, Online Retailer, Venice, CA">
+      <img id="bbblinkimg"
+        src="https://seal-sanjose.bbb.org/logo/sehzbus/stackcommerce-1013267.png"
+        width="200"
+        height="38"
+        alt="StackCommerce, Online Retailer, Venice, CA">
+  </a>
+</div>
+
+</div>
+
+          </div>
+        </div>
+      </div>
+
+          <img alt="GDGT logo" class="sc-footer-pub-logo hidden-xs" src="https://cdnp1.stackassets.com/14489c2c7e059e7aec8bbb33f42e49c7c8e60265/store/acbbc512bffbcd624f4f9e531b70d2db95cf4f8399eb355d27d474ffffbe/65f87e156edf7570d47cc795dff7710de16f2458_logo_footer.png" />
+
+
+    </div>
+  </footer>
+
+  <script>
+//<![CDATA[
+
+    var bbbprotocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cscript src='" + bbbprotocol + 'seal-sanjose.bbb.org' + unescape('%2Flogo%2Fstackcommerce-1013267.js') + "' type='text/javascript'%3E%3C/script%3E"));
+
+//]]>
+</script>
+    </div>
+
+    
+    
+    <script src="https://shops1.stackassets.com/assets/config-269b3be761327b3f955044ff15b7b65ae6e0ab34e3b050439dc5a54e608a5bb5.js"></script>
+
+<script>
+  SC.config.setPublisher({"id":185,"name":"GDGT","hostname":"deals.gdgt.com","brand_primary_color":"#00B0FF","vertical":"technology"});
+  SC.config.setUser(null);
+  SC.config.setOptions({
+    loyaltySpentAmount: 25,
+    loyaltyAmountInCredit: 1,
+    jetloreCartUpsellFilter: 'PROD_CART_UPSELL_FILTER'
+  });
+</script>
+
+    <script src="https://shops1.stackassets.com/assets/classic-0c245fa035b46b16f77438a65d66f99c7592c678e0566fb3ea11a59b05bf64af.js"></script>
+      <script type="text/javascript">
+    var _at = {}; window._at.track = window._at.track || function(){(window._at.track.q = window._at.track.q || []).push(arguments);};
+
+    _at.domain = 'deals.gdgt.com/';
+    _at.idSite = '8346';
+    _at.webpushid = 'web.88.aimtell.com';
+    _at.owner = '2fcd12b568b6';
+    _at.attributes = {};
+
+    (function() { var u='//s3.amazonaws.com/cdn.aimtell.com/trackpush/'; var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'trackpush.min.js'; s.parentNode.insertBefore(g,s); })();
+  </script>
+
+    <script>
+  window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], t = window.twttr || {};
+    if (d.getElementById(id)) return; js = d.createElement(s); js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs);
+    t._e = []; t.ready = function(f) { t._e.push(f); };
+    return t;
+  }(document, "script", "twitter-wjs"));
+</script>
+
+<script>
+</script>
+
+  <!-- Quantcast Tag, part 2 -->
+  <script type="text/javascript">
+    _qevents.push( { qacct:"p-443uI8zl5eTMM" } );
+  </script>
+  <noscript>
+    <div style="display:none;">
+      <img src="//pixel.quantserve.com/pixel/p-443uI8zl5eTMM.gif" border="0" height="1" width="1" alt="Quantcast"/>
+    </div>
+  </noscript>
+<!-- End Quantcast tag -->
+
+    
+    
+
+      
+      
+    <div bundle-club-modal visible="showModal"></div>
+    
+  </body>
+  
+  
+</html>
+Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

@@ -1,0 +1,53 @@
+¦Ifinal_url¢DtypeEvaluex0http://cybert.ics.uci.edu/dataset-help/ANOVADS1/Lhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:33:19 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYÒ
+<p><a href="/static/sampledata/CyberT_ANOVA_DataSet">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>
+  This is a toy data set of a small amount of three condition data.
+  The data file is comma-delimited.
+  The data has been ln-transformed, so no normalization is needed.  
+  There is one comment line (beginning with '#') at the top, but then no header row besides.
+  There is one label column, followed by three columns for condition 1, then three columns for condition 2,
+  and finally two columns for condition 3.
+</p>
+<ul>
+  <li>Delimiter: Commas</li>
+  <li>Row Start: 1</li>
+  <li>Number of label columns: 1</li>
+  <li>Data columns for each condition: 3 3 2</li>
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a one-way ANOVA using the Bayes-regularized variance estimates.
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+  TukeyHSD pairwise post-hoc tests are performed between each condition using the 
+  Bayes-regularized variance estimates.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 6</li>
+  <li>Run Pairwise Post-hoc: checked</li>
+  <li>Pairwise Post-hoc Type: TukeyHSD</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard one-way ANOVA using empirical variances.  
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+  TukeyHSD pairwise post-hoc tests are performed between each condition using the
+  empirical variances.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run Pairwise Post-hoc: checked</li>
+  <li>Pairwise Post-hoc Type: TukeyHSD</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

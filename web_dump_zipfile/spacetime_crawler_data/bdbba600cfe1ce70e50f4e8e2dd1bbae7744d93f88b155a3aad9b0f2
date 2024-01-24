@@ -1,0 +1,31 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC588¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:40:04 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"24c-3158ecd4c4900"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:50:24 GMTKraw_content¢DtypeEvalueYL// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Interface to random number generator
+// so when I change from rand/srand to something better,
+// I won't have to change all the code that cares about it.
+
+#include "Random.h"
+#include <stdlib.h>
+
+extern long nrand48(unsigned short xseed[3]);
+extern double drand48();
+extern void srand48(long seed);
+extern unsigned short _rand48_seed[3];
+
+unsigned long RandomLong()
+{
+	return nrand48(_rand48_seed);
+}
+
+double RandomDouble()
+{
+	return drand48();
+}
+
+void SeedRandom(unsigned long seed)
+{
+	srand48(seed);
+}
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,804 @@
+¦Ifinal_url¢DtypeEvaluex!http://www.reg.uci.edu/catalogue/Lhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXeDCA0_reg809=!QfPRhtOyyk/GgjvyihE1IqTBlE7xpJB4nNs5c6JH9OwVJI853x3oUSg8tBsKzsh/p59gPTZIcKGQaFM=; path=/¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=2, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 04 Oct 2018 17:35:17 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 00:38:30 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueY²~<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+<head>
+<!-- %2fcatalogue%2f; 148-80 -->
+
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>UCI General Catalogue Archives</title>
+
+    <link rel="stylesheet" href="/css/reg.css" type="text/css" title="Standard Table Style" />
+
+     <script type="text/javascript">
+
+    <!--
+	window.onload=initsubmenus;	// Initialization routine if browser supports javascript.
+
+	function initsubmenus() {
+	    // Change submenus from inline ("no js" mode) to indented pop-up menus.
+
+	    var oSubmenu;   // Points a submenu object.
+
+	    nMissingMenus = 0;		// Stop loop below whenever more than two menus in a row are missing.
+	    for (var i = 1; i<=15; i++) {	// Cycle through each submenu that exists (smenu1, smenu2, ...).
+		oSubmenu = document.getElementById( 'smenu'+i );
+		if ( ! oSubmenu ) {     // This menu doesn't exist.
+		    if ( ++nMissingMenus >= 2 ) {  break;  }  // Quit loop if more than two consecutive menus missing.
+		    continue;		// One more chance for next menu to exist.
+		}
+		nMissingMenus = 0;		// Menu exists, so reset counter.
+
+		// IE hides submenus with lower primary menu items, unless z-index
+		//	of parent is reduced for each lower item.
+		oSubmenu.parentNode.style.zIndex = 50 - i;
+
+		oSubmenu.style.position = "absolute";
+		oSubmenu.style.zIndex = 100;      // When visible, make sure this menu sits on top of main page.
+		oSubmenu.style.left = "150px";    // Move this first-level submenu rightward.
+		oSubmenu.style.marginTop = "-1.4em";  // Move the box slightly upward so it overlays the invoking line.
+		oSubmenu.style.display = "none";  // Hide this first-level submenu.
+		oSubmenu.style.width = "250px";   // Fixed width for all first-level submenus.
+
+		// Check for 2nd-level submenus, with names like "smenu1-3" (Secondary submenu "3", within first submenu).
+		//    No need to look for skipped secondary submenus, since not every fist-level submenu has one.
+		for (var k = 1; k<=15; k++) {	// Cycle through each submenu that exists (smenu1_1, smenu1_2, ...).
+		    oSubmenu2 = document.getElementById( 'smenu'+i+'_'+k );
+		    if ( ! oSubmenu2 ) {  continue;  }     // Doesn't exist; try next submenu name.
+
+		    // IE hides secondary submenus with first-level submenus unless
+		    //	   z-index of parent is reduced for each lower item.
+		    oSubmenu2.parentNode.style.zIndex = 70 - k;
+
+		    oSubmenu2.style.position = "absolute";
+		    oSubmenu2.style.zIndex = 110;      // When visible, make sure this menu sits on top of its parent submenu.
+		    oSubmenu2.style.left = "185px";    // Move this first-level submenu rightward.
+		    if ( ! /Explorer/.test(window.navigator.appName) ) {
+			// Move seconday submenu slightly upward, unless this is Microsoft Explorer.
+			oSubmenu2.style.marginTop = "-1.4em";
+		    }
+		    oSubmenu2.style.display = "none";  // Hide this first-level submenu.
+		    oSubmenu2.style.width = "17em";    // Fixed width for all first-level submenus.
+		}
+	    }
+	    // Debug: Show the app name (ie, "Microsoft Internet Explorer", "Netscape").
+	    // alert( window.navigator.appName + "; " + window.navigator.appCodeName );
+	}
+
+	function montre( iSubmenuId ) {
+	    // Display submenu number iSubmenuId, and hide all other submenus.
+	    //	    If parameter iSubmenuId is present, construct ID name by
+	    //	    concatenating it with "smenu" (ie, "smenu1", "smenu2", etc.).
+	    // This function counts through menu names, starting from 1, and
+	    //	    stops when two consecutive menu names in a row are missing.
+
+	    var oSubmenu;	// Points to a submenu object.
+	    var nMissingMenus;
+	    nMissingMenus = 0;	// Cycle through consecutive menu numbers until two in a row are missing.
+
+	    for (var i = 1; i<=15; i++) {
+		// Try to find every primary submenu by constructing menu names.
+		oSubmenu = document.getElementById( 'smenu'+i );
+		if ( ! oSubmenu ) {     // This menu doesn't exist.
+		    if ( ++nMissingMenus >= 2 ) {  break;  }  // Quit loop if more than two consecutive menus missing.
+		    continue;		// One more chance for next menu number to exist.
+		}
+		nMissingMenus = 0;		// Menu exists, so reset counter.
+		// Hide ("none") or display ("block") submenu on top of web page.
+		if ( i == iSubmenuId ) {  oSubmenu.style.display = 'block'  }
+		else {  oSubmenu.style.display = 'none'  }
+	    }
+	}
+
+	function montre2( iSubmenuId, iSubmenu2Id ) {
+	    // Within primary submenu iSubmenuId, display secondary submenu number
+	    //	    iSubmenu2Id, if present, and hide all all other submenus.
+	    //	    If parameter iSubmenu2Id is present, construct ID name by
+	    //	    concatenating iSubmenuId and iSubmenu2Id with "smenu" (ie,
+	    //      "smenu1_1", "smenu1_2", etc.).
+	    // This function counts through secondary submenu names, starting from
+	    //	    1 and going to 15.  It doesn't look for missing secondary submenus
+	    //	    so it can quit early because not every first-level submenu item
+	    //	    has a secondary submenu.
+
+	    var sSubmenuId;     // Primary submenu name, composed of 'smenu' and iSubmenuId;
+				//	concat '_' and iSubmenu2Id for secondary submenu names.
+	    var oSubmenu2;      // Points to secondary submenu object.
+
+	    sSubmenuId = 'smenu'+iSubmenuId;  // This should be the primary submenu (ie, smenu1 or smenu2, etc.).
+	    for (var k = 1; k<=15; k++) {
+		// Find Hide every secondary submenu (smenu1_1, smenu1_2, ...) except iSubmenu2Id.
+		oSubmenu2 = document.getElementById( sSubmenuId+'_'+k );
+		if ( ! oSubmenu2 ) {  continue;  }     // Doesn't exist; try next submenu name.
+		// Hide ("none") or display ("block") submenu on top of web page.
+		if ( k == iSubmenu2Id ) {  oSubmenu2.style.display = 'block'  }
+		else {  oSubmenu2.style.display = 'none'  }
+	    }
+	}
+
+
+    //-->
+
+    </script>
+
+    <link rel="stylesheet" href="/css/menu.css" type="text/css" title="Standard Table Style" />
+	
+
+</head>
+
+<body>
+    <!--
+	onload="javascript: document.QL.QuickLink.focus();"
+	/* IE doesn't interpret the border-spacing style, so we'll have
+	/*   to use cellspacing in each of the tables. */
+    -->
+
+
+<table width="45%" cellspacing="0" id="tbl-container-flex">
+    <!--Start Header--> 
+
+            <tr>
+            <td>
+
+	    <div id="maps">
+	        <a href="/staff/contactus.html"><img src="https://www.reg.uci.edu/images/envelope_icon_sm.gif" border="0" alt="envelope image" /></a>
+		    : <a href="/staff/contactus.html">Contact Us</a> 
+		    : <a href="/addl/faq.html">FAQ</a> 
+	    </div>  <!-- Close div id="maps" -->
+
+	    <div id="datetime">
+	    </div>  <!-- Close div id="datetime" -->
+
+	 </td>
+    </tr>  
+     <!--2nd row: Banner-->
+    <tr id="hdr-row">
+        <td id="hdr-td" align="left" valign="bottom">
+	    <div id="mouseover">
+	        <img src="https://www.reg.uci.edu/images/tgif.gif" width="260" height="65" usemap="#map1"  alt="Click here to go to www.uci.edu" />
+	           <map id="map1" name="map1">
+			<area href="http://www.uci.edu/" alt="UC Irvine" shape="rect" coords="4,6,132,70" />
+		        <area href="http://www.reg.uci.edu" alt="University Registrar" shape="rect" coords="133,9,261,73" />
+                 	<area shape="rect" coords="1957,325,1959,327" alt="Image Map" style="outline:none;" title="Image Map" />
+		    </map>
+	    </div>  <!-- Close div id="mouseover" -->
+	    
+	    <div id="srchbox-g">
+		<form id="searchbox_004296503812929449051:cnncxej5ijo" action="https://www.google.com/search">
+		    <h3>Search Registrar site:</h3>
+		    <input type="hidden" name="cx" value="004296503812929449051:cnncxej5ijo" />
+		    <input type="hidden" name="cof" value="FORID:0" />
+		    <input id="srchbox-input" name="q" type="text" /><br/>
+		    <input id="srchbox-button" type="image" name="Search" value="Search" class="srchbutton" src="https://www.reg.uci.edu/images/btnGo2.gif" alt="Go" />
+		</form>
+	     </div>  
+        </td>
+    </tr>  
+    <!--End 2nd row: Banner-->
+
+
+    <!--3rd row: Audience Navigation-->
+    <tr>
+        <td class="tborder bborder">
+
+	    <table width="100%" id="audience_nav_background">
+	        <tr id="audience_nav-flex">
+		    <td><span><a href="http://www.uci.edu">&nbsp;UCI Home&nbsp;</a></span></td>
+		    <td>:</td>
+		    <td><span><a href="https://www.reg.uci.edu/perl/WebSoc">&nbsp;Schedule of Classes&nbsp;</a></span></td>
+		    <td>:</td>
+		    <td><span><a href="https://www.reg.uci.edu/catalogue/index.html">&nbsp;General Catalogue&nbsp;</a></span></td>
+		    <td>:</td>
+		    <td><span><a href="https://www.reg.uci.edu/registrar/soc/webreg.html">&nbsp;WebReg&nbsp;</a></span></td>
+		    <td>:</td>
+		    <td><span><a href="https://www.reg.uci.edu/access/student/welcome/">&nbsp;StudentAccess&nbsp;</a></span></td>
+			<td>:</td>
+		    <td><span><a href="https://www.reg.uci.edu/webadmin/staff/welcome/">&nbsp;WebAdmin&nbsp;</a></span></td>
+			<td>:</td>
+		    <td><span><a href="/addl/faq.html">&nbsp;FAQ&nbsp;</a></span></td>
+		    <td>:</td>
+		    <td><span><a href="https://www.reg.uci.edu/staff/contactus.html">&nbsp;Help Desk&nbsp;</a></span></td>
+		</tr>
+	    </table>
+        </td>
+    </tr>  
+    <!--Close of 3rd row-->
+
+
+    <!--end header-->
+
+
+
+    <!-- 4th row: Changing Data Window in main body of page -->
+    <tr>
+        <td>
+	    <table cellspacing="0">	<!--DWLayoutTable-->
+
+
+               <!--Menu Start-->
+
+                           <!-- This first row contains all three main page columns. -->
+        <tr>
+            <!-- Left-most column of main page, containing a small campus picture, nav links, and another small campus pic. -->
+            <td width="206" rowspan="2" valign="top" id="resource_nav">
+                <!-- Left most column of main page, this is the small UCI image at the top. -->
+            <img src="/images/photoa.jpg" title="photo by Michelle S. Kim/University Commun" alt="UC Irvine" width="190" height="100" />
+
+            <!-- Left-most column of main page, these are menu headings and submenus. -->
+            <ul>
+                <!-- Each <li> is a heading in the main navigation menu.  If it contains     -->
+                <!--     a submenu, it is labeled as class "menu" and calls "montre(idnum)"  -->
+                <!--     to display/hide its <ul> submenu component for mouse-on/off events. -->
+
+                <!-- Menu Item 1 -->
+                <li class="menu" onmouseover="javascript:montre('1');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 1's heading. -->
+                    <a href="/navigation/facultystaff.html">Faculty/Staff</a>
+
+                <!-- Menu Item 1's submenu contents.  -->
+                <ul id="smenu1">
+                    <!-- Each <li> is a heading in a first level submenu.  If it contains its own  -->
+                    <!--     submenu, it is labeled as class "submenu" and calls "montre2()"       -->
+                    <!--     to display/hide its <ul> submenu component for mouse-on/off events.   -->
+
+                    <!-- Menu/Submenu item 1/1's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('1','1');" onmouseout="javascript:montre2('1');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Services...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 1/1's contents.  -->
+                    <ul id="smenu1_1">
+                        <li><a href="https://www.reg.uci.edu/perl/WebRoster">&#8226;&nbsp;WebRoster</a></li>
+                        <li><a href="/faculty-staff/tutorials/webroster-tut.pdf">&#8226;&nbsp;WebRoster Tutorial (pdf)</a></li>
+                        <!--<li><a href="http://webster.reg.uci.edu:8890/reginfo/aboutRegInfo.html">&#8226;&nbsp;RegInfo</a></li>-->
+                        <li><a href="https://www.reg.uci.edu/webadmin/staff/welcome/">&#8226;&nbsp;WebAdmin</a></li>
+                        <li><a href="https://www.reg.uci.edu/cob/esoc">&#8226;&nbsp;eSOC</a></li>
+                        <li><a href="https://www.reg.uci.edu/websocCalendar/websoc-cal/">&#8226;&nbsp;SOC Room Reporting Tool</a></li>
+                        <li><a href="https://www.reg.uci.edu/faculty-staff/nka.html">&#8226;&nbsp;PMTV</a></li>
+                    </ul>
+                    </li>
+
+                    <!-- Menu/Submenu item 1/2's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('1','2');" onmouseout="javascript:montre2('1');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Grades...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 1:2's contents.  -->
+                    <ul id="smenu1_2">   <!--  onmouseover="javascript:montre2('1','2');" onmouseout="javascript:montre2('1');">  -->
+                        <li><a href="https://www.reg.uci.edu/perl/WebGrades">&#8226;&nbsp;WebGrades</a></li>
+                        <li><a href="https://www.reg.uci.edu/perl/WebGradesStatus">&#8226;&nbsp;WebGrades Status</a></li>
+                        <li><a href="/faculty-staff/tutorials/webgradesinfo.html">&#8226;&nbsp;WebGrades Information</a></li>
+                        <li><a href="/faculty-staff/tutorials/webgrades-tut.pdf">&#8226;&nbsp;WebGrades Tutorial (pdf)</a></li>
+                        <li><a href="/faculty-staff/gradingpolicy-facstaff.html">&#8226;&nbsp;Grading Policy</a></li>
+                        <li><a href="/faculty-staff/gradechanges-faculty.html">&#8226;&nbsp;Grade Changes</a></li>
+                        <li><a href="https://aisc.uci.edu/faculty-staff/index.php">&#8226;&nbsp;Academic Honesty Faculty Resources</a></li>
+                    </ul>
+                    </li>
+
+                    <!-- Menu/Submenu item 1/3's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('1','3');" onmouseout="javascript:montre2('1');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Course Management...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu Item 1:3's contents.  -->
+                    <ul id="smenu1_3">   <!--  onmouseover="javascript:montre2('1','3');" onmouseout="javascript:montre2('1');">  -->
+                        <li><a href="https://next.catalogue.uci.edu/courseadmin/">&#8226;&nbsp;Course Inventory Management</a></li>
+                        <li><a href="/faculty-staff/subjectmap.html">&#8226;&nbsp;Banner Mappings</a></li>
+                        <li><a href="https://www.reg.uci.edu/perl/EnrollHist.pl">&#8226;&nbsp;Course Enrollment History</a></li>
+                        <li><a href="https://www.reg.uci.edu/cob/prrqcgi">&#8226;&nbsp;Prerequisites</a></li>
+                        <li><a href="/faculty-staff/prerequisitechecks.html">&#8226;&nbsp;Prerequisite Checks</a></li>
+                        <li><a href="/faculty-staff/ead.html">&#8226;&nbsp;Enrollment After Instruction has Begun</a></li>
+                        <li><a href="/faculty-staff/waitlist.html">&#8226;&nbsp;Waitlist Option</a></li>
+                    </ul>
+                    </li>
+
+                    <!-- Menu/Submenu item 1/4's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('1','4');" onmouseout="javascript:montre2('1');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Classrooms...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 1:4's contents.  -->
+                    <ul id="smenu1_4">   <!--  onmouseover="javascript:montre2('1','4');" onmouseout="javascript:montre2('1');">   -->
+                        <li><a href="/addl/campus/">&#8226;&nbsp;Classroom &amp; Building Descriptions</a></li>
+                        <li><a href="/addl/campus/scheduling.html">&#8226;&nbsp;Classroom Scheduling Policy</a></li>
+                        <li><a href="/addl/campus/on-module.html">&#8226;&nbsp;Classroom Scheduling Modules</a></li>
+                        <li><a href="https://eee.uci.edu/toolbox/socc/">&#8226;&nbsp;Schedule of Classes Coordinators</a></li>
+                        <li><a href="/addl/classroompriority.html">&#8226;&nbsp;GAC Priority List</a></li>
+                    </ul>
+                    </li>
+
+                    <!-- Menu/Submenu item 1/5's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('1','5');" onmouseout="javascript:montre2('1');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;More...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 1:5's contents.  -->
+                    <ul id="smenu1_5">   <!--  onmouseover="javascript:montre2('1','5');" onmouseout="javascript:montre2('1');">  -->
+                        <li><a href="https://www.reg.uci.edu/perl/InstructHist">&#8226;&nbsp;Instructor History</a></li>
+                        <li><a href="http://ps.uci.edu/~stuaff/ac.html">&#8226;&nbsp;Undergraduate Academic Advisors</a></li>
+                        <li><a href="https://www.reg.uci.edu/mdsd/">&#8226;&nbsp;Major/Degree Database</a></li>
+                        <li><a href="/faculty-staff/adhoc.html">&#8226;&nbsp;AdHoc Data Request</a></li>
+                        <li><a href="/faculty-staff/systemsaccess.html">&#8226;&nbsp;Request for Systems Access</a></li>
+                        <li><a href="/faculty-staff/tools.html">&#8226;&nbsp;Descriptions of Registrar Online Tools</a></li>
+                    </ul>
+                    </li>
+                </ul>
+                </li>  <!-- End of Primary Menu Item 1 -->
+
+
+                <!-- Menu Item 2 -->
+                <li class="menu" onmouseover="javascript:montre('2');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 2's heading. -->
+                    <a href="/navigation/calendars.html">Calendars</a>
+
+                <!-- Menu Item 2's submenu contents.  -->
+                <ul id="smenu2" >
+                    <!--<li><a href="/calendars/quarterly/2008-2009/quarterly08-09.html">&#187;&nbsp;Quarterly Academic Calendar</a></li>-->
+
+
+                    <!-- Menu/Submenu item 2/1's heading. -->
+
+                    <li class="submenu" onmouseover="javascript:montre2('2','1');" onmouseout="javascript:montre2('2');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Quarterly Academic Calendar...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 2/1's contents.  -->
+
+                    <ul id="smenu2_1">
+                        <!--<li><a href="/calendars/quarterly/2017-2018/summer18.html">&#8226;&nbsp;Summer Session 2018</a></li>-->
+                        <li><a href="/calendars/quarterly/2018-2019/quarterly18-19.html">&#8226;&nbsp;Current: 2018-2019</a></li>
+                        <li><a href="/calendars/quarterly/2019-2020/quarterly19-20.html">&#8226;&nbsp;Future: 2019-2020</a></li>
+                    </ul>
+                    </li>
+
+
+                    <!--<li><a href="/calendars/law/2009-2010/law-0910.html">&#187;&nbsp;School of Law Academic Calendar</a></li>-->
+
+                    <!-- Menu/Submenu item 2/2's heading. -->
+
+                    <li class="submenu" onmouseover="javascript:montre2('2','2');" onmouseout="javascript:montre2('2');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;School of Law Academic Calendar...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 2/2's contents.  -->
+
+                    <ul id="smenu2_2">
+                        <li><a href="/calendars/law/2018-2019/law-1819.html">&#8226;&nbsp;Current: 2018-2019</a></li>
+                        <li><a href="/calendars/law/2019-2020/law-1920.html">&#8226;&nbsp;Future: 2019-2020</a></li>
+                    </ul>
+                    </li>
+
+
+                    <li><a href="/calendars/academic/tenyr-13-23.html">&#187;&nbsp;Ten-year Academic Calendar</a></li>
+                    <li><a href="/calendars/archives.html">&#187;&nbsp;Archives (1996-2019)</a></li>
+                    <li><a href="/calendars/finals/schedule-201819.html">&#187;&nbsp;Final Exam Schedule</a></li>
+                    <li><a href="https://www.reg.uci.edu/ropc/">&#187;&nbsp;Registrar's Office Processing Calendar</a></li>
+                </ul>
+                </li>
+
+                <!-- Menu Item 3 -->
+                <li class="menu" onmouseover="javascript:montre('3');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 3's heading. -->
+                    <a href="/navigation/enrollment.html">Enrollment</a>
+
+                <!-- Menu Item 3's submenu contents.  -->
+                <ul id="smenu3">
+                    <li><a href="/enrollment/registration.html">&#187;&nbsp;Registration</a></li>
+                    <li><a href="https://www.reg.uci.edu/registrar/soc/webreg.html">&#187;&nbsp;Course Enrollment: WebReg</a></li>
+
+                    <li><a href="/enrollment/windows.html">&#187;&nbsp;Enrollment Windows</a></li>
+                    <li><a href="/enrollment/restrict_codes.html">&#187;&nbsp;Course Restriction Codes</a></li>
+                    <li><a href="/enrollment/waitlistoption.html">&#187;&nbsp;Waitlist Option</a></li>
+                    <li><a href="https://www.reg.uci.edu/cob/prrqcgi">&#187;&nbsp;Prerequisites</a></li>
+                    <li><a href="/enrollment/holds.html">&#187;&nbsp;Academic Holds</a></li>
+                    <li><a href="/enrollment/adc/adcpolicy.html">&#187;&nbsp;Add/Drop/Change Policy</a></li>
+                    <li><a href="/enrollment/adc/exceptions.html">&#187;&nbsp;Enrollment Exceptions</a></li>
+                    <li><a href="/enrollment/withdrawals/">&#187;&nbsp;Withdrawals</a></li>
+                    <li><a href="/enrollment/readmission.html">&#187;&nbsp;Readmission</a></li>
+                
+                
+                
+                
+                    <!-- Menu/Submenu item 3/1's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('3','1');" onmouseout="javascript:montre2('3');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Part Time & Alternate Enrollment Programs...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 3/1's contents.  -->
+                    <ul id="smenu3_1">
+                        <li><a href="/enrollment/parttime/parttime.html">&#187;&nbsp;Part-Time Study Program for Students</a></li>
+                        <li><a href="/enrollment/altenrollment.html">&#187;&nbsp;Alternate Enrollment Programs</a></li>
+                    </ul>
+                    
+                    
+                    <!-- Menu/Submenu item 3/2's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('3','2');" onmouseout="javascript:montre2('3');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Other Enrollment Topics...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 3/2's contents.  -->
+                    <ul id="smenu3_2">
+                        <li><a href="http://catalogue.uci.edu/informationforadmittedstudents/requirementsforabachelorsdegree/#GErequirement">&#187;&nbsp;General Education Requirements</a></li>
+                        <li><a href="/enrollment/studentstatus.html">&#187;&nbsp;Loss of Student Status</a></li>
+                        <li><a href="/fees/latecharges.html">&#187;&nbsp;Late Enrollment Charges</a></li>
+                    </ul>
+                </ul>
+                </li>
+
+                <!-- Menu Item 4 -->
+                <li class="menu" onmouseover="javascript:montre('4');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 4's heading. -->
+                    <a href="/navigation/fees.html">Tuition and Fees</a>
+
+                <!-- Menu Item 4's submenu contents.  -->
+                <ul id="smenu4">
+                    <li><a href="/fees/">&#187;&nbsp;Tuition and Fees</a></li>
+                    <li><a href="/fees/billing.html">&#187;&nbsp;Billing</a></li>
+                    <li><a href="/fees/payments.html">&#187;&nbsp;Payments</a></li>
+                    <li><a href="/fees/latecharges.html">&#187;&nbsp;Late Payment Charges</a></li>
+                    <li><a href="/enrollment/parttime/parttime.html">&#187;&nbsp;Part-Time Study Program for Students</a></li>
+                    <li><a href="/fees/staff.html">&#187;&nbsp;Tuition and Fees Reduction for Staff and Academic Employees</a></li>
+                    </ul>
+                </li>
+
+                <!-- Menu Item 5 -->
+                <li class="menu" onmouseover="javascript:montre('5');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 5's heading -->
+                    <a href="/navigation/grades_finals.html">Grades &amp; Final Exams</a>
+
+                <!-- Menu Item 5's submenu contents.  -->
+                <ul id="smenu5">
+                    <li><a href="/grades/gradingpolicy.html">&#187;&nbsp;Grading Policy</a></li>
+                    <li><a href="/grades/retention.html">&#187;&nbsp;Accuracy and Retention of Student Records</a></li>
+                    <li><a href="/grades/endoftermgrades.html">&#187;&nbsp;End of Term Grades</a></li>
+                    <li><a href="/grades/finalexampolicy.html">&#187;&nbsp;Final Exam Policy</a></li>
+                    <li><a href="/calendars/finals/schedule-201819.html">&#187;&nbsp;Final Exam Schedules</a></li>
+                    <li><a href="/grades/examscheduling.html">&#187;&nbsp;Exam Scheduling Guidelines</a></li>
+                    <li><a href="/grades/accommodation.html">&#187;&nbsp;Religious Accommodation and Observance</a></li>
+                    </ul>
+                </li>
+
+
+
+
+                <!-- Menu Item 6 -->
+                <li class="menu" onmouseover="javascript:montre('6');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 6's heading -->
+                    <a href="/navigation/graduation.html">Graduation</a>
+
+                <!-- Menu Item 6's submenu contents.  -->
+                <ul id="smenu6">
+                    <li><a href="/grades/commencement.html">&#187;&nbsp;Graduation &amp; Commencement</a></li>
+                    <li><a href="/services/diplomas.html">&#187;&nbsp;Diplomas</a></li>
+                    </ul>
+                </li>
+
+
+
+                <!-- Menu Item 7 -->
+                <li class="menu" onmouseover="javascript:montre('7');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 7's heading -->
+                    <a href="/navigation/services.html">Services</a>
+
+                <!-- Menu Item 7's submenu contents.  -->
+                <ul id="smenu7">
+                    <li><a href="/services/transcripts/">&#187;&nbsp;Transcripts</a></li>
+                    <li><a href="/services/verifications/">&#187;&nbsp;Verifications</a></li>
+                    <li><a href="/services/diplomas.html">&#187;&nbsp;Diplomas</a></li>
+                    <li><a href="/services/course_descriptions.html">&#187;&nbsp;Course Descriptions</a></li>
+                    <li><a href="/services/non-uc.html">&#187;&nbsp;Transferring Non-UCI Credit</a></li>
+                    <li><a href="/services/notary.html">&#187;&nbsp;Notary</a></li>
+                    </ul>
+                </li>
+
+
+
+
+
+                <!-- Menu Item 8 -->
+                <li class="menu" onmouseover="javascript:montre('8');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 8's heading -->
+                    <a href="/navigation/requestchange.html">Request a Change</a>
+
+                <!-- Menu Item 8's submenu contents.  -->
+                <ul id="smenu8">
+                    <li><a href="/request/changemajor.html">&#187;&nbsp;Major</a></li>
+                    <li><a href="/request/changeaddress.html">&#187;&nbsp;Address</a></li>
+                    <li><a href="/request/changename.html">&#187;&nbsp;Legal Name on UCI Records</a></li>
+                    <li><a href="/request/preferredname.html">&#187;&nbsp;Preferred Names</a></li>
+                    <li><a href="/request/genderidentityandsexualorientation.html">&#187;&nbsp;Gender Identity and Sexual Orientation</a></li>
+                    <li><a href="/request/changegrade.html">&#187;&nbsp;Inaccurate Grade in a Course</a></li>
+                    </ul>
+                </li>
+
+
+
+                <!-- Menu Item 9 -->
+                <li class="menu" onmouseover="javascript:montre('9');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 9's heading -->
+                    <a href="/navigation/residency.html">Residency</a>
+
+                <!-- Menu Item 9's submenu contents.  -->
+                <ul id="smenu9">
+                    <li><a href="/residency/classification.html">&#187;&nbsp;Residence Classification</a></li>
+                    <li><a href="https://www.reg.uci.edu/stlr/">&#187;&nbsp;Online Statement of Legal Residence (SLR)</a></li>
+                    <li><a href="/residency/downloads/slr.pdf">&#187;&nbsp;Statement of Legal Residence (SLR)</a></li>
+                    <li><a href="/residency/downloads/reclass_undergrad.pdf">&#187;&nbsp;Undergraduate Petition for Resident Classification</a></li>
+                    <li><a href="/residency/downloads/reclass_grad.pdf">&#187;&nbsp;Graduate Petition for Resident Classification</a></li>
+                    <li><a href="http://www.ucop.edu/residency/">&#187;&nbsp;Office of the General Counsel Residency Guidelines</a></li>
+                    </ul>
+                </li>
+
+
+
+                <!-- Menu Item 10 -->
+                <li class="menu" onmouseover="javascript:montre('10');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 10's heading -->
+                    <a href="/navigation/policies.html">Policies &amp; Procedures</a>
+
+                <!-- Menu Item 10's submenu contents.  -->
+                <ul id="smenu10">
+
+                    <!-- Menu/Submenu item 10/1's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('10','1');" onmouseout="javascript:montre2('10');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Policies and Regulations for UC and UCI...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 10/1's contents.  -->
+                    <ul id="smenu10_1">
+                        <li><a href="https://policy.ucop.edu/">&#187;&nbsp;UC Policies and Regulations Applying to Students</a></li>
+                        <li><a href="https://aisc.uci.edu/policies/">&#187;&nbsp;UCI Campus Policies and Regulations Applying to Students</a></li>
+                        <li><a href="https://aisc.uci.edu/policies/pacaos/grounds-for-discipline.php">&#187;&nbsp;Computer Use Policy</a></li>
+                        <li><a href="https://aisc.uci.edu/policies/pacaos/grounds-for-discipline.php">&#187;&nbsp;Policy on Alcohol</a></li>
+                        <li><a href="https://aisc.uci.edu/policies/pacaos/grounds-for-discipline.php">&#187;&nbsp;Policy on Substance Abuse</a></li>
+                        <li><a href="https://aisc.uci.edu/policies/pacaos/grounds-for-discipline.php">&#187;&nbsp;Policy on Firearms</a></li>
+                    </ul>
+                    </li>
+
+
+                    <!-- Menu/Submenu item 10/2's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('10','2');" onmouseout="javascript:montre2('10');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Policies and Regulations Specific to UCI...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 10/2's contents.  -->
+                    <ul id="smenu10_2">
+                        <li><a href="https://aisc.uci.edu/policies/academic-integrity/index.php">&#187;&nbsp;Academic Honesty Policy</a></li>
+                        <li><a href="/grades/gradingpolicy.html">&#187;&nbsp;Grading Policy</a></li>
+                        <li><a href="/grades/retention.html">&#187;&nbsp;Accuracy and Retention of Student Records</a></li>
+                        <li><a href="/grades/currentcontactinfo.html">&#187;&nbsp;Policies on Student Contact Information</a></li>
+                    </ul>
+                    </li>
+
+
+
+                    <!-- Menu/Submenu item 10/3's heading. -->
+                    <li class="submenu" onmouseover="javascript:montre2('10','3');" onmouseout="javascript:montre2('10');">
+                    <!--[if lt IE 7]><a href="#"><![endif]-->
+                    &#187;&nbsp;Final Exams...
+                    <!--[if lt IE 7]></a><![endif]-->
+
+                    <!-- Menu/Sub item 10/3's contents.  -->
+                    <ul id="smenu10_3">
+                        <li><a href="/grades/finalexampolicy.html">&#8226;&nbsp;Policy</a></li>
+                        <li><a href="/grades/examscheduling.html">&#8226;&nbsp;Scheduling Guidelines</a></li>
+                        <li><a href="/grades/accommodation.html">&#8226;&nbsp;Religious Accommodation and Observance</a></li>
+                    </ul>
+                    </li>
+
+
+                    <li><a href="https://aisc.uci.edu/policies/pacaos/appeals-and-grievances.php">&#187;&nbsp;Policy on Student Grievance Procedures</a></li>
+                    <li><a href="/addl/complaint_process.pdf">&#187;&nbsp;Campuswide Complaint Process (PDF)</a></li>
+                    <li><a href="http://police.uci.edu/police/clery/">&#187;&nbsp;Clery Act Compliance</a></li>
+
+
+
+
+                    </ul>
+                </li>
+
+                <!-- Menu Item 11 -->
+                <li class="menu" onmouseover="javascript:montre('11');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 11's heading -->
+                    <a href="/privacy/">Privacy</a>
+
+                <!-- Menu Item 11's submenu contents.  -->
+                <!--<ul id="smenu11">
+                    <li><a href="/privacy/">&#187;&nbsp;Privacy and Student Records</a></li>
+                    <li><a href="/privacy/matrix.html">&#187;&nbsp;Student Information Release Matrix</a></li>
+                    </ul>--?
+                </li>
+
+                <!-- Menu Item 12 -->
+                <li class="menu" onmouseover="javascript:montre('12');" onmouseout="javascript:montre();" >
+                <!-- Menu Item 12's heading -->
+                    <a href="/navigation/etc.html">Additional Information</a>
+
+                <!-- Menu Item 12's submenu contents.  -->
+                <ul id="smenu12">
+                    <li><a href="/catalogue/index.html">&#187;&nbsp;UCI Catalogue</a></li>
+                    <li><a href="http://www.uci.edu/visit/maps.php">&#187;&nbsp;Campus Map</a></li>
+                    <li><a href="/addl/campus/">&#187;&nbsp;Classroom and Building Descriptions</a></li>
+                    <li><a href="http://www.commencement.uci.edu/">&#187;&nbsp;Commencement</a></li>
+                    <li><a href="/addl/advising.html">&#187;&nbsp;Undergraduate Academic Advisors</a></li>
+                    <li><a href="/addl/zotalert.html">&#187;&nbsp;zotAlert</a></li>
+                    <li><a href="https://www.reg.uci.edu/addl/faq.html">&#187;&nbsp;Frequently Asked Questions</a></li>
+                    <li><a href="https://www.reg.uci.edu/staff/index.html">&#187;&nbsp;Registrar Staff</a></li>
+                    </ul>
+                </li>
+
+            </ul>  <!-- Close id="menu" -->
+
+            <!-- Left most column, this is the small, bottom UCI picture below side menu. -->
+                    <img src="/images/photoe.jpg" title="photo by Steve Zylius/University Commun" alt="Aldrich Park" width="190" height="135" id="image_d" />
+                </td>
+
+            <!-- Main page body, 2nd column (white pixel shim for column with Reg contact info at bottom) -->
+            <td width="100%" height="3" valign="top"><img src="https://www.reg.uci.edu/images/tgif_385.gif" alt=""/>
+                    </td>
+
+            <!-- Main page body, 3rd column (white pixel shim for column with UCI seal at bottom) -->
+            <td width="182" valign="top"><img src="https://www.reg.uci.edu/images/tgif_184.gif" alt="" />
+                    </td>
+            </tr>  <!-- End of first main body row -->
+  
+
+               <!--End Menu-->
+
+
+
+		    <tr>   <!-- Start of main body 2nd row (combined 2nd & 3rd columns) -->
+              		<td height="318" colspan="2" valign="top" class="lborder">
+			    <!-- Main body, 2nd and 3rd columns combined -->              		
+			    <div id="page2data">
+				<a name="top"></a>
+
+				<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+				    <tr>
+					<td><h3 align="left"><span>UCI General Catalogue</span></h3></td>
+				    </tr>
+
+				    <tr>
+					<td height="19">
+					<dl>
+					    <!--INSERT CONTENT BELOW-->
+						<dl style="list-style-type: disc; list-style-position: inside; margin-left: 1.8em; ">
+						<h2>Current Catalogue</h2></br>
+							<dd>2018-2019&emsp;<a href="http://catalogue.uci.edu/">Web</a>&emsp;<a href="http://catalogue.uci.edu/pdf/2018-19.pdf">PDF</a></dd>
+						</dl><br />
+						
+						<dl style="list-style-type: disc; list-style-position: inside; margin-left: 1.8em; ">
+							<h2>Archive</h2></br>
+							<dd>2017-2018&emsp;<a href="http://catalogue.uci.edu/previouseditions/2017-18/">Web</a>&emsp;<a href="http://catalogue.uci.edu/previouseditions/2017-18/pdf/2017-18.pdf">PDF</a></dd>
+							<dd>2016-2017&emsp;<a href="http://catalogue.uci.edu/previouseditions/2016-17/">Web</a>&emsp;<a href="http://catalogue.uci.edu/previouseditions/2016-17/pdf/2016-17.pdf">PDF</a></dd>
+							<dd>2015-2016&emsp;<a href="http://catalogue.uci.edu/previouseditions/2015-16/">Web</a>&emsp;<a href="http://catalogue.uci.edu/previouseditions/2015-16/pdf/2015-16.pdf">PDF</a></dd>
+							<dd>2014-2015&emsp;<a href="http://catalogue.uci.edu/previouseditions/2014-15/">Web</a>&emsp;<a href="http://catalogue.uci.edu/previouseditions/2014-15/pdf/2014-15.pdf">PDF</a></dd>
+							<dd>2013-2014&emsp;<a href="http://catalogue.uci.edu/previouseditions/2013-14/">Web</a>&emsp;<a href="http://catalogue.uci.edu/previouseditions/2013-14/pdf/2013-14.pdf">PDF</a></dd>
+						</dl>
+						<br />
+						
+						<dl style="list-style-type: disc; list-style-position: inside; margin-left: 1.8em; ">
+							<h4>PDF Only</h4><br />
+							<dd><a href="2012-2013Catalogue.pdf">2012-2013</a>&emsp;&emsp;&emsp;<a href="1996-1997Catalogue.pdf">1996-1997</a>&emsp;&emsp;&emsp;<a href="1980-1981Catalogue.pdf">1980-1981</a></dd>
+							<dd><a href="2011-2012Catalogue.pdf">2011-2012</a>&emsp;&emsp;&emsp;<a href="1995-1996Catalogue.pdf">1995-1996</a>&emsp;&emsp;&emsp;<a href="1979-1980Catalogue.pdf">1979-1980</a></dd>
+							<dd><a href="2010-2011Catalogue.pdf">2010-2011</a>&emsp;&emsp;&emsp;<a href="1994-1995Catalogue.pdf">1994-1995</a>&emsp;&emsp;&emsp;<a href="1978-1979Catalogue.pdf">1978-1979</a></dd>
+							<dd><a href="2009-2010Catalogue.pdf">2009-2010</a>&emsp;&emsp;&emsp;<a href="1993-1994Catalogue.pdf">1993-1994</a>&emsp;&emsp;&emsp;<a href="1977-1978Catalogue.pdf">1977-1978</a></dd>
+							<dd><a href="2008-2009Catalogue.pdf">2008-2009</a>&emsp;&emsp;&emsp;<a href="1992-1993Catalogue.pdf">1992-1993</a>&emsp;&emsp;&emsp;<a href="1976-1977Catalogue.pdf">1976-1977</a></dd>
+							<dd><a href="2007-2008Catalogue.pdf">2007-2008</a>&emsp;&emsp;&emsp;<a href="1991-1992Catalogue.pdf">1991-1992</a>&emsp;&emsp;&emsp;<a href="1975-1976Catalogue.pdf">1975-1976</a></dd>
+							<dd><a href="2006-2007Catalogue.pdf">2006-2007</a>&emsp;&emsp;&emsp;<a href="1990-1991Catalogue.pdf">1990-1991</a>&emsp;&emsp;&emsp;<a href="1974-1975Catalogue.pdf">1974-1975</a></dd>
+							<dd><a href="2005-2006Catalogue.pdf">2005-2006</a>&emsp;&emsp;&emsp;<a href="1989-1990Catalogue.pdf">1989-1990</a>&emsp;&emsp;&emsp;<a href="1973-1974Catalogue.pdf">1973-1974</a></dd>
+							<dd><a href="2004-2005Catalogue.pdf">2004-2005</a>&emsp;&emsp;&emsp;<a href="1988-1989Catalogue.pdf">1988-1989</a>&emsp;&emsp;&emsp;<a href="1972-1973Catalogue.pdf">1972-1973</a></dd>
+							<dd><a href="2003-2004Catalogue.pdf">2003-2004</a>&emsp;&emsp;&emsp;<a href="1987-1988Catalogue.pdf">1987-1988</a>&emsp;&emsp;&emsp;<a href="1971-1972Catalogue.pdf">1971-1972</a></dd>
+							<dd><a href="2002-2003Catalogue.pdf">2002-2003</a>&emsp;&emsp;&emsp;<a href="1986-1987Catalogue.pdf">1986-1987</a>&emsp;&emsp;&emsp;<a href="1970-1971Catalogue.pdf">1970-1971</a></dd>
+							<dd><a href="2001-2002Catalogue.pdf">2001-2002</a>&emsp;&emsp;&emsp;<a href="1985-1986Catalogue.pdf">1985-1986</a>&emsp;&emsp;&emsp;<a href="1969-1970Catalogue.pdf">1969-1970</a></dd>
+							<dd><a href="2000-2001Catalogue.pdf">2000-2001</a>&emsp;&emsp;&emsp;<a href="1984-1985Catalogue.pdf">1984-1985</a>&emsp;&emsp;&emsp;<a href="1968-1969Catalogue.pdf">1968-1969</a></dd>
+							<dd><a href="1999-2000Catalogue.pdf">1999-2000</a>&emsp;&emsp;&emsp;<a href="1983-1984Catalogue.pdf">1983-1984</a>&emsp;&emsp;&emsp;<a href="1967-1968Catalogue.pdf">1967-1968</a></dd>
+							<dd><a href="1998-1999Catalogue.pdf">1998-1999</a>&emsp;&emsp;&emsp;<a href="1982-1983Catalogue.pdf">1982-1983</a>&emsp;&emsp;&emsp;<a href="1966-1967Catalogue.pdf">1966-1967</a></dd>
+							<dd><a href="1997-1998Catalogue.pdf">1997-1998</a>&emsp;&emsp;&emsp;<a href="1981-1982Catalogue.pdf">1981-1982</a></dd></br>
+							<dd>1965-1966&emsp;&emsp;&emsp;<a href="1965-1966AcademicProgram.pdf">Academic Program&emsp;&emsp;&emsp;<a href="1965-1966Catalogue.pdf">General Catalogue</a></dd><br/><br/>
+							
+						If you have any questions about the General Catalogue, please contact the <a href="mailto:aehassan@uci.edu">University Editor.</a></dl>
+						
+						<!--<dl style="list-style-type: disc; list-style-position: inside; margin-left: 1.8em; ">
+							<h2>How to Find a Course Description</h2><br />
+							<ol>
+								<li>Locate the Catalogue for the Academic Year in which the course was taken. Click here for the index of Catalogues.</li>
+								<li>Click on the PDF version of the Catalogue.</li>
+								<li>Scroll to the Table of Contents page which will be toward the beginning of the Catalogue.</li>
+								<li>Generally, courses are arranged under the School in which the course was offered, then by Department, then by undergraduate courses, and/or graduate courses.</li>
+								<li>Locate the page number of the School and/or Department in which the course was offered. If available, it may be helpful to refer to your academic transcript to obtain the department that offered the course, the course number, and the course title. Navigate to that page. Note that the page number printed in the Table of Contents may not match the PDF page exactly, but it will be close.</li>
+								<li>Navigate to the course description you are searching for.</li>
+								<li>The Catalogue page is printable. (If printing using "actual size," the Catalogue year might not print visibly. If so, adjust your printer settings to use the "fit" option.)</li>
+							</ol>
+							<br />
+						Note: When printing from the 1969-1970 Catalogue, landscape orientation is recommended.</dl>-->
+
+					    <!--END CONTENT-->
+					</dl>
+					</td>
+				    </tr>
+				</table>	
+			   
+				<br />
+			    </div>
+			</td>
+		    </tr>  <!-- End of main body 2nd row (combined 2nd & 3rd columns) -->
+
+            </table>
+
+            <!-- FOOTER ROW -->
+
+	    
+	    <table cellpadding="0" cellspacing="0" style="border-top: #036 solid 2px;  border-bottom: #036 solid 2px; margin-top: 2px;">
+	        <tr id="ftr-row">
+	            <td style="vertical-align: middle; padding: 4px 0;">	<!-- Left-most column, bottom row -->
+		      <table cellpadding="0" cellspacing="0" width="188"><tr><td>
+	                <!-- // STAMPS SECTION (UCI seal) // -->
+			        <!--<a href="http://www.uci.edu/">
+			           <img src="https://www.reg.uci.edu/images/footer_ucirvine_150.jpg" border="0" alt=""/><br /><br />
+			        </a>-->
+				<a href="http://www.vcsa.uci.edu">
+			           <img src="https://www.reg.uci.edu/images/safooter-transparent_175.png" border="0" alt=""/>
+				</a><br />
+				<address id="footer-copyright">
+				    &copy; UC Regents
+
+				</address>
+				
+				
+		      </td></tr></table>
+	            </td>
+		    <td width="100%" class="lborder"  style="vertical-align: middle;">  <!-- Center column, bottom row --> 
+			<!-- // CONTACT INFORMATION // -->
+			<div id="contact-footer" style="margin: 0.5em 0 0.5em 0;" >
+				<div id="footer-office-title">University Registrar</div>
+
+
+				<ul><li class="reg-email"><a href="mailto:registrar@uci.edu">registrar@uci.edu</a></li>
+
+				    <li>&bull;</li>
+				    <li>tel: (949) 824-6124</li>
+				    <li>&bull;</li>
+				    <li>fax: (949) 824-7896</li>
+				</ul>
+
+				<ul><li>215 Aldrich Hall</li>
+
+				    <li>&bull;</li> <li>Irvine, CA 92697-4975</li>
+				</ul>
+
+
+				<ul>
+				    <li>hours: Monday&ndash;Friday, 8:00 a.m.&ndash;5:00 p.m.</li>
+				</ul>
+
+				<!--<address id="footer-copyright">
+				    &copy; UC Regents
+
+				</address>-->
+
+			</div>  <!-- close div id="contact-footer" -->
+	            </td>
+	        </tr> 
+           </table>
+ 
+            <!-- end of footer row -->
+
+        </td>
+    </tr>	<!-- END OF DATA ROW -->
+
+</table>
+   
+
+</body>
+</html>Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

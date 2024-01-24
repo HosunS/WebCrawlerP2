@@ -1,0 +1,153 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7803¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 17 Oct 2017 22:48:08 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1e7b-55bc5eab5c4f5"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 15:57:17 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY{<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Report: Next-event estimation on translucent object rendering**
+
+# Introduction
+
+## Translucent effect
+![](0914/intro.png width=\pagewidth)
+
+## Reflection, Transmission and Radiative Transfer
+Rendering scattering volumes that are enclosed by refractive boundaries - e.g. a marble statue, human tissue, milk, jewelry made of translucent materials - poses a great challenge for most rendering algorithms.
+
+![](0914/1-1.png width=\pagewidth) ![](0914/1-2.png width=\pagewidth)
+
+## Next-event Estimation (NEE)
+A popular technique for reducing variance of Monte Carlo rendering is next event estimation (NEE), which estimates direct illumination by sampling a point on the emitter and testing its visibility by casting a shadow ray. To boost the efficiency of path tracing algorithms, NEE is often executed at every step of path construction.
+
+# Problem statement
+
+## Refraction issue
+Here light interacts with the material and refracts at the interface due to snells law of refraction. Therefore, direct connections are no longer valid which prevents straightforward application of NEE.
+
+![](0914/1-3.png width=\pagewidth)
+
+## Boundary blocking issue
+The basic NEE connect the point in the medium to the emitter using a straight line (refract line) through the boundary, which will always fail. There is no benefit to use basic NEE for the interior medium comparing to brute-force one.
+
+![](0914/1-4.png width=\pagewidth)
+
+# Straight-line approximation
+
+## Break through the boundary
+### Illustration
+![](0914/1-5.png width=\pagewidth)
+
+### Results
+
+![w/o NNE](0914/simple_dielectric_PT_spp100000.png width=\pagewidth) ![NNE](0914/simple_fake3dielectric_NE_spp1000.png width=\pagewidth)
+
+Beyond critical angle, $L_{dir} = 0$, this method can not let the point connect to light. But in real case, this point could still receive light from refracted rays. 
+
+![w/o NNE](0914/plane_dielectric_PT_spp20000.png width=\pagewidth) ![NNE](0914/plane_fake3dielectric_NE_spp1000.png width=\pagewidth)
+
+## Fake BSDF
+We are trying to create a fake BSDF to match the results of NNE.
+
+### Illustration
+![](0914/1-6.png width=\pagewidth) 
+![](0914/1-7.png width=\pagewidth)
+
+### Results
+![FakeBSDF w/o NNE](0914/simple_fake3dielectric_PT_spp100000.png width=\pagewidth) ![FakeBSDF w/ NNE](0914/simple_fake3dielectric_NE_spp1000.png width=\pagewidth)
+
+More results in Appendix I.
+
+## Fake Fresnel Next-event Estimation (FFNEE)
+![](0914/1-8.png width=\pagewidth) 
+$$F_{fake}(\theta) = R_0 + (1 - R_0)(1-|cos\theta|)^5, R_0 = (\frac{n_1-n_2}{n_1+n_2})^2$$
+
+## Results
+
+![w/o NNE (1000spp)](0914/plane_dielectric_PT_spp1000.png width=\pagewidth) ![w/o NNE (20000spp)](0914/plane_dielectric_PT_spp20000.png width=\pagewidth) ![FFNNE (1000spp)](0914/plane_dielectric_NE_spp1000.png width=\pagewidth) 
+
+![w/o NNE (1000spp)](0914/simple_dielectric_PT_spp1000.png width=\pagewidth) ![w/o NNE (100000spp)](0914/simple_dielectric_PT_spp100000.png width=\pagewidth) ![FFNNE (1000spp)](0914/simple_dielectric_NE_spp1000.png width=\pagewidth) 
+
+![w/o NNE (1000spp)](0914/cbox_dielectric_PT_spp1000.png width=\pagewidth) ![w/o NNE (10000spp)](0914/cbox_dielectric_PT_spp10000.png width=\pagewidth) ![FFNNE (1000spp)](0914/cbox_dielectric_NE_spp1000.png width=\pagewidth) 
+
+![w/o NNE (1000spp)](0914/horse_dielectric_PT_spp1000.png width=\pagewidth) ![w/o NNE (100000spp)](0914/horse_dielectric_PT_spp100000.png width=\pagewidth) ![FFNNE (1000spp)](0914/horse_dielectric_NE_spp1000.png width=\pagewidth) 
+
+Apple to apple comparison in Appendix II.
+
+# Future plan
+
+## Related works
+
+### Subdivision Next-Event Estimation (SNEE)
+![](0830/6.png width=\pagewidth)
+
+So common to all prior work is that idea of moving or finding a point on the surface which causes problems for highly detailed geometry. This is in contrast to this paper. They try to investigate the idea of moving the last point within the medium to find a valid 2‚Äêbounce connection to the light. For this we want to use the degree of freedom given by the subsurface scattering volume.
+
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Koerner David, Jan Nov√°k, Peter Kutz, Ralf Habel, and Wojciech Jarosz. "Subdivision next-event estimation for path-traced subsurface scattering." EGSR2016. [<a href="papers/koerner16subdivision.pdf" target="_blank">pdf</a>]
+</div>
+
+### Shell tracing
+
+![](0830/7.png width=\pagewidth)
+
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Jonathan T. Moon, Bruce Walter, and Stephen R. Marschner. "Rendering Discrete Random Media Using Precomputed Scattering Solutions." EGSR2007. [<a href="papers/EGSR07-vol.pdf" target="_blank">pdf</a>]
+</div>
+
+<div class="endnote"><a class="target" name="endnote-syntax">&nbsp;</a>
+Thomas M√ºller, Marios Papas, Markus Gross, Wojciech Jarosz, and Jan Nov√°k. "Efficient Rendering of Heterogeneous Polydisperse Granular Media." SigAsia2016. [<a href="papers/HGM.pdf" target="_blank">pdf</a>]
+</div>
+
+## Extending
+Rough surface, phase function
+
+
+# Appendix I
+<div class="twentytwenty-container">
+    <img src="0914/plane_fake3dielectric_PT_spp20000.png" alt="FakeBSDF w/o NNE (20000spp)">
+    <img src="0914/plane_fake3dielectric_NE_spp1000.png" alt="FakeBSDF w/ NNE (1000spp)">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0914/simple_fake3dielectric_PT_spp100000.png" alt="FakeBSDF w/o NNE (100000spp)">
+    <img src="0914/simple_fake3dielectric_NE_spp1000.png" alt="FakeBSDF w/ NNE (1000spp)">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0914/cbox_fake3dielectric_PT_spp10000.png" alt="FakeBSDF w/o NNE (10000spp)">
+    <img src="0914/cbox_fake3dielectric_NE_spp1000.png" alt="FakeBSDF w/ NNE (1000spp)">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0914/horse_fake3dielectric_PT_spp100000.png" alt="FakeBSDF w/o NNE (100000spp)">
+    <img src="0914/horse_fake3dielectric_NE_spp1000.png" alt="FakeBSDF w/ NNE (1000spp)">    
+</div>
+
+# Appendix II
+<div class="twentytwenty-container">
+    <img src="0914/plane_dielectric_PT_spp20000.png" alt="BSDF w/o NNE (20000spp)">
+    <img src="0914/plane_dielectric_NE_spp1000.png" alt="BSDF w/ FFNNE (1000spp)">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0914/simple_dielectric_PT_spp100000.png" alt="BSDF w/o NNE (100000spp)">
+    <img src="0914/simple_dielectric_NE_spp1000.png" alt="BSDF w/ FFNNE (1000spp)">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0914/cbox_dielectric_PT_spp10000.png" alt="BSDF w/o NNE (10000spp)">
+    <img src="0914/cbox_dielectric_NE_spp1000.png" alt="BSDF w/ FFNNE (1000spp)">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0914/horse_dielectric_PT_spp100000.png" alt="BSDF w/o NNE (100000spp)">
+    <img src="0914/horse_dielectric_NE_spp1000.png" alt="BSDF w/ FFNNE (1000spp)">    
+</div>
+
+
+End.
+
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

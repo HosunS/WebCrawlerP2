@@ -1,0 +1,1792 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‹¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4520¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.22 (Ubuntu)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 12 May 2016 21:56:39 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"4ee466f-740f-532ac3b988288"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 07:06:23 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueYt
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+
+    <meta name="description" content="CodeExchange: A new Java code search engine">
+    <meta name="keywords" content="CodeExchange,UCI,java,code,search">
+
+
+    <link href="jquery-ui-1.10.3.custom/css/blitzer/jquery-ui-1.10.3.custom.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="jquery-ui-1.10.3.custom/development-bundle/demos/demos.css" type="text/css">
+
+
+    <title>CodeExchange</title>
+    <link rel="shortcut icon" href="http://codeexchange.ics.uci.edu/logo.ico">
+
+
+</head>
+
+<body bgcolor=#d3d3d3>
+<script type="text/javascript" src="jquery-1.10.2.js"></script>
+<script type="text/javascript" src="jquery-migrate-1.2.1.js"></script>
+<script type="text/javascript" src="jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.js"></script>
+
+<script type="text/javascript" src="Critize.js"></script>
+<script type="text/javascript" src="ScreenSizes.js"></script>
+<script type="text/javascript" src="SplashScreen.js"></script>
+<script type="text/javascript" src="Client.js"></script>
+<script type="text/javascript" src="CodeResult.js"></script>
+<script type="text/javascript" src="QueryManager.js"></script>
+<script type="text/javascript" src="Controller.js"></script>
+<script type="text/javascript" src="Cell.js"></script>
+<script type="text/javascript" src="SetupManager.js"></script>
+<script type="text/javascript" src="URLQueryCreator.js"></script>
+<script type="text/javascript" src="FilterManager.js"></script>
+<script type="text/javascript" src="SmartQueryCreator.js"></script>
+<script type="text/javascript" src="EncoderDecoder.js"></script>
+<script type="text/javascript" src="Util.js"></script>
+<script type="text/javascript" src="Utf8.js"></script>
+<script type="text/javascript" src="BuildQueryBox/BuildQueryBoxView.js"></script>
+<script type="text/javascript" src="BuildQueryBox/BuildQueryBoxModel.js"></script>
+<script type="text/javascript" src="BuildQueryBox/QueryModel.js"></script>
+<script type="text/javascript" src="BuildQueryBox/QueryView.js"></script>
+<script type="text/javascript" src="BuildQueryBox/QueryBucketModel.js"></script>
+<script type="text/javascript" src="BuildQueryBox/QueryBucketView.js"></script>
+<script type="text/javascript" src="QueryTrail/QueryTrailModel.js"></script>
+<script type="text/javascript" src="QueryTrail/QueryTrailView.js"></script>
+<script type="text/javascript" src="QueryTrail/QueryTrailNavView.js"></script>
+<script type="text/javascript" src="QueryTrail/QueryGridModel.js"></script>
+<script type="text/javascript" src="QueryTrail/QueryGridView.js"></script>
+<script type="text/javascript" src="QueryRecommender/QueryRecommenderModel.js"></script>
+<script type="text/javascript" src="QueryRecommender/QueryRecommenderView.js"></script>
+<script type="text/javascript" src="jQueryRotate.js"></script>
+<script type="text/javascript" src="ace-builds/src-noconflict/ace.js" charset="utf-8"></script>
+<script type="text/javascript" src="ace-builds/src-noconflict/token_tooltip.js"></script>
+<script type="text/javascript" src="UsageLogger.js"></script>
+<script type="text/javascript" src="Event.js"></script>
+<script type="text/javascript" src="Survey.js"></script>
+<script type="text/javascript" src="log4javascript.js"></script>
+
+
+
+<script>
+
+
+    $(document).ready(on_ready);
+
+
+
+</script>
+
+<style type="text/css">
+
+
+.Absolute{
+
+    position:'absolute';
+
+}
+
+.package{
+    position:absolute;
+    background: lightgoldenrodyellow;
+
+    z-index:40;
+    border-radius: 50px;
+    opacity: 0.7;
+
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.classFound{
+    position:absolute;
+    background-color: #d3d3d3;
+
+    z-index:40;
+    border-radius: 50px;
+    opacity: 0.7;
+
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.topBuffer{
+    padding-top: 5px;
+
+
+}
+
+.addQueryIcon{
+
+    background-color: #d3d3d3;
+    border: 2px solid;
+    border-radius: 5px;
+    pointer-events: auto;
+    cursor: pointer;
+    padding: 5px;
+
+}
+
+.import{
+    position:absolute;
+    background: lightcyan;
+
+    z-index:40;
+    border-radius: 50px;
+    opacity: 0.7;
+
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.implements{
+    position:absolute;
+    background: gold;
+
+    z-index:40;
+    border-radius: 50px;
+
+    opacity: 0.4;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.extends{
+    position:absolute;
+    background: gold;
+
+    z-index:40;
+    border-radius: 50px;
+
+    opacity: 0.4;
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.child{
+    position:absolute;
+    background: #DCD0FF;
+
+    z-index:40;
+    border-radius: 50px;
+
+
+    pointer-events: auto;
+    cursor: pointer;
+
+    font-size: 15pt;
+
+    opacity: 0.7;
+
+    /*background-image: url('http://level1router.ics.uci.edu/upArrow.png');*/
+    /*background-repeat: no-repeat;*/
+    /*padding-left: 30px;  *//* width of the image plus a little extra padding */
+    /*display: block;  *//* may not need this, but I've found I do */
+}
+
+.tip{
+    position:absolute;
+
+
+    z-index:40;
+    border-radius: 50px;
+
+
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+.tipDec{
+    position:absolute;
+
+
+    z-index:40;
+    border-radius: 50px;
+
+
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+
+
+.classHeadHighlight{
+    position:absolute;
+    background-color: #d3d3d3;
+    z-index:40;
+    border-radius: 50px;
+}
+.decChild{
+    position:absolute;
+    background: lightgreen;
+    opacity: 0.4;
+    z-index:40;
+    border-radius: 50px;
+}
+
+.Grid{
+
+    border:0px solid;
+    padding:0px;
+
+    background-color: #d3d3d3;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+
+    color: black;
+    width: auto;
+    height: auto;
+}
+
+.GridCell{
+    background-color: white;
+    color: black;
+    width: 100%;
+    border: 1px solid;
+    cursor:pointer;
+    margin: 0px;
+    cellpadding: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+
+}
+
+.GridCellHeader{
+    border: 1px solid;
+
+
+}
+
+.GridCellHighLight{
+
+}
+
+.GridCellHover{
+    border: 1px solid black;
+    background-color: lightgoldenrodyellow;
+    box-shadow: 3px 3px 3px darkgray;
+    margin: -1px;
+    cellpadding: -1px;
+
+
+    color: black;
+    width: 100%;
+
+    cursor:pointer;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.GridRow{
+    background-color:whitesmoke;
+    color:#ffffff;
+
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: darkgray;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #FFBF00;
+
+    height:auto;
+    width: 100px;
+    word-wrap:break-word;
+    padding: 1px;
+
+
+}
+
+
+
+.GridRowHover{
+    background-color:lightgoldenrodyellow;
+    color:#ffffff;
+
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: darkgray;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+    cursor: pointer;
+    box-shadow: 3px 3px 3px darkgray;
+    height:auto;
+    word-wrap:break-word;
+
+    padding: 1px;
+
+
+}
+
+.ace_gutter-cell.ace_breakpoint{
+    border-radius: 20px 0px 0px 20px;
+    box-shadow: 0px 0px 1px 1px red inset;
+}
+
+.highlightBackground{
+    background-color: lightgoldenrodyellow;
+}
+
+.Cell
+{
+
+    border: solid;
+    border-width: thin;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: white;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+
+}
+.Result
+{
+
+    border: 0px solid;
+    margin: 0px;
+
+}
+
+
+.Meta
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+
+
+
+
+}
+.MetaDatum{
+    float: left;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    bottom:0;
+
+
+}
+
+.ExpandButtonDiv{
+    padding:  5px;
+
+}
+.ResultOptions{
+    position: relative;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    top:0px;
+
+    height:55px;
+
+}
+button{
+    height:35px;
+    width:35px;
+
+
+}
+.Expand{
+    top:0px;
+    float:right;
+
+
+}
+.SpanCol{
+    colspan:2;
+}
+.SpanRow{
+    rowspan:2;
+}
+.LinkToPage{
+    padding: 0px;
+    margin: 0px;
+    margin-right: 10px;
+    float:right;
+    cursor:pointer;
+    background-color:transparent;
+    border:0px;
+    font-size: 16px;
+
+
+
+}
+.HighLightLink{
+    background-color:lightgoldenrodyellow;
+    text-decoration:underline;
+    color:black;
+
+    border: 1px solid;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.ResultTotal{
+    float:right;
+}
+
+.Message{
+    float:left;
+    font-family:"Courier New", Courier, monospace";
+valign:"bottom";
+    vertical-align:bottom;
+    padding-top: 5px;
+    padding-bottom: 0px;
+    padding-right: 5px;
+    background-color:transparent;
+    font-size: 14px;
+
+}
+
+.code{
+    font-size: 12px;
+}
+.MetaBorder{
+
+
+    float: left;
+
+}
+
+.MetaGroupBorder{
+    padding-left: 5px;
+    padding-right: 5px;
+
+    float: left;
+
+}
+
+
+.MetaQuery{
+    cursor:pointer;
+
+}
+
+.HeaderTable{
+    margin: 0;
+    padding: 0;
+}
+
+
+table.ResultTable{
+    background-color: #d3d3d3;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+td.ResultTD{
+    background-color: #d3d3d3;
+    height: 100%;
+
+}
+
+
+
+tr.ResultTR{
+    background-color: #d3d3d3;
+}
+
+em{
+    background-color: yellow;
+}
+
+
+
+td.StatusTD{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height:15px;
+
+
+}
+
+td.Logo{
+
+    height:15px;
+    float:left;
+}
+
+
+
+.CriticBorder{
+
+
+
+
+    border-top: 0px solid;
+    border-bottom: 0px solid;
+    border-color: lightblue;
+
+}
+
+
+textarea{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height:45px;
+    resize: none;
+    font-size: 17pt;
+    font-family: Courier;
+    overflow:hidden;
+
+    border: 1px solid;
+}
+
+
+
+div.Filter{
+    overflow:scroll;
+}
+
+
+.PeopleFilter{
+    background-color: gray;
+    border: 2px solid;
+
+
+}
+
+
+
+td.FilterSideTD{
+
+    height: 100%;
+
+    border: 1px solid;
+    border-color: black;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+
+    background-color: whitesmoke;
+
+
+}
+
+table{
+
+    width: 100%;
+}
+
+
+td.FilterTDhover{
+    background-color: yellow;
+}
+
+td.FilterTDunHover{
+    background-color: white;
+}
+
+button.CloseFilter{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+    background: transparent;
+    border:none;
+    vertical-align:bottom;
+    text-align:left;
+
+}
+
+div.FilterSelected{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+
+    display:inline-block;
+    font-size: 10pt;
+    cursor:pointer;
+
+}
+
+
+
+
+
+.highlight{
+    background-color:transparent;
+}
+
+label {
+    display: block;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+td {
+    padding:0; margin:0;
+}
+
+.Check {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    overflow: hidden;
+}
+
+
+
+
+
+.SiteBack{
+    background-color: #d3d3d3;
+
+}
+
+.HeaderBack{
+    background-color: #d3d3d3;
+
+}
+
+.HeaderTR{
+    margin: 2px;
+}
+
+.ResultsBack{
+    background-color: #d3d3d3;
+}
+
+.important{
+    background-color:orange;
+
+}
+
+.Status
+{
+    background-color: #d3d3d3;
+    color:black;
+    font-size: 14px
+}
+
+
+
+.navView{
+    background-color: whitesmoke;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+
+
+}
+.BucketView{
+
+    color:black;
+    background-color: whitesmoke;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 4px;
+    padding-right: 7px;
+
+
+}
+
+.QueryBucket{
+
+    background-color: whitesmoke;
+    font-size: 14px;
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    border-top: 1px solid;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    background-color:#ffffff;
+    overflow:scroll;
+
+    overflow-x:hidden;
+}
+
+
+
+.QueryBucketOverflow{
+    overflow:scroll;
+}
+
+.QueryHistory{
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+.CellStatus{
+    font-size: 12pt;
+    font-family: Courier;
+}
+
+.callout {
+    border: 1px solid black;
+    position: relative;
+    margin: 0px 0;
+    padding: 0px 0px;
+    background-color: #ffffff;
+    /* easy rounded corners for modern browsers */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+}
+
+.callout .notchUpInner {
+    position: absolute;
+    top: -9px;
+    left: 20px;
+    margin: 0;
+    border-top: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+
+    padding: 0;
+    width: 0;
+    height: 0;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+    /* ie6 transparent fix */
+    _border-right-color: pink;
+    _border-left-color: pink;
+    _filter: chroma(color=pink);
+
+}
+
+.callout .notchUp {
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    margin: 0;
+    border-top: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid black;
+
+    padding: 0;
+    width: 0;
+    height: 0;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+    /* ie6 transparent fix */
+    _border-right-color: pink;
+    _border-left-color: pink;
+    _filter: chroma(color=pink);
+
+}
+
+.callout .notchDownInner {
+    position: absolute;
+    bottom: -9px;
+    left: 20px;
+    margin: 0;
+    border-top: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #ffffff;
+
+    padding: 0;
+    width: 0;
+    height: 0;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+    /* ie6 transparent fix */
+    _border-right-color: pink;
+    _border-left-color: pink;
+    _filter: chroma(color=pink);
+}
+
+.callout .notchDown {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    margin: 0;
+    border-top: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+
+    padding: 0;
+    width: 0;
+    height: 0;
+    /* ie6 height fix */
+    font-size: 0;
+    line-height: 0;
+    /* ie6 transparent fix */
+    _border-right-color: pink;
+    _border-left-color: pink;
+    _filter: chroma(color=pink);
+}
+
+
+.Arrow{
+    cursor: pointer;
+    border: 0px solid black;
+
+
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+.ArrowHover{
+    cursor: pointer;
+    border: 0px solid black;
+    background-color: white;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+
+    box-shadow: 3px 3px 3px gray;
+}
+
+.downloadLink{
+    cursor: pointer;
+
+    align: center;
+    font-size: 14px;
+}
+
+.downloadLinkHover{
+    cursor: pointer;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+
+    box-shadow: 3px 3px 3px gray;
+
+}
+
+.deleteCellHover{
+    box-shadow: 3px 3px 3px gray;
+}
+
+.URLStatus{
+    padding-top: 0px;
+    border-top: 0px solid;
+    border-color: lightblue;
+
+
+    font-family: Courier;
+}
+
+.BuildQueryTitle {
+    font-size: 16pt;
+    font-family: Courier;
+    padding: 0;
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.BuildQueryTitleFlash{
+    background-color: #ffff00;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.QueryTypeTitle{
+    font-size: 10pt;
+    font-family: Courier;
+    vertical-align: middle ;
+    text-align: left;
+}
+
+.QueryView{
+    background-color:lightgoldenrodyellow;
+    color:#ffffff;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: darkgray;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #FFBF00;
+    height:auto;
+    padding: 1px;
+    word-wrap:break-word;
+
+}
+
+.QueryViewHover{
+    background-color: #ffffff;
+    color:#ffffff;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: darkgray;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #FFBF00;
+    word-wrap:break-word;
+    height:auto;
+    padding: 1px;
+
+}
+
+.QueryViewDeactiveHover{
+    background-color: yellow;
+    color:#ffffff;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 5px;
+    border-color: darkgray;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #FFBF00;
+    height:auto;
+    word-wrap:break-word;
+    opacity:0.4;
+    padding: 1px;
+
+}
+
+.textWrap{
+    word-wrap:break-word;
+}
+
+.TrailQueryView{
+    background-color:#000000;
+    color:#ffffff;
+    font-size: 12px;
+    border: 1px solid;
+}
+
+.QueryViewButton{
+
+    float: right;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    bottom:0;
+    font-size: 11px;
+
+
+}
+
+.QueryViewButtonRecommend{
+    float: right;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 0px;
+    bottom:0;
+
+}
+
+.QueryViewDeactive{
+    background-color:white;
+
+    opacity:0.7;
+
+    font-size: 14px;
+    border: 1px solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+    height:auto;
+    border-color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #888888;
+    padding: 1px;
+
+}
+
+.QueryTrail{
+    background-color:#ffffff;
+
+}
+
+.QueryViewRow{
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+
+    height:auto;
+    width: 100px;
+    word-wrap:break-word;
+
+}
+
+.BrowsersSupported{
+    color: gray;
+}
+.ProjectRefinement{
+
+
+    word-wrap:break-word;
+}
+
+.QueryViewTable{
+    table-layout: fixed;
+}
+
+.RecommendationDown{
+    background-color: lightgoldenrodyellow;
+    color:white;
+    font-size: 12px;
+    border: 1px solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+
+    box-shadow: 3px 3px 3px darkgray;
+    border-radius: 5px;
+    border-color: darkgray;
+    cursor: pointer;
+    height:auto;
+    word-wrap:break-word;
+    padding: 2px;
+}
+
+.RecommendationHover{
+    background-color: lightgoldenrodyellow;
+    color:#ffffff;
+    font-size: 12px;
+    border: 1px solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+
+    box-shadow: 3px 3px 3px darkgray;
+    border-radius: 5px;
+    border-color: darkgray;
+    cursor: pointer;
+    height:auto;
+    word-wrap:break-word;
+    padding: 2px;
+}
+
+.QueryRecommendation{
+    background-color: white;
+    color:#ffffff;
+    font-size: 12px;
+    border: 1px solid;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right:0px;
+
+
+    border-radius: 5px;
+    border-color: #d3d3d3;
+    cursor: pointer;
+    word-wrap:break-word;
+    height:auto;
+
+    box-shadow: 0px 0px 0px palegreen;
+    padding: 2px;
+
+}
+
+
+
+.PageNavigation{
+    padding-top: 4px;
+    color: black;
+
+}
+
+.QueryRecommenderView{
+    height: 200px;
+    /* overflow-y: scroll;*/
+}
+
+.AnnotationQuery{
+    background-color: red;
+}
+
+
+
+.QueryCell{
+    border: 1px solid;
+    background-color: #E2D4B2;
+    color:black;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.QueryInput{
+    background-color: #d4ebf2;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.recommendCell{
+
+    border: 1px solid;
+    border-color: #d4ebf2;
+
+    overflow-y: auto;
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.SplashInput{
+    width:98%;
+    border: 0px;
+    font-size: 20px;
+    margin-left: 5px;
+
+}
+
+input:focus{
+    outline: 0;
+}
+
+.SplashInputDiv{
+    background-color: #d3d3d3;
+    color:#ffffff;
+    box-shadow: 0px 0px 0px #FFBF00;
+
+
+
+    border: 0px solid;
+    border-color: white;
+
+    width: 100%;
+    height: 60px;
+    text-align: left;
+    vertical-align: middle;
+
+
+
+
+}
+
+.SplashTitle{
+
+    font-size: 35px;
+    color:black;
+    text-align: left;
+    vertical-align: middle;
+    float: left;
+    border-color: #d3d3d3;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+
+
+}
+
+.AutoComplete{
+    font-size: 20px;
+    z-index : 9003;
+
+}
+
+.AdvancedAutoComplete{
+    font-size: 17px;
+    z-index : 9003;
+
+}
+
+.SplashFloatLeft{
+    float: left;
+}
+
+.Splash{
+    background-color: #d3d3d3;
+    width: 100%;
+
+    text-align: center;
+    vertical-align: middle;
+
+    border-color: #d3d3d3;
+
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+
+}
+
+.footerText{
+    font-size: 15px;
+    margin-top: 30px;
+    color:black;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+
+
+.subtext{
+    font-size: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+html { height: 100%; }
+
+.SubmitInputButton{
+    color: black;
+    background-color: whitesmoke;
+
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+
+    border-left: 1px solid;
+
+    margin: 0px;
+
+    border-color: gray;
+
+    font-size: 15px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    padding-bottom: 2px;
+    cursor: pointer;
+    padding-left:5px;
+    padding-right:5px;
+    height: 100%;
+}
+
+.AdvancedSearch{
+    color: black;
+    background-color: whitesmoke;
+
+    border: 1px solid;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-bottom-right-radius:25px;
+    border-top-right-radius:25px;
+
+    border-left: 1px solid;
+
+
+    border-color: gray;
+
+    font-size: 15px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    padding-bottom: 2px;
+    padding-left:5px;
+    padding-right:5px;
+    cursor: pointer;
+    height: 100%;
+
+
+}
+
+.AdvancedSearchText{
+
+    margin-top: 2px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.SubmitInputButtonHover{
+     color: black;
+     background-color: whitesmoke;
+     box-shadow: 3px 3px 3px darkgray;
+     border: 2px solid;
+
+     border-color: black;
+
+     font-size: 15px;
+
+    text-align: center;
+    vertical-align: middle;
+
+     margin: -1px;
+
+     padding-bottom: 2px;
+     cursor: pointer;
+
+    padding-left:6px;
+    padding-right:5px;
+    height: 100%;
+ }
+
+.AdvancedSearchHover{
+    color: black;
+    background-color: whitesmoke;
+    box-shadow: 3px 3px 3px darkgray;
+
+    border: 2px solid;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-bottom-right-radius:25px;
+    border-top-right-radius:25px;
+
+    border-left: 2px solid;
+
+    border-color: black;
+
+    font-size: 15px;
+
+    text-align: center;
+    vertical-align: middle;
+
+    padding-bottom: 2px;
+    cursor: pointer;
+    padding-left:5px;
+    padding-right:5px;
+    height: 100%;
+}
+
+.ExtraHistoryPadding{
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.BottomButtonsHover{
+    font-size: 14px;
+
+
+
+
+
+    box-shadow: 3px 3px 3px darkgray;
+    background-color: whitesmoke;
+
+    border: 2px solid;
+    border-color: #000000;
+
+    color:#000000;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    margin-top: 0px;
+    margin: -1px;
+
+    text-align: center;
+    vertical-align: middle;
+
+
+    cursor: pointer;
+
+
+
+
+}
+
+
+
+
+.BottomButtons{
+    font-size: 14px;    text-align: center;
+
+
+
+    color:#000000;
+    border: 1px solid;
+    background-color: whitesmoke;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    margin-top: 0px;
+    margin: 0px;
+
+
+
+    text-align: center;
+    vertical-align: middle;
+
+    cursor: pointer;
+
+
+}
+
+
+#blanket {
+    background-color : #111;
+    opacity : 0.65;
+    position: fixed;
+    z-index : 9001;
+    top : 0px;
+    left : 0px;
+    width : 100%;
+    height : 100%;
+}
+
+#confirm {
+
+    position : fixed;
+    background-color : #eee;
+    width : 300px;
+    height : 350px;
+    z-index : 9002;
+    top : 150px;
+    left : 500px;
+    margin: auto;
+
+
+    overflow: auto;
+    padding: 5px;
+}
+
+.AdvancedForm{
+
+    border: 5px solid black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.MethodCallLabel{
+    background-color: red;
+}
+
+.AdvancedSearchTable{
+    background-color: lightgoldenrodyellow;
+    border: 1px solid;
+    border-color: black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.AdvancedInput{
+    width: 97%;
+    font-size: 14px;
+    margin: auto;
+
+}
+
+.childAdvancedTable{
+    margin: 5px;
+
+}
+
+.RefineButtonHover{
+    box-shadow: 3px 3px 3px darkgray;
+
+    margin: -1;
+
+    border: 0px solid;
+    border-color: black;
+    background-color: whitesmoke;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+
+
+
+    cursor: pointer;
+
+}
+
+
+.SubmitButtonHover{
+    box-shadow: 3px 3px 3px darkgray;
+    margin: -1px;
+    margin-top: 4px;
+
+    border: 2px solid;
+    border-color: black;
+    background-color: whitesmoke;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    padding-top: 3px;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.SubmitButton{
+    margin: 0px;
+    margin-top: 5px;
+    border: 1px solid;
+    border-color: black;
+    background-color: whitesmoke;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    padding-top: 3px;
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20px;
+    cursor: pointer;
+
+
+}
+
+.ExpandButtonHover{
+    box-shadow: 3px 3px 3px darkgray;
+    margin: 0px;
+    margin-top: 5px;
+    border: 1px solid;
+    border-color: black;
+    background-color: whitesmoke;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+
+}
+
+.ExpandButton{
+    margin: 0px;
+    margin-top: 5px;
+    border: 1px solid;
+    border-color: black;
+    background-color: whitesmoke;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+
+    height: 30px;
+    width: 100px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+
+}
+
+.CloseButton{
+    border: 1px solid;
+    border-color: black;
+    background-color: whitesmoke;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    cursor: pointer;
+
+    float:right;
+    padding-left:2px;
+    padding-right:2px;
+    padding-top:4px;
+    width:50px;
+    margin-right:4px;
+
+}
+
+.CloseButtonHover{
+    box-shadow: 3px 3px 3px darkgray;
+    border: 2px solid;
+
+    border-color: black;
+    background-color: whitesmoke;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 15px;
+    cursor: pointer;
+
+    float:right;
+    padding-left:2px;
+    padding-right:2px;
+    padding-top:4px;
+    width:50px;
+    margin-right:2px;
+    margin-bottom:-2px;
+    margin-left:-1px;
+
+}
+
+.SurveyLabel{
+    font-size: 15px;
+    cursor: pointer;
+    color:#2c4961;
+
+}
+
+.Spacer{
+    font-size: 15px;
+
+    color:gray;
+}
+
+.LetterLabel{
+    font-size: 15px;
+    cursor: pointer;
+    color:gray;
+}
+
+.Survey{
+    background-color: white;
+    border: 5px solid black;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+    vertical-align: middle;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.Question{
+    font-size: 15px;
+    padding: 10px;
+    background-color: white;
+
+
+}
+
+.BoxSelected{
+    border: 3px dashed;
+}
+
+
+</style>
+
+
+<div id="entireSite" height="100%">
+
+    <div id="vis"></div>
+
+
+
+</div>
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

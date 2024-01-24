@@ -1,0 +1,35 @@
+¦Ifinal_url¢DtypeEvaluex6https://www.ics.uci.edu/~sysarch/projects/Autovec.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2438¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 29 Sep 2017 19:06:06 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"986-55a58b78e7c0c"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 29 Jan 2019 10:16:11 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY	†
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<title>Improving autovectorization</title>
+</head>
+
+<body bgcolor="#EEFFEE" text =" black" link="blue" vlink="blue"
+alink="red">
+<h4> Improving Automatic Vectorization </h4>
+<p>
+Automatic vectorization is available today in all production compilers.  However, the result of the vectorization are mixed.  This has several reasons, including lack of run-time information during compilation, imprecise dependence analysis and cost functions, and impact of the code generation.
+</p>
+<p>
+The goal of this project is to advance the state of the art in autovectorization by creating new techniques and extending our understanding of programming patterns, program analysis, and transformation techniques.  The effect of this is the acceleration of computer programs and the reduction of the energy that they consume. Faster programs are of great importance in all application areas, but are particularly important in science and engineering where computing speed is an enabler of discoveries and better designs. 
+</p>
+<p>
+The research strategy is to develop and evaluate a prototype autovectorizer based on the exploration of the space of equivalent versions of a program guided by an intelligent search engine. The space of equivalent versions is obtained with a source-to-source restructurer. A repository of codelets is planned in order to train the search engine so that it becomes capable of guiding the selection in the space of possibilities in order to identify a highly efficient version of the code.
+<br>
+<br>
+This project is supported by the NSF.
+</p>
+<p>
+<b>Current State </b> <br>
+The loop repository, LORE (LOop Repository for the Evaluation of compilers), containing a large number of C language "for" loop nests extracted from popular benchmarks, libraries, and real applications has been created. The infrastructure that builds and maintains the repository has been developed. Each loop nest in the repository has been compiled, transformed, executed, and measured independently.  The results can be accessed as a database. These loops have a variety of properties that can be used by the compiler community to evaluate loop optimizations.
+<br>
+<br>
+The repository is available online and can be accessed at <A HREF="https://vectorization.computer"> <B> LORE </B> </A> <br>  
+Please feel free to use it and we would appreciate your feedback!  
+</p>
+
+</body>
+
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,25 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC534¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 23 Sep 2017 04:54:05 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"216-559d41d74c8af"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 03:30:10 GMTKraw_content¢DtypeEvalueY"""Subsets.py
+
+List all subsets of a given sequence
+
+The subsets are yielded as the sequence of values
+of a dynamic set; if any of these subsets needs
+to be kept persistently, while listing more of them,
+it should be copied to another structure.
+
+D. Eppstein, September 2017."""
+
+def subsets(S):
+    """All subsets of sequence S."""
+    S = iter(S)
+    try:
+        x = S.next()
+    except StopIteration:
+        yield set()
+        return
+    for T in subsets(S):
+        yield T
+        T.add(x)
+        yield T
+        T.remove(x)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

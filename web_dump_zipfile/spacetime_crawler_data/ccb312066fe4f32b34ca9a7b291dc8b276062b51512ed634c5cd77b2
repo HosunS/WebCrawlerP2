@@ -1,0 +1,31 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1141¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 07 Aug 2013 22:13:46 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"475-4e362daeb5a80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 15:33:58 GMTKraw_content¢DtypeEvalueYu# zeroes.py
+#
+# ICS 33 Summer 2013
+# Code Example
+#
+# A class whose objects act like an infinitely-long sequence of zeroes.
+
+
+class InfiniteZeroes:
+    def __getitem__(self, index):
+        # First, we handle the case where we're given a slice, which is
+        # the most complex case, because more things can go wrong.  Then
+        # we require that the index is a non-negative integer and, if so,
+        # we simply return 0.
+        if type(index) == slice:
+            if index.stop == None:
+                raise IndexError('stop must be specified in a slice')
+
+            if (index.start != None and index.start < 0) or (index.stop < 0):
+                raise IndexError('index must be non-negative integer')
+
+            range_start = 0 if index.start == None else index.start
+            range_stop = index.stop
+            range_step = 1 if index.step == None else index.step
+
+            return [0] * len(range(range_start, range_stop, range_step))
+        elif type(index) != int or index < 0:
+            raise IndexError('index must be non-negative integer')
+        else:
+            return 0
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

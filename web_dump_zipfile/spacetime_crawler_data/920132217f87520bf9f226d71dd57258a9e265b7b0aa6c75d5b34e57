@@ -1,0 +1,43 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:59:04 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueY¾<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML><HEAD>
+<TITLE> Compiler Considerations for CompSci 165</TITLE>
+</HEAD><BODY>
+<span style="color:#000000; font:16px Arial, Helvetica, sans-serif;">
+
+<center>
+<H2>Compiler Considerations for CompSci 165</H2>
+</center>
+
+<UL>
+<LI> Be aware that using an ANSI compliant compiler
+     that has the standard libraries is a necessity
+<LI> Many such compilers are available,
+     including gcc which is available on all ICS machines
+<LI> I enjoyed using the <a href="http://www.delorie.com/djgpp/">djgpp</a> command line environment for the PC (XP and 32-bit Windows 7)
+<LI> After getting 64-bit Windows 10, I enjoy using the <a href="http://www.mingw.org/">MinGW</a> command line environment
+  <UL>
+  <LI>However, note that MinGW does not have all of the timing include files
+      (although there is a <a href="TIME/index.html">way</a> to fix that)
+  </UL>
+<LI> Some people enjoy using the <a href="http://www.codeblocks.org">Code::Blocks</a> IDE
+  <UL>
+  <LI> But others have said that they had compilation problems using it
+  <LI> It seems to be missing some library functions and/or include files needed for timing
+  </UL>
+<LI> The Microsoft compilers that I have seen do not use the standard libraries
+  <UL>
+  <LI> <a href="http://msdn.microsoft.com/en-us/library/aa271961(VS.60).aspx">This page</a>
+       has Microsoft's suggestions on how to write code that works in the
+       largest number of C compilers (i.e., portable code)
+<!--
+  <LI> <a href="visual.txt">Here</a> is a tip from a CompSci 165 student on using Visual Studio
+-->
+  </UL>
+</UL>
+</span>
+<HR>
+
+Last modified: Feb 23, 2018
+</BODY></HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

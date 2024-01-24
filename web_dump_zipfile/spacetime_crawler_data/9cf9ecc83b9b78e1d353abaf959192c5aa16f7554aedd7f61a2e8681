@@ -1,0 +1,231 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:16:40 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY1Ê
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Z-Alizadeh Sani Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Z-Alizadeh Sani Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/00412/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="#"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: It was collected for CAD diagnosis.</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">303</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Life</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Integer, Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">56</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2017-11-17</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">12367</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Provide the names, email addresses, institutions, and other contact information of the donors and creators of the data set.<br><br>Name:Dr Zahra Alizadeh Sani,Associate Professor of cardiology,<br>email:<u>Drzas <b>'@'</b> rhc.ac.ir</u>,<br>institution: Cardiovascular Imaging Department, Rajaei Cardiovascular, Medical & Research Center, Iran University , Tehran, Iran.<br>Post code:1996911151<br>website: <a href="http://dralizadehsani.rhc.ac.ir/Files/Forms/2016-11-13_01.46.29_dr.alizadeh.CV.pdf">http://dralizadehsani.rhc.ac.ir/Files/Forms/2016-11-13_01.46.29_dr.alizadeh.CV.pdf</a><br><br>Name:Roohallah Alizadehsani, PhD student<br>email: <u>alizadeh_roohallah <b>'@'</b> yahoo.com</u><br>institution: Institute for Intelligent Systems Research and Innovation (IISRI), Deakin University, Victoria 3217, Australia.<br>website: <a href="http://ce.sharif.ir/~ralizadeh/">http://ce.sharif.ir/~ralizadeh/</a><br><br>Name: Mohamad Roshanzamir, PhD candidate<br>email: <u>mohamad.roshanzamir <b>'@'</b> ec.iut.ac.ir</u><br>institution: Electrical and Computer Engineering, Isfahan University of Technology, Isfahan, Iran.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">Each patient could be in two possible categories CAD or Normal. A patient is categorized as CAD, if his/her diameter narrowing is greater than or equal to 50%, and otherwise as Normal .</p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">The Z-Alizadeh Sani dataset contains the records of 303 patients, each of which have 54 features.The features are arranged in four groups: demographic, symptom and examination, ECG, and laboratory and echo features.</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">R. Alizadehsani, J. Habibi, M. J. Hosseini, H. Mashayekhi, R. Boghrati, A. Ghandeharioun, et al., 'A data mining approach for diagnosis of coronary artery disease,' Computer Methods and Programs in Biomedicine, vol. 111, pp. 52-61, 2013/07/01/ 2013.<br><br>R. Alizadehsani, J. Habibi, B. Bahadorian, H. Mashayekhi, A. Ghandeharioun, R. Boghrati, et al., 'Diagnosis of Coronary Arteries Stenosis Using Data Mining,' Journal of Medical Signals and Sensors, vol. 2, pp. 153-159, Jul-Sep<br><br>R. Alizadehsani, M. J. Hosseini, Z. A. Sani, A. Ghandeharioun, and R. Boghrati, 'Diagnosis of Coronary Artery Disease Using Cost-Sensitive Algorithms,' in 2012 IEEE 12th International Conference on Data Mining Workshops, 2012, pp. 9-16.<br><br>Z. Arabasadi, R. Alizadehsani, M. Roshanzamir, H. Moosaei, and A. A. Yarifard, 'Computer aided decision making for heart disease detection using hybrid neural network-Genetic algorithm,' Computer Methods and Programs in Biomedicine, vol. 141, pp. 19-26, 2017/04/01/ 2017.<br><br>R. Alizadehsani, J. Habibi, Z. Alizadeh Sani, H. Mashayekhi, R. Boghrati, A. Ghandeharioun, et al., 'Diagnosing Coronary Artery Disease via Data Mining Algorithms by Considering Laboratory and Echocardiography Features,' Research in Cardiovascular Medicine, vol. 2, pp. 133-139, 07/31<br><br>R. Alizadehsani, J. Habibi, M. J. Hosseini, R. Boghrati, A. Ghandeharioun, B. Bahadorian, et al., 'Diagnosis of coronary artery disease using data mining techniques based on symptoms and ecg features,' European Journal of Scientific Research, vol. 82, pp. 542-553, 2012.<br><br>R. Alizadehsani, M. H. Zangooei, M. J. Hosseini, J. Habibi, A. Khosravi, M. Roshanzamir, et al., 'Coronary artery disease detection using computational intelligence methods,' Knowledge-Based Systems, vol. 109, pp. 187-197, 2016/10/01/ 2016.<br><br>R. Alizadehsani, J. Habibi, Z. A. Sani, H. Mashayekhi, R. Boghrati, A. Ghandeharioun, et al., 'Diagnosis of Coronary Artery Disease Using Data mining based on Lab Data and Echo Features,' Journal of Medical and Bioengineering, vol. 1, 2012.<br><br>A. Roohallah, H. Mohammad Javad, B. Reihane, G. Asma, K. Fahime, and S. Zahra Alizadeh, 'Exerting Cost-Sensitive and Feature Creation Algorithms for Coronary Artery Disease Diagnosis,' International Journal of Knowledge Discovery in Bioinformatics (IJKDB), vol. 3, pp. 59-79, 2012.<br><br>R. Alizadehsani, M. J. Hosseini, Z. Alizadehsani, M. H. Mohammadi, O. Barati, and F. Khozeimeh, 'System for determining the need for Angiography in patients with symptoms of Coronary Artery disease,' ed: Google Patents, 2014.<br><br>F. Babi√Ñ¬ç, J. Olej√É¬°r, Z. Vantov√É¬°, and J. Parali√Ñ¬ç, 'Predictive and Descriptive Analysis for Heart Disease Diagnosis,' presented at the Federated Conference on Computer Science and Information Systems, 2017.<br><br>LOHITA, Kodali et al. Performance Analysis of Various Data Mining Techniques in the Prediction of Heart Disease. Indian Journal of Science and Technology, [S.l.], dec. 2015. ISSN 0974 -5645. Available at: <<a href="http://52.172.159.94/index.php/indjst/article/view/87458">[Web Link]</a>>. Date accessed: 17 Nov. 2017. <a href="doi:10.17485/ijst/2015/v8i35/87458">[Web Link]</a>.<br><br>J. Bekta√Ö≈∏, T. Ibrik√É¬ßi, and I. √É‚Äìzcan, 'Classification of Real Imbalanced Cardiovascular Data Using Feature Selection and Sampling Methods: A Case Study with Neural Networks and Logistic Regression,' International Journal on Artificial Intelligence Tools, 2017.<br><br>C. Yadav, S. Lade, and M. K. Suman, 'Predictive Analysis for the Diagnosis of Coronary Artery Disease using Association Rule Mining,' International Journal of Computer Applications, vol. 87, 2014.<br><br><br></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Z-Alizadeh Sani Dataset User Agreement<br><br>I agree with following items.<br><br>√¢‚Ç¨¬¢	To cite  Z-Alizadeh Sani Dataset in any paper of mine or my collaborators that makes any use of the database. The reference is:<br><br>1.	R. Alizadehsani et al., √¢‚Ç¨≈ìA data mining approach for diagnosis of coronary artery disease,√¢‚Ç¨¬ù Computer Methods and Programs in Biomedicine, vol.111, no.1, pp.52-61, Jul. 2013.<br>2.	R. Alizadehsani, M.H. Zangooei, M.J. Hosseini, J. Habibi, A. Khosravi, M. Roshanzamir, F. Khozeimeh, N. Sarrafzadegan, S. Nahavandi, Coronary artery disease detection using computational intelligence methods, Knowledge-Based Systems, 109 (2016) 187-197<br>3.	Z. Arabasadi, R. Alizadehsani, M. Roshanzamir, H. Moosaei, and A. A. Yarifard, 'Computer aided decision making for heart disease detection using hybrid neural network-Genetic algorithm,' Computer Methods and Programs in Biomedicine, vol. 141, pp. 19-26, 2017/04/01/ 2017.<br><br>√¢‚Ç¨¬¢	To use the dataset for research purposes only.<br></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

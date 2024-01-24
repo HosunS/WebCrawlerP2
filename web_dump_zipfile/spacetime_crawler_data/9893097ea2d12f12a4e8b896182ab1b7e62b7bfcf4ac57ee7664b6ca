@@ -1,0 +1,202 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD8103¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 06 Jan 2016 20:44:23 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1fa7-528b06b4b37c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 03:17:21 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY§<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ICS 46: GDB Installation on Mac OS X</title>
+<style>
+body {
+  font: 16px/25px Charter, Georgia, serif;
+  color: rgb(60, 60, 60);
+  background-color: white;
+  width: 605px;
+  margin: 0 auto;
+}
+h1, h2, h3, h4, h5, h6 { margin: 2ex 0 -0.5ex 0; }
+h1 { font-size: 170%; }
+h2 { font-size: 130%; }
+h3 { font-size: 110%; }
+p { margin: 1.5ex 0 1.5ex 0; }
+q { display: inline; font-style: italic; }
+q::before { content: "â€œ"; }
+q::after { content: "â€"; }
+code, samp, pre {
+  white-space: nowrap;
+  font: 12px/18px Menlo, Consolas, monospace;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(205, 205, 205);
+  padding: 1px 3px 1px 3px;
+  border-radius: 3px;
+}
+span.menu { font: 15px/23px -apple-system, '.SFNSDisplay-Regular', 'Helvetica Neue', Helvetica, Verdana, sans-serif; }
+span.menu>br { content: ""; }
+span.menu>br::before { content: "\a0â–¸ "; }
+</style>
+</head>
+<body>
+
+<h1>GDB Installation on Mac OSÂ X</h1>
+<p>
+If you work on aÂ Mac OSÂ XÂ 10.9 Mavericks or later, you will run into
+the problem of Eclipse refusing to interactively debug problems that
+otherwise build and run fine:
+AnÂ attempt to start aÂ debugging session by selecting
+<span class="menu">Run<br>Debug</span>
+from the menu will result in Eclipse complaining that an
+<q>Error with command: gdbÂ --version</q>
+has occurred.
+</p><p>
+The problem is caused by Apple switching away from GDB, the GNU
+debugger, to LLDB, the LLVM debugger, in their Xcode toolchain (along
+with the transition from GCC to Clang). Unfortunately, Eclipse is not
+capable of communicating with any debugger other than GDB (yet).
+Here is aÂ step-by-step guide for installing and configuring GDB.
+</p>
+
+<h2 id="install">Installing GDB</h2>
+<p>
+As with GCC, the easiest way to install GDB is through Homebrew.
+InÂ aÂ Terminal window, run the command
+<code>brew install gdb</code>,
+and wait for it to complete.
+(As usual, it may ask for your password.)
+</p><p>
+Now, we need to code-sign the GDB executable, so it will be allowed to
+control other processes, as necessary for aÂ debugger.
+For that, we will first create aÂ new certificate in Keychain.
+</p>
+
+<h2 id="cert">Creating a Certificate</h2>
+<p>
+Open the Keychain Access application (can be found in
+Applications/Utilities directory or through Spotlight).
+Select <span class="menu">Certificate Assistant<br>
+Create aÂ Certificate</span> in the application menu
+(<span class="menu">Keychain Access</span>).
+AnÂ assistant window will appear for guiding you through the process.
+</p>
+<ol>
+<li>
+First, you will be asked for the name and type of the certificate.
+You may choose the name arbitrarily, but to simplify its future use in
+command line, prefer names without spaces or other fancy characters,
+e.g.,Â <code>gdbcert</code>.
+</li><li>
+Make sure that <span class="menu">Identity Type</span>
+is set to <span class="menu">Self Signed Root</span>,
+change <span class="menu">Certificate Type</span>
+toÂ <span class="menu">Code Signing</span>,
+check the <span class="menu">Let me override defaults</span>
+checkbox, and click <span class="menu">Continue</span>.
+Click <span class="menu">Continue</span> again in the popup
+prompt warning about the certificate being self-signed.
+</li><li>
+On the next page, leave <span class="menu">Security Number</span>
+to beÂ 1, and set <span class="menu">Validity Period</span>
+to aÂ large enough number of days to cover the duration of the class
+or more, say,Â 365.
+(Certificates cannot last forever; the maximum validity period
+is 20Â years.)
+</li><li>
+Then click <span class="menu">Continue</span> once again, and keep
+doing so to skip the next six screens until you see the one entitled
+<span class="menu">Specify aÂ Location For TheÂ Certificate</span>.
+For the only property, <span class="menu">Keychain</span>, choose
+<span class="menu">System</span> from the drop-down list.
+Lastly, click <span class="menu">Create</span>, type in your
+password, if prompted, and click <span class="menu">Done</span>.
+</li><li>
+Back in the main window, choose the <span class="menu">System</span>
+keychain in the sidebar on the left, and select the newly created
+certificate from the list.
+Open the context menu and select
+<span class="menu">GetÂ Info</span>.
+In the information window that will appear, expand the
+<span class="menu">Trust</span> section and set the
+<span class="menu">CodeÂ Signing</span> property to
+<span class="menu">Always Trust</span>.
+Close this window (you may be asked for your password),
+and quit Keychain Access.
+</li>
+</ol>
+
+<h2 id="sign">Signing GDB</h2>
+<p>
+Our new certificate is now ready to be used.
+In order to make it immediately available for signing, we need to
+restart the Taskgate access-control service.
+You can use Activity Monitor to do this (also found in
+Applications/Utilities).
+Open it and filter the list of processes by typing
+<code>taskgated</code> in the search field in the toolbar.
+(IfÂ you cannot find it, make sure the menu item <span
+class="menu">View<br>AllÂ Processes</span> is checked.)
+</p><p>
+There should be exactly one process left in the list.
+Highlight it, then select
+<span class="menu">View<br>Quit Process</span>
+from the menu, and click <span class="menu">Quit</span>
+in the popup prompt.
+The Taskgate process will be terminated and, consequently, should
+disappear from the list.
+InÂ aÂ few seconds, it will be restarted by the system and should
+reappear in the list. Please wait for this to happen (it may take up to
+aÂ minute or two, at worst).
+</p><p>
+Finally, in aÂ Terminal window, run
+<code>codesign -s gdbcert /usr/local/bin/gdb</code>
+(if you named your certificate differently, replace
+<code>gdbcert</code> with its name here).
+Once again, you will be prompted for you username and password.
+If the command does not produce any output, then GDB is
+successfully signed.
+</p>
+
+<h2 id="eclipse">Configuring Eclipse</h2>
+<p>
+The only thing left to do is to point Eclipse to the GDB executable.
+Open <span class="menu">Eclipse<br>Preferences</span> from the
+main menu (not to be confused with
+<span class="menu">Project Preferences</span>).
+In the tree of options listed in the sidebar, navigate to
+<span class="menu">C/C++<br>Debug<br>GDB</span>, and set
+the <span class="menu">GDBÂ debugger</span> field to
+<code>/usr/local/bin/gdb</code>.
+</p><p>
+If there is no <span class="menu">GDB</span> section
+in the <span class="menu">C/C++<br>Debug</span> subtree,
+close the preferences window, and try to first start a debugging
+session for any project that you can already run without problems.
+You can do it by either clicking the <span class="menu">Debug</span>
+button on the toolbar, or selecting <span class="menu">Run<br>Debug</span>
+from the main menu.
+This attempt will, of course, fail with an error message about
+the <code>gdb</code> command, but it will force
+the said <span class="menu">C/C++<br>Debug<br>GDB</span>
+settings to appear in the preferences.
+</p><p>
+This will change the GDB executable for new projects; for all existing
+ones (that you are going to use debugging for), you will need to
+manually update their debug configurations.
+To do that, select
+<span class="menu">Run<br>Debug Configurations</span>
+from the menu.
+InÂ theÂ window that appears, one after another, select every project
+under the <span class="menu">C++Â Application</span> section in
+the sidebar.
+For each of them, open the <span class="menu">Debugger</span> tab,
+set the <span class="menu">GDBÂ debugger</span> field to the same path
+<code>/usr/local/bin/gdb</code>, and click the
+<span class="menu">Apply</span> button.
+After repeating this change for all listed projects, click <span
+class="menu">Close</span>.
+</p>
+<center>â¦</center>
+<p>
+If the above steps do not solve the issue on your machine, or you
+encounter aÂ problem while following them, please do not hesitate to
+come to one of the upcoming common labs for help.
+</p>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

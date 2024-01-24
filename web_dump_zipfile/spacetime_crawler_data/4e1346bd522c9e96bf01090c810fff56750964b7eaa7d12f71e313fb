@@ -1,0 +1,89 @@
+¦Ifinal_url¢DtypeEvaluex+https://www.ics.uci.edu/~baldig/dompro.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2707¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 30 Jul 2013 18:51:36 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"a93-4e2bf192f3e00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 00:35:23 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY
+“<html>
+<head>
+<title>Protein Domain Prediction</title>
+
+</head>
+
+<body>
+<font face="arial>
+<div style="margin-left: 0%;">
+<table width="80%" border="0">
+  <tbody>
+  	<tr>
+	<td>
+<img src="baldig_html/1eia_domain_small.jpg" width="200" height="100">	
+	</td>
+
+      <td><big><big><span style="font-weight: bold;">DOMpro: Protein Domain Prediction</span>
+	(<a href="dom_intro.html">Help</a>)
+</big></big><br>
+      <font size="+1">
+      </font></td>
+    </tr>
+
+
+
+  </tbody>
+</table>
+</div>
+<br>
+
+<table width="80%" border="0">
+  <tbody>
+    <tr>
+      <td>
+<!--
+      <form method="post" action="http://w3.ics.uci.edu/cgi-bin/nph-cgiwrap/baldig/casp6/predict_dom.pl">
+-->
+      <form method="post" action="http://genome.ics.uci.edu/cgi-bin/casp6/predict_dom_new.pl">
+        <table border="0">
+          <tbody>
+            <tr>
+              <td>
+              <p><b>
+Email address(where the prediction will be sent):</b><br>
+              <input text="" name="email_address" size=30></p>
+              <p><b>
+Target Name(required):</b><br>
+              <input text="" name="input_name" size=30></p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+              <p>
+              <br>
+              <b>
+Protein sequence(one plain sequence, no headers):
+</b><br>
+              <textarea name="input_text" rows="6" cols="80"></textarea></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <input type="submit" value="Predict"></form>
+<b>Notice:</b>
+    The prediction results for protein domain are in the <a href="dom_intro.html">CASP format</a>. DOMpro was ranked among the top ab-initio domain predictors in <a href="dom_intro.html#4">CAFASP4 evaluation</a>.   
+<br><br>
+<b>Reference</b><br>
+J. Cheng, M. Sweredoski, and P. Baldi. DOMpro: Protein Domain Prediction Using Profiles, Secondary Structure, Relative Solvent Accessibility, and Recursive Neural Networks. Data Mining and Knowledge Discovery, vol. 13, no. 1, pp. 1-10, 2006. 
+<a href="http://contact.ics.uci.edu/domain.pdf">[PDF]</a>
+<br>
+<b><a href="http://contact.ics.uci.edu/download.html">Download DOMpro 1.0 and Datasets</a></b>
+<br><br>
+
+	<i>Contact: Jianlin Cheng at jianlinc@uci.edu</i><br>
+      <i><a href="http://www.igb.uci.edu/">Institute for Genomics and
+Bioinformatics</a></i><br>
+	  <i><a href="http://www.ics.uci.edu">School of Information & Computer Science</a></i><br>
+      <i><a href="http://www.uci.edu/">University of California Irvine</a></i> </i></i>
+	<br> <i><a href="http://www.ics.uci.edu/~baldig/scratchstats/log_dom.html" >Protein Domain Prediction Statistics</a></i><br>
+	</td>
+    </tr>
+  </tbody>
+</table>
+</font>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

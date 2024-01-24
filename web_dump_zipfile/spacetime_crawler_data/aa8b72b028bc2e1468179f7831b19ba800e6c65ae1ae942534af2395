@@ -1,0 +1,57 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1624¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 09 Jun 2017 22:24:38 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"658-5518e6f55c7ec"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:35:22 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYX<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**CS216 Image Understanding**
+	**Instructor: Charless Fowlkes**
+	*Yu Guo (26642334)*
+	*05/15/2017*
+
+# Color quantization:
+
+## regular quantization
+![](results/1-1.png width=\pagewidth)
+
+## scale one of the feature coordinates (RED)
+![](results/1-2.png width=\pagewidth)
+Scale $R$ by $1000$ means we didn't take red into consideration when we do clustering. 
+
+
+# Filterbank:
+
+## Filters:
+![](results/2-1.png width=\pagewidth)
+
+## Results:
+![](results/2-2.png width=\pagewidth)
+
+# Filter Distributions:
+![](results/3.png width=\pagewidth)
+
+# Textons:
+![](results/4.png width=\pagewidth)
+
+# Segmentation:
+
+## First method:
+![](results/5-1-1.png width=\pagewidth) ![](results/5-1-2.png width=\pagewidth) ![](results/5-1-3.png width=\pagewidth)
+
+## Second method (using both color and filter responses):
+![](results/5-2-1.png width=\pagewidth) ![](results/5-2-2.png width=\pagewidth) ![](results/5-2-3.png width=\pagewidth)
+
+If we do a binary segmentation, it's important and very tricky to pick the initial foreground and background points. And also hard to choose robust weights. 
+
+# Project:
+
+Topic: Transform photographs to cartoony or painting images
+
+Teammate: Zahra Montazeri 
+
+Technical idea: edge-preserving image smoothing, e.g.
+
+End.
+
+<!-- Markdeep: -->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style>
+<script src="markdeep.min.js"></script>
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
+<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

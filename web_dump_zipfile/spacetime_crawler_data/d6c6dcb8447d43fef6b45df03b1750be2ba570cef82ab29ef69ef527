@@ -1,0 +1,417 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE14427¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 15 Dec 2017 19:56:28 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"385b-560666579fec2"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 13:39:52 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY8[<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Update: Next-event estimation on translucent object rendering**
+
+# 2017.12.07
+## Change shading normal
+
+![](1207/shadingnormal2.mp4)
+
+## Shading normal on top surface
+![](1207/mi_layerednormalmap_top.png width=\pagewidth) ![](1207/normal.jpg width=200) 
+
+
+## Shading normal on bottom surface
+![](1207/mi_layerednormalmap_bottom.png width=\pagewidth) ![](1207/normal.jpg width=200) 
+
+# 2017.12.04
+## Texture mapping for $\alpha_t$,$\alpha_b$,$\sigma_t$,$albedo$,$g$ 
+![](1207/mi_layeredtexture_leaf.png width=\pagewidth) 
+
+
+# 2017.11.13
+## Transmittance validation
+![Ref:100spp](1114/plane_medium_spp100.png width=\pagewidth) ![Ref:10000spp](1114/plane_medium_spp10000.png width=\pagewidth) ![Layered:100spp](1114/plane_layered_spp100.png width=\pagewidth)
+
+# 2017.11.13
+## Transmittance
+![No transmission](1113/mi_reflection.png width=\pagewidth) ![With transmission](1113/mi_transmission.png width=\pagewidth) 
+
+## rose
+![alpha 0.05](1113/rose0.05.png width=\pagewidth) ![alpha 0.005](1113/rose0.005.png width=\pagewidth) 
+
+
+# 2017.11.09
+## Transmittance
+![](1109/3_importance.png width=\pagewidth) 
+
+## Transmittance with scattering
+![](1109/3_importance_scattering.png width=\pagewidth)
+
+# 2017.11.08
+## MIS (remove 5th light)
+<div id="small" class="twentytwenty-container">
+    <img src="1108/mi1_simple.png" alt="">
+    <img src="1108/mi1.png" alt="MIS">    
+</div>
+
+# 2017.11.06
+
+## MIS
+<div id="small" class="twentytwenty-container">
+    <img src="1102/mi1.png" alt="">
+    <img src="1106/mi1.png" alt="MIS">    
+</div>
+<div id="small" class="twentytwenty-container">
+    <img src="1102/mi2.png" alt="">
+    <img src="1106/mi2.png" alt="MIS">    
+</div>
+<div id="small" class="twentytwenty-container">
+    <img src="1102/mi3.png" alt="">
+    <img src="1106/mi3.png" alt="MIS">    
+</div>
+<div id="small" class="twentytwenty-container">
+    <img src="1102/mi4.png" alt="">
+    <img src="1106/mi4.png" alt="MIS">    
+</div>
+
+<div id="small" class="twentytwenty-container">
+    <img src="1106/matpreview_simple.png" alt="">
+    <img src="1106/matpreview_MIS.png" alt="MIS">    
+</div>
+
+## Different weight of top/bottom pdf
+<div class="twentytwenty-container">
+    <img src="1106/mi1_w1.png" alt="top:1, bottom:0">
+    <img src="1106/mi1_w0.png" alt="top:0, bottom:1">    
+    <img src="1106/mi1.png" alt="top:0.5, bottom:0.5">    
+</div>
+
+# 2017.11.01
+## Different roughness of top/bottom surface from micro geometry
+
+![](1102/mi1.png width=\pagewidth) ![](1101/mi2_smoothTop_differentBottom.jpg width=\pagewidth)
+![](1102/mi2.png width=\pagewidth) ![](1101/mi1_roughBottom_differentTop.jpg width=\pagewidth)
+![](1102/mi3.png width=\pagewidth) ![](1101/mi4_smoothBottom_differentTop.jpg width=\pagewidth)
+![](1102/mi4.png width=\pagewidth) ![](1101/mi3_roughTop_differentBottom.jpg width=\pagewidth)
+
+## More
+![Two layers nested](1101/mi_2layer.png width=\pagewidth) ![g=0.5](1101/matpreview.png width=\pagewidth)
+
+
+# 2017.10.31 
+Rendering with our BSDF (layered BSDF)
+
+## Validation
+![Ref:100spp](1031/plane_medium_spp100.png width=\pagewidth) ![Ref:10000spp](1031/plane_medium_spp10000.png width=\pagewidth) ![Layered:100spp](1031/plane_layered_spp100.png width=\pagewidth)
+
+## 
+
+# 2017.10.29 
+Our sample() and Eval() comparision, only plot errors in horizontal lines. 
+
+(Right figure: Errors in R,G,B channels)
+
+If no specific statement, the default setting is:
+* Top surface: rough dielectric (0.01); intIOR = 1.5; extIOR = 1.0
+* Medium: albedo:(0.1,0.5,0.9); $\sigma_T$ = 1 
+* (Medium no scattering): $\sigma_s$ = 0; $\sigma_a$ = (0.9,0.5,0.1)
+* Bottom surface: rough conductor (0.1), material = none
+
+## top: smooth dielectric; bottom: rough(0.1) conductor; no scattering
+![](1029/0-1.png width=\pagewidth)
+
+## top: smooth dielectric; bottom: rough(0.1) conductor; no scattering
+![](1029/0-2.png width=\pagewidth)
+
+## top: smooth dielectric; bottom: rough(0.1) conductor; no scattering
+![](1029/1.png width=\pagewidth)
+
+## top: rough(0.01) dielectric; bottom: rough(0.1) conductor; no scattering
+![](1029/2.png width=\pagewidth)
+
+## top: smooth dielectric; bottom: rough(0.1) conductor
+![](1029/3.png width=\pagewidth)
+
+## top: rough(0.01) dielectric; bottom: rough(0.1) conductor
+![](1029/4.png width=\pagewidth)
+
+## top: rough(0.1) dielectric; bottom: rough(0.1) conductor
+![](1029/5.png width=\pagewidth)
+
+## top: rough(0.01) dielectric; bottom: rough(0.1) conductor; hg0.9
+![](1029/6.png width=\pagewidth)
+
+## top: rough(0.01) dielectric; bottom: rough(0.1) conductor; IOR2.65
+![](1029/7.png width=\pagewidth)
+
+## top: rough(0.01) dielectric; bottom: rough(0.1) conductor; IOR0.67
+![](1029/8.png width=\pagewidth)
+
+## top: rough(0.01) dielectric; bottom: rough(0.1) conductor; $\sigma_T = 10$
+![](1029/9.png width=\pagewidth)
+
+## top: rough(0.1) dielectric; bottom: rough(0.01) conductor
+![](1029/11.png width=\pagewidth)
+
+## top: rough(0.1) dielectric; bottom: rough(0.001) conductor
+![](1029/12.png width=\pagewidth)
+
+
+# 2017.10.28
+![](1028/snellslaw.png width=500)
+
+$$\eta = \frac{\eta_2}{\eta_1}$$
+
+$$\eta_1 \sin\theta_1 = \eta_2 \sin\theta_2$$
+
+$$\sin\theta_1 = \eta \sin\theta_2$$
+
+1) From low IOF to high IOF
+
+$$\begin{cases}
+	\theta_1 = \arcsin(\eta\sin\theta_2) \\
+	\varphi_1 = \varphi_2
+\end{cases}$$
+
+$$\begin{align}
+J(\theta_1,\varphi_1) &=
+\begin{vmatrix}
+\frac{\partial\theta_1}{\partial\theta_2} & \frac{\partial\theta_1}{\partial\varphi_2} \\ 
+\frac{\partial\varphi_1}{\partial\theta_2} & \frac{\partial\varphi_1}{\partial\varphi_2} 
+\end{vmatrix}
+=
+\begin{vmatrix}
+\frac{\partial\theta_1}{\partial\theta_2} & 0 \\ 
+0 & 1 
+\end{vmatrix}
+=
+\frac{\partial\theta_1}{\partial\theta_2} \notag \\ 
+&= 
+\frac{\eta\cos\theta_2}{\sqrt{1-\eta^2\sin^2\theta_2}} 
+=
+\frac{\eta\cos\theta_2}{\sqrt{1-\sin^2\theta_1}}
+= 
+\eta\frac{\cos\theta_2}{\cos\theta_1} \notag
+\end{align}$$
+
+2) From high IOF to low IOF
+
+$$\begin{cases}
+	\theta_2 = \arcsin(\frac{1}{\eta}\sin\theta_1) \\
+	\varphi_2 = \varphi_1
+\end{cases}$$
+
+$$\begin{align}
+J(\theta_2,\varphi_2) &=
+\begin{vmatrix}
+\frac{\partial\theta_2}{\partial\theta_1} & \frac{\partial\theta_2}{\partial\phi_1} \\ 
+\frac{\partial\phi_2}{\partial\theta_1} & \frac{\partial\phi_2}{\partial\phi_1} 
+\end{vmatrix}
+=
+\begin{vmatrix}
+\frac{\partial\theta_2}{\partial\theta_1} & 0 \\ 
+0 & 1 
+\end{vmatrix}
+=
+\frac{\partial\theta_2}{\partial\theta_1} \notag \\ 
+&= 
+\frac{\frac{1}{\eta}\cos\theta_1}{\sqrt{1-\frac{1}{\eta^2}\sin^2\theta_1}} 
+=
+\frac{\frac{1}{\eta}\cos\theta_1}{\sqrt{1-\sin^2\theta_2}}
+= 
+\frac{1}{\eta}\frac{\cos\theta_1}{\cos\theta_2} \notag
+\end{align}$$
+
+~~When doing next-event, we sample new direction from low to high IOF. Shouldn't the compensation term be:~~
+
+$$ \frac{1}{J(\theta_1,\varphi_1)}J(\theta_2,\varphi_2) = \frac{1}{\eta^2}\frac{\cos^2\theta_1}{\cos^2\theta_2} \,\,\,\,\,\,\, (wrong!)
+$$ 
+
+In 3D, the final Jacobian is related to $\cos\theta$ instead of $\theta$.
+This is because 
+$$\mathrm d\omega = \sin\theta \mathrm d\theta \mathrm d\varphi = \mathrm d\cos\theta \mathrm d\varphi$$
+
+1) From low IOF to high IOF
+
+$$\begin{cases}
+	\cos\theta_1 = \cos(\arcsin(\eta\sin(\arccos(\cos\theta_2)))) \\
+	\varphi_1 = \varphi_2
+\end{cases}$$
+
+$$J(\cos\theta_1,\varphi_1) =
+\begin{vmatrix}
+\frac{\partial\cos\theta_1}{\partial\cos\theta_2} & \frac{\partial\cos\theta_1}{\partial\varphi_2} \\ 
+\frac{\partial\varphi_1}{\partial\cos\theta_2} & \frac{\partial\varphi_1}{\partial\varphi_2} 
+\end{vmatrix}
+=
+\begin{vmatrix}
+\frac{\partial\cos\theta_1}{\partial\cos\theta_2} & 0 \\ 
+0 & 1 
+\end{vmatrix}
+=
+\frac{\partial\cos\theta_1}{\partial\cos\theta_2} \notag \\ 
+=
+-\sin(\arcsin(\eta\sin(\arccos(\cos\theta_2)))) 
+\frac{\eta\cos(\arccos(\cos\theta_2)}{\sqrt{1-\eta^2\sin^2(\arccos(\cos\theta_2))}} 
+(-\frac{1}{\sqrt{1-\cos^2\theta_2}}) \\
+=
+-\eta\sin\theta_2 
+\frac{\eta\cos\theta_2}{\sqrt{1-\eta^2\sin^2\theta_2}} 
+(-\frac{1}{\sqrt{1-\cos^2\theta_2}}) \\
+=
+-\eta\sin\theta_2 
+\frac{\eta\cos\theta_2}{\sqrt{1-\sin^2\theta_1}} 
+(-\frac{1}{\sqrt{1-\cos^2\theta_2}})
+= 
+\eta^2\frac{\cos\theta_2}{\cos\theta_1} \notag
+$$
+
+2) Samilarly, From high IOF to low IOF
+$$J(\cos\theta_2,\varphi_2) = \frac{1}{\eta^2}\frac{\cos\theta_1}{\cos\theta_2} $$
+
+3) In general, given a direction ($\theta_A,\varphi_A$) in medium A, sample a new direction ($\theta_B,\varphi_B$) in medium B, the Jabobian term is:
+$$J(\cos\theta_A,\varphi_A) = \frac{\eta_B^2}{\eta_A^2}\frac{\cos\theta_B}{\cos\theta_A} $$ 
+
+# 2017.10.24
+
+## NNE (Fresnel) on refracted direction, including weight
+![](1024/3.png width=\pagewidth)
+
+## NNE (Fresnel) on refracted direction 
+![](1024/2.png width=\pagewidth)
+
+## NNE on refracted direction 
+![](1024/1.png width=\pagewidth)
+
+
+# 2017.10.22
+
+## remove double counting and seperate top/bottom reflectance
+![](1022/1.png width=\pagewidth)
+
+![scence description](1022/2.png width=\pagewidth)
+
+# 2017.10.19
+
+## Testing of FFNEE 1
+Top surface: dielectric; bottom surface: diffuse/conductor/roughconductor
+![Top row: our sample, middle row: our eval, bottom row: error](1019/1.png width=\pagewidth)
+
+## Testing of FFNEE 2
+Top surface: roughdielectric; bottom surface: diffuse/conductor/roughconductor
+![Top row: our sample, middle row: our eval, bottom row: error](1019/2.png width=\pagewidth)
+
+## Testing of FFNEE 3
+Top surface: dielectric; bottom surface: roughconductor with different $\alpha$
+![Top row: our sample, middle row: our eval, bottom row: error](1019/3.png width=\pagewidth)
+
+
+# 2017.10.17
+Comparing our sample (samples:10M) and our eval (avg:100)
+
+## Regular bsdf
+Right most: medium with single surface at bottom
+
+![Top row: our sample, middle row: our eval, bottom row: error](1017/1.png width=\pagewidth)
+
+## Medium with two surfaces
+Left: next-event failed
+
+Middle: Fresnel considered NNE
+
+Right: Fake Fresnel NNE
+
+![Top row: our sample, middle row: our eval, bottom row: error](1017/2.png width=\pagewidth)
+
+
+
+
+# 2017.10.13
+Different Eval()
+
+![](1013/differentEval.png width=\pagewidth)
+
+
+# 2017.10.12
+Validate eval()
+
+## Diffuse ($K_d=[0.1,0.5,0.9]$)
+![](1011/diffuse.png width=\pagewidth)
+
+## RoughConductor ($\alpha=0.2$,$K_s=Cu/copper$)
+![](1011/roughconductor.png width=\pagewidth)
+
+## Roughplastic 
+### (GGX,$\alpha=0.2$,$K_s=[0.9,0.5,0.1]$,$K_d=[0.1,0.5,0.9]$)
+![](1011/roughplastic.png width=\pagewidth)
+### (GGX,$\alpha=0.2$,$K_s=[0.9,0.5,0.1]$,$K_d=[0.1,0.5,0.9]$)
+![](1011/roughplastic_angle30.png width=\pagewidth)
+
+
+# 2017.10.09
+## Top: Beckman distribution heightmap, roughdielectric; Bottom: conductor plane
+![Visualize as RGB](1009/rgb.png width=\pagewidth) ![Visualize as colormap](1009/exr.png width=\pagewidth)
+
+
+# 2017.10.04
+Energy in different outgoing directions, incident ray is perpendicular to the surface
+
+## No medium
+![](1004/noMedium.png width=\pagewidth)
+
+## With medium, different $\sigma_t$
+![](1004/differentSigmaT.png width=\pagewidth)
+
+## With medium, different angle of incident ray, forward scattering
+![](1004/differentAngle.png width=\pagewidth)
+
+
+# 2017.09.29
+Todo: 
+
+- http://www.cs.cornell.edu/projects/layered-sg14/
+
+- Mitsuba Utility
+
+
+# 2017.09.28
+
+## Henyey-Greenstein phase function with fake Fresnel NNE 
+![isotropic](0928/plane_dielectric_NE_spp1000.png width=\pagewidth) ![hg=0.5](0928/plane_dielectric_NE_spp1000_hg0.5.png width=\pagewidth) ![hg=0.9](0928/plane_dielectric_NE_spp1000_hg0.9.png width=\pagewidth)
+
+![isotropic](0928/simple_dielectric_NE_spp1000.png width=\pagewidth) ![hg=0.5](0928/simple_dielectric_NE_spp1000_hg0.5.png width=\pagewidth) ![hg=0.9](0928/simple_dielectric_NE_spp1000_hg0.9.png width=\pagewidth)
+
+![isotropic](0928/cbox_dielectric_NE_spp1000.png width=\pagewidth) ![hg=0.5](0928/cbox_dielectric_NE_spp1000_hg0.5.png width=\pagewidth) ![hg=0.9](0928/cbox_dielectric_NE_spp1000_hg0.9.png width=\pagewidth)
+
+![isotropic](0928/horse_dielectric_NE_spp1000.png width=\pagewidth) ![hg=0.5](0928/horse_dielectric_NE_spp1000_hg0.5.png width=\pagewidth) ![hg=0.9](0928/horse_dielectric_NE_spp1000_hg0.9.png width=\pagewidth)
+
+## Strong forward phase function comparison (hg=0.9)
+![VPT](0928/cbox_dielectric_PT_spp10000_hg0.9.png width=\pagewidth) ![FakeFresnel NNE](0928/cbox_dielectric_NE_spp1000_hg0.9.png width=\pagewidth)
+
+![VPT](0928/horse_dielectric_PT_spp20000_hg0.9.png width=\pagewidth) ![FakeFresnel NNE](0928/horse_dielectric_NE_spp1000_hg0.9.png width=\pagewidth)
+
+## Spheres
+![VPT](0928/cboxballs_dielectric_PT_spp20000_hg0.5.png width=\pagewidth) ![FakeFresnel NNE](0928/cboxballs_dielectric_NE_spp1000_hg0.5.png width=\pagewidth)
+
+## Rose
+![VPT w/o BSDF](0928/rose_woBSDF_spp100_backlight.png width=\pagewidth) ![VPT](0928/rose_PT_spp100_backlight.png width=\pagewidth) ![FakeFresnel NNE](0928/rose_NE_spp100_backlight.png width=\pagewidth)
+
+![VPT w/o BSDF](0928/rose_woBSDF_spp100_frontlight.png width=\pagewidth) ![VPT](0928/rose_PT_spp100_frontlight.png width=\pagewidth) ![FakeFresnel NNE](0928/rose_NE_spp100_frontlight.png width=\pagewidth)
+
+## Roughconductor sphere in medium box
+![VPT](0928/simple2_dielectric_PT.png width=\pagewidth) ![FakeFresnel NNE](0928/simple2_dielectric_NE.png width=\pagewidth)
+
+
+End.
+
+<a href="report.html" target="_blank">Report</a>
+
+<a href="update_20170830.html" target="_blank">Old Doc1</a>
+
+<a href="update_20170915.html" target="_blank">Old Doc2</a>
+
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

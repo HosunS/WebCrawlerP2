@@ -1,0 +1,48 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5903¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 21 Jan 2019 01:17:30 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"170f-57fed9fe4a2ab"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 13:12:43 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY# Setup
+c-->from importlib import reload
+c-->import q1solution
+c-->reload(q1solution)
+c-->from q1solution import multidict_lookup, popular, lowest_order, movie_rank, score_dict, reviewer_dict
+
+# Test multidict_lookup
+c-->scope1 = multidict_lookup ({'a':1}, {'b':2}, {'a':3})
+e-->scope1.successes-->0
+e-->[scope1('a'),scope1('b')]-->[1, 2]
+^-->scope1('c')-->NameError
+c-->scope2 = multidict_lookup (dict(a=1,x=10), dict(b=2,y=11,z=12), {'a':3, 15:'z'})
+e-->[scope2('a'),scope2('b'),scope2('x'),scope2('y'),scope2('z'),scope2(15)]-->[1, 2, 10, 11, 12, 'z']
+^-->scope1('c')-->NameError
+^-->scope_error = multidict_lookup ({'a':1}, 'b', {'a':3})-->TypeError
+e-->scope1.successes-->2
+e-->scope2.successes-->6
+
+# Test popular
+c-->db1 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), }, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Jaws': {('Carrie', 2), ('Alan', 5)}}
+c-->db2 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), ('Evan',4), ('Fawn',2)}, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Casablanca': {('Alan',2), ('Diane',5), ('Evan',2)}, 'Rashamon': {('Alan',2), ('Diane',5), ('Fawn',3), ('Gary',4)}, 'Alien': {('Alan',2), ('Diane',5), ('Evan',5), ('Fawn',5)}}
+e-->popular(db1)-->['Psychoe', 'Amadeus', 'Jaws', 'Up']
+e-->popular(db2)-->['Psychoe', 'Alien', 'Rashamon', 'Amadeus', 'Casablanca', 'Up']
+
+# Test lowest_order
+c-->db1 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), }, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Jaws': {('Carrie', 2), ('Alan', 5)}}
+c-->db2 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), ('Evan',4), ('Fawn',2)}, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Casablanca': {('Alan',2), ('Diane',5), ('Evan',2)}, 'Rashamon': {('Alan',2), ('Diane',5), ('Fawn',3), ('Gary',4)}, 'Alien': {('Alan',2), ('Diane',5), ('Evan',5), ('Fawn',5)}}
+e-->lowest_order(db1)-->[('Amadeus', 3), ('Jaws', 2), ('Up', 2), ('Psychoe', 1)]
+e-->lowest_order(db2)-->[('Amadeus', 3), ('Alien', 2), ('Casablanca', 2), ('Rashamon', 2), ('Up', 2), ('Psychoe', 1)]
+
+# Test movie_rank
+c-->db1 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), }, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Jaws': {('Carrie', 2), ('Alan', 5)}}
+c-->db2 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), ('Evan',4), ('Fawn',2)}, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Casablanca': {('Alan',2), ('Diane',5), ('Evan',2)}, 'Rashamon': {('Alan',2), ('Diane',5), ('Fawn',3), ('Gary',4)}, 'Alien': {('Alan',2), ('Diane',5), ('Evan',5), ('Fawn',5)}}
+e-->movie_rank(db1)-->[('Jaws', 3.5), ('Up', 3.5), ('Amadeus', 3.0), ('Psychoe', 3.0)]
+e-->movie_rank(db2)-->[('Alien', 4.25), ('Rashamon', 3.5), ('Up', 3.5), ('Amadeus', 3.0), ('Casablanca', 3.0), ('Psychoe', 3.0)]
+
+# Test score_dict
+c-->db1 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), }, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Jaws': {('Carrie', 2), ('Alan', 5)}}
+c-->db2 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), ('Evan',4), ('Fawn',2)}, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Casablanca': {('Alan',2), ('Diane',5), ('Evan',2)}, 'Rashamon': {('Alan',2), ('Diane',5), ('Fawn',3), ('Gary',4)}, 'Alien': {('Alan',2), ('Diane',5), ('Evan',5), ('Fawn',5)}}
+==-->score_dict(db1)-->{1: {('Psychoe', 'Diane'), ('Psychoe', 'Alan')}, 5: {('Jaws', 'Alan'), ('Up', 'Diane'), ('Psychoe', 'Bobe'), ('Psychoe', 'Carry')}, 3: {('Amadeus', 'Diane'), ('Amadeus', 'Carry'), ('Amadeus', 'Bobe')}, 2: {('Jaws', 'Carrie'), ('Up', 'Alan')}}
+==-->score_dict(db2)-->{1: {('Psychoe', 'Diane'), ('Psychoe', 'Alan')}, 5: {('Rashamon', 'Diane'), ('Alien', 'Evan'), ('Alien', 'Fawn'), ('Alien', 'Diane'), ('Psychoe', 'Bobe'), ('Casablanca', 'Diane'), ('Up', 'Diane'), ('Psychoe', 'Carry')}, 2: {('Psychoe', 'Fawn'), ('Alien', 'Alan'), ('Up', 'Alan'), ('Casablanca', 'Alan'), ('Rashamon', 'Alan'), ('Casablanca', 'Evan')}, 4: {('Rashamon', 'Gary'), ('Psychoe', 'Evan')}, 3: {('Amadeus', 'Diane'), ('Amadeus', 'Carry'), ('Amadeus', 'Bobe'), ('Rashamon', 'Fawn')}}
+
+# Test reviewer_dict
+c-->db1 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), }, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Jaws': {('Carrie', 2), ('Alan', 5)}}
+c-->db2 = {'Psychoe':  {('Bobe',5),  ('Carry',5), ('Alan', 1), ('Diane', 1), ('Evan',4), ('Fawn',2)}, 'Amadeus': {('Bobe',3),  ('Carry',3), ('Diane',3)}, 'Up': {('Alan',2), ('Diane',5)}, 'Casablanca': {('Alan',2), ('Diane',5), ('Evan',2)}, 'Rashamon': {('Alan',2), ('Diane',5), ('Fawn',3), ('Gary',4)}, 'Alien': {('Alan',2), ('Diane',5), ('Evan',5), ('Fawn',5)}}
+==-->reviewer_dict(db1)-->{'Diane': [set(), {'Psychoe'}, set(), {'Amadeus'}, set(), {'Up'}], 'Carry': [set(), set(), set(), {'Amadeus'}, set(), {'Psychoe'}], 'Bobe': [set(), set(), set(), {'Amadeus'}, set(), {'Psychoe'}], 'Alan': [set(), {'Psychoe'}, {'Up'}, set(), set(), {'Jaws'}], 'Carrie': [set(), set(), {'Jaws'}, set(), set(), set()]}
+==-->reviewer_dict(db2)-->{'Diane': [set(), {'Psychoe'}, set(), {'Amadeus'}, set(), {'Casablanca', 'Rashamon', 'Up', 'Alien'}], 'Carry': [set(), set(), set(), {'Amadeus'}, set(), {'Psychoe'}], 'Fawn': [set(), set(), {'Psychoe'}, {'Rashamon'}, set(), {'Alien'}], 'Evan': [set(), set(), {'Casablanca'}, set(), {'Psychoe'}, {'Alien'}], 'Alan': [set(), {'Psychoe'}, {'Casablanca', 'Rashamon', 'Up', 'Alien'}, set(), set(), set()], 'Bobe': [set(), set(), set(), {'Amadeus'}, set(), {'Psychoe'}], 'Gary': [set(), set(), set(), set(), {'Rashamon'}, set()]}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

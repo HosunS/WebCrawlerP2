@@ -1,0 +1,517 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 22:04:19 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYë˚<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Classification</a> <font color=red>(26)</font><br><a href='datasets.html?format=&task=reg&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Regression</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=clu&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Clustering</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=other&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Other</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b>  - <a href='datasets.html?format=&task=&att=&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=cat&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Categorical</a> <font color=red>(4)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Numerical</a></font> <font color=red>(29)</font><br><a href='datasets.html?format=&task=&att=mix&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Mixed</a> <font color=red>(4)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=mvar&sort=taskUp&view=table'>Multivariate</a> <font color=red>(22)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=uvar&sort=taskUp&view=table'>Univariate</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=seq&sort=taskUp&view=table'>Sequential</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=ts&sort=taskUp&view=table'>Time-Series</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=text&sort=taskUp&view=table'>Text</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=dt&sort=taskUp&view=table'>Domain-Theory</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=other&sort=taskUp&view=table'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b> - <a href='datasets.html?format=&task=&att=num&area=&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Life Sciences</a></font> <font color=red>(29)</font><br><a href='datasets.html?format=&task=&att=num&area=phys&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Physical Sciences</a> <font color=red>(27)</font><br><a href='datasets.html?format=&task=&att=num&area=comp&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>CS / Engineering</a> <font color=red>(91)</font><br><a href='datasets.html?format=&task=&att=num&area=soc&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Social Sciences</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=&att=num&area=bus&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Business</a> <font color=red>(10)</font><br><a href='datasets.html?format=&task=&att=num&area=game&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Game</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=&att=num&area=other&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Other</a> <font color=red>(17)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=less10&numIns=greater1000&type=&sort=taskUp&view=table'>Less than 10</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=10to100&numIns=greater1000&type=&sort=taskUp&view=table'>10 to 100</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=greater100&numIns=greater1000&type=&sort=taskUp&view=table'>Greater than 100</a> <font color=red>(7)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=&type=&sort=taskUp&view=table'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=less100&type=&sort=taskUp&view=table'>Less than 100</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>100 to 1000</a> <font color=red>(31)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Greater than 1000</a></font> <font color=red>(29)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Matrix</a> <font color=red>(21)</font><br><a href='datasets.html?format=nonmat&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Non-Matrix</a> <font color=red>(8)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>29</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskDown&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/KASANDR"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KASANDR">KASANDR</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KASANDR is a novel, publicly available collection for recommendation systems that records the behavior of customers of the European leader in e-Commerce advertising, Kelkoo. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Causal-Discovery&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">17764280&nbsp;</p></td>
+			<td><p class="normal">2158859&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Reuters+RCV1+RCV2+Multilingual%2C+Multiview+Text+Categorization+Test+collection"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Reuters+RCV1+RCV2+Multilingual%2C+Multiview+Text+Categorization+Test+collection">Reuters RCV1 RCV2 Multilingual, Multiview Text Categorization Test collection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This test collection contains feature characteristics of documents originally written in five different languages and their translations, over a common set of 6 categories. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">111740&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/EEG+Eye+State"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/EEG+Eye+State">EEG Eye State</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set consists of 14 EEG values and a value indicating the eye state.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">14980&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/sEMG+for+Basic+Hand+movements"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/sEMG+for+Basic+Hand+movements">sEMG for Basic Hand movements</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The ‚ÄúsEMG for Basic Hand movements‚Äù includes 2 databases of surface electromyographic signals of 6 hand movements using Delsys' EMG System. Healthy subjects conducted six daily life grasps.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">3000&nbsp;</p></td>
+			<td><p class="normal">2500&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Diabetic+Retinopathy+Debrecen+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Diabetic+Retinopathy+Debrecen+Data+Set">Diabetic Retinopathy Debrecen Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains features extracted from the Messidor image set to predict whether an image contains signs of diabetic retinopathy or not. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">1151&nbsp;</p></td>
+			<td><p class="normal">20&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions">Smartphone-Based Recognition of Human Activities and Postural Transitions</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Activity recognition data set built from the recordings of 30 subjects performing basic activities and postural transitions while carrying a waist-mounted smartphone with embedded inertial sensors.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">10929&nbsp;</p></td>
+			<td><p class="normal">561&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Yeast"><img src="assets/MLimages/SmallLarge110.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Yeast">Yeast</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Predicting the Cellular Localization Sites of Proteins&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1484&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1996&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Dorothea"><img src="assets/MLimages/SmallLarge169.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dorothea">Dorothea</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">DOROTHEA is a drug discovery dataset. Chemical compounds represented by structural molecular features must be classified as active (binding to thrombin) or inactive. This is one of 5 datasets of the NIPS 2003 feature selection challenge.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1950&nbsp;</p></td>
+			<td><p class="normal">100000&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Activity+recognition+with+healthy+older+people+using+a+batteryless+wearable+sensor">Activity recognition with healthy older people using a batteryless wearable sensor</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Sequential motion data from 14 healthy older people aged 66 to 86 years old using a batteryless, wearable sensor on top of their clothing for the recognition of activities in clinical environments.&nbsp;</p></td> -->
+			<td><p class="normal">Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">75128&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/chipseq"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/chipseq">chipseq</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">ChIP-seq experiments characterize protein modifications or binding at
+specific genomic locations in specific samples. The machine learning
+problem in these data is structured binary classification.&nbsp;</p></td> -->
+			<td><p class="normal">Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">4960&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/p53+Mutants"><img src="assets/MLimages/SmallLarge188.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/p53+Mutants">p53 Mutants</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The goal is to model mutant p53 transcriptional activity (active vs inactive) based on data extracted from biophysical simulations.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">16772&nbsp;</p></td>
+			<td><p class="normal">5409&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Cardiotocography"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cardiotocography">Cardiotocography</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) features on cardiotocograms classified by expert obstetricians.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2126&nbsp;</p></td>
+			<td><p class="normal">23&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Localization+Data+for+Person+Activity"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Localization+Data+for+Person+Activity">Localization Data for Person Activity</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data contains recordings of five people performing different activities. Each person wore four sensors (tags) while performing the same scenario five times. &nbsp;</p></td> -->
+			<td><p class="normal">Univariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">164860&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Simulated+Falls+and+Daily+Living+Activities+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Simulated+Falls+and+Daily+Living+Activities+Data+Set">Simulated Falls and Daily Living Activities Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">20 falls and 16 daily living activities were performed by 17 volunteers with 5 repetitions while wearing 6 sensors (3.060 instances) that attached to their head, chest, waist, wrist, thigh and ankle.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">3060&nbsp;</p></td>
+			<td><p class="normal">138&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/EMG+data+for+gestures"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/EMG+data+for+gestures">EMG data for gestures</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">These are files of raw EMG data recorded by MYO Thalmic bracelet&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">30000&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2019&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/One-hundred+plant+species+leaves+data+set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/One-hundred+plant+species+leaves+data+set">One-hundred plant species leaves data set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Sixteen samples of leaf each of one-hundred plant species. For each sample, a shape descriptor, fine scale margin and texture histogram are given.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1600&nbsp;</p></td>
+			<td><p class="normal">64&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Diabetes+130-US+hospitals+for+years+1999-2008"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Diabetes+130-US+hospitals+for+years+1999-2008">Diabetes 130-US hospitals for years 1999-2008</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data has been prepared to analyze factors related to readmission as well as other 
+
+outcomes pertaining to patients with diabetes.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">100000&nbsp;</p></td>
+			<td><p class="normal">55&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Mice+Protein+Expression"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Mice+Protein+Expression">Mice Protein Expression</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Expression levels of 77 proteins measured in the cerebral cortex of 8 classes of control and Down syndrome mice exposed to context fear conditioning, a task used to assess associative learning.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1080&nbsp;</p></td>
+			<td><p class="normal">82&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Epileptic+Seizure+Recognition"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Epileptic+Seizure+Recognition">Epileptic Seizure Recognition</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is a pre-processed and re-structured/reshaped version of a very commonly used dataset featuring epileptic seizure detection. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">11500&nbsp;</p></td>
+			<td><p class="normal">179&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Anuran+Calls+%28MFCCs%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Anuran+Calls+%28MFCCs%29">Anuran Calls (MFCCs)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Acoustic features extracted from syllables of anuran (frogs) calls, including the family, the genus, and the species labels (multilabel). &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">7195&nbsp;</p></td>
+			<td><p class="normal">22&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Parkinson+Speech+Dataset+with++Multiple+Types+of+Sound+Recordings"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Parkinson+Speech+Dataset+with++Multiple+Types+of+Sound+Recordings">Parkinson Speech Dataset with  Multiple Types of Sound Recordings</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The training data belongs to 20 Parkinson's Disease (PD) patients and 20 healthy subjects. From all subjects, multiple types of sound recordings (26) are taken.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">1040&nbsp;</p></td>
+			<td><p class="normal">26&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Cuff-Less+Blood+Pressure+Estimation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cuff-Less+Blood+Pressure+Estimation">Cuff-Less Blood Pressure Estimation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This Data set provides preprocessed and cleaned vital signals which can be used in designing algorithms for cuff-less estimation of the blood pressure.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">12000&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals">EEG Steady-State Visual Evoked Potential Signals</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This database consists on 30 subjects performing Brain Computer Interface for Steady State Visual Evoked Potentials (BCI-SSVEP). &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">9200&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Tamilnadu+Electricity+Board+Hourly+Readings"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Tamilnadu+Electricity+Board+Hourly+Readings">Tamilnadu Electricity Board Hourly Readings</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data can be effectively produced the result to fewer parameter of the Load profile can be reduced in the Database  &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">45781&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Drug+Review+Dataset+%28Drugs.com%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Drug+Review+Dataset+%28Drugs.com%29">Drug Review Dataset (Drugs.com)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset provides patient reviews on specific drugs along with related conditions and a 10 star patient rating reflecting overall patient satisfaction.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">215063&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29">KEGG Metabolic Relation Network (Directed)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KEGG Metabolic pathways modeled as directed relation network. Variety of graphical features presented.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">53414&nbsp;</p></td>
+			<td><p class="normal">24&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29">KEGG Metabolic Reaction Network (Undirected)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KEGG Metabolic pathways modeled as un-directed reaction network. Variety of graphical features presented.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">65554&nbsp;</p></td>
+			<td><p class="normal">29&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Physicochemical+Properties+of+Protein+Tertiary+Structure"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Physicochemical+Properties+of+Protein+Tertiary+Structure">Physicochemical Properties of Protein Tertiary Structure</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a data set of Physicochemical Properties of Protein Tertiary Structure. The data set is taken from CASP 5-9. There are 45730 decoys and size varying from 0 to 21 armstrong.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">45730&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Parkinsons+Telemonitoring"><img src="assets/MLimages/SmallLarge174.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Parkinsons+Telemonitoring">Parkinsons Telemonitoring</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Oxford Parkinson's Disease Telemonitoring Dataset&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">5875&nbsp;</p></td>
+			<td><p class="normal">26&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

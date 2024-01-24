@@ -1,0 +1,58 @@
+¦Ifinal_url¢DtypeEvaluex/https://www.ics.uci.edu/~theory/269/170217.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2264¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:08:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"8d8-54c85ea7e00fa"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:27:31 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYØ<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Theory Seminar, February 17, 2017</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<p><a href="/~theory/"><img src="/~theory/logo/CATOC2.jpg" 
+alt="ICS Theory Group"></a></p>
+
+<h2><a href="/~theory/269/">Winter 2017: Theory Seminar</a><br>
+Bren Hall, Room 1300, 1:00pm</h2>
+
+<hr>
+
+<h2>February 17, 2017:</h2>
+<h1>
+An $O(nm)$ time algorithm for finding the min length directed cycle in a graph
+</h1>
+<h2>
+Juan Jos&eacute; Besa Vial
+</h2>
+
+<p>We introduce an $O(nm)$ time algorithm to determine the minimum
+length directed cycle in a directed network with $n$ nodes and $m$
+arcs and with no negative length directed cycles. This result improves
+upon the previous best time bound of $O(nm + n^2 \log\log n)$. Our
+algorithm first determines the cycle with minimum mean length
+$\lambda^*$ in $O(nm)$ time. Subsequently, it chooses node potentials
+so that all reduced costs are $\lambda^*$ or greater. It then solves
+the all pairs shortest path problem, but restricts attention to paths
+of length at most $n\lambda^*$. We speed up the shortest path
+calculations to $O(m)$ per source node, leading to an $O(nm)$ running
+time in total. We also carry out computational experiments comparing
+the performance of the proposed methods and other state-of-the-art
+methods. Experiments confirmed that it is advantageous to solve the
+minimum mean cycle problem prior to solving shortest path
+problems. Analysis of our experiments suggest that the running time to
+solve the minimum length directed cycle problem was much faster than
+$O(n^2)$ on average.</p>
+
+<p>(Based on <a href="http://epubs.siam.org/doi/abs/10.1137/1.9781611974782.122">a paper from SODA 2017</a> by James Orlin and Antonio Sede&ntilde;o-Noda.)
+
+</body>
+</html>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

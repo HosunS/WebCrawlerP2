@@ -1,0 +1,32 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC831¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 18 Jul 2006 15:33:42 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"33f-418dcdf1e0180"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:18:19 GMTKraw_content¢DtypeEvalueY?# ReverseComplement.py
+#
+# This program finds the reverse complement of a DNA strand, using a
+# dictionary called "basePairTranslator" to translate from one nucleotide
+# in a base pair to its complement.
+
+
+basePairTranslator = {}
+basePairTranslator['A'] = 'T'
+basePairTranslator['C'] = 'G'
+basePairTranslator['G'] = 'C'
+basePairTranslator['T'] = 'A'
+
+dnaStrand = "ACTCATTG"
+
+reverseStrand = ""
+
+for i in range(len(dnaStrand) - 1, -1, -1):
+    c = dnaStrand[i]
+    reverseC = basePairTranslator[c]
+    reverseStrand = reverseStrand + reverseC
+
+
+# We could also put this statement into the loop, which does the same job
+# as the three statements above, but puts them all together into a single
+# assignment:
+#
+#    reverseStrand = reverseStrand + basePairTranslator[dnaStrand[i]]
+
+
+print reverseStrand
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

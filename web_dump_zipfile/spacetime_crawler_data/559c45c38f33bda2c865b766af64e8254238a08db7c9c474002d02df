@@ -1,0 +1,33 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC566¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:39:39 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"471-3158ecbced0c0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 13:48:36 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYq// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Nearest neighbor closest pair algorithm
+// Augments BruteForce by adding an array of each point's nearest neighbor
+// and another array of the distance to that neighbor.
+// Finding closest pair becomes linear time: scan the array.
+// Insertion also takes a single array scan.
+// But deletion involves one scan for each point for which the deleted
+// point was the neighbor, and may be quadratic.
+//
+// Total space: 20n bytes. (Could be reduced to 4n at some cost in update time.)
+// Time per insertion or single distance update: O(Dn)
+// Time per deletion or point update: O(Dn) expected, O(Dn^2) worst case
+// Time per closest pair: O(n)
+
+#include "BruteForce.h"
+
+class NeighborCP : public BruteForceCP {
+ 	point * neighbors;
+ 	double * nbr_dist;
+ 	void FindNeighbor(point);
+
+ public:
+ 	~NeighborCP() { delete neighbors; delete nbr_dist; }
+ 	NeighborCP(long np, long mp, Distance & d);
+ 	void operator += (point);
+ 	void operator -= (point);
+ 	double operator () (point & a, point & b);
+ 	void UpdatePoint(point);
+ 	void UpdateDistance(point,point);
+};
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

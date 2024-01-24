@@ -1,0 +1,230 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4431¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 04 Mar 2010 06:01:24 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"114f-480f354259500"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:25:50 GMTKraw_content¢DtypeEvalueYO// MenubaScanner.java
+//
+// Informatics 102 Winter 2010
+// Assignment #5: Implementing a Domain-Specific Language
+//
+// This class implements a scanner for the Menuba language.  It follows the
+// same basic pattern as demonstrated in the code examples that use separate
+// scanners are parsers.
+
+package inf102.menuba.compiler;
+
+import java.io.IOException;
+import java.io.Reader;
+
+
+public class MenubaScanner
+{
+	private Reader reader;
+	private MenubaTokenType currentTokenType;
+	private String currentToken;
+	private int nextChar;
+	private static final int NO_MORE_CHARS = -1;
+	
+
+	public MenubaScanner(Reader reader)
+	throws IOException
+	{
+		this.reader = reader;
+		advanceToNextChar();
+		advance();
+	}
+	
+	
+	public MenubaTokenType getCurrentTokenType()
+	{
+		return currentTokenType;
+	}
+	
+	
+	public String getCurrentToken()
+	{
+		return currentToken;
+	}
+
+
+	public void advance()
+	throws IOException
+	{
+		while (true)
+		{
+			consumeWhitespaceIfAny();
+			
+			if (noMoreChars())
+			{
+				currentTokenType = MenubaTokenType.END_OF_INPUT;
+				currentToken = "";
+				return;
+			}
+
+			if (nextChar == '/')
+			{
+				advanceToNextChar();
+				
+				if (nextChar == '/')
+				{
+					consumeRestOfCurrentLine();
+					continue;
+				}
+				else
+				{
+					throw new MenubaScanException("Invalid character: /");
+				}
+			}
+			else if (nextChar == '.')
+			{
+				currentTokenType = MenubaTokenType.DOT;
+				currentToken = ".";
+				advanceToNextChar();
+				return;
+			}
+			else if (nextChar == '{')
+			{
+				currentTokenType = MenubaTokenType.LEFT_BRACE;
+				currentToken = "{";
+				advanceToNextChar();
+				return;
+			}
+			else if (nextChar == '}')
+			{
+				currentTokenType = MenubaTokenType.RIGHT_BRACE;
+				currentToken = "}";
+				advanceToNextChar();
+				return;
+			}
+			else if (nextChar == '-')
+			{
+				advanceToNextChar();
+				
+				if (nextChar == '>')
+				{
+					currentTokenType = MenubaTokenType.ARROW;
+					currentToken = "->";
+					advanceToNextChar();
+					return;
+				}
+				else
+				{
+					throw new MenubaScanException("Invalid character: -");
+				}
+			}
+			else if (nextChar == ':')
+			{
+				currentTokenType = MenubaTokenType.COLON;
+				currentToken = ":";
+				advanceToNextChar();
+				return;
+			}
+			else if (nextChar == ';')
+			{
+				currentTokenType = MenubaTokenType.SEMICOLON;
+				currentToken = ";";
+				advanceToNextChar();
+				return;
+			}
+			else if (nextChar == '"')
+			{
+				currentToken = "";
+				
+				do
+				{
+					advanceToNextChar();
+					
+					if (nextChar == '\r' || nextChar == '\n')
+					{
+						throw new MenubaScanException("End of line not permitted in strings");
+					}
+					else if (nextChar == '\\')
+					{
+						advanceToNextChar();
+						
+						if (nextChar == '"')
+						{
+							currentToken += '"';
+						}
+						else
+						{
+							throw new MenubaScanException("Unrecognized escape sequence in string");
+						}
+					}
+					else if (nextChar != '"')
+					{
+						currentToken += (char) nextChar;
+					}
+				}
+				while (nextChar != '"');
+
+				currentTokenType = MenubaTokenType.STRING;
+				advanceToNextChar();
+				return;
+			}
+			else if (Character.isLetter(nextChar))
+			{
+				currentToken = "";
+				
+				do
+				{
+					currentToken += (char) nextChar;
+					advanceToNextChar();
+				}
+				while (Character.isLetter(nextChar) || Character.isDigit(nextChar));
+				
+				if (currentToken.equals("package"))
+				{
+					currentTokenType = MenubaTokenType.PACKAGE;
+					return;
+				}
+				else if (currentToken.equals("menu"))
+				{
+					currentTokenType = MenubaTokenType.MENU;
+					return;
+				}
+				else
+				{
+					currentTokenType = MenubaTokenType.IDENTIFIER;
+					return;
+				}
+			}
+			else
+			{
+				throw new MenubaScanException("Invalid character: " + (char) nextChar);
+			}
+		}
+	}
+	
+	
+	private void consumeWhitespaceIfAny()
+	throws IOException
+	{
+		while (!noMoreChars() && Character.isWhitespace(nextChar))
+		{
+			advanceToNextChar();
+		}
+	}
+	
+	
+	private void consumeRestOfCurrentLine()
+	throws IOException
+	{
+		while (nextChar != '\n')
+		{
+			advanceToNextChar();
+		}
+		
+		advanceToNextChar();
+	}
+	
+	
+	private void advanceToNextChar()
+	throws IOException
+	{
+		nextChar = reader.read();
+	}
+	
+		
+	private boolean noMoreChars()
+	{
+		return nextChar == NO_MORE_CHARS;
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

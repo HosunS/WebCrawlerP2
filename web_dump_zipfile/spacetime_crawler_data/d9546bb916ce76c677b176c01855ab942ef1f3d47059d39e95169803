@@ -1,0 +1,269 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE17605¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueX°trac_form_token=4b6eab461d8e01d5e03bda8d; httponly; Path=/wiki/public, trac_session=b7008e4da3f0f64839b6ecfa; expires=Fri, 03 May 2019 17:01:37 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXFri, 01 Jan 1999 00:00:00 GMT¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueOmust-revalidate¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 17:01:36 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=utf-8Kraw_content¢DtypeEvalueYDÅ<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      cs122b-2018-winter-project1-install-tomcat-on-aws â€“ Public
+    </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--[if IE]><script type="text/javascript">
+      if (/^#__msie303:/.test(window.location.hash))
+        window.location.replace(window.location.hash.replace(/^#__msie303:/, '#'));
+    </script><![endif]-->
+        <link rel="search" href="/wiki/public/search" />
+        <link rel="help" href="/wiki/public/wiki/TracGuide" />
+        <link rel="alternate" href="/wiki/public/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws?format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="tracwysiwyg.base" href="/wiki/public" />
+        <link rel="start" href="/wiki/public/wiki" />
+        <link rel="stylesheet" href="/wiki/public/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/tracwysiwyg/wysiwyg.css" type="text/css" />
+        <link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/common/css/trac.css" /><link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/tracwysiwyg/editor.css" />
+        <link rel="shortcut icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+    <style id="trac-noscript" type="text/css">.trac-noscript { display: none !important }</style>
+    <script type="text/javascript">
+      var _tracwysiwyg={};
+    </script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/jquery.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/babel.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/trac.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/search.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/folding.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/tracwysiwyg/wysiwyg.js"></script>
+    <script type="text/javascript">
+      jQuery("#trac-noscript").remove();
+      jQuery(document).ready(function($) {
+        $(".trac-autofocus").focus();
+        $(".trac-target-new").attr("target", "_blank");
+        setTimeout(function() { $(".trac-scroll").scrollToTop() }, 1);
+        $(".trac-disable-on-submit").disableOnSubmit();
+      });
+    </script>
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://www.ics.uci.edu/"><img src="/wiki/public/chrome/site/ics.jpg" alt="ICS Logo" height="67" width="128" /></a>
+      </div>
+      <form id="search" action="/wiki/public/search" method="get">
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="/wiki/public/login">Login</a></li><li><a href="/wiki/public/prefs">Preferences</a></li><li class="last"><a href="/wiki/public/about">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="/wiki/public/wiki">wiki:</a><a class="pathentry" href="/wiki/public/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws" title="View cs122b-2018-winter-project1-install-tomcat-on-aws">cs122b-2018-winter-project1-install-tomcat-on-aws</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+        <ul>
+          <li class="first"><a href="/wiki/public/wiki/WikiStart">Start Page</a></li><li><a href="/wiki/public/wiki/TitleIndex">Index</a></li><li class="last"><a href="/wiki/public/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws?action=history">History</a></li>
+        </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <div class="wikipage searchable">
+        
+          <div id="wikipage" class="trac-content"><p>
+This tutorial introduces how to install tomcat 8.51 on AWS Ubuntu instance 14.04.
+</p>
+<h2 id="StartyourAWSinstanceandconnecttoitusingSSH.">Start your AWS instance, and connect to it using SSH.</h2>
+<p>
+For this step, please refer to the previous tutorial on how to use AWS.
+</p>
+<h2 id="DownloadTomcat">Download Tomcat</h2>
+<p>
+You can find latest version of tomcat 8.5.x fromÂ <a class="ext-link" href="http://tomcat.apache.org/download-80.cgi"><span class="icon">â€‹</span>http://tomcat.apache.org/download-80.cgi</a>. For example, the download link for tomcat 8.5.24 isÂ <a class="ext-link" href="http://apache.mirrors.pair.com/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz"><span class="icon">â€‹</span>http://apache.mirrors.pair.com/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz</a>
+</p>
+<p>
+Then use wget on your AWS machine to download it:
+</p>
+<pre class="wiki">wget http://apache.mirrors.pair.com/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz
+</pre><p>
+After you download the tar.gz, decompress it to a desired destination (for example, I use /home/ubuntu/tomcat)
+</p>
+<pre class="wiki">mkdir /home/ubuntu/tomcat
+</pre><pre class="wiki">tar xvf apache-tomcat-8.5.24.tar.gz -C /home/ubuntu/tomcat/ --strip-components=1
+</pre><p>
+Now go toÂ /home/ubuntu/tomcat/, and use ls, you show see the following contents:
+</p>
+<p>
+<a style="padding:0; border:none" href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat-dir.jpeg"><img src="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat-dir.jpeg" /></a>
+</p>
+<h2 id="ConfigureTomcatMemory">Configure Tomcat Memory</h2>
+<p>
+By default, the maximum heap available for Tomcat may not be enough for large projects. Thus, we need to change the memory configuration by the following steps.
+</p>
+<p>
+Go toÂ /home/ubuntu/tomcat/bin/, and create a text file name setenv.sh, which contains the following lines:
+</p>
+<pre class="wiki">#!/bin/sh
+env JAVA_OPTS="-Xmx512m -Xms128m"
+</pre><p>
+Xmx means the maximum heap memory available for Tomcat, and Xms means the initial memory available after each garbage collection. You may vary them based on your machine capacity.
+</p>
+<h2 id="ChangeAccessSettingofhost-managerandmanager">Change Access Setting of host-manager and manager</h2>
+<p>
+host-manager and manager are two useful default applications provided by Tomcat to manage the Tomcat server. However, by default they can be accessed by only the machine hosting tomcat, i.e., localhost.
+</p>
+<p>
+To change this, you need to change /<strong>home/ubuntu/tomcat/webapps/host-manager/META-INF/context.xml</strong> and <strong>/home/ubuntu/tomcat/webapps/manager/META-INF/context.xml</strong> by deleting the following lines:
+</p>
+<pre class="wiki">&lt;Valve className="org.apache.catalina.valves.RemoteAddrValve"Â 
+
+      allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" /&gt;
+</pre><h2 id="CreateaTomcatUser">Create a Tomcat User</h2>
+<p>
+Now, create a tomcat user so that you can manage the tomcat server remotely.
+</p>
+<p>
+Edit /home/ubuntu/tomcat/conf/tomcat-users.xml, and add the following line:
+</p>
+<pre class="wiki">&lt;user username="tomcat" password="123456" roles="manager-gui,admin-gui"/&gt;
+</pre><p>
+<a style="padding:0; border:none" href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat-users.jpeg"><img src="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat-users.jpeg" /></a>
+</p>
+<p>
+By doing so, you've created a user named "tomcat", and its password is "123456". You've also granted two roles "manager-gui" and "admin-gui" to it.
+</p>
+<h2 id="StartTomcat">Start Tomcat</h2>
+<p>
+Now you are ready to start tomcat by executing the following command:
+</p>
+<pre class="wiki">/home/ubuntu/tomcat/bin/startup.sh
+</pre><p>
+If you see this, then it means your tomcat has started properly.
+</p>
+<h2 id="OpenportforAWS">Open port for AWS</h2>
+<p>
+If you do the above steps on your local machine, then you should be able to accessÂ <a class="ext-link" href="http://localhost:8080"><span class="icon">â€‹</span>http://localhost:8080</a>Â from your browser to access tomcat.
+</p>
+<p>
+However, on AWS, the port 8080 is not opened to public by default. Thus, you need to open it as follows.
+</p>
+<p>
+Go to your AWS console, and click the item under "<strong>Security Groups</strong>" for your instance.
+</p>
+<p>
+<a style="padding:0; border:none" href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/security_group.jpeg"><img src="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/security_group.jpeg" /></a>
+</p>
+<p>
+Click "Edit" to add more inbound rules:
+</p>
+<p>
+<a style="padding:0; border:none" href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/add-rule.jpeg"><img src="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/add-rule.jpeg" /></a>
+</p>
+<h2 id="AccessTomcat">Access Tomcat</h2>
+<p>
+Now you should be able to access your tomcat server usingÂ <a class="ext-link" href="http://public_ip:8080"><span class="icon">â€‹</span>http://public_ip:8080</a>, and you should be able to see the following page:
+</p>
+<p>
+<a style="padding:0; border:none" href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat.jpeg"><img src="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat.jpeg" /></a>
+</p>
+<p>
+If you want to access manager or host-manager, just click the button on the right, and type the username/password you've set in the tomcat-users.xml file.
+</p>
+<p>
+<a style="padding:0; border:none" href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/manager-pwd.jpeg"><img src="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/manager-pwd.jpeg" /></a>
+</p>
+<p>
+<a style="padding:0; border:none" href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/manager.jpeg"><img src="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/manager.jpeg" /></a>
+</p>
+<blockquote class="citation">
+</blockquote>
+</div>
+          
+          <div class="trac-modifiedby">
+            <span><a href="/wiki/public/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws?action=diff&amp;version=2" title="Version 2 by qiushi">Last modified</a> <a class="timeline" href="/wiki/public/timeline?from=2018-01-28T23%3A13%3A44-08%3A00&amp;precision=second" title="See timeline at Jan 28, 2018 11:13:44 PM">12 months ago</a></span>
+            <span class="trac-print">Last modified on Jan 28, 2018 11:13:44 PM</span>
+          </div>
+        
+        
+      </div>
+      
+    <div id="attachments">
+        <h3 class="foldable">Attachments <span class="trac-count">(8)</span></h3>
+        <div>
+          <ul>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/add-rule.jpeg" title="View attachment">add-rule.jpeg</a><a href="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/add-rule.jpeg" class="trac-rawlink" title="Download">â€‹</a>
+       (<span title="22623 bytes">22.1 KB</span>) -
+      added by <em>qiushi</em> <a class="timeline" href="/wiki/public/timeline?from=2018-01-28T23%3A11%3A46-08%3A00&amp;precision=second" title="See timeline at Jan 28, 2018 11:11:46 PM">12 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/manager-pwd.jpeg" title="View attachment">manager-pwd.jpeg</a><a href="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/manager-pwd.jpeg" class="trac-rawlink" title="Download">â€‹</a>
+       (<span title="65085 bytes">63.6 KB</span>) -
+      added by <em>qiushi</em> <a class="timeline" href="/wiki/public/timeline?from=2018-01-28T23%3A11%3A54-08%3A00&amp;precision=second" title="See timeline at Jan 28, 2018 11:11:54 PM">12 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/manager.jpeg" title="View attachment">manager.jpeg</a><a href="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/manager.jpeg" class="trac-rawlink" title="Download">â€‹</a>
+       (<span title="61061 bytes">59.6 KB</span>) -
+      added by <em>qiushi</em> <a class="timeline" href="/wiki/public/timeline?from=2018-01-28T23%3A12%3A02-08%3A00&amp;precision=second" title="See timeline at Jan 28, 2018 11:12:02 PM">12 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/security_group.jpeg" title="View attachment">security_group.jpeg</a><a href="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/security_group.jpeg" class="trac-rawlink" title="Download">â€‹</a>
+       (<span title="22295 bytes">21.8 KB</span>) -
+      added by <em>qiushi</em> <a class="timeline" href="/wiki/public/timeline?from=2018-01-28T23%3A12%3A11-08%3A00&amp;precision=second" title="See timeline at Jan 28, 2018 11:12:11 PM">12 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/start.jpeg" title="View attachment">start.jpeg</a><a href="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/start.jpeg" class="trac-rawlink" title="Download">â€‹</a>
+       (<span title="31985 bytes">31.2 KB</span>) -
+      added by <em>qiushi</em> <a class="timeline" href="/wiki/public/timeline?from=2018-01-28T23%3A12%3A20-08%3A00&amp;precision=second" title="See timeline at Jan 28, 2018 11:12:20 PM">12 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat-dir.jpeg" title="View attachment">tomcat-dir.jpeg</a><a href="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat-dir.jpeg" class="trac-rawlink" title="Download">â€‹</a>
+       (<span title="13742 bytes">13.4 KB</span>) -
+      added by <em>qiushi</em> <a class="timeline" href="/wiki/public/timeline?from=2018-01-28T23%3A12%3A29-08%3A00&amp;precision=second" title="See timeline at Jan 28, 2018 11:12:29 PM">12 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat-users.jpeg" title="View attachment">tomcat-users.jpeg</a><a href="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat-users.jpeg" class="trac-rawlink" title="Download">â€‹</a>
+       (<span title="62470 bytes">61.0 KB</span>) -
+      added by <em>qiushi</em> <a class="timeline" href="/wiki/public/timeline?from=2018-01-28T23%3A12%3A36-08%3A00&amp;precision=second" title="See timeline at Jan 28, 2018 11:12:36 PM">12 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat.jpeg" title="View attachment">tomcat.jpeg</a><a href="/wiki/public/raw-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/tomcat.jpeg" class="trac-rawlink" title="Download">â€‹</a>
+       (<span title="66731 bytes">65.2 KB</span>) -
+      added by <em>qiushi</em> <a class="timeline" href="/wiki/public/timeline?from=2018-01-28T23%3A12%3A43-08%3A00&amp;precision=second" title="See timeline at Jan 28, 2018 11:12:43 PM">12 months ago</a>.
+              </li>
+          </ul>
+          <p>
+            Download all attachments as: <a rel="nofollow" href="/wiki/public/zip-attachment/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws/">.zip</a>
+          </p>
+        </div>
+    </div>
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="/wiki/public/wiki/cs122b-2018-winter-project1-install-tomcat-on-aws?format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/wiki/public/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="/wiki/public/about"><strong>Trac 1.0.13</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

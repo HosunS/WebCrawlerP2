@@ -1,0 +1,240 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:27:18 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY0
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: SPECTF Heart Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>SPECTF Heart Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/spect/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/spect/SPECTF.names"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: Data on cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient classified into two categories: normal and abnormal.</p>
+     </td>
+     <td><img
+src="../assets/MLimages/Large45.jpg"
+hspace=20 vspace=10  /> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">267</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Life</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Integer</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">44</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2001-10-01</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">No</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">76595</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">77%</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Original owners: <br><br>1. Krzysztof J. Cios, Lukasz A. Kurgan<br>University of Colorado at Denver, Denver, CO 80217, U.S.A.<br><u>Krys.Cios <b>'@'</b> cudenver.edu</u><br><br>2. Lucy S. Goodenday<br>Medical College of Ohio, OH, U.S.A.<br><br>Donors: <br><br>Lukasz A.Kurgan, Krzysztof J. Cios</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">The dataset describes diagnosing of cardiac Single Proton Emission Computed Tomography (SPECT) images. Each of the patients is classified into two categories: normal and abnormal. The database of 267 SPECT image sets (patients) was processed to extract features that summarize the original SPECT images. As a result, 44 continuous feature pattern was created for each patient. The CLIP3 algorithm was used to generate classification rules from these patterns. The CLIP3 algorithm generated rules that were 77.0% accurate (as compared with cardilogists' diagnoses). <br><br>SPECTF is a good data set for testing ML algorithms; it has 267 instances that are descibed by 45 attributes.<br>	 <br>Predicted attribute: OVERALL_DIAGNOSIS (binary) <br><br>NOTE: See the SPECT heart data for binary data for the same classification task.</p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">   1.   OVERALL_DIAGNOSIS: 0,1 (class attribute, binary)<br>   2.   F1R:   continuous (count in ROI (region of interest) 1 in rest)<br>   3.   F1S:   continuous (count in ROI 1 in stress)<br>   4.   F2R:   continuous (count in ROI 2 in rest)<br>   5.   F2S:   continuous (count in ROI 2 in stress)<br>   6.   F3R:   continuous (count in ROI 3 in rest)<br>   7.   F3S:   continuous (count in ROI 3 in stress)<br>   8.   F4R:   continuous (count in ROI 4 in rest)<br>   9.   F4S:   continuous (count in ROI 4 in stress)<br>   10.  F5R:   continuous (count in ROI 5 in rest)<br>   11.  F5S:   continuous (count in ROI 5 in stress)<br>   12.  F6R:   continuous (count in ROI 6 in rest)<br>   13.  F6S:   continuous (count in ROI 6 in stress)<br>   14.  F7R:   continuous (count in ROI 7 in rest)<br>   15.  F7S:   continuous (count in ROI 7 in stress)<br>   16.  F8R:   continuous (count in ROI 8 in rest)<br>   17.  F8S:   continuous (count in ROI 8 in stress)<br>   18.  F9R:   continuous (count in ROI 9 in rest)<br>   19.  F9S:   continuous (count in ROI 9 in stress)<br>   20.  F10R:  continuous (count in ROI 10 in rest)<br>   21.  F10S:  continuous (count in ROI 10 in stress)<br>   22.  F11R:  continuous (count in ROI 11 in rest)<br>   23.  F11S:  continuous (count in ROI 11 in stress)<br>   24.  F12R:  continuous (count in ROI 12 in rest)<br>   25.  F12S:  continuous (count in ROI 12 in stress)<br>   26.  F13R:  continuous (count in ROI 13 in rest)<br>   27.  F13S:  continuous (count in ROI 13 in stress)<br>   28.  F14R:  continuous (count in ROI 14 in rest)<br>   29.  F14S:  continuous (count in ROI 14 in stress)<br>   30.  F15R:  continuous (count in ROI 15 in rest)<br>   31.  F15S:  continuous (count in ROI 15 in stress)<br>   32.  F16R:  continuous (count in ROI 16 in rest)<br>   33.  F16S:  continuous (count in ROI 16 in stress)<br>   34.  F17R:  continuous (count in ROI 17 in rest)<br>   35.  F17S:  continuous (count in ROI 17 in stress)<br>   36.  F18R:  continuous (count in ROI 18 in rest)<br>   37.  F18S:  continuous (count in ROI 18 in stress)<br>   38.  F19R:  continuous (count in ROI 19 in rest)<br>   39.  F19S:  continuous (count in ROI 19 in stress)<br>   40.  F20R:  continuous (count in ROI 20 in rest)<br>   41.  F20S:  continuous (count in ROI 20 in stress)<br>   42.  F21R:  continuous (count in ROI 21 in rest)<br>   43.  F21S:  continuous (count in ROI 21 in stress)<br>   44.  F22R:  continuous (count in ROI 22 in rest)<br>   45.  F22S:  continuous (count in ROI 22 in stress)<br>   - all continuous attributes have integer values from the 0 to 100<br>   - dataset is divided into:<br>	-- training data ("SPECTF.train" 80 instances)<br>	-- testing data ("SPECTF.test" 187 instances)</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Kurgan, L.A., Cios, K.J., Tadeusiewicz, R., Ogiela, M. & Goodenday, L.S. "Knowledge Discovery Approach to Automated Cardiac SPECT Diagnosis" Artificial Intelligence in Medicine, vol. 23:2, pp 149-169, Oct 2001<br><a href="http://rexa.info/paper/c39661d8583e5afeff3a9dfa694e66e053c8b45f">[Web Link]</a><br><br>Cios, K.J., Wedding, D.K. & Liu, N. CLIP3: cover learning using integer programming. Kybernetes, 26:4-5, pp 513-536, 1997<br>	<br>Cios K. J. & Kurgan L. Hybrid Inductive Machine Learning: An Overview of CLIP Algorithms,  In: Jain L.C., and Kacprzyk J. (Eds). New Learning Paradigms in Soft Computing, Physica-Verlag (Springer), 2001<br><a href="http://rexa.info/paper/0e8ca2f73a5cd43ac85798fd3731149349acdca3">[Web Link]</a></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Carlotta Domeniconi and Bojun Yan. <a
+href="http://rexa.info/paper/208ff3b44c2d57f4e00f263ddfbee69f4ad21972">Nearest Neighbor Ensemble</a>. ICPR (1). 2004.  [<a
+href="../support/SPECTF+Heart#208ff3b44c2d57f4e00f263ddfbee69f4ad21972">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Carlotta Domeniconi and Bojun Yan. <a
+href="http://rexa.info/paper/208ff3b44c2d57f4e00f263ddfbee69f4ad21972">Nearest Neighbor Ensemble</a>. ICPR (1). 2004.  [<a
+href="../support/SPECTF+Heart#208ff3b44c2d57f4e00f263ddfbee69f4ad21972">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please refer to the Machine Learning
+Repository's <a href="../citation_policy.html">citation policy</a></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

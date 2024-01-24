@@ -1,0 +1,210 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 05:12:07 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY/3<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=nonmat&task=&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=nonmat&task=cla&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Classification</a> <font color=red>(14)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Regression</a></font> <font color=red>(4)</font><br><a href='datasets.html?format=nonmat&task=clu&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Clustering</a> <font color=red>(7)</font><br><a href='datasets.html?format=nonmat&task=other&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Other</a> <font color=red>(2)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=nonmat&task=reg&att=cat&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Categorical</a> <font color=red>(0)</font><br><a href='datasets.html?format=nonmat&task=reg&att=num&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Numerical</a> <font color=red>(4)</font><br><a href='datasets.html?format=nonmat&task=reg&att=mix&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Mixed</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=dateUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=mvar&sort=dateUp&view=list'>Multivariate</a> <font color=red>(10)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=uvar&sort=dateUp&view=list'>Univariate</a> <font color=red>(2)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Sequential</a></font> <font color=red>(4)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=dateUp&view=list'>Time-Series</a> <font color=red>(8)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=text&sort=dateUp&view=list'>Text</a> <font color=red>(1)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=dt&sort=dateUp&view=list'>Domain-Theory</a> <font color=red>(1)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=other&sort=dateUp&view=list'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=nonmat&task=reg&att=&area=life&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Life Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=phys&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Physical Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=comp&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>CS / Engineering</a> <font color=red>(3)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=soc&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Social Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=bus&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Business</a> <font color=red>(1)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=game&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=other&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Other</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=less10&numIns=greater1000&type=seq&sort=dateUp&view=list'>Less than 10</a> <font color=red>(2)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=10to100&numIns=greater1000&type=seq&sort=dateUp&view=list'>10 to 100</a> <font color=red>(2)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=greater100&numIns=greater1000&type=seq&sort=dateUp&view=list'>Greater than 100</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=&type=seq&sort=dateUp&view=list'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=less100&type=seq&sort=dateUp&view=list'>Less than 100</a> <font color=red>(0)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=100to1000&type=seq&sort=dateUp&view=list'>100 to 1000</a> <font color=red>(0)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Greater than 1000</a></font> <font color=red>(4)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b> - <a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Matrix</a> <font color=red>(4)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=list'>Non-Matrix</a></font> <font color=red>(4)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>4</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=dateUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/3D+Road+Network+%28North+Jutland%2C+Denmark%29">3D Road Network (North Jutland, Denmark)</a></b>: 3D road network with highly accurate elevation information (+-20cm) from Denmark used in eco-routing and fuel/Co2-estimation routing algorithms.</p><p class="normal">2. <b><a href="datasets/Cargo+2000+Freight+Tracking+and+Tracing">Cargo 2000 Freight Tracking and Tracing</a></b>: Sanitized and anonymized Cargo 2000 (C2K) airfreight tracking and tracing events, covering five months of business execution (3,942 process instances, 7,932 transport legs, 56,082 activities). </p><p class="normal">3. <b><a href="datasets/Geo-Magnetic+field+and+WLAN+dataset+for+indoor+localisation+from+wristband+and+smartphone">Geo-Magnetic field and WLAN dataset for indoor localisation from wristband and smartphone</a></b>: A multisource and multivariate dataset for indoor localisation methods based on WLAN and Geo-Magnetic Ô¨Åeld Ô¨Ångerprinting</p><p class="normal">4. <b><a href="datasets/Parking+Birmingham">Parking Birmingham</a></b>: Data collected from car parks in Birmingham that are operated by NCP from 
+Birmingham City Council. UK Open Government Licence (OGL).
+https://data.birmingham.gov.uk/dataset/birmingham-parking</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

@@ -1,0 +1,123 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3319¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 24 May 1997 22:09:03 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"cf7-31244d3587dc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 15:26:08 GMTKraw_content¢DtypeEvalueY÷// Ray intersection diagram applet
+// David Eppstein, UC Irvine, 18 May 1997
+
+import java.awt.*;
+import java.applet.Applet;
+import java.lang.*;
+import java.util.*;
+
+public class RayDiagram extends Applet
+{
+	private int x_down = 0;
+	private int y_down = 0;
+	private FastPair rays;
+	
+	// Draw a segment
+	private void drawSeg(RayDiagObj o) {
+		double dr = o.t;
+		if (dr == Double.POSITIVE_INFINITY) {		// if infinite ray
+			Rectangle r = this.bounds();				// perform doubling search
+			dr = 1.0;										// to find length param outside
+			while (true) {									// screen rectangle area
+				double ox = o.x + dr * o.dx;
+				double oy = o.y + dr * o.dy;
+				if (ox < r.x && o.dx <= 0) break;		// off left edge of screen?
+				if (ox > r.x + r.width && o.dx >= 0) break;	// off right edge of screen?
+				if (oy < r.y && o.dy <= 0) break;		// off top edge of screen?
+				if (oy > r.y + r.height && o.dy >= 0) break;	// off bottom edge of screen?
+				dr *= 2;										// none of the above, keep growing the ray
+			}
+		}
+	
+		Graphics g = this.getGraphics();
+		g.setColor(Color.black);
+		g.drawLine((int) o.x, (int) o.y,
+					  (int) (o.x + dr * o.dx), (int) (o.y + dr * o.dy));
+	}
+	
+	// redisplay
+	public void paint(Graphics g) {
+		Rectangle r = this.bounds();
+		g.setColor(Color.white);
+		g.fillRect(r.x, r.y, r.width, r.height);
+		Enumeration enum = rays.elements();
+		while (enum.hasMoreElements()) {
+			RayDiagObj o = (RayDiagObj) enum.nextElement();
+			drawSeg(o);
+		}
+	}
+	
+	// Found the end of a segment
+	private void terminate(RayDiagObj r, double termTime) {
+		r.t = termTime;
+		rays.update(r);
+		drawSeg(r);
+	}
+	
+	// Recompute the ray diagram
+	private void restart() {
+		// empty the screen
+		Graphics g = this.getGraphics();
+		Rectangle r = this.bounds();
+		g.setColor(Color.white);
+		g.fillRect(r.x, r.y, r.width, r.height);
+		
+		// unterminate all rays
+		Enumeration enum = rays.elements();
+		if (!enum.hasMoreElements()) return;	// nothing to do
+		while (enum.hasMoreElements()) {
+			RayDiagObj o = (RayDiagObj) enum.nextElement();
+			o.t = Double.POSITIVE_INFINITY;
+		}
+		rays.restart();
+		
+		// now find collisions
+		while (true) {
+			RayDiagObj o = (RayDiagObj) rays.closestPair();
+			if (o.distanceToNeighbor == Double.POSITIVE_INFINITY) break;
+			RayDiagObj n = (RayDiagObj) o.neighbor;
+			double no = n.crosstime(o);
+			double on = o.crosstime(n);
+			if (no >= on) terminate(n, no);
+			if (on >= no) terminate(o, on);
+		}
+		
+		// draw all remaining rays
+		enum = rays.elements();
+		while (enum.hasMoreElements()) {
+			RayDiagObj o = (RayDiagObj) enum.nextElement();
+			if (o.t == Double.POSITIVE_INFINITY) drawSeg(o);
+		}
+	}
+	
+	// Forget about all our rays
+	public void clear() {
+		rays = new FastPair();
+		restart();
+	}
+
+	// Called to initialize the applet
+	public void init() {
+		this.setBackground(Color.white);
+		clear();
+	}
+	
+	// Called on mouse-down events: start making a ray
+	public boolean mouseDown(Event e, int x, int y)
+	{
+		x_down = x;
+		y_down = y;
+		return true;
+	}
+	
+	// Called on mouse-up events: finish making a ray
+	public boolean mouseUp(Event e, int x, int y)
+	{
+		if (x == x_down && y == y_down) return true;	// ignore single click
+		rays.add(new RayDiagObj((double) x_down, (double) y_down,
+									   (double) (x - x_down), (double) (y - y_down)));
+		restart();
+		return true;
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,366 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE14135¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 29 Sep 1999 23:25:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"3737-355b1e9402740"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 23:03:41 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY77WebDAV Advanced Collections Minutes September 14, 1999
+
+ATTENDING: Judy Slein, Geoff Clemm, Chuck Fay, Jason Crawford
+
+ACTION ITEMS
+
+Judy: Respond to Jim Amsden on Issue 8, explaining why we are
+not making any changes to the spec.
+
+Judy: Start a thread on whether / how to provide more than just
+501 (Not Implemented) when a binding cannot be created.
+
+Geoff: Write replacement text for the algorithm for determining
+what new URL mappings are introduced by a new binding.
+
+Judy: Draft new language for the section "Bindings and Other
+Methods" and send it to the mailing list.
+
+Geoff: Write up arguments against protecting the LOCK Request-URI,
+and send them to the mailing list.
+
+Judy: Send out proposal for a GUID property.
+
+LOGISTICS
+
+Decide whether to have an unofficial advanced collections meeting 
+at IETF, in addition to the official WebDAV meeting.  Make this 
+decision early enough for people to take it into account when
+deciding whether to attend IETF.
+
+ISSUE 7: RESOURCE-TYPE HEADER IS NOT EXTENSIBLE.
+
+AGREED: We will get rid of the Resource-Type header and instead
+return the DAV:reftarget property in the response body.  This will 
+let clients know that the 302 is from a redirect reference, and
+also gives them the relative URI of the target.
+
+Judy: This is true, but all we are using it for is in 302
+responses, to let clients know that it's not an ordinary HTTP 302,
+but a response from a redirect reference.  So we could just use
+a Redirect-Ref header with no value (it's either present or not).
+
+Geoff: Prefers using XML in the message body.  The parser is cheap
+to invoke.  There's no real runtime cost.
+
+Geoff: Doesn't like using headers.  They are global, that is, they
+need to be usable with all methods.  There is a length limit.  He
+would only favor a header if there is already a defined body being
+used for something else.
+
+Judy: In this case, it is global -- it gets returned by all methods
+whenever there is a 302 response from a redirect reference.
+
+Geoff: Generally it's good to use XML for additional information
+about an error.  There might be other information about the 302 that
+you might want to return.
+
+This issue is related to Issue 14, trying to limit the number of 
+new headers we define.
+
+ISSUE 8: IT IS IMPOSSIBLE TO GUARANTEE REFERENTIAL INTEGRITY FOR
+BINDINGS.
+
+AGREED:  We will not weaken the spec.  We require a guarantee of
+integrity for bindings.
+
+Judy: Not sure exactly what Jim is getting at, but it looks like
+he is imagining that the server where the resource lives might go
+down, while the server where a binding lives is running.  Then
+the binding is at least temporarily broken.
+
+Geoff: It the server is willing to go to enough trouble, it can
+guarantee the integrity of its binding to the remote resource.  It
+can store a copy of the resource locally, and make it a policy that
+unless both participants are up, no changes to the resource are
+allowed.  It could respond with "Temporarily unavailable" to
+requests that would make changes in case the other server is down.
+
+Chuck: In effect, you have to keep state on the server for all 
+bindings that it holds.
+
+Geoff: The one thing we want to avoid is for a client to use one 
+name and get one value, but use a different name and get a 
+different value.
+
+Probably few servers will attempt to support cross-server bindings.
+
+STATEMENTS ABOUT CROSS-SERVER BINDINGS
+
+Geoff: There should be nothing in the spec about cross-server 
+anything except rationale for decisions.  We should never fork based 
+on same-server / cross-server.
+
+AGREED: We will strike statement that support for cross-server 
+bindings is OPTIONAL.
+
+Geoff: It's OK to leave the discussion about the difficulty of
+guaranteeing the integrity of bindings across servers if we label 
+it as an implementer's note.  Or move it to a different, supporting
+document.
+
+Currently we say that if the server can't guarantee the required
+behavior for the binding, it must fail the BIND request with a 501
+(Not Implemented).  We may want to provide better information, about
+why the binding can't be created, especially in the case of cross-
+server bindings.  Geoff sees no problem with talking about cross-
+server operations in error descriptions.
+
+There are at least 3 possibilities, each favored by one member of the
+team:
+1. A new error code for "Can't create binding" or even "Can't create
+cross-server binding". (Judy prefers this.)
+2. Use 501, but put an explanation in the response body. (Geoff prefers
+this.)
+3. Use 501, and don't provide any further explanation. Keep it simple.
+(Chuck prefers this.)
+
+Judy will take these options to the mailing list.
+
+ISSUE 9: WHAT TO SAY ABOUT TRAILING "/" ON REQUEST-URI AND DESTINATION
+HEADER OF BIND REQUESTS
+
+AGREED: We will remove the language related to trailing slashes from
+the BIND method, and remove the corresponding BIND Conflict example.
+
+The presence or absence of a trailing "/" cannot be relied upon for
+any indication of the type of resource.
+
+ISSUE 10: ALGORITHM FOR DETERMINING URL MAPPINGS
+
+Geoff will write replacement text for how to determine all the new mappings
+introduced by a bind.  It is easier to specify what will change than to try
+to specify the complete set of mappings, old and new.
+
+ISSUE 11: WHAT TO SAY ABOUT PUT AND POST IN RELATION TO BINDINGS
+
+AGREED: 2 bindings to same resource always produce same result for
+all methods; if can't guarantee that, BIND must fail (so probably
+can't bind to dynamic resources)
+
+Judy: The concern is that if the resource is a cgi script or other
+executable that dynamically produces content, you can't be assured
+that the result will be the same no matter which binding you use to
+access it.  The language takes this into account for most methods, but
+I couldn't think of a case where PUT might have different results
+depending on the Request-URI.  Can anyone think of a case?
+
+Geoff: One URI might translate the content into French, another
+into Spanish.
+
+Chuck: For GET, using a binding with pdf in it might retrieve the
+PDF rendition, while a binding with html in it might retrieve the
+HTML rendition.
+
+Geoff: If you get different results using different URIs, then they
+are not bindings but something else.
+
+Geoff: We need to say something about the normal case, the intent with some
+exceptions.
+
+Judy: The trouble is that we can't anticipate all the exceptions.  We
+can't give a clean definition of the exceptions.
+
+We are trying to distinguish between static and dynamic responses.
+
+If a resource has access to the Request-Uri, it can perform arbitrary 
+behavior depending on the Request-Uri.  We can say that for bindings
+that's not legal.
+
+We can leave it vague, and depend on people's intuition: The general
+intent is for it to appear to be the same resource responding to the
+same request through any Request-URI. 
+
+That would argue for deleting the section, as Yaron suggested.
+
+Geoff: We can at least say that dead properties display the same no
+matter which binding is used to access the resource.
+
+We can at least define a GUID (see Issue 12), and then say that
+it is guaranteed that all bindings to the same resource would return 
+same GUID.
+
+Geoff: This spec is about authoring.  For the resources that Jim
+is calling "functors", you can't author the resource directly.  You
+would have to follow its DAV:source property to do that.  The
+Request-URI that you use to address a functor does not map to a
+binding.
+
+Consider a dynamic resource that returns the current time. When
+you access that resource, by the same or a different URI, you get 
+a different value each time.  But the thing that you author, the
+thing you would do a PUT to, is the resource identified by the
+DAV:source property.  You would get the same result every time if
+you did a GET to that resource.
+
+You can't PUT to a dynamic resource.
+
+What we care about is the Source resource and authoring that.
+There can be multiple bindings to that for authoring. You don't 
+author the dynamic things, but rather their source.
+
+Chuck: Distinguish between static and dynamic resources.  It's the
+static ones where 2 bindings must behave the same. 
+ 
+Geoff: There are not multiple bindings to dynamic resources. There
+might be multiple bindings to the source resource.
+
+Geoff hesitates to rely on static vs dynmic, but we can say whether
+BIND works.  We say that BIND must fail if you can't guarantee that
+GET using the new binding will always get the same result as GET
+through the existing binding.
+
+Chuck: We might want to have multiple bindings to a dynamic 
+resource (e.g., the clock).
+
+Geoff: If the cost of binding to executables is not being able to 
+say anything intelligible about the semantics of bindings, that 
+cost is too high.  Let's just not allow bindings to executables.
+
+Geoff: 2 bindings to same resource always produce same result for
+all methods; if can't guarantee that, BIND must fail (so probably
+can't bind to dynamic resources)
+
+Judy will draft language for this proposal and send it to the mailing
+list.
+
+ISSUE 1: MOVE AND LOCKS
+
+AGREED: If the source resource is locked individually, the lock
+moves with it.  We will not put anything in the protocol that is
+specific to cross-server moves.
+
+AGREED: If the source resource is locked individually, and the
+destination parent collection is locked with a different token,
+the MOVE will fail.
+
+It seems as if opinion is moving toward consensus that it's OK
+for the lock to move with the resource.
+
+Yaron and Greg are opposed to moving locks.  Yaron is concerned
+about Microsoft file systems not being able to comply.
+
+Geoff: Can't find anything related to locks in Windows 95. If there
+is something, it must be under the covers.
+
+Don't try to make our protocol Windows-95-compliant for the sake
+of something under the covers.
+
+UNIX doesn't have lock tokens, locking, depth locking.
+
+Judy: So we should stick with our basic position that locks move
+with a resource, but remove all the language about cross-server
+moves.  We won't provide anything in th protocol special for
+cross-server moves.
+
+Judy: We haven't discussed the case Jason raised about conflicting
+locks.  What happens if the source resource is locked, and the
+destination parent collection is locked with a different token?
+
+We agree that this move fails.
+
+Judy will simplify the proposal on this issue, getting rid of
+everything related to cross-server moves, and re-post to the list.
+
+ISSUE 2: PROTECTING THE LOCK REQUEST-URL
+
+Are locks on resources, or are they protections of URIs, or some
+hybrid?
+
+Geoff: Opposes trying to protect the Request-URI at all.  It's too
+expensive.  When you move a collection, you would have to scan 
+descendents and check whether any descendent is locked, and figure
+out which URL was used to lock it and whether the protected URL
+includes yours.  Where there may be multiple bindings and only one
+path is protected, that's hard.
+
+Jim W said last time that it's only the last segment that he
+really cares about protecting.
+
+Geoff: In versioning, it's even harder to protect the Request-URI.
+
+Geoff will post his arguments against protecting the Request-URI
+to the mailing list.  So far the discussion has only been about
+SHOULD vs. MUST, but we need discussion about whether it makes
+sense to try to protect the Request-URI at all.
+
+Chuck: The motivation for trying to protect the Request-URI is 
+that the client may not know any other URI for the resource, and
+so would be cut off from the resource if the Request-URI no longer
+provided access to it.
+
+There was a proposal on the list to make it possible to use the
+lock token as the request-URI  for UNLOCK so that at least it 
+would be possible to release the lock.  That doesn't help with 
+other operations.
+
+It would be nice to have a persistent name for a resource 
+(guaranteed to name it for all time) as in DMSs.
+
+Chuck: The client could always lock all elements on the path if it really
+cares.  
+
+Jason: But that would mean that no one else could make any 
+changes anywhere in the namespace since he would have to lock the
+root collection.
+Also, if there are non-DAV resources above, it wouldn't be possible
+to lock those, so can't protect those so couldn't protect the
+Request-URI.
+
+Chuck: protecting the URI is different from locking all elements 
+of the path, because a lock has defined methods that it prevents, 
+stronger than protecting as we have proposed it.
+
+Protecting has limited semantics: It affects only DELETE and MOVE,
+like defining a "protect lock".
+We could define a semantics that would allow clients to do the
+protecting, but would allow others to do useful work while the
+"protect lock" was in place.
+
+PROPOSAL: Don't protect the Request-URL.  Do allow an unlock on 
+the token itself.
+
+ISSUE 12: DEFINE A GUID PROPERTY THAT CAN BE USED TO DETERMINE
+WHETHER 2 BINDINGS ARE TO THE SAME RESOURCE.
+
+AGREED: We will define such a property.
+
+Judy will send mail about this to the list.
+
+It could just be an ID, not a URN.  It could even be a URN.  
+People aren't opposed to URNs per se, but only to using URNs as
+URLs.
+
+Chuck: Maybe must just be globally unique, but doesn't need to 
+follow any particular guid generation algorithm.  With lock tokens,
+we gave an example algorithm, but didn't require its use.  
+
+Make it a URI so that you know what namespace you are in.
+
+ISSUE 13: CLARIFY WHAT "OPTIONAL" MEANS FOR DAV:bindings
+
+AGREED: The property is optional per resource.  If it exists, it
+must contain a complete list of the bindings to that resource.
+
+Chuck: Is it possible to be sure the list is complete?
+
+Judy: We think yes, because we are requiring BIND to fail unless
+integrity can be guaranteed.  You couldn't make that guarantee
+unless the resource knew about all bindings to it.
+
+ISSUE 14: CAN WE GET RID OF SOME SIMILAR HEADERS: Destination,
+Location, Ref-Target
+
+The only one we are introducing is Ref-Target.  We use that only
+in MKREF requests.
+
+Geoff: Would prefer just putting the DAV:reftarget property into 
+the body of MKREF.  We could also do that in 302 responses instead
+of using the Resource-Type header.
+
+That would cut by 2 the number of new headers we are defining.
+
+AGREED: We'll accept Geoff's suggestion.
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

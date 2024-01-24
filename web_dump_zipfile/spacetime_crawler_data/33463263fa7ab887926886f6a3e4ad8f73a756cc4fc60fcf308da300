@@ -1,0 +1,48 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC403¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:40:22 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"4be-3158ece5ef180-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 14:54:43 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY¾// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Generate n vectors in R^d, with varying distances
+
+#include "PointSet.h"
+
+class VectorPointSet : public PointSet {
+	double * points;
+
+ protected:
+	int d;
+
+ public:
+ 	virtual double VecDistance(double *, double *) { return 0.0; }
+ 	VectorPointSet(unsigned long npoints, int dim);
+ 	~VectorPointSet() { delete points; }
+ 	double operator() (point i, point j) {
+ 		gDistances++;
+ 		return VecDistance(points+i*d, points+j*d);
+ 	}
+ 	void interact(point, point);
+};
+
+class VectorL1 : public VectorPointSet {
+ public:
+ 	VectorL1 (unsigned long np, int dim) : VectorPointSet(np, dim) { ; }
+	double VecDistance(double *, double *);
+};
+
+class VectorL2 : public VectorPointSet {
+ public:
+ 	VectorL2 (unsigned long np, int dim) : VectorPointSet(np, dim) { ; }
+	double VecDistance(double *, double *);
+};
+
+class VectorLinf : public VectorPointSet {
+ public:
+ 	VectorLinf (unsigned long np, int dim) : VectorPointSet(np, dim) { ; }
+	double VecDistance(double *, double *);
+};
+
+class VectorDot : public VectorPointSet {
+ public:
+ 	VectorDot (unsigned long np, int dim) : VectorPointSet(np, dim) { ; }
+	double VecDistance(double *, double *);
+};
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

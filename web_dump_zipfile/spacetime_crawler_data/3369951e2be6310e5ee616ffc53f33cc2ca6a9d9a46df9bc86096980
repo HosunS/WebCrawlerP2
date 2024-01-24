@@ -1,0 +1,1385 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE55260¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 27 Mar 1998 22:26:06 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"d7dc-32a64d99a5b80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 04:23:30 GMTKraw_content¢DtypeEvalueY×Ü;; Invert - program to compute inverses of recursive functions.
+;; Written by David Eppstein at Columbia University starting 26-Oct-84.
+;;
+;; This program takes recursive definitions of one or more functions
+;; with some set of arguments, and computes recursive definitions that
+;; given the values returned from the original functions calculate
+;; what the original arguments must have been.
+;;
+;; The method is largely based on "Inversion of Applicative Functions",
+;; Richard E. Korf, Carnegie Mellon University Computer Science Department.
+;; However, we perform many-to-many inversions (such as CAR and CDR to CONS)
+;; all at once rather than doing it one at a time and fixing up later.
+;; Also, we replace conditions with equivalent conditions on a somewhat
+;; ad hoc basis rather than using the formula in Korf's paper, which has
+;; no easy way of guaranteeing that the new condition is equivalent to the old
+;; or of making sure that a function defined with it will be computable.
+;;
+;; To do:
+;;
+;;  (1) Make insertion and deletion of tautologies smarter
+;;      (so can use variables that are conditioned NIL rather than const etc).
+;;
+;;  (2) Use conditions in context to help find replacement conditions
+;;      (again, so can use conditioned variables).
+;;
+;;  (3) Improve conditional system; for instance we need GREATERP
+;;      to be able to invert SUM/DIFF, and that would also be useful
+;;      for recursions going to constants other than zero.
+;;
+;;  (4) Improve expression class finder to know about dependencies on
+;;      argument class (so can do both-ways-at-once def of NEGATE).
+
+
+;; (definv (foo fah) (bar baz) foo-body fah-body)
+;;    Defines foo to be (lambda (bar baz) foo-body) and similarly
+;;    with fah.  Then it tries to find inverses bar and baz such that
+;;    (bar (foo bar baz) (fah bar baz)) = bar and similarly with baz.
+;;    If it does so, it remembers all the definitions and returns
+;;    (definv (bar baz) (foo fah) bar-body baz-body).
+;;    Otherwise, it prints an error message and returns NIL.
+
+(defun definv fexpr (arg)
+  (let ((start (make-list (car arg)))
+	(goal (make-list (cadr arg)))
+	(start-bodies (cddr arg)))
+    (and (all-atoms (append start goal))
+	 (no-duplications (append start goal))
+	 (make-sure-evaluable start-bodies goal)
+	 (check-consistency start goal start-bodies)
+	 (all-undefined goal)
+	 (set-classes start start-bodies)
+	 (invert start goal start-bodies)
+	 (add-inversion start goal)
+	 (add-definitions start goal start-bodies)
+	 (make-definv goal start))))
+
+;; Argument checking.
+
+;; We allow the user to specify just an atom for a single argument or function,
+;; rather than the list containing that atom.  Here we detect that case and
+;; turn it into the complete list.
+
+(defun make-list (atom-or-list)
+  (if (atom atom-or-list) (ncons atom-or-list) atom-or-list))
+
+
+;; Function and argument names are only allowed to be atoms.
+;; Here we make sure that this is the case, and if not complain
+;; and return failure from definv.
+
+(defun all-atoms (list)
+  (cond ((null list) t)			;All ok
+	((not (atom (car list)))	;This one bad
+	 (format t "~&Function or argument name not atomic: ~S.~%" (car list))
+	 (all-atoms (cdr list))		;Check for errors in the rest
+	 nil)				;Return failure from definv AND
+	(t (all-atoms (cdr list)))))	;Ok, try the next one
+
+
+;; The user must not specify the same name for more than one function,
+;; for more than one argument, or for both a function and an argument.
+;; Here we test whether the arguments to definv are acceptible by that
+;; criterion.  If not, we tell the user which names were duplicates
+;; and return NIL, causing definv to fail.
+
+(defun no-duplications (list)
+  (cond ((null list) t)			;All ok
+	((memq (car list) (cdr list))	;This one bad
+	 (format t "~&Duplicate function or argument: ~S.~%" (car list))
+	 (no-duplications (cdr list))	;Check rest anyway
+	 nil)
+	(t (no-duplications (cdr list)))))	;This ok, try rest of list
+
+;; Check evaluability of function bodies and conditions.
+
+;; We must make sure that all function bodies are evaluable, so that
+;; we can come up with a reasonable inverse.
+
+(defun make-sure-evaluable (start-bodies goal)
+  (cond ((expr-list-evaluable start-bodies goal) t)
+	(t (format t "~&Function bodies are not evaluable in terms of args.~%")
+	   nil)))
+
+
+;; Here to check whether, knowing a list of variable values (the arguments
+;; to the function definitions), we can evaluate a list of expressions
+;; (the function bodies).
+
+(defun expr-list-evaluable (expr-list var-list)
+  (cond ((null expr-list) t)
+	((expr-evaluable (car expr-list) var-list)
+	 (expr-list-evaluable (cdr expr-list) var-list))
+	(t nil)))
+
+
+;; Here to check whether some specific condition or expression is evaluable,
+;; given the values of certain variables (the arguments to the expression).
+;; We can always evaluate NIL and numbers.
+
+(defun expr-evaluable (expr var-list)
+  (cond ((null expr) t)
+	((numberp expr) t)
+	((atom expr) (memq expr var-list))
+	(t (expr-list-evaluable (cdr expr) var-list))))
+
+;; Definition consistency check.
+
+;; This function takes a list of function names, a list of their arguments,
+;; and a list of bodies, and makes sure those bodies all agree with the
+;; definitions we already know for those functions.  If they agree it returns
+;; T, otherwise it prints a diagnostic message and returns NIL.
+
+(defun check-consistency (start goal start-bodies)
+  (cond ((and (null start) (null start-bodies)) t)
+	((null start-bodies)
+	 (format t "~&More bodies than function names.~%")
+	 nil)
+	((null start-bodies)
+	 (format t "~&More function names than bodies.~%") nil)
+	((not (consistent (car start) goal (car start-bodies)))
+	 (format t "~&Inconsistent definition of ~S.~%" (car start))
+	 (check-consistency (cdr start) goal (cdr start-bodies))
+	 nil)
+	(t (check-consistency (cdr start) goal (cdr start-bodies)))))
+
+
+;; Check one definition for consistency.
+
+(defun consistent (fun args body)
+  (let ((def (definition fun)))
+    (cond ((null def) t)
+	  ((atom def) nil)
+	  (t (consistent-arg-replace args body (cadr def) (caddr def))))))
+
+
+;; Go through the list of arguments replacing new for old until we
+;; run out; then make sure the two are the same.
+
+(defun consistent-arg-replace (new-args new-body old-args old-body)
+  (cond ((null new-args) (if (null old-args) nil (equal new-body old-body)))
+	((null old-args) nil)
+	(t (consistent-arg-replace (cdr new-args) new-body (cdr old-args)
+				   (subst (car new-args) (car old-args)
+					  old-body)))))
+
+
+;; When we implicitly define some goal function using
+;; definv, we can't know beforehand what it will invert to.
+;; Thus we must disallow any goal function names that
+;; already have definitions attached.
+
+(defun all-undefined (goal)
+  (cond ((null goal) t)
+	((definition (car goal))
+	 (format t "~&~S already defined; unable to define implicitly.~%"
+		 (car goal))
+	 (all-undefined (cdr goal))	;Get more error messages
+	 nil)
+	(t (all-undefined (cdr goal)))))
+
+;; Maintenance of definitions.
+
+;; For each object we invert, we want to remember what we defined
+;; it as so that we can make sure that the definition is the same
+;; if this function is used in later inversion sets.
+;; The definition for a function is kept as a LAMBDA-expression
+;; in its DEFINITION property.  Primitive functions like
+;; CAR and ADD1 just keep the atom name itself here.
+
+(defun definition (fun-name) (get fun-name 'definition))
+(defun add-definition (fun-name def) (setf (get fun-name 'definition) def))
+
+(add-definition 'car 'car)
+(add-definition 'cdr 'cdr)
+(add-definition 'cons 'cons)
+(add-definition 'add1 'add1)
+(add-definition 'sub1 'sub1)
+
+
+;; Often we have the function name, the argument list, and the body,
+;; and we want to put them together into a lambda-form definition.
+
+(defun make-definition (name args body)
+  (add-definition name
+		  (list 'lambda args body)))
+
+
+;; Here when an inversion has been complete, to add a list of definitions
+;; to the definition list.  We already checked that they are consistent
+;; with our previous definitions, so rather than bothering to check
+;; whether we already have a definition we just use the new one.
+;;
+;; This always returns T.
+
+(defun add-definitions (start goal start-bodies)
+  (cond ((null start) t)
+	(t (make-definition (car start) goal (car start-bodies))
+	   (add-definitions (cdr start) goal (cdr start-bodies)))))
+
+;; States in the search.
+
+;; A state is an object containing a list of facts, an index, a pointer
+;; to its parent state, and a string describing what transformation
+;; produced this state from the parent.
+
+(defun state-fact-list (state) (caar state))
+(defun state-index (state) (cdar state))
+(defun state-parent (state) (cadr state))
+(defun state-desc (state) (cddr state))
+
+(defun make-state (desc parent fact-list)
+  (print-state (cons (cons fact-list (new-state-index parent))
+		     (cons parent desc))))
+
+
+;; Each state remembers a number identifying it uniquely throughout the
+;; inversion process.  These numbers are assigned from this variable.
+
+(defvar *state-index*)
+
+
+;; When we produce a new state we must also produce a new index for that
+;; state.  If this is the very first state in a new DEFINV the parent will
+;; be NIL, so we reset the index to 1.  Otherwise we bump it to the next
+;; number after the previously assigned index.
+
+(defun new-state-index (parent)
+  (setq *state-index* (if (null parent) 1 (add1 *state-index*)))
+  *state-index*)
+
+
+;; When we produce a new state, we want to display it on the terminal
+;; so the user can see what we're trying to do.  This function does
+;; so, and returns the state that was printed.
+
+(defun print-state (state)
+  (format t "~&~%~D. ~A" (state-index state) (state-desc state))
+  (and (state-parent state)
+       (format t " from ~D" (state-index (state-parent state))))
+  (format t ":~%")
+  (print-fact-list (state-fact-list state))
+  state)
+
+
+;; Here to recursively print each fact in the state.
+
+(defun print-fact-list (fact-list)
+  (cond ((null fact-list) nil)
+	(t (print-fact (car fact-list))
+	   (print-fact-list (cdr fact-list)))))
+
+;; Fact representation.
+;;
+;; Each state is kept as a list of facts, each of which is represented as
+;; a condition, a left side of the equality, and a right side of the
+;; equality.  The condition is the conjunction of a list of forms;
+;; thus if the list is NIL the equality holds absolutely.  The state
+;; consists of a list of these facts.
+
+;; I want to do
+;;
+;; (defstruct (fact)
+;;   fact-condition-list
+;;   fact-left-side
+;;   fact-right-side)
+;;
+;; But MacLISP doesn't seem to know about defstruct.  So instead I have
+;; to define my constructors and accessors by hand...
+
+(defun fact-condition-list (fact) (car fact))
+(defun fact-left-side (fact) (cadr fact))
+(defun fact-right-side (fact) (cddr fact))
+
+(defun make-fact (condition-list left-side right-side)
+  (cons condition-list (cons left-side right-side)))
+
+;; We want to print out these facts.  The format we use is:
+;;     [ cond [ " & " cond ]* " -> " ] left " = " right,  e.g.
+;;     (NULL X) & (NULL Y) -> X = Y.
+;; It prints the whole fact on a new line, followed by a carriage return.
+;;
+;; If the fancy options of FORMAT autoloaded correctly, we could do this:
+;;
+;; (defun print-fact (fact)
+;;   (format t "~&~{~S~@{ & ~S~} -> ~}~S = ~S~%"
+;;	  (fact-condition-list fact)
+;;	  (fact-left-side fact)
+;;	  (fact-right-side fact)))
+
+(defun print-fact (fact)
+  (format t "~&")
+  (and (fact-condition-list fact) (print-condition (fact-condition-list fact)))
+  (format t "~S = ~S~%" (fact-left-side fact) (fact-right-side fact)))
+
+
+;; Since we can't use FORMAT to run through the condition list and print it,
+;; we must perform that recursion by hand.  Conditions are separated from
+;; each other by ampersands and from the rest of the fact by an arrow.
+;; If the condition list is empty nothing is printed.
+
+(defun print-condition (condition-list)
+  (cond ((null (cdr condition-list)) (format t "~S -> " (car condition-list)))
+	(t (format t "~S & " (car condition-list))
+	   (print-condition (cdr condition-list)))))
+
+;; State transformation machinery.
+
+;; Inversion consists of transforming our initial definitions into a list of
+;; facts, and then performing various transformations on those facts until
+;; we run across a fact list which is a set of unqualified definitions of the
+;; inverse functions we wish to find.
+
+(defun invert (start goal start-bodies)
+  (cond ((transform-facts (make-state "Initial definitions" nil
+				      (fact-list-for start start-bodies))
+			  start goal)
+	 t)				;Found a successful combination
+	(t (format t "~&~%Couldn't find an inversion.~%")
+	   nil)))
+
+
+;; Here to transform our lists of start functions and their definition
+;; bodies into a list of facts that can be manipulated by TRANSFORM-FACTS.
+
+(defun fact-list-for (name-list body-list)
+  (if (null name-list) nil
+      (cons (make-fact nil (car name-list) (car body-list))
+	    (fact-list-for (cdr name-list) (cdr body-list)))))
+
+
+;; This is the top of the fact transformation loop.
+;; It tries the various possible transformations until one succeeds.
+
+(defun transform-facts (state start goal)
+  (*catch 'give-up-transformation
+    (or (check-if-goal-state state start goal) ;should be first in this list
+	(make-conds-evaluable state start goal) ;must be before expand-conds
+	(expand-conditionals state start goal) ;less overhead if before merge
+	(merge-conditions state start goal)
+	(find-inversions state start goal)))) ;this should be last
+
+;; Pseudo-transformation to check if goal has been achieved.
+
+;; Here to see if we have an actual solution to the inversion.
+;; This is treated like any other transformation rule, but it is
+;; always the first one so that we don't transfer past our goal.
+
+(defun check-if-goal-state (state start goal)
+  (check-at-goal (state-fact-list state) start goal))
+
+
+;; The transformation machine wants to pass us the whole state,
+;; but since we aren't going to add any new states to the search
+;; tree we are only interested in the list of facts for that state.
+
+(defun check-at-goal (fact-list start goal)
+  (cond ((null fact-list) (null goal))	;No facts or goals is good
+	((null goal) nil)		;Extra facts are bad
+	((fact-condition-list (car fact-list)) nil) ;Must be unconditional
+	((not (memq (fact-right-side (car fact-list)) goal)) nil) ;Non-goal
+	((check-at-goal (cdr fact-list) start
+			(rem-one-q (fact-right-side (car fact-list)) goal))
+	 (add-goal-def fact start))	;Success, add defs and return win
+	(t nil)))			;Lost later, return failure
+
+
+
+;; All previous facts are definitional, because they got through their
+;; previous checks in the COND to the recursive call to CHECK-AT-GOAL
+;; which eventually called this instantiation.  Similarly, this fact
+;; is definitional.  All future facts are definitional and all our definitions
+;; cover exactly the set of goal functions, because our recursive call
+;; to CHECK-AT-GOAL returned T.  Thus we are at the goal.
+;;
+;; All recursive calls to CHECK-AT-GOAL have already remembered the definition
+;; and class for the goal function they covered; similarly the instances of
+;; CHECK-AT-GOAL that called us will remember their definition and class.
+;; What remains for us to do is remember the definition and class from this
+;; fact, and return true from this instance of CHECK-AT-GOAL.
+
+(defun add-goal-def (fact start)
+  (set-class (fact-right-side (car fact-list))
+	     (fact-left-side (car fact-list)))
+  (make-definition (fact-right-side (car fact-list)) start
+		   (fact-left-side (car fact-list)))
+  t)
+
+
+;; We found a goal with a right hand side that matched one of our original
+;; goal functions.  We want to test the rest of the fact list against
+;; the rest of the goal list, and therefore we need to calculate the
+;; rest of the goal list.  ZetaLISP provides a function REMQ to do this
+;; for us, but since we are using MacLISP we have to define it ourselves.
+;; We assume here that the item occurs exactly once in the list.
+
+(defun rem-one-q (item list)
+  (if (eq item (car list))
+      (cdr list)
+      (cons (car list) (rem-one-q item (cdr list)))))
+
+;; Expansion of conditionals
+
+;; The first thing we want to do to an expression with a conditional function
+;; such as IF or COND is to split it into facts with the condition set to
+;; true or false.  Then later we can replace these conditions with something
+;; computable in the inverse direction and put them back together.
+
+(defun expand-conditionals (state start goal)
+  (let ((fact (find-unexpanded-cond (state-fact-list state))))
+    (and fact (expand-the-condition fact state start goal))))
+
+
+;; This routine goes through the list of facts looking for one that
+;; has a right side starting with IF or COND.  Since we expand conditions
+;; after replacement of unevaluable ones, it is always safe to expand
+;; whatever condition we find, so it doesn't matter if we ignore one
+;; as long as we find some other.  Thus we simply return the condition
+;; we found to save stack for the recursive call to TRANSFORM-FACTS.
+
+(defun find-unexpanded-cond (fact-list)
+  (cond ((null fact-list) nil)
+	((conditional-form-p (fact-right-side (car fact-list)))
+	 (car fact-list))
+	(t (find-unexpanded-cond (cdr fact-list)))))
+
+
+;; Here we do the work of expanding any of the above conditional forms.
+;; We take the fact to expand, the state, start and goal information,
+;; and calculate the new state with the fact replaced by its true and
+;; false conditional facts.  It can never hurt to expand a condition,
+;; so we don't let the search backtrack past this point.
+
+(defun expand-the-condition (fact state start goal)
+  (let* ((right (fact-right-side fact))
+	 (left (fact-left-side fact))
+	 (cond (cond-clause right))
+	 (old-conds (fact-condition-list fact))
+	 (fact-list (list* (make-fact (cons (simplify-cond cond) old-conds)
+				      left (true-clause right))
+			   (make-fact (cons (negate-cond cond) old-conds)
+				      left (false-clause right))
+			   (rem-one-q fact (state-fact-list state))))
+	 (new-state (make-state (format nil "Expand condition ~S" cond)
+				state fact-list)))
+    (or (transform-facts new-state start goal)
+	(*throw 'give-up-transformation nil))))
+
+;; Manipulation of conditions.
+
+;; Simplification of conditionals.
+;; When we add a condition to a form, we want it to be in as simple
+;; a form as possible.   This function removes double negatives,
+;; and canonicalizes uses of NULL and NOT so conds can be easily compared.
+;; Which of NULL or NOT is used depends on whether we think the condition
+;; is an expression or a predicate.  This is very heuristic, but acceptible
+;; in its vagueness since it doesn't matter as long as we are consistent.
+
+(defun simplify-cond (cond)
+  (cond ((atom cond) cond)
+	((not (memq (car cond) '(not null))) cond)
+	((atom (cadr cond)) (list 'null (cadr cond)))
+	(t (caseq (caadr cond)
+	     ((not null) (simplify-cond (cadadr cond)))
+	     ((zerop minusp plusp numberp atom) (list 'not (cadr cond)))
+	     (t (list 'null (cadr cond)))))))
+
+(defun negate-cond (cond) (simplify-cond (list 'not cond)))
+
+;; Comparison of conditions.
+;; Often we want to test whether two conditions are the same.
+;; Here we provide a function to do that.  The INVERT argument is
+;; used to check if they are the same except that that clause in the
+;; first is inverted in the second.
+
+(defun same-cond (first second invert)
+  (*catch 'no-such-cond (null (conds-left-over first second invert))))
+
+
+;; Compute the list of conditions from the second list that don't appear
+;; in the first.  As above, INVERT is negated from the first list.
+
+(defun conds-left-over (first second invert)
+  (cond ((null first) second)
+	((equal (car first) invert)
+	 (conds-left-over (cdr first)
+			  (find-and-remove-cond (negate-cond invert) second)
+			  nil))
+	(t (conds-left-over (cdr first)
+			    (find-and-remove-cond (car first) second)
+			    invert))))
+
+
+;; Given a condition, make sure it is a member of the condition list
+;; and return a new condition list with it removed.  If the condition
+;; is not in the list, we throw NIL out to NO-SUCH-COND.
+
+(defun find-and-remove-cond (cond list)
+  (cond ((null list) (*throw 'no-such-cond nil))
+	((equal cond (car list)) (cdr list))
+	(t (cons (car list) (find-and-remove-cond cond (cdr list))))))
+
+;; Expanding specific conditional forms.
+
+;; First we have a function to determine whether a function is a conditional
+;; form that can be expanded.
+
+(defun conditional-form-p (expr)
+  (and (not (atom expr))
+       (memq (car expr) '(if cond and or))))
+
+
+;; Once we have determined that something is a conditional form, we want to
+;; extract the condition, the value if the condition is true, and the value
+;; if the condition is false.  Here we extract the condition.
+;; For IF, AND, and OR, this is simply the first argument; for COND it
+;; is the CAR of the first argument.
+
+(defun cond-clause (expr)
+  (caseq (car expr)
+    (cond (caadr expr))
+    ((if and or) (cadr expr))))
+
+
+;; Here to extract the true clause.  For AND it is either the conditional
+;; clause or the AND of the remaining args; for OR it is the conditional;
+;; for IF it is the second arg, and for COND it is the rest of the first arg.
+
+(defun true-clause (expr)
+  (caseq (car expr)
+    (cond (cadadr expr))		;Conditional returns rest of first arg
+    (if (caddr expr))			;IF returns second arg
+    (or (cadr expr))			;OR returns true condition result
+    (and (if (more-than-two-args expr)	;AND with only one arg after this?
+	     (cons 'and (cddr expr))	;No, have to cons rest as another AND
+	     (caddr expr)))))		;Yes, just use last arg as result
+
+
+;; Here to extract the false clause.
+
+(defun false-clause (expr)
+  (caseq (car expr)
+    (cond (cond ((null (cddr expr)) nil)	;This was last cond clause?
+		((eq 't (car (caddr expr)))	;Trivial next clause?
+		 (cadr (caddr expr)))		;Yes, will always succeed
+		(t (cons 'cond (cddr expr)))))	;Otherwise make more COND
+    (if (cadddr expr))			;Third arg of IF
+    (and nil)				;AND failed, returns NIL immediately
+    (or (if (more-than-two-args expr)	;OR with only two args left?
+	    (cons 'or (cddr expr))	;No, rest is OR of remaining args
+	    (caddr expr)))))		;Yes, result is remaining arg
+
+
+;; For the true clause of an AND or the false clause of an OR we want to
+;; see if we need to continue it as a condition, or if there is one remaining
+;; argument after this one that will always be the result.
+
+(defun more-than-two-args (expr) (not (null (cdddr expr))))
+
+;; Replacement of unevaluable conditions.
+
+;; The conditions we expand from conditional forms in the definitions
+;; of the start functions will be expressed in terms of the goal variables.
+;; To form conditions usable in definitions of the inverse goal functions,
+;; we need them to be expressed in terms of the start variables.
+;; Therefore we go through the database looking for conditions which
+;; are not evaluable in the inverse context but which can be replaced
+;; by conditions which are.
+
+(defun make-conds-evaluable (state start goal)
+  (let ((new-state
+	 (find-unevaluable-fact (state-fact-list state) state start)))
+    (cond ((null new-state) nil)
+	  ((transform-facts new-state start goal))
+	  (t (*throw 'give-up-transformation nil)))))
+
+
+;; Here to check the facts in some tail of the list of facts in the
+;; current state for unevaluable conditions.  We only examine it in
+;; detail if there are actually conditions on this fact.
+
+(defun find-unevaluable-fact (fact-list state evaluable-atoms)
+  (cond ((null fact-list) nil)
+        ((let* ((first-fact (car fact-list))
+		(cond-list (fact-condition-list first-fact)))
+	   (find-unevaluable-cond cond-list cond-list state evaluable-atoms)))
+	(t (find-unevaluable-fact (cdr fact-list) state evaluable-atoms))))
+
+
+;; Here to check some condition in the conjunction of conditions
+;; for this fact.  If we find that it is unevaluable, we try replacing
+;; it with some equivalent condition that is evaluable.
+
+(defun find-unevaluable-cond (cond-list all-conds state evaluable-atoms)
+  (and cond-list
+       (let* ((first-cond (car cond-list))
+	      (new-cond (and (not (expr-evaluable first-cond evaluable-atoms))
+			     (replacement-cond first-cond all-conds state))))
+	 (if new-cond
+	     (state-with-cond-replaced first-cond new-cond all-conds state)
+	     (find-unevaluable-cond (cdr cond-list) all-conds state start)))))
+
+
+;; We have a condition that is not evaluable, and a context of other
+;; conditions in the list we found it with.  Look through the whole
+;; list of facts to find a condition true in this context iff the
+;; original condition is true.  (NOT ...) conds are covered by the
+;; check for the uninverted form, so we ignore them here.
+
+(defun replacement-cond (cond all-conds state)
+  (if (and (not (atom cond)) (eq 'not (car cond))) nil
+      (find-false-replace-cases cond all-conds (state-fact-list state)
+	(find-true-replace-cases cond all-conds (state-fact-list state) nil))))
+
+;; Look for replacement conditions.
+
+;; First we go through looking for all statements of the form
+;;    cond & all-conds -> left = right.
+;; For each such, we record in an alist an association between the left side
+;; and the tightest predicate we know that is true of the right side.
+
+(defun find-true-replace-cases (cond all-conds fact-list alist)
+  (if (null fact-list) alist
+      (let ((fact (car fact-list)))
+	(find-true-replace-cases cond all-conds (cdr fact-list)
+	   (if (same-cond all-conds (fact-condition-list fact) nil)
+	       (cons (cons (fact-left-side fact)
+			   (expr-class (fact-right-side fact)))
+		     alist)
+	       alist)))))
+
+
+;; Once we have computed the list of left sides when the condition is true,
+;; we look again through the fact lists for one with the condition false,
+;; a left side that matches a left side we found when the condition was true,
+;; and a right side of a disjoint class than that recorded when the condition
+;; was true (which can be found by looking up the left side in the alist).
+
+(defun find-false-replace-cases (cond all-conds fact-list alist)
+  (if (null fact-list) nil		;Didn't find any match
+      (let* ((fact (car fact-list))
+	     (old-assoc (assoc (fact-left-side fact) alist))
+	     (old-class (if old-assoc (cdr old-assoc) 'root-class))
+	     (new-class (expr-class (fact-right-side fact))))
+	(if (and (same-cond all-conds (fact-condition-list fact) cond)
+		 (disjoint-classes old-class new-class))
+	    (apply-class (simpler-class old-class (negate-class new-class))
+			 (fact-left-side fact))
+	    (find-false-replace-cases cond all-conds (cdr fact-list) alist)))))
+
+
+;; Here with one of two choices for a replacement condition.
+;; We don't want to clutter up our derivation with complicated
+;; conditions, so we choose the one that looks simplest.
+
+(defun simpler-class (first-class second-class)
+  (cond ((member first-class '(null (not null))) first-class)
+	((member second-class '(null (not null))) second-class)
+	((atom second-class) second-class)
+	(t first-class)))
+
+
+;; Now combine the chosen class with the expression it tests to make a cond.
+
+(defun apply-class (class clause)
+  (simplify-cond (if (atom class) (list class clause)
+		     (list (car class) (apply-class (cadr class) clause)))))
+
+;; Found replacement condition, do the replacement.
+
+;; Now we've found an unevaluable condition and its evaluable equivalent
+;; in some context.  Perform the replacement.
+
+(defun state-with-cond-replaced (cond replacement cond-list state)
+  (let* ((cond-list-without-cond (find-and-remove-cond cond cond-list))
+	 (inv-cond (negate-cond cond))
+	 (false-replacement (negate-cond replacement))
+	 (true-list (cons replacement cond-list-without-cond))
+	 (false-list (cons false-replacement cond-list-without-cond))
+	 (rbase (cond-base replacement))
+	 (fact-list (state-fact-list state))
+	 (new-list (fact-list-with-cond-replaced cond-list-without-cond cond
+						 true-list inv-cond false-list
+						 rbase fact-list)))
+    (make-state (format nil "Replace condition ~S with ~S" cond replacement)
+		state
+		(replace-tautologies true-list false-list cond new-list))))
+
+
+;; If we got rid of a condition such as (NULL goal-atom), we want
+;; to replace it with a fact such as NIL = goal-atom.  Similarly,
+;; later we will remove facts that are subsumed in the new condition.
+
+(defun replace-tautologies (true-list false-list cond new-list)
+  (if (atom cond)
+      (cons (make-fact false-list nil cond) new-list)
+      (caseq (car cond)
+	(not (replace-tautologies false-list true-list (cadr cond) new-list))
+	(null (cons (make-fact true-list nil (cadr cond)) new-list))
+	(zerop (cons (make-fact true-list 0 (cadr cond)) new-list))
+	(t new-list))))
+
+
+;; Here to replace the condition in the list of facts for this state.
+;; We call ourselves recursively to replace the rest of the facts,
+;; and hand this list and our arguments off to REPLACE-COND-FACT.
+
+(defun fact-list-with-cond-replaced (context cond cond-list inv-cond inv-list
+					     rbase facts)
+  (if (null facts) nil
+      (replace-cond-fact context cond cond-list
+			 inv-cond inv-list (car facts) rbase
+			 (fact-list-with-cond-replaced context cond cond-list
+						       inv-cond inv-list
+						       rbase (cdr facts)))))
+
+;; Yet more condition replacement.
+
+;; Here to replace the condition in one fact in the state.
+;; We call CHECK-CONTEXT-AND-REPLACE to do the replacement for a fact
+;; that has this context and either the condition or its inverse.
+;; If the fact is not of this form, we will get thrown out to NO-SUCH-COND
+;; and simply use the old fact.
+
+(defun replace-cond-fact (context cond cond-list inv-cond inv-list
+			  fact rbase rest)
+  (*catch 'no-such-cond (check-context-and-replace context cond cond-list
+						   inv-cond inv-list
+						   fact rbase rest)))
+
+
+;; Here to try removing the context from the condition.  If we did that, we
+;; then call REPLACE-CONTEXT-FACT to distinguish the case where the cond
+;; itself is left in the condition from the case where its inverse is left.
+;; If this fact should be ignored, REPLACE-CONTEXT-FACT will throw IGNORE-FACT.
+
+(defun check-context-and-replace (context cond cond-list inv inv-list
+				  fact rbase rest)
+  (*catch 'ignore-fact
+    (or (*catch 'no-such-cond
+	  (let ((rest-of-cond
+		 (conds-left-over context (fact-condition-list fact) nil))
+		(left-side (fact-left-side fact))
+		(right-side (fact-right-side fact)))
+	    (or (replace-context-fact cond cond-list rbase rest
+				      left-side right-side rest-of-cond)
+		(replace-context-fact inv inv-list rbase rest
+				      left-side right-side rest-of-cond))))
+	(cons fact rest))))
+
+
+;; Here to check one condition or its inverse against the conditions
+;; left once the context is removed.  If the condition is not there we return
+;; NIL to the OR in CHECK-CONTEXT-AND-REPLACE.  Otherwise, we make sure that
+;; the fact isn't something that REPLACE-TAUTOLOGIES would make and thus can
+;; be thrown away.  If that is not the case, it builds a new fact which
+;; is the same as the old but with the condition replaced.
+
+(defun replace-context-fact (cond cond-list rbase rest left-side right-side
+			     rest-of-cond)
+  (*catch 'no-such-cond
+    (if (and (equal rest-of-cond (list cond))
+	     (equal left-side rbase)
+	     (or (null right-side) (numberp right-side)))
+	(*throw 'ignore-fact rest)	;Ignore useless statement
+	(cons (make-fact (append (find-and-remove-cond cond rest-of-cond)
+				 cond-list)
+			 left-side right-side)
+		rest))))
+
+;; Object class heirarchy.
+
+;; To be able to find calculable replacement conditions, we need to
+;; find out what conditions hold of various functions.
+;; This is done by a class system; e.g. the object NIL is in class NULL,
+;; and everything else is (NOT NULL), so if we see an expression that
+;; under a condition is equal to NIL and under the negation of the
+;; condition is not, we know that (NULL expression) is equivalent to that
+;; condition.
+;;
+;; Objects are divided up by the following taxonomy:
+;;
+;;                                                    __ PLUSP
+;;                                                   |
+;;                                __ NUMBERP ________|__ ZEROP
+;;                               |                   |
+;;                               |                   |__ MINUSP
+;;               __ ATOM ________|
+;;              |                |                    __ NULL
+;;              |                |___(NOT NUMBERP) __|
+;; ROOT-CLASS __|                                    |__ (NOT NULL)
+;;              |
+;;              |__ (NOT ATOM)
+;;
+;; Negation here is considered as being within the superclass of the
+;; negated class; for instance the class (NOT NUMBERP) is not as you
+;; might expect the class of all objects that are not numbers, but
+;; rather the class of all atoms that are not numbers.
+;;
+;; The root of the tree is ROOT-CLASS; every object is a member of this class.
+;; If an expression has class (NOT ROOT-CLASS) then it can never return.
+;;
+;; Each pair of subclasses of NUMBERP above union to form the negation
+;; of the third; for instance PLUSP + ZEROP = (NOT MINUSP).  The functions
+;; that combine and test classes have special code to handle these cases.
+
+(defmacro defclass (name super) `(defprop ,name ,super super-class))
+
+(defclass atom root-class)
+(defclass numberp atom)
+(defclass minusp numberp)
+(defclass zerop numberp)
+(defclass plusp numberp)
+(defclass null (not numberp))
+
+
+;; Often it will be useful to calculate the inverse of a class within
+;; a superclass, e.g. given MINUSP return (NOT MINUSP) and vice versa.
+;; This is almost like NEGATE-COND, but that will use NULL instead of NOT.
+;;
+;; This code assumes that the only non-atomic classes are of the form
+;; (NOT class).  Rewrite it if the assumption becomes no longer valid.
+
+(defun negate-class (class)
+  (if (atom class)			;Atomic?
+      (list 'not class)			;Yes, simple negation
+      (cadr class)))			;No, must already be negation so strip.
+
+;; Set function class definitions.
+
+;; When we define a function we want to remember its class for use in
+;; later inversions.
+
+(defun set-classes (name-list body-list)
+  (cond ((null name-list) t)
+	(t (set-class (car name-list) (car body-list))
+	   (set-classes (cdr name-list) (cdr body-list)))))
+
+
+;; Here to set the class of a function from its body.  We initially use just
+;; the base case by assuming that recursive calls return class
+;; (NOT ROOT-CLASS), then recalculate the class using the newly computed
+;; class recursively until we come to a fixed point.  We always will,
+;; since each iteration is always a superclass of the previous, there
+;; are a finite number of superclasses between any class and ROOT-CLASS,
+;; and ROOT-CLASS is always a fixed point.
+
+(defun set-class (name body)
+  (set-class-iteration name body '(not root-class)))
+
+(defun set-class-iteration (name body class)
+  (setf (get name 'function-class) class)
+  (let ((new-class (expr-class body)))
+    (or (equal new-class class)
+	(set-class-iteration name body new-class))))
+
+;; Test if two classes are disjoint.
+
+;; The structure of our taxonomy ensures that given two classes, either
+;; one is a subclass of the other or the two are disjoint.  We want to
+;; be able to determine the latter to find replacement conditions.
+
+(defun disjoint-classes (first-class second-class)
+  (and (not (equal first-class 'root-class))
+       (not (equal second-class 'root-class))
+       (not (overlapping-numeric-classes first-class second-class))
+       (not (eventual-super-class first-class second-class))
+       (not (eventual-super-class second-class first-class))))
+
+
+;; The exception to the trichotomy of disjointness to subclasses is
+;; for subclasses of NUMBERP.  Here we check whether this is the case.
+
+(defun overlapping-numeric-classes (first-class second-class)
+  (and (numeric-class first-class)
+       (numeric-class second-class)
+       (or (not (atom first-class)) (not (atom second-class)))
+       (not (equal first-class (negate-class second-class)))))
+
+
+;; Here we test whether one class is a (proper or improper) subclass of
+;; some other.  This is true if the subclass is a member of the list
+;; of the superclass and all its superclasses.
+
+(defun eventual-super-class (sub super)
+  (member super (super-class-list sub nil)))
+
+
+;; We need special case code to handle the case of subclasses of NUMBERP,
+;; because the taxonomy there does not follow the simple binary structure
+;; used elsewhere.  Therefore we have to check whether a class is in
+;; fact a subclass of NUMBERP.  Happily all such classes have no subclasses
+;; themselves.  Here we make that check.
+
+(defun numeric-class (class)
+  (eq 'numberp (super-class class)))
+
+
+;; We want to calculate a list of superclasses of a class going back
+;; to NIL, the root of the class heirarchy.  Here we compute that function.
+
+(defun super-class-list (sub rest)
+  (if (equal sub 'root-class)
+      (cons sub rest)
+      (super-class-list (super-class sub) (cons sub rest))))
+
+
+;; To compute the superclass list we need to be able to compute one superclass.
+;; If a class name is atomic then its direct superclass is simply
+;; its SUPER-CLASS property; otherwise it is of the form (NOT atom)
+;; and the superclass is the SUPER-CLASS property for that atom.
+
+(defun super-class (sub)
+  (get (if (atom sub) sub (cadr sub)) 'super-class))
+
+;; Find least common superclass.
+
+;; This is used when deciding what class a function can possibly return,
+;; when it can return either of two values depending on some condition.
+;; This is defined by making the SUPER-CLASS-LIST of the two classes
+;; and finding the last place where the two lists are the same.
+;; If one of the classes is T we simply return the other class.
+;; We must also special case for subclasses of NUMBERP.
+
+(defun common-super (first-class second-class)
+  (cond ((equal first-class '(not root-class)) second-class)
+	((equal second-class '(not root-class)) first-class)
+	((and (numeric-class first-class) (numeric-class second-class))
+	 (common-numeric-class first-class second-class))
+	(t (common-super-list-head 'root-class
+				   (super-class-list first-class nil)
+				   (super-class-list second-class nil)))))
+
+
+;; We need special code for the least common superclass of two subclasses
+;; of NUMBERP.  This code needs detailed explanation:
+;;  (1) If the two classes are both one class, its superclass is itself.
+;;  (2) If they are disjoint members of (ZEROP PLUSP MINUSP), the superclass
+;;      is the negation of the third member, e.g. ZEROP + PLUSP = (NOT MINUSP).
+;;  (3) If one is the negation of the other, the superclass is all of NUMBERP.
+;;  (4) If one is a member of (ZEROP PLUSP MINUSP), and the other is the
+;;      negation of a member, then the atomic member is a proper subset of
+;;      the negation, so the superclass is the negation.  E.g.
+;;      ZEROP is within (NOT MINUSP), so ZEROP + (NOT MINUSP) = (NOT MINUSP).
+;;  (5) The remaining case is that they are distinct negations of members
+;;      of (ZEROP PLUSP MINUSP).  In that case the result is all of NUMBERP,
+;;      e.g. (NOT MINUSP) + (NOT ZEROP) = NUMBERP.  This is of course valid
+;;      for the other cases above (and would be returned by COMMON-SUPER
+;;      without all this special case code) but is not tight enough to invert
+;;      many recursions.
+
+(defun common-numeric-class (first-class second-class)
+  (cond ((equal first-class second-class) first-class)
+	((and (atom first-class) (atom second-class))
+	 (negate-class (car (rem-one-q first-class
+				      (rem-one-q second-class
+						 '(zerop plusp minusp))))))
+	((equal first-class (negate-class second-class)) 'numberp)
+	((atom first-class) second-class)
+	((atom second-class) first-class)
+	(t 'numberp)))
+
+
+;; Here to find where two super-class lists diverge.  The first argument
+;; returned if they already diverge; both lists always start with ROOT-CLASS
+;; so the initial setting is irrelevant, but should be ROOT-CLASS for safety.
+
+(defun common-super-list-head (prev-head first-tail second-tail)
+  (if (or (null first-tail) (null second-tail)
+	  (not (equal (car first-tail) (car second-tail))))
+      prev-head
+      (common-super-list-head (car first-tail)
+			      (cdr first-tail) (cdr second-tail))))
+
+;; Function class maintenance.
+
+;; We will want to calculate the class of some expression, both for
+;; finding equivalent conditions and also for setting the result class
+;; of a function for later use by these routines.
+
+(defun expr-class (expr)
+  (cond ((null expr) 'null)
+	((numberp expr) (cond ((minusp expr) 'minusp)
+			      ((zerop expr) 'zerop)
+			      (t '(not zerop))))
+	((atom expr) 'root-class)
+	((conditional-form-p expr)
+	 (common-super (expr-class (true-clause expr))
+		       (expr-class (false-clause expr))))
+	(t (caseq (car expr)
+	     (sub1 (sub1-class (expr-class (cadr expr))))
+	     (add1 (add1-class (expr-class (cadr expr))))
+	     (t (function-class-of (car expr)))))))
+
+
+;; Here to find the class we've determined that a function always returns.
+;; If we don't know anything about the function we return ROOT-CLASS.
+
+(defun function-class-of (name)
+  (or (get name 'function-class) 'root-class))
+
+
+;; CONS always returns an object of type (NOT ATOM).
+
+(defprop cons (not atom) function-class)
+
+
+;; ADD1 can return different classes depending on the class of its argument.
+;; If we didn't make this distinction we wouldn't be able to replace
+;; conditions based on numeric recursions.  Note that (NOT ZEROP) means > 0.
+
+(defun add1-class (class)
+  (cond ((equal class '(not root-class)) class)
+	((member class '(zerop plusp (not minusp))) 'plusp)
+	(t 'numberp)))
+
+
+;; Similarly we distinguish among the arguments for SUB1.
+;; Since this is symmetric with ADD1 switching PLUSP and MINUSP,
+;; the definition here is similarly symmetric with ADD1-CLASS.
+
+(defun sub1-class (class)
+  (cond ((equal class '(not root-class)) class)
+	((member class '(zerop minusp (not plusp))) 'minusp)
+	(t 'numberp)))
+
+;; Re-merging of conditionals.
+
+;; Here to look through the fact list for this state, trying to find
+;; pairs of facts with atomic right sides and evaluable conditions
+;; so we can merge conditions and come up with an unconditional def.
+
+(defun merge-conditions (state start goal)
+  (find-mergeable-cond-fact-list (state-fact-list state) state start goal))
+
+
+;; Look through the fact list for this state, finding mergeable facts
+
+(defun find-mergeable-cond-fact-list (fact-list state start goal)
+  (or (find-mergeable-cond-fact (car fact-list) state start goal)
+      (and (cdr fact-list)
+	   (find-mergeable-cond-fact-list (cdr fact-list) state start goal))))
+
+
+;; Check one fact to see if it is mergeable
+
+(defun find-mergeable-cond-fact (fact state start goal)
+  (and (atom (fact-right-side fact))
+       (find-mergeable-cond-list (fact-condition-list fact)
+				 fact state start goal)))
+
+
+;; Look through the condition list for this fact, finding mergeable conds
+
+(defun find-mergeable-cond-list (cond-list fact state start goal)
+  (cond ((null cond-list) nil)		;Unconditional or out of conds
+	((not (expr-evaluable (car cond-list) start))
+	 (find-mergeable-cond-list (cdr cond-list) fact state start goal))
+	((and (not (atom (car cond-list))) (memq (caar cond-list) '(not null)))
+	 (find-mergeable-cond-list (cdr cond-list) fact state start goal))
+	(t (or (find-mergeable-cond (car cond-list) fact state start goal)
+	       (find-mergeable-cond-list (cdr cond-list)
+					 fact state start goal)))))
+
+
+;; We found a condition that looks like it might be mergeable.
+;; See if we can find the same one elsewhere.
+
+(defun find-mergeable-cond (cond fact state start goal)
+  (find-cond-negation (state-fact-list state) cond (fact-condition-list fact)
+		      (fact-right-side fact) fact state start goal))
+
+;; Find fact to merge condition with
+
+;; We found a fact with the condition true.  Now find another one
+;; with the condition false, so that the two can be merged.
+
+(defun find-cond-negation (fact-list cond cond-list right-side
+			   fact state start goal)
+  (cond ((null fact-list) nil)		;No such luck
+	((not (equal (fact-right-side (car fact-list)) right-side))
+	 (find-cond-negation (cdr fact-list) cond cond-list right-side
+			     fact state start goal))
+	((not (same-cond cond-list (fact-condition-list (car fact-list)) cond))
+	 (find-cond-negation (cdr fact-list) cond cond-list right-side
+			     fact state start goal))
+	(t (merge-cond-facts cond cond-list right-side (car fact-list)
+			     fact state start goal))))
+
+
+;; We have both facts ready to be merged.  Perform the merge and test
+;; the new state.
+
+(defun merge-cond-facts (cond cond-list right-side false-fact true-fact
+			 state start goal)
+  (or (transform-facts
+       (make-state (format nil "Merge condition ~S and its negation" cond)
+		   state
+		   (cons (make-fact (find-and-remove-cond cond cond-list)
+				    (merge-cond cond
+						(fact-left-side true-fact)
+						(fact-left-side false-fact))
+				    right-side)
+			 (rem-one-q false-fact
+				    (rem-one-q true-fact
+					       (state-fact-list state)))))
+       start goal)
+      (*throw 'give-up-transformation nil)))
+
+;; Form conditional expressions.
+;; Given a condition, a false clause, and a true clause, we want to
+;; merge them together into one expression.  Here we do so, choosing
+;; between COND, AND, OR, and IF depending on the subformulae.
+;;
+;; Did I write this?  Did I leave it with so few comments?  For shame!
+
+(defun merge-cond (cond true-clause false-clause)
+  (cond ((equal cond false-clause) (merge-cond cond true-clause nil))
+	((equal (negate-cond cond) true-clause)
+	 (merge-cond cond nil false-clause))
+	((equal false-clause true-clause) true-clause)
+	((conditional-form-p false-clause)
+	 (merge-already-cond cond true-clause false-clause))
+	((conditional-form-p true-clause)
+	 (merge-already-cond (negate-cond cond) false-clause true-clause))
+	((null false-clause)
+	 (if (equal cond true-clause) cond (list 'and cond true-clause)))
+	((null true-clause)
+	 (if (equal (negate-cond cond) false-clause) false-clause
+	     (list 'and (negate-cond cond) false-clause)))
+	((equal cond true-clause) (list 'or cond false-clause))
+	((equal (negate-cond cond) false-clause)
+	 (list 'or (negate-cond cond) true-clause))
+	((atom cond) (list 'if cond true-clause false-clause))
+	((eq (car cond) 'not)
+	 (list 'if (cadr cond) false-clause true-clause))
+	(t (list 'if cond true-clause false-clause))))
+
+
+;; See what the base expression of some conditional expression is.
+
+(defun cond-base (cond)
+  (if (atom cond) cond
+      (caseq (car cond)
+	(not (cadadr cond))
+	((zerop minusp numberp atom null) (cadr cond))
+	(t cond))))
+
+;; More conditional merging
+
+;; One of our conditional clauses is already a conditional expression.
+;; Merge the new condition in with it.
+
+(defun merge-already-cond (cond true-clause false-clause)
+  (caseq (car false-clause)
+    (cond (list* 'cond (list cond true-clause) (cdr false-clause)))
+    (if (list 'cond (list cond true-clause)
+		    (list (cadr false-clause) (caddr false-clause))
+		    (list t (cadddr false-clause))))
+    (and (if (null true-clause)
+	     (list* 'and (negate-cond cond) (cdr false-clause))
+	     (list* 'cond (list cond true-clause)
+		    (and-into-cond-list (cdr false-clause)))))
+    (or (if (equal true-clause cond)
+	    (list* 'or cond (cdr false-clause))
+	    (list* 'cond (list cond true-clause)
+		   (or-into-cond-list (cdr false-clause)))))))
+
+
+;; The false clause is an AND expression, but the new condition and
+;; clause are not suitable for an AND.  Turn the AND argument list
+;; into an argument list suitable for COND.
+
+(defun and-into-cond-list (list)
+  (if (null (cdr list))
+      (list (list t (car list)))
+      (cons (list (negate-cond (car list)) nil)
+	    (and-into-cond-list (cdr list)))))
+
+
+;; As with AND, the false clause is an OR expression, but the OR form
+;; is not extensible to the whole conditional expression.  Make a COND
+;; argument list so we can do it as a COND instead.
+
+(defun or-into-cond-list (list)
+  (if (null (cdr list))
+      (list (list t (car list)))
+      (cons (list (car list) (car list))
+	    (or-into-cond-list (cdr list)))))
+
+;; Inversion.
+;;
+;; Here, given facts
+;;   cond -> left-arg-1 = (right-fun-1 right-arg-1 right-arg-2 right-arg-3)
+;;   cond -> left-arg-2 = (right-fun-2 right-arg-1 right-arg-2 right-arg-3)
+;; and the inversion
+;;   (right-fun-1 right-fun-2) => (left-fun-1 left-fun-2 left-fun-3)
+;; we replace the above facts by:
+;;   cond -> (left-fun-1 left-arg-1 left-arg-2) = right-arg-1
+;;   cond -> (left-fun-2 left-arg-1 left-arg-2) = right-arg-2
+;;   cond -> (left-fun-3 left-arg-1 left-arg-2) = right-arg-3.
+;;
+;; This is done both on previously known inversions, i.e. built in axioms
+;; such as CONS <=> (CAR CDR) and inversions found using previous calls
+;; to DEFINV, and also on the start => goal half of the inversion we are
+;; trying to find.  The former transformations are absolutely correct,
+;; and the latter can be proved inductively (in fact, it corresponds
+;; directly to an inductive hypothesis).
+
+(defun find-inversions (state start goal)
+  (look-for-inversions (state-fact-list state) state start goal))
+
+
+;; Recursively look through the fact list for this state finding
+;; possible inversions.
+
+(defun look-for-inversions (fact-list state start goal)
+  (cond ((null fact-list) nil)
+	((check-fact-for-inversion (car fact-list) state start goal))
+	((look-for-inversions (cdr fact-list) state start goal))))
+
+
+;; Check one fact from the fact list to see if it is part of an inversion.
+
+(defun check-fact-for-inversion (fact state start goal)
+  (if (atom (fact-right-side fact)) nil
+      (check-inversions (inversions (car (fact-right-side fact)) start goal)
+			(cdr (fact-right-side fact))
+			(fact-condition-list fact)
+			state start goal)))
+
+
+;; We now have the list of possible inversions involving a function
+;; called at top level on the left hand side of some fact, the
+;; condition for that fact, and the arguments given there to that
+;; function.  See if we can find a complete set of functions in the
+;; inversion list for which we have facts with that condition and arg list.
+
+(defun check-inversions (inversions args cond state start goal)
+  (cond ((null inversions) nil)
+	((check-inversion (car inversions) args cond state start goal))
+	((check-inversions (cdr inversions) args cond state start goal))))
+
+;; Check one inversion from the inversion list we found.
+;; We call a helper routine that returns NIL if the inversion
+;; didn't go through, or the new list of right hand sides if it did.
+;; We reverse the list of start functions for the inversion for
+;; two reasons: (1) we already know the first function fits, so
+;; this way we will find out sooner that the inversion failed, and
+;; (2) this lets us cons together an argument list for the new functions.
+
+(defun check-inversion (inversion args cond state start goal)
+  (if (not (equal (length args) (length (cdr inversion)))) nil
+      (let ((new-fact-list (make-inversion (reverse (car inversion))
+					   (cdr inversion)
+					   (state-fact-list state) nil
+					   args nil cond)))
+	(and new-fact-list
+	     (transform-facts (make-state (format nil "Invert ~S => ~S"
+					     (unmake-list (car inversion))
+					     (unmake-list (cdr inversion)))
+					  state new-fact-list)
+			      start goal)))))
+
+
+;; Try to make a new list of facts from an inversion.
+;; If we succeed, we return the right hand sides of the inverted facts
+;; as a list to be used as the arguments of the new fact lists.
+;; Otherwise we return NIL.
+
+(defun make-inversion (from to old-facts new-facts old-args new-args cond)
+  (cond ((null from)			;All inverted?
+	 (invert-facts to old-args new-args cond (append new-facts old-facts)))
+	((null old-facts) nil)		;No facts to fit this function, fail
+	((and (not (atom (fact-right-side (car old-facts))))
+	      (eq (car from) (car (fact-right-side (car old-facts))))
+	      (equal old-args (cdr (fact-right-side (car old-facts))))
+	      (same-cond cond (fact-condition-list (car old-facts)) nil))
+	 (make-inversion (cdr from) to
+			 (append (cdr old-facts) new-facts) nil old-args
+			 (cons (fact-left-side (car old-facts)) new-args)
+			 cond))		;Fitted this inversion, try next
+	(t (make-inversion from to (cdr old-facts)
+			   (cons (car old-facts) new-facts) old-args new-args
+			   cond))))	;Not fitted, go on looking for a fit
+
+
+;; We found a full inversion.  Now we want to add the new facts constructed
+;; from the result list with the arg list we constructed onto the list of
+;; facts to use in the next state.
+
+(defun invert-facts (new-funs old-args new-args cond old-facts)
+  (if (null new-funs) old-facts
+      (cons (make-fact cond (cons (car new-funs) new-args) (car old-args))
+	    (invert-facts (cdr new-funs) (cdr old-args)
+			  new-args cond old-facts))))
+
+;; Maintenance of inversion lists.
+;;
+;; Each inversion is kept in the INVERSIONS property of the first
+;; element of the start list.  This keeps an inversion from being
+;; tried for each element of its list.
+
+;; (add-inversion start goal)
+;;   adds the two inversions  (start . goal) and (goal . start)
+;;   to *inversions*.  Thus it should be called only once for each such
+;;   inversion list pair (not once for each ordering of the pair).
+;;
+;; This always returns T so it is safe to use in AND.
+
+(defun add-inversion (start goal)
+  (push (cons start goal) (get (car start) 'inversions))
+  (push (cons goal start) (get (car goal) 'inversions))
+  T)
+
+
+;; As mentioned above, we want to define some initial inversions
+;; for the list.
+
+(add-inversion '(cons) '(car cdr))
+(add-inversion '(add1) '(sub1))
+
+
+;; Now to look up the inversions for some function.
+;; We look both in the known inversions given as axioms or remembered
+;; from previous inversions, and also in the start and goal lists for
+;; the inversion we are trying to compute (or looked at another way,
+;; the inductive hypothesis for the inversion we are trying to prove).
+
+(defun inversions (fun start goal)
+  (if (eq fun (car start))
+      (cons (cons start goal) (get fun 'inversions))
+      (get fun 'inversions)))
+
+;; Successful completion of inversion.
+
+;; Once we have found an inversion, we want to return to the user a form
+;; that looks like the original definv except that the arguments are now
+;; functions and vice versa.  This routine is used to construct such a form.
+
+(defun make-definv (new-start new-goal)
+  (format t "~&~%Success!~%~%")
+  (list* 'definv (unmake-list new-start) (unmake-list new-goal)
+	 (definitions new-start)))
+
+
+;; For each original argument, we have stored away the new definition,
+;; in the form (lambda (args) body).  We want to make a list of the bodies
+;; for the new definv form, so we go through the original argument list
+;; extracting the body part from the newly stored definition.
+
+(defun definitions (func-list)
+  (if (null func-list) nil
+      (cons (caddr (definition (car func-list)))
+	    (definitions (cdr func-list)))))
+
+
+;; To make the resulting definv form prettier, we invert the transformation
+;; performed at the start with make-list to turn single variable or argument
+;; names back into atoms rather than singleton lists containing the atom.
+
+(defun unmake-list (list)
+  (cond ((null list) nil)
+	((null (cdr list)) (car list))
+	(t list)))
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

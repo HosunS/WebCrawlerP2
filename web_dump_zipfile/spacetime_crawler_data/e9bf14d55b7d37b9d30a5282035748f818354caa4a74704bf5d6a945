@@ -1,0 +1,27 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÜ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC653¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 02 Jul 1998 21:10:56 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"28d-332031b649800"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 20:21:59 GMTKraw_content¢DtypeEvalueYç// David Eppstein, UC Irvine, 11 Jun 1997
+//
+// Buttons to change the game state
+
+import java.awt.*;
+import java.util.*;
+import gui.*;
+
+class UndoButton extends GameButton {
+	public UndoButton(Game g) { super(g, "Undo"); }
+	public static Board retro(Game g) {
+		Board b = g.getBoard();
+		if (b == null) return null;
+		for (;;) {
+			b = b.previousPosition;
+			if (b == null) return null;
+			if (g.humanToMove(b) && !g.mustPass(b)) return b;
+		}
+	}
+
+	public boolean active() { return retro(game) != null; }
+	public void action() { game.setBoard(retro(game)); }
+	public String status() { return "Return to the position before your most recent move"; }
+}
+
+
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

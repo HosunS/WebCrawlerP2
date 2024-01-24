@@ -1,0 +1,46 @@
+¦Ifinal_url¢DtypeEvaluex/https://www.ics.uci.edu/~theory/269/090529.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1837¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:08:50 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"72d-54c85ea68003b"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:57:51 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY-<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+<title>Theory Seminar, April 17 , 2009</title>
+</head>
+<body>
+<a href="/~theory/"><img src="/~theory/logo/shortTheory.gif" width="
+521" height="82" border="0" alt="ICS Theory Group"></a>
+<h2> May 29, Spring Quarter 2009: Thoery Seminar </h2>
+<h3>1:00pm in 253 ICS</h3>
+<h1>   Measuring Independence of Datasets
+</h1>
+<h2> Vladimir Braverman, UCLA</h2>
+
+
+<p>
+A data stream model represents setting where approximating pairwise,
+or $k$-wise, independence with sublinear memory is of considerable importance. 
+In the streaming model the joint distribution is given by a stream of $k$-tuples, 
+with the goal of testing correlations among the components measured over the entire stream.
+Indyk and McGregor (SODA 08) recently gave exciting new results for measuring 
+pairwise independence in the streaming model.
+The Indyk and McGregor methods provide $\log{n}$-approximation under
+statistical distance between the joint and product distributions in the streaming model. 
+Indyk and McGregor leave, as their main open question, the problem of  improving their 
+$\log n$-approximation for the statistical distance metric.
+
+
+<p>
+This talk covers our recent paper "Measuring Independence of Datasets" (submitted).
+We solve the  main open problem  posed by of Indyk and McGregor
+for the statistical distance for pairwise independence and extend this 
+result to any constant $k$. In particular, we present an algorithm that computes
+an $(\epsilon, \delta)$-approximation
+of the statistical distance between the joint and product distributions 
+defined by a stream of $k$-tuples.
+Our algorithm requires $O(\left({1\over \epsilon}\log({nm\over \delta})\right)^{(30+k)^k})$ 
+memory and a single pass over the data stream.
+
+<p>
+Joint work with Rafail Ostrovsky (UCLA). 
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

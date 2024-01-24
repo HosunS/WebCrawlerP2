@@ -1,0 +1,117 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÜ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4752¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 31 Oct 2018 17:46:44 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1290-57989e2bb78bf"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 09:20:04 GMTKraw_content¢DtypeEvalueYêy <- c(62,60,63,59,0,0,0,0,63,67,71,64,65,66,0,0,68,66,71,67,68,68,0,0,
+    56,62,60,61,63,64,63,59)
+dim(y) <- c(8,4)
+n <- 24 
+nj <- c(4,6,6,8)
+ybar <- c(61,66,68,61)
+#
+# log joint post density
+# in terms of log tau and log sigma
+lpost  <-  function (theta,mu,sigma,tau,y,nj){
+  output  <-  log(tau) + sum (log(dnorm (theta, mu, tau)))
+  for (j in 1:length(nj))
+    output  <-  output + sum(log(dnorm(y[1:nj[j],j], theta[j], sigma)))
+  output }
+#
+# log marg post density
+# fixed to be in terms of log tau and log sigma!
+lmarg  <-  function (mu, sigma, tau, y, ybar, nj){
+  theta  <-  ((1/tau^2)*mu + (nj/sigma^2)*ybar)/((1/tau^2) + (nj/sigma^2))
+  Vtheta  <-  1/((1/tau^2) + (nj/sigma^2))
+  output  <-  log(tau) + sum (log(dnorm (theta, mu, tau)))
+  for (j in 1:length(nj))
+    output  <-  output + sum(log(dnorm(y[1:nj[j],j], theta[j], sigma)))
+  output  <-  output + .5*sum(log(Vtheta))
+  output }
+#
+# gibbs sampling
+M  <-  10
+nloop  <-  1000
+k <- length(nj)
+mu.em <- 64.012
+sigma.em <- 2.362
+tau.em <- 3.471
+theta.em <- c(61.31,65.86,67.71,61.16)
+mu  <-  array (NA, c(nloop,M))
+sigma  <-  array (NA, c(nloop,M))
+tau  <-  array (NA, c(nloop,M))
+theta  <-  array (NA, c(nloop,M,k))
+lm  <-  array (NA, c(nloop,M))
+lp  <-  array (NA, c(nloop,M))
+# 
+# initialize all sequences at em starting values (not usually recommended)
+mu[1,]  <-  mu.em
+sigma[1,]  <-  sigma.em
+tau[1,]  <-  tau.em
+for (m in 1:M) theta[1,m,]  <-  theta.em
+#
+# perform gibbs sampling
+for (m in 1:M){
+for (loop in 2:nloop){
+  theta0  <-  ((1/tau[loop-1,m]^2)*mu[loop-1,m] + (nj/sigma[loop-1,m]^2)*ybar) /
+    ((1/tau[loop-1,m]^2) + (nj/sigma[loop-1,m]^2))
+  Vtheta0  <-  1/((1/tau[loop-1,m]^2) + (nj/sigma[loop-1,m]^2))
+  theta[loop,m,]  <-  rnorm (k, theta0, sqrt(Vtheta0))
+  sig2  <-  0
+  for (j in 1:k) sig2  <-  sig2 + sum((y[1:nj[j],j]-theta[loop,m,j])^2)
+  sigma[loop,m]  <-  sqrt (sig2/rchisq(1,n))
+  mu[loop,m]  <-  rnorm (1, mean (theta[loop,m,]), tau[loop-1,m]/sqrt(k))
+  tau[loop,m]  <-  sqrt (sum((theta[loop,m,]-mu[loop,m])^2)/rchisq(1,k-1))
+  lm[loop,m]  <-  lmarg (mu[loop,m], sigma[loop,m], tau[loop,m], y, ybar, nj)
+  lp[loop,m]  <-  lpost (theta[loop,m,], mu[loop,m], sigma[loop,m], tau[loop,m], y, nj) } 
+  print(m) }
+# 
+# collect all drawn parameters in 3-dimensional matrix of dimension
+# (number of iterations/seq) x (number of sequences) x (number of parameters)
+output  <-  array (NA, c(nloop,M,k+5))
+output[,,1:k]  <-  theta
+output[,,k+1]  <-  mu
+output[,,k+2]  <-  sigma
+output[,,k+3]  <-  tau
+output[,,k+4]  <-  lm
+output[,,k+5]  <-  lp
+# 
+# gandr.conv is a program designed to perform calculations for 
+# Gelman and Rubin's R-statistics for diagnosing convergence
+#
+gandr.conv(output[,,1])
+#
+# output from gandr.conv(output[,,1])
+$post:                                          # normal approximation
+[1] 58.82716 61.24303 63.65891                  # 2.5%   mean  97.5%
+
+$quantiles:                                     # actual posterior quantiles
+     2.5%    25.0%    50.0%    75.0%    97.5% 
+ 58.80768 60.43903 61.23192 62.03248 63.73198
+
+$confshrink:                                    # estimated Gelman-Rubin
+[1] 1.001042 1.002916                           # converg diagnostic
+                                                # and a 97.5%ile for it
+
+# i've run gandr.conv on all parameters and neatened up the output
+# (note: convergence of sig, tau are diagnosed on log scale 
+#        but percentiles are given on ordinary, untransformed scale)
+# using last half of 10 seq of length 1000
+         2.5%  25.0%  50.0%  75.0%  97.5%  R-hat upper
+theta1  58.81  60.44  61.23  62.03  63.73  1.001 1.003
+theta2  63.93  65.25  65.91  66.57  67.95  1.000 1.001
+theta3  65.69  67.17  67.81  68.45  69.77  1.000 1.002
+theta4  59.41  60.52  61.10  61.67  62.86  1.000 1.002
+mu      54.10  62.23  64.05  65.87  74.31  1.135 1.139
+sig      1.80   2.17   2.41   2.68   3.45  1.000 1.002
+tau      2.03   3.64   5.26   8.28  30.87  1.008 1.014
+lmarg  -68.47 -64.59 -63.39 -62.61 -61.99  1.008 1.014
+lpost  -71.69 -67.06 -65.28 -64.02 -62.43  1.002 1.005
+
+# using last half of 10 seq of length 100
+         2.5%  25.0%  50.0%  75.0%  97.5%  R-hat upper
+theta1  58.79  60.47  61.31  62.16  63.68  1.003 1.014
+theta2  63.89  65.30  65.95  66.53  67.81  1.007 1.021
+theta3  65.50  67.12  67.85  68.42  69.60  1.013 1.035
+theta4  59.37  60.54  61.14  61.81  63.16  1.005 1.018
+mu      54.58  62.32  64.27  66.10  71.91  1.239 1.385
+sig      1.85   2.21   2.45   2.70   3.37  1.016 1.040
+tau      1.78   3.54   5.17   7.71  33.93  1.050 1.102
+lmarg  -68.48 -64.53 -63.42 -62.60 -61.96  1.059 1.121
+lpost  -71.21 -66.92 -65.31 -64.14 -62.53  1.051 1.107
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

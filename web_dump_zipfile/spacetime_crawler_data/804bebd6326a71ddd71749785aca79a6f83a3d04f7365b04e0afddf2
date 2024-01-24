@@ -1,0 +1,265 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:12:30 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY9§
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Primary Tumor Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Primary Tumor Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/primary-tumor/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/primary-tumor/primary-tumor.names"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: From Ljubljana Oncology Institute</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">339</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Life</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Categorical</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">17</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">1988-11-01</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">Yes</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">103913</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Donors: <br><br>1. Igor Kononenko, <br>University E.Kardelj<br>Faculty for electrical engineering<br>Trzaska 25<br>61000 Ljubljana (tel.: (38)(+61) 265-161<br><br>2. Bojan Cestnik<br>Jozef Stefan Institute<br>Jamova 39<br>61000 Ljubljana<br>Yugoslavia (tel.: (38)(+61) 214-399 ext.287) </p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">This is one of three domains provided by the Oncology Institutenthat has repeatedly appeared in the machine learning literature.<br><br>(See also breast-cancer and lymphography.)</p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">--- NOTE: All attribute values in the database have been entered as numeric values corresponding to their index in the list of attribute values for that attribute domain as given below.<br>   1. class: lung, head & neck, esophasus, thyroid, stomach, duoden & sm.int, colon, rectum, anus, salivary glands, pancreas, gallblader, liver, kidney, bladder, testis, prostate, ovary, corpus uteri, cervix uteri, vagina, breast<br>   2. age:   <30, 30-59, >=60<br>   3. sex:   male, female<br>   4. histologic-type: epidermoid, adeno, anaplastic<br>   5. degree-of-diffe: well, fairly, poorly<br>   6. bone: yes, no<br>   7. bone-marrow: yes, no<br>   8. lung: yes, no<br>   9. pleura: yes, no<br>  10. peritoneum: yes, no<br>  11. liver: yes, no<br>  12. brain: yes, no<br>  13. skin: yes, no<br>  14. neck: yes, no<br>  15. supraclavicular: yes, no<br>  16. axillar: yes, no<br>  17. mediastinum: yes, no<br>  18. abdominal: yes, no</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Cestnik,G., Konenenko,I, & Bratko,I. (1987). Assistant-86: A Knowledge-Elicitation Tool for Sophisticated Users.  In I.Bratko & N.Lavrac (Eds.) Progress in Machine Learning, 31-45, Sigma Press.<br><a href="http://rexa.info/paper/929f34b1fbef4c2335cebebf22840bcf78577ae4">[Web Link]</a><br><br>Clark,P. & Niblett,T. (1987). Induction in Noisy Domains.  In I.Bratko & N.Lavrac (Eds.) Progress in Machine Learning, 11-30, Sigma Press.<br><a href="http://rexa.info/paper/e61e98320017b392a93c8ae4b0a9f80acc3fbc82">[Web Link]</a><br><br>Michalski,R., Mozetic,I. Hong,J., & Lavrac,N. (1986).  The Multi-Purpose Incremental Learning System AQ15 and its Testing Applications to Three Medical Domains.  In Proceedings of the Fifth National Conference on Artificial Intelligence, 1041-1045. Philadelphia, PA: Morgan Kaufmann.<br><a href="http://rexa.info/paper/2aba4fdd38df99d73ae0097b58ba06a02f048326">[Web Link]</a></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Remco R. Bouckaert. <a
+href="http://rexa.info/paper/e140ecaac8486469d0ef5b237f4fa08d7315c5ed">Accuracy bounds for ensembles under 0 { 1 loss</a>. Xtal Mountain Information Technology & Computer Science Department, University of Waikato. 2002.  [<a
+href="../support/Primary+Tumor#e140ecaac8486469d0ef5b237f4fa08d7315c5ed">View Context</a>].<br><br>Xavier Llor and David E. Goldberg and Ivan Traus and Ester Bernad i Mansilla. <a
+href="http://rexa.info/paper/412e0644abd8fccf9fb195db3ed361c2ffd3695c">Accuracy, Parsimony, and Generality in Evolutionary Learning Systems via Multiobjective Selection</a>. IWLCS. 2002.  [<a
+href="../support/Primary+Tumor#412e0644abd8fccf9fb195db3ed361c2ffd3695c">View Context</a>].<br><br>Pedro Domingos. <a
+href="http://rexa.info/paper/3e78257004181e6dbbdfa3ec12399520412e9c5c">Control-Sensitive Feature Selection for Lazy Learners</a>. Artif. Intell. Rev, 11. 1997.  [<a
+href="../support/Primary+Tumor#3e78257004181e6dbbdfa3ec12399520412e9c5c">View Context</a>].<br><br>Igor Kononenko and Edvard Simec and Marko Robnik-Sikonja. <a
+href="http://rexa.info/paper/632fe4095475bee152843a02969ade56a290db39">Overcoming the Myopia of Inductive Learning Algorithms with RELIEFF</a>. Appl. Intell, 7. 1997.  [<a
+href="../support/Primary+Tumor#632fe4095475bee152843a02969ade56a290db39">View Context</a>].<br><br>Kamal Ali and Michael J. Pazzani. <a
+href="http://rexa.info/paper/349644828ad3c8da8e1a15eee5aec0d704db34a1">Error Reduction through Learning Multiple Descriptions</a>. Machine Learning, 24. 1996.  [<a
+href="../support/Primary+Tumor#349644828ad3c8da8e1a15eee5aec0d704db34a1">View Context</a>].<br><br>Geoffrey I. Webb. <a
+href="http://rexa.info/paper/81a75649d5acc1cc428ca756dac221bac3c8fe01">OPUS: An Efficient Admissible Algorithm for Unordered Search</a>. J. Artif. Intell. Res. (JAIR, 3. 1995.  [<a
+href="../support/Primary+Tumor#81a75649d5acc1cc428ca756dac221bac3c8fe01">View Context</a>].<br><br>Alexander K. Seewald. <a
+href="http://rexa.info/paper/e2b2b723df700c90e69a31a4403b740c2d2a7b2f">Dissertation Towards Understanding Stacking Studies of a General Ensemble Learning Scheme ausgefuhrt zum Zwecke der Erlangung des akademischen Grades eines Doktors der technischen Naturwissenschaften</a>.  [<a
+href="../support/Primary+Tumor#e2b2b723df700c90e69a31a4403b740c2d2a7b2f">View Context</a>].<br><br>Geoffrey I Webb. <a
+href="http://rexa.info/paper/1ef1e2c976bf0ee1cac221de391fcfabe5b10188">Learning Decision Lists by Prepending Inferred Rules</a>. School of Computing and Mathematics Deakin University.  [<a
+href="../support/Primary+Tumor#1ef1e2c976bf0ee1cac221de391fcfabe5b10188">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Remco R. Bouckaert. <a
+href="http://rexa.info/paper/e140ecaac8486469d0ef5b237f4fa08d7315c5ed">Accuracy bounds for ensembles under 0 { 1 loss</a>. Xtal Mountain Information Technology & Computer Science Department, University of Waikato. 2002.  [<a
+href="../support/Primary+Tumor#e140ecaac8486469d0ef5b237f4fa08d7315c5ed">View Context</a>].<br><br>Xavier Llor and David E. Goldberg and Ivan Traus and Ester Bernad i Mansilla. <a
+href="http://rexa.info/paper/412e0644abd8fccf9fb195db3ed361c2ffd3695c">Accuracy, Parsimony, and Generality in Evolutionary Learning Systems via Multiobjective Selection</a>. IWLCS. 2002.  [<a
+href="../support/Primary+Tumor#412e0644abd8fccf9fb195db3ed361c2ffd3695c">View Context</a>].<br><br>Pedro Domingos. <a
+href="http://rexa.info/paper/3e78257004181e6dbbdfa3ec12399520412e9c5c">Control-Sensitive Feature Selection for Lazy Learners</a>. Artif. Intell. Rev, 11. 1997.  [<a
+href="../support/Primary+Tumor#3e78257004181e6dbbdfa3ec12399520412e9c5c">View Context</a>].<br><br>Igor Kononenko and Edvard Simec and Marko Robnik-Sikonja. <a
+href="http://rexa.info/paper/632fe4095475bee152843a02969ade56a290db39">Overcoming the Myopia of Inductive Learning Algorithms with RELIEFF</a>. Appl. Intell, 7. 1997.  [<a
+href="../support/Primary+Tumor#632fe4095475bee152843a02969ade56a290db39">View Context</a>].<br><br>Kamal Ali and Michael J. Pazzani. <a
+href="http://rexa.info/paper/349644828ad3c8da8e1a15eee5aec0d704db34a1">Error Reduction through Learning Multiple Descriptions</a>. Machine Learning, 24. 1996.  [<a
+href="../support/Primary+Tumor#349644828ad3c8da8e1a15eee5aec0d704db34a1">View Context</a>].<br><br>Geoffrey I. Webb. <a
+href="http://rexa.info/paper/81a75649d5acc1cc428ca756dac221bac3c8fe01">OPUS: An Efficient Admissible Algorithm for Unordered Search</a>. J. Artif. Intell. Res. (JAIR, 3. 1995.  [<a
+href="../support/Primary+Tumor#81a75649d5acc1cc428ca756dac221bac3c8fe01">View Context</a>].<br><br>Alexander K. Seewald. <a
+href="http://rexa.info/paper/e2b2b723df700c90e69a31a4403b740c2d2a7b2f">Dissertation Towards Understanding Stacking Studies of a General Ensemble Learning Scheme ausgefuhrt zum Zwecke der Erlangung des akademischen Grades eines Doktors der technischen Naturwissenschaften</a>.  [<a
+href="../support/Primary+Tumor#e2b2b723df700c90e69a31a4403b740c2d2a7b2f">View Context</a>].<br><br>Geoffrey I Webb. <a
+href="http://rexa.info/paper/1ef1e2c976bf0ee1cac221de391fcfabe5b10188">Learning Decision Lists by Prepending Inferred Rules</a>. School of Computing and Mathematics Deakin University.  [<a
+href="../support/Primary+Tumor#1ef1e2c976bf0ee1cac221de391fcfabe5b10188">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">This primary tumor domain was obtained from the University Medical Centre, Institute of Oncology, Ljubljana, Yugoslavia.  Thanks go to M. Zwitter and M. Soklic for providing the data.  Please include this citation if you plan to use this database.</p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

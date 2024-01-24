@@ -1,0 +1,77 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7908¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX+attachment; filename=cs122a-2016-spring.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=b7e8d2236812ccbd8856f8b7; expires=Sat, 04 May 2019 17:06:53 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 17:06:53 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueYä[[PageOutline]]
+
+= CS122A/EECS116, Spring 2016: Introduction to Data Management =
+
+|| Lecture || !Tue/Thu 12:30 pm â€“ 1:50 pm || [https://eee.uci.edu/toolbox/roomfinder/class.php?ccode=34030&quarter=S16 Schneiderman Lecture Hall, Room 100A] || 
+|| Discussion 1 || WED 5:00 pm â€“ 5:50 pm || [https://eee.uci.edu/toolbox/roomfinder/class.php?ccode=34031&quarter=S16 Steinhaus Hall, Room 128] || 
+|| Discussion 2 || WED 6:00 pm â€“ 6:50 pm || [https://eee.uci.edu/toolbox/roomfinder/class.php?ccode=34031&quarter=S16 Steinhaus Hall, Room 128] || 
+|| Discussion 3 || WED 7:00 pm â€“ 7:50 pm || [https://eee.uci.edu/toolbox/roomfinder/class.php?ccode=34031&quarter=S16 Steinhaus Hall, Room 128] || 
+|| Discussion 4 || WED 8:00 pm â€“ 8:50 pm || [https://eee.uci.edu/toolbox/roomfinder/class.php?ccode=34031&quarter=S16 Steinhaus Hall, Room 128] ||
+
+'''Instructor:'''  [www.ics.uci.edu/~chenli/ Chen Li],  E-Mail: chenli AT ics DOT uci DOT edu [[BR]] Office hours: T/Th, 2 - 3 pm, DBH 2092[[BR]]
+
+'''TAs/Readers:'''
+|| Name || Email ||  Hours || Place || 
+
+== Online Discussion ==
+ * '''Piazza ''':  [[BR]]
+
+----
+== Course Objectives ==
+This course provides students with an introduction to the design of databases and the use of database management systems in support of applications. It covers the entity relationship (E/R) approach to database design. It then covers the relational data model, mapping of E/R designs to relations, relational database design principles, abstract query languages such as the relational algebra and relational calculus, and the industry-standard query language, SQL. Students will gain exposure to how relational database management systems are used to manage an actual database. Time permitting, the course will also touch lightly on advanced database management topics such as transactions and/or semi-structured data management.
+
+This course is aimed at database design and the use of database management systems in implementing database applications. It feeds into a follow-on project course, [www.ics.uci.edu/~cs122b CS122B], whose focus is data-centric Web applications. The CS122A/B course sequence does NOT cover the internals of database systems; that material is covered in the undergraduate course [www.ics.uci.edu/~cs122c CS122C] and its graduate-level follow-on course CS223.  (The course textbook also delves further into that material for those students who are curious about what goes on under the hood.)  Interested students are strongly encouraged to take one, two, or all of these courses; CS122B and CS122C are independent, and each requires only CS122A as their required database background.
+
+== Prerequisites ==
+Students should have some experience programming in Java, C#, or C++.
+
+== Textbooks ==
+''Database Management Systems'' (3rd Edition) by Raghu Ramakrishnan and Johannes Gehrke, ''a.k.a.'' "the Cow book".
+
+----
+== Topic Coverage and Exam Schedule ==
+=== Syllabus ===
+|| No. || '''Date''' || '''Topic''' || ''' Reading''' ||
+|| 1 || 03/29/16, Tu || Hello World and Introduction || ||
+
+=== Midterm Exam ===
+Time: TBD
+
+=== Final Exam ===
+Time: Monday, Jun 6,  1:30 - 3:30 p.m. Place: [https://eee.uci.edu/toolbox/roomfinder/class.php?ccode=34150&quarter=W16 Schneiderman Lecture Hall, Room 100A].
+
+----
+== Exams, Assignments, and Grading ==
+=== Grading Criteria ===
+Homework: 40% [[BR]] Quizzes: 5% [[BR]] Midterm: 25% [[BR]] Final: 30% [[BR]]
+
+=== Homework and Quizzes ===
+Homework assignments must be turned in by the assigned due dates/times. '''Turning in an assignment will involve handing it to one of the course instructors at the start or end of class or office hours.  The 40% of your grade attributed to homework will be based on your top 7 out of 8 homework scores. (You can spend the 8th one however you like, but if you decide to skip an assignment, do keep in mind that the material will still be on the exam and that the homework is intended to be a useful study/practice tool.)''' There will also be short weekly quizzes in the discussion sections to give you further practice with the course material; those will count very little towards your final grade (they are mostly a discussion section participation score), and they're really just there for your benefit (to give you another opportunity to check your understanding of things).
+
+=== Grade Change Policy ===
+For all of the graded assignments as well as the midterm exam, if you disagree with the grading, you may discuss your concerns with the relevant instructor (professor, TA, or reader) within two weeks after they are returned. After that, all grades will be considered final. 
+
+=== Collaboration Policy ===
+All homework assignments are to be completed individually. It is okay to discuss the assignments with your peers, e.g., to clarify details of assignments or to compare thoughts on rough alternative approaches, but the bulk of your work is to be done by yourself.  See http://www.ics.uci.edu/ugrad/policies/index.php#academic_honesty for a good discussion of what is/isn't considered honest collaboration.  The exams are also to be done solo :-).
+
+=== Late Policy ===
+The due date will be clearly indicated on all problem sets and projects. Assignments will still be accepted for up to '''two days''' after the due date, but you will lose 20 points per day (from the 100-point total per assignment) for any lateness. We will not accept assignments in any form after that time. "Stuff happens" sometimes, as we all know, so you should anticipate that fact and try to avoid working up until the very last minute. Assignments MUST be turned in per the assignment's instructions by the indicated deadline date/time in order to get full credit.  '''(Note:  The best-7-out-of-8 grading policy is another fallback plan for what would otherwise be late homework assignments; that will work once, but only once.)'''
+
+=== Academic Honesty Policy ===
+Cheating is one area where the instructor for this course has ''zero'' patience or sympathy. You are here to learn, and cheating defeats that purpose. All students will be expected to adhere to the UCI and ICS Academic Honesty policies (see http://www.editor.uci.edu/catalogue/appx/appx.2.htm#academic and http://www.ics.uci.edu/ugrad/policies/index.php#academic_honesty to read their details). Any student found to be involved in cheating or aiding others in doing so will be academically prosecuted to the maximum extent possible: that means you will fail this course. (Ask around.)  Just say ''no'' to cheating!
+
+----
+== DBMS Platform ==
+This class will use an industrial-strength relational database management system (RDBMS) for the hands-on homework assignments, namely MySQL. For information on how to set up and use MySQL, please see: [attachment:"2016s-cs122a-mysql-installation-guide-for-mac.pdf" "[MySQL Installation Guide for Mac]"], [attachment:"2016s-cs122a-mysql-installation-guide-for-windows.pdf" "[MySQL Installation Guide for Windows]"], [attachment:"sample_script.sql" "[Sample SQL Script used in the guide]"].[[BR]]
+For information on how to use MySQL Command-Line Tool, please see: [attachment:"2016s-cs122a-mysql-cmdtool-guide-for-mac.pdf" "[MySQL Command-Line Tool Guide for Mac]"], [attachment:"2016s-cs122a-mysql-cmdtool-guide-for-windows.pdf" "[MySQL Command-Line Tool Guide for Windows]"] [attachment:"createscript.sql" "[Sample SQL Script used in the guide]"].[[BR]] 
+For further information on how to use the DBMS, please go here: [https://dev.mysql.com/doc/refman/5.7/en/index.html].[[BR]] 
+
+----
+== HW Due Dates & Links ==
+=== Homework Assignments ===
+|| '''Due Date''' || '''Topic''' || '''Assignment''' || '''Solution''' || '''Grading Notes''' || 
+|| TBD || ||  ||  ||  ||
+
+=== Discussion Section Quizzes ===
+|| '''Week''' || '''Topic''' || '''Quiz''' || '''Solution''' ||
+|| Week 1 || Academic Honesty ||  ||  ||Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

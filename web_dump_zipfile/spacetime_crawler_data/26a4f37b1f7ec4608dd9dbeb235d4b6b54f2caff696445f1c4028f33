@@ -1,0 +1,43 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC843¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 31 Jan 2014 01:04:30 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"34b-4f139c1946380"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:05:33 GMTKraw_content¢DtypeEvalueYK
+import java.util.ArrayList;
+
+public abstract class Pizza {
+	String name;
+	String dough;
+	String sauce;
+	ArrayList<String> toppings = new ArrayList<String>();
+
+	public String getName() {
+		return name;
+	}
+
+	public void prepare() {
+		System.out.println("Preparing " + name);
+	}
+
+	public void bake() {
+		System.out.println("Baking " + name);
+	}
+
+	public void cut() {
+		System.out.println("Cutting " + name);
+	}
+
+	public void box() {
+		System.out.println("Boxing " + name);
+	}
+
+	public String toString() {
+		// code to display pizza name and ingredients
+		StringBuffer display = new StringBuffer();
+		display.append("---- " + name + " ----\n");
+		display.append(dough + "\n");
+		display.append(sauce + "\n");
+		for (int i = 0; i < toppings.size(); i++) {
+			display.append((String )toppings.get(i) + "\n");
+		}
+		return display.toString();
+	}
+}
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

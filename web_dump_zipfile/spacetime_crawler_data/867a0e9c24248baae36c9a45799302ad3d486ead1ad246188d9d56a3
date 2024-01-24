@@ -1,0 +1,12 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC250¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 02 Jul 1998 21:10:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueR"fa-332031b278f00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 20:20:52 GMTKraw_content¢DtypeEvalueXú// David Eppstein, UC Irvine, 11 Jun 1997
+//
+// Panel without annoying redisplay flashes
+
+import java.awt.*;
+import gui.*;
+
+public class FlatPanel extends Panel {
+	// no image no flash
+	public void update(Graphics g) { if (isVisible()) paint(g); }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

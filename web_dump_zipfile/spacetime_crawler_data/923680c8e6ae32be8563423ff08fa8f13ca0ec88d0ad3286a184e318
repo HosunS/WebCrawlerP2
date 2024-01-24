@@ -1,0 +1,340 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 05:01:31 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYkK
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Chess (King-Rook vs. King-Pawn) Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Chess (King-Rook vs. King-Pawn) Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/chess/king-rook-vs-king-pawn/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/chess/king-rook-vs-king-pawn/kr-vs-kp.names"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: King+Rook versus King+Pawn on a7 (usually abbreviated KRKPA7).</p>
+     </td>
+     <td><img
+src="../assets/MLimages/Large24.jpg"
+hspace=20 vspace=10  /> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">3196</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Game</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Categorical</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">36</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">1989-08-01</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">No</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">96263</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Database originally generated and described by Alen Shapiro.<br><br>Donor/Coder: <br><br>Rob Holte (<u>holte <b>'@'</b> uottawa.bitnet</u>).  <br><br>The database was supplied to Holte by Peter Clark of the Turing Institute in Glasgow (<u>pete <b>'@'</b> turing.ac.uk</u>).</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">The dataset format is described below.  Note: the format of this database was modified on 2/26/90 to conform with the format of all the other databases in the UCI repository of machine learning databases.</p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">Classes (2):  -- White-can-win ("won") and White-cannot-win ("nowin").<br><br>I believe that White is deemed to be unable to win if the Black pawn can safely advance.<br><br>Attributes: see Shapiro's book.</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Alen D. Shapiro (1983,1987), "Structured Induction in Expert Systems", Addison-Wesley.  This book is based on Shapiro's Ph.D. thesis (1983) at the University of Edinburgh entitled "The Role of Structured Induction in Expert Systems".<br><a href="http://rexa.info/paper/54c38eb801bac8f34635fe770f1ee66408abc41a">[Web Link]</a><br><br>Stephen Muggleton (1987), "Structuring Knowledge by Asking Questions", pp.218-229 in "Progress in Machine Learning", edited by I. Bratko and Nada Lavrac, Sigma Press, Wilmslow, England  SK9 5BB.<br><a href="http://rexa.info/paper/b95261901ea3461f129c2102d50a0e82d85d9372">[Web Link]</a><br><br>Robert C. Holte, Liane Acker, and Bruce W. Porter (1989), "Concept Learning and the Problem of Small Disjuncts", Proceedings of IJCAI.  Also available as technical report AI89-106, Computer Sciences Department, University of Texas at Austin, Austin, Texas 78712.<br><a href="http://rexa.info/paper/73c7fa0b5e4bb04121c8164de85fd2bb4186c357">[Web Link]</a></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Manuel Oliveira. <a
+href="http://rexa.info/paper/5b07457d7b968260c0c1a712f9120a243bcfbf8c">Library Release Form Name of Author: Stanley Robson de Medeiros Oliveira Title of Thesis: Data Transformation For Privacy-Preserving Data Mining Degree: Doctor of Philosophy Year this Degree Granted</a>. University of Alberta Library. 2005.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#5b07457d7b968260c0c1a712f9120a243bcfbf8c">View Context</a>].<br><br>Marcus Hutter and Marco Zaffalon. <a
+href="http://rexa.info/paper/7125dc87ceddf952f1840074b40ac0526dcc03dc">Distribution of Mutual Information from Complete and Incomplete Data</a>. CoRR, csLG/0403025. 2004.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#7125dc87ceddf952f1840074b40ac0526dcc03dc">View Context</a>].<br><br>Ira Cohen and Fabio Gagliardi Cozman and Nicu Sebe and Marcelo Cesar Cirelo and Thomas S. Huang. <a
+href="http://rexa.info/paper/9b1522e8a25d84453b24d3891ac99e165d3eebaa">Semisupervised Learning of Classifiers: Theory, Algorithms, and Their Application to Human-Computer Interaction</a>. IEEE Trans. Pattern Anal. Mach. Intell, 26. 2004.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#9b1522e8a25d84453b24d3891ac99e165d3eebaa">View Context</a>].<br><br>Douglas Burdick and Manuel Calimlim and Jason Flannick and Johannes Gehrke and Tomi Yiu. <a
+href="http://rexa.info/paper/32c4d28ceaa19d2a6906dfa39df99da7026c9cc5">MAFIA: A Performance Study of Mining Maximal Frequent Itemsets</a>. FIMI. 2003.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#32c4d28ceaa19d2a6906dfa39df99da7026c9cc5">View Context</a>].<br><br>Russell Greiner and Wei Zhou. <a
+href="http://rexa.info/paper/5bc77452a8b6552aed91aa3294068d7110dc54af">Structural Extension to Logistic Regression: Discriminative Parameter Learning of Belief Net Classifiers</a>. AAAI/IAAI. 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#5bc77452a8b6552aed91aa3294068d7110dc54af">View Context</a>].<br><br>Tanzeem Choudhury and James M. Rehg and Vladimir Pavlovic and Alex Pentland. <a
+href="http://rexa.info/paper/a0c05cdac8e9929a4113d37aa2588e7ae70a6b76">Boosting and Structure Learning in Dynamic Bayesian Networks for Audio-Visual Speaker Detection</a>. ICPR (3). 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#a0c05cdac8e9929a4113d37aa2588e7ae70a6b76">View Context</a>].<br><br>Marco Zaffalon and Marcus Hutter. <a
+href="http://rexa.info/paper/3fa8ab593f1fd58f33109aae497ca1fb67732c35">Robust Feature Selection by Mutual Information Distributions</a>. CoRR, csAI/0206006. 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#3fa8ab593f1fd58f33109aae497ca1fb67732c35">View Context</a>].<br><br>Michael G. Madden. <a
+href="http://rexa.info/paper/d25c86892bfa80849ecd629de4c45936a52a1590">Evaluation of the Performance of the Markov Blanket Bayesian Classifier Algorithm</a>. CoRR, csLG/0211003. 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#d25c86892bfa80849ecd629de4c45936a52a1590">View Context</a>].<br><br>James Bailey and Thomas Manoukian and Kotagiri Ramamohanarao. <a
+href="http://rexa.info/paper/7bea464dce753e6523458d22de98a96004c1aac8">Fast Algorithms for Mining Emerging Patterns</a>. PKDD. 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#7bea464dce753e6523458d22de98a96004c1aac8">View Context</a>].<br><br>Jie Cheng and Russell Greiner. <a
+href="http://rexa.info/paper/beeb203c082359f4e141e1767a14f09449a5a717">Learning Bayesian Belief Network Classifiers: Algorithms and System</a>. Canadian Conference on AI. 2001.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#beeb203c082359f4e141e1767a14f09449a5a717">View Context</a>].<br><br>Boonserm Kijsirikul and Sukree Sinthupinyo and Kongsak Chongkasemwongse. <a
+href="http://rexa.info/paper/5976a7013ed27ef8dc3309ee0427e9e110b5323d">Approximate Match of Rules Using Backpropagation Neural Networks</a>. Machine Learning, 44. 2001.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#5976a7013ed27ef8dc3309ee0427e9e110b5323d">View Context</a>].<br><br>Jinyan Li and Guozhu Dong and Kotagiri Ramamohanarao and Limsoon Wong. <a
+href="http://rexa.info/paper/ca1c2b19089d0ca0d4069b04c35d6f6c4312db79">DeEPs: A New Instance-based Discovery and Classification System</a>. Proceedings of the Fourth European Conference on Principles and Practice of Knowledge Discovery in Databases. 2001.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#ca1c2b19089d0ca0d4069b04c35d6f6c4312db79">View Context</a>].<br><br>Jinyan Li and Guozhu Dong and Kotagiri Ramamohanarao. <a
+href="http://rexa.info/paper/111c890abe7dc9f26523d1c59b7a75a04b69256b">Instance-Based Classification by Emerging Patterns</a>. PKDD. 2000.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#111c890abe7dc9f26523d1c59b7a75a04b69256b">View Context</a>].<br><br>Mark A. Hall. <a
+href="http://rexa.info/paper/cd11168bb19fd462bc59beefbe670bc4eb31e3eb">Department of Computer Science Hamilton, NewZealand Correlation-based Feature Selection for Machine Learning</a>. Doctor of Philosophy at The University of Waikato. 1999.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#cd11168bb19fd462bc59beefbe670bc4eb31e3eb">View Context</a>].<br><br>Yk Huhtala and Juha K√§rkk√§inen and Pasi Porkka and Hannu Toivonen. <a
+href="http://rexa.info/paper/ac8fe867e1d16d4d09f9bd759ba46699055c7ca6">Efficient Discovery of Functional and Approximate Dependencies Using Partitions</a>. ICDE. 1998.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#ac8fe867e1d16d4d09f9bd759ba46699055c7ca6">View Context</a>].<br><br>Adam J. Grove and Dale Schuurmans. <a
+href="http://rexa.info/paper/c334718c7e09d2671197a8c9526018de1d816903">Boosting in the Limit: Maximizing the Margin of Learned Ensembles</a>. AAAI/IAAI. 1998.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#c334718c7e09d2671197a8c9526018de1d816903">View Context</a>].<br><br>Ron Kohavi. <a
+href="http://rexa.info/paper/bf6cec50b7f7d48d105c8c649210cc3a42d3d71e">Scaling Up the Accuracy of Naive-Bayes Classifiers: A Decision-Tree Hybrid</a>. KDD. 1996.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#bf6cec50b7f7d48d105c8c649210cc3a42d3d71e">View Context</a>].<br><br>Brian R. Gaines. <a
+href="http://rexa.info/paper/128dbeaae1b5807933aa2a5983bc1765dcaf6f85">Structured and Unstructured Induction with EDAGs</a>. KDD. 1995.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#128dbeaae1b5807933aa2a5983bc1765dcaf6f85">View Context</a>].<br><br>Ron Kohavi and Dan Sommerfield. <a
+href="http://rexa.info/paper/00c705fd319a8886a15103ab320040ae719c4283">Feature Subset Selection Using the Wrapper Method: Overfitting and Dynamic Search Space Topology</a>. KDD. 1995.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#00c705fd319a8886a15103ab320040ae719c4283">View Context</a>].<br><br>Grigorios Tsoumakas and Ioannis P. Vlahavas. <a
+href="http://rexa.info/paper/7de1dca96d7e6789dadc875a7f1b070f9d65fff5">Fuzzy Meta-Learning: Preliminary Results</a>. Greek Secretariat for Research and Technology.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#7de1dca96d7e6789dadc875a7f1b070f9d65fff5">View Context</a>].<br><br>Nikunj C. Oza and Stuart J. Russell. <a
+href="http://rexa.info/paper/3e9ebff12a232c9f091156827e92c55d259b95f3">Online Bagging and Boosting</a>. Computer Science Division University of California.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#3e9ebff12a232c9f091156827e92c55d259b95f3">View Context</a>].<br><br>Hankil Yoon and Khaled A. Alsabti and Sanjay Ranka. <a
+href="http://rexa.info/paper/287a92657decc181f6842e52b05c1fa17e5ab277">Tree-based Incremental Classification for Large Datasets</a>. CISE Department, University of Florida.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#287a92657decc181f6842e52b05c1fa17e5ab277">View Context</a>].<br><br>Omid Madani and David M. Pennock and Gary William Flake. <a
+href="http://rexa.info/paper/03a71aaf988c71c8022be08734da8e376f7fe037">Co-Validation: Using Model Disagreement to Validate Classification Algorithms</a>. Yahoo! Research Labs.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#03a71aaf988c71c8022be08734da8e376f7fe037">View Context</a>].<br><br>M. A. Galway and Michael G. Madden. <a
+href="http://rexa.info/paper/d342517262ff52ffd3566bd8f520b36723486aa3">DEPARTMENT OF INFORMATION TECHNOLOGY technical report NUIG-IT-011002 Evaluation of the Performance of the Markov Blanket Bayesian Classifier Algorithm</a>. Department of Information Technology National University of Ireland, Galway.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#d342517262ff52ffd3566bd8f520b36723486aa3">View Context</a>].<br><br>BayesianClassifi552 Pat Langley and Wayne Iba. <a
+href="http://rexa.info/paper/d1f5f29cee39c05c852c7fe7a1857064bc7957da">In Proceedings of the Tenth National ConferenceonArtifi256 Intelligence( 42840</a>. Lambda Kevin Thompson.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#d1f5f29cee39c05c852c7fe7a1857064bc7957da">View Context</a>].<br><br>Jerome H. Friedman and Ron Kohavi and Youngkeol Yun. <a
+href="http://rexa.info/paper/12fe4ef85ae4ef89437a10d0a7b0daf32af2be21">To appear in AAAI-96 Lazy Decision Trees</a>. Statistics Department and Stanford Linear Accelerator Center Stanford University.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#12fe4ef85ae4ef89437a10d0a7b0daf32af2be21">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Manuel Oliveira. <a
+href="http://rexa.info/paper/5b07457d7b968260c0c1a712f9120a243bcfbf8c">Library Release Form Name of Author: Stanley Robson de Medeiros Oliveira Title of Thesis: Data Transformation For Privacy-Preserving Data Mining Degree: Doctor of Philosophy Year this Degree Granted</a>. University of Alberta Library. 2005.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#5b07457d7b968260c0c1a712f9120a243bcfbf8c">View Context</a>].<br><br>Marcus Hutter and Marco Zaffalon. <a
+href="http://rexa.info/paper/7125dc87ceddf952f1840074b40ac0526dcc03dc">Distribution of Mutual Information from Complete and Incomplete Data</a>. CoRR, csLG/0403025. 2004.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#7125dc87ceddf952f1840074b40ac0526dcc03dc">View Context</a>].<br><br>Ira Cohen and Fabio Gagliardi Cozman and Nicu Sebe and Marcelo Cesar Cirelo and Thomas S. Huang. <a
+href="http://rexa.info/paper/9b1522e8a25d84453b24d3891ac99e165d3eebaa">Semisupervised Learning of Classifiers: Theory, Algorithms, and Their Application to Human-Computer Interaction</a>. IEEE Trans. Pattern Anal. Mach. Intell, 26. 2004.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#9b1522e8a25d84453b24d3891ac99e165d3eebaa">View Context</a>].<br><br>Douglas Burdick and Manuel Calimlim and Jason Flannick and Johannes Gehrke and Tomi Yiu. <a
+href="http://rexa.info/paper/32c4d28ceaa19d2a6906dfa39df99da7026c9cc5">MAFIA: A Performance Study of Mining Maximal Frequent Itemsets</a>. FIMI. 2003.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#32c4d28ceaa19d2a6906dfa39df99da7026c9cc5">View Context</a>].<br><br>Russell Greiner and Wei Zhou. <a
+href="http://rexa.info/paper/5bc77452a8b6552aed91aa3294068d7110dc54af">Structural Extension to Logistic Regression: Discriminative Parameter Learning of Belief Net Classifiers</a>. AAAI/IAAI. 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#5bc77452a8b6552aed91aa3294068d7110dc54af">View Context</a>].<br><br>Tanzeem Choudhury and James M. Rehg and Vladimir Pavlovic and Alex Pentland. <a
+href="http://rexa.info/paper/a0c05cdac8e9929a4113d37aa2588e7ae70a6b76">Boosting and Structure Learning in Dynamic Bayesian Networks for Audio-Visual Speaker Detection</a>. ICPR (3). 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#a0c05cdac8e9929a4113d37aa2588e7ae70a6b76">View Context</a>].<br><br>Marco Zaffalon and Marcus Hutter. <a
+href="http://rexa.info/paper/3fa8ab593f1fd58f33109aae497ca1fb67732c35">Robust Feature Selection by Mutual Information Distributions</a>. CoRR, csAI/0206006. 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#3fa8ab593f1fd58f33109aae497ca1fb67732c35">View Context</a>].<br><br>Michael G. Madden. <a
+href="http://rexa.info/paper/d25c86892bfa80849ecd629de4c45936a52a1590">Evaluation of the Performance of the Markov Blanket Bayesian Classifier Algorithm</a>. CoRR, csLG/0211003. 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#d25c86892bfa80849ecd629de4c45936a52a1590">View Context</a>].<br><br>James Bailey and Thomas Manoukian and Kotagiri Ramamohanarao. <a
+href="http://rexa.info/paper/7bea464dce753e6523458d22de98a96004c1aac8">Fast Algorithms for Mining Emerging Patterns</a>. PKDD. 2002.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#7bea464dce753e6523458d22de98a96004c1aac8">View Context</a>].<br><br>Jie Cheng and Russell Greiner. <a
+href="http://rexa.info/paper/beeb203c082359f4e141e1767a14f09449a5a717">Learning Bayesian Belief Network Classifiers: Algorithms and System</a>. Canadian Conference on AI. 2001.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#beeb203c082359f4e141e1767a14f09449a5a717">View Context</a>].<br><br>Boonserm Kijsirikul and Sukree Sinthupinyo and Kongsak Chongkasemwongse. <a
+href="http://rexa.info/paper/5976a7013ed27ef8dc3309ee0427e9e110b5323d">Approximate Match of Rules Using Backpropagation Neural Networks</a>. Machine Learning, 44. 2001.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#5976a7013ed27ef8dc3309ee0427e9e110b5323d">View Context</a>].<br><br>Jinyan Li and Guozhu Dong and Kotagiri Ramamohanarao and Limsoon Wong. <a
+href="http://rexa.info/paper/ca1c2b19089d0ca0d4069b04c35d6f6c4312db79">DeEPs: A New Instance-based Discovery and Classification System</a>. Proceedings of the Fourth European Conference on Principles and Practice of Knowledge Discovery in Databases. 2001.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#ca1c2b19089d0ca0d4069b04c35d6f6c4312db79">View Context</a>].<br><br>Jinyan Li and Guozhu Dong and Kotagiri Ramamohanarao. <a
+href="http://rexa.info/paper/111c890abe7dc9f26523d1c59b7a75a04b69256b">Instance-Based Classification by Emerging Patterns</a>. PKDD. 2000.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#111c890abe7dc9f26523d1c59b7a75a04b69256b">View Context</a>].<br><br>Mark A. Hall. <a
+href="http://rexa.info/paper/cd11168bb19fd462bc59beefbe670bc4eb31e3eb">Department of Computer Science Hamilton, NewZealand Correlation-based Feature Selection for Machine Learning</a>. Doctor of Philosophy at The University of Waikato. 1999.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#cd11168bb19fd462bc59beefbe670bc4eb31e3eb">View Context</a>].<br><br>Yk Huhtala and Juha K√§rkk√§inen and Pasi Porkka and Hannu Toivonen. <a
+href="http://rexa.info/paper/ac8fe867e1d16d4d09f9bd759ba46699055c7ca6">Efficient Discovery of Functional and Approximate Dependencies Using Partitions</a>. ICDE. 1998.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#ac8fe867e1d16d4d09f9bd759ba46699055c7ca6">View Context</a>].<br><br>Adam J. Grove and Dale Schuurmans. <a
+href="http://rexa.info/paper/c334718c7e09d2671197a8c9526018de1d816903">Boosting in the Limit: Maximizing the Margin of Learned Ensembles</a>. AAAI/IAAI. 1998.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#c334718c7e09d2671197a8c9526018de1d816903">View Context</a>].<br><br>Ron Kohavi. <a
+href="http://rexa.info/paper/bf6cec50b7f7d48d105c8c649210cc3a42d3d71e">Scaling Up the Accuracy of Naive-Bayes Classifiers: A Decision-Tree Hybrid</a>. KDD. 1996.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#bf6cec50b7f7d48d105c8c649210cc3a42d3d71e">View Context</a>].<br><br>Brian R. Gaines. <a
+href="http://rexa.info/paper/128dbeaae1b5807933aa2a5983bc1765dcaf6f85">Structured and Unstructured Induction with EDAGs</a>. KDD. 1995.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#128dbeaae1b5807933aa2a5983bc1765dcaf6f85">View Context</a>].<br><br>Ron Kohavi and Dan Sommerfield. <a
+href="http://rexa.info/paper/00c705fd319a8886a15103ab320040ae719c4283">Feature Subset Selection Using the Wrapper Method: Overfitting and Dynamic Search Space Topology</a>. KDD. 1995.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#00c705fd319a8886a15103ab320040ae719c4283">View Context</a>].<br><br>Grigorios Tsoumakas and Ioannis P. Vlahavas. <a
+href="http://rexa.info/paper/7de1dca96d7e6789dadc875a7f1b070f9d65fff5">Fuzzy Meta-Learning: Preliminary Results</a>. Greek Secretariat for Research and Technology.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#7de1dca96d7e6789dadc875a7f1b070f9d65fff5">View Context</a>].<br><br>Nikunj C. Oza and Stuart J. Russell. <a
+href="http://rexa.info/paper/3e9ebff12a232c9f091156827e92c55d259b95f3">Online Bagging and Boosting</a>. Computer Science Division University of California.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#3e9ebff12a232c9f091156827e92c55d259b95f3">View Context</a>].<br><br>Hankil Yoon and Khaled A. Alsabti and Sanjay Ranka. <a
+href="http://rexa.info/paper/287a92657decc181f6842e52b05c1fa17e5ab277">Tree-based Incremental Classification for Large Datasets</a>. CISE Department, University of Florida.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#287a92657decc181f6842e52b05c1fa17e5ab277">View Context</a>].<br><br>Omid Madani and David M. Pennock and Gary William Flake. <a
+href="http://rexa.info/paper/03a71aaf988c71c8022be08734da8e376f7fe037">Co-Validation: Using Model Disagreement to Validate Classification Algorithms</a>. Yahoo! Research Labs.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#03a71aaf988c71c8022be08734da8e376f7fe037">View Context</a>].<br><br>M. A. Galway and Michael G. Madden. <a
+href="http://rexa.info/paper/d342517262ff52ffd3566bd8f520b36723486aa3">DEPARTMENT OF INFORMATION TECHNOLOGY technical report NUIG-IT-011002 Evaluation of the Performance of the Markov Blanket Bayesian Classifier Algorithm</a>. Department of Information Technology National University of Ireland, Galway.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#d342517262ff52ffd3566bd8f520b36723486aa3">View Context</a>].<br><br>BayesianClassifi552 Pat Langley and Wayne Iba. <a
+href="http://rexa.info/paper/d1f5f29cee39c05c852c7fe7a1857064bc7957da">In Proceedings of the Tenth National ConferenceonArtifi256 Intelligence( 42840</a>. Lambda Kevin Thompson.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#d1f5f29cee39c05c852c7fe7a1857064bc7957da">View Context</a>].<br><br>Jerome H. Friedman and Ron Kohavi and Youngkeol Yun. <a
+href="http://rexa.info/paper/12fe4ef85ae4ef89437a10d0a7b0daf32af2be21">To appear in AAAI-96 Lazy Decision Trees</a>. Statistics Department and Stanford Linear Accelerator Center Stanford University.  [<a
+href="../support/Chess+(King-Rook+vs.+King-Pawn)#12fe4ef85ae4ef89437a10d0a7b0daf32af2be21">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please refer to the Machine Learning
+Repository's <a href="../citation_policy.html">citation policy</a></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

@@ -1,0 +1,52 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1068¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 04 Feb 2014 23:44:08 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"42c-4f19d375f6200"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 19:07:39 GMTKraw_content¢DtypeEvalueY,
+
+public class Amplifier {
+	String description;
+	Tuner tuner;
+	DvdPlayer dvd;
+	CdPlayer cd;
+	
+	public Amplifier(String description) {
+		this.description = description;
+	}
+ 
+	public void on() {
+		System.out.println(description + " on");
+	}
+ 
+	public void off() {
+		System.out.println(description + " off");
+	}
+ 
+	public void setStereoSound() {
+		System.out.println(description + " stereo mode on");
+	}
+ 
+	public void setSurroundSound() {
+		System.out.println(description + " surround sound on (5 speakers, 1 subwoofer)");
+	}
+ 
+	public void setVolume(int level) {
+		System.out.println(description + " setting volume to " + level);
+	}
+
+	public void setTuner(Tuner tuner) {
+		System.out.println(description + " setting tuner to " + dvd);
+		this.tuner = tuner;
+	}
+  
+	public void setDvd(DvdPlayer dvd) {
+		System.out.println(description + " setting DVD player to " + dvd);
+		this.dvd = dvd;
+	}
+ 
+	public void setCd(CdPlayer cd) {
+		System.out.println(description + " setting CD player to " + cd);
+		this.cd = cd;
+	}
+ 
+	public String toString() {
+		return description;
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

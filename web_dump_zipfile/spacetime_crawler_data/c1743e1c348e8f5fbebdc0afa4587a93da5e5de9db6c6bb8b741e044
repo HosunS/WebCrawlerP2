@@ -1,0 +1,627 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE10241¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Jan 2019 21:54:45 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"7fdc-57fc28f27c4a0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:31:55 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYÜ<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head>
+<title>David Eppstein - Publications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<h1>David Eppstein - Publications</h1>
+<hr><p>
+<h2>
+J. Graph Algorithms and Applications
+</h2>
+I was on the editorial board from 1995 to 2009.
+<p>
+<ul>
+<li><b>Subgraph isomorphism in planar graphs and related problems</b>.<br>
+D. Eppstein.<br>
+<a href="Epp-TR-94-25.pdf">Tech. Rep. 94-25</a>, ICS, UCI, 1994.<br>
+<a href="//portal.acm.org/citation.cfm?id=313830">
+<i>6th ACM-SIAM Symp. Discrete Algorithms,</i>
+San Francisco, 1995, pp. 632&ndash;640</a>.<br>
+<a href="//arXiv.org/abs/cs.DS/9911003">arXiv:cs.DS/9911003</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00014"><i>J. Graph
+Algorithms and Applications</i> 3 (3): 1&ndash;27, 1999.</a>
+<p>
+Uses an idea of Baker to cover a planar graph with subgraphs
+of low treewidth.  As a consequence, any fixed pattern can
+be found as a subgraph in linear time; the same methods can be used to
+solve other planar graph problems
+including vertex connectivity, diameter, girth, induced subgraph
+isomorphism, and shortest paths.
+A companion paper, "<a href="p-dtwmcgf.html">Diameter and treewidth in
+minor-closed graph families</a>", presents a result announced in the
+conference version of this paper,
+that exactly characterizes the minor-closed graph families for which the
+same techniques apply.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Subgraph isomorphism in planar graphs and related problems">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Subgraph-isomorphism-in-planar-graphs-and-related-problems.html">Citations</a> &ndash;
+<a href="//theory.lcs.mit.edu/~dmjones/SODA/References/eppstein1995:632.html">Citations from MIT hypertext bibliography</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein95subgraph.html">CiteSeer (SODA)</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein99subgraph.html">CiteSeer (JGAA)</a>)
+<p>
+<li><b>Geometric thickness of complete graphs</b>.<br>
+<a href="/~dillenco/">M. Dillencourt</a>,
+D. Eppstein, and 
+<a href="//www.ics.uci.edu/~dan/">
+D. S. Hirschberg</a>.<br>
+<a href="/~dan/pubs/thick.ps.gz"><i>6th Int. Symp. Graph Drawing,</i>
+Montreal, August 1998</a>.<br>
+Springer, <i>Lecture Notes in
+Comp. Sci.</i> 1547, 1998, pp. 102&ndash;110.<br>
+<a href="//arXiv.org/abs/math.CO/9910185">arXiv:math.CO/9910185</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00023"><i>J. Graph
+Algorithms and Applications</i> 4 (3): 5&ndash;17, 2000</a>
+(special issue for GD98).
+<p>
+We define a notion of geometric thickness, intermediate between the
+previously studied concepts of graph thickness and book thickness: a
+graph has geometric thickness T if its vertices can be embedded in the
+plane, and its edges partitioned into T subsets, so that each subset
+forms a planar straight line graph.  We then give upper and lower bounds
+on the geometric thickness of complete graphs.
+<p>(<a href="//link.springer.de/link/service/series/0558/bibs/1547/15470102.htm">Springer abstract</a> &ndash;
+<a href="/~eppstein/bibs/eppstein.html#Geometric thickness of complete graphs">BibTeX</a> &ndash;
+<a href="//citeseer.ist.psu.edu/dillencourt99geometric.html">CiteSeer</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Geometric-thickness-of-complete-graphs.html">Citations</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=729087">ACM DL</a> &ndash;
+<a href="//gdea.informatik.uni-koeln.de/archive/00000287/">GDEA</a>)
+<p>
+<li><b>Fast approximation of centrality</b>.<br>
+D. Eppstein and
+<a href="//www.ics.uci.edu/~josephw/">J. Wang</a>.<br>
+<a href="//arXiv.org/abs/cs.DS/0009005">arXiv:cs.DS/0009005</a>.<br>
+<a href="//portal.acm.org/citation.cfm?id=365449">
+<i>12th ACM-SIAM Symp. Discrete Algorithms,</i>
+Washington, 2001, pp. 228&ndash;229</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00081"><i>J. Graph Algorithms &amp; Applications</i> 8 (1): 39&ndash;45, 2004</a>.
+<p>
+We use random sampling to quickly estimate, for each vertex in a graph,
+the average <a href="graph-path.html">distance</a> to all other vertices.
+<p>
+(<a href="/~eppstein/bibs/eppstein.html#Fast approximation of centrality">BibTeX</a> &ndash;
+<a href="EppWan-SODA-01.pdf">SODA paper</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Fast-approximation-of-centrality.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein01fast.html">CiteSeer</a>)
+<p>
+<li><b>Small maximal independent sets and faster exact graph coloring</b>.<br>
+D. Eppstein.<br>
+<a href="//arXiv.org/abs/cs.DS/0011009">arXiv:cs.DS/0011009</a>.<br>
+<a href="Epp-WADS-01.pdf"><i>7th Worksh. Algorithms and Data
+Structures,</i> Providence, Rhode
+Island, 2001</a>.<br>
+Springer, <i>Lecture Notes in
+Comp. Sci.</i> 2125, 2001, pp. 462&ndash;470.<br>
+<a href="//doi.org/10.7155/jgaa.00064"><i>J. Graph
+Algorithms and Applications</i>
+(special issue for WADS'01) 7 (2): 131&ndash;140, 2003</a>.
+<p>
+We show that any graph can be
+<a href="graph-color.html">colored</a> in time O(2.415<sup>n</sup>),
+by a dynamic programming procedure in which we extend partial colorings
+on subsets of the vertices by adding one more color for
+a maximal independent set.  The time bound follows from limiting
+our attention to maximal independent subsets that are small relative to
+the previously colored subset, and from bounding the number of small
+maximal independent subsets that can occur in any graph.
+<p>
+(<a href="/~eppstein/bibs/eppstein.html#Small maximal independent sets and faster exact graph coloring">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Small-maximal-independent-sets-and-faster-exact-graph-coloring.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein01small.html">CiteSeer</a> &ndash;
+<a href="Epp-WADS-01-slides.pdf">WADS talk slides</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=673363">ACM DL</a>)
+<p>
+<li><b>Confluent drawings: visualizing non-planar diagrams in a planar way</b>.<br>
+<a href="//www.middlebury.edu/~dickerso/">M. Dickerson</a>,
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>,
+and
+J. Meng.<br>
+<a href="//arxiv.org/abs/cs.CG/0212046">arXiv:cs.CG/0212046</a>.<br>
+11th Int. Symp. Graph Drawing, Perugia, Italy, 2003.<br>
+Springer, <i>Lecture Notes in
+Comp. Sci.</i> 2912, 2004, pp. 1&ndash;12.<br>
+<a href="//doi.org/10.7155/jgaa.00099"><i>J. Graph
+Algorithms and Applications</i>
+(special issue for GD'03) 9 (1): 31&ndash;52, 2005</a>.
+<p>
+We describe a new method of
+<a href="gdraw.html">drawing graphs</a>, based on allowing the edges to
+be merged together and drawn as "tracks" (similar to train tracks).
+We present heuristics for finding such drawings
+based on my previous <a href="p-asgi.html">algorithms
+for finding maximal bipartite subgraphs</a>, prove that several
+important families of graphs have confluent drawings, and provide
+examples of other graphs that can not be drawn in this way.
+<p>
+(<a href="//www.ics.uci.edu/~eppstein/bibs/eppstein.html#Confluent drawings: visualizing non-planar diagrams in a planar way">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Confluent-drawings-visualizing-non-planar-diagrams-in-a-planar-way.html">Citations</a> &ndash;
+<a href="//gdea.informatik.uni-koeln.de/archive/00000406/">GDEA</a>)
+<p>
+<li><b>The traveling salesman problem for cubic graphs</b>.<br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/cs.DS/0302030">arXiv:cs.DS/0302030</a>.<br>
+<i>8th Worksh. Algorithms and Data
+Structures,</i> Ottawa, 2003.<br>
+Springer, <i>Lecture Notes in
+Comp. Sci.</i> 2748, 2003, pp. 307&ndash;318.
+<i>J. Graph Algorithms and Applications</i> 11 (1): 61&ndash;81, 2007.
+<p>
+We find improved <a href="exponential.html">exponential-time
+algorithms</a> for exact solution of the
+<a href="tsp.html">traveling salesman problem</a>
+on graphs of maximum degree three and four.
+We also consider related problems including counting the number of
+Hamiltonian cycles in such graphs.
+<p>
+(<a href="//www.ics.uci.edu/~eppstein/bibs/eppstein.html#The traveling salesman problem for cubic graphs">BibTeX</a> &ndash;
+<a href="Epp-WADS-03-talk.pdf">WADS talk slides</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/The-traveling-salesman-problem-for-cubic-graphs.html">Citations</a>)
+<p>
+<li><b>Upright-quad drawing of st-planar learning spaces.</b><br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/cs.CG/0607094">arXiv:cs.CG/0607094</a>.<br>
+14th Int. Symp. Graph Drawing, Karlsruhe, Germany, 2006.<br>
+<a href="//doi.org/10.1007/978-3-540-70904-6_28">Springer, <i>Lecture Notes in
+Comp. Sci.</i> 4372, 2007, pp. 282&ndash;293</a>.<br>
+<a href="//www.jgaa.info/accepted/2008/Eppstein2008.12.1.pdf"><i>J. Graph Algorithms and Applications</i> 12 (1): 51&ndash;72</a>, 2008 (special
+issue for GD'06).
+<p>
+We consider graph drawing algorithms for learning spaces, a type of
+st-oriented partial cube derived from antimatroids and used to model
+states of knowledge of students. We show how to draw any st-planar
+learning space so all internal faces are convex quadrilaterals with the
+bottom side horizontal and the left side vertical, with one minimal and
+one maximal vertex. Conversely, every such drawing represents an
+$st$-planar learning space.  We also describe connections between these
+graphs and arrangements of translates of a quadrant.
+<p>
+(<a href="Epp-GD-06-talk.pdf">GD'06 talk slides</a>)
+<p>
+<li><b>Recognizing partial cubes in quadratic time</b>.<br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/0705.1025">arXiv:0705.1025</a>.<br>
+<i>19th ACM-SIAM Symp. Discrete Algorithms,</i>
+San Francisco, 2008, pp. 1258&ndash;1266.<br>
+<a href="//jgaa.info/accepted/2011/Eppstein2011.15.2.pdf"><i>J. Graph
+    Algorithms and Applications</i> 15 (2): 269&ndash;293, 2011</a>.
+<p>
+We show how to test whether a graph is a partial cube, and if so embed
+it isometrically into a <a href="graph-cube.html">hypercube</a>, in time
+O(n<sup>2</sup>), improving previous O(nm)-time solutions; here n is the
+number of vertices and m is the number of edges. The ideas are to use
+bit-parallelism to speed up previous approaches to the embedding step,
+and to verify that the resulting embedding is isometric using an
+all-pairs shortest path algorithm from "<a
+href="p-algmed.html">algorithms for media</a>".
+<p>
+(<a href="Epp-SODA-08.pdf">slides</a>)
+<p>
+<li><b>The Complexity of Bendless Three-Dimensional Orthogonal Graph Drawing</b>.<br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/0709.4087">arXiv:0709.4087</a>.<br>
+<i>Proc. 16th Int. Symp. Graph Drawing</i>, Heraklion, Crete, 2008.<br>
+Springer, <i>Lecture Notes in Comp. Sci.</i> 5417, 2009, pp. 78&ndash;89.<br>
+<a href="//doi.org/10.7155/jgaa.00283"><i>J. Graph Algorithms and Applications</i> 17 (1): 35&ndash;55, 2013</a>.
+<p>
+Defines a class of orthogonal graph drawings formed by a point set
+in three dimensions for which
+axis-parallel line contains zero or two vertices, with edges connecting pairs
+of points on each nonempty axis-parallel line. Shows that the existence
+of such a drawing can be defined topologically, in terms of certain
+two-dimensional surface embeddings of the same graph. Based on this
+equivalence, describes algorithms, graph-theoretic properties, and
+hardness results for graphs of this type.
+<p>
+(<a href="/~eppstein/0xDE/xyz-Tucson.pdf">Slides from talk at
+U. Arizona, February 2008</a> &ndash;
+<a href="Epp-GD-08-xyz.pdf">Slides from GD08</a>)
+)
+<p>
+<li><b>Finding large clique minors is hard</b>.<br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/0807.0007">arXiv:0807.0007</a>.<br>
+<a href="//jgaa.info/accepted/2009/Eppstein2009.13.2.pdf"><i>J. Graph
+Algorithms and Applications</i> 13 (2): 197&ndash;204, 2009</a>.
+<p>
+Proves that it's NP-complete to compute the Hadwiger number of a graph.
+<p>
+<li><b>The h-index of a graph and its application to dynamic subgraph statistics</b>.<br>
+D. Eppstein and
+<a href="//www.socsci.uci.edu/~sgsa/2008/2008-emma.html">E. S. Spiro</a>.<br>
+<a href="//arxiv.org/abs/0904.3741">arXiv:0904.3741</a>.<br>
+Algorithms and Data Structures Symposium (WADS), Banff, Canada.<br>
+Springer, <i>Lecture Notes in Comp. Sci.</i> 5664, 2009, pp. 278&ndash;289.<br>
+<a href="//doi.org/10.7155/jgaa.00273"><i>J. Graph
+Algorithms and Applications</i> 16 (2): 543&ndash;567, 2012</a>.
+<p>
+We define the h-index of a graph to be the maximum h such that the graph
+has h vertices each of which has degree at least h. We show that the
+h-index, and a partition of the graph into high and low degree vertices,
+may be maintained in constant time per update. Based on this technique,
+we show how to maintain the number of triangles in a dynamic graph in
+time O(h) per update; this problem is motivated by Markov Chain Monte
+Caro simulation of the Exponential Random Graph Model used for
+simulation of social networks. We also prove
+bounds on the h-index for scale-free graphs and investigate the behavior
+of the h-index on a corpus of real social networks.
+<p>
+(<a href="WADS09-talks/subgraphs.pdf">Slides</a>)
+<p>
+<li><b>Optimal angular resolution for face-symmetric drawings</b>.<br>
+D. Eppstein and
+<a href="//kwortman.ecs.fullerton.edu/">K. Wortman</a>.<br>
+<a href="//arxiv.org/abs/0907.5474">arXiv:0907.5474</a>.<br>
+<a href="//jgaa.info/accepted/2011/EppsteinWortman2011.15.4.pdf"><i>J. Graph
+Algorithms and Applications</i> 15 (4): 551&ndash;564, 2011</a>.
+<p>
+We consider drawings of planar partial cubes in which all interior faces are
+centrally symmetric convex polygons, as in my previous
+paper <a href="p-afdm.html">Algorithms for Drawing Media</a>. Among all
+drawings of this type, we show how to find the one with optimal angular
+resolution. The solution involves a transformation from the problem
+into the parametric negative cycle detection problem: given a graph in
+which the edge weights are linear functions of a parameter &lambda;,
+find the minimum value of &lambda; for which the graph contains no
+negative cycles.
+<p>
+<li><b>Flows in one-crossing-minor-free graphs</b>.<br>
+<a href="//mathcs.slu.edu/~chambers/">E. Chambers</a> and
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1007.1484">arXiv:1007.1484</a>.<br>
+<i>Proc. 21st International Symposium on Algorithms and Computation
+(ISAAC 2010)</i>, Jeju, Korea, 2010.<br>
+<a href="//doi.org/10.1007/978-3-642-17517-6_23">Springer, <i>Lecture
+Notes in
+Comp. Sci.</i> 6506, 2010, pp. 241&ndash;252</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00291"><i>J. Graph Algorithms
+and Applications</i> 17 (3): 201&ndash;220, 2013</a>.
+<p>
+We show that the maximum flow problem can be solved in near-linear time
+for K<sub>5</sub>-minor-free and K<sub>3,3</sub>-minor-free graphs. The
+same result also holds for H-minor-free graphs when H can be embedded in
+the plane with one crossing and a structural decomposition of the input
+flow graph is given.
+<p>
+<li><b>Drawing graphs in the plane with a prescribed outer face and
+polynomial area</b>.<br>
+<a href="//mathcs.slu.edu/~chambers/">E. Chambers</a>,
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>, and
+<a href="//www.ics.uci.edu/~mloffler/">M. L&ouml;ffler</a>.<br>
+<i>Proc. 18th Int. Symp. Graph Drawing</i>, Konstanz, Germany, 2010.<br>
+<a href="//doi.org/10.1007/978-3-642-18469-7_12">Springer, <i>Lecture Notes in
+Comp. Sci.</i> 6502, 2011, pp. 129&ndash;140</a>.<br>
+<a href="//arxiv.org/abs/1009.0088">arXiv:1009.0088</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00257"><i>J. Graph
+Algorithms and Applications</i> 16 (2): 243&ndash;259, 2012</a>.
+<p>
+Tutte's method of spring embeddings allows any triangulated planar graph
+to be drawn so that the outer face has any pre-specified convex shape,
+but it may place vertices exponentially close to each other. Alternative
+graph drawing methods provide polynomial-area straight line drawings but
+do not allow the outer face shape to be specified. We describe a drawing
+method that combines both properties: it has polynomial area, and can
+match any pre-specified shape of the outer face, even a shape in which
+some of the vertices have 180 degree angles. We apply our results to
+drawing polygonal schemas for graphs embedded on surfaces of positive genus.
+<p>
+<li><b>Lombardi drawings of graphs</b>.<br>
+<a href="//www2.latech.edu/~duncan/">C. Duncan</a>,
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>,
+<a href="//www.cs.arizona.edu/~kobourov/">S. Kobourov</a>, and
+<a
+href="//www.ac.tuwien.ac.at/people/noellenburg/">M. N&ouml;llenburg</a>.<br>
+<i>Proc. 18th Int. Symp. Graph Drawing</i>, Konstanz, Germany, 2010.<br>
+<a href="//doi.org/10.1007/978-3-642-18469-7_18">Springer, <i>Lecture Notes in
+Comp. Sci.</i> 6502, 2011, pp. 195&ndash;207</a>.<br>
+<a href="//arxiv.org/abs/1009.0579">arXiv:1009.0579</a>.<br>
+Invited talk at <a href="//www.win.tue.nl/algo/DCGD.php">7th Dutch Computational Geometry Day</a>, Eindhoven, the
+Netherlands, 2010.<br>
+<a href="//doi.org/10.7155/jgaa.00251"><i>J. Graph
+Algorithms and Applications</i> 16 (1): 85&ndash;108, 2012</a> (special issue
+for GD 2010).
+<p>
+In honor of artist <a
+href="//en.wikipedia.org/wiki/Mark_Lombardi">Mark Lombardi</a>, we
+define a Lombardi drawing to be a drawing of a graph in which the edges
+are drawn as circular arcs and at each vertex they are equally spaced
+around the vertex so as to achieve the best possible angular
+resolution. We describe algorithms for constructing Lombardi drawings of
+regular graphs, 2-degenerate graphs, graphs with rotational symmetry,
+and several types of planar graphs. A program for the rotationally
+symmetric case, the <a
+href="//11011110.github.io/blog/2010/07/23/graph-drawing-acceptances.html">Lombardi
+Spirograph</a>, is available online.
+<p>
+<li><b>Optimal 3D angular resolution for low-degree graphs</b>.<br>
+D. Eppstein,
+<a href="//www.ics.uci.edu/~mloffler/">M. L&ouml;ffler</a>,
+E. Mumford, and
+<a
+href="//www.ac.tuwien.ac.at/people/noellenburg/">M. N&ouml;llenburg</a>.<br>
+<i>Proc. 18th Int. Symp. Graph Drawing</i>, Konstanz, Germany, 2010.<br>
+<a href="//doi.org/10.1007/978-3-642-18469-7_19">Springer, <i>Lecture Notes in
+Comp. Sci.</i> 6502, 2011, pp. 208&ndash;219</a>.<br>
+<a href="//arxiv.org/abs/1009.0045">arXiv:1009.0045</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00290"><i>J. Graph Algorithms
+and Applications</i> 17 (3): 173&ndash;200, 2013</a>.
+<p>
+We show how to draw any graph of maximum degree three in three
+dimensions with 120 degree angles at each vertex or bend, and any graph of
+maximum degree four in three dimensions with the angles of the diamond
+lattice at each vertex or bend. In each case there are no crossings and
+the number of bends per edge is a small constant.
+<p>
+<li><b>Guest editor's foreword</b>.<br>
+D. Eppstein and
+E. Gansner.<br>
+<a
+href="//jgaa.info/accepted/2011/EppsteinGansner2011.15.1.pdf"><i>Journal
+of Graph Algorithms and Applications</i> 15 (2): 3&ndash;5, 2011</a>.<br>
+(Special Issue on Selected Papers from the Seventeenth International
+Symposium on Graph Drawing, GD 2009)
+<p>
+<li><b>Confluent Hasse diagrams</b>.<br>
+D. Eppstein and
+<a href="//www.ics.uci.edu/~jsimons/">J. Simons</a>.<br>
+<i>Proc. 19th Int. Symp. Graph Drawing</i>, Eindhoven, The Netherlands, 2011.<br>
+Springer, <i>Lecture Notes in
+Comp. Sci.</i> 7034, 2012, pp. 2&ndash;13.<br>
+<a href="//arxiv.org/abs/1108.5361">arXiv:1108.5361</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00312"><i>J. Graph
+Algorithms and Applications</i> 17 (7): 689&ndash;710, 2013</a>.
+<p>
+We show that a partial order has a non-crossing upward planar drawing if
+and only if it has order dimension two, and we use the
+Dedekind-MacNeille completion to find a drawing with the minimum
+possible number of confluent junctions.
+<p>
+<li><b>Inapproximability of orthogonal compaction</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+D. Eppstein, and
+<a href="//www.ics.uci.edu/~jsimons/">J. Simons</a>.<br>
+<a href="//arxiv.org/abs/1108.4705">arXiv:1108.4705</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00263"><i>J. Graph Algorithms and Applications</i> 16 (3): 651&ndash;673, 2012</a>. (Special issue for GD 2011.)
+<p>
+This is the journal version of "<a href="p-hard-compact.html">Hardness
+of approximate compaction for nonplanar orthogonal graph drawings</a>". 
+It has stronger inapproximability bounds, and more variations of the
+compaction problem that are hard to approximate. In addition it includes
+a retraction of a buggy approximation algorithm from the conference version.
+<p>
+<li><b>Parameterized complexity of 1-planarity</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+<a href="//www.fmf.uni-lj.si/~cabello/">S. Cabello</a>,
+and D. Eppstein.<br>
+<a href="//arxiv.org/abs/1304.5591">arXiv:1304.5591</a>.<br>
+13th Int. Symp. Algorithms and Data Structures (WADS 2013), London, Ontario<br>
+<a href="//doi.org/10.1007/978-3-642-40104-6_9">Springer, <i>Lecture Notes in Comp. Sci. 8037</i>, 2013, pp. 97&ndash;108</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00457"><i>J. Graph Algorithms and
+Applications</i> 22 (1): 23&ndash;49, 2018</a>. (Special issue on Graph
+Drawing Beyond Planarity.)<br>
+<p>
+We show that testing whether a graph is 1-planar (drawable with at most
+one crossing per edge) may be performed in polynomial and
+fixed-parameter tractable time for graphs of bounded circuit rank,
+vertex cover number, or tree-depth. However, it is NP-complete for
+graphs of bounded treewidth, pathwidth, or bandwidth.
+<p>
+(<a href="BanCabEpp-WADS-13-slides.pdf">Slides</a>)
+<p>
+<li><b>Universal point sets for planar graph drawings with circular arcs</b>.<br>
+<a href="//www.dia.uniroma3.it/~compunet/www/view/person.php?id=angelini">P. Angelini</a>,
+D. Eppstein,
+<a href="//www.dia.uniroma3.it/~compunet/www/view/person.php?id=frati">F. Frati</a>,
+<a href="//www-pr.informatik.uni-tuebingen.de/?site=mitarbeiter/michaelkaufmann/index">M. Kaufmann</a>,
+<a href="//www.loria.fr/~lazard/">S. Lazard</a>,
+<a href="//i11www.iti.uni-karlsruhe.de/en/members/tamara_mchedlidze/index">T. Mchedlidze</a>,
+<a href="//www-sop.inria.fr/members/Monique.Teillaud/">M. Teillaud</a>, and
+<a href="//www1.informatik.uni-wuerzburg.de/en/staff/wolff_alexander/">A. Wolff</a>.<br>
+HAL-Inria open archive <a href="//hal.inria.fr/hal-00846953">oai:hal.inria.fr:hal-00846953</a>.<br>
+<i>25th Canadian Conference on Computational Geometry</i>, Waterloo,
+Canada, 2013.<br>
+<a href="//doi.org/10.7155/jgaa.00324"><i>J. Graph Algorithms
+and Applications</i> 18 (3): 313&ndash;324, 2014</a>.
+<p>
+For every positive integer <i>n</i>, there exists a set of <i>n</i>
+points on a parabola, with the property that every <i>n</i>-vertex
+planar graph can be drawn without crossings with its vertices at these
+points and with its edges drawn as circular arcs.
+<p>
+(<a href="AngEppFra-CCCG-13-slides.pdf">Slides</a>)
+<p>
+<li><b>Superpatterns and universal point sets</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+Z. Cheng,
+<a href="//www.ics.uci.edu/~wdevanny/">W. E. Devanny</a>, and
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1308.0403">arXiv:1308.0403</a>.<br>
+<i>21st Int. Symp. Graph Drawing</i>, Bordeaux, France, 2013.<br>
+<a href="//doi.org/10.1007/978-3-319-03841-4_19">Springer, <i>Lecture Notes in Comp. Sci.</i> 8242, 2013, pp. 208&ndash;219</a>.<br>
+Bannister's talk on this paper won the GD2013 best presentation award.<br>
+<a href="//doi.org/10.7155/jgaa.00318"><i>J. Graph Algorithms & Applications</i> 18 (2): 177&ndash;209, 2014<a> (special issue for GD'13).
+<p>
+A superpattern of a set of permutations is a permutation that contains
+as a pattern every permutation in the set. Previously superpatterns had
+been considered for all permutations of a given length; we generalize this
+to sets of permutations defined by forbidden patterns; we show that
+the 213-avoiding permutations have superpatterns half the length of the
+known bound for all permutations, and that any proper permutation
+subclass of the 213-avoiding permutations has near-linear superpatterns.
+We apply these results to the construction of universal point sets, sets
+of points that can be used as the vertices of drawings of all n-vertex
+planar graphs. We use our 213-avoiding superpatterns to construct
+universal sets of size approximately <i>n</i><sup>2</sup>/4,
+and we also construct near-linear universal sets for graphs of bounded
+pathwidth.
+<p>
+<li><b>Drawing arrangement graphs in small grids, or how to play
+planarity</b>.<br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1308.0066">arXiv:1308.0066</a>.<br>
+<i>21st Int. Symp. Graph Drawing</i>, Bordeaux, France, 2013.<br>
+<a href="//doi.org/10.1007/978-3-319-03841-4_38">Springer, <i>Lecture Notes in Comp. Sci.</i> 8242, 2013, pp. 436&ndash;447</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00319"><i>J. Graph Algorithms &
+Applications</i> 18 (2): 211&ndash;231, 2014</a> (special issue for GD'13).
+<p>
+The <a href="//planarity.net/">planarity game</a> involves
+rearranging a scrambled line arrangement graph to make it planar.
+We show that the resulting graphs have drawings in grids of area
+<i>n</i><sup>7/6</sup>, much smaller than the quadratic size bound for
+grid drawings of planar graphs, and we provide a strategy for
+planarizing these graphs that is simple enough for human puzzle solving.
+<p>
+<li><b>Planar induced subgraphs of sparse graphs</b>.<br>
+<a href="//blogs.oregonstate.edu/glencora/">G. Borradaile</a>,
+D. Eppstein,
+and P. Zhu.<br>
+<a href="//arxiv.org/abs/1408.5939">arXiv:1408.5939</a>.<br>
+<i>22nd Int. Symp. Graph Drawing</i>, W&uuml;rzburg, Germany, 2014.<br>
+<a href="//doi.org/10.1007/978-3-662-45803-7_1">Springer, <i>Lecture Notes
+in Comp. Sci.</i> 8871, 2014, pp. 1&ndash;12.</a><br>
+<a href="//doi.org/10.7155/jgaa.00358"><i>J. Graph Algorithms &
+Applications</i> 19 (1): 281&ndash;297, 2015</a>.
+<p>
+We investigate the number of vertices that must be deleted from an
+arbitrary graph, in the worst case as a function of the number of edges,
+in order to planarize the remaining graph.
+We show that <i>m</i>/5.22 vertices are sufficient
+and <i>m</i>/(6&nbsp;&minus;&nbsp;o(1)) are necessary, and we also give
+bounds for the number of deletions needed to achieve certain subclasses
+of planar graphs.
+<p>
+<li><b>The Galois complexity of graph drawing: why numerical solutions are
+ubiquitous for force-directed, spectral, and circle packing drawings</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+<a href="//www.ics.uci.edu/~wdevanny/">W. E. Devanny</a>,
+D. Eppstein, and
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>.<br>
+<a href="//arxiv.org/abs/1408.1422">arXiv:1408.1422</a>.<br>
+<i>22nd Int. Symp. Graph Drawing</i>, W&uuml;rzburg, Germany, 2014<br>
+<a href="//doi.org/10.1007/10.1007/978-3-662-45803-7_13">Springer, <i>Lecture
+Notes in Comp. Sci.</i> 8871, 2014, pp. 149&ndash;161.</a><br>
+<a href="//doi.org/10.7155/jgaa.00349"><i>J. Graph Algorithms &
+Applications</i> 19 (2): 619&ndash;656, 2015</a>.
+<p>
+We show that many standard graph drawing methods have algebraic
+solutions described by polynomials that can have unsolvable Galois groups,
+and that can have Galois groups whose order is divisible by large prime
+numbers. As a consequence certain models of exact algebraic computation
+are unable to construct these drawings.
+<p>
+<li><b>Crossing minimization for 1-page and 2-page drawings of graphs
+with bounded treewidth</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a> and
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1408.6321">arXiv:1408.6321</a>.<br>
+<i>22nd Int. Symp. Graph Drawing</i>, W&uuml;rzburg, Germany, 2014.<br>
+<a href="//doi.org/10.1007/10.1007/978-3-662-45803-7_18">Springer, <i>Lecture
+Notes in Comp. Sci.</i> 8871, 2014, pp. 210&ndash;221.</a><br>
+<a href="//doi.org/10.7155/jgaa.00479"><i>J. Graph Algorithms &
+Applications</i> 22 (4): 577&ndash;606, 2018</a>.
+<p>
+We show how to express in monadic second-order logic the problems of
+drawing a graph with a fixed
+number of crossings on a one or two page book layout.
+By applying Courcelle's theorem, we obtain fixed-parameter tractable
+algorithms for these problems, parameterized by treewidth.
+<p>
+<li><b>Simple recognition of Halin graphs and their generalizations</b>.<br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1502.05334">arXiv:1502.05334</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00395"><i>J. Graph Algorithms &
+Applications</i> 20 (2): 323&ndash;346, 2016</a>.
+<p>
+We describe and implement a simple linear time algorithm for recognizing
+Halin graphs based on two simplifications of triples of degree-three
+vertices in such graphs. Removing some auxiliary data from the algorithm
+causes it to recognize a broader class of graphs that we call the
+D3-reducible graphs. We study the properties of these graphs, showing
+that they share many properties with the Halin graphs.
+<p>
+<li><b>Rooted cycle bases</b>.<br>
+D. Eppstein,
+<a href="//www.eng.uci.edu/users/j-michael-mccarthy">J. M. McCarthy</a>, and
+B. E. Parrish.<br>
+<a href="//arxiv.org/abs/1504.04931">arXiv:1504.04931</a>.<br>
+14th Algorithms and Data Structures Symp. (WADS 2015), Victoria, BC.<br>
+<a href="//doi.org/10.1007/978-3-319-21840-3_28">Springer, <i>Lecture Notes in Comp. Sci.</i> 9214 (2015), pp. 339&ndash;350</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00434"><i>J. Graph Algorithms &
+Applications</i> 21 (4): 663&ndash;686, 2017</a>.
+<p>
+We consider the problem of finding a cycle basis for a graph in which
+all basis cycles contain a specified edge. We characterize the graphs
+having such a basis in terms of their vertex connectivity, we show that
+the minimum weight cycle basis with this constraint can be found in
+polynomial time and is weakly fundamental, and we show that finding a
+fundamental cycle basis with this constraint is NP-hard but
+fixed-parameter tractable.
+<p>
+(<a href="EppMcCPar-WADS-15-slides.pdf">Slides</a>)
+<p>
+<li><b>Metric dimension parameterized by max leaf number</b>.<br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1506.01749">arXiv:1506.01749</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00360"><i>J. Graph Algorithms &
+Applications</i> 19 (1): 313&ndash;323, 2015</a>.
+<p>
+We prove that when a graph of bounded size has its edges subdivided to
+form a larger graph, it is still possible to find its metric dimension
+by a fixed-parameter tractable algorithm, parameterized by the
+pre-subdivision size of the graph.
+<p>
+<li><b>Triangle-free penny graphs: degeneracy, choosability, and edge count</b>.<br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1708.05152">arXiv:1708.05152</a>.<br>
+<i>Proc. 25th Int. Symp. Graph Drawing</i>, Boston, Massachusetts, 2017.<br>
+<a href="//doi.org/10.1007/978-3-319-73915-1_39">Springer, <i>Lecture
+Notes in Comp. Sci.</i> 10692 (2018), pp. 506&ndash;513</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00463"><i>J. Graph Algorithms &
+Applications</i> 22 (3): 483&ndash;499 (special issue for GD 2017), 2018</a>.
+<p>
+A penny graph is the contact graph of unit disks: each disk represents a
+vertex of the graph, no two disks can overlap, and each tangency between
+two disks represents an edge in the graph.
+We prove that, when this graph is triangle free, its degeneracy is at most two.
+As a consequence, triangle-free penny graphs have list chromatic number
+at most three.
+We also show that the number of edges in any such graph is at most
+2<i>n</i>&nbsp;&minus;&nbsp;&Omega;(&radic;<i>n</i>).
+The journal version uses the alternative title "Edge Bounds and Degeneracy of Triangle-Free Penny Graphs and Squaregraphs".
+<p>
+(<a href="Epp-GD-17-penny-slides.pdf">Slides</a>)
+<p>
+<li><b>The effect of planarization on width</b>.<br>
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1708.05155">arXiv:1708.05155</a>.<br>
+<i>Proc. 25th Int. Symp. Graph Drawing</i>, Boston, Massachusetts, 2017.<br>
+<a href="//doi.org/10.1007/978-3-319-73915-1_43">Springer, <i>Lecture
+Notes in Comp. Sci.</i> 10692 (2018), pp. 560&ndash;572</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00468"><i>J. Graph Algorithms &
+Applications</i> 22 (3): 461&ndash;481 (special issue for GD 2017), 2018</a>.
+<p>
+We study what happens to nonplanar graphs of low width
+(for various width measures) when they are made planar by
+replacing crossings by vertices.
+For treewidth, pathwidth, branchwidth, clique-width, and tree-depth,
+this replacement can blow up the width from constant to linear.
+However, for bandwidth, cutwidth, and carving width,
+graphs of bounded width stay bounded when we planarize them.
+<p>
+(<a href="Epp-GD-17-planarization-slides.pdf">Slides</a>)
+<p>
+</ul>
+
+<hr><p>
+<a href="jour.html">Journals</a> &ndash;
+<a href="/~eppstein/pubs/">Publications</a> &ndash;
+<a href="/~eppstein/">David Eppstein</a> &ndash;
+<a href="/~theory/">Theory Group</a> &ndash;
+<a href="/">Inf. &amp; Comp. Sci.</a> &ndash;
+<a href="//www.uci.edu/">UC Irvine</a>
+<p>
+<small>Semi-automatically <a href="filter.html">filtered</a>
+from a common source file.</small>
+</body></html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

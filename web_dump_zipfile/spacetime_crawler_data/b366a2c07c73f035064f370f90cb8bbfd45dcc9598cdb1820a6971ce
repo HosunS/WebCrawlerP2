@@ -1,0 +1,24 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC517¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 11 Mar 2018 01:34:16 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"205-5671905ff1600"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 19:47:15 GMTKraw_content¢DtypeEvalueY# test_songs.py
+
+
+from songs import Song, SongCollection
+import unittest
+
+
+
+class SongCollectionTest(unittest.TestCase):
+    def test_new_collections_have_size_zero(self):
+        collection = SongCollection()
+        self.assertEqual(collection.size(), 0)
+
+
+    def test_after_adding_one_song_to_a_collection__size_is_1(self):
+        collection = SongCollection()
+        collection.add(Song())
+        self.assertEqual(collection.size(), 1)
+
+
+
+if __name__ == '__main__':
+    unittest.main()
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

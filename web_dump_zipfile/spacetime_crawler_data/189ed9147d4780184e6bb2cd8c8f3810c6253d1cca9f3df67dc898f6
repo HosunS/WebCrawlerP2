@@ -1,0 +1,793 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 16:33:01 GMT¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE36259¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueYç£<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<!-- saved from url=(0055)http://www.math.ucsd.edu/~math20f/Fall/Lab7S/Lab7S.html -->
+  <title>Eigenvalues, Determinants and Diagonalization</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=ISO-8859-1">
+  <meta content="Microsoft FrontPage 6.0" name="GENERATOR">
+</head>
+<body bgcolor="D4E9D4">
+<center>
+<h1>4.&nbsp; Eigenvalues, Determinants and Diagonalization</h1>
+
+<p align="center"><b><font size="4">Due: December 4, 2013</font></b></p>
+</center>
+<p align="center"><big>&sect;4.1 Introduction</big>&nbsp;&nbsp;&nbsp; </p>
+<p>&nbsp;&nbsp;&nbsp; Eigenvalues and determinants reveal quite a bit
+of information about a matrix.&nbsp; In this lab we will learn how to
+use MATLAB to compute the eigenvalues, eigenvectors, and the
+determinant of a matrix.&nbsp; We will also learn about diagonalization
+and how it can be applied to study certain problems in population
+dynamics.</p>
+<p align="center"><big>&sect;4.2 Determinants</big></p>
+<p>&nbsp;&nbsp;&nbsp; As you should be aware by now, there is a nice
+formula for calculating the determinant of a 2x2 matrix.&nbsp; Even the
+3x3 case is not that difficult.&nbsp; But as matrix size increases so
+does the complexity of calculating determinants.&nbsp; This is where
+MATLAB, or any other computer algebra program, comes in.</p>
+<p><font color="#6600cc"><b><small><font size="+1"><small>Example 4.1</small></font></small></b></font></p>
+<p>&nbsp; Let's start by entering the following matrices into
+MATLAB.&nbsp; (You'll need to do this before proceeding with the rest
+of the example.)</p>
+<p align="center"><span
+ style="font-size: 12pt; font-family: Times New Roman;">
+<img style="border: 0px solid ; width: 434px; height: 119px;" alt=""
+ src="Lab4_Files/image002.gif"></span></p>
+<p>&nbsp;&nbsp;&nbsp; To compute the determinants of these matrices we
+are going to use the command <tt><font color="#990000">det()</font></tt>.&nbsp;
+That
+is, to compute the determinant of A we type the following</p>
+<p><tt>&gt;&gt; <font color="#990000">det(A)</font></tt></p>
+MATLAB gives us 76 as the answer.&nbsp; Similarly we get
+<p><tt>&gt;&gt; <font color="#990000">det(B)</font></tt> </p>
+<p><tt>&nbsp;&nbsp;&nbsp; ans =
+</tt></p>
+<p><tt>&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 48</tt></p>
+&nbsp;
+<table width="100%" border="1" cellpadding="2" cellspacing="2"
+ height="146">
+  <tbody>
+    <tr>
+      <td colspan="2" width="200" height="1"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><b><font
+ color="#009900">Exercise 4.1</font></b></span></td>
+    </tr>
+    <tr>
+
+      <td valign="top" height="113"><font color="#009900"><b>(a)</b></font>&nbsp;
+Use
+MATLAB to compute the determinants of the following matrices:
+      <p>&nbsp;<b>A</b> + <b>B</b>, <b>A</b> - <b>B</b>, <b>AB</b>,
+      <b>A</b><sup>-1</sup>, <b>B</b><sup>T</sup></p>
+      <p>Recall: In MATLAB the transpose of a matrix is denoted with an
+apostrophe; i.e. <span
+ style="font-size: 12pt; font-family: Times New Roman;"> <b>B</b><sup>T</sup></span>
+is given by the command</p>
+      <p>&gt;&gt;<tt><font color="#990000"> B'</font></tt></p>
+      </td>
+    </tr>
+    <tr>
+
+      <td valign="top" height="37"><font color="#009900"><b>(b)</b></font>&nbsp;
+Which
+of the above matrices are NOT invertible?&nbsp; Explain your
+reasoning.</td>
+    </tr>
+    <tr>
+
+      <td valign="top" height="37"><b><font color="#009900">(c)</font></b>&nbsp;
+Now
+we know the determinants of <b>A</b> and <b>B</b>, but suppose
+that we lost our original matrices <b>A</b> and <b>B</b>.&nbsp; Which
+of the determinants in part (a) will we still be able to recover, even
+without having <b>A</b> or <b>B</b> at hand?&nbsp; Explain your
+reasoning.</td>
+    </tr>
+  </tbody>
+</table>
+<p><font color="#ff6600"><b><small><font size="+1"><small>Remark
+4.1&nbsp; </small></font></small></b></font>The main use of
+determinants in this class relates to the idea of invertibility.&nbsp;
+When you use MATLAB for that purpose, you have to understand that the
+program introduces rounding errors.&nbsp; Therefore, there is a
+possibility that a matrix may appear to have zero determinant and yet
+be invertible.&nbsp; This only applies to matrices with non-integer
+entries.&nbsp; The above matrices don't fall into this category as all
+their entries are integers.</p>
+<table width="100%" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+
+      <td valign="top"><b><font color="#009900">Exercise 4.2&nbsp; </font></b>In
+this
+exercise we are going to work with the following matrix:
+      <p align="center"> <img
+ style="border: 0px solid ; width: 245px; height: 92px;" alt=""
+ src="Lab4_Files/lab4matrix.jpg"></p>
+      <span style="font-size: 12pt; font-family: Times New Roman;">
+      <p align="left">Use<tt><font color="#990000"> det() </font></tt>to
+compute
+the determinant of <b>N</b><sup>100</sup>.&nbsp; Do you think
+that <span style="font-size: 12pt; font-family: Times New Roman;"> <b>N</b><sup>100</sup></span>
+is invertible?&nbsp; Also use the command to compute the determinant of
+      <b>N</b>.</p>
+      <p align="left">&nbsp;&nbsp;&nbsp;&nbsp; Now, using the
+determinant of <b>N</b> as a known quantity, calculate by hand the
+determinant of <span
+ style="font-size: 12pt; font-family: Times New Roman;"> <b>N</b><sup>100</sup></span>.&nbsp;
+Would
+you now reconsider your answer to the previous question?&nbsp;
+Explain.</p>
+      <p align="left">Hint: look at Remark 4.1 and consider some of the
+properties of determinants.</p>
+      </span></td>
+    </tr>
+  </tbody>
+</table>
+<p align="center"><big>&sect;4.3 Eigenvalues and Eigenvectors</big></p>
+<p>&nbsp;&nbsp;&nbsp; Given a matrix <b>A</b>, recall that an
+eigenvalue of <b>A</b>
+is a number <i>&#955;</i> such that <b>A</b><i><b>v</b></i> = <span
+ style="font-size: 12pt; font-family: Times New Roman; font-style: italic;">
+&#955;</span><b><i>v</i></b> for some vector <i><b>v</b></i>.&nbsp;
+The vector <i><b>v</b></i> is called an eigenvector corresponding to
+the eigenvalue
+<span
+ style="font-size: 12pt; font-family: Times New Roman; font-style: italic;">&#955;</span>.&nbsp;
+Generally,
+it is rather unpleasant to compute eigenvalues and
+eigenvectors of matrices by hand. Luckily MATLAB has a function <span
+ style="font-size: 12pt; font-family: Times New Roman;">
+<tt><font color="#990000">eig()</font></tt></span> that performs this
+task for us.</p>
+<p><font color="#6600cc"><b><small><font size="+1"><small>Example 4.2</small></font></small></b></font></p>
+<p>&nbsp;&nbsp;&nbsp; Compute the eigenvalues of the matrix <b>B</b>
+from example 4.1 and assign the values to a vector <b>b</b>.</p>
+<p>We do this by typing the following:</p>
+<p><tt><font color="#000000">&gt;&gt;</font><font color="#990000"> b =
+eig(B)</font></tt></p>
+<p><tt>&nbsp;&nbsp;&nbsp;b =</tt></p>
+<p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</tt> </p>
+<p>&nbsp;&nbsp;&nbsp; The eigenvalues are 1, 8, 3, 2.&nbsp; There are
+four of them because our matrix is 4x4.&nbsp; Notice also that it is
+very easy to compute the determinant of <b>B</b>.&nbsp; All we have to
+do is multiply all the eigenvalues together.&nbsp; Clearly 48 =
+1*8*3*2.&nbsp; (Further information about this can be found in your
+linear algebra book, <i>Linear Algebra and Its Applications</i> by D.
+Lay, in chapter 5 section 2.)</p>
+<p>If we wanted to compute the eigenvalues of <b>B</b> together with
+the corresponding eigenvectors we would type in the following command:</p>
+<p align="left"><tt><font color="#000000">&gt;&gt;</font><font
+ color="#990000"> [P,D] = eig(B)</font></tt></p>
+<p align="left"><tt>&nbsp;&nbsp;&nbsp; P =<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.0000&nbsp;&nbsp;
+-0.1980&nbsp;&nbsp; 0.2357&nbsp;&nbsp;&nbsp; 0.9074<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6931&nbsp;
+-0.2357 &nbsp; -0.1815<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.6931&nbsp;&nbsp;
+0.9428&nbsp;&nbsp;&nbsp;
+0.3630<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.1089<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; D =<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 0 0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 8 0 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 0 3 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 0 0 2</tt></p>
+<p align="left">MATLAB returns the matrix <b>P</b> consisting of the
+eigenvectors of <b>B</b> as its columns and a diagonal matrix <b>D</b>&nbsp;
+with
+the corresponding eigenvalues along the diagonal.&nbsp; So in the
+example above, the vector (-0.1980, 0.6931, 0.6931, 0)<sup>T</sup>,
+which is in the second column of <b>P</b>, is the eigenvector of <b>B</b>
+corresponding to the eigenvalue 8 which is the second entry on the
+diagonal of <b>D</b>.</p>
+<p>&nbsp;&nbsp;&nbsp; Let's do a quick check of MATLAB's output and our
+own understanding. Enter the following command into MATLAB:
+</p>
+<p align="left"><tt><font color="#000000">&gt;&gt;</font><font
+ color="#990000"> x = P(:,2);</font></tt></p>
+<p>This will store the second column of <b>P</b>, that is, the second
+eigenvector of <b>P</b>. Now enter the following in MATLAB:
+</p>
+<p align="left"><tt><font color="#000000">&gt;&gt;</font><font
+ color="#990000"> B*x - 8*x</font></tt></p>
+<p>The output shows that <b>Bx</b> = 8<b>x</b>, which we would expect,
+since <b>x</b> is the eigenvalue of <b>B</b> corresponding to the
+eigenvalue 8.
+</p>
+<p>The next exercise demonstrates a rather amazing property eigenvalues
+and eigenvectors to diagonalization.
+</p>
+<br>
+<p>
+<table width="100%" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td colspan="2" width="973"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><b><font
+ color="#009900">Exercise 4.3</font></b></span></td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"><b><font color="#009900">(a)</font></b>&nbsp;Enter
+the
+following matrix <b>V</b> into MATLAB:
+      <p><tt>&gt;&gt; <font color="#990000"> V = [9 -4 -2 0;<br>
+-56 32 -28 44;<br>
+-14 -14 6 -14;<br>
+42 -33 21 -45]</font></tt></p>
+      <p>Now use MATLAB to find the eigenvectors and corresponding
+eigenvalues of <b>V</b>.&nbsp; Assign them to matrices <b>P</b> and <b>D</b>
+respectively.</p>
+      </td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"><b><font color="#009900">(b)</font></b>&nbsp;
+Determine
+if <b>V</b> is invertible by looking at the
+eigenvalues.&nbsp; Explain your reasoning.</td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"><font color="#009900"><b>(c)</b></font>
+Use MATLAB to evaluate <b>P</b><sup>-1</sup><b>VP</b>.&nbsp; What do
+you notice?</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p align="center">&nbsp;&nbsp;&nbsp; <big>
+&sect;4.4 </big><span style="font-family: Times New Roman;">
+<font size="4">Diagonalization</font></span></p>
+<span style="font-size: 12pt; font-family: Times New Roman;">
+<p align="left">&nbsp;&nbsp;&nbsp;&nbsp; A matrix <b>A</b>
+is called diagonalizable, if we can find an invertible matrix <b>P</b>
+such that <b>P</b><sup>-1</sup><b>AP</b> is diagonal.&nbsp; This idea
+may seem quite arbitrary to you; after all, why would anyone want to
+modify the matrix <b>A</b> in such a manner just to make it
+diagonal?&nbsp; To give you some idea as to why we would want to do
+this, consider the problem of raising some matrix <b>A</b> to a large
+power, say 100.&nbsp; We could, of course, multiply <b>A</b> by itself
+100 times, but that would be rather time-consuming and
+ineffective.&nbsp; Instead, if we could express <b>A</b> as <b>PDP</b><sup>-1</sup>,
+where
+<b>D</b> is a diagonal matrix and <b>P</b> is some invertible
+matrix, then, we could significantly simplify our work by noting that </p>
+<p align="left"><b>A</b><sup>100</sup> = (<b>PDP</b><sup>-1</sup>)<sup>100</sup>
+= (<b>PDP</b><sup>-1</sup>)(<b>PDP</b><sup>-1</sup>)(<b>PDP</b><sup>-1</sup>)...(<b>PDP</b><sup>-1</sup>)
+=
+<b>PD</b>(<b>P</b><sup>-1</sup><b>P</b>)<b>D</b>(<b>P</b><sup>-1</sup><b>P</b>)<b>D</b>(<b>P</b><sup>-1</sup><b>P</b>)...(<b>P</b><sup>-1</sup><b>P</b>)<b>DP</b><sup>-1</sup>
+= <b>PD</b><sup>100</sup><b>P</b><sup>-1</sup>.</p>
+<p align="left">The upshot of this computation is that dealing with
+<b>D</b><sup>100</sup> is much easier than with
+<b>A</b><sup>100</sup> because to raise a diagonal matrix to a power,
+we simply raise all of its entries to that power.&nbsp; Thus, there is
+no need to perform as many matrix multiplications.</p>
+<p align="left">&nbsp;&nbsp;&nbsp; Not every matrix is diagonalizable,
+however.&nbsp; In order to diagonalize an <i>n</i> x <i>n</i>
+matrix <b>A</b> we must find a basis of <b>R</b><i><sup>n</sup></i>
+consisting of eigenvectors of <b>A</b>.&nbsp; Then forming a matrix <b>P</b>
+whose columns are the elements of this basis, we get <span
+ style="font-size: 12pt; font-family: Times New Roman;">
+<b>P</b><sup>-1</sup><b>AP</b></span> = <b>D</b>, where <b>D</b> is a
+diagonal matrix whose entries on the diagonal are the eigenvalues of <b>A</b>
+corresponding to the eigenvectors in the respective columns of <b>P</b>.&nbsp;
+If
+<span style="font-size: 12pt; font-family: Times New Roman;"><b>R</b><i><sup>n</sup></i></span>
+does not possess such a basis of
+eigenvectors, then <b>A</b> is not diagonalizable.</p>
+<p>&nbsp;&nbsp;&nbsp; In some situations, we can mak use of  the following theorem:
+</p>
+<p>&nbsp;&nbsp;&nbsp; <b>Theorem:</b> If an nxn matrix has n distict
+eigenvalues the matrix is diagonalizable.</p>
+Note, however, if the matrix does not have n distict eigenvalues this
+theorem does not give us any
+information; other means are needed to determine if is diagonalizable
+or not.
+<p><font color="#ff6600"><b><small><font size="+1"><small>Remark 4.2 </small></font></small></b></font>&nbsp;Part
+(a)
+of the preceding exercise says that if a matrix has distinct
+eigenvalues, then it is diagonalizable.&nbsp; Note that the converse to
+this statement is not necessarily true; i.e., if a matrix is
+diagonalizable, it is not necessarily true that all its eigenvalues are
+distinct.&nbsp; A matrix can be diagonalizable even if it has repeated
+eigenvalues: think about the identity matrix (already diagonal) whose
+eigenvalues are all 1.</p>
+<table width="100%" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td colspan="2" width="200"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><b><font
+ color="#009900">Exercise 4.4</font></b></span></td>
+    </tr>
+    <tr>
+
+      <td valign="top"><b><font color="#009900">(a)</font></b>&nbsp;<span
+ style="font-size: 12pt; font-family: Times New Roman;"> Let <b>F</b> =</span>
+      <p>0&nbsp; &nbsp;&nbsp;&nbsp; 1</p>
+      <p>1&nbsp;&nbsp; &nbsp;&nbsp; 1</p>
+      <p><span style="font-size: 12pt; font-family: Times New Roman;">Use
+MATLAB
+to find an invertible matrix <b>P</b> and a diagonal matrix <b>D</b>
+such that <b>PDP</b><sup>-1</sup> = <b>F</b></span></p>
+      </td>
+    </tr>
+    <tr>
+
+      <td valign="top"><b><font color="#009900">(b)</font></b>&nbsp;
+Use MATLAB to compare <span
+ style="font-size: 12pt; font-family: Times New Roman;"> <b>F</b><sup>10</sup></span>
+and <span style="font-size: 12pt; font-family: Times New Roman;"> <b>PD</b><sup>10</sup><b>P</b><sup>-1</sup></span>.</td>
+    </tr>
+    <tr>
+
+      <td valign="top"><font color="#009900"><b>(c)</b></font>&nbsp;
+Let <b>f</b> = (1,1)<sup>T</sup>. Compute <b>Ff</b>, <b>F</b><sup>2</sup><b>f</b>,
+
+      <span style="font-size: 12pt; font-family: Times New Roman;"> <b>F</b><sup>3</sup><b>f</b></span>,
+
+      <span style="font-size: 12pt; font-family: Times New Roman;"> <b>F</b><sup>4</sup><b>f</b></span>,
+
+      <span style="font-size: 12pt; font-family: Times New Roman;"> <b>F</b><sup>5</sup><b>f</b></span>.&nbsp;
+Describe
+the pattern in your answers.</td>
+    </tr>
+    <tr>
+
+      <td valign="top"><font color="#009900"><b>(d)</b></font>&nbsp;
+Given a sequence of numbers {1, 1, 2, 3, 5, 8, 13, ....} where each
+term is the sum of the previous two, find the 30th term of this
+sequence.&nbsp; (If you are stuck, read the remark below)</td>
+    </tr>
+  </tbody>
+</table>
+<p><font color="#ff6600"><b><small><font size="+1"><small>Remark 4.3 </small></font></small></b></font>&nbsp;The
+sequence
+in the above exercise is called a
+<a
+ href="http://www.mcs.surrey.ac.uk/Personal/R.Knott/Fibonacci/fibnat.html">Fibonacci
+sequence</a>.&nbsp; It has many interesting properties and appears
+often in nature.&nbsp; The above problem points in the direction of how
+to find an explicit formula for the <i>n</i><sup>th</sup> term in this
+sequence (it is not obvious a priori that such a formula must even
+exist).&nbsp; To obtain this formula simply note that if we let </p>
+<p><i>f</i><sub>0</sub> = <i>f</i><sub>1</sub> = 1 and <i>f</i><sub><i>n</i>+2</sub>
+=&nbsp; <i>f</i><sub><i>n</i>+1</sub> +&nbsp; <i>f<sub>n</sub></i> </p>
+<p>be our Fibonacci sequence and let</p>
+<p><b>f<i> = </i></b>( <i>f</i><sub>0</sub>,&nbsp; <i>f</i><sub>1</sub>)<sup>T</sup>
+= (1, 1)<sup>T</sup>, then </p>
+<p><b>Ff</b> = ( <i>f</i><sub>1</sub>,&nbsp; <i>f</i><sub>0 </sub>+ <i>f</i><sub>1</sub>)<sup>T</sup>
+= ( <i>f</i><sub>1</sub>,&nbsp; <i>f</i><sub>2</sub>)<sup>T</sup>, </p>
+<p><b>F</b><sup>2</sup><b>f</b> = <b>F</b>(<b>Ff</b>)<b> = F</b>*( <i>f</i><sub>1</sub>,
+<i>f</i><sub>2</sub>)<sup>T</sup> = (<i>f</i><sub>2</sub>, <i>f</i><sub>1
+</sub>+<i> f</i><sub>2</sub>)<sup>T</sup> = (<i>f</i><sub>2</sub>, <i>f</i><sub>3</sub>)<sup>T</sup>
+and in general, </p>
+<p><b>F</b><i><sup>n</sup></i><b>f</b>= (<i>f<sub>n</sub></i>, <i>f</i><sub><i>n</i>+1</sub>)<sup>T</sup></p>
+<p align="left">Thus, to get the general formula we need to compute
+<b>F</b><i><sup>n</sup></i>, (which is done by computing
+<b>PD</b><i><sup>n</sup></i><b>P</b><sup>-1</sup>), multiply it by the
+vector
+(1, 1)<sup>T</sup> and read off the first row of the resulting
+vector.&nbsp; If you like, you may perform these calculations by hand
+at your leisure and derive an interesting formula for the
+<i>n</i><sup>th</sup> Fibonacci number involving the golden ratio.</p>
+<p align="center">
+<big>&sect;4.5 Returning to: Matrices and Presidential Elections</big></p>
+</span><span style="font-family: Times New Roman;">
+<p>&nbsp;&nbsp;&nbsp; At the end of the last lab, we said that we would
+revisit our
+election example once we had a bit more mathematics under our belts. We
+have included the text from last time in case you want a review. If you
+feel confident on our work from last time, feel free to skip this
+review. You will need the results of the exercise from last time, so if
+you didn't save them, it would be helpful to rework them before moving
+on.
+</p>
+<b>REVIEW:</b>
+<p align="left">&nbsp;&nbsp;&nbsp; Certainly, the title of this section
+sounds a bit strange.&nbsp; What do matrices and presidents have in
+common?&nbsp; Let us consider a math model which is used
+in many subjects involving dynamics by illustrating it in a simple
+"sociological" situation. &nbsp;
+In California when you register to vote you declare a party
+affiliation.
+Suppose we have four political parties: Democrats, Republicans,
+Independents, and Libertarians, and we get the (publically available)
+data telling us
+what percentage of voters in each party switch to a different party
+every 4
+years.&nbsp; So we may be told something like this... "81% of Democrats
+remain Democrats, 9% convert to Republicans, 6% switch to Independents
+and 4% become Libertarians."&nbsp; Suppose we have this sort of
+information for each party, and we organize it into a matrix, which we
+shall call <b>P</b>, as follows:</p>
+<table id="AutoNumber1" width="100%" border="1">
+  <tbody>
+    <tr>
+      <td width="20%">&nbsp;</td>
+      <td width="20%">Democrats</td>
+      <td width="20%">Republicans</td>
+      <td width="20%">Independents</td>
+      <td width="20%">Libertarians</td>
+    </tr>
+    <tr>
+      <td width="20%">Democrats</td>
+      <td width="20%">0.81</td>
+      <td width="20%">0.08</td>
+      <td width="20%">0.16</td>
+      <td width="20%">0.10</td>
+    </tr>
+    <tr>
+      <td width="20%">Republicans</td>
+      <td width="20%">0.09</td>
+      <td width="20%">0.84</td>
+      <td width="20%">0.05</td>
+      <td width="20%">0.08</td>
+    </tr>
+    <tr>
+      <td width="20%">Independent</td>
+      <td width="20%">0.06</td>
+      <td width="20%">0.04</td>
+      <td width="20%">0.74</td>
+      <td width="20%">0.04</td>
+    </tr>
+    <tr>
+      <td width="20%">Libertarians</td>
+      <td width="20%">0.04</td>
+      <td width="20%">0.04</td>
+      <td width="20%">0.05</td>
+      <td width="20%">0.78</td>
+    </tr>
+  </tbody>
+</table>
+</span><span style="font-size: 12pt; font-family: Times New Roman;">
+<p align="left">(For example, the 0.05 in the second row and third
+column indicates that every four years, 5% of those calling themselves
+Independent will switch to the Republican party.)&nbsp; Note that we
+are assuming that these percentages do not change from one election to
+the next.&nbsp; This is not a very realistic assumption, but it will do
+for our simple model.</p>
+<p align="left">&nbsp;&nbsp;&nbsp; The question of course is to try to
+determine the outcome of all future elections, and if possible, the
+composition of the electorate in the long term.&nbsp; Let <i>D</i><sub>0</sub>,
+<i>R</i><sub>0</sub>,
+<i>I</i><sub>0</sub> and <i>L</i><sub>0</sub> denote the current
+percentage of Democrats, Republicans, Independents and
+Libertarians.&nbsp; In four years these numbers will change according
+to the matrix above, as follows:</p>
+<p align="left"><i>D</i><sub>1</sub> = 0.81<i>D</i><sub>0</sub> + 0.08<i>R</i><sub>0</sub>
++ 0.16<i>I</i><sub>0</sub> + 0.10<i>L</i><sub>0</sub><br>
+<i>R</i><sub>1</sub> = 0.09<i>D</i><sub>0</sub> + 0.84<i>R</i><sub>0</sub>
++ 0.05<i>I</i><sub>0</sub> + 0.08<i>L</i><sub>0</sub><br>
+<i>I</i><sub>1</sub> =
+0.06<i>D</i><sub>0</sub> + 0.04<i>R</i><sub>0</sub> + 0.74<i>I</i><sub>0</sub>
++ 0.04<i>L</i><sub>0</sub><br>
+<i>L</i><sub>1</sub> =
+0.04<i>D</i><sub>0</sub> + 0.04<i>R</i><sub>0</sub> + 0.05<i>I</i><sub>0</sub>
++ 0.78<i>L</i><sub>0</sub><br>
+</p>
+<p align="left">Let <i><b>x</b><sub>n</sub></i> be the vector (<i>D</i><span
+ style="font-size: 12pt; font-family: Times New Roman;"><i><sub>n</sub></i></span>,
+<i>R</i><span style="font-size: 12pt; font-family: Times New Roman;"><i><sub>n</sub></i></span>,
+<i>I</i><span style="font-size: 12pt; font-family: Times New Roman;"><i><sub>n</sub></i></span>,
+<i>L</i><span style="font-size: 12pt; font-family: Times New Roman;"><i><sub>n</sub></i></span>)<sup>T</sup>.
+It
+represents
+the percentage of representatives of each party after <i>n</i>
+presidential elections
+and we shall call it the party distribution.&nbsp; From the calculation
+above we see that </p>
+<p align="left"><span
+ style="font-size: 12pt; font-family: Times New Roman;">
+<i><b>x</b></i><sub>1<i> </i></sub>= <b>P</b><i><b>x</b></i></span><sub>0</sub></p>
+<p align="left"><span
+ style="font-size: 12pt; font-family: Times New Roman;">
+<i><b>x</b></i><sub>2<i> </i></sub>= <b>P</b><sup>2</sup><b><i>x</i></b><sub>0</sub>
+and in general <i><b>x</b></i><sub>n<i> </i></sub>= <b>P</b><i><sup>n</sup><b>x</b></i><sub>0</sub></span></p>
+<p align="left">Assuming everyone voted along party lines, from the
+presidential election of 2004 we know that <span
+ style="font-size: 12pt; font-family: Times New Roman;">
+<i><b>x</b></i><sub>0</sub></span> is roughly (48.56, 51.01, 0.0013,
+0.0030)<sup>T</sup></p>
+<span style="font-size: 12pt; font-family: Times New Roman;"> </span><span
+ style="font-size: 12pt; font-family: Times New Roman;"> </span><span
+ style="font-size: 12pt; font-family: Times New Roman;"> </span>
+<table width="100%" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td colspan="2" width="973"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><b><font
+ color="#009900">Review Exercise (you do not need to turn in, but you
+may need the results) </font></b></span></td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"><b><font color="#009900">(a)</font></b>&nbsp;Enter
+the
+matrix <b>P</b> and the vector <span
+ style="font-size: 12pt; font-family: Times New Roman;"> <i><b>x</b></i><sub>0</sub></span>
+into MATLAB. To avoid mistakes, just copy and paste this:
+      <p><tt>&gt;&gt; <font color="#990000">P = [0.8100 0.0800 0.1600
+0.1000;<br>
+0.0900 0.8400 0.0500 0.0800;<br>
+0.0600 0.0400 0.7400 0.0400;<br>
+0.0400 0.0400 0.0500 0.7800]</font></tt></p>
+      <p><tt>&gt;&gt; <font color="#990000">x0 = [48.56; 51.01;
+0.0013; 0.0030]</font></tt></p>
+      <p>What will the party distribution vector be
+3, 7, and 10 presidential elections
+from now?</p>
+      </td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"><b><font color="#009900">(b)</font></b>&nbsp;
+What
+will be the results 30, 60, 100 elections from now?
+&nbsp; <br>
+How much different is x<sub> 30 </sub> from
+x<sub> 60 </sub> from
+x<sub> 100 </sub>? <br>
+Summarize simply what is happening with x<sub> k </sub>
+as k gets big. </td>
+    </tr>
+  </tbody>
+</table>
+<b><br>
+NEW MATERIAL:</b>
+<p> &nbsp;&nbsp;&nbsp; From the previous exercise you probably observed
+that the results seem to stabilize the further into the future we
+go.&nbsp; Let us try to explain this mathematically. </p>
+<span style="font-size: 12pt; font-family: Times New Roman;"> </span><span
+ style="font-size: 12pt; font-family: Times New Roman;"> </span><span
+ style="font-size: 12pt; font-family: Times New Roman;"> </span><span
+ style="font-size: 12pt; font-family: Times New Roman;"> </span>
+<table style="width: 1243px; height: 462px;" border="1" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td colspan="2" width="973"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><b><font
+ color="#009900">Exercise 4.5</font></b></span></td>
+    </tr>
+    <tr>
+
+
+      <td valign="top" width="931"><b><font color="#009900">(a)</font></b>&nbsp;<span
+ style="font-size: 12pt; font-family: Times New Roman;"> First of all,
+use MATLAB to find matrices <b>Q</b> and <b>D</b> such that <b>QDQ</b><sup>-1</sup>
+= <b>P</b></span></td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"><b><font color="#009900">(b)</font></b>&nbsp;
+Now,
+recall that <b>P</b><i><sup>n</sup></i> = <b>QD</b><span
+ style="font-size: 12pt; font-family: Times New Roman;"><i><sup>n</sup></i></span><b>Q</b><sup>-1</sup>.&nbsp;
+Find
+      <b> <img style="border: 0px solid ; width: 104px; height: 30px;"
+ alt="" src="Lab4_Files/limDn.gif"></b> by hand. You have probably
+never computed a limit of matrix multiplication before, so just recall
+that our limit is simply what the product <b>D</b><sup>n</sup> tends
+to a <i>n</i> gets very large. What is this limit?<span
+ style="font-size: 12pt; font-family: Times New Roman;"></span></td>
+    </tr>
+    <tr>
+
+      <td style="vertical-align: top;"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><b><font
+ color="#009900">(c)</font></b></span><span
+ style="font-size: 12pt; font-family: Times New Roman;"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><b><font
+ color="#009900"> </font></b><font style="color: rgb(0, 0, 0);"
+ color="#009900">Now, using MATLAB, multiply your answer by Q and </font></span></span><span
+ style="font-size: 12pt; font-family: Times New Roman;"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><span
+ style="color: rgb(0, 0, 0);">Q</span><sup>-1</sup></span><span
+ style="font-size: 12pt; font-family: Times New Roman;"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><font
+ color="#009900"><span style="color: rgb(0, 0, 0);"></span></font><font
+ color="#009900"><span style="color: rgb(0, 0, 0);"></span></font><font
+ color="#009900"><span style="color: rgb(0, 0, 0);"> </span></font></span></span>to
+      </span><span
+ style="font-size: 12pt; font-family: Times New Roman;">compute <b> <img
+ style="border: 0px solid ; width: 113px; height: 26px;" alt=""
+ src="Lab4_Files/limPn.gif"></b><span
+ style="font-size: 12pt; font-family: Times New Roman;">.&nbsp; Store
+the answer in a variable called Pinf.</span></span><span
+ style="font-size: 12pt; font-family: Times New Roman;"><span
+ style="font-size: 12pt; font-family: Times New Roman;"></span></span></td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"> <span
+ style="font-size: 12pt; font-family: Times New Roman;"> <b><font
+ color="#009900">(d)</font></b>&nbsp; U</span>se MATLAB to compute <span
+ style="font-size: 12pt; font-family: Times New Roman;"> <b>P</b></span><sub><span
+ style="font-size: 12pt;">&#8734;</span></sub> <span
+ style="font-size: 12pt; font-family: Times New Roman;"> <i><b>x</b></i><sub>0</sub>
+= Pinf*<i><b>x</b></i><sub>0</sub>, where <i><b>x</b></i><sub>0</sub>
+is the same as in part (a) of the review exercise. How does your answer
+compare to part (b) of the review exercise from last time?</span></td>
+    </tr>
+    <tr>
+
+
+      <td valign="top" width="931"><span
+ style="font-size: 12pt; font-family: Times New Roman;"> <b><font
+ color="#009900">(e)&nbsp; </font></b></span>Now make up any vector <i><b>y</b></i>
+in <b>R</b><sup>4</sup> whose entries sum to 100.&nbsp; Compute <span
+ style="font-size: 12pt; font-family: Times New Roman;"> <b>P</b><sub><span
+ style="font-size: 12pt;">&#8734;</span></sub> <b><i>y</i></b></span> and
+compare it to part (c).&nbsp; How does the initial distribution
+y of the
+electorate seem to affect the distribution in the long term?&nbsp; By
+looking at the matrix <span
+ style="font-size: 12pt; font-family: Times New Roman;"> <b>P</b><sub><span
+ style="font-size: 12pt;">&#8734;</span></sub></span>, give a mathematical
+explanation. </td>
+    </tr>
+  </tbody>
+</table>
+<big> </big>
+<font size="+1"><br>
+</font>
+<div style="text-align: center;"><font size="+1">&sect;4.6 Returning
+to: Google PageRank</font><br>
+</div>
+<p>&nbsp;&nbsp;&nbsp; In Lab 2 we initially discussed Google's PageRank
+algorithm for ranking websites where the linking information is stored
+in a linking matrix L. It turns out that Google does not try to solve
+the problem using the methods we implemented in that lab. Here we will
+revisit PageRank to highlight the actual method used to solve L<b>r</b>
+=<b>r</b>. If at any point you need a refresher, please reference <a
+ href="Lab2.shtml">Lab 2</a>.
+</p>
+<p>&nbsp;&nbsp;&nbsp; Recall after setting your problem up from the
+network data
+the equations to be solved have the form</p>
+<p align="center">L<b>r</b> =<b>r</b></p>
+<p>where <b>r</b> is an <i>k</i>-dimensional vector and L is
+a <i>k</i> x <i>k</i> matrix describing the network links.
+Since the web is huge, an important
+issue is: how do we solve L<b>r</b> =<b>r</b> when <i>k</i> is very
+large?
+An advantage is that most entries of L equal 0, but how
+do we take advantage of that?
+Our favorite technique so far, Gaussian elimination (or row reduction),
+will destroy much of this 0 structure after only a few steps,
+so we had better try something else.
+One approach goes back to</p>
+<p>&nbsp;&nbsp;&nbsp; <b>Theorem (Perron-Frobenius)</b>
+If a matrix L has only non-negative entries and each of its
+columns sum to 1, then its largest eigenvalue is 1.
+Moreover, for any vector <b>r</b><sub>0</sub> with positive entries
+the vector <b>r</b><sub>n</sub> = L<sup>n</sup>*<b>r</b><sub>0</sub>
+approaches a non-negative vector
+<b>r</b> which is a solution to the eigenvalue problem L<b>r</b> = <b>r</b>.</p>
+<p>&nbsp;&nbsp;&nbsp; This is not exactly the Perron-Frobenius theorem
+you saw in Lab 2, but it is a variation on it. In fact, most people
+think of the phenomenon behind Page Rank as one of eigenvectors and
+eigenvalues (which we suppressed in Lab 2 because you had not yet heard
+of them).
+</p>
+<p>&nbsp;&nbsp;&nbsp; This gives an alternative approach to solving L<b>r</b>=<b>r</b>.
+Specifically,
+if we take <i>n</i> to be large enough, L<sup>n</sup><b>r</b><sub>0</sub>
+will approach the solution to L<b>r</b> = <b>r</b>.
+As an exercise consider</p>
+<p align="center"> <img
+ style="border: 0px solid ; width: 230px; height: 309px;" alt=""
+ src="Lab4_Files/BigPageRank.gif"></p>
+<p>The letters along the left and top are simply labels for the
+websites, and should not be considered part of the linking matrix.
+Enter this matrix into MATLAB with the command
+</p>
+<p><small><tt>&gt;&gt; <font color="#990000"> L = [0,0,0,0,1,0,0,0;<br>
+0,0,0,0,0,0,0,1;<br>
+0,1/2,0,0,0,0,1,0;<br>
+1/2,0,1/2,0,0,0,0,0;<br>
+0,0,1/2,0,0,1,0,0;<br>
+1/2,0,0,0,0,0,0,0;<br>
+0,1/2,0,0,0,0,0,0;<br>
+0,0,0,1,0,0,0,0;]</font></tt></small></p>
+<br>
+<table width="100%" border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td colspan="2" width="973"><span
+ style="font-size: 12pt; font-family: Times New Roman;"><b><font
+ color="#009900">Exercise 4.6</font></b></span></td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"><b><font color="#009900">(a)</font></b>&nbsp;
+Let
+      <font color="#990000">e0 = [1;1;1;1;1;1;1;1]</font>, and let <b>e</b><sub>n+1</sub>
+= L*<b>e</b><sub>n</sub>. (Note this is the same as saying <b>e</b><sub>n</sub>=L<sup>n</sup>*<b>e</b><sub>0</sub>).
+Compute
+      <b>e</b><sub>10</sub>.
+How large must n be so that <b>e</b><sub>n</sub> changes by less than
+1% when we increase n by 1? Don't try to get an exact value, instead
+just try to get a value for n that is big enough.</td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"><font color="#009900"><b>(b)</b></font>
+Draw by hand on your paper the graph
+of the network of webpages corresponding to L. (By graph here, we mean
+a <a href="http://en.wikipedia.org/wiki/Graph_%28mathematics%29">set
+of vertices and edges</a>)<br>
+      </td>
+    </tr>
+    <tr>
+
+      <td valign="top" width="931"><font color="#009900"><b>(bonus)</b></font>
+This part will not be graded, but you are encouraged to do it if you
+find the PageRank application interesting. The question now is: what is
+the computational cost of solving L<b>r</b>=<b>r</b> using iteration?
+More precisely, how many estimated operations are required to find r<sub>n</sub>
+in this method? Hint: multiplying 0 times a number and adding two
+numbers costs almost no time, so you just need to count how many times
+non-zero numbers are multiplied.</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<p>&nbsp;&nbsp;&nbsp; What usually happens in practice for very large L
+is
+that the convergence of <b>e</b><sub>n</sub> to <b>e</b> is very
+quick,
+indeed the size of <i>n</i> required for decent accuracy
+often does not go up rapidly with <i>k</i>. This is very important
+since the true linking matrix used for the internet will have <i>k</i>
+on the order of millions.
+The quick convergence is especially true if we have a
+good initial guess at the answer.
+Indeed the type of iteration you have just seen illustrates
+a basic idea behind solving many large scale problems, not just
+PageRank.
+Standard eigenvalue solvers and
+row reduction linear equation solvers
+such as Matlab are very reliable for modest size matrices,
+but start having
+trouble when there are more than a few hundred variables.
+"Iterative methods" work well with high probability,
+but there exist matrices which mess them up.
+</p>
+
+
+
+<p align="center"><big><font face="Times New Roman"><br>
+&sect;4.7 </font></big>
+<font size="4">Conclusion</font></p>
+&nbsp;&nbsp;&nbsp; In this lab you have learned how to use MATLAB to
+compute determinants, eigenvalues, and eigenvectors of matrices.&nbsp;
+You have also learned about diagonalization and how it can be applied
+to study fairly complex models using iteration .&nbsp; The moral is
+that computing with
+diagonal matrices is a lot simpler than with those that are not
+diagonal.
+
+<hr width="100%" size="2">
+<p><i>Acknowledgement: This lab was developed by faculty and graduate students at UCSD.
+(<a href="http://www.math.ucsd.edu/~math20f/Fall/MatlabIndex.html">http://www.math.ucsd.edu/~math20f/Fall/MatlabIndex.html</a>).</i></p>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

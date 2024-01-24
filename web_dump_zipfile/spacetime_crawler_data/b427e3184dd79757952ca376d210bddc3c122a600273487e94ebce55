@@ -1,0 +1,252 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 04:55:24 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYAÎ
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: US Census Data (1990) Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>US Census Data (1990) Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/census1990-mld/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/census1990-mld/USCensus1990-desc.html"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: The USCensus1990raw data set contains a one percent sample of the Public Use Microdata Samples (PUMS) person records drawn from the full 1990 census sample.</p>
+     </td>
+     <td><img
+src="../assets/MLimages/Large2.jpg"
+hspace=20 vspace=10  /> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">2458285</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Social</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Categorical</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">68</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Clustering</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">128201</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">The USCensus1990raw data set was obtained from the (U.S. Department of Commerce) Census Bureau website using the Data Extraction System. This system can be found at <a href="http://dataferrett.census.gov/">http://dataferrett.census.gov/</a>. <br><br>Donors:<br><br>Chris Meek, Microsoft, <u>meek <b>'@'</b> microsoft.com</u><br>Bo Thiesson, Microsoft, <u>thiesson <b>'@'</b> microsoft.com</u><br>David Heckerman, Microsoft, <u>heckerma <b>'@'</b> microsoft.com</u> </p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">The data was collected as part of the 1990 census. <br><br>There are 68 categorical attributes. This data set was derived from the USCensus1990raw data set. The attributes are listed in the file USCensus1990.attributes.txt (repeated below) and the coding for the values is described below. Many of the less useful attributes in the original data set have been dropped, the few continuous variables have been discretized and the few discrete variables that have a large number of possible values have been collapsed to have fewer possible values. <br><br>More specifically the USCensus1990 data set was obtained from the USCensus1990raw data set by the following sequence of operations; <br><br>- Randomization: The order of the cases in the original USCensus1990raw data set were randomly permuted. <br>- Selection of attributes: The 68 attributes included in the data set are given below. In the USCensus1990 data set we have added a single letter prefix to the original name. We add the letter 'i' to indicate that the original attribute values are used and 'd' to indicate that original attribute values for each case have been mapped to new values (the precise mapping is described below). <br><br>Hierarchies of values are provided in the file USCensus1990raw.coding.htm and the mapping functions used to transform the USCensus1990raw to the USCensus1990 data sets are giving in the file USCensus1990.mapping.sql. <br><br>The data is contained in a file called USCensus1990.data.txt. The first row contains the list of attributes. The first attribute is a caseid and should be ignored during analysis. The data is comma delimited with one case per row. </p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">      --------------------------------------------------------------<br>        Old Variable        New Variable<br>      --------------------------------------------------------------<br>        Age         dAge<br>        Ancstry1        dAncstry1<br>        Ancstry2        dAncstry2<br>        Avail           iAvail<br>        Citizen         iCitizen<br>        Class           iClass<br>        Depart          dDepart<br>        Disabl1         iDisabl1<br>        Disabl2         iDisabl2<br>        English         iEnglish<br>        Feb55           iFeb55<br>        Fertil          iFertil<br>        Hispanic        dHispanic<br>        Hour89          dHour89<br>        Hours           dHours<br>        Immigr          iImmigr<br>        Income1         dIncome1<br>        Income2         dIncome2<br>        Income3         dIncome3<br>        Income4         dIncome4<br>        Income5         dIncome5<br>        Income6         dIncome6<br>        Income7         dIncome7<br>        Income8         dIncome8<br>        Industry        dIndustry<br>        Korean          iKorean<br>        Lang1           iLang1<br>        Looking         iLooking<br>        Marital         iMarital<br>        May75880        iMay75880<br>        Means           iMeans<br>        Military        iMilitary<br>        Mobility        iMobility<br>        Mobillim        iMobillim<br>        Occup           dOccup<br>        Othrserv        iOthrserv<br>        Perscare        iPerscare<br>        POB         dPOB<br>        Poverty         dPoverty<br>        Pwgt1           dPwgt1<br>        Ragechld        iRagechld<br>        Rearning        dRearning<br>        Relat1          iRelat1<br>        Relat2          iRelat2<br>        Remplpar        iRemplpar<br>        Riders          iRiders<br>        Rlabor          iRlabor<br>        Rownchld        iRownchld<br>        Rpincome        dRpincome<br>        RPOB            iRPOB<br>        Rrelchld        iRrelchld<br>        Rspouse         iRspouse<br>        Rvetserv        iRvetserv<br>        School          iSchool<br>        Sept80          iSept80<br>        Sex         iSex<br>        Subfam1         iSubfam1<br>        Subfam2         iSubfam2<br>        Tmpabsnt        iTmpabsnt<br>        Travtime        dTravtime<br>        Vietnam         iVietnam<br>        Week89          dWeek89<br>        Work89          iWork89<br>        Worklwk         iWorklwk<br>        WWII            iWWII<br>        Yearsch         iYearsch<br>        Yearwrk         iYearwrk<br>        Yrsserv         dYrsserv<br><br>Mapping: In this step we map all of the old values for variables with prefix 'd' to new values. The mappings for the variables dAncstry1, dAncstry2, dHispanic, dIndustry, dOccup, dPOB were designed to correspond to a natural coarsening of the original values based on the information in the file coding.htm. The remaining variables are continuous valued variables and the mapping for these variables was chosen to make variables that were fairly uniformly distributed across the states (quantiles). The precise mappings are specified in the file USCensus1990.mapping.sql. This file contains all of T-SQL procedures used to map the variables. These procedures can be used directly in SQLServer to map the original values or translated to some other language. <br>      --------------------------------------------------------------<br>        Variable        Procedure<br>      --------------------------------------------------------------<br>        dAge            discAge<br>        dAncstry1       discAncstry1<br>        dAncstry2       discAncstry2<br>        dHispanic       discHispanic<br>        dHour89         discHour89<br>        dHours          discHours<br>        dIncome1        discIncome1<br>        dIncome2        discIncome2to8<br>        dIncome3        discIncome2to8<br>        dIncome4        discIncome2to8<br>        dIncome5        discIncome2to8<br>        dIncome6        discIncome2to8<br>        dIncome7        discIncome2to8<br>        dIncome8        discIncome2to8<br>        dIndustry       discIndustry<br>        dOccup          discOccup<br>        dPOB            discPOB<br>        dPoverty        discPoverty<br>        dPwgt1          discPwgt1<br>        dRearning       discRearning<br>        dRpincome       discRpincome<br>        dTravtime       discTravtime<br>        dWeek89         discWeek89<br>        dYrsserv        discYrsserv<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Meek, Thiesson, and Heckerman (2001), "The Learning Curve Method Applied to Clustering", to appear in The Journal of Machine Learning Research. <br><a href="http://rexa.info/paper/0071aac48d5e8154c0f7197433ed828aae00d4b2">[Web Link]</a><br><br>Also see: <a href="http://research.microsoft.com/research/pubs/view.aspx?msr_tr_id=MSR-TR-2001-34">[Web Link]</a></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Zhiyuan Chen and Johannes Gehrke and Flip Korn. <a
+href="http://rexa.info/paper/6bacbb21f7a1d6dee581f756cf326e0932446698">Query Optimization In Compressed Database Systems</a>. SIGMOD Conference. 2001.  [<a
+href="../support/US+Census+Data+(1990)#6bacbb21f7a1d6dee581f756cf326e0932446698">View Context</a>].<br><br>David R. Musicant. <a
+href="http://rexa.info/paper/f1395e1da4a724219d6cc414e48969140355bebb">DATA MINING VIA MATHEMATICAL PROGRAMMING AND MACHINE LEARNING</a>. Doctor of Philosophy (Computer Sciences) UNIVERSITY.  [<a
+href="../support/US+Census+Data+(1990)#f1395e1da4a724219d6cc414e48969140355bebb">View Context</a>].<br><br>Chris Giannella and Bassem Sayrafi. <a
+href="http://rexa.info/paper/48dc427a3536d7bef34e910efc1f34171bf98729">An Information Theoretic Histogram for Single Dimensional Selectivity Estimation</a>. Department of Computer Science, Indiana University Bloomington.  [<a
+href="../support/US+Census+Data+(1990)#48dc427a3536d7bef34e910efc1f34171bf98729">View Context</a>].<br><br>David R. Musicant and Alexander Feinberg. <a
+href="http://rexa.info/paper/8e003bfae7c07cdeeb0ae5f251d545873364dd1e">Active Set Support Vector Regression</a>.  [<a
+href="../support/US+Census+Data+(1990)#8e003bfae7c07cdeeb0ae5f251d545873364dd1e">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Zhiyuan Chen and Johannes Gehrke and Flip Korn. <a
+href="http://rexa.info/paper/6bacbb21f7a1d6dee581f756cf326e0932446698">Query Optimization In Compressed Database Systems</a>. SIGMOD Conference. 2001.  [<a
+href="../support/US+Census+Data+(1990)#6bacbb21f7a1d6dee581f756cf326e0932446698">View Context</a>].<br><br>David R. Musicant. <a
+href="http://rexa.info/paper/f1395e1da4a724219d6cc414e48969140355bebb">DATA MINING VIA MATHEMATICAL PROGRAMMING AND MACHINE LEARNING</a>. Doctor of Philosophy (Computer Sciences) UNIVERSITY.  [<a
+href="../support/US+Census+Data+(1990)#f1395e1da4a724219d6cc414e48969140355bebb">View Context</a>].<br><br>Chris Giannella and Bassem Sayrafi. <a
+href="http://rexa.info/paper/48dc427a3536d7bef34e910efc1f34171bf98729">An Information Theoretic Histogram for Single Dimensional Selectivity Estimation</a>. Department of Computer Science, Indiana University Bloomington.  [<a
+href="../support/US+Census+Data+(1990)#48dc427a3536d7bef34e910efc1f34171bf98729">View Context</a>].<br><br>David R. Musicant and Alexander Feinberg. <a
+href="http://rexa.info/paper/8e003bfae7c07cdeeb0ae5f251d545873364dd1e">Active Set Support Vector Regression</a>.  [<a
+href="../support/US+Census+Data+(1990)#8e003bfae7c07cdeeb0ae5f251d545873364dd1e">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please refer to the Machine Learning
+Repository's <a href="../citation_policy.html">citation policy</a></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

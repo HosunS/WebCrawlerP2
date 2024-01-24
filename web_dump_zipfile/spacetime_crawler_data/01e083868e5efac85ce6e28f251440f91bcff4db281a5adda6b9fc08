@@ -1,0 +1,200 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueà¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXI79eed619ece9b34315b1b9f5af9f028a=f44d9b3d12abe67ac046b52e64037b8d; path=/¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 21:10:00 GMT¢Ak¢DtypeEvalueCP3PAv¢DtypeEvalueX2CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY8	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr" >
+<head>
+  <base href="http://tutors.ics.uci.edu/index.php/79-python-resources/89-for-loop-basics" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Super User" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>For loop basics</title>
+  <link href="/templates/beez_20/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/beez_20/css/position.css" type="text/css" media="screen,projection"  />
+  <link rel="stylesheet" href="/templates/beez_20/css/layout.css" type="text/css" media="screen,projection"  />
+  <link rel="stylesheet" href="/templates/beez_20/css/print.css" type="text/css" media="print"  />
+  <link rel="stylesheet" href="/templates/beez_20/css/general.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/beez_20/css/personal.css" type="text/css" />
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="/templates/beez_20/javascript/md_stylechanger.js" type="text/javascript"></script>
+  <script src="/templates/beez_20/javascript/hide.js" type="text/javascript"></script>
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+  </script>
+
+
+<!--[if lte IE 6]>
+<link href="/templates/beez_20/css/ieonly.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#line {
+  width:98% ;
+}
+.logoheader {
+  height:200px;
+}
+#header ul.menu {
+  display:block !important;
+  width:98.2% ;
+}
+</style>
+<![endif]-->
+
+<!--[if IE 7]>
+<link href="/templates/beez_20/css/ie7only.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--<script type="text/javascript">
+  var big ='72%';
+  var small='53%';
+  var altopen='is open';
+  var altclose='is closed';
+  var bildauf='/templates/beez_20/images/plus.png';
+  var bildzu='/templates/beez_20/images/minus.png';
+  var rightopen='Open info';
+  var rightclose='Close info';
+  var fontSizeTitle='Font size';
+  var bigger='Bigger';
+  var reset='Reset';
+  var smaller='Smaller';
+  var biggerTitle='Increase size';
+  var resetTitle='Revert styles to default';
+  var smallerTitle='Decrease size';
+</script>-->
+
+</head>
+
+<body>
+
+<div id="all">
+        <div id="back">
+                <div id="header">
+                                <div class="logoheader">
+                                        <h1 id="logo">
+
+                                                                                                                                                                                                        <span class="header1">
+                                                                                </span></h1>
+                                </div><!-- end logoheader -->
+                                        <ul class="skiplinks">
+                                                <li><a href="#main" class="u2">Skip to content</a></li>
+                                                <li><a href="#nav" class="u2">Jump to main navigation and login</a></li>
+                                                                                    </ul>
+                                        <!--<h2 class="unseen">Nav view search</h2>-->
+                                        <h3 class="unseen">Navigation</h3>
+                                        
+<ul class="menu">
+<li class="item-464 active"><a href="/" >Home</a></li><li class="item-469"><a href="/index.php/becoming-a-tutor" >Becoming a Tutor</a></li><li class="item-470"><a href="/index.php/tutor-resources" >Learning Resources</a></li><li class="item-477"><a href="/index.php/tutor-coordinators" >Tutor Coordinators</a></li><li class="item-476"><a href="/index.php/contact" >Contact Us</a></li></ul>
+
+                                        <div id="line">
+                                        <!-- <div id="fontsize"></div> -->
+                                        <!--<h3 class="unseen">Search</h3> -->
+                                        
+                                        </div> <!-- end line -->
+
+
+                        </div><!-- end header -->
+                        <div id="contentarea">
+                                        <div id="breadcrumbs">
+
+                                                        
+
+                                        </div>
+
+                                        
+
+                                                        <div class="left1 leftbigger" id="nav">
+                                                   <div class="moduletable_menu">
+ <h3><span
+	class="backh"><span class="backh2"><span class="backh3">This Site</span></span></span></h3>
+ 
+<ul class="menu">
+<li class="item-464 active"><a href="/" >Home</a></li><li class="item-469"><a href="/index.php/becoming-a-tutor" >Becoming a Tutor</a></li><li class="item-470"><a href="/index.php/tutor-resources" >Learning Resources</a></li><li class="item-477"><a href="/index.php/tutor-coordinators" >Tutor Coordinators</a></li><li class="item-476"><a href="/index.php/contact" >Contact Us</a></li></ul>
+</div>
+
+                                                                
+                                                                
+
+
+                                                        </div><!-- end navi -->
+               
+                                        <div id="wrapper2" >
+
+                                                <div id="main">
+
+                                                
+                                                        
+<div id="system-message-container">
+</div>
+                                                        <div class="item-page">
+
+	<h2>
+			<a href="/index.php/79-python-resources/89-for-loop-basics">
+		For loop basics</a>
+		</h2>
+
+
+
+
+
+
+
+
+<p><strong>By: Emory Jiang</strong></p>
+<p>This study guide is focused on the subject of "for" loops and how to effectively construct them.</p>
+<p><br />The ‚ÄúFor‚Äù Loop<br />* The ‚ÄúFor‚Äù loop is an iteration method that exists in many higher level languages like C++, Python, Java.<br />* In Python the syntax to write ‚ÄúFor‚Äù loops is written as follow:<br /> * for &lt;variable&gt; in &lt;iterable_object&gt;:<br />&nbsp; &nbsp; &lt;code_block&gt;<br /> * example:<br /> for i in [0,1,2,3,4,5,6]:<br />&nbsp; &nbsp; print(i) <br /> * to create a for loop you need to replace values in the code template at the top with three things. &lt;variable&gt; needs to be replaced with the variable you wish to use for your iteration. Remember the variable you use here will only be used locally in the ‚ÄúFor‚Äù loop which means you may not call it outside the for loop. &lt;iterable_object&gt; is supposed to be replaced with an iterable data type of your choosing (this can be a list, tuple, string, range(int), etc). Finally, &lt;code_block&gt; needs to be replaced with the block of code you wish to be executed inside the ‚ÄúFor‚Äù loop (in the example above the code prints the value which results each value of the list for 0-6 to be printed out).<br />* What happens in a ‚ÄúFor‚Äù loop:<br /> * The ‚ÄúFor‚Äù loop will set the first value in the iteration to the variable that you requested. After that it will execute the code block doing whatever it needs to do. When the code block is done executing it will return back to the top and the ‚ÄúFor‚Äù loop will then set the 2nd value in the iteration to the variable and repeat the cycle again till it reaches the final value.<br /> * Something to keep in mind: <br />The number of cycles a ‚ÄúFor‚Äù loop goes through is depended on the length of the iterable object (in the example above the ‚ÄúFor‚Äù loop will cycle through the code block 7 times because the length of the list is 7). Another way to look at this is to count how many elements does the variable need to equal to in the for loop. In the example above variable i needs to equal to 7 values in the list: 0, 1, 2, 3, 4, 5, and 6. Therefore the ‚ÄúFor‚Äù loop will ‚Äúloop‚Äù through the code block 7 times.<br /> * A ‚ÄúFor‚Äù loop can also ‚Äúloop‚Äù through a range of an integer (example below). This is useful for repeating an execution of a code block multiple times.<br />* ‚ÄúFor‚Äù loops are extremely useful when you want to write code that requires you to evaluate every single element in a list, or every single character in a string, etc.</p>
+<p><br />Here are 4 code examples to help show you what for loops can do:</p>
+<p><br />Example Number 1:<br />=====================================================================<br />#for looping a string</p>
+<p><br />for string in "aeiou":<br />&nbsp; &nbsp; another_str = "Vowel: "<br />&nbsp; &nbsp; print(another_str + string)<br />----------------------------------------------------------------------------------------------------------------------------<br />Result on console:<br />&gt;&gt;&gt;<br />Vowel: a<br />Vowel: e<br />Vowel: i<br />Vowel: o<br />Vowel: u<br />&gt;&gt;&gt;<br />=====================================================================</p>
+<p><br />Example Number 2*:<br />=====================================================================<br />#the double "for" loop</p>
+<p><br />first_iterable = ['a', 'b', 'c']</p>
+<p><br />second_iterable = [1, 2, 3, 4]</p>
+<p><br />for f in first_iterable:<br />&nbsp; &nbsp; for s in second_iterable:<br />&nbsp; &nbsp; &nbsp; &nbsp; print("f = {}, s = {}".format(f, s))<br />----------------------------------------------------------------------------------------------------------------------------<br />Result on console:<br />&gt;&gt;&gt;<br />f = a, s = 1<br />f = a, s = 2<br />f = a, s = 3<br />f = a, s = 4<br />f = b, s = 1<br />f = b, s = 2<br />f = b, s = 3<br />f = b, s = 4<br />f = c, s = 1<br />f = c, s = 2<br />f = c, s = 3<br />f = c, s = 4<br />&gt;&gt;&gt;</p>
+<p><br />*In the example code above I demonstrate what happens when you use a double ‚ÄúFor‚Äù loop. Essentially when the top ‚ÄúFor‚Äù loop goes through one ‚Äúloop‚Äù the second ‚ÄúFor‚Äù loop will complete it‚Äôs full collection of cycles (look at the console results for the example above to get a clearer image of what is going on).<br />=====================================================================</p>
+<p><br />Example Number 3:<br />=====================================================================<br />#"for" loop using a range of an integer</p>
+<p><br />iterable = [0, 1, 2, 3, 4, 5]</p>
+<p><br />for i in range(len(iterable)): # length of a list is an integer<br />&nbsp; &nbsp; iterable[i] += 10 # add 10 to each element in the list, same as (iterable[i] = iterable[i] + 10)</p>
+<p><br />print(iterable)<br />----------------------------------------------------------------------------------------------------------------------------<br />Result in Console:<br />&gt;&gt;&gt;<br />[10, 11, 12, 13, 14, 15]<br />&gt;&gt;&gt;<br />=====================================================================</p>
+<p><br />Example Number 4:<br />=====================================================================<br />#using a for loop to append values to an empty list</p>
+<p><br />iterable1 = [10, 20, 30, 40]<br />iterable2 = [5, 10, 15, 20]<br />result = []</p>
+<p><br />for i in range(len(iterable1)):<br />&nbsp; &nbsp; result.append(iterable1[i] + iterable2[i])</p>
+<p><br />print(result)</p>
+<p><br />----------------------------------------------------------------------------------------------------------------------------<br />Result on Console:<br />&gt;&gt;&gt;<br />[15, 30, 45, 60]<br />&gt;&gt;&gt;<br />=====================================================================</p>
+<p><br />Common Errors and Mistakes when writing ‚ÄúFor‚Äù loops:<br />* DO NOT WRITE A RETURN STATEMENT INSIDE YOUR ‚ÄúFOR‚Äù LOOP<br /> * if you write a return statement inside your ‚Äúfor‚Äù loop you will prematurely end your for loop. A return statement inside a function will end the function, therefore IT WILL END your ‚Äúfor‚Äù loop as well.<br /> * ONLY write a return statement if you WANT to end a ‚Äúfor‚Äù loop prematurely (example: you want to return ‚Äútrue‚Äù if there exists at least one specific element inside a list, etc.)<br /> * IF YOU DO NOT want to end your ‚Äúfor‚Äù loop prematurely, then keep your return statement OUTSIDE of your for loop.<br />* Be careful when you use an empty list or string in a for loop.<br /> * If you have an empty list or string that you want to append/concatenate to make sure you keep it OUTSIDE of the ‚Äúfor‚Äù loop. If you keep it inside the variable that you have the empty list/string will keep resetting itself to it‚Äôs empty value after each ‚Äúfor‚Äù loop cycle. <br /> * Example of what NOT to do:<br /> * for i in range(len(iterable1)):<br /> result = [] # don‚Äôt write it here<br /> result.append(iterable1[i] + iterable2[i])</p> 
+	
+</div>
+
+
+                                                </div><!-- end main -->
+
+                                        </div><!-- end wrapper -->
+
+                                
+                        
+                                <div class="wrap"></div>
+
+                                </div> <!-- end contentarea -->
+
+                        </div><!-- back -->
+
+                </div><!-- all -->
+
+                <div id="footer-outer">
+                        
+                        <div id="footer-sub">
+
+
+                                <div id="footer">
+
+                                        
+                                        
+
+                                </div><!-- end footer -->
+
+                        </div>
+
+                </div>
+        
+        </body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

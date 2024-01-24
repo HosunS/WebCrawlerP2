@@ -1,0 +1,29 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC807¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 14 Apr 1996 20:11:10 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"5ed-2f26ff8083380-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 03:29:46 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYí<HR><PRE>
+<B>From:</B>           <A HREF="mailto:shebs@utah-cs.UUCP">shebs@utah-cs.UUCP</A> (Stanley Shebs)
+<B>Newsgroups:</B>     comp.theory
+<B>Subject:</B>        Clustering to Minimize Window Motion
+<B>Keywords:</B>       algorithms, clustering, computational geometry
+<B>Date:</B>           21 Aug 87 16:27:47 GMT
+<B>Organization:</B>   PASS Research Group
+</PRE><HR><PRE>
+Does anybody know of any good algorithms to cluster nearby points to
+minimize the moving of a window over those points?  In case that wasn't
+clear, suppose I have a set of points randomly scattered over the plane,
+and a rectangular window of some fixed size, and I want to get each point
+visible inside the window at least once.  I move the window some number of
+times, and that number will of course be between 0 (if all the points fit in
+one view) and the number of points (if they're all far apart).  Moving the
+window is expensive, so what I want is an algorithm to determine the smallest
+set of window positions that covers all the points.  The algorithm should
+probably be quadratic in the number of points or better - optimality is
+less important.  Algorithms, references and reductions to similar problems
+are all welcome...
+
+							stan shebs
+							<A HREF="mailto:shebs@cs.utah.edu">shebs@cs.utah.edu</A>
+
+(Incidentally, this problem arose in connection with my recently posted
+game "xconq", where the points are playing pieces and the window is an
+X window, so a good algorithm will likely show up in the next release!)
+</PRE>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

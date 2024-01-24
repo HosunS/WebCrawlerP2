@@ -1,0 +1,238 @@
+¦Ifinal_url¢DtypeEvaluex+https://www.ics.uci.edu/~xhx/courses/CS206/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD9142¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 14 Jun 2017 17:05:59 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"23b6-551ee90f3b66f"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 08:09:30 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY#¶<!doctype html>
+  <head>
+    <meta charset="utf-8">
+
+    <title>CS 206: Principles of Scientific Computing (Spring 2017)</title>
+
+    <base href="http://www.ics.uci.edu/~xhx/index.html">
+    <meta name="description" content="Xiaohui Xie, University of
+				      California, Irvine
+">
+    <meta name="description" content=""> 
+    <meta name="author" content="Xiaohui Xie">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="canonical" href="http://www.ics.uci.edu/~xhx/courses/CS206">
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="canonical" href="/">
+
+    <link href="javascripts/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/pubs.css">
+    <link rel="stylesheet" href="stylesheets/maroon.css">
+    <link rel="stylesheet" href="stylesheets/sidebar-light.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+
+
+<body class="clearfix"> 
+
+<div class="container">
+
+    <h1> CS 206: Principles of Scientific Computing <small>Spring 2017</small></h1>
+
+<!--
+    <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="index.html">About</a></li>
+            <li role="presentation"><a href="sched.html">Schedule</a></li>
+            <li role="presentation"><a href="assignments.html">Assignments</a></li>
+            <li role="presentation"><a href="projects.html">Projects</a></li>
+            <li role="presentation"><a href="resources.html">Resources</a></li>
+      
+    </ul>
+-->
+
+    <p>
+      <div>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="img/opt.png" alt="Optimization Picture" style="max-width: 300px;" class="img-rounded">
+        </div>
+        <div class="col-md-6">
+          <table class="table" style="max-width: 450px;">
+              <tbody>
+                  <tr>
+                      <th scope="row">Instructor</th>
+                      <td><a href="http://www.ics.uci.edu/~xhx/">Xiaohui Xie</a></td>
+                  </tr>
+                  <tr>
+                      <th>Lectures</th>
+                      <td>ICS 180 TuTh <b>2:00-3:30pm</b></td>
+                  </tr>
+                  <tr>
+                      <th>Office Hours</th>
+                      <td>DBH 4088 
+<!--<a class="btn btn-default btn-xs" role="button"
+   href="https://calendly.com/xhx/office-hours">Signup
+  here</a>-->
+</td>
+                  </tr>
+                  <tr>
+                      <th>Course Code</th>
+                      <td>34710</td>
+                  </tr>
+                  <tr>
+                      <th>Other Links</th>
+                      <td><a href="https://piazza.com/uci/spring2017/cs206/home">Piazza</a></td>
+                  </tr>
+              </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+
+
+
+<p>
+<dl>
+<dt>Course description</dt>
+Overview of widely used principles and methods in scientific
+      computing, including basic concepts and computational methods in
+      numerical linear algebra and convex optimization. 
+Tentative
+      topics include
+<ul>
+<li> numerical linear algebra
+<li> QR factorization and least squares
+<li> Conditioning and stability
+<li> Systems of equations
+<li> Eigenvalues
+<li> Iterative methods
+<li> Convex optimization
+<li> Convex sets and convex functions
+<li> Optimality conditions and duality
+<li> Unconstrained optimization
+<li> Constrained optimization
+<li> Interior point methods
+</ul>
+
+
+<dt>Prerequisites</dt>
+ multivariate calculus, linear algebra 
+
+
+<dt>Grading and homework policy</dt>
+<ul>
+<li> Grading: Based on homework (20%), a midterm (30%) and a final exam (50%). 
+<li> Homework: You may discuss each assignment with others, but are
+      required to code and write up each assignment independently.
+<li> Late homework policy: If you get a note from the Student's Office
+      (personal problems) or infirmary  (medical problems) requesting
+      a postponement, it will be honored. Otherwise, late homework
+      will not be accepted.
+</ul>
+
+
+<dt> Lecture schedule </dt>
+<ul>
+<li> Matrix-vector multiplication 
+<dd> reading: NLA 1</dd>
+<li> Orthogonal vectors and matrices
+<dd> reading NLA 2</dd>
+<li> Vector norms, matrix norms 
+<dd> reading NLA 3</dd>
+<li> Singular value decomposition (SVD) 
+<dd> reading NLA 4,5</dd>
+<li> QR factorization, Gram-Schmidt Orthogonalization
+<dd> reading NLA 7,8</dd>
+<li> Projectors, Modified Gram-Schmidt Orthogonalization 
+<dd> reading NLA 6,8</dd>
+<li> Householder triangularization and least squares problems 
+<dd> reading NLA 10,11</dd>
+<li> Eigenvalue problems, Rayleigh quotient, Inverse iteration, Rayleigh
+      quotient iteration 
+<dd> reading NLA 24,25,26,27</dd>
+<li> QR algorithm for eigenvalue problems 
+<dd> reading NLA 28,29</dd>
+<li> Hessenberg or tridiagonal form, Computing SVD 
+<dd> reading NLA 26,31</dd>
+<li> Convex Optimzation Problems</li>
+<dd> <a href="http://www.ics.uci.edu/~xhx/courses/CS206/intro_convex_optimization.pdf">Introduction</a></dd>
+<li> Convex sets 
+<dd> <a href="http://www.ics.uci.edu/~xhx/courses/CS206/convex_sets.pdf">Convex Sets</a></dd>
+<dd> reading CO chapter 2</dd>
+<li> Convex functions 
+<dd> <a href="http://www.ics.uci.edu/~xhx/courses/ConvexOpt/convex_functions.pdf">Convex Functions</a></dd>
+<dd> reading CO chapter 3</dd>
+<li> Optimization problems, Duality 
+<dd> reading CO chapter 5</dd>
+<li> Optimality conditions, KKT conditions 
+<dd> reading CO chapter 5</dd>
+<dd> <a href="http://www.ics.uci.edu/~xhx/courses/ConvexOpt/duality.pdf">Duality</a></dd>
+
+<li> Unconstrained optimization, gradient descent, Newton's method 
+<dd> reading CO chapter 9</dd>
+<dd> <a href="http://www.ics.uci.edu/~xhx/courses/ConvexOpt/unconstrained_opt.pdf">
+      Unconstrained minimization</a></dd>
+<dd> <a href="http://www.ics.uci.edu/~xhx/courses/CS206/SGD-intro.pdf">
+      Stochastic Gradient Descent (SGD)</a></dd>
+<li>  Constrained optimization, interior point methods 
+<dd> reading: CO chapter 10,11</dd>
+<dd> <a href="http://www.ics.uci.edu/~xhx/courses/ConvexOpt/equality.pdf">
+      Equality constrained minimization</a></dd>
+<dd> <a href="http://www.ics.uci.edu/~xhx/courses/ConvexOpt/interior.pdf">
+      Interior-point methods</a></dd>
+</ul>
+
+
+<dt>Homework</dt>
+<ul>
+<li> Assignment #1:  NLA 2.3, 2.4, 2.6, 3.2, 4.1 
+** from the textbook (NLA: Numerical linear algebra)
+<li> <a href="http://www.ics.uci.edu/~xhx/courses/CS206/ps2.pdf"> Assignment #2</a>
+<li> Assignment #3: NLA 29.1 (only sub-problems a,b,c), (due date: May
+  29     before class)
+
+<li> Assignment #4: CO:  2.12, 3.1, 3.16, 3.17 (due date: May 30
+  (Tues) before class)
+
+<li> Assignment #5: CO: 9.30, 10.15, 11.22 (due date: June 16 (Friday 5pm))
+
+<li> <b>The final is released on Piazza.  Due date: 5pm on June 16th</b>
+
+<!--       (due date: May 1 (Thur) before class)
+** [http://www.ics.uci.edu/~xhx/courses/CS206/ps2-soln.pdf Solutions]
+
+<li> [http://www.ics.uci.edu/~xhx/courses/CS206/midterm14-soln.pdf
+      Midterm exam solutions]
+
+
+
+
+-->
+</ul>
+
+
+<dt>Textbooks</dt>
+<ul>
+<li> Numerical Linear Algebra by Trefethen and Bau  - NLA
+<li> Convex Optimization by Boyd and Vandenberghe - CO
+</ul>
+
+
+<dt>Piazza</dt>
+        <dd>We will be using Piazza for class discussion. The system is highly catered to getting you help fast and efficiently from classmates and myself. Rather than emailing questions to me, I encourage you to post your questions on Piazza. If you have any problems or feedback for the developers, email <a href="mailto:team@piazza.com">team@piazza.com</a>.
+        <p>
+        Find our class page at: <a href="https://piazza.com/uci/spring2017/cs206/home">https://piazza.com/uci/spring2017/cs206/home</a>
+        </dd>
+
+
+ <dt>Academic Honesty</dt>
+        <dd>Academic honesty is a requirement for passing this class.  Any student who compromises the academic integrity of this course is subject to a failing grade. The work you submit must be your own. Academic dishonesty includes, but is not limited to copying answers from another student, allowing another student to copy your answers, communicating exam answers to other students during an exam, attempting to use notes or other aids during an exam, or tampering with an exam after it has been corrected and then returning it for more credit.  If you do so, you will be in violation of the UCI Policies on Academic Honesty (see <a href="https://aisc.uci.edu/">link</a>). It is your responsibility to read and understand these policies. Note that any instance of academic dishonesty will be reported to the Academic Integrity Administrative Office for disciplinary action and may be cause for a failing grade in the course.</dd>
+
+</dl>
+</p>
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

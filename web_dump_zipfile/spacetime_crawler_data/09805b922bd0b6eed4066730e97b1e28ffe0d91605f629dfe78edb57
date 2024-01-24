@@ -1,0 +1,341 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueä¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3924¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 10 Feb 2019 02:40:58 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 02 Jan 2008 15:16:46 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"2e3a-442bec3f9f380-gzip"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueMmax-age=21600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:40:58 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvaluey.:<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang='en' xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux/x86 (vers 12 April 2005), see www.w3.org" />
+
+  <title>XML Processing Model WG -- 13 Dec 2007</title>
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/StyleSheets/base.css" />
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/StyleSheets/public.css" />
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/2004/02/minutes-style.css" />
+  <meta content="XML Processing Model WG" name="Title" />
+  <meta content="text/html; charset=utf-8" http-equiv=
+  "Content-Type" />
+</head>
+
+<body>
+  <p><a href="http://www.w3.org/"><img src=
+  "http://www.w3.org/Icons/w3c_home" alt="W3C" border="0" height=
+  "48" width="72" /></a></p>
+
+  <h1>XML Processing Model WG</h1>
+
+  <h2>Meeting 94, 13 Dec 2007</h2>
+
+  <p><a href=
+  'http://www.w3.org/XML/XProc/2007/12/13-agenda'>Agenda</a></p>
+
+  <p>See also: <a href="http://www.w3.org/2007/12/13-xproc-irc">IRC
+  log</a></p>
+
+  <h2><a name="attendees" id="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Alex, Norm, Mohamed, Andrew, Henry, Alessandro,
+      Richard</dd>
+
+      <dt>Regrets</dt>
+
+      <dd>Paul</dd>
+
+      <dt>Chair</dt>
+
+      <dd>Norm</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Norm</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Accept this agenda?</a></li>
+
+        <li><a href="#item02">Accept minutes from the previous
+        meeting?</a></li>
+
+        <li><a href="#item03">Next meeting: telcon 20 December
+        2007</a></li>
+
+        <li><a href="#item04">Last call comments</a></li>
+
+        <li><a href="#item05">Comment #81, a proposal to
+        restructure our top-level syntax</a></li>
+
+        <li><a href="#item06">Comment 79: sequence-consistency of
+        choose/try branches</a></li>
+
+        <li><a href="#item07">Comment 80, properties of an implicit
+        output port</a></li>
+
+        <li><a href="#item08">Comment 83, viewport</a></li>
+
+        <li><a href="#item09">Comment 74, minor p:http-request
+        issues</a></li>
+
+        <li><a href="#item10">Comment 76, p:import dynamic errors:
+        should be static</a></li>
+
+        <li><a href="#item11">Any other business?</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  </ul>
+  <hr />
+
+  <div class="meeting">
+    <h3 id="item01">Accept this agenda?</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/2007/12/13-agenda">http://www.w3.org/XML/XProc/2007/12/13-agenda</a></p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item02">Accept minutes from the previous meeting?</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/2007/11/29-minutes">http://www.w3.org/XML/XProc/2007/11/29-minutes</a></p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item03">Next meeting: telcon 20 December 2007</h3>
+
+    <p class='phone'>No regrets given.</p>
+
+    <h3 id="item04">Last call comments</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/2007/09/lastcall/comments">http://www.w3.org/XML/XProc/2007/09/lastcall/comments</a></p>
+
+    <h3 id="item05">Comment #81, a proposal to restructure our
+    top-level syntax</h3>
+
+    <p class='phone'><cite>Henry:</cite> I think the motivation is
+    the crucial thing.<br />
+    ... It felt like we still hadn't found the sweet-spot in the
+    relationship between pipelines, steps, and
+    pipeline-libraries<br />
+    ... The crucial observation was that it suddenly made sense to
+    allow declare-step to contain a subpipeline<br />
+    ... That's precisely what we're doing when we put
+    &lt;px:somename&gt; in a pipeline as a call to the pipeline
+    with the type px:somename<br />
+    ... It made sense to use *declare-step* to do that.<br />
+    ... When I worked that all through, it seemed to me to have a
+    number of positive consequences.<br />
+    ... The single residual notion as the sort-of entry level way
+    of wrapping a subpipeline to run it, it didn't have to have a
+    name.<br />
+    ... Giving it a name is only necessary if you want to be able
+    to refer to its ports.<br />
+    ... There are two seperable parts: 1. Put a subpipeline in
+    declare-step and 2. let's make reference to the enclosing
+    top-level artifact easy by defaulting on p:pipe.<br />
+    ... I think that works very neatly, but its seperable from the
+    other proposal.</p>
+
+    <p class='phone'><cite>Norm:</cite> My big concern was the fact
+    the you couldn't import two simple pipelines anymore, because
+    there'd be a name clash.</p>
+
+    <p class='phone'><cite>Henry:</cite> We could (1) add an
+    optional name to p:pipeline, but that still doesn't help if you
+    don't own the pipeline.<br />
+    ... Or (2) alow a type attribute on p:import that is the type
+    of a naked imported pipeline.<br />
+    ... or an error if the imported library doesn't include it.</p>
+
+    <p class='phone'><cite>Norm:</cite> If we went with type, I
+    think I'd want it to be an error if you don't import a naked
+    pipeline.</p>
+
+    <p class='phone'><cite>Henry:</cite> Or you can workaround it
+    with a really tedious set of nested libraries.</p>
+
+    <p class='phone'>Some discussion</p>
+
+    <p class='phone'><cite>Norm:</cite> The other concern I have is
+    much harder to quantify: are we making the language more like a
+    static compile/run language and less dynamic and is it going to
+    piss off our audience.</p>
+
+    <p class='phone'><cite>Richard:</cite> there isn't a pipeline
+    and a declare-step for the pipeline, it's one or the other.</p>
+
+    <p class='phone'>Henry observes that the type/p:import trick
+    would bungle an attempt to import a recursive pipeline.</p>
+
+    <p class='phone'><cite>Alex:</cite> I don't see why requiring
+    the p:declare-step in the recursive case is such a big
+    deal.</p>
+
+    <p class='phone'><cite>Norm:</cite> I'm not *sure* it is, it
+    just changes the way the language feels.</p>
+
+    <p class='phone'><cite>Richard:</cite> I thought we were going
+    to get rid of p:pipeline altogether, just putting them all in
+    p:declare-steps.<br />
+    ... Then we put pipeline back in as an abbreviation for a
+    common case of a declare-stpe with a subpipeline in it.<br />
+    ... We can then fiddle with what the abbreviation means to make
+    the common cases we care about easy.<br />
+    ... If you do it in those two stages, it seems more plausible
+    to me.</p>
+
+    <p class='phone'><cite>Norm:</cite> There's no point in
+    repeating myself: there's a sense in which this makes the
+    language feel more like java and less like a scrypting language
+    and that worries me.</p>
+
+    <p class='phone'><cite>Henry:</cite> A question of how much a
+    discontinuity arises when you want to write a recursive
+    pipeline is an open question.</p>
+
+    <p class='phone'><cite>Alex:</cite> What if a pipeline is
+    allowed to have a type declared. And you have to do that to use
+    recursion.</p>
+
+    <p class='phone'><cite>Richard:</cite> If we made pipeline just
+    be an abbreviation in that way, the only thing we've really
+    changed is that you write pipelines with p:declare-step when
+    you put them in libraries.</p>
+
+    <p class='phone'><cite>Henry:</cite> I get confused about what
+    the state of play is wrt what attributes are allowed on
+    p:pipeline at the moment.</p>
+
+    <p class='phone'><cite>Alex:</cite> It also fixes the
+    defaulting problem for inputs and outputs of pipelines.</p>
+
+    <p class='phone'><cite>Henry:</cite> The other consequence is
+    that we could get rid of the situation where p:pipeline has
+    both an optional name and an optional type.<br />
+    ... Our users are never going to be anything other than
+    confused by that.</p>
+
+    <p class='phone'><cite>Norm:</cite> The way that was rectified
+    was by allowing p:pipe to have no step and that means the
+    enclosing pipeline.</p>
+
+    <p class='phone'>Some discussion of the proposal that Norm had
+    made earlier</p>
+
+    <p class='phone'><cite>Alex:</cite> I'd have to think about the
+    defaulting story a bit more.</p>
+
+    <p class='phone'><cite>Richard:</cite> The thing that Henry's
+    proposing isn't really defaulting, it's like giving the name of
+    the pipeline the name "" and just letting you not say that.</p>
+
+    <p class='phone'><cite>Alessandro:</cite> I think it would help
+    if someone could consolidate the proposal and post it with some
+    examples. My reluctance now is coming more from lack of
+    understanding that something being wrong with it.</p>
+
+    <p class='phone'><cite>Henry:</cite> I'll do that over the next
+    24 hours.</p>
+
+    <h3 id="item06">Comment 79: sequence-consistency of choose/try
+    branches</h3>
+
+    <p class='phone'><cite>Norm:</cite> I think so.</p>
+
+    <p class='phone'><cite>Richard:</cite> The reason why it came
+    up was that one branch had an XSLT and the other had Identity,
+    so that doesn't work.</p>
+
+    <p class='phone'><cite>Norm:</cite> Yes, I see how that might
+    be tedious.</p>
+
+    <p class='phone'><cite>Richard:</cite> Because you're allowed
+    to hook sequences to non-sequences, it doesn't really matter to
+    the implementor.<br />
+    ... We could say that if any branch produces a sequence, then
+    the p:choose does.</p>
+
+    <p class='phone'><cite>Norm:</cite> I can live with that.</p>
+
+    <p class='phone'><cite>Proposal:</cite> We accept Richard's
+    suggestion above, an output of a choose or try is a sequence if
+    any of the branches produces a sequence on that port.</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item07">Comment 80, properties of an implicit output
+    port</h3>
+
+    <p class='phone'><cite>Richard:</cite> I think Norm's right, it
+    inherits the properties of the output on the last step.</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <p class='phone'><cite>Richard:</cite> The only effect that
+    declaring something sequence=false has is that it prevents a
+    sequence from slipping through.</p>
+
+    <h3 id="item08">Comment 83, viewport</h3>
+
+    <p class='phone'><cite>Richard:</cite> We really did mean that
+    the pipeline can inside the viewport can only have one
+    output.</p>
+
+    <p class='phone'><cite>Norm:</cite> Yes, we meant that.</p>
+
+    <p class='phone'>This is a significant editorial issue, but not
+    a technical one.</p>
+
+    <p class='phone'>The subpipeline must have one output and the
+    result can be a sequence.</p>
+
+    <p class='phone'><cite>Richard:</cite> I think there may be
+    similar editorial problems with p:for-each</p>
+
+    <h3 id="item09">Comment 74, minor p:http-request issues</h3>
+
+    <p class='phone'>The version was absent by mistake and yes, the
+    XML decl should be present</p>
+
+    <h3 id="item10">Comment 76, p:import dynamic errors: should be
+    static</h3>
+
+    <p class='phone'><cite>Norm:</cite> Yes, they should be
+    static.</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item11">Any other business?</h3>
+
+    <p class='phone'>None.</p>
+  </div>
+
+  <h2><a name="ActionSummary" id="ActionSummary">Summary of Action
+  Items</a></h2><!-- Action Items -->
+  [End of minutes]<br />
+  <hr />
+
+  <address>
+    Minutes formatted by David Booth's <a href=
+    "http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">
+    scribe.perl</a> version 1.128 (<a href=
+    "http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br />
+    $Date: 2008/01/02 15:16:45 $
+  </address>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

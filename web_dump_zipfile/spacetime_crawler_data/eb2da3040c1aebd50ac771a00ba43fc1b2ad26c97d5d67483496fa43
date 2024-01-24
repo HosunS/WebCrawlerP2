@@ -1,0 +1,100 @@
+¦Ifinal_url¢DtypeEvaluex7https://www.ics.uci.edu/~kay/courses/i141/hw/asst2.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD6072¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 24 Jan 2015 00:05:21 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"17b8-50d5aa93b3240"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 05:50:50 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY¸<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="GENERATOR" CONTENT="Globetrotter 1.1.1" />
+<META HTTP-EQUIV="UPDATED" CONTENT="Tuesday, November 22, 2005 9:30 AM" />
+<TITLE>Information Retrieval Assignments</TITLE>
+<META HTTP-EQUIV="X-GLOBETROTTERDATA" CONTENT="33CB8976" />
+<link href="http://www.ics.uci.edu/~kay/courses/31/mainstyle.css" rel="stylesheet" type="text/css" />
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<p><FONT size="2"  >INFX 141 / CS 121</FONT><FONT size="2"  > &bull; DAVID G. KAY &bull; UC IRVINE &bull; WINTER 2015</FONT></p>
+<p><FONT   SIZE=6>Assignment #2<br /><B>Text Processing Functions</B></FONT>
+</p>
+<p>
+This assignment is to be done individually; you may not use code written by your classmates. Use code found over the Internet at your own peril -- it may not do exactly what the assignment requests. If you do end up using code you find on the Internet, you must disclose the origin of the code. As stated in the collaboration guidelines, concealing the origin of a piece of code is plagiarism. Use Piazza for general questions whose answers can benefit you and everyone.</p>
+<p><b>General Specifications</b>
+<ol>
+<li>
+You may use Java, Python, or Scheme/Racket for this assignment.  Java is the safest choice because the assignment is written with Java in mind and contains a variety of helpful Java resources.  Using Python or Scheme will require you to translate these Java resources.
+<ol type="a">
+<li>
+If you use Java, your solution must fill out the program skeleton provided.
+(i) Fill in each method according to its Javadoc specification. 
+(ii) Feel free to create additional methods / classes where necessary.</li>
+<li>
+If you donâ€™t use Java, you should produce a similar skeleton to start with and fill it out. You should also be very precise with instructions for how to run your program -â€“ what programs are needed, what versions, and so on. If the TA canâ€™t run your program, your grade will reflect that.</li></ol>
+<li>
+You should test your code thoroughly, of course, with test data you create. You may exchange test data with anyone in the class. We will test your program with our own text files.</li>
+<li>
+At points, this assignment may be underspecified (i.e., not fully describe what to do in every situation). In those cases, post your questions on Piazza or check with the TA. For minor issues, make your own
+assumptions and document them.</li>
+</ol>
+<p><b>Project Skeleton:</b>
+  <a href="http://www.ics.uci.edu/~kay/courses/i141/hw/Assignment2.zip">http://www.ics.uci.edu/~kay/courses/i141/hw/Assignment2.zip</a>
+</p>
+<p>
+<b>Part A: Utilities</b> (20 points)<br />
+Write a method that reads in a text file and returns a list of the tokens in that file. Write a method to print out frequency results.</p>
+<ul><li>
+Package: <code>ir.assignments.two.a</code>
+</li><li>
+File: <code>Utilities.java</code>
+</li><li>
+Method: <code>tokenizeFile(File)</code>
+</li><li>
+Method: <code>printFrequencies(List&lt;Frequency&gt;)</code>
+</li></ul><p>
+<b>Part B: Word Frequencies</B> (20 points)<br />
+Count the total number of words and their frequencies in a token list.
+ï¿¼<ul><li>
+Package: <code>ir.assignments.two.b</code>
+</li><li>
+File: <code>WordFrequencyCounter.java</code>
+</li><li>Method: <code>computeWordFrequencies(ArrayList&lt;String&gt;)</code>
+</li></ul><p>
+<b>Part C: 2-grams</b> (30 points)<br />
+A 2-gram is two words that occur consecutively in a file. For example, "two words", "words that", and "that occur" are all 2-grams from the previous sentence.</p><p>
+Count the total number of 2-grams and their frequencies in a token list.</p>
+<ul>
+<li>
+Package: <code>ir.assignments.two.c</code>
+</li><li>
+File: <code>TwoGramFrequencyCounter.java</code>
+</li><li>Method: <code>computeTwoGramFrequencies(ArrayList&lt;String&gt;)</code>
+</ul><p>
+<b>Part D: Palindromes</b> (30 points)<br />
+A palindrome is a words or phrase that reads the same in both directions. For example, these are all palindromes: "kayak",  "Do geese see god", "A man, a plan, a canal--Panama".
+Count the total number of palindromes and their frequencies in a text file.
+</p><ul><li>
+Package: <code>ir.assignments.two.d</code>
+</li><li>
+File: <code>PalindromeFrequencyCounter.java</code>
+</li><li>Method: <code>computePalindromeFrequencies(ArrayList&lt;String&gt;)</code>
+</li></ul>
+<p>
+Once you have implemented your palindrome counting algorithm, please perform a short analysis of its runtime complexity: Does it run in linear time relative to the size of the input? polynomial time? exponential time? This analysis should go in the <code>analysis.txt</code> file in this package.</p>
+<p>
+<b>Submitting Your Assignment</b><br />
+Submit your assignment via Checkmate (<code>checkmate.ics.uci.edu</code>). <!--Your submission should be a single zip file submitted to EEE. This zip file should match the skeleton zip file provided with the assignment, with the addition of your implementations of the four sections. If there is anything you wish to communicate to the TA, such as implementation assumptions made, or how to run your program, this should be placed into the README.txt file provided in the skeleton zip file.-->
+</p><p>
+<b>Evaluation Criteria</b><br />
+Your assignment will be graded on the following four criteria:</p><ul><li>Correctness:
+How well does the behavior of the program match the specification?
+How does your program handle bad input? 
+</li><li>Efficiency:
+How quickly does the program work on large inputs?
+</li>
+<li>
+Style/documentation/aesthetics: Is the program clearly documented and well written?
+</li><li>
+Understanding:
+Do you understand the program you wrote? This will be tested during meetings with the TA. If you show poor understanding of your program, that will outweigh the other criteria.</li></ul>
+<HR />
+<FONT  ><A HREF="http://www.ics.uci.edu/~kay/">David G. Kay</A>, <a href=mailto:kay@uci.edu>kay@uci.edu</A> </FONT><span><br />
+<font size="2"  >
+<!-- #BeginDate format:fcAm1a -->Friday, January 23, 2015 4:03 PM<!-- #EndDate -->
+</font></span>
+</BODY>
+</HTML>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

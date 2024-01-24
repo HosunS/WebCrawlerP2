@@ -1,0 +1,181 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueä¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2105¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 10 Feb 2019 02:40:15 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 20 Jan 2010 13:24:06 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"1865-47d9880306980-gzip"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueMmax-age=21600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:40:15 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueye<?xml version='1.0'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" >
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+
+  <title>XProc telcon -- 14 Jan 2010</title>
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/base.css"/>
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/StyleSheets/public.css"/>
+  <link type="text/css" rel="STYLESHEET" href="http://www.w3.org/2004/02/minutes-style.css"/>
+  <meta content="XProc telcon" name="Title"/>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+</head>
+
+<body>
+  <p><a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" border="0" height="48" width="72"/></a></p>
+
+  <h1>- DRAFT -</h1>
+
+  <h1>XProc telcon</h1>
+
+  <h2>14 Jan 2010</h2>
+
+  <p><a href="http://www.w3.org/XML/XProc/2010/01/14-agenda.html">Agenda</a></p>
+
+  <p>See also: <a href="http://www.w3.org/2010/01/14-xproc-irc">IRC
+  log</a></p>
+
+  <h2><a name="attendees" id="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Henry, Paul, Mohamed, Vojetch, Alex</dd>
+
+      <dt>Regrets</dt>
+     <dd>Norm</dd>
+
+      <dt>Chair</dt>
+
+      <dd>Henry S. Thompson (pro tem)</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Henry S. Thompson</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Charter</a></li>
+
+        <li><a href="#item02">HTTP multipart</a></li>
+
+        <li><a href="#item03">namespace and prefix attrs -- missing
+        error</a></li>
+
+        <li><a href="#item04">Test Suite</a></li>
+
+        <li><a href="#item05">Default processing model</a></li>
+      </ol>
+    </li>
+  </ul>
+  <hr/>
+
+  <div class="meeting">
+
+    <p class="phone"><a href="http://www.w3.org/XML/XProc/2010/01/14-agenda.html">http://www.w3.org/XML/XProc/2010/01/14-agenda.html</a></p>
+
+    <p class="phone">Next meeting: 21 Jan.</p>
+
+    <p class="phone">Regrets for 21 Jan: Henry, Mohamed</p>
+   <p class="phone">Regrets for 28 Jan: Voytech</p>
+
+    <h3 id="item01">Charter</h3>
+
+    <p class="phone">It runs out at the end of this month</p>
+
+    <p class="phone"><strong class="resolution">RESOLUTION: Request
+    a charter extension, recharter later</strong></p>
+
+    <p class="phone">How long an extension?</p>
+
+    <p class="phone"><strong class="resolution">RESOLUTION: Request
+    an 8 month extension, to allow for the summer</strong></p>
+
+    <h3 id="item02">HTTP multipart</h3>
+
+    <p class="phone">Consensus by email that content model of
+    multipart is just body+</p>
+
+    <p class="phone">And that the prose about headers inside
+    multipart has to go as well</p>
+
+    <p class="phone">Then we have Voytech's message <a href="http://lists.w3.org/Archives/Public/public-xml-processing-model-comments/2010Jan/0008.html">
+    http://lists.w3.org/Archives/Public/public-xml-processing-model-comments/2010Jan/0008.html</a></p>
+
+    <p class="phone"><cite>VT:</cite> The default for content-type on multipart might conflict --
+    should this be an error, or should we make it required?</p>
+
+    <p class="phone"><cite>AM:</cite> or should we instead specify
+    that the default is to inherit?</p>
+
+    <p class="phone"><cite>VT:</cite> content-type is required on
+    c:body</p>
+
+    <p class="phone"><cite>AM:</cite> Doing the inheritance will
+    not make it easier to understand<br/>
+    ... we should just make it required, and assume that people
+    will mostly not use c:header Content-Type with
+    c:multipart<br/>
+    ... So, two alternatives: leave as is but make clear
+    inconsistency is an error; make required</p>
+
+    <p class="phone"><cite>VT:</cite> Any pblm with making it
+    required?<br/>
+    ... If you are building it dynamically, you might have to find
+    it in a header. . .</p>
+
+    <p class="phone"><cite>AM:</cite> Same even w/o multipart<br/>
+    ... Given the long list of possible types, it's hard to be sure
+    what the right default is, so making it required avoids having
+    to pick</p>
+
+    <p class="phone"><strong class="resolution">RESOLUTION: make
+    the content-type attribute required on c:multipart</strong></p>
+
+    <h3 id="item03">namespace and prefix attrs -- missing
+    error</h3>
+
+    <p class="phone"><a href="http://lists.w3.org/Archives/Public/public-xml-processing-model-comments/2010Jan/0012.html">
+    http://lists.w3.org/Archives/Public/public-xml-processing-model-comments/2010Jan/0012.html</a></p>
+
+    <p class="phone"><cite>TV:</cite> What happens if you specify
+    wrapper-prefix or wrapper-namespace but no wrapper, on
+    p:data?</p>
+
+    <p class="phone"><cite>HT:</cite> Because the implicit default
+    is c:data, that's an error (the same error as an explicit
+    wrapper with a : in)</p>
+
+    <p class="phone"><strong class="resolution">RESOLUTION: Make
+    clear that if if you specify wrapper-prefix or
+    wrapper-namespace but no wrapper, on p:data, that's an error
+    (the same error as an explicit wrapper with a :
+    in)</strong></p>
+
+    <h3 id="item04">Test Suite</h3>
+
+    <p class="phone"><cite>TV:</cite> 50 new tests, prefix,
+    namespace, http-request</p>
+
+    <p class="phone"><cite>HT:</cite> WooHoo -- gold star</p>
+
+    <h3 id="item05">Default processing model</h3>
+
+    <p class="phone"><cite>PG:</cite> What's next on this?</p>
+
+    <p class="phone"><cite>HST:</cite> We have comments from the
+    TAG, which I need to summarise and present to this group<br/>
+    ... Then we decide what change, if any, to make, and whether to
+    publish a First PWD.</p>
+  </div>
+
+  <h2><a name="ActionSummary" id="ActionSummary">Summary of Action
+  Items</a></h2>
+  <hr/>
+
+  <address>
+    Minutes formatted by David Booth's <a href="http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">
+    scribe.perl</a> version 1.135 (<a href="http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br/>
+    $Date: 2010/01/20 13:24:06 $
+  </address>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

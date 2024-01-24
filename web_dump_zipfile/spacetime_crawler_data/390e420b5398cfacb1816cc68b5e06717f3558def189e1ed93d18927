@@ -1,0 +1,245 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE13126¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXWerkzeug/0.14.1 Python/2.7.14¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 19:36:25 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY3F<!DOCTYPE html>
+<html>
+  <head>
+
+
+
+    <title>CircadiOmics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+      href="/static/main.css">
+
+
+
+    <!--[if lt IE 9]>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+      href="/static/main.css">
+
+
+
+  </head>
+  <body>
+    
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a  style="font-size: 16px  !important;" class="navbar-brand" href="/"><font color="#457ab2">C</font>ircadi<font color="orange">O</font>mics</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/about">About</a></li>
+        <li><a href="/datasets">Datasets</a></li>
+        <li><a href="/biocycle">BIO_CYCLE</a></li>
+        <li><a href="/metabolicatlas">Metabolic Atlas</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- 
+        <li><a href="/login">Login</a></li>
+         -->
+        <li><a href="/help">Help</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    
+<div class="container">
+  <center>
+  <h1>Help</h1>
+  </center>
+  <div class="well well-lg">
+    <h3>Topics</h3>
+    <ul class="list-group">
+    <li class="list-group-item"><a href="#datasets">Selecting Datasets</a></li>
+    <li class="list-group-item"><a href="#details">Dataset Information</a></li>
+    <li class="list-group-item"><a href="#query">Querying Species</a></li>
+    <li class="list-group-item"><a href="#batch">Performing Batch Queries</a></li>
+    <li class="list-group-item"><a href="#filter">Filtering Datasets</a></li>
+    <li class="list-group-item"><a href="#stats">Statistics</a></li>
+    <li class="list-group-item"><a href="#manage">Displaying Results</a></li>
+    <li class="list-group-item"><a href="d#ownloadables">Downloadable Content</a></li>
+    <li class="list-group-item"><a href="#biocycle">Processing Data with BIO_CYCLE</a></li>
+    <li class="list-group-item"><a href="#bcquery">BIO_CYCLE Results</a></li>
+    <li class="list-group-item"><a href="#atlas">Metabolic Atlas</a></li>
+    <li class="list-group-item"><a href="#trouble">Further Help</a></li>
+    </ul>
+  </div>
+
+  <div id="datasets" class="well well-lg">
+    <h3>Selecting Datasets</h3>
+    <p>Select any dataset from the Transcriptome, Metabolome, Proteome or Acetylome dropdowns.  Datasets are added to the dropdown menu title "Selected Datasets" as shown below.  Clicking the <b><i>yellow</i></b> dataset name will display information about the dataset including the citation, species, omic type, and any others datasets included in the study in a pop-up window.  Remove a dataset by selecting the <i>red</i> "X" button. All queries will be run against all the datasets that are currently selected</p>
+    <p><b>Yellow Button For Dataset Details and Red Button to Remove Dataset</b></p>
+    <img style="max-width:600px" src="/static/datadropdown.png">
+    <p><b>Example of Dataset Details Pop-Up</b></p>
+    <img style="max-width:600px" src="/static/datadetails.png">
+  </div>
+  <div id="details" class="well well-lg">
+    <h3>Dataset Details</h3>
+    <p>Further details for each dataset are included on the <a href="/datasets">Dataset</a> page.  This can be accessed from any location by clicking on the "Datasets" button in the navigation bar on the upper left of the page.  There are four separate tabs for each omic type.  Details include a brief description, species, specific tissue, a broader tissue classification, experimental condition, GEO accession, experiment type, information on animal subject, experimental protocol, a link to the original publication, and number of replicates and timepoints.  Keyword search can be performed on any category for available information.</p>
+    <p><b>Location of Data Page Link and Keyword Search</b></p>
+    <img style="max-width:600px" src="/static/datawebpage.png">
+  </div>
+  <div id="query" class="well well-lg">
+    <h3>Querying Species</h3>
+    <p>Begin typing the name of a species for the omic type in the main search bar as shown below. Autocomplete will give suggestions for species symbols that are currently available in all the selected datasets.</p>
+    <img style="max-width:600px" src="/static/dataautocomplete.png">
+    <p>Clicking "Display" will show trends for the current query in the currently selected datasets. Clicking "Clear" will clear the main display and statistics table and remove all previous queries.</p>
+    <p><b>Display and Clear Options</b></p>
+    <img style="max-width:600px" src="/static/dataoptions.png">
+  </div>
+  <div id="batch" class="well well-lg">
+    <h3>Performing Batch Queries</h3>
+    <h5>Dataset Batch</h5>
+    <p>Adding multiple datasets to the "Selected Datasets" dropdown allows the user to perform a query for a given species on several datasets at once.  Any combination of datasets can be added to the current "Selected Datasets" list.  See <a href="#datasets">Selecting Datasets</a> for more information on using the dropdown menus.</p>
+    <p><b>Selection of Two Datasets</b></p>
+    <img style="max-width:600px" src="/static/databatchtwo.png">
+    <h5>Symbol Batch</h5>
+    <p>To query multiple species against the currently selected datasets at once, separate each species symbol by a semi-colon as shown below.</p>
+    <p><b>Batch Species Query</b></p>
+    <img style="max-width:600px" src="/static/databatchsymbols.png">
+  </div>
+  <div id="manage" class="well well-lg">
+    <h3>Displaying Results</h3>
+    <h5>Removing Queries</h5>
+    <p>Selecting the "Remove" option for a particular species / dataset trend will remove this result from the main display and the statistics table.  The button is show below.</p>
+    <img style="max-width:600px" src="/static/dataremove.png">
+    <h5>Normalization</h5>
+    <p>Toggling the "Normalization" between <i>Off</i> and <i>On</i> will update the main display between expression results provided in the public available datasets and the same values normalized between 0 and 1.  An example is shown below.  This feature is useful when experiments have diverse reported expression values.</p>
+    <h5>Software</h5>
+    <p>Toggling the "Software" tab between "BIO_CYCLE" and "JTK_CYCLE" will update the current display table with statistics produced from the respective software packages.  For more information on these statistics, see <a href="stats">Statistics</a>.</p>
+    <p><b>Normalization and Software Toggles</b></p>
+    <img style="max-width:600px" src="/static/datatoggle.png">
+  </div>
+  <div id="filter" class="well well-lg">
+    <h3>Filtering Datasets</h3>
+    <p>The user can filter datasets by species, broad tissue classification (Liver, Muscle, Brain, etc.), and dataset experimental type (Control, Knock-Out, Knock-Down, Drug Treatment, etc.).  Selecting the "Clear Filters" option at the very top of the filter menu shown below removes all of the currently applied filters. </p>
+    <img style="max-width:600px" src="/static/datafilter.png">
+  </div>
+  <div id="stats" class="well well-lg">
+    <h3>Statistics</h3>
+    <h5>P-Value</h5>
+    <p>Adjusted p-value as reported from BIO_CYCLE or JTK_CYCLE.  Generally, a p-value < 0.05 is considered statistically significant.</p>
+    <h5>P-Value</h5>
+    <p>Benjamini-Hochbeg FDR as reported from BIO_CYCLE or JTK_CYCLE.
+    <h5>Amplitude</h5>
+    <p>Amplitude of periodic signal from peak to trough.</p>
+    <h5>Lag</h5>
+    <p>Phase shift of periodic signal from sine function.</p>
+    <h5>Period</h5>
+    <p>Both BIO_CYCLE and JTK_CYCLE have been set to search for statistically significant signals with periods between 20 and 28 hours.</p>
+    <p><b>Data Table Display</b></p>
+    <img style="max-width:600px" src="/static/datastats.png">
+  </div>
+  <div id="downloadables" class="well well-lg">
+    <h3>Downloadable Content</h3>
+    <p>The current display image can be downloaded in PNG or SVG format by clicking the buttons within the query search bar as shown below.</p>
+    <img style="max-width:600px" src="/static/datapics.png">
+    <p>The current table of statistics results can be downloaded in an excel compatible format by clicking the "Excel" button on the upper right side of the statistics table as shown below.  The downloaded excel will be produced for the current selected "Software" toggle setting.</p>
+    <img style="max-width:600px" src="/static/dataexcel.png">
+  </div>
+  <div id="biocycle" class="well well-lg">
+    <h3>Processing Data with BIO_CYCLE</h3>
+    <p>Users can upload data to the BIO_CYCLE web portal to produce the statistics described <a href="#stats">here</a>.  Results are generated for all included symbols in the user provided file at 3 period searches (8, 12, 24).  The user can quickly view trends using these provided symbols under the "Visualization" tab shown below.  Distribution of the previously described statistics can be examined in histograms displayed under the "Histogram" tab as shown below.</p>
+    <p>File must be a tab separated file (*.tsv) with a single ID in the first column followed by the molecular concentrations at each timepoint. An example file format is provided in the link below. BIO_CYCLE can handle variable numbers of replicates, uneven timepoints, and missing replicates (as long as each row has at least one value per timepoint).</p>
+    <h4><a href="/static/downloadables/example_input_file.tsv" download>EXAMPLE DATA FORMAT</a></h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>ZT_0_REP_1</th>
+          <th>ZT_0_REP_2</th>
+          <th>ZT_4_REP_1</th>
+          <th>ZT_4_REP_2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Per1</th>
+          <td>4.25</td>
+          <td>3.08</td>
+          <td>9.17</td>
+          <td>8.90</td>
+        </tr>
+        <tr>
+          <th scope="row">Per2</th>
+          <td>3.45</td>
+          <td>na</td>
+          <td>9.50</td>
+          <td>9.93</td>
+        </tr>
+        <tr>
+          <th scope="row">Per3</th>
+          <td>1.40</td>
+          <td>1.53</td>
+          <td>10.70</td>
+          <td>10.55</td>
+        </tr>
+        <tr>
+          <th scope="row">Cry1</th>
+          <td>4.35</td>
+          <td>5.78</td>
+          <td>14.87</td>
+          <td>12.21</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="bcquery" class="well well-lg">
+    <h3>BIO_CYCLE Results</h3>
+    <p>BIO_CYCLE is a Neural Network based approach which predicts rhythmicity in biological species. It is the default method used by CircadiOmics.  For information on provided <a href="#stats">statistics</a> and how to <a href="biocycle">upload</a> user data follow the links.</p>
+    <p><b>Visualization Of User BIO_CYCLE Data</b></p>
+    <img style="max-width:600px" src="/static/dataviz.png">
+    <p><b>Histogram Analysis Of User BIO_CYCLE Data</b></p>
+    <img style="max-width:600px" src="/static/datahisto.png">
+  </div>
+  <div id="atlas" class="well well-lg">
+    <h3>Metabolic Atlas</h3>
+    <p>Is currently being developed to examine metabolomic networks through identification of correlated trends in the metabolome datasets found inside CircadiOmics.</p>
+  </div>
+  <div class="well well-lg">
+    <h3>Further Help</h3>
+    <p> For further help, contact nickceglia@gmail.com </p>
+  </div>
+</div>
+
+
+    
+<script src="/static/cytoscape.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload=
+{'modules':[{'name':'visualization','version':'1.1','packages':
+['corechart']}]}"></script>
+
+<script src="/static/typeahead.min.js"></script>
+<script src="/static/main.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  </body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

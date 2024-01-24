@@ -1,0 +1,30 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC859¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 09 May 2012 22:57:16 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"35b-4bfa26cb12b00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 03:30:58 GMTKraw_content¢DtypeEvalueY["""BFS.py
+
+Breadth First Search. See also LexBFS.py.
+
+D. Eppstein, May 2007.
+"""
+
+def BreadthFirstLevels(G,root):
+    """
+    Generate a sequence of bipartite directed graphs, each consisting
+    of the edges from level i to level i+1 of G. Edges that connect
+    vertices within the same level are not included in the output.
+    The vertices in each level can be listed by iterating over each
+    output graph.
+    """
+    visited = set()
+    currentLevel = [root]
+    while currentLevel:
+        for v in currentLevel:
+            visited.add(v)
+        nextLevel = set()
+        levelGraph = {v:set() for v in currentLevel}
+        for v in currentLevel:
+            for w in G[v]:
+                if w not in visited:
+                    levelGraph[v].add(w)
+                    nextLevel.add(w)
+        yield levelGraph
+        currentLevel = nextLevel
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

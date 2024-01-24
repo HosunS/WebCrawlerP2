@@ -1,0 +1,51 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1267¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 26 Jun 2012 03:01:24 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"4f3-4c35750528900"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 03:06:41 GMTKraw_content¢DtypeEvalueYó// GuessNumberUserInterface.java
+//
+// ICS 21 / CSE 21 Summer 2012
+// Lab 0
+//
+// This class implements the user interface for the "guess a number"
+// game, where the computer chooses a number at random, then asks the
+// user to guess what it is, giving hints along the way.
+
+import java.util.Scanner;
+
+
+public class GuessNumberUserInterface
+{
+	private static int RANGE = 10;
+
+	
+	public static void main(String[] args)
+	{
+		Scanner s = new Scanner(System.in);
+
+		GuessNumberGame game = new GuessNumberGame(RANGE);
+
+		System.out.println("I'm thinking of a number between 1 and 10.  Can you guess what it is?");
+		
+		GuessResponse response;
+		
+		do
+		{
+			System.out.print("Enter a number between 1 and 10: ");
+			
+			int guess = s.nextInt();
+			s.nextLine();
+			
+			response = game.checkGuess(guess);
+
+			if (response == GuessResponse.TARGET_IS_SMALLER)
+			{
+				System.out.println("The number I'm thinking of is smaller than that.");
+			}
+			else if (response == GuessResponse.TARGET_IS_LARGER)
+			{
+				System.out.println("The number I'm thinking of is larger than that.");
+			}
+		}
+		while (response != GuessResponse.CORRECT);
+
+		System.out.println("Great job!  That's exactly the number I was thinking of!");
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

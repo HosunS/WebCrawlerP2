@@ -1,0 +1,238 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD8697¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 16 Oct 2001 22:39:03 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"24c9df22-21f9-3907873c68fc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:19:39 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY!ùDocumentation for data set
+
+1. Title of Data Set
+>
+USCensus1990
+
+2. Data Type
+>
+Multivariate
+
+3. Abstract
+>
+
+The USCensus1990 data set is a discretized version of the
+USCensus1990raw data set. Many of the less useful attributes in the
+original data set have been dropped, the few continuous variables have
+been discretized and the few discrete variables that have a large
+number of possible values have been collapsed to have fewer possible
+values.
+
+The USCensus1990raw data set was obtained from the (U.S. Department of
+Commerce) Census Bureau website using the Data Extraction System. This
+system can be found at http://www.census.gov/DES/www/des.html.
+
+The USCensus1990raw data set contains a one percent sample of the
+Public Use Microdata Samples (PUMS) person records drawn from the full
+1990 census sample (all fifty states and the District of Columbia but
+not including "PUMA Cross State Lines One Percent Persons Records"). A
+description of the fields and the coding of the values can be found in
+the files attributes.txt and coding.htm, respectively. Additional
+information can be found at the Census bureau website described above.
+
+NOTE: Unlike the USCensus1990raw data set the order of the cases in
+      the USCensus HAS been randomized.
+
+
+4. Sources
+   (a) Original owners of database (name/snail address/phone/email/homepage)
+>
+
+The U.S. Department of Commerce Bureau
+of Census. The data was extracted using the Data Extraction
+System. This system can be found at http://www.census.gov/DES/www/des.html.
+The email contact information is webmaster@census.gov.
+
+   (b) Donor of database (name/snail address/phone/email/homepage)
+>
+
+Chris Meek         meek@microsoft.com
+Bo Thiesson        thiesson@microsoft.com
+David Heckerman    heckerma@microsoft.com
+
+5. Data Characteristics
+>
+
+The data was collected as part of the 1990 census.
+
+There are 68 categorical attributes. This data set was derived from
+the USCensus1990raw data set. The attributes are listed in the file
+USCensus1990.attributes.txt (repeated below) and the coding for the
+values is described below.  Many of the less useful attributes in the
+original data set have been dropped, the few continuous variables have
+been discretized and the few discrete variables that have a large
+number of possible values have been collapsed to have fewer possible
+values.
+
+   More specifically the USCensus1990 data set was obtained from
+   the USCensus1990raw data set by the following sequence of operations;
+
+   a) Randomization: The order of the cases in the original
+      USCensus1990raw data set were randomly permuted.
+
+   b) Selection of attributes: The 68 attributes included in the data
+      set are given below. In the USCensus1990 data set we have
+      added a single letter prefix to the original name. We add the
+      letter 'i' to indicate that the original attribute values are
+      used and 'd' to indicate that original attribute values for each
+      case have been mapped to new values (the precise mapping is
+      described below).
+
+      --------------------------------------------------------------
+        Old Variable        New Variable
+      --------------------------------------------------------------
+        Age         dAge
+        Ancstry1        dAncstry1
+        Ancstry2        dAncstry2
+        Avail           iAvail
+        Citizen         iCitizen
+        Class           iClass
+        Depart          dDepart
+        Disabl1         iDisabl1
+        Disabl2         iDisabl2
+        English         iEnglish
+        Feb55           iFeb55
+        Fertil          iFertil
+        Hispanic        dHispanic
+        Hour89          dHour89
+        Hours           dHours
+        Immigr          iImmigr
+        Income1         dIncome1
+        Income2         dIncome2
+        Income3         dIncome3
+        Income4         dIncome4
+        Income5         dIncome5
+        Income6         dIncome6
+        Income7         dIncome7
+        Income8         dIncome8
+        Industry        dIndustry
+        Korean          iKorean
+        Lang1           iLang1
+        Looking         iLooking
+        Marital         iMarital
+        May75880        iMay75880
+        Means           iMeans
+        Military        iMilitary
+        Mobility        iMobility
+        Mobillim        iMobillim
+        Occup           dOccup
+        Othrserv        iOthrserv
+        Perscare        iPerscare
+        POB         dPOB
+        Poverty         dPoverty
+        Pwgt1           dPwgt1
+        Ragechld        iRagechld
+        Rearning        dRearning
+        Relat1          iRelat1
+        Relat2          iRelat2
+        Remplpar        iRemplpar
+        Riders          iRiders
+        Rlabor          iRlabor
+        Rownchld        iRownchld
+        Rpincome        dRpincome
+        RPOB            iRPOB
+        Rrelchld        iRrelchld
+        Rspouse         iRspouse
+        Rvetserv        iRvetserv
+        School          iSchool
+        Sept80          iSept80
+        Sex         iSex
+        Subfam1         iSubfam1
+        Subfam2         iSubfam2
+        Tmpabsnt        iTmpabsnt
+        Travtime        dTravtime
+        Vietnam         iVietnam
+        Week89          dWeek89
+        Work89          iWork89
+        Worklwk         iWorklwk
+        WWII            iWWII
+        Yearsch         iYearsch
+        Yearwrk         iYearwrk
+        Yrsserv         dYrsserv
+
+
+   c) Mapping: In this step we map all of the old values for variables
+      with prefix 'd' to new values. The mappings for the variables
+      dAncstry1, dAncstry2, dHispanic, dIndustry, dOccup, dPOB were
+      designed to correspond to a natural coarsening of the original
+      values based on the information in the file coding.htm. The
+      remaining variables are continuous valued variables and the
+      mapping for these variables was chosen to make variables that
+      were fairly uniformly distributed across the states
+      (quantiles). The precise mappings are specified in the file
+      USCensus1990.mapping.sql. This file contains all of T-SQL
+      procedures used to map the variables. These procedures can be
+      used directly in SQLServer to map the original values or
+      translated to some other language.
+
+      --------------------------------------------------------------
+        Variable        Procedure
+      --------------------------------------------------------------
+        dAge            discAge
+        dAncstry1       discAncstry1
+        dAncstry2       discAncstry2
+        dHispanic       discHispanic
+        dHour89         discHour89
+        dHours          discHours
+        dIncome1        discIncome1
+        dIncome2        discIncome2to8
+        dIncome3        discIncome2to8
+        dIncome4        discIncome2to8
+        dIncome5        discIncome2to8
+        dIncome6        discIncome2to8
+        dIncome7        discIncome2to8
+        dIncome8        discIncome2to8
+        dIndustry       discIndustry
+        dOccup          discOccup
+        dPOB            discPOB
+        dPoverty        discPoverty
+        dPwgt1          discPwgt1
+        dRearning       discRearning
+        dRpincome       discRpincome
+        dTravtime       discTravtime
+        dWeek89         discWeek89
+        dYrsserv        discYrsserv
+
+
+6. Other Relevant Information
+>
+
+Hierarchies of values are provided in the file
+USCensus1990raw.coding.htm and the mapping functions used to transform
+the USCensus1990raw to the USCensus1990 data sets are giving in the
+file USCensus1990.mapping.sql.
+
+7. Data Format
+>
+
+The data is contained in a file called USCensus1990.data.txt.  The
+first row contains the list of attributes. The first attribute is a
+caseid and should be ignored during analysis. The data is comma
+delimited with one case per row.
+
+
+8. Past Usage
+>
+
+9. Acknowledgements, Copyright Information, and Availability
+  (a) copyright information
+>
+  (b) usage restrictions (e.g. for research only)
+>
+  (c) citation requests
+>
+  (d) acknowledgements
+>
+
+10. References & Further Information
+>
+
+The U.S. Department of Commerce Bureau of Census website
+http://www.census.gov and the Data Extraction System at
+http://www.census.gov/DES/www/des.html.
+
+Meek, Thiesson, and Heckerman (2001), "The Learning Curve Method
+Applied to Clustering", to appear in The Journal of Machine Learning
+Research. (Also see MSR-TR-2001-34 available at
+http://research.microsoft.com/scripts/pubs/view.asp?TR_ID=MSR-TR-2001-34)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

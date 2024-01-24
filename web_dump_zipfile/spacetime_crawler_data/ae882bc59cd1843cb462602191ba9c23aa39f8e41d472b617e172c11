@@ -1,0 +1,258 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:11:14 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY9
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Cylinder Bands Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Cylinder Bands Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/cylinder-bands/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/cylinder-bands/bands.names"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: Used in decision tree induction for mitigating process delays known as "cylinder bands" in rotogravure printing</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">512</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Physical</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Categorical, Integer, Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">39</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">1995-08-01</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">Yes</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">62078</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Creator: <br><br>Bob Evans<br>RR Donnelley & Sons Co.<br>Gallatin Division<br>801 Steam Plant Rd<br>Gallatin, Tennessee 37066-3396<br>(615) 452-5170<br>    <br>Donor: same</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">Here's the abstract from the above reference:<br><br>ABSTRACT: Machine learning tools show significant promise for knowledge acquisition, particularly when human expertise is inadequate. Recently, process delays known as cylinder banding in rotogravure printing were substantially mitigated using control rules discovered by decision tree induction. Our work exemplifies a more general methodology which transforms the knowledge acquisition task from one in which rules are directly elicited from an expert, to one in which a learning system is responsible for rule generation. The primary responsibilities of the human expert are to evaluate the merits of generated rules, and to guide the acquisition and classification of data necessary for machine induction. These responsibilities require the expert to do what an expert does best: to exercise his or her expertise. This seems a more natural fit to an expert's capabilities than the requirements of traditional methodologies that experts explicitly enumerate the rules that they employ.</p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">	 1. timestamp: numeric;19500101 - 21001231 <br>	 2. cylinder number: nominal<br>	 3. customer: nominal; <br>	 4. job number: nominal; <br>	 5. grain screened: nominal; yes, no <br>	 6. ink color: nominal;  key, type <br>	 7. proof on ctd ink:  nominal;  yes, no  <br>	 8. blade mfg: nominal;  benton, daetwyler, uddeholm <br>	 9. cylinder division: nominal;  gallatin, warsaw, mattoon <br>	10. paper type: nominal;  uncoated, coated, super <br>	11. ink type: nominal;  uncoated, coated, cover <br>	12. direct steam: nominal; use; yes, no *<br>	13. solvent type: nominal;  xylol, lactol, naptha, line, other <br>	14. type on cylinder:  nominal;  yes, no  <br>	15. press type: nominal; use; 70 wood hoe, 70 motter, 70 albert, 94 motter <br>	16. press: nominal;  821, 802, 813, 824, 815, 816, 827, 828 <br>	17. unit number: nominal;  1, 2, 3, 4, 5, 6, 7, 8, 9, 10 <br>	18. cylinder size: nominal;  catalog, spiegel, tabloid <br>	19. paper mill location: nominal; north us, south us, canadian, scandanavian, mid european<br>	20. plating tank: nominal; 1910, 1911, other <br>	21. proof cut: numeric;  0-100 <br>	22. viscosity: numeric;  0-100 <br>	23. caliper: numeric;  0-1.0 <br>	24. ink temperature: numeric;  5-30 <br>	25. humifity: numeric;  5-120 <br>	26. roughness: numeric;  0-2 <br>	27. blade pressure: numeric;  10-75 <br>	28. varnish pct: numeric;  0-100 <br>	29. press speed: numeric;  0-4000 <br>	30. ink pct: numeric;  0-100 <br>	31. solvent pct: numeric;  0-100 <br>	32. ESA Voltage: numeric;  0-16 <br>	33. ESA Amperage: numeric;  0-10 <br>	34. wax: numeric ;  0-4.0<br>	35. hardener:  numeric; 0-3.0 <br>	36. roller durometer:  numeric;  15-120 <br>	37. current density:  numeric;  20-50 <br>	38. anode space ratio:  numeric;  70-130 <br>	39. chrome content: numeric; 80-120 <br>	40. band type: nominal; class; band, no band *</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Evans, B., and Fisher, D. (1994). Overcoming process delays with decision tree induction. IEEE Expert , Vol. 9, No. 1, 60--66.<br><a href="http://rexa.info/paper/c39e7a6eee15aac33224844c708fabb86aec1792">[Web Link]</a></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Juan J Rodr√≠guez Diez and Carlos Alonso Gonz√°lez and Henrik Bostr√∂m. <a
+href="http://rexa.info/paper/bcf7a3acb12b41b9b37ec937c2c9aea2d1d1c855">Learning First Order Logic Time Series Classifiers: Rules and Boosting</a>. PKDD. 2000.  [<a
+href="../support/Cylinder+Bands#bcf7a3acb12b41b9b37ec937c2c9aea2d1d1c855">View Context</a>].<br><br>Juan J. Rodr##guez and Carlos J. Alonso. <a
+href="http://rexa.info/paper/43960812b02c29db1368816cd996112a9af54a99">Applying Boosting to Similarity Literals for Time Series Classification</a>. Department of Informatics University of Valladolid, Spain. 2000.  [<a
+href="../support/Cylinder+Bands#43960812b02c29db1368816cd996112a9af54a99">View Context</a>].<br><br>Juan J. Rodr##guez and Carlos J. Alonso and Henrik Bostrom. <a
+href="http://rexa.info/paper/179e206cfdc14b74819ce95f39bb68610874578b">Boosting Interval Based Literals</a>. 2000.  [<a
+href="../support/Cylinder+Bands#179e206cfdc14b74819ce95f39bb68610874578b">View Context</a>].<br><br>Juan J. Rodr##guez and Carlos J. Alonso and Henrik Bostrom. <a
+href="http://rexa.info/paper/9755b662d1579511b54a4b2c69eea04c30c2142c">Learning First Order Logic Time Series Classifiers: Rules and Boosting</a>. Grupo de Sistemas Inteligentes, Departamento de Inform#atica Universidad de Valladolid, Spain.  [<a
+href="../support/Cylinder+Bands#9755b662d1579511b54a4b2c69eea04c30c2142c">View Context</a>].<br><br>Charles Campbell and Nello Cristianini. <a
+href="http://rexa.info/paper/b6e169d69cd67763b95698e8961696fec9ca93bf">Simple Learning Algorithms for Training Support Vector Machines</a>. Dept. of Engineering Mathematics.  [<a
+href="../support/Cylinder+Bands#b6e169d69cd67763b95698e8961696fec9ca93bf">View Context</a>].<br><br>Carlos J. Alonso Gonzalez and Juan J. Rodr and iguez Diez. <a
+href="http://rexa.info/paper/6046926fc134386ba1ce22047b0146525a5440b7">Time Series Classification by Boosting Interval Based Literals</a>. Grupo de Sistemas Inteligentes Departamento de Informatica Universidad de Valladolid.  [<a
+href="../support/Cylinder+Bands#6046926fc134386ba1ce22047b0146525a5440b7">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Juan J Rodr√≠guez Diez and Carlos Alonso Gonz√°lez and Henrik Bostr√∂m. <a
+href="http://rexa.info/paper/bcf7a3acb12b41b9b37ec937c2c9aea2d1d1c855">Learning First Order Logic Time Series Classifiers: Rules and Boosting</a>. PKDD. 2000.  [<a
+href="../support/Cylinder+Bands#bcf7a3acb12b41b9b37ec937c2c9aea2d1d1c855">View Context</a>].<br><br>Juan J. Rodr##guez and Carlos J. Alonso. <a
+href="http://rexa.info/paper/43960812b02c29db1368816cd996112a9af54a99">Applying Boosting to Similarity Literals for Time Series Classification</a>. Department of Informatics University of Valladolid, Spain. 2000.  [<a
+href="../support/Cylinder+Bands#43960812b02c29db1368816cd996112a9af54a99">View Context</a>].<br><br>Juan J. Rodr##guez and Carlos J. Alonso and Henrik Bostrom. <a
+href="http://rexa.info/paper/179e206cfdc14b74819ce95f39bb68610874578b">Boosting Interval Based Literals</a>. 2000.  [<a
+href="../support/Cylinder+Bands#179e206cfdc14b74819ce95f39bb68610874578b">View Context</a>].<br><br>Juan J. Rodr##guez and Carlos J. Alonso and Henrik Bostrom. <a
+href="http://rexa.info/paper/9755b662d1579511b54a4b2c69eea04c30c2142c">Learning First Order Logic Time Series Classifiers: Rules and Boosting</a>. Grupo de Sistemas Inteligentes, Departamento de Inform#atica Universidad de Valladolid, Spain.  [<a
+href="../support/Cylinder+Bands#9755b662d1579511b54a4b2c69eea04c30c2142c">View Context</a>].<br><br>Charles Campbell and Nello Cristianini. <a
+href="http://rexa.info/paper/b6e169d69cd67763b95698e8961696fec9ca93bf">Simple Learning Algorithms for Training Support Vector Machines</a>. Dept. of Engineering Mathematics.  [<a
+href="../support/Cylinder+Bands#b6e169d69cd67763b95698e8961696fec9ca93bf">View Context</a>].<br><br>Carlos J. Alonso Gonzalez and Juan J. Rodr and iguez Diez. <a
+href="http://rexa.info/paper/6046926fc134386ba1ce22047b0146525a5440b7">Time Series Classification by Boosting Interval Based Literals</a>. Grupo de Sistemas Inteligentes Departamento de Informatica Universidad de Valladolid.  [<a
+href="../support/Cylinder+Bands#6046926fc134386ba1ce22047b0146525a5440b7">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please refer to the Machine Learning
+Repository's <a href="../citation_policy.html">citation policy</a></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

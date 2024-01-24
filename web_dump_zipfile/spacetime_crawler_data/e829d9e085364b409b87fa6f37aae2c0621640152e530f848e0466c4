@@ -1,0 +1,23 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC983¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 21 Jun 2014 23:56:13 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"3d7-4fc615ad86140"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 16:06:52 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY×G-G interaction using the Wald test
+
+The gg_wald program runs in unix or linux. 
+
+Compile the C++ code: 
+	g++ -o gg_wald gg_wald.cpp
+
+Required arguments:
+	argument 1: the file name of the case data
+	argument 2: the file name of the control data
+	argument 3: the name of the output file	
+
+Example of using the gg_wald program: 
+	gg_wald cases.txt controls.txt output.txt
+Here "output.txt" is the name of the output file. If gg_wald runns successfully, the result in output.txt should be similar to that of "pvalues.txt", the result that I obtained from my computer. 
+	
+
+Data formats:
+	the case file: an ascii file with S rows and n1 columns, where S is the number of SNPs and n1 is the number of cases
+	the control file: an ascii file with S rows and n0 columns, where S is the number of SNPs and n0 is the number of controls
+	the output file: row 1 contains the column names; column1: the p-values from the Wald test; column2: the p-values from the Wald1 test
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

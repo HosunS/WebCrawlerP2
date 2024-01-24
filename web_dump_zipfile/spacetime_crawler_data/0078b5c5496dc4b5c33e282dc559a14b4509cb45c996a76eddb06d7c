@@ -1,0 +1,46 @@
+¦Ifinal_url¢DtypeEvaluex'http://sli.ics.uci.edu/~ihler/uai-data/Lhttp_headers¢DtypeEvalue‹¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1210¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueQtimeout=5, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.4.18 (Ubuntu)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 12 Oct 2018 22:09:25 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"a9a-5780f57251d35-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 06:37:31 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueY
+š
+<h2> UAI model files and solutions </h2>
+These spreadsheets contain links to UAI files used in past UAI exact and approximate inference competitions,
+along with many solutions and other statistics and information.  Use the tabs at the bottom to move between
+different problem groups.
+<br>
+<br>
+If you have any problems you would like to donate, please email Alex Ihler (ihler@ics.uci.edu).
+<br>
+<br>
+
+<iframe src="https://docs.google.com/spreadsheets/d/1_IL96-JfxLh1ChErAz68XK-SXbOOaYmr1cUDOTDCg4U/pubhtml?widget=true&amp;headers=false" width="1100" height="600"></iframe>
+
+<br><hr>
+For summation inference solutions, we used a basic conditioned variable elimination or junction tree algorithm;
+a linux binary implementation can be downloaded <a href="solvers/exact">here</a>. 
+No warrantees, express or implied; use at your own risk, etc.
+An example execution is, e.g.
+<pre>
+./exact -f $1 -e $1.evid -t100 -o1000 --order-rand 3 --memory 20000 -T PR
+</pre>
+and you can add <pre>--order-file $1.ord</pre> to use a pre-identified elimination order (or save one once found).
+
+<br><hr>
+Statistics listed in the spreadsheet include:
+<dl>
+<dt><b>Name:</b>     </dt><dd>The instance name, along with a link to the file</dd>
+<dt><b>nEvid:</b>    </dt><dd>The number of evidence variables, along with a link to the evidence file (if nonzero)</dd>
+<dt><b>Width:</b>    </dt><dd>The induced width of the file for a (linked) elimination ordering</dd>
+<dt><b>Depth:</b>    </dt><dd>The depth of the pseudo-tree for the given elimination ordering</dd>
+<dt><b>logSS:</b>    </dt><dd>State space size (storage size of the junction tree), log base 10 (so, 1GB of doubles is ~ 8.1, while 100GB ~ 10.1)</dd>
+<dt><b># var:</b>    </dt><dd>Number of variables in the model</dd>
+<dt><b>d-avg:</b>    </dt><dd>Average cardinality (# of states) of the variables</dd>
+<dt><b>d-max:</b>    </dt><dd>Largest cardinality (# of states) of any variable</dd>
+<dt><b># factor:</b> </dt><dd>Number of factors in the model</dd>
+<dt><b>s-avg:</b>    </dt><dd>Average scope size (# of arguments) of the factors</dd>
+<dt><b>s-max:</b>    </dt><dd>Largest scope size (# of arguments) of any factor</dd>
+<dt><b>0-avg:</b>    </dt><dd>Average fraction of zeros (forbidden configurations) per factor; a loose measure of sparsity of the state space</dd>
+<dt><b>MPE:</b>      </dt><dd>Value of the MPE/MAP solution (log10), along with a link to the configuration.</dd>
+<dt><b>MPLP:</b>     </dt><dd>MPE/MAP upper bound given by a basic MPLP implementation</dd>
+<dt><b>PR:</b>       </dt><dd>Value of the log partition function (log10) </dd>
+<dt><b>LBP:</b>      </dt><dd>Log partition function estimate given by a basic Loopy BP implementation</dd>
+</dl>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

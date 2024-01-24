@@ -1,0 +1,13 @@
+¦Ifinal_url¢DtypeEvaluex8https://www.ics.uci.edu/~wjohnson/BIDA/Ch13/leukemia.txtLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC287¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Sep 2010 01:19:22 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"11f-48fa12fd77a80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:51:17 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYmodel
+{
+ for(i in 1:n[1]){t1[i] ~ dexp(theta1)}
+ for(i in 1:n[2]){t2[i] ~ dexp(theta2)}
+ theta1 ~ dgamma(a1,b1)
+ theta2 ~ dgamma(a2,b2)
+ median1 <- log(2)/theta1
+ median2 <- log(2)/theta2
+ relmedian <- theta2/theta1
+ S[1] <- exp(-24*theta1)
+ S[2] <- exp(-24*theta2)
+ Sdiff <- S[1]-S[2]
+}Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

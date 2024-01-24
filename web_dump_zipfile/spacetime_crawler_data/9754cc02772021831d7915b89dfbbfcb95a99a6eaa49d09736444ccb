@@ -1,0 +1,407 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE14379¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 17 Sep 2018 06:23:20 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"382b-5760b35adbe15"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:41:33 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY8+<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Face relighting**
+
+# References
+<a href="ref.html" target="_blank">References</a>
+
+# 2018.09.16
+
+https://www.ics.uci.edu/~yug10/projects/megvii/result.html
+
+
+# 2018.09.09
+
+https://www.ics.uci.edu/~yug10/projects/megvii/0909/test_pix2pix/index.html
+
+https://www.ics.uci.edu/~yug10/projects/megvii/0909/test1_pix2pix/index.html
+
+https://www.ics.uci.edu/~yug10/projects/megvii/0909/test2_pix2pix/index.html
+
+
+# 2018.08.30 Real datasets
+![women:6000+; man:2000+](0815/4.png)
+
+# 2018.08.26
+
+<table style="width:100%">
+  <tr>  
+    <th>input</th>
+    <th>SfSnet</th>
+    <th>pix2pix_1</th>
+    <th>pix2pix_2</th>
+    <th>pix2pix_3</th>
+    <th>reference</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/08807.jpg)</th>
+    <th>![](0830/out_sfs/08807_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_08807_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_08807_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_08807_fake_B.png)</th>
+    <th>![](0830/out_ref/AB_08807_real_B.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/01977.jpg)</th>
+    <th>![](0830/out_sfs/01977_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_01977_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_01977_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_01977_fake_B.png)</th>
+    <th>![](0830/out_ref/AB_01977_real_B.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/112.85526.jpg)</th>
+    <th>![](0830/out_sfs/112.85526_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_112.85526_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_112.85526_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_112.85526_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/112.51829.jpg)</th>
+    <th>![](0830/out_sfs/112.51829_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_112.51829_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_112.51829_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_112.51829_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/139.98621.jpg)</th>
+    <th>![](0830/out_sfs/139.98621_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_139.98621_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_139.98621_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_139.98621_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/96.68580.jpg)</th>
+    <th>![](0830/out_sfs/96.68580_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_96.68580_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_96.68580_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_96.68580_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/78.82214.jpg)</th>
+    <th>![](0830/out_sfs/78.82214_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_78.82214_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_78.82214_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_78.82214_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/86.62311.jpg)</th>
+    <th>![](0830/out_sfs/86.62311_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_86.62311_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_86.62311_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_86.62311_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/68.10464.jpg)</th>
+    <th>![](0830/out_sfs/68.10464_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_68.10464_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_68.10464_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_68.10464_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/57.78817.jpg)</th>
+    <th>![](0830/out_sfs/57.78817_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_57.78817_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_57.78817_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_57.78817_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/51.40485.jpg)</th>
+    <th>![](0830/out_sfs/51.40485_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_51.40485_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_51.40485_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_51.40485_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/47.16515.jpg)</th>
+    <th>![](0830/out_sfs/47.16515_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_47.16515_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_47.16515_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_47.16515_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+  <tr>
+    <th>![](0830/in/31.04265.jpg)</th>
+    <th>![](0830/out_sfs/31.04265_albedo.png)</th>
+    <th>![](0830/out_pix2pix1/AB_31.04265_fake_B.png)</th>
+    <th>![](0830/out_pix2pix2/AB_31.04265_fake_B.png)</th>
+    <th>![](0830/out_pix2pix3/AB_31.04265_fake_B.png)</th>
+    <th>![](0830/out_ref/empty.png)</th>
+  </tr>
+</table>
+
+
+# 2018.08.12 Synthetic datasets:
+
+## regular shading single light (10000)
+![](0815/2.png) ![](0815/22.png)
+
+## hard shadow single light (2000)
+![](0815/3.png) ![](0815/33.png)
+
+## environment light (900)
+![](0815/1.png) ![](0815/11.png)
+
+
+# 2018.08.05 Synthetic data rule
+InputFace = Albedo * Shading * k
+![Input](0815/face.png) ![Albedo](0815/albedo.png) ![shading](0815/shading.png) ![Reconstruct](0815/recon.png) 
+
+# 2018.07.21
+
+## Traditional method:
+https://github.com/shenjianbing/Intrinsic-images-using-optimization
+
+![](0721/input/31.png width=200) ![](0721/shen/31_albedo.png width=200) ![](0721/shen/31_shading.png width=200) ![](0721/shen/31_recon.png width=200)
+
+![](0721/input/31_relit0.png width=200) ![](0721/shen/31_relit0_albedo.png width=200) ![](0721/shen/31_relit0_shading.png width=200) ![](0721/shen/31_relit0_recon.png width=200)
+
+![](0721/input/31_relit1.png width=200) ![](0721/shen/31_relit1_albedo.png width=200) ![](0721/shen/31_relit1_shading.png width=200) ![](0721/shen/31_relit1_recon.png width=200)
+
+
+## SfSnet:
+https://github.com/senguptaumd/SfSNet
+
+![](0721/input/31.png width=200) ![](0721/SfSNet/31_albedo.png width=200) ![](0721/SfSNet/31_shading.png width=200) ![](0721/SfSNet/31_recon.png width=200)
+
+![](0721/input/31_relit0.png width=200) ![](0721/SfSNet/31_relit0_albedo.png width=200) ![](0721/SfSNet/31_relit0_shading.png width=200) ![](0721/SfSNet/31_relit0_recon.png width=200)
+
+![](0721/input/31_relit1.png width=200) ![](0721/SfSNet/31_relit1_albedo.png width=200) ![](0721/SfSNet/31_relit1_shading.png width=200) ![](0721/SfSNet/31_relit1_recon.png width=200)
+
+
+
+# 2018.07.11
+
+ - issues: geometry projection (alignment), other region of head (hair,neck,cloth...), 
+ eye (specular reflectance), boundary matting, highlight/shadow removal
+
+
+<video width="100%" autoplay loop>
+  <source src="0711/31_output.mp4" type="video/mp4">
+</video>
+
+Using BSSRDF and smooth ratio
+
+# 2018.07.10
+
+<video width="100%" autoplay loop>
+  <source src="0709/31_output.mp4" type="video/mp4">
+</video>
+
+# 2018.07.09
+
+![input](0709/31.jpg width=200) ![output](0709/31_output.jpg width=200)
+
+# 2018.07.06
+
+![input](0706/projectMeshToFace.png)
+
+# 2018.06.28 Proposal: Face Relighting
+
+## Introduction
+
+Given an input portrait photo, change lighting condition to have a neutral output.
+
+![](0628/intro/PortraitPro_Relighting_Mode.mp4)
+
+Current results:
+
+![input](0628/intro/1_input.png width=200) ![output](0628/intro/1_output.png width=200)
+![input](0628/intro/2_input.png width=200) ![output](0628/intro/2_output.png width=200)
+
+
+## Related work
+
+### Inverse rendering
+
+ - Intrinsic Decomposition
+
+	![](0628/related/eccv14.png)
+
+ [1] Li Chen, Kun Zhou, and Stephen Lin. "Intrinsic face image decomposition with human face priors." European Conference on Computer Vision. Springer, Cham, 2014.
+
+ - 3D spherical harmonic basis morphable model
+
+	![](0628/related/pami09.png)
+
+ [2] Yang Wang, Lei Zhang, Zicheng Liu, Gang Hua, Zhen Wen, Zhengyou Zhang, Dimitris Samaras. "Face relighting from a single image under arbitrary unknown lighting conditions." TPAMI 2009.
+
+ [3] Zexiang Xu, Kalyan Sunkavalli,	Sunil Hadap, Ravi Ramamoorthi. "Deep Image-Based Relighting from Optimal Sparse Samples." Siggraph 2018.
+
+
+### Style transfer
+
+ -  Multiscale Local Transfer
+
+	![](0628/related/sig14.png)
+
+ [4] YiChang Shih, Sylvain Paris, Connelly Barnes, William T. Freeman, Fr√©do Durand. "Style transfer for headshot portraits." Siggpraph 2014.
+
+ - Deep network
+
+ [5] Fujun Luan, Sylvain Paris, Eli Shechtman, Kavita Bala. "Deep Photo Style Transfer." CVPR 2017
+
+
+## Pipeline
+
+### Synthetic data
+
+	![](0628/pipeline/face_env.png width=200)
+
+### Ground-truth output
+
+	![front](0628/pipeline/face_front.png) ![left](0628/pipeline/face_left.png) ![top](0628/pipeline/face_top.png) ![right](0628/pipeline/face_right.png)
+
+### Decomposition (inverse rendering)
+
+![input](0628/pipeline/face_env.png) ![](0628/pipeline/=.png) ![mesh](0628/pipeline/face_mesh.png) ![](0628/pipeline/+.png) ![basis(albedo*)](0628/pipeline/face_const.png) ![](0628/pipeline/+.png) ![shading](0628/pipeline/face_env_diffConst.png) ![](0628/pipeline/+.png) ![specular](0628/pipeline/face_env_spec.png) 
+
+### Generate guiding image (rendering)
+
+![mesh](0628/pipeline/face_mesh.png) ![](0628/pipeline/+.png) ![basis(albedo**)](0628/pipeline/face_const.png) ![](0628/pipeline/+.png) ![shading](0628/pipeline/face_right_diffConst.png) ![](0628/pipeline/+.png) ![specular](0628/pipeline/face_right_spec.png) ![](0628/pipeline/=.png) ![guide](0628/pipeline/face_right.png)  
+
+### Differential of guide
+
+![guide](0628/pipeline/face_right.png) ![](0628/pipeline/-.png) ![basis(albedo**)](0628/pipeline/face_const.png) ![](0628/pipeline/=.png) ![guide diff](0628/pipeline/face_right-const.png)
+
+### image warping
+
+![input](0628/pipeline/face_env.png) ![](0628/pipeline/arrow.png) ![basis(albedo*)](0628/pipeline/face_const.png) ![](0628/pipeline/+.png) ![guide diff](0628/pipeline/face_right-const.png) ![](0628/pipeline/arrow.png) ![](0628/pipeline/questionMark.png)
+
+
+## Difficulty
+
+![](0628/intro/2_input.png width=200)
+
+### Strong shadow/highlight removal
+
+### hair
+
+Possible solution: unknown hack
+
+### glasses
+
+Possible solution: render 3D model with glasses
+
+
+# 2018.06.27
+<div class="twentytwenty-container">
+    <img src="0628/pipeline/face_const.png" alt="const light">
+    <img src="0628/pipeline/face_right.png" alt="side light">    
+</div>
+
+<div class="twentytwenty-container">
+    <img src="0628/pipeline/face_right_diffColor.png" alt="no specular">
+    <img src="0628/pipeline/face_right.png" alt="with specular">    
+</div>
+
+# 2018.06.26
+
+## Related work
+
+ - Face Relighting from a Single Image under Arbitrary Unknown Lighting Conditions (https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=4641935 )
+
+ - Face Relighting with Radiance Environment Maps (https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1211466 ) 
+
+## Pipeline
+input photo (const lighting) -> 
+
+generate mesh (using landmark) -> 
+
+render image (with specific lighting, skin property(sec. [skin property]), geometry) -> 
+
+intensity transfer (sec. [intensity transfer]) -> 
+
+output  
+
+
+## skin property
+### simple brdf
+### SSS*
+### extract from image
+
+ - Image-Based Reconstruction of Spatially Varying Materials (http://jankautz.com/publications/brdfRW01.pdf )
+
+### Intrinsic image decomposition of face
+
++ method:
+
+ - Intrinsic Face Image Decomposition with Human Face Priors (http://gaps-zju.org/chenli/Publication/ECCV2014/main.pdf )
+
+
++ application:
+
+ - Physically-based Simulation of Cosmetics via Intrinsic Image Decomposition with Facial Priors (https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8353139 )
+
+ - Specular Highlight Removal in Facial Images (http://openaccess.thecvf.com/content_cvpr_2017/papers/Li_Specular_Highlight_Removal_CVPR_2017_paper.pdf )
+
+
+## intensity transfer
+
+ - Style Transfer for Headshot Portraits (https://people.csail.mit.edu/yichangshih/portrait_web/ )
+
+ - Intrinsic image decomposition
+
+## if input photo is not perfact
+
+### light position estimation
+
+ - training
+
+ - environment reconstruction (http://openaccess.thecvf.com/content_cvpr_2017/papers/Li_Specular_Highlight_Removal_CVPR_2017_paper.pdf )
+
+
+
+### shadow removal 
+
+ - DeshadowNet: A Multi-context Embedding Deep Network for Shadow Removal (http://www.cs.cityu.edu.hk/~rynson/papers/cvpr17a.pdf )
+
+ - Towards non-conventional face recognition : shadow removal and heterogeneous scenario (https://tel.archives-ouvertes.fr/tel-01760819/document )
+
+
+
+### highlight reduction 
+
+ - Specular Highlight Removal in Facial Images (http://kunzhou.net/2017/specuremove-cvpr17.pdf )
+
+ - highlight reduction with known surface geometry (https://reader.elsevier.com/reader/sd/C94E1C8D8CDAC68FE8D68F16A0A9CE39BA706821A230AE469628F2F015354DE925C5337C5A5BB09DD11C6BE471DB38B4 )
+
+
+## Others
+
+### Subsurface scattering
+https://support.solidangle.com/display/AFHUG/Skin+SSS%3A+Head
+<img src="https://support.solidangle.com/download/attachments/3146146/skinTut_with_withoutSSS.jpg" alt="">
+
+### portrait lighting 
+<img src="http://ww4.sinaimg.cn/large/6857cd42gw1f3znnyfh7mj21kw28fnpd.jpg" alt="">
+
+<!-- ## Pdf visualization -->
+
+<!-- ![](0517/performance/bi/render_0.01_0.01.png width=\pagewidth) -->
+
+
+
+End.
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

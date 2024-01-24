@@ -1,0 +1,38 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1065¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 18 Sep 1999 23:38:37 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"429-354d4cf3fd940"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 06:39:31 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY)/* This unit contains three functions for measuring cpu time	*/
+/* used by a program.  The first, user_time(), returns the	*/
+/* total amount of user cpu time used by the current process.	*/
+/* The second, start_timer(), starts the timer.			*/
+/* Actually, it only records the current value of user_time()	*/
+/* for future reference.  Finally, elapsed_time() returns the	*/
+/* amount of cpu time that has been used since the last call	*/
+/* to start_timer().						*/
+
+	/* ERROR_VALUE is returned by elapsed_time()	*/
+	/* if start_time() was not called previously.	*/
+#define  ERROR_VALUE -1.0   
+
+	/* Return the amount of time in seconds used by	*/
+	/* the current process since it began.		*/
+#ifdef __STDC__
+double user_time(void);
+#else
+double user_time();
+#endif
+
+
+	/* Starts timer. */
+#ifdef __STDC__
+void start_timer(void);
+#else
+start_timer();
+#endif
+
+
+	/* Returns elapsed time since last call to start_timer() */
+	/* Returns ERROR_VALUE if start_timer() has never been called */
+#ifdef __STDC__
+double elapsed_time(void);
+#else
+double elapsed_time();
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

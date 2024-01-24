@@ -1,0 +1,18 @@
+¦Ifinal_url¢DtypeEvaluex7https://www.ics.uci.edu/~wjohnson/BIDA/Ch10/DogCode.txtLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC468¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Sep 2010 01:18:01 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1d4-48fa12b038440"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 07:51:09 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÔmodel{
+  for(i in 1:30){
+    Concentration[i] ~ dnorm(mu[i], tau)
+    mu[i] <- beta[1]*I[i] + beta[2]*H[i] + 
+             beta[3]*D1[i] + beta[4]*D2[i] + beta[5]*D3[i] +  
+             beta[6]*D4[i] + beta[7]*D5[i] + beta[8]*D6[i] +
+             beta[9]*D7[i] +beta[10]*D8[i] + beta[11]*D9[i] + beta[12]*D10[i]
+  }
+  for(i in 1:12){ beta[i] ~ dnorm(0,0.01) }
+  tau ~ dgamma(0.01,0.01)
+  diff12 <- beta[2] - beta[1]
+  diff13 <-   -beta[1] 
+  diff23 <-   -beta[2]
+}
+
+
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

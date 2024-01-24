@@ -1,0 +1,92 @@
+¦Ifinal_url¢DtypeEvaluex7https://www.ics.uci.edu/~dechter/publications/r252.htmlLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 22:30:43 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueYõ<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Dr. Rina Dechter @ UCI</title>
+  <link rel="Stylesheet" href="/%7Edechter/basic.css">
+</head>
+<body alink="#00aaaa" bgcolor="#ffffff" link="#008080" vlink="#008080">
+<!-- Begin Header -->[an error occurred while processing this directive]<!-- End Header --><!-- Begin Body --><br><br><center>
+<table width=90%>
+<tr>
+<td class=title>Publications & Technical Reports</td>
+<tr>
+  <td colspan=2><img width="100%" height="2"  src="/~dechter/images/black-fill.gif"></td>
+</tr>
+</tr>
+</table>
+</center> 
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="80%">
+  <tbody>
+    <tr valign="top">
+      <td><b>R252</b></td>
+<br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      <div class="title"><span style="font-weight: bold;">
+      Anytime Approximate Inference in Graphical Models
+      </span></div>
+      <span style="font-weight: bold;">
+      Qi Lou
+      </span><br>
+      <tt></tt></td>
+    </tr>
+  </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="80%">
+  <tbody>
+    <tr>
+      <td><br>
+      <div class="abstract"><b>Abstract</b><br>
+    	  <div style="text-align: justify;">
+Graphical models are a powerful framework for modeling interactions within complex systems.
+Reasoning over graphical models typically involves answering inference queries, such as
+computing the most likely configuration (maximum a posteriori or MAP) or evaluating
+the marginals or normalizing constant of a distribution (the partition function); a task
+called marginal MAP generalizes these two by maximizing over a subset of variables while
+marginalizing over the rest.
+Exact computation of these queries is known to be intractable in general, leading to the
+development of many approximate schemes, the major categories of which are variational
+methods, search algorithms, and Monte Carlo sampling. Within these, anytime techniques that
+provide some guarantees on the correct value, and can be improved with more computational
+effort, are valued for quickly providing users with confidence intervals or certificates of
+accuracy and allow users to decide the desired balance of quality, time and memory.
+In this dissertation, we develop a series of approximate inference algorithms for the partition
+function and marginal MAP with anytime properties by leveraging ideas and techniques
+from the three inference paradigms, and integrating them to provide hybrid solutions that
+inherit the strengths of all three approaches. We propose anytime anyspace best-first search
+algorithms that provide deterministic bounds on the partition function and marginal MAP.
+These best-first search schemes take advantage of both AND/OR tree search and optimized
+variational heuristics. We then extend this approach to give anytime probabilistic confidence
+bounds via a dynamic importance sampling algorithm, which interleaves importance sampling
+(using proposal distributions extracted from the variational bound) with our best-first search
+algorithm to refine the proposal. We also propose a framework for interleaving sampling
+with the optimization of the initial variational bound, which can automatically balance its
+computational effort between the two schemes. Overall, we show that our hybrid algorithms
+perform significantly better than existing methods, giving flexible approaches with excellent
+anytime confidence bounds.
+	 </div>
+      <br>
+      <a target="blank" href="r252.pdf">
+      <b>[pdf]</b></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<!-- End Body-->
+<!--- Begin Footer --><div id="footer"><centeR>
+<A HREF="http://www.ics.uci.edu">School of Information and Computer Science</A>
+<A HREF="http://www.uci.edu">University of California, Irvine, CA 92697-3435</a>
+<A HREF="http://www.ics.uci.edu/~dechter">Dr. Rina Dechter</A>
+
+<A HREF="mailto:dechter_at_ics.uci.edu">dechter at ics.uci.edu</A>
+
+</center></div><!--- End Footer -->
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,56 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2349¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX<attachment; filename=cs122b-2019-winter-project1-logging.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=a81818155441876157d9978a; expires=Sat, 04 May 2019 17:16:36 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 17:16:36 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueY	-= Logging in MySQL and Tomcat =
+
+To develop this multi-tier application, it is very important for you to understand what's happening in each tier. Whenever you have the question "why doesn't my application work?", the first thing you should do is to use the logging of MySQL and Tomcat to understand what each tier has received, and whether there is any error. This page provides instructions on how to enable and analyze logging of MySQL and Tomcat, on both the development machine and the production/AWS machine.
+
+----
+
+[[Span(id=MySqlLogging)]]
+= 1. MySQL Logging (AWS and Dev) =
+
+* By default MySQL doesn't enable logging.  To enable it, run the following:
+{{{
+shell> mysql -u root -p
+mysql> SET GLOBAL general_log = 'ON';
+mysql> exit
+}}}
+
+* Run the following command to find MySQL file log file:
+{{{
+shell> mysql -u root -p -se "SHOW VARIABLES" | grep -e log_error -e general_log -e slow_query_log
+}}}
+
+Pay attention to the path in the '''general_log_file''' line. For example:
+{{{
+general_log_file	/usr/local/mysql/data/dhcp-v044-069.log
+}}}
+
+* Monitor the ".log" files under this folder. For example:
+
+{{{
+shell> sudo tail -f /usr/local/mysql/data/*.log
+}}}
+
+[[Span(id=TomcatLoggingAws)]]
+= 2. Tomcat Logging (AWS) =
+
+* Monitor log files by running the command: {{{sudo tail -f HOME_OF_TOMCAT/logs/*}}} 
+* For instance: {{{sudo tail -f /home/ubuntu/tomcat/logs/*}}}
+
+[[Span(id=TomcatLoggingDev)]]
+= 3. Tomcat Logging (Dev machine + Eclipse) 
+
+* After Eclipse starts, go to the '''Servers''' view and double-click the Tomcat server you're running.
+[[Image(wiki:cs122b-2019-winter-project1-logging:server-view.png)]]
+
+* You will find a window like the image below. Then, click on the blue link: '''Open launch configuration'''.
+[[Image(wiki:cs122b-2019-winter-project1-logging:server-overview.png)]]
+
+* You will find a dialog window like the image below.
+[[Image(wiki:cs122b-2019-winter-project1-logging:launch-configuration.png)]]
+
+* Click on '''Arguments''' section. Log files are stored in the folder {{{logs}}} of the path {{{-Dcatalina.base}}}.
+
+* Change the directory to that folder and monitor the files to see how they change as your browser sends requests to Tomcat.  In a Linux-like environment (e.g., Ubuntu or MacOS), you can run the following command : {{{tail -f *}}}.
+
+----
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

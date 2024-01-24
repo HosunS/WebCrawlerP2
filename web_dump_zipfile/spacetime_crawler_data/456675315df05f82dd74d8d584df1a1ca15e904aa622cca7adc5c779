@@ -1,0 +1,112 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 17:24:20 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=ISO-8859-1Kraw_content¢DtypeEvalueYƒ<html>
+	<head>
+		<title>Welcome to SIDEpro</title>
+		<link href="css/SIDEpro.css" rel="stylesheet" type="text/css"></link>
+	</head>
+	<body>
+		<!-- Javascript for hidding/showing popup message -->
+		<script type="text/javascript">
+			function display(show)
+			{
+				if(show == true)
+					document.getElementById('message-wrapper').style.display='block';
+				else
+					document.getElementById('message-wrapper').style.display='none';
+			}
+		</script>
+		
+		<!-- Start HTML includes -->
+		<div id="header"><div id="banner"></div>
+
+<div id="header-wrapper">
+	<div class="purple-line"><!-- --></div>
+	<div id="menu">
+		<ul>
+			<!-- Will add Overview page later -->
+			<!-- <li><a href="overview.pl">Overview</a></li> -->
+			<li><a href="/">Submit</a></li>
+			<li><a target="_blank" href="http://download.igb.uci.edu/#sidepro">Download</a></li>
+		</ul>
+	</div>
+	<div class="purple-line"><!-- --></div>
+</div>
+</div>
+		<div id="content"><div id="welcome-wrapper">
+	<div id="welcome">
+		<div id="logo" class="float-left"></div>
+		<div id="howto" class="float-left">
+			<div><p><b>SIDEpro</b> is a machine learning based program for the fast and accurate prediction of side-chain conformations. SIDEpro can accomodate non-standard amino acids, including post-translational modifications,  as well as the presence of external ligands.</p></div>
+			<div id="instruct">				
+				<span id="instruct-label">Instructions:</span>						
+				<div id="instruct-wrapper">
+					<ol>
+						<li>Enter your email address</li>
+						<li>Click the "Browse" button, locate the PDB file you wish to upload.</li>
+						<li>Click the "Browse" button, locate the Fixed Atoms file you wish to upload. This step is <b>optional</b>.</li>
+						<li>Click the "Browse" button, locate the Non standard amino acid file you wish to upload. This step is <b>optional</b>.</li>
+						<li>Click submit, and an email will be sent to the address that you provided, containing your results.</li>
+					</ol>
+				</div>					
+			</div>				
+		</div>
+	</div>
+</div>
+
+<div class="divider"><!--  --></div>
+
+<div id="form-wrapper">								
+	<form name="webFrm" id="webFrm" action="" enctype="multipart/form-data" method="post">
+		<div id="email-wrapper" class="float-left">					
+			<span class="bold">Your E-Mail address:</span>
+			<input class="input-length" type=text id="email" name="email" value="" />
+			<span class="red">(Required: results will be sent here)</span>					
+		</div>
+		
+		<div id="input-file-wrapper">
+			<span id="inputFileLabel" class="bold">Upload Input File:</span>
+			<input id="inputFile" type="file" name="inputFile" />
+			<span class="red">(Required: protein backbone in PDB format)</span>				
+		</div>
+		
+		<div id="frames-file-wrapper" class="float-left">
+			<span id="framesFileLabel" class="bold">Upload Fixed Atoms File:</span>
+			<input class="input-length" id="framesFile" type="file" name="framesFile" />
+			<span>(Optional: all HETATM and ATOM atoms treated as fixed)</span>
+		</div>
+        
+        <div id="nsa-file-wrapper">
+            <span id="nsaFileLabel" class="bold">Amino Acid File:</span>
+            <input id="nsaFile" type="file" name="nsaFile" />
+            <span>(Optional: Non standard amino acid in PDB format)</span>
+        </div>
+		
+		<div id="submit-wrapper">
+			<input type="submit" id="submitBtn" name="submitBtn" value="Submit" />
+		</div>		
+	</form>
+</div>
+				
+<div id="message-wrapper">
+	<div class="float-right cursor-pointer" onclick="display('none')">[X]</div>
+	<div id="message"></div>
+</div>
+</div>
+		<div id="footer"><div class="divider"><!--  --></div>
+<div id="footer-wrapper">
+	<p>
+		Contact SIDEpro Administrator: <a href="mailto:knagata@uci.edu">knagata@uci.edu</a><br />
+		For commercial license, please contact <a href="mailto:igb-license@ics.uci.edu">igb-license@ics.uci.edu</a>
+	</p>
+	<p>
+		<a target="_blank" href="http://www.uci.edu">University of California Irvine</a> ::
+		<a target="_blank" href="http://www.ics.uci.edu">School of Information & Computer Science</a> ::
+		<a target="_blank" href="http://www.igb.uci.edu">Institute for Genomics and Bioinformatics</a>
+	</p>
+</div>
+</div>
+
+		<!-- Execute Javascript function -->
+		<script type="text/javascript">display();</script>
+	</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

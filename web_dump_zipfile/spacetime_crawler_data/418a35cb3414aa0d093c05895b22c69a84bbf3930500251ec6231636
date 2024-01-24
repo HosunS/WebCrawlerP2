@@ -1,0 +1,522 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 01:51:58 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYçË<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Classification</a></font> <font color=red>(30)</font><br><a href='datasets.html?format=&task=reg&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Regression</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=clu&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Clustering</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=other&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Other</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b>  - <a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=cat&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Categorical</a> <font color=red>(9)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Numerical</a></font> <font color=red>(30)</font><br><a href='datasets.html?format=&task=cla&att=mix&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Mixed</a> <font color=red>(9)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=mvar&sort=taskUp&view=table'>Multivariate</a> <font color=red>(27)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=uvar&sort=taskUp&view=table'>Univariate</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=seq&sort=taskUp&view=table'>Sequential</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=ts&sort=taskUp&view=table'>Time-Series</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=text&sort=taskUp&view=table'>Text</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=dt&sort=taskUp&view=table'>Domain-Theory</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=other&sort=taskUp&view=table'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b> - <a href='datasets.html?format=&task=cla&att=num&area=&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Life Sciences</a></font> <font color=red>(30)</font><br><a href='datasets.html?format=&task=cla&att=num&area=phys&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Physical Sciences</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=cla&att=num&area=comp&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>CS / Engineering</a> <font color=red>(22)</font><br><a href='datasets.html?format=&task=cla&att=num&area=soc&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Social Sciences</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=num&area=bus&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Business</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=cla&att=num&area=game&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=other&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Other</a> <font color=red>(13)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=less10&numIns=100to1000&type=&sort=taskUp&view=table'>Less than 10</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=10to100&numIns=100to1000&type=&sort=taskUp&view=table'>10 to 100</a> <font color=red>(18)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=greater100&numIns=100to1000&type=&sort=taskUp&view=table'>Greater than 100</a> <font color=red>(4)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=&type=&sort=taskUp&view=table'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=less100&type=&sort=taskUp&view=table'>Less than 100</a> <font color=red>(4)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>100 to 1000</a></font> <font color=red>(30)</font><br><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'>Greater than 1000</a> <font color=red>(26)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Matrix</a> <font color=red>(24)</font><br><a href='datasets.html?format=nonmat&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=table'>Non-Matrix</a> <font color=red>(6)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>30</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=taskDown&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=&numIns=100to1000&type=&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Wisconsin+%28Original%29"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Wisconsin+%28Original%29">Breast Cancer Wisconsin (Original)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Original Wisconsin Breast Cancer Database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">699&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1992&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29">Breast Cancer Wisconsin (Diagnostic)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Diagnostic Wisconsin Breast Cancer Database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">569&nbsp;</p></td>
+			<td><p class="normal">32&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Thoracic+Surgery+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Thoracic+Surgery+Data">Thoracic Surgery Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data is dedicated to classification problem related to the post-operative life expectancy in the lung cancer patients: class 1 - death within one year after surgery, class 2 - survival.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">470&nbsp;</p></td>
+			<td><p class="normal">17&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/LSVT+Voice+Rehabilitation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/LSVT+Voice+Rehabilitation">LSVT Voice Rehabilitation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">126 samples from 14 participants, 309 features. Aim: assess whether voice rehabilitation treatment lead to phonations considered 'acceptable' or 'unacceptable' (binary class classification problem).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">126&nbsp;</p></td>
+			<td><p class="normal">309&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Ecoli"><img src="assets/MLimages/SmallLarge120.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Ecoli">Ecoli</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data contains protein localization sites&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">336&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">1996&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Haberman%27s+Survival"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Haberman%27s+Survival">Haberman's Survival</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Dataset contains cases from study conducted on the survival of patients who had undergone surgery for breast cancer&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">306&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Iris"><img src="assets/MLimages/SmallLarge53.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Iris">Iris</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Famous database; from Fisher, 1936&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">150&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/SPECTF+Heart"><img src="assets/MLimages/SmallLarge45.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SPECTF+Heart">SPECTF Heart</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data on cardiac Single Proton Emission Computed Tomography (SPECT) images. Each patient classified into two categories: normal and abnormal.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">267&nbsp;</p></td>
+			<td><p class="normal">44&nbsp;</p></td>
+			<td><p class="normal">2001&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Cervical+cancer+%28Risk+Factors%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cervical+cancer+%28Risk+Factors%29">Cervical cancer (Risk Factors)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset focuses on the prediction of indicators/diagnosis of cervical cancer. The features cover demographic information, habits, and historic medical records.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">858&nbsp;</p></td>
+			<td><p class="normal">36&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Quality+Assessment+of+Digital+Colposcopies"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Quality+Assessment+of+Digital+Colposcopies">Quality Assessment of Digital Colposcopies</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset explores the subjective quality assessment of digital colposcopies.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">287&nbsp;</p></td>
+			<td><p class="normal">69&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/extention+of+Z-Alizadeh+sani+dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/extention+of+Z-Alizadeh+sani+dataset">extention of Z-Alizadeh sani dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">It was collected for CAD diagnosis.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">303&nbsp;</p></td>
+			<td><p class="normal">59&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Z-Alizadeh+Sani"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Z-Alizadeh+Sani">Z-Alizadeh Sani</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">It was collected for CAD diagnosis.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">303&nbsp;</p></td>
+			<td><p class="normal">56&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Mammographic+Mass"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Mammographic+Mass">Mammographic Mass</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Discrimination of benign and malignant mammographic masses based on BI-RADS attributes and the patient's age.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">961&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2007&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Children++"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Children++">Autistic Spectrum Disorder Screening Data for Children  </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Children screening data for autism suitable for classification and predictive tasks &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">292&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Adolescent+++"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Autistic+Spectrum+Disorder+Screening+Data+for+Adolescent+++">Autistic Spectrum Disorder Screening Data for Adolescent   </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Autistic Spectrum Disorder Screening Data for Adolescent. This dataset is related to classification and predictive tasks.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">104&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Arcene"><img src="assets/MLimages/SmallLarge167.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Arcene">Arcene</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">ARCENE's task is to distinguish cancer versus normal patterns from mass-spectrometric data. This is a two-class classification problem with continuous input variables. This dataset is one of 5 datasets of the NIPS 2003 feature selection challenge.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">900&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/HCC+Survival"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/HCC+Survival">HCC Survival</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Hepatocellular Carcinoma dataset (HCC dataset) was collected at a University Hospital in Portugal. It contains real clinical data of 165 patients diagnosed with HCC.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">165&nbsp;</p></td>
+			<td><p class="normal">49&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Parkinsons"><img src="assets/MLimages/SmallLarge174.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Parkinsons">Parkinsons</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Oxford Parkinson's Disease Detection Dataset&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">197&nbsp;</p></td>
+			<td><p class="normal">23&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Demospongiae"><img src="assets/MLimages/SmallLarge190.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Demospongiae">Demospongiae</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Marine sponges of the Demospongiae class classification domain.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">503&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Breast+Tissue"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Tissue">Breast Tissue</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Dataset with electrical impedance measurements of freshly excised tissue samples from the breast.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">106&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Coimbra"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Coimbra">Breast Cancer Coimbra</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Clinical features were observed or measured for 64 patients with breast cancer and 52 healthy controls. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">116&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Somerville+Happiness+Survey"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Somerville+Happiness+Survey">Somerville Happiness Survey</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">A data extract of a non-federal dataset posted here https://catalog.data.gov/dataset/somerville-happiness-survey-responses-2011-2013-2015&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">143&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/ILPD+%28Indian+Liver+Patient+Dataset%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/ILPD+%28Indian+Liver+Patient+Dataset%29">ILPD (Indian Liver Patient Dataset)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains 10 variables that are age, gender, total Bilirubin, direct Bilirubin, total proteins, albumin, A/G ratio, SGPT, SGOT and Alkphos.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">583&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Daphnet+Freezing+of+Gait"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Daphnet+Freezing+of+Gait">Daphnet Freezing of Gait</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains the annotated readings of 3 acceleration sensors at the hip and leg of Parkinson's disease patients that experience freezing of gait (FoG) during walking tasks.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">237&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/MicroMass"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/MicroMass">MicroMass</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">A dataset to explore machine learning approaches for the identification of microorganisms from mass-spectrometry data.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">931&nbsp;</p></td>
+			<td><p class="normal">1300&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/gene+expression+cancer+RNA-Seq"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/gene+expression+cancer+RNA-Seq">gene expression cancer RNA-Seq</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This collection of data is part of the RNA-Seq (HiSeq) PANCAN data set, it is a random extraction of gene expressions of patients having different types of tumor: BRCA, KIRC, COAD, LUAD and PRAD.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">801&nbsp;</p></td>
+			<td><p class="normal">20531&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/seeds"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/seeds">seeds</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Measurements of geometrical properties of kernels belonging to three different varieties of wheat. A soft X-ray technique and GRAINS package were used to construct all seven, real-valued attributes.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">210&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Breast+Cancer+Wisconsin+%28Prognostic%29"><img src="assets/MLimages/SmallLarge14.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Breast+Cancer+Wisconsin+%28Prognostic%29">Breast Cancer Wisconsin (Prognostic)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Prognostic Wisconsin Breast Cancer Database&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">198&nbsp;</p></td>
+			<td><p class="normal">34&nbsp;</p></td>
+			<td><p class="normal">1995&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Early+biomarkers+of+Parkinson%92s+disease+based+on+natural+connected+speech"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Early+biomarkers+of+Parkinson%92s+disease+based+on+natural+connected+speech">Early biomarkers of ParkinsonÔøΩs disease based on natural connected speech</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Predict a pattern of neurodegeneration in the dataset of speech features obtained from patients with early untreated Parkinson‚Äôs disease and patients at high risk developing Parkinson‚Äôs disease.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">130&nbsp;</p></td>
+			<td><p class="normal">65&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Fertility"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Fertility">Fertility</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">100 volunteers provide a semen sample analyzed according to the WHO 2010 criteria. Sperm concentration are related to socio-demographic data, environmental factors, health status, and life habits&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">100&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

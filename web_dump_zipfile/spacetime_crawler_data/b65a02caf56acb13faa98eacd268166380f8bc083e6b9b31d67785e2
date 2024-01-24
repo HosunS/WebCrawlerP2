@@ -1,0 +1,54 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1268¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:54:21 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"4f4-4da84c3b80d40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 17:49:59 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYô/* 
+$Id$
+
+Copyright (C) 2007 by The Regents of the University of California
+
+Redistribution of this file is permitted under
+the terms of the *GNU* Public License (*GPL*) 	
+
+Date: 04/08/2007
+Author: Yiming Lu <yimingl@ics.uci.edu>
+*/
+
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <sys/types.h>
+#include <time.h>
+#include <map>
+#include "filtertree.h"
+#include "../util/input.h"
+
+using namespace std;
+
+const string DICTFILE = "data/trec.sel.ls.0.words.txt";
+const string PATTERNFILE = "data/trec.sel.ls.0.words.query.200.bin";
+const string ANSWERFILE = "data/trec.sel.ls.0.words.answer.200.2.bin";
+
+int main()
+{
+    //dictionary
+    vector<string> words;
+    readString(words, DICTFILE);
+    //build Index
+    AppSearch *filter = new FilterTree(2, &words, standardFunction);
+    filter->build();
+    //query
+    vector<unsigned> queryIDs;
+    readUnsignedBin(queryIDs, PATTERNFILE);
+    vector<unsigned> results;
+    for(unsigned i = 0; i < queryIDs.size(); i++) {
+        results.clear();
+        filter->search( words[queryIDs[i]], 2, results);
+    }
+    //save the index
+    ((FilterTree*)filter)->saveIndex("index_file");
+    //report the performance result	
+    ((FilterTree*)filter)->reportAnalyses();
+    delete filter;
+    return 0;			
+}
+
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

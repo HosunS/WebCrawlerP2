@@ -1,0 +1,26 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC318¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 24 Apr 2011 04:32:37 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"238-4a1a2949e0340-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:49:38 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY81. E, A, B, C, D
+
+
+2.
+
+A    B
+|    |
+C    D
+     |
+     E
+
+
+3.
+
+A: dfsnum = 1, lowlink = 1
+B: dfsnum = 3, lowlink = 3
+C: dfsnum = 2, lowlink = 1
+D: dfsnum = 4, lowlink = 3
+E: dfsnum = 5, lowlink = 3
+
+
+4. {A, C}, {B, D, E}
+
+
+5. Because Tarjan's algorithm needs only the outgoing edges from each vertex, while Kosaraju's needs both incoming and outgoing edges. In a web graph, only the outgoing edges are directly available; we'd have to make an in-memory copy of the graph that includes lists of both incoming and outgoing edges in order to apply Kosaraju's algorithm.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

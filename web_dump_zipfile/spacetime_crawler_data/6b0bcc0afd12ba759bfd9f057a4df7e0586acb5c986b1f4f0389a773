@@ -1,0 +1,45 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueà¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2703¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX9attachment; filename=cs222p-2018-fall-mac-setup-guide.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=aa716129ab8bea4fe4540bb5; expires=Wed, 08 May 2019 23:45:18 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXÑApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 23:45:18 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueY
+è{{{#!div style="background-color:#f2f3f4"
+
+== '''Mac Setup Guide''' ==
+This page will guide you how to setup C++ development environment on Mac using Eclipse and how to set gdb for debugging purposes.
+
+'''Setup development environment using Eclipse'''
+
+1: Install [https://itunes.apple.com/us/app/xcode/id497799835?mt=12 Xcode] from Mac App Store. After the installation is finished, open it and it will start installing additional necessary things.
+
+2: Open terminal, type  ` xcode-select --install `  Follow the prompts to let it install necessary components (Xcode Command Line Tools)
+
+3: Download and install [https://www.eclipse.org/downloads/packages/release/2018-09/r/eclipse-ide-cc-developers Eclipse for C/C++] for Mac OS X. We recommend using the latest version, but you don't have to. Note: for mac users who have updated to Mac OS X High Sierra, please follow the exact link to download the latest version., since it fixes a bug that won't let you run C/C++ programs in Eclipse in High Sierra.
+
+4: Go to the [https://grape.ics.uci.edu/wiki/public/wiki/cs222-2018-fall-project1-create-project deployment guide] to set up the codebase for project 1. Be sure to select '''MacOSX GCC''' instead of Cross GCC.
+
+You can check [http://www.ics.uci.edu/~pattis/common/handouts/macmingweclipse/eclipse.html this page] if you need more detailed instructions.
+
+'''Set up GDB for debugging purposes'''
+
+This process is pretty complicated, but GDB can help a lot when debugging.
+
+Follow this [https://grape.ics.uci.edu/wiki/public/wiki/cs222p-2018-fall-setup-gdb-on-macos Setup GDB on MacOS] to set up gdb.
+
+'''Set up Valgrind for debugging purposes'''
+
+Valgrind is a very powerful tool to detect memory leaks in your program. As of 09/26/2018, the latest release of Valgrind (3.13.0) doesn't support MacOS 10.13 High Sierra yet, so we have to build from source on our own. Even if you use a older version of Mac, I recommend you to follow the same process.
+
+Prerequisite:
+
+ 1. Xcode command line tools, you should already have it if you follow step 1 and 2 of Eclipse setup guide.
+ 1. Install [https://brew.sh/ Homebrew] if you haven't done so. Homebrew is a powerful package management tool for Mac and everyone is highly recommended install it.
+
+Installation:
+
+ 1. Install git using homebrew:  '''` brew install git `'''
+ 1. Install automake using homebrew: '''` brew install automake `'''
+ 1. Clone Valgrind's git repository: '''` git clone git://sourceware.org/git/valgrind.git `'''
+ 1. cd into the valgrind folder: '''` cd valgrind `'''
+ 1. run '''` ./autogen.sh `'''
+ 1. run '''` ./configure `'''
+ 1. run '''` make `'''
+ 1. run '''` make install `'''
+
+}}}Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

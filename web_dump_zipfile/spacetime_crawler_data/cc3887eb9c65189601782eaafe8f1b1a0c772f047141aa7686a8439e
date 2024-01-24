@@ -1,0 +1,123 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5098¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 07 Aug 2013 22:25:53 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"13ea-4e36306407e40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 17:42:44 GMTKraw_content¢DtypeEvalueYê# squareslist.py
+#
+# ICS 33 Summer 2013
+# Code Example
+#
+# This is a class called SquaresList, whose objects act like finite-length
+# lists, where each element of the list is the square of its index.  When
+# a SquaresList is created, it is given a size.  A SquaresList of size n
+# contains the elements [0, 1, 4, 9, ..., (n-1)^2].
+#
+# This example includes the following features:
+#
+# * The ability to ask a SquaresList for its length
+# * The ability to index a SquaresList with an integer index or a slice,
+#   including handling for negative indices (as in lists) because the list
+#   has a finite length
+# * The ability to ask whether a particular element is "in" or "not in"
+#   a SquaresList
+
+import math
+
+
+class SquaresList:
+    # Creating a SquaresList requires passing a "size" to its constructor.
+    # This is stored in an attribute and used in various calculations later
+    # (e.g., to see if an index is valid, to normalize a negative index to
+    # the corresponding positive one, etc.).
+    def __init__(self, size):
+        self._size = size
+
+
+    # When we ask for the length of an object, its __len__ method is called.
+    # In this case, the length of a SquaresList is whatever we specified its
+    # size to be at the time it was created.
+    def __len__(self):
+        return self._size
+
+
+    # The __getitem__ special method provides indexing.  Note the use of
+    # a private method _normalize_int_index, whose job is to translate
+    # negative indices to the corresponding positive index.  This will allow
+    # us to do things like x[-3] or x[5:-1].  There is also careful handling
+    # of various combinations of start, stop, and step in slices.
+    def __getitem__(self, index):
+        if type(index) == int:
+            normalized_index = self._normalize_int_index(index)
+            return normalized_index * normalized_index
+
+        elif type(index) == slice:
+            start_index = 0 if index.start == None else self._normalize_int_index(index.start)
+            stop_index = self._count if index.stop == None else self._normalize_int_index(index.stop)
+            step = 1 if index.step == None else index.step
+
+            results = []
+
+            for current_index in range(start_index, stop_index, step):
+                results.append(current_index * current_index)
+
+            return results
+
+        else:
+            raise IndexError('index has wrong type')
+
+
+    # The special method __contains__ is called when the "in" or "not in"
+    # operators are used in Python.  For example, given a SquaresList x,
+    # "16 in x" would be translated to "x.__contains__(16)", while
+    # "16 not in x" would be translated to "not x.__contains__(16)".
+    #
+    # In the case of a SquaresList, we can determine whether an item is
+    # in the list by checking if its square root is an integer whose
+    # value is in the range of valid indices in the list.
+    def __contains__(self, item):
+        if type(item) != int or item < 0:
+            return False
+
+        square_root = math.sqrt(item)
+
+        if int(square_root) == square_root:
+            return self._is_valid_nonnegative_index(int(square_root))
+        else:
+            return False
+
+
+    # Notice that we wrote some private utility methods to encapsulate
+    # things we needed to do in more than one place, or things that would
+    # be easier to understand where used if they had an English name instead
+    # of a block of code.  If you read the methods above, you'll see that
+    # they read more clearly than they would if the code from the methods
+    # below was pasted into them in place of calls to them; the goal when
+    # we write code is always to write something that we'll be able to read
+    # later.  Encapsulating complexity and giving it a name is a great way
+    # to do that.
+
+
+    # In a SquaresList, normalizing an index means to convert a negative
+    # index to the corresponding positive index.  For example, in a SquaresList
+    # of size 10, we would normalize -1 to 9, -2 to 8, and so on.
+    #
+    # Note, too, that this method raises an exception if given an index that's
+    # invalid.  (Having trouble seeing why?  Check out the implementation of
+    # _require_valid_nonnegative_index.)
+    def _normalize_int_index(self, index):
+        if index < 0:
+            index = self._size + index
+
+        self._require_valid_nonnegative_index(index)
+        return index
+
+
+    # This method takes an index and checks that it is a valid non-negative
+    # index (i.e., between 0 and size-1).  If not, it raises an exception;
+    # if so, it has no effect.
+    def _require_valid_nonnegative_index(self, index):
+        if not self._is_valid_nonnegative_index(index):
+            raise IndexError('index out of bounds')
+
+
+    # This method returns True if given a valid non-negative index (i.e.,
+    # between 0 and size-1), False otherwise.
+    def _is_valid_nonnegative_index(self, index):
+        return index >= 0 and index < self._size
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

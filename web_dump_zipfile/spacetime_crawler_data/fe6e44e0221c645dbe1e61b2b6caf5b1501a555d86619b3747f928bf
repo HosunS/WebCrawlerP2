@@ -1,0 +1,740 @@
+�Ifinal_url�DtypeEvaluex*http://docs.python-requests.org/en/latest/Lhttp_headers�DtypeEvalue��Ak�DtypeEvaluePX-Cname-TryFilesAv�DtypeEvalueDTrue�Ak�DtypeEvaluePContent-EncodingAv�DtypeEvalueDgzip�Ak�DtypeEvalueQTransfer-EncodingAv�DtypeEvalueGchunked�Ak�DtypeEvalueDVaryAv�DtypeEvalueOAccept-Encoding�Ak�DtypeEvalueHX-ServedAv�DtypeEvalueENginx�Ak�DtypeEvalueFServerAv�DtypeEvalueUnginx/1.14.0 (Ubuntu)�Ak�DtypeEvalueMLast-ModifiedAv�DtypeEvalueXThu, 13 Dec 2018 21:35:05 GMT�Ak�DtypeEvalueDETagAv�DtypeEvalueQW/"5c12d089-c7e2"�Ak�DtypeEvalueDDateAv�DtypeEvalueXMon, 04 Feb 2019 23:07:53 GMT�Ak�DtypeEvalueGX-DeityAv�DtypeEvalueEweb03�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueItext/htmlKraw_content�DtypeEvalueY�P
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Requests: HTTP for Humansâ¢ &#8212; Requests 2.21.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="https://media.readthedocs.org/css/badge_only.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="#" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="https://media.readthedocs.org/javascript/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://media.readthedocs.org/javascript/underscore.js"></script>
+    <script type="text/javascript" src="https://media.readthedocs.org/javascript/doctools.js"></script>
+    <script type="text/javascript" src="https://media.readthedocs.org/javascript/readthedocs-doc-embed.js"></script>
+    <link rel="index" title="Index" href="genindex/" />
+    <link rel="search" title="Search" href="search/" />
+    <link rel="next" title="Introduction" href="user/intro/" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  
+<!-- RTD Extra Head -->
+
+<!-- 
+Always link to the latest version, as canonical.
+http://docs.readthedocs.org/en/latest/canonical.html
+-->
+<link rel="canonical" href="http://docs.python-requests.org/en/master/" />
+
+<link rel="stylesheet" href="https://media.readthedocs.org/css/readthedocs-doc-embed.css" type="text/css" />
+
+<script type="text/javascript" src="_static/readthedocs-data.js"></script>
+
+<!-- Add page-specific data, which must exist in the page js, not global -->
+<script type="text/javascript">
+READTHEDOCS_DATA['page'] = 'index'
+READTHEDOCS_DATA['source_suffix'] = '.rst'
+</script>
+
+<script type="text/javascript" src="https://media.readthedocs.org/javascript/readthedocs-analytics.js"></script>
+
+<!-- end RTD <extrahead> -->
+</head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="requests-http-for-humans">
+<h1>Requests: HTTP for Humansâ¢<a class="headerlink" href="#requests-http-for-humans" title="Permalink to this headline">Â¶</a></h1>
+<p>Release v2.21.0. (<a class="reference internal" href="user/install/#install"><span class="std std-ref">Installation</span></a>)</p>
+<a class="reference external image-reference" href="https://pypi.org/project/requests/"><img alt="https://img.shields.io/pypi/l/requests.svg" src="https://img.shields.io/pypi/l/requests.svg" /></a>
+<a class="reference external image-reference" href="https://pypi.org/project/requests/"><img alt="https://img.shields.io/pypi/wheel/requests.svg" src="https://img.shields.io/pypi/wheel/requests.svg" /></a>
+<a class="reference external image-reference" href="https://pypi.org/project/requests/"><img alt="https://img.shields.io/pypi/pyversions/requests.svg" src="https://img.shields.io/pypi/pyversions/requests.svg" /></a>
+<a class="reference external image-reference" href="https://codecov.io/github/requests/requests"><img alt="codecov.io" src="https://codecov.io/github/requests/requests/coverage.svg?branch=master" /></a>
+<a class="reference external image-reference" href="https://saythanks.io/to/kennethreitz"><img alt="https://img.shields.io/badge/Say%20Thanks!-ð¦-1EAEDB.svg" src="https://img.shields.io/badge/Say%20Thanks!-ð¦-1EAEDB.svg" /></a>
+<p><strong>Requests</strong> is the only <em>Non-GMO</em> HTTP library for Python, safe for human
+consumption.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The use of <strong>Python 3</strong> is <em>highly</em> preferred over Python 2. Consider upgrading your applications and infrastructure if you find yourself <em>still</em> using Python 2 in production today. If you are using Python 3, congratulations â&nbsp;you are indeed a person of excellent taste.
+â<em>Kenneth Reitz</em></p>
+</div>
+<p>If youâre interested in financially supporting Kenneth Reitz open source, consider visiting  <a class="reference external" href="https://cash.me/kennethreitz">this link</a>. Your support helps tremendously with sustainability of motivation, as Open Source is no longer part of my day job.</p>
+<hr class="docutils" />
+<p><strong>Behold, the power of Requests</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.github.com/user&#39;</span><span class="p">,</span> <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;pass&#39;</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">status_code</span>
+<span class="go">200</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s1">&#39;content-type&#39;</span><span class="p">]</span>
+<span class="go">&#39;application/json; charset=utf8&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">encoding</span>
+<span class="go">&#39;utf-8&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">text</span>
+<span class="go">u&#39;{&quot;type&quot;:&quot;User&quot;...&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">r</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="go">{u&#39;private_gists&#39;: 419, u&#39;total_private_repos&#39;: 77, ...}</span>
+</pre></div>
+</div>
+<p>See <a class="reference external" href="https://gist.github.com/973705">similar code, sans Requests</a>.</p>
+<p><strong>Requests</strong> allows you to send <em>organic, grass-fed</em> HTTP/1.1 requests, without the
+need for manual labor. Thereâs no need to manually add query strings to your
+URLs, or to form-encode your POST data. Keep-alive and HTTP connection pooling
+are 100% automatic, thanks to <a class="reference external" href="https://github.com/shazow/urllib3">urllib3</a>.</p>
+<div class="section" id="user-testimonials">
+<h2>User Testimonials<a class="headerlink" href="#user-testimonials" title="Permalink to this headline">Â¶</a></h2>
+<p>Nike, Twitter, Spotify, Microsoft, Amazon, Lyft, BuzzFeed, Reddit, The NSA, Her Majestyâs Government, Google, Twilio, Runscope, Mozilla, Heroku,
+PayPal, NPR, Obama for America, Transifex, Native Instruments, The Washington
+Post, SoundCloud, Kippt, Sony, and Federal U.S.
+Institutions that prefer to be unnamed claim to use Requests internally.</p>
+<dl class="docutils">
+<dt><strong>Armin Ronacher</strong>, creator of Flaskâ</dt>
+<dd><em>Requests is the perfect example how beautiful an API can be with the
+right level of abstraction.</em></dd>
+<dt><strong>Matt DeBoard</strong>â</dt>
+<dd><em>Iâm going to get Kenneth Reitzâs Python requests module tattooed
+on my body, somehow. The whole thing.</em></dd>
+<dt><strong>Daniel Greenfeld</strong>â</dt>
+<dd><em>Nuked a 1200 LOC spaghetti code library with 10 lines of code thanks to
+Kenneth Reitzâs Requests library. Today has been AWESOME.</em></dd>
+<dt><strong>Kenny Meyers</strong>â</dt>
+<dd><em>Python HTTP: When in doubt, or when not in doubt, use Requests. Beautiful,
+simple, Pythonic.</em></dd>
+</dl>
+<p>Requests is one of the most downloaded Python packages of all time, pulling in
+over 400,000 downloads <strong>each day</strong>. Join the party!</p>
+<p>If your organization uses Requests internally, consider <a class="reference external" href="https://www.kennethreitz.org/requests3">supporting the development of 3.0</a>. Your
+generosity will be greatly appreciated, and help drive the project forward
+into the future.</p>
+</div>
+<div class="section" id="beloved-features">
+<h2>Beloved Features<a class="headerlink" href="#beloved-features" title="Permalink to this headline">Â¶</a></h2>
+<p>Requests is ready for todayâs web.</p>
+<ul class="simple">
+<li>Keep-Alive &amp; Connection Pooling</li>
+<li>International Domains and URLs</li>
+<li>Sessions with Cookie Persistence</li>
+<li>Browser-style SSL Verification</li>
+<li>Automatic Content Decoding</li>
+<li>Basic/Digest Authentication</li>
+<li>Elegant Key/Value Cookies</li>
+<li>Automatic Decompression</li>
+<li>Unicode Response Bodies</li>
+<li>HTTP(S) Proxy Support</li>
+<li>Multipart File Uploads</li>
+<li>Streaming Downloads</li>
+<li>Connection Timeouts</li>
+<li>Chunked Requests</li>
+<li><code class="docutils literal notranslate"><span class="pre">.netrc</span></code> Support</li>
+</ul>
+<p>Requests officially supports Python 2.7 &amp; 3.4â3.7, and runs great on PyPy.</p>
+</div>
+<div class="section" id="the-user-guide">
+<h2>The User Guide<a class="headerlink" href="#the-user-guide" title="Permalink to this headline">Â¶</a></h2>
+<p>This part of the documentation, which is mostly prose, begins with some
+background information about Requests, then focuses on step-by-step
+instructions for getting the most out of Requests.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="user/intro/">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/intro/#philosophy">Philosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/intro/#apache2-license">Apache2 License</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/intro/#requests-license">Requests License</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user/install/">Installation of Requests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/install/#pipenv-install-requests">$ pipenv install requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/install/#get-the-source-code">Get the Source Code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user/quickstart/">Quickstart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#make-a-request">Make a Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#passing-parameters-in-urls">Passing Parameters In URLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#response-content">Response Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#binary-response-content">Binary Response Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#json-response-content">JSON Response Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#raw-response-content">Raw Response Content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#custom-headers">Custom Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#more-complicated-post-requests">More complicated POST requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#post-a-multipart-encoded-file">POST a Multipart-Encoded File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#response-status-codes">Response Status Codes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#response-headers">Response Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#cookies">Cookies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#redirection-and-history">Redirection and History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#timeouts">Timeouts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/quickstart/#errors-and-exceptions">Errors and Exceptions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user/advanced/">Advanced Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#session-objects">Session Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#request-and-response-objects">Request and Response Objects</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#prepared-requests">Prepared Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#ssl-cert-verification">SSL Cert Verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#client-side-certificates">Client Side Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#ca-certificates">CA Certificates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#body-content-workflow">Body Content Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#keep-alive">Keep-Alive</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#streaming-uploads">Streaming Uploads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#chunk-encoded-requests">Chunk-Encoded Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#post-multiple-multipart-encoded-files">POST Multiple Multipart-Encoded Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#event-hooks">Event Hooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#custom-authentication">Custom Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#streaming-requests">Streaming Requests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#proxies">Proxies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#compliance">Compliance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#http-verbs">HTTP Verbs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#custom-verbs">Custom Verbs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#link-headers">Link Headers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#transport-adapters">Transport Adapters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#blocking-or-non-blocking">Blocking Or Non-Blocking?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#header-ordering">Header Ordering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/advanced/#timeouts">Timeouts</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="user/authentication/">Authentication</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user/authentication/#basic-authentication">Basic Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/authentication/#digest-authentication">Digest Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/authentication/#oauth-1-authentication">OAuth 1 Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/authentication/#oauth-2-and-openid-connect-authentication">OAuth 2 and OpenID Connect Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/authentication/#other-authentication">Other Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user/authentication/#new-forms-of-authentication">New Forms of Authentication</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="the-community-guide">
+<h2>The Community Guide<a class="headerlink" href="#the-community-guide" title="Permalink to this headline">Â¶</a></h2>
+<p>This part of the documentation, which is mostly prose, details the
+Requests ecosystem and community.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="community/sponsors/">Community Sponsors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/sponsors/#patron-sponsors">Patron Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/sponsors/#major-sponsors">Major Sponsors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/sponsors/#individual-sponsors">Individual Sponsors</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="community/recommended/">Recommended Packages and Extensions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/recommended/#certifi-ca-bundle">Certifi CA Bundle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/recommended/#cachecontrol">CacheControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/recommended/#requests-toolbelt">Requests-Toolbelt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/recommended/#requests-threads">Requests-Threads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/recommended/#requests-oauthlib">Requests-OAuthlib</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/recommended/#betamax">Betamax</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="community/faq/">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/faq/#encoded-data">Encoded Data?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/faq/#custom-user-agents">Custom User-Agents?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/faq/#why-not-httplib2">Why not Httplib2?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/faq/#python-3-support">Python 3 Support?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/faq/#what-are-hostname-doesn-t-match-errors">What are âhostname doesnât matchâ errors?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="community/out-there/">Integrations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/out-there/#python-for-ios">Python for iOS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="community/out-there/#articles-talks">Articles &amp; Talks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community/support/">Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/support/#stack-overflow">Stack Overflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/support/#send-a-tweet">Send a Tweet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/support/#file-an-issue">File an Issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/support/#e-mail">E-mail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/support/#irc">IRC</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="community/vulnerabilities/">Vulnerability Disclosure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/vulnerabilities/#process">Process</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/vulnerabilities/#previous-cves">Previous CVEs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="community/updates/">Community Updates</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#github">GitHub</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#twitter">Twitter</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="community/updates/#release-and-version-history">Release and Version History</a></li>
+<li class="toctree-l1"><a class="reference internal" href="community/updates/#release-history">Release History</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#dev">dev</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id1">2.21.0 (2018-12-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id2">2.20.1 (2018-11-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id3">2.20.0 (2018-10-18)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id4">2.19.1 (2018-06-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id5">2.19.0 (2018-06-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id6">2.18.4 (2017-08-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id7">2.18.3 (2017-08-02)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id8">2.18.2 (2017-07-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id9">2.18.1 (2017-06-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id10">2.18.0 (2017-06-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id11">2.17.3 (2017-05-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id12">2.17.2 (2017-05-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id13">2.17.1 (2017-05-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id14">2.17.0 (2017-05-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id15">2.16.5 (2017-05-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id16">2.16.4 (2017-05-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id17">2.16.3 (2017-05-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id18">2.16.2 (2017-05-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id19">2.16.1 (2017-05-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id20">2.16.0 (2017-05-26)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id21">2.15.1 (2017-05-26)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id22">2.15.0 (2017-05-26)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id23">2.14.2 (2017-05-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id24">2.14.1 (2017-05-09)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id25">2.14.0 (2017-05-09)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id26">2.13.0 (2017-01-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id27">2.12.5 (2017-01-18)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id28">2.12.4 (2016-12-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id29">2.12.3 (2016-12-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id30">2.12.2 (2016-11-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id31">2.12.1 (2016-11-16)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id32">2.12.0 (2016-11-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id33">2.11.1 (2016-08-17)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id34">2.11.0 (2016-08-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id35">2.10.0 (2016-04-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id36">2.9.2 (2016-04-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id37">2.9.1 (2015-12-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id38">2.9.0 (2015-12-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id39">2.8.1 (2015-10-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id40">2.8.0 (2015-10-05)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id41">2.7.0 (2015-05-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id42">2.6.2 (2015-04-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id43">2.6.1 (2015-04-22)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id44">2.6.0 (2015-03-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id45">2.5.3 (2015-02-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id46">2.5.2 (2015-02-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id47">2.5.1 (2014-12-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id48">2.5.0 (2014-12-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id49">2.4.3 (2014-10-06)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id50">2.4.2 (2014-10-05)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id51">2.4.1 (2014-09-09)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id52">2.4.0 (2014-08-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id53">2.3.0 (2014-05-16)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id54">2.2.1 (2014-01-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id55">2.2.0 (2014-01-09)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id56">2.1.0 (2013-12-05)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id57">2.0.1 (2013-10-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id58">2.0.0 (2013-09-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id59">1.2.3 (2013-05-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id60">1.2.2 (2013-05-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id61">1.2.1 (2013-05-20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id62">1.2.0 (2013-03-31)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id63">1.1.0 (2013-01-10)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id64">1.0.3 (2012-12-18)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id65">1.0.2 (2012-12-17)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id66">1.0.1 (2012-12-17)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id67">1.0.0 (2012-12-17)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id68">0.14.2 (2012-10-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id69">0.14.1 (2012-10-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id70">0.14.0 (2012-09-02)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id71">0.13.9 (2012-08-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id72">0.13.8 (2012-08-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id73">0.13.7 (2012-08-19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id74">0.13.6 (2012-08-06)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id75">0.13.5 (2012-07-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id76">0.13.4 (2012-07-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id77">0.13.3 (2012-07-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id78">0.13.2 (2012-06-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id79">0.13.1 (2012-06-07)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id80">0.13.0 (2012-05-29)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id81">0.12.1 (2012-05-08)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id82">0.12.0 (2012-05-02)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id83">0.11.2 (2012-04-22)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id84">0.11.1 (2012-03-30)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id85">0.11.0 (2012-03-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id86">0.10.8 (2012-03-09)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id87">0.10.7 (2012-03-07)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id88">0.10.6 (2012-02-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id89">0.10.5 (2012-02-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id90">0.10.4 (2012-02-20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id91">0.10.3 (2012-02-20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id92">0.10.2 (2012-01-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id93">0.10.1 (2012-01-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id94">0.10.0 (2012-01-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id95">0.9.3 (2012-01-18)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id96">0.9.2 (2012-01-18)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id97">0.9.1 (2012-01-06)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id98">0.9.0 (2011-12-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id99">0.8.9 (2011-12-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id100">0.8.8 (2011-12-28)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id101">0.8.7 (2011-12-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id102">0.8.6 (2011-12-18)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id103">0.8.5 (2011-12-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id104">0.8.4 (2011-12-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id105">0.8.3 (2011-11-27)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id106">0.8.2 (2011-11-19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id107">0.8.1 (2011-11-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id108">0.8.0 (2011-11-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id109">0.7.6 (2011-11-07)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id110">0.7.5 (2011-11-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id111">0.7.4 (2011-10-26)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id112">0.7.3 (2011-10-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id113">0.7.2 (2011-10-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id114">0.7.1 (2011-10-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id115">0.7.0 (2011-10-22)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id116">0.6.6 (2011-10-19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id117">0.6.5 (2011-10-18)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id118">0.6.4 (2011-10-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id119">0.6.3 (2011-10-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id120">0.6.2 (2011-10-09)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id121">0.6.1 (2011-08-20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id122">0.6.0 (2011-08-17)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id123">0.5.1 (2011-07-23)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id124">0.5.0 (2011-06-21)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id125">0.4.1 (2011-05-22)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id126">0.4.0 (2011-05-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id127">0.3.4 (2011-05-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id128">0.3.3 (2011-05-12)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id129">0.3.2 (2011-04-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id130">0.3.1 (2011-04-01)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id131">0.3.0 (2011-02-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id132">0.2.4 (2011-02-19)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id133">0.2.3 (2011-02-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id134">0.2.2 (2011-02-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id135">0.2.1 (2011-02-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id136">0.2.0 (2011-02-14)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/updates/#id137">0.0.1 (2011-02-13)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="community/release-process/">Release Process and Rules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="community/release-process/#major-releases">Major Releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/release-process/#minor-releases">Minor Releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/release-process/#hotfix-releases">Hotfix Releases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="community/release-process/#reasoning">Reasoning</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="the-api-documentation-guide">
+<h2>The API Documentation / Guide<a class="headerlink" href="#the-api-documentation-guide" title="Permalink to this headline">Â¶</a></h2>
+<p>If you are looking for information on a specific function, class, or method,
+this part of the documentation is for you.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/">Developer Interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/#main-interface">Main Interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#request-sessions">Request Sessions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#lower-level-classes">Lower-Level Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#lower-lower-level-classes">Lower-Lower-Level Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#encodings">Encodings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#cookies">Cookies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#status-code-lookup">Status Code Lookup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#migrating-to-1-x">Migrating to 1.x</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/#migrating-to-2-x">Migrating to 2.x</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="the-contributor-guide">
+<h2>The Contributor Guide<a class="headerlink" href="#the-contributor-guide" title="Permalink to this headline">Â¶</a></h2>
+<p>If you want to contribute to the project, this part of the documentation is for
+you.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dev/contributing/">Contributorâs Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev/contributing/#be-cordial">Be Cordial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/contributing/#get-early-feedback">Get Early Feedback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/contributing/#contribution-suitability">Contribution Suitability</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/contributing/#code-contributions">Code Contributions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dev/contributing/#steps-for-submitting-code">Steps for Submitting Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dev/contributing/#code-review">Code Review</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dev/contributing/#new-contributors">New Contributors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dev/contributing/#kenneth-reitz-s-code-style">Kenneth Reitzâs Code Styleâ¢</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dev/contributing/#documentation-contributions">Documentation Contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/contributing/#bug-reports">Bug Reports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/contributing/#feature-requests">Feature Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev/philosophy/">Development Philosophy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev/philosophy/#management-style">Management Style</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/philosophy/#values">Values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/philosophy/#semantic-versioning">Semantic Versioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/philosophy/#standard-library">Standard Library?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/philosophy/#linux-distro-packages">Linux Distro Packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev/todo/">How to Help</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev/todo/#feature-freeze">Feature Freeze</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/todo/#development-dependencies">Development Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/todo/#runtime-environments">Runtime Environments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dev/authors/">Authors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dev/authors/#keepers-of-the-crystals">Keepers of the Crystals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/authors/#previous-keepers-of-crystals">Previous Keepers of Crystals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dev/authors/#patches-and-suggestions">Patches and Suggestions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p>There are no more guides. You are now guideless.
+Good luck.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><p class="logo">
+  <a href="#">
+    <img class="logo" src="_static/requests-sidebar.png" title="https://kennethreitz.org/tattoos"/>
+  </a>
+</p>
+
+<p>
+  <iframe src="https://ghbtns.com/github-btn.html?user=requests&repo=requests&type=watch&count=true&size=large"
+    allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+<p>
+  Requests is an elegant and simple HTTP library for Python, built for
+  human beings.
+</p>
+<p>Sponsored by <strong><a href="https://linode.com/">Linode</a></strong> and <a href="http://docs.python-requests.org/en/master/community/sponsors/#patron-sponsors">other wonderful organizations</a>.</p>
+
+
+<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=CKYI5K3E&placement=pythonrequestsorg" id="_carbonads_js"></script>
+
+<h3>Stay Informed</h3>
+<p>Receive updates on new releases and upcoming projects.</p>
+
+<p><iframe src="https://ghbtns.com/github-btn.html?user=kennethreitz&type=follow&count=false"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200" height="20"></iframe></p>
+
+<p><a href="https://twitter.com/kennethreitz" class="twitter-follow-button" data-show-count="false">Follow @kennethreitz</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
+<p><a href="https://tinyletter.com/kennethreitz">Join Mailing List</a>.</p>
+<h3>Other Projects</h3>
+
+<p>More <a href="https://www.kennethreitz.org/">Kenneth Reitz</a> projects:</p>
+<ul>
+    <li><a href="https://html.python-requests.org/">Requests-HTML</a></li>
+    <li><a href="http://howtopython.org/">howtopython.org</a></li>
+    <li><a href="http://pipenv.org/">pipenv</a></li>
+    <li><a href="https://pep8.org/">pep8.org</a></li>
+    <li><a href="https://httpbin.org/">httpbin.org</a></li>
+    <li><a href="https://docs.python-guide.org/">The Python Guide</a></li>
+    <li><a href="https://github.com/kennethreitz/maya">Maya: Datetimes for Humans</a></li>
+    <li><a href="https://github.com/kennethreitz/records">Records: SQL for Humans</a></li>
+    <li><a href="http://www.git-legit.org">Legit: Git for Humans</a></li>
+    <li><a href="http://docs.python-tablib.org/en/latest/">Tablib: Tabular Datasets</a></li>
+</ul>
+
+
+<h3>Useful Links</h3>
+<ul>
+  <li><a href="http://docs.python-requests.org/en/latest/community/recommended/">Recommended Packages and Extensions</a></li>
+
+  <p></p>
+
+  <li><a href="https://github.com/requests/requests">Requests @ GitHub</a></li>
+  <li><a href="https://pypi.org/project/requests/">Requests @ PyPI</a></li>
+  <li><a href="https://github.com/requests/requests/issues">Issue Tracker</a></li>
+  <li><a href="http://docs.python-requests.org/en/latest/community/updates/#software-updates">Release History</a></li>
+</ul>
+
+
+<h3>Translations</h3>
+
+<ul>
+  <li><a href="http://docs.python-requests.org/">English</a></li>
+  <li><a href="http://fr.python-requests.org/">French</a></li>
+  <li><a href="http://de.python-requests.org/">German</a></li>
+  <li><a href="http://jp.python-requests.org/">Japanese</a></li>
+  <li><a href="http://cn.python-requests.org/">Chinese</a></li>
+  <li><a href="http://pt.python-requests.org/">Portuguese</a></li>
+  <li><a href="http://it.python-requests.org/">Italian</a></li>
+  <li><a href="http://es.python-requests.org/">Spanish</a></li>
+</ul>
+
+<div class="native-js">
+  <div class="native-sponsor">Sponsored by #native_company# â Learn More</div>
+  <a href="#native_link#" class="native-flex">
+    <style>
+      .native-js {
+        background: linear-gradient(-30deg, #native_bg_color#E5, #native_bg_color#E5 45%, #native_bg_color# 45%) #fff;
+      }
+
+      .native-details,
+      .native-sponsor,
+      .native-bsa {
+        color: #native_color# !important;
+      }
+
+      .native-details:hover {
+        color: #native_color_hover# !important;
+      }
+
+      .native-cta {
+        color: #native_cta_color#;
+        background-color: #native_cta_bg_color#;
+      }
+
+      .native-cta:hover {
+        color: #native_cta_color_hover;
+        background-color: #native_cta_bg_color_hover#;
+      }
+    </style>
+    <div class="native-main">
+      <img class="native-img" src="#native_logo#">
+      <div class="native-details">
+        <span class="native-company">#native_title#</span>
+        <span class="native-desc">#native_desc#</span>
+      </div>
+    </div>
+    <span class="native-cta">#native_cta#</span>
+  </a>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search/" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><!-- Alabaster (krTheme++) Hacks -->
+
+<!-- CSS Adjustments (I'm very picky.) -->
+<style type="text/css">
+
+  /* Rezzy requires precise alignment. */
+  img.logo {margin-left: -20px!important;}
+
+  /* "Quick Search" should be capitalized. */
+  div#searchbox h3 {text-transform: capitalize;}
+
+  /* Make the document a little wider, less code is cut-off. */
+  div.document {width: 1008px;}
+
+  /* Much-improved spacing around code blocks. */
+  div.highlight pre {padding: 11px 14px;}
+
+  /* Remain Responsive! */
+  @media screen and (max-width: 1008px) {
+    div.sphinxsidebar {display: none;}
+    div.document {width: 100%!important;}
+
+    /* Have code blocks escape the document right-margin. */
+    div.highlight pre {margin-right: -30px;}
+  }
+
+</style>
+
+
+<!-- Analytics tracking for Kenneth. -->
+<script type="text/javascript">
+  var _gauges = _gauges || [];
+  (function() {
+    var t   = document.createElement('script');
+    t.type  = 'text/javascript';
+    t.async = true;
+    t.id    = 'gauges-tracker';
+    t.setAttribute('data-site-id', '56ca7a57c88d9011080024dd');
+    t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+    t.src = 'https://d36ee2fcip1434.cloudfront.net/track.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(t, s);
+  })();
+</script>
+
+
+<!-- There are no more hacks. -->
+<!--         à®Ú¿Ú°Û£-Ú°Û£â         -->
+<!--   Love, Kenneth Reitz    -->
+
+<script src="_static//konami.js"></script>
+<script>
+  var easter_egg = new Konami('http://fortunes.herokuapp.com/random/raw');
+</script>
+
+<!-- That was not a hack. That was art. -->
+
+<!-- Native CPC by BuySellAds -->
+
+<script src="_static//native.js"></script>
+<script>
+  _native.init("CK7D62JU", {
+    targetClass: 'native-js'
+  });
+</script>
+
+<div class="native-js">
+  <div class="native-sponsor">Sponsored Ad by #native_company# â Learn More</div>
+  <a href="#native_link#" class="native-flex">
+    <style>
+      .native-js {
+        background: linear-gradient(-30deg, #native_bg_color#E5, #native_bg_color#E5 45%, #native_bg_color# 45%) #fff;
+      }
+
+      .native-details,
+      .native-sponsor {
+        color: #native_color# !important;
+      }
+
+      .native-details:hover {
+        color: #native_color_hover# !important;
+      }
+
+      .native-cta {
+        color: #native_cta_color#;
+        background-color: #native_cta_bg_color#;
+      }
+
+      .native-cta:hover {
+        color: #native_cta_color_hover;
+        background-color: #native_cta_bg_color_hover#;
+      }
+    </style>
+    <div class="native-main">
+      <img class="native-img" src="#native_logo#">
+      <div class="native-details">
+        <span class="native-company">#native_title#</span>
+        <span class="native-desc">#native_desc#</span>
+      </div>
+      <span class="native-cta">#native_cta#</span>
+    </div>
+  </a>
+</div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;MMXVIII. A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project.
+      
+    </div>
+
+    
+    <a href="https://github.com/requests/requests" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+  </body>
+</html>Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

@@ -1,0 +1,39 @@
+¦Ifinal_url¢DtypeEvaluex3https://www.ics.uci.edu/~eppstein/projects/hexmesh/Lhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC856¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 24 Sep 1996 20:38:21 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"6d7-2ff3f59616940-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 04:40:01 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY×<HTML><HEAD><TITLE>Hexahedral meshing</TITLE>
+</HEAD><BODY FGCOLOR=#000000 BGCOLOR=#FFFFFF>
+<H1><A HREF="http://www.ics.uci.edu/~eppstein/projects/">Research Projects:</A>
+Hexahedral Meshing</H1>
+
+A major area of my research
+has been in
+<A HREF="http://www.ics.uci.edu/~eppstein/gina/meshgen.html">mesh
+generation</A>: decomposing complicated shapes into simpler shapes,
+for applications including simulation of heat flows or other physical properties.
+<P>
+One type of decomposition I have been studying recently is
+<A HREF="http://www.ics.uci.edu/~eppstein/pubs/p-hexmesh.html">hexahedral meshing</A>:
+decomposing shapes into cuboids.  For instance, this shape, known as the rhombic dodecahedron
+<P>
+<CENTER><IMG SRC="rhombic.gif" WIDTH=359 HEIGHT=343 ALT=""></CENTER>
+<P>
+can be decomposed into four cuboids:
+<P>
+<CENTER><IMG SRC="rhombs.gif" WIDTH=425 HEIGHT=407 ALT=""></CENTER>
+<P>
+However, it is still open whether a similar decomposition into cuboids exists for the following octahedron:
+<P>
+<CENTER><IMG SRC="octahedron.gif" WIDTH=405 HEIGHT=495 ALT=""></CENTER>
+<P>
+Methods from my recent paper,
+"<A HREF="http://www.ics.uci.edu/~eppstein/pubs/p-hexmesh.html">Linear
+complexity hexahedral mesh generation</A>", and related work by Scott
+Mitchell and Bill Thurston, prove that this octahedron can be meshed if
+we allow the cuboids to have curved sides.  But it is not known whether
+it can be meshed by straight-sided cuboids.
+<P>
+More generally, we would like to know under what conditions a hexahedral
+mesh exists, and we would like to find algorithms that construct these
+meshes whenever they exist.  Other research issues here include the
+number of cuboids needed to mesh a given shape, and the quality of the
+cuboid shapes.
+</BODY></HTML>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

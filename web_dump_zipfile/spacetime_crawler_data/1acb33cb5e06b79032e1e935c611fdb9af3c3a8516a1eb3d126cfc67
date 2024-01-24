@@ -1,0 +1,30 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC923¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Jan 2011 23:13:11 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"806-49935a536efc0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:46:15 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYICS 261, Winter 2011, Homework 1
+Due Wednesday, January 12, 2011.
+
+1. Suppose that we are computing shortest paths in a graph G that has t^2 vertices and t^3 edges, for some integer parameter t.
+
+(a) What would be the running time of Dijkstra's algorithm on G, using a priority queue that stores all its items in an unordered list and searches the whole list each time the minimum-priority item is required? Your answer should be expressed in O-notation, as a function of t, in as simple terms as possible.
+
+(b) What would be the running time of Dijkstra's algorithm using a binary heap as a priority queue?
+
+(c) What would be the best choice of d to use, for Dijkstra's algorithm on this graph using a d-ary heap as a priority queue?
+
+(d) What would be the running time of Dijkstra's algorithm with a d-ary heap, using the value of d you gave in your answer to part (c)?
+
+
+2. In modern versions of Java, the dynamic array structure is called an ArrayList, but earlier versions of Java had a similar structure called a Vector. The difference between a Vector and an ArrayList is that when an ArrayList of n items runs out of room, it grows to 2n items, whereas when a Vector of n items runs out of room, it grows to n+K items, where K is a number that is chosen when the Vector is initialized.
+
+What is the amortized time per insertion operation of a Vector, with the growth rules described above? Express your answer in O-notation as a function of N, where N is the number of insertion operations performed. In order to simplify your answer, you should assume that K is a fixed constant.
+
+
+3. For a binary heap H, define a potential function Phi(H) to be n log n, where n is the number of items currently in the heap.
+
+(a) Show that with this definition, the insert operation in a binary
+heap still takes O(log n) amortized time.
+
+(b) Show that with this definition, finding and removing the minimum
+element in a binary heap takes constant amortized time.
+
+For both parts, the data structure should be unchanged; we are merely
+analyzing it differently.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

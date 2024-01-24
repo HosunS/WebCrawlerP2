@@ -1,0 +1,46 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1900¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 05 Jun 1997 00:09:20 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"76c-31323c9c44c00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 21:33:38 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYv
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>Directory URLs</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>Directory URLs</H1> 
+ <P><UL>
+<LI><H2>Requirements
+</H2>
+<UL>
+<LI>Format - ï¿½/ï¿½
+</UL></UL><UL>
+<LI><H2>Suggested Implementation
+</H2>
+<UL>
+<LI>Get Functions - SiteMaps
+<LI>Other Functions - Directory Awareness
+<LI>Supporting Those who Donï¿½t like the Idea</UL></UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld007.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld009.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld008.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+ <FONT size=4><STRONG> Notes: </FONT></STRONG>
+  <HR SIZE=3> <P> <UL>
+While URLs have been recognized as hierarchical there has never been an explicit recognition of a directory URL. Usually when a URL which ends in a ï¿½/ï¿½ is referenced the index.html file is called. However this solution does not work well for distributed authoring where directories provide a key means of organization and file discovery. As such directory URLs should be recognized as special entities.
+<BR></UL><UL>
+A GET on a directory URL should return a file, with a unique content-type, formatted to give directory information. While this group should specify certain default descriptors in this file we should also allow for arbitrary descriptor extension with the same caveats as given in the previous discussion on attributes.
+</UL><UL>
+Other methods, such as delete, should be aware of the special nature of directories. So deleting a directory URL deletes all of its entries all the way down the tree.</UL> </P> 
+
+</Body>
+</HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

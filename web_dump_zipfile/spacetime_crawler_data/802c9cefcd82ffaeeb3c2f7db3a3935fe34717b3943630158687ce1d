@@ -1,0 +1,233 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 05:08:36 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY3î
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: StoneFlakes Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>StoneFlakes Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/00299/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="#"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: Stone flakes are waste products of the stone tool production in
+the prehistoric era. The variables are means of geometric and
+stylistic features of the flakes contained in different inventories.</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">79</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">8</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2014-05-20</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification, Clustering, Causal-Discovery</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">Yes</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">50513</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Owner: Thomas Weber<br>       Landesamt fÃƒÂ¼r Denkmalpflege und ArchÃƒÂ¤ologie Sachsen-Anhalt<br>       Richard-Wagner-Str. 9<br>       06114 Halle/Germany<br>       <u>tweber <b>'@'</b> lda.mk.sachsen-anhalt.de</u><br><br>Donor: Gunter Ritter<br>       University of Passau<br>       94030 Passau/Germany<br>       <u>ritter <b>'@'</b> fim.uni-passau.de</u></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">Background information: The data set concerns the earliest history<br>of mankind. Prehistoric men created the desired shape of a stone tool<br>by striking on a raw stone, thus splitting off flakes, the waste<br>products of the crafting process. Archaelogists do not find many tools,<br>but they do find flakes. The data set is about these flakes. Its rows do<br>not stand for single flakes but for whole inventories of them. The given<br>features are relative frequencies of binary, and mean values of numerical<br>characteristics taken over all pieces found in the inventory. A question<br>related to the data set is: Does the data reflect the technological<br>progress during several hundred thousand years?<br><br>Annotation:<br>The columns below stand for the identifier of the inventory, a group<br>defined by the archaeologists mainly by age and hominid type (1=Lower<br>Paleolithic, Homo ergaster?, oldest; 2=Levallois technique; 3=Middle<br>Paleolithic, probably Neanderthals; 4=Homo sapiens, youngest), age of<br>the stone artefacts (millennia, not to be taken too seriously), mode of<br>dating (geological=more accurate, typological), stone material (1=flint,<br>2=other), region (mit=Central Germany, d=Non-Central Germany, eur=Europe<br>without Germany), site (1=gravel pit, 0=other), number of finds in<br>inventory.<br><br>ID  group age dating mat region site number<br>-------------------------------------------<br>ar    3  -120  geo    2   d      0    34<br>arn   2  -200  typo   1   mit    1     5<br>be    2  -200  typo   1   mit    1   331<br>bi1   1  -300  geo    1   mit    0  4111<br>bi2   1  -300  geo    2   mit    0    77<br>bie   2  -200  geo    1   mit    1     8<br>bn    2  -200  typo   1   mit    1    25<br>bo    2  -200  geo    1   d      1   211<br>by    2  -200  typo   1   mit    1     8<br>c     3   -80  geo    1   mit    1    50   <br>cl    1  -300  geo    1   eur    1   134<br>d     2  -200  geo    1   mit    1   104   <br>e1    3  -120  geo    1   mit    0   772<br>e2    3  -120  geo    2   mit    0   215<br>ey    2  -200  geo    1   mit    1   356<br>fli   1    ?    ?     1   mit    ?   119   <br>g10   3   -80  geo    1   d      0    38<br>g11   3   -80  geo    1   d      0   122<br>g2    3   -80  geo    1   d      0   614<br>g4    3   -80  geo    1   d      0    60<br>g5    3   -80  geo    1   d      0    57<br>g6    3   -80  geo    1   d      0   104<br>ga1   3   -80  geo    1   mit    0   418<br>ga2   3   -80  geo    2   mit    0    44<br>goe   3  -120  geo    1   mit    0    21   <br>gra   3  -120  geo    1   mit    0     7   <br>gro   1  -300  geo    1   mit    1    11<br>gue   2  -200  typo   1   mit    1    95<br>hey   2  -200  typo   1   mit    1    56<br>hu    2  -200  geo    1   mit    1    71<br>hx    2  -200  geo    1   eur    0   135<br>ka    3   -80  geo    1   mit    0   270<br>kb    3   -80  geo    1   mit    0   506<br>kc    3   -80  geo    1   mit    0   190<br>l     3  -120  geo    1   mit    0    20   <br>li    3   -80  geo    1   mit    0   140<br>lue   2  -200  geo    1   mit    1   651   <br>m     2  -200  geo    1   mit    1  2717<br>mar   1  -300  geo    1   mit    1    16<br>ml    1  -300  typo   1   mit    1    62<br>mr    2  -200  typo   1   mit    1   107<br>ms    2  -200  typo   1   mit    1    17<br>n     3  -120  geo    1   mit    0   256   <br>nie   2  -200  typo   1   mit    1    55<br>pb    3   -80  geo    1   mit    0   291<br>r     3  -120  geo    1   mit    0   102<br>r1    3   -80  typo   1   d      1   270<br>r3    3   -80  typo   1   d      1   315<br>reh   2  -200  geo    1   mit    1    36   <br>roe   3   -80  geo    1   mit    1   104   <br>s1    3   -80  geo    1   d      0   159<br>s2    3   -80  geo    1   d      0   299<br>s4    3   -80  geo    1   d      0   153<br>s5    3   -80  geo    1   d      0   100<br>sa1   4   -40  geo    1   eur    0    65   <br>sa2   4   -40  geo    1   eur    0   370   <br>sa3   4   -40  geo    1   eur    0   430   <br>san   1    ?    ?     1   mit    ?   103   <br>sk    2  -200  geo    2   d      0   126<br>sm    3   -80  geo    1   d      0   180<br>so    3   -80  geo    1   d      0   366<br>sz    2  -200  typo   1   d      1   308<br>t1    3  -120  geo    1   mit    0   395<br>t2    3  -120  geo    2   mit    0    58<br>ta    2  -130  geo    2   d      0    59<br>tb    3   -80  geo    1   d      0    42<br>v1    1  -400  geo    1   eur    0   120<br>v2    1  -400  geo    2   eur    0   208<br>va    2  -200  geo    1   mit    1     5<br>w1    3  -120  geo    1   mit    0   537<br>w2    3  -120  geo    2   mit    0    24<br>wd    1  -300  geo    1   mit    1   727<br>we    3   -80  geo    1   mit    0   338   <br>wl    2  -200  typo   2   mit    1   315   <br>wn    1  -300  geo    1   mit    1    39<br>woe   1  -300  geo    1   mit    1    20<br>wol   2  -200  geo    1   mit    1   218<br>wst   2  -200  typo   2   mit    1    69<br>z     2  -200  geo    1   mit    0   214</p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">LBI: Length-breadth index of the striking platform<br>RTI: Relative-thickness index of the striking platform<br>WDI: Width-depth index of the striking platform<br>FLA: Flaking angle (the angle between the striking platform and the splitting surface)<br>PSF: platform primery (yes/no, relative frequency)<br>FSF: Platform facetted (yes/no, relative frequency)<br>ZDF1: Dorsal surface totally worked (yes/no, relative frequency)<br>PROZD: Proportion of worked dorsal surface (continuous)<br><br>LBI, RTI, WDI, FLA, and PROZD are averages, PSF, FSF, and ZDF1 are<br>relative frequencies<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Thomas Weber (2009): The Lower/middle palaeolithic transition - is<br>          there a Lower/middle palaeolithic transition?<br>          Preistoria Alpina 44: 1-6.<br><br>D. SchÃƒÂ¤fer (1993): GrundzÃƒÂ¼ge der technologischen Entwicklung und<br>          Klassifikation vorjungpalÃƒÂ¤olithischer Steinartefakte in<br>          Mitteleuropa. Berichte der RÃƒÂ¶misch-Germanischen Kommission,<br>          74: 49-193.<br><br>Gunter Ritter (2014): Robust Cluster Analysis and Variable Selection,<br>          Chapman and Hall/CRC.</p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">If you have no special citation requests, please leave this field blank.</p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

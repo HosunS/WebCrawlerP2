@@ -1,0 +1,833 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueYDokuWiki=64e20920fbd389152108983c5443a0e1; path=/; HttpOnly, DW68700bfd16c2027de7de74a5a8202a6f=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; httponly, FCK_media=%2Flib%2Fplugins%2Fckgedit%2Ffckeditor%2Fuserfiles%2Fimage%2F; path=/, FCK_NmSp=teaching%3Acs285s14%3Astart; path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX>no-store, no-cache, must-revalidate, post-check=0, pre-check=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 21:30:49 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY}’<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>
+    âœŽ teaching:cs285s14:start â€“ Machine Learning and Bioinformatics Lab  </title>
+
+  <meta name="generator" content="DokuWiki"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="search" type="application/opensearchdescription+xml" href="/lib/exe/opensearch.php" title="Machine Learning and Bioinformatics Lab"/>
+<link rel="start" href="/"/>
+<link rel="contents" href="/doku.php?id=teaching:cs285s14:start&amp;do=index" title="Sitemap"/>
+<link rel="alternate" type="application/rss+xml" title="Recent Changes" href="/feed.php"/>
+<link rel="alternate" type="application/rss+xml" title="Current namespace" href="/feed.php?mode=list&amp;ns=teaching:cs285s14"/>
+<link rel="alternate" type="text/html" title="Plain HTML" href="/doku.php?do=export_xhtml&amp;id=teaching:cs285s14:start"/>
+<link rel="alternate" type="text/plain" title="Wiki Markup" href="/doku.php?do=export_raw&amp;id=teaching:cs285s14:start"/>
+<link rel="stylesheet" type="text/css" href="/lib/exe/css.php?t=centered-cbcl&amp;tseed=b2d22e40d8432f9a51d287dc38bdd86a"/>
+<!--[if gte IE 9]><!-->
+<script type="text/javascript">/*<![CDATA[*/var NS='teaching:cs285s14';var JSINFO = {"id":"teaching:cs285s14:start","namespace":"teaching:cs285s14","confirm_delete":"Are you sure you want to delete this page?","doku_base":"\/","cg_rev":"","dw_version":49.5,"chrome_version":0,"hide_captcha_error":"none","ckg_dbl_click":"","ckg_canonical":0,"doku_url":"http:\/\/cbcl.ics.uci.edu\/","has_wrap":"Wrap","wrapDiv":"WRAP","wrapSpan":"wrap","ckgEdPaste":"off","rel_links":0,"isadmin":0,"isauth":0,"move_renameokay":false,"htmlok":1};
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="/lib/exe/jquery.php?tseed=23f888679b4f1dc26eef34902aca964f"></script>
+<script type="text/javascript" charset="utf-8" src="/lib/exe/js.php?t=centered-cbcl&amp;tseed=b2d22e40d8432f9a51d287dc38bdd86a"></script>
+<script type="text/x-mathjax-config">/*<![CDATA[*/MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+        displayMath: [ ["$$","$$"], ["\\[","\\]"] ],
+        processEscapes: true
+    }
+});
+/*!]]>*/</script>
+<script type="text/javascript" charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_CHTML.js"></script>
+<script type="text/javascript" charset="utf-8" src="/lib/plugins/ckgedit/ckeditor/ckeditor.js"></script>
+<!--<![endif]-->
+
+    <script type="text/javascript">
+    //<![CDATA[ 
+    function LoadScript( url )
+    {
+     document.write( '<scr' + 'ipt type="text/javascript" src="' + url + '"><\/scr' + 'ipt>' ) ;        
+
+    }
+   function LoadScriptDefer( url )
+    {
+     document.write( '<scr' + 'ipt type="text/javascript" src="' + url + '" defer><\/scr' + 'ipt>' ) ;        
+
+    }
+//]]> 
+
+ </script>
+
+  <link rel="shortcut icon" href="/lib/tpl/centered-cbcl/images/favicon.ico" />
+
+  
+</head>
+<body class="dw-left">
+
+
+<div id="menubar" class="dokuwiki">   
+   
+		<a href="/doku.php?id=start"  name="dokuwiki__top" accesskey="h" title="[ALT+H]" id="wikititle">Machine Learning and Bioinformatics Lab</a>		<form action="/doku.php?id=start" accept-charset="utf-8" class="search" id="dw__search" method="get" role="search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" placeholder="Search" id="qsearch__in" accesskey="f" name="id" class="edit" title="[F]" /><button type="submit" title="Search">Search</button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>		 
+            <div class="action-menus">
+        <div class="action-menu">
+			<div class="action-menu-title unicode">
+				âš™
+			</div>
+			<div class="action-menu-content">
+          <a href="/doku.php?id=teaching:cs285s14:start&amp;do="  class="action show" accesskey="v" rel="nofollow" title="Show page [V]">Show page</a><a href="/doku.php?id=teaching:cs285s14:start&amp;do=revisions"  class="action revs" accesskey="o" rel="nofollow" title="Old revisions [O]">Old revisions</a><a href="/doku.php?id=teaching:cs285s14:start&amp;do=backlink"  class="action backlink" rel="nofollow" title="Backlinks">Backlinks</a>			</div>
+        </div>
+        <div class="action-menu">
+        <div class="action-menu-title unicode">
+			âš’
+		</div>
+		<div class="action-menu-content"><a href="/doku.php?id=teaching:cs285s14:start&amp;do=recent"  class="action recent" accesskey="r" rel="nofollow" title="Recent Changes [R]">Recent Changes</a><a href="/doku.php?id=teaching:cs285s14:start&amp;do=index"  class="action index" accesskey="x" rel="nofollow" title="Sitemap [X]">Sitemap</a><a href="/doku.php?id=teaching:cs285s14:start&amp;do=login&amp;sectok="  class="action login" rel="nofollow" title="Log In">Log In</a></div>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+</div>
+
+<div class="cbcl-custom-menu">
+      </div>
+
+
+
+
+
+<div id="wrapper" class="dokuwiki">
+
+    	
+
+
+    
+
+
+
+      <div class="cbcl-menu">
+  <ul>
+    <li><a href="/doku.php/start">CBCL Lab @ UCI</a></li>
+    <li><a href="/doku.php/publications">Publications</a></li>
+    <li><a href="/doku.php/software">Software</a></li>
+    <li><a href="/doku.php/data">Data</a></li>
+    <li><a href="/doku.php/people">People</a></li>
+    <li><a href="/doku.php/teaching">Teaching</a></li>
+    <li><a href="/doku.php/contact">Contact</a></li>
+    <li><a href="/doku.php/internal_index">Internal Projects</a></li>
+  </ul>
+</div>
+
+    
+    
+    
+              <div  id="page" class="page">
+          
+<p>
+This page is read only. You can view the source, but not change it. Ask your administrator if you think this is wrong.
+</p>
+
+
+<script type='text/javascript'>
+ //<![CDATA[
+
+if(window.dw_locktimer) {
+   var locktimer = dw_locktimer;
+} 
+var FCKRecovery = "";
+var oldonload = window.onload;
+var ourLockTimerINI = false;
+var oldBeforeunload;
+
+  var ckgedit_onload = function() { 
+		   ckgeditCKInstance = CKEDITOR.replace('wiki__text',
+		       { 
+                  toolbar: 'Dokuwiki' ,    
+                  height: 250,
+                 filebrowserWindowWidth: "1070",
+                 filebrowserWindowHeight:  "660", 
+                 on :
+                   {
+                      'instanceReady' : function( evt )
+                      {
+                         evt.editor.document.on( 'mousedown', function()
+                         {   handlekeypress (evt);  } );
+                      }
+                   },  
+                 filebrowserImageBrowseUrl :  'http://cbcl.ics.uci.edu/lib/plugins/ckgedit/fckeditor/editor/filemanager/browser/default/browser.html?Type=Image&Connector=http://cbcl.ics.uci.edu/lib/plugins/ckgedit/fckeditor/editor/filemanager/connectors/php/connector.php',
+                 filebrowserBrowseUrl: 'http://cbcl.ics.uci.edu/lib/plugins/ckgedit/fckeditor/editor/filemanager/browser/default/browser.html?Type=File&Connector=http://cbcl.ics.uci.edu/lib/plugins/ckgedit/fckeditor/editor/filemanager/connectors/php/connector.php',                                
+               } 
+		   );
+           FCKeditor_OnComplete(ckgeditCKInstance);
+           
+                };
+  
+  jQuery(window).on('load',ckgedit_onload);
+  
+ function ckgeditEditorTextChanged() {
+   window.textChanged = false;   
+   oldBeforeunload(); 
+   if(window.dwfckTextChanged) {        
+      return LANG.notsavedyet;
+   }  
+ }
+
+  function getCurrentWikiNS() {
+        var DWikiMediaManagerCommand_ns = 'teaching:cs285s14';
+        return DWikiMediaManagerCommand_ns;
+  }
+ 
+ var ourLockTimerRefreshID;
+ var ourLockTimerIsSet = true;
+ var ourLockTimerWarningtimerID;
+ var ourFCKEditorNode = null;
+ var ourLockTimerIntervalID;
+ var dwfckTextChanged = false;
+
+   /**
+    *    event handler
+    *    handles both mousepresses and keystrokes from FCKeditor window
+    *    assigned in fckeditor.html
+  */
+ 
+ function handlekeypress (e) {  
+ 
+ 
+   if(ourLockTimerIsSet) {
+         lockTimerRefresh();        
+   }
+   window.dwfckTextChanged = true;
+ }
+
+ function unsetDokuWikiLockTimer() {
+     
+    if(window.locktimer && !ourLockTimerINI) {
+        locktimer.old_reset = locktimer.reset;
+        locktimer.old_warning = locktimer.warning;        
+        ourLockTimerINI=true;
+    }
+    else {
+        window.setTimeout("unsetDokuWikiLockTimer()", 600);
+
+    }
+  
+  locktimer.reset = function(){
+        locktimer.clear();  // alert(locktimer.timeout);
+        window.clearTimeout(ourLockTimerWarningtimerID);
+        ourLockTimerWarningtimerID =  window.setTimeout(function () { locktimer.warning(); }, locktimer.timeout);
+   };
+
+   locktimer.warning = function(){    
+        window.clearTimeout(ourLockTimerWarningtimerID);
+
+        if(ourLockTimerIsSet) {
+            if(locktimer.msg.match(/Preview/i)) {
+                locktimer.msg = locktimer.msg.replace(/Preview/i, "Back-up");      
+             }
+            alert(locktimer.msg);
+        }
+        else {
+            alert("Your lock for editing this page is about to expire in a minute.\nYou can reset the timer by clicking the Back-up button.");
+        }
+     };
+     
+
+    locktimer.ourLockTimerReset = locktimer.reset;
+    locktimer.our_lasttime = new Date();
+    lockTimerRefresh();
+
+ }
+
+ function lockTimerRefresh(bak) {
+        var now = new Date();
+        if(!ourLockTimerINI)  unsetDokuWikiLockTimer();
+
+        if((now.getTime() - locktimer.our_lasttime.getTime() > 45*1000) || bak){            
+           var dwform = GetE('dw__editform');
+            window.clearTimeout(ourLockTimerWarningtimerID);
+            var params = 'call=lock&id='+locktimer.pageid;
+            if(CKEDITOR.instances) {  
+                dwform.elements.wikitext.value = CKEDITOR.instances.wiki__text.getData();
+                params += '&prefix='+encodeURIComponent(dwform.elements.prefix.value);
+                params += '&wikitext='+encodeURIComponent(dwform.elements.wikitext.value);
+                params += '&suffix='+encodeURIComponent(dwform.elements.suffix.value);
+                params += '&date='+encodeURIComponent(dwform.elements.date.value);
+            }
+            locktimer.our_lasttime = now;  
+            jQuery.post(
+                DOKU_BASE + 'lib/exe/ajax.php',
+                params,
+                function (data) {
+                    data = data.replace(/auto/,"")  + ' by ckgedit';
+                    locktimer.response = data; 
+                    locktimer.refreshed(data);
+                },
+                'html'
+            );
+       }
+        
+ }
+
+
+ /**
+   Legacy function has no current use
+ */
+ function getRecoveredText() {
+    return FCKRecovery;
+ }
+
+ function resetDokuWikiLockTimer(delete_checkbox) {
+
+        var dom_checkbox = document.getElementById('ckgedit_timer');
+        var dom_label = document.getElementById('ckgedit_timer_label');
+        locktimer.clear();     
+        if(ourLockTimerIsSet) {
+
+             ourLockTimerIsSet = false;             
+             locktimer.reset = locktimer.old_reset; 
+             locktimer.refresh(); 
+             return;
+        }
+      
+     if(delete_checkbox) {
+       dom_checkbox.style.display = 'none';
+       dom_label.style.display = 'none';
+     }
+
+       ourLockTimerIsSet = true;
+       locktimer.reset = locktimer.ourLockTimerReset;     
+       lockTimerRefresh();
+          
+ }
+
+/* Renews lock and  creates a ckgedit backup if editor_bak config option is true */
+function renewLock(bak) {
+  if(ourLockTimerIsSet) {
+         lockTimerRefresh(true);
+   }
+   else { 
+    locktimer.refresh();
+   }
+   locktimer.reset();
+
+
+    if(bak) {
+        var id = "teaching:cs285s14:start"; 
+        parse_wikitext('bakup');
+
+        var dwform = GetE('dw__editform');
+        if(dwform.elements.fck_wikitext.value == '__false__' ) return;
+         GetE('saved_wiki_html').innerHTML = CKEDITOR.instances.wiki__text.getData(); // ourFCKEditorNode.innerHTML; 
+        if((0) == 0 ) {           
+           return; 
+        }
+     
+        var params = "rsave_id=" + encodeURIComponent("/var/www/dokuwiki/sites/cbcl.ics.uci.edu/data/meta/teaching/cs285s14/start.ckgedit");       
+        params += '&wikitext='+encodeURIComponent(dwform.elements.fck_wikitext.value);      
+        params += '&call=refresh_save';
+        jQuery.post(
+           //     DOKU_BASE + 'lib/plugins/ckgedit/scripts/refresh_save.php',
+               DOKU_BASE + 'lib/exe/ajax.php',
+                params,
+                function (data) {          
+                    if(data == 'done') {
+                        show_backup_msg("meta/teaching/cs285s14/start.ckgedit");  
+                    }
+                    else {
+                      alert("error saving: " + id);
+                    }
+                },
+                'html'
+            );
+    }
+
+}
+
+
+function revert_to_prev() {
+  if(!(GetE('saved_wiki_html').innerHTML.length)) {
+            if(!confirm(backup_empty)) {
+                           return;
+            }
+  }
+  CKEDITOR.instances.wiki__text.setData( GetE('saved_wiki_html').innerHTML);
+   window.dwfckTextChanged = true;
+}
+
+
+function draft_delete() {
+
+        var debug = false;
+        var params = "draft_id=/var/www/dokuwiki/sites/cbcl.ics.uci.edu/data/cache/3/36cb0da618706e9f54aebb3e8e4335c0.draft";
+        jQuery.ajax({
+           url: DOKU_BASE + 'lib/plugins/ckgedit/scripts/draft_delete.php',
+           data: params,    
+           type: 'POST',
+           dataType: 'html',         
+           success: function(data){                 
+               if(debug) {            
+                  alert(data);
+               }
+              
+    }
+    });
+
+}
+
+function disableDokuWikiLockTimer() {
+  resetDokuWikiLockTimer(false);
+  if(ourLockTimerIntervalID) {
+     window.clearInterval(ourLockTimerIntervalID);
+  }
+  if(ourLockTimerIsSet) { 
+    ourLockTimerIntervalID = window.setInterval(function () { locktimer.refresh(); }, 30000);   
+  }
+}
+
+function dwfckKeypressInstallHandler() {
+  if(window.addEventListener){    
+      oDokuWiki_FCKEditorInstance.EditorDocument.addEventListener('keyup', handlekeypress , false) ;
+  }
+  else {   
+     oDokuWiki_FCKEditorInstance.EditorDocument.attachEvent('onkeyup', handlekeypress ) ;
+  }
+}
+
+var DWFCK_EditorWinObj;
+function FCKEditorWindowObj(w) { 
+  DWFCK_EditorWinObj = w;
+}
+
+function ckgedit_isRTL() { 
+var direction = "nocheck";
+
+return direction == 'rtl';
+  
+}
+
+function remove_styling() {
+//'TextColor,BGColor, FontAssist,Font,FontSize';
+var opts = "";
+var color_opts = parseInt( "0");
+var font_opts =  parseInt("0");
+var skip_styling=parseInt("0");
+if(color_opts) {
+  opts ='TextColor,BGColor,FontAssist';
+}
+else if(!skip_styling) {
+     opts = 'FontAssist';
+}
+if(font_opts) {
+  if(color_opts || !skip_styling) opts+=',';
+  opts +='Font,FontSize';
+}
+if("") {
+  if(opts) opts+=',';
+  opts+="";
+}
+
+return opts;
+
+}
+
+function  extra_plugins(config) {  
+    if("off" == 'on')  config.addPaste();    
+    return "Geshi";
+}
+
+function ckgedit_language_chk(config) { 
+    if("on" == 'on') {
+        config.scayt_autoStartup = true;      
+    }
+    else config.scayt_autoStartup = false;
+    if("on" == 'disable') {
+        config.scayt__disable = true;
+    }   
+    config.scayt_sLang="en_US";  
+   var lang = "default"; 
+   if(lang ==  'default') return; ;
+   config.language = lang;
+}
+
+function getCKEditorGUI() {
+    return "moono";
+}
+var oDokuWiki_FCKEditorInstance;
+function FCKeditor_OnComplete( editorInstance )
+{
+
+  oDokuWiki_FCKEditorInstance = editorInstance;
+  editorInstance.on( 'key', handlekeypress, editorInstance );
+
+  CKEDITOR.instances.wiki__text.on('change', function(event) {
+        window.dwfckTextChanged = true;
+  });
+
+  editorInstance.on("focus", function(e) {
+          window.dwfckTextChanged = true;
+    });
+    
+  oDokuWiki_FCKEditorInstance.dwiki_user = "visitor";   
+  oDokuWiki_FCKEditorInstance.dwiki_client = "";    
+  oDokuWiki_FCKEditorInstance.dwiki_usergroups = "";  
+  oDokuWiki_FCKEditorInstance.dwiki_doku_base = "/";  
+  oDokuWiki_FCKEditorInstance.dwiki_create_folder = "n"; 
+  oDokuWiki_FCKEditorInstance.dwiki_fnencode = "url"; 
+  oDokuWiki_FCKEditorInstance.dwiki_version = 1289113200; 
+  oDokuWiki_FCKEditorInstance.dwiki_anteater = 1289113200; 
+  oDokuWiki_FCKEditorInstance.isLocalDwikiBrowser = false;
+  oDokuWiki_FCKEditorInstance.isUrlExtern = false; 
+  oDokuWiki_FCKEditorInstance.isDwikiMediaFile = false; 
+  oDokuWiki_FCKEditorInstance.imageUploadAllowedExtensions=".(jpg|jpeg|gif|png|ico|odi)$";
+  oDokuWiki_FCKEditorInstance.fckgUserName = "";
+  oDokuWiki_FCKEditorInstance.fckgUserMail=""; 
+  oDokuWiki_FCKEditorInstance.useheading = "n"; 
+  oDokuWiki_FCKEditorInstance.mfiles = parseInt("0");
+  oDokuWiki_FCKEditorInstance.fbsz_increment=parseInt("0");
+ 
+  var index = navigator.userAgent.indexOf('Safari'); 
+  if(index == -1  || (navigator.userAgent.indexOf('Chrome'))) {
+    oldBeforeunload = window.onbeforeunload;
+    window.onbeforeunload = ckgeditEditorTextChanged;
+  }
+ 
+  
+}
+
+   
+ var DWikifnEncode = "url";
+
+/* Make sure that show buttons in top and/or bottom clear the fckl file */  
+ function get_showButtons() {	
+	var inputs = document.getElementsByTagName('input');
+    
+     for(var i=0; i<inputs.length; i++) {	    
+        if(inputs[i].type && inputs[i].type.match(/submit/i)) {		           		    
+			if(inputs[i].value.match(/Show/i) || (inputs[i].form &&  inputs[i].form.className.match(/btn_show/) ) )
+    			inputs[i].onmouseup = draft_delete;
+        }
+     }
+  }
+
+ /* make sure the entire page has been loaded */
+ setTimeout("get_showButtons()", 3000);
+ //]]>
+ 
+</script>   <form id="dw__editform" method="post" action="/doku.php"  accept-charset="utf-8">
+    <div class="no">
+      <input type="hidden" name="id"   value="teaching:cs285s14:start" />
+      <input type="hidden" name="rev"  value="0" />
+      <input type="hidden" name="date" value="1490827398" />
+      <input type="hidden" name="prefix" value="" />
+      <input type="hidden" name="suffix" value="" />
+      <input type="hidden" id="ckgedit_mode_type"  name="mode" value="" />
+      <input type="hidden" id="fck_preview_mode"  name="fck_preview_mode" value="nil" />
+      <input type="hidden" id="fck_wikitext"    name="fck_wikitext" value="__false__" />     
+       <input type="hidden" id="styling"  name="styling" value="styles" />
+      <input type="hidden" id="template"  name="template`" value="" />
+      <div class="no"><input type="hidden" name="sectok" value="" /></div>
+    </div>
+
+    <textarea name="wikitext" id="wiki__text" readonly="readonly" cols="80" rows="10" class="edit" tabindex="1">
+
+<h3>Math 227C / CS 285: An Introduction to Stochastic Differential Equations</h3>
+<div class="level3">
+
+</div>
+
+<h5>Course information</h5>
+<div class="level5">
+<ul>
+<li class="level1"> Instructor:  Xiaohui Xie</li>
+<li class="level1 node"> Meeting information: <ul>
+<li class="level2"> Regular lecture: TT 3:00-4:20</li>
+<li class="level2"> Meeting place: ICS 213</li>
+</ul>
+</li>
+</ul>
+
+</div>
+
+<h5>Prerequisites</h5>
+<div class="level5">
+<ul>
+<li class="level1"> multivariate calculus, linear algebra, elementary differential equations (at the level of Math 3D at UCI), and (helpful to know) some elementary probability</li>
+</ul>
+
+</div>
+
+<h5>Course Description</h5>
+<div class="level5">
+
+<p>
+Tentative topics:
+</p>
+<ul>
+<li class="level1">  Markov Chains and Linear Difference Equations</li>
+<li class="level1">  Continuous Time Markov Processes</li>
+<li class="level1">  Poisson Counters and Differential Equations</li>
+<li class="level1">  Wiener Processes and Differential Equations</li>
+<li class="level1">  Ito&#039;s calculus and Ito Formula</li>
+<li class="level1">  Diffusion, Fokker-Planck Equations</li>
+<li class="level1">  Probability space, Foundation of stochastic processes</li>
+<li class="level1">  Conditional Expectation, Martingales</li>
+<li class="level1">  Markov Properties, Feymann-Kac Theorem, Kolmogorov backward equation</li>
+<li class="level1">  Application to stochastic control</li>
+<li class="level1">  Application to filtering problems</li>
+<li class="level1">  Application to population genetics</li>
+</ul>
+
+</div>
+
+<h5>Lecture notes</h5>
+<div class="level5">
+<ul>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/CourseScribeNotes.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/CourseScribeNotes.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/CourseScribeNotes.pdf</a> Combined scribe notes]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture1.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture1.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture1.pdf</a> Lecture 1]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture2.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture2.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture2.pdf</a> Lecture 2]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture3.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture3.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture3.pdf</a> Lecture 3]</li>
+<li class="level1"> [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture4.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture4.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture4.pdf</a> Lecture 4]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture7.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture7.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture7.pdf</a> Lecture 7]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture9.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture9.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture9.pdf</a> Lecture 9]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture10.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture10.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture10.pdf</a> Lecture 10]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture11.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture11.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture11.pdf</a> Lecture 11]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture12.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture12.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture12.pdf</a> Lecture 12]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture13.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture13.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture13.pdf</a> Lecture 13]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture14.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture14.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture14.pdf</a> Lecture 14]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture17.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture17.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture17.pdf</a> Lecture 17]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture18.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture18.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture18.pdf</a> Lecture 18]</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/lecture19.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/lecture19.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/lecture19.pdf</a> Lecture 19]</li>
+</ul>
+
+</div>
+
+<h5>Textbook</h5>
+<div class="level5">
+<ul>
+<li class="level1"> Stochastic Differential Equations: An Introduction with Applications by Bernt Ã˜ksendal</li>
+</ul>
+
+</div>
+
+<h5>Homework</h5>
+<div class="level5">
+<ul>
+<li class="level1">  [<a href="https://eee.uci.edu/14s/35340/home/ps1.pdf" class="urlextern" title="https://eee.uci.edu/14s/35340/home/ps1.pdf" rel="nofollow">https://eee.uci.edu/14s/35340/home/ps1.pdf</a> Assignment #1]  Due date: 04/17 (Thur) before class.</li>
+<li class="level1">  [<a href="https://eee.uci.edu/14s/35340/home/ps2.pdf" class="urlextern" title="https://eee.uci.edu/14s/35340/home/ps2.pdf" rel="nofollow">https://eee.uci.edu/14s/35340/home/ps2.pdf</a> Assignment #2]  Due date: 05/01 (Thur) before class.</li>
+<li class="level1">  [<a href="http://www.ics.uci.edu/~xhx/courses/math227c/ps3.pdf" class="urlextern" title="http://www.ics.uci.edu/~xhx/courses/math227c/ps3.pdf" rel="nofollow">http://www.ics.uci.edu/~xhx/courses/math227c/ps3.pdf</a> Assignment #3]  Due date: 05/15 (Thur) before class.</li>
+<li class="level1">  [<a href="https://eee.uci.edu/14s/35340/home/ps4.pdf" class="urlextern" title="https://eee.uci.edu/14s/35340/home/ps4.pdf" rel="nofollow">https://eee.uci.edu/14s/35340/home/ps4.pdf</a> Assignment #4]  Due date: 05/29 (Thur) before class.</li>
+</ul>
+
+</div>
+
+<h5>Exam</h5>
+<div class="level5">
+<ul>
+<li class="level1"> [<a href="https://eee.uci.edu/14s/35340/home/final14.pdf" class="urlextern" title="https://eee.uci.edu/14s/35340/home/final14.pdf" rel="nofollow">https://eee.uci.edu/14s/35340/home/final14.pdf</a> Final Exam] Due date: 06/10 (Tues) before 5pm.</li>
+</ul>
+
+</div>
+</textarea>
+    
+<script type='text/javascript'>
+//<![CDATA[ 
+var useDW_Editor =   0;
+ //]]> </script>
+    <script type="text/javascript">
+    //<![CDATA[ 
+    var ckgedit_dwedit_reject = false;
+    var ckgedit_to_dwedit = false;
+    function setDWEditCookie(which, e) { 
+      
+        var dom = document.getElementById('ckgedit_mode_type');                
+          
+         if(useDW_Editor) {
+                document.cookie = 'FCKG_USE=other;expires=';             
+              }  
+             else {
+                document.cookie='FCKG_USE=other;expires=Thu,01-Jan-70 00:00:01 GMT;'
+           }
+        if(which == 1) {             
+           if(e && e.form) {
+                    if(e.form['mode']) {
+                       e.form['mode'].value = 'fck';
+                    }
+                    else {
+                       e.form['mode'] = new Object;
+                       e.form['mode'].value = 'fck';  
+                    }
+           }
+           else dom.value = 'fck';  
+           e.form.submit(); 
+       }
+        else {            
+            document.cookie = 'FCKG_USE=_false_;expires=';             
+            dom.value = 'dwiki';        
+           if(JSINFO['chrome_version'] >= 56 && window.dwfckTextChanged) {
+           }
+            else if(window.dwfckTextChanged  && !window.confirm("To Save your edits click OK; to Discard click Cancel")) {            
+               var dom = GetE('dwsave_select');                
+               ckgedit_dwedit_reject=true;
+               window.dwfckTextChanged = false;
+        }
+       }
+        
+    }
+  
+ 
+    //]]> 
+
+    </script>
+    <div id="wiki__editbar">
+      <div id="size__ctl" style="display: none"></div>
+      
+                    </div>
+   </form>
+
+        <!-- draft messages from DW -->
+        <div id="draft__status"></div>
+  <script type="text/javascript">
+//<![CDATA[
+        var backup_empty = "The back-up buffer appears to be empty. Do you wish to continue?";        /* aspell_window removed, not supported */
+        if(window.unsetDokuWikiLockTimer) window.unsetDokuWikiLockTimer();  
+
+   
+  function getComplexTables() {   
+     return  document.getElementById('complex_tables').checked;
+  }
+
+                   
+        document.getElementById('complex_tables').click();            
+      
+             document.getElementById('complex_tables').disabled = true;
+         document.getElementById('complex_tables_label').style = "display:none";
+         document.getElementById('complex_tables_label_text').style = "display:none";
+      
+
+var isIE = false;var doku_base = '/'  
+          
+   var ckgedit_draft_btn = "Exit Draft";
+   var ckgedit_draft_btn_title = "Return to current document";
+   function ckgedit_get_draft() {
+      var dom = GetE('ckgedit_draft_html');
+      var draft = dom.innerHTML;
+      var dw_text =  CKEDITOR.instances.wiki__text.getData();     	 
+ 
+      CKEDITOR.instances.wiki__text.setData(draft);      
+      dom.innerHTML = dw_text;
+      var btn = GetE('ckgedit_draft_btn');
+      var tmp = btn.value;  
+      btn.value = ckgedit_draft_btn;
+      ckgedit_draft_btn = tmp;
+      tmp = ckgedit_draft_btn_title;
+      btn.title = ckgedit_draft_btn_title;
+      ckgedit_draft_btn_title = tmp;
+   }
+
+
+   function safe_convert(value) {            
+
+     if(oDokuWiki_FCKEditorInstance.dwiki_fnencode && oDokuWiki_FCKEditorInstance.dwiki_fnencode == 'safe') {
+      updateVersion=49.5;
+ 		if(value.match(/%25/ && value.match(/%25[a-z0-9]/))) {
+                          value = value.replace(/%25/g,"%");
+                          value = value.replace(/%5D/g,"]");
+                          value =  dwikiUTF8_decodeFN(value,'safe');
+                       }
+        }
+        return value; 
+
+     }
+	 
+RegExp.escape = function(str)
+{
+    var specials = new RegExp("[.*+?|()\\[\\]{}\\\\]", "g"); // .*+?|()[]{}\
+    return str.replace(specials, "\\$&");
+}
+var ckgedit_xcl_fonts =parseInt  ("0");
+var ckgedit_xcl_colors =parseInt("0");
+var ckgedit_xcl_styles = (ckgedit_xcl_fonts + ckgedit_xcl_colors ==2) ? true : false;
+var HTMLParser_DEBUG = "";
+var ckgedit_hasCaptcha = "0";
+
+
+var script_url = 'http://cbcl.ics.uci.edu/lib/plugins/ckgedit/scripts/script-cmpr.js';var parse_url = 'http://cbcl.ics.uci.edu/lib/plugins/ckgedit/scripts/parse_wiki-cmpr.js';
+   
+LoadScript(parse_url);
+try {
+  if(!window.HTMLParserInstalled){
+    LoadScript(script_url);   
+  }
+}
+catch (ex) {  
+   LoadScript(script_url); 
+}
+
+
+if(window.DWikifnEncode && window.DWikifnEncode == 'safe') {
+   LoadScript(DOKU_BASE + 'lib/plugins/ckgedit/scripts/safeFN_cmpr.js' );
+}
+
+
+ //]]>
+
+  </script>
+
+
+  
+
+
+    <script type="text/javascript">
+    //<![CDATA[ 
+
+    try {
+    if(!window.HTMLParserInstalled || !HTMLParserInstalled){
+         LoadScript("http://cbcl.ics.uci.edu/lib/plugins/ckgedit/scripts/script-cmpr.js");        
+    }
+    }
+    catch (ex) {  
+         LoadScript("http://cbcl.ics.uci.edu/lib/plugins/ckgedit/scripts/script-cmpr.js");        
+    }             
+    if("") {
+       LoadScriptDefer("");        
+    }
+    function createRequestValue() {
+        try{
+        var inputNode=document.createElement('input');
+        inputNode.setAttribute('type','hidden');
+        inputNode.setAttribute('value','yes');
+        inputNode.setAttribute('name','dwedit_preview');
+        inputNode.setAttribute('id','dwedit_preview');
+        var dwform = GetE("dw__editform");
+        dwform.appendChild(inputNode);
+        }catch(e) { alert(e); }
+    }
+//]]> 
+ </script>
+ 
+        </div> 
+      
+    
+
+
+     
+    <div id="trail">
+      <span class="bchead">You are here: </span><span class="home"><bdi><a href="/doku.php?id=start" class="wikilink1" title="start">start</a></bdi></span><bdi><a href="/doku.php?id=teaching" class="wikilink1" title="teaching">teaching</a></bdi><bdi><span class="curid"><a href="/doku.php?id=teaching:cs285s14:start" class="wikilink1" title="teaching:cs285s14:start">cs285s14</a></span></bdi>    </div>
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+
+<div class="no"><img src="/lib/exe/indexer.php?id=teaching%3Acs285s14%3Astart&amp;1549315849" width="2" height="1" alt="" /></div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,61 @@
+¦Ifinal_url¢DtypeEvaluex0http://cybert.ics.uci.edu/dataset-help/CEENCODE/Lhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:33:11 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYp
+<p><a href="/static/sampledata/SubEncodeNonZero.fpkm">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>This data comes from a subset of the gene-level FPKM (fragments per kilobase per million sequenced reads)
+  values from  <a href="http://cufflinks.cbcb.umd.edu/">Cufflinks</a> on an <a href="http://genome.ucsc.edu/ENCODE/">ENCODE</a>
+  dataset.  Specifically, we look at FPKM values from two replicate RNA-Seq runs on the HUVEC cell line 
+  (<a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM828373">GSM828373</a>) vs two replicate RNA-Seq runs on the 
+  K562 line: (<a href="http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM828368">GSM828368</a>).
+</p>
+<p>
+  There are several other methods for differential analysis of RNA-Seq data, including count based methods
+  <a href="http://www.bioconductor.org/packages/release/bioc/html/DESeq.html">DESeq</a> and 
+  <a href="http://www.bioconductor.org/packages/release/bioc/html/edgeR.html">edgeR</a> as well as cuffdiff (as part of cufflinks).
+  All of these model variance with a negative binomial model, which has been shown to be appropriate for count based data. 
+  However, FPKM values are not discrete, and  none of these methods offer easy to use solutions for performing 
+  differential analysis given a table of FPKM values.  Cyber-T's normal distribution error model is a reasonable approximation to use for
+  a first pass analysis. We plan on implementing a negative binomial model derived from the same Bayesian model underlying Cyber-T in the near
+  future.
+</p>
+<p>
+  The details of the data are:
+  There is one header row.
+  There is one label column, and then there are two control (HUVEC) columns and two experimental (K562) columns.
+  The data has been preprocessed to remove all rows that are zero for all samples.
+</p>
+
+<ul>
+  <li>Delimiter: Spaces</li>
+  <li>Row Start: 2</li>
+  <li>Number of label columns: 1</li>
+  <li>Number of first condition columns: 2</li>
+  <li>Number of second condition columns: 2</li>  
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a two-sample t-test using the Bayes-regularized variance estimates.
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 6</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard t-test using empirical variances.  
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,33 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1756¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX:attachment; filename=cs222p-2017-fall-project2-grading.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=df0c35cfb3ff85766232582e; expires=Tue, 07 May 2019 20:52:23 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 20:52:23 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueYÜ= Project 2 Grading Rubrics =
+
+'''Full Credit: 100 points'''[[br]]
+'''Extra Credit: 10 points'''
+
+1. Follow the submission requirements (5%)
+ * Code is structured as required
+ * Makefile works
+ * Code compiles and links correctly
+  
+ Please make sure that your submission follows these requirements and can be unzipped and built by running the script we provided. Failure to follow the instructions could make your project unable to build on our machines, which may result in loss of points.
+
+2. Project Report (5%)
+ * Clearly document the design of your project (the record format, the page format, the page format in the file, and the meta-data) using the template file that we have provided.
+ * Explain the implementation of important functions such as updateTuple and deleteTuple.
+
+3. Debugging screenshot and Valgrind reports(5%)
+ * One screenshot of debugging your program and two Valgrind reports of two different test cases are submitted.
+
+4. Implementation details (15%)
+ * Implement all the required functionalities
+ * Implementation should follow the basic requirements of the project. For example, both catalog information and table files should persist on disk. After RM is shut down and restarted, catalog and data should be able to be loaded correctly.
+
+5. Pass the provided test suite. (50%)
+ * Each of which is graded as pass/fail.[[br]]
+ 
+6. Pass the private test suite. (20%)
+ * There are private tests, each of which is graded as pass/fail.[[br]]
+
+7. Extra credit work: Implement the following functionalities and pass the provided extra credit test cases: (10%)
+ * addAttributes/dropAttributes
+ 
+ Note that those methods should internally use the corresponding methods of the record-based file manager. Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

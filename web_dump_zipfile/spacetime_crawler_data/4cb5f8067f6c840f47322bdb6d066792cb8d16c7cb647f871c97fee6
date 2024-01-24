@@ -1,0 +1,56 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1123¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 18 Apr 2010 00:51:23 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"abb-484783e4cb8c0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:43:01 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY
+»1. (a) Draw a directed graph, with a specified starting vertex, for
+   which Dijkstra's algorithm does not produce the correct distances to
+   all other nodes.
+
+   (b) Draw a directed graph, with a specified starting vertex, that has
+   at least one negative edge but does not have any negative cycles,
+   such that Dijkstra's algorithm works correctly for your graph despite
+   the fact that it has a negative edge.
+
+2. Suppose that we have already run Dijkstra's algorithm on a graph G,
+   but G has some negative edges. How can we tell whether the distances
+   produced by Dijkstra's algorithm are correct? Describe an algorithm
+   that can test this in linear time.
+
+   Your algorithm should take as input the (weighted) graph G together
+   with the distances D computed by Dijkstra's algorithm; it should
+   produce as output a Boolean value that is True if, for every vertex
+   v, D[v] = distance(s,v). Your algorithm should return False if there
+   is any vertex for which D[v] != distance(s,v).
+
+3. Suppose that we are using Johnson's algorithm
+   (http://en.wikipedia.org/wiki/Johnson%27s_algorithm) to find the
+   distances between all pairs of vertices in the graph G, described
+   below.
+
+   (a) Draw the shortest path tree from the new artificial vertex to the
+   other vertices in G.
+
+   (b) Show in a separate drawing the new weights in G after it is
+   reweighted to have all edge weights non-negative.
+
+   For problem 3, graph G has four vertices a, b, c, and d.
+       Vertex a has an edge of weight -2 to b.
+       Vertex b has an edge of weight -1 to c, and an edge of weight -4 to d.
+       Vertex c has an edge of weight -3 to d, and an edge of weight 5 to a.
+       Vertex d has an edge of weight 9 to a.
+
+4. Suppose that we have a road network in the form of a square grid in
+   the plane, with four square blocks each 1 mile by 1 mile big. (This
+   grid has nine intersections, forming the vertices of the network, and
+   twelve line segments connecting them, forming the edges.) Suppose
+   also that we wish to find a route from the vertex at the center of
+   the network to the vertex at the bottom right corner.
+
+   (a) In what order would Dijkstra's algorithm remove vertices, and
+   what are the priorities D[v] of each vertex v at the time that it is
+   removed? If two vertices have the same priority you may break the tie
+   between them in any way you like.
+
+   (b) In what order would the A* algorithm (using the same edge lengths
+   as Dijkstra's algorithm but with the priority D[v]+E[v], where E is
+   the straight-line distance between the two vertices) remove vertices,
+   and what are the priorities D[v]+E[v] of each vertex v at the time
+   that it is removed? Again, you may break ties however you like.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,255 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueí¢Ak¢DtypeEvalueFStatusAv¢DtypeEvalueF200 OK¢Ak¢DtypeEvalueLX-Request-IdAv¢DtypeEvalueX$2d2eb22f-c104-4a50-b7e9-38c8b59f30d9¢Ak¢DtypeEvaluePX-XSS-ProtectionAv¢DtypeEvalueM1; mode=block¢Ak¢DtypeEvalueVX-Content-Type-OptionsAv¢DtypeEvalueGnosniff¢Ak¢DtypeEvalueRX-Download-OptionsAv¢DtypeEvalueFnoopen¢Ak¢DtypeEvalueLX-Powered-ByAv¢DtypeEvalueWPhusion Passenger 5.3.3¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueX˘XSRF-TOKEN=g%2BOxqQIhfORfib5C5H11Fi4Nlhb59Bqd3BhEiU71Ozj6JqZP9GTLO7gjZkISPQ3s8UCgJroPD90aVJSYxhFU%2BA%3D%3D; path=/; secure; SameSite=Strict, _recruit_session_20160421_2.3.4=7b45165a0e96029db34c48643c5d1d6c; path=/; HttpOnly; secure; SameSite=Strict¢Ak¢DtypeEvalueXStrict-Transport-SecurityAv¢DtypeEvalueX-max-age=631139040; includeSubdomains; preload¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE28491¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueIX-RuntimeAv¢DtypeEvalueH0.121354¢Ak¢DtypeEvalueX!X-Permitted-Cross-Domain-PoliciesAv¢DtypeEvalueDnone¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueQprivate, no-cache¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 09:10:47 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueOReferrer-PolicyAv¢DtypeEvalueXorigin-when-cross-origin¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYoK<!DOCTYPE html>
+<html lang="en" class='no-js uci recruit-uci-production production-area apply show stylesheet-modern shadowbox' prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c5bf3f27bd","applicationID":"558310","transactionName":"cFkKFxFYXA5UR05QSUNaHUwQX18V","queueTime":0,"applicationTime":112,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="University of California, Irvine Online Faculty Recruitment" />
+<meta name="keywords" content="University of California, Irvine, UCI, Online, Faculty, Recruitment" />
+<meta name="support-email" content="recruit@uci.edu" />
+<title>Environmental Management Instructors (JPF04497) - UCI - Recruit</title>
+<link rel="stylesheet" media="all" href="https://recruit.ap.uci.edu/assets/modern-30a5bd322d8bc5fe979432eb1d9d42fe9f18f29444e1970437c321958fac5707.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,900">
+
+  <!--[if lte IE 9]><link rel="stylesheet" media="all" href="https://recruit.ap.uci.edu/assets/modern2-fd4c6062fca04753e44c40068f26d414.css" /><![endif]-->
+<script src="https://recruit.ap.uci.edu/packs/application-2aafeedc8f5177f0893b.js"></script>
+<script src="https://recruit.ap.uci.edu/packs/cosmopolitan-72c16766f376a98367d2.js"></script>
+<link rel="stylesheet" media="screen" href="https://recruit.ap.uci.edu/packs/application-5c642d37c834f9f2c64aa80a13ad56f9.css" />
+<script src="https://recruit.ap.uci.edu/assets/application-09afc12a9a056d9164ecb31c2c749961476d056ed3cb5044bebbb55c5de29fa0.js"></script>
+<script src="https://recruit.ap.uci.edu/assets/bootstrap-0c0f91dc9056dfb29456f65b77c6b1dce7f47be07928b428cc3c418701abab9c.js"></script>
+
+<link rel="shortcut icon" href="https://recruit.ap.uci.edu/assets/favicons/uci-b45ca8a34e61d0b8066df21f7df77b2146e3adf25cc29f59d93bd52020dc651e.ico" type="image/x-icon">
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32621778-15']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    
+    $(document).data('ga-trackers', {"site":"UA-32621778-7"});
+  </script>
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="hgV1s9feinJuYHWXH+9jLmAEN7x84IOCUMfmSP2OUl3/wGJVIZs9rYnKrZfprxvUv0kBjD8blsKWizZZdWo9nQ==" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@UCIrvine">
+  
+    <meta name="twitter:label1" content="Apply by">
+    <meta name="twitter:data1" content="Mar 2, 2018">
+    <meta name="twitter:label2" content="Department">
+    <meta name="twitter:data2" content="Engineering &amp; Life Sciences - Division of Continuing Education">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recruit.ap.uci.edu/JPF04497">
+  <meta property="og:title" content="Environmental Management Instructors">
+  <meta property="og:description" content="University of California, Irvine is hiring. Apply now!">
+  <meta property="og:image" content="https://recruit.ap.uci.edu/assets/uci/main/aerial-w-27d4aa34a43521dcf1ad5724eef18a67bb635d6c31ff657e5342c8ab80995300.jpg">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-32621778-7"></script>
+  <script>
+//<![CDATA[
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-32621778-7';
+
+//]]>
+</script>
+
+  </head>
+  <body data-cosmopolitan=''>
+    <a tabindex="1" class="skip-nav" href="#content">Skip to main content</a>
+
+    
+    
+    <header id='header' class='uci_logo' role='banner'>
+  <div class='menu'>
+    <div class="logo">
+      <a href="/"><img src="https://recruit.ap.uci.edu/assets/uci/logo-a2ab281f90b5d5d55c08d8a397b408baa6009bf4d6608abfcc880fda114c537f.svg" alt="Logo" /></a>
+    </div>
+    <div class="recruit ">
+      <h1><a href="/">Recruit</a></h1>
+    </div>
+    
+  </div>
+</header>
+
+    
+    <div id="where-am-i">
+  <ol id='breadcrumbs' class='breadcrumb'>
+    <li class=''><a href="/">Home</a></li><li class=''><a href="/apply">Open Recruitments</a></li><li class='active'>Environmental Management Instructors (JPF04497)</li>
+  </ol>
+
+  
+</div>
+
+    
+    
+
+
+    
+    <main id='content'>
+      <aside id='flash'></aside>
+
+      
+
+  <script type="application/ld+json">
+  {"@context":"http://schema.org","@type":"JobPosting","title":"Environmental Management Instructors","identifier":"JPF04497","description":"\u003cp\u003eOnline teaching positions are now available in the Environmental Management Program.  We are seeking qualified applicants possessing current knowledge and/or teaching experience in Climate Protection, Environmental Sustainability, Waste Management, and Clean Water Regulations. \u003c/p\u003e\n\n\u003cp\u003eClasses are offered online in an instructor led format asynchronous for 10 weeks. \u003c/p\u003e\n\n\u003cp\u003eSpecific Instructor Duties \u003cbr\u003e\n‚Ä¢ Develop and/or update course syllabus in consultation with the UCI Division of Continuing Education (DCE), Engineering, Sciences, and IT Programs Director as assigned using approved syllabus template\u003cbr\u003e\n‚Ä¢ Prepare and deliver course materials and learning assessments in assigned format (online)\u003cbr\u003e\n‚Ä¢ Utilize the Canvas Learning Management System as the course support platform\u003cbr\u003e\n‚Ä¢ Communicate teaching objectives and specific learning outcomes to students, and clearly outline the grading policies for the course \u003cbr\u003e\n‚Ä¢ Evaluate student achievement of Specific Learning Outcomes and assign grades\u003cbr\u003e\n‚Ä¢ Post final student grades to the transcript system within their instructor accounts in a timely manner no later than 2 weeks after the last date of course meeting\u003cbr\u003e\n‚Ä¢ Respond to student questions and learning needs in a timely manner\u003cbr\u003e\n‚Ä¢ Handle student inquiries about final grades and consult with Director as needed\u003cbr\u003e\n‚Ä¢ Communicate with Program Director, Program Representatives and Online Course Managers in a timely manner\u003cbr\u003e\n‚Ä¢ Stay current regarding the professional body of knowledge in project management\u003cbr\u003e\n‚Ä¢ Participate in required orientations and complete mandatory training programs by deadlines established by UC Irvine\u003cbr\u003e\n‚Ä¢ Complete required administrative tasks in a timely manner including: Initial training of Canvas learning system; providing bio for website; completing all hiring paperwork; submitting updated quarterly syllabus; and signing quarterly contract. \u003cbr\u003e\n‚Ä¢ Develop and maintain curriculum, syllabus, modules, learning practice questions, exams and grading.\u003cbr\u003e\n‚Ä¢ Employ culturally competent teaching methodologies in the online classroom inclusive of both domestic and international student populations \u003cbr\u003e\n‚Ä¢ Allow students to review their final exams/papers for up to 13 months following the last class session\u003cbr\u003e\n‚Ä¢ Use subject-matter expertise and leverage additional resources appropriately to enhance the curriculum (i.e.: make arrangements for guest speakers, etc.)\u003cbr\u003e\n‚Ä¢ Design interactive and motivational online classroom activities to fully engage participants and to reinforce student learning (i.e.: design boards for labs, etc.)\u003cbr\u003e\n‚Ä¢ Update materials periodically, and regularly monitor course evaluations in order to make adjustments and improvements to the curriculum\u003c/p\u003e\n\n\u003cp\u003eOur curriculum is constantly updated and tailored to bring students the background, expertise, and business practices to remain competitive and advance their careers. Taught by qualified practitioners, our courses feature practical applications, underlying rationale, and current issues, all of which can be immediately utilized in and applied to our students‚Äô work environments.\u003c/p\u003e\n\n\u003cp\u003ePart-time, temporary assignments are on an as-needed basis. This is an ONGOING recruitment. We accept part-time instructor applications all year long; when the division has a need to fill, they refer to the ‚Äúpool‚Äù of applications on file. We are looking specifically for instructors who are qualified to teach the following course as early as FALL 2018 quarter (beginning September 2018):\u003c/p\u003e\n\n\u003cp\u003eClimate Protection and Environmental Sustainability: The Business of Mitigating Climate Change (3 units)\u003cbr\u003e\nENGRCEE X468\u003cbr\u003e\nThis class will provide the ability to assess financial, environmental and business aspects of mitigation efforts and to create a strategic competitive advantage for an organization. The instruction will include assessing the greenhouse gas (GHG) inventory of an organization, measuring and tracking carbon footprints. Areas of mitigation will be identified, including transportation, fuel usage, and facilities. The triple bottom line and the cost/benefit carbon analysis will be examined: economic incentives for increasing carbon sequestration and substitution, choosing the best tactics (e.g. renewable energy practice, carbon offsets, etc.) for mitigating carbon footprints. Students will study evaluating the effectiveness of a program. This course will utilize case studies to illustrate concepts. Climate protection and environmental sustainability requires a systems engineering approach to develop and implement a Strategic Plan for climate protection and sustainable practices. In this course, you will explore the forces driving sustainability change, the application of sustainable practices, and be guided through an analysis that will help you develop a vision and plan for implementation. Topics covered include: understanding the forces driving change, developing a Strategic Vision, identifying options and analyzing sustainability solutions (including cost/benefit analyses), and developing and communicating a Sustainability, Climate Protection, or Impact Reduction Plan. Learn a systems approach to developing a sustainable business or community - whether to affect the bottom line for energy usage, develop new markets, or ‚ÄúGo Green.‚Äù \u003c/p\u003e\n\n\u003cp\u003eTo apply for this position, please click this link: \u003ca href=\"https://recruit.ap.uci.edu/apply/JPF04497\" rel=\"nofollow\"\u003ehttps://recruit.ap.uci.edu/apply/JPF04497\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003eIndividuals hired to teach these courses must understand that all such agreements with the University are made on a course-by-course basis and that the Instructor will be made no guarantee of continual involvement with the University in any capacity.\u003c/p\u003e\n\n\u003cp\u003eThe University of California, Irvine is an Equal Opportunity/Affirmative Action Employer advancing inclusive excellence. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, age, protected veteran status, or other protected categories covered by the UC nondiscrimination policy.\u003c/p\u003e\n","datePosted":"2018-02-16T00:00:00-08:00","validThrough":"2018-03-02T23:59:59-08:00","industry":"Higher Education","hiringOrganization":{"@type":"Organization","name":"University of California, Irvine","sameAs":"http://www.uci.edu/","department":{"@type":"Organization","name":"Division of Continuing Education","department":{"@type":"Organization","name":"Engineering \u0026 Life Sciences"}}},"employmentType":["OTHER"],"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","name":"Online"}}}
+  </script>
+
+
+<header class='recruitment'>
+  <h2>
+    <span class='name'>Environmental Management Instructors</span>
+      <span class='apply'><form action="/JPF04497/apply" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><button class="btn btn-lg btn-primary">Apply now<span class="sr-only"> to Environmental Management Instructors</span></button></form></span>
+  </h2>
+  <div class="metadata">
+    Job #JPF04497
+    <ul>
+        <li>
+          Division of Continuing Education - Engineering &amp; Life Sciences
+        </li>
+    </ul>
+  </div>
+</header>
+
+<div class='body'>
+  
+    <h3 id="recruitment-period">
+      Recruitment Period
+    </h3>
+    <div class='section'>
+        <div class='date'><strong>Open date: </strong>February 16th, 2018</div>
+          <div class='date'>
+            <strong>Last review date:</strong> <span class="review_date" id="review_date_1276"><span class="date">March 2nd, 2018</span><span class="visibility"></span></span><br/>
+            Applications received after this date will be reviewed by the search committee if the position has not yet been filled.
+          </div>
+        <div class='date'>
+          <strong>Final date: </strong>February 15th, 2019<br/>
+          Applications will continue to be accepted until this date, but those received after the review date will only be considered if the position has not yet been filled.
+        </div>
+    </div>
+
+    <h3 id="description">Description</h3>
+    <div class='section'><p>Online teaching positions are now available in the Environmental Management Program.  We are seeking qualified applicants possessing current knowledge and/or teaching experience in Climate Protection, Environmental Sustainability, Waste Management, and Clean Water Regulations. </p>
+
+<p>Classes are offered online in an instructor led format asynchronous for 10 weeks. </p>
+
+<p>Specific Instructor Duties <br>
+‚Ä¢ Develop and/or update course syllabus in consultation with the UCI Division of Continuing Education (DCE), Engineering, Sciences, and IT Programs Director as assigned using approved syllabus template<br>
+‚Ä¢ Prepare and deliver course materials and learning assessments in assigned format (online)<br>
+‚Ä¢ Utilize the Canvas Learning Management System as the course support platform<br>
+‚Ä¢ Communicate teaching objectives and specific learning outcomes to students, and clearly outline the grading policies for the course <br>
+‚Ä¢ Evaluate student achievement of Specific Learning Outcomes and assign grades<br>
+‚Ä¢ Post final student grades to the transcript system within their instructor accounts in a timely manner no later than 2 weeks after the last date of course meeting<br>
+‚Ä¢ Respond to student questions and learning needs in a timely manner<br>
+‚Ä¢ Handle student inquiries about final grades and consult with Director as needed<br>
+‚Ä¢ Communicate with Program Director, Program Representatives and Online Course Managers in a timely manner<br>
+‚Ä¢ Stay current regarding the professional body of knowledge in project management<br>
+‚Ä¢ Participate in required orientations and complete mandatory training programs by deadlines established by UC Irvine<br>
+‚Ä¢ Complete required administrative tasks in a timely manner including: Initial training of Canvas learning system; providing bio for website; completing all hiring paperwork; submitting updated quarterly syllabus; and signing quarterly contract. <br>
+‚Ä¢ Develop and maintain curriculum, syllabus, modules, learning practice questions, exams and grading.<br>
+‚Ä¢ Employ culturally competent teaching methodologies in the online classroom inclusive of both domestic and international student populations <br>
+‚Ä¢ Allow students to review their final exams/papers for up to 13 months following the last class session<br>
+‚Ä¢ Use subject-matter expertise and leverage additional resources appropriately to enhance the curriculum (i.e.: make arrangements for guest speakers, etc.)<br>
+‚Ä¢ Design interactive and motivational online classroom activities to fully engage participants and to reinforce student learning (i.e.: design boards for labs, etc.)<br>
+‚Ä¢ Update materials periodically, and regularly monitor course evaluations in order to make adjustments and improvements to the curriculum</p>
+
+<p>Our curriculum is constantly updated and tailored to bring students the background, expertise, and business practices to remain competitive and advance their careers. Taught by qualified practitioners, our courses feature practical applications, underlying rationale, and current issues, all of which can be immediately utilized in and applied to our students‚Äô work environments.</p>
+
+<p>Part-time, temporary assignments are on an as-needed basis. This is an ONGOING recruitment. We accept part-time instructor applications all year long; when the division has a need to fill, they refer to the ‚Äúpool‚Äù of applications on file. We are looking specifically for instructors who are qualified to teach the following course as early as FALL 2018 quarter (beginning September 2018):</p>
+
+<p>Climate Protection and Environmental Sustainability: The Business of Mitigating Climate Change (3 units)<br>
+ENGRCEE X468<br>
+This class will provide the ability to assess financial, environmental and business aspects of mitigation efforts and to create a strategic competitive advantage for an organization. The instruction will include assessing the greenhouse gas (GHG) inventory of an organization, measuring and tracking carbon footprints. Areas of mitigation will be identified, including transportation, fuel usage, and facilities. The triple bottom line and the cost/benefit carbon analysis will be examined: economic incentives for increasing carbon sequestration and substitution, choosing the best tactics (e.g. renewable energy practice, carbon offsets, etc.) for mitigating carbon footprints. Students will study evaluating the effectiveness of a program. This course will utilize case studies to illustrate concepts. Climate protection and environmental sustainability requires a systems engineering approach to develop and implement a Strategic Plan for climate protection and sustainable practices. In this course, you will explore the forces driving sustainability change, the application of sustainable practices, and be guided through an analysis that will help you develop a vision and plan for implementation. Topics covered include: understanding the forces driving change, developing a Strategic Vision, identifying options and analyzing sustainability solutions (including cost/benefit analyses), and developing and communicating a Sustainability, Climate Protection, or Impact Reduction Plan. Learn a systems approach to developing a sustainable business or community - whether to affect the bottom line for energy usage, develop new markets, or ‚ÄúGo Green.‚Äù </p>
+
+<p>To apply for this position, please click this link: <a href="https://recruit.ap.uci.edu/apply/JPF04497" rel="nofollow">https://recruit.ap.uci.edu/apply/JPF04497</a></p>
+
+<p>Individuals hired to teach these courses must understand that all such agreements with the University are made on a course-by-course basis and that the Instructor will be made no guarantee of continual involvement with the University in any capacity.</p>
+
+<p>The University of California, Irvine is an Equal Opportunity/Affirmative Action Employer advancing inclusive excellence. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, age, protected veteran status, or other protected categories covered by the UC nondiscrimination policy.</p>
+</div>
+    <h3 id="job-location">Job location</h3>
+    <div class='section'>Online</div>
+
+    <h3 id="requirements">Requirements</h3>
+
+      <div class='recruitment-level'>
+
+          <div class='documents'>
+            <strong>Document requirements</strong>
+            <ul><li><p>Curriculum Vitae -  Your most recently updated C.V. </p>
+</li><li><p>Cover Letter</p>
+</li></ul>
+          </div>
+
+          <div class='references'><strong>Reference requirements</strong></div>
+          <ul>
+            <li>3 required (contact information only)</li>
+          </ul>
+      </div>
+
+    <h3 id="apply-online">How to apply</h3>
+    <ol>
+      <li>Create an ApplicantID</li>
+      <li>Provide required information and documents</li>
+        <li>If any, provide required reference information</li>
+    </ol>
+    <div class='section'><strong>Get started: press Apply Now</strong></div>
+</div>
+
+<footer class="how-to-apply">
+      <form action="/JPF04497/apply" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><button class="btn btn-lg btn-primary">Apply now<span class="sr-only"> to Environmental Management Instructors</span></button></form>
+    <br/><small>Questions? <a href="/JPF04497/question">Contact the hiring department</a></small>
+    <br/><small>Already applied? <a href="/apply/login">Log in to your application</a></small>
+  <p class='smaller'>
+    The University of California, Irvine is an Equal Opportunity/Affirmative Action Employer. You have <a href="http://www1.eeoc.gov/employers/upload/eeoc_self_print_poster.pdf">the right to an equal employment opportunity</a>.<br/>
+    For more information about your rights, see the <a href="http://www.dol.gov/ofccp/regs/compliance/posters/pdf/OFCCP_EEO_Supplement_Final_JRF_QA_508c.pdf">EEO is the Law Supplement</a>.<br/>
+    The University of California, Irvine is committed to providing <a href="<span class=&quot;translation_missing&quot; title=&quot;translation missing: uci.apply.details.footer.legal.disability_accomodations_link_url&quot;>Disability Accomodations Link Url</span>">reasonable accommodations to applicants with disabilities</a>.<br/>
+    See our Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act <a href="http://www.ucop.edu/ethics-compliance-audit-services/compliance/clery-act/clery-act-details.html">Annual Security Reports</a>.<br/>
+  </p>
+</footer>
+
+    </main>
+    
+    
+    <div class='quintain--post'>
+      
+    </div>
+    
+    
+    
+    <footer id="site-footer" role='contentinfo'>
+  <div class="help-links">
+    Academic Personnel Recruit<br />
+University of California, Irvine
+
+  </div>
+
+  <ul class="global-links">
+  <li><a class="iconic-link" href="/accessibility"><span class="iconic fa fa-universal-access"></span>Accessibility</a></li>
+  <li><a class="iconic-link" href="/about"><span class="iconic fa fa-history"></span>About</a></li>
+  <li id="ux-volunteer-link"></li>
+  <li class="privacy">
+    <span class="iconic fa fa-user-secret"></span> <a target="_blank" href="http://www.uci.edu/privacy">Campus privacy policy</a> | <a target="_blank" href="/privacy/gdpr">GDPR statement</a>
+  </li>
+</ul>
+
+  <div class="copyright">
+  &copy; 2007-2019 The Regents of the University of California. All rights reserved.
+</div>
+
+</footer>
+
+  </body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

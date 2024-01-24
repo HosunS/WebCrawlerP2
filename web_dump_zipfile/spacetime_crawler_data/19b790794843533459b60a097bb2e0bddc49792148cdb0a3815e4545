@@ -1,0 +1,558 @@
+�Ifinal_url�DtypeLhttp_headers�DtypeEvalue��Ak�DtypeEvalueNContent-LengthAv�DtypeEvalueE36298�Ak�DtypeEvalueJSet-CookieAv�DtypeEvalueX�trac_form_token=e7bc31214fae31774e3870a5; httponly; Path=/wiki/public, trac_session=21d1cdd6165b3d7976e42ccc; expires=Mon, 06 May 2019 21:44:12 GMT; httponly; Path=/wiki/public�Ak�DtypeEvalueGExpiresAv�DtypeEvalueXFri, 01 Jan 1999 00:00:00 GMT�Ak�DtypeEvalueJKeep-AliveAv�DtypeEvalueRtimeout=5, max=100�Ak�DtypeEvalueFServerAv�DtypeEvalueX�Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3�Ak�DtypeEvalueJConnectionAv�DtypeEvalueJKeep-Alive�Ak�DtypeEvalueMCache-ControlAv�DtypeEvalueOmust-revalidate�Ak�DtypeEvalueDDateAv�DtypeEvalueXTue, 05 Feb 2019 21:44:12 GMT�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueWtext/html;charset=utf-8Kraw_content�DtypeEvalueY��<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+    <html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      cs222-2017-fall-command-line-interface (diff) – Public
+    </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--[if IE]><script type="text/javascript">
+      if (/^#__msie303:/.test(window.location.hash))
+        window.location.replace(window.location.hash.replace(/^#__msie303:/, '#'));
+    </script><![endif]-->
+        <link rel="search" href="/wiki/public/search" />
+        <link rel="help" href="/wiki/public/wiki/TracGuide" />
+        <link rel="up" href="/wiki/public/wiki/cs222-2017-fall-command-line-interface?action=history" title="Page history" />
+        <link rel="start" href="/wiki/public/wiki" />
+        <link rel="stylesheet" href="/wiki/public/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/common/css/diff.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/tracwysiwyg/wysiwyg.css" type="text/css" />
+        <link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/common/css/trac.css" /><link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/tracwysiwyg/editor.css" />
+        <link rel="tracwysiwyg.base" href="/wiki/public" />
+        <link rel="shortcut icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+    <style id="trac-noscript" type="text/css">.trac-noscript { display: none !important }</style>
+    <script type="text/javascript">
+      var _tracwysiwyg={};
+    </script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/jquery.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/babel.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/trac.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/search.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/diff.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/tracwysiwyg/wysiwyg.js"></script>
+    <script type="text/javascript">
+      jQuery("#trac-noscript").remove();
+      jQuery(document).ready(function($) {
+        $(".trac-autofocus").focus();
+        $(".trac-target-new").attr("target", "_blank");
+        setTimeout(function() { $(".trac-scroll").scrollToTop() }, 1);
+        $(".trac-disable-on-submit").disableOnSubmit();
+      });
+    </script>
+    <link rel="stylesheet" type="text/css" href="/wiki/public/chrome/common/css/diff.css" />
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://www.ics.uci.edu/"><img src="/wiki/public/chrome/site/ics.jpg" alt="ICS Logo" height="67" width="128" /></a>
+      </div>
+      <form id="search" action="/wiki/public/search" method="get">
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="/wiki/public/login">Login</a></li><li><a href="/wiki/public/prefs">Preferences</a></li><li class="last"><a href="/wiki/public/about">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+  </div>
+    <div id="main">
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+        <ul>
+          <li class="first"><span class="missing">&larr; Previous Change</span></li><li><a href="/wiki/public/wiki/cs222-2017-fall-command-line-interface?action=history" title="Page history">Wiki History</a></li><li class="last"><span class="missing">Next Change &rarr;</span></li>
+        </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+      <h1>
+        Changes between
+          <a href="/wiki/public/wiki/cs222-2017-fall-command-line-interface?version=0">Initial Version</a> and
+          <a href="/wiki/public/wiki/cs222-2017-fall-command-line-interface?version=1">Version 1</a> of
+          <a href="/wiki/public/wiki/cs222-2017-fall-command-line-interface">cs222-2017-fall-command-line-interface</a>
+      </h1>
+      <form method="post" id="prefs" action="/wiki/public/wiki/cs222-2017-fall-command-line-interface?version=1"><div><input type="hidden" name="__FORM_TOKEN" value="e7bc31214fae31774e3870a5" /></div>
+        <div>
+          <input type="hidden" name="action" value="diff" />
+          <input type="hidden" name="version" value="1" />
+          <input type="hidden" name="old_version" value="0" />
+          
+  <label for="style">View differences</label>
+  <select id="style" name="style">
+    <option selected="selected" value="inline">inline</option>
+    <option value="sidebyside">side by side</option>
+  </select>
+  <div class="field">
+    <label><input type="radio" name="contextall" value="0" checked="checked" />
+             Show</label>
+      <label><input type="text" name="contextlines" id="contextlines" size="2" maxlength="3" value="2" />
+             lines around each change</label><br />
+    <label><input type="radio" name="contextall" value="1" />
+           Show the changes in full context</label>
+  </div>
+  <fieldset id="ignore">
+    <legend>Ignore:</legend>
+    <div class="field">
+      <input type="checkbox" id="ignoreblanklines" name="ignoreblanklines" />
+      <label for="ignoreblanklines">Blank lines</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorecase" name="ignorecase" />
+      <label for="ignorecase">Case changes</label>
+    </div>
+    <div class="field">
+      <input type="checkbox" id="ignorewhitespace" name="ignorewhitespace" />
+      <label for="ignorewhitespace">White space changes</label>
+    </div>
+  </fieldset>
+  <div class="buttons">
+    <input type="submit" name="update" value="Update" />
+  </div>
+
+        </div>
+      </form>
+      <dl id="overview">
+        <dt class="property time">Timestamp:</dt>
+        <dd class="time">
+            Nov 20, 2017 9:40:44 PM (<a class="timeline" href="/wiki/public/timeline?from=2017-11-20T21%3A40%3A44-08%3A00&amp;precision=second" title="See timeline at Nov 20, 2017 9:40:44 PM">15 months</a> ago)
+        </dd>
+        <dt class="property author">Author:</dt>
+        <dd class="author">
+          zuozhi
+        </dd>
+        <dt class="property message">Comment:</dt>
+        <dd class="message">
+          
+          <p>
+--
+</p>
+
+        </dd>
+      </dl>
+      <div class="diff">
+        <div class="legend" id="diff-legend">
+          <h3>Legend:</h3>
+          <dl>
+            <dt class="unmod"></dt><dd>Unmodified</dd>
+            <dt class="add"></dt><dd>Added</dd>
+            <dt class="rem"></dt><dd>Removed</dd>
+            <dt class="mod"></dt><dd>Modified</dd>
+          </dl>
+        </div>
+        <div class="diff">
+  <ul class="entries">
+      <li class="entry">
+        <h2 id="file0">
+          <a href="/wiki/public/wiki/cs222-2017-fall-command-line-interface?version=1">cs222-2017-fall-command-line-interface</a>
+        </h2>
+        <table class="trac-diff inline" summary="Differences" cellspacing="0">
+              <colgroup><col class="lineno" /><col class="lineno" /><col class="content" /></colgroup>
+              <thead>
+                <tr>
+                  <th title="Version currently edited">
+                    <a href="#L1">
+                      v1</a>
+                  </th>
+                  <th title="Version 1">
+                    <a href="/wiki/public/wiki/cs222-2017-fall-command-line-interface?version=1#L1">
+                      v1</a>
+                  </th>
+                  <td> </td>
+                </tr>
+              </thead>
+            <tbody class="add">
+                  <tr class="first">
+                          <th> </th><th>1</th><td class="r"><ins>{{{</ins></td>
+                  </tr><tr>
+                          <th> </th><th>2</th><td class="r"><ins>#!div style="background-color:rgb(237,222,222)"</ins></td>
+                  </tr><tr>
+                          <th> </th><th>3</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>4</th><td class="r"><ins>[[PageOutline]]</ins></td>
+                  </tr><tr>
+                          <th> </th><th>5</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>6</th><td class="r"><ins>= Command Line Interface Interpreter for Project4 =</ins></td>
+                  </tr><tr>
+                          <th> </th><th>7</th><td class="r"><ins>[[BR]]</ins></td>
+                  </tr><tr>
+                          <th> </th><th>8</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>9</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>10</th><td class="r"><ins>== Introduction ==</ins></td>
+                  </tr><tr>
+                          <th> </th><th>11</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>12</th><td class="r"><ins>Command Line Interface (CLI) takes a SQL-like command and executes that command. </ins></td>
+                  </tr><tr>
+                          <th> </th><th>13</th><td class="r"><ins>CLI is laid on top of the Relation Manager (RM) and Query Engine (QE) layers in Project 4 so that each command is executed via the public methods of the RM and/or QE layers.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>14</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>15</th><td class="r"><ins>== Supported Commands ==</ins></td>
+                  </tr><tr>
+                          <th> </th><th>16</th><td class="r"><ins>The interpreter supports the following commands. </ins></td>
+                  </tr><tr>
+                          <th> </th><th>17</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>18</th><td class="r"><ins>{{{</ins></td>
+                  </tr><tr>
+                          <th> </th><th>19</th><td class="r"><ins>create catalog</ins></td>
+                  </tr><tr>
+                          <th> </th><th>20</th><td class="r"><ins>create table &lt;tableName&gt; (col1 = &lt;type&gt;, col2 = &lt;type&gt;, ...)</ins></td>
+                  </tr><tr>
+                          <th> </th><th>21</th><td class="r"><ins>&nbsp; &nbsp; &lt;type&gt; = int | real | &lt;varchar&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>22</th><td class="r"><ins>&nbsp; &nbsp; &lt;varchar&gt; = "varchar(" &lt;length&gt; ")"</ins></td>
+                  </tr><tr>
+                          <th> </th><th>23</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>24</th><td class="r"><ins>create index &lt;columnName&gt; on &lt;tableName&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>25</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>26</th><td class="r"><ins>drop catalog</ins></td>
+                  </tr><tr>
+                          <th> </th><th>27</th><td class="r"><ins>drop table &lt;tableName&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>28</th><td class="r"><ins>drop index &lt;indexName&gt; on &lt;tableName&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>29</th><td class="r"><ins>drop attribute &lt;attributeName&gt; from &lt;tableName&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>30</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>31</th><td class="r"><ins>insert into &lt;tableName&gt; tuple(col1 = &lt;value1&gt;, col2 = &lt;value2&gt;, ...)</ins></td>
+                  </tr><tr>
+                          <th> </th><th>32</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>33</th><td class="r"><ins>SELECT &lt;query&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>34</th><td class="r"><ins>&lt;query&gt; = </ins></td>
+                  </tr><tr>
+                          <th> </th><th>35</th><td class="r"><ins>&nbsp; &nbsp; PROJECT &lt;query&gt; GET "[" &lt;attrs&gt; "]"</ins></td>
+                  </tr><tr>
+                          <th> </th><th>36</th><td class="r"><ins>&nbsp; &nbsp; FILTER &lt;query&gt; WHERE &lt;attr&gt; &lt;op&gt; &lt;value&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>37</th><td class="r"><ins>&nbsp; &nbsp; BNLJOIN &lt;query&gt;, &lt;query&gt; WHERE &lt;attr&gt; &lt;op&gt; &lt;attr&gt; PAGES(&lt;numPages&gt;)</ins></td>
+                  </tr><tr>
+                          <th> </th><th>38</th><td class="r"><ins>&nbsp; &nbsp; INLJOIN &lt;query&gt;, &lt;query&gt; WHERE &lt;attr&gt; &lt;op&gt; &lt;attr&gt;)</ins></td>
+                  </tr><tr>
+                          <th> </th><th>39</th><td class="r"><ins>&nbsp; &nbsp; GHJOIN &lt;query&gt;, &lt;query&gt; WHERE &lt;attr&gt; &lt;op&gt; &lt;attr&gt; PARTITIONS(&lt;numPartitions&gt;)</ins></td>
+                  </tr><tr>
+                          <th> </th><th>40</th><td class="r"><ins>&nbsp; &nbsp; AGG &lt;query&gt; [ GROUPBY(&lt;attr&gt;) ] GET &lt;agg-op&gt;(&lt;attr&gt;)</ins></td>
+                  </tr><tr>
+                          <th> </th><th>41</th><td class="r"><ins>&nbsp; &nbsp; IDXSCAN &lt;query&gt; &lt;attr&gt; &lt;op&gt; &lt;value&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>42</th><td class="r"><ins>&nbsp; &nbsp; TBLSCAN &lt;query&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>43</th><td class="r"><ins>&nbsp; &nbsp; &lt;tableName&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>44</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>45</th><td class="r"><ins>&lt;agg-op&gt; = MIN | MAX | SUM | AVG | COUNT</ins></td>
+                  </tr><tr>
+                          <th> </th><th>46</th><td class="r"><ins>&lt;op&gt; = &lt; | &gt; | = | != | &gt;= | &lt;= | NOOP</ins></td>
+                  </tr><tr>
+                          <th> </th><th>47</th><td class="r"><ins>&lt;attrs&gt; = &lt;attr&gt; { "," &lt;attr&gt; }</ins></td>
+                  </tr><tr>
+                          <th> </th><th>48</th><td class="r"><ins>&lt;numPartitions&gt; = is a number bigger than 0</ins></td>
+                  </tr><tr>
+                          <th> </th><th>49</th><td class="r"><ins>&lt;numPages&gt; = is a number bigger than 0</ins></td>
+                  </tr><tr>
+                          <th> </th><th>50</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>51</th><td class="r"><ins>print &lt;tableName&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>52</th><td class="r"><ins>print attributes &lt;tableName&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>53</th><td class="r"><ins>print index &lt;attributeName&gt; on &lt;tableName&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>54</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>55</th><td class="r"><ins>load &lt;tableName&gt; &lt;fileName&gt;: loads the file which is in data/ folder.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>56</th><td class="r"><ins>help &lt;commandName&gt;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>57</th><td class="r"><ins>help</ins></td>
+                  </tr><tr>
+                          <th> </th><th>58</th><td class="r"><ins>quit | exit</ins></td>
+                  </tr><tr>
+                          <th> </th><th>59</th><td class="r"><ins>}}}</ins></td>
+                  </tr><tr>
+                          <th> </th><th>60</th><td class="r"><ins>'''Note:''' All commands are case-insensitive. However, all user defined strings such as table names, attribute names etc. are case-sensitive.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>61</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>62</th><td class="r"><ins>== Command Examples ==</ins></td>
+                  </tr><tr>
+                          <th> </th><th>63</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>64</th><td class="r"><ins>When you first execute CLI, you need to create the system catalog using the following command. Once the catalog is created, you don't need to execute this command again.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>65</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>66</th><td class="r"><ins>{{{</ins></td>
+                  </tr><tr>
+                          <th> </th><th>67</th><td class="r"><ins>create catalog</ins></td>
+                  </tr><tr>
+                          <th> </th><th>68</th><td class="r"><ins>}}}</ins></td>
+                  </tr><tr>
+                          <th> </th><th>69</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>70</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>71</th><td class="r"><ins>You can create a table and insert a record using the following commands:</ins></td>
+                  </tr><tr>
+                          <th> </th><th>72</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>73</th><td class="r"><ins>{{{</ins></td>
+                  </tr><tr>
+                          <th> </th><th>74</th><td class="r"><ins>create table Employee EmpName = varchar(30), Age = int, Height = real, Salary = int</ins></td>
+                  </tr><tr>
+                          <th> </th><th>75</th><td class="r"><ins>insert into Employee tuple(EmpName = sky, Age = 22, Height = 6.1, Salary = 13291)</ins></td>
+                  </tr><tr>
+                          <th> </th><th>76</th><td class="r"><ins>}}}</ins></td>
+                  </tr><tr>
+                          <th> </th><th>77</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>78</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>79</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>80</th><td class="r"><ins>Also, CLI supports a load command that allows users to load records in a file to an existing table.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>81</th><td class="r"><ins>The following screenshot shows how to load records from a file, employee_5 to a table, tbl_employee, and print all records in the table.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>82</th><td class="r"><ins>Furthermore, it also shows how to use SELECT command with FILTER iterator.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>83</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>84</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>85</th><td class="r"><ins>{{{</ins></td>
+                  </tr><tr>
+                          <th> </th><th>86</th><td class="r"><ins>&gt;&gt;&gt; create table tbl_employee EmpName = varchar(30), Age = int, Height = real, Salary = int</ins></td>
+                  </tr><tr>
+                          <th> </th><th>87</th><td class="r"><ins>&gt;&gt;&gt; load tbl_employee employee_5</ins></td>
+                  </tr><tr>
+                          <th> </th><th>88</th><td class="r"><ins>&gt;&gt;&gt; print tbl_employee</ins></td>
+                  </tr><tr>
+                          <th> </th><th>89</th><td class="r"><ins>EmpName&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; Age&nbsp; |&nbsp; Height&nbsp; &nbsp; |&nbsp; Salary&nbsp; |&nbsp; </ins></td>
+                  </tr><tr>
+                          <th> </th><th>90</th><td class="r"><ins>===================================================</ins></td>
+                  </tr><tr>
+                          <th> </th><th>91</th><td class="r"><ins>Anettea Belote&nbsp; &nbsp; |&nbsp; 67&nbsp; &nbsp;|&nbsp; 6.400000&nbsp; |&nbsp; 75000&nbsp; &nbsp;|&nbsp; </ins></td>
+                  </tr><tr>
+                          <th> </th><th>92</th><td class="r"><ins>Zina Legleiter&nbsp; &nbsp; |&nbsp; 45&nbsp; &nbsp;|&nbsp; 6.300000&nbsp; |&nbsp; 150000&nbsp; |&nbsp; </ins></td>
+                  </tr><tr>
+                          <th> </th><th>93</th><td class="r"><ins>Rena Broadus&nbsp; &nbsp; &nbsp; |&nbsp; 68&nbsp; &nbsp;|&nbsp; 5.900000&nbsp; |&nbsp; 250000&nbsp; |&nbsp; </ins></td>
+                  </tr><tr>
+                          <th> </th><th>94</th><td class="r"><ins>Lorriane Shimmin&nbsp; |&nbsp; 49&nbsp; &nbsp;|&nbsp; 6.600000&nbsp; |&nbsp; 400000&nbsp; |&nbsp; </ins></td>
+                  </tr><tr>
+                          <th> </th><th>95</th><td class="r"><ins>Elvira Binns&nbsp; &nbsp; &nbsp; |&nbsp; 36&nbsp; &nbsp;|&nbsp; 5.600000&nbsp; |&nbsp; 200000&nbsp; |&nbsp; </ins></td>
+                  </tr><tr>
+                          <th> </th><th>96</th><td class="r"><ins>&gt;&gt;&gt; SELECT FILTER tbl_employee WHERE Age = 45</ins></td>
+                  </tr><tr>
+                          <th> </th><th>97</th><td class="r"><ins>tbl_employee.EmpName&nbsp; |&nbsp; tbl_employee.Age&nbsp; |&nbsp; tbl_employee.Height&nbsp; |&nbsp; tbl_employee.Salary&nbsp; |&nbsp; </ins></td>
+                  </tr><tr>
+                          <th> </th><th>98</th><td class="r"><ins>============================================================================================</ins></td>
+                  </tr><tr>
+                          <th> </th><th>99</th><td class="r"><ins>Zina Legleiter&nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; 45&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |&nbsp; 6.300000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; 150000&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;|&nbsp; </ins></td>
+                  </tr><tr>
+                          <th> </th><th>100</th><td class="r"><ins>}}}</ins></td>
+                  </tr><tr>
+                          <th> </th><th>101</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>102</th><td class="r"><ins>'''Note''' that there are a set of dataset files under codebase/data/ directory, which are used for example programs, "cli_example_01.cc" under codebase/cli directory (and can be used for your own examples.)</ins></td>
+                  </tr><tr>
+                          <th> </th><th>103</th><td class="r"><ins>The example program contains 21 cases each of which executes a set of CLI commands.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>104</th><td class="r"><ins>Those example cases provide more comprehensive usage of all CLI commands.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>105</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>106</th><td class="r"><ins>&nbsp;== Getting and Using Command Line Interface ==</ins></td>
+                  </tr><tr>
+                          <th> </th><th>107</th><td class="r"><ins>The [wiki:cs222-2016-fall-project4#no1 codebase] has the following source tree.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>108</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>109</th><td class="r"><ins>{{{</ins></td>
+                  </tr><tr>
+                          <th> </th><th>110</th><td class="r"><ins>codebase/</ins></td>
+                  </tr><tr>
+                          <th> </th><th>111</th><td class="r"><ins>├── cli</ins></td>
+                  </tr><tr>
+                          <th> </th><th>112</th><td class="r"><ins>│&nbsp; &nbsp;├── cli.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>113</th><td class="r"><ins>│&nbsp; &nbsp;├── cli.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>114</th><td class="r"><ins>│&nbsp; &nbsp;├── cli_example_XX.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>115</th><td class="r"><ins>│&nbsp; &nbsp;├── makefile</ins></td>
+                  </tr><tr>
+                          <th> </th><th>116</th><td class="r"><ins>│&nbsp; &nbsp;└── start.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>117</th><td class="r"><ins>├── data</ins></td>
+                  </tr><tr>
+                          <th> </th><th>118</th><td class="r"><ins>│&nbsp; &nbsp;├── ages_90</ins></td>
+                  </tr><tr>
+                          <th> </th><th>119</th><td class="r"><ins>│&nbsp; &nbsp;├── employee_5</ins></td>
+                  </tr><tr>
+                          <th> </th><th>120</th><td class="r"><ins>│&nbsp; &nbsp;├── employee_50</ins></td>
+                  </tr><tr>
+                          <th> </th><th>121</th><td class="r"><ins>│&nbsp; &nbsp;└── salary_5</ins></td>
+                  </tr><tr>
+                          <th> </th><th>122</th><td class="r"><ins>├── ix</ins></td>
+                  </tr><tr>
+                          <th> </th><th>123</th><td class="r"><ins>│&nbsp; &nbsp;├── ix.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>124</th><td class="r"><ins>│&nbsp; &nbsp;├── ix.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>125</th><td class="r"><ins>│&nbsp; &nbsp;├── ixtestX.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>126</th><td class="r"><ins>│&nbsp; &nbsp;├── ixtest_extra_X.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>127</th><td class="r"><ins>│&nbsp; &nbsp;├── ixtest_util.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>128</th><td class="r"><ins>│&nbsp; &nbsp;└── makefile</ins></td>
+                  </tr><tr>
+                          <th> </th><th>129</th><td class="r"><ins>├── makefile.inc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>130</th><td class="r"><ins>├── qe</ins></td>
+                  </tr><tr>
+                          <th> </th><th>131</th><td class="r"><ins>│&nbsp; &nbsp;├── makefile</ins></td>
+                  </tr><tr>
+                          <th> </th><th>132</th><td class="r"><ins>│&nbsp; &nbsp;├── qe.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>133</th><td class="r"><ins>│&nbsp; &nbsp;├── qetestX.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>134</th><td class="r"><ins>│&nbsp; &nbsp;├── qetest_util.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>135</th><td class="r"><ins>│&nbsp; &nbsp;└── qe.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>136</th><td class="r"><ins>├── rbf</ins></td>
+                  </tr><tr>
+                          <th> </th><th>137</th><td class="r"><ins>│&nbsp; &nbsp;├── makefile</ins></td>
+                  </tr><tr>
+                          <th> </th><th>138</th><td class="r"><ins>│&nbsp; &nbsp;├── pfm.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>139</th><td class="r"><ins>│&nbsp; &nbsp;├── pfm.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>140</th><td class="r"><ins>│&nbsp; &nbsp;├── rbfm.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>141</th><td class="r"><ins>│&nbsp; &nbsp;├── rbfm.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>142</th><td class="r"><ins>│&nbsp; &nbsp;└── rbftestX.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>143</th><td class="r"><ins>├── readme.txt</ins></td>
+                  </tr><tr>
+                          <th> </th><th>144</th><td class="r"><ins>├── rm</ins></td>
+                  </tr><tr>
+                          <th> </th><th>145</th><td class="r"><ins>│&nbsp; &nbsp;├── makefile</ins></td>
+                  </tr><tr>
+                          <th> </th><th>146</th><td class="r"><ins>│&nbsp; &nbsp;├── rm.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>147</th><td class="r"><ins>│&nbsp; &nbsp;├── rm.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>148</th><td class="r"><ins>│&nbsp; &nbsp;├── rmtest_XX.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>149</th><td class="r"><ins>│&nbsp; &nbsp;├── rmtest_create_tables.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>150</th><td class="r"><ins>│&nbsp; &nbsp;├── rmtest_delete_tables.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>151</th><td class="r"><ins>│&nbsp; &nbsp;├── rmtest_extra_X.cc</ins></td>
+                  </tr><tr>
+                          <th> </th><th>152</th><td class="r"><ins>│&nbsp; &nbsp;└── test_util.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>153</th><td class="r"><ins>└── shared.h</ins></td>
+                  </tr><tr>
+                          <th> </th><th>154</th><td class="r"><ins>}}}</ins></td>
+                  </tr><tr>
+                          <th> </th><th>155</th><td class="r"><ins>'''Note''' that the folder, codebase/data/ has csv files that contain a set of records, which can be used for your own checking purpose. </ins></td>
+                  </tr><tr>
+                          <th> </th><th>156</th><td class="r"><ins>[[BR]]</ins></td>
+                  </tr><tr>
+                          <th> </th><th>157</th><td class="r"><ins>Also, the data folder is a folder that CLI program searches for files specified in "load" commands. [[BR]]</ins></td>
+                  </tr><tr>
+                          <th> </th><th>158</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>159</th><td class="r"><ins>Goto cli folder and type the following commands</ins></td>
+                  </tr><tr>
+                          <th> </th><th>160</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>161</th><td class="r"><ins>{{{</ins></td>
+                  </tr><tr>
+                          <th> </th><th>162</th><td class="r"><ins>make clean; make; ./start</ins></td>
+                  </tr><tr>
+                          <th> </th><th>163</th><td class="r"><ins>}}}</ins></td>
+                  </tr><tr>
+                          <th> </th><th>164</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>165</th><td class="r"><ins>if you see the following outputs (the folder hierarchy will be different), you are good to go to the next step.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>166</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>167</th><td class="r"><ins>{{{</ins></td>
+                  </tr><tr>
+                          <th> </th><th>168</th><td class="r"><ins>************************</ins></td>
+                  </tr><tr>
+                          <th> </th><th>169</th><td class="r"><ins>SecSQL CLI started</ins></td>
+                  </tr><tr>
+                          <th> </th><th>170</th><td class="r"><ins>Enjoy!</ins></td>
+                  </tr><tr>
+                          <th> </th><th>171</th><td class="r"><ins>&gt;&gt;&gt; </ins></td>
+                  </tr><tr>
+                          <th> </th><th>172</th><td class="r"><ins>}}}</ins></td>
+                  </tr><tr>
+                          <th> </th><th>173</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>174</th><td class="r"><ins>Now, put all files that you implemented(and will implement in Project4) to the corresponding folders in the above source tree. </ins></td>
+                  </tr><tr>
+                          <th> </th><th>175</th><td class="r"><ins>Then, if you type again the same command in the cli folder, you can start playing by typing '''"help"'''.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>176</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>177</th><td class="r"><ins>== Acknowledgement ==</ins></td>
+                  </tr><tr>
+                          <th> </th><th>178</th><td class="r"><ins>The CLI layer was originally written by the following three students from the last CS222 course project.&nbsp; &nbsp;</ins></td>
+                  </tr><tr>
+                          <th> </th><th>179</th><td class="r"><ins>* Sky Faber</ins></td>
+                  </tr><tr>
+                          <th> </th><th>180</th><td class="r"><ins>* Cesar Ghali</ins></td>
+                  </tr><tr>
+                          <th> </th><th>181</th><td class="r"><ins>* Ekin Oguz</ins></td>
+                  </tr><tr>
+                          <th> </th><th>182</th><td class="r"><ins>We really appreciate their efforts. We also acknowledge the efforts of Sattam Alsubaiee, Young-Seok Kim, Hotham Altwaijry, and Jianfeng Jia who updated the the CLI layer in the previous quarters. </ins></td>
+                  </tr><tr>
+                          <th> </th><th>183</th><td class="r"><ins></ins></td>
+                  </tr><tr>
+                          <th> </th><th>184</th><td class="r"><ins>Lastly, to reflect the changed API of this quarter project, the CLI layer has been modified by Taewoo Kim.</ins></td>
+                  </tr><tr>
+                          <th> </th><th>185</th><td class="r"><ins></ins></td>
+                  </tr><tr class="last">
+                          <th> </th><th>186</th><td class="r"><ins>}}}</ins></td>
+                  </tr>
+            </tbody>
+        </table>
+      </li>
+  </ul>
+</div>
+      </div>
+  </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/wiki/public/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="/wiki/public/about"><strong>Trac 1.0.13</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>
+Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

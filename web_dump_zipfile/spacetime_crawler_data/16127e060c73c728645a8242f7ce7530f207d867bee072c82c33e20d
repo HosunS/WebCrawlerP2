@@ -1,0 +1,605 @@
+�Ifinal_url�DtypeEvaluexYhttps://worldwide.espacenet.com/errorpages/error403.htm?reason=Blacklist&ip=128.195.76.25Lhttp_headers�DtypeEvalue��Ak�DtypeEvalueNContent-LengthAv�DtypeEvalueE19586�Ak�DtypeEvalueOAccept-EncodingAv�DtypeEvalueMgzip, deflate�Ak�DtypeEvaluePX-Forwarded-PortAv�DtypeEvalueC443�Ak�DtypeEvalueOX-Forwarded-ForAv�DtypeEvalueM128.195.76.25�Ak�DtypeEvalueFAcceptAv�DtypeEvalueC*/*�Ak�DtypeEvalueJuser-agentAv�DtypeEvalueLZebincLoksc1�Ak�DtypeEvalueJConnectionAv�DtypeEvalueJkeep-alive�Ak�DtypeEvalueQX-Forwarded-ProtoAv�DtypeEvalueEhttps�Ak�DtypeEvalueDDateAv�DtypeEvalueXSat, 09 Feb 2019 05:36:46 GMT�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueItext/htmlKraw_content�DtypeEvalueYMq<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <title>espacenet - page not found</title>
+
+    <style>
+
+      #epoLogo img{display: block;}
+
+      .epoContentWrap {display: none;}
+
+      .epoContentWrap.en_locale {display: block;}
+
+      .languages_box{float: right;}
+
+      .languages_box li{margin-right: 5px;}
+
+    </style>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+
+    <meta name="keywords" content="brevets gratuits, information brevets, documents brevets en ligne, espacenet, espacenet, base de donnÃ©es, inventions, inventeur, innovation, industrie, idÃ©es"/>
+
+    <meta name="description" content="error page 403"/>
+
+    <link href="/css/cssEpo.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <link href="/css/cssJQuery.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <link href="/css/espacenet.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <link href="/images/favicon.ico" rel="favicon" />
+
+    <link href="/css/cssPrint.css" type="text/css" rel="stylesheet" media="print"/>
+
+    <link href="/css/cssPrintLayout.css" type="text/css" rel="stylesheet" media="print"/>
+
+    <link href="/css/espacenetPrint.css" media="print" rel="stylesheet" type="text/css" />
+
+    <!--[if IE 9]> <link href="/css/css_IE9.css" media="all" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!--[if IE 8]> <link href="/css/css_IE8.css" media="all" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!--[if IE 7]> <link href="/css/css_IE7.css" media="all" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <!--[if IE 6]> <link href="/css/css_IE6.css" media="all" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <script>
+
+      (function() {
+
+        var data = {
+
+          'en': {
+
+            'errorMessages': {
+
+              'DataSizeQuota': 'The current daily limit of data has been exceeded.',
+
+              'RequestVolumeQuota': 'The limit of requests per minute has been exceeded.',
+
+              'Blacklist': 'The IP address has been blacklisted.',
+
+              'RobotAbuse': 'Some of the requests from this IP are seen as originating from automated tools.',
+
+              'DistributedIPUsage': 'The requests are seen as originating from distributed automated tools.',
+
+              'default': 'The Espacenet application has found that requests from your IP address may be in violation of our fair use charter.'
+
+            }
+
+          },
+
+          'fr': {
+
+            'errorMessages': {
+
+              'DataSizeQuota': 'Lâactuelle limite journaliÃ¨re de donnÃ©es a Ã©tÃ© dÃ©passÃ©e.',
+
+              'RequestVolumeQuota': 'La limite de requÃªtes par minute a Ã©tÃ© dÃ©passÃ©e.',
+
+              'Blacklist': 'Lâadresse IP figure sur la liste noire.',
+
+              'RobotAbuse': 'Certaines requÃªtes Ã©manant de cette adresse IP sont considÃ©rÃ©es comme provenant dâoutils automatisÃ©s.',
+
+              'DistributedIPUsage': 'Les requÃªtes sont considÃ©rÃ©es comme provenant dâoutils automatisÃ©s distribuÃ©s.',
+
+              'default': 'Lâapplication Espacenet a constatÃ© que les requÃªtes Ã©manant de votre adresse IP seraient contraires Ã  notre charte d\'utilisation Ã©quitable.'
+
+            }
+
+          },
+
+          'de': {
+
+            'errorMessages': {
+
+              'DataSizeQuota': 'Die aktuelle tÃ¤gliche Obergrenze fÃ¼r das Datenvolumen wurde erreicht.',
+
+              'RequestVolumeQuota': 'Die Grenze fÃ¼r Anfragen pro Minute wurde erreicht.',
+
+              'Blacklist': 'Die IP-Adresse wurde auf eine schwarze Liste gesetzt.',
+
+              'RobotAbuse': 'Es wird angenommen, dass einige der von dieser IP-Adresse gesendeten Abfragen von automatisierten Tools stammen.',
+
+              'DistributedIPUsage': 'Es wird angenommen, dass die Abfragen von verteilten automatisierten Tools stammen.',
+
+              'default': 'Espacenet hat festgestellt, dass die von Ihrer IP-Adresse gesendeten Abfragen nicht unserem Leitfaden zur fairen Nutzung entsprechen kÃ¶nnten.'
+
+            }
+
+          }
+
+        };
+
+
+
+        var getUrlParameter = function(paramName) {
+
+          return (window.location.search.match(new RegExp('[\?\&]' + paramName + '=([A-z\\.0-9]+)')) || [])[1];
+
+        };
+
+
+
+        var getCookie = function getCookie(a) {
+
+          var c = a + "=";
+
+          if (document.cookie.length > 0) {
+
+            offset = document.cookie.indexOf(c);
+
+            if (offset != -1) {
+
+              offset += c.length;
+
+              var b = document.cookie.indexOf(";", offset);
+
+              if (b == -1) {
+
+                b = document.cookie.length
+
+              }
+
+              return unescape(document.cookie.substring(offset, b))
+
+            }
+
+          }
+
+        };
+
+
+
+        var locale = getUrlParameter('locale') || getCookie('org.springframework.web.servlet.i18n.CookieLocaleResolver.LOCALE') || 'en_EN'; // Get locale, default en_EN
+
+        var language = locale.split('_')[0];
+
+
+
+        if (Object.keys(data).indexOf(language) === -1) {
+
+          // If we have no localized data -- switch to english
+
+          language = 'en';
+
+        }
+
+
+
+        var ip = getUrlParameter('ip');
+
+        var reason = getUrlParameter('reason');
+
+
+
+        var localizedData = data[language];
+
+
+
+        document.write('<style >.epoContentWrap.en_locale {display: none;}</style>');
+
+
+
+        document.querySelector('html').className += ' ' + language;
+
+
+
+
+
+        window.onload =  function() {
+
+          
+
+          // Set reason
+
+//          document.querySelector('.' + language + '_locale .abuseReason').innerHTML = (localizedData['errorMessages'][reason] || localizedData['errorMessages']['default'])
+
+
+
+          if (ip) {
+
+            var elements = document.querySelectorAll('.ip');
+
+            for (var i = 0; i < elements.length; i++) {
+
+              elements[i].innerHTML = '<strong> ' + ip + '</strong>';
+
+            }
+
+          }
+
+
+
+          // Create language change box
+
+          var html = '<ul>';
+
+          html += '<li><a href="?reason='+(reason || '')+'&ip='+(ip || '')+'&locale=de">Deutsch</a></li>';
+
+          html += '<li><a href="?reason='+(reason || '')+'&ip='+(ip || '')+'&locale=en">English</a></li>';
+
+          html += '<li><a href="?reason='+(reason || '')+'&ip='+(ip || '')+'&locale=fr">FranÃ§ais</a></li>';
+
+          html += '</ul>';
+
+          document.querySelector('.languages_box').innerHTML = html;
+
+
+
+          // Show localized variant
+
+          document.querySelector('.' + language + '_locale').style.display = 'block';
+
+        };
+
+
+
+          
+
+      })();
+
+    </script>
+
+  </head>
+
+  <body class="present">
+
+    <input type="hidden" name="page" value="error403.htm">
+
+    <div id="page" class="pageWrap screenWide printGrid">
+
+      <div class="pageWrap contentPage">
+
+        <div class="clearfix" id="epoHeader">
+
+           <a href="//www.epo.org/index.html" name="epoLogo" id="epoLogo">
+
+          <img src="../images/logo.gif" alt="Logo"></a>
+
+          <div class="languages_box"></div>
+
+        </div>
+
+        <div class="epoNavigation" id="epoNavigation">
+
+          <div class="mainNavi">
+
+            <ul class="lvl1ul clearfix"><li>&nbsp;</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <!-- en -->
+
+      <div class="epoContentWrap clearfix en_locale">
+
+        <div id="pagebody">
+
+          <a name="Content"></a>
+
+          <h1>Espacenet could not fulfil your request</h1>
+
+          <div class="clearfix" id="body">
+
+            <p>Espacenet may reject your requests if you are using any automated tools, perform too many queries per minute or generate queries that result in the system attempting to retrieve unusually large numbers of documents or unusually large documents.</p>
+
+            <p>Please note that multiple users behind a firewall may be seen as a single user who apparently generates many queries in a short time or who downloads excessive amounts of data.
+
+            As a result it is possible that a colleague other than the user who triggered the error will receive a rejection message.</p>
+
+            <p>If you feel the rejection is not warranted and you would like us to investigate it, please contact us and send us
+
+            </p><ul>
+
+              <li>your IP address<span class="ip">, which can be found by searching for "what is my IP" on the net (please note it is the public IP we need so it cannot start with 10, 192.168 or 172.16)</span>,</li>
+
+              <li>your timezone and</li>
+
+              <li>the time the rejection message was received: <script>document.write((new Date()).toDateString())</script> at <script>document.write((new Date()).toLocaleTimeString())</script></li>
+
+            </ul>
+
+            <p></p>
+
+            <p>We will analyse the information you send us and if necessary contact your IT department to try to resolve the situation.</p>
+
+            <p>For more information please click on the "terms and conditions of use for Espacenet" link at the bottom of the home page.</p>
+
+            <p>
+
+            <strong>NOTE:</strong> For users who require large amounts of family, legal or bibliographic information, we have developed the Open Patent Services,
+
+            a Web Services-based alternative that offers the same data routinely available via Espacenet, but in XML format.
+
+            </p>
+
+            <h4>You could try one of these options:</h4>
+
+            <ul class="noBullets">
+
+              <li><a class="int" href="http://forums.epo.org/espacenet/topic4597.html" target="_blank">Find out more at our forum</a></li>
+
+              <li><a class="int" target="_top" href="../">Return to the homepage</a></li>
+
+              <li><a class="int" target="_top" href="mailto:support@epo.org">Contact us</a></li>
+
+              <li><a class="int" href="https://worldwide.espacenet.com">ops.epo.org</a></li>
+
+            </ul>
+
+            <hr>
+
+            <form action="//www.epo.org/search.html" method="get">
+
+              <fieldset>
+
+                <div class="epoForm2">
+
+                  <div class="epoTeaLeft">
+
+                    <label for="textfeldH1">Alternatively, you could search the EPO website:
+
+                    </label>
+
+                    <br>
+
+                    <input id="textfeldH1" class="textfeldMitButton" name="q" title="Enter search term" value="Enter search term" onblur="if(this.value=='')this.value='Enter search term';" onfocus="if(this.value=='Enter search term')this.value='';">
+
+                    <input class="gometa" value="Search" name="Search" title="Start search" type="submit">
+
+                    <input type="hidden" name="proxystylesheet" value="EN">
+
+                  </div>
+
+                </div>
+
+              </fieldset>
+
+            </form>
+
+          </div>
+
+        </div>
+
+        <!-- noindex -->
+
+      </div>
+
+      <!-- end of en -->
+
+      <!-- de -->
+
+      <div class="epoContentWrap clearfix de_locale">
+
+        <div id="pagebody">
+
+          <a name="Content"></a>
+
+          <h1>Espacenet konnte Ihre Anfrage nicht ausfÃ¼hren</h1>
+
+          <div class="clearfix" id="body">
+
+            <p>Espacenet kann Ihre AntrÃ¤ge ablehnen, wenn Sie automatisierte Tools verwenden, zu viele Anfragen pro Minute durchfÃ¼hren oder Anfragen generieren, die dazu fÃ¼hren, dass das System versucht, ungewÃ¶hnlich viele Dokumente oder auÃergewÃ¶hnlich groÃe Dokumente abzurufen.
+
+            </p>
+
+            <p>Bitte beachten Sie, dass mehrere Nutzer hinter derselben Firewall als ein einzelner Nutzer gesehen werden kÃ¶nnen, der offenbar innerhalb kurzer Zeit zahlreiche Anfragen generiert oder zu groÃe Datenmengen herunterlÃ¤dt. Daher ist es mÃ¶glich, dass ein Kollege des Nutzers, der die Fehlermeldung ausgelÃ¶st hat, eine Ablehnungsmeldung erhÃ¤lt.</p>
+
+            
+
+            <p>Wenn Sie der Meinung sind, dass die Ablehnung nicht gerechtfertigt ist, und Sie mÃ¶chten, dass wir der Ablehnung nachgehen, so wenden Sie sich bitte an uns und senden Sie uns die folgenden Angaben:</p>
+
+            <ul>
+
+              <li>Ihre IP-Adresse<span class="ip">, die Sie im Internet mit der Suche "Wie ist meine IP-Adresse" finden kÃ¶nnen. Bitte beachten Sie, dass wir die Ã¶ffentliche IP-Adresse benÃ¶tigen, d.Â h. sie darf nicht mit 10, 192.168 oder 172.16 beginnen.</span></li>
+
+              <li>Ihre Zeitzone</li>
+
+              <li>Zeitpunkt des Eingangs der Ablehnungsmeldung: <script>document.write((new Date()).toDateString())</script> at <script>document.write((new Date()).toLocaleTimeString())</script></li>
+
+            </ul>
+
+            <p></p>
+
+            <p>Wir werden die uns Ã¼bermittelten Informationen prÃ¼fen und uns falls erforderlich an Ihre IT-Abteilung wenden, um das Problem zu lÃ¶sen.</p>
+
+            <p>NÃ¤here Informationen finden Sie in den besonderen Nutzungsbedingungen fÃ¼r Espacenet unter dem Link unten auf der Homepage.</p>
+
+            <p>
+
+            <strong>HINWEIS:</strong>
+
+            FÃ¼r Nutzer, die groÃe Mengen von Familien-, Rechtsstands- oder bibliografischen Daten benÃ¶tigen, haben wir die Open Patent Services entwickelt, eine webbasierte Alternative, die dieselben Daten, die ansonsten Ã¼ber Espacenet verfÃ¼gbar sind, im XML-Format zur VerfÃ¼gung stellt.
+
+            </p>
+
+            <h4>Sie kÃ¶nnten Folgendes versuchen:</h4>
+
+            <ul class="noBullets">
+
+              <li><a class="int" href="http://forums.epo.org/espacenet/topic4597.html" target="_blank">Find out more at our forum</a></li>
+
+              <li><a href="../" class="int" target="_top">Gehen Sie zurÃ¼ck zur Homepage</a></li>
+
+              <li><a href="mailto:support@epo.org" class="int" target="_top">Kontaktieren Sie uns</a></li>
+
+              <li><a href="https://worldwide.espacenet.com" class="int" target="_top">ops.epo.org</a></li>
+
+            </ul>
+
+            <form action="//www.epo.org/search.html" method="get">
+
+              <fieldset>
+
+                <div class="epoForm2">
+
+                  <div class="epoTeaLeft">
+
+                    <label for="textfeldH1">Sie kÃ¶nnen aber auch auf der Website des EPA recherchieren:
+
+                    </label>
+
+                    <br>
+
+                    <input id="textfeldH1" class="textfeldMitButton" name="q" title="Enter search term" value="Enter search term" onblur="if(this.value=='')this.value='Enter search term';" onfocus="if(this.value=='Enter search term')this.value='';">
+
+                    <input class="gometa" value="Search" name="Search" title="Start search" type="submit">
+
+                    <input type="hidden" name="proxystylesheet" value="EN">
+
+                  </div>
+
+                </div>
+
+              </fieldset>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- end of de -->
+
+      <!-- fr -->
+
+      <div class="epoContentWrap clearfix fr_locale">
+
+        <div id="pagebody">
+
+          <a name="Content"></a>
+
+          <h1>Espacenet n'a pas pu rÃ©pondre Ã  votre demande</h1>
+
+          <div class="clearfix" id="body">
+
+            <p>Espacenet est susceptible de rejeter vos requÃªtes si vous utilisez des outils automatisÃ©s, si vous effectuez trop de demandes par minute ou si le systÃ¨me essaie de trouver un nombre de documents anormalement Ã©levÃ© ou des documents exeptionnellement volumineux Ã  la suite de demandes que vous avez gÃ©nÃ©rÃ©es.
+
+            </p>
+
+            <p>Veuillez noter que le systÃ¨me peut Ã©ventuellement considÃ©rer plusieurs utilisateurs derriÃ¨re un pare-feu comme un seul et unique utilisateur paraissant gÃ©nÃ©rer de nombreuses demandes en un court laps de temps ou tÃ©lÃ©charger des volumes de donnÃ©es excessifs. Il est donc possible qu'un collÃ¨gue de l'utilisateur ayant dÃ©clenchÃ© le message d'erreur reÃ§oive un message de rejet de sa requÃªte.</p>
+
+            
+
+            <p>Si vous considÃ©rez que le rejet de votre requÃªte n'est pas justifiÃ© et souhaitez que nous l'examinions, veuillez nous contacter et nous communiquer :</p>
+
+            <ul>
+
+              <li>Votre adresse IP<span class="ip">, que vous trouverez en tapant "what is my IP" dans un moteur de recherche Internet. Veuillez noter que nous avons besoin de l'adresse IP publique, ce qui signifie qu'elle ne doit pas commencer par 10, 192.168 ou 172.16.</span></li>
+
+              <li>Votre fuseau horaire, et</li>
+
+              <li>L'heure Ã  laquelle le message de rejet de votre requÃªte a Ã©tÃ© reÃ§u: <script>document.write((new Date()).toDateString())</script> at <script>document.write((new Date()).toLocaleTimeString())</script></li>
+
+            </ul>
+
+            <p></p>
+
+            <p>AprÃ¨s examen des informations que vous nous avez transmises, nous prendrons Ã©ventuellement contact avec votre service informatique pour remÃ©dier Ã  cette situation.</p>
+
+            <p>Pour de plus amples informations, veuillez cliquer sur le lien "Conditions d'utilisation d'Espacenet" en bas de la page d'accueil.</p>
+
+            <p>
+
+            <strong>REMARQUE:</strong>
+
+            pour les utilisateurs ayant besoin de quantitÃ©s importantes d'informations concernant les familles, la situation juridique ou les donnÃ©es bibliographiques, nous avons dÃ©veloppÃ© les Services brevets ouverts, une solution basÃ©e sur des services en ligne, qui propose les mÃªmes donnÃ©es par ailleurs disponibles via Espacenet, mais au format XML.
+
+            </p>
+
+            <h4>Vous pouvez essayer une des options suivantes :</h4>
+
+            <ul class="noBullets">
+
+              <li><a class="int" href="http://forums.epo.org/espacenet/topic4597.html" target="_blank">Find out more at our forum</a></li>
+
+              <li><a href="../" class="int" target="_top">Retour Ã  la page d'accueil</a></li>
+
+              <li><a href="mailto:support@epo.org" class="int" target="_top">Nous contacter</a></li>
+
+              <li><a href="https://worldwide.espacenet.com" class="int" target="_top">ops.epo.org</a></li>
+
+            </ul>
+
+            <form action="//www.epo.org/search.html" method="get">
+
+              <fieldset>
+
+                <div class="epoForm2">
+
+                  <div class="epoTeaLeft">
+
+                    <label for="textfeldH1">Vous pouvez Ã©galement rechercher sur la page Internet de l'OEB :
+
+                    </label>
+
+                    <br>
+
+                    <input id="textfeldH1" class="textfeldMitButton" name="q" title="Enter search term" value="Enter search term" onblur="if(this.value=='')this.value='Enter search term';" onfocus="if(this.value=='Enter search term')this.value='';">
+
+                    <input class="gometa" value="Search" name="Search" title="Start search" type="submit">
+
+                    <input type="hidden" name="proxystylesheet" value="EN">
+
+                  </div>
+
+                </div>
+
+              </fieldset>
+
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- end of fr -->
+
+      <div class="clearbreak">&nbsp;
+
+      </div>
+
+      <div id="epoFooter">
+
+        <ul><li>
+
+          <a href="//www.epo.org/metanav/accessibility.html">Accessibility</a></li>
+
+          <li><a href="//www.epo.org/etc/imprint.html">Legal notice</a></li>
+
+          <li><a href="//www.epo.org/etc/termsofuse.html">Terms of use</a></li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+    <div id="placeholder" class="clearbreak">&nbsp;</div>
+
+  </div>
+
+</body>
+
+</html>Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

@@ -1,0 +1,239 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 06:02:00 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY.0
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Corel Image Features Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Corel Image Features Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/CorelFeatures-mld/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/CorelFeatures-mld/CorelFeatures.data.html"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: This dataset contains image features extracted from a Corel image collection. Four sets of features are available based on the color histogram, color histogram layout, color moments, and co-occurence</p>
+     </td>
+     <td><img
+src="../assets/MLimages/Large119.jpg"
+hspace=20 vspace=10  /> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">68040</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">89</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">1999-07-01</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">73144</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Original Owner:<br><br>Michael Ortega-Binderberger<br>Information and Computer Science<br>University of California at Irvine<br>Irvine, CA 92697-3425<br>USA<br><u>miki <b>'@'</b> ics.uci.edu</u><br><br>Donor:<br><br>Kriengkrai Porkaew and Sharad Mehrotra<br>Information and Computer Science<br>University of California at Irvine<br>Irvine, CA 92697-3425<br>USA <br><u>nid <b>'@'</b> ics.uci.edu</u>,<u>sharad <b>'@'</b> ics.uci.edu</u><br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">The original image collection was obtained from Corel at <a href="http://corel.digitalriver.com/">[Web Link]</a>. There are 68,040 photo images from various categories.<br><br>Each set of features is stored in a separate file. For each file, a line corresponds to a single image. The first value in a line is is the image ID and the subsequent values are the feature vector (e.g. color histogram, etc.) of the image. The same image has the same ID in all files but the image ID is not the same as the image filename. </p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">From each image four sets of features were extracted: <br><br>- Color Histogram <br>- Color Histogram Layout <br>- Color Moments <br>- Co-occurrence Texture <br><br>Color Histogram: 32 dimensions (8 x 4 = H x S)<br>- HSV color space is divided into 32 subspaces (32 colors : 8 ranges of H and 4 ranges of S). <br>- the value in each dimension in a ColorHistogram of an image is the density of each color in the entire image. <br>- Histogram intersection (overlap area between ColorHistograms of two images) can be used to measure the similarity between two images. <br><br>Color Histogram Layout: 32 dimensions (4 x 2 x 4 = H x S x sub-images)<br>- each image is divided into 4 sub-images (one horizontal split and one vertical split). <br>- 4x2 Color Histogram for each sub-image is computed. <br>- Histogram Intersection can be used to measure the similarity between two images. <br><br>Color Moments: 9 dimensions (3 x 3)<br>- the 9 values are: (one for each of H,S, and V in HSV color space) <br>  -- mean, <br>  -- standard deviation, and <br>  -- skewness. <br>- Euclidean distance between Color Moments of two images can be used to represent the dis-similarity (distance) between two images. <br><br>Co-occurrence Texture: 16 dimensions (4 x 4)<br>- images are converted to 16 gray-scale images. <br>- co-ocurrence in 4 directions is computed (horizontal, vertical, and two diagonal directions). the 16 values are: (one for each direction). <br>  -- Second Angular Moment, <br>  -- Contrast, <br>I  -- nverse Difference Moment, and <br>  -- Entropy. <br>-Euclidean distance between ColorMoments of two images can be used to measure the dis-similarity (distance) between two images. <br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Michael Ortega, Yong Rui, Kaushik Chakrabarti, Kriengkrai Porkaew, Sharad Mehrotra, and Thomas S. Huang, Supporting Ranked Boolean Similarity Queries in MARS, IEEE Transaction on Knowledge and Data Engineering, Vol. 10, No. 6, Pages 905-925, December 1998. <br><a href="http://rexa.info/paper/dcbd30bd8edc4910838040588674f4454f25dd5b">[Web Link]</a><br><br>Kaushik Chakrabarti, and Sharad Mehrotra, The Hybrid Tree: An Index Structure for High Dimensional Feature Spaces, 1999 IEEE International Conference on Data Engineering (ICDE), Pages 440-447, February, 1999. <br><a href="http://rexa.info/paper/0bbc5a892dff7a28c1c1d3fc1852d510854cb532">[Web Link]</a><br><br>Kriengkrai Porkaew, Kaushik Chakrabarti, and Sharad Mehrotra, Query Refinement for Multimedia Retrieval and its Evaluation Techniques in MARS, 1999 ACM International Multimedia Conference, Orlando, Florida, Oct 30 - Nov 4, 1999. <br><a href="http://rexa.info/paper/4ed4365f20416936fd8116de18814d0af5285b04">[Web Link]</a><br><br>Kaushik Chakrabarti, Kriengkrai Porkaew, and Sharad Mehrotra, Efficient Query Refinement in Multimedia Databases, ICDE, 2000<br><a href="http://rexa.info/paper/7f743ce18ea849fcee0b8bac2aafc24748773ed4">[Web Link]</a></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Thomas T. Osugi and M. S. <a
+href="http://rexa.info/paper/208ec47695794498051a25cd425bc385a9d19602">EXPLORATION-BASED ACTIVE MACHINE LEARNING</a>. Faculty of The Graduate College at the University of Nebraska In Partial Fulfillment of Requirements.  [<a
+href="../support/Corel+Image+Features#208ec47695794498051a25cd425bc385a9d19602">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Thomas T. Osugi and M. S. <a
+href="http://rexa.info/paper/208ec47695794498051a25cd425bc385a9d19602">EXPLORATION-BASED ACTIVE MACHINE LEARNING</a>. Faculty of The Graduate College at the University of Nebraska In Partial Fulfillment of Requirements.  [<a
+href="../support/Corel+Image+Features#208ec47695794498051a25cd425bc385a9d19602">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">This data may be used for non-commercial purposes only. </p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

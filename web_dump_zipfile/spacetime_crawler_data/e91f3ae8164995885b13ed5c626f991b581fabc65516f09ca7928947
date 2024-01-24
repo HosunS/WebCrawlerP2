@@ -1,0 +1,97 @@
+¦Ifinal_url¢DtypeEvaluex5https://www.ics.uci.edu/~eli/courses/cs153-f09/p1.txtLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2671¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 25 Sep 2009 20:22:37 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"a6f-4746cb57cfd40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 09:58:13 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY
+oProject 1
+
+Implement an entity that takes 2 8-bit unsigned inputs (a, b) and one 2-bit
+unsigned input (op). Your entity should have one 16-bit unsigned output (z).
+The entity, a combinational circuit, computes z as follows:
+
+  z = a + b     (if op == "00")
+  z = a - b     (if op == "01")
+  z = a * b     (if op == "10")
+  z = "0 ...0"  (if op == "11")
+
+Implement an exhaustive testbench for your entity. You'll find 95% of the code
+provided below. However, make sure you complete the project.
+
+--
+--  ALU.vhdl
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_ARITH.all;
+
+entity ALU is
+  port (A  : in  UNSIGNED (7 downto 0);
+        B  : in  UNSIGNED (7 downto 0);
+        OP : in  UNSIGNED (1 downto 0);
+        Z : out UNSIGNED (15 downto 0));
+end ALU;
+
+architecture BHV of ALU is
+begin
+  process(A, B, OP)
+  begin
+    case OP is
+      when "00" =>
+        Z <= "00000000" & (A + B);
+      when "01" =>
+        Z <= "00000000" & (A - B);
+      when "10" =>
+        Z <= A * B;
+      when others =>
+        Z <= "0000000000000000";
+    end case;
+  end process;
+end BHV;
+
+--
+-- ALU_TB.vhdl
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_ARITH.all;
+
+entity ALU_TB is
+end ALU_TB;
+
+architecture BHV of ALU_TB is
+  component ALU
+    port (A  : in  UNSIGNED (7 downto 0);
+          B  : in  UNSIGNED (7 downto 0);
+          OP : in  UNSIGNED (1 downto 0);
+          Z : out UNSIGNED (15 downto 0));
+  end component;
+  signal A : UNSIGNED (7 downto 0) := "00000000";
+  signal B : UNSIGNED (7 downto 0) := "00000000";
+  signal OP : UNSIGNED (1 downto 0) := "00";
+  signal Z : UNSIGNED (15 downto 0);
+begin
+  U1: ALU port map(A, B, OP, Z);
+  process
+  begin
+    for i in 0 to 255 loop
+      for j in 0 to 255 loop
+        A <= conv_unsigned(i, 8);
+        B <= conv_unsigned(j, 8);
+        OP <= "00";
+        wait for 5 ns;
+        assert Z = conv_unsigned(A + B, 16) report "Addition Failed!" severity ERROR;
+        -- add more here
+      end loop;
+    end loop;
+  end process;
+end BHV;
+
+Simulate your testbench entity and show the wave-forms of input and output
+signals to your TA. Make sure your TA checks out your demo. This will be worth
+70% the points for this project.
+
+Complete a report and attach to it all source VHDL files. Your report should
+include your name, a description of the VHDL files attached, any special notes
+or comments, and a description of how you tested your design.
+
+Your TA will provide you with information on tools, lab setup, and other
+things related to this project. Make sure you seek help to get you started.
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

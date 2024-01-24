@@ -1,0 +1,99 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3513¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX0Apache/2.2.3 (CentOS) mod_perl/2.0.4 Perl/v5.8.8¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 12 Feb 2018 22:09:21 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"58f4a2b-db9-5650b21488640"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 03:31:05 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueY¹<html>
+<head>
+<title>
+IGB@UCI :: SELECTpro Help/Example
+</title>
+</head>
+<body>
+<div align="left">
+  <TABLE width="100%" summary=title>
+    <TBODY>
+    <TD width="53%" height="59"><div align="left">
+          <h1><div align="left"><font color="#0000AA">SELECTpro</font></div></h1>
+          <h3><font color="#0000AA">
+          effective protein model selection using a structure-based energy function resistant to blunders
+          </font></h3>
+          </div>
+      </TD>
+    <TD width="47%">
+    <div align="center">
+    <a href="http://www.igb.uci.edu/"><img src="NewIGB_logo.gif" border=0></A>
+        </div></TD>
+  </TABLE>
+</div>
+<hr>
+<table width = "100%">
+<tr>
+<td width = "25%" align="center"><a href="index.html">Submission Page</a></td>
+<td width = "25%" align="center"><a href="selectpro_overview.html">Overview</a></td>
+<td width = "25%" align="center"><a href="selectpro_help.html">Help/Example</a></td>
+<td width = "25%" align="center"><a href="selectpro_download.html">Download</a></td>
+</tr>
+</table>
+<hr>
+<!-- header only above here-->
+
+
+<!-- Help with input fields-->
+
+<h3> Input Format </h3> <br>
+
+<b>Submission Name:</b> <br>
+The identifier provided will be used in the results email.<br>
+If no name is provided, the generic name 'SELECTproJob' is used.
+<ul>
+<li>only letters, numbers, underscores, and dashes are valid characters</li>
+</ul>
+
+<br><b>Email:</b> <br>
+A valid email address is required for submission.
+Results will be sent to the email address provided. <br>
+<br>
+
+<br><b>Protien Sequence:</b> <br>
+The amino acid sequence of the query protein must be submitted.
+<ul>
+<li>only valid amino acid symbols are allowed</li>
+<li>both capital and lower case are allowed</li>
+<li>white space is ignored</li>
+</ul>
+
+<br><b>Models File:</b> <br>
+SELECTpro is designed to read a set of models appended into a single file in .pdb format
+SELECTpro will score from 1 to 100 models in a single submission.
+Larger model sets can be split up and submitted separately.
+The model scores are calculated independently, so they can still be compared.
+<br><br>
+The MODEL identifier is used to distinguish models within the file.
+These identifiers are used in the results email to associate the scores with the models.
+If no MODEL identier is provided for a model, the model is identified by its order in the file.
+If it is the 5th model, it will simply be identified by "5" in the results.
+<ul>
+<li>.pdb format only</li>
+<li>model length must match length of submitted sequence</li>
+<li>models must have coordinates for all backbone (N,CA,C) atoms
+	- additional atoms are ignored but will not disrupt submission</li>
+<li>both capital and lower case are allowed</li>
+<li>white space is ignored</li>
+</ul>
+<br><b>Example Sequence and Models:</b> <br>
+The following example sequence and models file work properly with SELECTpro.
+(<a href="T0283.seq">example protein sequence</a>)<br>
+(<a href="T0283_FOLDpro.pdb.txt">example models file</a>)
+<!-- footer only below here-->
+<hr>
+	<br>
+Contact SELECTpro Administrator:<a href="mailto:cmagnan@ics.uci.edu"><i>cmagnan@ics.uci.edu</a></i><br>
+	<br>
+      <i><a href="http://www.igb.uci.edu/">Institute for Genomics and Bioinformatics</a></i><br>
+	  <i><a href="http://www.ics.uci.edu">School of Information & Computer Science</a></i><br>
+      <i><a href="http://www.uci.edu/">University of California Irvine</a></i> </i></i>
+	<br> <br>
+
+
+</body>
+</html>
+
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

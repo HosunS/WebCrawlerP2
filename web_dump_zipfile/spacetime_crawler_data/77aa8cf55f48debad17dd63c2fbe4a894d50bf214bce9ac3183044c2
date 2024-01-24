@@ -1,0 +1,365 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE12885¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 12 May 2014 14:59:46 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"3255-4f93532b2bc80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 20:13:29 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY2U				Tuples
+
+In this lecture we will talk about regular and named tuples. The former is an
+immutable version of lists; the later will be used briefly but superseeded by
+classes we will learn how do define by then end of the quarter. We will also
+review some odd & ends along the way: the .split/.join methods, comprehensions,
+and the meaning of *args as a parameter, and tuple assignments.
+
+------------------------------------------------------------------------------
+
+.split/.join Review:
+
+First let's review a topic that is strictly about lists and strings: the
+.split/.join methods, which interconvert strings and lists in an interesting
+way. Let's start by looking at the headers of these methods, which are both
+declared in the str class.
+
+str.split(long : str, splitter : str)   -> [str]
+str.join (sep  : str, items    : [str]) -> str
+
+Note that we will use the notation [str] to mean a list where every element is
+a string. Since str is a reference to an object representing the str class, then
+[str] really is a list we can write, containing this one value).
+
+Because these are methods, we can all them two ways. First we can call .split
+as a method in the str class as
+
+  str.split('1 2 3 4',' ')
+
+but we are more likely to call it using
+
+  '1 2 3 4'.split(' ')
+
+both produce the list ['1', '2', '3', '4']. Of cours if the values in the first
+string were separated by commas (or anything else) we could use commas to split
+the values: '1,2,3,4'.split(',') still produces ['1', '2', '3', '4']. 
+
+In the comprehension section we will review a simple way to create the list
+[1, 2, 3, 4] from ['1', '2', '3', '4']: [int(i) for i in '1 2 3 4'.split(' ')]
+
+Now let's discuss .join, which we can also call two ways. First we can call
+.join as a method in the str class as
+
+  str.join(';',['1', '2', '3', '4'])
+
+but we are more likely to call it using
+
+  ';'.join(['1', '2', '3', '4']).
+
+both produce the string '1;2;3;4'. In the comprehension section we will review
+a simple way to create '1;2;3;4' from [1, 2, 3, 4]:
+';'.join([str(i) for i in [1, 2, 3, 4]]).
+
+Practice using these methods. They are incredibly versatile, especially when
+used with comprehensions, which make it easy to interconvert betwee a
+list-of-object and a list-of-str (and produce many other interesting lists).
+
+------------------------------------------------------------------------------
+
+Tuples:
+
+A tuple is like an immutable list, written within () instead of []: that pretty
+much says everything you need to know about tuples, except why do we need an
+immutable version of a list (which we will see next week when we discuss sets
+and dictionaries, which require immutable components).
+
+So, all the standard things like len, indexing, slicing (both operations still
+use []), checking containment, catenation, mutliplication, and iterability
+(items 1-7 in the list lecture) work as you expect with tuple. Also the
+functions index, count, and choice. But we cannot use any operators or functions
+to change/mutate a tuple.
+
+I will mention a few other needed facts: the first shows how to interconvert
+between lists and tuple with the same values. We have already examined how to
+use the list function to convert any iterable into a list, for example:
+
+list('abc')        is   ['a', 'b', 'c']
+list(range(1,5))   is   [0, 1, 2, 3, 4]
+
+Because tuples are iterable, list ((1, 2, 3)) is [1, 2, 3].
+
+Likewise
+
+tuple('abc')        is   ('a', 'b', 'c')
+tuple(range(1,5))   is   (0, 1, 2, 3, 4)
+tuple([1, 2, 3])    is   (1, 2, 3)
+
+In all cases, we call the tuple function on something that is iterable, and it
+produces a tuple of all those values.
+
+Also, note that (1) is NOT a tuple: it is an expression with 1 in parentheses.
+To write a singleton tuple (a tuple storing a single value: its len is 1) we
+must write (1,); likewise, when Python prints a singleton tuple it prints
+the value single in parentheses, followed by a comma. Verify this fact in the 
+Python interpreter
+
+Finally besides creating lists of lists and tuples of tuples, we can create
+lists of tuples or tuples of lists, etc.
+
+  (1, [2, 3], 4)
+  [1, (2, 3), 5]
+
+------------------------------------------------------------------------------
+
+namedtuple
+
+A named tuple is similar to a regular tuple, except that we associate a name
+with every index in the tuple (and use the name instead of the index).
+
+To use the namedtuple function we must first import it, typically as follows
+
+from collections import namedtuple
+
+Here is an example of how we use named tuples.
+
+Point = namedtuple('Point', 'x y')
+origin = Point(0.,0.)
+unit   = Point(1.,1.)
+print(origin,unit)
+print(origin.x,unit.y)
+print(origin[0],unit[0])
+print(origin.z)
+
+which prints:
+
+   Point(x=0.0,y=0.0) Point(x=1.0,y=1.0)
+   0.0 1.0
+   0.0 1.0
+
+and then raises an exception:
+
+   AttributeError: 'Point' object has no attribute 'z'
+
+meaning that when trying to print origin.z, this object (constructed from the
+'Point' class, has no such attribute. In fact, origin[2] would raise a similar
+exception: IndexError: tuple index out of range because Point tuples contain
+only two values (indexed by 0 and 1)
+
+Also, if we try to write origin.x = 1.0 or origin[0] = 1.0 Python will raise an
+exception: AttributeError: can't set attribute, because we are dealing with a
+tuple which is immutable. But, we can call a function that returns a new
+namedtuple with certain values substituted for others; this is similar to how
+for strings s = 'abc', callins s.upper() doesn't mutate s, it returns 'ABC'.
+
+p1 = origin._replace(x=2)
+p2 = unit._replace(x=2,y=5)
+print(p1,p2,origin,unit)
+
+prints:
+
+Point(x=2.0,y=0.0) Point(x=2.0,y=5.0) Point(x=0.0,y=0.0) Point(x=1.0,y=1.0)
+
+So, the namedtuple function takes two string arguments (the name for the entire
+tuple and the names for the fields/indexes in the tuple) and  returns a
+"factory": an object that we can use to construct namedtuples, by using the
+first name (here Point) and supplying values for all the fields (here two: x
+and y).
+
+We conventially bind the result of calling named tuple to the same name that
+appears in the string as the first argument.
+
+The namedtuples created will print as shown above, and we can index them by
+ints (as with regular tuples) or names. With ._replace we can create new
+namedtuples that are variants of existing ones.
+
+As another example, we could write
+
+Student = namedtuple('Student', 'name id year gpa')
+a_student = Student('Anteater, Peter', 123456789, 2, 3.5)
+print(a_student)
+
+Prints as: Student(name='Anteater, Peter', id=123456789, year=2, gpa=3.5)
+
+Even more intersting, we can create a list of students to represent a class
+(or a huge list of students to represent a school). Given such a list, we can
+compute the average gpa for all the students in it as follows (using a simple
+composition of ideas about lists and named tuples). If we had many lists for
+many courses/schools, we could use this function to see which courses/schools
+exhibited grade inflation.
+
+def gpa_average(students : [Student]) -> float:
+    gpa_sum = 0
+    for s in students:
+        gpa_sum += s.gpa # or gpa_sum += s[3], which is much more cryptic
+    return gpa_sum/len(students)
+
+Notice that if we change the structure of the Student namedtuple to 
+Student = namedtuple('Student', 'last_name first_name id year gpa') the code
+above (using s.gpa) would work; but the code using s[3] would now be computing
+the average year in school, which is now the information at index 3 in each
+named tuple.
+
+Finally, we can layer lists and namedtuple to build quite complicated data
+structures.
+
+Student = namedtuple('Student', 'name id year gpa tests')
+Class   = namedtuple('Class',   'name number meeting faculty students')
+School  = namedtuple('School',  'name address year_started classes')
+
+With these (and lists) we can create a list of Schools (for the US), such
+that each School would have list of classes, and each class would have a list
+of students, and each student would have a list of tests. 
+
+------------------------------------------------------------------------------
+
+More tuple information:
+
+Most of the list functions we wrote work identically for tuples (but not the
+onese that mutate the list/tuple). We can alos return a tuple instead of a list
+(as we did in list_min_max).
+
+If we specify *args as the name of a parameter, it means to put all the
+remaining non-named arguments into a tuple that is bound to args (yes, the *
+prefixes the parameter name and has this special  meaning). So, as we saw
+(and now we can understand), writing
+
+def min(*args):	     	 	      def max(*args):
+    answer = args[0]		          answer = args[0]
+    for x in args[1:]:			  for x in args[1:]:
+        if x < answer:			      if x > answer:
+            answer = x			          answer = x
+    return answer    			  return answer
+
+Allows us to write min(1, 3, 5) then args is bound to (1, 3, 5); both functions
+iterate over args to find an extremal value. The print function is actually
+defined like
+
+def print(*args,sep=' ',end='\n'):
+
+Which allows us to specify any number of values to print (print converts each
+into a str to print it), with the appropriate separation and line ending
+information.
+
+Finally we can write
+
+  (x, y) = (0, 1)
+
+Which "unpacks" the tuple (0, 1) to bind its individual values to the names x
+and y. Thus, we can assign a tuple of values to a tuple of names, so long as
+both tuples have the same length. We can actually simplify this form of
+assignment and write it as
+
+  x, y = (0, 1)
+
+which means the same as
+
+  x, y = 0, 1
+
+leaving the () off either the names on the left or value on the right.
+
+If fact, this unpacking works for lists as well; we can write 
+
+  [x, y] = [0, 1]
+
+and we can even mix lists and tuple so long as the lengths are the same. For
+example, we can write
+
+  (x, y) = [0, 1]
+
+Recall the list_min_max function which returns a 2-list: the minimum value in
+it argument list followed by the maximum value. We can write
+
+  min, max = list_min_max([6, 3, 6, 2, 8, 7, 1])
+
+To unpack the returned list into is min and max values.
+
+note, writing
+
+   x = list_min_max([6, 3, 6, 2, 8, 7, 1])
+
+would bind x to a 2-list.
+
+But writing
+
+  x,y,z = list_min_max([6, 3, 6, 2, 8, 7, 1])
+
+raises an exception, because there are three names on the left but the function
+returns a 2-list: Python doesn't know how to unpack it it. The exception will
+print as
+
+  ValueError: need more than 2 values to unpack
+
+------------------------------------------------------------------------------
+
+Comprehension on Tuples
+
+Tuple comprehensions -using () instead of list comprehensions which use []- are
+unlike list comprehensions (and any other kinds of comprehensions that we will
+learn about later in Python). Their properties allow for very efficient use of
+Python memory (space), but their use is a bit strange (and undestanding why is
+a bit beyond the scope of this course).
+
+If we write the following tuple comprehension -note the use of () not []
+
+  x = ( i**2 for i in range(0,5) )
+
+and then print(x), it prints
+
+  <generator object <genexpr> at 0x02EF3648>
+
+Which means a tuple comprehension really is a special kind of function called
+a generator. If we want, we can use conversion functions or standard for loops
+to iterate over such a comprehension:
+
+  tuple(x) produces the tuple (0, 1, 4, 9, 16)
+
+or 
+
+  list(x)  produces the tuple [0, 1, 4, 9, 16]
+
+or 
+
+  for a in x:
+      print(a)
+
+prints
+
+0
+1
+4
+9
+16
+
+But, once we have iterated over a tuple comprehension in any way, we cannot
+iterate over its values again. That is
+
+  x = (i**2 for i in range(0,5))
+  a = list(x)
+  b = list(x)
+
+results in a = [0, 1, 4, 9, 16], but b = []
+
+But, if we use two tuple comprehensions, we have no problem.
+
+  a = list( i**2 for i in range(0,5) )
+  b = list( i**2 for i in range(0,5) )
+
+results in a = [0, 1, 4, 9, 16], and again b = [0, 1, 4, 9, 16].
+
+Also, writing
+
+  c = tuple( i**2 for i in range(0,5) )
+
+results in c = (0, 1, 4, 9, 16).
+
+but notice that in the above we did not write
+
+  tuple( (i**2 for i in range(0,5)) )
+
+although both are equivalent. In the first, we call the conversion function
+tuple(...) and specify the tuple comprehension without an extra ().
+
+BOTTOM LINE:
+
+We will discuss generators and tuple comprehensions much more in ICS-33. For
+ICS-31, be aware that 
+
+  1) tuple comprehensions are a bit strange (look here for their details)
+  2) writing a tuple comprehension inside tuple(...) produces a tuple of the
+       correct value (which is probably the only way you need to use tuple
+       comprehensions in ICS-31)
+
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

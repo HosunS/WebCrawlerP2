@@ -1,0 +1,69 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 13:11:09 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueY
+ê<html>
+  <head>
+    <title>
+      Dr. Rina Dechter @ UCI
+    </title>
+    <link REL="Stylesheet" HREF="/~dechter/basic.css">
+  </head>
+
+<body bgcolor="#ffffff" alink="00aaaa" link="008080" vlink="008080">
+
+[an error occurred while processing this directive]
+
+<br><br>
+<center>
+<table width="90%" cellspacing="0" cellpadding="0" border="0">
+
+<tr>
+  <td><img height="4" src="/~dechter/images/transp-fill.gif"></td>
+</tr>
+
+<tr>
+<td class=title>ICS-280, Current Topics in Automated Reasoning, Spring 2003</td>
+</tr>
+
+<tr>
+  <td><img width="100%" height="2"  src="/~dechter/images/black-fill.gif"></td>
+</tr>
+</table>
+<p>
+
+<table width="90%" cellspacing="0" cellpadding="0" border="0">
+
+<tr>
+<td>
+
+<P CLASS="section">
+Ideas for Research Projects
+</P>
+<br><br>
+
+<OL>
+	<LI>w-cutset: Investigate approximate algorithms and properties for finding a w-cutset.
+	<LI>Convert any integer programming problem to a relational constraint optimization	that can interface through REES with all our algorithms.
+	<LI>Develop an object oriented language for expressing constraint problems such as the Object oriented language of Pfeffer and Koller for probabilistc problems.
+	<LI>LEARNING:  Read Rish Survey about learning, Read abut EM, Read Russel, Koller et. Al on learning.
+	<OL TYPE=a>
+		<LI>Investigating the learning EM algorithm with a stronger inference component than greedy inside EM. One can start with learning HMM. Can we improve learning HMM in some way by more advance inference?
+		<LI>Develop a one iteration learning algorithms that replace EM:<BR>Complete each tuple using inference, then count the tuples giving each completed tuple its weight based on the computed probability. Is this a single iteration of EM?
+		<LI>Algorithms for MAP applied to HMM's. Approximate MAP and incorporate in EM. Currently the expected counts are computed separately for every family. Alternative: compute expected completions per tuple, and only then take expected counts.
+		<LI>Is there any relationship between EM and iterative belief propagation for MAP?
+	</OL>
+	<LI>Develop algorithms for MAP.
+	<OL TYPE=a>
+		<LI>Adapt search algorithms to MAP.
+		<LI>Aanalyze MAP for trees.
+		<LI>Develop iterative belief propagation for MAPs
+	</OL>
+	<LI>General search with caching simulating variable-elimination. Apply the idea of backtracking with no-good learning to any Look at Bacchus paper for the case of belief. Extend to optimization, either for MAX-CSP or for MPE first.
+	<LI>Apply approximate inference with local search + iterative propagation as done by Pinkas and Dechter. Apply to optimization in general, to MPE and MAP.
+	<LI>Develop Branch and bound for finding M-best solutions. Can we develop upper-bounds using mini-bucket for the ith solution and use it?
+</OL>
+</td>
+</tr>
+</table>
+</center>
+
+</body>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

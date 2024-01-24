@@ -1,0 +1,129 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5000¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 28 Jun 2006 07:14:58 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1388-4174392ae8080"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 07:39:59 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYˆ<html>
+<head>
+
+<style type="text/css">
+  <! --
+  H { font-family: Arial, Helvetica, Modern; }
+  H1 { font-family:  Arial, Helvetica, Modern; font-size:large}
+  H2 { font-family: 10pt;  Arial,Helvetica,Modern;   
+       padding-top: 1; padding-bottom: 1; padding-left: 2; color:black}
+  H3 { font-family:    Arial,Helvetica,Modern; background:#aaccaa;  color:black;
+       padding-top: 1; padding-bottom: 1; padding-left: 2; font-size:medium }
+  P { font-family: Arial; font-size: small; color: black}
+  P.important { margin-left: 0.5cm; margin-right: 1cm; color: red }
+  LI { margin-left: 0.5cm; font-family: Arial; font-size: small }
+  B  { font-size: smaller }
+  table.indent { margin-left: 1cm }
+  div.math { font-family: times; text-align: center; margin-top: 1em }
+  span.math { font-family: times }
+  span.mathi { font-family: times; font-style: italic }
+  -->
+</style>
+
+<title>CCToolbox Documentation: Cluster Models/Methods</title>
+
+</head>
+
+<body bgcolor="#eeeeee">
+ <H2 align=center>Cluster Models/Methods</H2>
+
+
+
+<div align=center>
+<a href="http://www.ics.uci.edu/~sgaffney/software/CCT">CCToolbox</a> |
+<a href="../#Down">Download</a> |
+<a href="./">Documentation</a> |
+<a href="http://www.ics.uci.edu/~sgaffney#contact">Contact</a>
+</div>
+
+<!-- <a href="./">Documentation home</a> > Cluster Models -->
+
+
+
+
+<h3>Current supported models</h3>
+    <p>The current set of supported cluster models can always be listed by running
+    the function <b>listmodels()</b> at the matlab prompt. For example, running this
+    command reveals that K-means is a supported cluster model in this toolbox.
+    You can access the matlab help file for the supported cluster models by following 
+    the CCToolbox\mixtures link from the main CCToolbox matlab help screen.
+    You can also access the matlab help file by typing <tt>help &lt;method&gt;</tt>
+    at the matlab prompt.
+
+
+<h3>Naming convention</h3>
+    <p>There is a specific naming convention that is followed in this toolbox 
+    for the set of regression mixture models. The naming convention is at first based
+    on the standard linear and spline regression mixture models. These two models
+    are listed by <b>listmodels()</b> as follows.
+    <pre>
+       lrm    - Linear Regression Mixtures (LRM) with y = XB + e
+       srm    - Spline Regression Mixture (SRM) with y = XB + e
+    </pre>
+    
+    <p>This listing shows that the method name 'lrm' should be used to run <b>lrm()</b> and the method name
+    'srm' should be used for <b>srm()</b>. All of the other regression mixture models are
+    named by adding a suffix containing the transformation variables that are
+    learned for that specific model (see the 
+    <a href="background.html">background</a> section for a discussion of the
+    transformation variables and of curve-aligned clustering in general). 
+    For example, the following curve-aligned
+    LRM models are listed by <b>listmodels()</b>.
+    <pre>
+       lrm_d      - LRM with transformation  [x]B + d
+       lrm_b      - LRM with transformation  [x+b]B
+       lrm_d_b    - LRM with transformation  [x+b]B + d
+       lrm_cd     - LRM with transformation c[x]B + d
+       lrm_ab     - LRM with transformation  [ax+b]B
+       lrm_d_ab   - LRM with transformation  [ax+b]B + d
+       lrm_cd_b   - LRM with transformation c[x+b]B + d
+       lrm_cd_ab  - LRM with transformation c[ax+b]B + d
+    </pre>
+
+    <p>Notice how the measurement space transformation variables are always listed 
+    before the time transformation variables for each method name (on the left). A similar but
+    shorter list is returned for the curve-aligned SRM models.
+    <pre>
+       srm_d      - SRM with transformation y=[x]B+d
+       srm_cd     - SRM with transformation y=c[x]B+d
+       srm_b      - SRM with transformation y=[x+b]B
+       srm_ab     - SRM with transformation y=[ax+b]B
+       srm_d_b    - SRM with transformation y=[x+b]B+d
+    </pre>
+
+    <p>Gaussian mixtures ('gmix') and K-means ('kmeans') are also provided in the
+    base set.
+
+
+<h3>Calling a method</h3>
+<p>You should use <b>curve_clust()</b> to call all of the clustering methods.
+This procedure is demonstrated in the <a href="demo.html#Cluster">tutorial<a/> section.
+In short, ops.method should contain the string of the method that is to be
+used, and then this options structure is passed-in to <b>curve_clust()</b>.
+For example, these two lines will run spline regression mixtures with space
+alignment using the curves in <tt>trajs</tt> and the options in <tt>ops</tt>.
+<pre>
+>> ops.method = 'srm_cd';
+>> model = curve_clust(trajs,ops);
+</pre>
+
+<p>It is possible, for example, to directly call <b>srm_cd()</b> itself. However, you 
+should only do this for advanced usage.
+
+
+
+<h3></h3>
+<div align=center>
+<a href="#top">Top</a> |
+<a href="http://www.ics.uci.edu/~sgaffney/software/CCT">CCToolbox</a> |
+<a href="../#Down">Download</a> |
+<a href="./">Documentation</a> |
+<a href="http://www.ics.uci.edu/~sgaffney#contact">Contact</a>
+</div>
+
+
+
+</body>
+
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

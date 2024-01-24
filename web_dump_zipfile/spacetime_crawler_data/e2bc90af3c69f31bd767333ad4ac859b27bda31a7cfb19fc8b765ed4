@@ -1,0 +1,328 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE15567¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 30 May 2013 19:25:13 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"3ccf-4ddf475165840"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:35:26 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY<Ï				Functional Programming
+
+
+Functional programming is a style of programming. Some use the words programming
+paradigm. The more standard styles are procedural and object-oriented, which
+are part of the imperative paradigm. Functional programs fundamentally evaluate
+expressions; imperative programs fundamentally execute statements. Functional 
+programming uses the simplicity and power of functions to accomplish
+programming tasks.
+
+In a purely functional solution to a problem, there will be no mutation to data
+structures, and special functions calling functions (not looping) will be the
+primary control structure. Primarily this lecture discusses functional
+programming using three functions: map, filter, and reduce, which each take a
+function as an argument.
+
+Functional languages easily support and frequently use the passing of functions
+as arguments to other functions (these other functions are called "higher-order"
+functions or functionals) and functions returning other functions as their
+results. Python allows both.
+
+There are programming languqages that are purely function (Haskell), others that
+are mostly functional (ML -whose major implementations are SML and OCaml- the
+Scheme dialect of Lisp, and Erlang), and still others that at least support a
+functional style of programming (some better, some worse) when it is useful.
+Python is in this latter category, although features like comprehensions in
+Python emphasize its functional programming aspects (lambdas fall into this
+category too).
+
+Generally, functional programming is characterized as using immutable objects
+and no state changes (not even rebinding of names). Strings, tuples and
+frozensets are all immutable in Python, but lists, sets, and dicts are not.
+
+In functional programming, we don't change data structures but produce new ones
+that are variants of the old ones. For example, if we want to "change" the first
+value of a tuple t to 1, we cannot: instead we create a new tuple whose first
+values is 1 and whose other values are the other values in the tuple, using the
+concatenation operator. The new tuple is specified as (1,)+t[1:]; note that we
+need the comma in (1,) to distinguish it from (1): the former is a tuple
+containing the value 1, the later is an int.
+
+Functional programming creates lots of objects and must do so in a time and
+space efficient way, and for the most part, functional languages achieve parity
+in time/space efficiency with non-functional programming languages. Although,
+mixed language like Python tend not to do as well when used functionally as true
+functional languages. Emerging languages like Scala and Clojure are closing the
+gap. Also, because of the simplicity of the semantics of functional programming,
+it is easier to automatically transform functional programs to run efficiently
+on parallel, cluster, or multi-core computers (see the end of this lecture).
+
+Functional programming languages are still not as widely used as imperative
+languages, but they continue to find many uses in industry, and in some
+industries (telecommunications) they have achieved dominance (at least with
+some companies within the industries). Programmers who are trained to use
+functional languages think about problems and solve problems differently. All
+CS students should be exposed to functional programming as part of their
+education (and I mean an exposure longer than one day).
+
+To learn more about Python's use of functional programming, read section 10
+(Functional Programming Modules) in Python's Library documentation, discussing
+the itertools, functools, and the operator modules.
+
+------------------------------------------------------------------------------
+
+In this lecture we will look at just three important higher-order functions used
+in functional programming: map (transform), filter, and reduce (accumulate).
+Each operates on a function and an interable, which means they operate on lists
+and tuples easily. We will write versions of these functions, to help explain
+what they do, although more general and faster versions are already available
+in in Python's builtins module. So mostly to study functional programming we
+are concerned with studying how to call these functions.
+
+(1) map/transform: this function takes a unary function and a list and produces
+    a same-sized list of mapped/transformed values based on substituting each
+    value with the result of calling the parameter function on it. For example,
+    calling
+
+    map( lambda x : x**2, [i for i in irange(0,5)] )
+
+produces a list of the squares of the values of the numbers [0, 1, 2, 3, 4, 5],
+which is [0,1,4,9,16,25].
+
+Note that lambdas are frequently (but not exclusively) used in calls to the map
+function. We can use regularly defined functions as well, but often we need only
+a short function, so lambdas often work out well.
+
+Here is a simple implementation of the map function. Again, Python's builtin
+map function is more general and faster; I show this one only to help you
+undertand what map does.
+
+def map(f,alist):
+    answer = []
+    for v in alist:		# generate each value in alist
+       answer.append(f(v))	# put f(that value) in a list to return
+    return answer
+    
+The simpler definition below uses a comprehension. The use of map functions in
+programming preceded the use of comprehensions, which are more powerful. So
+comprehensions make the map function trivial to write.
+
+def map(f,alist):
+    return [f(v) for v in alist]
+    
+(2) filter: this function takes a predicate (a unary function returning a bool,
+although in Python most values have a bool interpretation) and some list of
+values and produces a list (the same size or smaller) with only those values
+for which the predicate returns True (or a value that is interpreted as True).
+For example, calling
+
+   filter( predicate.is_prime, [i for i in irange(2,50)] )
+
+produces a list of all the values between 2 and 50 that are prime:
+[2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47].
+
+Here is a simple implementation of the filter function. Again, Python's builtin
+filter function is more general and faster; I show this one only to help you
+undertand what filter does.
+
+def filter(p,alist):
+    answer = []
+    for v in alist:
+       if p(v):
+           answer.append(v)
+    return answer
+
+The simpler definition below uses a comprehension. The use of filter functions
+in programming preceded the use of comprehensions, which are more powerful. So
+comprehensions make the filter function trivial to write.
+
+def map(p,alist):
+    return [v for v in alist if p(v)]
+    
+(3) reduce/accumulate: this function is different than the previous two: it
+takes a binary function and some list of values and typically produces a single
+value: it reduces or accumulates these results into a single value. 
+
+Unlike map and filter (which are defined and automatically imported from the
+builtins module) we must import reduce from the functools module explicitly.
+
+For example, calling
+
+   reduce( lambda x,y : x+y, [i for i in irange(1,100)] )
+
+returns the sum of all the values 1 to 100, in the list. Here is a more
+interesting call, because uses a non-commutative operator (subtract).
+
+   reduce( lambda x,y : x-y, [1,2,3] )
+
+which returns -4: or 1 - 2 - 3 or (1-2)-3. Technically, this is called LEFT
+reduction/accumulation because the operators are applied left to right. If
+they had been applied right to left (right reduction), the result would have
+been 1-(2-3) = 1 - (-1) = 2. For all commutative operators, the association
+order doesn't make a difference. That is, (1+2)+3 is the same as 1+(2+3). So
+for 5 values, the reduce is equivalent to (((1+2)+3)+4)+5.
+
+Note that the operator module defines a variety of functions like add (which
+has the same meaning as lambda x,y: x+y) so we could also call this function
+as reduce( operator.add, [i for i in irange(1,100)] ) if we had imported
+operators.
+
+Here is another interesting example
+
+  reduce( max, [4,2,-3,8,6] )
+
+which is equivalent to max(max(max(max(4,2),-3),8),6) which evaluates as
+follows, to compute the maximum of the entire list of values.
+
+max(max(max(max(4,2),-3),8),6) -> max(max(max(4,-3),8),6) ->
+max(max(4,8),6) -> max(8,6) -> 8
+
+So, we can easily add up a list or compute its max using functional programming.
+
+Here is the simplest implementation of reduce that I can think of. None is
+returned for an empty list; otherwise f is applied to all the operands as shown
+above to compute the reduced/accumulated value.
+
+def reduce(f,alist)
+    if alist == []:
+        return None
+
+    answer = alist[0]
+    for v in alist[1::
+        answer = f(answer,v)
+    return v
+
+Hand simulate this code (or single step the debugger on it) for the examples
+above. reduce(f,[a,b]) returns f(a,b); reduce(f,[a,b,c]) returns f(f(a,b),c); 
+reduce(f,[a,b,c,d]) returns f(f(f(a,b),c),d); etc.
+
+Here is a concrete example of a function style of programming. This expression
+computes the length of the longest line in a file.
+
+reduce(max, map(lambda l : len(l.rstrip()), [line for line in open('file')]))
+
+First the comprehension puts all the lines in a list; then map creates a list
+of lengths for each rstripped line; finally reduce applies max to the values
+in the list to compute the maximum length line.
+
+To return the longest line itself, not the length of the longest line, we could
+compute as follows. Here the lambda for reduce (whose arguments will be two
+lines from the file) returns the longer of the two lines; when reduced over all
+lines in the file, the final result is the largest line in the file. The lambda
+to map now strips spaces off the right end, but doesn't map lines to their
+lengths.
+
+reduce(lambda x,y: x if len(x) >= len(y) else y,
+       map(lambda l : l.rstrip(), [line for line in open('file')]))
+
+Functional programmers spend a lot of time using these tools to build up their
+idioms of expressions. We are just peeking at this topic now. It is possible
+for reduce to return all type of results, not just simple ones: there are for
+example, wasy to reduce lists of lists to produce just lists.
+
+For example, these two lambdas end up computing a tuple whose index 0 in the
+smallest value in a list and whose index 1 is the largest.
+
+reduce(lambda tupx,tupy: ( min(tupx[0],tupy[0]), max(tupx[1],tupy[1]) )
+       map(lambda x : (x,x), [4,2,-3,8,6] )
+
+The result returned by calling reduce is (-3,8). Here's how this function works:
+The inner map produces the list [(4,4), (2,2), (-3,-3), (8,8), (6,6)]. The
+reduce reduces (4,4) and (2,2) to (2,4); then reduces (2,4) and (-3,-3) to
+(-3,4); then reduces (-3,4) and (8,8) to (-3,8); then reduces (-3,8) and (6,6)
+too (-3,8) which are the minmum/maximum respectively of the original list.
+
+Two final truths.
+
+1) The map, filter, and reduce function work on anything that is iterable
+(which list and tuple are, but so are sets, dicts, and even strings). So I can
+call map(lambda x : x.upper(), 'Hello') to produce the list
+['H', 'E', 'L', 'L', 'O'].
+
+2) The map and filter functions built into Python produce an iterable as a
+result (not a real list). So if we call
+
+ print(map(lambda x : x.upper(), 'Hello'))
+
+Python prints: <map object at 0x02DFFE30>
+
+Which just says that the result is a map object, which is iterable. But if we
+call
+
+  print(list(map(lambda x : x.upper(), 'Hello')))
+
+the list constructor takes this iterable and produces a real list of its values
+from it, so Python prints: ['H', 'E', 'L', 'L', 'O']
+
+------------------------------------------------------------------------------
+
+MapReduce, commutative functions, and parallel processing
+
+MapReduce is a special language implementing the map/reduce functions running on
+a parallel, cluster, or multi-core computer. If we can write our code within 
+the MapReduce language, we can guarantee that it runs quickly on the
+kinds of computers Google uses for its servers. Generally what it does is run 
+similar operations on huge amounts of data, combining results, until we get a
+single answer. Apache Hadoop is open source version of MapReduce (but to really
+see its power, we need a cluster of computer to run our code on).
+
+How does MapReduce work? The story is long, but imagine we have a commutative
+operator and want to compute: 1 + 2 + 3 + ... + n
+
+We can evaluate this expression as shown above, one operator at a time left to
+right, which would require n-1 additions one right after the other (the former
+must finish before the later starts). Even if we had multiples cores, doing the
+operations in this order would require n-1 sequential additions, one after the
+other, so only one core at a time would be active.
+
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16
+|   |   |   |   |
++-+-+   |   |   |
+  |     |   |   |
+  3     |   |   |
+  |     |   |   |
+  +--+--+   |   |
+     |      |   |
+     6      |   |
+     |      |   |
+     +---+--+   |
+         |   	|
+        10   	|
+         |   	|
+         +---+--+
+             |
+            15
+
+         .... note that one more operand is used at each level
+
+Here each level uses 1 core and there are 15 levels. In general, with N numbers
+to add it take N-1 time steps.
+
+Now, how can MapReduce handle this problem?
+
+Instead, because of commutivity, we can evaluate this expression in a
+different way: add the 1st and 2nd values at the same time as we add the 3rd
+and 4th at the same time as the 5th and 6th ... In all, we can add n/2 pairs
+simultaneously (if we had n/2 cores). We can use this same trick for the
+remaining n/2 sums, simultaneously adding them together; then for the n/4 sums,
+..., to the final sum sums (for which only one processor is necessary). Here is
+a pictorial representation of this process for 16 values.
+
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 + 11 + 12 + 13 + 14 + 15 + 16
+|   |   |   |   |   |   |   |   |   |     |   |     |   |     |   | 
++-+-+   +-+-+   +-+-+   +-+-+   +-+-+     +-+-+     +-+-+     +-+-+    8 cores
+  |       |       |       |       |         |         |         |
+  3       7      11      15      19        23        27        31
+  |       |       |       |       |         |         |         |
+  +---+---+       +---+---+       +----+----+         +----+----+      4 cores 
+      |               |                |                   |
+     10              26               42                  58
+      |               |                |                   |
+      +-------+-------+                +---------+---------+           2 cores
+              |                                  |
+             36                                 100
+              |                                  |
+              +----------------+-----------------+		       1 core
+                               |
+                              136
+
+Here each level uses as many cores as possible there are 4 levels. In general,
+with N numbers to add it takes Log2 N times steps. Recall that Log2 1,000 is
+10, Log2 1,000,000 is 20, and Log2 1,000,000,000 = 30. To perform 10**9
+additions in 30 time steps,  we'd need a half billion cores: not likely this is
+coming in your lifetime. But if we had tens-or-hundreds of cores, we could keep
+them all busy except for the last few (bottom) levels. So we could get our code
+to run tens-or-hundreds of times faster.
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,458 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE20347¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 24 May 1999 22:52:30 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"4f7b-34ba286e3e780"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 23:02:53 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYO{Advanced Collections Minutes - May 18, 1999
+
+Attending: Judy Slein, Jim Whitehead, Geoff Clemm, Jim Davis, Jason Crawford
+
+ACTION ITEMS
+
+Judy: Draft language about how DELETE on a collection depends on locks below that
+collection in the hierarchy.
+
+Judy: Revise the section on embedded redirect references to collections, to 
+simplify it in line with Geoff's comments.
+
+Judy: Start a discussion on the mailing list on the semantics of DELETE.
+
+Jim W: Start a discussion on redirect references to collections.
+
+Judy: Edit spec till COB Friday.
+
+Jim W: Edit spec when Judy is done.
+
+SLASHES IN MEMBER NAMES
+
+Geoff: Is the slash included in the member name for members that are collections? 
+It seems so obvious that it is not that it's hard to explain why. 
+
+Jim W: It depends whether you come from a file system background.  From the point
+of view of the URI world, it makes perfect sense for two URIs, one of which ends in 
+a slash and the other of which does not, to refer to different things.  There may
+be a server convention that makes them always refer to the same thing.
+
+Jim W: rfc 2518 says that the server can interpret such URIs as being to the same 
+resource, but clients should differentiate.  
+
+Geoff: This would cause interoperability problems.  
+
+Jim W:  The client would just have to know what kind of server it's talking to.  
+This approach saves the URL spec from defining namespace foldings for slash.  
+
+Geoff thinks we are being inconsistent, Jim does not.
+
+Geoff eventually wants to have a property that lists a collection's members, and
+he wants the semantics to be clear for that property. 
+
+Jim W: Leave slash folding undefined like case folding.
+
+Geoff: If we listed all bindings, we would have to list both foo and foo/ separately,
+folding would not be allowed.
+
+Jim: For case folding, conceptually there are lots of bindings but only one gets 
+included in listings.
+
+Geoff: All file-system-based servers are slash-folding.
+
+Jim W: This is ok as long as when the server reports to the client, it includes 
+a slash when the binding is to a collection. AGREED.
+
+Geoff wants a binding name to be a slash-free segment. AGREED.
+
+LOCK / DELETE AND BINDINGS
+
+Jim W: The problems we've been having in sorting out the effects of LOCK on 
+namespaces result from our assumption that bindings are owned by collections. If we 
+shift our thinking to be that a resource has some ownership over its end of 
+a binding as well, that will resolve this locking problem.
+
+Jim W's mail: Binding is more than just state on a collection; it has to be owned
+by both ends of the relationship.  If it is just owned by the collection, then you 
+could make the target of the binding inaccessible even though the resource is locked.
+We've defined delete to be unbind. If only the collection owns the binding, then 
+lock on its target doesn't affect the binding / collection.
+
+Geoff: Lock has 2 aspects: it locks state and locks something in the namespace.  
+If you have 2 URLs mapped to a resource and submit a LOCK via one of them, the state 
+is locked but the only part of the namespace that is locked is the part that is in 
+the request-URL.  Geoff really would prefer that LOCK have no effect on the
+namespace. Yaron thinks (judging from e-mail conversations) that LOCK only affects 
+namespace of the one binding that was used to LOCK the resource.  
+
+Judy: But look at rfc 2518 section 8.10.3.  That seems to say that all URIs through
+which the locked resource is accessible must be preserved.
+
+Jim W: Also interprets RFC 2518 to say that LOCK on a resource doesn't lock all 
+possible paths to it, but only the one that was used to request the lock.
+
+Geoff would prefer: (for versioning) Only state is locked, namespace is not affected.
+The server can choose to lock the namespace.  It can choose to lock one or all or 
+none of the URLsthat give access to the locked resource.
+
+Jim W: In that case, you could make a locked resource completely inaccessible.
+
+Geoff: If the locked resource had 3 bindings and I remove one while it's locked,
+that's ok.
+
+Jim W: We don't want to allow the last binding to be removed.  As long as lock 
+always insures that the binding used for the lock stays (or at least keeps one 
+binding available), that's what he is looking for.
+
+Geoff: A good compromise position is that a LOCK just preserves one binding.  It's 
+just too hard for a server to make sure that none of the bindings to a locked 
+resource can be removed.
+
+Jason: We all agree that when we lock resource, we need a guarantee that there will
+be a URL to access it while it is locked, so we'll maintain the one we used to lock 
+it.  But this depends on lots of bindings scattered through the hierarchy.
+
+Geoff: It's the possibility of multiple bindings on parents that makes it too hard 
+to require that all URLs stay valid.
+
+Geoff: Let's just say that if a resource is LOCKed, it must be possible to use the 
+URL that was used to request the lock, and that you can't violate any locks when 
+you DELETE a collection.
+
+Tyson: what is a lock? it locks a resource.  what is this about bindings?
+
+Geoff: Locking something in a namespace affects lots of collections.  We need the 
+concept of locking a mapping. That's well defined.  Then the requirement is that
+deletion of a binding may not violate anyv locks on mappings.
+
+ACTION: Judy will draft this.
+
+BINDINGS IN RFC 2518 COLLECTIONS
+
+Judy: Geoff and I seem to have a basic disagreement about whether advanced 
+collections differ from rfc 2518 collections in having bindings as part of their
+state.  I think that both have bindings as part of their state.
+
+Geoff: DELETE on an rfc 2518 collection could do one thing or another, but on an
+advanced collection DELETE has specific meaning.
+
+Jim W; Why is this a problem?
+
+Geoff: We can take either of 2 positions:
+   Both kinds of collections have bindings as part of their state, but DELETE means 
+   something different; or 
+   DELETE means the same thing for both sorts of collections, but only advanced
+   collections have bindings as part of their state. 
+
+Jim W: What we should do is deprecate the requirement in RFC 2518 that DELETE
+removes all URIs to the resource being deleted.
+
+Geoff: As long as we can be clear about DELETE semantics, it's ok to say that 
+bindings exist in both.
+
+Jim W: Wants to make the changes in rfc 2518.
+
+GEOFF'S TERMINOLOGY ISSUES
+
+In the definition of "Binding" you talk about members instead of internal members.
+Jim only changed from the rfc 2518 language because thought old language
+caused confusion. Is this worse?
+
+"Reference" is a bad term to apply to both bindings and redirect references. Let's 
+think of url-to-url associations as references. You can create them even though
+the resource isn't there yet.  You can't do that for name-to-resource association
+(binding). Let's use the term "association" to encompass bindings, mappings, and 
+redirect references. AGREED.
+
+We don't need the definitions of strong / weak references.  Integrity is always
+guaranteed for bindings.  We don't think servers will ever provide strong integrity
+for redirect references (their appeal was supposed to be simplicity for the server).
+Let's get rid of the Ref-Integrity header and refintegrity property, and add them
+later if needed.  AGREED.
+
+Jim W: Can we just call a redirect reference a redirect (or redirect resource)? 
+
+Judy: We may sometimes need to distinguish a redirect reference from a redirect as
+defined in HTTP 1.1.  
+
+Jim W: We should comb through both the HTTP 1.1 spec and the collections spec to see
+whether there is baggage associated with redirect from HTTP 1.1 that we need differs
+from redirect references.
+
+CONSISTENCY OF MAPPINGS VS. BINDINGS
+
+Geoff: Section 4.1 says that MOVE and DELETE operations cannot leave mappings in an
+inconsistent state.  This is not true.  Bindings always have to be consistent, but
+mappings are not guaranteed to have integrity. 
+
+DESTINATION HEADER WITH BIND
+
+Geoff: BIND as currently specified uses the Ref-Target header, but he would prefer
+to use the Destination header to make it like COPY / MOVE.  AGREED.  
+
+Currently, Ref-Target is allowed to be a relative URL.  The Destination header is
+defined in rfc 2518 to be an absolute URL.  Can we allow Destination to be relative 
+in the context of BIND? (Geoff would actually like to see it allow relative URLs in 
+MOVE and COPY as well.)  Can we extend the definition given in rfc 2518?  Jim W
+thinks not.  There was no extension mechanism built into the BNF in rfc 2518.
+
+To be consistent, we will require the value of Destination to be an absolute URL.
+AGREED.
+
+URL MAPPINGS CREATED BY BIND
+
+Geoff: A much simpler definition of the set of mappings could be given, rather than
+the recursive rule now in the spec.
+
+Jim W: But then it doesn't leap out at you that if the parent has multiple bindings, 
+there's an exponential explosion of mappings.  
+
+Geoff: The example shows this.  As it is now, the rules give the impression that the
+relationship between bindings and mappings is very complicated.
+
+BIND EXAMPLE IN 4.2.6
+
+Geoff: The description of the example says that a new binding is created and "in
+addition" the binding is added to the collection.  It should say "as part of this 
+process". A binding is just part of the state of a collection.  The only way to 
+create a new binding is to put it in a collection.
+
+COPY AND BINDINGS 4.2.9
+
+Geoff: This discussion loses the distinction between COPY and MOVE.  The essence of
+COPY is that it creates a new resource, but that's not clear here.
+
+Jim W: Wants the method descriptions to be deltas on 2518.  We shouldn't be 
+duplicating definitions from other specs.
+
+Geoff: Basing MOVE on COPY in rfc 2518 was a mistake and will cause continuing 
+confusion.
+
+BACKPOINTERS
+
+Jim D concurs with our May 11 decision to have backpointers for bindings, but
+not for redirect references.  They wouldn't be useful for redirects off server,
+but they are especially crucial for bindings because there is no reftarget property
+on bindings that could be searched with DASL.  Backpointers are, as in earlier drafts,
+optional.
+
+RESOLVING EMBEDDED REDIRECT REFERENCES TO COLLECTIONS
+
+Geoff: This can be much simpler than it currently looks in the spec.  It's the
+apparent complexity that scares people. You don't have to talk about any constraints 
+on types of resources (collection or not). Geoff wants to allow embedded redirects 
+and thinks it should be easy to define processing for this. Jason is mildly concerned
+about it.  Jim W had an action item to investigate implementation and performance
+implications of this feature, but hasn't completed the action.  Judy will try to
+revise this section.
+
+INTEGRITY OF BINDINGS
+
+Judy: We need to state clearly the integrity requirements on bindings.  She would
+prefer to see a separate section on this, since it relates to a number of methods.
+Generally speaking, the requirement is that servers must fail any method that 
+would create a binding (BIND, COPY, MOVE, PUT, etc) unless it can guarantee that no
+MOVE or DELETE through another binding will ever leave this binding broken.
+
+Others prefer that the integrity constraints be discussed in the methods where they
+apply.  Jim W does not want to see a summary section for this information, because in
+general duplicated information causes confusion and is a maintenance headache.
+
+Geoff: Do say that PUT and COPY create a single binding. A server shouldn't
+leave around a dangling binding after a DELETE that could result later in a PUT or 
+COPY making multiple bindings available.  
+
+Jim W: There might be cases where you would want PUT to create multiple bindings.
+Maybe if we someday provide authoring for variants, we might want to let clients do
+a PUT on the resource that negotiates with a header that says I'm really giving the 
+French variant.  
+
+Geoff: Let variants be mappings, not bindings.  
+
+Jim W: It seems overly restrictive to allow only 1 binding.  
+
+Geoff: It violates the intent of DELETE if I have bindings to a resource in 2
+collections, and delete them both, but a resource can reappear in both collections
+when I do a PUT on one of those bindings. 
+
+Jim W: If a server has this behavior, it's becuase it knows its own namespace and 
+is doing it for some good reason.
+
+Jim W: In favor of some extra language, but keep it distributed and be careful of
+extra MUSTs.
+
+JUDY'S MINOR CONCERNS
+
+At this point, Jim Davis and Geoff Clemm had left.  So it was decided to spend the
+rest of the meeting resolving minor issues.
+
+Judy's comment #6: There are several points about the semantics of bindings that
+we agreed on in the 5/4/99 phone conference, but have not found their way into the
+specification.  These should be added to section 4.1 (Overview).
+
+- PUT through one binding must be visible in a GET on any binding to the same
+  resource
+
+- GET with the same headers on 2 bindings to the same resource must result in
+  the same entity
+
+- PROPFIND through one binding must result in the same values for all properties
+  (except if there turn out to be live properties whose value depends on which
+  binding is used) as through any other binding to the same resource
+
+- A server is free to decide whether to allow bindings to a resource that supports
+  content negotiation or to content generated by a cgi script or to any dynamically
+  generated content
+
+AGREED: These points will be added to 4.1.
+
+Judy's comment #7: There are several remaining questions about topics other than
+bindings.
+
+- Do we allow Passthrough: T with MOVE or DELETE for redirect references?
+
+Judy: The result of such a request would be a 302, and then the client would decide
+whether to resubmit the request to the target resource.  For a collection that
+contains redirect references, it would result in a multistatus response with 302s
+for all the redirect references.
+
+Jim W: Multistatus is already defined for MOVE and DELETE, so that is not a problem.
+Allowing Passthrough: T wouldn't cause any semantic problems.
+
+AGREED:  We will allow this.
+
+- Jim's proposal of a new status code for use when a client tries to position a
+collection member in an unordered collection.
+
+Judy: There seems to be continuing discussion of this on the list.
+
+Jim W: Is not prepared to invent a new general purpose error mechanism as part of
+handling this case.
+
+Judy: New status code seems fine.  It should also apply to the case where a client
+tries to position a collection member in a collection whose ordering is server-
+maintained.
+
+AGREED: We will introduce a new status code for these cases.  
+
+Judy's comment #8: Get rid of state from all diagrams. Distinguishing between a
+resource and its state adds nothing to the discussion.  Nothing depends on this
+distinction, and it's also debatable whether it's consistent with the definition
+of "resource" in the URI spec, so let's not show it.
+
+Jim W: Had already thought about doing this.
+
+AGREED: The diagrams will not distinguish state from resource.
+
+Judy's comment #9: I think there is some confusion (sloppiness?) in the spec about
+the distinction between a URI path segment and a binding.  A binding is an
+association between a URI path segment and a resource, but sometimes we talk as if
+the binding is just the URI path segment.  Do we want to say that the
+members of a collection are URI path segments or that they are bindings?
+
+Jim W: They are bindings.
+
+Judy: It may not actually matter unless there are things that would be implemented
+differently depending on which answer we give.  There are inconsistencies in the
+spec, though -- places where we talk as if the members are URI segments, and other
+places where we say they are bindings.
+
+Jim W: We should comb for collection member in both RFC 2518 and the collection
+spec to see whether there are any conflicts or problems if we stay with our position 
+that collection members are bindings.
+ 
+Judy: Check for consistency within the collection spec, too.
+
+Judy's comment #10:  Agree with Jim W that we need to clean up the spec to get rid
+of duplicate information, but unclear how to do this.  We agreed at one point that
+method descriptions would include normative language about which headers MAY / MUST
+be used with the method.  Normative language about values of the headers and server
+behavior for each value would be in the definition of the header.
+
+Jim W: Yes. In the method description, just list headers with no description of what
+they mean.  You can give readers a general sense of what the headers are for just 
+through their names and implicitly in the rest of the discussion.  There should be
+no explicit discussion of what the headers are for in the method description. AGREED.
+
+Judy's comment #11: I don't believe what we say in paragraph 3 of 4.2.8 about our
+interpretation of DELETE being consistent with RFC 2068.  It's just not true that
+an HTTP 1.1 client couldn't tell whether a single binding or all bindings had been
+removed.
+
+Jim: Would you be happier just flatly saying that we are reinterpreting DELETE?
+
+Judy: Yes.
+
+AGREED: We will rewrite this paragraph to say that we are reinterpreting DELETE.
+
+Judy's comment #12:  In section 4.2.1 we equate a request-URI having "no path 
+segment" with a Request-URI having "just a scheme and authority", but a request-URI
+never has an explicit scheme and authority.  Besides, the point we are really trying
+to make is that you can't create a binding to the root collection (because there's
+no collection for the binding to belong to).  That point would be clearer if we
+defined request-URI having no path segment as request-URI "/".
+
+AGREED.
+
+Judy's comment #13: Some of the diagrams we use were originally designed for more
+complicated scenarios, and so are more complicated than they need to be in their
+new context. Judy will simplify these.
+
+Judy's comment #14: I need someone to explain how a resource can have an infinite 
+number of mappings.
+
+Jim W:  This can happen if there is a binding loop.  
+
+We should either mention binding loops where we say that a resource can have an
+infinite number of bindings or just say that a resource can have many bindings.
+
+Judy's comment #15: The definition of "target resource" allows it to apply only
+to redirect references.  Do we want to be able to talk about the target of a
+binding?
+
+No.  The definition can stand as it is.
+
+Judy's comment #16: In section 3 (overview of ordering) there is some discussion
+of human language descriptions, but nothing in advanced collections addresses
+this problem, so let's get rid of it.
+
+AGREED.
+
+Judy's Comment #17: Section numbering of the appendices is confused.
+
+Jim W: We don't want to lose the hard-won understanding of strong references.  We may
+need it if we later add direct references.  So he the discussion of strong references
+to an appendix.
+
+Judy: We could move it into the rationale document.  The risk is that that document
+will never be completed.
+
+Not resolved.
+
+Judy's comment #18: We introduce section 4.1 by saying that the mechanisms we provide
+for resource sharing are bindings and redirect references, and then immediately
+start talking about mappings.  This is confusing.
+
+Jim W: It seemed reasonable to do this because both bindings and mappings are
+defined in an earlier section.
+
+Judy: Has some ideas about how to re-organize this discussion.  Judy will edit and see
+what Jim thinks.
+
+Judy's comment #19:  There is a significant typo in the example of generating a
+set of mappings (Section 4.2.4, step 5).  Judy will fix this.
+
+Judy's comment #20: The titles of the examples in 4.2.6 and 4.2.7 don't really reflect
+what the examples show.
+
+Jim W: Each example may show multiple points.  Anyhow, since we are replacing the
+Ref-Target header with the Destination header, which must be an absolute URI, the
+examples and their titles will change.
+
+Judy's comment #21: We agreed in an earlier meeting that we would never use the term
+"mapping" alone (unless in its generic sense), but instead would always use
+"URL mapping".  Judy will fix this.
+
+REVIEW OF ACTION ITEMS
+
+There have been a number of action items from the past few weeks that were never
+completed.  Which of these still matter?
+
+Judy will start a discussion on the mailing list on the semantics of DELETE.
+
+Jim will start a discussion on redirect references to collections.
+
+We don't need to have a general discussion of the semantics of bindings.
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

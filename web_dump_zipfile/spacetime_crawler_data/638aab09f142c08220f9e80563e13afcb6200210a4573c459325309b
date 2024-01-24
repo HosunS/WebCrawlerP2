@@ -1,0 +1,510 @@
+¶Ifinal_url¢DtypeEvaluexhttps://www.ics.uci.edu/~qlou/Lhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE31645¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 16 Dec 2018 06:04:59 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"7b9d-57d1d71b898c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 05:55:48 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY{ù<!DOCTYPE html>
+<html lang="en">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120828148-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-120828148-1');
+</script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qi Lou</title>
+
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header
+      ================================================== -->
+      <div class="navbar-wrapper">
+        <div class="container">
+          <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                  <li><a href="#about"><b>Home</b></a></li>
+                  <li><a href="#research"><b>Research</b></a></li>
+                  <li><a href="#publications"><b>Publications</b></a></li>
+                  <li><a href="#internship"><b>Internship</b></a></li>
+                  <li><a href="#teaching"><b>Teaching</b></a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="item active">
+            <img src="image/background.png" alt="image">
+            <div class="container">
+              <div class="carousel-caption">
+                <img class="img-circle" src="image/photo.jpg" alt="Generic placeholder image" width="210" height="210">
+                <br/>
+                <div class="header-name">
+                  <span>Qi Lou </span>
+                  <img src="image/myname.png" title="my Chinese name" />
+                </div>
+                <p>
+                  Office: DBH 4051
+                  <br/>
+                  Email: qlou AT uci.edu
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="container marketing">
+      <!-- About me
+        ================================================== -->
+        <div class="row featurette">
+          <div class="col-md-12">
+            <div class="featurette-heading content-header">
+              <a name="about">
+                About me
+              </a>
+            </div>
+            <p class="lead">
+              I successfully defended my PhD thesis on Dec. 5, 2018. I was a PhD student in the Computer Science Department at <a href="http://www.uci.edu/" target="blank">University of California, Irvine</a>,
+              under the supervision of Prof. <a href="http://www.ics.uci.edu/~ihler/" target="blank">Alexander Ihler</a>.
+              I also worked closely with Prof. <a href="http://www.ics.uci.edu/~dechter/" target="blank">Rina Dechter</a>.
+            </p>
+            <div class="featurette-slide">
+              <p class="lead">
+                <b>I'm on the job market now! Shoot me an <u><a href="mailto:qilou.zju@gmail.com" target="blank" style="color:orange">email</a></u> if you are interested.</b>
+              </p>
+<!--               <p class="lead">
+              <b><a href="https://www.linkedin.com/in/qi-lou-08099031/" target="blank">LinkedIn</a></b>
+              </p> -->
+            </div>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+      <!-- Research
+        ================================================== -->
+        <div class="row featurette">
+          <div class="col-md-12">
+            <div class="featurette-heading content-header">
+              <a name="research">
+                Research
+              </a>
+            </div>
+            <p class="lead">
+              I'm generally interested in artificial intelligence, machine learning, and computer vision.
+              My thesis work focuses on developing approximate inference algorithms for probabilistic graphical models
+              with strong anytime guarantees, which takes advantage of ideas and techniques from variational methods, heuristic search, and Monte Carlo sampling. I've also worked on (deep) multi-instance learning, video ads analysis, semantic segmentation, etc.
+            </p>
+            <div class="featurette-slide">
+              <p class="lead">
+                <b><a href="https://scholar.google.com/citations?hl=en&user=Z8OP_PgAAAAJ&view_op=list_works&sortby=pubdate" target="blank">Google Scholar</a></b>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+      <!-- Publication
+        ================================================== -->
+          <div class="row featurette">
+          <!-- <div class="col-md-8"> -->
+            <div class="col-md-12">
+              <div class="featurette-heading content-header">
+                <a name="publications">
+                  Publications
+                </a>
+              </div>
+              <div class="featurette-heading title">
+                <a href="publications/aaai19_interleave.pdf" title="link" target="blank">
+                  Interleave variational optimization with Monte Carlo sampling: a tale of two approximate inference paradigms
+                </a>
+              </div>
+              <div class="authors">
+                <b>Qi Lou</b>, Rina Dechter, Alexander Ihler
+              </div>
+              <div class="publisher">
+                <span class="bookTitle">The 33rd AAAI Conference on Artificial Intelligence (AAAI-19).</span> [to appear].
+              </div>
+<!--               <div class="abstract">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+              </div> -->
+            </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+        </div>
+        <div class="row featurette">
+            <div class="col-md-12">
+              <div class="featurette-heading title">
+                <a href="https://arxiv.org/pdf/1811.12500.pdf" title="link" target="blank">
+                    Sequential embedding induced text clustering, a non-parametric Bayesian approach
+                </a>
+              </div>
+              <div class="authors">
+                Tiehang Duan, <b>Qi Lou</b>, Sargur Srihari, Xiaohui Xie
+              </div>
+              <div class="publisher">
+                <span class="bookTitle">The 23rd Pacific-Asia Conference on Knowledge Discovery and Data Mining (PAKDD-19).</span> [to appear].
+              </div>
+            </div>
+        </div>
+        <div class="row featurette">
+            <div class="col-md-12">
+              <div class="featurette-heading title">
+                <a href="publications/ism18.pdf" title="link" target="blank">
+                  Content-based effectiveness prediction of video advertisements
+                </a>
+              </div>
+              <div class="authors">
+                <b>Qi Lou</b>, Somdeb Sarkhel, Saayan Mitra, Viswanathan Swaminathan
+              </div>
+              <div class="publisher">
+                <span class="bookTitle">The 20th IEEE International Symposium on Multimedia (ISM-18).</span> [short paper, to appear].
+              </div>
+<!--               <div class="abstract">
+                &nbsp;&nbsp;&nbsp;&nbsp;Marginal MAP is a key task in Bayesian inference and
+                decision-making. It is known to be very difficult in general,
+                particularly because the evaluation of each MAP assignment
+                requires solving an internal summation problem. In this paper,
+                we propose a best-first search algorithm that provides anytime
+                upper bounds for marginal MAP in graphical models. It folds
+                the computation of external maximization and internal summation
+                into an AND/OR tree search framework, and solves
+                them simultaneously using a unified best-first search algorithm.
+                The algorithm avoids some unnecessary computation of
+                summation sub-problems associated with MAP assignments,
+                and thus yields significant time savings. Furthermore, our algorithm
+                is able to operate within limited memory. Empirical
+                evaluation on three challenging benchmarks demonstrates that
+                our unified best-first search algorithm using pre-compiled variational
+                heuristics often provides tighter anytime upper bounds
+                compared to those state-of-the-art baselines.
+              </div> -->
+            </div>
+      </div>
+      <div class="row featurette">
+        <div class="col-md-12">
+          <div class="featurette-heading title">
+            <a href="publications/uai18_mmap.pdf" title="link" target="blank">
+              Finite-sample bounds for marginal MAP
+            </a>
+          </div>
+          <div class="authors">
+            <b>Qi Lou</b>, Rina Dechter, Alexander Ihler
+          </div>
+          <div class="publisher">
+            <span class="bookTitle">The 34th Conference on Uncertainty in Artificial Intelligence (UAI-18).</span>
+          </div>
+<!--               <div class="abstract">
+                &nbsp;&nbsp;&nbsp;&nbsp;Marginal MAP is a key task in Bayesian inference and decision-making, and known to be very challenging in general. In this paper, we present an algorithm that blends heuristic search and importance sampling to provide anytime finite-sample bounds for marginal MAP along with predicted MAP solutions. We convert bounding marginal MAP to a surrogate task of bounding a series of summation problems of an augmented graphical model, and then adapt dynamic importance sampling, a recent advance in bounding the partition function, to providing finite-sample bounds for the surrogate task. Those bounds are guaranteed to be tight given enough time, and the values of the predicted MAP solutions will converge to the optimum. Our algorithm runs in an anytime/anyspace manner, which gives flexible trade-offs between memory, time, and solution quality. We demonstrate the effectiveness of our approach empirically on multiple challenging benchmarks in comparison with some state-of-the-art search algorithms.
+              </div> -->
+        </div>
+      </div>
+      <div class="row featurette">
+        <div class="col-md-12">
+          <div class="featurette-heading title">
+            <a href="publications/aaai18_mmap.pdf" title="link" target="blank">
+              Anytime anyspace AND/OR best-first search for bounding marginal MAP
+            </a>
+          </div>
+          <div class="authors">
+            <b>Qi Lou</b>, Rina Dechter, Alexander Ihler
+          </div>
+          <div class="publisher">
+            <span class="bookTitle">The 32nd AAAI Conference on Artificial Intelligence (AAAI-18). </span>
+          </div>
+<!--               <div class="abstract">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+          </div> -->
+        </div>
+      </div>
+      <div class="row featurette">
+        <!-- <div class="col-md-8"> -->
+          <div class="col-md-12">
+            <div class="featurette-heading title">
+              <a href="publications/nips17_DIS.pdf" title="link" target="blank">
+                Dynamic importance sampling for anytime bounds of the partition function
+              </a>
+            <!-- <a href="publications/nips17_DIS_poster.pdf" title="link" target="blank" class="featurette-slide">[poster]</a> -->
+          </div>
+          <div class="authors">
+            <b>Qi Lou</b>, Rina Dechter, Alexander Ihler
+          </div>
+          <div class="publisher">
+            <span class="bookTitle">The 31st Annual Conference on Neural Information Processing Systems (NIPS-17).</span>
+            <!-- [<a href="publications/nips17_DIS_poster.pdf" title="link" target="blank">poster</a>] -->
+          </div>
+ <!--          <div class="abstract">
+            &nbsp;&nbsp;&nbsp;&nbsp;  Computing the partition function is a key inference task in many graphical models.
+            In this paper, we propose a dynamic importance sampling scheme
+            that provides  anytime finite-sample bounds for the partition function.
+            Our algorithm balances the advantages of the three major inference strategies,
+            heuristic search, variational bounds, and Monte Carlo methods, blending sampling
+            with search to refine a variationally defined proposal.
+            Our algorithm combines and generalizes recent work on anytime search
+            and probabilistic bounds of the partition function.
+            By using an intelligently
+            chosen weighted average over the samples, we construct an unbiased estimator
+            of the partition function with strong finite-sample confidence intervals that
+            inherit both the rapid early improvement rate of sampling and the long-term benefits
+            of an improved proposal from search.
+            This gives significantly improved anytime behavior, and more flexible trade-offs
+            between memory, time, and solution quality.
+            We demonstrate the effectiveness of our approach empirically
+            on real-world problem instances taken from recent UAI competitions.
+          </div> -->
+        </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+      </div>
+      <div class="row featurette">
+        <!-- <div class="col-md-8"> -->
+          <div class="col-md-12">
+            <div class="featurette-heading title">
+              <a href="publications/aaai17_partition_function.pdf" title="link" target="blank">
+                Anytime anyspace AND/OR search for bounding the partition function
+              </a>
+<!--             <a href="publications/aaai17_anytime.pptx" title="link" target="blank" class=
+            "featurette-slide">
+              [slides]
+            </a> -->
+          </div>
+          <div class="authors">
+            <b>Qi Lou</b>, Rina Dechter, Alexander Ihler
+          </div>
+          <div class="publisher">
+            <span class="bookTitle">The 31st AAAI Conference on Artificial Intelligence (AAAI-17).</span>
+          </div>
+<!--           <div class="abstract">
+            &nbsp;&nbsp;&nbsp;&nbsp;Bounding the partition function is a key inference task in
+            many graphical models. In this paper, we develop an anytime
+            anyspace search algorithm taking advantage of AND/OR tree
+            structure and optimized variational heuristics to tighten deterministic
+            bounds on the partition function. We study how our
+            priority-driven best-first search scheme can improve on stateof-the-art
+            variational bounds in an anytime way within limited
+            memory resources, as well as the effect of the AND/OR framework
+            to exploit conditional independence structure within the
+            search process within the context of summation. We compare
+            our resulting bounds to a number of existing methods, and
+            show that our approach offers a number of advantages on realworld
+            problem instances taken from recent UAI competitions.
+          </div> -->
+        </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+      </div>
+      <div class="row featurette">
+        <!-- <div class="col-md-8"> -->
+          <div class="col-md-12">
+            <div class="featurette-heading title">
+              <a href="https://arxiv.org/pdf/1612.05968.pdf" title="link" target="blank">
+              Deep multi-instance networks with sparse label assignment for whole mammogram classification</a>
+            </div>
+            <div class="authors">
+              Wentao Zhu, <b>Qi Lou</b>, Yeeleng Scott Vang, Xiaohui Xie
+            </div>
+            <div class="publisher">
+              <span class="bookTitle">The 20th International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI-17).</span>
+            </div>
+<!--             <div class="abstract">
+              &nbsp;&nbsp;&nbsp;&nbsp;Mammogram classification is directly related to computer-aided diagnosis of breast cancer. Traditional methods requires great effort to annotate the training data by costly manual labeling and specialized computational models to detect these annotations during test. Inspired by the success of using deep convolutional features for natural image analysis and multi-instance learning for labeling a set of instances/patches, we propose end-to-end trained deep multi-instance networks for mass classification based on whole mammogram without the aforementioned costly need to annotate the training data. We explore three different schemes to construct deep multi-instance networks for whole mammogram classification. Experimental results on the INbreast dataset demonstrate the robustness of proposed deep networks compared to previous work using segmentation and detection annotations in the training.
+            </div> -->
+          </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+      </div>
+      <!-- <hr class="featurette-divider"> -->
+      <div class="row featurette">
+        <!-- <div class="col-md-8"> -->
+          <div class="col-md-12">
+            <div class="featurette-heading title">
+              <!-- <a href="http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6661985" title="link" target="blank">Novelty detection under multi-instance multi-label framework</a> -->
+              <a href="https://arxiv.org/pdf/1311.6211.pdf" title="link" target="blank">Novelty detection under multi-instance multi-label framework</a>
+            </div>
+            <div class="authors">
+              <b>Qi Lou</b>, Raviv Raich, Forrest Briggs, Xiaoli Fern
+            </div>
+            <div class="publisher">
+              <span class="bookTitle">IEEE International Workshop on Machine Learning for Signal Processing, 2013. </span>
+            </div>
+<!--             <div class="abstract">
+              &nbsp;&nbsp;&nbsp;&nbsp;Novelty detection plays an important role in machine learning and signal processing. This paper studies novelty detection in a new setting where the data object is represented as a bag of instances and associated with multiple class labels, referred to as multi-instance multi-label (MIML) learning. Contrary to the common assumption in MIML that each instance in a bag belongs to one of the known classes, in novelty detection, we focus on the scenario where bags may contain novel-class instances. The goal is to determine, for any given instance in a new bag, whether it belongs to a known class or a novel class. Detecting novelty in the MIML setting captures many real-world phenomena and has many potential applications. For example, in a collection of tagged images, the tag may only cover a subset of objects existing in the images. Discovering an object whose class has not been previously tagged can be useful for the purpose of soliciting a label for the new object class. To address this novel problem, we present a discriminative framework for detecting new class instances. Experiments demonstrate the effectiveness of our proposed method, and reveal that the presence of unlabeled novel instances in training bags is helpful to the detection of such instances in testing stage.
+            </div> -->
+          </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+      </div>
+      <!-- <hr class="featurette-divider"> -->
+      <div class="row featurette">
+        <!-- <div class="col-md-8"> -->
+          <div class="col-md-12">
+            <div class="featurette-heading title">
+              <a href="http://dl.acm.org/citation.cfm?id=2500491" title="link" target="blank">
+                Instance annotation for multi-instance multi-label learning
+              </a>
+            </div>
+            <div class="authors">
+              Forrest Briggs, Xiaoli Fern, Raviv Raich, <b>Qi Lou</b></div>
+              <div class="publisher">
+                <span class="bookTitle">ACM Transactions on Knowledge Discovery from Data, Vol. 7 Iss. 3, 2013.</span>
+              </div>
+ <!--              <div class="abstract">
+                &nbsp;&nbsp;&nbsp;&nbsp;Multi-instance multi-label learning (MIML) is a framework for supervised classification where the objects to be classified are bags of instances associated with multiple labels. For example, an image can be represented as a bag of segments and associated with a list of objects it contains. Prior work on MIML has focused on predicting label sets for previously unseen bags. We instead consider the problem of predicting instance labels while learning from data labeled only at the bag level. We propose a regularized rank-loss objective designed for instance annotation, which can be instantiated with different aggregation models connecting instance-level labels with bag-level label sets. The aggregation models that we consider can be factored as a linear function of a ‚Äúsupport instance‚Äù for each class, which is a single feature vector representing a whole bag. Hence we name our proposed methods rank-loss Support Instance Machines (SIM). We propose two optimization methods for the rank-loss objective, which is nonconvex. One is a heuristic method that alternates between updating support instances, and solving a convex problem in which the support instances are treated as constant. The other is to apply the constrained concave-convex procedure (CCCP), which can also be interpreted as iteratively updating support instances and solving a convex problem. To solve the convex problem, we employ the Pegasos framework of primal subgradient descent, and prove that it finds an Œµ-suboptimal solution in runtime that is linear in the number of bags, instances, and 1/Œµ. Additionally, we suggest a method of extending the linear learning algorithm to nonlinear classification, without increasing the runtime asymptotically. Experiments on artificial and real-world datasets including images and audio show that the proposed methods achieve higher accuracy than other loss functions used in prior work, e.g., Hamming loss, and recent work in ambiguous label classification.
+              </div> -->
+            </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+      </div>
+      <!-- <hr class="featurette-divider"> -->
+      <div class="row featurette">
+        <!-- <div class="col-md-8"> -->
+          <div class="col-md-12">
+            <div class="featurette-heading title">
+              <a href="http://scitation.aip.org/content/asa/journal/poma/19/1/10.1121/1.4800995" title="link" target="blank">
+                A framework for analyzing bioacoustics audio recordings as multiple instance multiple label data
+              </a>
+            </div>
+            <div class="authors">
+              Raviv Raich, Forrest Briggs, <b>Qi Lou</b>, Xiaoli Fern, David Mellinger
+            </div>
+            <div class="publisher">
+              <span class="bookTitle">Proceedings of Meetings on Acoustics Vol. 19 Iss. 1, 2013.</span>
+            </div>
+<!--             <div class="abstract">
+              &nbsp;&nbsp;&nbsp;&nbsp;We consider the problem of in-situ species monitoring across large spatial and temporal scales. We are interested in the scenario in which omnidirectional microphones are deployed for round-the-clock in-situ species monitoring. In such a scenario, recordings may suffer from two problems: (i) low signal-to-noise ratio and (ii) simultaneous vocalizations of multiple individuals. The multiple instance multiple label framework is commonly used to analyze complex data using the bag-of-instances representation. We propose a framework for converting an audio recording to a collection of instances for species classification.
+            </div> -->
+          </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+      </div>
+      <!-- <hr class="featurette-divider"> -->
+      <div class="row featurette">
+        <!-- <div class="col-md-8"> -->
+          <div class="col-md-12">
+            <div class="featurette-heading title">
+              <a href="https://ac.els-cdn.com/S009784931200060X/1-s2.0-S009784931200060X-main.pdf?_tid=ebb12a10-df6a-44f7-bfbe-fa81fffa3005&acdnat=1526429939_f5cddfbd241464b0dcc9f3938715d1dd" title="link" target="blank">
+              <!-- <a href="publications/smi12_clipping.pdf" title="link" target="blank"> -->
+                Curve intersection using hybrid clipping
+              </a>
+            </div>
+            <div class="authors">
+              <b>Qi Lou</b>, Ligang Liu
+            </div>
+            <div class="publisher">
+              <span class="bookTitle">Computers & Graphics 36(5): 309-320 (2012).</span>
+              <span class="bookTitle">Oral presentation at Shape Modeling International 2012.</span>
+            </div>
+<!--             <div class="abstract">
+              &nbsp;&nbsp;&nbsp;&nbsp;This paper presents a novel approach, called hybrid clipping, for computing all intersections between two polynomial B√©zier curves within a given parametric domain in the plane. Like B√©zier clipping, we compute a ‚Äòfat line‚Äô (a region along a line) to bound one of the curves. Then we compute a ‚Äòfat curve‚Äô around the optimal low degree approximation curve to the other curve. By clipping the fat curve with the fat line, we obtain a new reduced subdomain enclosing the intersection. The clipping process proceeds iteratively and then a sequence of subdomains that is guaranteed to converge to the corresponding intersection will be obtained. We have proved that the hybrid clipping technique has at least a quadratic convergence rate. Experimental results have been presented to show the performance of the proposed approach with comparison with B√©zier clipping.
+            </div> -->
+          </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+      </div>
+      <hr class="featurette-divider">
+      <!-- Internship
+        ================================================== -->
+        <div class="row featurette">
+          <!-- <div class="col-md-8"> -->
+            <div class="col-md-12">
+              <div class="featurette-heading content-header">
+                <a name="internship">
+                  Internship
+                </a>
+              </div>
+              <div class="featurette-heading title">
+                Research Intern at Adobe Research
+                <img src="image/Adobe_logo.png" alt="image" style="width:115px;height:25px;">
+              </div>
+              <div class="abstract">
+                &nbsp;&nbsp;&nbsp;&nbsp;Big Data Experience Lab, hosted by Dr. Somdeb Sarkhel, Dr. Saayan Mitra,
+                and Dr. Vishy Swaminathan. 06/2017 ~ 09/2017.
+              </div>
+              <div class="featurette-heading title">
+                Research Intern at Virginia Tech
+              </div>
+              <div class="abstract">
+                &nbsp;&nbsp;&nbsp;&nbsp;Machine Learning & Perception Group, hosted by Prof. <a href="https://filebox.ece.vt.edu/~dbatra/" target="blank">Dhruv Batra</a>. 08/2013 ~ 11/2013,
+                04/2014 ~ 08/2014.
+              </div>
+            </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+      </div>
+
+      <hr class="featurette-divider">
+      <!-- Footer (include map)
+        ================================================== -->
+            <!-- Teaching
+              ================================================== -->
+              <div class="row featurette">
+                <!-- <div class="col-md-8"> -->
+                  <div class="col-md-12">
+                    <div class="featurette-heading content-header">
+                      <a name="teaching">
+                        Teaching
+                      </a>
+                    </div>
+                    <div class="featurette-heading title">
+                      Teaching assistant for
+                    </div>
+                    <div class="abstract">
+                      &nbsp;&nbsp;&nbsp;&nbsp; CS 171 Intro to Artificial Intelligence <br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp; CS 178 Machine Learning and Data Mining <br/>
+                      &nbsp;&nbsp;&nbsp;&nbsp; CS 179 Intro to Graphical Models
+                    </div>
+                  </div>
+<!--         <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="image/500x500.png" alt="Generic placeholder image">
+        </div> -->
+      </div>
+
+      <!-- Footer (include map)
+        ================================================== -->
+
+        <hr class="featurette-divider">
+
+<!--         <div id="clustrmaps-widget"></div>
+        <script type="text/javascript">var _clustrmaps = {'url' : 'http://www.ics.uci.edu/~qlou/', 'user' : 1179980, 'server' : '3', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2015-09-30', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www3.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script>
+        <noscript>
+          <a href="http://www3.clustrmaps.com/user/9eb12014c"><img src="http://www3.clustrmaps.com/stats/maps-no_clusters/www.ics.uci.edu-~qlou--thumb.jpg" alt="Locations of visitors to this page" /></a>
+        </noscript> -->
+
+        <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Back to the top" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+        <footer>
+          <p class="footer-text"> &copy; 2015 Qi Lou &middot; Last Updated on: 06/20/2018 </p>
+        </footer>
+      </div>
+
+
+    </div><!-- /.container -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" async src="http://www3.clustrmaps.com/counter/map.js"></script> -->
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+  </html>Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

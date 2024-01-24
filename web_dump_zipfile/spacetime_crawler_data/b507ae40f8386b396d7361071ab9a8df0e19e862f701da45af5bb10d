@@ -1,0 +1,1198 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE58528¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 01 Feb 2019 08:49:57 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"e4a0-580d13a4368cb"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 21:54:43 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYä <!Doctype HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+  <title>Announcements</title>
+</head>
+<body BGCOLOR="white">
+
+
+<hr align="left">
+
+<center><h1>Announcements</h1>
+<p>
+<h2>ICS-33: Intermediate Programming<br>
+</h2><p>
+</center>
+<h3>In reverse-chronological order</h3>
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #11: 1/31/19<br>
+  In-Lab Programming Exam #1 Graded
+</b></td>
+<td width ="80%">
+I have run the automatic batch self-check tests for In-Lab Exam #1 and the
+  grades are now recorded.
+See the
+   <a href="solutions/ile1gradesstudents.zip">assignment grades</a> and
+   <a href="ics33win19grades.zip">Grades(zipped .xlsm file)</a> files, whose
+   details are discussed below, in Announcement #7.
+<p>
+You can find your solutions (by your Hashed ID), my solution, and the actual
+  <b>bsc</b> and <b>db</b> files that I used to compute grades for this
+  assignment, in the EEE dropbox for this class
+  (see the name <b>ile1materials.zip</b>).
+To test your code with these new files, you should put them in your project
+  file, comment out all the tests in the script in your code (the ones you ran
+  during the exam), and then you should add and run the code
+<b><pre>
+    import driver
+    driver.default_file_name = "bscile1W19.txt"
+    driver.driver()</pre></b>
+<!-- For Labs 1-9 use <b>bscile1W18.txt</b> and
+     for Labs 10-15 use <b>bscile2W18.txt</b>.
+-->
+<p>
+I believe the In-Lab Exams are the best indicator, of all testing instruments,
+  of your ability to program: read specifications and transform them into
+  working code (writing code and debugging it).
+As I'll say in class, Tolstoy is often quoted (from Anna Karenina) as writing,
+<blockquote>
+"Happy families are all alike; every unhappy family is unhappy in its own way."
+</blockquote>
+My adaptation of this quote is
+<blockquote>
+"High-scoring students are all alike (knowing how to program well); every
+  low-scoring student did poorly in his/her own way: e.g., lack of programming 
+  or debugging ability, freezing on the exam, misreading or misunderstanding
+  some problem statements, spending too much time debugging one problem, being
+  ill when taking the exam, arriving late, etc."
+</blockquote>
+So, I understand that there are many possible reasons that students don't do
+  well on In-Lab Exams.
+If you did poorly, think about why; don't fool yourself.
+<p>
+The spreadsheet computes grades the standard way: the percentage of tests
+  passed for each function multiplied by 20 (each problem was worth 20 points),
+  with all the points added up.
+Column I computes this number, which is also the same as the rounded value
+  (Column J) and the percentage (Column K)
+<p>
+<!---
+The spreadsheet computes grades in two ways.
+<ol>
+<li>The standard way: the percentage of tests passed for functions 1-5,
+       multiplied by 20 (each problem was worth 20 points), plus 1 extra point
+       for the last problem, only if it passes all tests.
+    Column J computes this number.
+<p>
+<li>An alternative way: the percentage of tests passed for functions 1-5, but
+       dropping the lowest score, multiplied by 25 (for these top 4 problems),
+       plus 1 extra point for the last problem, only if it passes all tests.
+   In addition, there is a deduction of 10 points for dropping the lowest
+     score (I don't want a student who solved all 5 problems to get the same
+     grade as a student who solved just 4; but I want to boost the scores a bit
+     of students who might have gotten hung up on one problem).
+   Column N computes this number.
+</ol>
+The value in in Column O is the largest of Columns J and N.
+This is the grade recorded in the main grades spreadsheet.
+<p>
+---->
+<!---
+I computed the grades a bit more liberally than 20% per problem (all students
+  received the same or higher scores):
+  all 5 problems correct: 100%; 4 problems correct: 85%; 3 problems correct:
+  70%; 2 problems correct: 55%; 1 problem correct: 35%; no problems correct: 0%.
+Of course, correctly solving the sixth problem was worth 1% extra.
+<p>
+--->
+The result was the class average was about 82% <!--(resulting in 8 normalization
+  points: almost an entire grade)--> and the median was about 100%.
+The large skew between these statistics shows that although the majority of
+  students solved most of the problems correctly, there were other students who
+  did very poorly, which dragged down the average much more than the median.
+At the extremes, 55% of the students submitted code in which all five functions
+  passed all batch self-check tests (half of those had the extra credit problem
+  correct too); 4% submitted code in which no functions passed any batch
+  self-check tests (although some of these are from code containing bad imports,
+  syntax errors, and infinite loops: see below).
+<p>
+The approximate distribution of grades on this In-Lab exam
+  <!--(after normalization)-->
+  is 69% As, 6% Bs, 3% Cs, 4% Ds, and 18% Fs.
+This <b>U</b>-shaped distribution 87% As and Fs) is common for In-Lab
+  Programming Exams, where we are testing competency/mastery of programming
+  concepts: the ones who attained it scored As (could do everything in the
+  allotted time); the ones who have not attained it scored Fs (solved just a
+  few problems in the allotted time); only about 13% of the students scored
+  somewhere in-between (and most of those scored Bs).
+<!---
+There were actually two different exams given.
+Although they both used Stock Portfolios, 4 of 6 questions were different (but
+  similar in how they were solved).
+--->
+<p>
+FYI, the <!--normalized--> averages <!--and medians--> for the different exams
+  was
+  84% for students in Lab  1-2 (meeting at 8am),
+  86% for students in Labs 4-6 (meeting at 10am), 
+  83% for students in Labs 7-9 (meeting at 12noon),
+  79% for students in Labs 10-12 (meeting at 2pm), and
+  78% for students in Labs 13-15 (meeting at 4pm).
+<p>
+<!---
+This exam was similar in the kinds of problems it asked as the practice exam I
+  distributed, although the <b>dict</b> of <b>dict</b> was more complicated
+--->
+<!--
+  given (early morning through late afternoon) were: 12noon 76%, 2pm 77%,
+  and 4pm 75%.
+About as many students got 100 points as 101.
+within 2% of each other; the grade distributions were also similar.
+-->
+<!--
+This was the first time I put a 2nd extra credit problem on In-Lab Exam #2, and
+  19% solved it, scoring 102%, which greatly exceeded my expectations.
+<p>
+--->
+In <b>registered_ordering</b>, many students did not correctly specify the way
+  to sort: their solution worked correctly only if the dictionary was iterated
+  through in increasing order of it keys/zipcodes.
+In the <b>bsc</b>, I tested two dictionaries: one that iterated that way and
+  one that didn't; so many students passed one test but failed the second
+  (getting 10 points out of 20 for this problem).
+Look at the <b>lambda</b> in my solution and compare it to yours.
+<p>
+Students should talk to the TA/Reader for their Lab first, if they do not
+  understand why they received the marks they did or dispute any of these marks.
+The best time to talk with your TA/Reader about grades is during one of your
+  Labs, when both student and TA are physically present to examine the
+  submission and the grade, possibly running the solution on a computer they
+  can share.
+<p>
+Students should examine their graded work immediately and get any regrade
+  issues settled as soon as possible (within a week of when the grade is
+  assigned).
+<p>
+<b>IMPORTANT</b> Information about Student Grades
+<ul>
+<!---
+<li>If there is a comment in column B (the one with the X) saying that you
+  submitted an empty folder, contact me (Rich).
+<p>
+--->
+<li>
+If you submitted code that had syntax errors and therefore failed all tests:
+  the TAs are authorized to allow you to fix a few simple syntax errors in the
+  code you submitted and rerun/regrade the code (but, I will deduct some points
+  for not submitting executable code).
+You cannot "debug" the code beyond fixing syntax errors.
+Also see Announcement #5 below.
+<p>
+<li>
+If you submitted code that didn't finish executing in at least one of their
+  functions and therefore failed all its tests: the TAs are authorized to allow
+  you to replace any method body with <b>pass</b> and rerun/regrade the code
+  (but, I will deduct some points for submitting  code with an infinite loop).
+</ul>
+The actual batch self-check tests I used for grading were similar to the tests
+  in the script of the exam; but, all produce differents results, so students
+  could not "hard-code" any answers into their functions, hoping to get some
+  correctness points.
+Often I just changed the zipcodes and party letters, which leads to different
+  but equivalent output.
+<p>
+Finally, if students score a higher percentage on their In-Lab Exam #2 (which
+  involves material from the first, as well as Classes, Operator Overloading,
+  and writing Iterators), I will score their In-Lab Exam #1 higher.
+In the past, I have sometimes made the first exam score equal to the second,
+  effectively erasing the first score; other times I have averaged the two,
+  bringing the first score half way to the second.
+Therefore, even a terrible grade on this exam can have a minimal effect on your
+  final grade if you perform much better on In-Lab Exam #2.
+</td>
+</tbody>
+</table>
+
+<hr align="left">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+    #10: 1/25/18<br>
+  Quiz #2 Graded
+</b></td>
+<td width ="80%">
+I have run the automatic batch self-check tests for Quiz #2 and the grades are
+  now recorded.
+I used the following <a href="solutions/bscq2W19.txt">batch self-check file<a>
+  (similar to the ones I provided, but with some altered/additional tests).
+<p>
+See the
+   <a href="solutions/quiz2gradesstudents.zip">assignment grades</a> and
+   <a href="ics33win19grades.zip">Grades(zipped .xlsm file)</a> files, whose
+   details are discussed below, in Announcement #7.
+<p>
+The class average was about 80% and the median was 88%, meaning that most
+  students correctly solved most problems; about (37%) of the class
+  correctly solved all the problems (or had minor deductions).
+Overall there were 37% As, 29% Bs, 10% Cs, and 23% Ds and Fs.
+About 16% of the students submitted early, and these early submitters scored
+  much better (93% average) than students submitting on the due day (78%
+  average);
+I am assuming that some students ran out of time before they finished all the
+  problems, and will plan to get started earlier on later quizzes.
+<p>
+In the assignment spreadsheet, Column A contains the Hashed IDs of all students
+  (in sorted order) and Column B contains an X if we believe the student
+  submitted work on time.
+Row 1 for Columns C-Q shows how many points the problems were worth.
+Row 2 shows the number of tests performed for each problem.
+<p>
+Rows 4 and beyond show the number of failed tests for each student (a blank
+  indicates no failed tests: equivalent to 0 failed tests).
+To compute the number of points for a problem/in a column, compute the
+  percentage of successful tests and multiply it by the number of points the
+  problem is worth.
+So for example, if a student missed 5 of 20 tests on a 4 point problem, he/she
+  would receive <b>(20-5)/20*4 = 15/20*4 = 3</b> points.
+Columns R-T show each student's cumulative <b>Score</b>, the score
+  <b>Rounded</b> to an integer (what integer is entered in the Grades
+  spreadsheet) and <b>Percent</b>, based on the number of points the
+  assginment is worth (here 25).
+<p>
+Students should talk to the TA/Reader for their Lab first, if they do not
+  understand why they received the marks they did or dispute any of these marks.
+The best time to talk with your TA/Reader about grades is during one of your
+  Labs, when both student and TA/Reader are physically present to examine the
+  submission and the grade, possibly running the solution on a computer they
+  can share.
+<p>
+Students should examine their graded work immediately and get any regrade
+  issues settled as soon as possible (within a week of when the grade is
+  assigned).
+<p>
+<b>IMPORTANT</b> Information about Student Grades
+<ul>
+<li>
+A few students submitted code that had syntax errors and therefore failed
+  all tests for that part: the TAs are authorized to allow you to fix a few
+  simple syntax errors in the code you submitted and rerun/regrade the code
+  (but, I will deduct some points for not submitting executable code).
+You cannot "debug" the code beyond fixing syntax errors.
+Also see Announcement #5 below.
+<p>
+<li>
+A few students submitted code that didn't finish executing in at least one of
+  their functions and therefore failed all its tests: the TAs are
+  authorized to allow you to replace any method body with <b>pass</b> and
+  rerun/regrade the code (but, I will deduct some points for submitting 
+  code with an infinite loop).
+<p>
+</ul>
+This assignment was designed to provide you with a good grounding in the use of
+  writing regular expressions and using the <b>re</b> module to write code that
+  processes text using regular expression.
+All these topics will be tested again on the Midterm.
+As with all assignments, you should examine my solutions.
+</td>
+</tbody>
+</table>
+
+<hr align="left">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #9: 1/23/19<br>
+  Program #1 Graded
+</b></td>
+<td width ="80%">
+I have run the automatic batch self-check tests for Program #1 and the grades
+  are now recorded.
+I used the following <a href="solutions/bscp1W19.zip">batch self-check files<a>
+  (similar to the ones I provided with the assignment).
+<p>
+See the
+   <a href="solutions/program1gradesstudents.zip">assignment grades</a> and
+   <a href="ics33win19grades.zip">Grades(zipped .xlsm file)</a> files, whose
+   details are discussed below, in Announcement #7.
+Note that columns AI-AN show information about the submissions for each student:
+  what days submissions occurred (AI-AK), the total number of submissions (AL),
+  how many submissions were graded and counted (AM), and how many were not
+  graded and not counted (AN).
+Of 369 students/pairs submitting, 42 (11%) had one or more submissions not
+  counted; they submitted more than one on the due date, and/or more than two
+  during the last two days.
+Only 17 (5%) had more than one submission not counted.
+Only 1 student submitted after 11:30pm:
+I removed that submission from being graded. and deducted 1 point
+  (in Column C) for requiring manual work to correct for the late submissions.
+Please do not submit any work after the deadline.
+<p>
+The class average was about 89% and the median was 102%, meaning that most
+  students correctly solved most problems, and over half (72%) of the class
+  correctly solved all the problems (or had minor deductions).
+Overall there were
+  72% As, 7% Bs,  6% Cs, and 15% Ds and Fs.
+FYI, last Spring quarter, there were
+  69% As, 9% Bs,  7% Cs, and 15% Ds and Fs.
+About 47% of the students submitted early, and these early submitters scored
+  much better (99% average) than students submitting any programs on the due
+  day (91% average).
+I am assuming that some students ran out of time before they finished all the
+  problems, and will plan to get started earlier on later programs.
+<p>
+In the assignment spreadsheet, Column A contains the Hashed IDs of all students
+  (in sorted order); Column B contains an X if we believe the student
+  submitted work on time (for pairs, only the submitting student will show an
+  X, not their partner); Column C shows the extra credit points for early
+  submissions (to get any extra credit points, you had to have all five
+  submissions meet the submission-date critera).
+If column B or C has a red triangle, hover over it to read its message;
+  sometimes you have to right-click the comment, then select "Edit Comment" to
+  enlarge the comment box to read all of it.
+<p>
+Row 2 for Columns D-Y shows how many points the problems were worth.
+Row 3 shows the number of tests performed for each problem: all were batch-self
+  check tests.
+Rows 4-5 show further information about the tests performed in each column.
+<p>
+Rows 6 and beyond show the number of failed tests for each submission (a blank
+  indicates no failed tests: equivalent to 0 failed tests).
+To compute the number of points for a problem/in a column, compute the
+  percentage of successful tests and multiply it by the number of points the
+  problem is worth.
+So for example, if a student failed 1 of 4 tests on a 5 point problem, he/she
+  would receive <b>(4-1)/4*5 = 3/4*5 = 3.75</b> points.
+Columns Z-AD show each student's cumulative score, for all the tests in each of
+  the problems in this assignment.
+Columns AE-AG show each student's cumulative <b>Score</b>, the score
+  <b>Rounded</b> to an integer (what integer is entered in the Grades
+  spreadsheet) and <b>Percent</b>, based on the number of points the
+  assginment is worth (50).
+Note that these columns are filled in both for <b>submitters</b> and their
+  <b>partners</b> (these are the only columns filled in for partners): a
+  partner should refer to his/her submitter's line for grading details.
+<p>
+Students should talk to the TA/Reader for their Lab first, if they do not
+  understand why they received the marks they did or dispute any of these marks.
+The best time to talk with your TA/Reader about grades is during one of your
+  Labs, when both student and TA/Reader are physically present to examine the
+  submission and the grade, possibly running the solution on a computer they
+  can share.
+<p>
+Students should examine their graded work immediately and get any regrade
+  issues settled as soon as possible (within a week of when the grade is
+  assigned).
+<p>
+<b>IMPORTANT</b> Information about Student Grades
+<ul>
+<li>
+A few students submitted code that had syntax errors and therefore failed
+  all tests for that part: the TAs/Readers are authorized to allow you to fix a
+  few simple syntax errors in the code you submitted and rerun/regrade the code
+  (but, I will deduct some points for not submitting executable code).
+You cannot "debug" the code beyond fixing syntax errors.
+Also see Announcement #5 below.
+<p>
+<li>
+A few students submitted code that didn't finish executing in their
+  <b>google</b> (sometimes other) solutions and therefore failed all its 
+  tests: the TAs/Readers are authorized to allow you to replace any method body
+  with <b>pass</b> (to avoid the infinite loop) and rerun/regrade the code.
+But, I will deduct some points for submitting code with an infinite loop: in
+  the future, replace any method body with <b>pass</b> if it causes an infinite
+  loop.
+Students who had this problem have a comment attached to their X in Column B.
+<p>
+<li>
+A few students submitted code that (a) incorrectly named partners -wrong
+  format or wrong UCInetID, or (b) had students listed a partners of 
+  multiple submitters, or (c) had both students submitting and listed as
+  partners of submitters.
+The TAs/Readers are authorized to try to understand these problems and help me
+  correct them (but, I will deduct some points for staff having to deal with
+  these problems manually).
+As always, see a TA/Reader first.
+<!---
+<p>
+<li>
+If your score is recorded as a <b>0</b> on the Grades spreadsheet, I probably
+  do not have a signed Academic Integrity Contract from you.
+Please come by during my office hours as soon as possible to fix this problem.
+--->
+</ul>
+<p>
+This assignment was designed to provide you with a good grounding in the use of
+  the standard data structures in Python: <b>list</b>, <b>tuple</b>, <b>set</b>,
+  and especially <b>dict</b> (and the <b>defaultdict</b> variant).
+It also included practice iterating overs such structures, writing
+  comprehensions, use of the <b>sorted</b> function and <b>lambda</b>, and
+  other useful/important Python functions.
+Unlike Quiz #1, the problems were bigger, requiring more interesting algorithms
+  to solve, but still all expressible with a small number of Python language
+  features.
+All these topics will be tested again on the Midterm and In-Lab Exam #1.
+As with all assignments, you should examine my solutions.
+I hope the "tracing" requirements for some of the problems showed you how to
+  instrument the code you write to aid in debugging: if you added the tracing
+  code after your program was running correctly, you missed the point of this
+  part of the assignment.
+</td>
+</tbody>
+</table>
+
+<hr align="left">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #8: 1/21/19<br>
+  Quiz #1 Graded
+</b></td>
+<td width ="80%">
+I have run the automatic batch self-check tests for Quiz #1 (checking
+  correctness) and the Readers/TAs have examined problem 1 and the code
+  (checking requirements: e.g., 1 return statements/solution for 3a, 3b, and 3c)
+  and the grades are now recorded and posted.
+'I used the following <a href="solutions/bscq1W19.txt">batch self-check file<a>.
+You should run your program on this file to understand your recorded grade.
+<p>
+See the
+   <a href="solutions/quiz1gradesstudents.zip">assignment grades</a> and
+   <a href="ics33win19grades.zip">Grades(zipped .xlsm file)</a> files, whose
+   details are discussed below, in Announcement #7.
+The class average was about 84% and the median was 92%, meaning that most
+  students correctly solved most problems (58% As), and 18% of the class
+  correctly solved all the problems.
+Overall there were 58% As, 20% Bs, 6% Cs, and 16% Ds and Fs for those students
+  who submitted work; most of the students who scored near <b>0</b> submitted
+  code that we could not run (see the paragraphs below for possible regrading by
+  your TA).
+FYI, the Fall quarter grades for this quiz were
+  63% As, 18% Bs, 7% Cs, and 12% Ds and Fs for those students who submitted 
+  work.
+<p>
+About 35% of the students submitted early (although there are no extra credit
+  points on quizzes for doing so), and these early submitters scored much
+  better than students submitting on the due day (94% compared to 79%):
+  a difference of 1.5 full grade (students submitting 2 days early had
+  an average of 95%).
+I am assuming that some students ran out of time before they finished all the
+  problems, and will plan to get started earlier on later quizzes.
+<p>
+In the assignment grades spreadsheet, Column A contains the ID Hashed of all
+  students (in sorted order) and Column B contains an X if we believe the
+  student submitted work on time.
+Column C shows deductions for...
+<ul>
+  <li>written work submitted late (written work is due at the start of class)
+  <li>not printing a copy of quiz page on which you wrote your answer
+</ul>
+Row 1 for Columns D-N shows how many points the problems were worth.
+Some problems show points in two columns: e.g., Problem #3 has 2 points in
+  Column G (3a/C: produced correct answers, graded by the batch self-checks)
+  and 1 point in Column J (3a/R: the requirement of 1 return statement,
+  graded by the staff.
+Any <b>/C</b> column relates to correctness; any <b>/R</b> relates to
+  requirements.
+Note that you did not receive a requirement point unless you also received
+  full correctness points, regardless of what it says in a requirement column.
+Row 2 shows the number of batch self-check tests performed for each problem
+  (for those checked automatically; for the other columns it is just the
+  number of points the problem is worth).
+<p>
+Rows 4 and beyond show the number of failed tests for each student (a blank
+  indicates no failed tests: equivalent to 0 failed tests).
+<b>IMPORTANT</b>:
+To compute the number of points you scored for a problem/in a column, compute
+  the percentage of successful tests and multiply it by the number of points the
+  problem is worth.
+So for example, if a student missed <b>2</b> of <b>6</b> tests on a <b>5</b>
+  point problem, he/she would receive <b>(6-2)/6 * 5 = 3.3333...</b>
+  points.
+Columns R-T show each student's cumulative <b>Score</b>, the score
+  <b>Rounded</b> to an integer (that integer is the score entered in the Grades
+  spreadsheet) and <b>Percent</b>, based on the number of points the
+  assginment is worth (here 25).
+<p>
+The TAS/Readers will distribute the pages with your solutions to Problem #1 in
+  labs <b>this week</b> only; after that, your papers will be archived in my
+  office.
+The rubric for this problem was as follows: each part wrog was a .5 pt
+  deduction.
+<ol>
+<li>.5 pt ALL names  are written inside the module object/oval they belong in 
+       (m, x in script; x, y in m)
+<li>.5 pt ALL names have (square) boxes written underneath them
+<li>.5 pt ALL arrows point from "namey things" to "objecty things" AND
+       the TAIL of ALL arrows are INSIDE the box.
+     Wrong if box has an arrow pointing to another box (name pointing to name)
+<li>.5 pt ALL "objecty things" appear as circles, ovals, or rounded corner
+        rectangles
+<li>.5 pt ALL "objecty things" are correctly labeled by their type: int,
+       str (allow string), or list
+<li>.5 pt script.m points to m's module; AND script.x points to a list: AND
+         no arrows in script.m/script.x are crossed out
+<li>.5 pt m.x has a crossed-out arrow to int(1) AND an arrow to the
+         "listy thing"
+<li>.5 pt m.y has an arrow to int(1)
+<li>.5 pt some "listy thing" in index 0 points to an str(a) and is crossed out; AND
+       in index 1 point to an int(1) (don't care if crossed out; see 10).
+     Note: the "llsty thing" can have 0/1 indexes label its arrows or not; no
+       point deduction for either; give points even if multiple listy things.
+<li>.5 pt the "listy thing" in index 1 points to an int(1) and is crossed out;
+        AND it now point to itself.
+     Note that if list indexes are numbered, should be renumbered 0
+<li>.5 pt no crossing arrows (see my solution)
+</ol>
+If you lost any points on this problem (most students did) I suggest that you
+  start by comparing your solution to mine using this rubric.
+<p>
+Reader Cynthia Tsao graded all paper submissions for Labs 1-8;
+  reader Carlos Puentes graded all paper submissions for Labs 9-15.
+Students should talk to one of these two Readers, if they do not understand
+  why they received the marks they did or to dispute any of these marks.
+<!---
+Requirements points for the functions  were deducted only for too many
+  statements.
+Many students created extra/temporary lists:
+<ul>
+<li>Lists created by any kinds of comprehensions.
+<li>Lists for sorting <b>parts</b> two different parts of the parameter, and
+      then another list that was the concatenation of these two lists.
+</ul>
+But, I decided to have the TAs <b>not</b> take off points for these deviations
+  from the requirements: if you had these issues, closely look at my solutions
+  to see how to avoid them in future work, where I might deduct points.
+<p>
+--->
+<!---
+Students should talk to the TA for their Lab first, if they do not understand
+  why they received the marks they did or dispute any of these marks.
+Alternatively, they might talk to the TA who graded that problem.
+The best time to talk with your TA about grades is during one of your Labs,
+  when both student and TA are physically present to examine the submission and
+  the grade, possibly running the solution on a computer they can share.
+--->
+<p>
+Students should examine their graded work immediately and get any regrade
+  issues settled as soon as possible (within a week of when the grade is
+  assigned).
+Show up to lab and settle these issues immediately.
+<p>
+<b>IMPORTANT</b> Information about Student Grades
+<ul>
+<li>
+A few students submitted code that extraneous imports or had syntax errors and
+  therefore failed all tests: the TAs are authorized to allow you to fix a few
+  simple syntax errors in the code you submitted and rerun/regrade the code
+  (but, I will deduct some points for submitting unexecutable code).
+You cannot "debug" the code beyond fixing syntax errors.
+Also see Announcement #5 below.
+<p>
+<li>
+If you submitted an assignment, but the <b>X</b> in column <b>B</b> has the
+  comment <b>TIMEOUT</b> it means that one of your functions contained an
+  infinite loop, and therefore failed all tests: the TAs are authorized to
+  allow you to replace the body of any function by <b>pass</b> (so you will
+  receive 0 points for that function) and rerun/regrade the rest of the code
+  (but, I will deduct some points for not submitting gradable code).
+Also see Announcement #5 below.
+<!---
+<li>
+If your score is recorded as a <b>0</b> on the Grades spreadsheet, I probably
+  do not have a signed Academic Integrity Contract from you.
+Please come by during my office hours as soon as possible to fix this problem.
+--->
+</ul>
+This assignment was designed to provide you with a good grounding in the use of
+  the standard data structures in Python: <b>list</b>, <b>tuple</b>, <b>set</b>,
+  and <b>dict</b> (and the <b>defaultdict</b> variant).
+It also included practice iterating over such structures, writing
+  comprehensions, and use of the <b>sorted</b> function and <b>lambda</b>s.
+All these topics will be tested again on the Midterm and In-Lab Exam #1 (along
+  with appearing in Programming Assignment #1 as well).
+As with all assignments, you should examine my solutions.
+</td>
+</tbody>
+</table>
+
+<hr align="left" width="33%">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #7: 1/14/19<br>
+  Programming Assignment #0 Graded
+</b></td>
+<td width ="80%">
+The TAs/Readers have graded (and I have recorded the grades for) Programming
+  Assignment #0.
+As with most assignments, there are two files that you should download, unzip,
+  and examine to understand your performance on this assignment, and your
+  cumulative performance in this class.
+<p>
+Both of these files are sorted by <b>Hashed ID</b>s (which are computed
+  from the 8-digit <b>UCI ID</b>s of all the students in the class).
+To determine your <b>Hashed ID</b>, see <b>Message #6</b> below.
+<ul>
+<li>The first file to examine stores the
+   <a href="solutions/program0gradesstudents.zip">assignment grades</a>, a
+   zipped Excel file that details how each student was graded on this
+   instrument: what marks were given and why.
+It is sorted by <b>Hashed ID</b>s (column A).
+Column B contains an <b>X</b> if the student submitted work
+  (later, if you work in pairs, the <b>X</b> will appear only on the Submitter's
+  cell, not in the Partner's cell, although both will receive the same grade).
+Column C (for Programming Assignments only) shows extra credit points for early
+  submission: 1 point for submitting 24 hours early; 2 points for submitting
+  48 hours (or more) early; a blank here means no extra credit/early submission
+  points.
+<p>
+Columns D and beyond show marks for the various parts of the assignment.
+The last three columns show your <b>Score</b>, the score <b>Rounded</b> to an
+  integer (see the discussion below) and your <b>Percent</b>, based on the
+  number of points the assginment is worth.
+If a cell contains a comment (those cells with a red-triangle in their
+  upper-right hand corner) you can hover over the cell and you will see the
+  comment that explains why the marks were given: sometimes you must right-click
+  the comment and then enlarge its bounding box to see the full comment.
+<p>
+<b>Students should talk to the TA/Reader who graded a question, if they do not
+  understand why they received the marks they did or to dispute any of these
+  marks.</b>
+For Programming Assignment #0, the grading was as follows
+<b><pre>
+Part A: Lawrence Dang, Cynthia Tsao, Weidi Zhang
+Part B: Ivan Furlong, Ahmad Razavi, Kiuxi Ren
+Part C: Robert Gevorkyam, Talha Khan, Charles Zhu
+Part D: Radu Handolescu, Richard Hsu, Carlos Puentes
+</pre></b>
+<p>
+The best time to talk with the TA/Readers about grades is during one of their
+  Labs, when both student and starff are physically present to examine the
+  submission and the grade, possibly running the solution on a computer they
+  can share.
+The same goes for talking to other TAs/Readers.
+All the TAs/Readers can download your work from Checkmate.
+<p>
+<li>The second file to examine stores the cumulative
+   <a href="ics33win19grades.zip">Grades(zipped .xlsm file)</a> -also available
+     as a link on course web- unzip it, and then click the tab labeled
+     <b>Winter 2019</b>.
+   This tab records all the grades for all the testing instruments that you
+     submit during the quarter.
+It is also sorted by <b>Hashed ID</b>s (column A).
+You will notice that in this spreadsheet all recorded grades are rounded up to
+  integers: so receiving a 27.5 on the first spreadsheet will translate into a
+  28 recorded on the second one.
+We will use this same "round-up" process for recording all grades during the
+  quarter.
+<p>
+On this spreadsheet, columns B-T contain your scores: for the Quizzes (B-I),
+  Programming Assignments (J-O), In-Lab Programming Exams (P-Q), and Written
+   Exams (R and T: I'll discuss S after the Midterm).
+Columns U-X contain the sums for all these testing instruments.
+Column Y contains special extra credit points (for example, submitting the
+  faculty/course evaluation at the end of the quarter; more on this then.
+In fact, because this quareter all students submitted correctly and on time in
+  Checkmate, anyone submitting an assignment received one extra credit point,
+  which is listed here.
+--->
+Column Z-AD contains your cumulative points (Z), your average (AA), your rank
+  in class (AB: 1 means highest-scoring student), and your current grade (AC is
+  the letter, AD is +/- if appropriate).
+<p>  
+You should check this spreadsheet after every assignment is graded to ensure
+  that your score was recorded correctly.
+Again, students should talk to the TAs/Readers first, if this spreadsheet
+  contains any errors.
+<!---
+<p>
+Finally, there were 2 students who submitted work, but who are unregistered for
+  the course.
+Therefore, they have no ID Hashed, so their scores appear at the bottom with
+  <b>Unregistered</b> appearing in column A.
+--->
+</ul>
+<p>
+<b>IMPORTANT</b>:
+Scores wil revert to <b>0</b>, if I do not receive a signed Academic Integrity
+  Contract from you (we are tabulating them this week).
+Please come by during my office hours as soon as possible if you need to fix
+  this problem.
+If you turned in a document that was NOT printed double sided on a single sheet
+  of paper, it will NOT be counted: get a new sheet outside my office and
+  resubmit it to me in my office (or just slide it under the door).
+<p>
+This assignment was designed to test you on whether you have mastered the
+   basics of using Python in Eclipse, the Eclipse Debugger perspective, and
+   batch-self-check files in the <b>driver.py</b> module (in <b>courselib</b>).
+ It was also designed to see if you could follow instructions and ask
+    questions: more on that below.
+<p>
+The class average was 29 (or about 97%) and the median was 30 (or about 100%).
+For those students submtting work, there were
+  89% As, 6% Bs, 3% Cs, and 3% Ds and Fs.
+<p>
+The assignment was not meant to be hard, but it was not trivial either, and
+  there were many opportunities to lose points (and learn from your mistakes).
+Your work in the Eclipse/Python Integrated Developement Environment (IDE)
+  throughout the quarter will leverage off the understanding and skills that
+  you acquired in this assignment.
+<p>
+Let me talk about what will probably be the most contentious single point of
+  the 1,000 points that this course is worth (thus .1% of the grade)
+<!--- this point
+  was lost by about 14% of the students submitting work.--->
+I took off 1 point if you corrected the misspelling <b>Inteprxter</b> (and
+  took off 2 points if you didn't have either spelling: in this second case you
+  obviously failed to meet the specifications because you did not print what was
+  required).
+When some students hear about this point deduction, their heads explode and
+  they cannot believe that I am taking off a point for correcting what you
+  thought was my mistake.
+But... I am trying to foster an atmosphere where nothing is taken for granted in
+  the instructions that I give: if anything seems confusing or plain wrong, I
+  should be questioned about it -preferably in public, in the appropriate
+  Piazza folder- so others can learn if there really is a problem, and if so
+  the correction.
+<p>
+<ul>
+<li>
+Some students did ask me outside of class if they should correct the
+  misspelling, and I told them "no"; some students asked me by email if they
+  should correct the misspelling, and I told them "no"; one student asked in
+  Piazza folder whether they should have corrected the misspelling, and I
+   posted a reply saying that they shouldn't, for all students in the class to
+  see.
+It is critical for programmers to be sure they know the specifications of the
+  problem they are being asked to solve, otherwise they will solve, test, debug
+  document, etc. the problem incorrectly, and another cycle of development will
+  be needed to fix the misconceptions.
+The overview lecture included a graph that showed that the later in development
+  a problem is found, the harder/more expensive it is to fix.
+So if we can find problems at  the time we are reading the specification of the
+  problem to solve, that can save us a lot of work/money later.
+<p>
+<li>
+The bottom line is that you are responsible for reading the instructions
+  carefully and reporting any confusion so that I can clear it up (best reported
+  in the appropriate Piaza folder).
+Of course, you can freely talk to anyone about the problem specifications, just
+  not the code that you write for your solutions.
+If you make any assumptions (like the node names in Programming Assignment #1
+  always being one letter long -that is not part of the specification), they
+  might come back later to haunt you (gradewise).
+When working with a partner, you'll have two pairs of eyes reading the
+   specifications and looking for issues.
+I am willing to deduct this one painful point at the start of the quarter, from
+  many students, to get across this perspective, and save everyone grading grief
+  during the quarter.
+I hope you submitted early so the extra credit erased this point loss (see
+  below for the statistics on early submission).
+<p>
+<li>
+I will not intentionally do anything like this on subsequent assignments; but I
+  can certainly be unclear about the specifications (which have lots of details)
+  or even contradict myself from one spot to the next.
+It it up to you (the hundreds of eyes looking at my specifications) to clear up
+  the confusion, and best to do it on Piazza, so I can clear up the problem 
+  once for all students.
+</ul>
+<p>
+We deducted 1 point on the <b>demo.py</b> program if your <b># Submitter</b>
+  line did not perfectly match what was required, including using correct
+  spacing, punctuation, lower-/upper-case letters, etc.
+Many students lost a point here; ensure that you know what you did wrong so you
+  won't lose points in subsequent submissions.
+I'd  like to clear up all problems related to this issue immediately.
+Most deductions came from not using the correct special characters, not using
+  correct spacing, not using the correct "case" for letters, not writing your
+  UCInetID (instead writing your  Student ID).
+If you have a non-standard name and you think it was automatically graded
+  wrong, contact the TAs/Readers who graded this part with your argument. 
+<p>
+Also, some students did not carefully read the instructions in the Debugger
+  Perspective document for the quiz part, which required them to change a line
+  in the <b>craps</b> script before running it with the debugger to gather the
+  required information.
+With this change in your program, we can check your answers for correctness;
+  without it, we cannot check you answers for correctness.
+<p>
+Finally, about 66% of the students submitted the program 2 or more days early;
+  about 14% submitted the program 1 day early.
+So, about 80% of the students submitted this assignment early.
+Keep up the good work, although it will be harder in upcoming assignments.
+You can earn 12 extra points if you turn in every Programming Assignment two or
+  more days early (upping your grade by 1.2%): for some students, this boost
+  will be enough to raise their final grade.
+Over the course of a two week assignment, it will be to everyone's benefit
+  -students and staff alike- if students try to finish and submit early.
+<p>
+<b>IMPORTANT</b>
+If you believe that we graded your work incorrectly, please examine the files
+  mentioned above first, then contact the TA who graded your work, to discuss
+  the issues with him/her.
+Such a discussion can have only positive outcomes: either he/she will agree
+  with you that you deserve more credit (and, we do want you to receive all the
+  credit that you are due), or you will come to understand the question,
+  program, or solution better and realize why you lost points.
+This is certainly a win-win situation.
+Please read my solution and the <b>assignment grades</b> spreadsheet carefully
+  <b>before</b> contacting a TA/Reader; ensure that you understand what is the
+  correct answer and what points were deducted from your assignment and why.
+If there is a problem, the TA/Reader will email me a revised summary about your
+  program, and cc a copy to you.
+I will update the grades spreadsheet as appropriate (it might take a bit of
+  time for all these events to cumulate in a changed grade) and email you.
+<p>
+If you feel there is still an unresolved problem after talking to a TA/Reader,
+  please contact me (but always contact your TA/Reader first).
+<b>IMPORTANT:</b> Also, because of the size of this class, if you have a grading
+  issue, we will consider it only if you bring it to your
+  <b>TAs attention within a week of when I return the materials</b>.
+This policy is in place to avoid an avalanche of work because of
+  "grade-grubbing" late in the quarter.
+</td>
+</tbody>
+</table>
+
+<hr align="left" width="33%">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #6: 1/7/2019<br>
+  Hashed ID
+</b></td>
+<td width ="80%">
+  When we grade assignments, we often distribute/update various spreadsheets
+    with the relevant grading information.
+  These spreadsheets are indexed and sorted by each student's Hashed ID.
+  The course web-page has a <b>Find ID Hashed (grade key)</b> link (the
+    leftmost bottom/green link on the course web page) , which you can use to
+    retrieve your Hashed ID
+    (or click
+     <a href="https://support.ics.uci.edu/studentID/" target="main">
+       Find ID Hashed</a>).
+  Use the result it shows when examining any spreadsheets of grades;
+    I suggest that you find this number once, and write it down for future
+    reference.
+  If you are an ACCESS student, this link may not work for you; in this case
+    email me when you submit your first graded work.
+</td>
+</tbody>
+</table>
+
+<hr align="left" width="33%">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #5: 1/7/2019<br>
+  <b>Important</b>:<br> Submitting Code<br>without Losing Points
+</b></td>
+<td width ="80%">
+  ICS-33 uses software that automatically checks the correctnes of code in most
+    quizzes and programming assignments; it uses (self-checking) test cases
+    that we supply with the assignments that we distribute (sometimes slight
+    variants).
+  You will learn about these tools in Programming Assignment #0.
+  Here are a few hints to ensure that you will understand the grading process
+    better and minimize your point loss.
+  <ol>
+  <li>Ensure that you submit the code you wrote, not empty files, nor the
+        original files that you downloaded.
+      Be very careful and <b>double-check</b> what you submit to avoid this
+        mistake: <b>if you are not sure that you submitted the correct code,
+        resubmit it</b>.
+      After submitting (the correct file) to <b>Checkmate</b>, ensure that it
+        shows the assignment's status as completely submitted.
+      Bottom Line: If you do not submit code with your solution (e.g., you
+        submit the wrong file), you will receive 0 points for the assignment.
+  <p>
+  <li>If you are submitting with a partner, ensure that the <b>Submitter</b>
+        and <b>Partner</b> lines of the program are correctly specified.
+      The names must appear in the exact format required, with no misspellings
+        nor punctuation errors.
+      The student listed as <b>Submitter</b> must be the one who actually
+        submits the code.
+      See the <a href="assignments.html">Programming Assignments</a> web page
+        for the exact form required (and you must follow that exact form, with
+        no misspelling nor punctuation errors).
+  <p>
+  <li>Ensure that you submit your code on time.
+      We can, and mostly do, ignore any work submitted after the deadline
+        (even by a few minutes).
+      It is a fairness issue for other students who do submit on time.
+      The best strategy is to finish the work and submit it well before the
+         deadline (possibly getting extra credit points): by submitting early,
+         you will learn more too, if you aren't rushing to meet a deadline.
+      To ensure that we will grade something, submit partially complete code
+         ahead of the deadline; then, if you miss the deadline, we will still
+         grade the partially complete code.
+      Be warned: Checkmate can get bogged down if many students all try to
+        submit a few minutes before the due time, so do not wait until the
+        last minute to submit your code.
+      <b>Submit your code immediately when you finish; you can always remove a
+          submission and resubmit corrected code later</b>
+  <p>
+  <li>Ensure that you test your code using the self-checks that we provide
+        and use for grading.
+      By using these self-checks, you will know when your code contains
+        errors that will result in point deductions when we grade it.
+      The actual tests that we will use for grading might be a bit different,
+        but will be similar in form and content: so, think a bit about testing
+        your code beyond the self-checks that we supply.
+      No finite amount of testing can show that code is correct for all inputs.
+  <p>
+  <li>Ensure that your files...
+      <ol type="a">
+          <li>...contain no syntax errors.
+          <li>...contain only appropriate <b>import</b> statements,
+                typically just the ones provided in the download file(s);
+                if Eclipse adds extra imports (which it sometimes does
+                erroneosly) remove them.
+          <li>...contain only functions that execute quickly (typically under
+                a few seconds - unless specified otherwise in the assignment).
+      </ol>
+      <p>
+      Any syntax errors, inappropriate <b>import</b> statements, or excessive
+         execution time may cause <b>all self-check tests to fail</b> during
+         automatic grading.
+      For functions that take excessive time, it is best to comment out their
+        bodies, replacing their code with <b>pass</b>, resulting in the function
+        immediately returning <b>None</b>: it will be counted wrong, but doing
+         so will allow other functions to be run and graded for correctness.
+      <p>
+      To help avoid inappropriate <b>import</b>s and losing points, ensure that
+        in Python you have selected
+         <b>Window | Preferences | PyDev | Editor | Auto Imports</b> and
+         unchecked all boxes (illustrated below) and then clicked <b>Apply</b>
+         following by <b>OK</b>.
+      <p>
+      <img src="images/noautoimports.jpg">
+      <p>
+  </ol>
+<p>
+After an assignment is graded automatically, the Announcement for it will
+  contain a link to an Excel file that you can examine for detailed information
+  about how your score was computed.
+<p>
+If this information does not match your expectations from you running the
+  assignment's self-checks while developing your code, contact your TA.
+It is best to meet with your TA during lab hours: he/she can talk to you about
+  your code and run it while you are present, to help resolve the difference.
+But, if we have to modify your code to grade it properly (see the typical source
+  of problems above), then we will deduct points.
+I hope that by students carefully writing/submitting their code, these
+  grading anomalies and point deductions will be minimized during the quarter.
+</td>
+</tbody>
+</table>
+
+<hr align="left" width="33%">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #4: 1/7/2019<br>
+  Communication
+</b></td>
+<td width ="80%">
+  There are many ways to communicate with me (and other staff and students).
+  Here is a quick overview.
+  <ol>
+  <li><b>Instructor Email</b>:
+      If you send email to me, please do it through your
+        <b>UCI email address</b>.
+      Include a well-thought <b>Subject</b> line.
+      Also, please include your <b>full name</b> and the <b>course</b>
+        (<b>ICS-33</b>).
+      I teach many hundreds of students each quarter, often in multiple courses.
+      Providing this information helps me quickly determine the context of your
+        email, so I can better answer it.
+      Finally, when I respond to your email, please
+        <b>do not send a "Thank you"</b> acknowledgement.
+      Such niceties are not necessary for work-related email.
+      For me, it just increases the number of emails that I must read.
+      <p>
+  </ol>
+  <p>
+  Note that for questions that are not specific to you -questions that are
+    relevant to the entire class- it is best to ask them in the appropriate
+    Piazza Message Folders.
+  <ol start="2">
+  <li><b>Piazza Message Folders</b>:
+      Post in the Folder most closely related to your question.
+      Include a well-thought <b>Summary</b> line that clearly identifies the
+        context and issue you are asking about; doing so helps me, my staff,
+        and other students who are deciding whether to read your message and
+        how to respond to it.
+      If you discover the solution to your own question, revisit the
+        posting and explain (without supplying code) any useful information that
+        you learned that might help other students with the same problem.
+      <b>Avoid</b> a post that says just,
+        <b>"Never mind: I figured it out myself."</b>; try to supply some useful
+        information about your solution.
+  <p>
+  <li><b>Course Email (ics33-W198@classes.uci.edu)</b>:
+      Mostly this is for me to use to communicate with all the students in the
+        class (all course email is archived on EEE).
+      But, there are instances (very rarely) for students to use it: the best
+        example is that if <b>Checkmate</b> appears to be unavailable.
+      Sending a <b>Checkmate down</b> email to this address tells me that it is
+         unavailable, and tells all the other students that
+         (a) it is unavailable and (b) I have been informed that it is
+         unavailable.
+      FYI, we rehosted Checkmate on a new computer a few years ago, and
+        it is now much more reliable and rarely unavailable.
+  </ol>
+</td>
+</tbody>
+</table>
+
+<hr align="left" width="33%">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #3: 1/7/2019<br>
+  First/Later Labs
+</b></td>
+<td width ="80%">
+  I expect students to attend all their scheduled labs (unless they have
+    already finished the current programming assignment).
+  Programming Assignment #0 is assigned before the first lab of the quarter; so
+    if you have not already finished it, I expect you to attend your first lab
+    and work on it there.
+  <p>
+  Generally, you can get invaluable help in lab from the TAs and Tutors
+    relating to
+  <ul>
+    <li>understaing the specifications of the assignment
+    <li>understanding Python language features
+    <li>understanding how to deubg your Python code
+  </ul>
+  Learning how to ask technical questions and interpret answers is an important
+    skill that you can acquire/practice during your labs with TAs and Tutors.
+<p>
+  For debugging, don't expect the staff to debug your code for you.
+  Instead expect, them to help you learn how to debug code in general, using
+    your current problem/code as a concrete example.
+  TAs/tutors will model the debugging process for you, so that you can follow it
+    by yourself for subsequent bugs.
+  One goal of ICS-33 is to make students much more independent programmers and
+    debuggers: you should improve you debugging skills throughout the quarter.
+<!---
+  You will need to use the lab computers to take two In-Lab Programming Exams.
+  As part of your first day in lab, students should check that they can log on
+    to the ICS lab computers: those students who took previous ICS courses
+    (which should be most of you) should have these accounts already.
+  If you can log into these accounts, you can use them.
+  <p>
+  If you cannot log into these accounts, you should visit ICS-364 with your
+     student ID during the lab, to have them activate an account for you.
+  Activation may take a few days.
+  In the meantime, you can work on your own computer or log onto the lab
+    computers with the ID <b>ics-temp</b> and the password <b>Anteat3r</b>
+   (yes, a capital <b>A</b> and the number <b>3</b>).
+  <!---
+  When using Eclipse with this temporary account, you must create a workspace on
+    your desktop, not the <b>H</b> drive (otherwise all temporary users would be
+    sharing that workspace).
+  --->
+</td>
+</tbody>
+</table>
+
+<hr align="left" width="33%">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #2: 1/7/2019<br>
+  Install Course Software
+</b></td>
+<td width ="80%">
+  All students with computers should download and install the course Software:
+    Java (to run Eclipse), Python, and Eclipse.
+  All three products are available for free on the internet.
+  Students can view instructions for downloading and installing this software
+    by following the
+    <a href="../common/online33.html" target="main">Course Software</a>
+    link.
+  If you are using a Mac there are special instructions for you
+    (e.g., Java is already installed)
+  <p>
+  If you have installed a version of Python prior to 3.6, you should install
+    the current version of Python (3.7 or later).
+  If you have installed a version of Eclipse prior to Oxygen, you should install
+    the current version of Eclipse (Photon or later).
+  My instructions show installation of the latest versions available during
+    Summer of 2018, so you will likely follow similar but not identical
+    instructions.
+  <p>
+  Although students can work on their programming assignments on the computers
+    in the UCI labs, I expect students with computers to download and install
+    this software by the end of the first week of the quarter.
+  If you are having difficulty with this task, the TAs and Lab Tutors will help
+    you during the first Lab meeting (or beyond, if necessary: bring your
+    computer to the lab).
+  If you have successfully downloaded and installed this software, please help
+    other students do so too.
+  Finally, you can also use the Piazza Message Folders to ask questions about
+    installing this software and help other students install it.
+  Installing software is sometimes confusing, but it is a one-time event:
+    do it now; use it for the entire quarter.
+  <p>
+  I strongly suggest that you <b>BACKUP YOUR WORK</b> daily: computers can
+    malfunction, break, or be stolen.
+  Every quarter I hear from a few students who have lost their work because they
+    didn't backup their work; get into the backup habit now.
+  I backup all my ICS-33 materials every day by zipping a folder that has all
+    my ICS-33 materials and putting it on a USB memory stick.
+</td>
+</tbody>
+</table>
+
+<hr align="left" width="33%">
+
+<table cellspacing="0" cellpadding="5" border="0" rules="none" width="100%">
+<tbody>
+<tr valign="top">
+<td width ="20%"><b>
+  #1: 1/7/2019<br>
+  First Message
+</b></td>
+<td width ="80%">
+  Welcome to ICS-33.
+  I am going to post and archive important messages about the class in this
+    announcements web page: each entry will be numbered, dated, and labeled.
+  The entries will appear in reverse chronological order.
+  Whenever you follow the link to this page, scan its top for new announcements;
+    scan downward for older announcements.
+  This message will always appear at the bottom of this file. 
+  I will never remove a message from this page
+  <p>
+  I have already posted some important messages before the start of the quarter.
+  Expect a few new messages to be posted here each week, mostly regarding
+    understanding returned and graded work.
+  <p>
+  Check this Announcements page, along with your email, and Piazza Folders
+     daily.
+</td>
+</tbody>
+</table>
+
+<hr align="left">
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

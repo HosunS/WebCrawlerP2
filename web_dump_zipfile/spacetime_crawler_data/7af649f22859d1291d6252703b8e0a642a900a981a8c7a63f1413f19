@@ -1,0 +1,222 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 19:46:37 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYõº<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Classification</a> <font color=red>(88)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Regression</a> <font color=red>(33)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Clustering</a> <font color=red>(21)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Other</a> <font color=red>(5)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=cat&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Categorical</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=&att=num&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Numerical</a> <font color=red>(91)</font><br><a href='datasets.html?format=&task=&att=mix&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Mixed</a> <font color=red>(11)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=mvar&sort=nameUp&view=list'>Multivariate</a> <font color=red>(101)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=uvar&sort=nameUp&view=list'>Univariate</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=seq&sort=nameUp&view=list'>Sequential</a> <font color=red>(16)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=nameUp&view=list'>Time-Series</a> <font color=red>(26)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=text&sort=nameUp&view=list'>Text</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=dt&sort=nameUp&view=list'>Domain-Theory</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=other&sort=nameUp&view=list'>Other</a> <font color=red>(3)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=life&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Life Sciences</a> <font color=red>(17)</font><br><a href='datasets.html?format=&task=&att=&area=phys&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Physical Sciences</a> <font color=red>(19)</font><br><a href='datasets.html?format=&task=&att=&area=comp&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>CS / Engineering</a> <font color=red>(39)</font><br><a href='datasets.html?format=&task=&att=&area=soc&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Social Sciences</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=&att=&area=bus&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Business</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=&att=&area=game&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Game</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Other</a> <font color=red>(18)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=greater1000&type=&sort=nameUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=&numAtt=less10&numIns=greater1000&type=&sort=nameUp&view=list'>Less than 10</a> <font color=red>(55)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>10 to 100</a></font> <font color=red>(113)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=greater100&numIns=greater1000&type=&sort=nameUp&view=list'>Greater than 100</a> <font color=red>(58)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=&sort=nameUp&view=list'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=less100&type=&sort=nameUp&view=list'>Less than 100</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=100to1000&type=&sort=nameUp&view=list'>100 to 1000</a> <font color=red>(86)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Greater than 1000</a></font> <font color=red>(113)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Matrix</a> <font color=red>(94)</font><br><a href='datasets.html?format=nonmat&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=list'>Non-Matrix</a> <font color=red>(19)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>113</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Adult">Adult</a></b>: Predict whether income exceeds $50K/yr based on census data.  Also known as "Census Income" dataset.</p><p class="normal">2. <b><a href="datasets/Air+Quality">Air Quality</a></b>: Contains the responses of a gas multisensor device deployed on the field in an Italian city. Hourly responses averages are recorded along with gas concentrations references from a certified analyzer. </p><p class="normal">3. <b><a href="datasets/Air+quality">Air quality</a></b>:  Contains the responses of a gas multisensor device deployed on the field in an Italian city. </p><p class="normal">4. <b><a href="datasets/Anuran+Calls+%28MFCCs%29">Anuran Calls (MFCCs)</a></b>: Acoustic features extracted from syllables of anuran (frogs) calls, including the family, the genus, and the species labels (multilabel). </p><p class="normal">5. <b><a href="datasets/Appliances+energy+prediction">Appliances energy prediction</a></b>: Experimental data used to create regression models of appliances energy use in a low energy building.</p><p class="normal">6. <b><a href="datasets/Australian+Sign+Language+signs">Australian Sign Language signs</a></b>: This data consists of sample of Auslan (Australian Sign Language) signs. Examples of 95 signs were collected from five signers with a total of 6650 sign samples.</p><p class="normal">7. <b><a href="datasets/Australian+Sign+Language+signs+%28High+Quality%29">Australian Sign Language signs (High Quality)</a></b>: This data consists of sample of Auslan (Australian Sign Language) signs. 27 examples of each of 95 Auslan signs were captured from a native signer using high-quality position trackers</p><p class="normal">8. <b><a href="datasets/Avila">Avila</a></b>: The Avila data set has been extracted from 800 images of the 'Avila Bible', an XII century giant Latin copy of the Bible.  The prediction task consists in associating each pattern to a copyist.</p><p class="normal">9. <b><a href="datasets/Bach+Choral+Harmony">Bach Choral Harmony</a></b>: The data set is composed of 60 chorales (5665 events) by J.S. Bach (1675-1750).
+Each event of each chorale is labelled using 1 among 101 chord labels and described
+through 14 features.</p><p class="normal">10. <b><a href="datasets/Bank+Marketing">Bank Marketing</a></b>: The data is related with direct marketing campaigns (phone calls) of a Portuguese banking institution. The classification goal is to predict if the client will subscribe a term deposit (variable y).</p><p class="normal">11. <b><a href="datasets/Beijing+PM2.5+Data">Beijing PM2.5 Data</a></b>: This hourly data set contains the PM2.5 data of US Embassy in Beijing. Meanwhile, meteorological data from Beijing Capital International Airport are also included. </p><p class="normal">12. <b><a href="datasets/Bike+Sharing+Dataset">Bike Sharing Dataset</a></b>: This dataset contains the hourly and daily count of rental bikes between years 2011 and 2012 in Capital bikeshare system with the corresponding weather and seasonal information.</p><p class="normal">13. <b><a href="datasets/BLE+RSSI+Dataset+for+Indoor+localization+and+Navigation">BLE RSSI Dataset for Indoor localization and Navigation</a></b>: This dataset contains RSSI readings gathered from an array of Bluetooth Low Energy (BLE) iBeacons in a real-world and operational indoor environment for localization and navigation purposes.</p><p class="normal">14. <b><a href="datasets/Burst+Header+Packet+%28BHP%29+flooding+attack+on+Optical+Burst+Switching+%28OBS%29+Network">Burst Header Packet (BHP) flooding attack on Optical Burst Switching (OBS) Network</a></b>: One of the primary challenges in identifying the risks of the Burst Header Packet (BHP) flood attacks in Optical Burst Switching networks (OBS) is the scarcity of reliable historical data.  </p><p class="normal">15. <b><a href="datasets/Buzz+in+social+media+">Buzz in social media </a></b>: This data-set contains examples of buzz events from two different social networks: Twitter, and Tom's Hardware, a forum network focusing on new technology with more conservative dynamics.</p><p class="normal">16. <b><a href="datasets/Cardiotocography">Cardiotocography</a></b>: The dataset consists of measurements of fetal heart rate (FHR) and uterine contraction (UC) features on cardiotocograms classified by expert obstetricians.</p><p class="normal">17. <b><a href="datasets/Cargo+2000+Freight+Tracking+and+Tracing">Cargo 2000 Freight Tracking and Tracing</a></b>: Sanitized and anonymized Cargo 2000 (C2K) airfreight tracking and tracing events, covering five months of business execution (3,942 process instances, 7,932 transport legs, 56,082 activities). </p><p class="normal">18. <b><a href="datasets/Census+Income">Census Income</a></b>: Predict whether income exceeds $50K/yr based on census data.  Also known as "Adult" dataset.</p><p class="normal">19. <b><a href="datasets/Census-Income+%28KDD%29">Census-Income (KDD)</a></b>: This data set contains weighted census data extracted from the 1994 and 1995 current population surveys conducted by the U.S. Census Bureau.</p><p class="normal">20. <b><a href="datasets/Chess+%28King-Rook+vs.+King-Pawn%29">Chess (King-Rook vs. King-Pawn)</a></b>: King+Rook versus King+Pawn on a7 (usually abbreviated KRKPA7).</p><p class="normal">21. <b><a href="datasets/Cloud">Cloud</a></b>: Little Documentation</p><p class="normal">22. <b><a href="datasets/Condition+Based+Maintenance+of+Naval+Propulsion+Plants">Condition Based Maintenance of Naval Propulsion Plants</a></b>: Data have been generated from a sophisticated simulator of a Gas Turbines (GT), mounted on a Frigate characterized by a COmbined Diesel eLectric And Gas (CODLAG) propulsion plant type.</p><p class="normal">23. <b><a href="datasets/Connect-4">Connect-4</a></b>: Contains connect-4 positions</p><p class="normal">24. <b><a href="datasets/Corel+Image+Features">Corel Image Features</a></b>: This dataset contains image features extracted from a Corel image collection. Four sets of features are available based on the color histogram, color histogram layout, color moments, and co-occurence</p><p class="normal">25. <b><a href="datasets/Covertype">Covertype</a></b>: Forest CoverType dataset</p><p class="normal">26. <b><a href="datasets/Crowdsourced+Mapping">Crowdsourced Mapping</a></b>: Crowdsourced data from OpenStreetMap is used to automate the classification of satellite images into different land cover classes (impervious, farm, forest, grass, orchard, water). </p><p class="normal">27. <b><a href="datasets/Dataset+for+Sensorless+Drive+Diagnosis">Dataset for Sensorless Drive Diagnosis</a></b>: Features are extracted from motor current. The motor has intact and defective components. This results in 11 different classes with different conditions. </p><p class="normal">28. <b><a href="datasets/default+of+credit+card+clients">default of credit card clients</a></b>: This research aimed at the case of customers‚Äô default payments in Taiwan and compares the predictive accuracy of probability of default among six data mining methods.</p><p class="normal">29. <b><a href="datasets/Diabetes+130-US+hospitals+for+years+1999-2008">Diabetes 130-US hospitals for years 1999-2008</a></b>: This data has been prepared to analyze factors related to readmission as well as other 
+
+outcomes pertaining to patients with diabetes.</p><p class="normal">30. <b><a href="datasets/Diabetic+Retinopathy+Debrecen+Data+Set">Diabetic Retinopathy Debrecen Data Set</a></b>: This dataset contains features extracted from the Messidor image set to predict whether an image contains signs of diabetic retinopathy or not. </p><p class="normal">31. <b><a href="datasets/Drug+consumption+%28quantified%29">Drug consumption (quantified)</a></b>: Classify type of drug consumer by personality data</p><p class="normal">32. <b><a href="datasets/Educational+Process+Mining+%28EPM%29%3A+A+Learning+Analytics+Data+Set">Educational Process Mining (EPM): A Learning Analytics Data Set</a></b>: Educational Process Mining data set is built from the recordings of 115 subjects' activities through a logging application while learning with an educational simulator.</p><p class="normal">33. <b><a href="datasets/EEG+Eye+State">EEG Eye State</a></b>: The data set consists of 14 EEG values and a value indicating the eye state.</p><p class="normal">34. <b><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals">EEG Steady-State Visual Evoked Potential Signals</a></b>: This database consists on 30 subjects performing Brain Computer Interface for Steady State Visual Evoked Potentials (BCI-SSVEP). </p><p class="normal">35. <b><a href="datasets/El+Nino">El Nino</a></b>: The data set contains oceanographic and surface meteorological readings taken from a series of buoys positioned throughout the equatorial Pacific.</p><p class="normal">36. <b><a href="datasets/Electrical+Grid+Stability+Simulated+Data+">Electrical Grid Stability Simulated Data </a></b>: The local stability analysis of the 4-node star system (electricity producer is in the center) implementing Decentral Smart Grid Control concept. </p><p class="normal">37. <b><a href="datasets/Facebook+Comment+Volume+Dataset">Facebook Comment Volume Dataset</a></b>: Instances in this dataset contain features extracted from facebook posts. The task associated with the data is to predict how many comments the post will receive.</p><p class="normal">38. <b><a href="datasets/Firm-Teacher_Clave-Direction_Classification">Firm-Teacher_Clave-Direction_Classification</a></b>: The data are binary attack-point vectors and their clave-direction class(es) according to the partido-alto-based paradigm.</p><p class="normal">39. <b><a href="datasets/First-order+theorem+proving">First-order theorem proving</a></b>: Given a theorem, predict which of five heuristics will give the fastest proof when used by a first-order prover. A sixth prediction declines to attempt a proof, should the theorem be too difficult.</p><p class="normal">40. <b><a href="datasets/Gas+sensor+array+under+dynamic+gas+mixtures">Gas sensor array under dynamic gas mixtures</a></b>: The data set contains the recordings of 16 chemical sensors exposed to two dynamic gas mixtures at varying concentrations. For each mixture, signals were acquired continuously during 12 hours.</p><p class="normal">41. <b><a href="datasets/Gas+sensors+for+home+activity+monitoring">Gas sensors for home activity monitoring</a></b>: 100 recordings of a sensor array under different conditions in a home setting: background, wine and banana presentations. The array includes 8 MOX gas sensors, and humidity and temperature sensors.
+</p><p class="normal">42. <b><a href="datasets/Geo-Magnetic+field+and+WLAN+dataset+for+indoor+localisation+from+wristband+and+smartphone">Geo-Magnetic field and WLAN dataset for indoor localisation from wristband and smartphone</a></b>: A multisource and multivariate dataset for indoor localisation methods based on WLAN and Geo-Magnetic Ô¨Åeld Ô¨Ångerprinting</p><p class="normal">43. <b><a href="datasets/Geographical+Original+of+Music">Geographical Original of Music</a></b>: Instances in this dataset contain audio features extracted from 1059 wave files. The task associated with the data is to predict the geographical origin of music.
+</p><p class="normal">44. <b><a href="datasets/Gesture+Phase+Segmentation">Gesture Phase Segmentation</a></b>: The dataset is composed by features extracted from 7 videos with people gesticulating, aiming at studying Gesture Phase Segmentation. It contains 50 attributes divided into two files for each video.</p><p class="normal">45. <b><a href="datasets/Grammatical+Facial+Expressions">Grammatical Facial Expressions</a></b>: This dataset supports the development of models that make possible to interpret Grammatical Facial Expressions from Brazilian Sign Language (Libras).</p><p class="normal">46. <b><a href="datasets/HEPMASS">HEPMASS</a></b>: The search for exotic particles requires sorting through a large number of collisions to find the events of interest. This data set challenges one to detect a new particle of unknown mass.</p><p class="normal">47. <b><a href="datasets/Heterogeneity+Activity+Recognition">Heterogeneity Activity Recognition</a></b>: The Heterogeneity Human Activity Recognition (HHAR) dataset from Smartphones and Smartwatches is a dataset devised to benchmark human activity recognition algorithms (classification, automatic data segmentation, sensor fusion, feature extraction, etc.) in real-world contexts; specifically, the dataset is gathered with a variety of different device models and use-scenarios, in order to reflect sensing heterogeneities to be expected in real deployments.</p><p class="normal">48. <b><a href="datasets/HIGGS">HIGGS</a></b>: This is a classification problem to distinguish between a signal process which produces Higgs bosons and a background process which does not. </p><p class="normal">49. <b><a href="datasets/Hybrid+Indoor+Positioning+Dataset+from+WiFi+RSSI%2C+Bluetooth+and+magnetometer">Hybrid Indoor Positioning Dataset from WiFi RSSI, Bluetooth and magnetometer</a></b>: The dataset was created for the comparison and evaluation of hybrid indoor positioning methods. The dataset presented contains data from W-LAN and Bluetooth interfaces, and Magnetometer. </p><p class="normal">50. <b><a href="datasets/Image+Segmentation">Image Segmentation</a></b>: Image data described by high-level numeric-valued attributes, 7 classes</p><p class="normal">51. <b><a href="datasets/Insurance+Company+Benchmark+%28COIL+2000%29">Insurance Company Benchmark (COIL 2000)</a></b>: This data set used in the CoIL 2000 Challenge contains information on customers of an insurance company. The data consists of 86 variables and includes product usage data and socio-demographic data</p><p class="normal">52. <b><a href="datasets/Internet+Usage+Data">Internet Usage Data</a></b>: This data contains general demographic information on internet users in 1997.</p><p class="normal">53. <b><a href="datasets/IPUMS+Census+Database">IPUMS Census Database</a></b>: This data set contains unweighted PUMS census data from the Los Angeles and Long Beach areas for the years 1970, 1980, and 1990.</p><p class="normal">54. <b><a href="datasets/KDD+Cup+1999+Data">KDD Cup 1999 Data</a></b>: This is the data set used for The Third International Knowledge Discovery and Data Mining Tools Competition, which was held in conjunction with KDD-99</p><p class="normal">55. <b><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29">KEGG Metabolic Reaction Network (Undirected)</a></b>: KEGG Metabolic pathways modeled as un-directed reaction network. Variety of graphical features presented.</p><p class="normal">56. <b><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29">KEGG Metabolic Relation Network (Directed)</a></b>: KEGG Metabolic pathways modeled as directed relation network. Variety of graphical features presented.</p><p class="normal">57. <b><a href="datasets/Letter+Recognition">Letter Recognition</a></b>: Database of character image features; try to identify the letter</p><p class="normal">58. <b><a href="datasets/MAGIC+Gamma+Telescope">MAGIC Gamma Telescope</a></b>: Data are MC generated to simulate registration of high energy gamma particles in an atmospheric Cherenkov telescope</p><p class="normal">59. <b><a href="datasets/MEU-Mobile+KSD">MEU-Mobile KSD</a></b>: This dataset contains keystroke dynamics data collected on a touch mobile device (Nexus 7). The dataset contains 2856 records, 51 records per subject for 56 subjects. </p><p class="normal">60. <b><a href="datasets/Mice+Protein+Expression">Mice Protein Expression</a></b>: Expression levels of 77 proteins measured in the cerebral cortex of 8 classes of control and Down syndrome mice exposed to context fear conditioning, a task used to assess associative learning.</p><p class="normal">61. <b><a href="datasets/microblogPCU">microblogPCU</a></b>: MicroblogPCU data is crawled from sina weibo microblog[http://weibo.com/]. This data can be used to study machine learning methods  as well as do some social network research. </p><p class="normal">62. <b><a href="datasets/MiniBooNE+particle+identification">MiniBooNE particle identification</a></b>: This dataset is taken from the MiniBooNE experiment and is used to distinguish electron neutrinos (signal) from muon neutrinos (background).</p><p class="normal">63. <b><a href="datasets/Miskolc+IIS+Hybrid+IPS">Miskolc IIS Hybrid IPS</a></b>: The dataset was created for the comparison and evaluation of hybrid indoor positioning methods. The dataset presented contains data from W-LAN and Bluetooth interfaces, and Magnetometer. </p><p class="normal">64. <b><a href="datasets/MoCap+Hand+Postures">MoCap Hand Postures</a></b>: 5 types of hand postures from 12 users were recorded using unlabeled markers attached to fingers of a glove in a motion capture environment. Due to resolution and occlusion, missing values are common.</p><p class="normal">65. <b><a href="datasets/Molecular+Biology+%28Splice-junction+Gene+Sequences%29">Molecular Biology (Splice-junction Gene Sequences)</a></b>: Primate splice-junction gene sequences (DNA) with associated imperfect domain theory</p><p class="normal">66. <b><a href="datasets/Motion+Capture+Hand+Postures">Motion Capture Hand Postures</a></b>: 5 types of hand postures from 12 users were recorded using unlabeled markers on fingers of a glove in a motion capture environment. Due to resolution and occlusion, missing values are common.</p><p class="normal">67. <b><a href="datasets/Mushroom">Mushroom</a></b>: From Audobon Society Field Guide; mushrooms described in terms of physical characteristics; classification: poisonous or edible</p><p class="normal">68. <b><a href="datasets/News+Popularity+in+Multiple+Social+Media+Platforms">News Popularity in Multiple Social Media Platforms</a></b>: Large data set of news items and their respective social feedback on multiple platforms: Facebook, Google+ and LinkedIn.</p><p class="normal">69. <b><a href="datasets/One-hundred+plant+species+leaves+data+set">One-hundred plant species leaves data set</a></b>: Sixteen samples of leaf each of one-hundred plant species. For each sample, a shape descriptor, fine scale margin and texture histogram are given.</p><p class="normal">70. <b><a href="datasets/Online+News+Popularity">Online News Popularity</a></b>: This dataset summarizes a heterogeneous set of features about articles published by Mashable in a period of two years. The goal is to predict the number of shares in social networks (popularity).</p><p class="normal">71. <b><a href="datasets/Online+Shoppers%92+Purchasing+Intention+Dataset">Online ShoppersÔøΩ Purchasing Intention Dataset</a></b>: Of the 12,330 sessions in the dataset,
+84.5% (10,422) were negative class samples that did not
+end with shopping, and the rest (1908) were positive class
+samples ending with shopping.</p><p class="normal">72. <b><a href="datasets/Online+Video+Characteristics+and+Transcoding+Time+Dataset">Online Video Characteristics and Transcoding Time Dataset</a></b>: The dataset contains a million randomly sampled video instances listing 10 fundamental video characteristics along with the YouTube video ID. </p><p class="normal">73. <b><a href="datasets/Optical+Recognition+of+Handwritten+Digits">Optical Recognition of Handwritten Digits</a></b>: Two versions of this database available; see folder</p><p class="normal">74. <b><a href="datasets/Ozone+Level+Detection">Ozone Level Detection</a></b>: Two ground ozone level data sets are included in this collection. One is the eight hour peak set (eighthr.data), the other is the one hour peak set (onehr.data). Those data were collected from 1998 to 2004 at the Houston, Galveston and Brazoria area.</p><p class="normal">75. <b><a href="datasets/Page+Blocks+Classification">Page Blocks Classification</a></b>: The problem consists of classifying all the blocks of the page layout of a document that has been detected by a segmentation process.</p><p class="normal">76. <b><a href="datasets/PAMAP2+Physical+Activity+Monitoring">PAMAP2 Physical Activity Monitoring</a></b>: The PAMAP2 Physical Activity Monitoring dataset contains data of 18 different physical activities, performed by 9 subjects wearing 3 inertial measurement units and a heart rate monitor.</p><p class="normal">77. <b><a href="datasets/Parkinson+Speech+Dataset+with++Multiple+Types+of+Sound+Recordings">Parkinson Speech Dataset with  Multiple Types of Sound Recordings</a></b>: The training data belongs to 20 Parkinson's Disease (PD) patients and 20 healthy subjects. From all subjects, multiple types of sound recordings (26) are taken.</p><p class="normal">78. <b><a href="datasets/Parkinsons+Telemonitoring">Parkinsons Telemonitoring</a></b>: Oxford Parkinson's Disease Telemonitoring Dataset</p><p class="normal">79. <b><a href="datasets/Pen-Based+Recognition+of+Handwritten+Digits">Pen-Based Recognition of Handwritten Digits</a></b>: Digit database of 250 samples from 44 writers</p><p class="normal">80. <b><a href="datasets/Phishing+Websites">Phishing Websites</a></b>: This dataset collected mainly from: PhishTank archive, MillerSmiles archive, Google‚Äôs searching operators.</p><p class="normal">81. <b><a href="datasets/Plants">Plants</a></b>: Data has been extracted from the USDA plants database. It contains all plants (species and genera) in the database and the states of USA and Canada where they occur.</p><p class="normal">82. <b><a href="datasets/PM2.5+Data+of+Five+Chinese+Cities">PM2.5 Data of Five Chinese Cities</a></b>: This hourly data set contains the PM2.5 data in Beijing, Shanghai, Guangzhou, Chengdu and Shenyang. Meanwhile, meteorological data for each city are also included.</p><p class="normal">83. <b><a href="datasets/Poker+Hand">Poker Hand</a></b>: Purpose is to predict poker hands</p><p class="normal">84. <b><a href="datasets/Polish+companies+bankruptcy+data">Polish companies bankruptcy data</a></b>: The dataset is about bankruptcy prediction of Polish companies.The bankrupt companies were analyzed in the period 2000-2012, while the still operating companies were evaluated from 2007 to 2013.</p><p class="normal">85. <b><a href="datasets/QSAR+biodegradation">QSAR biodegradation</a></b>: Data set containing values for 41 attributes (molecular descriptors) used to classify 1055 chemicals into 2 classes (ready and not ready biodegradable).</p><p class="normal">86. <b><a href="datasets/Record+Linkage+Comparison+Patterns">Record Linkage Comparison Patterns</a></b>: Element-wise comparison of records with personal data from a record linkage setting. The task is to decide from a comparison pattern whether the underlying records belong to one person.</p><p class="normal">87. <b><a href="datasets/seismic-bumps">seismic-bumps</a></b>: The data describe the problem of high energy (higher than 10^4 J) seismic bumps forecasting in a coal 
+mine. Data come from two of longwalls located in a Polish coal mine.</p><p class="normal">88. <b><a href="datasets/SGEMM+GPU+kernel+performance">SGEMM GPU kernel performance</a></b>: Running times for multiplying two 2048 x 2048 matrices using a GPU OpenCL SGEMM kernel with varying parameters (using the library 'CLTune').</p><p class="normal">89. <b><a href="datasets/SkillCraft1+Master+Table+Dataset">SkillCraft1 Master Table Dataset</a></b>: This data was used in Thompson et al. (2013). A list of possible game actions is discussed in Thompson, Blair, Chen, & Henrey (2013).</p><p class="normal">90. <b><a href="datasets/SML2010">SML2010</a></b>: This dataset is collected from a monitor system mounted in a domotic house. It corresponds to approximately 40 days of monitoring data.</p><p class="normal">91. <b><a href="datasets/Solar+Flare">Solar Flare</a></b>: Each class attribute counts the number of solar flares of a certain class that occur in a 24 hour period</p><p class="normal">92. <b><a href="datasets/Spambase">Spambase</a></b>: Classifying Email as Spam or Non-Spam</p><p class="normal">93. <b><a href="datasets/Spoken+Arabic+Digit">Spoken Arabic Digit</a></b>: This dataset contains timeseries of mel-frequency cepstrum coefficients (MFCCs) corresponding to spoken Arabic digits.  Includes data from 44 male and 44 female native Arabic speakers.</p><p class="normal">94. <b><a href="datasets/Statlog+%28Image+Segmentation%29">Statlog (Image Segmentation)</a></b>: This dataset is an image segmentation database similar to a database already present in the repository (Image segmentation database) but in a slightly different form.</p><p class="normal">95. <b><a href="datasets/Statlog+%28Landsat+Satellite%29">Statlog (Landsat Satellite)</a></b>: Multi-spectral values of pixels in 3x3 neighbourhoods in a satellite image, and the classification associated with the central pixel in each neighbourhood</p><p class="normal">96. <b><a href="datasets/Steel+Plates+Faults">Steel Plates Faults</a></b>: A dataset of steel plates‚Äô faults, classified into 7 different types. 
+The goal was to train machine learning for automatic pattern recognition.
+</p><p class="normal">97. <b><a href="datasets/Superconductivty+Data">Superconductivty Data</a></b>: Two file s contain data on 21263 superconductors and their relevant features.</p><p class="normal">98. <b><a href="datasets/SUSY">SUSY</a></b>: This is a classification problem to distinguish between a signal process which produces supersymmetric particles and a background process which does not.</p><p class="normal">99. <b><a href="datasets/Tarvel+Review+Ratings">Tarvel Review Ratings</a></b>: Google reviews on attractions from 24 categories across Europe are considered. Google user rating ranges from 1 to 5 and average user rating per category is calculated.</p><p class="normal">100. <b><a href="datasets/Thyroid+Disease">Thyroid Disease</a></b>: 10 separate databases from Garavan Institute</p><p class="normal">101. <b><a href="datasets/Turkiye+Student+Evaluation">Turkiye Student Evaluation</a></b>: This data set contains a total 5820 evaluation scores provided by students from Gazi University in Ankara (Turkey). There is a total of 28 course specific questions and additional 5 attributes.</p><p class="normal">102. <b><a href="datasets/TV+News+Channel+Commercial+Detection+Dataset">TV News Channel Commercial Detection Dataset</a></b>: TV Commercials data set consists of  standard audio-visual features of video shots extracted from 150 hours of TV news broadcast of 3 Indian and 2 international news channels ( 30 Hours each).  </p><p class="normal">103. <b><a href="datasets/UJIIndoorLoc-Mag">UJIIndoorLoc-Mag</a></b>: The UJIIndoorLoc-Mag is an indoor localization database to test Indoor Positioning System that rely on Earth's magnetic field variations.</p><p class="normal">104. <b><a href="datasets/US+Census+Data+%281990%29">US Census Data (1990)</a></b>: The USCensus1990raw data set contains a one percent sample of the Public Use Microdata Samples (PUMS) person records drawn from the full 1990 census sample.</p><p class="normal">105. <b><a href="datasets/Vicon+Physical+Action+Data+Set">Vicon Physical Action Data Set</a></b>: The Physical Action Data Set includes 10 normal and 10 aggressive physical actions that measure the human activity. The data have been collected by 10 subjects using the Vicon 3D tracker.</p><p class="normal">106. <b><a href="datasets/Wall-Following+Robot+Navigation+Data">Wall-Following Robot Navigation Data</a></b>: The data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for 4 rounds, using 24 ultrasound sensors arranged circularly around its 'waist'.</p><p class="normal">107. <b><a href="datasets/Waveform+Database+Generator+%28Version+1%29">Waveform Database Generator (Version 1)</a></b>: CART book's waveform domains</p><p class="normal">108. <b><a href="datasets/Waveform+Database+Generator+%28Version+2%29">Waveform Database Generator (Version 2)</a></b>: CART book's waveform domains</p><p class="normal">109. <b><a href="datasets/Wearable+Computing%3A+Classification+of+Body+Postures+and+Movements+%28PUC-Rio%29">Wearable Computing: Classification of Body Postures and Movements (PUC-Rio)</a></b>: A dataset with 5 classes (sitting-down, standing-up, standing, walking, and sitting) collected on 8 hours of activities of 4 healthy subjects. We also established a baseline performance index.</p><p class="normal">110. <b><a href="datasets/Website+Phishing">Website Phishing</a></b>: 
+
+</p><p class="normal">111. <b><a href="datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29">WESAD (Wearable Stress and Affect Detection)</a></b>: WESAD (Wearable Stress and Affect Detection) contains data of 15 subjects during a stress-affect lab study, while wearing physiological and motion sensors.</p><p class="normal">112. <b><a href="datasets/Wine+Quality">Wine Quality</a></b>: Two datasets are included, related to red and white vinho verde wine samples, from the north of Portugal. The goal is to model wine quality based on physicochemical tests (see [Cortez et al., 2009], http://www3.dsi.uminho.pt/pcortez/wine/).</p><p class="normal">113. <b><a href="datasets/YearPredictionMSD">YearPredictionMSD</a></b>: Prediction of the release year of a song from audio features. Songs are mostly western, commercial tracks ranging from 1922 to 2011, with a peak in the year 2000s.</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

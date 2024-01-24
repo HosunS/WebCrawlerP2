@@ -1,0 +1,58 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1803¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:38:55 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"70b-3158ec92f6dc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:56:37 GMTKraw_content¢DtypeEvalueY// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 20 Apr 1997
+//
+// Cheapest insertion TSP application
+
+#include "CheapestInsertion.h"
+#include "Error.h"
+
+// compute cheapest insertion tsp
+double CheapestInsertion(unsigned long np, PointSet & ps, ClosestPairs & cp)
+{
+	CheapestInsDistance & cid = (CheapestInsDistance &) ps;
+	double total = 2*cid.base(0,1);		// find initial tour length
+	cid.partners[0] = 1;				// make initial tour
+	cid.partners[1] = 0;
+	cp.UpdatePoint(0);
+	cp.UpdatePoint(1);
+	np -= 2;							// how many points are left out of tour?
+	while (np > 0) {
+		point a, b;
+		total += cp(a,b);				// find best edge-point insertion
+		ps.interact(a,b);				// and do it
+		cp.UpdatePoint(a);				// tell closest pairs about changes
+		cp.UpdatePoint(b);
+		np--;							// one fewer point outside tour
+	}
+	return total;
+}
+
+CheapestInsDistance::CheapestInsDistance(unsigned long npoints, PointSet & b)
+	: PointSet(npoints), base(b), partners(new point[npoints])
+{
+	if (partners == 0) error("CheapestInsDistance: can't create partners");
+	for (long i = 0; i < npoints; i++)
+		partners[i] = i;
+}
+
+// return cost of inserting i into tour at edge j->partners[j]
+double CheapestInsDistance::operator() (point i, point j)
+{
+	if (partners[i] == i) {
+		if (partners[j] != j)
+			return base(i,j)+base(i,partners[j])-base(j,partners[j]);
+	} else if (partners[j] == j) return (*this)(j,i);
+	return MAX_DISTANCE;
+}
+
+// insert i into tour at edge j->partners[j]
+void CheapestInsDistance::interact(point i, point j)
+{
+	if (partners[i] == i) {
+		if (partners[j] == j)
+			error("CheapestInsertion: neither interacting point is in tour");
+		partners[i] = partners[j];
+		partners[j] = i;
+	} else if (partners[j] == j) interact(j,i);
+	else error("CheapestInsertion: both interacting points are in tour");
+}Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

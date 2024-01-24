@@ -1,0 +1,45 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC786¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:39:10 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"5b9-3158eca144f80-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 17:54:33 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY¹// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Programmer interface for points and distances
+
+#ifndef DISTANCES_H
+#define DISTANCES_H
+
+#include <float.h>
+
+// a special flag value for distances, larger than any other possible distance
+// value. ClosestPairs are allowed to ignore pairs at this distance apart
+// (and produce an error rather than return a pair at this distance).
+//
+#define MAX_DISTANCE DBL_MAX
+
+// All points are black boxes to us, interpreted only by the distance fn.
+// We represent them as integers rather than e.g. void *, so that our
+// data structures can use them as array indices without e.g. having
+// to go through an extra layer of hashing.
+//
+typedef unsigned long point;
+
+// For instrumentation purposes, we keep track of the
+// number of times a distance function is called throughout the program.
+//
+extern unsigned long gDistances;
+
+// Distance function object.
+//
+// A distance function is defined to be something that takes a pair of
+// point arguments and returns a (floating point) distance.
+// We assume distances are symmetric (d(a,b)=d(b,a)) but do not require
+// the triangle inequality, nonnegativity, or other assumptions.
+//
+// This is a class rather than a function so it can keep track of any
+// global information necessary to interpret the point arguments it is given.
+//
+class Distance {
+ public:
+	virtual double operator () (point, point) { gDistances++; return 0.0; }
+};
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

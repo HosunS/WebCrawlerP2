@@ -1,0 +1,32 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC969¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 19 May 1997 20:20:56 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"3c9-311debb7bda00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 22:00:32 GMTKraw_content¢DtypeEvalueYÉ// Element of Ray Diagram
+// David Eppstein, UC Irvine, 18 May 1997
+
+import java.lang.*;
+
+public class RayDiagObj extends DistancedObject {
+	public double x, y, dx, dy, t;
+	public RayDiagObj(double ix, double iy, double idx, double idy) {
+		x = ix; y = iy; dx = idx; dy = idy;
+		t = Double.POSITIVE_INFINITY;
+	}
+	
+	// For what value of t is this(t) on line of ray r?
+	// Returns infinity if no crossing exists
+	public double crosstime(RayDiagObj r) {
+		double det = dx*r.dy - r.dx*dy;
+		if (det == 0) return Double.POSITIVE_INFINITY;
+		double ct = (r.dy*(r.x-x) - r.dx*(r.y-y))/det;
+		if (ct < 0.0 || ct >= t) return Double.POSITIVE_INFINITY;
+		return ct;
+	}
+
+	// Distance function is latest of two crossing times
+	public double distanceTo(DistancedObject d) {
+		if (!(d instanceof RayDiagObj)) return Double.POSITIVE_INFINITY;
+		RayDiagObj r = (RayDiagObj) d;
+		double dr = crosstime(r);
+		double rd = r.crosstime(this);
+		if (dr < rd) return rd; else return dr;
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

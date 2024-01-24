@@ -1,0 +1,200 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD9133¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 28 Jun 2006 07:14:42 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"23ad-4174391ba5c80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 06:43:28 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY#­<html>
+<head>
+
+<style type="text/css">
+  <! --
+  H { font-family: Arial, Helvetica, Modern; }
+  H1 { font-family:  Arial, Helvetica, Modern; font-size:large}
+  H2 { font-family: 10pt;  Arial,Helvetica,Modern;   
+       padding-top: 1; padding-bottom: 1; padding-left: 2; color:black}
+  H3 { font-family:    Arial,Helvetica,Modern; background:#aaccaa;  color:black;
+       padding-top: 1; padding-bottom: 1; padding-left: 2; font-size:medium }
+  P { font-family: Arial; font-size: small; color: black}
+  P.important { margin-left: 0.5cm; margin-right: 1cm; color: red }
+  LI { margin-left: 0.5cm; font-family: Arial; font-size: small }
+  B  { font-size: smaller }
+  table.indent { margin-left: 1cm }
+  div.math { font-family: times; text-align: center; margin-top: 1em }
+  span.math { font-family: times }
+  span.mathi { font-family: times; font-style: italic }
+  -->
+</style>
+
+<title>CCToolbox Documentation: Background</title>
+
+</head>
+
+<body bgcolor="#eeeeee">
+ <H2 align=center>Background on Joint Curve Clustering &amp; Alignment</H2>
+
+
+
+<div align=center>
+<a href="http://www.ics.uci.edu/~sgaffney/software/CCT">CCToolbox</a> |
+<a href="../#Down">Download</a> |
+<a href="./">Documentation</a> |
+<a href="http://www.ics.uci.edu/~sgaffney#contact">Contact</a>
+</div>
+
+<!-- <a href="./">Documentation home</a> > Background -->
+
+
+
+
+<h3>Curve-alignment problem</h3>
+    <p>The focus of this toolbox is on the introduction of joint curve
+    clustering and alignment algorithms. Curves are often misaligned in 
+    real-world data sets. For example, the growth acceleration curves for 
+    a set of boys might share a common shape or structure due to similarities 
+    in human growth development but may be significantly misaligned due to 
+    differences in individual growth dynamics. Clustering and prediction in 
+    this situation can be difficult.
+ 
+    <p>With this type of curve data, typically one of two sequential strategies 
+    is followed: (1) clustering is followed by a within-cluster alignment, 
+    or (2) the curves are first aligned globally and then clustering is carried 
+    out on the aligned curves. Both of these methods are potentially suboptimal 
+    since the clustering and alignment are often dependent on each other. The 
+    joint clustering-alignment models in this toolbox address this problem by 
+    simultaneously solving both the clustering and alignment problems using a 
+    joint EM framework.
+
+
+
+<h3>Standard regression mixture model specification</h3>
+    <p>The general model specification used throughout this toolbox is based
+    on the standard polynomial regression model:
+             <div class="math">y = XB + e,</div>
+    <p>where <span class=math>y</span> is an observed curve, <span class=math>X</span> 
+    is the associated regression matrix, <span class=math>B</span> is
+    a vector of regression coefficients, and <span class=math>e</span> is an error 
+    term (zero-mean
+    Gaussian). In the case of splines, <span class=math>X</span> is a spline basis 
+    matrix and <span class=math>y</span> is the
+    spline coefficient vector. 
+ 
+    <p>If you repeat this model over <span class=mathi>K</span> cluster components 
+    (or groups), then the
+    resulting overall density of <span class=math>y</span> can be described 
+    by a linear regression 
+    mixture (LRM) model. (Some authors may choose to call this a polynomial 
+    regression mixture (PRM) model if <span class=math>y</span> is a polynomial 
+    in <span class=math>x</span>, but we just
+    stick with the notation LRM in this toolbox.) The mixture density 
+    for <span class=math>y</span>
+    can be written as
+
+    <div class="math">
+              <em>p</em>(y|<em>Q</em>) = \sum_<em>k w_k N</em>(y|<em>Q_k</em>),</div>
+              
+    <p>where <span class=mathi>Q</span> and <span class=mathi>Q_k</span> 
+    denote an appropriate set of 
+    parameters for the particular
+    chosen error model (Gaussian), <span class=mathi>w_k</span> is the 
+    <span class=mathi>k</span>-th mixture weight, 
+    and <span class=mathi>N</span>() is
+    the Gaussian density (note: \sum_<span class=mathi>k</span> is just a sum 
+    indexed from 1 to <span class=mathi>K</span>).
+    There is a straightforward EM procedure to estimate <span class=mathi>Q</span> 
+    and determine the
+    cluster memberships for each <span class=math>y</span>-curve. The EM procedure iterates
+    between estimating the cluster memberships and solving <span class=mathi>K</span> weighted
+    least-squares problems. The algorithm for this procedure is contained in the
+    function <b>lrm()</b> for this toolbox. The function <b>curve_clust()</b> provides a
+    standard calling interface that should be used to call this and all other 
+    EM algorithms in this toolbox.
+
+
+
+    <h3>Curve-aligned clustering model specification</h3>
+  
+    <p>In brief overview, simultaneous curve alignment and clustering is accounted
+    for by adding (at most) four scalar transformation variables to the above 
+    regression mixtures specification. We denote these variables by 
+    <span class=mathi>a,b,c</span>, 
+    and <span class=mathi>d</span>. 
+    Below we refer to <span class=math>x</span> as time (and refer to transformations in time) 
+    and <span class=math>y</span> as 
+    the measurements (and refer to transformations in measurement space).
+    The transformed regression model can be written as
+ 
+             <div class="math">y = <em>c</em>[<em>a</em>x+<em>b</em>]B + <em>d</em> + e,</div>
+ 
+    <p>where the square brackets '[' and ']' denote the transformed regression
+    matrix (discussed below). The variable <span class=mathi>c</span> 
+    allows for scaling in measurement
+    space, <span class=mathi>d</span> allows for translation in measurement space, 
+    <span class=mathi>a</span> allows for scaling
+    in time, and <span class=mathi>b</span> allows for translation in time. 
+    This can be rewritten to more
+    clearly separate the actions of <span class=mathi>a,b</span> and 
+    <span class=mathi>c,d</span>:
+    <div class="math">
+    <table cellspacing="0" cellpadding="0">
+            <tr><td align="center">(y-<em>d</em>)<td colspan="2">
+            <tr><td>-----  <td>&nbsp;=&nbsp;<td>[<em>a</em>x+<em>b</em>]B + e*,<br>
+            <tr><td align="center"><em>c</em><td colspan="2">
+    </table>
+    </div>
+ 
+    <p>where <span class=math>e*</span> is a new error term. 
+    From this equation it is clear that <span class=mathi>c</span> 
+    and <span class=mathi>d</span>
+    "operate" on <span class=math>y</span> (in measurement space), 
+    and <span class=mathi>a</span> and <span class=mathi>b</span> "operate" 
+    on <span class=math>x</span> (in time).
+ 
+    <p>The transformed regression matrix 
+    <span class=math>[<em>a</em>x+<em>b</em>]</span> can be computed 
+    by applying the
+    transformation <span class=math><em>a</em>x+<em>b</em></span> 
+    to the observation times before 
+    the regression matrix 
+    is built. The standard regression matrix in polynomial regression is the
+    Vandermonde matrix:
+    <div class="math">
+            X = (1  x  x^2  x^3 ... x^<em>p</em>),</div>
+ 
+    <p>where <span class=math>x = (<em>x</em>_1,<em>x</em>_2,...,<em>x_n</em>)</span>' 
+    and <span class=math>x^<em>m</em></span> is 
+    the vector <span class=math>x</span> whose <span class=mathi>n</span> components are
+    each raised to the power <span class=mathi>m</span>. Thus, in this case, 
+    <span class=math>X</span> is an <span class=math><em>n-by-</em>(<em>p+1</em>)</span>
+    regression matrix. Using this notation we can easily describe 
+    <span class=math>[<em>a</em>x+<em>b</em>]</span> as follows:
+    <div class="math">
+         [<em>a</em>x+<em>b</em>] = (1  <em>a</em>x+<em>b</em>  (<em>a</em>x+<em>b</em>)^2  
+         (<em>a</em>x+<em>b</em>)^3  ...  (<em>a</em>x+<em>b</em>)^<em>p</em>),</div>
+ 
+    <p>where <span class=math>(<em>a</em>x+<em>b</em>)^<em>m</em></span>
+    is the vector <span class=math><em>a</em>x+<em>b</em></span>
+    whose <span class=mathi>n</span> components are each raised to the power
+    <span class=mathi>m</span>.
+ 
+    <p>If we repeat the transformed regression model for 
+    <span class=math>y</span> over <span class=mathi>K</span> cluster components,
+    then the resulting overall density for <span class=math>y</span> 
+    is a curve-aligned regression
+    mixture model. A set of linear EM algorithms (linear in the number of curve 
+    measurements) that simultaneously solves for cluster memberships and curve
+    alignments for this model was introduced in (Gaffney, 04). These joint
+    clustering-alignment EM algorithms make up the body of what the CCToolbox
+    provides. The set of cluster models/methods provided in this toolbox
+    are described in the <a href="cluster_models.html">cluster models</a> section.
+
+
+<h3></h3>
+<div align=center>
+<a href="#top">Top</a> |
+<a href="http://www.ics.uci.edu/~sgaffney/software/CCT">CCToolbox</a> |
+<a href="../#Down">Download</a> |
+<a href="./">Documentation</a> |
+<a href="http://www.ics.uci.edu/~sgaffney#contact">Contact</a>
+</div>
+
+
+
+</body>
+
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,608 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueŒ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7594¢Ak¢DtypeEvaluePContent-LocationAv¢DtypeEvalueVXHTML2-WG-charter.html¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 10 Feb 2019 02:45:46 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX3negotiate,Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueCTCNAv¢DtypeEvalueFchoice¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 02 Jul 2007 16:50:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX'"6b30-4344aa1b41300;559951b17cf72-gzip"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueMmax-age=21600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:45:46 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueyk0<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"/><title>XHTML2 Working Group</title>
+    <style type="text/css">
+        .nowork { display: none }
+    </style>
+    <link rel="stylesheet" href="http://www.w3.org/2005/10/w3cdoc.css" type="text/css" media="screen"/><link rel="stylesheet" type="text/css" href="http://www.w3.org/Guide/pubrules-style.css"/><link rel="stylesheet" type="text/css" href="http://www.w3.org/2006/02/charter-style.css"/></head>
+    
+  
+  <body><div id="template"><ul id="navbar" style="font-size: .6em"><li><a href="#scope">Scope</a></li><li><a href="#deliverables">Deliverables</a></li><li><a href="#coordination">Dependencies</a></li><li><a href="#participation">Participation</a></li><li><a href="#communication">Communication</a></li><li><a href="#decisions">Decision Policy</a></li><li><a href="#patentpolicy">Patent Policy 
+       </a></li><li><a href="#about">About this Charter</a></li></ul>
+    
+
+    <p><a href="http://www.w3.org/" ><img alt="W3C" height="48" src="http://www.w3.org/Icons/w3c_home" width="72"/></a>  <a class="domainlogo" href="http://www.w3.org/Interaction/" ><img src="http://www.w3.org/Icons/interaction" alt="Interaction Domain"/></a>    </p>
+
+    <h1 id="title">XHTML2 Working Group Charter</h1>
+
+    <p class="mission">The
+    <strong>mission</strong> of the <a href="/MarkUp/">XHTML2 Working Group</a>, part of
+      the HTML Activity, is to fulfill 
+      the promise of XML for applying XHTML to a wide variety of platforms with 
+      proper attention paid to internationalization, accessibility, 
+      device-independence, usability and document structuring. This mission
+      includes providing 
+      an essential piece for supporting rich Web content that combines XHTML 
+      with other W3C work on areas such as math, scalable vector graphics, 
+      synchronized multimedia, and forms, in cooperation with other Working Groups.</p>
+
+    <div class="noprint">
+      <p class="join"><a href="http://www.w3.org/2004/01/pp-impl/32107/join">Join the XHTML2 Working Group</a>.</p>
+    </div>
+
+    <table class="summary-table">
+      <tr id="Duration">
+        <th rowspan="1" colspan="1">End date</th>
+
+        <td rowspan="1" colspan="1">31 December 2009</td>
+
+      </tr>
+
+      <tr>
+        <th rowspan="1" colspan="1">Confidentiality</th>
+
+        <td rowspan="1" colspan="1">Proceedings are <a href="/2005/10/Process-20051014/comm.html#confidentiality-levels" >
+        
+        Public</a></td>
+      </tr>
+
+      <tr>
+        <th rowspan="1" colspan="1">Initial Chairs</th>
+
+        <td rowspan="1" colspan="1">
+	  Roland Merrick, IBM;
+	  Steven Pemberton, W3C/CWI
+	</td>
+      </tr>
+
+      <tr>
+        <th rowspan="1" colspan="1">Initial Team Contact<br/>
+
+        (FTE %: 25)</th>
+
+        <td rowspan="1" colspan="1">Steven Pemberton, W3C/CWI</td>
+      </tr>
+
+      
+
+      <tr>
+        <th rowspan="1" colspan="1">Usual Meeting Schedule</th>
+
+        <td rowspan="1" colspan="1">Teleconferences: Weekly
+           <br/>
+
+        Face-to-face: 
+        4 per year   </td>
+      </tr>
+    </table>
+
+    <div class="scope">
+      <h2><a id="scope" name="scope">Scope</a></h2>
+      
+      <p>The scope of this charter is to continue the XHTML2 work from the <a
+        href="http://www.w3.org/2002/05/html/charter">previous HTML WG charter</a> to 
+        produce the 
+        accessible, semantic, next-generation XHTML2. 
+        This includes 
+        producing a new version of XML Events (to use 
+	<a href="/TR/DOM-Level-3-Events">DOM3 Events</a> being produced by
+        the <a href="/2006/webapi/">Web APIs Working Group</a>),  producing a new Access Key module in
+        cooperation with the WAI Working Groups, 
+        and finishing work on <a href="/TR/xhtml2/">XHTML 2.0</a>, 
+	which combines all the new modules into a
+        single profile. This document type will include new features such as XForms
+        and XML Events as replacements for legacy HTML/XHTML features that interfere
+        with device independence, accessibility, and usability. Producing a new version 
+        of  XHTML Modularization that
+        includes all the new modules is also in scope.</p>
+      
+      <p>Interoperable deployment of the deliverables listed below is critical for
+        the success of XHTML: in order to ensure interoperable implementations, test
+        suites need to be developed for the deliverables and implementations need 
+        to be tracked, tested and encouraged.</p>
+    </div>
+
+
+      
+	  <h3>Success Criteria</h3>
+
+    <p>The success of the XHTML2 Working Group will be judged on how well it
+      fulfills the above objectives in terms of the deliverables and milestones set
+      out below, and the deployment of its deliverables.</p>
+    <ul>
+      <li>Production of stable documents addressing the work items listed in the
+        <a href="#deliverables">Deliverables</a> section.</li>
+      <li>Test suites for each deliverable with conformance criteria</li>
+      <li>Availability of multiple, independent, interoperable implementations of
+        each deliverable with conformance criteria, as demonstrated by an 
+        implementation report 
+        (summarizing implementation status against the relevant test suite) 
+        for each testable class of product, including  authoring
+        tools, converters, and user agents.</li>
+      <li>Availability of authoring tools and validation tools.</li>
+      
+      <li>User community and industry adoption of the group deliverables.</li>
+    </ul>
+      
+    </div>
+
+    <div>
+      <h2 id="deliverables">Deliverables</h2>
+      
+      <h3 id="tr">Technical Reports</h3>
+
+	
+	  <p>The following existing deliverables are expected to
+	  become Recommendations (if they are not already) and to have
+	  errata actively maintained.  The <a
+	  href="/2004/02/05-pp-transition">W3C Patent Policy
+	  Transition Procedure</a> governs the policy that applies
+	  to these deliverables.</p>
+
+      <ul>
+        <li class="xhtml2"><a href="http://www.w3.org/TR/2003/REC-xml-events-20031014">XML
+          Events</a> (REC)  track errata</li>
+        <li class="xhtml2"><a href="http://www.w3.org/TR/2005/WD-xframes-20051012"
+          >XFrames</a> (WD)  </li>
+        <li class="xhtml2"><a href="http://www.w3.org/TR/2005/WD-xhtml2-20050527">XHTMLâ„¢
+          2.0</a> (WD)</li>
+        <li class="xhtml2"><a
+          href="http://www.w3.org/TR/2006/WD-xhtml-rdfa-primer-20060310/"
+          >RDFa Primer 1.0</a> (WD)  </li>
+
+        <li><a href="http://www.w3.org/TR/2002/REC-xhtml1-20020801">XHTMLâ„¢
+          1.0 The Extensible HyperText Markup Language (Second
+          Edition)</a> (REC) - track errata, publish third edition as required</li>
+        <li><a href="http://www.w3.org/TR/2001/REC-xhtml11-20010531">XHTMLâ„¢
+          1.1 - Module-based XHTML</a> (REC)  - track errata, publish third edition as required</li>
+        <li><a
+          href="http://www.w3.org/TR/2004/WD-xhtml-modularization-20040218"
+          >Modularization of XHTMLâ„¢ 1.0 - Second Edition</a>
+          (WD)</li>
+        <li><a href="http://www.w3.org/TR/2006/WD-xhtml-role-20061113/">XHTML 
+          Role Attribute Module</a> (take to Rec)</li>
+        <li><a href="http://www.w3.org/TR/2000/REC-xhtml-basic-20001219"
+          >XHTMLâ„¢ Basic</a> (REC) - track errata</li>
+        <li><a
+          href="http://www.w3.org/TR/2006/PR-xhtml-modularization-20060213"
+          >XHTMLâ„¢ Modularization 1.1</a> (PR) - take to Rec</li>
+        <li><a href="http://www.w3.org/TR/2006/PR-xhtml-print-20060131/"
+          >XHTML-Print</a> (PR) - take to Rec</li>
+        <li id="basic">A new version of XHTML Basic, produced in cooperation with OMA
+          to converge OMA XHTML Mobile Profile with XHTML Basic.</li>
+      </ul>
+      
+      <p>The following new deliverables will be created under the W3C Patent Policy:</p>
+      
+      <ul><li class="xhtml2">XML Events 2.0</li>
+        <li> <a href="http://www.w3.org/TR/2006/WD-xhtml-rdfa-primer-20060516/">RDFa</a>,
+        (including <a href="http://www.w3.org/TR/curie">CURIEs</a>) 
+        for incorporating rich (meta)data semantics into HTML
+          documents in a way that accommodates the use of
+          independently-developed ontologies in combination. RDFa will
+          be developed  in cooperation with the
+          Semantic Web Deployment WG</li>
+      <li>Access module, 
+      for flexible and accessible navigation to parts of documents.</li>
+        <li id="m12n-2">A new iteration of XHTML Modularization that
+          includes the new modules that have been developed with other
+          groups within W3C.</li>
+      </ul>
+	  
+	  
+	  <div  id="other-deliverables">
+	    <h3>Other Deliverables</h3>
+	   
+	    <p id="test">For each Recommendation-track deliverable which has conformance criteria, the Working Group will maintain:</p>
+	    <ul><li>a test suite, for each testable class of conforming product (browser, generator, etc.)</li>
+	      <li>an implementation report showing, for each tested product, the tests that are passed.</li></ul>
+	    
+	    <p id="convert">The Working group may create, or encourage the creation of, conversion tools to:</p>
+	    <ul><li>Update existing XHTML 1.x content to XHTML 2</li>
+	    <li>Convert XHTML2 content to XHTML 1.x,  for delivery to older clients</li></ul>
+	    
+	    <p id="validate">The Working Group will ensure that authoring and validation 
+	    tools for XHTML 2 are available. Validation should not be construed in a DTD sense but should allow
+	    checking of multinamespace documents and partial checking for specific
+	    conformance criteria in the prose of the specifications.</p>
+	    
+	    <p id="explain">One or more W3C Notes explaining the background to
+	    the language design, the alternatives considered, and why particular 
+	    choices were made.</p>
+	  </div>
+	
+
+	
+	  <h3>Milestones</h3>
+	   
+	    <table class="roadmap" width="80%">
+
+	      <caption>
+		Milestones
+	      </caption>
+	      
+	      <tfoot>
+		<tr>
+		  <td colspan="7" rowspan="1">Note: The group will document significant changes 
+		  from this initial schedule on the <a href="/MarkUp/">group home page</a>.</td>
+		</tr>
+	      </tfoot>
+	      
+	      <tbody>
+
+		<tr>
+		  <th rowspan="1" colspan="1">Specification</th>
+		  
+		  <th rowspan="1" colspan="1"><acronym title="First Working Draft">FPWD</acronym></th>
+		  
+		  <th rowspan="1" colspan="1"><acronym title="Last Call Working Draft">LC</acronym></th>
+		  
+		  <th rowspan="1" colspan="1"><acronym title="Canditate Recommendation">CR</acronym></th>
+		  
+		  <th rowspan="1" colspan="1"><acronym title="Proposed Recommendation">PR</acronym></th>
+
+		  
+		  <th rowspan="1" colspan="1"><acronym title="Recommendation">Rec</acronym></th>
+		</tr>
+	        
+	        <tr>
+	          <th rowspan="1" colspan="1">Accesskey module</th>
+	          
+	          <td class="WD1" rowspan="1" colspan="1">Nov 2006</td>
+	          
+	          <td class="LC" rowspan="1" colspan="1">Apr 2007</td>
+	          
+	          
+	          <td class="CR" rowspan="1" colspan="1">Sept 2007</td>
+	          
+	          <td class="PR" rowspan="1" colspan="1">Mar 2008</td>
+	          
+	          <td class="REC" rowspan="1" colspan="1">Jun 2008</td>
+	        </tr>
+
+		<tr>
+		  <th rowspan="1" colspan="1">XFrames</th>
+		  
+		  <td class="WD1" rowspan="1" colspan="1"><a href="http://www.w3.org/TR/2002/WD-xframes-20020806/">Aug 2002</a></td>
+		  
+		  <td class="LC" rowspan="1" colspan="1">Apr 2007</td>
+		  
+		  <td class="CR" rowspan="1" colspan="1">Sept 2007</td>
+
+		  
+		  <td class="PR" rowspan="1" colspan="1">Mar 2008</td>
+		  
+		  <td class="REC" rowspan="1" colspan="1">Jun 2008</td>
+		</tr>
+		
+		<tr>
+		  <th rowspan="1" colspan="1">XML Events 2.0</th>
+		  
+		  <td class="WD1" rowspan="1" colspan="1"><a href="http://www.w3.org/TR/2007/WD-xml-events-20070216/">Feb 2007</a></td>
+		  
+		  <td class="LC" rowspan="1" colspan="1">Sep 2007</td>
+
+		  
+		  <td class="CR" rowspan="1" colspan="1">Jan 2008</td>
+		  
+		  <td class="PR" rowspan="1" colspan="1">Jul 2008</td>
+		  
+		  <td class="REC" rowspan="1" colspan="1">Sep 2008</td>
+		</tr>
+	        <tr>
+	          <th rowspan="1" colspan="1">XHTML 2.0</th>
+	          
+	          <td class="WD1" rowspan="1" colspan="1"><a href="http://www.w3.org/TR/2002/WD-xhtml2-20020805/">Aug 2002</a></td>
+	          
+	          <td class="LC" rowspan="1" colspan="1">Sep 2007</td>
+	          
+	          
+	          <td class="CR" rowspan="1" colspan="1">Feb 2008</td>
+	          
+	          <td class="PR" rowspan="1" colspan="1">Jun 2008</td>
+	          
+	          <td class="REC" rowspan="1" colspan="1">Sep 2008</td>
+	        </tr>
+	        <tr>
+	          <th rowspan="1" colspan="1">XHTML Basic 1.1</th>
+	          
+	          <td class="WD1" rowspan="1" colspan="1"><a href="http://www.w3.org/TR/2006/WD-xhtml-basic-20060607/">July 2006</a></td>
+	          
+	          <td class="LC" rowspan="1" colspan="1">Dec 2006</td>
+	          
+	          
+	          <td class="CR" rowspan="1" colspan="1">Mar 2007</td>
+	          
+	          <td class="PR" rowspan="1" colspan="1">June 2007</td>
+	          
+	          <td class="REC" rowspan="1" colspan="1">Aug 2007</td>
+	        </tr>
+	        <tr>
+	          <th rowspan="1" colspan="1">RDFa Primer</th>
+	          
+	          <td class="WD1" rowspan="1" colspan="1"><a href="http://www.w3.org/TR/2006/WD-xhtml-rdfa-primer-20060310/">March 2006</a></td>
+	          
+	          <td class="LC" rowspan="1" colspan="1">Jul 2007</td>
+	          
+	          
+	          <td class="CR" rowspan="1" colspan="1"><em>no conformance criteria</em></td>
+	          
+	          <td class="PR" rowspan="1" colspan="1">Mar 2008</td>
+	          
+	          <td class="REC" rowspan="1" colspan="1">Jun 2008</td>
+	        </tr>
+	        <tr>
+	          <th rowspan="1" colspan="1">RDFa module</th>
+	          
+	          <td class="WD1" rowspan="1" colspan="1">Nov 2006</td>
+	          
+	          <td class="LC" rowspan="1" colspan="1">Jul 2007</td>
+	          
+	          
+	          <td class="CR" rowspan="1" colspan="1">Sept 2007</td>
+	          
+	          <td class="PR" rowspan="1" colspan="1">Mar 2008</td>
+	          
+	          <td class="REC" rowspan="1" colspan="1">Jun 2008</td>
+	        </tr>
+	      </tbody>
+	    </table>
+	  
+
+    </div>
+    
+    <div class="dependencies">
+      <h2 id="coordination">Dependencies and Liaison</h2>
+      
+
+      <p>The following is a list of known dependencies and liaisons with other W3C groups at the
+        time this charter was written. Liaison with other W3C groups can take
+        advantage of a broad range of mechanisms such as cross membership, reviews of
+        drafts produced by other groups, joint meetings etc., and whenever
+        appropriate, the XHTML2 Working Group will also coordinate with groups not
+        listed here.</p>
+      
+      <h3 id="dependencies">Dependencies</h3>
+      
+      <h3 id="liaisons">Liaisons</h3>
+      
+      <dl>
+        <dt><a id="hcg" class="member" name="hcg"
+          href="http://www.w3.org/MarkUp/CoordGroup/">Hypertext Coordination
+          Group</a></dt>
+        <dd>The Hypertext Coordination Group is the primary place for the XHTML2
+          Working Group for coordination with other Working Groups within the
+          W3C. The Chair will participate the regular Hypertext Coordination
+          Group meetings and ensure that reviews between Working Groups are
+          planned and carried out so as to meet requirements for deliverables and
+          deadlines.</dd>
+        <dt><a id="css" class="member" name="css"
+          href="http://www.w3.org/Style/Group/">Cascading Style Sheets (CSS) Working
+          Group</a> and <a id="xsl" class="member" name="xsl"
+            href="http://www.w3.org/Style/XSL/Group/">Extensible Stylesheet Language
+            (XSL) Working Group</a></dt>
+        <dd>The work of the XHTML2 Working Group will be coordinated with these
+          groups on presentation issues.</dd>
+        <dt><a id="di" class="member" name="di"
+          href="http://www.w3.org/2001/di/Group/">Device Independence Working
+          Group</a></dt>
+        <dd>The XHTML2 Working Group will cooperate with this group to ensure that
+          XHTML2 meets the requirements for device independence.  In particular, the
+          <a href="http://www.w3.org/TR/dial/">Device Independent Authoring Language (DIAL)</a>
+        specification builds on XHTML 2.0</dd>
+        <dt><a id="i18n" class="member" name="i18n"
+          href="http://www.w3.org/International/Group/">Internationalization Working
+          Group</a></dt>
+        <dd>The XHTML2 Working Group will cooperate with this group to ensure  that their specifications
+          provide effective support for internationalization.</dd>
+        <dt><a id="math" class="member" name="math"
+          href="http://www.w3.org/Math/Group/">Math Interest Group</a></dt>
+        <dd>The XHTML2 Working Group will cooperate with this group to ensure that
+          MathML can be seamlessly integrated with XHTML2. 
+        </dd>
+        <dt><a id="mmi" class="member" name="mmi"
+          href="http://www.w3.org/2002/mmi/Group/">Multimodal Interaction Working
+          Group</a></dt>
+        <dd>The XHTML2 Working Group will cooperate with this group to ensure that
+          XHTML2 and XML Events can be usable with multimodal interaction.</dd>
+
+        <dt><a id="svg" class="member" name="svg"
+          href="http://www.w3.org/Graphics/SVG/Group/">Scalable Vector Graphics (SVG)
+          Working Group</a></dt>
+        <dd>The XHTML2 Working Group will cooperate with this group to ensure that
+          XHTML can be seamlessly integrated with SVG.  In particular, 
+          <a href="http://www.w3.org/TR/SVGMobile12">SVG Tiny 1.2</a> uses
+           <a href="http://www.w3.org/TR/2003/REC-xml-events-20031014">XML Events 1.0 </a> 
+           and 
+          has requirements for XML Events 2.0
+        </dd>
+        <dt><a id="voice" class="member" name="voice"
+          href="http://www.w3.org/Voice/Group/">Voice Browser Working Group</a></dt>
+        <dd>The XHTML2 Working Group will cooperate with this group in the area of
+          event handling, and cross-group issues on speech handling.</dd>
+        <dt><a id="wai" name="wai" href="http://www.w3.org/WAI/">Web Accessibility
+          Initiative (WAI)</a></dt>
+        <dd>The XHTML2 Working Group will cooperate with the Web Accessibility
+          Initiative to ensure that the deliverables will satisfy accessibility
+          requirements. Coordination with WAI will be primarily conducted through
+          the <a href="http://www.w3.org/WAI/PF/">Protocol and Formats Working
+            Group</a>, but direct coordination with other WAI groups, such as <a
+              href="http://www.w3.org/WAI/GL/">Web Content Accessibility Guidelines
+              Working Group</a> and <a href="http://www.w3.org/WAI/UA/">User Agent
+                Accessibility Guidelines Working Group</a>, will also be done when
+          appropriate. In particular,the Accesskey module will be jointly developed with WAI.</dd>
+        <dt>HTML Working Group</dt>
+        <dd>The XHTML2 Working Group will cooperate with this group to
+          ensure a smooth transition path from  HTML to XHTML 2.
+        This may include document conversion tools.</dd>
+        <dt><a id="xforms" class="member" name="xforms"
+          href="http://www.w3.org/MarkUp/Forms/Group/">Forms Working Group</a></dt>
+        <dd>The XHTML2 Working Group will cooperate closely with this group to
+          ensure a smooth transition to next generation Web forms.</dd>
+        <dt><a id="xmlcore" class="member" name="xmlcore"
+          href="http://www.w3.org/XML/Group/Core">XML Core Working Group</a></dt>
+        <dd>The XHTML2 Working Group does not address changes to XML syntax. The
+          deliverables of the XHTML2 Working Group will conform to core XML
+          technologies developed by the XML Core Working Group.</dd>
+        <dt><a id="cdf" class="member" name="cdf"
+          href="http://www.w3.org/2004/CDF/Group/">Compound Document Formats Working
+          Group</a></dt>
+        <dd>The XHTML2 Working Group cooperates with this group to ensure that
+          XHTML2 can be readily combined with other W3C specifications, and to
+          ensure that XHTML Modularization addresses the necessary
+          requirements.</dd>
+        <dt><a id="swbpd" name="swbpd"
+          href="http://www.w3.org/2001/sw/BestPractices/">Semantic Web Deployment
+           Working Group</a></dt>
+        <dd>The XHTML2 Working Group will coordinate with this group in issues
+          related to metadata and the Semantic Web, in particular on developing
+          common solutions for representing metadata in RDF within an XHTML
+          document.</dd>
+        <dt><a href="http://www.w3.org/2006/webapi/">Web APIs Working Group</a></dt>
+        <dd>For coordination on event and DOM architectures.</dd>
+        <dt id="xmlcg"><a href="http://www.w3.org/XML/Group/">XML Coordination group</a></dt>
+        <dd>The XHTML2 WG will coordinate its spin-off technoilogies, useful for other
+        CXML markup, by participating in the XML CG.</dd>
+      </dl>
+      
+      <h2>Relationship to External Groups</h2>
+      
+      <p>The XHTML2 Working Group endeavors to coordinate with external groups on issues of
+        mutual importance. At the time of writing the groups being coordinated with
+        were:</p>
+      <dl>
+        <dt><a href="http://www.iptc.org/">The International Press
+          Telecommunications Council</a></dt>
+        <dd>On issues of metadata in XHTML2.</dd>
+                <dt><a href="http://www.openmobilealliance.org/">The Open
+          Mobile Alliance (OMA)</a></dt>
+        <dd>For the purpose of converging XHTML Basic and XHTML Mobile
+          Profile.</dd>
+      </dl>
+      
+      <div id="conformance">
+        <p>Furthermore, the XHTML2  Working Group expects
+          to follow these W3C Recommendations:</p>
+        
+        <ul>
+          <li><a href="/TR/qaframe-spec/" >QA Framework:
+            Specification Guidelines</a>.</li>
+          
+          <li><a href="/TR/charmod/" >Character Model for the
+            World Wide Web 1.0: Fundamentals</a></li>
+          
+          <li><a href="/TR/webarch/" >Architecture of the World
+            Wide Web, Volume I</a></li>
+        </ul>
+        
+      </div>
+      
+      </div>
+      
+      
+      
+      <div class="participation">
+        <h2 id="participation">Participation</h2>
+        
+        
+        
+        <p>To be successful, the XHTML2  Working Group is expected to have active participation
+          for its
+          duration. Effective participation to XHTML2  Working Group is expected to consume
+          one work day per week for each
+          participant; two days per week for
+          Editors, Chair and Team Contact. The XHTML2 Working Group will
+          allocate also the necessary resources for building Test
+          Suites for each specification and for monitoring, testing and encouraging implementation of its specifications.</p>
+        
+        <p>Participants are reminded of the <a href="/2005/10/Process-20051014/groups.html#good-standing" >
+          Good Standing requirements</a> of the W3C Process.</p>
+        
+        
+        
+      </div>
+      
+      <div class="communication">
+        <h2 id="communication">Communication</h2>
+        
+        
+        <p>This group primarily conducts its technical work on 
+          a Public mailing list public-xhtml2@w3.org (<a href="http://lists.w3.org/Archives/Public/public-xhtml2/">archive</a>),
+          It is referred to in the rest of this document as <em>the Working Group mailing list</em>.</p>
+        
+        <p>A Member-only mailing list, member-xhtml2@w3.org (<a href="http://lists.w3.org/Archives/Member/member-xhtml2/">archive</a>) is available for 
+        administrative purposes such as liaison with Member-only Working Groups.
+        </p>
+        
+        
+        <p>Information about the group (deliverables, participants,
+          face-to-face
+          meetings, teleconferences, etc.) is
+          available from the <a href="http://www.w3.org/MarkUp/">XHTML2 Working Group home
+            page</a>.</p>
+      </div>
+      
+      <div class="decisions">
+        <h2 id="decisions">Decision Policy</h2>
+        
+        <p>As explained in the Process Document (<a href="/Consortium/Process/policies#Consensus" >section
+          3.3</a>), this group will seek to make decisions when there
+          is consensus. When the Chair puts a question and observes
+          dissent, after due consideration of different opinions, the
+          Chair should record a decision (possibly after a formal vote)
+          and any objections, and move on.</p>
+        
+        <p>This charter is written in accordance with <a href="/Consortium/Process/policies#Votes" >Section
+          3.4, Votes</a> of the W3C Process Document and includes no
+          voting procedures beyond what the Process Document
+          requires.</p>
+        
+      </div>
+      
+      <div class="patent">
+        <h2 id="patentpolicy">Patent Policy 
+        </h2>
+        
+        <p>This Working Group operates under the <a href="/Consortium/Patent-Policy-20040205/" >W3C
+          Patent Policy</a> (5 February 2004 Version). To promote the
+          widest adoption of Web standards, W3C seeks to issue
+          Recommendations that can be implemented, according to this
+          policy, on a Royalty-Free basis.</p>
+        
+        <p>For more information about disclosure obligations for
+          this group, please see the <a href="/2004/01/pp-impl/" >W3C
+            Patent Policy Implementation</a>.</p>
+        
+      </div>
+      
+      
+      
+      <h2 id="about">About this Charter</h2>
+      
+      <p>This charter for the XHTML2 Working Group has been created according to
+        <a href="/Consortium/Process/groups#GAGeneral" >section
+          6.2</a> of the <a href="/Consortium/Process" >Process
+            Document</a>.   In the event of a
+        conflict between this document or the provisions of any charter
+        and the W3C Process, the W3C Process shall take precedence.</p>
+      
+      <p>Please also see the <a href="http://www.w3.org/2002/05/html/charter.html">previous HTML WG charter</a></p>
+      
+      <hr/>
+      
+      <address>
+        Chris Lilley <a href="mailto:chris@w3.org">chris@w3.org</a>
+      </address>
+      
+      <p class="copyright"><a rel="Copyright" href="/Consortium/Legal/ipr-notice#Copyright" >Copyright</a>Â©
+        2006 <a href="/" ><acronym title="World Wide Web Consortium">W3C</acronym></a>
+        <sup>Â®</sup> (<a href="http://www.csail.mit.edu/" ><acronym title="Massachusetts Institute of Technology">MIT</acronym></a> ,
+        <a href="http://www.ercim.org/" ><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>
+        
+        , <a href="http://www.keio.ac.jp/" >Keio</a>), All Rights
+        Reserved.</p>
+      
+      <p>$Date: 2007/07/02 16:50:52 $</p>
+</body></html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

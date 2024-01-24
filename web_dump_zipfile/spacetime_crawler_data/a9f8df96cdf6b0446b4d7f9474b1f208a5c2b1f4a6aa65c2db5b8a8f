@@ -1,0 +1,32 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC665¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 21 Feb 2010 22:28:29 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"299-48023d5fa3d40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:48:42 GMTKraw_content¢DtypeEvalueY™// IntBytesConverter.java
+//
+// Informatics 102 Winter 2010
+// Assignment #4
+//
+// This class can be used to convert an int to an array of four bytes and
+// back again.
+
+public class IntBytesConverter
+{
+	public static byte[] convertIntToBytes(int i)
+	{
+		return new byte[] {
+			(byte) (i >>> 24), (byte) (i >>> 16),
+			(byte) (i >>> 8), (byte) i
+		};
+	}
+	
+	
+	public static int convertBytesToInt(byte[] b)
+	{
+		if (b == null || b.length != 4)
+		{
+			throw new IllegalArgumentException(
+				"Argument must be an array of four bytes");
+		}
+		
+		return (b[0] << 24) + ((b[1] & 0xFF) << 16)
+			+ ((b[2] & 0xFF) << 8) + (b[3] & 0xFF);
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

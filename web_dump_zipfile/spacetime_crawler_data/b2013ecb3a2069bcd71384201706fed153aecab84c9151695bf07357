@@ -1,0 +1,27 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC616¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 07 Jan 2019 06:10:48 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"268-57ed817082a00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 03:09:47 GMTKraw_content¢DtypeEvalueYh# sum_numbers2.py
+#
+# ICS 32 Winter 2019
+# Code Example
+#
+# This function sums the integers in a list of *lists* of integers.
+
+def sum_numbers(numlist: [[int]]) -> int:
+    '''Adds up the integers in a list of lists of integers'''
+
+    total = 0
+
+    for sublist in numlist:
+        for num in sublist:
+            total += num
+
+    return total
+
+
+
+assert(sum_numbers([[1, 2], [3, 4], [5, 6, 7]]) == 28)
+assert(sum_numbers([[1], [2], [3, 4, 5]]) == 15)
+assert(sum_numbers([[3], [], [5]]) == 8)
+assert(sum_numbers([[1, 2]]) == 3)
+assert(sum_numbers([[9]]) == 9)
+assert(sum_numbers([]) == 0)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

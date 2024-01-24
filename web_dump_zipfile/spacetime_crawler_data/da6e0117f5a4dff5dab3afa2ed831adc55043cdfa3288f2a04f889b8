@@ -1,0 +1,260 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE18308¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 20 Dec 2018 07:32:18 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"4784-57d6f215f3cb5"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:13:45 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYG„<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+		<title>GuoYu's Publication</title>
+	</head>
+
+	<body>	
+
+		<div class="center_wrapper">
+			
+			<br>
+			<div id="navigation">	
+				<ul>
+					<li><a href="../index.html">Home</a></li>
+					<li class="current_page_item"><a href="publication.html">Publications</a></li>
+					<li><a href="../CV/GUOYU_CV.pdf" target="_blank">CV (pdf)</a></li>
+				</ul>
+			</div>
+
+			<hr>
+			<br>
+
+<!-- seperate line -->
+			<h5>Ph.D:</h5>
+
+<!-- seperate line -->
+			<img src="image/2018SigAsia.png" width="200" height="100" alt="" class="left bordered"/>
+			<p>
+				<b>Position-Free Monte Carlo Simulation for Arbitrary Layered BSDFs</b>  
+				<br><br>
+				Yu Guo, MiloÅ¡ HaÅ¡an, Shuang Zhao
+				<br>
+				<i>ACM Transactions on Graphics (SIGGRAPH Asia 2018), 2018</i>
+				<br>
+				[<a href="javascript:;" onclick="myFun('abs_2018SigAsia');">abstract</a>]
+				[<a href="pdf/2018SigAsia.pdf" target="_blank">paper</a>]
+				[<a href="https://www.ics.uci.edu/~yug10/projects/SiggraphAsia2018/layered.pptx" target="_blank">slides</a>]
+				[<a href="https://github.com/tflsguoyu/layeredbsdf" target="_blank">code</a>]
+				[<a href="https://www.ics.uci.edu/~yug10/projects/SiggraphAsia2018/supl/dataset.html" target="_blank">dataset</a>]
+				[<a href="https://youtu.be/sLLhimyXXko" target="_blank">video</a>]
+				[<a href="https://shuangz.com/projects/layered-sa18/" target="_blank">project</a>]				
+				[<a href="https://www.youtube.com/watch?v=Bv3yat484aQ" target="_blank">Two Minute Papers</a>]
+			</p>	
+			<div id="abs_2018SigAsia" class="abs2" style="display:none;">
+				Real-world materials are often layered: metallic paints, biological tissues, and many more. Variation in the interface and volumetric scattering properties of the layers leads to a rich diversity of material appearances from anisotropic highlights to complex textures and relief patterns. However, simulating light-layer interactions is a challenging problem. Past analytical or numerical solutions either introduce several approximations and limitations, or rely on expensive operations on discretized BSDFs, preventing the ability to freely vary the layer properties spatially. We introduce a new unbiased layered BSDF model based on Monte Carlo simulation, whose only assumption is the layer assumption itself. Our novel position-free path formulation is fundamentally more powerful at constructing light transport paths than generic light transport algorithms applied to the special case of flat layers, since it is based on a product of solid angle instead of area measures, so does not contain the high-variance geometry terms needed in the standard formulation. We introduce two techniques for sampling the position-free path integral, a forward path tracer with next-event estimation and a full bidirectional estimator. We show a number of examples, featuring multiple layers with surface and volumetric scattering, surface and phase function anisotropy, and spatial variation in all parameters.
+
+				<a href="https://www.overleaf.com/read/ymwkbnbrfxqy" target="_blank">https://www.overleaf.com/read/ymwkbnbrfxqy</a>
+			</div>
+			<div class="anchor"></div>
+
+<!-- seperate line -->
+			<h5>Before Ph.D:</h5>
+
+<!-- seperate line -->
+			<img src="image/2017CGA.png" width="200" height="100" alt="" class="left bordered"/>	
+			<p>
+				<b>A Virtual Try-on System for Prescription Eyeglasses</b>  
+				<br><br>
+				Qian Zhang, Yu Guo, Pierre-Yves Laffont, Tobias Martin, Markus Gross
+				<br>
+				<i>IEEE Computer Graphics and Application, 2017</i>
+				<br>
+				[<a href="javascript:;" onclick="myFun('abs_2017CGA');">abstract</a>]
+				[<a href="pdf/2017CGA.pdf" target="_blank">paper</a>]
+				[<a href="https://www.youtube.com/watch?v=_fckwZCzCgc" target="_blank">video</a>]
+			</p>		
+			<div id="abs_2017CGA" class="abs2" style="display:none;">
+				Corrective lenses introduce distortion caused by the refraction effect, which changes the wearerâ€™s appearance. To give users a more realistic experience, a virtual try-on system modifies an input video and virtually inserts prescription eyeglasses with reflections and shading, producing an output similar to a virtual mirror.
+			</div>		
+			<div class="anchor"></div>
+
+<!-- seperate line -->
+			<img src="image/2017VisionResearch.png" width="200" height="100" alt="" class="left bordered"/>			
+			<p>
+				<b>3D Faces are Recognized More Accurately and Faster than 2D Faces, but with Similar Inversion Effects</b>  
+				<br><br>
+				Derric Eng, Belle Yick, Yu Guo, Hong Xu, Miriam Reiner, TJ Cham, SH Chen
+				<br>
+				<i>Vision Research, 2017</i>
+				&nbsp;
+				[<a href="javascript:;" onclick="myFun('abs_2017VisionResearch');">abstract</a>]
+				[<a href="pdf/2017VisionResearch.pdf" target="_blank">paper</a>]
+				[<a href="pdf/2015APCV_poster.pdf" target="_blank">poster</a>]
+			</p>
+			<div id="abs_2017VisionResearch" class="abs2" style="display:none;">
+				Recognition of faces typically occurs via holistic processing where individual features are combined to provide an overall facial representation. However, when faces are inverted, there is greater reliance on featural processing where faces are recognized based on their individual features. These findings are based on a substantial number of studies using 2-dimensional (2D) faces and it is unknown whether these results can be extended to 3-dimensional (3D) faces, which have more depth information that is absent in the typical 2D stimuli used in face recognition literature. The current study used the face inversion paradigm as a means to investigate how holistic and featural processing are differentially influenced by 2D and 3D faces. Twenty-five participants completed a delayed face-matching task consisting of upright and inverted faces that were presented as both 2D and 3D stereoscopic images. Recognition accuracy was significantly higher for 3D upright faces compared to 2D upright faces, providing support that the enriched visual information in 3D stereoscopic images facilitates holistic processing that is essential for the recognition of upright faces. Typical face inversion effects were also obtained, regardless of whether the faces were presented in 2D or 3D. Moreover, recognition performances for 2D inverted and 3D inverted faces did not differ. Taken together, these results demonstrated that 3D stereoscopic effects influence face recognition during holistic processing but not during featural processing. Our findings therefore provide a novel perspective that furthers our understanding of face recognition mechanisms, shedding light on how the integration of stereoscopic information in 3D faces influences face recognition processes.
+			</div>
+			<div class="anchor"></div>
+
+<!-- seperate line -->
+			<img src="image/2016CGF.png" width="200" height="100" alt="" class="left bordered"/>		
+			<p>
+				<b>Physically Based Video Editing</b>  
+				<br><br>
+				Jean-Charles Bazin, Claudia Pluss, Yu Guo, Tobias Martin, Alec Jacobson, Markus Gross
+				<br>
+				<i>Computer Graphics Forum (Pacific Graphics 2016), 2016</i>
+				<br>
+				[<a href="javascript:;" onclick="myFun('abs_2016CGF');">abstract</a>]
+				[<a href="pdf/2016CGF.pdf" target="_blank">paper</a>]
+				[<a href="https://www.youtube.com/watch?v=bBzmlCU5FEo" target="_blank">video</a>]
+			</p>
+			<div id="abs_2016CGF" class="abs2" style="display:none;">
+				Convincing manipulation of objects in live action videos is a difficult and often tedious task. Skilled video editors achieve this with the help of modern professional tools, but complex motions might still lack physical realism since existing tools do not consider the laws of physics. On the other hand, physically based simulation promises a high degree of realism, but typically creates a virtual 3D scene animation rather than returning an edited version of an input live action video. We propose a framework that combines video editing and physics-based simulation. Our tool assists unskilled users in editing an input image or video while respecting the laws of physics and also leveraging the image content. We first fit a physically based simulation that approximates the objectâ€™s motion in the input video. We then allow the user to edit the physical parameters of the object, generating a new physical behavior for it. The core of our work is the formulation of an image-aware constraint within physics simulations. This constraint manifests as external control forces to guide the object in a way that encourages proper texturing at every frame, yet producing physically plausible motions. We demonstrate the generality of our method on a variety of physical interactions: rigid motion, multi-body collisions, clothes and elastic bodies.
+			</div>
+			<div class="anchor"></div>			
+			
+<!-- seperate line -->			
+			<img src="image/2013MICCAI.png" width="200" height="100" alt="" class="left bordered"/>			
+			<p>
+				<b>GPU Accelerated CBCT Reconstruction From Few Views with SART and TV Regularization</b>  
+				<br><br>
+				Ping Liu, Lin Shi, Defeng Wang, Yu Guo, Jianying Li, Jing Qin, Pheng-Ann Heng
+				<br>
+				<i>HPC-MICCAI, 2013</i>
+				&nbsp;
+				[<a href="javascript:;" onclick="myFun('abs_2013MICCAI');">abstract</a>]
+				[<a href="pdf/2013MICCAI.pdf" target="_blank">paper</a>]
+			</p>
+			<div id="abs_2013MICCAI" class="abs2" style="display:none;">
+				Compressed sensing-based iterative algorithms can reconstruct high-quality CBCT from undersampled and noisy projection data. However, a practical implementation of these methods still remains a challenge due to the heavy computation. We implemented an algorithm by combining simultaneous algebraic reconstruction technique (SART) and total variation (TV) regularization for the CBCT reconstruction from few views. More importantly, we introduced approaches to fit the SART and TV into the GPU architecture. Experimental results showed that our GPU accelerated algorithm could obtain good reconstruction quality from 20 to 40 projections, as well as significant gain in time performance. It only took 29.1s for reconstruction from 120 projections with 40 iterations. The proposed method has potential to make iterative-based CBCT reconstruction more accessable for routine clinical applications.
+			</div>
+			<div class="anchor"></div>
+				
+<!-- seperate line -->			
+			<img src="image/2013ICIP.png" width="200" height="100" alt="" class="left bordered"/>	
+			<p>
+				<b>Real-time Hand Detection Based on Multi-stage HOG-SVM Classifier</b>  
+				<br><br>
+				Jiang Guo, Jun Cheng, Jianxin Pang, Yu Guo
+				<br>
+				<i>International Conference on Image Processing (ICIP), 2013</i>
+				<br>
+				[<a href="javascript:;" onclick="myFun('abs_2013ICIP');">abstract</a>]
+				[<a href="pdf/2013ICIP.pdf" target="_blank">paper</a>]
+			</p>
+			<div id="abs_2013ICIP" class="abs2" style="display:none;">
+				In this paper, we propose a real-time hand detection method with multi-stage HOG-SVM classifier. Unlike traditional methods based on learning which make decomposition of feature vector or combination of different types of features or classifiers, upon the division of background into several categories, we propose a multi-stage classifier which combines several SVM classifies each of which is trained to distinguish corresponding divisions of background and target. Furthermore, in order to improve speed performance, skin color in-formation and integral histogram are also applied. Experiment results demonstrate that the proposed algorithm works well under multiple challenging backgrounds in real-time speed (16 frames per second).
+			</div>
+			<div class="anchor"></div>
+
+<!-- seperate line -->						
+			<img src="image/2013ICIA.png" width="200" height="100" alt="" class="left bordered"/>			
+			<p>
+				<b>A GPU-accelerated Finite Element Solver for Simulation of Soft-body Deformation</b>  
+				<br><br>
+				Yu Guo, Jianying Li, Ping Liu, Qiong Wang, Jing Qin
+				<br>
+				<i>International Conference on Information and Automation (ICIA), 2013</i>
+				<br>
+				[<a href="javascript:;" onclick="myFun('abs_2013ICIA');">abstract</a>]
+				[<a href="pdf/2013ICIA.pdf" target="_blank">paper</a>]
+			</p>
+			<div id="abs_2013ICIA" class="abs2" style="display:none;">
+				A nonlinear physical simulation is presented involving the soft body deformation and interaction contacts. We demonstrate the finite element method relying on Lagrangian discretization to simulate the deformation of the soft body with hyperelastic material properties. To perform a stable simulation, we use the constrained Delaunay Tetrahedralization to resampling and remeshing the object. A new contact strategy is developed and used to replace the collision detection. This method does not need to iteratively achieve the optimal contact response on the constrained boundary. It can dynamically determine whether the contact status of the point should be in a static or a sliding friction mode. The explicit method for the finite element model is employed in order to perform all the steps of the algorithm on the GPUs and achieve a real-time simulation.
+			</div>	
+			<div class="anchor"></div>
+
+<!-- seperate line -->									
+			<img src="image/2013JIT.png" width="200" height="100" alt="" class="left bordered"/>			
+			<p>
+				<b>A Survey on Simulation of Soft Tissue Deformation in Virtual Surgery (in Chinese)</b>  
+				<br><br>
+				Yu Guo, Jing Qin
+				<br>
+				<i>Journal of Integration Technology, 2013</i>
+				<br>
+				[<a href="javascript:;" onclick="myFun('abs_2013JIT');">abstract</a>]
+				[<a href="pdf/2013JIT.pdf" target="_blank">paper</a>]
+			</p>
+			<div id="abs_2013JIT" class="abs2" style="display:none;">
+				Human soft tissues generally exhibit complex material properties such as nonlinearity, anisotropy, incompressibility and viscoelastictity. Soft tissue deformation is one of the most important yet difficult research tasks in virtual surgery. This paper presents a comprehensive survey on simulation of soft tissue deformation in virtual surgery. We first give an introduction of the virtual surgery system. Then we detailed variours methods from geometrically-based methods to physically-based methods, from mesh-based models to meshless models. Finally, we describe some promissing research directions on this topic.
+			</div>	
+			<div class="anchor"></div>
+
+<!-- seperate line -->													
+			<img src="image/2012SigAsia.png" width="200" height="100" alt="" class="left bordered"/>			
+			<p>
+				<b>Fall Over or Sliding Down?</b>  
+				<br><br>
+				Yu Guo.
+				<br>
+				<i>Siggraph Asia (Poster), 2012</i>
+				<br>
+				[<a href="javascript:;" onclick="myFun('abs_2012SigAsia');">abstract</a>]
+				[<a href="pdf/2012SigAsia.pdf" target="_blank">paper</a>]
+				[<a href="pdf/2012SigAsia_poster.pdf" target="_blank">poster</a>]
+			</p>
+			<div id="abs_2012SigAsia" class="abs2" style="display:none;">
+				We present a contact model depending on constraints coupled with frictions which is called portable frictional contact model. Although it does not reach the optimal result, the flexibility and convenience of our method make it an easier use in contact simulation.
+			</div>
+			<div class="anchor"></div>
+			
+<!-- seperate line -->																	
+			<img src="image/2012IROS.png" width="200" height="100" alt="" class="left bordered"/>		
+			<p>
+				<b>A Master-Slave Robotic Simulator Based on GPUDirect</b>  
+				<br><br>
+				Jianying Li, Yu Guo, Heye Zhang, Yongming Xie
+				<br>
+				<i>International Conference on Intelligent Robots and Systems (IROS), 2012</i>
+				<br>
+				[<a href="javascript:;" onclick="myFun('abs_2012IROS');">abstract</a>]
+				[<a href="pdf/2012IROS.pdf" target="_blank">Paper</a>]
+			</p>
+			<div id="abs_2012IROS" class="abs2" style="display:none;">
+				The same as in traditional surgery, surgeons in telerobotic surgery need extensive training to achieve experience and highly accurate instrument manipulation. Traditional training methods like practice in operating room have major drawbacks such as high risk and limited opportunity for which virtual reality (VR) and computer technologies can offer solutions. To accelerate the data transmission speed in our master-slave robotic simulator, GPUDirect was applied to ensure the synchronization and display rate of three computers. By using GPUDirect with InfiniBand card we realized up to 247% performance improvement in data transmission speed on NVIDIA Teslaâ„¢ products on different computers compared to that without GPUDirect, which shows that GPUDirect enables better communication between remote GPUs over InfiniBand.
+			</div>
+			<div class="anchor"></div>
+
+<!-- seperate line -->																	
+			<h5>Thesis:</h5>
+			
+<!-- seperate line -->																		
+			<img src="image/UCAS-SIAT.png" width="200" height="100" alt="" class="left bordered"/>			
+			<p>
+				<b>GPU-based Soft Body Deformation with Nonlinear Finite Element Method</b>  
+				<br><br>
+				Yu Guo
+				<br>
+				<i>June, 2013</i>
+				<br>
+				[<a href="pdf/Thesis_Master.pdf" target="_blank">Paper (In Chinese)</a>]
+				[<a href="pdf/Thesis_Master (slides).pdf" target="_blank">Slides (In Chinese)</a>]	
+			</p>
+			<div class="anchor"></div>
+			
+<!-- seperate line -->																						
+			<img src="image/CSU-Math.png" width="200" height="100" alt="" class="left bordered"/>		
+			<p>
+				<b>Forces Distribution with Fractal Theory in High Velocity Compaction Technology</b>  
+				<br><br>
+				Yu Guo
+				<br>
+				<i>June, 2010</i>
+				<br>
+				[<a href="pdf/Thesis_Bachelor.pdf" target="_blank">Paper (In Chinese)</a>]
+				[<a href="pdf/Thesis_Bachelor (slides).pdf target="_blank"">Slides (In Chinese)</a>]
+			</p>
+			<div class="anchor"></div>
+		
+		</div>
+
+		<script>
+			function myFun(fn_paper) {
+				var x = document.getElementById(fn_paper);
+				if (x.style.display == "none") {
+					x.style.display = "block";
+				} else {
+					x.style.display = "none";
+				}
+			}
+		</script>
+
+	</body>
+</html>
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,23 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC236¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 25 Jan 2012 18:58:42 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueR"ec-4b75eda2c7c80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 05:00:58 GMTKraw_content¢DtypeEvalueXìpublic class SongCollection
+{
+	private int songCount;
+
+	
+	public SongCollection()
+	{
+		songCount = 0;
+	}
+	
+	
+	public int size()
+	{
+		return songCount;
+	}
+
+
+	public void add(Song songToAdd)
+	{
+		songCount = 1;
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,103 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2249¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:53:53 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"8c9-4da84c20cce40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 21:06:19 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÉ# $Id: util.py 4786 2009-11-21 20:14:53Z rares $
+#
+# Copyright (C) 2007 by The Regents of the University of California
+#
+# Redistribution of this file is permitted under the terms of the BSD
+# license
+#
+# Date: 08/28/2008
+#
+# Author: Rares Vernica <rares (at) ics.uci.edu>
+#
+
+import pickle
+import numpy
+
+datasets = {
+    'IMDB' : {
+    'filename'  : '/data/imdb/actors.rank.shuf.csv', 
+    'separator' : '\t', 
+    }, 
+    'WebCorpus' : {
+    'filename'  : '/data/webcorpus/webcorpus.shuf.2.4m.txt', 
+    'separator' : '\t', 
+    }, 
+    'Bio' : {
+    'filename'  : '/data/topk/bio/CHEMDB_SAMPLE_UNCOMP_100K.csv', 
+    'separator' : ',', 
+    }, 
+    }
+
+def data_freq(name):
+    dataset = datasets[name]
+    filename = dataset['filename']
+    separator = dataset['separator']
+
+    freq = {}
+    for line in open(filename):
+        f = int(line[:-1].split(separator)[1])
+        try:
+            freq[f] += 1
+        except:
+            freq[f] = 1
+
+    pickle.dump(freq, open(filename[:filename.rfind('.') + 1] + 'freq.p', 'wb'))
+
+    val = freq.keys()
+    val.sort()
+    for v in val:
+        print v, freq[v]
+
+def token_freq(name):
+    dataset = datasets[name]
+    filename = dataset['filename']
+    separator = dataset['separator']
+
+    freq = {}
+    for line in open(filename):
+        for token in line.split(separator):
+            f = int(token)
+            try:
+                freq[f] += 1
+            except:
+                freq[f] = 1
+
+    # pickle.dump(freq, open(filename[:filename.rfind('.') + 1] + 'freq.p', 'wb'))
+
+    # val = freq.keys()
+    # val.sort()
+    # for v in val:
+    #     print v, freq[v]
+
+    a = numpy.array(freq.values())
+    print len(a)
+    print a.mean()
+    print a.std()
+            
+def length_freq(name):
+    dataset = datasets[name]
+    filename = dataset['filename']
+    separator = dataset['separator']
+
+    freq = {}
+    total = count = 0
+    for line in open(filename):
+        f = len(line.split(separator))
+        total += f
+        count += 1
+        # try:
+        #     freq[f] += 1
+        # except:
+        #     freq[f] = 1
+
+    # for v in freq.keys():
+    #     print v, freq[v]
+
+    print float(total) / count
+
+token_freq('Bio')
+
+# a = numpy.array([1, 2, 3])
+# print a.std()
+# print a.mean()
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

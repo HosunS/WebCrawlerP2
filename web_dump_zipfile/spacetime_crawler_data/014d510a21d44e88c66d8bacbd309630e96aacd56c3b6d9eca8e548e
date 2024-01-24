@@ -1,0 +1,22 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÜ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC397¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:39:21 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"18d-3158ecabc2840"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 19:51:36 GMTKraw_content¢DtypeEvalueYç// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Greedy matching application
+
+#include "GreedyMatching.h"
+#include "Error.h"
+#include <iostream.h>
+
+double GreedyMatching(unsigned long npoints, PointSet &, ClosestPairs & cp)
+{
+	double total = 0.0;
+	while (npoints >= 2) {
+		point a, b;
+		total += cp(a,b);
+		cp -= a;
+		cp -= b;
+		npoints -= 2;
+	}
+	return total;
+}
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

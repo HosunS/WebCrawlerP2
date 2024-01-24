@@ -1,0 +1,348 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 11:32:16 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYwü
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Statlog (Landsat Satellite) Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Statlog (Landsat Satellite) Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/statlog/satimage/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/statlog/satimage/sat.doc"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: Multi-spectral values of pixels in 3x3 neighbourhoods in a satellite image, and the classification associated with the central pixel in each neighbourhood</p>
+     </td>
+     <td><img
+src="../assets/MLimages/Large146.jpg"
+hspace=20 vspace=10  /> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">6435</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Physical</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Integer</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">36</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">1993-02-13</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">109607</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">    Ashwin Srinivasan<br>     Department of Statistics and Data Modeling<br>     University of Strathclyde<br>     Glasgow<br>     Scotland<br>     UK<br>     <u>ross <b>'@'</b> uk.ac.turing</u><br><br>	The original Landsat data for this database was generated<br>	from data purchased from NASA by the Australian Centre<br>	for Remote Sensing, and used for research at:<br>		The Centre for Remote Sensing<br>		University of New South Wales<br>		Kensington, PO Box 1<br>		NSW 2033<br>		Australia.<br><br>     The sample database was generated taking a small section (82<br>     rows and 100 columns) from the original data. The binary values<br>     were converted to their present ASCII form by Ashwin Srinivasan.<br>     The classification for each pixel was performed on the basis of<br>     an actual site visit by Ms. Karen Hall, when working for Professor<br>     John A. Richards, at the Centre for Remote Sensing at the University<br>     of New South Wales, Australia. Conversion to 3x3 neighbourhoods and<br>     splitting into test and training sets was done by Alistair Sutherland.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">The database consists of the multi-spectral values of pixels in 3x3 neighbourhoods in a satellite image, and the classification associated with the central pixel in each neighbourhood. The aim is to predict this classification, given the multi-spectral values. In the sample database, the class of a pixel is coded as a number.<br><br>The Landsat satellite data is one of the many sources of information available for a scene. The interpretation of a scene by integrating spatial data of diverse types and resolutions including multispectral and radar data, maps indicating topography, land use etc. is expected to assume significant importance with the onset of an era characterised by integrative approaches to remote sensing (for example, NASA's Earth Observing System commencing this decade). Existing statistical methods are ill-equipped for handling such diverse data types. Note that this is not true for Landsat MSS data considered in isolation (as in this sample database). This data satisfies the important requirements of being numerical and at a single resolution, and standard maximum-likelihood classification performs very well. Consequently, for this data, it should be interesting to compare the performance of other methods against the statistical approach.<br><br>One frame of Landsat MSS imagery consists of four digital images of the same scene in different spectral bands. Two of these are in the visible region (corresponding approximately to green and red regions of the visible spectrum) and two are in the (near) infra-red. Each pixel is a 8-bit binary word, with 0 corresponding to black and 255 to white. The spatial resolution of a pixel is about 80m x 80m. Each image contains 2340 x 3380 such pixels.<br><br>The database is a (tiny) sub-area of a scene, consisting of 82 x 100 pixels. Each line of data corresponds to a 3x3 square neighbourhood of pixels completely contained within the 82x100 sub-area. Each line contains the pixel values in the four spectral bands (converted to ASCII) of each of the 9 pixels in the 3x3 neighbourhood and a number indicating the classification label of the central pixel. The number is a code for the following classes:<br><br>Number			Class<br>1			red soil<br>2			cotton crop<br>3			grey soil<br>4			damp grey soil<br>5			soil with vegetation stubble<br>6			mixture class (all types present)<br>7			very damp grey soil<br>	<br>NB. There are no examples with class 6 in this dataset.<br><br>The data is given in random order and certain lines of data have been removed so you cannot reconstruct the original image from this dataset.<br><br>In each line of data the four spectral values for the top-left pixel are given first followed by the four spectral values for the top-middle pixel and then those for the top-right pixel, and so on with the pixels read out in sequence left-to-right and top-to-bottom. Thus, the four spectral values for the central pixel are given by attributes 17,18,19 and 20. If you like you can use only these four attributes, while ignoring the others. This avoids the problem which arises when a 3x3 neighbourhood straddles a boundary.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">The attributes are numerical, in the range 0 to 255.</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">N/A</p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Ken Tang and Ponnuthurai N. Suganthan and Xi Yao and A. Kai Qin. <a
+href="http://rexa.info/paper/dedfa4527706631a09382e23555649c7b3e37ebd">Linear dimensionalityreduction using relevance weighted LDA</a>. School of Electrical and Electronic Engineering Nanyang Technological University. 2005.  [<a
+href="../support/Statlog+(Landsat+Satellite)#dedfa4527706631a09382e23555649c7b3e37ebd">View Context</a>].<br><br>Giorgio Valentini. <a
+href="http://rexa.info/paper/2048a44e66eac923f00c225ee12e17c38d923376">Random Aggregated and Bagged Ensembles of SVMs: An Empirical Bias?Variance Analysis</a>. Multiple Classifier Systems. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#2048a44e66eac923f00c225ee12e17c38d923376">View Context</a>].<br><br>Xiaoli Z. Fern and Carla Brodley. <a
+href="http://rexa.info/paper/426e712ef75473927e172cd8d75299a5c9037bd6">Cluster Ensembles for High Dimensional Clustering: An Empirical Study</a>. Journal of Machine Learning Research n, a. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#426e712ef75473927e172cd8d75299a5c9037bd6">View Context</a>].<br><br>Jaakko Peltonen and Samuel Kaski. <a
+href="http://rexa.info/paper/4f52834d0595282e8454f617706fbec7589c8de6">Discriminative Components of Data</a>. IEEE. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#4f52834d0595282e8454f617706fbec7589c8de6">View Context</a>].<br><br>S. Augustine Su and Jennifer G. Dy. <a
+href="http://rexa.info/paper/63460ee5afd1e104ba91e654e9aee9b977433c4c">Automated hierarchical mixtures of probabilistic principal component analyzers</a>. ICML. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#63460ee5afd1e104ba91e654e9aee9b977433c4c">View Context</a>].<br><br>Jaakko Peltonen and Arto Klami and Samuel Kaski. <a
+href="http://rexa.info/paper/8e5c7f7c811898dd8308bdf011e3bd14e3b43980">Improved Learning of Riemannian Metrics for Exploratory Analysis</a>. Improved Learning of Riemannian Metrics for Exploratory Analysis. Neural Networks. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#8e5c7f7c811898dd8308bdf011e3bd14e3b43980">View Context</a>].<br><br>Fabian Hoti and Lasse Holmstr√∂m. <a
+href="http://rexa.info/paper/e5473e70fc6fbb348156490ee2bfb466937196bc">A semiparametric density estimation approach to pattern classification</a>. Pattern Recognition, 37. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#e5473e70fc6fbb348156490ee2bfb466937196bc">View Context</a>].<br><br>Giorgio Valentini and Thomas G. Dietterich. <a
+href="http://rexa.info/paper/7025b49e49b58acbb1881ee289e9d719a528d505">Low Bias Bagged Support Vector Machines</a>. ICML. 2003.  [<a
+href="../support/Statlog+(Landsat+Satellite)#7025b49e49b58acbb1881ee289e9d719a528d505">View Context</a>].<br><br>Zoubin Ghahramani and Hyun-Chul Kim. <a
+href="http://rexa.info/paper/30ef69908e0a0792007e4a8b95c7c422b7e0ff99">Bayesian Classifier Combination</a>. Gatsby Computational Neuroscience Unit University College London. 2003.  [<a
+href="../support/Statlog+(Landsat+Satellite)#30ef69908e0a0792007e4a8b95c7c422b7e0ff99">View Context</a>].<br><br>Giorgio Valentini. <a
+href="http://rexa.info/paper/7ee121b26e79c0a7aa5c80979e275fc3592d0638">Ensemble methods based on bias--variance analysis Theses Series DISI-TH-2003</a>. Dipartimento di Informatica e Scienze dell'Informazione . 2003.  [<a
+href="../support/Statlog+(Landsat+Satellite)#7ee121b26e79c0a7aa5c80979e275fc3592d0638">View Context</a>].<br><br>Igor V. Tetko. <a
+href="http://rexa.info/paper/a5aba686ed10e6524f1a20a041eebfbf4ca08436">Associative Neural Network</a>. Neural Processing Letters, 16. 2002.  [<a
+href="../support/Statlog+(Landsat+Satellite)#a5aba686ed10e6524f1a20a041eebfbf4ca08436">View Context</a>].<br><br>Jaakko Peltonen and Arto Klami and Samuel Kaski. <a
+href="http://rexa.info/paper/2e6705a0fe8b335ec6bffc4acbe8a0665f67c8a5">Learning More Accurate Metrics for Self-Organizing Maps</a>. ICANN. 2002.  [<a
+href="../support/Statlog+(Landsat+Satellite)#2e6705a0fe8b335ec6bffc4acbe8a0665f67c8a5">View Context</a>].<br><br>Peter Sykacek and Stephen J. Roberts. <a
+href="http://rexa.info/paper/d328ae33fb50756832a1c6cd703f7176c361923f">Adaptive Classification by Variational Kalman Filtering</a>. NIPS. 2002.  [<a
+href="../support/Statlog+(Landsat+Satellite)#d328ae33fb50756832a1c6cd703f7176c361923f">View Context</a>].<br><br>Stephen D. Bay. <a
+href="http://rexa.info/paper/0527f760f533e2a7a827710a924d6987bfc9a06e">Multivariate Discretization for Set Mining</a>. Knowl. Inf. Syst, 3. 2001.  [<a
+href="../support/Statlog+(Landsat+Satellite)#0527f760f533e2a7a827710a924d6987bfc9a06e">View Context</a>].<br><br>Kagan Tumer and Joydeep Ghosh. <a
+href="http://rexa.info/paper/cf33e50e2855982af7c583c8e756a28a5e8f0aeb">Robust Combining of Disparate Classifiers through Order Statistics</a>. CoRR, csLG/9905013. 1999.  [<a
+href="../support/Statlog+(Landsat+Satellite)#cf33e50e2855982af7c583c8e756a28a5e8f0aeb">View Context</a>].<br><br>Kagan Tumer and Nikunj C. Oza. <a
+href="http://rexa.info/paper/2b8c2489b0b9622471466385b6d5c1cf703bd4c8">Decimated Input Ensembles for Improved Generalization</a>. NASA Ames Research Center. 1999.  [<a
+href="../support/Statlog+(Landsat+Satellite)#2b8c2489b0b9622471466385b6d5c1cf703bd4c8">View Context</a>].<br><br>Xavier Giannakopoulos and Juha Karhunen and Erkki Oja. <a
+href="http://rexa.info/paper/e550da2f9c24b03fec3cd94563a837e653db1c60">An Experimental Comparison of Neural Algorithms for Independent Component Analysis and Blind Separation</a>. Int. J. Neural Syst, 9. 1999.  [<a
+href="../support/Statlog+(Landsat+Satellite)#e550da2f9c24b03fec3cd94563a837e653db1c60">View Context</a>].<br><br>Cesar Guerra-Salcedo and L. Darrell Whitley. <a
+href="http://rexa.info/paper/6f9e5db8e117763c59d6ffabcb511900b9f62159">Genetic Approach to Feature Selection for Ensemble Creation</a>. GECCO. 1999.  [<a
+href="../support/Statlog+(Landsat+Satellite)#6f9e5db8e117763c59d6ffabcb511900b9f62159">View Context</a>].<br><br>Robert E. Schapire and Yoav Freund and Peter Bartlett and Wee Sun Lee. <a
+href="http://rexa.info/paper/ca1479cb43feeda16386d2e50460bd2c1230bc8b">The Annals of Statistics, to appear. Boosting the Margin: A New Explanation for the Effectiveness of Voting Methods</a>. AT&T Labs. 1998.  [<a
+href="../support/Statlog+(Landsat+Satellite)#ca1479cb43feeda16386d2e50460bd2c1230bc8b">View Context</a>].<br><br>Jaakko Peltonen and Arto Klami and Samuel Kaski. <a
+href="http://rexa.info/paper/ba8302e5db2921603c34aee0c738b103d1948f5f">Learning Metrics for Information Visualization</a>. Neural Networks Research Centre Helsinki University of Technology.  [<a
+href="../support/Statlog+(Landsat+Satellite)#ba8302e5db2921603c34aee0c738b103d1948f5f">View Context</a>].<br><br>C. esar and Cesar Guerra-Salcedo and Darrell Whitley. <a
+href="http://rexa.info/paper/f91a9d851efd2169d5f16f8bfd5c7b9d2b81655c">Feature Selection Mechanisms for Ensemble Creation : A Genetic Search Perspective</a>. Department of Computer Science Colorado State University.  [<a
+href="../support/Statlog+(Landsat+Satellite)#f91a9d851efd2169d5f16f8bfd5c7b9d2b81655c">View Context</a>].<br><br>Grigorios Tsoumakas and Ioannis P. Vlahavas. <a
+href="http://rexa.info/paper/7de1dca96d7e6789dadc875a7f1b070f9d65fff5">Fuzzy Meta-Learning: Preliminary Results</a>. Greek Secretariat for Research and Technology.  [<a
+href="../support/Statlog+(Landsat+Satellite)#7de1dca96d7e6789dadc875a7f1b070f9d65fff5">View Context</a>].<br><br>Xavier Giannakopoulos and Juha Karhunen and Erkki Oja. <a
+href="http://rexa.info/paper/82c18d900119b86bada0621e2774e8fcd0b47140">A COMPARISON OF NEURAL ICA ALGORITHMS USING REAL-WORLD DATA</a>. IDSIA.  [<a
+href="../support/Statlog+(Landsat+Satellite)#82c18d900119b86bada0621e2774e8fcd0b47140">View Context</a>].<br><br>Adil M. Bagirov and Julien Ugon. <a
+href="http://rexa.info/paper/69547b69d3133bba06b4ce74e67e2f3a6366a2f6">An algorithm for computation of piecewise linear function separating two sets</a>. CIAO, School of Information Technology and Mathematical Sciences, The University of Ballarat.  [<a
+href="../support/Statlog+(Landsat+Satellite)#69547b69d3133bba06b4ce74e67e2f3a6366a2f6">View Context</a>].<br><br>Giorgio Valentini. <a
+href="http://rexa.info/paper/77fb0a2e40e1c957295bfa6bffb09ffc1d1bebc7">An experimental bias--variance analysis of SVM ensembles based on resampling techniques</a>.  [<a
+href="../support/Statlog+(Landsat+Satellite)#77fb0a2e40e1c957295bfa6bffb09ffc1d1bebc7">View Context</a>].<br><br>Cesar Guerra-Salcedo and Stephen Chen and Darrell Whitley and Sarah Smith. <a
+href="http://rexa.info/paper/379f34d22ceaf54a97c9a95f0cb0e6eb2a44c1dc">Fast and Accurate Feature Selection Using Hybrid Genetic Strategies</a>. Department of Computer Science Colorado State University.  [<a
+href="../support/Statlog+(Landsat+Satellite)#379f34d22ceaf54a97c9a95f0cb0e6eb2a44c1dc">View Context</a>].<br><br>Je Scott and Mahesan Niranjan and Richard W. Prager. <a
+href="http://rexa.info/paper/d8a0c5fd34dede91f5241e9b9dca0626f6969c0d">Realisable Classifiers: Improving Operating Performance on Variable Cost Problems</a>. Cambridge University Department of Engineering.  [<a
+href="../support/Statlog+(Landsat+Satellite)#d8a0c5fd34dede91f5241e9b9dca0626f6969c0d">View Context</a>].<br><br>Vikas Sindhwani and P. Bhattacharya and Subrata Rakshit. <a
+href="http://rexa.info/paper/7286601416a1cec780621a415323a2bc6c958e11">Information Theoretic Feature Crediting in Multiclass Support Vector Machines</a>.  [<a
+href="../support/Statlog+(Landsat+Satellite)#7286601416a1cec780621a415323a2bc6c958e11">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Ken Tang and Ponnuthurai N. Suganthan and Xi Yao and A. Kai Qin. <a
+href="http://rexa.info/paper/dedfa4527706631a09382e23555649c7b3e37ebd">Linear dimensionalityreduction using relevance weighted LDA</a>. School of Electrical and Electronic Engineering Nanyang Technological University. 2005.  [<a
+href="../support/Statlog+(Landsat+Satellite)#dedfa4527706631a09382e23555649c7b3e37ebd">View Context</a>].<br><br>Giorgio Valentini. <a
+href="http://rexa.info/paper/2048a44e66eac923f00c225ee12e17c38d923376">Random Aggregated and Bagged Ensembles of SVMs: An Empirical Bias?Variance Analysis</a>. Multiple Classifier Systems. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#2048a44e66eac923f00c225ee12e17c38d923376">View Context</a>].<br><br>Xiaoli Z. Fern and Carla Brodley. <a
+href="http://rexa.info/paper/426e712ef75473927e172cd8d75299a5c9037bd6">Cluster Ensembles for High Dimensional Clustering: An Empirical Study</a>. Journal of Machine Learning Research n, a. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#426e712ef75473927e172cd8d75299a5c9037bd6">View Context</a>].<br><br>Jaakko Peltonen and Samuel Kaski. <a
+href="http://rexa.info/paper/4f52834d0595282e8454f617706fbec7589c8de6">Discriminative Components of Data</a>. IEEE. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#4f52834d0595282e8454f617706fbec7589c8de6">View Context</a>].<br><br>S. Augustine Su and Jennifer G. Dy. <a
+href="http://rexa.info/paper/63460ee5afd1e104ba91e654e9aee9b977433c4c">Automated hierarchical mixtures of probabilistic principal component analyzers</a>. ICML. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#63460ee5afd1e104ba91e654e9aee9b977433c4c">View Context</a>].<br><br>Jaakko Peltonen and Arto Klami and Samuel Kaski. <a
+href="http://rexa.info/paper/8e5c7f7c811898dd8308bdf011e3bd14e3b43980">Improved Learning of Riemannian Metrics for Exploratory Analysis</a>. Improved Learning of Riemannian Metrics for Exploratory Analysis. Neural Networks. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#8e5c7f7c811898dd8308bdf011e3bd14e3b43980">View Context</a>].<br><br>Fabian Hoti and Lasse Holmstr√∂m. <a
+href="http://rexa.info/paper/e5473e70fc6fbb348156490ee2bfb466937196bc">A semiparametric density estimation approach to pattern classification</a>. Pattern Recognition, 37. 2004.  [<a
+href="../support/Statlog+(Landsat+Satellite)#e5473e70fc6fbb348156490ee2bfb466937196bc">View Context</a>].<br><br>Giorgio Valentini and Thomas G. Dietterich. <a
+href="http://rexa.info/paper/7025b49e49b58acbb1881ee289e9d719a528d505">Low Bias Bagged Support Vector Machines</a>. ICML. 2003.  [<a
+href="../support/Statlog+(Landsat+Satellite)#7025b49e49b58acbb1881ee289e9d719a528d505">View Context</a>].<br><br>Zoubin Ghahramani and Hyun-Chul Kim. <a
+href="http://rexa.info/paper/30ef69908e0a0792007e4a8b95c7c422b7e0ff99">Bayesian Classifier Combination</a>. Gatsby Computational Neuroscience Unit University College London. 2003.  [<a
+href="../support/Statlog+(Landsat+Satellite)#30ef69908e0a0792007e4a8b95c7c422b7e0ff99">View Context</a>].<br><br>Giorgio Valentini. <a
+href="http://rexa.info/paper/7ee121b26e79c0a7aa5c80979e275fc3592d0638">Ensemble methods based on bias--variance analysis Theses Series DISI-TH-2003</a>. Dipartimento di Informatica e Scienze dell'Informazione . 2003.  [<a
+href="../support/Statlog+(Landsat+Satellite)#7ee121b26e79c0a7aa5c80979e275fc3592d0638">View Context</a>].<br><br>Igor V. Tetko. <a
+href="http://rexa.info/paper/a5aba686ed10e6524f1a20a041eebfbf4ca08436">Associative Neural Network</a>. Neural Processing Letters, 16. 2002.  [<a
+href="../support/Statlog+(Landsat+Satellite)#a5aba686ed10e6524f1a20a041eebfbf4ca08436">View Context</a>].<br><br>Jaakko Peltonen and Arto Klami and Samuel Kaski. <a
+href="http://rexa.info/paper/2e6705a0fe8b335ec6bffc4acbe8a0665f67c8a5">Learning More Accurate Metrics for Self-Organizing Maps</a>. ICANN. 2002.  [<a
+href="../support/Statlog+(Landsat+Satellite)#2e6705a0fe8b335ec6bffc4acbe8a0665f67c8a5">View Context</a>].<br><br>Peter Sykacek and Stephen J. Roberts. <a
+href="http://rexa.info/paper/d328ae33fb50756832a1c6cd703f7176c361923f">Adaptive Classification by Variational Kalman Filtering</a>. NIPS. 2002.  [<a
+href="../support/Statlog+(Landsat+Satellite)#d328ae33fb50756832a1c6cd703f7176c361923f">View Context</a>].<br><br>Stephen D. Bay. <a
+href="http://rexa.info/paper/0527f760f533e2a7a827710a924d6987bfc9a06e">Multivariate Discretization for Set Mining</a>. Knowl. Inf. Syst, 3. 2001.  [<a
+href="../support/Statlog+(Landsat+Satellite)#0527f760f533e2a7a827710a924d6987bfc9a06e">View Context</a>].<br><br>Kagan Tumer and Joydeep Ghosh. <a
+href="http://rexa.info/paper/cf33e50e2855982af7c583c8e756a28a5e8f0aeb">Robust Combining of Disparate Classifiers through Order Statistics</a>. CoRR, csLG/9905013. 1999.  [<a
+href="../support/Statlog+(Landsat+Satellite)#cf33e50e2855982af7c583c8e756a28a5e8f0aeb">View Context</a>].<br><br>Kagan Tumer and Nikunj C. Oza. <a
+href="http://rexa.info/paper/2b8c2489b0b9622471466385b6d5c1cf703bd4c8">Decimated Input Ensembles for Improved Generalization</a>. NASA Ames Research Center. 1999.  [<a
+href="../support/Statlog+(Landsat+Satellite)#2b8c2489b0b9622471466385b6d5c1cf703bd4c8">View Context</a>].<br><br>Xavier Giannakopoulos and Juha Karhunen and Erkki Oja. <a
+href="http://rexa.info/paper/e550da2f9c24b03fec3cd94563a837e653db1c60">An Experimental Comparison of Neural Algorithms for Independent Component Analysis and Blind Separation</a>. Int. J. Neural Syst, 9. 1999.  [<a
+href="../support/Statlog+(Landsat+Satellite)#e550da2f9c24b03fec3cd94563a837e653db1c60">View Context</a>].<br><br>Cesar Guerra-Salcedo and L. Darrell Whitley. <a
+href="http://rexa.info/paper/6f9e5db8e117763c59d6ffabcb511900b9f62159">Genetic Approach to Feature Selection for Ensemble Creation</a>. GECCO. 1999.  [<a
+href="../support/Statlog+(Landsat+Satellite)#6f9e5db8e117763c59d6ffabcb511900b9f62159">View Context</a>].<br><br>Robert E. Schapire and Yoav Freund and Peter Bartlett and Wee Sun Lee. <a
+href="http://rexa.info/paper/ca1479cb43feeda16386d2e50460bd2c1230bc8b">The Annals of Statistics, to appear. Boosting the Margin: A New Explanation for the Effectiveness of Voting Methods</a>. AT&T Labs. 1998.  [<a
+href="../support/Statlog+(Landsat+Satellite)#ca1479cb43feeda16386d2e50460bd2c1230bc8b">View Context</a>].<br><br>Jaakko Peltonen and Arto Klami and Samuel Kaski. <a
+href="http://rexa.info/paper/ba8302e5db2921603c34aee0c738b103d1948f5f">Learning Metrics for Information Visualization</a>. Neural Networks Research Centre Helsinki University of Technology.  [<a
+href="../support/Statlog+(Landsat+Satellite)#ba8302e5db2921603c34aee0c738b103d1948f5f">View Context</a>].<br><br>C. esar and Cesar Guerra-Salcedo and Darrell Whitley. <a
+href="http://rexa.info/paper/f91a9d851efd2169d5f16f8bfd5c7b9d2b81655c">Feature Selection Mechanisms for Ensemble Creation : A Genetic Search Perspective</a>. Department of Computer Science Colorado State University.  [<a
+href="../support/Statlog+(Landsat+Satellite)#f91a9d851efd2169d5f16f8bfd5c7b9d2b81655c">View Context</a>].<br><br>Grigorios Tsoumakas and Ioannis P. Vlahavas. <a
+href="http://rexa.info/paper/7de1dca96d7e6789dadc875a7f1b070f9d65fff5">Fuzzy Meta-Learning: Preliminary Results</a>. Greek Secretariat for Research and Technology.  [<a
+href="../support/Statlog+(Landsat+Satellite)#7de1dca96d7e6789dadc875a7f1b070f9d65fff5">View Context</a>].<br><br>Xavier Giannakopoulos and Juha Karhunen and Erkki Oja. <a
+href="http://rexa.info/paper/82c18d900119b86bada0621e2774e8fcd0b47140">A COMPARISON OF NEURAL ICA ALGORITHMS USING REAL-WORLD DATA</a>. IDSIA.  [<a
+href="../support/Statlog+(Landsat+Satellite)#82c18d900119b86bada0621e2774e8fcd0b47140">View Context</a>].<br><br>Adil M. Bagirov and Julien Ugon. <a
+href="http://rexa.info/paper/69547b69d3133bba06b4ce74e67e2f3a6366a2f6">An algorithm for computation of piecewise linear function separating two sets</a>. CIAO, School of Information Technology and Mathematical Sciences, The University of Ballarat.  [<a
+href="../support/Statlog+(Landsat+Satellite)#69547b69d3133bba06b4ce74e67e2f3a6366a2f6">View Context</a>].<br><br>Giorgio Valentini. <a
+href="http://rexa.info/paper/77fb0a2e40e1c957295bfa6bffb09ffc1d1bebc7">An experimental bias--variance analysis of SVM ensembles based on resampling techniques</a>.  [<a
+href="../support/Statlog+(Landsat+Satellite)#77fb0a2e40e1c957295bfa6bffb09ffc1d1bebc7">View Context</a>].<br><br>Cesar Guerra-Salcedo and Stephen Chen and Darrell Whitley and Sarah Smith. <a
+href="http://rexa.info/paper/379f34d22ceaf54a97c9a95f0cb0e6eb2a44c1dc">Fast and Accurate Feature Selection Using Hybrid Genetic Strategies</a>. Department of Computer Science Colorado State University.  [<a
+href="../support/Statlog+(Landsat+Satellite)#379f34d22ceaf54a97c9a95f0cb0e6eb2a44c1dc">View Context</a>].<br><br>Je Scott and Mahesan Niranjan and Richard W. Prager. <a
+href="http://rexa.info/paper/d8a0c5fd34dede91f5241e9b9dca0626f6969c0d">Realisable Classifiers: Improving Operating Performance on Variable Cost Problems</a>. Cambridge University Department of Engineering.  [<a
+href="../support/Statlog+(Landsat+Satellite)#d8a0c5fd34dede91f5241e9b9dca0626f6969c0d">View Context</a>].<br><br>Vikas Sindhwani and P. Bhattacharya and Subrata Rakshit. <a
+href="http://rexa.info/paper/7286601416a1cec780621a415323a2bc6c958e11">Information Theoretic Feature Crediting in Multiclass Support Vector Machines</a>.  [<a
+href="../support/Statlog+(Landsat+Satellite)#7286601416a1cec780621a415323a2bc6c958e11">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please refer to the Machine Learning
+Repository's <a href="../citation_policy.html">citation policy</a></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

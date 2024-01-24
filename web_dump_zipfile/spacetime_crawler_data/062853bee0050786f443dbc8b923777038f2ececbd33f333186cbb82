@@ -1,0 +1,522 @@
+¦Ifinal_url¢DtypeEvaluex?https://www.ics.uci.edu/~thornton/ics32a/ProjectGuide/Project4/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE34779¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 26 Nov 2017 12:46:21 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"87db-55ee22c376140"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:58:16 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY‡Û<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC
+ "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../../course.css" type="text/css" />
+
+<title>ICS 32A Fall 2017, Project #4: The Fall of the World's Own Optimist (Part 1)</title>
+</head>
+
+<body>
+
+<div class="navbar">
+
+<p>
+ICS 32A Fall 2017 |
+<a href="../../index.html">News</a> |
+<a href="../../CourseReference.html">Course Reference</a> |
+<a href="../../Schedule.html">Schedule</a> |
+<a href="../../ProjectGuide">Project Guide</a> |
+<a href="../../Notes">Notes and Examples</a> |
+<a href="http://www.ics.uci.edu/~thornton/">About Alex</a>
+</p>
+
+<hr />
+
+</div>
+
+<div class="header">
+
+<p>ICS 32A Fall 2017<br />
+   Project #4: <i>The Fall of the World's Own Optimist (Part 1)</i></p>
+
+</div>
+
+<div class="section">
+
+<p class="center"><b>Due date and time:</b> <i>Friday, December 1, 11:59pm</i></p>
+
+<p class="center"><i>This project is to be done individually</i></p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Background</p>
+
+<p>My first exposure to computers, as a kid in school, was in the context of computer games; some were educational games (it was school, after all), though many were not.  The first time I remember sitting behind a computer &mdash; a <a href="http://en.wikipedia.org/wiki/Radio_Shack_TRS-80">Radio Shack TRS-80 Model I</a> &mdash; I played a game called FASTMATH, which pitted two players against one another, trying to alternately solve arithemtic problems and type in the answers as quickly as possible.  Sure, it was just a boring educational game, one that was ridiculously simple by today's standards, but at the time I was captivated, and I still remember it to this day.  (I especially loved winning, though I didn't always win.)</p>
+
+<p>Thanks to the wisdom and generosity of my parents, it wasn't long before I had my own computer at home (a <a href="http://en.wikipedia.org/wiki/Commodore_64">Commodore 64</a>), complete with its own collection of games.  None of the games I played on my own computer could be classified as educational in a direct sense, though those games were sneaky: They taught me a surprising collection of lessons and motivated me to ask many interesting questions about computing, as I endeavored first to win them outright, then to modify them (to cheat or to change how a game was played to make it more fun), and finally to write them from scratch.  Games in those days, of course, didn't have the same photorealistic, three-dimensional, surround-sound appeal that they have today, but they were nonetheless fun and exciting; their simplicity made writing one's own game seem more possible with limited skills than it does today, in an era of tremendously complex games built by gigantic teams of programmers, designers, and artists.  (In truth, it's easier to build simple games now than it was then, because the computers have become so much more powerful and the tools have gotten better.  It's just harder to compete with the large-scale, professionally-developed games.)  Unfortunately, my skills didn't develop quickly enough &mdash; I always aimed too high, relative to what I knew how to do, but it was tougher when there was no Internet to search when you got stuck on something &mdash; and I never realized the goal of writing my own games before I became interested in other things, though I certainly learned a lot trying.</p>
+
+<p>This project is the first of a two-part sequence that offers you to opportunity to build your own game.  The first of the two projects focuses on developing a clean set of game logic and a test apparatus that runs in the Python shell to let you (and us) verify that it works as expected.  The second one pivots into drawing graphics, generating sounds, and other techniques to turn it into a playable game.  Along the way, we'll focus on finding a design that serves both purposes, on finding ways to simplify our code by eliminating duplication of boilerplate, and continuing our journey into understanding the mechanics and the benefits of classes and object-oriented programming in Python.  Finally, we'll take a step out of Python's standard library and into the world of third-party, open-source libraries that the Python community has to ffer.</p>
+
+<p>Games may seem frivolous to some of you &mdash; I know that not everyone likes to play them &mdash; but they provide a fascinating combination of problems to be solved: software engineering, human-computer interface, computer networks, psychology and cognition, and even (in multiplayer online games) economics and sociology.  Game developers push the envelope &mdash; in some cases further than just about any other kind of software developers &mdash; and many of these lessons can be applied in more seemingly serious contexts.  Even if you're not that interested in games, you'll be surprised what building games can teach you about software.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">The game of Columns</p>
+
+<p>In the late 1980s, a puzzle-based game called Columns showed up on at least one personal computing platform.  Later, it became somewhat more well-known when it was ported to the Sega Genesis, and later to other video game consoles and personal computers, becoming one of the better-known puzzle games of the early 1990s.  In this project and the one that follows it, you'll be building a version of this game.  It's not going to be our goal to completely duplicate the original, but what we'll be building will maintain its spirit throughout.</p>
+
+<p>The best way to start getting your mind around the game is actually to watch someone play it; the game is simple in concept, and you'll probably be able to deduce most of the rules just from watching a little bit of it, so best to start there.</p>
+
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=pFJvY1k-rpM">Columns gameplay video (Sega version from around 1990)</a></li>
+</ul>
+
+<p>Having watched the video, you'll have likely figured out many of the core rules of the game already, though I should point them out, not only to be sure that we all agree on what they are, but so that we can agree also on a set of terminology that we'll use to describe how the game is played.  (A common vocabulary goes a long way in letting people talk about abstract concepts without confusion.)</p>
+
+<ul>
+  <li>The <i>field</i> is a grid of cells, each of which is either empty space or contains a colored jewel.  At the outset, the field is empty, but it begins filling up once the game begins.</li>
+  <li>One at a time, a <i>faller</i> is created and begins descending from the top of the field downward.  Each faller is made up of three jewels arranged vertically, with the three jewels colored randomly.</li>
+  <li>As the faller descends, it can be <i>rotated</i>, which is to say that the bottom jewel becomes the top one, while the other two move down to make room for it.  Because the colors of the jewels are relevant, the act of rotating them serves a vitally important role in the mechanics of the game.</li>
+  <li>Fallers are subject to a crude sort of gravity, so they descend through the field until they <i>land</i> either on the bottom of the field or on top of a jewel that is already present in the field.</li>
+  <li>Once a faller has landed, it <i>freezes</i>, which is to say that the faller has nowhere left to fall, but that the jewels contained within it will remain in the field, wherever they landed.</li>
+  <li>After each faller freezes, if there are three or more jewels of the same color in a row &mdash; either horizontally, vertically, or diagonally &mdash; they are said to <i>match</i>, in which case they are displayed specially and then disappear.  After they disappear, any jewels above them moving down immediately to fill the empty space.</li>
+</ul>
+
+<p>The basic objective of the game is to continue as long as possible, with the game ending as the field becomes to filled to continue.  There are rules around scoring, of course &mdash; because a game like this is a lot less fun if there's no way to measure one's performance &mdash; but we'll skip them for the time being.  For now, our goal is to implement the game's basic mechanics of fallers, movement and rotation, freezing, and the matching and disappearance of adjacent sequences of jewels of the same color.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">The program</p>
+
+<p>This project is focused on implementing the mechanics of Columns, along with a program that you can run in the Python shell with a very spartan user interface that you'll use to test it &mdash; and that we'll use to <i>automatically</i> test it, making it crucial that you get the format of the program's input and output right according to the specification below.  Spacing, capitalization, and other seemingly-minor details are critical; every part of your output needs to be correct to the individual character.</p>
+
+<p>Using your test program, you won't be able to play a fully-functioning game of Columns, but you will be able to determine whether you've handled all of the game's mechanics correctly: fallers, movement and rotation, freezing, matching, and so on.  Note, too, that you don't need to implement all of the logic to receive at least some credit for the project; details are described a little later in the project, but you can receive substantial partial credit for a partially complete implementation, as long as some of the features are working with precisely correct output.</p>
+
+<p>The next project will allow you to take the game mechanics you've implemented here and build a playable game out of them.  But, as with a lot of game implementation, first thing's first: Without the underlying logic working, you can't have a game you can play.</p>
+
+<p class="subtitle">A detailed look at how your program should behave</p>
+
+<p>Your program will read its input via the Python shell (i.e., using the built-in <b>input()</b> function), <i>printing no prompts to a user</i> with no extraneous output other than precisely what is specified below.  The intent here is not to write a user-friendly user interface; what you're actually doing is building a tool for testing your game mechanics, which we'll then be using to <i>automatically</i> test them.  So it is vital that your program reads inputs and write outputs precisely as specified below.  You can freely assume that the input will match the specification described; we will not be testing your program on any inputs that don't match the specification.</p>
+
+<ul>
+  <li>First, your program needs to know the size of the field.  It will always be a rectangle, but the number of rows and columns can vary.
+    <ul>
+      <li>First, your program reads a line of input specifying the number of rows in the field.  You can assume this will be no less than 4.</li>
+      <li>Next, your program reads a line of input specifying the number of columns in the field.  You can assume this will be no less than 3.</li>
+    </ul>
+  </li>
+  <li>Now, your program needs to know what jewels are in the field to begin with.  There are two situations: We might want to start with an empty field, or we might want to specify the contents of the field in the input.
+    <ul>
+      <li>If the field is to begin empty, the word <b>EMPTY</b> will appear alone on the next line of input.
+      <li>If instead we want to specify the contents of the field in the input, the word <b>CONTENTS</b> will appear alone on the next line of input.  Given that there are <i>r</i> rows and <i>c</i> columns in the field, there would then be <i>r</i> lines of input, each of which will contain exactly <i>c</i> characters; these characters represent the contents of each of the field's cells to start with.
+        <ul>
+          <li>For a cell that should contain a jewel of some color, an uppercase letter in the range <b>A</b> through <b>J</b> will be used.  (There are ten different colors that will be possible in the final game we're building, so we'll represent them as one of ten different uppercase letters, both in the input and the output.)</li>
+          <li>For a cell that should be empty, a space will be used instead.</li>
+          <li>Note that when we're specifying the contents of the field explictly, the spaces will always be present in the input for every cell that's empty; the program should expect to read exactly the right number of characters.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>At this point, the game is ready to begin.  From here, we will repeatedly do two things: Display the field, then read a command from the user.</li>
+  <li>The rules for displaying the field are:
+    <ul>
+      <li>Given that the field has <i>r</i> rows, the field will be displayed as a total of <i>r</i> + 1 lines of output.  The first <i>r</i> will correspond to the <i>r</i> rows of the field, which each row displayed like this:
+       <ul>
+         <li>The vertical bar character <b>'|'</b>, followed by three characters for each of the <i>c</i> columns in that row, followed by another vertical bar character <b>'|'</b>.  For each column in that row, the three characters will be:
+           <ul>
+             <li>Three spaces if the cell is empty</li>
+             <li>A space, followed by an uppercase letter <b>A</b>..<b>J</b> if the cell contains a jewel that has been frozen.</li>
+             <li>A left bracket character <b>'['</b>, followed by an uppercase letter <b>A</b>..<b>J</b>, followed by a right bracket character <b>']'</b> if the cell contains a jewel that is part of the faller (if any).</li>
+             <li>A vertical bar character <b>'|'</b>, followed by an uppercase letter <b>A</b>..<b>J</b>, followed by another vertical bar character <b>'|'</b> if the cell contains a jewel that is part of a faller that has landed but not yet frozen.</li>
+             <li>An asterisk character <b>'*'</b>, followed by an uppercase letter <b>A</b>..<b>J</b>, followed by another asterisk character <b>'*'</b> if the cell contains a jewel that has frozen and has been recognized as a match.</li>
+           </ul>
+         </li>
+         <li>After the last row of the field, a space, followed by 3<i>c</i> dashes, followed by another space is displayed.</li>
+       </ul>
+      </li>
+    </ul>
+  </li>
+  <li>The commands that you would read are:
+    <ul>
+      <li>A blank line, which is a crude representation of the passage of time.  (In our complete game, this would happen without any input; instead, when a certain amount of time passes, we would see the appropriate effect.)
+        <ul>
+          <li>If there is a faller present, it falls; if there is a faller that has landed, it freezes; and so on.</li>
+        </ul>
+      </li>
+      <li><b>F</b>, followed by an integer that is a column number (the columns are numbered 1 through <i>c</i>, if there are <i>c</i> columns), followed by a space, followed by three uppercase letters <b>A</b>..</b>J</b>, each of these things separated by spaces (e.g., <b>F 1 A B C</b>).  This means to create a faller in column 1, with a jewel of color <b>A</b> on the top, a jewel of color <b>B</b> below it, and a jewel of color <b>C</b> below that.
+        <ul>
+          <li>The faller begins with only the bottommost of the three jewels visible.  See the example outputs below for more details.</li>
+          <li>Note that there can only be one faller at a time, so this command has no effect if there is a faller that has not already been frozen.</li>
+        </ul>
+      </li>
+      <li><b>R</b> alone on a line, which rotates the faller, if there is one.  If there is no faller currently, or if the faller has landed, this command has no effect.</li>
+      <li><b>&lt;</b> alone on a line, which moves the faller one column to the left, if there is one (and if it not blocked by jewels already frozen on the field or by the edge of the field).  If there is no faller, the faller has landed, or the faller can't be moved to the left, this command has no effect.</li>
+      <li><b>&gt;</b> alone on a line, which moves the faller one column to the right, if there is one (and if it not blocked by jewels already frozen on the field or by the edge of the field).  If there is no faller, the faller has landed, or the faller can't be moved to the right, this command has no effect.</li>
+      <li><b>Q</b> alone on a line, which means that to quit the program.</li>
+    </ul>
+  </li>
+  <li>There are two ways for the program to end:
+    <ul>
+      <li>If the user specifies the command <b>Q</b>, the program ends, with no additional output being printed.</li>
+      <li>When a faller lands without all three of its jewels being visible in the field (for example, if it lands on a jewel that's two rows below the top), the game ends, so the program ends, as well.  In that case, you would print <b>GAME OVER</b> before ending the program.</li>
+    </ul>
+  </li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Two complete examples of program execution</p>
+
+<p>Below are two examples of the program's execution, which you can consult when there are minor issues that you're not sure how to resolve.  Boldfaced, italicized text indicates input, while normal text indicates output.  Note that blank lines are actually blank input lines; there are no blank output lines in this program's design.  Some additional commentary appears to the right of the example, italicized and written in the form of Python comments; that would not appear in your program's output, but will help you to understand the examples.</p>
+
+<p class="subtitle">Beginning with an empty field</p>
+
+<blockquote><pre>
+<b><i>4</i></b>
+<b><i>3</i></b>
+<b><i>EMPTY</i></b>           <i># begin with an empty field with 4 rows and 3 columns</i>
+|         |
+|         |
+|         |
+|         |
+ --------- 
+<b><i>F 3 A B C</i></b>       <i># create a faller containing colors A, B, C in column 3</i>
+|      [C]|
+|         |
+|         |
+|         |
+ --------- 
+                <i># this is a blank line of input; there are lots of them in these examples</i>
+|      [B]|
+|      [C]|
+|         |
+|         |     <i># the faller begins falling</i>
+ --------- 
+
+|      [A]|
+|      [B]|
+|      [C]|
+|         |
+ --------- 
+
+|         |
+|      [A]|
+|      [B]|
+|      [C]|
+ --------- 
+
+|         |
+|      |A||
+|      |B||     <i># the faller has landed</i>
+|      |C||     <i># note the multi-step process here</i>
+ --------- 
+
+|         |
+|       A |
+|       B |
+|       C |     <i># the faller has frozen</i>
+ ---------
+<b><i>F 1 B C A</i></b>
+|[A]      |
+|       A |
+|       B |
+|       C |
+ --------- 
+
+|[C]      |
+|[A]    A |
+|       B |
+|       C |
+ --------- 
+
+|[B]      |
+|[C]    A |
+|[A]    B |
+|       C |
+ --------- 
+<b>R</b>               <i># rotating the faller</i>
+|[A]      |
+|[B]    A |
+|[C]    B |
+|       C |
+ --------- 
+<b>&gt;</b>               <i># moving the faller to the right</i>
+|   [A]   |
+|   [B] A |
+|   [C] B |
+|       C |
+ --------- 
+<b>&gt;</b>
+|   [A]   |
+|   [B] A |
+|   [C] B |
+|       C |     <i># moving to the right again has no effect; it's blocked</i>
+ --------- 
+
+|         |
+|   [A] A |
+|   [B] B |
+|   [C] C |
+ --------- 
+
+|         |
+|   |A| A |
+|   |B| B |
+|   |C| C |
+ --------- 
+
+|         |
+|    A  A |
+|    B  B |
+|    C  C |
+ --------- 
+<b>F 1 D F C</b>
+|[C]      |
+|    A  A |
+|    B  B |
+|    C  C |
+ --------- 
+
+|[F]      |
+|[C] A  A |
+|    B  B |
+|    C  C |
+ --------- 
+
+|[D]      |
+|[F] A  A |
+|[C] B  B |
+|    C  C |
+ --------- 
+
+|         |
+|[D] A  A |
+|[F] B  B |
+|[C] C  C |
+ --------- 
+
+|         |
+||D| A  A |
+||F| B  B |
+||C| C  C |
+ --------- 
+
+|         |
+| D  A  A |
+| F  B  C |
+|*C**C**C*|     <i># we have a match!</i>
+ --------- 
+
+|         |
+|         |
+| D  A  A |
+| F  B  C |     <i># and now the matching jewels disappear</i>
+ --------- 
+<b><i>F 1 H J C</i></b>
+|[C]      |
+|         |
+| D  A  A |
+| F  B  C |
+ --------- 
+
+|[J]      |
+|[C]      |
+| D  A  A |
+| F  B  C |
+ --------- 
+
+||J|      |
+||C|      |
+| D  A  A |
+| F  B  C |     <i># landed, but it doesn't fit!</i>
+ ---------
+GAME OVER
+</pre></blockquote>
+
+<p class="subtitle">Beginning with the field contents specified</p>
+
+<blockquote><pre>
+<b><i>4</i></b>
+<b><i>4</i></b>
+<b><i>CONTENTS</i></b>
+<b><i>    </i></b>            <i># there are four spaces on this line of input</i>
+<b><i>B HF</i></b>
+<b><i>CGJB</i></b>
+<b><i>DBFC</i></b>
+|            |
+| B     H  F |
+| C  G  J  B |
+| D  B  F  C |
+ ------------ 
+<b><i>F 2 A B C</i></b>
+|   [C]      |
+| B     H  F |
+| C  G  J  B |
+| D  B  F  C |
+ ------------ 
+<b><i>Q</i></b>               <i># quitting early is allowed; program ends</i>
+</pre></blockquote>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Working incrementally (and a reward for doing so)</p>
+
+<p>This problem is larger and more complex than you may have worked on before, so it will be important that you're able to control that complexity in your mind by working on the problem incrementally.  You won't be able to solve the entire problem all at once &mdash; and it's possible that some of you won't end up solving the entire problem at all &mdash; yet you do want to be able to get some positive feedback about your progress along the way (and partial credit on the project if you don't finish it), so we're breaking down the grading of this project into a set of features, which may help you to organize your thoughts the same way.  While we aren't (and won't be) explicitly listing a point value on each feature here, this will give you an idea of the way we'll be organizing the grading process.</p>
+
+<p>Your best bet, overall, is not to implement the entire program at once, haphazardly.  Implement it one complete feature at a time.  (This is good advice even if this wasn't being graded; working incrementally is the only way to build programs too large to work through in one sitting.)  There isn't a single ordering of features that is the "right" one, though, of course, some depend on others.  So what you'll want to do is choose one feature to start with, implement just that feature, test it, and then you'll be ready to move on to the next one.  You might also want to keep a copy of your code after you complete each feature, so you can "roll back" to the previous copy if you find that the next step you take leads you in a direction you're not happy with.</p>
+
+<p class="subtitle">The features</p>
+
+<p>This program can be considered to require the following set of features.  We will be grading these relatively independently of one another, except in the sense that some of them depend on others.  For example, if fallers don't move down as time passes, then you won't ever be able to get them to the point where they've landed and frozen.</p>
+
+<p>These aren't listed in any particular order &mdash; and are not listed in anything like the order in which I implemented them in my own solution &mdash; so don't feel like you need to work through these from top to bottom.  But this will serve as a checklist to tell you which issues you have left to solve.</p>
+
+<ul>
+  <li>The game can begin with an empty field of the correct size.</li>
+  <li>The game can begin with the contents of the field specified, with jewels in some of the cells.</li>
+  <li>It is possible to quit the program with the <b>Q</b> command.  (I did this one fairly early; you might want to do the same.)</li>
+  <li>A faller can be created in a column and appear with only the bottommost of its three jewels visible.</li>
+  <li>Fallers can be moved to the left and to the right at any point until they have landed.</li>
+  <li>Fallers cannot be moved to the left or right if they are blocked by jewels that are previously frozen.</li>
+  <li>Fallers can be rotated at any point until they have landed.</li>
+  <li>Fallers land when they can't be moved down any further.</li>
+  <li>Fallers freeze at the next "tick" of time after they have landed.</li>
+  <li>The game ends when a faller lands but cannot be displayed entirely in the field because it didn't move down far enough.</li>
+  <li>Matching can be performed horizontally (i.e., three jewels of the same color horizontally would be considered to match).</li>
+  <li>Matching can be performed vertically.</li>
+  <li>Matching can be performed diagonally.</li>
+  <li>Matched sequences longer than three jewels are handled.</li>
+  <li>More than one matching sequence at the same time can be handled.</li>
+</ul>
+
+<p>Note that substantial partial credit is available for submissions that implement some but not all of these features.  In particular, if you can get everything working except the more esoteric matching scenarios, or even if you can get everything working except matching, you can still receive a fair amount of the 20-point correctness score (plus potentially all of the 10-point quality score).</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Thinking through your design</p>
+
+<p class="subtitle">Module design</p>
+
+<p>You are required to keep the code that implements the game mechanics entirely separate from the code that implements the user interface used for testing it.  To that end, <i>you will be required</i> to submit at least two modules: one that implements your game mechanics and another that implements your user interface.  You're welcome to break these two modules up further if you find it beneficial, but the requirement is that you keep these two parts of your program &mdash; the logic and the user interface &mdash; separate.</p>
+
+<p>Note that this requirement is motivated partly by a desire to build good design habits, but also by the practical reality that maintaining that separation properly will give you a much better chance of being able to reuse your game mechanics, as-is and with little or no modification, in the next project, when you'll be asked to build a complete Columns game (with graphics, keyboard controls, and so on).  In a big-picture sense, you can think of the user interface in this project as being a "throwaway"; while we'll be using it to grade your game mechanics and you'll be using it to verify that the mechanics are correct, the true goal here is the complete version of Columns.  So keeping this "throwaway" code completely separate from your game mechanics means that it will be easy to leave it out of your completed version, without causing anything else to break.</p>
+
+<p>One key thing to keep separate is input and output.  Your game mechanics code should be neither reading input nor printing output &mdash; except maybe temporarily, if you're debugging something.</p>
+
+<p class="subtitle">Module naming</p>
+
+<p><i>Exactly</i> one of your modules must be executable (i.e., should contain an <b>if __name__ == '__main__':</b> block), namely the one that you would execute if you wanted to launch your user interface and play your game.  No other modules are permitted to have an <b>if __name__ == '__main__':</b> block.  (This is so our test automation tools can automatically determine which of your modules to execute.)</p>
+
+<p class="subtitle">Using classes and exceptions to implement your game mechanics</p>
+
+<p>Your game mechanics must consist of at least one class whose objects represent the current "state" of a Columns game, with methods that manipulate that state; you can feel free to implement additional classes, if you'd like.  Note that this is in stark contrast to the approach used in <b>connectfour.py</b> in <a href="../Project2">Project #2</a>, where we used a namedtuple and a set of functions that returned new states.  Classes offer us the ability to mix data together with the operations that safely manipulate that data; they allow us to create kinds of objects that don't just know how to <i>store</i> things, but also to <i>do</i> things.</p>
+
+<p>Some of the methods I found useful in my own implementation of the Columns game state are listed below; this is not an exhaustive list, and you'll probably find a need for additional methods beyond these.</p>
+
+<ul>
+  <li>Get the number of rows and/or columns on the board.</li>
+  <li>Determine whether the game is over.</li>
+  <li>Create a new faller.</li>
+  <li>Handle the passage of time (e.g., moving the faller down, etc.).</li>
+  <li>Moving the faller to the left.</li>
+</ul>
+
+<p>Even if your user interface does error checking, your game mechanics must not assume the presence of a particular user interface, so it must check any parameters it's given and raise an exception if the parameters are problematic (e.g., a non-existent row or column, an attempt to make an invalid move, an attempt to make a move after the game is over).  Create your own exception class(es) to represent these error conditions.</p>
+
+<p class="subtitle">Testing</p>
+
+<p>One issue that comes up in the implementation of a program like this one is that it's difficult to test some of the corner cases that come up in the game mechanics by playing your game using this user interface.  It can be difficult to duplicate certain situations without going through a lot of work up front.  And yet you need to be sure that these issues, and others like them, are handled correctly by your game logic.</p>
+
+<p>Your ability to specify any initial arrangement of jewels in the field when starting the game is one thing that will really help you (and us!) to test these kinds of scenarios, because you won't need to figure out a sequence of moves that lead from a "traditional" initial state to the scenario you want to test.</p>
+
+<p>Another way to do this kind of testing, though, is to load your game mechanics module into the Python shell and type Python expressions and statements into the interpreter manually to verify that the behavior is as you expect; if you aren't doing that already, you're missing out on one of the more valuable tools Python offers for testing and understanding the programs you write.</p>
+
+<p>Another approach is to figure out some interesting scenarios and write program input that covers these scenarios, saving each one into a file using your favorite text editor.  You can then copy and paste these into your program to test and re-test interesting cases as you work.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Sanity-checking your output</p>
+
+<p>We are providing a tool that you can use to sanity check whether you've followed some of the basic requirements above.  It will only give you a "passing" result in these circumstances:</p>
+
+<ul>
+  <li>There is exactly one module that is executable (i.e., with an <b>if __name__ == '__main__':</b> block in it).</li>
+  <li>Executing that module is enough to execute your program.</li>
+  <li>Your program reads its input and generates character-for-character correct input for one test scenario, which is similar to the example inputs and outputs shown above.</li>
+</ul>
+
+<p>It should be noted that there are many additional test inputs that will be used when we grade your project, as there are a number of interesting scenarios that are possible.  The way to understand the sanity checker's output is to think of it this way: Just because the sanity checker says your program passes doesn't mean it's close to perfect, but if you <i>cannot</i> get the sanity checker to report that your program passes, it surely will not pass all of our automated tests (and may well fail all of them).</p>
+
+<p>Running the sanity checker is simple.  First, download the Python module linked below:</p>
+
+<ul>
+  <li><a href="project4_sanitycheck.py">project4_sanitycheck.py</a></li>
+</ul>
+
+<p>Put that file into the same directory as your various Project 4 files.  It's important that its name is <b>project4_sanitycheck.py</b> and that there are no other executable modules in the same directory <i>except</i> <b>project4.py</b>.  Running the sanity-checking module &mdash; for example, by loading it in IDLE and pressing F5 (or selecting <b>Run Module</b> from the <b>Run</b> menu) &mdash; will run the sanity checker and report a result, which will be printed to the Python shell.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Thinking about the future in addition to the present</p>
+
+<p>The next project will revisit the Columns game that you're building here, but will ask you instead to build a playable version of the game using the <b>pygame</b> library.  We'll be talking a lot about <b>pygame</b> over the next couple of weeks in lecture; as we learn more about it, be sure to consider how your design for this project, particularly your game mechanics, can be done in a way that allows you to reuse code in the subsequent project, as you will not want to have to start over from scratch.  This means you'll need to be cognizant of how you can separate code that handles input and output from code that implements underlying game mechanics.  It also means you'll want to start thinking about how your eventual game might need to use your game mechanics, as we learn more about <b>pygame</b> in lecture as we move forward.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Deliverables</p>
+
+<p>Put your name and student ID in a comment at the top of each of your <b>.py</b> files, then submit all of the files to Checkmate.  Take a moment to be sure that you've submitted all of your files.</p>
+
+<p>Follow <a href="../SubmittingProjects.html">this link</a> for a discussion of how to submit your project via Checkmate.  Be aware that I'll be holding you to all of the rules specified in that document, including the one that says that you're responsible for submitting the version of the project that you want graded.  We won't regrade a project simply because you submitted the wrong version accidentally.</p>
+
+<p class="subtitle">Can I submit after the deadline?</p>
+
+<p>Yes, it is possible, subject to the late work policy for this course, which is described in the section titled <i>Late work</i> at <a href="../index.html">this link</a>.</p>
+
+</div>
+
+<div class="history">
+
+<hr />
+
+<ul class="nomarker">
+  <li>Originally written by Alex Thornton, Fall 2017.</li>
+</ul>
+
+</div>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

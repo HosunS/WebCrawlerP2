@@ -1,0 +1,168 @@
+¦Ifinal_url¢DtypeEvaluex1https://www.ics.uci.edu/~skong2/recurrentDepthSegLhttp_headers¢DtypeEvalueŠ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD6128¢Ak¢DtypeEvaluePContent-LocationAv¢DtypeEvalueVrecurrentDepthSeg.html¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueInegotiate¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueCTCNAv¢DtypeEvalueFchoice¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 02 Apr 2018 15:33:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX""17f0-568df4ee4c898;5803b51ff45bf"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 05:56:56 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYð<html>
+<head>
+<title>recurrent scene parser with perspective estimation in the loop - Shu Kong (Aimery) - UC Irvine - Computer Vision</title>
+<link rel="icon" href="img/rnn_estDepth.png" type="img/jpg">
+<style>
+h1 { padding : 0; margin : 0; }
+body { padding : 0; font-family : Arial; font-size : 16px; background-color : #EFEFEF; } /* background-image : url('bg.png');}*/
+#container { width : 1000px; margin : 20px auto;  background-color : #fff; padding : 50px; border : 1px solid #ccc; }
+#me { border : 0 solid black; margin-bottom : 0;}
+#sidebar { margin-left : 25px; border : 0 solid black; float : right; margin-bottom : 0;}
+#content { display : block; margin-right : 260px;}
+a { text-decoration : none; }
+a:hover { text-decoration : underline; }
+a:visited { color : blue; }
+a.invisible { color : inherit; text-decoration : inherit; }
+.publogo { margin-right : 10px; height: 50px; width: 50px; float : left; border : 0;}
+.publication { clear : left; padding-bottom : 0px;}
+.publication p { height : 60px; }
+.codelogo { margin-right : 10px; float : left; border : 0;}
+.code { clear : left; padding-bottom : 10px; vertical-align :middle;}
+.code .download a { display : block; margin : 0 15px; float : left;}
+<!-- #simpsons { margin : 5px auto; text-align : center; color : #B7B7B7; } -->
+<!-- 	#erdos { color : #999; text-align : center; font-size : 12px; } -->
+</style>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26193351-1']);
+	_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<div id="sidebar">
+<figure>
+<img src="img/sceneParsingFlowchart.png" id="me"  width="200"> 
+<figcaption>recurrent coarse-to-fine seg.</figcaption>
+</figure>
+<br>
+</div>
+
+<div id="content">
+<h1 align="center">Recurrent Scene Parsing with Perspective Understanding in the Loop </h1>
+
+
+<p align="center">
+          <a href="http://www.ics.uci.edu/~skong2/" target="_blank">Shu Kong</a>,
+          <a href="http://www.ics.uci.edu/~fowlkes/" target="_blank">Charless Fowlkes</a>
+</p>
+
+
+<p>
+<font color="red">Last update: May 22, 2017.</font>
+</p>
+
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/img/perspectiveDemo.png" alt="[rnn-seg-depth]" width="700" />
+	    </center>
+<br><br>
+</div>
+
+<p>
+Objects may appear at arbitrary scales in perspective images of a scene,
+  posing a challenge for recognition systems that process images at a fixed
+  resolution.  We propose a depth-aware gating module that adaptively selects
+  the pooling field size in a convolutional network architecture according to
+  the object scale (inversely proportional to the depth) so that small details
+  are preserved for distant objects while larger receptive fields are used for
+  those nearby.  The depth gating signal is provided by stereo disparity or
+  estimated directly from monocular input.  We integrate this depth-aware
+  gating into a recurrent convolutional neural network to perform semantic
+  segmentation.  Our recurrent module iteratively refines the segmentation
+  results, leveraging the depth and semantic predictions from the previous
+  iterations.
+
+  
+</p>
+<p>
+Through extensive experiments on four popular large-scale RGB-D datasets, we
+  demonstrate this approach achieves competitive semantic segmentation
+  performance with a model which is substantially more compact.  We carry out
+  extensive analysis of this architecture including variants that operate on
+  monocular RGB but use depth as side-information during training, unsupervised
+  gating as a generic attentional mechanism, and multi-resolution gating.
+  We find that gated pooling for joint semantic segmentation and depth yields
+  state-of-the-art results for quantitative monocular depth estimation.
+</p>
+
+
+<p>
+<b>keywords</b>: depth estimation, perspective geometry, semantic segmentation, recurrent neural networks, scene parsing, RGB-D data, indoor scene parsing, coarse-to-fine segmentation, panoramic photo parsing, attention model, scale-aware attentional gating mechanism.
+
+[<a href="https://github.com/aimerykong/Recurrent-Scene-Parser-with-depthEstimation-in-the-loop">repository</a>]
+
+
+<h2>Reference</h2>
+<ul>
+<li>
+<div class="publication">
+<p> <b>S. Kong</b>, C. Fowlkes, "<font color=#AF7817>Recurrent Scene Parsing with Perspective Understanding in the Loop</font>",
+CVPR, 2018.
+<br>
+[<a href="recurrentDepthSeg.html">project page</a>] 
+[<a href="https://arxiv.org/abs/1705.07238">technical report</a>] 
+[<a href="https://github.com/aimerykong/Recurrent-Scene-Parser-with-Perspective-Estimation-in-the-loop">demo</a>]
+[<a href="https://github.com/aimerykong/Recurrent-Scene-Parser-with-Perspective-Estimation-in-the-loop">model</a>]
+[<a href="http://www.ics.uci.edu/~skong2/img/socal_ml_2017.pdf">two-page summary</a>]
+[<a href="http://www.ics.uci.edu/~skong2/img/depthGatingSeg_poster.pdf">poster</a>]
+[<a href="http://www.ics.uci.edu/~skong2/slides/20180323_APG_ASU.pdf">slides</a>] 
+</p>
+</div>
+</li>
+</ul>
+
+
+<h2>More Visualization</h2>
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/img/attentionalGating.png" alt="[rnn-seg-depth]" width="400" />
+	    </center>
+<br><br>
+</div>
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/img/figure4paper_cityscapes.png" alt="[rnn-seg-depth]" width="700" />
+	    </center>
+<br><br>
+</div>
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/img/figure4paper_nyuv2.jpg" alt="[rnn-seg-depth]" width="700" />
+	    </center>
+<br><br>
+</div>
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/img/demo_nyuv2_depth.jpg" alt="[rnn-seg-depth]" width="700" />
+	    </center>
+<br><br>
+</div>
+
+
+<br clear="both">
+</div>
+</div>
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

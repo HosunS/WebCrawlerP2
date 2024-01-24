@@ -1,0 +1,42 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1096¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 03 Apr 2012 04:36:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"448-4bcbedb116100"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:34:07 GMTKraw_content¢DtypeEvalueYH// OffensiveWords.java
+//
+// Informatics 102 Spring 2012
+// Assignment #1
+//
+// This class consists of one static method that returns a list of the
+// words that are considered offensive.  Your aspect must take its list
+// of offensive words from this class, so that we can plug in our own list
+// of offensive words (by replacing this class with a new one that has a
+// different list of words in it) for grading purposes.
+//
+// The list returned by this class is not permitted to be modified.  Any
+// attempt to modify it results in an UnsupportedOperationException.
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+
+public class OffensiveWords
+{
+	private static String[] offensiveWordsArray = 
+		{ "alex", "thornton", "monkie" };
+	
+	private static List<String> offensiveWords;
+	
+	
+	static
+	{
+		offensiveWords = new ArrayList<String>(
+			Arrays.asList(offensiveWordsArray));
+	}
+
+	
+	
+	public static List<String> getOffensiveWords()
+	{
+		return Collections.unmodifiableList(offensiveWords);
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,72 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4616¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 09 Nov 2018 12:06:22 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"7c1401f-1208-57a3a2e066011"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 15:52:25 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY
+=============================================================
+BAUM-2 : Bahcesehir University Multimodal Multilingual Emotional Database 
+First Release: 23.04.2013
+=============================================================
+
+In the database, there are  286 folders corresponding to each subject, which are named from S001 to S286. There is also an excel file named ï¿½Annotations.xlsxï¿½ that contains all  the annotations. 
+
+Each subject folder has 5 sub-folders. For example for the first subject S001: 
+
+1) S001\avi: contains the avi files of the emotional facial video clips 
+
+2) S001\avi_with_landmarks: the avi files of the videos with the tracked facial landmarks drawn on the images. These videos are for visual inspection purposes only.  
+
+3) S001\emotion: contains the text files corresponding to each of the avi files with the emotion code (given below) and a score between 1-5 reflecting the intensity of the expressed emotion. Emotion Codes: 0:neutral,  1:anger, 2:contempt, 3: disgust, 4: fear, 5: happiness, 6: sadness, 7: surprise
+
+4) S001\facialFeatures: contains the text files corresponding to each avi file containing the locations of the tracked 66 facial landmarks at each frame written in consecutive rows. The format of one row is: [x1 y1 x2 y2 x3 y3 ... x66 y66]. The landmarks have been automatically tracked and have not been manually corrected. Jason Saragihï¿½s FaceTracker has been used for automatic tracking [1]. 
+
+5) S001\wav: the audio files for the video clips in wav format
+
+[1] J.M.Saragih, S.Lucey, and J.F.Cohn, "Deformable Model Fitting by Regularized Landmark Mean-Shift", International Journal of Computer Vision (IJCV), vol. 91, pp. 200-215, 2011.
+
+---------------------------
+Example:
+---------------------------
+
+-- If the avi file name is: BAUM2\S001\avi\001.avi
+
+-- The corresponding emotion label file is:  \BAUM2\S001\emotion\001.txt 
+
+which has  7.0000000e+000, meaning the emotion is  surprise.
+
+--  The corresponding facial landmark file is: \BAUM2\S001\facialFeatures\001.txt which contains 132 numbers in each line corresponding to the x and y coordinates of the tracked facial landmarks of each frame. 
+
+-- The corresponding audio file is: \BAUM2\S001\wav\001.wav 
+
+
+The annotations.xls file has 33 columns, which can be summarized as follows: 
+
+1- Column A: Overall clip counter 
+2- Column B: Subject label (i.e. subject number) 
+3- Column C-D: Number and name of the video clip for a specific subject (a subject may have more than one clips)
+4- Column E: Emotion label as a string
+5- Column F: Emotion label as a number between (1-7)
+6- Column G: The average score reflecting the intensity of the emotion at apex frame (average of the majority votes)
+7- Column H: Language of the movie: E for English, T for Turkish
+8- Column I: Gender of the artist (M/F)
+9- Column J: Age of the artist when the movie was shot (accurate if the birth date of the artist is known, otherwise it has been guessed) 
+10- Column K: 1: if the audio is useful, 0: if audio is not useful,  2: semi-useful (there is bakground noise). Audio is useful when the artist in the clip is speaking and the background music/noise is not disturbing
+11- Column L: Duration of the vide clip in seconds
+12- Column M: The frame number of the apex frame 
+13- Column N: 1 if the face tracker is successul (i.e. tracking does not contain major errors, judged by visual inspection), 0 otherwise 
+14- Column O-AB: The annotations of the 5 labelers(emotion number and the emotion intensity between 1-5). Each pair of columns belong to one subject, marked by a different color.  
+
+-----------------------------------------------------------
+KAPPA STATISTIC
+
+The Kappa statistic (Viera and Garrnett, 2005), which measures the amount of agreement between labelers (i.e. annotators) has been calculated as 0.55 for the BAUM-2 database. This indicates that there is moderate agreement between labelers. 
+
+A.J.Viera and J.M.Garrett, "Understanding Interobserver Agreement: The Kappa Statistic", Family Medicine,vol.37, no.5, 2005. 
+
+------------------------------------------------------------
+
+Please cite the following paper if you use the database in any publicly available document:
+
+
+C. E. Erdem, C. Turan, Z. Aydin, "BAUM-2: A Multilingual Audio-Visual Affective Face Database", Multimedia Tools and Applications, vol. 74, No. 18, pp. 7429- 7459, 2015. DOI:ï¿½10.1007/s11042-014-1986-2,
+Database web site: http://baum2.bahcesehir.edu.tr. 
+
+
+If you find any discrepancies in the database please send an email to cigdem.turan@connect.polyu.hk
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

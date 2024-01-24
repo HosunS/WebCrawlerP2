@@ -1,0 +1,94 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2601¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:53:53 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"a29-4da84c20cce40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 21:20:46 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY
+)/*
+  $Id$
+
+  Copyright (C) 2010 by The Regents of the University of California
+	
+  Redistribution of this file is permitted under
+  the terms of the BSD license.
+    
+  Date: 09/23/2008
+  Author: Alexander Behm <abehm (at) ics.uci.edu>
+*/
+
+#ifndef _ondiskmergerabs_h_
+#define _ondiskmergerabs_h_
+
+#include "filtertree/src/gramlist.h"
+#include "filtertree/src/gramlistondisk.h"
+#include "filtertree/src/statsutil.h"
+#include "filtertree/src/stringcontainer.h"
+#include "common/src/query.h"
+#include "common/src/filtertypes.h"
+
+template <class OnDiskMergerConcrete, class InvList>
+class OnDiskMergerAbs {
+
+protected:
+  GramGen* gramGen;
+  
+public:   
+  bool singleFilterOpt;
+  
+  // for stats gathering
+  unsigned numberStrings;
+  unsigned invListSeeks;
+  double invListData;
+  unsigned initialCandidates;
+  
+  PostMergeFilter pmf;
+
+  // for charsumfiltering
+  QueryCharsumStats* queryCharsumStats;
+  StrCharsumStats* charsumStats;
+  CharsumFilter* charsumFilter;
+
+  // for letter count filtering
+  unsigned lcCharNum;
+  StrLcStats* queryLcStats;
+  StrLcStats* dataLcStats;
+  
+  // for hash count filtering
+  unsigned hcBuckets;
+  StrHcStats* queryHcStats;
+  StrHcStats* dataHcStats;
+
+  StringContainerRM* strContainer;   // TODO: JUST FOR EXPERIMENTS, REMOVE LATER
+  unordered_map<unsigned, string>* gramcode2gram;
+  
+  OnDiskMergerAbs(bool singleFilterOpt = true) 
+    : singleFilterOpt(singleFilterOpt), numberStrings(1),
+    invListSeeks(0), invListData(0.0), initialCandidates(0),
+    pmf(PMF_NONE), queryCharsumStats(NULL), charsumStats(NULL), charsumFilter(NULL),
+    lcCharNum(NULL), queryLcStats(NULL), dataLcStats(NULL),
+    hcBuckets(NULL), queryHcStats(NULL), dataHcStats(NULL),
+    strContainer(NULL), gramcode2gram(NULL) { }
+  
+  bool estimationParamsNeeded() {
+    return static_cast<OnDiskMergerConcrete*>(this)->estimationParamsNeeded_Impl();
+  }
+  
+  void setEstimationParams(float readInvListTimeSlope, float readInvListTimeIntercept, float readStringAvgTime) { 
+    static_cast<OnDiskMergerConcrete*>(this)->setEstimationParams_Impl(readInvListTimeSlope, readInvListTimeIntercept, readStringAvgTime);
+  }
+
+  void setGramGen(GramGen* gramGen) { 
+    this->gramGen = gramGen;
+  }
+  
+  void merge(const Query& query,
+	     vector<vector<QueryGramList<InvList>* >* >& qgls,
+	     unsigned threshold,
+	     fstream& invListsFile,
+	     unsigned numberFilters,
+	     vector<unsigned>& results) {
+    static_cast<OnDiskMergerConcrete*>(this)->merge_Impl(query, qgls, threshold, invListsFile, numberFilters, results);
+  }
+  
+  string getName() {
+    return "OnDiskMergerAbs";
+  }
+};
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

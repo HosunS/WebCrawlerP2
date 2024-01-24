@@ -1,0 +1,193 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE17945¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 26 May 2018 07:39:27 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"4619-56d16fbf6e47c"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 13:39:46 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYF<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Update: layered bsdf**
+
+# 2018.05.24 pdf
+
+## Pdf visualization
+Type | Metal foil (0.01/0.01) | Metallic paint (0.01/0.10) | Frosted metal (0.10/0.01) | Rough on rough (0.10/0.01) 
+----|:----:|:----:|:----:|:----:|:----:
+BDPT (-1) | ![](0524/pdflob/bi-1/pdflobe_0.01_0.01.png width=\pagewidth) | ![](0524/pdflob/bi-1/pdflobe_0.01_0.1.png width=\pagewidth) | ![](0524/pdflob/bi-1/pdflobe_0.1_0.01.png width=\pagewidth) | ![](0524/pdflob/bi-1/pdflobe_0.1_0.1.png width=\pagewidth)
+BDPT (TST) | ![](0524/pdflob/bi2/pdflobe_0.01_0.01.png width=\pagewidth) | ![](0524/pdflob/bi2/pdflobe_0.01_0.1.png width=\pagewidth) | ![](0524/pdflob/bi2/pdflobe_0.1_0.01.png width=\pagewidth) | ![](0524/pdflob/bi2/pdflobe_0.1_0.1.png width=\pagewidth)
+PT (-1) | ![](0524/pdflob/uni-1/pdflobe_0.01_0.01.png width=\pagewidth) | ![](0524/pdflob/uni-1/pdflobe_0.01_0.1.png width=\pagewidth) | ![](0524/pdflob/uni-1/pdflobe_0.1_0.01.png width=\pagewidth) | ![](0524/pdflob/uni-1/pdflobe_0.1_0.1.png width=\pagewidth)
+PT (TST) | ![](0524/pdflob/uni2/pdflobe_0.01_0.01.png width=\pagewidth) | ![](0524/pdflob/uni2/pdflobe_0.01_0.1.png width=\pagewidth) | ![](0524/pdflob/uni2/pdflobe_0.1_0.01.png width=\pagewidth) | ![](0524/pdflob/uni2/pdflobe_0.1_0.1.png width=\pagewidth)
+top:Mean bottom:Max | ![](0524/pdflob/max/pdflobe_0.01_0.01.png width=\pagewidth) | ![](0524/pdflob/max/pdflobe_0.01_0.1.png width=\pagewidth) | ![](0524/pdflob/max/pdflobe_0.1_0.01.png width=\pagewidth) | ![](0524/pdflob/max/pdflobe_0.1_0.1.png width=\pagewidth)
+(TRT+ Diffuse(0.1)) | ![](0524/pdflob/trt/pdflobe_0.01_0.01.png width=\pagewidth) | ![](0524/pdflob/trt/pdflobe_0.01_0.1.png width=\pagewidth) | ![](0524/pdflob/trt/pdflobe_0.1_0.01.png width=\pagewidth) | ![](0524/pdflob/trt/pdflobe_0.1_0.1.png width=\pagewidth)
+
+
+## Equal sample rendering
+Type | Metal foil (0.01/0.01) | Metallic paint (0.01/0.10) | Frosted metal (0.10/0.01) | Rough on rough (0.10/0.01) 
+----|:----:|:----:|:----:|:----:|:----:
+BDPT (-1) | ![](0524/render1/bi-1/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/bi-1/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/bi-1/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/bi-1/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:5.2m | spp:100 time:4.80m | spp:100 time:5.06m | spp:100 time:4.57m 
+BDPT (TST) | ![](0524/render1/bi2/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/bi2/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/bi2/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/bi2/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:2.67m | spp:100 time:2.66m | spp:100 time:2.51m | spp:100 time:2.45m 
+PT (-1) | ![](0524/render1/uni-1/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/uni-1/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/uni-1/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/uni-1/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:2.51m | spp:100 time:2.38m | spp:100 time:2.33m | spp:100 time:2.31m 
+PT (TST) | ![](0524/render1/uni2/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/uni2/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/uni2/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/uni2/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:2.04m | spp:100 time:1.93m | spp:100 time:1.94m | spp:100 time:1.92m 
+Max | ![](0524/render1/max/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/max/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/max/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/max/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:1.62m | spp:100 time:1.50m | spp:100 time:1.60m | spp:100 time:1.48m 
+Mean + diffuse(0.1) | ![](0524/render1/mean_0.1/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/mean_0.1/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/mean_0.1/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/mean_0.1/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:1.62m | spp:100 time:1.50m | spp:100 time:1.60m | spp:100 time:1.48m 
+1x (TRT+ diffuse(0.1)) | ![](0524/render1/trt/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/trt/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/trt/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/trt/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:1.62m | spp:100 time:1.57m | spp:100 time:1.61m | spp:100 time:1.49m 
+1x (PT(TST)+ diffuse(0.1)) | ![](0524/render1/uni2_0.1/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/uni2_0.1/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/uni2_0.1/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/uni2_0.1/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:1.69m | spp:100 time:1.62m | spp:100 time:1.65m | spp:100 time:1.59m 
+1x (BDPT(TST)+ diffuse(0.1)) | ![](0524/render1/bi2_0.1/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/bi2_0.1/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/bi2_0.1/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/bi2_0.1/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:1.78m | spp:100 time:1.82m | spp:100 time:1.76m | spp:100 time:1.71m 
+3x (BDPT(TST)+ diffuse(0.1)) | ![](0524/render1/bi2_0.1_3x/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/bi2_0.1_3x/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/bi2_0.1_3x/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/bi2_0.1_3x/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:2.29m | spp:100 time:2.22m | spp:100 time:2.22m | spp:100 time:2.27m 
+1x (BDPT(TST)+ diffuse(1.0)) | ![](0524/render1/bi2_1.0/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/bi2_1.0/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/bi2_1.0/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/bi2_1.0/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:m | spp:100 time:m | spp:100 time:m | spp:100 time:m 
+1x (BDPT(TST)+ diffuse(2.0)) | ![](0524/render1/bi2_2.0/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/bi2_2.0/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/bi2_2.0/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/bi2_2.0/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:m | spp:100 time:m | spp:100 time:m | spp:100 time:m 
+1x (BDPT(TST)+ diffuse(3.0)) | ![](0524/render1/bi2_3.0/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/bi2_3.0/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/bi2_3.0/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/bi2_3.0/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:m | spp:100 time:m | spp:100 time:m | spp:100 time:m 
+1x (BDPT(TST)+ diffuse(5.0)) | ![](0524/render1/bi2_5.0/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/bi2_5.0/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/bi2_5.0/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/bi2_5.0/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:m | spp:100 time:m | spp:100 time:m | spp:100 time:m 
+1x (BDPT(TST)+ diffuse(10.0)) | ![](0524/render1/bi2_10.0/render_0.01_0.01.png width=\pagewidth) | ![](0524/render1/bi2_10.0/render_0.01_0.1.png width=\pagewidth) | ![](0524/render1/bi2_10.0/render_0.1_0.01.png width=\pagewidth) | ![](0524/render1/bi2_10.0/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:m | spp:100 time:m | spp:100 time:m | spp:100 time:m 
+
+
+
+## Equal time rendering
+Type | Metal foil (0.01/0.01) | Metallic paint (0.01/0.10) | Frosted metal (0.10/0.01) | Rough on rough (0.10/0.01) 
+----|:----:|:----:|:----:|:----:|:----:
+BDPT (-1) | ![](0524/render2/bi-1/render_0.01_0.01.png width=\pagewidth) | ![](0524/render2/bi-1/render_0.01_0.1.png width=\pagewidth) | ![](0524/render2/bi-1/render_0.1_0.01.png width=\pagewidth) | ![](0524/render2/bi-1/render_0.1_0.1.png width=\pagewidth)
+~ | spp:40 time:2.07m | spp:40 time:1.92m | spp:40 time:1.97m | spp:40 time:1.84m 
+BDPT (TRT) | ![](0524/render2/bi2/render_0.01_0.01.png width=\pagewidth) | ![](0524/render2/bi2/render_0.01_0.1.png width=\pagewidth) | ![](0524/render2/bi2/render_0.1_0.01.png width=\pagewidth) | ![](0524/render2/bi2/render_0.1_0.1.png width=\pagewidth)
+~ | spp:75 time:1.89m | spp:75 time:1.82m | spp:75 time:1.84m | spp:75 time:1.73m 
+PT (-1) | ![](0524/render2/uni-1/render_0.01_0.01.png width=\pagewidth) | ![](0524/render2/uni-1/render_0.01_0.1.png width=\pagewidth) | ![](0524/render2/uni-1/render_0.1_0.01.png width=\pagewidth) | ![](0524/render2/uni-1/render_0.1_0.1.png width=\pagewidth)
+~ | spp:80 time:1.93m | spp:80 time:1.85m | spp:80 time:1.87m | spp:80 time:1.74m 
+PT (TRT) | ![](0524/render2/uni2/render_0.01_0.01.png width=\pagewidth) | ![](0524/render2/uni2/render_0.01_0.1.png width=\pagewidth) | ![](0524/render2/uni2/render_0.1_0.01.png width=\pagewidth) | ![](0524/render2/uni2/render_0.1_0.1.png width=\pagewidth)
+~ | spp:100 time:2.04m | spp:100 time:1.93m | spp:100 time:1.94m | spp:100 time:1.92m 
+Max | ![](0524/render2/max/render_0.01_0.01.png width=\pagewidth) | ![](0524/render2/max/render_0.01_0.1.png width=\pagewidth) | ![](0524/render2/max/render_0.1_0.01.png width=\pagewidth) | ![](0524/render2/max/render_0.1_0.1.png width=\pagewidth)
+~ | spp:125 time:1.95m | spp:125 time:1.91m | spp:125 time:1.93m | spp:125 time:1.91m 
+
+# 2018.05.22 Pdf evaluation
+
+Max
+![](0517/evaluation/pdf_Max/conductor_unidir_fromTop_pdf_10_Max.png width=\pagewidth)
+
+MC(-1)
+![](0517/evaluation/pdf_stoch/conductor_unidir_fromTop_pdf_10_stoch-1.png width=\pagewidth)
+
+MC(1)
+![](0517/evaluation/pdf_stoch1/conductor_unidir_fromTop_pdf_10_stoch1.png width=\pagewidth)
+
+MC(2)
+![](0517/evaluation/pdf_stoch2/conductor_unidir_fromTop_pdf_10_stoch2.png width=\pagewidth)
+
+MC(3)
+![](0517/evaluation/pdf_stoch3/conductor_unidir_fromTop_pdf_10_stoch3.png width=\pagewidth)
+
+
+# 2018.05.17
+
+## Evaluation
+
+### Our unidir-layered and bidir-layered
+
+Use transparent object?
+
+Type | Metal foil (0.01/0.01) | Metallic paint (0.01/0.10) | Frosted metal (0.10/0.01) | Rough on rough (0.10/0.10) | different $g$ or $IOR$ or $\sigma_t$
+----|:----:|:----:|:----:|:----:|:----:
+Our Unidir (Sample() and Eval()) | ![](0517/evaluation/uni/lobe_0.01_0.01.png width=\pagewidth) | ![](0517/evaluation/uni/lobe_0.01_0.1.png width=\pagewidth) | ![](0517/evaluation/uni/lobe_0.1_0.01.png width=\pagewidth) | ![](0517/evaluation/uni/lobe_0.1_0.1.png width=\pagewidth) |
+~ | spp: time: | spp: time: | spp: time: | spp: time: | 
+Our Unidir (Rendered) | ![](0517/evaluation/uni/render_0.01_0.01.png width=\pagewidth) | ![](0517/evaluation/uni/render_0.01_0.1.png width=\pagewidth) | ![](0517/evaluation/uni/render_0.1_0.01.png width=\pagewidth) | ![](0517/evaluation/uni/render_0.1_0.1.png width=\pagewidth) |
+~ | spp:100 time:1.631m | spp:100 time:1.504m | spp:100 time:1.477m | spp: time:1.511m | 
+Our Bidir (Sample() and Eval()) | ![](0517/evaluation/bi/lobe_0.01_0.01.png width=\pagewidth) | ![](0517/evaluation/bi/lobe_0.01_0.1.png width=\pagewidth) | ![](0517/evaluation/bi/lobe_0.1_0.01.png width=\pagewidth) | ![](0517/evaluation/bi/lobe_0.1_0.1.png width=\pagewidth) |
+~ | spp: time: | spp: time: | spp: time: | spp: time: | 
+Our Bidir (Rendered) | ![](0517/evaluation/bi/render_0.01_0.01.png width=\pagewidth) | ![](0517/evaluation/bi/render_0.01_0.1.png width=\pagewidth) | ![](0517/evaluation/bi/render_0.1_0.01.png width=\pagewidth) | ![](0517/evaluation/bi/render_0.1_0.1.png width=\pagewidth) |
+~ | spp:100 time:3.017m | spp:100 time:2.798m | spp:100 time:2.904m | spp:100 time:3.022m | 
+
+
+### Different Pdfs
+
+show some Pdf curves?
+
+Type | Metal foil (0.01/0.01) | Metallic paint (0.01/0.10) | Frosted metal (0.10/0.01) | Rough on rough (0.10/0.01) | different $g$ or $IOR$ or $\sigma_t$
+----|:----:|:----:|:----:|:----:|:----:
+MC simulation | ![](0517/evaluation/bi/render_0.01_0.01.png width=\pagewidth) | ![](0517/evaluation/bi/render_0.01_0.1.png width=\pagewidth) | ![](0517/evaluation/bi/render_0.1_0.01.png width=\pagewidth) | ![](0517/evaluation/bi/render_0.1_0.1.png width=\pagewidth) |
+~ | spp:100 time:3.017m | spp:100 time:2.798m | spp:100 time:2.904m | spp:100 time:3.022m | 
+MC (limit depth) + diffuse | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) |
+~ | spp: time: | spp: time: | spp: time: | spp: time: | 
+Min() | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) |
+~ | spp: time: | spp: time: | spp: time: | spp: time: | 
+Max() | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) |
+~ | spp: time: | spp: time: | spp: time: | spp: time: | 
+
+
+## Validation
+
+Type | Metal foil (0.01/0.01) | Metallic paint (0.01/0.10) | Frosted metal (0.10/0.01) | Rough on rough (0.10/0.10) | different $g$ or $IOR$ or $\sigma_t$
+----|:----:|:----:|:----:|:----:|:----:
+PT | ![](0517/validation/pt/render_0.01_0.01.png width=\pagewidth) | ![](0517/validation/pt/render_0.01_0.1.png width=\pagewidth) | ![](0517/validation/pt/render_0.1_0.01.png width=\pagewidth) | ![](0517/validation/pt/render_0.1_0.1.png width=\pagewidth) |
+~ | spp:100 time:23.42s | spp:100 time:24.90s | spp:100 time:26.10s | spp:100 time:25.37s | 
+BDPT | ![](0517/validation/bdpt/render_0.01_0.01.png width=\pagewidth) | ![](0517/validation/bdpt/render_0.01_0.1.png width=\pagewidth) | ![](0517/validation/bdpt/render_0.1_0.01.png width=\pagewidth) | ![](0517/validation/bdpt/render_0.1_0.1.png width=\pagewidth) |
+~ | spp:100 time:42.89s | spp:100 time:43.91s | spp:100 time:45.03s | spp:100 time:47.59s | 
+Our Unidir | ![](0517/validation/uni/render_0.01_0.01.png width=\pagewidth) | ![](0517/validation/uni/render_0.01_0.1.png width=\pagewidth) | ![](0517/validation/uni/render_0.1_0.01.png width=\pagewidth) | ![](0517/validation/uni/render_0.1_0.1.png width=\pagewidth) |
+~ | spp:100 time:1.631m | spp:100 time:1.504m | spp:100 time:1.477m | spp: time:1.511m | 
+Our Bidir | ![](0517/validation/bi/render_0.01_0.01.png width=\pagewidth) | ![](0517/validation/bi/render_0.01_0.1.png width=\pagewidth) | ![](0517/validation/bi/render_0.1_0.01.png width=\pagewidth) | ![](0517/validation/bi/render_0.1_0.1.png width=\pagewidth) |
+~ | spp:100 time:3.017m | spp:100 time:2.798m | spp:100 time:2.904m | spp:100 time:3.022m | 
+Wenzel14' | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) |
+~ | spp: time: | spp: time: | spp: time: | spp: time: | 
+Laurent18' | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) | ![](0517/p256.png width=\pagewidth) |
+~ | spp: time: | spp: time: | spp: time: | spp: time: | 
+
+
+## Performance
+
+Directional light, high $g$ value
+Type | Metal foil (0.01/0.01) | Metallic paint (0.01/0.10) | Frosted metal (0.10/0.01) | Rough on rough (0.10/0.10) | different $g$ or $IOR$ or $\sigma_t$
+----|:----:|:----:|:----:|:----:|:----:
+PT | ![](0517/performance/pt/render_0.01_0.01.png width=\pagewidth) | ![](0517/performance/pt/render_0.01_0.1.png width=\pagewidth) | ![](0517/performance/pt/render_0.1_0.01.png width=\pagewidth) | ![](0517/performance/pt/render_0.1_0.1.png width=\pagewidth) |
+~ | spp: time: | spp: time: | spp: time: | spp: time: | 
+BDPT | ![](0517/performance/bdpt/render_0.01_0.01.png width=\pagewidth) | ![](0517/performance/bdpt/render_0.01_0.1.png width=\pagewidth) | ![](0517/performance/bdpt/render_0.1_0.01.png width=\pagewidth) | ![](0517/performance/bdpt/render_0.1_0.1.png width=\pagewidth) |
+~ | spp:100 time:43.01s | spp:100 time:47.33s | spp:100 time:46.76s | spp:100 time:49.62s | 
+Our Unidir | ![](0517/performance/uni/render_0.01_0.01.png width=\pagewidth) | ![](0517/performance/uni/render_0.01_0.1.png width=\pagewidth) | ![](0517/performance/uni/render_0.1_0.01.png width=\pagewidth) | ![](0517/performance/uni/render_0.1_0.1.png width=\pagewidth) |
+~ | spp: time: | spp: time: | spp: time: | spp: time: | 
+Our Bidir | ![](0517/performance/bi/render_0.01_0.01.png width=\pagewidth) | ![](0517/performance/bi/render_0.01_0.1.png width=\pagewidth) | ![](0517/performance/bi/render_0.1_0.01.png width=\pagewidth) | ![](0517/performance/bi/render_0.1_0.1.png width=\pagewidth) |
+~ | spp:20 time:48.11s | spp:20 time:45.58s | spp:20 time:44.71s | spp:20 time:45.99s | 
+
+
+
+## Generality
+
+### Heterogeneous (beat Wenze14')
+
+### Accuracy (beat Laurent18')
+
+### Special material (Cloth)
+
+
+## Multi-layer
+
+
+End.
+
+<a href="report.html" target="_blank">Report</a>
+
+<a href="update_20170830.html" target="_blank">Old Doc1</a>
+
+<a href="update_20170915.html" target="_blank">Old Doc2</a>
+
+<a href="update_20171219.html" target="_blank">Old Doc3</a>
+
+<a href="update_20180122.html" target="_blank">Old Doc4</a>
+
+<a href="update_20180517.html" target="_blank">Old Doc5</a>
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

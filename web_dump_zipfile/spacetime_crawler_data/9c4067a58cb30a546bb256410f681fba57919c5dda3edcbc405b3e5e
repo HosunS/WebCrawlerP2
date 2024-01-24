@@ -1,0 +1,525 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE28937¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 10 May 2018 22:17:27 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"7109-56be1627813fc"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 20:34:56 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYq	<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Update: layered bsdf**
+
+# 2018.05.10 
+
+Point light, direct illumination only, equal time
+
+## Unidirectional (25spp)
+![0.01|0.01](0510/unidir_pointLight_directOnly/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![0.01|0.1](0510/unidir_pointLight_directOnly/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![0.1|0.01](0510/unidir_pointLight_directOnly/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![0.1|0.1](0510/unidir_pointLight_directOnly/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth)
+
+## Bidirectional (10spp)
+![0.01|0.01](0510/bidir_pointLight_directOnly/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![0.01|0.1](0510/bidir_pointLight_directOnly/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![0.1|0.01](0510/bidir_pointLight_directOnly/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![0.1|0.1](0510/bidir_pointLight_directOnly/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth)
+
+
+# 2018.05.09 
+
+From left to right (top|bottom roughness): 0.01|0.01, 0.01|0.1, 0.1|0.01, 0.1|0.1
+
+$\sigma_t$ = 1, g = 0.95, IOR = 1.5
+
+## Unidirectional Eval()
+![29.6 s](0509/compare/0.01_0.01/lobe/unidir_29.6/lobe_eval.png width=\pagewidth) ![31.34 s](0509/compare/0.01_0.1/lobe/unidir_31.34/lobe_eval.png width=\pagewidth) ![27.87 s](0509/compare/0.1_0.01/lobe/unidir_27.87/lobe_eval.png width=\pagewidth) ![29.55 s](0509/compare/0.1_0.1/lobe/unidir_29.55/lobe_eval.png width=\pagewidth)
+
+## Bidirectional Eval()
+![25.04 s](0509/compare/0.01_0.01/lobe/bidir_25.04/lobe_eval.png width=\pagewidth) ![26.4 s](0509/compare/0.01_0.1/lobe/bidir_26.4/lobe_eval.png width=\pagewidth) ![22.7 s](0509/compare/0.1_0.01/lobe/bidir_22.7/lobe_eval.png width=\pagewidth) ![25.99 s](0509/compare/0.1_0.1/lobe/bidir_25.99/lobe_eval.png width=\pagewidth)
+
+## Unidirectional Rendering (spp:200)
+
+With global MIS ("MAX")
+![](0509/unidir_volpath_MAX/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/unidir_volpath_MAX/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![](0509/unidir_volpath_MAX/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/unidir_volpath_MAX/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth)
+
+With global MIS ("MIN")
+![](0509/unidir_volpath_MIN/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/unidir_volpath_MIN/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![](0509/unidir_volpath_MIN/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/unidir_volpath_MIN/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth)
+<!-- ![1.6028 min](0509/compare/0.01_0.01/render/unidir_1.6028/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![1.5812 min](0509/compare/0.01_0.1/render/unidir_1.5812/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![1.5605 min](0509/compare/0.1_0.01/render/unidir_1.5605/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![1.5449 min](0509/compare/0.1_0.1/render/unidir_1.5449/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth) -->
+
+Without global MIS
+![](0509/unidir_volpath_simple/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/unidir_volpath_simple/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![](0509/unidir_volpath_simple/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/unidir_volpath_simple/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth)
+
+## Bidirectional Rendering (spp:100)
+
+With global MIS ("MAX")
+![](0509/bidir_volpath_MAX/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/bidir_volpath_MAX/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![](0509/bidir_volpath_MAX/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/bidir_volpath_MAX/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth)
+
+With global MIS ("MIN")
+![](0509/bidir_volpath_MIN/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/bidir_volpath_MIN/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![](0509/bidir_volpath_MIN/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/bidir_volpath_MIN/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth)
+<!-- ![1.7036 min](0509/compare/0.01_0.01/render/bidir_1.7036/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![1.6296 min](0509/compare/0.01_0.1/render/bidir_1.6296/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![1.6316 min](0509/compare/0.1_0.01/render/bidir_1.6316/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![1.6146 min](0509/compare/0.1_0.1/render/bidir_1.6146/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth) -->
+
+Without global MIS
+![](0509/bidir_volpath_simple/render_0.01_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/bidir_volpath_simple/render_0.01_0.1_0.95_1_1.5.png width=\pagewidth) ![](0509/bidir_volpath_simple/render_0.1_0.01_0.95_1_1.5.png width=\pagewidth) ![](0509/bidir_volpath_simple/render_0.1_0.1_0.95_1_1.5.png width=\pagewidth)
+
+## visualization of pdf (topleft: groundtruth, topright: ad-hoc)
+
+0.01 | 0.01
+!["MAX"](0509/pdf/lobe_0.01_0.01_MAX.png width=\pagewidth) !["MIN"](0509/pdf/lobe_0.01_0.01_MIN.png width=\pagewidth)
+
+0.01 | 0.1
+!["MAX"](0509/pdf/lobe_0.01_0.1_MAX.png width=\pagewidth) !["MIN"](0509/pdf/lobe_0.01_0.1_MIN.png width=\pagewidth)
+
+0.1 | 0.01
+!["MAX"](0509/pdf/lobe_0.1_0.01_MAX.png width=\pagewidth) !["MIN"](0509/pdf/lobe_0.1_0.01_MIN.png width=\pagewidth)
+
+0.1 | 0.1
+!["MAX"](0509/pdf/lobe_0.1_0.1_MAX.png width=\pagewidth) !["MIN"](0509/pdf/lobe_0.1_0.1_MIN.png width=\pagewidth)
+
+## Layerlab Rendering (Discretization:500, spp:100)
+![45.0s+60M+15.3s](0509/compare/0.01_0.01/render/layerlab/layerlab_0.01_0.01.png width=\pagewidth) ![39.6s+49M+12.7s](0509/compare/0.01_0.1/render/layerlab/layerlab_0.01_0.1.png width=\pagewidth) ![47.4s+46M+8.3s](0509/compare/0.1_0.01/render/layerlab/layerlab_0.1_0.01.png width=\pagewidth) ![35.8s+45M+7.9s](0509/compare/0.1_0.1/render/layerlab/layerlab_0.1_0.1.png width=\pagewidth)
+
+Precomputation time + '.bsdf' file size + render time
+
+# 2018.05.02
+
+## Roughtness: top=0.1,bottom=0.01 (Surface only)
+![Reference](0502/lobe_sample.png width=\pagewidth) ![Bi-dir (30spp)](0502/lobe_bidir_30_eval.png width=\pagewidth) ![Equal sample (30spp)](0502/lobe_30_eval.png width=\pagewidth)  ![Equal time (130spp)](0502/lobe_130_eval.png width=\pagewidth)
+
+## Roughtness: top=0.25,bottom=0.01 (Surface only)
+![Reference](0502/lobe2_sample.png width=\pagewidth) ![Bi-dir (30spp)](0502/lobe2_bidir_eval.png width=\pagewidth) ![Equal sample (30spp)](0502/lobe2_eval.png width=\pagewidth)  ![Equal time (130spp)](0502/lobe2_equaltime_eval.png width=\pagewidth)
+
+![left:bi-dir; center:equal sample; right:equal time](0502/lobe2_curve.png width=\pagewidth)
+
+
+## rendered
+![Equal time](0502/render_0.25_0.01_0.95_2_1.5_layer.png width=\pagewidth) ![Bi-dir](0502/render_0.25_0.01_0.95_2_1.5.png width=\pagewidth) 
+
+
+# 2018.04.27
+<a href="https://www.overleaf.com/read/cgpgvzwdzjtn" target="_blank">Latex Doc</a>
+
+
+<!-- ## Input
+We have two seperate paths from path tracing:
+
+Path $X^{(L)}$: $\omega_0^{(L)}$, $Z_1^{(L)}$, $\omega_1^{(L)}$, $Z_2^{(L)}$, $\omega_2^{(L)}$, $\dots$, $Z_{N-1}^{(L)}$, $\omega_{N-1}^{(L)}$, $Z_N^{(L)}$, $\omega_N^{(L)}$. Where $\omega_0^{(L)}=-w_i$
+
+Path $X^{(R)}$: $\omega_0^{(R)}$, $Z_1^{(R)}$, $\omega_1^{(R)}$, $Z_2^{(R)}$, $\omega_2^{(R)}$, $\dots$, $Z_{M-1}^{(R)}$, $\omega_{M-1}^{(R)}$, $Z_M^{(R)}$, $\omega_M^{(R)}$. Where $\omega_0^{(R)}=-w_o$
+
+![](0427/1.png width=\pagewidth)
+
+\begin{equation}
+Tr^{(L)}(j) = \prod_{i=1}^{j} \frac{f_s(\omega_{i-1}^{(L)} \to \omega_{i}^{(L)}) |\omega_{i,Z}^{(L)}| }{p(\omega_{i-1}^{(L)} \to \omega_{i}^{(L)})}, j = 1,2,\dots,N
+\end{equation}
+
+\begin{equation}
+Tr^{(R)}(j) = \prod_{i=1}^{j} \frac{f_s(\omega_{i-1}^{(R)} \to \omega_{i}^{(R)}) |\omega_{i,Z}^{(R)}| }{p(\omega_{i-1}^{(R)} \to \omega_{i}^{(R)})}, j = 1,2,\dots,M
+\end{equation}
+
+## Generate new path
+Choose a subpath from both Path $^{(L)}$ and Path $^{(R)}$, and connect two subpath by some* sampling strategy ($\color{red} \omega$):
+
+Path $X^{(nm,\color{red} \omega)}$: $\omega_0^{(L)}$, $Z_1^{(L)}$, $\omega_1^{(L)}$, $\dots$, $\omega_{n-1}^{(L)}$, $Z_n^{(L)}$, $\color{red} \omega$, $Z_m^{(R)}$, $\omega_{m-1}^{(R)}$, $\dots$, $\omega_1^{(R)}$, $Z_1^{(R)}$, $\omega_0^{(R)}$.
+
+![](0427/2.png width=\pagewidth)
+
+$\color{red} \omega$ could be sampled from $Z_n^{(L)}$: $w = w_n^{(L)}$, or from $Z_m^{(R)}$: $w = w_m^{(R)}$. 
+
+Our goal (MIS): 
+\begin{equation}
+\frac{f(X^{(\omega=w_n^{(L)})})}{p^{(\omega=w_n^{(L)})}} \frac{p^{(\omega=w_n^{(L)})}}{\sum_j p_j} + 
+\frac{f(X^{(\omega=w_m^{(R)})})}{p^{(\omega=w_m^{(R)})}} \frac{p^{(\omega=w_m^{(R)})}}{\sum_j p_j}
+\end{equation}
+
+From next section, we will just focus on first case.
+
+Path $X^{(nm,\omega=w_n^{(L)})}$: $\omega_0^{(L)}$, $Z_1^{(L)}$, $\omega_1^{(L)}$, $\dots$, $\omega_{n-1}^{(L)}$, $Z_n^{(L)}$, $w_n^{(L)}$, $Z_m^{(R)}$, $\omega_{m-1}^{(R)}$, $\dots$, $\omega_1^{(R)}$, $Z_1^{(R)}$, $\omega_0^{(R)}$.
+
+![](0427/3.png width=\pagewidth)
+
+## f/p ($\omega=w_n^{(L)}$)
+
+\begin{equation}
+f(X) = f_s(\omega_{m-1}^{(R)} \to -\omega_{n}^{(L)}) \prod_{i=1}^{n} f_s(\omega_{i-1}^{(L)} \to \omega_{i}^{(L)}) \prod_{i=1}^{m-1} f_s(\omega_{i-1}^{(R)} \to \omega_{i}^{(R)}) \prod_{i=1}^{n} |\omega_{i,Z}^{(L)}| \prod_{i=1}^{m-1} |\omega_{i,Z}^{(R)}|
+\end{equation}
+
+\begin{equation}
+p = \left[\prod_{i=1}^{n} p(\omega_{i-1}^{(L)} \to \omega_{i}^{(L)}) \right] \left[\prod_{i=1}^{m-1} p(\omega_{i-1}^{(R)} \to \omega_{i}^{(R)}) \right]
+\end{equation}
+
+\begin{equation}
+\frac{f(X)}{p} = 
+Tr^{(L)}(n) \; Tr^{(R)}(m-1) \; f_s(\omega_{m-1}^{(R)} \to -\omega_{n}^{(L)})
+\end{equation}
+
+## weights
+
+\begin{equation}
+\frac{p}{\sum_{j} p_j} =
+\frac{1}{\sum_{j} \frac{p_j}{p}} \;\;\;\; (p \in \{p_j\})
+\end{equation}
+
+$p_{Z_i,\omega_j}^{a}$
+ -->
+
+
+
+
+# 2018.04.10
+<a href="https://rgl.epfl.ch/publications/Jakob2014Comprehensive" target="_blank">Wenzel's layered project</a>
+
+<a href="https://www.mitsuba-renderer.org/repos/mitsuba.git/files/layered-0.5.1/?at=layered-0.5.1" target="_blank">Wenzel's code</a>
+
+## In wenzel's video
+<a href="0410/wenzel/wenzelvideo.png"><img src=0410/wenzel/wenzelvideo.png></a>
+
+## what I tried
+<a href="0410/wenzel/wenzel.png"><img src=0410/wenzel/wenzel.png></a>
+<a href="0410/wenzel/wenzel_pointlight.png"><img src=0410/wenzel/wenzel_pointlight.png></a>
+
+
+# 2018.04.04 
+## Different IOR ($\alpha_{top}=0.001$, $\alpha_{bottom}=0.001$, $g=0.95$, $\sigma_t=1$)
+<center>
+<table>
+<tr>
+<td><a href="0404/IOR/render_0.001_0.001_0.95_1_1.001.png"><img src=0404/IOR/render_0.001_0.001_0.95_1_1.001.png></a></td>
+<td><a href="0404/IOR/render_0.001_0.001_0.95_1_1.2.png"><img src=0404/IOR/render_0.001_0.001_0.95_1_1.2.png></a></td>
+<td><a href="0404/IOR/render_0.001_0.001_0.95_1_1.5.png"><img src=0404/IOR/render_0.001_0.001_0.95_1_1.5.png></a></td>
+<td><a href="0404/IOR/render_0.001_0.001_0.95_1_2.png"><img src=0404/IOR/render_0.001_0.001_0.95_1_2.png></a></td>
+</tr>
+<tr>
+<td>1.001</td><td>1.2</td><td>1.5</td><td>2</td>
+</tr>
+</table>
+</center>
+
+## Different g ($\alpha_{top}=0.001$, $\alpha_{bottom}=0.001$, $IOR=1.001$, $\sigma_t=1$)
+<center>
+<table>
+<tr>
+<td><a href="0404/G/render_0.001_0.001_0.0.png"><img src=0404/G/render_0.001_0.001_0.0.png></a></td>
+<td><a href="0404/G/render_0.001_0.001_0.3.png"><img src=0404/G/render_0.001_0.001_0.3.png></a></td>
+<td><a href="0404/G/render_0.001_0.001_0.6.png"><img src=0404/G/render_0.001_0.001_0.6.png></a></td>
+<td><a href="0404/G/render_0.001_0.001_0.9.png"><img src=0404/G/render_0.001_0.001_0.9.png></a></td>
+</tr>
+<tr>
+<td>0</td><td>0.3</td><td>0.6</td><td>0.9</td>
+</tr>
+</table>
+</center>
+
+## Different $\sigma_t$ ($\alpha_{top}=0.001$, $\alpha_{bottom}=0.001$, $IOR=1.001$, $g=0.95$)
+<center>
+<table>
+<tr>
+<td><a href="0404/sigmaT/render_0.001_0.001_0.95_0.2.png"><img src=0404/sigmaT/render_0.001_0.001_0.95_0.2.png></a></td>
+<td><a href="0404/sigmaT/render_0.001_0.001_0.95_0.5.png"><img src=0404/sigmaT/render_0.001_0.001_0.95_0.5.png></a></td>
+<td><a href="0404/sigmaT/render_0.001_0.001_0.95_1.png"><img src=0404/sigmaT/render_0.001_0.001_0.95_1.png></a></td>
+<td><a href="0404/sigmaT/render_0.001_0.001_0.95_2.png"><img src=0404/sigmaT/render_0.001_0.001_0.95_2.png></a></td>
+</tr>
+<tr>
+<td>0.2</td><td>0.5</td><td>1</td><td>2</td>
+</tr>
+</table>
+</center>
+
+
+# 2018.04.03 
+## rendering, direct only (g=0.95, no scattering)
+<center>
+<table>
+<tr>
+<td><a href="0403_5/render_0.001_0.001.png"><img src=0403_5/render_0.001_0.001.png></a></td>
+<td><a href="0403_5/render_0.01_0.001.png"><img src=0403_5/render_0.01_0.001.png></a></td>
+<td><a href="0403_5/render_0.05_0.001.png"><img src=0403_5/render_0.05_0.001.png></a></td>
+<td><a href="0403_5/render_0.1_0.001.png"><img src=0403_5/render_0.1_0.001.png></a></td>
+<!-- <td><a href="0403_5/render_0.5_0.001.png"><img src=0403_5/render_0.5_0.001.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.001</td><td>0.01|0.001</td><td>0.05|0.001</td><td>0.1|0.001</td>
+</tr>
+<tr>
+<td><a href="0403_5/render_0.001_0.01.png"><img src=0403_5/render_0.001_0.01.png></a></td>
+<td><a href="0403_5/render_0.01_0.01.png"><img src=0403_5/render_0.01_0.01.png></a></td>
+<td><a href="0403_5/render_0.05_0.01.png"><img src=0403_5/render_0.05_0.01.png></a></td>
+<td><a href="0403_5/render_0.1_0.01.png"><img src=0403_5/render_0.1_0.01.png></a></td>
+<!-- <td><a href="0403_5/render_0.5_0.01.png"><img src=0403_5/render_0.5_0.01.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.01</td><td>0.01|0.01</td><td>0.05|0.01</td><td>0.1|0.01</td>
+</tr>
+<tr>
+<td><a href="0403_5/render_0.001_0.05.png"><img src=0403_5/render_0.001_0.05.png></a></td>
+<td><a href="0403_5/render_0.01_0.05.png"><img src=0403_5/render_0.01_0.05.png></a></td>
+<td><a href="0403_5/render_0.05_0.05.png"><img src=0403_5/render_0.05_0.05.png></a></td>
+<td><a href="0403_5/render_0.1_0.05.png"><img src=0403_5/render_0.1_0.05.png></a></td>
+<!-- <td><a href="0403_5/render_0.5_0.05.png"><img src=0403_5/render_0.5_0.05.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.05</td><td>0.01|0.05</td><td>0.05|0.05</td><td>0.1|0.05</td>
+</tr>
+<tr>
+<td><a href="0403_5/render_0.001_0.1.png"><img src=0403_5/render_0.001_0.1.png></a></td>
+<td><a href="0403_5/render_0.01_0.1.png"><img src=0403_5/render_0.01_0.1.png></a></td>
+<td><a href="0403_5/render_0.05_0.1.png"><img src=0403_5/render_0.05_0.1.png></a></td>
+<td><a href="0403_5/render_0.1_0.1.png"><img src=0403_5/render_0.1_0.1.png></a></td>
+<!-- <td><a href="0403_5/render_0.5_0.1.png"><img src=0403_5/render_0.5_0.1.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.1</td><td>0.01|0.1</td><td>0.05|0.1</td><td>0.1|0.1</td>
+</tr>
+<!-- <tr>
+<td><a href="0403_5/render_0.001_0.5.png"><img src=0403_5/render_0.001_0.5.png></a></td>
+<td><a href="0403_5/render_0.01_0.5.png"><img src=0403_5/render_0.01_0.5.png></a></td>
+<td><a href="0403_5/render_0.05_0.5.png"><img src=0403_5/render_0.05_0.5.png></a></td>
+<td><a href="0403_5/render_0.1_0.5.png"><img src=0403_5/render_0.1_0.5.png></a></td>
+<td><a href="0403_5/render_0.5_0.5.png"><img src=0403_5/render_0.5_0.5.png></a></td>
+</tr> -->
+</table>
+</center>
+
+## rendering, direct only (g=0.95)
+<center>
+<table>
+<tr>
+<td><a href="0403_4/render_0.001_0.001.png"><img src=0403_4/render_0.001_0.001.png></a></td>
+<td><a href="0403_4/render_0.01_0.001.png"><img src=0403_4/render_0.01_0.001.png></a></td>
+<td><a href="0403_4/render_0.05_0.001.png"><img src=0403_4/render_0.05_0.001.png></a></td>
+<td><a href="0403_4/render_0.1_0.001.png"><img src=0403_4/render_0.1_0.001.png></a></td>
+<!-- <td><a href="0403_4/render_0.5_0.001.png"><img src=0403_4/render_0.5_0.001.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.001</td><td>0.01|0.001</td><td>0.05|0.001</td><td>0.1|0.001</td>
+</tr>
+<tr>
+<td><a href="0403_4/render_0.001_0.01.png"><img src=0403_4/render_0.001_0.01.png></a></td>
+<td><a href="0403_4/render_0.01_0.01.png"><img src=0403_4/render_0.01_0.01.png></a></td>
+<td><a href="0403_4/render_0.05_0.01.png"><img src=0403_4/render_0.05_0.01.png></a></td>
+<td><a href="0403_4/render_0.1_0.01.png"><img src=0403_4/render_0.1_0.01.png></a></td>
+<!-- <td><a href="0403_4/render_0.5_0.01.png"><img src=0403_4/render_0.5_0.01.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.01</td><td>0.01|0.01</td><td>0.05|0.01</td><td>0.1|0.01</td>
+</tr>
+<tr>
+<td><a href="0403_4/render_0.001_0.05.png"><img src=0403_4/render_0.001_0.05.png></a></td>
+<td><a href="0403_4/render_0.01_0.05.png"><img src=0403_4/render_0.01_0.05.png></a></td>
+<td><a href="0403_4/render_0.05_0.05.png"><img src=0403_4/render_0.05_0.05.png></a></td>
+<td><a href="0403_4/render_0.1_0.05.png"><img src=0403_4/render_0.1_0.05.png></a></td>
+<!-- <td><a href="0403_4/render_0.5_0.05.png"><img src=0403_4/render_0.5_0.05.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.05</td><td>0.01|0.05</td><td>0.05|0.05</td><td>0.1|0.05</td>
+</tr>
+<tr>
+<td><a href="0403_4/render_0.001_0.1.png"><img src=0403_4/render_0.001_0.1.png></a></td>
+<td><a href="0403_4/render_0.01_0.1.png"><img src=0403_4/render_0.01_0.1.png></a></td>
+<td><a href="0403_4/render_0.05_0.1.png"><img src=0403_4/render_0.05_0.1.png></a></td>
+<td><a href="0403_4/render_0.1_0.1.png"><img src=0403_4/render_0.1_0.1.png></a></td>
+<!-- <td><a href="0403_4/render_0.5_0.1.png"><img src=0403_4/render_0.5_0.1.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.1</td><td>0.01|0.1</td><td>0.05|0.1</td><td>0.1|0.1</td>
+</tr>
+<!-- <tr>
+<td><a href="0403_4/render_0.001_0.5.png"><img src=0403_4/render_0.001_0.5.png></a></td>
+<td><a href="0403_4/render_0.01_0.5.png"><img src=0403_4/render_0.01_0.5.png></a></td>
+<td><a href="0403_4/render_0.05_0.5.png"><img src=0403_4/render_0.05_0.5.png></a></td>
+<td><a href="0403_4/render_0.1_0.5.png"><img src=0403_4/render_0.1_0.5.png></a></td>
+<td><a href="0403_4/render_0.5_0.5.png"><img src=0403_4/render_0.5_0.5.png></a></td>
+</tr> -->
+</table>
+</center>
+
+## sample() and eval() (g=0.95)
+<center>
+<table>
+<tr>
+<td><a href="0402_4/lobe26_0.001_0.001.png"><img src=0402_4/lobe26_0.001_0.001.png></a></td>
+<td><a href="0402_4/lobe26_0.01_0.001.png"><img src=0402_4/lobe26_0.01_0.001.png></a></td>
+<td><a href="0402_4/lobe26_0.05_0.001.png"><img src=0402_4/lobe26_0.05_0.001.png></a></td>
+<td><a href="0402_4/lobe26_0.1_0.001.png"><img src=0402_4/lobe26_0.1_0.001.png></a></td>
+<!-- <td><a href="0402_4/lobe26_0.5_0.001.png"><img src=0402_4/lobe26_0.5_0.001.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.001</td><td>0.01|0.001</td><td>0.05|0.001</td><td>0.1|0.001</td>
+</tr>
+<tr>
+<td><a href="0402_4/lobe26_0.001_0.01.png"><img src=0402_4/lobe26_0.001_0.01.png></a></td>
+<td><a href="0402_4/lobe26_0.01_0.01.png"><img src=0402_4/lobe26_0.01_0.01.png></a></td>
+<td><a href="0402_4/lobe26_0.05_0.01.png"><img src=0402_4/lobe26_0.05_0.01.png></a></td>
+<td><a href="0402_4/lobe26_0.1_0.01.png"><img src=0402_4/lobe26_0.1_0.01.png></a></td>
+<!-- <td><a href="0402_4/lobe26_0.5_0.01.png"><img src=0402_4/lobe26_0.5_0.01.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.01</td><td>0.01|0.01</td><td>0.05|0.01</td><td>0.1|0.01</td>
+</tr>
+<tr>
+<td><a href="0402_4/lobe26_0.001_0.05.png"><img src=0402_4/lobe26_0.001_0.05.png></a></td>
+<td><a href="0402_4/lobe26_0.01_0.05.png"><img src=0402_4/lobe26_0.01_0.05.png></a></td>
+<td><a href="0402_4/lobe26_0.05_0.05.png"><img src=0402_4/lobe26_0.05_0.05.png></a></td>
+<td><a href="0402_4/lobe26_0.1_0.05.png"><img src=0402_4/lobe26_0.1_0.05.png></a></td>
+<!-- <td><a href="0402_4/lobe26_0.5_0.05.png"><img src=0402_4/lobe26_0.5_0.05.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.05</td><td>0.01|0.05</td><td>0.05|0.05</td><td>0.1|0.05</td>
+</tr>
+<tr>
+<td><a href="0402_4/lobe26_0.001_0.1.png"><img src=0402_4/lobe26_0.001_0.1.png></a></td>
+<td><a href="0402_4/lobe26_0.01_0.1.png"><img src=0402_4/lobe26_0.01_0.1.png></a></td>
+<td><a href="0402_4/lobe26_0.05_0.1.png"><img src=0402_4/lobe26_0.05_0.1.png></a></td>
+<td><a href="0402_4/lobe26_0.1_0.1.png"><img src=0402_4/lobe26_0.1_0.1.png></a></td>
+<!-- <td><a href="0402_4/lobe26_0.5_0.1.png"><img src=0402_4/lobe26_0.5_0.1.png></a></td> -->
+</tr>
+<tr>
+<td>0.001|0.1</td><td>0.01|0.1</td><td>0.05|0.1</td><td>0.1|0.1</td>
+</tr>
+<!-- <tr>
+<td><a href="0402_4/lobe26_0.001_0.5.png"><img src=0402_4/lobe26_0.001_0.5.png></a></td>
+<td><a href="0402_4/lobe26_0.01_0.5.png"><img src=0402_4/lobe26_0.01_0.5.png></a></td>
+<td><a href="0402_4/lobe26_0.05_0.5.png"><img src=0402_4/lobe26_0.05_0.5.png></a></td>
+<td><a href="0402_4/lobe26_0.1_0.5.png"><img src=0402_4/lobe26_0.1_0.5.png></a></td>
+<td><a href="0402_4/lobe26_0.5_0.5.png"><img src=0402_4/lobe26_0.5_0.5.png></a></td>
+</tr> -->
+</table>
+</center>
+
+# 2018.04.02
+## transmittance (g=0.95)
+<center>
+<table>
+<tr>
+<td><a href="0402_3/curve26_0.001_0.001.png"><img src=0402_3/lobe26_0.001_0.001.png></a></td>
+<td><a href="0402_3/curve26_0.01_0.001.png"><img src=0402_3/lobe26_0.01_0.001.png></a></td>
+<td><a href="0402_3/curve26_0.05_0.001.png"><img src=0402_3/lobe26_0.05_0.001.png></a></td>
+<td><a href="0402_3/curve26_0.1_0.001.png"><img src=0402_3/lobe26_0.1_0.001.png></a></td>
+<!-- <td><a href="0402_3/curve26_0.5_0.001.png"><img src=0402_3/lobe26_0.5_0.001.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402_3/curve26_0.001_0.01.png"><img src=0402_3/lobe26_0.001_0.01.png></a></td>
+<td><a href="0402_3/curve26_0.01_0.01.png"><img src=0402_3/lobe26_0.01_0.01.png></a></td>
+<td><a href="0402_3/curve26_0.05_0.01.png"><img src=0402_3/lobe26_0.05_0.01.png></a></td>
+<td><a href="0402_3/curve26_0.1_0.01.png"><img src=0402_3/lobe26_0.1_0.01.png></a></td>
+<!-- <td><a href="0402_3/curve26_0.5_0.01.png"><img src=0402_3/lobe26_0.5_0.01.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402_3/curve26_0.001_0.05.png"><img src=0402_3/lobe26_0.001_0.05.png></a></td>
+<td><a href="0402_3/curve26_0.01_0.05.png"><img src=0402_3/lobe26_0.01_0.05.png></a></td>
+<td><a href="0402_3/curve26_0.05_0.05.png"><img src=0402_3/lobe26_0.05_0.05.png></a></td>
+<td><a href="0402_3/curve26_0.1_0.05.png"><img src=0402_3/lobe26_0.1_0.05.png></a></td>
+<!-- <td><a href="0402_3/curve26_0.5_0.05.png"><img src=0402_3/lobe26_0.5_0.05.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402_3/curve26_0.001_0.1.png"><img src=0402_3/lobe26_0.001_0.1.png></a></td>
+<td><a href="0402_3/curve26_0.01_0.1.png"><img src=0402_3/lobe26_0.01_0.1.png></a></td>
+<td><a href="0402_3/curve26_0.05_0.1.png"><img src=0402_3/lobe26_0.05_0.1.png></a></td>
+<td><a href="0402_3/curve26_0.1_0.1.png"><img src=0402_3/lobe26_0.1_0.1.png></a></td>
+<!-- <td><a href="0402_3/curve26_0.5_0.1.png"><img src=0402_3/lobe26_0.5_0.1.png></a></td> -->
+</tr>
+<!-- <tr>
+<td><a href="0402_3/curve26_0.001_0.5.png"><img src=0402_3/lobe26_0.001_0.5.png></a></td>
+<td><a href="0402_3/curve26_0.01_0.5.png"><img src=0402_3/lobe26_0.01_0.5.png></a></td>
+<td><a href="0402_3/curve26_0.05_0.5.png"><img src=0402_3/lobe26_0.05_0.5.png></a></td>
+<td><a href="0402_3/curve26_0.1_0.5.png"><img src=0402_3/lobe26_0.1_0.5.png></a></td>
+<td><a href="0402_3/curve26_0.5_0.5.png"><img src=0402_3/lobe26_0.5_0.5.png></a></td>
+</tr> -->
+</table>
+</center>
+
+
+## transmittance (g=0)
+<center>
+<table>
+<tr>
+<td><a href="0402/curve26_0.001_0.001.png"><img src=0402/lobe26_0.001_0.001.png></a></td>
+<td><a href="0402/curve26_0.01_0.001.png"><img src=0402/lobe26_0.01_0.001.png></a></td>
+<td><a href="0402/curve26_0.05_0.001.png"><img src=0402/lobe26_0.05_0.001.png></a></td>
+<td><a href="0402/curve26_0.1_0.001.png"><img src=0402/lobe26_0.1_0.001.png></a></td>
+<!-- <td><a href="0402/curve26_0.5_0.001.png"><img src=0402/lobe26_0.5_0.001.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402/curve26_0.001_0.01.png"><img src=0402/lobe26_0.001_0.01.png></a></td>
+<td><a href="0402/curve26_0.01_0.01.png"><img src=0402/lobe26_0.01_0.01.png></a></td>
+<td><a href="0402/curve26_0.05_0.01.png"><img src=0402/lobe26_0.05_0.01.png></a></td>
+<td><a href="0402/curve26_0.1_0.01.png"><img src=0402/lobe26_0.1_0.01.png></a></td>
+<!-- <td><a href="0402/curve26_0.5_0.01.png"><img src=0402/lobe26_0.5_0.01.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402/curve26_0.001_0.05.png"><img src=0402/lobe26_0.001_0.05.png></a></td>
+<td><a href="0402/curve26_0.01_0.05.png"><img src=0402/lobe26_0.01_0.05.png></a></td>
+<td><a href="0402/curve26_0.05_0.05.png"><img src=0402/lobe26_0.05_0.05.png></a></td>
+<td><a href="0402/curve26_0.1_0.05.png"><img src=0402/lobe26_0.1_0.05.png></a></td>
+<!-- <td><a href="0402/curve26_0.5_0.05.png"><img src=0402/lobe26_0.5_0.05.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402/curve26_0.001_0.1.png"><img src=0402/lobe26_0.001_0.1.png></a></td>
+<td><a href="0402/curve26_0.01_0.1.png"><img src=0402/lobe26_0.01_0.1.png></a></td>
+<td><a href="0402/curve26_0.05_0.1.png"><img src=0402/lobe26_0.05_0.1.png></a></td>
+<td><a href="0402/curve26_0.1_0.1.png"><img src=0402/lobe26_0.1_0.1.png></a></td>
+<!-- <td><a href="0402/curve26_0.5_0.1.png"><img src=0402/lobe26_0.5_0.1.png></a></td> -->
+</tr>
+<!-- <tr>
+<td><a href="0402/curve26_0.001_0.5.png"><img src=0402/lobe26_0.001_0.5.png></a></td>
+<td><a href="0402/curve26_0.01_0.5.png"><img src=0402/lobe26_0.01_0.5.png></a></td>
+<td><a href="0402/curve26_0.05_0.5.png"><img src=0402/lobe26_0.05_0.5.png></a></td>
+<td><a href="0402/curve26_0.1_0.5.png"><img src=0402/lobe26_0.1_0.5.png></a></td>
+<td><a href="0402/curve26_0.5_0.5.png"><img src=0402/lobe26_0.5_0.5.png></a></td>
+</tr> -->
+</table>
+</center>
+
+## transmittance (g=0.9)
+<center>
+<table>
+<tr>
+<td><a href="0402_2/curve26_0.001_0.001.png"><img src=0402_2/lobe26_0.001_0.001.png></a></td>
+<td><a href="0402_2/curve26_0.01_0.001.png"><img src=0402_2/lobe26_0.01_0.001.png></a></td>
+<td><a href="0402_2/curve26_0.05_0.001.png"><img src=0402_2/lobe26_0.05_0.001.png></a></td>
+<td><a href="0402_2/curve26_0.1_0.001.png"><img src=0402_2/lobe26_0.1_0.001.png></a></td>
+<!-- <td><a href="0402_2/curve26_0.5_0.001.png"><img src=0402_2/lobe26_0.5_0.001.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402_2/curve26_0.001_0.01.png"><img src=0402_2/lobe26_0.001_0.01.png></a></td>
+<td><a href="0402_2/curve26_0.01_0.01.png"><img src=0402_2/lobe26_0.01_0.01.png></a></td>
+<td><a href="0402_2/curve26_0.05_0.01.png"><img src=0402_2/lobe26_0.05_0.01.png></a></td>
+<td><a href="0402_2/curve26_0.1_0.01.png"><img src=0402_2/lobe26_0.1_0.01.png></a></td>
+<!-- <td><a href="0402_2/curve26_0.5_0.01.png"><img src=0402_2/lobe26_0.5_0.01.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402_2/curve26_0.001_0.05.png"><img src=0402_2/lobe26_0.001_0.05.png></a></td>
+<td><a href="0402_2/curve26_0.01_0.05.png"><img src=0402_2/lobe26_0.01_0.05.png></a></td>
+<td><a href="0402_2/curve26_0.05_0.05.png"><img src=0402_2/lobe26_0.05_0.05.png></a></td>
+<td><a href="0402_2/curve26_0.1_0.05.png"><img src=0402_2/lobe26_0.1_0.05.png></a></td>
+<!-- <td><a href="0402_2/curve26_0.5_0.05.png"><img src=0402_2/lobe26_0.5_0.05.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402_2/curve26_0.001_0.1.png"><img src=0402_2/lobe26_0.001_0.1.png></a></td>
+<td><a href="0402_2/curve26_0.01_0.1.png"><img src=0402_2/lobe26_0.01_0.1.png></a></td>
+<td><a href="0402_2/curve26_0.05_0.1.png"><img src=0402_2/lobe26_0.05_0.1.png></a></td>
+<td><a href="0402_2/curve26_0.1_0.1.png"><img src=0402_2/lobe26_0.1_0.1.png></a></td>
+<!-- <td><a href="0402_2/curve26_0.5_0.1.png"><img src=0402_2/lobe26_0.5_0.1.png></a></td> -->
+</tr>
+<tr>
+<td><a href="0402_2/curve26_0.001_0.5.png"><img src=0402_2/lobe26_0.001_0.5.png></a></td>
+<td><a href="0402_2/curve26_0.01_0.5.png"><img src=0402_2/lobe26_0.01_0.5.png></a></td>
+<td><a href="0402_2/curve26_0.05_0.5.png"><img src=0402_2/lobe26_0.05_0.5.png></a></td>
+<td><a href="0402_2/curve26_0.1_0.5.png"><img src=0402_2/lobe26_0.1_0.5.png></a></td>
+<!-- <td><a href="0402_2/curve26_0.5_0.5.png"><img src=0402_2/lobe26_0.5_0.5.png></a></td> -->
+</tr>
+</table>
+</center>
+
+End.
+
+<a href="report.html" target="_blank">Report</a>
+
+<a href="update_20170830.html" target="_blank">Old Doc1</a>
+
+<a href="update_20170915.html" target="_blank">Old Doc2</a>
+
+<a href="update_20171219.html" target="_blank">Old Doc3</a>
+
+<a href="update_20180122.html" target="_blank">Old Doc4</a>
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,47 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC877¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 09 Oct 2018 00:24:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"36d-577c0c3895374"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 04:02:03 GMTKraw_content¢DtypeEvalueYm
+
+data {
+    int<lower=0> N;
+    int<lower=0> num[N];
+    int<lower=0> dead[N];
+    vector[N] dose;
+}
+
+transformed data {
+    vector[N] centered_dose;
+    real mean_dose;
+    mean_dose = mean(dose);
+    centered_dose = dose - mean_dose;
+}
+
+parameters {
+    real alpha_star;
+    real beta;
+}
+
+transformed parameters {
+    vector[N] m;
+    m = alpha_star + beta * centered_dose;
+}
+
+model {
+  alpha_star ~ normal(0.0, 1.0E4);  
+  beta ~ normal(0.0, 1.0E4);
+  dead ~ binomial_logit(num, m);
+}
+
+generated quantities {
+  real alpha; 
+  real LD50;
+  real p[N];
+//  real llike[N];
+//  real rhat[N];
+  for (i in 1:N)  {
+    p[i] = inv_logit(m[i]);
+//    llike[i]  = dead[i]*log(p[i]) + (num[i]-dead[i])*log(1-p[i]);  
+//    rhat[i] = p[i]*num[i];  // fitted values
+  }
+  alpha = alpha_star - beta*mean_dose;   
+  LD50 = -1.0*alpha/beta;
+} 
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

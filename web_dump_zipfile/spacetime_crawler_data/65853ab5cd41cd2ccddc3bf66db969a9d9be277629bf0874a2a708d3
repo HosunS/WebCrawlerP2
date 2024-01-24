@@ -1,0 +1,815 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 20:29:02 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY˘<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Classification</a> <font color=red>(184)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Regression</a></font> <font color=red>(59)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Clustering</a> <font color=red>(51)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Other</a> <font color=red>(19)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=cat&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Categorical</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=num&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Numerical</a> <font color=red>(55)</font><br><a href='datasets.html?format=&task=reg&att=mix&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Mixed</a> <font color=red>(2)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=mvar&sort=attUp&view=table'>Multivariate</a> <font color=red>(54)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=uvar&sort=attUp&view=table'>Univariate</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=attUp&view=table'>Sequential</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attUp&view=table'>Time-Series</a> <font color=red>(23)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=text&sort=attUp&view=table'>Text</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=dt&sort=attUp&view=table'>Domain-Theory</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=other&sort=attUp&view=table'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=life&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Life Sciences</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=reg&att=&area=phys&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Physical Sciences</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=reg&att=&area=comp&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>CS / Engineering</a> <font color=red>(25)</font><br><a href='datasets.html?format=&task=reg&att=&area=soc&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Social Sciences</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=reg&att=&area=bus&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Business</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=reg&att=&area=game&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Game</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=&area=other&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Other</a> <font color=red>(5)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=less10&numIns=greater1000&type=&sort=attUp&view=table'>Less than 10</a> <font color=red>(14)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=10to100&numIns=greater1000&type=&sort=attUp&view=table'>10 to 100</a> <font color=red>(33)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=greater1000&type=&sort=attUp&view=table'>Greater than 100</a> <font color=red>(11)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=&type=&sort=attUp&view=table'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=less100&type=&sort=attUp&view=table'>Less than 100</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=&sort=attUp&view=table'>100 to 1000</a> <font color=red>(30)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Greater than 1000</a></font> <font color=red>(59)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Matrix</a> <font color=red>(46)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'>Non-Matrix</a> <font color=red>(13)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>59</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=attUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=attDown&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/KDC-4007+dataset+Collection"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KDC-4007+dataset+Collection">KDC-4007 dataset Collection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KDC-4007 dataset Collection is the Kurdish Documents Classification text used in categories regarding Kurdish Sorani news and articles.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">4007&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Cuff-Less+Blood+Pressure+Estimation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cuff-Less+Blood+Pressure+Estimation">Cuff-Less Blood Pressure Estimation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This Data set provides preprocessed and cleaned vital signals which can be used in designing algorithms for cuff-less estimation of the blood pressure.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">12000&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Combined+Cycle+Power+Plant"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Combined+Cycle+Power+Plant">Combined Cycle Power Plant</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset contains 9568 data points collected from a Combined Cycle Power Plant over 6 years (2006-2011), when the plant was set to work with full load. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">9568&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Parking+Birmingham"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Parking+Birmingham">Parking Birmingham</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data collected from car parks in Birmingham that are operated by NCP from 
+Birmingham City Council. UK Open Government Licence (OGL).
+https://data.birmingham.gov.uk/dataset/birmingham-parking&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">35717&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">2019&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/3D+Road+Network+%28North+Jutland%2C+Denmark%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/3D+Road+Network+%28North+Jutland%2C+Denmark%29">3D Road Network (North Jutland, Denmark)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">3D road network with highly accurate elevation information (+-20cm) from Denmark used in eco-routing and fuel/Co2-estimation routing algorithms.&nbsp;</p></td> -->
+			<td><p class="normal">Sequential, Text&nbsp;</p></td>
+			<td><p class="normal">Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">434874&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Tamilnadu+Electricity+Board+Hourly+Readings"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Tamilnadu+Electricity+Board+Hourly+Readings">Tamilnadu Electricity Board Hourly Readings</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data can be effectively produced the result to fewer parameter of the Load profile can be reduced in the Database  &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">45781&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/GNFUV+Unmanned+Surface+Vehicles+Sensor+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/GNFUV+Unmanned+Surface+Vehicles+Sensor+Data">GNFUV Unmanned Surface Vehicles Sensor Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data-set contains four (4) sets of mobile sensor readings data (humidity, temperature) corresponding to a swarm of four (4) Unmanned Surface Vehicles (USVs) in a test-bed in Athens (Greece). &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1672&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Airfoil+Self-Noise"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Airfoil+Self-Noise">Airfoil Self-Noise</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">NASA data set, obtained from a series of aerodynamic and acoustic tests of two and three-dimensional airfoil blade sections conducted in an anechoic wind tunnel.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1503&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Drug+Review+Dataset+%28Drugs.com%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Drug+Review+Dataset+%28Drugs.com%29">Drug Review Dataset (Drugs.com)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset provides patient reviews on specific drugs along with related conditions and a 10 star patient rating reflecting overall patient satisfaction.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">215063&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/GNFUV+Unmanned+Surface+Vehicles+Sensor+Data+Set+2"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/GNFUV+Unmanned+Surface+Vehicles+Sensor+Data+Set+2">GNFUV Unmanned Surface Vehicles Sensor Data Set 2</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data-set contains eight (2x4) data-sets of mobile sensor readings data (humidity, temperature) corresponding to a swarm of four Unmanned Surface Vehicles (USVs) in a test-bed, Athens, Greece.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">10190&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Carbon+Nanotubes"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Carbon+Nanotubes">Carbon Nanotubes</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains 10721 initial and calculated atomic coordinates of carbon nanotubes.&nbsp;</p></td> -->
+			<td><p class="normal">Univariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">10721&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Drug+Review+Dataset+%28Druglib.com%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Drug+Review+Dataset+%28Druglib.com%29">Drug Review Dataset (Druglib.com)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset provides patient reviews on specific drugs along with related conditions. Reviews and ratings are grouped into reports on the three aspects benefits, side effects and overall comment.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">4143&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Physicochemical+Properties+of+Protein+Tertiary+Structure"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Physicochemical+Properties+of+Protein+Tertiary+Structure">Physicochemical Properties of Protein Tertiary Structure</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a data set of Physicochemical Properties of Protein Tertiary Structure. The data set is taken from CASP 5-9. There are 45730 decoys and size varying from 0 to 21 armstrong.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">45730&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Concrete+Compressive+Strength"><img src="assets/MLimages/SmallLarge165.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Concrete+Compressive+Strength">Concrete Compressive Strength</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Concrete is the most important material in civil engineering. The concrete compressive strength is a highly nonlinear function of age and ingredients. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1030&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">2007&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Individual+household+electric+power+consumption"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Individual+household+electric+power+consumption">Individual household electric power consumption</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Measurements of electric power consumption in one household with a one-minute sampling rate over a period of almost 4 years. Different electrical quantities and some sub-metering values are available.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2075259&nbsp;</p></td>
+			<td><p class="normal">9&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Solar+Flare"><img src="assets/MLimages/SmallLarge89.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Solar+Flare">Solar Flare</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Each class attribute counts the number of solar flares of a certain class that occur in a 24 hour period&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">1389&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Online+Video+Characteristics+and+Transcoding+Time+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Online+Video+Characteristics+and+Transcoding+Time+Dataset">Online Video Characteristics and Transcoding Time Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset contains a million randomly sampled video instances listing 10 fundamental video characteristics along with the YouTube video ID. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">168286&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/News+Popularity+in+Multiple+Social+Media+Platforms"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/News+Popularity+in+Multiple+Social+Media+Platforms">News Popularity in Multiple Social Media Platforms</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Large data set of news items and their respective social feedback on multiple platforms: Facebook, Google+ and LinkedIn.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series, Text&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">93239&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Wine+Quality"><img src="assets/MLimages/SmallLarge186.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Wine+Quality">Wine Quality</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two datasets are included, related to red and white vinho verde wine samples, from the north of Portugal. The goal is to model wine quality based on physicochemical tests (see [Cortez et al., 2009], http://www3.dsi.uminho.pt/pcortez/wine/).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">4898&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29">WESAD (Wearable Stress and Affect Detection)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">WESAD (Wearable Stress and Affect Detection) contains data of 15 subjects during a stress-affect lab study, while wearing physiological and motion sensors.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">63000000&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/UJIIndoorLoc-Mag"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/UJIIndoorLoc-Mag">UJIIndoorLoc-Mag</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The UJIIndoorLoc-Mag is an indoor localization database to test Indoor Positioning System that rely on Earth's magnetic field variations.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">40000&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Educational+Process+Mining+%28EPM%29%3A+A+Learning+Analytics+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Educational+Process+Mining+%28EPM%29%3A+A+Learning+Analytics+Data+Set">Educational Process Mining (EPM): A Learning Analytics Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Educational Process Mining data set is built from the recordings of 115 subjects' activities through a logging application while learning with an educational simulator.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">230318&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Beijing+PM2.5+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Beijing+PM2.5+Data">Beijing PM2.5 Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This hourly data set contains the PM2.5 data of US Embassy in Beijing. Meanwhile, meteorological data from Beijing Capital International Airport are also included. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">43824&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Electrical+Grid+Stability+Simulated+Data+"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Electrical+Grid+Stability+Simulated+Data+">Electrical Grid Stability Simulated Data </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The local stability analysis of the 4-node star system (electricity producer is in the center) implementing Decentral Smart Grid Control concept. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">14&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Air+Quality"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Air+Quality">Air Quality</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Contains the responses of a gas multisensor device deployed on the field in an Italian city. Hourly responses averages are recorded along with gas concentrations references from a certified analyzer. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">9358&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Air+quality"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Air+quality">Air quality</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal"> Contains the responses of a gas multisensor device deployed on the field in an Italian city. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">9358&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Bike+Sharing+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Bike+Sharing+Dataset">Bike Sharing Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains the hourly and daily count of rental bikes between years 2011 and 2012 in Capital bikeshare system with the corresponding weather and seasonal information.&nbsp;</p></td> -->
+			<td><p class="normal">Univariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">17389&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Condition+Based+Maintenance+of+Naval+Propulsion+Plants"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Condition+Based+Maintenance+of+Naval+Propulsion+Plants">Condition Based Maintenance of Naval Propulsion Plants</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data have been generated from a sophisticated simulator of a Gas Turbines (GT), mounted on a Frigate characterized by a COmbined Diesel eLectric And Gas (CODLAG) propulsion plant type.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">11934&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals">EEG Steady-State Visual Evoked Potential Signals</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This database consists on 30 subjects performing Brain Computer Interface for Steady State Visual Evoked Potentials (BCI-SSVEP). &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">9200&nbsp;</p></td>
+			<td><p class="normal">16&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/SGEMM+GPU+kernel+performance"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SGEMM+GPU+kernel+performance">SGEMM GPU kernel performance</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Running times for multiplying two 2048 x 2048 matrices using a GPU OpenCL SGEMM kernel with varying parameters (using the library 'CLTune').&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">241600&nbsp;</p></td>
+			<td><p class="normal">18&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Gas+sensor+array+under+dynamic+gas+mixtures"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gas+sensor+array+under+dynamic+gas+mixtures">Gas sensor array under dynamic gas mixtures</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set contains the recordings of 16 chemical sensors exposed to two dynamic gas mixtures at varying concentrations. For each mixture, signals were acquired continuously during 12 hours.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">4178504&nbsp;</p></td>
+			<td><p class="normal">19&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/SkillCraft1+Master+Table+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SkillCraft1+Master+Table+Dataset">SkillCraft1 Master Table Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data was used in Thompson et al. (2013). A list of possible game actions is discussed in Thompson, Blair, Chen, & Henrey (2013).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">3395&nbsp;</p></td>
+			<td><p class="normal">20&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Game&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/SML2010"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SML2010">SML2010</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is collected from a monitor system mounted in a domotic house. It corresponds to approximately 40 days of monitoring data.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series, Text&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">4137&nbsp;</p></td>
+			<td><p class="normal">24&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29">KEGG Metabolic Relation Network (Directed)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KEGG Metabolic pathways modeled as directed relation network. Variety of graphical features presented.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">53414&nbsp;</p></td>
+			<td><p class="normal">24&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Geo-Magnetic+field+and+WLAN+dataset+for+indoor+localisation+from+wristband+and+smartphone"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Geo-Magnetic+field+and+WLAN+dataset+for+indoor+localisation+from+wristband+and+smartphone">Geo-Magnetic field and WLAN dataset for indoor localisation from wristband and smartphone</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">A multisource and multivariate dataset for indoor localisation methods based on WLAN and Geo-Magnetic Ô¨Åeld Ô¨Ångerprinting&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">153540&nbsp;</p></td>
+			<td><p class="normal">25&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Parkinson+Speech+Dataset+with++Multiple+Types+of+Sound+Recordings"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Parkinson+Speech+Dataset+with++Multiple+Types+of+Sound+Recordings">Parkinson Speech Dataset with  Multiple Types of Sound Recordings</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The training data belongs to 20 Parkinson's Disease (PD) patients and 20 healthy subjects. From all subjects, multiple types of sound recordings (26) are taken.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">1040&nbsp;</p></td>
+			<td><p class="normal">26&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Parkinsons+Telemonitoring"><img src="assets/MLimages/SmallLarge174.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Parkinsons+Telemonitoring">Parkinsons Telemonitoring</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Oxford Parkinson's Disease Telemonitoring Dataset&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">5875&nbsp;</p></td>
+			<td><p class="normal">26&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Appliances+energy+prediction"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Appliances+energy+prediction">Appliances energy prediction</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Experimental data used to create regression models of appliances energy use in a low energy building.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">19735&nbsp;</p></td>
+			<td><p class="normal">29&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29">KEGG Metabolic Reaction Network (Undirected)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KEGG Metabolic pathways modeled as un-directed reaction network. Variety of graphical features presented.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">65554&nbsp;</p></td>
+			<td><p class="normal">29&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Facebook+Comment+Volume+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Facebook+Comment+Volume+Dataset">Facebook Comment Volume Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Instances in this dataset contain features extracted from facebook posts. The task associated with the data is to predict how many comments the post will receive.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">40949&nbsp;</p></td>
+			<td><p class="normal">54&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Online+News+Popularity"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Online+News+Popularity">Online News Popularity</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset summarizes a heterogeneous set of features about articles published by Mashable in a period of two years. The goal is to predict the number of shares in social networks (popularity).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">39797&nbsp;</p></td>
+			<td><p class="normal">61&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Geographical+Original+of+Music"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Geographical+Original+of+Music">Geographical Original of Music</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Instances in this dataset contain audio features extracted from 1059 wave files. The task associated with the data is to predict the geographical origin of music.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1059&nbsp;</p></td>
+			<td><p class="normal">68&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Buzz+in+social+media+"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Buzz+in+social+media+">Buzz in social media </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data-set contains examples of buzz events from two different social networks: Twitter, and Tom's Hardware, a forum network focusing on new technology with more conservative dynamics.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series, Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression, Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">140000&nbsp;</p></td>
+			<td><p class="normal">77&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Superconductivty+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Superconductivty+Data">Superconductivty Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two file s contain data on 21263 superconductors and their relevant features.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">21263&nbsp;</p></td>
+			<td><p class="normal">81&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Insurance+Company+Benchmark+%28COIL+2000%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Insurance+Company+Benchmark+%28COIL+2000%29">Insurance Company Benchmark (COIL 2000)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set used in the CoIL 2000 Challenge contains information on customers of an insurance company. The data consists of 86 variables and includes product usage data and socio-demographic data&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression, Description&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">9000&nbsp;</p></td>
+			<td><p class="normal">86&nbsp;</p></td>
+			<td><p class="normal">2000&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/PM2.5+Data+of+Five+Chinese+Cities"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/PM2.5+Data+of+Five+Chinese+Cities">PM2.5 Data of Five Chinese Cities</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This hourly data set contains the PM2.5 data in Beijing, Shanghai, Guangzhou, Chengdu and Shenyang. Meanwhile, meteorological data for each city are also included.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">52854&nbsp;</p></td>
+			<td><p class="normal">86&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/YearPredictionMSD"><img src="assets/MLimages/SmallLarge203.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/YearPredictionMSD">YearPredictionMSD</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Prediction of the release year of a song from audio features. Songs are mostly western, commercial tracks ranging from 1922 to 2011, with a peak in the year 2000s.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">515345&nbsp;</p></td>
+			<td><p class="normal">90&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Cargo+2000+Freight+Tracking+and+Tracing"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cargo+2000+Freight+Tracking+and+Tracing">Cargo 2000 Freight Tracking and Tracing</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Sanitized and anonymized Cargo 2000 (C2K) airfreight tracking and tracing events, covering five months of business execution (3,942 process instances, 7,932 transport legs, 56,082 activities). &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">3942&nbsp;</p></td>
+			<td><p class="normal">98&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Communities+and+Crime"><img src="assets/MLimages/SmallLarge183.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Communities+and+Crime">Communities and Crime</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Communities within the United States. The data combines socio-economic data from the 1990 US Census, law enforcement data from the 1990 US LEMAS survey, and crime data from the 1995 FBI UCR.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<td><p class="normal">128&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Gas+Sensor+Array+Drift+Dataset+at+Different+Concentrations"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gas+Sensor+Array+Drift+Dataset+at+Different+Concentrations">Gas Sensor Array Drift Dataset at Different Concentrations</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This archive contains 13910 measurements from 16 chemical sensors exposed to 6 different gases at various concentration levels.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering, Causa&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">13910&nbsp;</p></td>
+			<td><p class="normal">129&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Communities+and+Crime+Unnormalized"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Communities+and+Crime+Unnormalized">Communities and Crime Unnormalized</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Communities in the US. Data combines socio-economic data from the '90 Census, law enforcement data from the 1990 Law Enforcement Management and Admin Stats survey, and crime data from the 1995 FBI UCR&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2215&nbsp;</p></td>
+			<td><p class="normal">147&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/BlogFeedback"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/BlogFeedback">BlogFeedback</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Instances in this dataset contain features extracted from blog posts. The task associated with the data is to predict how many comments the post will receive.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">60021&nbsp;</p></td>
+			<td><p class="normal">281&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Relative+location+of+CT+slices+on+axial+axis"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Relative+location+of+CT+slices+on+axial+axis">Relative location of CT slices on axial axis</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset consists of 384 features extracted from CT images. The class variable is numeric and denotes the relative location of the CT slice on the axial axis of the human body.&nbsp;</p></td> -->
+			<td><p class="normal">Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">53500&nbsp;</p></td>
+			<td><p class="normal">386&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/KDD+Cup+1998+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KDD+Cup+1998+Data">KDD Cup 1998 Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is the data set used for The Second International Knowledge Discovery and Data Mining Tools Competition, which was held in conjunction with KDD-98&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">191779&nbsp;</p></td>
+			<td><p class="normal">481&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Dynamic+Features+of+VirusShare+Executables"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dynamic+Features+of+VirusShare+Executables">Dynamic Features of VirusShare Executables</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains the dynamic features of 107,888 executables, collected by VirusShare from Nov/2010 to Jul/2014.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">107888&nbsp;</p></td>
+			<td><p class="normal">482&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/UJIIndoorLoc"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/UJIIndoorLoc">UJIIndoorLoc</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The UJIIndoorLoc is a Multi-Building Multi-Floor indoor localization database to test Indoor Positioning System that rely on WLAN/WiFi fingerprint.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">21048&nbsp;</p></td>
+			<td><p class="normal">529&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Greenhouse+Gas+Observing+Network"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Greenhouse+Gas+Observing+Network">Greenhouse Gas Observing Network</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Design an observing network to monitor emissions of a greenhouse gas (GHG) in California given time series of synthetic observations and tracers from weather model simulations.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2921&nbsp;</p></td>
+			<td><p class="normal">5232&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Amazon+Access+Samples"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Amazon+Access+Samples">Amazon Access Samples</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Amazon's InfoSec is getting smarter about the way Access data is leveraged. This is an anonymized sample of access provisioned within the company.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Regression, Clustering, Causal-Discovery&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">30000&nbsp;</p></td>
+			<td><p class="normal">20000&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Condition+monitoring+of+hydraulic+systems"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Condition+monitoring+of+hydraulic+systems">Condition monitoring of hydraulic systems</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set addresses the condition assessment of a hydraulic test rig based on multi sensor data. Four fault types are superimposed with several severity grades impeding selective quantification.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2205&nbsp;</p></td>
+			<td><p class="normal">43680&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

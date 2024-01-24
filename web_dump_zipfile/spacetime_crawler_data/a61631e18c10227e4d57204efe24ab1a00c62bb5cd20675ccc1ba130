@@ -1,0 +1,143 @@
+¦Ifinal_url¢DtypeEvaluex&https://www.ics.uci.edu/~eppstein/261/Lhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2914¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 18 Mar 2018 05:24:44 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"2163-567a90f1da63e-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 03:01:53 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY!c<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Data Structures</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<h1>CS 261, Winter 2018: Data Structures</h1>
+
+<p>This course meets Mondays, Wednesdays, and Fridays, 3:00 - 3:50
+in <a href="http://www.classrooms.uci.edu/GAC/SE2-1304.html">Social Ecology II, room 1304</a>. Coursework will consist of weekly homeworks, turned in online
+and returned at the reader's office hours, one midterm, and a
+comprehensive final exam. No books or notes are permitted for the exams.
+Group work on homeworks is permitted; each
+student should turn in his or her own copy of the homeworks. Homeworks
+will usually be assigned Fridays and due on the following
+Friday. Grading will be based 20% on homework, 35% for the midterm, and
+45% for the final.</p>
+
+<p>Rather than setting specific office hours, I will be trying an open
+  door policy: I will be available in my office most afternoons, and if
+  my door is open you are welcome to interrupt me with course questions.
+  If this becomes too problematic I will set more specific office hours,
+  and if you need me to be available at a more predictable time please
+  email me for an appointment.</p>
+
+<p>There is no
+required textbook; however, much of the course material will be drawn
+from the Wikipedia articles collected together in
+the Wikipedia "book"
+<i><a href="https://en.wikipedia.org/wiki/Book:Fundamental_Data_Structures">Fundamental Data Structures</a></i>.
+Additionally, suggested internet readings for the
+topics covered here will be linked from the schedule of topics.</p>
+
+<p>This course may be used as part of the comprehensive exam in the
+  computer science masters program. To pass the comprehensive exam,
+  students must score at least 66% of the possible points on the final
+  examination for the course. If you are enrolled in the course,
+  you will be automatically considered eligible for the comprehensive exam.
+  Students who wish to take the
+  comprehensive exam but are not enrolled in the
+  course should contact me by email before the end of week 8 of the
+  quarter to reserve a place in the exam.</p>
+
+<h2>Tentative schedule of topics</h2>
+<dl>
+<dt><b>Week 1</b> (January 8&ndash;12):</dt>
+<dd>Introduction: Abstract data types versus data structures. Worst case versus amortized complexity.</dd>
+<dd><a href="https://en.wikipedia.org/wiki/Potential_method">The
+potential method of amortized analysis</a>. <a href="https://en.wikipedia.org/wiki/Dynamic_array">Dynamic arrays</a>. Stacks, queues, and deques.</dd>
+<dd><a href="w18-hw1.html">Homework 1</a>, due Monday, January 22 (11:55pm)
+&ndash; <a href="w18-hw1-soln.html">Solutions</a></dd>
+<dd>&nbsp;</dd>
+<dt><b>Week 2</b> (January 15&ndash;19):</dt>
+<dd>Holiday Monday, January 15: Martin Luther King Day</dd>
+<dd>The <a href="https://en.wikipedia.org/wiki/Associative_array">dictionary problem</a> and <a href="https://en.wikipedia.org/wiki/Hash_table">hash tables</a>. <a href="https://en.wikipedia.org/wiki/Hash_table#Separate_chaining">Hash chaining</a>, <a href="https://en.wikipedia.org/wiki/Linear_probing">linear probing</a>, and <a href="https://en.wikipedia.org/wiki/Cuckoo_hashing">cuckoo hashing</a>.</dd>
+<dd><a href="w18-hw2.html">Homework 2</a>, due Monday, January 29 (11:55pm)
+&ndash; <a href="w18-hw2-soln.html">Solutions</a></dd>
+<dd>&nbsp;</dd>
+<dt><b>Week 3</b> (January 22&ndash;26):</dt>
+<dd>Hash functions: <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">cryptographic hash functions</a>, <a href="https://en.wikipedia.org/wiki/K-independent_hashing">k-independent hashing</a>, and <a href="https://en.wikipedia.org/wiki/Tabulation_hashing">tabulation hashing</a>.</dd>
+<dd>Representing sets by bitmaps, dictionaries, and <a href="https://en.wikipedia.org/wiki/Bloom_filter">Bloom
+filters</a>.</dd>
+<dd><a href="http://arxiv.org/abs/1604.06067">Cuckoo filters</a> and <a href="http://arxiv.org/abs/0704.3313">invertible Bloom
+filters</a>.</dd>
+<dd><a href="w18-hw3.html">Homework 3</a>, due Monday, February 5 (11:55pm)
+&ndash; <a href="w18-hw3-soln.html">Solutions</a></dd>
+<dd>&nbsp;</dd>
+<dt><b>Week 4</b> (January 29 &ndash; February 2):</dt>
+<dd><a href="https://en.wikipedia.org/wiki/Streaming_algorithm">Streaming
+data structures</a> and <a href="http://dmac.rutgers.edu/Workshops/WGUnifyingTheory/Slides/cormode.pdf">frequent item detection</a>.</dd>
+<dd><a href="https://en.wikipedia.org/wiki/Boyer%E2%80%93Moore_majority_vote_algorithm">Boyer&ndash;Moore majority voting</a>,
+<a href="https://en.wikipedia.org/wiki/MinHash">MinHash</a>,
+and the <a href="https://en.wikipedia.org/wiki/Count%E2%80%93min_sketch">count-min sketch</a>.</dd>
+<dd><a href="w18-hw4.html">Homework 4</a>, due Monday, February 12 (11:55pm)
+&ndash; <a href="w18-hw4-soln.html">Solutions</a></dd>
+<dd>&nbsp;</dd>
+<dt><b>Week 5</b> (February 5 &ndash; 9):</dt>
+<dd><a href="https://en.wikipedia.org/wiki/Priority_queue">Priority
+queues</a>. <a href="https://en.wikipedia.org/wiki/Binary_heap">Binary
+heaps</a> and <a href="https://en.wikipedia.org/wiki/D-ary_heap">k-ary
+heaps</a>. <a href="https://en.wikipedia.org/wiki/Fibonacci_heap">Fibonacci
+heaps</a>.</dd>
+<dd><a href="w18-hw5.html">Homework 5</a>, due Tuesday, February 20 (11:55pm)
+&ndash; <a href="w18-hw5-soln.html">Solutions</a></dd>
+<dd>&nbsp;</dd>
+<dt><b>Week 6</b> (February 12 &ndash; 16):</dt>
+<dd><a href="https://en.wikipedia.org/wiki/Binary_search_tree">Binary
+search trees</a> and predecessor
+queries. <a href="https://en.wikipedia.org/wiki/WAVL_tree">WAVL
+trees</a> and <a href="https://en.wikipedia.org/wiki/B-tree">B-trees</a>.</dd>
+<dd><a href="https://en.wikipedia.org/wiki/Splay_tree">Splay trees</a>,
+static
+optimality, <a href="https://en.wikipedia.org/wiki/Competitive_analysis_(online_algorithm)">competitive
+analysis</a>, and
+the <a href="https://en.wikipedia.org/wiki/Geometry_of_binary_search_trees">dynamic optimality conjecture</a>.</dd>
+<dd>&nbsp;</dd>
+<dt><b>Week 7</b> (February 19 &ndash; 23):</dt>
+<dd>Holiday Monday, February 19: Presidents' Day</dd>
+<dd><a href="w18-mt.pdf">Midterm</a> Wednesday, February 21
+&ndash; <a href="w18-mt-soln.pdf">Solutions</a></dd>
+<dd><a href="https://en.wikipedia.org/wiki/Van_Emde_Boas_tree">Integer searching</a>.</dd>
+<dd>&nbsp;</dd>
+<dt><b>Week 8</b> (February 23 &ndash; March 2):</dt>
+<dd><a href="https://en.wikipedia.org/wiki/Range_searching">Range
+searching</a>, <a href="http://people.csail.mit.edu/mip/docs/blog/dynlogn.pdf">Dynamic prefix sums</a>
+and <a href="https://en.wikipedia.org/wiki/Order_statistic_tree">augmented
+binary search
+trees</a>. <a href="https://en.wikipedia.org/wiki/Fractional_cascading">Fractional
+cascading</a>.</dd>
+<dd><a href="w18-hw6.html">Homework 6</a>, due Friday, March 9 (11:55pm)</a>
+&ndash; <a href="w18-hw6-soln.html">Solutions</a></dd>
+<dd>&nbsp;</dd>
+<dt><b>Week 9</b> (March 5 &ndash; 9):</dt>
+<dd><a href="https://en.wikipedia.org/wiki/Range_Minimum_Query">Range
+minima</a>, <a href="https://en.wikipedia.org/wiki/Cartesian_tree">Cartesian
+trees</a>, <a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor">lowest
+common ancestors</a>,
+and <a href="https://en.wikipedia.org/wiki/Level_ancestor_problem">level
+ancestors</a>.</dd>
+<dd><a href="w18-hw7.html">Homework 7</a>, due Friday, March 16 (11:55pm)
+&ndash; <a href="w18-hw7-soln.html">Solutions</a></a></dd>
+<dd>&nbsp;</dd>
+<dt><b>Week 10</b> (March 12 &ndash; 16):</dt>
+<dd><a href="https://en.wikipedia.org/wiki/Trie">Tries</a> and <a href="https://en.wikipedia.org/wiki/Suffix_tree">suffix trees</a>.</dd>
+<dd><a href="https://en.wikipedia.org/wiki/Persistant_data_structure">Persistence</a>.</dd>
+<dd><a href="https://en.wikipedia.org/wiki/Disjoint-set_data_structure">Union-find</a>.</dd>
+<dd>&nbsp;</dd>
+<dt><b>Finals Week</b></dt>
+<dd>Final exam, Monday March 19, 4:00&ndash;6:00.</dd>
+</dl>
+
+<p>See also syllabi from <a href="http://www.ics.uci.edu/~eppstein/261/s13.html">Spring 2013</a> and <a href="http://www.ics.uci.edu/~eppstein/261/f11.html">Fall 2011</a> including
+sample homeworks and exams with their solutions,
+and <a href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/">Erik
+Demaine's open courseware class</a> on similar material.</p>
+
+<hr>
+<p><a href="http://www.ics.uci.edu/~eppstein/">David Eppstein</a>, 
+<a href="http://www.ics.uci.edu/">ICS</a>, <a href="http://www.uci.edu/">UC Irvine</a>.</p>
+
+
+</body></html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

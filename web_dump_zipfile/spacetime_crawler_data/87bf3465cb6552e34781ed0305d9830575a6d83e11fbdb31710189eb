@@ -1,0 +1,213 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 01:31:54 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY9Ë<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Classification</a></font> <font color=red>(19)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Regression</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Clustering</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Other</a> <font color=red>(2)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=cat&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Categorical</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Numerical</a> <font color=red>(17)</font><br><a href='datasets.html?format=&task=cla&att=mix&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Mixed</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=&sort=dateUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=mvar&sort=dateUp&view=list'>Multivariate</a> <font color=red>(280)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Univariate</a></font> <font color=red>(19)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=seq&sort=dateUp&view=list'>Sequential</a> <font color=red>(36)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=ts&sort=dateUp&view=list'>Time-Series</a> <font color=red>(65)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=dateUp&view=list'>Text</a> <font color=red>(38)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=dt&sort=dateUp&view=list'>Domain-Theory</a> <font color=red>(11)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=other&sort=dateUp&view=list'>Other</a> <font color=red>(8)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Life Sciences</a> <font color=red>(6)</font><br><a href='datasets.html?format=&task=cla&att=&area=phys&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Physical Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=&area=comp&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>CS / Engineering</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=cla&att=&area=soc&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Social Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=&area=bus&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Business</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=cla&att=&area=game&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Other</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=less10&numIns=&type=uvar&sort=dateUp&view=list'>Less than 10</a> <font color=red>(11)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=10to100&numIns=&type=uvar&sort=dateUp&view=list'>10 to 100</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=greater100&numIns=&type=uvar&sort=dateUp&view=list'>Greater than 100</a> <font color=red>(2)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=less100&type=uvar&sort=dateUp&view=list'>Less than 100</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=100to1000&type=uvar&sort=dateUp&view=list'>100 to 1000</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=uvar&sort=dateUp&view=list'>Greater than 1000</a> <font color=red>(8)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Matrix</a> <font color=red>(12)</font><br><a href='datasets.html?format=nonmat&task=cla&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=list'>Non-Matrix</a> <font color=red>(7)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>19</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=uvar&sort=dateUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Badges">Badges</a></b>: Badges labeled with a "+" or "-" as a function of a person's name</p><p class="normal">2. <b><a href="datasets/Localization+Data+for+Person+Activity">Localization Data for Person Activity</a></b>: Data contains recordings of five people performing different activities. Each person wore four sensors (tags) while performing the same scenario five times. </p><p class="normal">3. <b><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29">KEGG Metabolic Relation Network (Directed)</a></b>: KEGG Metabolic pathways modeled as directed relation network. Variety of graphical features presented.</p><p class="normal">4. <b><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29">KEGG Metabolic Reaction Network (Undirected)</a></b>: KEGG Metabolic pathways modeled as un-directed reaction network. Variety of graphical features presented.</p><p class="normal">5. <b><a href="datasets/Nomao">Nomao</a></b>: Nomao collects data about places (name, phone, localization...) from many sources.
+Deduplication consists in detecting what data refer to the same place.
+Instances in the dataset compare 2 spots.</p><p class="normal">6. <b><a href="datasets/Skin+Segmentation">Skin Segmentation</a></b>: The Skin Segmentation dataset is constructed over B, G, R color space. Skin and Nonskin dataset is generated using skin textures from face images of diversity of age, gender, and race people.</p><p class="normal">7. <b><a href="datasets/Planning+Relax">Planning Relax</a></b>: The dataset concerns with the classification of two mental stages from recorded EEG signals: Planning (during imagination of motor act) and Relax state. </p><p class="normal">8. <b><a href="datasets/Northix">Northix</a></b>: Northix is designed to be a schema matching benchmark problem for data integration of two entity relationship databases. </p><p class="normal">9. <b><a href="datasets/ISTANBUL+STOCK+EXCHANGE">ISTANBUL STOCK EXCHANGE</a></b>: Data sets includes returns of Istanbul Stock Exchange with seven other international index; SP, DAX, FTSE, NIKKEI, BOVESPA, MSCE_EU, MSCI_EM from Jun 5, 2009 to Feb 22, 2011.</p><p class="normal">10. <b><a href="datasets/User+Identification+From+Walking+Activity">User Identification From Walking Activity</a></b>: The dataset collects data from an Android smartphone positioned in the chest pocket from 22 participants walking in the wild over a predefined path. 
+</p><p class="normal">11. <b><a href="datasets/Activity+Recognition+from+Single+Chest-Mounted+Accelerometer">Activity Recognition from Single Chest-Mounted Accelerometer</a></b>: The dataset collects data from a wearable accelerometer mounted on the chest. The dataset is intended for Activity Recognition research purposes.</p><p class="normal">12. <b><a href="datasets/Perfume+Data">Perfume Data</a></b>: This data consists of odors of 20 different perfumes. Data was obtained by using a handheld odor meter (OMX-GR sensor) per second for 28 seconds period.</p><p class="normal">13. <b><a href="datasets/microblogPCU">microblogPCU</a></b>: MicroblogPCU data is crawled from sina weibo microblog[http://weibo.com/]. This data can be used to study machine learning methods  as well as do some social network research. </p><p class="normal">14. <b><a href="datasets/Container+Crane+Controller+Data+Set">Container Crane Controller Data Set</a></b>: A container crane has the function of transporting containers from one point to another point.</p><p class="normal">15. <b><a href="datasets/Immunotherapy+Dataset">Immunotherapy Dataset</a></b>: This dataset contains information about wart treatment results of 90 patients using immunotherapy.</p><p class="normal">16. <b><a href="datasets/Cryotherapy+Dataset+">Cryotherapy Dataset </a></b>: This dataset contains information about wart treatment results of 90 patients using cryotherapy.</p><p class="normal">17. <b><a href="datasets/PMU-UD">PMU-UD</a></b>: The handwritten dataset was collected from 170 participants with a total of 5,180 numeral patterns. The dataset is named Prince Mohammad Bin Fahd University - Urdu/Arabic Database (PMU-UD). </p><p class="normal">18. <b><a href="datasets/Caesarian+Section+Classification+Dataset">Caesarian Section Classification Dataset</a></b>: This dataset contains information about caesarian section results of  80 pregnant women with the most important characteristics of delivery problems in the medical field.</p><p class="normal">19. <b><a href="datasets/Parking+Birmingham">Parking Birmingham</a></b>: Data collected from car parks in Birmingham that are operated by NCP from 
+Birmingham City Council. UK Open Government Licence (OGL).
+https://data.birmingham.gov.uk/dataset/birmingham-parking</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

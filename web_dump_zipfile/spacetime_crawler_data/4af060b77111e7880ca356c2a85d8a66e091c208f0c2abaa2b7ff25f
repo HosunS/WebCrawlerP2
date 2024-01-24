@@ -1,0 +1,27 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC485¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 25 Dec 2014 10:51:10 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1e5-50b082f9cc380"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 20:10:21 GMTKraw_content¢DtypeEvalueYådef f (a,*b):     # typically *args and **kargs or **kwargs
+    print('f1:',a,b)
+    print('f2:',a,*b)
+
+def g (a,*b,**c):  # typically *args and **kargs or **kwargs
+    print('g1:',a,b,c)
+    print('g2:',a,*b,**c)
+    
+f(1)
+f(1,2)
+f(1,2,3,4,5)
+print()
+g(1)
+g(1,2,3,4,5,sep='-',end='cr\n')
+
+# f1: 1 ()
+# f2: 1
+# f1: 1 (2,)
+# f2: 1 2
+# f1: 1 (2, 3, 4, 5)
+# f2: 1 2 3 4 5
+
+# g1: 1 () {}
+# g2: 1
+# g1: 1 (2, 3, 4, 5) {'sep': '-', 'end': 'cr\n'}
+# g2:-1-2-3-4-5cr
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

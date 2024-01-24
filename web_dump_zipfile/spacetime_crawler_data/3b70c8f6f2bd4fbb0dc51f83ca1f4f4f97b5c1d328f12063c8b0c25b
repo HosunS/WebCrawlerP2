@@ -1,0 +1,214 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 02:21:57 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYc?<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Classification</a></font> <font color=red>(47)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Regression</a> <font color=red>(23)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Clustering</a> <font color=red>(18)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Other</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=cat&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Categorical</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Numerical</a> <font color=red>(42)</font><br><a href='datasets.html?format=&task=cla&att=mix&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Mixed</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=&sort=attTypeUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=mvar&sort=attTypeUp&view=list'>Multivariate</a> <font color=red>(146)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=uvar&sort=attTypeUp&view=list'>Univariate</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=seq&sort=attTypeUp&view=list'>Sequential</a> <font color=red>(28)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Time-Series</a></font> <font color=red>(47)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=text&sort=attTypeUp&view=list'>Text</a> <font color=red>(26)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=dt&sort=attTypeUp&view=list'>Domain-Theory</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=other&sort=attTypeUp&view=list'>Other</a> <font color=red>(2)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Life Sciences</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=cla&att=&area=phys&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Physical Sciences</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=&area=comp&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>CS / Engineering</a> <font color=red>(30)</font><br><a href='datasets.html?format=&task=cla&att=&area=soc&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Social Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=&area=bus&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Business</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=cla&att=&area=game&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Other</a> <font color=red>(4)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=less10&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Less than 10</a> <font color=red>(10)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=10to100&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>10 to 100</a> <font color=red>(19)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=greater100&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Greater than 100</a> <font color=red>(15)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=ts&sort=attTypeUp&view=list'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=less100&type=ts&sort=attTypeUp&view=list'>Less than 100</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=100to1000&type=ts&sort=attTypeUp&view=list'>100 to 1000</a> <font color=red>(12)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Greater than 1000</a></font> <font color=red>(47)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Matrix</a> <font color=red>(33)</font><br><a href='datasets.html?format=nonmat&task=cla&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=list'>Non-Matrix</a> <font color=red>(14)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>47</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=ts&sort=attTypeUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Activities+of+Daily+Living+%28ADLs%29+Recognition+Using+Binary+Sensors">Activities of Daily Living (ADLs) Recognition Using Binary Sensors</a></b>: This dataset comprises information regarding the ADLs performed by two users on a daily basis in their 
+own homes.  </p><p class="normal">2. <b><a href="datasets/BAUM-1">BAUM-1</a></b>: BAUM-1 dataset contains 1184 multimodal facial video clips collected from 31 subjects. The 1184 video clips contain spontaneous facial expressions and speech of 13 emotional and mental states.</p><p class="normal">3. <b><a href="datasets/BAUM-2">BAUM-2</a></b>: A multilingual audio-visual affective face database consisting of 1047 video clips of 286 subjects. </p><p class="normal">4. <b><a href="datasets/Human+Activity+Recognition+Using+Smartphones">Human Activity Recognition Using Smartphones</a></b>: Human Activity Recognition database built from the recordings of 30 subjects performing activities of daily living (ADL) while carrying a waist-mounted smartphone with embedded inertial sensors.</p><p class="normal">5. <b><a href="datasets/Australian+Sign+Language+signs">Australian Sign Language signs</a></b>: This data consists of sample of Auslan (Australian Sign Language) signs. Examples of 95 signs were collected from five signers with a total of 6650 sign samples.</p><p class="normal">6. <b><a href="datasets/Educational+Process+Mining+%28EPM%29%3A+A+Learning+Analytics+Data+Set">Educational Process Mining (EPM): A Learning Analytics Data Set</a></b>: Educational Process Mining data set is built from the recordings of 115 subjects' activities through a logging application while learning with an educational simulator.</p><p class="normal">7. <b><a href="datasets/Dynamic+Features+of+VirusShare+Executables">Dynamic Features of VirusShare Executables</a></b>: This dataset contains the dynamic features of 107,888 executables, collected by VirusShare from Nov/2010 to Jul/2014.</p><p class="normal">8. <b><a href="datasets/BLE+RSSI+Dataset+for+Indoor+localization+and+Navigation">BLE RSSI Dataset for Indoor localization and Navigation</a></b>: This dataset contains RSSI readings gathered from an array of Bluetooth Low Energy (BLE) iBeacons in a real-world and operational indoor environment for localization and navigation purposes.</p><p class="normal">9. <b><a href="datasets/Simulated+Falls+and+Daily+Living+Activities+Data+Set">Simulated Falls and Daily Living Activities Data Set</a></b>: 20 falls and 16 daily living activities were performed by 17 volunteers with 5 repetitions while wearing 6 sensors (3.060 instances) that attached to their head, chest, waist, wrist, thigh and ankle.</p><p class="normal">10. <b><a href="datasets/EEG+Steady-State+Visual+Evoked+Potential+Signals">EEG Steady-State Visual Evoked Potential Signals</a></b>: This database consists on 30 subjects performing Brain Computer Interface for Steady State Visual Evoked Potentials (BCI-SSVEP). </p><p class="normal">11. <b><a href="datasets/EEG+Eye+State">EEG Eye State</a></b>: The data set consists of 14 EEG values and a value indicating the eye state.</p><p class="normal">12. <b><a href="datasets/UJIIndoorLoc-Mag">UJIIndoorLoc-Mag</a></b>: The UJIIndoorLoc-Mag is an indoor localization database to test Indoor Positioning System that rely on Earth's magnetic field variations.</p><p class="normal">13. <b><a href="datasets/Online+Retail">Online Retail</a></b>: This is a transnational data set which contains all the transactions occurring between 01/12/2010 and 09/12/2011 for a UK-based and registered non-store online retail.</p><p class="normal">14. <b><a href="datasets/Geo-Magnetic+field+and+WLAN+dataset+for+indoor+localisation+from+wristband+and+smartphone">Geo-Magnetic field and WLAN dataset for indoor localisation from wristband and smartphone</a></b>: A multisource and multivariate dataset for indoor localisation methods based on WLAN and Geo-Magnetic Ô¨Åeld Ô¨Ångerprinting</p><p class="normal">15. <b><a href="datasets/Epileptic+Seizure+Recognition">Epileptic Seizure Recognition</a></b>: This dataset is a pre-processed and re-structured/reshaped version of a very commonly used dataset featuring epileptic seizure detection. </p><p class="normal">16. <b><a href="datasets/URL+Reputation">URL Reputation</a></b>: Anonymized 120-day subset of the ICML-09 URL data containing 2.4 million examples and 3.2 million features.</p><p class="normal">17. <b><a href="datasets/Buzz+in+social+media+">Buzz in social media </a></b>: This data-set contains examples of buzz events from two different social networks: Twitter, and Tom's Hardware, a forum network focusing on new technology with more conservative dynamics.</p><p class="normal">18. <b><a href="datasets/Daily+and+Sports+Activities">Daily and Sports Activities</a></b>: The dataset comprises motion sensor data of 19 daily and sports activities each performed by 8 subjects in their own style for 5 minutes. Five Xsens MTx units are used on the torso, arms, and legs.
+</p><p class="normal">19. <b><a href="datasets/Gas+Sensor+Array+Drift+Dataset+at+Different+Concentrations">Gas Sensor Array Drift Dataset at Different Concentrations</a></b>: This archive contains 13910 measurements from 16 chemical sensors exposed to 6 different gases at various concentration levels.</p><p class="normal">20. <b><a href="datasets/Gesture+Phase+Segmentation">Gesture Phase Segmentation</a></b>: The dataset is composed by features extracted from 7 videos with people gesticulating, aiming at studying Gesture Phase Segmentation. It contains 50 attributes divided into two files for each video.</p><p class="normal">21. <b><a href="datasets/REALDISP+Activity+Recognition+Dataset">REALDISP Activity Recognition Dataset</a></b>: The REALDISP dataset is devised to evaluate techniques dealing with the effects of sensor displacement in wearable activity recognition as well as to benchmark general activity recognition algorithms </p><p class="normal">22. <b><a href="datasets/sEMG+for+Basic+Hand+movements">sEMG for Basic Hand movements</a></b>: The ‚ÄúsEMG for Basic Hand movements‚Äù includes 2 databases of surface electromyographic signals of 6 hand movements using Delsys' EMG System. Healthy subjects conducted six daily life grasps.</p><p class="normal">23. <b><a href="datasets/Gas+sensor+array+under+dynamic+gas+mixtures">Gas sensor array under dynamic gas mixtures</a></b>: The data set contains the recordings of 16 chemical sensors exposed to two dynamic gas mixtures at varying concentrations. For each mixture, signals were acquired continuously during 12 hours.</p><p class="normal">24. <b><a href="datasets/Machine+Learning+based+ZZAlpha+Ltd.+Stock+Recommendations+2012-2014">Machine Learning based ZZAlpha Ltd. Stock Recommendations 2012-2014</a></b>: The data here are the ZZAlpha¬Æ machine learning recommendations made for various US traded stock portfolios the morning of each day during the 3 year period Jan 1, 2012 - Dec 31, 2014.  </p><p class="normal">25. <b><a href="datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions">Smartphone-Based Recognition of Human Activities and Postural Transitions</a></b>: Activity recognition data set built from the recordings of 30 subjects performing basic activities and postural transitions while carrying a waist-mounted smartphone with embedded inertial sensors.
+</p><p class="normal">26. <b><a href="datasets/Heterogeneity+Activity+Recognition">Heterogeneity Activity Recognition</a></b>: The Heterogeneity Human Activity Recognition (HHAR) dataset from Smartphones and Smartwatches is a dataset devised to benchmark human activity recognition algorithms (classification, automatic data segmentation, sensor fusion, feature extraction, etc.) in real-world contexts; specifically, the dataset is gathered with a variety of different device models and use-scenarios, in order to reflect sensing heterogeneities to be expected in real deployments.</p><p class="normal">27. <b><a href="datasets/Indoor+User+Movement+Prediction+from+RSS+data">Indoor User Movement Prediction from RSS data</a></b>: This dataset contains temporal data from a Wireless Sensor Network deployed in real-world office environments. The task is intended as real-life benchmark in the area of Ambient Assisted Living.</p><p class="normal">28. <b><a href="datasets/Occupancy+Detection+">Occupancy Detection </a></b>: Experimental data used for binary classification (room occupancy) from Temperature,Humidity,Light and CO2. Ground-truth occupancy was obtained from time stamped pictures that were taken every minute.</p><p class="normal">29. <b><a href="datasets/Gas+sensors+for+home+activity+monitoring">Gas sensors for home activity monitoring</a></b>: 100 recordings of a sensor array under different conditions in a home setting: background, wine and banana presentations. The array includes 8 MOX gas sensors, and humidity and temperature sensors.
+</p><p class="normal">30. <b><a href="datasets/Smartphone+Dataset+for+Human+Activity+Recognition+%28HAR%29+in+Ambient+Assisted+Living+%28AAL%29">Smartphone Dataset for Human Activity Recognition (HAR) in Ambient Assisted Living (AAL)</a></b>: This data is an addition to an existing dataset on UCI. We collected more data to improve the accuracy of our human activity recognition algorithms applied in the domain of Ambient Assisted Living.  </p><p class="normal">31. <b><a href="datasets/Activity+Recognition+system+based+on+Multisensor+data+fusion+%28AReM%29">Activity Recognition system based on Multisensor data fusion (AReM)</a></b>: This dataset contains temporal data from a Wireless Sensor Network worn by an actor performing the activities: bending, cycling, lying down, sitting, standing, walking.</p><p class="normal">32. <b><a href="datasets/Australian+Sign+Language+signs+%28High+Quality%29">Australian Sign Language signs (High Quality)</a></b>: This data consists of sample of Auslan (Australian Sign Language) signs. 27 examples of each of 95 Auslan signs were captured from a native signer using high-quality position trackers</p><p class="normal">33. <b><a href="datasets/FMA%3A+A+Dataset+For+Music+Analysis">FMA: A Dataset For Music Analysis</a></b>: FMA features 106,574 tracks and includes song title, album, artist, genres; play counts, favorites, comments; description, biography, tags; together with audio (343 days, 917 GiB) and features.</p><p class="normal">34. <b><a href="datasets/Hybrid+Indoor+Positioning+Dataset+from+WiFi+RSSI%2C+Bluetooth+and+magnetometer">Hybrid Indoor Positioning Dataset from WiFi RSSI, Bluetooth and magnetometer</a></b>: The dataset was created for the comparison and evaluation of hybrid indoor positioning methods. The dataset presented contains data from W-LAN and Bluetooth interfaces, and Magnetometer. </p><p class="normal">35. <b><a href="datasets/Ozone+Level+Detection">Ozone Level Detection</a></b>: Two ground ozone level data sets are included in this collection. One is the eight hour peak set (eighthr.data), the other is the one hour peak set (onehr.data). Those data were collected from 1998 to 2004 at the Houston, Galveston and Brazoria area.</p><p class="normal">36. <b><a href="datasets/Character+Trajectories">Character Trajectories</a></b>: Multiple, labelled samples of pen tip trajectories recorded whilst writing individual characters. All samples are from the same writer, for the purposes of primitive extraction. Only characters with a single pen-down segment were considered.</p><p class="normal">37. <b><a href="datasets/Condition+monitoring+of+hydraulic+systems">Condition monitoring of hydraulic systems</a></b>: The data set addresses the condition assessment of a hydraulic test rig based on multi sensor data. Four fault types are superimposed with several severity grades impeding selective quantification.</p><p class="normal">38. <b><a href="datasets/Spoken+Arabic+Digit">Spoken Arabic Digit</a></b>: This dataset contains timeseries of mel-frequency cepstrum coefficients (MFCCs) corresponding to spoken Arabic digits.  Includes data from 44 male and 44 female native Arabic speakers.</p><p class="normal">39. <b><a href="datasets/Localization+Data+for+Person+Activity">Localization Data for Person Activity</a></b>: Data contains recordings of five people performing different activities. Each person wore four sensors (tags) while performing the same scenario five times. </p><p class="normal">40. <b><a href="datasets/WESAD+%28Wearable+Stress+and+Affect+Detection%29">WESAD (Wearable Stress and Affect Detection)</a></b>: WESAD (Wearable Stress and Affect Detection) contains data of 15 subjects during a stress-affect lab study, while wearing physiological and motion sensors.</p><p class="normal">41. <b><a href="datasets/EMG+Physical+Action+Data+Set">EMG Physical Action Data Set</a></b>: The Physical Action Data Set includes 10 normal and 10 aggressive physical actions that measure the human activity. The data have been collected by 4 subjects using the Delsys EMG wireless apparatus.</p><p class="normal">42. <b><a href="datasets/Vicon+Physical+Action+Data+Set">Vicon Physical Action Data Set</a></b>: The Physical Action Data Set includes 10 normal and 10 aggressive physical actions that measure the human activity. The data have been collected by 10 subjects using the Vicon 3D tracker.</p><p class="normal">43. <b><a href="datasets/EMG+data+for+gestures">EMG data for gestures</a></b>: These are files of raw EMG data recorded by MYO Thalmic bracelet</p><p class="normal">44. <b><a href="datasets/OPPORTUNITY+Activity+Recognition">OPPORTUNITY Activity Recognition</a></b>: The OPPORTUNITY Dataset for Human Activity Recognition from Wearable, Object, and Ambient Sensors is a dataset devised to benchmark human activity recognition algorithms (classification, automatic data segmentation, sensor fusion, feature extraction, etc).</p><p class="normal">45. <b><a href="datasets/Parking+Birmingham">Parking Birmingham</a></b>: Data collected from car parks in Birmingham that are operated by NCP from 
+Birmingham City Council. UK Open Government Licence (OGL).
+https://data.birmingham.gov.uk/dataset/birmingham-parking</p><p class="normal">46. <b><a href="datasets/PAMAP2+Physical+Activity+Monitoring">PAMAP2 Physical Activity Monitoring</a></b>: The PAMAP2 Physical Activity Monitoring dataset contains data of 18 different physical activities, performed by 9 subjects wearing 3 inertial measurement units and a heart rate monitor.</p><p class="normal">47. <b><a href="datasets/Gas+sensor+arrays+in+open+sampling+settings">Gas sensor arrays in open sampling settings</a></b>: The dataset contains 18000 time-series recordings from a chemical detection platform at six different locations in a wind tunnel facility in response to ten high-priority chemical gaseous substances</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

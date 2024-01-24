@@ -1,0 +1,17 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC317¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 05 Feb 2019 17:59:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"13d-581295f993886"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 14:32:08 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY=#ifndef _AVR_H
+#define _AVR_H
+
+#include <avr/interrupt.h>
+#include <avr/pgmspace.h>
+#include <avr/io.h>
+
+#define XTAL_FRQ 8000000lu
+
+#define SET_BIT(p,i) ((p) |=  (1 << (i)))
+#define CLR_BIT(p,i) ((p) &= ~(1 << (i)))
+#define GET_BIT(p,i) ((p) &   (1 << (i)))
+
+void avr_wait(unsigned short msec);
+
+#endif /* _AVR_H */
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

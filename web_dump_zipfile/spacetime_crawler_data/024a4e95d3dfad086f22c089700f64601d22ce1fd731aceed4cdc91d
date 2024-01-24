@@ -1,0 +1,628 @@
+¶Ifinal_url¢DtypeEvaluex3http://www.w3.org/TR/2008/WD-xhtml-access-20080107/Lhttp_headers¢DtypeEvalueé¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD8364¢Ak¢DtypeEvaluePContent-LocationAv¢DtypeEvalueMOverview.html¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 09 Feb 2020 20:45:44 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 09 Oct 2018 13:19:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"73e3-577cb97c6ae00-gzip"¢Ak¢DtypeEvalueDLinkAv¢DtypeEvalueXﬂ<https://www.w3.org/TR/2008/WD-xhtml-access-20080107/>;rel="canonical", <https://timetravel.mementoweb.org/w3c/timegate/http://www.w3.org/TR/xhtml-access/>;rel="timegate", <http://www.w3.org/TR/xhtml-access/>;rel="original"¢Ak¢DtypeEvaluePMemento-DatetimeAv¢DtypeEvalueXTue, 09 Oct 2018 13:19:52 GMT¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvaluePmax-age=31536000¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:45:44 GMT¢Ak¢DtypeEvalueXAccess-Control-Allow-OriginAv¢DtypeEvalueA*¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueys„<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet href="http://www.w3.org/StyleSheets/TR/W3C-WD.css" type="text/css"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/MarkUp/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org" />
+<title>XHTML Access Module</title>
+<style type="text/css">
+      .dtd-code {  font-family: monospace; background-color: #dfdfdf; white-space: pre; border: #000000; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+      code {
+      color: green;
+      font-family: monospace;
+      font-weight: bold;
+      }
+      h4 { color: #005A9C; background: white }
+      code.greenmono {
+      color: green;
+      font-family: monospace;
+      font-weight: bold;
+      }
+      .example {
+      border: solid green;
+      border-width: 2px;
+      color: green;
+      font-weight: bold;
+      margin-right: 5%;
+      margin-left: 0;
+      }
+      .bad  {
+      border: solid red;
+      border-width: 2px;
+      margin-left: 0;
+      margin-right: 5%;
+      color: rgb(192, 101, 101);
+      }
+      div.navbar { text-align: center; }
+      div.contents {
+      background-color: rgb(204,204,255);
+      padding: 0.5em;
+      border: none;
+      margin-right: 5%;
+      }
+      .tocline { list-style: none; }
+      td { text-align: left }
+      .ins { background-color: yellow }
+      .del { background-color: yellow; text-decoration: line-through }
+      ul.acks { list-style: none }
+    p.issueTitle {
+        font-size: 150% ;
+    }
+    div.issue {
+        background-color: #cfc ;
+        border: none ;
+        margin-right: 5% ;
+    }
+    /* assertion styles */
+
+    .must, .mustnot, .required, .shall, .shallnot, .should, .recommended, .may, .optional {
+        font-style:  italic ;
+        background-color: #FF8040 ;
+    }
+    
+</style>
+
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css" />
+</head>
+<body>
+<div class="head">
+      <a href="http://www.w3.org/"><img height="48" width="72" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/></a>
+
+<h1><a id="title"> XHTML Access Module</a></h1>
+
+<h2><a id="subtitle"> Module to enable generic document accessibility</a></h2>
+
+<h2><a id="w3c-doctype"> W3C Working Draft 7 January 2008</a></h2>
+
+<dl>
+<dt>This version:</dt>
+
+<dd><a href="http://www.w3.org/TR/2008/WD-xhtml-access-20080107">http://www.w3.org/TR/2008/WD-xhtml-access-20080107</a></dd>
+
+<dt>Latest version:</dt>
+
+<dd><a href="http://www.w3.org/TR/xhtml-access">http://www.w3.org/TR/xhtml-access</a></dd>
+
+<dt>Editors:</dt>
+
+<dd><a href="mailto:Mark.Birbeck@x-port.net">Mark Birbeck</a>, <a href="http://www.x-port.net">x-port.net Ltd.</a></dd>
+
+<dd><a href="mailto:shane@aptest.com">Shane McCarron</a>, <a href="http://www.aptest.com">Applied Testing and Technology, <abbr title="Incorporated">Inc.</abbr></a></dd>
+
+<dd><a href="http://www.cwi.nl/~steven/">Steven Pemberton</a>, <a href="http://www.cwi.nl"><abbr xml:lang="nl" title="Centrum voor Wiskunde en Informatica">CWI</abbr></a>/<a href=
+"http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>&#174;</sup></dd>
+
+<dd><a href="mailto:raman@google.com">T. V. Raman</a>, Google, Inc.</dd>
+
+<dd><a href="mailto:schwer@us.ibm.com">Richard Schwerdtfeger</a>, IBM Corporation</dd>
+</dl>
+
+<p>This document is also available in these non-normative formats: <a href="xhtml-access.ps">PostScript version</a>, <a href="xhtml-access.pdf">PDF version</a>, <a href="xhtml-access.zip">ZIP
+archive</a>, and <a href="xhtml-access.tgz">Gzip'd TAR archive</a>.</p>
+
+<p>The English version of this specification is the only normative version. Non-normative <a href="http://www.w3.org/Consortium/Translation/">translations</a> may also be available.</p>
+
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> &#169; 2007-2008 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">
+W3C</acronym></a><sup>&#174;</sup> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title= 
+"European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href= 
+"http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href= 
+"http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+</div>
+
+<hr />
+<h2><a id="abstract"> Abstract</a></h2>
+
+<p>The XHTML Access module defines an element that, when used in conjunction with other XHTML modules in XHTML Family Markup Languages, enables a more robust accessibility model than is presently
+possible.</p>
+
+<h2><a id="status"> Status of This Document</a></h2>
+
+<p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of
+this technical report can be found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a> at http://www.w3.org/TR/.</em></p>
+
+<p>This is a First Public Working Draft produced by the <a href="http://www.w3.org/MarkUp/">XHTML 2 Working Group</a>. The goals of the XHTML 2 Working Group are discussed in the <a href= 
+"http://www.w3.org/2007/03/XHTML2-WG-charter">XHTML 2 Working Group charter</a>. Note that the content of this document is based upon materials from [<a class="nref" href="#ref_XHTML2">XHTML2</a>]
+and is therefore considered relatively mature.</p>
+
+<p> This document was produced by a group operating under the <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5 February 2004 W3C Patent Policy</a>. W3C maintains a <a rel="disclosure"
+href="http://www.w3.org/2004/01/pp-impl/32107/status">public list of any patent disclosures</a> made in connection with the deliverables of the group; that page also includes instructions for
+disclosing a patent. An individual who has actual knowledge of a patent which the individual believes contains <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential
+Claim(s)</a> must disclose the information in accordance with <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section 6 of the W3C Patent Policy</a>.</p>
+
+<p>Publication as a Working Draft does not imply endorsement by the W3C Membership. This is a draft document and may be updated, replaced or obsoleted by other documents at any time. It is
+inappropriate to cite this document as other than work in progress.</p>
+
+<p>Please report errors in this specification to <a href="mailto:www-html-editor@w3.org">www-html-editor@w3.org</a> (<a href="http://lists.w3.org/Archives/Public/www-html-editor/">archive</a>). It is
+inappropriate to send discussion email to this address. Public discussion may take place on <a href="mailto:www-html@w3.org">www-html@w3.org</a> (<a href=
+"http://lists.w3.org/Archives/Public/www-html/">archive</a>).</p>
+
+<h2><a id="contents"> Table of Contents</a></h2>
+
+<div class="toc">
+<ul class='toc'>
+<li class='tocline'>1. <a href="#s_intro" class="tocxref">Introduction</a></li>
+
+<li class='tocline'>2. <a href="#s_conformance" class="tocxref">Conformance Requirements</a> 
+
+<ul class="toc">
+<li class='tocline'>2.1. <a href="#docconf" class="tocxref">Document Conformance</a></li>
+
+<li class='tocline'>2.2. <a href="#hostconf" class="tocxref">Host Language Conformance</a></li>
+
+<li class='tocline'>2.3. <a href="#uaconf" class="tocxref">User Agent Conformance</a></li>
+</ul>
+</li>
+
+<li class='tocline'>3. <a href="#s_access" class="tocxref">XHTML Access Module</a> 
+
+<ul class="toc">
+<li class='tocline'>3.1. <a href="#sec_3.1." class="tocxref">The <code>access</code> element</a> 
+
+<ul class="toc">
+<li class='tocline'>3.1.1. <a href="#sec_3.1.1." class="tocxref"><code>activate</code> = ( yes | no* )</a></li>
+
+<li class='tocline'>3.1.2. <a href="#sec_3.1.2." class="tocxref"><code>key</code> = <span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">
+Character</a></span></a></li>
+
+<li class='tocline'>3.1.3. <a href="#sec_3.1.3." class="tocxref"><code>targetid</code> = <code>IDREFs</code></a></li>
+
+<li class='tocline'>3.1.4. <a href="#sec_3.1.4." class="tocxref"><code>targetrole</code> = <code>CURIEs</code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class='tocline'>A. <a href="#a_Schema_definition" class="tocxref">Schema Implementation</a></li>
+
+<li class='tocline'>B. <a href="#a_DTD_definition" class="tocxref">DTD Implementation</a> 
+
+<ul class="toc">
+<li class='tocline'>B.1. <a href="#a_module_qname" class="tocxref">Qualified Names Module</a></li>
+
+<li class='tocline'>B.2. <a href="#a_module_impl" class="tocxref">Element Definition Module</a></li>
+</ul>
+</li>
+
+<li class='tocline'>C. <a href="#s_refs" class="tocxref">References</a> 
+
+<ul class="toc">
+<li class='tocline'>C.1. <a href="#s_norm-refs" class="tocxref">Normative References</a></li>
+
+<li class='tocline'>C.2. <a href="#s_other-refs" class="tocxref">Other References</a></li>
+</ul>
+</li>
+
+<li class='tocline'>D. <a href="#s_acks" class="tocxref">Acknowledgments</a></li>
+</ul>
+</div>
+
+<!--OddPage-->
+<h1><a id="s_intro">1. Introduction</a></h1>
+
+<p><em>This section is informative.</em></p>
+
+<p>This document contains a single module designed to be used to help make XHTML-family markup languages more effective at supporting the needs of the Accessibility Community. It has been developed
+in conjunction with the W3C's Web Accessibility Initiative and other interested parties. It provides a generic mechanism for defining the relationship between document components and well-known
+accessibility taxonomies.</p>
+
+<!--OddPage-->
+<h1><a id="s_conformance">2. Conformance Requirements</a></h1>
+
+<p>This section is <em>normative</em>.</p>
+
+<p>The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in [<a class="nref" href= 
+"#ref_RFC2119">RFC2119</a>].</p>
+
+<p>Note that all examples in this document are informative, and are not meant to be interpreted as normative requirements.</p>
+
+<h2><a id="docconf">2.1. Document Conformance</a></h2>
+
+<p>XHTML Access is not a stand-alone document type. It is intended to be integrated into other XHTML Family Markup Languages. A conforming XHTML Access document is a document that requires only the
+facilities described as mandatory in this specification and the facilities described as mandatory in its host language. Such a document must meet all the following criteria:</p>
+
+<ol>
+<li>
+<p><span class="must">The document MUST conform to the constraints expressed in its host language implementation.</span></p>
+</li>
+
+<li>
+<p><span class="must">If the host language is not in the XHTML namespace, and the host language does not incorporate this module into its own namespace, then the document MUST contain an <code>
+xmlns:</code> declaration for the XHTML Access namespace [<a class="nref" href="#ref_XMLNAMES">XMLNAMES</a>]</span>. The namespace for XHTML Access Module is defined to be <code>
+http://www.w3.org/1999/xhtml</code>. An example start tag of a root element might look like:</p>
+
+<div class="example">
+<p>Example</p>
+
+<pre>
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" &gt;
+</pre>
+</div>
+</li>
+</ol>
+
+<h2><a id="hostconf">2.2. Host Language Conformance</a></h2>
+
+<p><span class="must">When XHTML Access is included in a host language, all of the facilities required in this specification MUST be included in the host language.</span> <span class="must">In
+addition, the element defined in this specification MUST be included in the content model of the host language.</span> <span class="may">The element defined in this specification MAY be incorporated
+into the namespace of the host language, or it MAY remain in the XHTML namespace.</span> <span class="must">Finally, XHTML Access requires the availability of the XHTML Role Attribute Module [<a
+class="nref" href="#ref_XHTMLROLE">XHTMLROLE</a>] and of the Core Attribute Collection as defined in XHTML Modularization [<a class="nref" href="#ref_XHTMLMOD">XHTMLMOD</a>].</span></p>
+
+<div class="issue">
+<p id="s_conformance_issue_0" class="issueTitle">Chameleon Namespace</p>
+
+It is not clear that there is a benefit in making this module chameleon. However, since the Role Attribute Module is chameleon, this one likely should be as well.</div>
+
+<h2><a id="uaconf">2.3. User Agent Conformance</a></h2>
+
+<p><span class="must">A conforming user agent MUST support all of the features required in this specification.</span></p>
+
+<!--OddPage-->
+<h1><a id="s_access">3. XHTML Access Module</a></h1>
+
+<p>This section is <em>normative</em>.</p>
+
+<p>This module defines the <span class="eref">access</span> element.</p>
+
+<table class="moduledef" border="1" summary="Elements and Attributes in Text Module">
+<thead>
+<tr>
+<th>Element</th>
+<th>Attributes</th>
+<th>Minimal Content Model</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><span class="eref">access</span></td>
+<td><span class="csref">Common</span>, <span class="aref">activate</span>, <span class="aref">key</span>, <span class="aref">targetid</span>, <span class="aref">targetrole</span></td>
+<td class="content">EMPTY</td>
+</tr>
+</tbody>
+</table>
+
+<p>Implementations: <a href="#a_DTD_definition">XML DTD</a></p>
+
+<h2><a id="sec_3.1.">3.1. The <code>access</code> element</a></h2>
+
+<p>The <span class="eref">access</span> element assigns an accessibility mapping to elements within a document. Actuating the mapping results in the element gaining focus or, optionally, in some
+other event being delivered.</p>
+
+<p><em>Attributes</em></p>
+
+<h3><a id="sec_3.1.1.">3.1.1. <code>activate</code> = ( yes | no* )</a></h3>
+
+<p>The <span class="aref">activate</span> attribute indicates whether a target element should be activated or not once it obtains focus. The default value for this attribute is "no", indicating that
+the element will not be "activated".</p>
+
+<h3><a id="sec_3.1.2.">3.1.2. <code>key</code> = <span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_Character">Character</a></span></a></h3>
+
+<p>This attribute assigns a key mapping to an access shortcut. An access key is a single character from the document character set. <strong>Note:</strong> Authors should consider the input method of
+the expected reader when specifying an accesskey.</p>
+
+<p>Triggering an access key defined in an access element changes focus to the next element in navigation order from the current focus that has one of the the referenced role or id values. Note that
+it is possible to deliver alternate events via [<a class="nref" href="#ref_XMLEVENTS">XMLEVENTS</a>]. It is also possible to have the target element activated through the use of the <span class=
+"aref">activate</span> attribute. Finally, it is possible to associate additional event handlers with target which might then perform additional actions once focus is changed.</p>
+
+<p><span class="mustnot">If neither a <code>targetrole</code> nor a <code>targetid</code> attribute are specified, the user agent MUST NOT define a mapping nor deliver any events.</span></p>
+
+<p><span class="must">An <code>access</code> element must have either a <code>targetrole</code> or a <code>targetid</code> attribute specified.</span></p>
+
+<p>The invocation of access keys depends on the implementation. For instance, on some systems one may have to press the "alt" key in addition to the access key. On other systems, one generally has to
+press the "cmd" key in addition to the access key.</p>
+
+<p>The rendering of access keys depends on the user agent. We recommend that authors include the access key in label text or wherever the access key is to apply. User agents should render the value
+of an access key in such a way as to emphasize its role and to distinguish it from other characters (e.g., by underlining it).</p>
+
+<p>The character assigned to a key, and its relationship to a <span class="aref">role</span> or <span class="aref">id</span> attribute, are a suggestion of the author. <span class="may">User agents
+may provide mechanisms for overriding, disabling, or re-assigning keys.</span> <span class="must">In such user agents, user-specified assignments must take precendence.</span> <span class="should">If
+no key attribute is specified, the user agent SHOULD assign a key.</span></p>
+
+<div class="issue">
+<p id="s_access_issue_1" class="issueTitle">id and xml:id</p>
+
+We talk about the id attribute, but we might also need to accomodate xml:id. How can we do that consistently?</div>
+
+<h3><a id="sec_3.1.3.">3.1.3. <code>targetid</code> = <code>IDREFs</code></a></h3>
+
+<p>The <span class="aref">targetid</span> attribute specifies one or more <span class="datatype"><a href="http://www.w3.org/TR/xhtml-modularization/abstraction.html#dt_IDREF">IDREF</a></span>s
+related to target elements for the associated event (i.e., the node to which the event should be delivered).</p>
+
+<h3><a id="sec_3.1.4.">3.1.4. <code>targetrole</code> = <code>CURIEs</code></a></h3>
+
+<p>The <span class="aref">targetrole</span> attribute specifies a space separated list of <code>CURIE</code>s [<a class="nref" href="#ref_CURIE">CURIE</a>] that maps to an element with a <span class= 
+"aref">role</span> attribute with the same value.</p>
+
+<p><span class="must">If a <span class="aref">targetid</span> and a <span class="aref">targetrole</span> are both specified for an element, the <span class="aref">targetid</span> attribute value must
+take precedence.</span></p>
+
+<p><span class="must">If the prefix is omitted from a CURIE, the default value of <code>http://www.w3.org/1999/xhtml/vocab#</code> MUST be used.</span></p>
+
+<div class="example">
+<p>Access element that focuses into a field</p>
+
+<pre>
+&lt;access key="s" 
+        title="Social Security Number" 
+        targetrole="ss:number" /&gt;
+</pre>
+</div>
+
+<div class="example">
+<p>Accessing a table of contents</p>
+
+<pre>
+&lt;access key="c"
+        title="Table of Contents" 
+        targetrole="toc" /&gt;
+</pre>
+</div>
+
+<div class="example">
+<p>Access that moves to the main content</p>
+
+<pre>
+&lt;access key="m"
+        title="Main content" 
+        targetrole="main" /&gt;
+</pre>
+</div>
+
+<div class="example">
+<p>Access element that goes to a specific element</p>
+
+<pre>
+&lt;access key="u" 
+        title="Username" 
+        targetid="username" /&gt;
+</pre>
+</div>
+
+<div class="example">
+<p>Access element with no specific key mapping</p>
+
+<pre>
+&lt;access title="Navigation bar" 
+        targetrole="navigation" /&gt;
+</pre>
+</div>
+
+<!--OddPage-->
+<h1><a id="a_Schema_definition">A. Schema Implementation</a></h1>
+
+<p>This appendix is <em>informative</em>.</p>
+
+<p>There will be an XML Schema implementation of this module in the next version.</p>
+
+<!--OddPage-->
+<h1><a id="a_DTD_definition">B. DTD Implementation</a></h1>
+
+<p>This appendix is <em>normative</em>.</p>
+
+<p>The DTD implementation of XHTML Access Module conforms to the requirements defined in [<a class="nref" href="#ref_XHTMLMOD">XHTMLMOD</a>]. Consequently, it provides a Qualified Names sub-module,
+and a module file for the XHTML Access Module defined in this specification.</p>
+
+<h2><a id="a_module_qname">B.1. Qualified Names Module</a></h2>
+
+<pre class="dtd">
+&lt;!-- ....................................................................... --&gt;
+&lt;!-- XHTML Access Qname Module  ............................................ --&gt;
+&lt;!-- file: xhtml-access-qname-1.mod
+
+     This is XHTML Access - the Access Attribute Module for XHTML.
+
+     Copyright 2007-2008 W3C (MIT, ERCIM, Keio), All Rights Reserved.
+
+     This DTD module is identified by the PUBLIC and SYSTEM identifiers:
+
+       PUBLIC "-//W3C//ENTITIES XHTML Access Attribute Qnames 1.0//EN"
+       SYSTEM "http://www.w3.org/MarkUp/DTD/xhtml-access-qname-1.mod"
+
+     Revisions:
+     (none)
+     ....................................................................... --&gt;
+
+&lt;!-- XHTML Access Attribute Qname (Qualified Name) Module
+
+     This module is contained in two parts, labeled Section 'A' and 'B':
+
+       Section A declares parameter entities to support namespace-
+       qualified names, namespace declarations, and name prefixing
+       for XHTML Access and extensions.
+
+       Section B declares parameter entities used to provide
+       namespace-qualified names for the XHTML access element:
+
+         %XHTML-ACCESS.access.qname;   the xmlns-qualified name for access
+         ...
+
+     XHTML Access extensions would create a module similar to this one.
+--&gt;
+
+&lt;!-- Section A: XHTML Access Attribute XML Namespace Framework ::::::::::::::: --&gt;
+
+&lt;!-- 1. Declare a %XHTML-ACCESS.prefixed; conditional section keyword, used
+        to activate namespace prefixing. The default value should
+        inherit '%NS.prefixed;' from the DTD driver, so that unless
+        overridden, the default behavior follows the overall DTD
+        prefixing scheme.
+--&gt;
+&lt;!ENTITY <span class="entity">% NS.prefixed</span> "IGNORE" &gt;
+&lt;!ENTITY <span class="entity">% XHTML-ACCESS.prefixed</span> "%NS.prefixed;" &gt;
+
+&lt;!-- 2. Declare a parameter entity (eg., %XHTML-ACCESS.xmlns;) containing
+        the URI reference used to identify the XHTML Access Attribute namespace
+--&gt;
+&lt;!ENTITY <span class="entity">% XHTML-ACCESS.xmlns</span>  "http://www.w3.org/1999/xhtml" &gt;
+
+&lt;!-- 3. Declare parameter entities (eg., %XML.prefix;) containing
+        the default namespace prefix string(s) to use when prefixing
+        is enabled. This may be overridden in the DTD driver or the
+        internal subset of an document instance. If no default prefix
+        is desired, this may be declared as an empty string.
+
+     NOTE: As specified in [XMLNAMES], the namespace prefix serves
+     as a proxy for the URI reference, and is not in itself significant.
+--&gt;
+&lt;!ENTITY <span class="entity">% XHTML-ACCESS.prefix</span>  "" &gt;
+
+&lt;!-- 4. Declare parameter entities (eg., %XHTML-ACCESS.pfx;) containing the
+        colonized prefix(es) (eg., '%XHTML-ACCESS.prefix;:') used when
+        prefixing is active, an empty string when it is not.
+--&gt;
+&lt;![%XHTML-ACCESS.prefixed;[
+&lt;!ENTITY <span class="entity">% XHTML-ACCESS.pfx</span>  "%XHTML-ACCESS.prefix;:" &gt;
+]]&gt;
+&lt;!ENTITY <span class="entity">% XHTML-ACCESS.pfx</span>  "" &gt;
+
+&lt;!-- declare qualified name extensions here ............ --&gt;
+&lt;!ENTITY <span class="entity">% xhtml-access-qname-extra.mod</span> "" &gt;
+%xhtml-access-qname-extra.mod;
+
+&lt;!-- 5. The parameter entity %XHTML-ACCESS.xmlns.extra.attrib; may be
+        redeclared to contain any non-XHTML Access namespace 
+        declaration attributes for namespaces embedded in XML. The default
+        is an empty string.  XLink should be included here if used
+        in the DTD.
+--&gt;
+&lt;!ENTITY <span class="entity">% XHTML-ACCESS.xmlns.extra.attrib</span> "" &gt;
+
+
+&lt;!-- Section B: XML Qualified Names ::::::::::::::::::::::::::::: --&gt;
+
+&lt;!-- 6. This section declares parameter entities used to provide
+        namespace-qualified names for the XHTML Access element.
+--&gt;
+
+&lt;!ENTITY <span class="entity">% XHTML-ACCESS.access.qname</span>  "%XHTML-ACCESS.pfx;access" &gt;
+
+&lt;!-- end of xhtml-access-qname-1.mod --&gt;
+
+</pre>
+
+<h2><a id="a_module_impl">B.2. Element Definition Module</a></h2>
+
+<pre class="dtd">
+&lt;!-- ...................................................................... --&gt;
+&lt;!-- XHTML Access Module .................................................. --&gt;
+&lt;!-- file: xhtml-access-1.mod
+
+     This is XHTML Access - the Access Module for XHTML.
+
+     Copyright 2007-2008 W3C (MIT, ERCIM, Keio), All Rights Reserved.
+
+     This DTD module is identified by the PUBLIC and SYSTEM identifiers:
+
+       PUBLIC "-//W3C//ELEMENTS XHTML Access Element 1.0//EN"
+       SYSTEM "http://www.w3.org/MarkUp/DTD/xhtml-access-1.mod"
+
+     Revisions:
+     (none)
+     ....................................................................... --&gt;
+
+
+&lt;!ENTITY <span class="entity">% Character.datatype</span> "CDATA" &gt;
+&lt;!ENTITY <span class="entity">% CURIEs.datatype</span> "CDATA" &gt;
+&lt;!ENTITY <span class="entity">% IDREFs.datatype</span> "CDATA" &gt; 
+
+&lt;!ENTITY <span class="entity">% access.element</span>  "INCLUDE" &gt;
+&lt;![%access.element;[
+&lt;!ENTITY <span class="entity">% access.content</span>  "EMPTY" &gt;
+&lt;!ENTITY <span class="entity">% XHTML-ACCESS.access.qname</span>  "access" &gt;
+&lt;!ELEMENT <span class="element">%XHTML-ACCESS.access.qname;</span>  %access.content; &gt;
+&lt;!-- end of access.element --&gt;]]&gt;
+
+&lt;!ENTITY <span class="entity">% access.attlist</span>  "INCLUDE" &gt;
+&lt;![%access.attlist;[
+&lt;!ATTLIST %access.qname;
+      %Common.attrib;
+      activate     ( yes | no )             #IMPLIED
+      key          %Character.datatype;     #IMPLIED
+      targetid     %IDREFs.datatype;        #IMPLIED
+      targetrole   %CURIEs.datatype;        #IMPLIED
+&gt;
+&lt;!-- end of access.attlist --&gt;]]&gt;
+
+&lt;!-- end of xhtml-access-1.mod --&gt;
+
+</pre>
+
+<!--OddPage-->
+<h1><a id="s_refs">C. References</a></h1>
+
+<p>This appendix is <em>normative</em>.</p>
+
+<h2><a id="s_norm-refs">C.1. Normative References</a></h2>
+
+<dl>
+<dt>[<a id="ref_CURIE" class="normref">CURIE</a>]</dt>
+
+<dd>"<cite><a href="http://www.w3.org/TR/curie/">CURIE Syntax 1.0</a></cite>", W3C Working Draft, M. Birbeck, S. McCarron, <i><abbr title="editor">ed.</abbr></i>, 26 November 2007.<br />
+Available at: http://www.w3.org/TR/2007/WD-curie-20071126/<br />
+The <a href="http://www.w3.org/TR/curie">latest version</a> is available at: http://www.w3.org/TR/curie</dd>
+
+<dt>[<a id="ref_DOM2EVENTS" class="normref">DOM2EVENTS</a>]</dt>
+
+<dd>"<cite><a href="http://www.w3.org/TR/DOM-Level-2-Events/">Document Object Model (DOM) Level 2 Events Specification</a></cite>", W3C Recommendation, T. Pixley, <i><abbr title="editor">
+ed.</abbr></i>, 13 November 2000.<br />
+Available at: http://www.w3.org/TR/DOM-Level-2-Events/<br />
+The <a href="http://www.w3.org/TR/DOM-Level-2-Events">latest version</a> is available at: http://www.w3.org/TR/DOM-Level-2-Events</dd>
+
+<dt><a id="ref_IRI" class="normref">IRI</a></dt>
+
+<dd>"<cite><a href="http://www.ietf.org/rfc/rfc3987.txt">Internationalized Resource Identifiers (IRI)</a></cite>", RFC 3987, M.Duerst, M. Suignard January 2005.<br />
+Available at: http://www.ietf.org/rfc/rfc3987.txt</dd>
+
+<dt><a id="ref_RFC2119" class="normref">[RFC2119]</a></dt>
+
+<dd>"<cite><a href="http://www.rfc-editor.org/rfc/rfc2119.txt">Key words for use in RFCs to indicate requirement levels</a></cite>", RFC 2119, S. Bradner, March 1997.<br />
+ Available at: http://www.rfc-editor.org/rfc/rfc2119.txt</dd>
+
+<dt><a id="ref_XHTMLMOD">[XHTMLMOD]</a></dt>
+
+<dd>"<cite><a href="http://www.w3.org/TR/2006/WD-xhtml-modularization-20060705">Modularization of XHTML&#8482; 1.1</a></cite>", W3C Working Draft, D. Austin <i xml:lang="lt">et al.</i>, <i><abbr
+title="editors">eds.</abbr></i>, 5 July 2006.<br />
+Available at: http://www.w3.org/TR/2006/WD-xhtml-modularization-20060705<br />
+The <a href="http://www.w3.org/TR/xhtml-modularization">latest version</a> is available at: http://www.w3.org/TR/xhtml-modularization</dd>
+
+<dt><a id="ref_XMLNAMES" class="ref">[XMLNAMES]</a></dt>
+
+<dd>"<cite><a href="http://www.w3.org/TR/1999/REC-xml-names-19990114">Namespaces in XML</a></cite>", W3C Recommendation, T. Bray <i xml:lang="lt">et al.</i>, <i><abbr title="editors">eds.</abbr></i>,
+14 January 1999.<br />
+Available at: http://www.w3.org/TR/1999/REC-xml-names-19990114<br />
+The <a href="http://www.w3.org/TR/REC-xml-names">latest version</a> is available at: http://www.w3.org/TR/REC-xml-names</dd>
+
+<dt><a id="ref_XHTMLROLE" class="ref">[XHTMLROLE]</a></dt>
+
+<dd>"<cite><a href="http://www.w3.org/TR/2006/WD-xhtml-role-20061113/">XHTML Role Attribute Module</a></cite>", W3C Working Draft, M. Birbeck <i xml:lang="lt">et al.</i>, <i><abbr title="editors">
+eds.</abbr></i>, 13 November 2006.<br />
+Available at: http://www.w3.org/TR/2006/WD-xhtml-role-20061113/<br />
+The <a href="http://www.w3.org/TR/xhtml-role">latest version</a> is available at: http://www.w3.org/TR/xhtml-role</dd>
+</dl>
+
+<h2><a id="s_other-refs">C.2. Other References</a></h2>
+
+<dl>
+<dt><a id="ref_XHTML2">[XHTML2]</a></dt>
+
+<dd>"<cite><a href="http://www.w3.org/TR/2005/WD-xhtml2-20050527">XHTML&#8482; 2.0</a></cite>". J. Axelsson <i xml:lang="lt">et al.</i>, 27 May 2005.<br />
+Available at: http://www.w3.org/TR/2005/WD-xhtml2-20050527<br />
+The <a href="http://www.w3.org/TR/xhtml2">latest version</a> is available at: http://www.w3.org/TR/xhtml2</dd>
+
+<dt><a id="ref_XMLEVENTS" class="normref">[XMLEVENTS]</a></dt>
+
+<dd>"<cite><a href="http://www.w3.org/TR/2003/REC-xml-events-20031014">XML Events</a></cite>", W3C Recommendation, S. McCarron <i xml:lang="la">et al.</i>, <i><abbr title="editors">eds.</abbr></i>,
+14 October 2003.<br />
+Available at: http://www.w3.org/TR/2003/REC-xml-events-20031014</dd>
+</dl>
+
+<!--OddPage-->
+<h1><a id="s_acks">D. Acknowledgments</a></h1>
+
+<p><em>This section is informative.</em></p>
+
+<p>At the time of publication, the participants in the W3C XHTML 2 Working Group were:</p>
+<script type="application/javascript" src="https://www.w3.org/scripts/TR/fixup.js"></script></body>
+</html>
+
+Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

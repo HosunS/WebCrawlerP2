@@ -1,0 +1,106 @@
+final_urltypeEvaluex.https://www.ics.uci.edu/~baldig/dom_intro.htmlLhttp_headerstypeEvalue嚔AktypeEvalueNContent-LengthAvtypeEvalueD5308ktypeEvalueMAccept-RangesAvtypeEvalueEbytesktypeEvalueFServerAvtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14ktypeEvalueMLast-ModifiedAvtypeEvalueXTue, 13 Jun 2006 19:07:52 GMTktypeEvalueDETagAvtypeEvalueT"14bc-4161fc8975200"ktypeEvalueDDateAvtypeEvalueXMon, 04 Feb 2019 23:58:13 GMTktypeEvalueLContent-TypeAvtypeEvalueXtext/html; charset=UTF-8Kraw_contenttypeEvalueY�<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="jianlincheng@yahoo.com">
+<meta name="generator" content="AceHTML 5 Freeware">
+</head>
+<body"><a href="#1"><a href="#2"><a href="#3"></a></a></a>
+<br>
+
+<b><a name="1"></a>Methodology</b>
+<ul type="disc">
+	<li><a href="http://www.ics.uci.edu/~baldig/domain.html"><b>DOMpro</b></a> is a web server to predict protein domain boundaries using 1D-Recursive Neural Networks and statistical methods. To utilize the evolutionary information encoded in homologous proteins, profiles generated from the NR database by PSI-BLAST are used as inputs. The predicted secondary structure and solvent accessibility are also fed into the neural networks to improve predictions. </li>
+	<li> The protein domains are predicted in two steps. Step 1: Neural networks classify residues into two categories: boundary residues or non-boundary residues. Step 2: Proteins are cut into domains according to domain boundary predictions in step 1. 
+</ul>
+
+<b><a name="5"></a>Limitation</b>
+<ul type="disc">
+	<li>Currently the implementation of the web server can only cut proteins into at most three domains according to domain boundary predictions. This is usually not enough for very long proteins (>600 residues). To overcome this limit, you can download DOMpro software to make domain boundary predictions and then manually infer domains from the domain bounday predictions. 
+	<li>This server is an ab initio domain prediction server. We are working on adding homology modeling to improve domain predictions and will incorporate it into the server in future. Currently, for proteins having significant similarity with proteins in the PDB, you can use the <a href="http://ncbi.nih.gov/Structure/cdd/cdd.shtml">NCBI Conserved Domain Database search tool</a>.   
+</ul>
+
+
+<b><a name="1"></a>Input Format</b>
+<ul type="disc">
+	<li>Target name, optional, which is used to identify your query.</li>
+	<li>Email address, where the prediction result is sent. 
+	<li>Sequence: a raw text of sequence, white spaces are ignored.</li>
+</ul>
+
+<b>Output F<a name="2"></a>ormat</b>
+<ul type="disc">
+	<li>Domain Boundary predictions are presented in CASP format. Here is an example with descriptions: </li>
+
+</ul>
+<pre>
+           PFRMAT DP
+           TARGET Query-Name 
+           AUTHOR baldi-group-server 
+           REMARK Predictor remarks
+           METHOD Description of methods used
+           METHOD Description of methods used
+           METHOD Description of methods used
+           MODEL  1
+           1 H 1 0.90  #Format: residue index, residue name, predicted domain index, confidence score of prediction.        
+           2 L 1 0.90  #In this example, two predicted domains: Residues 1-9 are in domain 1, others in domain 2.    
+           3 E 1 0.90       
+           4 G 1 0.90           
+           5 S 1 0.90          
+           6 I 1 0.90         
+           7 G 1 0.60
+           8 I 1 0.60
+           9 L 1 0.80
+           10 L 2 0.80
+           11 K 2 0.90
+           12 K 2 0.90
+           13 H 2 0.90
+           14 E 2 0.90
+           15 I 2 0.90
+           16 V 2 0.75
+           17 F 2 0.60
+           18 D 2 0.90
+           19 G 2 0.90
+           20 C 2 0.90
+           END
+</pre>
+
+
+<b>Performa<a name="3"></a>nce</b><br>
+<ul type="disc">
+<li>
+<a href="http://cafasp4.bioinformatics.buffalo.edu/dp/update.html">DOMpro's performance in the CAFASP4 (Evaluated by CAFASP team)</a>. In the CAFASP4 evaluation, DOMpro is ranked first among the ab-initio domain predictors (Armadillo, Biozon, Dompred-DPS, Globplot, Mateo, DOMpro), while the performance of the top three (DOMpro, Globplot, Dompred-DPS) is close. 
+</li>
+<li>
+On our own testing dataset, DOMpro correctly predicted the number of domains for 69% of the combined dataset of single and multi-domain proteins. 79% of the single domain proteins were correctly predicted as having no boundaries. The number of domains is correctly predicted for 43% of the multi-domain proteins.
+</li>
+</ul>
+<br>
+
+<b><a href="#4"></a>Reference<a name="4"></a></b><br><br>
+<ul type="disc">
+<!--
+</li>
+-->
+<li>
+J. Cheng, M. Sweredoski, P. Baldi. DOMpro: Protein Domain Prediction Using Profiles, Secondary Structure, Relative Solvent Accessibility, and Recursive Neural Networks. <i>Knowledge Discovery and Data Mining</i>, vol. 13, no. 1, pp. 1-10, 2006.  <a href="http://contact.ics.uci.edu/domain.pdf">[PDF]</a>
+</li>
+<!--
+	<li><a href="http://www.ics.uci.edu/~jianlinc">Jianlin Cheng</a>, Ph.D candidate, School of Information & Computer Science, University of California, Irvine </li>
+	<li>Michael Sweredoski, Ph.D student, School of Information & Computer Science, University of California, Irvine </li>
+	<li><a href="http://www.ics.uci.edu/~pfbaldi">Pierre Baldi</a>, Professor and director of Institute for Genomics and Bioinformatics, School of Information & Computer Science, University of California Irvine</li>
+-->
+</ul>
+<br>
+<b><a href="#5"></a>Download<a name="5"></a></b><br><br>
+<ul>
+<li>
+<a href="http://contact.ics.uci.edu/download.html">Download DOMpro 1.0 software and dataset here.</a>
+</li>
+</ul>
+<br><br>
+</body>
+</html>
+Mis_redirectedtypeEvalue鮅http_codetypeEvalue萉download_completetypeEvalue�

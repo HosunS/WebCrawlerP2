@@ -1,0 +1,37 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueŠ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1719¢Ak¢DtypeEvalueLX-Robots-TagAv¢DtypeEvalueGnoindex¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueXattachment; filename=sgd.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueYDokuWiki=2e8dd911f158330019ac0dc385e9bd5d; path=/; HttpOnly, DW68700bfd16c2027de7de74a5a8202a6f=deleted; expires=Thu, 01-Jan-1970 00:00:01 GMT; path=/; httponly, FCK_media=%2Flib%2Fplugins%2Fckgedit%2Ffckeditor%2Fuserfiles%2Fimage%2F; path=/, FCK_NmSp=software%3Asgd; path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX>no-store, no-cache, must-revalidate, post-check=0, pre-check=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 23:08:34 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=utf-8Kraw_content¢DtypeEvalueY·==== SGD software for parameter inference in discretely observed stochastic kinetic models ====
+
+
+This program is a free software associated with the paper:
+
+
+Parameter inference for discretely observed stochastic kinetic models using stochastic gradient descent\\ 
+Yuanfeng Wang, Scott Christley, Eric Mjolsness and Xiaohui Xie\\ 
+[[http://www.biomedcentral.com/1752-0509/4/99|BMC Systems Biology 2010, 4:99 doi:10.1186/1752-0509-4-99]].
+
+
+The code is implemented with Matlab(version 2008a) (Copyright @ [[yuanfenw@uci.edu|Yuanfeng Wang]])
+
+
+=== Instruction of use ===
+
+
+    - [[https://cbcl.ics.uci.edu/sgd/SGD.tar.gz|Download  SGD]]
+    - Open and run the file " main_sgd " in the fold using  matlab , choose to input the  datafile either using graphic interface or by specifying the file directory. <nowiki>%%
+
+
+%%*%%%%</nowiki><nowiki>*</nowiki> The GLPKmex package should be installed first before the run. The windows version of GLPKmex is included in the sourcecode. The Linux version of glpkmex is can be downloaded here [[http://sourceforge.net/projects/glpkmex/files/glpkmex/2.8/glpkmex-2.8-src.zip/download|GLPKmex]] .
+
+
+Input files:
+
+
+    * Stoichiometry Matrix for reactants (Columns corresponds to species, rows corresponds to reaction types): see example file 'Rct_mat.dat' ;
+    * Stoichiometry Matrix for product: same format as 1): see example file 'Prdt_mat.dat';
+    * time course measurement data: see example file 'data.txt'.
+
+
+Output:
+
+
+    * Summary of output is in the "dairy.txt" file under the same folder, which includes parameter values and the correpsonding gradient value during gradient descent. The parameter values and the corresponding gradient value is also plotted in fig 1 and 2.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

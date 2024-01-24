@@ -1,0 +1,22 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC804¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 04 Feb 2014 23:44:08 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"324-4f19d375f6200"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 20:28:51 GMTKraw_content¢DtypeEvalueY$
+
+public class HomeTheaterTestDrive {
+  public static void main(String[] args) {
+    Amplifier amp = new Amplifier("Top-O-Line Amplifier");
+    Tuner tuner = new Tuner("Top-O-Line AM/FM Tuner", amp);
+    DvdPlayer dvd = new DvdPlayer("Top-O-Line DVD Player", amp);
+    CdPlayer cd = new CdPlayer("Top-O-Line CD Player", amp);
+    Projector projector = new Projector("Top-O-Line Projector", dvd);
+    TheaterLights lights = new TheaterLights("Theater Ceiling Lights");
+    Screen screen = new Screen("Theater Screen");
+    PopcornPopper popper = new PopcornPopper("Popcorn Popper");
+
+    HomeTheaterFacade homeTheater = 
+      new HomeTheaterFacade(
+        amp, tuner, dvd, cd, projector, screen, lights, popper);
+
+    homeTheater.watchMovie("Raiders of the Lost Ark");
+    homeTheater.endMovie();
+  }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

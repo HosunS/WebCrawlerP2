@@ -1,0 +1,97 @@
+¦Ifinal_url¢DtypeEvaluex*https://www.ics.uci.edu/~baldig/index.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2750¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 13 Apr 2006 04:31:30 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"abe-411486e23cc80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 05:59:57 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY
+¾<html>
+<head>
+<title>Protein 2D and 3D structure prediction</title>
+
+</head>
+
+<body>
+<font face="arial>
+<div style="margin-left: 0%;">
+<table width="80%" border="0">
+  <tbody>
+  	<tr>
+	<td>
+	
+	</td>
+	</tr>
+
+    <tr>
+      <td><big><big><span style="font-weight: bold;">Protein 2D and Ab-Initio 3D Structure Prediction Server </span></big></big><br>
+      <font size="+1">
+      </font></td>
+    </tr>
+
+
+
+  </tbody>
+</table>
+</div>
+<br>
+
+<table width="80%" border="0">
+  <tbody>
+    <tr>
+      <td>
+<!--
+      <form method="post" action="http://w3.ics.uci.edu/cgi-bin/nph-cgiwrap/baldig/casp6/predict.pl">
+-->
+      <form method="post" action="http://genome.ics.uci.edu/cgi-bin/casp6/predict_new.pl">
+        <table border="0">
+          <tbody>
+            <tr>
+              <td>
+              <p><b>
+Email address(where the prediction will be sent):</b><br>
+              <input text="" name="email_address" size=30></p>
+              <p><b>
+Target Name(required):</b><br>
+              <input text="" name="input_name" size=30></p>
+              </td>
+	<tr>
+<input name="cmap" type="checkbox" value="conmap" checked>
+Residue-Residue Separation Prediction in CASP format (8 Angstrom)</a> </b><b><br /><br />
+	</tr>
+	<tr>
+<input name="twoto3d" type="checkbox" value="3dstx">
+3D Coordinates Prediction</a> </b><b><br /><br />
+	</tr>
+	<tr>
+<input name="eva_format" type="checkbox" value="eva" >
+Residue-Residue Separation Prediction in EVA format (8 Angstrom)</a> </b><b><br /><br />
+	</tr>
+            </tr>
+            <tr>
+              <td colspan="3">
+              <p>
+              <br>
+              <b>
+Protein sequence(one plain sequence, no headers):
+</b><br>
+              <textarea name="input_text" rows="6" cols="80"></textarea></p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+	<br>
+        <input type="submit" value="Predict"></form>
+      <br>
+<font size="+1"><b>Notice:</b></font>
+    The prediction results for residue-residue separation and 3d coordinates will be sent out via two different emails. Each email will include five attached files corresponding to five predicted models. 
+<br>
+<b>Reference:</b><br>
+J. Cheng, A. Randall, M. Sweredoski, P. Baldi, SCRATCH: a Protein Structure and Structural Feature Prediction Server, Nucleic Acids Research, Web Server Issue, vol. 33, w72-76, 2005.
+<a href="http://contact.ics.uci.edu/scratch.pdf">[PDF]</a>
+<br><br>
+      <i><a href="http://www.igb.uci.edu/">Institute for Genomics and
+Bioinformatics</a></i><br>
+	  <i><a href="http://www.ics.uci.edu">School of Information & Computer Science</a></i><br>
+      <i><a href="http://www.uci.edu/">University of California Irvine</a></i> </i></i>
+	</td>
+    </tr>
+  </tbody>
+</table>
+</font>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

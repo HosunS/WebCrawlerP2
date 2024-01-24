@@ -1,0 +1,46 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1912¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 01 Feb 2018 22:53:50 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"778-5642e7827ef6c"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 18:19:27 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYx<!DOCTYPE html>
+<html>
+<head>
+<title>Theory Seminar, January 19, 2018</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<a href="/~theory/"><img src="http://www.ics.uci.edu/~theory/logo/CATOC2.jpg"
+alt="Center for Algorithms and Theory of Computation"></a>
+<h2><a href="/~theory/269/">CS 269S, Winter 2018: Theory Seminar</a><br>
+Bren Hall, Room 1423, 1pm</h2>
+<hr />
+<h2>January 19, 2018:</h2>
+<h1>Adaptive Cuckoo Filters</h1>
+<h2>Timothy Johnson</h2>
+
+<p>We introduce the adaptive cuckoo filter (ACF), a data
+  structure for approximate set membership that extends cuckoo filters
+  by reacting to false positives, removing them for future queries. As
+  an example application, in packet processing queries may correspond to
+  flow identifiers, so a search for an element is likely to be followed
+  by repeated searches for that element. Removing false positives can
+  therefore significantly lower the false positive rate. The ACF, like
+  the cuckoo filter, uses a cuckoo hash table to store fingerprints. We
+  allow fingerprint entries to be changed in response to a false
+  positive in a manner designed to minimize the effect on the
+  performance of the filter. We show that the ACF is able to
+  significantly reduce the false positive rate by presenting both a
+  theoretical model for the false positive rate and simulations using
+  both synthetic data sets and real packet traces.</p>
+
+<p>(Based on <a href="https://arxiv.org/abs/1704.06818">a paper by Michael
+Mitzenmacher, Salvatore Pontarelli, and Pedro Reviriego</a>
+from ALENEX 2018.)</p>
+
+</body></html>
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

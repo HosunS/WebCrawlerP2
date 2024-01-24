@@ -1,0 +1,231 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:14:33 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY,◊
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: wiki4HE Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>wiki4HE Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/00334/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="#"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: Survey of faculty members from two Spanish universities on teaching uses of Wikipedia</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">913</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Social</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">53</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2015-05-04</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Regression, Clustering, Causal-Discovery</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">Yes</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">35997</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">E. Aibar, J. Llad√É¬≥s, A. Meseguer, J. Minguill√É¬≥n (jminguillona[at]uoc[dot]edu), M. Lerga. Universitat Oberta de Catalunya, Barcelona, Spain.</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">Ongoing research on university faculty perceptions and practices of using Wikipedia as a teaching resource. Based on a Technology Acceptance Model, the relationships within the internal and external constructs of the model are analyzed. Both the perception of colleagues√¢‚Ç¨‚Ñ¢ opinion about Wikipedia and the perceived quality of the information in Wikipedia play a central role in the obtained model. </p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">AGE: numeric<br>GENDER: 0=Male; 1=Female<br>DOMAIN: 1=Arts & Humanities; 2=Sciences; 3=Health Sciences; 4=Engineering & Architecture; 5=Law & Politics<br>PhD: 0=No; 1=Yes<br>YEARSEXP (years of university teaching experience): numeric<br>UNIVERSITY: 1=UOC; 2=UPF<br>UOC_POSITION (academic position of UOC members): 1=Professor; 2=Associate; 3=Assistant; 4=Lecturer; 5=Instructor; 6=Adjunct<br>OTHER (main job in another university for part-time members): 1=Yes; 2=No<br>OTHER_POSITION (work as part-time in another university and UPF members): 1=Professor; 2=Associate; 3=Assistant; 4=Lecturer; 5=Instructor; 6=Adjunct<br>USERWIKI (Wikipedia registered user): 0=No; 1=Yes<br><br>The following survey items are Likert scale (1-5) ranging from strongly disagree / never (1) to strongly agree / always (5)<br><br>Perceived Usefulness<br>PU1: The use of Wikipedia makes it easier for students to develop new skills<br>PU2: The use of Wikipedia improves students' learning<br>PU3: Wikipedia is useful for teaching<br><br>Perceived Ease of Use<br>PEU1: Wikipedia is user-friendly<br>PEU2: It is easy to find in Wikipedia the information you seek<br>PEU3: It is easy to add or edit information in Wikipedia<br><br>Perceived Enjoyment<br>ENJ1: The use of Wikipedia stimulates curiosity<br>ENJ2: The use of Wikipedia is entertaining<br><br>Quality<br>QU1: Articles in Wikipedia are reliable<br>QU2: Articles in Wikipedia are updated<br>QU3: Articles in Wikipedia are comprehensive<br>QU4: In my area of expertise, Wikipedia has a lower quality than other educational resources<br>QU5: I trust in the editing system of Wikipedia<br><br>Visibility<br>VIS1: Wikipedia improves visibility of students' work<br>VIS2: It is easy to have a record of the contributions made in Wikipedia<br>VIS3: I cite Wikipedia in my academic papers<br><br>Social Image<br>IM1: The use of Wikipedia is well considered among colleagues<br>IM2: In academia, sharing open educational resources is appreciated<br>IM3: My colleagues use Wikipedia<br><br>Sharing attitude<br>SA1: It is important to share academic content in open platforms<br>SA2: It is important to publish research results in other media than academic journals or books<br>SA3: It is important that students become familiar with online collaborative environments<br><br>Use behaviour<br>USE1: I use Wikipedia to develop my teaching materials<br>USE2: I use Wikipedia as a platform to develop educational activities with students<br>USE3: I recommend my students to use Wikipedia<br>USE4: I recommend my colleagues to use Wikipedia<br>USE5: I agree my students use Wikipedia in my courses<br><br>Profile 2.0<br>PF1: I contribute to blogs<br>PF2: I actively participate in social networks<br>PF3: I publish academic content in open platforms<br><br>Job relevance<br>JR1: My university promotes the use of open collaborative environments in the Internet<br>JR2: My university considers the use of open collaborative environments in the Internet as a teaching merit<br><br>Behavioral intention<br>BI1: In the future I will recommend the use of Wikipedia to my colleagues and students<br>BI2: In the future I will use Wikipedia in my teaching activity<br><br>Incentives<br>INC1: To design educational activities using Wikipedia, it would be helpful: a best practices guide<br>INC2: To design educational activities using Wikipedia, it would be helpful: getting instruction from a colleague<br>INC3: To design educational activities using Wikipedia, it would be helpful: getting specific training<br>INC4: To design educational activities using Wikipedia, it would be helpfull: greater institutional recognition<br><br>Experience<br>EXP1: I consult Wikipedia for issues related to my field of expertise<br>EXP2: I consult Wikipedia for other academic related issues<br>EXP3: I consult Wikipedia for personal issues<br>EXP4: I contribute to Wikipedia (editions, revisions, articles improvement...)<br>EXP5: I use wikis to work with my students<br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Meseguer, A., Aibar, E., Llad√É¬≥s, J., Minguill√É¬≥n, J., Lerga, M. (2015). √¢‚Ç¨≈ìFactors that influence the teaching use of Wikipedia in Higher Education√¢‚Ç¨¬ù. JASIST, Journal of the Association for Information Science and Technology. ISSN: 2330-1635. doi: 10.1002/asi.23488.<br></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please cite our JASIST paper if you use this dataset.</p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

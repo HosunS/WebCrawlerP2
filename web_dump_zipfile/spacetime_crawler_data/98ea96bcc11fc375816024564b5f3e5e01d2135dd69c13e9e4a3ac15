@@ -1,0 +1,413 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 10:31:24 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYu<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Classification</a></font> <font color=red>(19)</font><br><a href='datasets.html?format=&task=reg&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Regression</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=clu&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Clustering</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=other&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Other</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b>  - <a href='datasets.html?format=&task=cla&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=cat&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Categorical</a> <font color=red>(0)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Numerical</a></font> <font color=red>(19)</font><br><a href='datasets.html?format=&task=cla&att=mix&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Mixed</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=mvar&sort=taskUp&view=table'>Multivariate</a> <font color=red>(50)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=uvar&sort=taskUp&view=table'>Univariate</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=seq&sort=taskUp&view=table'>Sequential</a> <font color=red>(3)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Time-Series</a></font> <font color=red>(19)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=text&sort=taskUp&view=table'>Text</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=dt&sort=taskUp&view=table'>Domain-Theory</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=other&sort=taskUp&view=table'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=life&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Life Sciences</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=cla&att=num&area=phys&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Physical Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=comp&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>CS / Engineering</a> <font color=red>(15)</font><br><a href='datasets.html?format=&task=cla&att=num&area=soc&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Social Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=bus&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Business</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=game&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=num&area=other&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Other</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b> - <a href='datasets.html?format=&task=cla&att=num&area=&numAtt=&numIns=&type=ts&sort=taskUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=less10&numIns=&type=ts&sort=taskUp&view=table'>Less than 10</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=10to100&numIns=&type=ts&sort=taskUp&view=table'>10 to 100</a> <font color=red>(24)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Greater than 100</a></font> <font color=red>(19)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=less100&type=ts&sort=taskUp&view=table'>Less than 100</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=100to1000&type=ts&sort=taskUp&view=table'>100 to 1000</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=greater1000&type=ts&sort=taskUp&view=table'>Greater than 1000</a> <font color=red>(14)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Matrix</a> <font color=red>(16)</font><br><a href='datasets.html?format=nonmat&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=table'>Non-Matrix</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>19</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/REALDISP+Activity+Recognition+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/REALDISP+Activity+Recognition+Dataset">REALDISP Activity Recognition Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The REALDISP dataset is devised to evaluate techniques dealing with the effects of sensor displacement in wearable activity recognition as well as to benchmark general activity recognition algorithms &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1419&nbsp;</p></td>
+			<td><p class="normal">120&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/sEMG+for+Basic+Hand+movements"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/sEMG+for+Basic+Hand+movements">sEMG for Basic Hand movements</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The ‚ÄúsEMG for Basic Hand movements‚Äù includes 2 databases of surface electromyographic signals of 6 hand movements using Delsys' EMG System. Healthy subjects conducted six daily life grasps.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">3000&nbsp;</p></td>
+			<td><p class="normal">2500&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions">Smartphone-Based Recognition of Human Activities and Postural Transitions</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Activity recognition data set built from the recordings of 30 subjects performing basic activities and postural transitions while carrying a waist-mounted smartphone with embedded inertial sensors.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">10929&nbsp;</p></td>
+			<td><p class="normal">561&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Smartphone+Dataset+for+Human+Activity+Recognition+%28HAR%29+in+Ambient+Assisted+Living+%28AAL%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Smartphone+Dataset+for+Human+Activity+Recognition+%28HAR%29+in+Ambient+Assisted+Living+%28AAL%29">Smartphone Dataset for Human Activity Recognition (HAR) in Ambient Assisted Living (AAL)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data is an addition to an existing dataset on UCI. We collected more data to improve the accuracy of our human activity recognition algorithms applied in the domain of Ambient Assisted Living.  &nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5744&nbsp;</p></td>
+			<td><p class="normal">561&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Data+for+Software+Engineering+Teamwork+Assessment+in+Education+Setting"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Data+for+Software+Engineering+Teamwork+Assessment+in+Education+Setting">Data for Software Engineering Teamwork Assessment in Education Setting</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data include over 100 Team Activity Measures and outcomes (ML classes) obtained from activities of 74 student teams during the creation of final class project in SW Eng. classes  at SFSU, Fulda, FAU&nbsp;</p></td> -->
+			<td><p class="normal">Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">74&nbsp;</p></td>
+			<td><p class="normal">102&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/URL+Reputation"><img src="assets/MLimages/SmallLarge187.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/URL+Reputation">URL Reputation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Anonymized 120-day subset of the ICML-09 URL data containing 2.4 million examples and 3.2 million features.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">2396130&nbsp;</p></td>
+			<td><p class="normal">3231961&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Simulated+Falls+and+Daily+Living+Activities+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Simulated+Falls+and+Daily+Living+Activities+Data+Set">Simulated Falls and Daily Living Activities Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">20 falls and 16 daily living activities were performed by 17 volunteers with 5 repetitions while wearing 6 sensors (3.060 instances) that attached to their head, chest, waist, wrist, thigh and ankle.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">3060&nbsp;</p></td>
+			<td><p class="normal">138&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/PEMS-SF"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/PEMS-SF">PEMS-SF</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">15 months worth of daily data (440 daily records) that describes the occupancy rate, between 0 and 1, of different car lanes of the San Francisco bay area freeways across time.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">440&nbsp;</p></td>
+			<td><p class="normal">138672&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/OPPORTUNITY+Activity+Recognition"><img src="assets/MLimages/SmallLarge226.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/OPPORTUNITY+Activity+Recognition">OPPORTUNITY Activity Recognition</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The OPPORTUNITY Dataset for Human Activity Recognition from Wearable, Object, and Ambient Sensors is a dataset devised to benchmark human activity recognition algorithms (classification, automatic data segmentation, sensor fusion, feature extraction, etc).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2551&nbsp;</p></td>
+			<td><p class="normal">242&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Gas+sensor+arrays+in+open+sampling+settings"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gas+sensor+arrays+in+open+sampling+settings">Gas sensor arrays in open sampling settings</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset contains 18000 time-series recordings from a chemical detection platform at six different locations in a wind tunnel facility in response to ten high-priority chemical gaseous substances&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">18000&nbsp;</p></td>
+			<td><p class="normal">1950000&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Daily+and+Sports+Activities"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Daily+and+Sports+Activities">Daily and Sports Activities</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset comprises motion sensor data of 19 daily and sports activities each performed by 8 subjects in their own style for 5 minutes. Five Xsens MTx units are used on the torso, arms, and legs.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">9120&nbsp;</p></td>
+			<td><p class="normal">5625&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/FMA%3A+A+Dataset+For+Music+Analysis"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/FMA%3A+A+Dataset+For+Music+Analysis">FMA: A Dataset For Music Analysis</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">FMA features 106,574 tracks and includes song title, album, artist, genres; play counts, favorites, comments; description, biography, tags; together with audio (343 days, 917 GiB) and features.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">106574&nbsp;</p></td>
+			<td><p class="normal">518&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Epileptic+Seizure+Recognition"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Epileptic+Seizure+Recognition">Epileptic Seizure Recognition</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is a pre-processed and re-structured/reshaped version of a very commonly used dataset featuring epileptic seizure detection. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">11500&nbsp;</p></td>
+			<td><p class="normal">179&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Gas+sensor+array+under+flow+modulation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gas+sensor+array+under+flow+modulation">Gas sensor array under flow modulation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set contains 58 time series acquired from 16 chemical sensors under gas flow modulation conditions. The sensors were exposed to different gaseous binary mixtures of acetone and ethanol.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">58&nbsp;</p></td>
+			<td><p class="normal">120432&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Gas+sensor+array+exposed+to+turbulent+gas+mixtures"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gas+sensor+array+exposed+to+turbulent+gas+mixtures">Gas sensor array exposed to turbulent gas mixtures</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">A chemical detection platform composed of 8 chemoresistive gas sensors was exposed to turbulent gas mixtures generated naturally in a wind tunnel. The acquired time series of the sensors are provided.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">180&nbsp;</p></td>
+			<td><p class="normal">150000&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Twin+gas+sensor+arrays"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Twin+gas+sensor+arrays">Twin gas sensor arrays</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">5 replicates of an 8-MOX gas sensor array were exposed to different gas conditions (4 volatiles at 10 concentration levels each).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">640&nbsp;</p></td>
+			<td><p class="normal">480000&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Dynamic+Features+of+VirusShare+Executables"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dynamic+Features+of+VirusShare+Executables">Dynamic Features of VirusShare Executables</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains the dynamic features of 107,888 executables, collected by VirusShare from Nov/2010 to Jul/2014.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">107888&nbsp;</p></td>
+			<td><p class="normal">482&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Condition+monitoring+of+hydraulic+systems"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Condition+monitoring+of+hydraulic+systems">Condition monitoring of hydraulic systems</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set addresses the condition assessment of a hydraulic test rig based on multi sensor data. Four fault types are superimposed with several severity grades impeding selective quantification.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2205&nbsp;</p></td>
+			<td><p class="normal">43680&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Gas+Sensor+Array+Drift+Dataset+at+Different+Concentrations"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gas+Sensor+Array+Drift+Dataset+at+Different+Concentrations">Gas Sensor Array Drift Dataset at Different Concentrations</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This archive contains 13910 measurements from 16 chemical sensors exposed to 6 different gases at various concentration levels.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering, Causa&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">13910&nbsp;</p></td>
+			<td><p class="normal">129&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

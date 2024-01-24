@@ -1,0 +1,1069 @@
+¦Ifinal_url¢DtypeEvaluex;https://www.ics.uci.edu/~shz/courses/cs295/assignments/pa1/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE58483¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 05 May 2017 23:22:26 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"e473-54ecf298f4378"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 13:55:17 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYäs<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CS295 Programming Assignment 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Le styles -->
+  <link href="../../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../css/nori.css" rel="stylesheet">
+  <link href="../../css/jquery.fancybox.css" rel="stylesheet">
+
+  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      CS295 Realistic Image Synthesis<br>
+      <span style="font-size:26px">Programming Assignment 1: Monte Carlo Sampling and Direct Illumination</span>
+    </h1>
+    <p style="font-size:20px">
+      Instructor: <a href="http://shuangz.com">Shuang Zhao</a><br>
+      Due: Thursday May 4, 2017 (23:59pm Pacific Time)
+    </p>
+
+    <p>
+      <b>Credit:</b> The programming assignments of this course is based on <a href="https://wjakob.github.io/nori/">Nori</a>, an educational renderer created by <a href="http://rgl.epfl.ch/people/wjakob">Wenzel Jakob</a>.
+      <!--
+      This assignment adapts a few problems developed by Wenzel for his <a href="http://rgl.epfl.ch/courses/ACG17">rendering course</a>.
+      -->
+    </p>
+
+    <h4>What to submit</h4>
+    <ul>
+      <li>
+        A report including results and discussions required by Part 1, 2, and 3.
+      </li>
+      <li>
+        A zip package containing your <tt>nori/CMakeLists.txt</tt> file as well as full <tt>nori/include/</tt> and <tt>nori/src/</tt> directories.
+      </li>
+    </ul>
+
+    <div class="alert alert-danger" role="alert">
+      <b>Note</b>: since Nori has been actively used by a number of institutes for their rendering courses, please do NOT post your solution code online (even after the due date).
+    </div>
+
+    <!-- Part 0. Preliminaries -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#part0">Part 0. Preliminaries</a>
+        </h4>
+      </div>
+      <div id="part0" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div class="row col-md-12">
+            <p style="text-decoration: underline;">
+              This part of the assignment is for you to properly setup Nori and get familiar with its key components.
+              You do NOT have to submit anything.
+            </p>
+
+            <h3>Part 0.1. Setting Up a C++ Compiler and Building the Base Code</h3>
+            <p>
+              Click <a href="nori_student.zip">here</a> to download Nori's base code as well as all scene files needed for this assignment.
+            </p>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Linux / Mac OS X</h3>
+              <p>
+                Begin by installing the <a href="http://www.cmake.org/download/">CMake</a> build system on your system. On Mac OS X, you will also need to install a reasonably up-to-date version of XCode along with the command line tools. On Linux, any reasonably recent version of GCC or Clang will work. Navigate to the Nori folder, create a build directory and start <tt>cmake-gui</tt>, like so:
+              </p>
+              <pre class="prettyprint lang-bash">
+$ cd path-to-nori
+$ mkdir build
+$ cd build
+$ cmake-gui ..</pre>
+              <div class="row-centered">
+                <div class="thumbnail col-md-7 col-centered">
+                  <a class="fancybox" href="images/linux-cmake.png"><img src="images/linux-cmake.png"></a>
+                  <div class="caption">
+                    Set the build type to "Unix Makefiles" and then press the <em>Configure</em> and <em>Generate</em> buttons.
+                  </div>
+                </div>
+              </div>
+
+              <p>
+                After the Makefiles are generated, simply run <tt>make</tt> to compile all dependencies and Nori itself.
+                <pre class="prettyprint lang-bash">
+$ make -j 4</pre>
+                This can take quite a while; the above command compiles with four processors at the same time. Note that you will probably see many warning messages while the dependencies are compiledâ€”you can ignore them.
+              </p>
+
+              <div class="row-centered">
+                <div class="thumbnail col-md-7 col-centered">
+                  <a class="fancybox" href="images/build-type-linux.png"><img src="images/build-type-linux.png"></a>
+                  <div class="caption">
+                    Tip: it's a good idea to set the build mode to <em>Release</em> unless you are tracking down a particular bug. The debug version runs <em>much slower</em> (by a factor of 50 or more).
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <h3>Windows / Visual Studio 2013</h3>
+              <p>
+                Begin by installing Visual Studio 2013 (older versions won't do) and a reasonably recent version (3.x or later) of <a href="http://www.cmake.org/download/">CMake</a>. Start CMake and navigate to the Nori directory.
+              </p>
+              <div class="row-centered">
+                <div class="thumbnail col-md-7 col-centered">
+                  <a class="fancybox" href="images/cmake-windows.png"><img src="images/cmake-windows.png"></a>
+                  <div class="caption">
+                    Be sure to select the Visual Studio 2013 <b>64</b> bit compiler. It is also generally a good idea to choose a build directory that is <em>different</em> from the source directory.
+                  </div>
+                </div>
+              </div>
+              <p>
+                After setting up the project, click the <em>Configure</em> and <em>Generate</em> button. This will create a file called <tt>nori.sln</tt>â€”double-click it to open Visual Studio.
+              </p>
+
+              <div class="row-centered">
+                <div class="thumbnail col-md-7 col-centered">
+                  <a class="fancybox" href="images/vs2013.png"><img src="images/vs2013.png"></a>
+                  <div class="caption">
+                    The opened Visual Studio 2013 project. It's a good idea to set the build mode to <em>Release</em> (see the red marker) unless you are tracking down a particular bug. The debug version runs <em>much slower</em> (by a factor of 50 or more).
+                  </div>
+                </div>
+              </div>
+
+              <p>
+                The <em>Build->Build Solution</em> menu item will automatically compile all dependency libraries and Nori itself; the resulting executable is written to the <tt>Release</tt> or <tt>Debug</tt> subfolder of your chosen build directory. Note that you will probably see many warning messages while the dependencies are compiledâ€”you can ignore them.
+              </p>
+            </div>
+          </div>
+
+          <div class="row col-md-12">
+            <h3>Part 0.2. A High-Level Overview</h3>
+            The Nori base code consists of the base code files (left table) and several dependency libraries (right table) that are briefly explained below.
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <table class="table table-condensed">
+                <thead> <tr> <th>Directory</th> <th>Description</th> </tr> </thead>
+                <tbody>
+                  <tr><td><tt>src</tt></td><td>A directory containing the main C++ source code</td></tr>
+                  <tr><td><tt>include/nori</tt></td><td>A directory containing header files with declarations</td></tr>
+                  <tr><td><tt>ext</tt></td><td>External dependency libraries (see the table right)</td></tr>
+                  <tr><td><tt>scenes</tt></td><td>Example scenes and test datasets to validate your implementation</td></tr>
+                  <tr><td><tt>CMakeLists.txt</tt></td><td>A CMake build file which specifies how to compile and link Nori</td></tr>
+                  <tr><td><tt>CMakeConfig.txt</tt></td><td>A low-level CMake build file which specifies how to compile and link several dependency libraries upon which Nori depends. You probably won't have to change anything here.</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-6">
+              <table class="table table-condensed">
+                <thead> <tr> <th>Directory</th> <th>Description</th> </tr> </thead>
+                <tbody>
+                  <tr><td><tt>ext/openexr</tt></td><td>A high dynamic range image format library</td></tr>
+                  <tr><td><tt>ext/pcg32</tt></td><td>A tiny self-contained pseudorandom number generator</td></tr>
+                  <tr><td><tt>ext/filesystem</tt></td><td>A tiny self-contained library for manipulating paths on various platforms</td></tr>
+                  <tr><td><tt>ext/pugixml</tt></td><td>A light-weight XML parsing library</td></tr>
+                  <tr><td><tt>ext/tbb</tt></td><td>Intel's Boost Thread Building Blocks for multi-threading</td></tr>
+                  <tr><td><tt>ext/tinyformat</tt></td><td>Type-safe C++11 version of <tt>printf</tt> and <tt>sprintf</tt></td></tr>
+                  <tr><td><tt>ext/hypothesis</tt></td><td>Functions for statistical hypothesis tests</td></tr>
+                  <tr><td><tt>ext/nanogui</tt></td><td>A minimalistic GUI library for OpenGL</td></tr>
+                  <tr><td><tt>ext/nanogui/ext/eigen</tt></td><td>A linear algebra library used by <tt>nanogui</tt> and Nori.</td></tr>
+                  <tr><td><tt>ext/zlib</tt></td><td>A compression library used by OpenEXR</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="row col-md-12">
+            Let's begin with a brief overview of the most important dependencies:
+          </div>
+          <div class="row">
+            <div class="col-md-6 text-justify">
+              <h4>Eigen</h4>
+              <p>
+                When developing any kind of graphics-related software, it's important to be familiar with the core mathematics support library that is responsible for basic linear algebra types, such as vectors, points, normals, and linear transformations. Nori uses <a href="http://eigen.tuxfamily.org">Eigen 3</a> for this purpose. We don't expect you to understand the inner workings of this library but recommend that you at least take a look at the helpful <a href="http://eigen.tuxfamily.org/dox">tutorial</a> provided on the Eigen web page.
+              </p>
+
+              <p>
+                Nori provides a set of linear algebra types that are derived from Eigen's matrix/vector class (see e.g. the header file <tt>include/nori/vector.h</tt>). This is necessary because we will be handling various quantities that require different treatment when undergoing homogeneous coordinate transformations, and in particular we must distinguish between positions, vectors, and normals.
+
+                The main subset of types that you will most likely use are:
+                <ul>
+                  <li><tt>Point2i</tt>,</li>
+                  <li><tt>Point2f</tt>,</li>
+                  <li><tt>Point3f</tt>,</li>
+                  <li><tt>Vector2i</tt>,</li>
+                  <li><tt>Vector2f</tt>,</li>
+                  <li><tt>Vector3f</tt>, and</li>
+                  <li><tt>Normal3f</tt>.</li>
+                </ul>
+                where the number indicates the dimension and the subsequent character denotes the underlying scalar
+                type (i.e. integer or single precision floating point).
+              </p>
+
+              <h4>pugixml</h4>
+              <p>
+                The <a href="http://pugixml.org/">pugixml</a> library implements a tiny XML parser that we use to load Nori scenes. The format of these scenes is described below. The XML parser is fully implemented for your convenience, but you may have to change it if you wish to extend the file format for your final project.
+              </p>
+
+              <h4>pcg32</h4>
+              <p>
+                <a href="http://www.pcg-random.org">PCG</a> is a family of tiny pseudo-random number generators with good performance that was recently proposed by Melissa O'Neill. The full implementation of <tt>pcg32</tt> (one member of this family) is provided in a single header file in <tt>ext/pcg32/pcg32.h</tt>. You will be using this class as a source of pseudo-randomness.
+              </p>
+            </div>
+
+            <div class="col-md-6 text-justify">
+              <h4>Hypothesis test support library</h4>
+              <p>
+                With each programming assignment, we will provide statistical hypothesis tests that you can use to verify that your algorithms are implemented correctly. You can think of them as unit tests with a little extra twist: suppose that the correct result of a certain computation in a is given by a constant \(c\). A normal unit test would check that the actual computed \(c'\) satisfies \(|c-c'|&lt;\varepsilon\) for some small constant \(\varepsilon\) to allow for rounding errors etc. However, rendering algorithms usually employ randomness (they are <em>Monte Carlo</em> algorithms), and in practice the computed answer \(c'\) can be quite different from \(c\), which makes it tricky to choose a suitable constant \(\varepsilon\).
+              </p>
+              <p>
+                A statistical hypothesis test, on the other hand, analyzes the computed value and an estimate of its variance and tries to assess how likely it is that the difference \(|c-c'|\) is due to random noise or an actual implementation bug. When it is extremely unlikely (usually \(p&lt;0.001\)) that the error could be attributed to noise, the test reports a failure.
+              </p>
+
+              <h4>OpenEXR</h4>
+              <p>
+                <a href="http://www.openexr.com/">OpenEXR</a> is a standardized file format for storing high dynamic range images. It was originally developed by Industrial Light and Magic and is now widely used in the movie industry and for rendering in general. The directory <tt>ext/openexr</tt> contains the open source reference implementation of this standard. You will probably not be using this library directly but through Nori's <tt>Bitmap</tt> class implemented in <tt>src/bitmap.cpp</tt> and <tt>include/nori/bitmap.h</tt> to load and write OpenEXR files.
+              </p>
+
+              <h4>NanoGUI</h4>
+              <p>
+                The <a href="https://github.com/wjakob/nanogui">NanoGUI</a> library creates an OpenGL window and provides a small set of user interface elements (buttons, sliders, etc.). We use it to show the preview of the image being rendered. This library could be useful if your final project involves some kind of user interaction.
+              </p>
+
+              <h4>Intel Thread Building Blocks</h4>
+              <p>
+                The <tt>tbb</tt> directory contains <a href="https://www.threadingbuildingblocks.org/">Intel's Thread Building Blocks</a> (TBB). This is a library for parallelizing various kinds of programs similar in spirit to OpenMP and Grand Central Dispatch on Mac OS. You will see in the course that renderings often require significant amounts of computation, but this computation is easy to parallelize. We use TBB because it is more portable and flexible than the aforementioned platform-specific solutions. The basic rendering loop in Nori (in <tt>src/main.cpp</tt>) is already parallelized, so you will probably not have to read up on this library unless you plan to parallelize a custom algorithm for your final project.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 text-justify">
+              <h3>Part 0.3. Scene File Format and Parsing</h3>
+              <p>
+                Take a moment to browse through the header files in <tt>include/nori</tt>. You will generally find all important interfaces and their documentation in this place. Most headers files also have a corresponding <tt>.cpp</tt> implementation file in the <tt>src</tt> directory.
+
+                The most important class is called <tt>NoriObject</tt>â€”it is the base class of everything that can be constructed using the XML scene description language. Other interfaces (e.g. <tt>Camera</tt>) derive from this class and expose additional more specific functionality (e.g. to generate an outgoing ray from a camera).
+              </p>
+
+              <p>
+                Nori uses a very simple XML-based scene description language, which can be interpreted as a kind of building plan: the parser creates the scene step by step as it reads the scene file from top to bottom. The XML tags in this document are interpreted as requests to construct certain C++ objects including information on how to put them together.
+              </p>
+              <p>
+                Each XML tag is either an <em>object</em> or a <em>property</em>. Objects correspond to C++ instances that will be allocated on the heap. Properties are small bits of information that are passed to an object at the time of its instantiation.
+                For instance, the following snippet creates red diffuse BSDF:
+              </p>
+              <pre class="prettyprint linenums lang-xml">
+&lt;bsdf type="diffuse"&gt;
+    &lt;color name="albedo" value="0.5, 0, 0"/&gt;
+&lt;/bsdf&gt;</pre>
+              <p>
+                Here, the <tt>&lt;bsdf&gt;</tt> tag will cause the creation of an object of type <tt>BSDF</tt>, and the <tt>type</tt> attribute specifies what specific subclass of <tt>BSDF</tt> should be used. The <tt>&lt;color&gt;</tt> tag creates a property of name <tt>albedo</tt> that will be passed to its constructor. If you open up the C++ source file <tt>src/diffuse.cpp</tt>, you will see that there is a constructor, which looks for
+                <span rel="tooltip" title="Or alternatively substitutes 50% grey when no value is provided.">this specific property</span>:
+              </p>
+
+              <pre class="prettyprint linenums">
+Diffuse(const PropertyList &amp;propList) {
+    m_albedo = propList.getColor("albedo", Color3f(0.5f));
+}</pre>
+
+              <p>
+                The piece of code that associates the <tt>"diffuse"</tt> XML identifier with the <tt>Diffuse</tt> class in the C++ code is a macro found at the bottom of the file:
+              </p>
+
+              <pre class="prettyprint linenums">
+NORI_REGISTER_CLASS(Diffuse, "diffuse");</pre>
+
+              <p>
+                Certain objects can be nested hierarchically. For example, the following XML snippet creates a mesh that loads its contents from an external OBJ file and assigns a red diffuse BRDF to it.
+              </p>
+
+              <pre class="prettyprint linenums lang-xml">
+&lt;mesh type="obj"&gt;
+    &lt;string type="filename" value="bunny.obj"/&gt;
+
+    &lt;bsdf type="diffuse"&gt;
+        &lt;color name="albedo" value="0.5, 0, 0"/&gt;
+    &lt;/bsdf&gt;
+&lt;/mesh&gt;</pre>
+
+              <p>
+                Implementation-wise, this kind of nesting will cause a method named <tt>addChild()</tt> to be invoked within the parent object. In this specific example, this means that <tt>Mesh::addChild()</tt> is called, which roughly looks as follows:
+
+                <pre class="prettyprint linenums">
+void Mesh::addChild(NoriObject *obj) {
+    switch (obj->getClassType()) {
+        case EBSDF:
+            if (m_bsdf)
+                throw NoriException(
+                    "Mesh: multiple BSDFs are not allowed!");
+            /// Store pointer to BSDF in local instance
+            m_bsdf = static_cast&lt;BSDF *&gt;(obj);
+            break;
+    // ..(omitted)..
+}</pre>
+
+                This function verifies that the nested object is a BSDF, and that no BSDF was specified before; otherwise, it throws an exception of type <tt>NoriException</tt>.
+              </p>
+              <p>
+                The following different types of properties can currently be passed to objects within the XML description language:
+              </p>
+              <div class="row">
+                <div class="col-md-6">
+                  <pre class="prettyprint linenums">
+&lt;!-- Basic parameter types --&gt;
+&lt;string name="property name" value="arbitrary string"/&gt;
+&lt;boolean name="property name" value="true/false"/&gt;
+&lt;float name="property name" value="float value"/&gt;
+&lt;integer name="property name" value="integer value"/&gt;
+&lt;vector name="property name" value="x, y, z"/&gt;
+&lt;point name="property name" value="x, y, z"/&gt;
+&lt;color name="property name" value="r, g, b"/&gt;</pre>
+                </div>
+                <div class="col-md-6">
+                  <pre class="prettyprint linenums">
+&lt;!-- Linear transformations use a different syntax --&gt;
+&lt;transform name="property name"&gt;
+    &lt;!-- Any sequence of the following operations: --&gt;
+    &lt;translate value="x, y, z"/&gt;
+    &lt;scale value="x, y, z"/&gt;
+    &lt;rotate axis="x, y, z" angle="deg."/&gt;
+    &lt;!-- Useful for cameras and spot lights: --&gt;
+    &lt;lookat origin="x,y,z" target="x,y,z" up="x,y,z"/&gt;
+&lt;/transform&gt;</pre>
+                </div>
+              </div>
+
+              <p>
+                The top-level element of any scene file is usually a <tt>&lt;scene&gt;</tt> tag, but this is not always the case. For instance, some of the programming assignments will ask you to run statistical tests on BRDF models or rendering algorithms, and these tests are also specified using the XML scene description
+                language, like so:
+              </p>
+              <pre class="prettyprint linenums lang-xml">
+&lt;?xml version="1.0"?&gt;
+
+&lt;test type="chi2test"&gt;
+    &lt;!-- Run a Ï‡<sup>2</sup> test on the microfacet BRDF model (@ 0.01 significance level) --&gt;
+    &lt;float name="significanceLevel" value="0.01"/&gt;
+
+    &lt;bsdf type="microfacet"&gt;
+        &lt;float name="alpha" value="0.1"/&gt;
+    &lt;/bsdf&gt;
+&lt;/test&gt;</pre>
+
+              <h3>Part 0.4. Creating Your First Nori Class</h3>
+              <p>
+                In Nori, rendering algorithms are referred to as <em>integrators</em> because they generally solve a numerical integration problem. The remainder of this section explains how to create your first (dummy) integrator which visualizes the surface normals of objects.
+              </p>
+              <p>
+                We begin by creating a new Nori object subclass in <tt>src/normals.cpp</tt> with the following content:
+              </p>
+
+              <pre class="prettyprint linenums lang-cpp">
+#include &lt;nori/integrator.h&gt;
+
+NORI_NAMESPACE_BEGIN
+
+class NormalIntegrator : public Integrator {
+public:
+    NormalIntegrator(const PropertyList &amp;props) {
+        m_myProperty = props.getString("myProperty");
+        std::cout &lt;&lt; "Parameter value was : " &lt;&lt; m_myProperty &lt;&lt; std::endl;
+    }
+
+    /// Compute the radiance value for a given ray. Just return green here
+    Color3f Li(const Scene *scene, Sampler *sampler, const Ray3f &amp;ray) const {
+        return Color3f(0, 1, 0);
+    }
+
+    /// Return a human-readable description for debugging purposes
+    std::string toString() const {
+        return tfm::format(
+            "NormalIntegrator[\n"
+            "  myProperty = \"%s\"\n"
+            "]",
+            m_myProperty
+        );
+    }
+protected:
+    std::string m_myProperty;
+};
+
+NORI_REGISTER_CLASS(NormalIntegrator, "normals");
+NORI_NAMESPACE_END</pre>
+
+              <p>
+                To try out this integrator, we first need to add it to the CMake build system: for this, open <tt>CMakeLists.txt</tt> and look for the command
+              </p>
+
+              <pre class="prettyprint linenums lang-bash">
+add_executable(nori,
+  # Header files
+  include/nori/bbox.h
+  ...
+
+  # Source code files
+  src/bitmap.cpp
+  ...
+)</pre>
+              <p>
+                Add the line <tt>src/normals.cpp</tt> at the end of the source file list and recompile. If everything goes well, CMake will create an executable named <tt>nori</tt> (or <tt>nori.exe</tt> on Windows) which you can call on the command line.
+              </p>
+              <p>
+                Finally, create a small test scene with the following content and save it as <tt>test.xml</tt>:
+              </p>
+              <pre class="prettyprint linenums lang-xml">
+&lt;?xml version="1.0"?&gt;
+
+&lt;scene&gt;
+    &lt;integrator type="normals"&gt;
+        &lt;string name="myProperty" value="Hello!"/&gt;
+    &lt;/integrator&gt;
+
+    &lt;camera type="perspective"/&gt;
+&lt;/scene&gt;</pre>
+              <p>
+                This file instantiates our integrator and creates the default camera setup. Running <tt>nori</tt> with this scene causes two things to happen:
+              </p>
+            </div>
+          </div>
+          <div class="row">
+          <div class="col-md-6">
+            First, some text output should be visible on the console:
+            <pre class="prettyprint lang-bash">
+$ ./nori test.xml
+
+Property value was : Hello!
+
+Configuration: Scene[
+  integrator = NormalIntegrator[
+    myProperty = "Hello!"
+  ],
+  sampler = Independent[sampleCount=1]
+  camera = PerspectiveCamera[
+    cameraToWorld = [1, 0, 0, 0;
+                     0, 1, 0, 0;
+                     0, 0, 1, 0;
+                     0, 0, 0, 1],
+    outputSize = [1280, 720],
+    fov = 30.000000,
+    clip = [0.000100, 10000.000000],
+    rfilter = GaussianFilter[radius=2.000000, stddev=0.500000]
+
+  ],
+  medium = null,
+  envEmitter = null,
+  meshes = {
+  }
+]
+
+Rendering .. done. (took 93.0ms)
+Writing a 1280x720 OpenEXR file to "test.exr"</pre>
+
+            The Nori executable echoed the property value we provided, and
+            it printed a brief human-readable summary of the scene.
+            The rendered scene is saved as an OpenEXR file named <tt>test.exr</tt>.
+          </div>
+          <div class="col-md-6">
+            <div class="thumbnail">
+              <a class="fancybox" href="images/green.png"><img src="images/green.png"></a>
+              <div class="caption">
+                Secondly, a solid green window pops up. This is the image we just rendered! The slider at the bottom can be used to change the camera exposure value.
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h4>Visualizing OpenEXR files</h4>
+              <p>
+                A word of caution: various tools for visualizing OpenEXR images exist, but not all really do what one would expect. Adobe Photoshop and the <a href="https://bitbucket.org/edgarv/hdritools/downloads">HDRITools</a> by Edgar VelÃ¡zquez-ArmendÃ¡riz work correctly, but <tt>Preview.app</tt> on Mac OS for instance tonemaps these files in an awkward and unclear way.
+              </p>
+
+              <p>
+                If in doubt, you can also use Nori as an OpenEXR viewer: simply run it with an EXR file as parameter, like so:
+              </p>
+              <pre class="prettyprint lang-bash">
+$ ./nori test.exr</pre>
+
+              <h4>Tracing rays</h4>
+              <p>
+                Let's now build a more interesting integrator which traces some rays against the scene geometry. Change the file <tt>normals.cpp</tt> as shown on the left side. Invoke <tt>nori</tt> on the file <tt>scenes/pa1/bunny.xml</tt>, and you should get the image on the right.
+              </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <pre class="prettyprint lang-cpp">
+#include &lt;nori/integrator.h&gt;
+#include &lt;nori/scene.h&gt;
+
+NORI_NAMESPACE_BEGIN
+
+class NormalIntegrator : public Integrator {
+public:
+    NormalIntegrator(const PropertyList &amp;props) {
+        /* No parameters this time */
+    }
+
+    Color3f Li(const Scene *scene, Sampler *sampler, const Ray3f &amp;ray) const {
+        /* Find the surface that is visible in the requested direction */
+        Intersection its;
+        if (!scene-&gt;rayIntersect(ray, its))
+            return Color3f(0.0f);
+
+        /* Return the component-wise absolute
+           value of the shading normal as a color */
+        Normal3f n = its.shFrame.n.cwiseAbs();
+        return Color3f(n.x(), n.y(), n.z());
+    }
+
+    std::string toString() const {
+        return "NormalIntegrator[]";
+    }
+};
+
+NORI_REGISTER_CLASS(NormalIntegrator, "normals");
+NORI_NAMESPACE_END</pre>
+            </div>
+            <div class="col-md-6">
+              <div class="thumbnail">
+                <a class="fancybox" href="images/normals.png"><img src="images/normals.png"></a>
+                <div class="caption">
+                  A shading normal rendering of the Bunny scene
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 1. Monte Carlo Sampling -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#part1">Part 1. Monte Carlo Sampling</a>
+        </h4>
+      </div>
+      <div id="part1" class="panel-collapse collapse">
+        <div class="panel-body">
+
+          <p>
+            In this exercise you will generate sample points on various domains:
+            the plane, disks, spheres, and hemispheres. The base code has been
+            extended with an interactive visualization and testing tool to make
+            working with point sets as intuitive as possible.
+          </p>
+
+          <p>
+            After compiling the provided base code, you should see an executable named <tt>warptest</tt>. Run this
+            executable to launch the interactive warping tool, which allows you to visualize the behavior of different warping functions given a range of input point sets (independent, grid, and stratified). Up to now, we
+            only discussed uniform random variables which correspond to the "independent" type, and you need not concern yourself with the others for now.
+          </p>
+          <p>
+            Part 1 is split into several subsections; in each case, you are asked
+            to implement a distribution function and a matching sample warping
+            scheme It is crucial that both are <em>consistent</em> with respect to
+            each other (i.e. that warped samples have exactly the distribution
+            described by the density function). Significant errors can arise if
+            inconsistent warpings are used for Monte Carlo integration. The
+            <tt>warptest</tt> tool provided by us implements a \(\chi^2\) test to
+            ensure that this consistency requirement is indeed satisfied.
+          </p>
+
+          <div class="alert alert-danger" role="alert">
+            Note that passing the test does not generally imply that your
+            implementation is correctâ€”for instance, the test may not have enough
+            "evidence" to generate a failure, or potentially the warping function
+            and the density function are both incorrect in the same manner. Use
+            your judgment and don't rely on this test alone.
+          </div>
+
+          <div class="row" style="margin: 30px">
+            <div class="col-md-3">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/warp-square-points.png"><img src="images/warp-square-points.png"></a>
+                <div class="caption">
+                  The input point set (stratified samples passed through a "no-op" warp function)
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/warp-square-chi2.png"><img src="images/warp-square-chi2.png"></a>
+                <div class="caption">
+                  This point set passed the test for uniformity.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/warp-disk-points.png"><img src="images/warp-disk-points.png"></a>
+                <div class="caption">
+                  A more interesting case that you will implement
+                  (with a grid visualization of the mapping)
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/warp-disk-chi2.png"><img src="images/warp-disk-chi2.png"></a>
+                <div class="caption">
+                  This warping passed the tests as well.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Part 1.1. Sample Warping</h3>
+          <p>
+            Implement the missing functions in <code>class Warp</code> found in
+            <tt>src/warp.cpp</tt>. This class consists of various warp methods that
+            take as input a 2D point \((s, t) \in [0, 1) \times [0, 1) \) and
+            return the warped 2D (or 3D) point in the new domain. Each method is
+            accompanied by another method that returns the probability density with
+            which a sample was picked. Our default implementations all throw an
+            exception, which produces an error message in the graphical user
+            interface of <tt>warptest</tt>. The slides on the course website
+            provide a number of useful recipes for warping samples and computing
+            the densities, and the PBRT textbook also contains considerable
+            information on this topic that you should feel free to use.
+          </p>
+
+          <ul>
+            <li>
+              <h4><code>Warp::squareToTent</code> and <code>Warp::squareToTentPdf</code></h4>
+              <p>
+                        Implement a method that transforms uniformly distributed 2D
+                        points on the unit square into the 2D "tent" distribution,
+                        which has the following form:
+                \[
+                        p(x, y)=p_1(x)\,p_1(y)\quad\text{and}\quad
+                        p_1(t) = \begin{cases}
+                        1-|x|, & -1\le x\le 1\\
+                        0,&\text{otherwise}\\
+                        \end{cases}
+                \]
+              </p>
+                    Note that this distribution is composed of two independent 1D
+                    distributions, which makes this task considerably easier. Follow
+                    the "recipe" discussed in class:
+                    <ol>
+                        <li>Compute the CDF \(P_1(t)\) of the 1D distribution \(p_1(t)\)</li>
+                        <li>Derive the inverse \(P_1^{-1}(t)\)</li>
+                        <li>Map a random variable \(\xi\) through the inverse \(P_1^{-1}(t)\) from the previous step</li>
+                    </ol>
+                    Show the details of these steps in your report (either using TeX, or by taking
+                    a photograph of the derivation and embedding the image)
+            </li>
+            <li>
+              <h4><code>Warp::squareToUniformDisk</code> and <code>Warp::squareToUniformDiskPdf</code></h4>
+              <p>
+                Implement a method that transforms uniformly distributed 2D
+                points on the unit square into uniformly distributed points on
+                a planar <em>disk</em> with radius 1 centered at the origin. Next,
+                implement a probability density function that matches your
+                warping scheme.
+              </p>
+            </li>
+            <li>
+              <h4><code>Warp::squareToUniformSphere</code> and <code>Warp::squareToUniformSpherePdf</code></h4>
+              <p>
+                Implement a method that transforms uniformly distributed 2D
+                points on the unit square into uniformly distributed points on
+                the <em>unit sphere</em> centered at the origin. Implement a matching
+                probability density function.
+              </p>
+            </li>
+            <li>
+              <h4><code>Warp::squareToUniformHemisphere</code> and <code>Warp::squareToUniformHemispherePdf</code></h4>
+              <p>
+                Implement a method that transforms uniformly distributed 2D
+                points on the unit square into uniformly distributed points on
+                the <em>unit hemisphere</em> centered at the origin and oriented in
+                direction \((0, 0, 1)\). Add a matching probability density
+                function.
+              </p>
+            </li>
+            <li>
+              <h4><code>Warp::squareToCosineHemisphere</code> and <code>Warp::squareToCosineHemispherePdf</code></h4>
+              <p>
+                Transform your 2D point to a point distributed on the unit
+                hemisphere with a cosine density function
+                \[
+                p(\theta)=\frac{\cos\theta}{\pi},
+                \]
+                where \(\theta\) is the
+                angle between a point on the hemisphere and the north pole.
+              </p>
+            </li>
+          </ul>
+          <h3>Part 1.2. Validation</h3>
+          <p>
+            Pass the \(\chi^2\) test for each one of the above sampling techniques and include screen shots in your report.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 2. Two Simple Rendering Algorithms -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#part2">Part 2. Two Simple Rendering Algorithms</a>
+        </h4>
+      </div>
+      <div id="part2" class="panel-collapse collapse">
+        <div class="panel-body">
+          <p>
+              In this part of the homework, you'll implement two basic rendering
+              algorithms that set the stage for fancier methods investigated later
+              in the course. For now, both of the methods assume that the object is
+              composed of a simple white diffuse material that reflects light
+              uniformly into all directions.
+          </p>
+
+          <div class="row" style="margin: 30px">
+            <div class="col-md-3">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/ajax-simple.png"><img src="images/ajax-simple.png"></a>
+                <div class="caption">
+                  The Ajax bust illuminated by a point light source.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/ajax-ao.png"><img src="images/ajax-ao.png"></a>
+                <div class="caption">
+                  The Ajax bust rendered using Ambient Occlusion.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3>Part 2.1. Point lights</h3>
+          <p>
+            The provided base code includes a scene <code>scenes/pa1/ajax-simple.xml</code> that instantiates a (currently nonexistent) integrator/rendering algorithm named <code>simple</code>, which simulates a single point light source located at a 3D position <tt>position</tt>, and which emits an amount of energy given by the parameter <tt>energy</tt>.
+          </p>
+      <pre class="prettyprint lang-xml">
+&lt;!-- An excerpt from scenes/pa1/ajax-simple.xml: --&gt;
+&lt;integrator type="simple"&gt;
+    &lt;point name="position" value="-20, 40, 20"/&gt;
+    &lt;color name="energy" value="3000, 3000, 3000"/&gt;
+&lt;/integrator&gt;</pre>
+          <p>
+            Your first task will be to create a new <code>Integrator</code> that accepts these parameters (in a similar way as the dummy <code>normals</code> integrator shown at the beginning of Part 0.4).
+            Take a look at the <code>PropertyList</code> class, which should be used to extract the two parameters.
+          </p>
+
+          <p>
+            Let \(\mathbf{p}\) and \(\mathbf{\Phi}\) denote the position and energy of
+            the light source, and suppose that \(\mathbf{x}\) is the point being
+            rendered. Then this integrator should compute the quantity
+          </p>
+          \[
+            L(\mathbf{x})=\frac{\Phi}{4\pi^2} \frac{\mathrm{max}(0, \cos\theta)}{\|\mathbf{x}-\mathbf{p}\|^2} V(\mathbf{x}\leftrightarrow\mathbf{p})
+          \]
+          <p>
+            where \(\theta\) is the angle between the direction from \(\mathbf{x}\) to \(\mathbf{p}\) and the shading surface normal (available in <code>Intersection::shFrame::n</code>) at \(\mathbf{x}\) and
+          </p>
+          \[
+            V(\mathbf{x}\leftrightarrow\mathbf{p}):=\begin{cases}
+              1,&\text{if $\mathbf{x}$ and $\mathbf{p}$ are mutually visible}\\
+              0,&\text{otherwise}
+            \end{cases}
+          \]
+          <p>
+            is the visibility function, which can be implemented using a <em>shadow ray</em> query.
+            Intersecting a shadow ray against the scene is generally cheaper since it suffices
+            to check whether an intersection exists rather than having to find the closest one.
+          </p>
+
+          <p>
+            Implement the <code>simple</code> integrator according to this specification and
+            render the scene <code>scenes/pa1/ajax-simple.xml</code>.
+            Include a comparison against the <a href="images/ajax-simple.exr">reference image</a> in your report.
+          </p>
+
+          <h3>Part 2.2. Ambient occlusion</h3>
+          <p>
+            Ambient occlusion is rendering technique which assumes that a (diffuse)
+            surface receives uniform illumination from all directions (similar to
+            the conditions inside a <a
+            href="https://en.wikipedia.org/wiki/Lightbox#/media/File:DIY_Lightbox.jpg">light
+            box</a>), and that visibility is the only effect that matters. Some surface positions
+            will receive less light than others since they are occluded, hence they will look darker.
+            Formally, the quantity computed by ambient occlusion is defined as
+          </p>
+          \[
+            L(\mathbf{x})=\int_{\Omega_\mathbf{x}}V(\mathbf{x}, \mathbf{x}+\alpha\omega)\,\frac{\cos\theta}{\pi}\,\mathrm{d}\omega
+          \]
+          <p>
+            which is an integral over the upper hemisphere \(\Omega_{\mathbf{x}}\) centered at the point
+            \(\mathbf{x}\). The variable \(\theta\) refers to the angle between the direction \(\omega\)
+            and the shading normal at \(\mathbf{x}\). The ad-hoc variable \(\alpha\) adjusts
+            how far-reaching the effects of occlusion are.
+          </p>
+          <p>
+            Note that this situationâ€”sampling points on the hemisphere with a cosine weightâ€”exactly corresponds
+            to one of the warping functions you implemented in Part 2.1, specifically <code>squareToCosineHemisphere</code>. Use this function to sample a point on the hemisphere and then check for visibility
+            using a shadow ray query. You can assume that occlusion is a global effect (i.e. \(\alpha=\infty\)).
+          </p>
+
+          <p>
+            One potential gotcha is that the samples produced by <code>squareToCosineHemisphere</code> lie in the reference hemisphere and need to be oriented according to the surface at \(\mathbf{x}\). Take a look at the <code>Frame</code> class, which is intended to facilitate this.
+          </p>
+
+          <p>
+            Implement the ambient occlusion (<code>ao</code>) integrator and render the scene <code>scenes/pa1/ajax-ao.xml</code>.
+            Include a comparison against the <a href="images/ajax-ao.exr">reference image</a> in your report.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Part 3. Direct Illumination -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#part3">Part 3. Direct Illumination</a>
+        </h4>
+      </div>
+      <div id="part3" class="panel-collapse collapse">
+        <div class="panel-body">
+          <h3>Part 3.1. Area lights</h3>
+          <p>
+              Our first goal will be to extend Nori so that any geometric object can
+              be turned into a light source known as an <em>area light</em>.
+          </p>
+          <p style="text-align:center">
+            <img src="images/bunny.png" style="max-width:150px">
+          </p>
+          <p>
+              Each triangle of a mesh that is marked as an area light uniformly emits radiance towards all directions above its surface. In Nori's XML description language, area lights are specified using a nested
+              <tt>emitter</tt> tag of type <tt>area</tt>.
+              Here is an example:
+          </p>
+
+          <pre class="prettyprint linenums lang-xml">
+&lt;scene&gt;
+    &lt;!-- Load a OBJ file named "bunny.obj" --&gt;
+    &lt;mesh type="obj"&gt;
+        &lt;string name="filename" value="bunny.obj"/&gt;
+
+        &lt;!-- Turn the mesh into an area light source --&gt;
+        &lt;emitter type="area"&gt;
+            &lt;!-- Assign a uniform radiance of 1 W/m<sup>2</sup>sr --&gt;
+            &lt;color name="radiance" value="1, 1, 1"/&gt;
+        &lt;/emitter&gt;
+    &lt;/mesh&gt;
+
+    &lt;!-- ..... --&gt;
+&lt;/scene&gt;</pre>
+
+          <p>
+            Currently, Nori won't be able to understand the above snippet since area lights are not yet implemented.
+            To add area lights to Nori, follow these steps:
+          </p>
+          <ol>
+            <li>
+              Create a new class <code>AreaLight</code> in a file named <code>src/area.cpp</code> that derives from the <code>Emitter</code> class. Connect it to the scene parser using the <code>NORI_*</code> macros similar to the <code>Integrator</code>s you have previously created. Use the constructor's <code>const PropertyList &amp;</code> argument to extract the <code>radiance</code> parameter in the constructor.
+              <br><br>
+            </li>
+
+              <li>
+                <p>
+                  The Monte Carlo rendering technique in Part 3.2 requires the ability to sample points that are uniformly distributed on area lights.
+                  Currently, none of this functionality exists.
+                </p>
+                <p>
+                  Begin by familiarizing yourself with the <code>Mesh</code> class to see how vertices, faces and normals are stored. Next, add a method that uniformly samples positions on the surface associated with a specific <code>Mesh</code> instance.
+                  The name and precise interface of this method are completely up to you.
+                  However, we suggest that it should take a uniformly 2D sample and return:
+                </p>
+                <ol>
+                    <li>
+                      The sampled position \(\mathbb{p}\) on the surface of the mesh.
+                    </li>
+                    <li>
+                      The interpolated surface normal \(\mathbb{n}\) at \(\mathbb{p}\) computed from the per-vertex normals. When the mesh does not provide per-vertex normals, compute and return the face normal instead.
+                    </li>
+                    <li>
+                      The probability density of the sample. This should be the reciprocal of the surface area of the entire mesh.<br>
+                    </li>
+                </ol>
+                <p>
+                  You may find the <code>DiscretePDF</code> class (declared in <tt>include/nori/dpdf.h</tt>) useful to implement the sampling step. We suggest that you use this class to build a discrete probability distribution that will allow you to pick a triangle proportional to its surface area. Once a triangle is chosen, you can (uniformly) sample a barycentric coordinate \((\alpha, \beta, 1-\alpha-\beta)\) using the mapping
+
+                  \[
+                    \begin{pmatrix}
+                      \alpha\\
+                      \beta
+                    \end{pmatrix}
+                    \mapsto \begin{pmatrix}
+                      1 - \sqrt{1 - \xi_1}\\
+                      \xi_2\, \sqrt{1 - \xi_1}
+                    \end{pmatrix}
+                  \]
+
+                  where \(\xi_1\) and \(\xi_2\) are uniform variates.
+                </p>
+                <p>
+                  The precomputation to build the discrete probability distribution can be performed in the <code>activate()</code> method of the <code>Mesh</code> class, which is automatically invoked by the XML parser.
+                </p>
+              </li>
+          </ol>
+
+          <h3>Part 3.2. Distribution Ray Tracing</h3>
+          <p>
+            In this part you will implement a new direct illumination integrator, which integrates the incident radiance by sampling points on a set of emitters (a.k.a. light sources).
+
+            Emitters can be fully, partially or not at all visible from a point in your scene, hence you will need to perform Monte Carlo integration to compute the reflected radiance while accounting for visibility.
+          </p>
+
+          <div class="row" style="margin: 30px">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+              <div class="thumbnail" style="margin: 10px">
+                <a class="fancybox" href="images/motto-diffuse.jpg"><img src="images/motto-diffuse.jpg"></a>
+                <div class="caption">
+                    3D text modeled as a diffuse object and illuminated by two spherical lights sources. Note the presence of smooth shadows below the text.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>
+            Recall the <em>Reflection Equation</em> discussed in class, which expresses the reflected
+            radiance due to incident illumination from all directions as an integral over the unit hemisphere \(\Omega_{\mathbf{x}}\) at \(\mathbf{x}\):
+
+            \[
+              \newcommand{\vx}{\mathbf{x}}
+              \newcommand{\vc}{\mathbf{c}}
+              \newcommand{\vy}{\mathbf{y}}
+              \newcommand{\vn}{\mathbf{n}}
+              L_r(\vx,\omega_o) = \int_{\Omega_{\vx}} f_r (\vx,\omega_i \leftrightarrow \omega_o)\,L_i (\vx,\omega_i) \cos\theta_i\, \mathrm{d}\omega_i.
+            \]
+
+            We'll now put together all of the pieces to approximate this integral using Monte Carlo sampling.
+          </p>
+          <p>
+            Begin by taking a look at the <code>BSDF</code> class in Nori, which is an abstract interface for materials representing the \(f_r\) term in the above equation. Evaluating \(f_r\) entails a call to the <code>BSDF::eval()</code> function, while sampling and probability evaluation are realized using the <code>BSDF::sample()</code> and <code>BSDF::pdf()</code> methods. All methods take a special <code>BRDFQueryRecord</code> as argument, which stores relevant quantities in a convenient data structure.
+          </p>
+          <p>
+            In this assignment, we will only consider <em>direct</em> illumination, which means that \(L_i(\vx,\omega_i)\) is zero almost everywhere except for rays that happen to hit an area light source. A correct but naÃ¯ve way of evaluating this integral would be to uniformly sample a direction on the hemisphere and then check if it leads to an intersection with a light source.
+          </p>
+          <p>
+            However, doing so would be extremely inefficient: light sources generally only occupy a tiny area on the hemisphere, hence most samples would be wasted, causing the algorithm to produce unusably noisy and unconverged images.
+          </p>
+          <p>
+            We will thus use a better strategy with a higher chance of success: instead of sampling directions on the hemisphere and checking if they hit a light source, we will directly sample points on the light sources and then check if they are visible as seen from \(\vx\). Conceptually, this means that we will integrate over the light source surfaces \(A_e\) instead of the hemisphere \(\Omega_{\mathbf{x}}\):
+
+            \[
+              \newcommand{\vr}{\mathbf{r}}
+              L_r^\mathrm{direct}(\vx,\omega_o) = \int_{A_e} f_r (\vx,(\vx\to\vy) \leftrightarrow \omega_o)\,L_e (\vy,\vy\to\vx) \, \mathrm{d} \vy?? \qquad(\text{warning: this is not (yet) correct})
+            \]
+          </p>
+          <p>
+            Here \(\mathbf{x}\to\mathbf{y}\) refers to the normalized direction from \(\mathbf{x}\) to \(\mathbf{y}\) (i.e., \(\mathbf{x}\to\mathbf{y} := (\mathbf{y} - \mathbf{x})/\| \mathbf{y} - \mathbf{x} \|\)) and \(L_e(\vx,\omega)\) is the amount of emitted radiance at position \(\vx\) into direction \(\omega\).
+            The integral above motivates the algorithm, but it is not correct: since we changed the integration variable from the solid angle domain to positions, there should be a matching change of variables factor that accounts for this (this is not unlike switching from polar coordinates to a Cartesian coordinate system).
+
+            In our case, this change of variable factor is known as the <em>geometric term</em>:
+            \[
+              G(\vx\leftrightarrow\vy) :=V(\vx, \vy)\frac{
+              |\vn_\vx \cdot(\vx\to\vy)|\,\cdot\,
+              |\vn_\vy \cdot(\vy\to\vx)|}{\|\vx-\vy\|^2}
+            \]
+          </p>
+          <p>
+            The first term \(V(\vx, \vy)\) is the visibility function, which is \(1\) or \(0\) if the two points are mutually visible or invisible, respectively. The numerator contains the absolute value of two dot products that correspond to the familiar cosine foreshortening factors at both \(\vx\) and \(\vy\). The denominator is the inverse square falloff that we already observed when rendering with point lights. The "\(\leftrightarrow\)" notation expresses that \(G\) is symmetric with respect to its arguments.
+          </p>
+
+          <p>
+            Given the geometric term, we can now write down the final form of the reflection equation defined as an integral over surfaces:
+
+            \[
+              \newcommand{\vr}{\mathbf{r}}
+              L_r^\mathrm{direct}(\vx,\omega_o) = \int_{A_e} f_r (\vx,(\vx\to\vy) \leftrightarrow \omega_o)\,G(\vx\leftrightarrow\vy)\,L_e (\vy,\vy\to\vx)\, \mathrm{d} \vy
+            \]
+
+            Note that the cosine factor in the original integral is absorbed by one of the dot products the geometric term.
+            To implement distribution ray tracing in Nori, follow these steps:
+          </p>
+          <ol>
+            <li>
+              Create a new integrator <code>src/whitted.cpp</code> (the name will become clear later)<br><br>
+            </li>
+            <li>
+              The integrator should begin by finding the first surface interaction \(\vx\) visible along the ray passed to the <code>Li()</code> function. This part works just like in the <code>simple.cpp</code> integrator.
+              What this step does is to apply the ray tracing operator \(\mathrm{RayTrace}(\vc, \omega_c)\) to convert reflected radiance at surfaces into incident radiance at the camera \(\vc\):
+
+              \[
+                L_i(\vc,\omega_c)=L_r(\mathrm{RayTrace}(\vc, \omega_c), -\omega_c).
+              \]
+            </li>
+            <li>
+              <p>
+                Given \(\vx\), the distribution ray tracer should then approximate the above integral by sampling a <em>single</em> position \(\vy\in\mathcal{L}\) and then returning the body of the integral, i.e.
+
+                \[
+                  f_r (\vx,(\vx\to\vy) \leftrightarrow \omega_o)\,G(\vx\leftrightarrow\vy)\,L_e (\vy,\vy\to\vx)
+                \]
+
+                <em>divided</em> by the probability of the sample \(\vy\) per unit area.
+                However, this will require a few extra pieces of functionality.
+              </p>
+              <p>
+                Take a look at the <code>Emitter</code> interface. It is almost completely empty. Clearly, some mechanism for sample generation, evaluation of probabilities, and for returning the emitted radiance is needed.
+                We don't explicitly specify an API that you should use to implement the sampling and evaluation operations for emittersâ€”finding suitable abstractions is part of the exercise. That said, you can look at the <code>BSDF</code> definitions in <tt>include/nori/bsdf.h</tt> to get a rough idea as to how one might get started with such an interface.
+              </p>
+            </li>
+          </ol>
+          <p>
+            Discuss the design choices and challenges you faced in your report. Render the scene <code>scenes/pa1/motto-diffuse.xml</code> and don't forget to include a comparison against our reference solution: <a href="images/motto-diffuse.exr"><tt>motto-diffuse.exr</tt></a>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- container -->
+
+  <script type="text/javascript" src="../../js/jquery.min.js"></script>
+  <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../../js/prettify.js"></script>
+  <script type="text/javascript" src="../../js/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+  </script>
+
+  <script type="text/javascript">
+    !function ($) {
+      // $('a[href*=#]').on('click', function(event){
+      //   $('html,body').animate({scrollTop:$(this.hash + "-header").offset().top}, 500);
+      // });
+
+      $(".fancybox").fancybox({
+        openEffect  : 'none',
+        closeEffect : 'none',
+      });
+
+      // $('.tooltips').tooltip({ selector: "span[rel=tooltip]" })
+
+      $("code").addClass("prettyprint");
+      $("code").addClass("lang-cpp");
+      prettyPrint();
+      MathJax.Hub.Typeset();
+    }(window.jQuery)
+  </script>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

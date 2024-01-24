@@ -1,0 +1,115 @@
+¦Ifinal_url¢DtypeEvaluexXhttps://www.ics.uci.edu/~jacobson/ics45J/CodeSamples/KeyboardApplicationAnonAdapter.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2831¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 10 Sep 2012 23:46:47 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"b0f-4c961921987c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 11:05:35 GMTKraw_content¢DtypeEvalueY// KeyboardApplicationAnonAdapter.java applet for ICS21/80J
+
+// By N. Jacobson 11/02 to demonstrate event handling via a full GUI stand-alone interface
+
+// Display a rectangle in a panel by providing its upper-left x,y coordinates
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+
+public class KeyboardApplicationAnonAdapter
+{
+	public static void main(String[] args)
+	{
+		// Make a rectangle frame that
+		// ...closes on exit
+		// Then display the pane
+		JFrame appFrame = new RectangleFrame();
+		appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		appFrame.setVisible(true);
+	}
+
+}
+
+class RectangleFrame extends JFrame
+{
+	private RectanglePanel rectPanel;
+	private ControlPanel controlPanel;
+
+	// Make new rectangle panel (user-defined object)
+	// Get the current control pane and add the rectangle pane to it
+	// Make a new control panel (user-defined object)
+	// Get the current control pane and add the control pane to it
+	// Fit the control pane to the frame
+	public RectangleFrame()
+	{
+		rectPanel = new RectanglePanel();
+		getContentPane().add(rectPanel, BorderLayout.CENTER);
+		controlPanel = new ControlPanel(rectPanel);
+		getContentPane().add(controlPanel, BorderLayout.SOUTH);
+		pack();
+	}
+}
+
+
+class RectanglePanel extends JPanel
+{
+	private Rectangle box;
+
+	// Set the screen to 300 X 300 pixels
+	// Make the rectangle
+	public RectanglePanel()
+	{
+		setPreferredSize(new Dimension(300,300));
+		box = new Rectangle(100,100,20,30);
+	}
+
+	// Move the rectabgle and froce the
+	// screen to repaint, so we see the
+	// rectangle i the new position
+	public void setLocation(int x, int y)
+	{
+		box.setLocation(x,y);
+		repaint();
+	}
+	
+	// Redraw the rectangle
+	public void paintComponent(Graphics g)
+	{
+		super.paintComponent(g);		
+		Graphics2D g2 = (Graphics2D)g;
+		g2.draw(box);
+	}
+}
+
+class ControlPanel extends JPanel
+{
+	public ControlPanel(final RectanglePanel rectPanel)
+	{
+		// vars used in inner classes in another method
+		// must be 'final'
+		final JTextField xField = new JTextField(5);
+		final JTextField yField = new JTextField(5);
+
+		JButton moveButton = new JButton("Move");
+
+		// When 'move' button pressed, update
+		// rectangle's location and redisplay;
+		// done via used of anonymous inner class
+		moveButton.addActionListener(
+			new ActionListener()
+			{
+				public void actionPerformed(ActionEvent event)
+				{
+					int x = Integer.parseInt(xField.getText());
+					int y = Integer.parseInt(yField.getText());
+					rectPanel.setLocation(x,y);
+				}
+			});
+
+		// Define labels
+		JLabel xLabel = new JLabel("x = ");
+		JLabel yLabel = new JLabel("y = ");
+
+		// Place components into panel
+		add(xLabel);
+		add(xField);
+		add(yLabel);
+		add(yField);
+		add(moveButton);
+	}
+}
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

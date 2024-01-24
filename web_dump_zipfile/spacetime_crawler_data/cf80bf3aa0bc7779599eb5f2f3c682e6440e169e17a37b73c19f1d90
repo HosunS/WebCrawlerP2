@@ -1,0 +1,134 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5758¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 15 Mar 2000 23:01:19 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"167e-362e52772cdc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 23:03:25 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY~Advanced Collections Teleconference
+March 15, 2000
+
+Present: Judy Slein, Jason Crawford, Geoff Clemm, Jim Whitehead, Chuck Fay
+Minutes recorded by Jim Whitehead
+
+*** Note that decisions made during the teleconference are always
+subject to review on the mailing list.  The mailing list is the final
+arbiter of consensus on any issue.  Note also, that the revised
+Bindings Protocol specification, and Redirect References 
+protocol  produced as a result of this conference call will also 
+be subject to review by the mailing list. ***
+
+BINDINGS:
+
+Began with some discussion of Geoff Clemm's proposed language for
+binding "integrity". His proposed language is:
+
+If a DELETE request, MOVE request, or a request with an Overwrite:T
+header is applied to a resource identified by the URL /path/x, and
+/path identifies a collection that supports the BIND/UNBIND methods,
+then the request MUST have the same effect as an UNBIND of x from
+/path.  In particular, if the request succeeds, the binding named x
+MUST be removed from the collection indentified by /path, and whether
+or not the request succeeds, no other bindings from any other
+collection may be removed.
+
+Hashed around this language a bit.  Batted around the language, "if
+BIND to a resource is supported, then a DELETE/MOVE/Overwrite:T to
+that resource MUST have the same effect as an UNBIND." But, this
+doesn't capture the fact that the collection containing the resource
+must also support BIND for this assertion to be true.
+
+REDIRECT REFERENCES:
+
+Issue #49: Section 6.2 is going away (based on discussion last week),
+so this issue no longer applies.
+
+Issue #50: Discussed having the Redirect-Ref header give the value of
+the redirection (i.e., the relative or absolute URL), and thus not
+require a separate method just to read the value of the redirect
+resource.  Agreed that this is a good idea, and will put this into the
+spec.
+
+Decided to disagree with Yaron, and not accept his wording change.
+Felt that his wording suggestion did not make things more clear.
+
+Issue #51: Agreed to delete the first paragraph of section 7.
+
+Issue #52: Disagree with Yaron. Important use cases for relative URLs
+have been posted to the mailing list.  Need relative URLs to allow a
+redirect resource to behave correctly if it has multiple URL mappings,
+and is referring to a resource within its local namespace.
+
+Issue #53: Decided to make this functionality "SHOULD" behavior, since
+it is potentially expensive to implement, and is difficult to
+modularize, as was pointed out in the comment.  Will also add language
+describing what happens if the SHOULD behavior is not implemented
+(i.e., a 404 is returned).
+
+Issue #54: This was resolved in a discussion on the mailing list.  No
+changes needed here.
+
+Issue #55: Agreed to accept Yaron's suggestion and extend the IANA
+considerations section with methods, headers, and XML elements.
+
+Issue #56: Agreed that we will add an example showing use of non-HTTP
+URLs in a Redirect Reference.
+
+Issue #57: Previously agreed that we will add language forbidding
+servers to do redirect reference cleanup.
+
+Issue #58: Agreed that we will provide a mechanism for update of the
+value of a Redirect Reference.
+
+Issue #59: Disagreed.  This is too complex, and doesn't appear to
+address a pressing use scenario.
+
+Issue #60: Agreed to delete the paragraph containing
+
+Also discussed what should be returned by a PROPFIND multistatus
+response that includes a redirect reference resource.  Agreed that
+only the location information, and nothing else, should be returned.
+The rationale is that the location is necessary to return, since this
+tells you where the location would be redirected. But, if you need to
+know whether it is a redirect reference, or an ordinary resource, it
+is possible to submit a PROPFIND asking for the redirect value.
+Agreed to table this, and reconsider next week.
+
+Issue #61: Decided to no longer call DAV:location a "psuedoproperty",
+and just define a new XML element for this. This contradicts an
+earlier decision (Yaron raised this issue previously).  But, we'll
+still encourage the WebDAV Distributed Authoring protocol to add this
+in for 302 responses.
+
+Issue #62: Agreed to delete the sentence, "Until then, non-referencing
+clients will not ..."
+
+Issue #63: Agreed to delete section 7.1.  Will reword 7.2 to avoid
+concerns with "poses special problems" and "due to atomicity".
+
+Issue #64: We need relative URIs. As a result of needing relative
+URIs, we need a different mechanism from the Location header, which
+must be an absolute URI. So, do not accept this suggestion.
+
+Issue #65: This issue was discussed in the past, and even made it into
+some previous drafts. In the end, the difficulty of having some
+special cases that differ from a consistent set of semantics
+outweighed the advantage of the special cases. So, we disagree with
+the suggestion.
+
+Issue #66: Agreed, will make this change.
+
+Issue #67: Wording right now is wrong, so we agree with this
+suggestion.  Need to get rid of the end of the 2nd to last sentence,
+and the beginning of the last sentence, mushing them together.
+
+Issue #68: This issue has been noted on the WebDAV issues list as
+"DEEP_LOCK_ERROR_STATUS". Will keep using 207, and will encourage RFC
+2518 to be changed to use 207 in this case.
+
+Issue #69: Disagree.  The use of 424 in this case is correct (see
+def'n of 424 in RFC 2518)
+
+Issue #70: Agreed that we feel that no additional text is needed in
+this case.  The draft as-is is adequate.
+
+Issue #71: We accept this change, it's right.
+
+Issue #72: Add a note about not wanting two slashes in a row.  Use
+this for rationale for warning against ending a redirect reference
+target with a slash, since this will result in two slashes in a row.
+
+*** End of teleconference ***Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,121 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2686¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Jan 2019 21:54:47 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"1a2d-57fc28f431c98-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:15:54 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head>
+<title>David Eppstein - Publications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<h1>David Eppstein - Publications</h1>
+<hr><p>
+<h2>
+1988
+</h2>
+Note that a paper may appear in listings for multiple years
+due to multiple publication (of tech. report, conference, and journal versions).
+<p>
+<ul>
+<li><b>Speeding up dynamic programming</b>.<br>
+D. Eppstein,
+<a href="//www.scs.gatech.edu/people/zvi-galil">Z. Galil</a>,
+and
+<a href="//hpdma2.math.unipa.it/giancarl/source.html">R. Giancarlo</a>.<br>
+<a href="EppGalGia-FOCS-88.pdf"><i>29th IEEE Symp. Foundations of
+Comp. Sci.,</i> White Plains, New York, 1988, pp. 488&ndash;496</a>.<br>
+<i>Worksh. Algorithms for Molecular Genetics,</i> Bethesda, Maryland, 1988.<br>
+Tech. Rep. CUCS-379-88, Computer Science Dept., Columbia University, 1988.<br>
+Appeared as "Efficient algorithms with applications to molecular biology" in
+<i>Int. Advanced Workshop on Sequences,</i> Positano, Italy, 1988.<br>
+<a href="//doi.org/10.1007/978-1-4612-3352-7_5"><i>Sequences: Combinatorics, Compression, Security, Transmission,</i>
+R. M. Capocelli, ed., Springer, 1990, pp. 59&ndash;74</a>.
+<p>
+The FOCS and Positano versions of this paper merged my results
+on a dynamic program used for RNA secondary structure prediction,
+with Raffaele's on sequence comparison.
+The Bethesda talk and the TR version both used the longer title
+"Speeding up dynamic programming
+with application to the computation of RNA structure", and included only
+the RNA result, which
+used a mild convexity assumption on certain costs
+to save two orders of magnitude in total time.
+This work incited a boom in computational biology within the theory
+community that is still going strong.
+But the RNA results were quickly improved by a log factor
+[Aggarwal et al. at the same FOCS] and never made it into a journal paper.
+<p>(Bibtex: <a href="/~eppstein/bibs/eppstein.html#Efficient algorithms for sequence analysis">Positano</a>,
+<a href="/~eppstein/bibs/eppstein.html#Speeding up dynamic programming">FOCS</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Speeding-up-dynamic-programming.html">Citations</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Efficient-algorithms-with-applications-to-molecular-biology.html">Citations of "Efficient algorithms..."</a> &ndash;
+<a href="//theory.lcs.mit.edu/~dmjones/FOCS/References/eppsteingg1988:488.html">MIT hypertext bibliography</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein88speeding.html">CiteSeer</a>)
+<p>
+<li><b>Sequence comparison with mixed convex and concave costs</b>.<br>
+D. Eppstein.<br>
+Tech. Rep. CUCS-382-88, Computer Science Dept., Columbia University, 1988.<br>
+<a href="Epp-Algs-90.pdf"><i>J. Algorithms</i> 11 (1): 85&ndash;101, 1990</a>.
+<p>
+Gives an algorithm for finding the minimum number of mutations needed
+to transform one input string into another, in a general model
+in which substrings may be inserted or deleted at a cost depending
+nonlinearly on the substring length.  The time bound
+depends on the number of times the second derivative of the cost function changes sign.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Sequence comparison with mixed convex and concave costs">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Sequence-comparison-with-mixed-convex-and-concave-costs.html">Citations</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=82778">ACM DL</a>)
+<p>
+<li><b>Reset sequences for monotonic automata</b>.<br>
+D. Eppstein.<br>
+<i>15th Int. Coll. Automata, Languages and Programming,</i>
+Tampere, Finland, 1988.<br>
+Springer, <i>Lecture Notes in Comp. Sci.</i> 317, 1988, pp. 230&ndash;238.<br>
+<a href="Epp-SJC-90.pdf"><i>SIAM J. Computing</i> 19 (3): 500&ndash;510, 1990</a>.
+<p>
+Automata theory.
+A reset sequence for a DFA is an input such that, no matter which
+state the DFA starts in, it ends up after the input in a known state.
+These have been used by Natarajan and Goldberg for certain robot motion
+planning problems (in fact the conference version of this paper used
+the title "Reset sequences for finite automata
+with application to design of parts orienters"), and also in coding
+theory where they arise in the design of
+self-synchronizing codes.  This paper considers DFAs in which the
+transition functions respect a given cyclic ordering of the states, and
+shows that their shortest reset sequences can be found quickly.
+It also considers parallel algorithms for the problem.
+There remains open a gap between <i>n<sup>2</sup></i> and <i>n<sup>3</sup></i>
+in the maximum length of reset sequences for general automata.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Reset sequences for monotonic automata">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Reset-sequences-for-monotonic-automata.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein90reset.html">CiteSeer</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=681434">ACM DL (ICALP)</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=80025">ACM DL (SJC)</a>)
+<p>
+<li><b>Parallel algorithmic techniques for combinatorial computation</b>.<br>
+D. Eppstein and
+<a href="//www.scs.gatech.edu/people/zvi-galil">Z. Galil</a>.<br>
+<i>Ann. Rev. Comput. Sci.</i> 3: 233&ndash;283, 1988.<br>
+Invited talk by Z. Galil,
+<a href="EppGal-ICALP-89.pdf"><i>16th Int. Coll. Automata, Languages and Programming,</i> Stresa, Italy, 1989</a>.<br>
+<a href="//doi.org/10.1007/BFb0035768">Springer, <i>Lecture Notes in Comp. Sci.</i> 372, 1989, pp. 304&ndash;318</a>.
+<p>
+This survey on parallel algorithms emphasized the use of basic
+subroutines such as prefix sums, Euler tours, ear decomposition, and matrix
+multiplication for solving more complicated graph problems.
+<p>(<a href="/~eppstein/bibs/eppstein.html#Parallel algorithmic techniques for combinatorial computation">BibTeX</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/Parallel-algorithmic-techniques-for-combinatorial-computation.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/eppstein88parallel.html">CiteSeer</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=53603">ACM DL (ARCS)</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=681611">ACM DL (ICALP)</a>)
+<p>
+</ul>
+
+<hr><p>
+<a href="year.html">Years</a> &ndash;
+<a href="/~eppstein/pubs/">Publications</a> &ndash;
+<a href="/~eppstein/">David Eppstein</a> &ndash;
+<a href="/~theory/">Theory Group</a> &ndash;
+<a href="/">Inf. &amp; Comp. Sci.</a> &ndash;
+<a href="//www.uci.edu/">UC Irvine</a>
+<p>
+<small>Semi-automatically <a href="filter.html">filtered</a>
+from a common source file.</small>
+</body></html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,358 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‹¢Ak¢DtypeEvaluePContent-LanguageAv¢DtypeEvalueHen,en-us¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXSJSESSIONID=80BB589DFC063B46E1B7753878821B8A; Path=/AuthenticationService/; HttpOnly¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 01 Jan 1970 00:00:00 GMT¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueQApache-Coyote/1.1¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueRno-cache, no-store¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 19:40:10 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html;charset=ISO-8859-1Kraw_content¢DtypeEvalueY1æ<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="The San Diego State University Authentication Service is a single sign-on protocol for online services. Its purpose is to permit an SDSU user to access multiple SDSU applications while providing credentials only once." name="DESCRIPTION" />
+	<meta name="description" content="San Diego State University Authentication" />
+	<meta name="keywords" content="SDSU, San Diego State University, Authentication" />
+	<meta name="author" content="SDSU Enrollment Services" />
+	<meta name="copyright" content="Copyright 2012 Â© San Diego State University" />
+	<meta name="author" content="SDSU Enrollment Services" />
+	<link rel="shortcut icon" type="image/png" href="https://www.sdsu.edu/favicon.png"/>
+	<title>SDSU | Authentication</title>
+
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-36468865-1']);
+	  _gaq.push(['_trackPageview']);
+	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+   </script>
+   
+	
+	
+		
+	
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet"  type="text/css"  href="/AuthenticationService/stylesheet/bootstrap.min.v3.3.7.css" />
+    <script language="JavaScript" src="/AuthenticationService/script/bootstrap.min.v3.3.7.js"></script>
+
+<style>
+
+    body { 
+		text-align: left;
+		font-family: Arial, Helvetica, sans-serif;
+		color: #4b3831;
+		background-image:url("/AuthenticationService/images/bg_wrapper_main.jpg");
+		background-repeat:repeat-x;
+    }
+    
+    .authBox {
+	    background-color: #f1ebd5;
+	    margin-top: 130px;
+	    padding: 10px 40px;
+	    
+	    border: 1px solid;
+        border-radius: 5px;
+    }
+    	
+    .titleAuth {
+		font-weight: bold;
+		font-family: Arial, Helvetica, sans-serif;
+		color: #8D0812;
+		font-size: 28px;
+		padding:4px 0px 30px 0px;
+    }
+    
+    .form-control:focus {
+	     border-color: black;
+	     box-shadow: none;
+    }
+    .wsgred {
+      color: #ae2133
+    }
+    
+    a{
+	     color: #8d0d24;
+		 text-decoration:none;
+		 margin: 0px;
+		 text-align: left;
+		 font-size:13px;
+		 font-family: Arial, Helvetica, sans-serif;
+		 color: #4b3831;
+	}
+	a:link    {
+	      color: #8d0d24;
+		  text-decoration:none;
+	}
+	a:hover 	{
+		text-decoration: none;
+	    color: #8d0d24;
+		padding: 0px 0px 0px 0px;
+	}
+	a#header {
+		float: left;
+		height: 148px;
+		text-align: center;
+		width: 960px;
+	}
+	a:visited    {
+		text-decoration: none;
+		color: #8d0d24;
+	}
+	a:active    {
+		text-decoration: none;
+		color: #8d0d24;
+	}
+	a:focus    {
+		text-decoration: none;
+		color: #8d0d24;
+		outline: none;
+	}
+    .fontSize10 {
+       font-size: 10px; 
+    }
+    .sdsuIcon{
+        padding: 25px;
+    }
+    
+    .button_go {
+		cursor: pointer;
+		text-decoration: none;
+		text-align: center;
+		padding: 6px 6px;
+		border: solid 1px #005072;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		font: 13px Arial, Helvetica, sans-serif;
+		font-weight: bold;
+		color: #f4fafc;
+		background-color: #c42038;
+	}
+	
+	.button_go:hover {
+		cursor: pointer;
+		padding: 6px 6px;
+		border: double 1px #161717;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		font: 13px Arial, Helvetica, sans-serif;
+		font-weight: bold;
+		color: #f4fafc;
+		background-color: #a80c23;
+	}
+	
+	.error_block {
+	   color: #C41230;
+	   font-size:14px;
+    }
+    .noteSect{
+        font-size: 13px; 
+        font-weight: bold;
+    }
+    
+    .redBtn{
+	    color: white;
+	    font-size:15px;
+	    background-color: #a6192e;
+	    border: none;
+	    border-radius: 4px;
+	    padding: 5px 12px 5px 12px;
+	}
+	
+	.redBtn:hover 	{
+       color: #ffe6e6;
+    }
+</style>
+
+<script type="text/javascript">
+	$(document).ready(function(){  
+		document.getElementById('mySdsuId').focus();
+		
+		$('#mySdsuId').keypress(function(event){
+			var keycode = (event.keyCode ? event.keyCode : event.which);
+			if(keycode == '13'){
+				document.getElementById('initiateIDMLogin').click();
+				event.preventDefault();
+			}
+			event.stopPropagation();
+		});
+
+		$('#myPassword').keypress(function(event){
+			var keycode = (event.keyCode ? event.keyCode : event.which);
+			if(keycode == '13'){
+				 document.getElementById('initiateLogin').click();
+				 event.preventDefault();
+			}
+			event.stopPropagation();
+		});
+
+		var item = document.getElementById('error_block_userName');
+		 if (item){
+			   document.getElementById('myUsername').style.border = '2px solid red';
+			   document.getElementById('myPassword').style.border = '2px solid red';
+			   document.getElementById('myUsername').focus();
+		}  
+		    
+		var item1 = document.getElementById('error_block_sdsuId');
+		if (item1){
+		   document.getElementById('mySdsuId').style.border = '2px solid red';
+		   document.getElementById('mySdsuId').focus();
+			  
+		 }  
+		    
+		
+	});
+	
+	function changeInputTypePwd001(prm) {
+		var oldObject = document.getElementById(prm);
+		  var newObject = document.createElement('input');
+		  if (oldObject.type == 'text'){
+		       newObject.type = 'password';
+		       document.getElementById('userLabel2').style.display = "none";   
+		       document.getElementById('userLabel1').style.display = ""; 
+		  }else {
+			  newObject.type ='text';
+			  document.getElementById('userLabel1').style.display = "none";   
+		      document.getElementById('userLabel2').style.display = ""; 
+		  }
+		  
+		  if(oldObject.size) newObject.size = oldObject.size;
+		  if(oldObject.getAttribute("maxlength") != null) {
+			  newObject.setAttribute("maxlength",oldObject.getAttribute("maxlength"));
+		  }
+		  if(oldObject.value) newObject.value = oldObject.value;
+		  if(oldObject.name) newObject.name = oldObject.name;
+		  if(oldObject.id) newObject.id = oldObject.id;
+		  if(oldObject.className) newObject.className = oldObject.className;
+		  oldObject.parentNode.replaceChild(newObject,oldObject);
+		  return;
+	}
+
+</script>
+
+</head>
+<body>
+<form id="myFormLogin" action="/AuthenticationService/loginVerifier.html;jsessionid=80BB589DFC063B46E1B7753878821B8A?pc=portal" method="post"> 
+<div class="container">
+     <div class="row sdsuIcon">
+    	  <a href="https://www.sdsu.edu">
+     			<img src="/AuthenticationService/images/logo_sdsu.png" alt="San Diego State University" title="Go to SDSU home page" name="logo_sdsu" width="227" height="46" border="0" id="logo_sdsu"/>
+    	  </a>
+     </div> 
+    	
+     <div class="row">
+          <div class="col-sm-3">&nbsp;&nbsp;</div> 
+          <div class="col-sm-6">
+             <div class="authBox">
+                <div class="titleAuth" align="center">Account Authentication</div>
+                 
+                  <!-- --------------------------------------------------------IDM begin------------------------------------------------------ -->
+				  
+				  <div class="form-group row" style="padding-top: 10px;">
+				    <div class="col-sm-12">
+					  <div class="col-sm-3 text-right"> <label><span class="wsgred">SDSU</span>id</label></div>
+					  <div class="col-sm-7" style="margin-bottom: 4px;">
+					      <input id="mySdsuId" name="sdsuId" placeholder="SDSU ID eg jdoe@sdsu.edu" class="form-control" type="text" type="text" value=""/>   
+					  </div>
+					  <div class="col-sm-2">
+						   <input type="submit" id="initiateIDMLogin" value="Log in" class="redBtn" name="loginIDM"/>
+ 					 </div>
+ 					 </div>
+				  </div>
+				  
+		          
+				  <div class="row">
+				      <div class="col-sm-12" align="center">
+				         <a href="http://portal.office.com" target="_blank">Can't log in using my SDSUid?</a>
+				      </div>   
+				  </div>    
+		          <div class="row" align="center" style="padding: 20px 0px 10px 0px;">
+		              <span class="noteSect">Log in using SDSUid is available only for current students, faculty, <br />and authorized staff account.</span>
+	             </div> 
+                 <!-- ------------------------------------------------------IDM end ------------------------------------------------------ -->
+		        
+				  
+				  <!-- --------------------------------------------------------OR--------------------------------------------------------------- -->
+				  <div class="row">
+				     <div style="width: 100%; height: 20px; border-bottom: 2px solid grey; text-align: center">
+                         <span class="badge" style="margin-top: 7px; font-size: 16px;">OR</span>
+                     </div>
+				  </div>
+                 <!-- --------------------------------------------------------OR--------------------------------------------------------------- -->
+                <div class="form-group row" style="padding-top: 30px;">
+	                 <label  class="col-sm-6 text-right" for="myUsername"><span class="wsgred">Red</span>ID/User Name
+				                  <span id="loginUnameHideLink">
+				                       <a href="javascript: changeInputTypePwd001('myUsername');"> 
+				                           
+					                         
+				                                  <span id="userLabel2"  class="fontSize10">(Hide Value)</span>
+				                                  <span id="userLabel1"  style="display:none;" class="fontSize10">(Show Value)</span> 
+				                             
+				                               
+				                                
+				                       </a>
+				                  </span>
+				        </label>
+		                
+		                <div class="col-sm-6">
+		                     
+					                
+					                   <input id="myUsername" name="userName" class="form-control" type="text" type="text" value=""/>
+					                
+					                 
+					                
+		                </div>
+		        </div>
+		        
+	            <div class="form-group row">
+					  <label class="col-sm-6 text-right" >Password</label>
+					   <div class="col-sm-6" id="edge_projName">
+					          <input id="myPassword" name="userPassword" class="form-control" type="password" type="text" value=""/>
+						</div>
+				 </div><!-- line 2 -->
+				
+		         
+			     <!-- line error 1-->
+			      
+				  <div class="row" style="padding-bottom: 20px;">
+				      <div class="col-sm-3 pull-right">
+				          <input type="submit" id="initiateLogin" value="Log in" class="redBtn pull-right" name="login"/>
+				      </div>
+				     
+				      <div class="col-sm-9" align="right">
+				           <a href="/AuthenticationService/helpCantLogin.htm?pc=portal">Can't log in? &nbsp;&nbsp;</a>
+				           <a href="https://sunspot.sdsu.edu/pls/webapp/stu_web.activate_acc_new" target="_blank"> Create New Account &nbsp;&nbsp;</a>
+				           <a href="/AuthenticationService/loginProfile.htm?pc=portal" target="_blank"> My Account</a>
+				      </div>
+				      
+				  </div><!-- line help/submit 1 -->
+				  <!-- Using a shared or public computer? -->
+				  <!-- Be sure to log out and close all browser windows when you're done. This will help keep your information secure. -->                 
+                 
+                 
+                 
+
+		        
+		      </div><!-- authBox -->        
+          </div><!--------------------- main col6 -->
+          <div class="col-sm-3">&nbsp;&nbsp;</div> 
+     </div><!-- main row -->
+  
+</div><!-- end container -->
+<input id="partnerCode" name="partnerCode" type="hidden" value="portal"/>
+<input id="partnerUrl" name="partnerUrl" type="hidden" value="https://sunspot.sdsu.edu/pls/webapp/web_menu2.homepage"/>
+<input id="partnerDomainName" name="partnerDomainName" type="hidden" value="sunspot_ssl_portal"/>
+<input id="partnerName" name="partnerName" type="hidden" value="WebPortal"/>
+<input id="partnerParm" name="partnerParm" type="hidden" value="pc=portal"/>
+<input id="partnerHomepage" name="partnerHomepage" type="hidden" value="https://sunspot.sdsu.edu/pls/webapp/web_menu.login"/>
+<input id="showFieldID" name="showField" type="hidden" value="Y"/>
+<input id="useIdm" name="useIdm" type="hidden" value="Y"/>
+<input id="currentServer" name="currentServer" type="hidden" value="https://sunspot.sdsu.edu"/>
+
+
+</form>
+
+</body>
+</html>
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,21 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC338¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:39:34 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"241-3158ecb828580-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 13:53:44 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYA// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 20 Apr 1997
+//
+// Multi-fragment TSP application
+
+#include "Algorithms.h"
+
+extern CPApplication MultiFragment;
+
+class MultiFragmentDistance : public PointSet {
+	PointSet & base;
+	point * partners;
+	friend CPApplication MultiFragment;
+	
+ public:
+ 	MultiFragmentDistance(unsigned long npoints, PointSet & b);
+ 	~MultiFragmentDistance() { delete &base; delete partners; }
+ 	double operator() (point, point);	// compute dist modified by partners
+ 	void interact(point, point);		// merge two frags by repartnering
+};
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,266 @@
+¦Ifinal_url¢DtypeEvaluex8https://www.ics.uci.edu/~ardalan/courses/os/project.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE11437¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 26 Jan 2019 03:46:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"2cad-580544b528032"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 13:48:15 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY,­<!--
+ * Contains elements from:
+ *
+ * http://www.cs.columbia.edu/~roxana/research/index.html
+ * https://www.cs.jhu.edu/~huang/cs318/fall18/project/guide.html
+ *
+ -->
+
+<html class="no-js" lang="en">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Ardalan Amiri Sani</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+<div id="main_body">
+    <!--<script src="js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>-->
+    <table width="100%" height=125>
+        <tr>
+            <td>
+                <h1>CompSci 143A: Principles of Operating System</h1>
+                <p>
+                    <b>Instructor:</b> <a href="http://www.ics.uci.edu/~ardalan/">Ardalan Amiri Sani</a><br/>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <div id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lectures.html">Lectures</a></li>
+            <li><a href="homework.html">Homework</a></li>
+            <li><a href="discussions.html">Discussions</a></li>
+            <li><a href="reading.html">Reading</a></li>
+            <li><a href="project.html">Project</a></li>
+        </ul>
+    </div>
+
+    <h2 id="pintos-project-guide">Pintos Project Guide</h2>
+
+    <p> The course project is based on
+        <a href="http://pintos-os.org">Pintos</a>. Pintos is a teaching operating system
+        for 80x86. It is simple and small (compared to Linux). On the other hand,
+        it is realistic enough to help you understand core OS concepts in depth.
+        It supports kernel threads, virtual memory, user programs, and file system.
+        But its original implementations are premature or incomplete. Through the
+        projects, you will be strengthening some of these areas of Pintos to make
+        it complete.</p>
+
+    <p>
+        Since Pintos is designed
+        for 80x86 architecture,
+	<!--at the end of the projects, -->
+        you could run theoretically
+        the OS that you build on a regular IBM-compatible PC! Of course, during development,
+        running Pintos on bare metal machines each time could be time consuming. Instead,
+        you will run the projects in an x86 emulator, in particular, <a href="http://bochs.sourceforge.net">Bochs</a>
+        or <a href="http://fabrice.bellard.free.fr/qemu/">QEMU</a>. Pintos has also been tested with
+        <a href="http://www.vmware.com/">VMWare Player</a>.</p>
+
+    <p> We will start with a pre-project and then do one substantial project.
+        Note that in addition to the pre-project, Pintos has 4 other substantial projects.
+        However, in this class, you will only do one of those substantial projects as the project is only 10% of your grade.
+        Pintos projects are known to be hard. They have a reputation of taking a lot of time. But
+        they are also as rewarding as they are challenging.
+        Moreover, since you are only required to do one of these substantial projects (in addition to the pre-project),
+	we don't anticipate the project to be very challenging.
+    </p>
+
+    <table class="table table-bordered table-striped table-hover" id="schedule-table">
+        <thead>
+        <tr class="info">
+            <th>Project</th>
+            <th>Weight</th>
+            <th>Due</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="lab0.html">Lab 0: Getting Real (pre-project)</a></td>
+            <td>20/100</td>
+            <td>02/22/2019 11:55 PM</td>
+        </tr>
+        <tr>
+            <td><a href="lab1.html">Lab 1: Threads</a></td>
+            <td>80/100</td>
+            <td>03/20/2019 11:55 PM</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <hr size="6"/>
+
+    <h3 id="groups">Groups</h3>
+    <p>
+        Lab 0 is an individual project. From Lab 1 and onwards, you can work in groups of
+        1-3 people. We will overlap Lab 0 with the stage of forming groups. So start
+        talking with your classmates around once the course begins!
+    </p>
+
+    <hr size="6"/>
+
+    <h3 id="getting-started">Getting Started</h3>
+    <p>To get started, you can get a copy of the Pintos source code distribution.</p>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/trusslab/pintos.git
+</code></pre>
+    </div>
+    <p>or</p>
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code>wget https://www.ics.uci.edu/~ardalan/courses/os/pintos.tar.gz
+</code></pre>
+    </div>
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <strong>Warning!</strong>
+        </div>
+        <div class="panel-body">
+            The Pintos source code above has some customizations in it compared to the official Pintos distribution.
+	    Therefore, you
+            should be only getting the source code from the above channels. In other words,
+            do not download from other websites.
+        </div>
+    </div>
+
+    <p>Before you can compile and develop on Pintos, you will need to have a machine
+        with the appropriate environment setup. We will be instructing you on how to set up
+        the Pintos development environment on your school Openlab accounts.
+	We will be test your code on these school machines. We have also included instructions for
+        setting up the Pintos development environment on your own machine (e.g., Ubuntu, Fedora, Mac OS).
+	You can find the instructions here: <a href="project_setup.html">project setup guide</a></p>
+
+    <hr size="6"/>
+
+    <h3 id="documentation">Documentation</h3>
+
+    <ul>
+        <li>Pintos source code
+            <ul>
+                <li><a href="pintos/pintos_1.html#SEC3">Brief overview of the source tree</a></li>
+                <li><a href="pintos/pintos_7.html">Reference guide</a></li>
+            </ul>
+        </li>
+        <li>The original Pintos <a href="https://benpfaff.org/papers/pintos.pdf">paper</a></li>
+        <li><strong class="text-info">The complete Pintos documentation</strong> in <a href="pintos/pintos.pdf">PDF</a>, <a
+                href="pintos/pintos.html">HTML</a>.
+        </li>
+	<!--
+        <li>The reference <a href="/references.html">page</a> contains instructions on how to read the Pintos
+            documentation.
+	-->
+        </li>
+    </ul>
+
+    <hr size="6"/>
+
+
+    <h3 id="grading">Grading</h3>
+
+    <p>We will grade your assignments based on test results (<strong>60% of your grade</strong>)
+        as well as design quality (<strong>40% of your grade</strong>). Note that the testing grades
+        are fully automated. So please turn in working code or there is no credit.
+        The <a href="grading.html">grading policy page</a> lists detailed information about how
+        grading is done.</p>
+
+    <hr size="6"/>
+
+    <h3 id="submission">Submission</h3>
+
+    <p>We will be using EEE Dropbox for collecting the assignment submissions.
+       To submit, generate a tarball of your source tree and upload in Dropbox.
+       We only need the source files. Therefore, do not include the binaries.
+       You can create a tarball using this command:
+    </p>
+    <table>
+        <tbody>
+        <tr>
+            <td>&nbsp;</td>
+            <td class="example"><pre>$ tar -zcvf pintos.tar.gz pintos</pre>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <hr size="6"/>
+
+    <h3 id="late-policies">Late Policies</h3>
+    <p>Late submissions will receive penalties
+       as follows: you lose 5% of the submission grade for every late hour.
+       </p>
+
+    <!--
+    <h3 id="tips">Tips</h3>
+
+    <h4 id="gdb-port">GDB Port</h4>
+    <p>If you are using gdb on the lab machines to debug Pintos, you may encounter
+    a port conflict error. Thatâ€™s because <code class="highlighter-rouge">pintos --gdb</code> will invoke the <code class="highlighter-rouge">-s</code> option
+    with QEMU, which in turn is a short-hand for <code class="highlighter-rouge">-gdb tcp::1234</code>. So multiple users
+    might try to compete for the same port. Weâ€™ve modified the <code class="highlighter-rouge">pintos</code> script
+    to add two options to work around this.</p>
+
+    <ul>
+      <li><code class="highlighter-rouge">--gdb-port</code> to specify a port explicitly. You can choose any port thatâ€™s available
+    to bind gdb, e.g., <code class="highlighter-rouge">pintos --gdb --gdb-port=2430</code>.</li>
+      <li><code class="highlighter-rouge">--uport</code> to calculate a port number deterministically based on the user id.
+    So different users on the lab machines will get a different port. Example:
+    <code class="highlighter-rouge">pintos --gdb --uport</code>. You can find the generated port in the command verbose
+    output (e.g., <code class="highlighter-rouge">qemu-system-i386 ... -gdb tcp::25501</code>).</li>
+    </ul>
+
+    <p>When you use these two options, you also need to change the <code class="highlighter-rouge">target remote</code> command
+    in the gdb session to point to the specified/calculated port instead of 1234.</p>
+
+    
+    <hr size="6"/>
+    -->
+
+    <h3 id="cheating-and-collaboration">Cheating and Collaboration</h3>
+    <div class="panel panel-danger">
+        <div class="panel-heading">
+            <strong>Warning!</strong>
+        </div>
+        <div class="panel-body">
+            This class has zero tolerance for cheating. We will run tools to check your submission
+            against a comprehensive database of solutions including past and present submissions
+            for potential cheating. The consequences are very high. Please read UCI's <a
+                href="https://aisc.uci.edu/students/academic-integrity/index.php">academic integrity information for students</a>.
+        </div>
+    </div>
+
+    <p>The basic policies are:</p>
+    <ul>
+        <li>Never share code or text on the project. <em class="text-danger">That also means do not make your solutions
+            public on the Internet, e.g., GitHub public repo</em>.
+        </li>
+        <li>Never use someone else's code or text in your solutions.</li>
+        <li>Never consult project code or text found on the Internet.</li>
+        <li>You may read but not copy Linux or BSD source code. <em class="text-danger">But you must cite any code
+            that inspired your code</em>. As long as you cite what you used, it's
+            not cheating. In the worst case, we deduct points if it undermines
+            the assignment.
+        </li>
+    </ul>
+
+    <p>On the other hand, we encourage collaboration in the following form:</p>
+    <ul>
+        <li>Share ideas (but do not give code to others).</li>
+        <li>Explain your code to someone to see if they know why it does not work. But they're not allowed to write code for you. Just exchange ideas.</li>
+        <li>Help someone else debug if they're stuck. But you're not allowed to write code for them. Just exchange ideas.</li>
+    </ul>
+
+    <h3 id="credit">Credit</h3>
+    <p>
+            Most of the content of the project webpage has been borrowed from JHU's CS 318/418/618 course by Ryan Huang.
+	    The webpage also contains content from the Stanford's CS 140.</p>
+
+</div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

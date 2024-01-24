@@ -1,0 +1,196 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueLX-Powered-ByAv¢DtypeEvalueJPHP/7.1.24¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX Apache/2.4.6 (CentOS) PHP/7.1.24¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:06:30 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueDDENY¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY*><!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  
+<head>
+<!-- 9-80 -->
+ 
+	  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	  <title>UCI Campus Directory</title>
+	  <link href="directory.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			<!--
+			
+			
+			function clearAdvancedForm()
+			{
+				document.getElementById( "form_fname" ).value = "";
+				document.getElementById( "form_lname" ).value = "";
+				document.getElementById( "form_email" ).value = "";
+				document.getElementById( "form_ucinetid" ).value = "";
+				document.getElementById( "form_phone" ).value = "";
+				document.getElementById( "form_department" ).value = "";
+				
+				document.getElementById( "fname_default" ).selected = true;
+				document.getElementById( "lname_default" ).selected = true;
+				document.getElementById( "email_default" ).selected = true;
+				document.getElementById( "ucinetid_default" ).selected = true;
+				document.getElementById( "department_default" ).selected = true;
+				
+				document.getElementById( "searchgroup_default" ).selected = true;				
+			}
+			
+			function flipDeliveryPoint()
+			{
+				dp = document.getElementById("deliveryPoint");
+				dp_msg = document.getElementById("dp_message");
+				if (dp.style.display == 'none') 
+				{ 
+					dp.style.display = 'block'
+					dp_msg.innerHTML = '[Hide Delivery Point]'; 
+				} else { 
+					dp.style.display = 'none'
+					dp_msg.innerHTML = '[Show Delivery Point]';
+				}
+			}
+			
+			function load()
+			{
+				document.getElementById('basic_keywords').focus();
+			}
+			-->
+		</script>
+  </head>
+  <body onload="load();">
+		<div id="container">
+			<div id="header">
+				<div class="header-text">
+					<div class="date">Sunday, February 10th, 2019</div>
+					<div class="global-links"><a href="http://www.uci.edu/campusmap/">Campus Maps</a> : <a href="http://today.uci.edu/">UC Irvine Today</a></div>	
+				</div><br/>
+				<div class="header-bg"><a href="http://www.uci.edu"><img src="images/banner2.jpg" alt="UC Irvine, Campus Directory" border="0" /></a></div>
+				<!-- <div class="rotating-images"><img src="images/rotate/image11.jpg" alt="Fac/Staff Picture 1" class="left" 
+									/><img src="images/rotate/image12.jpg" alt="Fac/Staff Picture 2" class="mid" 
+									/><img src="images/rotate/image10.jpg" alt="Fact/Staff Picture 3" class="right" 
+				/></div> -->
+					<!-- <img src="images/rotate/image49.jpg" alt="Fac/Staff Picture 3" width="49" height="60" />
+					<img src="images/rotate/image26.jpg" alt="Fac/Staff Picture 4" width="49" height="60" />
+					<img src="images/rotate/image24.jpg" alt="Fac/Staff Picture 5" width="49" height="60" />
+					<img src="images/rotate/image81.jpg" alt="Fac/Staff Picture 6" width="49" height="60" />
+					<img src="images/rotate/image1.jpg" alt="Fac/Staff Picture 7" width="49" height="60" />
+					<img src="images/rotate/image27.jpg" alt="Fac/Staff Picture 8" width="49" height="60" />
+					<img src="images/rotate/image104.jpg" alt="Fac/Staff Picture 9" width="49" height="60" />
+					<img src="images/rotate/image53.jpg" alt="Fac/Staff Picture 10" width="49" height="60" />
+					<img src="images/rotate/image48.jpg" alt="Fac/Staff Picture 11" width="49" height="60" />
+					<img src="images/rotate/image34.jpg" alt="Fac/Staff Picture 12" width="49" height="60" />
+					<img src="images/rotate/image57.jpg" alt="Fac/Staff Picture 13" width="49" height="60" />
+					<img src="images/rotate/image36.jpg" alt="Fac/Staff Picture 14" width="49" height="60" />
+					<img src="images/rotate/image73.jpg" alt="Fac/Staff Picture 15" width="49" height="60" /> -->
+			</div>
+			<div id="wrapper">
+				<div id="leftcolumn">
+			  	<ul>
+			  		<li><a href="/index.php?action=update_directory">How to Update Directory Information</a></li>
+			      <li><a href="/index.php?action=search_tips&amp;form_type=advanced_search">Search Tips</a></li>
+			      <li><a href="/index.php?action=about_directory">About the UCI Directory</a> </li>
+			      <li class="redtext"><a href=" https://portal.uci.edu/uPortal/viewXmlFile.jsp?cmsUri=public/MainMenuEmergencyManagement.xml">UCI Preparedness &amp; Emergency Response </a></li>
+		        <li class="operator"><strong>Campus Operator<br />
+				  	        (949) 824-5011</strong></li>
+			      <li><a href="/index.php?action=ucdirectories">UC Directories</a> </li>
+			    	<li><a href="http://psearch.ics.uci.edu">Search the directory using ICS's powerful search technology: <br/><br/><img src="images/psearch.png" alt="PSearch Logo" border="0"/></a></li>
+					</ul>
+					<div class="sideimage">Maintained by the<br/>
+					<a href="http://www.oit.uci.edu"><img src="images/OIT-Logo-150.png" alt="Office of Information Technology" style="border: 0px; margin-left: -10px;" /></a>
+			    </div>
+			  </div> 
+			
+			<!-- left column ends -->	  	
+				
+				<div id="centercolumn">
+					
+			    
+			     
+			    <h1 align="left">Search for People &amp; Departments <span class="basicsearch">[ <a href="/index.php?form_type=basic_search">Basic Search</a> ]</span></h1> 
+			    <form action="" method="get" name="advanced_search" id="advanced_search">
+			        <label for="searchgroup">Search Group</label>  
+			        <select name="search_group" size="1" class="adv-field" accesskey="1" tabindex="1" title="Search Group" id="searchgroup">
+			          <option id="searchgroup_default" value="all" SELECTED>Faculty, Staff, Students &amp; Departments</option> <!-- &amp; Associated Accounts -->
+			          <option value="facstaff" >Faculty and Staff Only</option>
+			          <option value="students" >Students Only</option>
+								<option value="departments" >Departments Only</option>
+			        </select>
+			  		<br/>
+			        <label for="form_fname">First&nbsp;Name/Nickname</label>
+			        <input type="text" maxlength="60" name="form_fname" accesskey="2" tabindex="2" id="form_fname" value=""/>
+							<label class="hiddenLabel" for="form_fname_filter">First Name Search Type</label>
+							<select name="form_fname_filter" id="form_fname_filter" size="1" class="adv-field" accesskey="3" tabindex="3" title="">
+								<option value="exact" >Exact</option>
+								<option id="fname_default" value="starts with" SELECTED>Starts With</option>
+							</select>
+			      <br/>
+			        <label for="form_lname">Last&nbsp;Name</label>
+			        <input type="text" maxlength="60" name="form_lname" accesskey="4" tabindex="4" id="form_lname" value="" />
+							<label class="hiddenLabel" for="form_lname_filter">Last Name Search Type</label>
+							<select name="form_lname_filter" id="form_lname_filter" size="1" class="adv-field" accesskey="5" tabindex="5" title="">
+								<option value="exact" >Exact</option>
+								<option id="lname_default" value="starts with" SELECTED>Starts With</option>
+							</select>
+			      <br/>
+			        <label for="form_email">E-mail</label>
+			        <input type="text" maxlength="60" name="form_email" accesskey="6" tabindex="6" id="form_email" value="" />
+							<label class="hiddenLabel" for="form_email_filter">E-mail Search Type</label>
+							<select name="form_email_filter" id="form_email_filter" size="1" class="adv-field" accesskey="7" tabindex="7" title="">
+								<option value="exact" >Exact</option>
+								<option id="email_default" value="starts with" SELECTED>Starts With</option>
+							</select>
+			      <br/>
+			        <label for="form_ucinetid">UCInetID</label>
+			        <input type="text" maxlength="60" name="form_ucinetid" accesskey="8" tabindex="8" id="form_ucinetid" value="" />
+							<label class="hiddenLabel" for="form_ucinetid_filter">UCInetID Search Type</label>
+							<select name="form_ucinetid_filter" id="form_ucinetid_filter" size="1" class="adv-field" accesskey="9" tabindex="9" title="">
+								<option value="exact" >Exact</option>
+								<option id="ucinetid_default" value="starts with" SELECTED>Starts With</option>
+							</select>
+						<br/>
+			        <label for="form_department">Department</label>
+			        <input type="text" maxlength="60" name="form_department" accesskey="10" tabindex="10" id="form_department" value="" />
+							<label class="hiddenLabel" for="form_department_filter">Department Search Type</label>
+							<select name="form_department_filter" id="form_department_filter" size="1" class="adv-field" accesskey="11" tabindex="11" title="">
+								<option value="exact" >Exact</option>
+								<option id="department_default" value="starts with" SELECTED>Starts With</option>
+							</select>
+			      <br/>
+			        <label for="form_phone">Telephone</label>
+			        <input type="text" maxlength="60" name="form_phone" accesskey="12" tabindex="12" id="form_phone" value="" />
+			      <p class="search-buttons">      
+			        <input type="submit" name="advanced_submit" value="Search" accesskey="14" tabindex="14" id="Submit" />
+			        <input type="button" name="Reset" value="Clear Form" accesskey="15" tabindex="15" onclick="clearAdvancedForm();" />
+							
+			        <input type="hidden" name="form_type" value="advanced_search" />
+			      </p>
+			    </form>
+			    
+			    
+		      
+	        		
+	        
+	        
+	        
+	        
+	        
+	        
+		
+					
+					
+		      
+		      
+			    <hr />
+		  	  <div class="privacynotice">
+		    	  <p><strong>Privacy Notice:</strong>
+                            <br>
+                            This directory has been compiled for the use and convenience of the faculty, staff, students, and affiliates of the University of California, Irvine and others dealing with UC Irvine. It is the property of the Regents of the University of California. In accordance with the California Information Practices Act, neither this directory nor the information contained herein may be used, rented, distributed, or sold for commercial purposes. Compilation or redistribution of information from this directory is strictly forbidden. Upon using this directory, you submit to these terms of use.  For more details, please see the <a href='http://policy.ucop.edu/doc/7020469/BFB-RMP-12'> University guidelines for assuring privacy of personal information in mailing lists and telephone directories.</a>
+                          </p>
+                          <p><strong>Note:</strong>
+                            <br>
+                            Directory information provided here should not be used as a verification of UCI employment.
+                          </p>
+                          <p align='center'> 
+                            ~ Directory data is updated daily ~
+                          </p>
+			  </div>
+			  
+		  	</div> <!-- center column end -->
+			</div> <!-- wrapper end -->
+		</div> <!-- container end -->
+	</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

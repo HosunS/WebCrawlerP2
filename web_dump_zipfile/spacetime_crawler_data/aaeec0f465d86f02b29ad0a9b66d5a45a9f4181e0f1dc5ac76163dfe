@@ -1,0 +1,16 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC276¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 28 Feb 1996 00:33:20 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"114-2eec227125400"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 15:27:00 GMTKraw_content¢DtypeEvalueYOBJECTS = lineb.o lookup.o match.o
+
+.c.o:
+	g++ -c -O -finline-functions $*.c
+
+lookup: $(OBJECTS)
+	g++ $(OBJECTS)
+	cp a.out lookup
+	rm a.out
+make:
+	makemake +g++ -O -finline-functions lookup
+
+lineb.o: lineb.c lineb.h
+lookup.o: lineb.h lookup.c match.h
+match.o: match.c match.h
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

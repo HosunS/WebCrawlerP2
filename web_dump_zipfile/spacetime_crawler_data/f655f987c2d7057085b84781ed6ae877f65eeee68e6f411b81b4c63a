@@ -1,0 +1,70 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1693¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:06:22 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"e34-54c85e18dba54-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 19:20:59 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY4
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>CompSci 163/265, Spring 2016, Homework 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1>CompSci 163/265, Spring 2016, Homework 2</h1>
+<ol>
+<li><p>(163 students:) Prove that the smallest and second-smallest
+weight edges in an undirected graph are always both part of the minimum
+spanning tree. (Hint: what does Kruskal's algorithm do with these
+edges?)</p>
+<p>(265 students:) Suppose that the vertices of a graph are colored
+black and white. Define an edge to be white if both its endpoints are
+white, black if both its endpoints are black, and gray if it has one
+black and one white endpoint. The blue rule shows that the smallest gray
+edge is always part of the minimum spanning tree. Is the second-smallest
+gray edge also always part of the minimum spanning tree? If so, prove
+it. If not, find an example where it is not.</p></li>
+<li><p>What are the smallest and largest possible numbers of rounds that
+Boruvka's algorithm can take to compute the minimum spanning tree of an
+eight-vertex connected graph? (Here a "round" means that each spanning
+tree in the current forest finds its smallest outgoing edge, and all
+these edges are added to the forest. As usual, we assume that there are
+no two edges with equal weights.) Give an example of an eight-vertex
+graph that uses the smallest possible number of rounds, and another
+eight-vertex graph that uses the largest possible number of
+rounds.</p></li>
+<li><p>The red rule can be used to prove the correctness of a "backwards
+Kruskal" algorithm that sorts the edges in descending order by weight
+and then loops through the edges in that order, deleting any edge that
+belongs to a cycle in the remaining graph. To test whether an edge
+belongs to a cycle, we can use depth first search to look for a path
+that does not go through the edge but connects its endpoints. What is
+the running time of this algorithm, including both the time for the
+sorting step and the time to do a depth first search for each edge?
+Express your answer in $O$-notation, as a function of $n$, the number of
+vertices, and $m$, the number of edges. (This algorithm is described in
+Wikipedia as
+the <a href="https://en.wikipedia.org/wiki/Reverse-delete_algorithm">reverse-delete
+algorithm</a> but the analysis on Wikipedia uses different variable
+names and a more sophisticated method than depth-first search to find
+cycles, and should not be used for your answer. Your answer should
+be simplified as much as possible; you may assume that $m > n$.)</p></li>
+<li><p>Give an example of a system of voter preferences for which
+the <a href="https://en.wikipedia.org/wiki/Borda_count">Borda count</a>
+does not obey
+the <a href="https://en.wikipedia.org/wiki/Condorcet_method">Condorcet
+property</a>. That is, for each of the $k!$ permutations of the set of
+$k$ candidates, you should specify how many voters prefer that
+permutation. This specification should have the property that there is
+one candidate who wins all head-to-head competitions against individual
+other candidates (the Condorcet winner), but that the Borda count
+chooses a different winner than this candidate. As part of your answer,
+specify who the Condorcet winner is and who the Borda winner
+is.</p></li>
+</ol>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

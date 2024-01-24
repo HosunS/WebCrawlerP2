@@ -1,0 +1,40 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1466¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 14 Jul 2006 16:30:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"5ba-4188d338a4e40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:56:33 GMTKraw_content¢DtypeEvalueYº# Lab 2, Program 1 (Version 2)
+#
+# Given a DNA sequence, find out if there is a gap.
+#
+# The way we would solve this problem on paper is to scan the sequence
+# from left to right until we found a gap.  As soon as we found a gap,
+# we would immediately stop and say, "Yes, there is a gap!"  If you got
+# all the way to the end of the sequence without finding a gap, then
+# you would conclude, "No, there is no gap."
+#
+# So, why not have our program do the same?
+
+dnaSequence = "atcgatgagagctagcgata"
+
+for c in dnaSequence:
+    if c == '-':
+        break
+
+if c == '-':
+    print "There is a gap in the sequence."
+else:
+    print "There is no gap in the sequence."
+
+# Here's the meaning of this program:
+#
+# * First, the DNA sequence is set.  (Next week, we'll start having our
+#   programs get their DNA sequences from other places: the user of the
+#   program, or a file.)
+#
+# * For each character in the DNA sequence:
+#     - If the character is a dash, stop looping through the characters
+#       immediately.  (That's what the "break" does.)
+#     - If it's not, move on to the next one.
+#
+# * When you get through with the loop, there's one of two reasons you
+#   did: (1) a dash was found, or (2) we ran out of characters.  We can
+#   figure out which thing happened by looking at c: if it's a dash, we
+#   got out of the loop because we found a dash, otherwise we got out
+#   of the loop because we ran out of characters.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

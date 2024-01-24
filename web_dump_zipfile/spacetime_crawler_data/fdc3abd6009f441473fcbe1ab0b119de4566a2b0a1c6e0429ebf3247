@@ -1,0 +1,109 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4087¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 16 Aug 2014 02:38:17 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"ff7-500b607b67840"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 13:02:24 GMTKraw_content¢DtypeEvalueY÷#!/usr/bin/env python
+from argparse import ArgumentParser
+from sklearn.utils import shuffle
+from sklearn.linear_model import SGDClassifier
+from sklearn.preprocessing import StandardScaler
+from sklearn.metrics import roc_curve, auc
+import os
+import numpy
+import scipy
+import pylab
+    
+    
+    
+if __name__ == "__main__":
+    cadd_dir = '/gl/cbcl/yifeic/data/CADD/cadd/rep_dq'
+    ClinVar_ESP_dir = '/gl/cbcl/yifeic/data/CADD/ClinVar_ESP/rep_dq'
+  
+    print('Load Data')
+    X_tr = numpy.load(os.path.join(cadd_dir, 'training.X.npz'))
+    X_tr = scipy.sparse.csr_matrix((X_tr['data'], X_tr['indices'], X_tr['indptr']), shape=X_tr['shape'])
+    y_tr = numpy.load(os.path.join(cadd_dir, 'training.y.npy'))
+    
+    X_va = numpy.load(os.path.join(cadd_dir, 'validation.X.npz'))
+    X_va = scipy.sparse.csr_matrix((X_va['data'], X_va['indices'], X_va['indptr']), shape=X_va['shape'])
+    y_va = numpy.load(os.path.join(cadd_dir, 'validation.y.npy')) 
+    
+    X_te = numpy.load(os.path.join(cadd_dir, 'testing.X.npz'))
+    X_te = scipy.sparse.csr_matrix((X_te['data'], X_te['indices'], X_te['indptr']), shape=X_te['shape'])
+    y_te = numpy.load(os.path.join(cadd_dir, 'testing.y.npy'))
+    
+    X_ClinVar_ESP = numpy.load(os.path.join(ClinVar_ESP_dir, 'ClinVar_ESP.X.npz'))  
+    X_ClinVar_ESP = scipy.sparse.csr_matrix((X_ClinVar_ESP['data'], X_ClinVar_ESP['indices'], X_ClinVar_ESP['indptr']), shape=X_ClinVar_ESP['shape'])
+    y_ClinVar_ESP = numpy.load(os.path.join(ClinVar_ESP_dir, 'ClinVar_ESP.y.npy'))
+
+    
+    
+    print('Train SGD Logistic Regression')
+    alpha = 1e-2
+    clf = SGDClassifier(loss="log", penalty='l2', alpha=alpha, random_state=None, shuffle=False, n_iter=10, verbose=1, n_jobs=1)
+    clf.fit(X_tr, y_tr)
+    print
+    print
+    
+
+    
+    
+    print("Predict cadd 10% validation data")
+    p_hat = clf.predict_proba(X_va)
+    numpy.save('prdt_cadd_valid.npy', p_hat)
+    fpr, tpr, thresholds = roc_curve(y_va, p_hat[:, 1])
+    roc_auc = auc(fpr, tpr)
+    print("logistic regression Accuracy: %f" %clf.score(X_va, y_va))
+    print("logistic regression AUC: %f" %roc_auc)
+    pylab.clf()
+    pylab.plot(fpr, tpr, label='ROC curve (area = %0.4f)' % roc_auc)
+    pylab.plot([0, 1], [0, 1], 'k--')
+    pylab.xlim([0.0, 1.0]); pylab.ylim([0.0, 1.0])
+    pylab.xlabel('False Positive Rate'); pylab.ylabel('True Positive Rate')
+    pylab.title('Receiver operating characteristic')
+    pylab.legend(loc="lower right")
+    pylab.grid(True)
+    pylab.savefig('ROC_LGST_cadd_0.1_validation.png')
+    pylab.close()    
+    
+    
+    
+    
+    print("Predict cadd 10% testing data")
+    p_hat = clf.predict_proba(X_te)
+    numpy.save('prdt_cadd_test.npy', p_hat)
+    fpr, tpr, thresholds = roc_curve(y_te, p_hat[:, 1])
+    roc_auc = auc(fpr, tpr)
+    print("logistic regression Accuracy: %f" %clf.score(X_te, y_te))
+    print("logistic regression AUC: %f" %roc_auc)
+    pylab.clf()
+    pylab.plot(fpr, tpr, label='ROC curve (area = %0.4f)' % roc_auc)
+    pylab.plot([0, 1], [0, 1], 'k--')
+    pylab.xlim([0.0, 1.0]); pylab.ylim([0.0, 1.0])
+    pylab.xlabel('False Positive Rate'); pylab.ylabel('True Positive Rate')
+    pylab.title('Receiver operating characteristic')
+    pylab.legend(loc="lower right")
+    pylab.grid(True)
+    pylab.savefig('ROC_LGST_cadd_0.1_testing.png')
+    pylab.close()
+    
+    
+    
+    
+    print("Predict ClinVar_ESP data")
+    p_hat = clf.predict_proba(X_ClinVar_ESP)
+    numpy.save('prdt_ClinVar_ESP.npy', p_hat)
+    fpr, tpr, thresholds = roc_curve(y_ClinVar_ESP, p_hat[:, 1])
+    roc_auc = auc(fpr, tpr)
+    print("Accuracy: %f" %clf.score(X_ClinVar_ESP, y_ClinVar_ESP))
+    print("ROC_AUC: %f" %roc_auc)
+    pylab.clf()
+    pylab.plot(fpr, tpr, label='ROC curve (area = %0.4f)' % roc_auc)
+    pylab.plot([0, 1], [0, 1], 'k--')
+    pylab.xlim([0.0, 1.0]); pylab.ylim([0.0, 1.0])
+    pylab.xlabel('False Positive Rate'); pylab.ylabel('True Positive Rate')
+    pylab.title('Receiver operating characteristic')
+    pylab.legend(loc="lower right")
+    pylab.grid(True)
+    pylab.savefig('ROC_LGST_ClinVar_ESP.png')
+    pylab.close() 
+    
+
+    
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

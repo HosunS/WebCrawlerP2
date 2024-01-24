@@ -1,0 +1,195 @@
+¦Ifinal_url¢DtypeEvaluexhttps://www.ics.uci.edu/~cluo8/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD8243¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 18 Dec 2018 19:31:38 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"2033-57d50f243aa42"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 11:05:42 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY 3
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 2.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="description" />
+<meta name="keywords" />
+<meta name="author" content="Chen Luo" />
+<link rel="stylesheet" type="text/css" href="basic-profile.css"
+	title="Basic Profile" media="all" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89791670-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<title>Chen Luo</title>
+</head>
+
+<body>
+	<div id="wrap">
+		<div id="sidebar">
+			<h1>Chen Luo</h1>
+			<img src="images/image.png" width="188" height="" alt="Avatar" />
+			<p>
+				<a href="mailto:cluo8@uci.edu">cluo8@uci.edu</a>
+			</p>
+			<ul>
+				<li><a href="#about_me">About Me</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#publications">Publications</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#awards">Awards</a></li>
+				<li><a href="#Misc">Misc</a></li>
+
+			</ul>
+		</div>
+
+		<div id="content">
+			<h2>
+				<a name="about_me">About Me</a>
+			</h2>
+			<p>I am a third-year PhD student at Department of Computer
+				Science, University of California Irvine. Before that, I obtained my
+				Master's degree in Software Engineering from School of Software,
+				Tsinghua University in July, 2016, and my bachelor's degreee in
+				Software Engineering from School of Software, Tongji University in
+				July, 2013.</p>
+
+			<p>I'm working on database systems under supervision of Professor
+				<a href="http://www.ics.uci.edu/~mjcarey/">Michael J. Carey</a>.
+				Here is my <a href="doc/resume.pdf">resume</a>.
+			</p>
+
+			<h2>
+				<a name="education">Education</a>
+			</h2>
+
+			<ul>
+				<li>Department of Computer Science, University of California
+					Irvine, 2016.9 - Present <br /> Doctor of Philosophy, Computer Science (4.00/4.00)<br />
+					<br/>
+				<li>School of Software, Tsinghua University, 2013.9 - 2016.7<br />
+					Master of Engineering, Software Engineering (94.1/100, 2 out of
+					136)<br /> Thesis: Policy-Based Privacy Checking for Big Data
+					Analytics Systems <br /> <br />
+				</li>
+
+				<li>School of Software, Tongji University, 2009.9 - 2013.7 <br />
+					Bachelor of Engineering, Software Engineering (4.72/5, 2 out of
+					169)<br /> Thesis: Design and Implementation of a Key-Value
+					Storage System
+				</li>
+			</ul>
+
+
+			<h2>
+				<a name="projects">Projects</a>
+			</h2>
+			<p>
+				<strong>LSM-Based Storage Management in AsterixDB.</strong>
+				AsterixDB is a BDMS (Big Data Management System) with a rich feature set that sets it apart from other Big Data platforms. This project aims at improving the LSM-based storage management engine inside AsterixDB. Specially, I
+				have been working on these topics: (1) design efficient LSM point lookup methods to improve the applicability of secondary indexes (2)develop new maintenance strategies for LSM-based secondary indexes and filters for efficient data ingestion and query processing (3) study flow control mechanisms to minimize stalls and variances in LSM-based storage engines
+			</p>
+
+			<p>
+				<strong>Umzi: Unified Multi-Zone Indexing in HTAP Systems.</strong>
+				The rising demands of real-time analytics emphasized the need for Hybrid Transactional and Analytical Processing (HTAP) systems which can handle both fast transactions and large-scale analytics concurrently.
+				In these systems, efficient indexing is critical to enable fast lookups and transaction processing. However, indexing the distributed data in HTAP systems is highly non-trivial because of its scale and evolving nature.
+				To address indexing challenges in HTAP systems, we propose Umzi, a multi-version and multi-zone LSM-like indexing method. In addition to flush and merge operations in traditional LSM-like indexes, Umzi dymamically evolves itself as data is moved from one zone to another.
+			</p>
+
+			<p>
+				<strong>PSpec-SQL.</strong> Organizations often share business data
+				with third-parties to perform data analytics. However, one major
+				concern is the privacy issue. In this project, we collaborated with
+				researchers in Intel Labs China to build a privacy-integrated data
+				analytic system. The system allows data owners to specify their data
+				usage policies into a privacy specification, which are automatically
+				checked against the submitted queries. The system is implemented on
+				top of Spark-SQL.
+			</p>
+			<p>
+				<strong>Large-Scale Software Model Inference.</strong> Softwares are
+				often built without precise models. One approach to tackle this
+				problem is automatically inferring software models from execution
+				logs. However, real-world software systems often produce large
+				amount of logs. In this project, I combined formal methods with
+				modern parallel data processing techniques, and used MapReduce to
+				tackle the problem of inferring software behavioral models from
+				large logs.
+			</p>
+
+
+			<h2>
+				<a name="publications">Publications</a>
+			</h2>
+
+			<ul>
+				<li>
+					<b>Chen Luo</b>, Michael J. Carey
+					</br>
+					LSM-based Storage Techniques: A Survey</br>
+					<i>VLDB Journal</i>, Under Review
+				</li>
+				<li>
+					<b>Chen Luo</b>, Michael J. Carey
+					</br>
+					Efficient Data Ingestion and Query Processing for LSM-Based Storage Systems.</br>
+					<i>International Conference on Very Large Data Bases (VLDB)</i>, 2019 (to appear) 
+				</li>
+				<li>
+					<b>Chen Luo</b>, Pinar ToÌˆzuÌˆn, Yuanyuan Tian, Ronald Barber, Richard Sidle, and Vijayshankar Raman.
+					</br>
+					Unified Multi-Zone Indexing for Large-Scale HTAP Systems.</br>
+					<i>International Conference on Extending Database Technology (EDBT)</i>, 2019 (to appear)
+				</li>
+				<li><b>Chen Luo</b>, Fei He, and Carlo Ghezzi. <br />
+					Inferring Software Behavioral Models with MapReduce.</a><br />
+					In <i> Science of Computer Programming</i>, Volume 145, Pages 13-36, 2017</li>
+				<li><b>Chen Luo</b>, Fei He, Fei Peng, Dong Yan, Dan Zhang, and
+					Xin Zhou, and Bow-Yaw Wang. <br /> PSpec: A Formal Privacy Language for Data Analytics (Poster)<br />
+					In <i> International Conference on Software Engineering (ICSE)</i>, May 2017</li>
+			</ul>
+
+			<h2>
+				<a name="experience">Experience</a>
+			</h2>
+
+			<ul>
+				<li>Research Summer Intern, IBM Almaden Research Center, 2017.6 - 2017.9 </li>
+				<li>Research Assistant, Tsinghua University, 2014.3 - 2016.7</li>
+				<li>Teaching Assistant, Modeling and Verification of Software
+					Systems, Tsinghua University, 2015.3 - 2015.7</li>
+				<li>Software Developer Intern, eBay China Development Center,
+					2012.7 - 2013.3</li>
+				<li>Research Assistant, Tongji University, 2011.3 - 2012.6</li>
+				<li>Teaching Assistant, Object-Oriented Programming C++, Tongji
+					University, 2011.3 - 2011.7</li>
+			</ul>
+			<h2>
+				<a name="awards">Awards</a>
+			</h2>
+
+			<ul>
+				<li>Graduate with Honor of Beijing, Tsinghua University, 2016</li>
+				<li>First Prize Scholarship of Tsinghua University, 2014, 2015
+				</li>
+				<li>Graduate with Honor of Shanghai, Tongji University, 2013</li>
+				<li>Outstanding Student, Tongji University, 2010, 2011</li>
+				<li>First Prize Scholarship, Tongji University, 2011</li>
+			</ul>
+			<h2>
+				<a name="Misc">Misc</a>
+			</h2>
+
+			<ul>
+				<li><a href="http://luochen01.github.io/gallery.html" target="view_window">Gallery</a>
+					contains a few photos taken by me and my girlfriend.</li>
+			</ul>
+			<p class="credits">
+				Adapted from a template by <a href="http://andreasviklund.com/">Andreas
+					Viklund</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

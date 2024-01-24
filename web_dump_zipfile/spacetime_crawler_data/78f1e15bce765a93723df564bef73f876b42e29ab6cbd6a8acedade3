@@ -1,0 +1,58 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1201¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:54:22 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"4b1-4da84c3c74f80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 12:44:20 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY±/* 
+$Id$
+
+Copyright (C) 2007 by The Regents of the University of California
+
+Redistribution of this file is permitted under
+the terms of the *GNU* Public License (*GPL*) 	
+
+Date: 04/08/2007
+Author: Yiming Lu <yimingl@ics.uci.edu>
+*/
+
+#include <string>
+#include <iostream>
+#include <vector>
+#include <sys/types.h>
+#include <cassert>
+#include "filtertree.h"
+#include "../util/input.h"
+
+using namespace std;
+
+void testFilterTree()
+{
+    unsigned t = 0;
+    
+    vector<string> data;
+    data.push_back("abc");
+    data.push_back("ac");
+    data.push_back("xyz");
+    
+    FilterTree fSave(2, &data);
+    fSave.build();
+    vector<unsigned> searchResSave;
+    fSave.search("ab", 2, searchResSave); //search based on building index
+    fSave.saveIndex("index_File");
+    
+    FilterTree fLoad(&data, "index_File");
+    vector<unsigned> searchResLoad;
+    fLoad.search("ab", 2, searchResLoad); //search based on loading index
+    
+    assert(searchResSave == searchResLoad); t++;
+    
+    vector<unsigned> searchCor;
+    searchCor.push_back(0);
+    searchCor.push_back(1);
+    assert(searchCor == searchResSave); t++;
+    cout << "filterTree (" << t << ")" << endl;
+}
+
+int main()
+{
+	testFilterTree();	
+}
+
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,123 @@
+¦Ifinal_url¢DtypeEvaluex-https://www.ics.uci.edu/~smyth/courses/cs274/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5675¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 27 Jan 2019 02:22:04 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"162b-5806739e48ded"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 29 Jan 2019 09:58:12 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY+<!DOCTYPE html>
+<html>
+<title>CS 274A | Winter 2019</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!--MATERIAL BELOW TO BE INCLUDED ON ALL SITE PAGES--> 
+<link rel="stylesheet" href="https://www.ics.uci.edu/~smyth/test/localw3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css"> <!--mini icons--> 
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3-theme-blue.css">  <!-- color theme -->
+<!-- <link rel="stylesheet" type="text/css" href="localstyle.css">    my own style -->
+<link rel="stylesheet" type="text/css" href="https://www.ics.uci.edu/~smyth/courses/class_style.css">  <!--  Padhraic's class style -->  
+<link rel="icon" type="image/png" href="https://news.uci.edu/wp-content/uploads/2014/12/favicon.png"/> <!-- favicon -->
+
+<body class="w3-animate-opacity">
+  
+<div style="margin-left:10%;  margin-right:10%;  margin-top:30px">  
+ 
+ 
+
+<!-- -------------------------------------------------------------------------------------------- -->
+ 
+<h4> <span style="font-weight: bold;"> CS 274A: Probabilistic Learning: Theory and Algorithms, Winter 2019 </span></h4> 
+
+<h5> General Information </h5> 
+<ul>
+<li><b> Time: </b> Monday and Wednesday, 11:00 to 12:20pm </li>
+<li><b> Location: </b> PCB 1200 </li>
+<li><b> Instructor: </b>  
+<a href="http://www.ics.uci.edu/~smyth">Professor Padhraic Smyth</a>: Office Hours, 10 to 11:30, Tuesdays, DBH 4216</li> 
+<li>  <b> Reader: </b>  Hao Tang, email: htang6 at uci.edu.  </li> 
+<li><b>  
+<a href="syllabus.html">Syllabus and Schedule</a></b>  </li>
+<li> <b> <a href="notes.html">Notes</a></b>: Links to notes, texts, and background
+reading </li> 
+<li><b> Questions? </b> please use the 
+<a href="piazza.com/uci/winter2019/cs274a/home">Piazza class Website</a> for class-related questions and discussion, i.e., 
+post to Piazza (either publicly to the class, or privately to the instructor or reader) 
+rather than using email.</li>
+</ul>
+</p>
+
+<p>
+<h6>Homeworks</h6>
+<ul>
+<li> Homeworks will be submitted and graded via Gradescope.
+<li> <b> Homework 1 </b>  
+ | <a href="homeworks/hw1_2019.pdf">PDF</a> | <a href="homeworks/hw1_2019.tex">LaTeX</a>|  
+Due by 11am Monday January 14th.
+<li> <b> Homework 2 </b>  
+ | <a href="homeworks/hw2_2019.pdf">PDF</a> | <a href="homeworks/hw2_2019.tex">LaTeX</a>|  
+Due by 11am Wednesday January 23rd.
+<li> <b> Homework 3 </b>  
+ | <a href="homeworks/hw3_2019.pdf">PDF</a> | <a href="homeworks/hw3_2019.tex">LaTeX</a>|  
+Due by 11am Monday February 4th.
+</li> 
+<!---
+<li> <b> Homework 2 </b>  
+ | <a href="homeworks/hw2.pdf">PDF</a> | <a href="homeworks/hw2.tex">LaTeX</a>|
+ Hardcopy due to Vaibhav's office DBH 3209 by Friday January 26th, drop off between 3pm and 5pm 
+</li> 
+<li> <b> Homework 3 </b>  
+   | <a href="homeworks/hw3.pdf">PDF</a> | <a href="homeworks/hw3.tex">LaTeX</a>|
+Hardcopy due at the start of class on Monday February 5th. 
+</li> 
+<li> <b> Homework 4 </b>  
+  | <a href="homeworks/hw4_2018.pdf">PDF</a> | Electronic copy to EEE, due by 11:55pm Friday Feb 23rd
+</li> 
+<li> <b> Homework 5 </b>  
+  | <a href="homeworks/hw5_2018.pdf">PDF</a> | <a href="homeworks/hw5_2018.tex">LaTeX</a>|
+Hardcopy due in class on Wednesday March 7th. 
+ </li>
+<li> <b> Homework 6 </b>   | <a href="homeworks/hw6.pdf">PDF</a> | <a href="homeworks/hw6/">data and sample code</a>| 
+Code and report to be uploaded to EEE by 11:45pm Friday March 16th.
+</li>
+---> 
+</ul>
+</p>
+ 
+
+<p>
+<h6> Prerequisites for taking this class </h6>
+Knowledge of basic concepts in probability, multivariate calculus, and linear algebra are required for this course. 
+Note in particular that a good understanding of basic concepts in probability is important for this class.  
+</p>  
+
+<p>
+<h6> Course Goals </h6>
+Students will develop a comprehensive understanding of probabilistic approaches to machine learning. 
+Probabilistic learning is a key component in many areas within modern computer science, 
+including artificial intelligence, data mining, speech recognition, computer vision, bioinformatics, and so forth. 
+The course will provide a tutorial introduction to the basic principles of probabilistic modeling and then 
+demonstrate the application of these principles to the analysis, development, and practical 
+use of machine learning algorithms.  Topics covered will include probabilistic modeling, 
+defining likelihoods, parameter estimation using likelihood and Bayesian techniques, 
+probabilistic approaches to classification, clustering, and regression, and related topics 
+such as model selection and bias/variance tradeoffs.
+</p>
+
+<p>
+<h6> Grading Policy </h6>
+Final grades will be based on a combination of homework assignments and exams: 30% homeworks, 30% midterm, and 40% final. 
+Your lowest scoring homework will be dropped and not included in your score. No credit for late homeworks.  
+</p>
+
+<p>
+<h6> Academic Integrity </h6>
+Students are expected to be read and be familiar with the <a href="http://www.ics.uci.edu/~smyth/courses/academic_integrity">Academic
+Integrity Policy</a> for this class. 
+Failure to adhere to this policy can result in a student receiving a failing grade in the class.  
+</p>
+
+<!--- <p>
+<h6> UCI Catalogue Description </h6>
+Probabilistic Learning: Theory and Algorithms: A unified probabilistic framework for learning algorithms. 
+Classical pattern recognition algorithms, probabilistic mixture models, kernel methods, 
+hidden Markov models, among others. Multivariate data analysis concepts for classification and clustering. 
+Methodologies such as cross-validation and bootstrap. Prerequisites: basic calculus and linear algebra.  
+</p>
+--->
+  
+
+</body>Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,133 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5864¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 05 Feb 1999 18:24:35 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"16e8-3432231e25ec0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 07:16:43 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYè
++--------------------------------------------------------------------+
+| GENERAL INSTRUCTIONS (for DOWNLOADS, RESULT RETURNS, etc.)         | 
++--------------------------------------------------------------------+
+
+3. The README file contains information about the files included in
+the FTP server.  All data files are compressed. The files with .zip
+extension are compressed with the PKZIP compression utility and they
+are for participants with IBM PC compatible hardware. The PKUNZIP
+utility is needed to unzip these files. The files with .Z extension
+are UNIX COMPRESSed and they are for the participants with UNIX
+compatible hardware. YOU WILL EITHER NEED THE DATA FILES <cup98LRN.ZIP
+AND cup98VAL.ZIP> *OR* <cup98LRN.TXT.Z AND cup98VAL.TXT.Z>, BUT NOT
+BOTH. REMEMBER TO FTP THESE FILES IN BINARY MODE.
+
+4. The data sets are in comma delimited format. The learning dataset
+<cup98LRN.txt> contains 95412 records and 481 fields. The first/header
+row of the data set contains the field names.
+
+The validation dataset <cup98VAL.txt> contains 96367 records and 479
+variables. The first/header row of the data set contains the field
+names.
+
+THE RECORDS IN THE VALIDATION DATASET ARE IDENTICAL TO THE RECORDS IN
+THE LEARNING DATASET EXCEPT THAT THE VALUES FOR THE TARGET/DEPENDENT
+VARIABLES ARE MISSING (i.e., the fields TARGET_B and TARGET_D are
+not included in the validation data set.)
+
+5. The data dictionary (for both the learning and the validation data
+set) is included in the file <cup98DIC.txt>. The fields in the data
+dictionary are ordered by the position of the fields in the learning
+data set. The dictionary for the validation data set is identical to
+the dictionary for the learning data set except the two target fields
+(target_B and target_D) are missing in the validation data set.
+
+6. Blanks in the string (or character) variables/fields and periods in
+the numeric variables correspond to missing values.
+
+7. Each record has a unique record identifier or index (field name:
+CONTROLN.) For each record, there are two target/dependent variables
+(field names: TARGET_B and TARGET_D). TARGET_B is a binary variable
+indicating whether or not the record responded to the promotion of
+interest ("97NK" mailing) while TARGET_D contains the donation amount
+(dollar) and is only observed for those that responded to the
+promotion.
+
+8. THE DEADLINE HAS BEEN EXTENDED. You are required to return the
+questionnaire and the validation dataset of 96367 records by email to
+<iparsa@epsilon.com> by AUGUST 19, 1998.
+
+Each record in the returned file should consist of the following two
+values:
+
+a. The unique record identifier or index (field name: CONTROLN)
+b. Predicted value of the donation (dollar) amount (for the target
+variable TARGET_D) for that record 
+
+You are also required to fill out the questionnaire (file name:
+<cup98QUE.txt>. The questionnaire is used to summarize in bullet
+points the data analytic techniques you've applied to the dataset.
+
+9. Please send email to <iparsa@epsilon.com> when you download the
+files so we can keep you informed about anything necessary.
+
+10. Under no circumstances should any participant contact Paralyzed
+Veterans of America (PVA) for any reason.
+
+If you have any questions, please send email to <iparsa@epsilon.com.>
+
++--------------------------------------------------------------------+
+| FILES LISTING (README FILE)                                        |
++--------------------------------------------------------------------+
+
+File Naming Conventions: 
+
+o cup98         : KDD-CUP-98 
+o      QUE      : QUEstionnaire 
+o      DOC      : DOCumentation
+o      DIC      : DICtionary
+o      LRN      : LeaRNing data set 
+o      VAL      : VALidation data set 
+o         .txt  : plain ascii text files
+o         .zip  : PKZIP compressed files
+o         .txt.Z: UNIX COMPRESSED files
+
+FILE NAME       DESCRIPTION
+--------------- ------------------------------------------------------
+
+README          This list, listing the files in the FTP server and 
+                their contents.
+
+cup98NDA.txt    The Non-Disclosure Agreement. MUST BE SIGNED BY ALL 
+                PARTICIPANTS AND MAILED BACK TO ISMAIL PARSA 
+                <iparsa@epsilon.com> BEFORE DOWNLOADING THE DATA SETS.
+
+cup98DOC.txt    This file, an overview and pointer to more detailed 
+                information about the competition
+
+cup98DIC.txt    Data dictionary to accompany the analysis data set. 
+
+cup98QUE.txt    KDD-CUP questionnaire. PARTICIPANTS ARE REQUIRED TO
+                FILL-OUT THE QUESTIONNAIRE and turned in
+                with the results. 
+
+cup98LRN.zip    PKZIP compressed raw LEARNING data set. 
+                Internal name: cup98LRN.txt 
+                File size: 36,468,735 bytes zipped. 117,167,952 bytes 
+                unzipped.
+                Number of Records: 95412.
+                Number of Fields: 481.
+
+cup98VAL.zip    PKZIP compressed raw VALIDATION data set. 
+                Internal name: cup98VAL.txt 
+                File size: 36,763,018 bytes zipped. 117,943,347 bytes 
+                unzipped.
+                Number of Records: 96367.
+                Number of Fields: 479.
+ 
+cup98LRN.txt.Z  UNIX COMPRESSed raw LEARNING data set. 
+                Internal name: cup98LRN.txt 
+                File size: 36,579,127 bytes compressed. 117,167,952 
+                bytes uncompressed.
+                Number of Records: 95412.
+                Number of Fields: 481.
+
+cup98VAL.txt.Z  UNIX COMPRESSed raw VALIDATION data set. 
+                Internal name: cup98VAL.txt 
+                File size: 36,903,761 bytes compressed. 117,943,347 
+                bytes uncompressed.
+                Number of Records: 96367.
+                Number of Fields: 479.
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

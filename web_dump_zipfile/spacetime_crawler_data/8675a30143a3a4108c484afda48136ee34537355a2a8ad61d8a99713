@@ -1,0 +1,48 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1929¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Nov 2017 04:17:30 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"789-55d5cd9802c9e"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 05:13:32 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY‰<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+      "http://www.w3.org/TR/REC-html40/loose.dtd">
+<HTML><HEAD>
+<title> CompSci 260P Homework #5 </title>
+</HEAD><BODY>
+<span style="color:#000000; font:16px Arial, Helvetica, sans-serif;">
+
+<H2 align=center> CompSci 260P Homework #5 </H2>
+    <UL>
+      <LI> Chapter 5, problems 1,3,5
+<P>
+      <LI> Additional problem 1:
+<BR>
+Suppose you are given an unsorted array <I>A</I>[1..<I>n</I>],
+which contains all but one of the <I>n</I>+1 integers in the range
+0, ..., <I>n</I> (so exactly one of these elements is missing from <I>A</I>).
+To simplify the problem somewhat, we will assume that
+<I>n</I> = 2<sup><I>k</I></sup> - 1 for some integer <I>k</I>.
+Hence each array element has a binary representation using <I>k</I> bits.
+
+<P>
+You want to determine the missing integer.
+You are not allowed to access an entire integer in <I>A</I> with a single operation.
+The only way to access the elements of <I>A</I> is by calling the function
+<tt>bitvalue(</tt><I>i, j</I><tt>)</tt>,
+which returns the value of the <I>j</I>th bit of <I>A</I>[<I>i</I>].
+Give a divide-and-conquer algorithm that finds the missing integer and makes only
+<I>O</I>(<I>n</I>) calls to the function <tt>bitvalue()</tt>.
+
+<P>
+<B>Note:</B> There are (<I>n</I>-1) lg <I>n</I> bits,
+so you cannot afford to look at every bit.
+
+      <LI> Additional problem 2:
+<BR>
+Give asymptotic solutions (using &theta;-notation) for each of the following
+recurrence equations.
+
+          <OL type=a>
+          <LI> <I>T</I>(<I>n</I>) = 6<I>T</I>(<I>n</I>/4) + <I>n</I> lg <I>n</I>
+          <LI> <I>T</I>(<I>n</I>) = 2<I>T</I>(<I>n</I>/4) + sqrt(<I>n</I>)
+          <LI> <I>T</I>(<I>n</I>) = 6<I>T</I>(<I>n</I>/3) + <I>n</I><sup>2</sup>
+          <LI> <I>T</I>(<I>n</I>) = sqrt(<I>n</I>)<I>T</I>(&nbsp;sqrt(<I>n</I>)&nbsp;) + <I>n</I>, and <I>T</I>(1)=<I>T</I>(2)=1
+          </OL>
+    </UL>
+</span>
+</BODY></HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

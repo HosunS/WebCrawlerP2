@@ -1,0 +1,15 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC377¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Jan 2002 01:42:34 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"179-397c9db52f680"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 16:27:50 GMTKraw_content¢DtypeEvalueYy# quick sort, compact but inefficient list-copying implementation
+# David Eppstein, UCI, 17 Jan 2002
+
+import random
+R = random.Random(42)
+
+def qsort(L):
+	if len(L) < 2: return L
+	i = R.randrange(len(L))
+	return qsort([x for x in L if x < L[i]]) + \
+	       [x for x in L if x == L[i]] + \
+	       qsort([x for x in L if x > L[i]])
+
+print qsort([3,1,4,1,5,9,2,6,5,3,5,8,9,7,9])
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

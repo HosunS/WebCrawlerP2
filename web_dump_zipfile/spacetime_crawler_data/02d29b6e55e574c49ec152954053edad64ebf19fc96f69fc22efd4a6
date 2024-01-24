@@ -1,0 +1,63 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1098¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:39:08 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"96a-3158ec9f5cb00-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:56:15 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY	j// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Conga line closest pair algorithm
+//
+// Keeps a partition of the points into subsets, with a graph
+// for each subset computed as described in my paper.  Each graph is initially
+// computed using a nearest-neighbor insertion process alternating between
+// points in the subset and points in the whole database.
+//
+// Constructor takes as arg number of subsets to make; if omitted, uses
+// ceil(log_2(n)).
+//
+// Total space: 42n + O(k) bytes (where k=number of subsets, normally O(log n)).
+// Time per insertion: O(n log(n/k)) amortized
+// Time per deletion: O(n log(n/k)) expected, O(nk log(n/k)) worst case amortized
+//
+// Time per closest pair: O(n).
+
+#include "ClosestPairs.h"
+#include "SortedArray.h"
+
+// how many subsets can we have? need to leave one for scratch, one for inactive
+#define MaxCongaSubsets 65534L
+
+class CongaLine : public ClosestPairs {
+ 	Distance & dist;				// how to compare two points
+ 	unsigned long max_points;
+ 	
+ 	typedef unsigned short CongaSubset;
+ 	SortedArray subset_sizes;		// list of subset sizes
+	CongaSubset how_many_subsets;
+ 	
+ 	typedef struct { point in, out; double d; CongaSubset s; } CongaEdge;
+ 	CongaEdge * edges;				// list of all edges in graph
+ 	unsigned long how_many_edges;
+
+	CongaSubset * subsets;			// which subset is each point in?
+	point * scratch;
+	
+	void FixWhat(point);			// update subset_sizes prior to removing pt
+	void AddEdge(point, point, double, CongaSubset); // add an edge to the graph
+	void RemoveEdge(unsigned long);			// remove edge w/given index
+	void MoveToSubset(point, CongaSubset);	// move point to new subset
+	void CleanAllGraphs();					// remove non-inter-subset edges
+	
+	unsigned long NeighborInList(point pt, point * ptlist, unsigned long listlen,
+		double & d); // return dist & list pos of nearest nbr in list to pt
+	void FindSubsetEdges(CongaSubset);	// recompute edges in subset
+	void MergeSubsets(CongaSubset,CongaSubset);	// combine subsets
+	CongaSubset FindFreeSubset();	// where can I put this newly inserted pt?
+	void MadeNewSubset(CongaSubset, unsigned long);	// make edges etc
+
+ public:
+ 	~CongaLine();
+ 	CongaLine(long np, long mp, Distance & d, long how_many_subs = 0);
+ 	void operator += (point);
+ 	void operator -= (point);
+ 	double operator () (point & a, point & b);
+ 	void UpdatePoint(point);
+ 	void UpdateDistance(point,point);
+};
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

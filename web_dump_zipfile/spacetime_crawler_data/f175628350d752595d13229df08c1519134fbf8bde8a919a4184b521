@@ -1,0 +1,159 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE15855¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 20 Apr 2018 19:04:26 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"3def-56a4c5b597083"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 22:20:33 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY=ï<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Update: Multires**
+
+
+
+# 2018.04.11
+![](0410/differentLocalPatchSize2.png width=\pagewidth)
+
+![](0410/differentLocalPatchSize.png width=\pagewidth)
+
+<div class="twentytwenty-container">
+    <img src="0410/height_-1_1x.png" alt="reference:0.2384">
+    <img src="0410/height_-1_512x.png"" alt="512x:0.2341">    
+</div>
+
+
+# 2018.04.06 
+
+($x$:[0.0470,-0.2037,0] $\omega_i$:[0.2447,-0.3110,0.9184])
+
+total paths: 1000000
+
+## local (use whole heightmap) geometry only 
+![1x](0410/withoutGlobalConstrain/1x_sample.png width=\pagewidth) ![2x](0410/withoutGlobalConstrain/2x_sample.png width=\pagewidth) ![4x](0410/withoutGlobalConstrain/4x_sample.png width=\pagewidth) ![8x](0410/withoutGlobalConstrain/8x_sample.png width=\pagewidth) ![16x](0410/withoutGlobalConstrain/16x_sample.png width=\pagewidth) ![32x](0410/withoutGlobalConstrain/32x_sample.png width=\pagewidth) ![64x](0410/withoutGlobalConstrain/64x_sample.png width=\pagewidth) ![128x](0410/withoutGlobalConstrain/128x_sample.png width=\pagewidth) ![256x](0410/withoutGlobalConstrain/256x_sample.png width=\pagewidth) ![512x](0410/withoutGlobalConstrain/512x_sample.png width=\pagewidth)
+
+![1x](0410/withoutGlobalConstrain/1x_eval.png width=\pagewidth) ![2x](0410/withoutGlobalConstrain/2x_eval.png width=\pagewidth) ![4x](0410/withoutGlobalConstrain/4x_eval.png width=\pagewidth) ![8x](0410/withoutGlobalConstrain/8x_eval.png width=\pagewidth) ![16x](0410/withoutGlobalConstrain/16x_eval.png width=\pagewidth) ![32x](0410/withoutGlobalConstrain/32x_eval.png width=\pagewidth) ![64x](0410/withoutGlobalConstrain/64x_eval.png width=\pagewidth) ![128x](0410/withoutGlobalConstrain/128x_eval.png width=\pagewidth) ![256x](0410/withoutGlobalConstrain/256x_eval.png width=\pagewidth) ![512x](0410/withoutGlobalConstrain/512x_eval.png width=\pagewidth)
+
+number of paths: 355487, 355487, 355487, 355487, 355487, 355487, 355487, 355487, 355487, 355487
+
+## local (use whole heightmap) geometry + global geometry
+![1x](0410/withGlobalConstrain/1x_sample.png width=\pagewidth) ![2x](0410/withGlobalConstrain/2x_sample.png width=\pagewidth) ![4x](0410/withGlobalConstrain/4x_sample.png width=\pagewidth) ![8x](0410/withGlobalConstrain/8x_sample.png width=\pagewidth) ![16x](0410/withGlobalConstrain/16x_sample.png width=\pagewidth) ![32x](0410/withGlobalConstrain/32x_sample.png width=\pagewidth) ![64x](0410/withGlobalConstrain/64x_sample.png width=\pagewidth) ![128x](0410/withGlobalConstrain/128x_sample.png width=\pagewidth) ![256x](0410/withGlobalConstrain/256x_sample.png width=\pagewidth) ![512x](0410/withGlobalConstrain/512x_sample.png width=\pagewidth)
+
+![1x](0410/withGlobalConstrain/1x_eval.png width=\pagewidth) ![2x](0410/withGlobalConstrain/2x_eval.png width=\pagewidth) ![4x](0410/withGlobalConstrain/4x_eval.png width=\pagewidth) ![8x](0410/withGlobalConstrain/8x_eval.png width=\pagewidth) ![16x](0410/withGlobalConstrain/16x_eval.png width=\pagewidth) ![32x](0410/withGlobalConstrain/32x_eval.png width=\pagewidth) ![64x](0410/withGlobalConstrain/64x_eval.png width=\pagewidth) ![128x](0410/withGlobalConstrain/128x_eval.png width=\pagewidth) ![256x](0410/withGlobalConstrain/256x_eval.png width=\pagewidth) ![512x](0410/withGlobalConstrain/512x_eval.png width=\pagewidth)
+
+number of paths: 355487, 292511, 317289, 349040, 345160, 344604, 355341, 355487, 355487, 355487
+
+## local (use local heightmap) geometry + global geometry
+![1x](0410/withGlobalConstrain_0/1x_sample.png width=\pagewidth) ![2x](0410/withGlobalConstrain_0/2x_sample.png width=\pagewidth) ![4x](0410/withGlobalConstrain_0/4x_sample.png width=\pagewidth) ![8x](0410/withGlobalConstrain_0/8x_sample.png width=\pagewidth) ![16x](0410/withGlobalConstrain_0/16x_sample.png width=\pagewidth) ![32x](0410/withGlobalConstrain_0/32x_sample.png width=\pagewidth) ![64x](0410/withGlobalConstrain_0/64x_sample.png width=\pagewidth) ![128x](0410/withGlobalConstrain_0/128x_sample.png width=\pagewidth) ![256x](0410/withGlobalConstrain_0/256x_sample.png width=\pagewidth) ![512x](0410/withGlobalConstrain_0/512x_sample.png width=\pagewidth)
+
+![1x](0410/withGlobalConstrain_0/1x_eval.png width=\pagewidth) ![2x](0410/withGlobalConstrain_0/2x_eval.png width=\pagewidth) ![4x](0410/withGlobalConstrain_0/4x_eval.png width=\pagewidth) ![8x](0410/withGlobalConstrain_0/8x_eval.png width=\pagewidth) ![16x](0410/withGlobalConstrain_0/16x_eval.png width=\pagewidth) ![32x](0410/withGlobalConstrain_0/32x_eval.png width=\pagewidth) ![64x](0410/withGlobalConstrain_0/64x_eval.png width=\pagewidth) ![128x](0410/withGlobalConstrain_0/128x_eval.png width=\pagewidth) ![256x](0410/withGlobalConstrain_0/256x_eval.png width=\pagewidth) ![512x](0410/withGlobalConstrain_0/512x_eval.png width=\pagewidth)
+
+number of paths: 355487, 319433, 336694, 392395, 382899, 358406, 355341, 355487, 355487, 355487
+
+# 2018.03.22
+
+## visualization
+![](0322/vis1.png width=\pagewidth)
+
+# 2018.03.21
+
+## different constrains of 16x
+
+Average: 0.2748 |0.2184 |0.2117 |0.2089 |0.2077 |0.2070 |0.2067 |0.2064 |0.2061 |0.2059
+
+![0](0322/16x/scene_height_0_16x.png width=\pagewidth) ![1](0322/16x/scene_height_1_16x.png width=\pagewidth) ![2](0322/16x/scene_height_2_16x.png width=\pagewidth) ![3](0322/16x/scene_height_3_16x.png width=\pagewidth) ![4](0322/16x/scene_height_4_16x.png width=\pagewidth) ![5](0322/16x/scene_height_5_16x.png width=\pagewidth) ![6](0322/16x/scene_height_6_16x.png width=\pagewidth) ![7](0322/16x/scene_height_7_16x.png width=\pagewidth) ![8](0322/16x/scene_height_8_16x.png width=\pagewidth) ![9](0322/16x/scene_height_9_16x.png width=\pagewidth) ![10](0322/16x/scene_height_10_16x.png width=\pagewidth)
+
+
+# 2018.03.31
+
+## tile
+### Non-random (local vs global)
+
+![1x](0331/tile_certain_local/height_1x.png width=\pagewidth) ![2x](0331/tile_certain_local/height_2x.png width=\pagewidth) ![4x](0331/tile_certain_local/height_4x.png width=\pagewidth) ![8x](0331/tile_certain_local/height_8x.png width=\pagewidth) ![16x](0331/tile_certain_local/height_16x.png width=\pagewidth) ![32x](0331/tile_certain_local/height_32x.png width=\pagewidth) ![64x](0331/tile_certain_local/height_64x.png width=\pagewidth) ![128x](0331/tile_certain_local/height_128x.png width=\pagewidth) ![256x](0331/tile_certain_local/height_256x.png width=\pagewidth) ![512x](0331/tile_certain_local/height_512x.png width=\pagewidth)
+
+![1x](0331/tile_certain_global/height_1x.png width=\pagewidth) ![2x](0331/tile_certain_global/height_2x.png width=\pagewidth) ![4x](0331/tile_certain_global/height_4x.png width=\pagewidth) ![8x](0331/tile_certain_global/height_8x.png width=\pagewidth) ![16x](0331/tile_certain_global/height_16x.png width=\pagewidth) ![32x](0331/tile_certain_global/height_32x.png width=\pagewidth) ![64x](0331/tile_certain_global/height_64x.png width=\pagewidth) ![128x](0331/tile_certain_global/height_128x.png width=\pagewidth) ![256x](0331/tile_certain_global/height_256x.png width=\pagewidth) ![512x](0331/tile_certain_global/height_512x.png width=\pagewidth)
+
+### random (local vs glabal)
+
+![1x](0331/tile_random_local/height_1x.png width=\pagewidth) ![2x](0331/tile_random_local/height_2x.png width=\pagewidth) ![4x](0331/tile_random_local/height_4x.png width=\pagewidth) ![8x](0331/tile_random_local/height_8x.png width=\pagewidth) ![16x](0331/tile_random_local/height_16x.png width=\pagewidth) ![32x](0331/tile_random_local/height_32x.png width=\pagewidth) ![64x](0331/tile_random_local/height_64x.png width=\pagewidth) ![128x](0331/tile_random_local/height_128x.png width=\pagewidth) ![256x](0331/tile_random_local/height_256x.png width=\pagewidth) ![512x](0331/tile_random_local/height_512x.png width=\pagewidth)
+
+![1x](0331/tile_random_global/height_1x.png width=\pagewidth) ![2x](0331/tile_random_global/height_2x.png width=\pagewidth) ![4x](0331/tile_random_global/height_4x.png width=\pagewidth) ![8x](0331/tile_random_global/height_8x.png width=\pagewidth) ![16x](0331/tile_random_global/height_16x.png width=\pagewidth) ![32x](0331/tile_random_global/height_32x.png width=\pagewidth) ![64x](0331/tile_random_global/height_64x.png width=\pagewidth) ![128x](0331/tile_random_global/height_128x.png width=\pagewidth) ![256x](0331/tile_random_global/height_256x.png width=\pagewidth) ![512x](0331/tile_random_global/height_512x.png width=\pagewidth)
+
+
+## single
+### Non-random (local vs global)
+
+![1x](0331/single_certain_local/height_1x.png width=\pagewidth) ![2x](0331/single_certain_local/height_2x.png width=\pagewidth) ![4x](0331/single_certain_local/height_4x.png width=\pagewidth) ![8x](0331/single_certain_local/height_8x.png width=\pagewidth) ![16x](0331/single_certain_local/height_16x.png width=\pagewidth) ![32x](0331/single_certain_local/height_32x.png width=\pagewidth) ![64x](0331/single_certain_local/height_64x.png width=\pagewidth) ![128x](0331/single_certain_local/height_128x.png width=\pagewidth) ![256x](0331/single_certain_local/height_256x.png width=\pagewidth) ![512x](0331/single_certain_local/height_512x.png width=\pagewidth)
+
+![1x](0331/single_certain_global/height_1x.png width=\pagewidth) ![2x](0331/single_certain_global/height_2x.png width=\pagewidth) ![4x](0331/single_certain_global/height_4x.png width=\pagewidth) ![8x](0331/single_certain_global/height_8x.png width=\pagewidth) ![16x](0331/single_certain_global/height_16x.png width=\pagewidth) ![32x](0331/single_certain_global/height_32x.png width=\pagewidth) ![64x](0331/single_certain_global/height_64x.png width=\pagewidth) ![128x](0331/single_certain_global/height_128x.png width=\pagewidth) ![256x](0331/single_certain_global/height_256x.png width=\pagewidth) ![512x](0331/single_certain_global/height_512x.png width=\pagewidth)
+
+### random (local vs glabal)
+
+![1x](0331/single_random_local/height_1x.png width=\pagewidth) ![2x](0331/single_random_local/height_2x.png width=\pagewidth) ![4x](0331/single_random_local/height_4x.png width=\pagewidth) ![8x](0331/single_random_local/height_8x.png width=\pagewidth) ![16x](0331/single_random_local/height_16x.png width=\pagewidth) ![32x](0331/single_random_local/height_32x.png width=\pagewidth) ![64x](0331/single_random_local/height_64x.png width=\pagewidth) ![128x](0331/single_random_local/height_128x.png width=\pagewidth) ![256x](0331/single_random_local/height_256x.png width=\pagewidth) ![512x](0331/single_random_local/height_512x.png width=\pagewidth)
+
+![1x](0331/single_random_global/height_1x.png width=\pagewidth) ![2x](0331/single_random_global/height_2x.png width=\pagewidth) ![4x](0331/single_random_global/height_4x.png width=\pagewidth) ![8x](0331/single_random_global/height_8x.png width=\pagewidth) ![16x](0331/single_random_global/height_16x.png width=\pagewidth) ![32x](0331/single_random_global/height_32x.png width=\pagewidth) ![64x](0331/single_random_global/height_64x.png width=\pagewidth) ![128x](0331/single_random_global/height_128x.png width=\pagewidth) ![256x](0331/single_random_global/height_256x.png width=\pagewidth) ![512x](0331/single_random_global/height_512x.png width=\pagewidth)
+
+
+
+~~AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA~~
+
+# 2018.03.02
+
+## indirect illumination 
+![Ref](0302_indir/scene_ref_0.png width=\pagewidth) ![1x](0302_indir/scene_height_0_1x.png width=\pagewidth) ![2x](0302_indir/scene_height_0_2x.png width=\pagewidth) ![4x](0302_indir/scene_height_0_4x.png width=\pagewidth) ![8x](0302_indir/scene_height_0_8x.png width=\pagewidth) ![16x](0302_indir/scene_height_0_16x.png width=\pagewidth) ![32x](0302_indir/scene_height_0_32x.png width=\pagewidth) ![64x](0302_indir/scene_height_0_64x.png width=\pagewidth) ![128x](0302_indir/scene_height_0_128x.png width=\pagewidth) ![256x](0302_indir/scene_height_0_256x.png width=\pagewidth) ![512x](0302_indir/scene_height_0_512x.png width=\pagewidth)
+
+
+# 2018.03.01
+
+## No rotation 
+![Ref](0301/scene_ref_0.png width=\pagewidth) ![1x](0301/scene_height_0_1x.png width=\pagewidth) ![2x](0301/scene_height_0_2x.png width=\pagewidth) ![4x](0301/scene_height_0_4x.png width=\pagewidth) ![8x](0301/scene_height_0_8x.png width=\pagewidth) ![16x](0301/scene_height_0_16x.png width=\pagewidth) ![32x](0301/scene_height_0_32x.png width=\pagewidth) ![64x](0301/scene_height_0_64x.png width=\pagewidth) ![128x](0301/scene_height_0_128x.png width=\pagewidth) ![256x](0301/scene_height_0_256x.png width=\pagewidth) ![512x](0301/scene_height_0_512x.png width=\pagewidth)
+
+## Rot=20
+![Ref](0301/scene_ref_20.png width=\pagewidth) ![1x](0301/scene_height_20_1x.png width=\pagewidth) ![2x](0301/scene_height_20_2x.png width=\pagewidth) ![4x](0301/scene_height_20_4x.png width=\pagewidth) ![8x](0301/scene_height_20_8x.png width=\pagewidth) ![16x](0301/scene_height_20_16x.png width=\pagewidth) ![32x](0301/scene_height_20_32x.png width=\pagewidth) ![64x](0301/scene_height_20_64x.png width=\pagewidth) ![128x](0301/scene_height_20_128x.png width=\pagewidth) ![256x](0301/scene_height_20_256x.png width=\pagewidth) ![512x](0301/scene_height_20_512x.png width=\pagewidth)
+
+
+# 2018.02.22
+
+<div class="twentytwenty-container">
+    <img src="0222/scene_ref.png" alt="reference">
+    <img src="0222/scene_height_downsample.png"" alt="downsample to squre">    
+</div>
+
+<div class="twentytwenty-container">
+    <img src="0222/scene_ref.png" alt="reference">
+    <img src="0222/scene_height_0.65.png"" alt="downsample to squre (higher than max)">    
+</div>
+
+# 2018.02.16
+
+## Eval()
+![Ref](0216/results1/ref_eval.png width=\pagewidth) ![2x](0216/results1/2x_eval.png width=\pagewidth) ![4x](0216/results1/4x_eval.png width=\pagewidth) ![8x](0216/results1/8x_eval.png width=\pagewidth) ![16x](0216/results1/16x_eval.png width=\pagewidth) ![32x](0216/results1/32x_eval.png width=\pagewidth) ![64x](0216/results1/64x_eval.png width=\pagewidth) ![128x](0216/results1/128x_eval.png width=\pagewidth) ![256x](0216/results1/256x_eval.png width=\pagewidth)
+
+## Downsample heightmap and render
+![Ref](0216/results1/scene_ref_sq.png width=\pagewidth) ![2x](0216/results1/scene_2x.png width=\pagewidth) ![4x](0216/results1/scene_4x.png width=\pagewidth) ![8x](0216/results1/scene_8x.png width=\pagewidth) ![16x](0216/results1/scene_16x.png width=\pagewidth) ![32x](0216/results1/scene_32x.png width=\pagewidth) ![64x](0216/results1/scene_64x.png width=\pagewidth) ![128x](0216/results1/scene_128x.png width=\pagewidth) ![256x](0216/results1/scene_256x.png width=\pagewidth)
+
+# 2018.02.09
+
+## Heightmap
+![1x](0209/heightmap.png width=\pagewidth) ![8x](0209/heightmap_low.png width=\pagewidth)
+
+## Heightmap rendering
+![1x](0209/scene.png width=\pagewidth) ![8x](0209/scene_low.png width=\pagewidth)
+
+## Sample/Eval validation (global heightmap)
+![Sample()](0209/1_sample.png width=\pagewidth) ![Eval()](0209/1_eval.png width=\pagewidth)
+
+## Sample/Eval validation (local heightmap)
+![Sample()](0209/2_sample.png width=\pagewidth) ![Eval()](0209/2_eval.png width=\pagewidth)
+
+
+<a href="update_2017.html" target="_blank">Old Doc1</a>
+
+
+End.
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

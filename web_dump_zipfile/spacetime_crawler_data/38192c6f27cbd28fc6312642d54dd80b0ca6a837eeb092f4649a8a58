@@ -1,0 +1,924 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueè¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE48144¢Ak¢DtypeEvalueXStrict-Transport-SecurityAv¢DtypeEvalueX#max-age=31536000; includeSubdomains¢Ak¢DtypeEvalueVX-Content-Type-OptionsAv¢DtypeEvalueGnosniff¢Ak¢DtypeEvaluePContent-LanguageAv¢DtypeEvalueBen¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSat, 09 Feb 2019 06:27:35 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Language¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueOGoogle Frontend¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 17 Jan 2019 00:02:51 GMT¢Ak¢DtypeEvaluePX-XSS-ProtectionAv¢DtypeEvalueA0¢Ak¢DtypeEvalueUX-Cloud-Trace-ContextAv¢DtypeEvalueX 7e5f240daf32d7515fd07aed359cbd87¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX%must_revalidate, public, max-age=3600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:27:35 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueGAlt-SvcAv¢DtypeEvalueX%quic=":443"; ma=2592000; v="44,43,39"¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYº
+
+
+
+
+
+<!DOCTYPE html><html lang="en"
+      class=""><head><script>var a=window.devsite||{};window.devsite=a;a.readyCallbacks=[];window.devsite.readyCallbacks=a.readyCallbacks;a.ready=function(b){a.readyCallbacks.push(b)};window.devsite.ready=a.ready;
+</script><meta charset="utf-8"><meta name="xsrf_token" content="Ocp8Ggg59wiBTuIMT2cRnPL0kbT0Xyc9KTPmv9LtjMU6MTU0OTY5MDA1NTM4MTcxNA" /><link rel="canonical" href="https://developers.google.com/my-business/content/overview"><link rel="alternate" href="https://developers.google.com/my-business/content/overview?hl=ja" hreflang="ja"><link rel="alternate" href="https://developers.google.com/my-business/content/overview" hreflang="en"><link rel="alternate" href="https://developers.google.cn/my-business/content/overview?hl=ja" hreflang="ja-cn"><link rel="alternate" href="https://developers.google.cn/my-business/content/overview" hreflang="en-cn"><link rel="alternate" href="https://developers.google.com/my-business/content/overview" hreflang="x-default"><link rel="shortcut icon" href="https://developers.google.com/_static/83a13d8b48/images/favicon.png"><link rel="apple-touch-icon" href="https://developers.google.com/_static/83a13d8b48/images/touch-icon.png"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet"
+      
+      href="//fonts.googleapis.com/css?family=Google+Sans:400,500|Roboto:400,400italic,500,500italic,700,700italic|Roboto+Mono:400,500,700|Material+Icons"
+      ><link rel="stylesheet"
+        href="https://developers.google.com/_static/83a13d8b48/css/devsite-google-blue.css"><link rel="search"
+        type="application/opensearchdescription+xml"
+        title="Google Developers"
+        href="https://developers.google.com/s/opensearch.xml"><script src="https://developers.google.com/_static/83a13d8b48/js/jquery-bundle.js"></script><meta property="og:site_name" content="Google Developers"><meta property="og:type" content="website"><meta property="og:url" content="https://developers.google.com/my-business/content/overview"><meta property="og:locale" content="en"><script>
+    var ___gcfg = ___gcfg || {};
+    ___gcfg.lang = 'en';
+  </script><title>Overview &nbsp;|&nbsp; Google My Business API
+      &nbsp;|&nbsp; Google Developers</title><meta property="og:title" content="Overview &nbsp;|&nbsp; Google My Business API
+      &nbsp;|&nbsp; Google Developers"><meta property="og:image"
+          content="https://developers.google.com/_static/83a13d8b48/images/share/devsite-google-blue.png"><meta property="og:image:secure_url"
+          content="https://developers.google.com/_static/83a13d8b48/images/share/devsite-google-blue.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"></head><body class="
+               devsite-doc-page
+               
+               
+               
+               devsite-header-no-upper-tabs
+               "
+        data-family="endorsed"
+        
+        
+        
+        id="top_of_page"><div class="devsite-wrapper"><div class="devsite-top-section-wrapper
+            "><header class="devsite-top-section nocontent"><div class="devsite-top-logo-row-wrapper-wrapper"><div class="devsite-top-logo-row-wrapper"><div class="devsite-top-logo-row devsite-full-site-width"><button type="button" class="devsite-expand-section-nav devsite-header-icon-button
+                                       button-flat material-icons gc-analytics-event"
+                  data-category="Site-Wide Custom Events" data-label="Hamburger menu"></button><div class="devsite-product-name-wrapper"><a class="devsite-product-name-link gc-analytics-event"
+       href="https://developers.google.com/my-business/"
+       data-category="Site-Wide Custom Events"
+       data-label="Project logo (header)"><img src="https://developers.google.com/my-business/images/logo_google_my_business_color_2x_web_64dp.png" class="devsite-product-logo"
+               alt="Google My Business API"></a><span class="devsite-product-name"><ul class="devsite-breadcrumb-list"><li class="devsite-breadcrumb-item"><a href="https://developers.google.com/my-business/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Upper Header"
+       data-value="1">
+    
+    
+      
+        Google My Business API
+      
+    
+    
+    </a></li></ul></span></div><div class="devsite-header-upper-tabs"></div><form class="devsite-search-form"
+                action="https://developers.google.com/s/results/"
+                method="GET"
+                id="top-search"
+                search-placeholder='Search'><div id="searchbox" class="devsite-searchbox"><input placeholder='Search'
+         
+         type="text"
+         class="devsite-search-field devsite-search-query"
+         name="q"
+         value=""
+         autocomplete="off"
+         
+         aria-label="Search box"
+         ><div class="devsite-search-image material-icons"></div></div><input type="hidden"
+       name="p"
+       id="search_project"
+       value="/my-business/"
+       data-project-name="Google My Business API"
+       data-project-path="/my-business/"
+       data-query-match=""><input type="hidden" class="suggest-project" value="Google My Business API" /><div class="suggest-project-metadata" data-home_url="/my-business/" data-path="/my-business/" data-name="Google My Business API" ></div></form><a class="devsite-header-link devsite-top-button button gc-analytics-event"
+               
+               href="https://developers.google.com/products/"
+               
+               data-category="Site-Wide Custom Events"
+               data-label="Site header link"
+               track-type="globalNav"
+               track-name="all products"
+               track-metadata-position="nav"
+               track-metadata-eventDetail='nav'><div class="devsite-header-link-label">All Products</div></a><button type="button" class="devsite-search-button devsite-header-icon-button button-flat
+                                       material-icons"></button><a href="https://accounts.google.com/ServiceLogin?passive=true&continue=https%3A%2F%2Fdevelopers.google.com%2Fmy-business%2Fcontent%2Foverview%3Frefresh%3D1&service=ahsid"
+   class="devsite-user-signin devsite-top-button button gc-analytics-event"
+   data-category="Site-Wide Custom Events"
+   data-label="Sign in button"
+   track-type='globalNav'
+   track-name='signIn'
+   track-metadata-eventDetail='nav'
+   track-metadata-position='nav'>
+  
+  Sign in
+</a></div></div></div><div class="devsite-collapsible-section"><div class="devsite-header-background devsite-full-site-width"><div class="devsite-doc-set-nav-row devsite-full-site-width"><nav class="devsite-doc-set-nav devsite-nav devsite-overflow-tabs-scroll-wrapper"><ul class="devsite-doc-set-nav-tab-list devsite-overflow-tabs-scroll"><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.com/my-business/"
+           class=" devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Home"
+         >
+          Home
+        </a></li><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.com/my-business/content/overview"
+           class="devsite-doc-set-nav-active devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           aria-label="Guides, selected"
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Guides"
+         >
+          Guides
+        </a></li><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.com/my-business/reference/rest/index"
+           class=" devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Reference"
+         >
+          Reference
+        </a></li><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.com/my-business/samples"
+           class=" devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Samples"
+         >
+          Samples
+        </a></li><li class="devsite-doc-set-nav-tab-container devsite-nav-tab
+                 "><a href="https://developers.google.com/my-business/content/support"
+           class=" devsite-nav-tab
+                  devsite-doc-set-nav-tab devsite-doc-set-nav-tab-link gc-analytics-event"
+           
+         
+           data-category="Site-Wide Custom Events"
+         
+           data-label="Tab: Support"
+         >
+          Support
+        </a></li><button type="button" id="devsite-feedback-project"
+          class="devsite-feedback-button devsite-top-button gc-analytics-event"
+          data-category="Site-Wide Custom Events" data-label="Send Feedback Button"
+          track-type="feedback" track-name="sendFeedbackLink" track-metadata-position="header">
+  
+  Send feedback
+  </button></ul></nav></div></div></div></header><script>
+    if (window.jQuery) {
+      $(document).ready(function() {
+        if (window.devsite && window.devsite.search) {
+          
+          window.devsite.search.init('en')
+        }
+      });
+    }
+  </script></div><div id="gc-wrapper"itemscope itemtype="http://schema.org/Article"><input class="google-analytics-id-json" type="hidden" value="{&quot;dimensions&quot;: {&quot;dimension6&quot;: &quot;en&quot;, &quot;dimension4&quot;: &quot;Google My Business API&quot;, &quot;dimension5&quot;: &quot;en&quot;, &quot;dimension3&quot;: false, &quot;dimension1&quot;: &quot;Signed out&quot;, &quot;dimension8&quot;: null}, &quot;gaid&quot;: &quot;UA-24532603-1&quot;}"><script>
+      var dataLayer = [{"freeTrialEligibleUser": "False", "userCountry": "US", "language": {"requested": "en", "served": "en"}, "projectName": "Google My Business API", "scriptsafe": null, "signedIn": "False", "internalUser": "False"}];
+    </script>
+
+      
+        <div class="devsite-site-mask"></div>
+        
+  
+
+
+<nav class="devsite-nav-responsive devsite-nav nocontent" tabindex="0">
+  
+  <div class="devsite-nav-responsive-tabs-panel">
+    
+      
+
+
+
+<nav class="devsite-nav-responsive-tabs devsite-nav">
+  <ul class="devsite-nav-list">
+  
+
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <a 
+             href="https://developers.google.com/my-business/"
+           
+           class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                  "
+           
+           data-category="Site-Wide Custom Events" data-label="Responsive Tab: Home">
+          Home
+        </a>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <span class="devsite-nav-responsive-forward devsite-nav-responsive-tab devsite-nav-title
+                     devsite-nav-active gc-analytics-event"
+              data-category="Site-Wide Custom Events" data-label="Responsive Tab: Guides"
+              tabindex="0">
+          Guides
+        </span>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <a 
+             href="https://developers.google.com/my-business/reference/rest/index?nav=true"
+           
+           class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                  "
+           
+           data-category="Site-Wide Custom Events" data-label="Responsive Tab: Reference">
+          Reference
+        </a>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <a 
+             href="https://developers.google.com/my-business/samples?nav=true"
+           
+           class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                  "
+           
+           data-category="Site-Wide Custom Events" data-label="Responsive Tab: Samples">
+          Samples
+        </a>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      
+        <a 
+             href="https://developers.google.com/my-business/content/support?nav=true"
+           
+           class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event
+                  "
+           
+           data-category="Site-Wide Custom Events" data-label="Responsive Tab: Support">
+          Support
+        </a>
+      
+
+      
+
+      
+
+      
+    </li>
+  
+
+  
+    <li class="devsite-nav-item devsite-nav-item-heading">
+      <a href="https://developers.google.com/products/"
+         class="devsite-nav-responsive-tab devsite-nav-title gc-analytics-event"
+         data-category="Site-Wide Custom Events"
+         data-label="Responsive Tab: all_products"
+         >
+        All Products
+      </a>
+    </li>
+  
+  </ul>
+</nav>
+
+
+    
+  </div>
+  
+  
+  <div class="devsite-nav-responsive-sidebar-panel">
+    
+    <div class="devsite-nav-responsive-back" tabindex="0"></div>
+    
+    <nav class="devsite-nav-responsive-sidebar">
+      
+      
+    </nav>
+  </div>
+  
+  
+</nav>
+
+
+        <div class="devsite-main-content clearfix">
+
+        
+        
+          <div class="devsite-banner devsite-banner-announcement
+                    ">
+            <div class="devsite-banner-inner">
+            <a class="gc-analytics-event" href="https://goo.gl/forms/VvglLGIs7e1E2Wm82" data-category="GMB" data-label="GMB-announcement-form">Sign up for email announcements</a> to stay updated on the latest information about the GMB API.
+
+            </div>
+          </div>
+        
+
+        
+  
+  
+    
+    
+      
+  <nav class="devsite-section-nav devsite-nav nocontent">
+    <ul class="devsite-nav-list"><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" aria-label="Get started, click to expand/collapse" role="link">Get started</span><li class="devsite-nav-item devsite-nav-active"><a href="https://developers.google.com/my-business/content/overview" class="devsite-nav-title">Overview</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/prereqs" class="devsite-nav-title">Prerequisites</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/basic-setup" class="devsite-nav-title">Basic setup</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/adwords-integration" class="devsite-nav-title">Google Ads integration</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" aria-label="How To..., click to expand/collapse" role="link">How To...</span><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/set-up-java-client" class="devsite-nav-title">Set up the Java client library</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/account-data" class="devsite-nav-title">Work with account data</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/location-data" class="devsite-nav-title">Work with location data</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/offering-data" class="devsite-nav-title">Add structured offering data</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/posts-data" class="devsite-nav-title">Posts on Google</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/review-data" class="devsite-nav-title">Work with review data</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/insight-data" class="devsite-nav-title">Retrieve location insights</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/manage-admins" class="devsite-nav-title">Manage admins for accounts and locations</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/upload-photos" class="devsite-nav-title">Upload photos</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/search-matching-listings" class="devsite-nav-title">Search for matching listings</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" aria-label="APIs, click to expand/collapse" role="link">APIs</span><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/googlelocations-api-guide" class="devsite-nav-title">GoogleLocations guide</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/manage-verification" class="devsite-nav-title">Manage verification</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/recommended-locations" class="devsite-nav-title">RecommendedGoogleLocations API</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/report-locations" class="devsite-nav-title">ReportGoogleLocations API</a></li><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/content/notification-setup" class="devsite-nav-title">Manage real-time notifications</a></li></li><li class="devsite-nav-item devsite-nav-item-heading"><span class="devsite-nav-title devsite-nav-title-no-path" aria-label="Quickstarts, click to expand/collapse" role="link">Quickstarts</span><li class="devsite-nav-item"><a href="https://developers.google.com/my-business/quickstarts/javascript" class="devsite-nav-title">JavaScript</a></li></li></ul>
+  </nav>
+
+    
+
+    
+  <nav class="devsite-page-nav devsite-nav"></nav>
+
+
+      <article class="devsite-article">
+        <article class="devsite-article-inner">
+  
+          
+  
+
+
+<div class="devsite-rating-container
+            "><div class="devsite-rating-stars"><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="1" data-category="Site-Wide Custom Events" data-label="Star Rating 1"
+         track-metadata-score="1" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="Site content star ratings, rating 1 out of 5"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="2" data-category="Site-Wide Custom Events" data-label="Star Rating 2"
+         track-metadata-score="2" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="Site content star ratings, rating 2 out of 5"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="3" data-category="Site-Wide Custom Events" data-label="Star Rating 3"
+         track-metadata-score="3" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="Site content star ratings, rating 3 out of 5"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="4" data-category="Site-Wide Custom Events" data-label="Star Rating 4"
+         track-metadata-score="4" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="Site content star ratings, rating 4 out of 5"></div><div class="devsite-rating-star devsite-rating-star-outline gc-analytics-event material-icons"
+         data-rating-val="5" data-category="Site-Wide Custom Events" data-label="Star Rating 5"
+         track-metadata-score="5" track-type="feedback" track-name="rating"
+         track-metadata-position="header"
+         role="button"
+         
+         aria-label="Site content star ratings, rating 5 out of 5"></div></div><div class="devsite-rating-description"></div><div class="devsite-rating-internal"><span class="devsite-rating-stats"></span></div></div><script>
+  $(document).ready(function() {
+    devsite.ratings.init(
+      document.querySelectorAll('#devsite-feedback-project'), false
+      
+    );
+  });
+</script>
+
+
+  
+  <nav class="devsite-breadcrumb-nav devsite-nav">
+    
+
+
+<ul class="devsite-breadcrumb-list">
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <a href="https://developers.google.com/products/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="1">
+    
+    
+      Products
+    
+    
+    </a>
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <div class="devsite-breadcrumb-guillemet material-icons"></div>
+    
+    
+    <a href="https://developers.google.com/my-business/" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="2">
+    
+    
+      Google My Business API
+    
+    
+    </a>
+    
+  </li>
+  
+  <li class="devsite-breadcrumb-item">
+    
+    
+    <div class="devsite-breadcrumb-guillemet material-icons"></div>
+    
+    
+    <a href="https://developers.google.com/my-business/content/overview" class="devsite-breadcrumb-link gc-analytics-event"
+       data-category="Site-Wide Custom Events" data-label="Breadcrumbs"
+       data-value="3">
+    
+    
+      Guides
+    
+    
+    </a>
+    
+  </li>
+  
+</ul>
+
+  </nav>
+  
+  
+  <h1 itemprop="name" class="devsite-page-title">
+    Overview
+  </h1>
+  
+  
+  <nav class="devsite-page-nav-embedded devsite-nav"></nav>
+  
+  <div class="devsite-article-body clearfix
+            "
+       itemprop="articleBody">
+    
+
+
+<p>Google My Business provides a fast and easy way for businesses, products, brands, artists, and
+organizations to manage their online presence with Google.</p>
+
+<p>The Google My Business API is a programming interface that allows developers to write
+applications to manage Google My Business account and location data. The Google My Business API
+supports a
+<a href="https://developers.google.com/my-business/reference/rest/index">subset of the features</a>
+available on the Google My Business Interface. For the features that are available in the API, all
+functionality and
+<a href="https://support.google.com/business/answer/3038177">quality guidelines</a> are the same as
+that of the full interface.</p>
+
+<p>Developers who want to write applications to manage Google My Business data and developers who
+use the AdWords API to manage manual Location Extensions should consider signing up for the Google
+My Business API.</p>
+
+<aside class="note"><b>Note:</b> Access to the API should only be requested by companies directly
+developing an application using the API.</aside>
+
+<p>The Google My Business API allows merchants or their representatives to manage how their data
+is presented across Google and who co-manages their data. User-created data can be managed through
+the API, including
+<a hef="/my-business/reference/rest/v4/accounts.locations#photos">owner photos</a>
+and reviews.</p>
+
+<p>To retrieve local business information and provide location awareness to end users, see the
+documentation for the
+<a href="https://developers.google.com/places/documentation/">Places API</a>.  To manage existing Google+ +Pages and engage with
+social content, see the
+<a href="https://developers.google.com/+/partners/pages/">Google+ Pages Partner API</a>.</p>
+
+<h2 id="accounts-location-groups">Google My Business accounts and location groups</h2>
+
+<p>Changes made through the Google My Business API appear immediately in your Google My Business
+account.</p>
+
+<h3 id="business-owners">Business owners</h3>
+
+<p>To share access to a large set of locations with a group of people, you can create location
+groups. Business owners who manage only a few locations don't need to create a location group.
+However, if you manage a large number of locations or are currently sharing your username and
+password with other users, you should transition to using location groups as a safer way to work
+together.</p>
+
+<h3 id="agencies-third-parties">Agencies and third parties</h3>
+
+<p>If your client already has a Google My Business account, they can add your agency account as a
+manager to their individual locations or to their location group. If they don't already have a
+Google My Business account, they should create one (and a location group, if necessary) and add your
+agency as a manager to their individual locations or to their location group.</p>
+
+<p>Third parties should not request access to the API on behalf of their clients. A single project ID
+is used for their entire application. Once a client has invited you to an existing location group,
+you can access their account through your generated
+<a href="https://developers.google.com/identity/protocols/OAuth2">OAuth2.0 token</a>.</p>
+
+<h2 id="api-functionality">API functionality</h2>
+
+<p>Using the Google My Business API offers much of the same functionality as the Google My
+Business
+<a href="http://business.google.com/manage">user interface</a>, plus some additional features
+specific to the API. API users can expect Google updates to occur just as they do for users of the
+<a href="http://business.google.com/manage">user interface</a>. For more information on Google
+updates, see
+<a href="https://support.google.com/business/answer/3480441">Manage Google updates</a>.</p>
+
+<p>Rate limit restrictions apply to the Google My Business API. For more information, see
+<a href="https://developers.google.com/my-business/content/limits">Usage Limits</a>.</p>
+
+<h3 id="testing-and-verification">Testing and verification</h3>
+
+<p>The Google My Business API allows you to read location groups using the API, but not create
+them. You must sign in to the Google My Business interface to
+<a href="https://support.google.com/business/answer/6085339">create a location group</a>. The
+Google My Business API does not support location verification. Locations must be
+<a href="https://support.google.com/business/answer/2911778">verified individually</a> or through
+<a href="https://support.google.com/business/answer/4490296">bulk verification</a> if you own more
+than ten locations of the same business.</p>
+
+<p>Only one project per business can be whitelisted. Testing with unverified locations must be
+performed in your primary project.</p>
+
+<h2 id="listing-setup">Listing setup</h2>
+
+<p>The Google My Business API allows you to see your
+<a href="https://support.google.com/business/answer/3480862">listing state</a> and any updates
+Google has made to your listing.</p>
+
+<h3 id="latitude-and-longitude">Latitude and longitude</h3>
+
+<p>To set up your listing, provide Google with the latitude and longitude for new locations to
+help us place them on the map. We'll only use latitude and longitude when we have trouble locating
+your address and won't be considered if they're included in subsequent update calls for
+existing locations. Latitude and longitude details must be edited using the Google My Business
+<a href="http://business.google.com/manage">user interface</a>.</p>
+
+<h3 id="attributes">Attributes</h3>
+
+<p>The mandatory listing fields for the Google My Business API are the same as the mandatory fields
+found in the Google My Business
+<a href="http://business.google.com/manage">user interface</a>. For more information, see
+<a href="https://support.google.com/business/answer/3038177">Guidelines for representing your
+business on Google</a>.</p>
+
+<p>You can use the Google My Business API to provide additional attributes about your business
+beyond the
+<a href="https://support.google.com/business/answer/3038177">core GMB attributes</a>. Additional
+attributes cannot be added through the Google My Business
+<a href="http://business.google.com/manage">user interface</a>. Attributes are based on business
+category. For example, for restaurants you may see things like "serves breakfast." The
+<a  href="https://developers.google.com/my-business/reference/rest/v4/attributes/list">attributes.list</a> method can be used to
+get a list of attributes for a given category or country.</p>
+
+<p>Attributes may not show up on Google surfaces like Maps or Search after you've updated them.
+However, providing these attributes helps Google develop future local search experiences and better
+understand your business. We‚Äôre currently working on building consumer experiences around these
+additional attributes, and you can expect some attributes to start showing on Google soon. Providing
+attributes can also help Google better understand your business and match your listing to relevant
+searches.</p>
+
+<h2 id="manage-listing-details">Manage listing details</h2>
+
+<p>Changes you make using the Google My Business API may not be reflected immediately. Changes made
+to unverified locations only appear in the Google My Business interface and can be used in Google Ads
+location extensions.</p>
+
+<p>Edits made to verified business locations are eligible to appear on other Google products and may
+be subject to review to ensure that they adhere to the Google My Business
+<a href="https://support.google.com/business/answer/3038177">quality guidelines</a> and the
+<a href="http://www.google.com/intl/en/+/policy/content.html">Google+ content policy</a>. Users who
+haven't been
+<a href="https://support.google.com/business/answer/4490296">bulk verified</a> can create and
+manage up to 100 Google+ pages per
+<a href="https://support.google.com/accounts/answer/27441">Google Account</a>.</p>
+
+<h3 id="special-hours">Special hours</h3>
+
+<p>Google maintains a list of
+<a href="https://support.google.com/business/answer/6333474">Holidays on Google</a> that are
+considered to be potential holidays. Maps and Search warn users that a business location's hours may
+differ on these dates. You can choose to set special hours to let customers know your operating
+hours on these days.</p>
+
+<h2 id="support">Support</h2>
+
+<p>Any questions about the Google My Business API should be directed to the
+<a href="https://www.en.advertisercommunity.com/t5/Google-My-Business-API/bd-p/gmb-api">My Business API forum</a>.
+The forum is actively monitored by the Google My Business API support team. Developers can also use
+the forum to search for issues and solutions posted by other developers. Answers to non-API
+questions about Google My Business can be found in the
+<a href="http://support.google.com/business/">Google My Business Help Center</a>.</p>
+
+
+  
+  </div>
+  
+
+  
+        
+  
+
+
+
+
+
+
+
+        
+<div class="devsite-content-footer nocontent">
+  
+  
+    <p>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>. For details, see our <a href="https://developers.google.com/terms/site-policies">Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</p>
+  
+
+  
+    
+    <p class="devsite-content-footer-date" itemprop="datePublished"
+       content="2019-01-17T00:02:51.653467">
+      
+      Last updated January 17, 2019.
+    </p>
+  
+
+</div>
+
+        </article>
+      </article>
+  
+
+        </div>
+      
+
+<footer class="devsite-footer-linkboxes nocontent
+               
+               devsite-footer-linkboxes-with-sites"><nav class="devsite-full-site-width"><ul class="devsite-footer-linkboxes-list"><li class="devsite-footer-linkbox "><h3 class="devsite-footer-linkbox-heading">Product Info</h3><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/my-business/content/terms"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox"
+               >
+                Terms of Service
+            </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/my-business/content/limits"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox"
+               >
+                Usage Limits
+            </a></li><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/my-business/content/pricing"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox"
+               >
+                Pricing
+            </a></li></ul></li><li class="devsite-footer-linkbox "><h3 class="devsite-footer-linkbox-heading">Help</h3><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="https://developers.google.com/my-business/content/support"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Content Page Footer Linkbox"
+               >
+                Support
+            </a></li></ul></li><li class="devsite-footer-linkbox devsite-footer-linkbox-backup"><h3 class="devsite-footer-linkbox-heading">Developer Consoles</h3><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="//console.developers.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Google Developers Console"
+               >
+                Google API Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//console.cloud.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Google Cloud Platform Console"
+               >
+                Google Cloud Platform Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//play.google.com/apps/publish/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Google Play Console"
+               >
+                Google Play Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//console.firebase.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Firebase Console"
+               >
+                Firebase Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//console.actions.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Actions on Google Console"
+               >
+                Actions on Google Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//cast.google.com/publish/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Cast SDK Developer Console"
+               >
+                Cast SDK Developer Console
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//chrome.google.com/webstore/developer/dashboard"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Chrome Web Store Developer Dashboard"
+               >
+                Chrome Web Store Dashboard
+            </a></li></ul></li><li class="devsite-footer-linkbox devsite-footer-linkbox-sites"><a href="https://developers.google.com/"
+           class="gc-analytics-event devsite-footer-linkbox-logo-link"
+           data-category="Site-Wide Custom Events" data-label="Footer Google Developers Link"><img class="devsite-footer-linkbox-logo"
+               src="https://developers.google.com/_static/83a13d8b48/images/redesign-14/lockup-color-knockout.png"
+               alt="Google Developers"></a><ul class="devsite-footer-linkbox-list"><li class="devsite-footer-linkbox-item"><a href="//developer.android.com/index.html"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Android Link"
+               >
+                Android
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//developer.chrome.com/home"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Chrome Link"
+               >
+                Chrome
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//firebase.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Firebase Link"
+               >
+                Firebase
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//cloud.google.com"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Cloud Link"
+               >
+                Google Cloud Platform
+            </a></li><li class="devsite-footer-linkbox-item"><a href="//developers.google.com/products/"
+               class="gc-analytics-event"
+               data-category="Site-Wide Custom Events"
+               data-label="Footer Products Link"
+               >
+                All Products
+            </a></li></ul></li></ul></nav></footer><footer class="devsite-utility-footer"><nav class="devsite-utility-footer-nav devsite-nav devsite-full-site-width"><div class="devsite-utility-footer-nav-left"><form class="devsite-utility-footer-language" action="https://developers.google.com/i18n/setlang/"
+            method="post"><input type="hidden" name="xsrf_token" value="Ocp8Ggg59wiBTuIMT2cRnPL0kbT0Xyc9KTPmv9LtjMU6MTU0OTY5MDA1NTM4MTcxNA" /><input type="hidden" name="next" value="/my-business/content/overview?nav=true"><select class="devsite-utility-footer-language-select kd-select" name="language"
+                track-type="languageSelector" track-name="click"><option value="id"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="id"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="id">
+            Bahasa Indonesia
+          </option><option value="de"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="de"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="de">
+            Deutsch
+          </option><option value="en"
+                 selected="selected" 
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="en"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="en">
+            English
+          </option><option value="es"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="es"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="es">
+            espa√±ol
+          </option><option value="fr"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="fr"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="fr">
+            fran√ßais
+          </option><option value="pt-br"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="pt-br"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="pt-br">
+            Portugu√™s Brasileiro
+          </option><option value="ru"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="ru"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="ru">
+            –†—É—Å—Å–∫–∏–π
+          </option><option value="ja"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="ja"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="ja">
+            Êó•Êú¨Ë™û
+          </option><option value="zh-cn"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="zh-cn"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="zh-cn">
+            ÁÆÄ‰Ωì‰∏≠Êñá
+          </option><option value="ko"
+                
+                track-type="languageSelector" track-name="changed"
+                track-metadata-eventDetail="ko"
+                track-metadata-original-language="en"
+                track-metadata-selected-language="ko">
+            ÌïúÍµ≠Ïñ¥
+          </option></select></form><span class="devsite-utility-footer-links"><a class="devsite-utility-footer-link gc-analytics-event"
+           href="https://developers.google.com/terms/site-terms"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer terms link"
+           data-footer-link-id="terms"
+           >Terms
+         </a><a class="devsite-utility-footer-link gc-analytics-event"
+           href="//policies.google.com/privacy"
+           data-category="Site-Wide Custom Events"
+           data-label="Footer privacy link"
+           data-footer-link-id="privacy"
+           >Privacy
+         </a></span></div><div class="devsite-utility-footer-nav-right"><div class="devsite-utility-footer-newsletter-signup-text">
+        Sign up for the Google Developers newsletter
+      </div><a class="button button-primary devsite-utility-footer-newsletter-signup-button"
+         href="//services.google.com/fb/forms/googledevelopersnewsletter/?utm_medium=referral&amp;utm_source=google-products&amp;utm_team=googledevs&amp;utm_campaign=201611-newsletter-launch"
+         track-type="navigateTo" track-name="newsletter"
+         track-metadata-eventDetail="footer"
+         track-metadata-position="footer">
+        
+        Subscribe
+      </a></div></nav></footer><div class="devsite-feedback-dialog devsite-dialog"><div class="devsite-dialog-contents"><h3>Send feedback about...</h3><div class="devsite-feedback-item"><a data-type="documentation" class="gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Docs Feedback Image"
+           track-type="feedback" track-name="feedbackDocIcon" track-metadata-position="header"><div class="devsite-feedback-item-icon-container"><div class="devsite-feedback-item-icon-white devsite-feedback-item-icon-docs
+                        material-icons"></div></div></a><div class="devsite-feedback-item-name">
+          
+          This page
+        </div><div class="devsite-feedback-item-description"><a data-type="documentation" tabindex="0" class="gc-analytics-event"
+             data-category="Site-Wide Custom Events" data-label="Docs Feedback Text"
+             track-type="feedback" track-name="feedbackDocText" track-metadata-position="header">
+            
+            Documentation feedback
+          </a></div></div><div class="devsite-feedback-item"><a data-type="product" tabindex="0" class="gc-analytics-event"
+           data-category="Site-Wide Custom Events" data-label="Product Feedback Image"
+           track-type="feedback" track-name="feedbackProductIcon" track-metadata-position="header"
+         ><img src="https://developers.google.com/my-business/images/logo_google_my_business_color_2x_web_64dp.png"
+                 class="devsite-feedback-item-icon"
+                 alt="Google My Business API"></a><div class="devsite-feedback-item-name">
+        Google My Business API
+        </div><div class="devsite-feedback-item-description"><a data-type="product" tabindex="0" class="gc-analytics-event"
+             data-category="Site-Wide Custom Events" data-label="Product Feedback Text"
+             track-type="feedback" track-name="feedbackProductText" track-metadata-position="header"
+           >
+            
+            Product feedback
+          </a></div></div><div class="devsite-feedback-support"><img src="https://developers.google.com/_static/83a13d8b48/images/feedback/ic_help_24px.svg">
+        
+        
+        Need help? Visit our <a href="https://www.en.advertisercommunity.com/t5/Google-My-Business-API/bd-p/gmb-api" >support page</a>.
+      </div></div><div class="devsite-dialog-buttons"><button type="button" class="devsite-feedback-cancel button-white gc-analytics-event"
+              data-category="Site-Wide Custom Events" data-label="Cancel Feedback Button"
+              track-type="feedback" track-name="cancelFeedbackButton"
+              track-metadata-position="header">
+        
+        Cancel
+      </button></div></div><script>
+  $(document).ready(function() {
+    new devsite.feedback.Widget({
+        'product_id': '1026882',
+        'bucket': '',
+        'context': '',
+        'version': 'devsite-20190208-r00-rc01.default'
+      },
+      document.querySelectorAll('.devsite-feedback-button'),
+      'en',
+      document.querySelector('.devsite-site-mask'),
+      document.querySelector('.devsite-feedback-dialog'),
+      document.querySelector('.devsite-feedback-cancel'),
+      document.querySelectorAll('.devsite-feedback-item a:not([href])')
+    );
+  });
+  </script></div><script async defer src="//www.gstatic.com/feedback/api.js"></script><script src="https://developers.google.com/_static2/83a13d8b48/jsi18n/"></script><script src="https://developers.google.com/_static/83a13d8b48/js/script_foot_closure.js"></script><script src="https://developers.google.com/_static/83a13d8b48/js/script_foot.js"></script><script>
+        (function($) {
+          
+          devsite.devsite.Init($, {'ENABLE_BLOCKED_VIDEO_PLACEHOLDER': 0, 'SITE_NAME': 'devsite', 'FULL_SITE_SEARCH_ENABLED': 1, 'ENABLE_CLOUDTRACK': 0, 'VTAGS_ENABLED': 0, 'HISTORY_ENABLED': 1, 'SIDEBAR_MINI_ENABLED': 0, 'VERSION_HASH': '83a13d8b48', 'SCRIPTSAFE_DOMAIN': 'google-developers.appspot.com', 'ENABLE_BLOCKED_LINK_TOOLTIP': 0, 'ALLOWED_HOSTS': ['.android.com', '.appspot.com', '.gonglchuangl.net', '.google.cn', '.google.com', '.googleplex.com', '.tensorflow.org'], 'BLOCK_RSS_FEEDS': 0},
+                               '[]','en',
+                               true, '',
+                               {"8e03e230de0bd8a6fe173fdf172e8b3f": true, "8de7a048f21618359bd37f5ce44be073": false, "cb025a64a50094835616312f4774a53d": true, "51470233c56fc1fde50f00b73c52b216": false, "d169d485cf24243a263783dbe42029b1": true, "039e5d84b87fd75807ffb37b7f1bbf2c": true, "700def1a83e356c06c0925afb05de4b0": false, "6749dcb526ce9bde6993550c7d928d24": true, "098dafe57affddc137df300142652cfd": false}, '/my-business/',
+                               'https://developers.google.com/');
+        })(jQuery);
+
+        
+        devsite.localInit = function() {
+          
+        };
+
+      </script><script>
+      $('.devsite-utility-footer-language-select').each(function() {
+        $(this).change(function(){$('.devsite-utility-footer-language').submit();});
+      });
+      </script></div><span id="devsite-request-elapsed" data-request-elapsed="206.674098969"></span></body></html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

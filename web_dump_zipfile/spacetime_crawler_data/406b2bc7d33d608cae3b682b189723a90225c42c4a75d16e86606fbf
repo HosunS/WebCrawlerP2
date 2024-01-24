@@ -1,0 +1,48 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1057¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:06:21 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"86a-54c85e18c89a2-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 04:23:50 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYj<html>
+<head>
+<title>CompSci 163/265, Spring 2015, Homework 2</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1>CompSci 163/265, Spring 2015, Homework 2</h1>
+<ol>
+<li><p>Describe a linear time algorithm that takes as input a directed
+graph and partitions its edges into two subsets such that each of the
+two subsets forms a directed acyclic graph.</p></li>
+<li><p>Suppose that $G$ is a directed acyclic graph with $n$ vertices,
+with the special property that there is only one way to place the
+vertices of $G$ into a topological order.</p>
+<ol type="a"><li><p>How many edges can the transitive closure of $G$
+have, as a function of $n$?</p></li>
+<li><p>How many edges can the transitive reduction of $G$ have, as a
+function of $n$?</p></li>
+</ol></li>
+<li><p>(For 163 students:)
+If $G$ is a directed acyclic graph without any redundant edges (it is
+its own transitive reduction), is it always possible to assign the
+vertices to layers in such a way that each edge goes downwards from one layer
+to the next consecutive layer? For this problem, there is no limit on
+the number of vertices per layer. If the answer is yes, explain why. If
+the answer is no, find a counterexample.</p>
+<p>(For 265 students:)
+Find an example of a directed acyclic graph for which the
+Coffman&ndash;Graham algorithm, with three vertices per layer, can use
+more layers than the optimum layering. Show both the optimum layering
+and the layering found by the algorithm.</p></li>
+<li><p>Suppose we are given as input a directed graph (not necessarily
+acyclic) and we want to add one edge to the graph so that the augmented
+graph is strongly connected. Describe a linear time algorithm for
+finding such an edge, if it exists. (Hint: use the condensation, and
+look at the numbers of incoming and outgoing edges of the nodes in the
+condensation.)</p></li>
+</ol>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

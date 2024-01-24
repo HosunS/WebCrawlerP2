@@ -1,0 +1,51 @@
+¦Ifinal_url¢DtypeEvaluex-http://cybert.ics.uci.edu/dataset-help/QMSDS/Lhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:33:31 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY§
+<p><a href="/static/sampledata/QMS_dNSAF.txt">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>This data comes from a real unpublished shotgun proteomics experiment 
+  with two control and three bait (experimental) samples.
+  It has been shown that such quantative mass spectrometry data follows a similar error model as 
+  DNA microarray data <a href="/help/#references">[15]</a>, 
+  thus Cyber-T is an appropriate approach for analysis. 
+  The data file is tab-delimited.
+  The data has been pre-processed 
+  with <a href="http://www.ncbi.nlm.nih.gov/pubmed/20166708" target="blank">dNSAF</a> normalization. 
+  NOTE: The Cyber-T webserver does not currently offer this as a normalization option.
+  There is one header row.
+  There is one label column, and then there are two control columns and then three experimental columns.
+</p>
+
+<ul>
+  <li>Delimiter: Commas</li>
+  <li>Row Start: 2</li>
+  <li>Number of label columns: 1</li>
+  <li>Number of first condition columns: 2</li>
+  <li>Number of second condition columns: 3</li>  
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a two-sample t-test using the Bayes-regularized variance estimates.
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 6</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard t-test using empirical variances.  
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

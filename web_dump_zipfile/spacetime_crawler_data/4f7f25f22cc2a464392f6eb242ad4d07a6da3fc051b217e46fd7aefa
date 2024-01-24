@@ -1,0 +1,311 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE13768¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueYsession=.eJy9jl0LgjAYRv9K7LqLNq8mdFH4UTItFjZfb2QTRZaBpCw_8L-36D90ezgP51lQevN54Z05che0UchFjDRGidSUJBhA8IE5RwzPsQNMtcwibVmnCO7AiQ2QdgISPKSggxTJzJxkBxnvYKK4DEdjXcvuc55Fvt3WsfZxossRrdtfOL2yy8H7e9-ytwppk5_i_fdLUb-qvkFuLdu-Wj9i0Vpj.Dzr2xQ.bQ5NkcKDHmsYwYer61gUeUdw4Jg; HttpOnly; Path=/¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXWerkzeug/0.14.1 Python/2.7.14¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 10:28:21 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY5È<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>CircadiOmics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+      href="/static/main.css">
+
+
+
+    <!--[if lt IE 9]>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+      href="/static/main.css">
+
+
+
+  </head>
+  <body>
+    
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a  style="font-size: 16px  !important;" class="navbar-brand" href="/"><font color="#457ab2">C</font>ircadi<font color="orange">O</font>mics</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+          <li><a href="/about">About</a></li>
+          <li><a href="/datasets">Datasets</a></li>
+          <li><a href="/biocycle">BIO_CYCLE</a></li>
+          <li><a href="/metabolicatlas">Metabolic Atlas</a></li>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/help">Help</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+<div class="container">
+  <center>
+  <h1 style="font-size:70px"><font color="#457ab2">B</font>IO_CYCLE <font color="orange">P</font>ORTAL</h1>
+  <div class="row">
+  <div class="col-lg-12">
+    <div class="well well-lg">
+    <h3>Processing Data with BIO_CYCLE</h3>
+    <p style="font-size:18px">Use the <b>"BROWSE FILES"</b> button to upload a dataset.  The dataset must be in <b>.tsv</b> format.  Download the <a href="/static/downloadables/example_input_file.tsv">Example File</a> or visit <a href="/help">Help</a> for more information on the correct file format. Press <b>"RUN BIO_CYCLE"</b> to begin processing the current data file.  After the processing is complete, the file will download in your browser. The resulting file contains statistics for p-value, q-value, amplitude, lag, and period for each row in the current dataset.  Additionally, the code is available for download in the link below and can be run locally.</p>
+    <h4><a href="/static/downloadables/BioCycle.tar.gz" download>BIO_CYCLE CODE</a></h4>
+    </div>
+    <br>
+
+    <form action = "/upload" method = "POST" enctype = "multipart/form-data">
+       <input type="submit" name="file" class="btn btn-primary" onclick="alert('The Data is Being Processed.  Please Keep This Window Open Until The Download Completes!');$('#bc-tools').show();" value="RUN BIO_CYCLE">
+       <label class="btn btn-warning" for="my-file-selector">
+           <input id="my-file-selector" type="file" name="file" style="display:none"
+           onchange="$('#upload-file-info').html(this.files[0].name)">
+           BROWSE FILES
+       </label>
+       <br><br><br>
+       <h4>Current Data File</h4>
+      <h3><span class='label label-default' id="upload-file-info">example_input_file.tsv</span></h3>
+    </form>
+    <br><br>
+    <div id="bc-tools" style="display: none;" class="btn-group" role="group" aria-label="...">
+      <button type="button" class="btn btn-default" onclick="$('#bc-histo').show();$('#bc-viz').hide();">Histograms</button>
+      <button type="button" class="btn btn-default" onclick="$('#bc-histo').hide();$('#bc-viz').show();">Visualization</button>
+      <button type="button" class="btn btn-default" onclick="$('#bc-histo').hide();$('#bc-viz').hide();">Close</button>
+    </div>
+    <br><br>
+
+
+    <div class="row">
+      <div style="min-height: 25px" class="col-sm-10"><h3 id="not-found-message"></h3></div>
+    </div>
+    <div id="bc-viz" style="display:none;" class="col-lg-12">
+    <div class="col-lg-12">
+    <h3>Visualization</h3>
+    <h5>Search by user provided ID</h5>
+    <div class="input-group">
+    <input id="biocycle-id" type="text" class="form-control" value="Arntl" data-provide="typeahead">
+    <span class="input-group-btn">
+      <button id="display-biocycle" class="btn btn-default" type="button" autofocus>Display</button>
+    </span>
+   </div>
+    </div>
+    <div class="row row-timeseries">
+        <div class="col-lg-12 col-timeseries">
+            <div id="timeseries" style="width: 80%; height: 90%;"></div>
+        </div>
+    </div>
+    <br><br>
+    <a id="png" class="btn btn-primary" type="button" download="timeseries.png" href="">Download PNG <i class="glyphicon glyphicon-download"></i></a>&nbsp
+    <a id="svg-download" class="btn btn-primary" type="button" download="timeseries.svg" href="">Download SVG <i class="glyphicon glyphicon-download"></i></a>
+    <br><br>
+    </div>
+
+
+    <div id="bc-histo" style="display:none;min-height: 400px;" class="col-lg-12">
+      <div class="col-lg-12">
+      <h3>Histograms</h3>
+      <h5>Examine significant subsets and download search results</h5>
+      <p style="font-size:16px">Select a p-value or q-value threshold to determine which species should be considered periodic and a period to investigate (24, 12, or 8 hours). Histograms of lag, amplitude and offset along with a list of IDs meeting this criteria can be visualized and downloaded.</p>
+      <div class="btn-group" role="group" aria-label="...">
+        <div class="btn-group" role="group">
+          <button id="biocycle-statistic" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            P-Value
+            <span class="caret"></span>
+          </button>
+          <ul id="dropdown-menu-biocycle-statistic" class="dropdown-menu">
+            <li><a>P-Value</a></li>
+            <li><a>Q-Value</a></li>
+          </ul>
+        </div>
+
+        <div class="btn-group" role="group">
+          <button id="biocycle-cutoff" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            0.05
+            <span class="caret"></span>
+          </button>
+          <ul id="dropdown-menu-biocycle-cutoff" class="dropdown-menu">
+            <li><a>0.05</a></li>
+            <li><a>0.01</a></li>
+            <li><a>0.001</a></li>
+          </ul>
+        </div>
+
+  			<div class="btn-group" role="group">
+          <button id="biocycle-period" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            24
+            <span class="caret"></span>
+          </button>
+          <ul id="dropdown-menu-biocycle-period" class="dropdown-menu">
+            <li><a>24</a></li>
+            <li><a>12</a></li>
+            <li><a>8</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="...">
+        <button id="histogram-biocycle-lag" type="button" class="btn btn-primary">Lag</button>
+        <button id="histogram-biocycle-amp" type="button" class="btn btn-primary">Amplitude</button>
+        <button id="histogram-biocycle-off" type="button" class="btn btn-primary">Offset</button>
+        <button id="show-id-list-biocycle" type="button" class="btn btn-primary">IDs</button>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="...">
+      	<form id = "biocycle-search-download-form">
+        	<a id="biocycle-search-download" class="btn btn-warning">Download</a>
+      	</form>
+      </div>
+
+      <div class="row top-buffer">
+      <img id="histogram" src="" style="width:82%">
+
+      <ul id="id-list-biocycle" style="width:82%; overflow:hidden; overflow-y:scroll; height:200px;">
+  		</ul>
+
+  		</div>
+      </div>
+      <br><br><br>
+    </div>
+    <br><br><br>
+      <h4><span style='color:black'>If you find BIO_CYCLE useful to your work, please cite the following paper:</span><br><br>
+      <span class="paper-title">What time is it? Deep learning approaches for circadian rhythms</span><br>
+      <span class="paper-authors">F.&nbspAgostinelli, N.&nbspCeglia, B.&nbspShahbaba, P.&nbspSassone-Corsi, and&nbspP.&nbspBaldi</span><br>
+      <span class="paper-journal">Bioinformatics</span>,
+      <span class="paper-extra">32</span>,&nbsp
+      <span class="paper-extra">(12)</span>,&nbsp
+      <span class="paper-extra">i8-i17</span>,&nbsp
+      <span class="paper-year">2016</span></h4>
+
+
+</div>
+
+    <!-- <br>
+    <br>
+    <br>
+    <br>
+    <h3>File Format</h3>
+    <p>File must be a tab separated file (*.tsv) with a single ID in the first column followed by the molecular concentrations at each timepoint.</p>
+    <p>BIO_CYCLE can handle variable numbers of replicates, uneven timepoints, and missing replicates (as long as each row has at least one value per timepoint).</p>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>0</th>
+          <th>0</th>
+          <th>8</th>
+          <th>10</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Per1</th>
+          <td>4.25</td>
+          <td>3.08</td>
+          <td>9.17</td>
+          <td>8.90</td>
+        </tr>
+        <tr>
+          <th scope="row">Per2</th>
+          <td>3.45</td>
+          <td>na</td>
+          <td>9.50</td>
+          <td>9.93</td>
+        </tr>
+        <tr>
+          <th scope="row">Per3</th>
+          <td>1.40</td>
+          <td>1.53</td>
+          <td>10.70</td>
+          <td>10.55</td>
+        </tr>
+        <tr>
+          <th scope="row">Cry1</th>
+          <td>4.35</td>
+          <td>5.78</td>
+          <td>14.87</td>
+          <td>12.21</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4><a href="/static/downloadables/example_input_file.tsv" download>Example input file</a></h4> -->
+
+
+
+    <!-- <h5>Synthetic Training Data</h5>
+    <ul id="bio_cycle_synthetic">
+        <li><a href="/downloadables/Training_PRange_20_28.tar.gz" download>Period 20 - 28 hours</a></li>
+        <li><a href="/downloadables/Training_PRange_10_14.tar.gz" download>Period 10 - 14 hours</a></li>
+        <li><a href="/downloadables/Training_PRange_7_9.tar.gz" download>Period 7 - 9 hours</a></li>
+    </ul>
+    <h5>Synthetic Testing Data</h5>
+    <ul id="bio_cycle_synthetic">
+        <li><a href="/downloadables/Testing_PRange_20_28.tar.gz" download>Period 20 - 28 hours</a></li>
+        <li><a href="/downloadables/Testing_PRange_10_14.tar.gz" download>Period 10 - 14 hours</a></li>
+        <li><a href="/downloadables/Testing_PRange_7_9.tar.gz" download>Period 7 - 9 hours</a></li>
+    </ul>
+    <h5>Real-World Biological Testing Data</h5>
+    <ul id="bio_cycle_biological">
+        <li><a href="/downloadables/data_timepoints_0_24_4_1_biocycle_real.tsv" download>24 Hours / Every 4 hours</a></li>
+        <li><a href="/downloadables/data_timepoints_0_48_1_1_biocycle_real.tsv" download>48 Hours / Every hour</a></li>
+        <li><a href="/downloadables/data_timepoints_0_48_2_1_biocycle_real.tsv" download>48 Hours / Every 2 hours</a></li>
+    </ul>
+
+    <h3>BIO_CLOCK DOWNLOAD</h3>
+    <h5>Control Datasets</h5>
+    <ul id="control_tissue">
+        <li><a href="/downloadables/biocycle/organs_wildtype/organs_wildtype/all/all_Core_Clock_Full_train.p" download>All Control</a></li>
+        <li><a href="/downloadables/biocycle/organs_wildtype/organs_wildtype/brain/brain_Core_Clock_Full.tsv" download>All Brain</a></li>
+        <li><a href="/downloadables/biocycle/organs_wildtype/organs_wildtype/liver/liver_Core_Clock_Full.tsv" download>All Liver</a></li>
+        <li><a href="/downloadables/biocycle/organs_wildtype/organs_wildtype/set1/set1_Core_Clock_Full.tsv" download>Set 1</a></li>
+        <li><a href="/downloadables/biocycle/organs_wildtype/organs_wildtype/set2/set2_Core_Clock_Full.tsv" download>Set 2</a></li>
+    </ul>
+    <h5>Experimental Datasets</h5>
+    <ul id="experimental_tissue">
+        <li><a href="/downloadables/biocycle/organs_experimental/all.tsv" download>All Experimental</a></li>
+    </ul>
+    <h5>All NCBI GEO Datasets</h5>
+    <ul id="geo_full">
+        <li><a href="/downloadables/biocycle/geo/full_geo.tsv" download>Mouse Dataset</a></li>
+        <li><a href="/downloadables/results.tsv" download>Mouse Dataset with BIO_CLOCK Labels</a></li>
+        <li>Mouse Dataset with BIO_CLOCK Labels (BIO_CLOCK labels are being re-computed)</a></li>
+    </ul> -->
+  </div>
+  </center>
+</div>
+
+<footer><center>&copy; 2018 Institute for Genomics and Bioinformatics - University of California, Irvine</center></footer>
+<br>
+<br>
+
+
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/static/cytoscape.min.js"></script>
+<script src="/static/typeahead.min.js"></script>
+<script src="/static/main.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

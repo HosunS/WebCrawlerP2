@@ -1,0 +1,46 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC486¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 22 Sep 2000 20:20:44 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"3c3-371e52cd8ff00-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 18:23:07 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÃ/* log scale compaction of word frequencies
+   use -lm option when compiling!
+   usage: freq min max
+
+   any frequencies below min are threshholded
+   but any frequencies above max cause an error
+*/
+
+#include <stdio.h>
+
+static void usage()
+{
+  fprintf(stderr,"usage: a.out minfreq maxfreq\n");
+  exit(0);
+}
+
+main(int ac, char **av)
+{
+  int min, max;
+  double logscale;
+  double logmin;
+  double log(double);
+  int atoi(char *);
+  int c;
+
+  if (ac != 3) usage();
+
+  min = atoi(av[1]);
+  max = atoi(av[2]);
+  if (max <= 0 || (max-min) <= 0) usage();
+
+  logmin = log((double)min);
+  logscale = 255/(log((double)max) - logmin);
+
+  while ((c = getchar()) != EOF) {
+    int n = 0;
+    double x;
+    while ((c = getchar()) != ' ') ; /* skip word itself */
+    while ((c = getchar()) != '\n') n = (n*10) + (c-'0');
+    n = (int) (logscale * (log((double)n) - logmin));
+    if (n > 255) fprintf(stderr,"frequency too large\n");
+    if (n < 0) n = 0;
+    putchar(n);
+  }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

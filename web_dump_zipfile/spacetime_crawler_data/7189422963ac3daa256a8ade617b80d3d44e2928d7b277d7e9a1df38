@@ -1,0 +1,39 @@
+¦Ifinal_url¢DtypeEvaluey¢https://s100.copyright.com/App/checkLoginCas.jsp?service=https%3A%2F%2Fs100.copyright.com%2FAppDispatchServlet%3FpublisherName%3DOUP%26publication%3D1460-2059%26title%3DModeling%2520the%2520organization%2520of%2520the%2520%2526lt%253Bem%2526gt%253BWUSCHEL%2526lt%253B%252Fem%2526gt%253B%2520expression%2520domain%2520in%2520the%2520shoot%2520apical%2520meristem%26publicationDate%3D2005-06-01%26volumeNum%3D21%26issueNum%3Dsuppl_1%26author%3DJ%25C3%25B6nsson%252C%2520Henrik%253B%2520Heisler%252C%2520Marcus%26startPage%3Di232%26endPage%3Di240%26contentId%3D10.1093%252Fbioinformatics%252Fbti1036%26oa%3D%26copyright%3DOxford%2520University%2520Press%26orderBeanReset%3DTrueLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1312¢Ak¢DtypeEvalueLX-Powered-ByAv¢DtypeEvalueSUndertow/1, JSP/2.3¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueY8AWSALB=3SS5+XTxxfP2uHhaYQfJVUhC9zl8Rt1O1W3XC5It37O21RvuM91W9vY3BEPQFAxsvs8gSJ/RdrVKTyUyrP71iXIxi/U1yqZruMCcteR3JlZEkcIENki5E7oeut83; Expires=Sun, 17 Feb 2019 08:45:56 GMT; Path=/, BIGipCookie=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueJWildFly/13¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:45:56 GMT¢Ak¢DtypeEvalueOX-FRAME-OPTIONSAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=UTF-8Kraw_content¢DtypeEvalueY 
+<html>
+<head>
+<script language="JavaScript">
+    function parseQueryString(query) {
+        var vars = query.split("&");
+        var queryString = {};
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            var key = decodeURIComponent(pair[0]);
+            var value = decodeURIComponent(pair[1]);
+            // If first entry with this name
+            if (typeof queryString[key] === "undefined") {
+                queryString[key] = value;
+                // If second entry with this name
+            } else if (typeof queryString[key] === "string") {
+                var arr = [queryString[key],value];
+                queryString[key] = arr;
+                // If third or later entry with this name
+            } else {
+                queryString[key].push(value);
+            }
+        }
+        return queryString;
+    }
+
+    function redirect() {
+        var query = window.location.search.substring(1);
+        var queryParameters = parseQueryString(query);
+        window.location.replace(queryParameters.service);
+    }
+    var img = new Image();
+    img.onload = redirect;
+    img.onerror = redirect;
+    img.src = "/CAS/Images/singlepixel.cas?" + new Date().getTime();
+</script>
+</head>
+<body></body>
+</html>Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

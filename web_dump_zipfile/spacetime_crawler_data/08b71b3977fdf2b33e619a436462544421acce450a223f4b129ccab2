@@ -1,0 +1,370 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE13831¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 28 Jun 2006 07:14:05 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"3607-417438f85c940"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 07:39:57 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY6<html>
+<head>
+
+<style type="text/css">
+  <! --
+  H { font-family: Arial, Helvetica, Modern; }
+  H1 { font-family:  Arial, Helvetica, Modern; font-size:large}
+  H2 { font-family: 10pt;  Arial,Helvetica,Modern;   
+       padding-top: 1; padding-bottom: 1; padding-left: 2; color:black}
+  H3 { font-family:    Arial,Helvetica,Modern; background:#aaccaa;  color:black;
+       padding-top: 1; padding-bottom: 1; padding-left: 2; font-size:medium }
+  P { font-family: Arial; font-size: small; color: black}
+  P.important { margin-left: 0.5cm; margin-right: 1cm; color: red }
+  LI { margin-left: 0.5cm; font-family: Arial; font-size: small }
+  B  { font-size: smaller }
+  table.indent { margin-left: 1cm }
+  -->
+</style>
+
+<title>The CCToolbox</title>
+
+</head>
+
+<body bgcolor="#eeeeee">
+ <H2 align=center>CCToolbox Tutorial/Demo</H2>
+
+
+<div align=center>
+<a href="http://www.ics.uci.edu/~sgaffney/software/CCT">CCToolbox</a> |
+<a href="../#Down">Download</a> |
+<a href="./">Documentation</a> |
+<a href="http://www.ics.uci.edu/~sgaffney#contact">Contact</a>
+</div>
+
+<!-- <a href="./">Documentation home</a> > Tutorial/Demo -->
+
+
+
+ <H3>Overview</H3>
+   <p>Curves are clustered with the CCToolbox by following five simple steps.
+   <ol>
+   <li><a href="#Init">Initialize the toolbox</a>
+   <li><a href="#Data">Load the appropriate curve data</a>
+   <li><a href="#ModelOps">Set the cluster model options (e.g., number of clusters)</a>
+   <li><a href="#EMOps">Set the EM algorithm options (e.g., number of EM starts)</a>
+   <li><a href="#Cluster">Run <tt>model = curve_clust(trajs,options)</tt></a>
+   </ol>
+
+
+<h3 id="Init">1. Initializing the toolbox</h3>
+<p>You must run <b>SetCCTPath()</b> each time you wish to use the
+toolbox. This function sets the appropriate paths needed by the toolbox.
+You can run this each time automatically by starting matlab with the
+-r option.</p>
+
+
+
+ <H3 id="Data">2. Loading the data</H3>
+ <p>Curves can be represented in various ways 
+(see <a href="curve_format.html">curve formats</a> for more details). The standard way 
+that they are represented
+ in the toolbox is by loading a set of curves into cell arrays. For example, suppose we have 
+ <em>n</em> curves, then the observations for each of these curves are stored in the 
+ <em>n</em>-by-1 cell array Y. The times (or whichever independent variable is of interest) 
+ at which these
+ observations were made is stored in the cell array X of the same size. Thus, the <em>i</em>-th
+ curve's observations Y{i} and observation times X{i} can be easily accessed using the index
+ variable <em>i</em>. 
+ 
+ <p>Since observations can be multivariate (say, of dimension <em>D</em>)
+ and curve lengths may vary (say, length <em>n<sub>i</sub></em> for curve <em>i</em>), 
+ the size of each Y{i} is  <em>n<sub>i</sub></em> by <em>D</em>, where the total
+ number of observations in all curves is
+ <em>N=n<sub>1</sub>+n<sub>2</sub>+...+n<sub>n</sub></em>. The size of each X{i} is 
+always <em>n<sub>i</sub></em> by 1 since time is univariate. However, often the times at 
+which the curve observations were made are fixed and uniform across all curves. 
+In this case, X does not actually have to be specified, and the toolbox assumes that
+X{i} is equal to 0..(<em>n<sub>i</sub>&nbsp;-1</em>).
+ 
+ <p>As an example, we demonstrate the structure of a set of curves representing actual
+ observed cyclone tracks that originated in the North Atlantic from 1995-2001.
+ Each track consists of <em>n<sub>i</sub></em>
+ observations of cyclone latitude and longitude position, and there are 296 total tracks. 
+ The size of the cell array Y as output by Matlab can be seen below.
+ 
+ <PRE>
+ >> whos Y
+  Name      Size                   Bytes  Class
+
+  Y       296x1                    87152  cell array
+ </PRE>
+
+ <p>The cells for the first 10 tracks can be listed as follows.
+ <pre>
+ >> Y(1:10)
+ans = 
+    [13x2 double]
+    [10x2 double]
+    [21x2 double]
+    [11x2 double]
+    [18x2 double]
+    [14x2 double]
+    [14x2 double]
+    [10x2 double]
+    [10x2 double]
+    [19x2 double]
+ </pre>
+
+ <p>Notice that, for example, the first track Y{1} has 13 observations, each being
+ two-dimensional (i.e., both a latitude and longitude observation). The first track
+ can be listed as follows.
+ <pre>
+ >> Y{1}
+ans =
+  -57.2177   51.2200
+  -55.5783   53.1028
+  -54.8666   55.2942
+  -55.0624   57.3329
+  -56.4487   58.9460
+  -57.2662   59.2198
+  -57.9229   59.5291
+  -57.8100   59.3403
+  -57.1867   59.6936
+  -57.5489   60.9830
+  -55.9977   61.8928
+  -62.3653   65.1744
+  -62.8327   67.4031
+ </pre>
+
+ <p> The first dimension here is longitude and the second is latitude, although this
+ ordering is insignificant. (Negative longitude numbers mean west of zero degrees and
+ positive latitude numbers mean north of zero degrees.) A plot of the first 10 cyclone
+ tracks on a map of the North Atlantic is given below. The small circles indicate 
+ the genesis point (the origin) for each cyclone track.</p>
+
+ <img src="imgs/mapoften.gif" border="1">
+
+ <p>For this data set there is no need for an X cell array since each cyclone track
+ was observed uniformly at 6-hour intervals from time zero (the instant at which it was
+ detected) to time <em>n<sub>i</sub></em> (the end of its lifetime). In the absence of
+ a provided X cell array, the toolbox simply
+ assumes that X{i} is equal to 0..(<em>n<sub>i</sub>&nbsp;-1</em>).
+
+
+
+
+
+
+ <H3 id="ModelOps">3. Setting the model options</H3>
+<p>Depending on the particular cluster model that is used (see 
+<a href="cluster_models.html">cluster models</a> for complete list), there are a number of 
+different model options. For example, knots are required for spline regression but
+not for polynomial regression. In any case, all options are set by using one large
+options structure. 
+
+<p class="important">You can retrieve the default options for any cluster model by
+calling the clustering function associated with that model and passing-in the single
+string argument of 'options'. For example, <tt>ops = lrm('options')</tt> will return the
+default options for linear/polynomial regression mixtures in <tt>ops</tt>.
+
+<p>Most cluster models only require the most common options. These are listed below.<p>
+
+ <table class="indent" cellspacing="0">
+   <tr><td>ops.method<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <td>: select clustering method; see <b>listmodels()</b> for all methods
+   <tr><td>ops.K<td>       <td>: number of clusters
+   <tr><td>ops.order<td>   <td>: order of regression; specify 1 for linear, 2 for quadratic, etc.
+   <tr><td>ops.zero<td>    <td>: select data normalization; see <b>trajs2seq()</b> for values
+ </table>
+
+<p>The help message at the beginning of each clustering function
+should list any other required options for that model. For example, ops.knots is
+required for <b>srm()</b>; however, even in this case it is possible to enable 
+automatic knot selection, and thus dispense with specifying ops.knots.
+
+<p>For our current demo using the cyclone track data, we set only the basic options
+as follows.
+<pre>
+ops = 
+    method: 'lrm'
+         K: 3
+     order: 2
+      zero: 'none'
+</pre>
+
+<p>We are going to use standard linear/polynomial regression mixtures as specified by
+'lrm', and we are seeking three groups in the data. We choose to use quadratic polynomial
+regression, and we do not want to perform any preprocessing or normalization of the data.
+
+
+
+
+
+
+ <H3 id="EMOps">4. Setting the EM options</H3>
+<p>Unlike the cluster model options, the EM options of this section are all truly
+optional. These options are more technical in nature and usually apply to all EM
+algorithms in general, regardless of the cluster model. Some of the more common
+options are listed below.<p>
+ 
+ <table class="indent" cellspacing="0">
+   <tr><td>ops.NumEMStarts<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <td>: number of random EM starts to perform
+   <tr><td>ops.IterLimit<td> <td>: maximum number of possible iterations to perform
+   <tr><td>ops.stopval<td>   <td>: value used in EM stopping criterion function (e.g., see <b>lrm()</b>)
+   <tr><td>ops.ShowGraphics<td> <td>: {0,1} enable iterative graphics output during EM
+ </table>
+
+<p>For our current demo, we only set the number of random EM starts.
+<pre>
+>> ops.NumEMStarts = 5;
+</pre>
+
+
+
+
+
+ <H3 id="Cluster">5. Performing the clustering</H3>
+<p>The clustering is carried out by calling <b>curve_clust()</b> and passing-in the 
+curve data and the options structure.
+<pre>
+>> model = curve_clust(Y,ops);
+</pre>
+
+<p>When the clustering is finished, a learned model structure is returned.
+The format of this structure is detailed extensively in the 
+<a href="model_structure.html">model structure</a> section of the documentation.
+For the sake of completeness, we list this structure here.
+<pre>
+>> model
+model = 
+                 K: 3
+             order: 2
+           Options: [1x1 struct]
+              zero: 'none'
+            method: 'lrm'
+               Pik: [296x3 double]
+             Alpha: [3x1 double]
+                Mu: [3x3x2 double]
+             Sigma: [2x2x3 double]
+             scale: 5.3632e-004
+             Lhood: [1x30 double]
+                 C: [296x1 double]
+         NumPoints: 8674
+        TrainLhood: -3.0850e+004
+    TrainLhood_ppt: -3.5565
+      NumIndParams: 26
+             state: [35x1 double]
+            nstate: [2x1 double]
+</pre>
+
+<p>Of the five random EM starts, the one with maximum likelihood is always returned.
+This maximal run consisted of 30 iterations as can be seen by the size of <tt>model.Lhood</tt>,
+which gives the log-likelihood achieved at each iteration of EM. The final log-likelihood
+value is -3.0850e+004 (as given by <tt>model.TrainLhood</tt>) and the final per-point
+log-likelihood value is -3.5565 as shown by <tt>model.TrainLhood_ppt</tt>.
+
+<p>The regression coefficients are stored in <tt>model.Mu</tt>. For example, 
+<tt>model.Mu(:,1,1)</tt> holds the longitudinal coefficients for cluster one, 
+while <tt>model.Mu(:,2,1)</tt> holds them for cluster two. Finishing up, we note
+that the actual clustering is given by reading the labels stored in <tt>model.C</tt>.
+For example, the labels for the first ten tracks are as shown below.
+<pre>
+>> model.C(1:10)
+ans =
+     2
+     1
+     1
+     1
+     3
+     1
+     1
+     1
+     1
+     2
+</pre>
+
+<p>You can visualize the results of the clustering by calling <b>showmodel()</b>.
+<pre>
+>> showmodel(model,Y);
+</pre>
+<img src="imgs/results_dims.gif" border="1">
+
+<p>The left plot shows the longitude vs. time profiles for all of the tracks, 
+and the right plot shows the latitude vs. time profiles. The learned cluster groups
+are color-coded, and the mean curves for each group are bolded. 
+There are many options that can be used to change the type of plot produced with
+<b>showmodel()</b>. The function is set up like a large script with all of the
+options laid out and explained, line-by-line. The user is encouraged to actively
+edit and re-edit this function/script to produce the desired plots.
+
+<p>Since this data is inherently geographic, it can be effective to view the
+clustering on top of the map from whence the data originated.
+This type of plot can be produced with the 
+<a href="http://www.ics.uci.edu/~sgaffney/cyctrack">Cyclone Tracking Toolbox</a>.</p>
+
+<img src="imgs/results_map.gif" border="1">
+
+<p>Notice that the clusters appear to be heavily influenced by initial cyclone track
+position (or genesis position). This can be seen as a benefit or a nuisance. One
+can remove this dependence by using advanced options. This will be briefly discussed
+in the next section.
+
+
+
+<h3>Some advanced topics</h3>
+<p>In the previous exercise, we used standard polynomial regression mixtures to
+perform the clustering. We might like to try other methods that allow for continuous
+alignment in time, such as <b>lrm_b()</b> (see <a href="cluster_models.html">cluster 
+models</a> for a complete list of models). This will allow for two cyclone tracks
+that are similar but translated in time to be simultaneously aligned and 
+clustered. This clustering method can be tried by simply changing the value of ops.method
+as follows.
+<pre>
+>> ops.method = 'lrm_b';
+</pre>
+
+<p>That's it. Now you can just run <b>curve_clust()</b> directly as before.
+
+<p>Suppose we now would like to remove initial starting position as a possible source 
+of variation. We can easily do this by changing the value of ops.zero.
+One setting for this option is the string 'zero'. This will take each cyclone track
+and subtract the first lat-lon position from each of the measurements for that cyclone.
+This will force all cyclones to begin at the relative position of (0,0), and hence
+remove initial starting position as a possible source of variation.
+<pre>
+>> ops.zero = 'zero'
+ops = 
+         method: 'lrm'
+              K: 3
+          order: 2
+           zero: 'zero'
+    NumEMStarts: 5
+</pre>
+
+<p>Now we simply run the clustering and plot the results again.
+<pre>
+>> model_zero = curve_clust(Y,ops);
+>> showmodel(model_zero,Y);
+</pre></p>
+
+<p><img src="imgs/results_zero_dims.gif" border="1">
+
+<p><img src="imgs/results_zero_map.gif" border="1">
+
+<p>Now we have clearly removed initial starting position as a source of variation.
+The clustering is more concentrated on cyclone track shape as a result. This can
+better be seen in the following three cluster plots.
+
+<p><img src="imgs/results_zero_map1.gif" border="1"><br>
+<img src="imgs/results_zero_map2.gif" border="1"><br>
+<img src="imgs/results_zero_map3.gif" border="1"></p>
+
+<p>This concludes the tutorial. More information can be found on the main
+<a href="./">documentation</a> page.
+
+<h3></h3>
+<div align=center>
+<a href="#top">Top</a> |
+<a href="http://www.ics.uci.edu/~sgaffney/software/CCT">CCToolbox</a> |
+<a href="../#Down">Download</a> |
+<a href="./">Documentation</a> |
+<a href="http://www.ics.uci.edu/~sgaffney#contact">Contact</a>
+</div>
+
+
+
+
+</body>
+
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,85 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 03:57:31 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueY	<HTML><HEAD>
+<TITLE>
+</TITLE>
+</HEAD><BODY>
+<span style="color:#000000; font:16px Arial, Helvetica, sans-serif;">
+
+<H2>How to use Binary (not Text) I/O on the PC</H2>
+
+You do not want the operating system to "help" you by automatically
+converting end-of-line indicators into "standard" end-of-line indicators.
+End-of-line indicators vary by platform.
+
+<TABLE align=center border=1 cellspacing=0>
+<TR><TH>Platform</TH>
+    <TH colspan=4>End-of-line indicator</TH>
+<TR><TH>&nbsp;  </TH>
+    <TH>Description</TH>
+    <TH>ASCII</TH>
+    <TH>char  </TH>
+    <TH>decimal</TH>
+<TR><TD>Unix</TD>
+    <TD>linefeed (newline) character</TD>
+    <TD>LF</TD>
+    <TD>\n</TD>
+    <TD>10</TD>
+<TR><TD>Macintosh</TD>
+    <TD>carriage return character</TD>
+    <TD>CR </TD>
+    <TD>\r</TD>
+    <TD>13</TD>
+<TR><TD>Windows</TD>
+    <TD>two character sequence</TD>
+    <TD>CR LF</TD>
+    <TD>\r\n</TD>
+    <TD>10,13</TD>
+</TABLE>
+
+When in text mode on Windows, if the operating system detects what would
+be a normal end-of-line indicator from a different system (say, Linux),
+it will convert that indicator into the two-character CR LF sequence.
+Unfortunately, when dealing with binary files, this can result in an
+extra byte being inserted (during input or output) which could cause
+chaos.  Accordingly, unless you are dealing with files for which you do
+not care if the end-of-line indicators are silently modified, you will
+want to do I/O in binary mode.
+<P>
+This is certainly true when the input is coming from a file.
+However, if input is coming from stdin
+and if stdin is coming from the console keyboard
+then it should not be opened in binary mode,
+because that has the side effect of switching stdin into raw mode
+in which all characters are read one by one with no echo,
+and Ctrl-C and Ctrl-Z are disabled so you cannot signal EOF.
+<P>
+An implementation using old C code is shown below.
+
+<PRE>
+    FILE *fp;
+    char *filename;
+
+    if (filename == "") {
+        fp = stdin;
+#ifdef _WIN32
+#ifndef O_BINARY
+#define O_BINARY 0
+#endif
+	if (isatty( fileno(stdin) ) == 0)
+		setmode(fileno(stdin), O_BINARY);
+#endif
+    }
+    else
+        fp = fopen( filename, "rb");
+    if (fp == NULL) {
+        fprintf(stderr,"Cannot open file %s\n", filename);
+        return(0);
+    }
+</PRE>
+
+<P>
+</span>
+<HR>
+
+Last modified: May 22, 2014
+</BODY>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

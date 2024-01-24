@@ -1,0 +1,335 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:14:14 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYyø
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Statlog (Vehicle Silhouettes) Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Statlog (Vehicle Silhouettes) Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/statlog/vehicle/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/statlog/vehicle/vehicle.doc"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: 3D objects within a 2D image by application of an ensemble of shape feature extractors to the 2D silhouettes of the objects.</p>
+     </td>
+     <td><img
+src="../assets/MLimages/Large149.jpg"
+hspace=20 vspace=10  /> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">946</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Integer</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">18</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">100814</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">SOURCE:<br><br>	Drs.Pete Mowforth and Barry Shepherd<br>	Turing Institute<br>	George House<br>	36 North Hanover St.<br>	Glasgow<br>	G1 2AD<br><br>CONTACT:<br><br>	Alistair Sutherland<br>	Statistics Dept.<br>	Strathclyde University<br>	Livingstone Tower<br>	26 Richmond St.<br>	GLASGOW G1 1XH<br>	Great Britain<br>	<br>	Tel: 041 552 4400 x3033<br>	<br>	Fax: 041 552 4711 <br>	<br>	e-mail: <u>alistair <b>'@'</b> uk.ac.strathclyde.stams</u><br></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">The purpose is to classify a given silhouette as one of four types of vehicle, using  a set of features extracted from the silhouette. The vehicle may be viewed from one of many different angles.  <br><br>HISTORY:<br><br>This data was originally gathered at the TI in 1986-87 by JP Siebert. It was partially financed by Barr and Stroud Ltd. The original purpose was to find a method of distinguishing 3D objects within a 2D image by application of an ensemble of shape feature extractors to the 2D silhouettes of the objects. Measures of shape features extracted from example silhouettes of objects to be discriminated were used to generate a classification rule tree by means of computer induction.<br><br>This object recognition strategy was successfully used to discriminate between silhouettes of model cars, vans and buses viewed from constrained elevation but all angles of rotation.<br><br>The rule tree classification performance compared favourably to MDC (Minimum Distance Classifier) and k-NN (k-Nearest Neighbour) statistical classifiers in terms of both error rate and computational efficiency. An investigation of these rule trees generated by example indicated that the tree structure was heavily influenced by the orientation of the objects, and grouped similar object views into single decisions.<br><br><br>DESCRIPTION:<br><br>The features were extracted from the silhouettes by the HIPS (Hierarchical Image Processing System) extension BINATTS, which extracts a combination of scale independent features utilising both classical moments based measures such as scaled variance, skewness and kurtosis about the major/minor axes and heuristic measures such as hollows, circularity, rectangularity and compactness.<br><br>Four "Corgie" model vehicles were used for the experiment: a double decker bus, Cheverolet van, Saab 9000 and an Opel Manta 400. This particular combination of vehicles was chosen with the expectation that the bus, van and either one of the cars would be readily distinguishable, but it would be more difficult to distinguish between the cars.<br><br>The images were acquired by a camera looking downwards at the model vehicle from a fixed angle of elevation (34.2 degrees to the horizontal). The vehicles were placed on a diffuse backlit surface (lightbox). The vehicles were painted matte black to minimise highlights. The images were captured using a CRS4000 framestore connected to a vax 750. All images were captured with a spatial resolution of 128x128 pixels quantised to 64 greylevels. These images were thresholded to produce binary vehicle silhouettes, negated (to comply with the processing requirements of BINATTS) and thereafter subjected to shrink-expand-expand-shrink HIPS modules to remove "salt and pepper" image noise.<br><br>The vehicles were rotated and their angle of orientation was measured using a radial graticule beneath the vehicle. 0 and 180 degrees corresponded to "head on" and "rear" views respectively while 90 and 270 corresponded to profiles in opposite directions. Two sets of 60 images, each set covering a full 360 degree rotation, were captured for each vehicle. The vehicle was rotated by a fixed angle between images. These datasets are known as e2 and e3 respectively.<br><br> A further two sets of images, e4 and e5, were captured with the camera at elevations of 37.5 degs and 30.8 degs respectively. These sets also contain 60 images per vehicle apart from e4.van which contains only 46 owing to the difficulty of containing the van in the image at some orientations.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">ATTRIBUTES<br>	<br>	COMPACTNESS	(average perim)**2/area<br>	<br>	CIRCULARITY	(average radius)**2/area<br>	<br>	DISTANCE CIRCULARITY	area/(av.distance from border)**2<br>	<br>	RADIUS RATIO	(max.rad-min.rad)/av.radius<br>	<br>	PR.AXIS ASPECT RATIO	(minor axis)/(major axis)<br>	<br>	MAX.LENGTH ASPECT RATIO	(length perp. max length)/(max length)<br>	<br>	SCATTER RATIO	(inertia about minor axis)/(inertia about major axis)<br>	<br>	ELONGATEDNESS		area/(shrink width)**2<br>	<br>	PR.AXIS RECTANGULARITY	area/(pr.axis length*pr.axis width)<br>	<br>	MAX.LENGTH RECTANGULARITY area/(max.length*length perp. to this)<br>	<br>	SCALED VARIANCE 	(2nd order moment about minor axis)/area<br>	ALONG MAJOR AXIS<br>	<br>	SCALED VARIANCE 	(2nd order moment about major axis)/area<br>	ALONG MINOR AXIS <br>	<br>	SCALED RADIUS OF GYRATION	(mavar+mivar)/area<br>	<br>	SKEWNESS ABOUT 	(3rd order moment about major axis)/sigma_min**3<br>	MAJOR AXIS<br>	<br>	SKEWNESS ABOUT 	(3rd order moment about minor axis)/sigma_maj**3<br>	MINOR AXIS<br>	  	<br>	KURTOSIS ABOUT 	(4th order moment about major axis)/sigma_min**4<br>	MINOR AXIS  <br>	  	<br>	KURTOSIS ABOUT 	(4th order moment about minor axis)/sigma_maj**4<br>	MAJOR AXIS<br>	<br>	HOLLOWS RATIO	(area of hollows)/(area of bounding polygon)<br>	<br>	 Where sigma_maj**2 is the variance along the major axis and sigma_min**2 is the variance along the minor axis, and<br>	<br>	area of hollows= area of bounding poly-area of object <br>	<br>	 The area of the bounding polygon is found as a side result of the computation to find the maximum length. Each individual length computation yields a pair of calipers to the object orientated at every 5 degrees. The object is propagated into an image containing the union of these calipers to obtain an image of the bounding polygon. <br>	<br>NUMBER OF CLASSES<br><br>	4	OPEL, SAAB, BUS, VAN<br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Turing Institute Research Memorandum TIRM-87-018 "Vehicle Recognition Using Rule Based Methods" by Siebert,JP (March 1987)<br><a href="http://rexa.info/paper/d715d3d76ec59bce66b10e627c2c1aad859f15a7">[Web Link]</a></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Ken Tang and Ponnuthurai N. Suganthan and Xi Yao and A. Kai Qin. <a
+href="http://rexa.info/paper/dedfa4527706631a09382e23555649c7b3e37ebd">Linear dimensionalityreduction using relevance weighted LDA</a>. School of Electrical and Electronic Engineering Nanyang Technological University. 2005.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#dedfa4527706631a09382e23555649c7b3e37ebd">View Context</a>].<br><br>Ping Zhong and Masao Fukushima. <a
+href="http://rexa.info/paper/81ad8e5b8306aee758f09fd5c1caa8a23c63c2d6">A Regularized Nonsmooth Newton Method for Multi-class Support Vector Machines</a>. 2005.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#81ad8e5b8306aee758f09fd5c1caa8a23c63c2d6">View Context</a>].<br><br>Remco R. Bouckaert and Eibe Frank. <a
+href="http://rexa.info/paper/56eb4e64499baa9ef620d2aeb5383e1739a2e6e3">Evaluating the Replicability of Significance Tests for Comparing Learning Algorithms</a>. PAKDD. 2004.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#56eb4e64499baa9ef620d2aeb5383e1739a2e6e3">View Context</a>].<br><br>Dmitry Pavlov and Alexandrin Popescul and David M. Pennock and Lyle H. Ungar. <a
+href="http://rexa.info/paper/cf50848a3edbd7599d1ff18d941d332e1fe6a673">Mixtures of Conditional Maximum Entropy Models</a>. ICML. 2003.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#cf50848a3edbd7599d1ff18d941d332e1fe6a673">View Context</a>].<br><br>Gisele L. Pappa and Alex Alves Freitas and Celso A A Kaestner. <a
+href="http://rexa.info/paper/30b640cb0a4ba73302609a2f1ec74291c70efd85">Attribute Selection with a Multi-objective Genetic Algorithm</a>. SBIA. 2002.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#30b640cb0a4ba73302609a2f1ec74291c70efd85">View Context</a>].<br><br>James Bailey and Thomas Manoukian and Kotagiri Ramamohanarao. <a
+href="http://rexa.info/paper/7bea464dce753e6523458d22de98a96004c1aac8">Fast Algorithms for Mining Emerging Patterns</a>. PKDD. 2002.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#7bea464dce753e6523458d22de98a96004c1aac8">View Context</a>].<br><br>Robi Polikar and L. Upda and S. S. Upda and Vasant Honavar. <a
+href="http://rexa.info/paper/66119cd7be7811baab2a4b05715b5eb2f5c358b1">Learn++: an incremental learning algorithm for supervised neural networks</a>. IEEE Transactions on Systems, Man, and Cybernetics, Part C, 31. 2001.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#66119cd7be7811baab2a4b05715b5eb2f5c358b1">View Context</a>].<br><br>Thomas G. Dietterich. <a
+href="http://rexa.info/paper/4eff6dda32898a8bdc8268d2a790a96b93f2e262">An Experimental Comparison of Three Methods for Constructing Ensembles of Decision Trees: Bagging, Boosting, and Randomization</a>. Machine Learning, 40. 2000.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#4eff6dda32898a8bdc8268d2a790a96b93f2e262">View Context</a>].<br><br>Thierry Denoeux. <a
+href="http://rexa.info/paper/f51be2f205fbe38436ed150a6627139668eb002a">A neural network classifier based on Dempster-Shafer theory</a>. IEEE Transactions on Systems, Man, and Cybernetics, Part A, 30. 2000.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#f51be2f205fbe38436ed150a6627139668eb002a">View Context</a>].<br><br>Robert E. Schapire and Yoav Freund and Peter Bartlett and Wee Sun Lee. <a
+href="http://rexa.info/paper/ca1479cb43feeda16386d2e50460bd2c1230bc8b">The Annals of Statistics, to appear. Boosting the Margin: A New Explanation for the Effectiveness of Voting Methods</a>. AT&T Labs. 1998.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#ca1479cb43feeda16386d2e50460bd2c1230bc8b">View Context</a>].<br><br>Richard Maclin. <a
+href="http://rexa.info/paper/93fcd9513832c5bf30d24120ab3bba1f9ec422b2">Boosting Classifiers Regionally</a>. AAAI/IAAI. 1998.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#93fcd9513832c5bf30d24120ab3bba1f9ec422b2">View Context</a>].<br><br>Ron Kohavi and Mehran Sahami. <a
+href="http://rexa.info/paper/b9cc48070522b3c3f7b5d7bc3b49a06213978f8e">Error-Based and Entropy-Based Discretization of Continuous Features</a>. KDD. 1996.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#b9cc48070522b3c3f7b5d7bc3b49a06213978f8e">View Context</a>].<br><br>Ron Kohavi. <a
+href="http://rexa.info/paper/b90249d5778eb237815fe93968e894cb5adb7f8a">A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection</a>. IJCAI. 1995.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#b90249d5778eb237815fe93968e894cb5adb7f8a">View Context</a>].<br><br>Chih-Wei Hsu and Cheng-Ru Lin. <a
+href="http://rexa.info/paper/f624e93bd6b670bc3dc31925c1c885b538131534">A Comparison of Methods for Multi-class Support Vector Machines</a>. Department of Computer Science and Information Engineering National Taiwan University.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#f624e93bd6b670bc3dc31925c1c885b538131534">View Context</a>].<br><br>Yin Zhang and W. Nick Street. <a
+href="http://rexa.info/paper/8432b52f06e00a68cb8a7a49e3938190338231de">Bagging with Adaptive Costs</a>. Management Sciences Department University of Iowa Iowa City.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#8432b52f06e00a68cb8a7a49e3938190338231de">View Context</a>].<br><br>H. Altay Guvenir. <a
+href="http://rexa.info/paper/8eb7bb53b63501db4eb1c49eab30d76f7febba8d">A Classification Learning Algorithm Robust to Irrelevant Features</a>. Bilkent University, Department of Computer Engineering and Information Science.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#8eb7bb53b63501db4eb1c49eab30d76f7febba8d">View Context</a>].<br><br>Alexander K. Seewald. <a
+href="http://rexa.info/paper/e2b2b723df700c90e69a31a4403b740c2d2a7b2f">Dissertation Towards Understanding Stacking Studies of a General Ensemble Learning Scheme ausgefuhrt zum Zwecke der Erlangung des akademischen Grades eines Doktors der technischen Naturwissenschaften</a>.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#e2b2b723df700c90e69a31a4403b740c2d2a7b2f">View Context</a>].<br><br>Adil M. Bagirov and Alex Rubinov and A. N. Soukhojak and John Yearwood. <a
+href="http://rexa.info/paper/50b9babac023b426f1531a4265076bea534d121e">Unsupervised and supervised data classification via nonsmooth and global optimization</a>. School of Information Technology and Mathematical Sciences, The University of Ballarat.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#50b9babac023b426f1531a4265076bea534d121e">View Context</a>].<br><br>Ron Kohavi and George H. John. <a
+href="http://rexa.info/paper/c15fec7384ce8461549ba1fc09fb2d87024cf037">Automatic Parameter Selection by Minimizing Estimated Error</a>. Computer Science Dept. Stanford University.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#c15fec7384ce8461549ba1fc09fb2d87024cf037">View Context</a>].<br><br>Rajesh Parekh and Jihoon Yang and Vasant Honavar. <a
+href="http://rexa.info/paper/1570e3547e5d0131eee5b25f40359409b8d8c396">Constructive Neural-Network Learning Algorithms for Pattern Classification</a>.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#1570e3547e5d0131eee5b25f40359409b8d8c396">View Context</a>].<br><br>Vikas Sindhwani and P. Bhattacharya and Subrata Rakshit. <a
+href="http://rexa.info/paper/7286601416a1cec780621a415323a2bc6c958e11">Information Theoretic Feature Crediting in Multiclass Support Vector Machines</a>.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#7286601416a1cec780621a415323a2bc6c958e11">View Context</a>].<br><br>Maria Salamo and Elisabet Golobardes. <a
+href="http://rexa.info/paper/22dbe26a460522ada68b637b8a3483c717b671fa">Analysing Rough Sets weighting methods for Case-Based Reasoning Systems</a>. Enginyeria i Arquitectura La Salle.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#22dbe26a460522ada68b637b8a3483c717b671fa">View Context</a>].<br><br>Ronaldo C. Prati and Peter A. Flach. <a
+href="http://rexa.info/paper/a5de010b13b49c05ccdf94f823248eba956d8d6b">ROCCER: an Algorithm for Rule Learning Based on ROC Analysis</a>. Institute of Mathematics and Computer Science University of S~ ao Paulo.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#a5de010b13b49c05ccdf94f823248eba956d8d6b">View Context</a>].<br><br>Jeffrey P. Bradford and Clayton Kunz and Ron Kohavi and Clifford Brunk and Carla Brodley. <a
+href="http://rexa.info/paper/af8d7cc40c6d9dd6d1b261e68d612c371055b313">Appears in ECML-98 as a research note Pruning Decision Trees with Misclassification Costs</a>. School of Electrical Engineering.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#af8d7cc40c6d9dd6d1b261e68d612c371055b313">View Context</a>].<br><br>Gisele L. Pappa and Alex Alves Freitas and Celso A A Kaestner. <a
+href="http://rexa.info/paper/1a387e912f3bd68e66957cdfdebbb068ffc2149a">AMultiobjective Genetic Algorithm for Attribute Selection</a>. Computing Laboratory Pontificia Universidade Catolica do Parana University of Kent at Canterbury.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#1a387e912f3bd68e66957cdfdebbb068ffc2149a">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Ken Tang and Ponnuthurai N. Suganthan and Xi Yao and A. Kai Qin. <a
+href="http://rexa.info/paper/dedfa4527706631a09382e23555649c7b3e37ebd">Linear dimensionalityreduction using relevance weighted LDA</a>. School of Electrical and Electronic Engineering Nanyang Technological University. 2005.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#dedfa4527706631a09382e23555649c7b3e37ebd">View Context</a>].<br><br>Ping Zhong and Masao Fukushima. <a
+href="http://rexa.info/paper/81ad8e5b8306aee758f09fd5c1caa8a23c63c2d6">A Regularized Nonsmooth Newton Method for Multi-class Support Vector Machines</a>. 2005.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#81ad8e5b8306aee758f09fd5c1caa8a23c63c2d6">View Context</a>].<br><br>Remco R. Bouckaert and Eibe Frank. <a
+href="http://rexa.info/paper/56eb4e64499baa9ef620d2aeb5383e1739a2e6e3">Evaluating the Replicability of Significance Tests for Comparing Learning Algorithms</a>. PAKDD. 2004.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#56eb4e64499baa9ef620d2aeb5383e1739a2e6e3">View Context</a>].<br><br>Dmitry Pavlov and Alexandrin Popescul and David M. Pennock and Lyle H. Ungar. <a
+href="http://rexa.info/paper/cf50848a3edbd7599d1ff18d941d332e1fe6a673">Mixtures of Conditional Maximum Entropy Models</a>. ICML. 2003.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#cf50848a3edbd7599d1ff18d941d332e1fe6a673">View Context</a>].<br><br>Gisele L. Pappa and Alex Alves Freitas and Celso A A Kaestner. <a
+href="http://rexa.info/paper/30b640cb0a4ba73302609a2f1ec74291c70efd85">Attribute Selection with a Multi-objective Genetic Algorithm</a>. SBIA. 2002.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#30b640cb0a4ba73302609a2f1ec74291c70efd85">View Context</a>].<br><br>James Bailey and Thomas Manoukian and Kotagiri Ramamohanarao. <a
+href="http://rexa.info/paper/7bea464dce753e6523458d22de98a96004c1aac8">Fast Algorithms for Mining Emerging Patterns</a>. PKDD. 2002.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#7bea464dce753e6523458d22de98a96004c1aac8">View Context</a>].<br><br>Robi Polikar and L. Upda and S. S. Upda and Vasant Honavar. <a
+href="http://rexa.info/paper/66119cd7be7811baab2a4b05715b5eb2f5c358b1">Learn++: an incremental learning algorithm for supervised neural networks</a>. IEEE Transactions on Systems, Man, and Cybernetics, Part C, 31. 2001.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#66119cd7be7811baab2a4b05715b5eb2f5c358b1">View Context</a>].<br><br>Thomas G. Dietterich. <a
+href="http://rexa.info/paper/4eff6dda32898a8bdc8268d2a790a96b93f2e262">An Experimental Comparison of Three Methods for Constructing Ensembles of Decision Trees: Bagging, Boosting, and Randomization</a>. Machine Learning, 40. 2000.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#4eff6dda32898a8bdc8268d2a790a96b93f2e262">View Context</a>].<br><br>Thierry Denoeux. <a
+href="http://rexa.info/paper/f51be2f205fbe38436ed150a6627139668eb002a">A neural network classifier based on Dempster-Shafer theory</a>. IEEE Transactions on Systems, Man, and Cybernetics, Part A, 30. 2000.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#f51be2f205fbe38436ed150a6627139668eb002a">View Context</a>].<br><br>Robert E. Schapire and Yoav Freund and Peter Bartlett and Wee Sun Lee. <a
+href="http://rexa.info/paper/ca1479cb43feeda16386d2e50460bd2c1230bc8b">The Annals of Statistics, to appear. Boosting the Margin: A New Explanation for the Effectiveness of Voting Methods</a>. AT&T Labs. 1998.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#ca1479cb43feeda16386d2e50460bd2c1230bc8b">View Context</a>].<br><br>Richard Maclin. <a
+href="http://rexa.info/paper/93fcd9513832c5bf30d24120ab3bba1f9ec422b2">Boosting Classifiers Regionally</a>. AAAI/IAAI. 1998.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#93fcd9513832c5bf30d24120ab3bba1f9ec422b2">View Context</a>].<br><br>Ron Kohavi and Mehran Sahami. <a
+href="http://rexa.info/paper/b9cc48070522b3c3f7b5d7bc3b49a06213978f8e">Error-Based and Entropy-Based Discretization of Continuous Features</a>. KDD. 1996.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#b9cc48070522b3c3f7b5d7bc3b49a06213978f8e">View Context</a>].<br><br>Ron Kohavi. <a
+href="http://rexa.info/paper/b90249d5778eb237815fe93968e894cb5adb7f8a">A Study of Cross-Validation and Bootstrap for Accuracy Estimation and Model Selection</a>. IJCAI. 1995.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#b90249d5778eb237815fe93968e894cb5adb7f8a">View Context</a>].<br><br>Chih-Wei Hsu and Cheng-Ru Lin. <a
+href="http://rexa.info/paper/f624e93bd6b670bc3dc31925c1c885b538131534">A Comparison of Methods for Multi-class Support Vector Machines</a>. Department of Computer Science and Information Engineering National Taiwan University.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#f624e93bd6b670bc3dc31925c1c885b538131534">View Context</a>].<br><br>Yin Zhang and W. Nick Street. <a
+href="http://rexa.info/paper/8432b52f06e00a68cb8a7a49e3938190338231de">Bagging with Adaptive Costs</a>. Management Sciences Department University of Iowa Iowa City.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#8432b52f06e00a68cb8a7a49e3938190338231de">View Context</a>].<br><br>H. Altay Guvenir. <a
+href="http://rexa.info/paper/8eb7bb53b63501db4eb1c49eab30d76f7febba8d">A Classification Learning Algorithm Robust to Irrelevant Features</a>. Bilkent University, Department of Computer Engineering and Information Science.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#8eb7bb53b63501db4eb1c49eab30d76f7febba8d">View Context</a>].<br><br>Alexander K. Seewald. <a
+href="http://rexa.info/paper/e2b2b723df700c90e69a31a4403b740c2d2a7b2f">Dissertation Towards Understanding Stacking Studies of a General Ensemble Learning Scheme ausgefuhrt zum Zwecke der Erlangung des akademischen Grades eines Doktors der technischen Naturwissenschaften</a>.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#e2b2b723df700c90e69a31a4403b740c2d2a7b2f">View Context</a>].<br><br>Adil M. Bagirov and Alex Rubinov and A. N. Soukhojak and John Yearwood. <a
+href="http://rexa.info/paper/50b9babac023b426f1531a4265076bea534d121e">Unsupervised and supervised data classification via nonsmooth and global optimization</a>. School of Information Technology and Mathematical Sciences, The University of Ballarat.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#50b9babac023b426f1531a4265076bea534d121e">View Context</a>].<br><br>Ron Kohavi and George H. John. <a
+href="http://rexa.info/paper/c15fec7384ce8461549ba1fc09fb2d87024cf037">Automatic Parameter Selection by Minimizing Estimated Error</a>. Computer Science Dept. Stanford University.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#c15fec7384ce8461549ba1fc09fb2d87024cf037">View Context</a>].<br><br>Rajesh Parekh and Jihoon Yang and Vasant Honavar. <a
+href="http://rexa.info/paper/1570e3547e5d0131eee5b25f40359409b8d8c396">Constructive Neural-Network Learning Algorithms for Pattern Classification</a>.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#1570e3547e5d0131eee5b25f40359409b8d8c396">View Context</a>].<br><br>Vikas Sindhwani and P. Bhattacharya and Subrata Rakshit. <a
+href="http://rexa.info/paper/7286601416a1cec780621a415323a2bc6c958e11">Information Theoretic Feature Crediting in Multiclass Support Vector Machines</a>.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#7286601416a1cec780621a415323a2bc6c958e11">View Context</a>].<br><br>Maria Salamo and Elisabet Golobardes. <a
+href="http://rexa.info/paper/22dbe26a460522ada68b637b8a3483c717b671fa">Analysing Rough Sets weighting methods for Case-Based Reasoning Systems</a>. Enginyeria i Arquitectura La Salle.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#22dbe26a460522ada68b637b8a3483c717b671fa">View Context</a>].<br><br>Ronaldo C. Prati and Peter A. Flach. <a
+href="http://rexa.info/paper/a5de010b13b49c05ccdf94f823248eba956d8d6b">ROCCER: an Algorithm for Rule Learning Based on ROC Analysis</a>. Institute of Mathematics and Computer Science University of S~ ao Paulo.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#a5de010b13b49c05ccdf94f823248eba956d8d6b">View Context</a>].<br><br>Jeffrey P. Bradford and Clayton Kunz and Ron Kohavi and Clifford Brunk and Carla Brodley. <a
+href="http://rexa.info/paper/af8d7cc40c6d9dd6d1b261e68d612c371055b313">Appears in ECML-98 as a research note Pruning Decision Trees with Misclassification Costs</a>. School of Electrical Engineering.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#af8d7cc40c6d9dd6d1b261e68d612c371055b313">View Context</a>].<br><br>Gisele L. Pappa and Alex Alves Freitas and Celso A A Kaestner. <a
+href="http://rexa.info/paper/1a387e912f3bd68e66957cdfdebbb068ffc2149a">AMultiobjective Genetic Algorithm for Attribute Selection</a>. Computing Laboratory Pontificia Universidade Catolica do Parana University of Kent at Canterbury.  [<a
+href="../support/Statlog+(Vehicle+Silhouettes)#1a387e912f3bd68e66957cdfdebbb068ffc2149a">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">This dataset comes from the Turing Institute, Glasgow, Scotland. If you use this dataset in any publication you must acknowledge this source.<br></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

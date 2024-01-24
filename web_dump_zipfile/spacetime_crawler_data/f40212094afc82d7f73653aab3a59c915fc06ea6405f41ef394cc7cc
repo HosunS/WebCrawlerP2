@@ -1,0 +1,238 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueŒ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2799¢Ak¢DtypeEvaluePContent-LocationAv¢DtypeEvalueQP3Pv1-errata.html¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 10 Feb 2019 02:44:42 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX3negotiate,Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueCTCNAv¢DtypeEvalueFchoice¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 30 Jul 2010 10:53:20 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX'"2075-48c98a8b20800;5288c149e3b80-gzip"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueMmax-age=21600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:44:42 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=iso-8859-1Kraw_content¢DtypeEvaluey w<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>Errata of the P3P1.0 Specification</title>
+  <link href="http://www.w3.org/StyleSheets/TR/base" type="text/css"
+  rel="stylesheet">
+</head>
+
+<body lang="en">
+<p></p>
+
+<div class="head">
+<a href="http://www.w3.org/"><img height="48" alt="W3C"
+src="http://www.w3.org/Icons/w3c_home" width="72"></a>
+
+<h1 id="title">Errata of the P3P1.0 Specification</h1>
+<dl>
+  <dt>This version:</dt>
+    <dd><a
+      href="http://www.w3.org/2002/04/P3Pv1-errata">http://www.w3.org/2002/04/P3Pv1-errata</a></dd>
+    <dd>$Revision: 1.4 $ on $Date: 2010/07/30 10:53:20 $ GMT by $Author:
+      massimo $</dd>
+</dl>
+
+<p class="copyright">Copyright Â© 2002 <a href="http://www.w3.org/"
+shape="rect"><abbr
+title="World Wide Web Consortium">W3C</abbr></a><sup>Â®</sup> (<a
+href="http://www.lcs.mit.edu/" shape="rect"><abbr
+title="Massachusetts   Institute of Technology">MIT</abbr></a>, <a
+href="http://www.inria.fr/" shape="rect"><abbr lang="fr"
+title="Institut   National   de Recherche en Informatique et Automatique">INRIA</abbr></a>,
+<a href="http://www.keio.ac.jp/" shape="rect">Keio</a>), All Rights Reserved.
+W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer"
+shape="rect">liability</a>, <a
+href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks"
+shape="rect">trademark</a>, <a
+href="http://www.w3.org/Consortium/Legal/copyright-documents-19990405"
+shape="rect">document use</a> and <a
+href="http://www.w3.org/Consortium/Legal/copyright-software-19980720"
+shape="rect">software licensing</a> rules apply.</p>
+</div>
+
+<p></p>
+<hr title="separator from header">
+
+<h2 id="about">About this document</h2>
+
+<p>This document lists the known errata to the <a
+href="http://www.w3.org/TR/P3P">Platform for Privacy Preferences 1.0 (P3P1.0)
+Specification</a>.</p>
+
+<p>Each reported entry has the following information:</p>
+<ul>
+  <li><em>Identifier</em>: A unique entry number.</li>
+  <li><em>Date</em>: The date it was added to the errata page.</li>
+  <li><em>Category</em>: Whether the entry is considered:
+    <ul>
+      <li>an <strong>Editorial</strong> error, such as a typographical
+        mistake,</li>
+      <li>a <strong>Clarification</strong> with respect to a misstatement or
+        misinterpration of the specification,</li>
+      <li>a structural defect in the <strong>Document</strong>, such as an
+        incorrect fragment identifier,</li>
+      <li>an <strong>Error</strong> that has a substantive affect on the
+        conformance of syntax and processing,</li>
+      <li>a <strong>Caveat</strong> where subsequent experience has shown
+        that a recommendation of the specification was incorrect or needs
+        further qualification.</li>
+    </ul>
+  </li>
+  <li><em>Description</em>: A description of the issue.</li>
+  <li><em>Resolution</em>: The normative resolution of the issue.</li>
+</ul>
+
+<p>Please report errors in this document to <a
+href="mailto:public-p3p-spec@w3.org">public-p3p-spec@w3.org</a> (<a
+href="http://lists.w3.org/Archives/Public/public-p3p-spec/">publicly
+archived</a>).</p>
+
+<p></p>
+<hr title="separator from header">
+
+<h3>Errata</h3>
+
+<p></p>
+
+<table border="1" cellpadding="2">
+  <tbody>
+    <tr>
+      <td><strong>Identifier</strong></td>
+      <td><strong>E1</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Date</strong></td>
+      <td>27 Jan 2003</td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>Clarification</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td>The P3P Specification is ambiguous about whether a Policy Reference
+        File (PRF) can be considered valid if located through mechanism other
+        than the three ones described in the Specification (Section 2.2)</td>
+    </tr>
+    <tr>
+      <td><strong>Resolution</strong></td>
+      <td>When a user agent locates a valid policy reference file referenced
+        using the HTTP header, HTML link tag, or XHTML link tag mechanisms,
+        it may discover policy references for URIs other than the URI from
+        which it was referenced. Unless conflicting references are found in a
+        policy reference file at the well-known location, the user agent MAY
+        cache these references for as long as they are valid and apply them
+        to the specified URIs. The relative URIs and URI patterns specified
+        by <code>INCLUDE</code> and <code>EXCLUDE</code> elements in policy
+        references MUST be interpreted relative to the root of any DNS host
+        that declared the policy reference file.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p></p>
+
+<table border="1" cellpadding="2">
+  <tbody>
+    <tr>
+      <td><strong>Identifier</strong></td>
+      <td><strong>E2</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Date</strong></td>
+      <td>27 Jan 2003</td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>Clarification</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td>The P3P Specification is ambiguous about whether an
+        <code>EXPIRY</code> element in a Policy Reference File (PRF) applies
+        to a policy embedded in that file or not (section 2.3.2.3.1).</td>
+    </tr>
+    <tr>
+      <td><strong>Resolution</strong></td>
+      <td>An <code>EXPIRY</code> element in a <code>POLICY-REFERENCES</code>
+        element applies only to the lifetime of the policy references, and
+        not to the lifetime of any policies that may be embedded in
+        <code>POLICIES</code> element in the same file.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p></p>
+
+<table border="1" cellpadding="2">
+  <tbody>
+    <tr>
+      <td><strong>Identifier</strong></td>
+      <td><strong>E3</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Date</strong></td>
+      <td>27 Jan 2003</td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>Editorial</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td>The <code>customization</code> element (previously removed from
+        older drafts of the P3P specification) is still listed in the DTD
+        (Appendix 5: XML DTD Definition, and in <a
+        href="http://www.w3.org/2002/01/P3Pv1.dtd">http://www.w3.org/2002/01/P3Pv1.dtd</a>
+        ).&nbsp;</td>
+    </tr>
+    <tr>
+      <td><strong>Resolution</strong></td>
+      <td>This is a typo: the <code>customization</code> element does not
+        exist (any more) in P3P. Hence, its definition should be omitted from
+        the DTD. <br>
+        Note for implementers: using the current DTD is still safe (just,
+        presence of an extra element named&nbsp;<code>customization</code>
+        will not be signaled as an error by DTD validation tools, so it would
+        have to be checked with other means). The P3P XML Schema does not
+        have this typo, so XML-Schema validation tools based on the P3P XML
+        Schema DTD will be able to catch the eventual presence of such an
+        extra element.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p></p>
+
+<table border="1" cellpadding="2">
+  <tbody>
+    <tr>
+      <td><strong>Identifier</strong></td>
+      <td><strong>E4</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Date</strong></td>
+      <td>10 Jul 2010</td>
+    </tr>
+    <tr>
+      <td><strong>Category</strong></td>
+      <td>Editorial</td>
+    </tr>
+    <tr>
+      <td><strong>Description</strong></td>
+      <td>In Example 3.2 (<a
+	href="/TR/P3P/#encoding">http://www.w3.org/TR/P3P/#encoding)</a>, the DATA
+	element on line 94 (&lt;DATA ref="#user.login.password"/&gt;) is self-closing, but
+	it also contains CATEGORIES elements. Thus, the file is not valid XML.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Resolution</strong></td>
+      <td>This is a typo: it should read <code>&lt;DATA
+	ref="#user.login.password"&gt;</code> without the closing slash. This is
+	confirmed by the fact that there is a closing &lt;/DATA&gt; element present.
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p></p>
+<hr>
+
+<p><em>Created by <a href="http://www.w3.org/People/Massimo">Massimo</a> (<a
+href="mailto:massimo@w3.org">massimo@w3.org</a>).<br>
+Last modified: $Revision: 1.4 $ on $Date: 2010/07/30 10:53:20 $ GMT by
+$Author: rigo $</em></p>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

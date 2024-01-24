@@ -1,0 +1,18 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC494¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 02 Jul 1998 21:10:54 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1ee-332031b461380"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 20:22:35 GMTKraw_content¢DtypeEvalueYî// David Eppstein, UC Irvine, 11 Jun 1997
+//
+// Buttons to change the game state
+
+import java.awt.*;
+import java.util.*;
+import gui.*;
+
+class ResetButton extends GameButton {
+	public ResetButton(Game g) { super(g, "New Game"); }
+	public boolean active() { return (game.getBoard().previousPosition != null); }
+	public void action() {
+		game.resetBoard();
+		Fanorona.showMessage(this, "New game started", true);
+	}
+	public String status() { return "Reset the board to the starting position"; }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

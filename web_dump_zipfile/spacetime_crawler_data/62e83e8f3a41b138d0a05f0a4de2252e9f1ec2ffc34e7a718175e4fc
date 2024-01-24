@@ -1,0 +1,18 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC639¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 02 Jul 1998 21:10:53 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"27f-332031b36d140"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 20:21:25 GMTKraw_content¢DtypeEvalueY// David Eppstein, UC Irvine, 11 Jun 1997
+//
+// HotJava 1.0 doesnt automatically use the background color when redrawing components.
+// Probably it's just doing a clearRect() which uses the browser's color not the component's.
+// So anyway, I'm attempting to fix it by replacing clearRect() by fillRect()
+// and by overriding update() (the default version of which also calls clearRect).
+
+import java.awt.*;
+
+class OpaquePanel extends Panel {
+//	public void paint(Graphics g) {
+//		g.setColor(getBackground());
+//		Rectangle r = bounds();
+//		g.fillRect(r.x, r.y, r.width, r.height);
+//	}
+//	public void update(Graphics g) { paint(g); }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

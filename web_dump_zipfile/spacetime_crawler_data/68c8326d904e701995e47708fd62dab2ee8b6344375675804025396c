@@ -1,0 +1,105 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3001¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 31 Oct 2018 17:46:40 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"bb9-57989e2748cc7"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:56:01 GMTKraw_content¢DtypeEvalueY¹y <- c(62,60,63,59,0,0,0,0,63,67,71,64,65,66,0,0,68,66,71,67,68,68,0,0,
+    56,62,60,61,63,64,63,59)
+dim(y) <- c(8,4)
+n<-24 
+nj<-c(4,6,6,8)
+ybar<-c(61,66,68,61)
+#
+# log marg post density (in terms of parm=(mu,log sigma, log tau))
+#
+lmarg <- function (parm){
+  mu <- parm[1]
+  sigma <- exp(parm[2])
+  tau <- exp(parm[3])
+  theta <- ((1/tau^2)*mu + (nj/sigma^2)*ybar)/((1/tau^2) + (nj/sigma^2))
+  Vtheta <- 1/((1/tau^2) + (nj/sigma^2))
+  output <- log(tau) + sum (log(dnorm (theta, mu, tau)))
+  for (j in 1:length(nj))
+    output <- output + sum(log(dnorm(y[1:nj[j],j], theta[j], sigma)))
+  output <- output + .5*sum(log(Vtheta))
+  output }
+#
+#
+# Metropolis algorithm using normal jumping distribution with 
+# variance matrix c*a$vcov (i.e., scalar c times vcov at posterior mode)
+#
+M  <-  10
+nloop  <-  5000
+k <- length(nj)
+# set posterior mode and variance matrix (from separate postmode code)
+param.mode <- c(64.012, 0.859, 1.244)
+param.vcov <- matrix(c(3.26,0,0,0,.025,0,0,0,.194),3,3)
+#
+#
+# set up array (nloop x 3 x nchains(M)) to hold draws 
+# initialize all sequences at random draw from N(param.mode,(16)*param.vcov)
+# where 16 is too get overdispersion
+#
+params <- array(NA, c(nloop,3,M))
+pchol <- chol(param.vcov)
+for (m in 1:M) {
+  x <- matrix(rnorm(3,0,1),1,3)
+  x <- x%*%pchol
+  params[1,,m]  <-  param.init + 4*x
+  }
+#
+# set variance for jumping distribution to parameter const^2 times variance matrix at mode
+# start with const = 2.4/sqrt(3) approx sqrt(2)  
+#
+vjump <- 5*matrix(c(3.26,0,0,0,.025,0,0,0,.194),3,3)
+vchol <- chol(vjump) 
+# perform metropolis sampling
+for (m in 1:M){
+# keep track of acceptances
+ac <- 0
+lm <- lmarg(params[1,,m])
+for (loop in 2:nloop){
+  x <- matrix(rnorm(3,0,1),1,3)
+  x <- x%*%vchol
+  cand <- params[loop-1,,m] + x
+  candlm <- lmarg(cand)
+  unif <- runif(1) 
+  if (unif < exp(candlm-lm)) {
+	ac <- ac + 1
+        params[loop,,m] <- cand
+        lm <- candlm
+	}
+  else {
+	params[loop,,m] <- params[loop-1,,m]
+	}
+  }
+  print(ac,m) 
+  }
+#
+# save ouput on mu, sigma, tau scale 
+# and sample theta's given mu, sigma, tau
+output <- array(NA, c(nloop,7,M))
+dimnames(output)[[2]] <- c("mu","sigma","tau","theta1","theta2","theta3","theta4")
+output[,1,] <- params[,1,]
+output[,2,] <- exp(params[,2,])
+output[,3,] <- exp(params[,3,])
+for (m in 1:M){
+for (loop in 1:nloop){
+  mu <- output[loop,1,m]
+  sigma <- output[loop,2,m]
+  tau <- output[loop,3,m]
+  theta0  <-  ((1/tau^2)*mu + (nj/sigma^2)*ybar) /
+    ((1/tau^2) + (nj/sigma^2))
+  Vtheta0  <-  1/((1/tau^2) + (nj/sigma^2))
+  output[loop,4:(3+k),m]  <-  rnorm (k, theta0, sqrt(Vtheta0))
+  }}
+#
+summ <- array(NA, c(7,8))
+for (i in (1:7)) {
+a <- gandr.conv(output[,i,])
+summ[i,] <- c(nloop*m/2,a$quantiles,a$confshrink)
+}
+dimnames(summ)[[1]] <- dimnames(output[[2]])
+summ
+
+l <- 1
+u <- 500
+matplot(c(l:u),output[l:u,1,],type="l")
+matplot(c(l:u),output[l:u,2,],type="l")
+matplot(c(l:u),output[l:u,3,],type="l")
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

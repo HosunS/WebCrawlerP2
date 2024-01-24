@@ -1,0 +1,40 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC623¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 25 Apr 2010 00:25:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"513-48504b1ab4e80-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 14:31:35 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY1. Let graph G have the six vertices a,b,c,d,e, and f, and the nine edges
+    ac with weight 15
+    ad with weight 10
+    ae with weight 1
+    bc with weight 3
+    bd with weight 20
+    be with weight 5
+    fc with weight 12
+    fd with weight 7
+    fe with weight 9
+
+(a) What is the minimum spanning tree of this graph?
+
+(b) In what order would the Prim-Dijkstra-Jarnik algorithm, starting
+from vertex a, add edges to form the MST?
+
+(c) In what order would Boruvka's algorithm add edges to form the MST?
+
+(d) In what order would Kruskal's algorithm add edges to form the MST?
+
+
+2. The following pseudocode for performing a find operation in the
+union-find data structure does not correctly implement the data
+structure. Explain what is wrong with it.
+
+def find(x):
+    y = x
+    while y is not a root:
+        y = parent(y)
+    parent(x) = y
+    return y
+
+3. What is the running time for each of the three algorithms,
+Prim-Dijkstra-Jarnik, Boruvka, and Kruskal, when used to build a maze
+from a k-by-k grid of squares? For Prim-Dijkstra-Jarnik, use the
+analysis for the variant of the algorithm that uses binary heaps, and
+for Kruskal's algorithm, assume that the sorting stage of the algorithm
+is done using a comparison sorting algorithm.  Express your answers in
+O-notation, as a function of k.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,407 @@
+¶Ifinal_url¢DtypeEvaluex/https://ubiquity.acm.org/article.cfm?id=1029454Lhttp_headers¢DtypeEvalueå¢Ak¢DtypeEvalueIExpect-CTAv¢DtypeEvalueXWmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXØJSESSIONID=64D7A2AADCF0662F7ECA4E2E9BC0DB6F.mags; Path=/; Secure; HttpOnly, CFID=18115991; Path=/, CFTOKEN=62fa38717146fe4b%2D2736DECD%2D07D7%2D5AC4%2D6824E33108004197; Path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 01 Jan 1970 00:00:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueJcloudflare¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX.no-cache, no-store, must-revalidate, max-age=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:26:32 GMT¢Ak¢DtypeEvalueFCF-RAYAv¢DtypeEvalueT4a63ebeaf856537e-LAX¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=utf-8Kraw_content¢DtypeEvalueYô}<!DOCTYPE html>
+<html>
+<head><script type="text/javascript">/* <![CDATA[ */_cf_loadingtexthtml="<img alt=' ' src='/cf_scripts/scripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/cf_scripts/scripts/ajax";
+_cf_jsonprefix='//';
+_cf_websocket_port=0;
+_cf_flash_policy_port=0;
+_cf_clientid='60610F4D12A10B24AE24046146A6CD2B';/* ]]> */</script><script type="text/javascript" src="/cf_scripts/scripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/ajax/package/cfajax.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/cfform.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/masks.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/cfformhistory.js"></script>
+<meta charset="UTF-8">
+<title>An Interview with Ramesh Jain</title>
+<meta name="keywords" content="" />
+<meta name="article_id" content="1029454" />
+<meta property="og:title" content="Ubiquity: An Interview with Ramesh Jain" />
+<meta property="og:description" content="The vast amount of information on the internet is growing every day -- it's enough to gag a google search. Researcher Ramesh Jain offers up new strategies for information retrival." />
+<meta property="og:image" content="https://ubiquity.acm.org/siteimages/fb_ubiquity_logo.jpg" />
+<link href="https://ubiquity.acm.org/primarytemplatefiles/style.css" rel="stylesheet" type="text/css" />
+<link href="https://ubiquitydev.acm.org/primarytemplatefiles/print.css" type="text/css" rel="stylesheet" media="print" />
+<script language="javascript">
+  function addbookmark(){
+		
+	if (document.all) {
+		window.external.AddFavorite(window.location.href,document.title);
+	} 
+	else {
+		alert("Use CTRL-D to add a bookmark in your Browser.");
+	}
+}
+</script>
+<link rel="stylesheet" href="/css/styles.css" type="text/css" />
+<script type="text/javascript" src="/js/lib/jquery.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js-common/base.js" type="text/javascript" language="javascript"></script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js-common/utility.js" type="text/javascript" language="javascript"></script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js/cssmenus.js" type="text/javascript" language="javascript"></script>
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/css/horizontal.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/skins/TopNav/menus.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">/* <![CDATA[ */
+			ColdFusion.Ajax.importTag('CFFORM');
+		/* ]]> */</script>
+<script type="text/javascript">/* <![CDATA[ */
+			if (window.ColdFusion) ColdFusion.required['add_email']=true;
+		/* ]]> */</script>
+<script type="text/javascript">
+<!--
+    _CF_checkCFForm_1 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element add_email required check
+        if( _CF_hasValue(_CF_this['add_email'], "TEXT", false ) )
+        {
+            //form element add_email 'EMAIL' validation checks
+            if (!_CF_checkEmail(_CF_this['add_email'].value, true))
+            {
+                _CF_onError(_CF_this, "add_email", _CF_this['add_email'].value, "Please enter a properly formatted E-mail address");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "add_email", _CF_this['add_email'].value, "Please enter a properly formatted E-mail address");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/css/vertical.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/skins/ubiquityleft/menus.css" rel="stylesheet" type="text/css" media="screen" />
+<script type='text/javascript' src='/cfformprotect/js/cffp.js'></script>
+<script type="text/javascript">/* <![CDATA[ */
+			if (window.ColdFusion) ColdFusion.required['username']=true;
+		/* ]]> */</script>
+<script type="text/javascript">/* <![CDATA[ */
+			if (window.ColdFusion) ColdFusion.required['email']=true;
+		/* ]]> */</script>
+<script type="text/javascript">/* <![CDATA[ */
+			if (window.ColdFusion) ColdFusion.required['body_text']=true;
+		/* ]]> */</script>
+<script type="text/javascript">/* <![CDATA[ */
+			var _cf_SUBMIT_init_14616708131540013=function()
+			{
+				ColdFusion.setSubmitClicked('comment-form','discussion_reply:method');
+			};ColdFusion.Event.registerOnLoad(_cf_SUBMIT_init_14616708131540013);
+		/* ]]> */</script>
+<script type="text/javascript">
+<!--
+    _CF_submit_status["edit_form"]=null;
+    _CF_checkedit_form = function(_CF_this)
+    {
+        //return false if form submit button has already been pressed once
+        if( _CF_submit_status[_CF_this.name] == "submitting" ) return false;
+        //reset on submit
+        _CF_submit_status[_CF_this.name] = "submitting";
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element Creator required check
+        if( !_CF_hasValue(_CF_this['Creator'], "TEXT", false ) )
+        {
+            _CF_onError(_CF_this, "Creator", _CF_this['Creator'].value, "Name is required.");
+            _CF_error_exists = true;
+        }
+
+        //form element email required check
+        if( _CF_hasValue(_CF_this['email'], "TEXT", false ) )
+        {
+            //form element email 'EMAIL' validation checks
+            if (!_CF_checkEmail(_CF_this['email'].value, true))
+            {
+                _CF_onError(_CF_this, "email", _CF_this['email'].value, "Please enter a properly formatted E-mail address");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "email", _CF_this['email'].value, "Please enter a properly formatted E-mail address");
+            _CF_error_exists = true;
+        }
+
+        //form element body_text required check
+        if( !_CF_hasValue(_CF_this['body_text'], "TEXTAREA", false ) )
+        {
+            _CF_onError(_CF_this, "body_text", _CF_this['body_text'].value, "Please enter your Comment, (HTML is not allowed)");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+                _CF_submit_status[_CF_this.name] = null;
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+</head>
+<body>
+<div id="masthead">
+<a class="home" href="/"><img src="/siteimages/acm_logo.png" alt="acm - an acm publication" /></a>
+<input type="text" class="st-default-search-input">
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','jqznesdyZkdNbMyHJYXG','2.0.0');
+</script>
+</div>
+<div id="nav-wrapper">
+<div id="nav-container">
+<div class="ktcssmenu savvynav_TopNav"><div class="kthorizontal ktopts_showtimeout_100 ktopts_hidetimeout_100 ktopts_imgreplace_no ktopts_imgreplacestyle_img ktopts_imgdir_ ktopts_imgnames_">
+<ul class='lev1 clearfix'><li class="lev1 pos1 lev1_pos1 first lev1_first"><a href="/index.cfm" class="lev1 pos1 lev1_pos1 first lev1_first" target="_self">HOME</a></li>
+<li class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren"><a href="/about_ubiquity.cfm" class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren" target="_self">OVERVIEW</a><ul class='lev2'><li class="lev2 pos1 lev2_pos1 first lev2_first"><a href="/about_ubiquity.cfm" class="lev2 pos1 lev2_pos1 first lev2_first" target="_self">ABOUT UBIQUITY</a></li>
+<li class="lev2 pos2 lev2_pos2"><a href="/topic_areas.cfm" class="lev2 pos2 lev2_pos2" target="_self">TOPIC AREAS</a></li>
+<li class="lev2 pos3 lev2_pos3"><a href="/meet_the_editors.cfm" class="lev2 pos3 lev2_pos3" target="_self">EDITORIAL BOARD</a></li>
+<li class="lev2 pos4 lev2_pos4"><a href="/submissions.cfm" class="lev2 pos4 lev2_pos4" target="_self">CONTRIBUTE TO UBIQUITY</a></li>
+<li class="lev2 pos5 lev2_pos5"><a href="/organizesymposium.cfm" class="lev2 pos5 lev2_pos5" target="_self">ORGANIZE A SYMPOSIUM</a></li>
+<li class="lev2 pos6 lev2_pos6"><a href="/becomeaneditor.cfm" class="lev2 pos6 lev2_pos6" target="_self">BECOME AN EDITOR</a></li>
+<li class="lev2 pos7 lev2_pos7"><a href="/permissions.cfm" class="lev2 pos7 lev2_pos7" target="_self">PERMISSIONS</a></li>
+<li class="lev2 pos8 lev2_pos8"><a href="/contactus.cfm" class="lev2 pos8 lev2_pos8" target="_self">CONTACT US</a></li>
+<li class="lev2 pos9 lev2_pos9 last lev2_last"><a href="https://www.acm.org" class="lev2 pos9 lev2_pos9 last lev2_last" target="_new">ABOUT ACM</a></li>
+</ul></li>
+<li class="lev1 pos3 lev1_pos3"><a href="https://blog.ubiquity.acm.org/" class="lev1 pos3 lev1_pos3" target="_new"><span class="__cf_email__" data-cfemail="c98b85868e899c8b80989c809d90">[email&#160;protected]</span></a></li>
+<li class="lev1 pos4 lev1_pos4"><a href="/symposia.cfm" class="lev1 pos4 lev1_pos4" target="_self">SYMPOSIA</a></li>
+<li class="lev1 pos5 lev1_pos5"><a href="/leaders.cfm" class="lev1 pos5 lev1_pos5" target="_self">INNOVATORS</a></li>
+<li class="lev1 pos6 lev1_pos6"><a href="/communication.cfm" class="lev1 pos6 lev1_pos6" target="_self">COMMUNICATION</a></li>
+<li class="lev1 pos7 lev1_pos7"><a href="/pitch.cfm" class="lev1 pos7 lev1_pos7" target="_self">MAKE A PITCH</a></li>
+<li class="lev1 pos8 lev1_pos8 haschildren lev1_haschildren"><a href="/archives.cfm?volume=all" class="lev1 pos8 lev1_pos8 haschildren lev1_haschildren" target="_self">PAST ISSUES</a><ul class='lev2'><li class="lev2 pos10 lev2_pos10"><a href="/interviews.cfm" class="lev2 pos10 lev2_pos10" target="_self">INTERVIEWS</a></li>
+<li class="lev2 pos11 lev2_pos11 last lev2_last"><a href="/commentaries.cfm" class="lev2 pos11 lev2_pos11 last lev2_last" target="_self">COMMENTARIES</a></li>
+</ul></li>
+</ul></div></div>
+</div> </div>
+<div id="content-container">
+<div class="col1" id="leftcolumn">
+<div class="email-alerts">
+<div id="layoutsu" style="">
+<div id="cf_layoutarea14616708131540011" style="overflow:hidden;">
+<div id="emailsignup">
+<strong>EMAIL ALERTS</strong><br />
+Receive email notification of new articles by entering your email address here:
+<form id="email-alerts-signup" action="newssignup.cfm" method="post" target="_blank" onsubmit="return ColdFusion.Ajax.checkForm(this, _CF_checkCFForm_1,'cf_layoutarea14616708131540011')">
+<fieldset>
+<input name="add_email" type="text" class="text" id="add_email" />
+<input class="text" id="list_name" name="list_name" type="hidden" value="UBIQUITY" />
+<button type="submit" value="Sign Up" class="submit">
+<span>SIGN UP</span>
+</button>
+</fieldset>
+<input type='text' style='display:none' /></form>
+</div>
+</div>
+</div>
+</div> <div class="ktcssmenu savvynav_ubiquityleft"><div class="ktvertical ktopts_showtimeout_100 ktopts_hidetimeout_100 ktopts_imgreplace_no ktopts_imgreplacestyle_img ktopts_imgdir_ ktopts_imgnames_">
+<ul class='lev1 clearfix'><li class="lev1 pos1 lev1_pos1 first lev1_first"><a href="https://ubiquity.acm.org/submissions.cfm" class="lev1 pos1 lev1_pos1 first lev1_first" target="_new">CALL FOR CONTRIBUTIONS</a></li>
+<li class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren"><a href="/index.cfm" class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren" target="_self">BROWSE BY...</a><ul class='lev2'><li class="lev2 pos1 lev2_pos1 first lev2_first"><a href="/archives.cfm" class="lev2 pos1 lev2_pos1 first lev2_first" target="_self">VOLUME</a></li>
+<li class="lev2 pos2 lev2_pos2"><a href="/authors.cfm" class="lev2 pos2 lev2_pos2" target="_self">AUTHOR</a></li>
+<li class="lev2 pos3 lev2_pos3"><a href="/commentaries.cfm" class="lev2 pos3 lev2_pos3" target="_self">COMMENTARIES</a></li>
+<li class="lev2 pos4 lev2_pos4"><a href="/interviews.cfm" class="lev2 pos4 lev2_pos4" target="_self">INTERVIEWS</a></li>
+<li class="lev2 pos5 lev2_pos5 haschildren lev2_haschildren"><a href="/collections.cfm" class="lev2 pos5 lev2_pos5 haschildren lev2_haschildren" target="_self">COLLECTIONS</a><ul class='lev3'><li class="lev3 pos1 lev3_pos1 first lev3_first"><a href="/collections.cfm?id=81337494686" class="lev3 pos1 lev3_pos1 first lev3_first" target="_self">PHILIP YAFEE</a></li>
+<li class="lev3 pos2 lev3_pos2"><a href="/collections.cfm?id=81100132467" class="lev3 pos2 lev3_pos2" target="_self">JOHN STUCKEY</a></li>
+<li class="lev3 pos3 lev3_pos3"><a href="/collections.cfm?id=81100570644" class="lev3 pos3 lev3_pos3" target="_self">ESPEN ANDERSEN</a></li>
+<li class="lev3 pos4 lev3_pos4"><a href="/collections.cfm?id=81100311898" class="lev3 pos4 lev3_pos4" target="_self">GOUTAM KUMAR SAHA</a></li>
+<li class="lev3 pos5 lev3_pos5 last lev3_last"><a href="/aboutcollections.cfm" class="lev3 pos5 lev3_pos5 last lev3_last" target="_self">ABOUT COLLECTIONS</a></li>
+</ul></li></ul></li>
+<li class="lev1 pos3 lev1_pos3 last lev1_last"><a href="https://www.acm.org/publications" class="lev1 pos3 lev1_pos3 last lev1_last" target="_new">BROWSE OTHER ACM PUBLICATIONS</a></li>
+</ul></div></div>
+<ul id="user-actions" class="clearfix" style="list-style:none">
+<li class="first"><a class="add-website" href="javascript:addbookmark()" )>ADD THIS WEBSITE</a></li>
+<li><a class="rss" href="/feeds/latestitems.xml" target="_blank">RSS FEED</a></li>
+<li><a class="feedback" href="contactus.cfm">SEND US FEEDBACK</a></li>
+<li><a class="print" href="javascript:window.print()">PRINT THIS PAGE</a></li>
+</ul>
+</div>
+<div id="main-content" class="col2 article-page">
+<div class="header"><h1>Articles</h1></div>
+<div id="currentissue">
+<div class="interview">
+<div class="interview-meta">
+<h2 class="interview-title">An Interview with Ramesh Jain<br />
+Refining the search engine</h2>
+<p class="meta"><span class="month">Ubiquity, Volume 2004 Issue September</span> <span class="divider">|</span> BY <a href="collections.cfm?id=81100428328"> Ubiquity staff</a>&nbsp;<a href="https://dl.acm.org/author_page.cfm?id=81100428328" target="_blank"><img src="siteimages/dl_original.png" /></a></p>
+
+<div style="margin-left:5px;" class="addthis_toolbox addthis_default_style">
+<a class="addthis_button_email"></a>
+<a class="addthis_button_print"></a>
+<a class="addthis_button_twitter"></a>
+<a class="addthis_button_favorites"></a>
+<a class="addthis_button_facebook"></a>
+<span class="addthis_separator">|</span>
+<a href="https://www.addthis.com/bookmark.php?v=250&amp;username=acm" class="addthis_button_expanded" title="more"></a>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js#username=acm"></script>
+<br />
+
+<p>Full citation in the ACM Digital Library <a href="https://dl.acm.org/citation.cfm?id=1029454&coll=portal&dl=ACM" target="_blank"><img src="siteimages/dl_original.png" alt="" border="0" /></a>
+</p>
+<div class="interview-content"> <p>The vast amount of information on the internet is growing every day -- it's enough to gag a google search. Researcher Ramesh Jain offers up new strategies for information retrival.</p></div>
+</p>
+</div>
+<hr />
+<p>
+<P><i>Researcher, entrepreneur and teacher Ramesh Jain is currently professor of computer science at the Georgia Institute of Technology. His previous appointments include similar positions at the University of Michigan, Ann Arbor, and the University of California, San Diego. He has founded three companies (PRAJA, Virage, and ImageWare), and his numerous books and articles include "Machine Vision," a textbook used at several universities. He serves on the editorial boards of several magazines in multimedia, business and image and vision processing.</i></P>
+<P><B>UBIQUITY:</B> Let's talk today about Web searching strategies. Do you think that search technology is now in an evolutionary stage, or is it entering stage better thought of as revolutionary? </P>
+<P><B>JAIN:</B> I think both processes are going to work together: there will be an evolutionary process but I don't think it's going to take us to the solution that we are looking for. There will also be some revolutionary things coming down the line, but in my opinion they're not going to happen in the next few years, because people are not frustrated enough with the current approaches. For example, today I'll use Google and complain about it, but it has not become so frustrating for me that I'd say, "Enough of this, I'm going to do something else!" And when I say this about myself, as someone who's already thinking about search techniques, then the same point could be made even more strongly for the common person, for whom searching has not become all that frustrating yet. But it is going to be soon in my opinion. </P>
+<P><B>UBIQUITY:</B> What do you think are the main characteristics of this frustration? </P>
+<P><B>JAIN:</B> A variety of different things, of course. Number one is that the amount of data is continuously increasing &#151 the amount of data that Google throws up at me is increasing really fast. Now their ranking algorithms work in very well-defined cases, so that for example if I am looking for a restaurant in Atlanta with a certain kind of food, my Web search is going to work extremely well. But if I am looking for so-called "lifestyle" restaurants, it's not going to work that well. So if the problem is very well-defined, then the answer will be very well-defined, whereas ill-defined, unstructured problems are of course the hardest to solve. </P>
+<P><B>UBIQUITY:</B> Besides the structure factor (or lack of structure factor), isn't there also an anticipation factor &#151 where the search problem is compounded by the system failure to anticipate certain kinds of requests? If you anticipate that you are going to need something &#151 data or objects or old clothes &#151 then you think about them and you classify them. </P>
+<P><B>JAIN:</B> That's right, so in fact if I understand you right, search engines like Google try to find out what the user's intents are, and in some cases the system is doing a good job; for example, on Google I can put in a complete address and it immediately understands that it is an address. And it will take me to Mapquest or a map of that particular area. But one of the examples that I like to use is this: what about if I am trying to understand whether President Bush's popularity is increasing or decreasing; what do I do? There is no way I can find out this information. </P>
+<P><B>UBIQUITY:</B> And what would be the nature of the project that would give an answer to that? </P>
+<P><B>JAIN:</B> Ah. If I had an answer I would have implemented it. But I do have some speculations on that topic, along the following lines. Current search engines like Google do not give me a "steering wheel" for searching the Internet (the term steering wheel was used by William Woods in one of his articles). The search engines get faster and faster, but they're not giving me any control mechanism. The only control mechanism, which is also a stateless control mechanism, asks the searcher to put in keywords, and if I put in keywords I get this huge monstrous list. I have no idea how to refine this list. The only way is to come up with a completely new keyword list. I also don't know what to do with the 8 million results that Google threw at me. So when I am trying to come up with those keywords, I don't know really where I am. That means I cannot control that list very easily because I don't have a holistic picture of that list. That's very important. When I get these results, how do I get some kind of holistic representation of what these results are, how they are distributed among different dimensions. </P>
+<P><B>UBIQUITY:</B> What would that kind of holistic representation be like? </P>
+<P><B>JAIN:</B> Two common dimensions that I find very useful in many general applications are time and space. If I can be shown how the items are distributed in time and space, I can start controlling what I want to see over this time period or what I want to see in that space. </P>
+<P><B>UBIQUITY:</B> How would you compare the search on Google or other search mechanisms with the process of searching for food in a supermarket? </P>
+<P><B>JAIN:</B> That's a very good analogy. If I went to a Publix, and I wanted a tube of toothpaste, but could only see two tubes, I could ask for assistance &#151 and that's how the current Google is. But when I go to a Publix I have a holistic picture &#151 I have a complete distribution of the same things and I can search by going through those things and finding exactly what I require. Google does not give me an option like that. With Google, you have to play a game of 20 Questions &#151 you ask a question and it gives you an answer. Since you asked me about supermarkets, let me give you a slightly different example, still related to shopping. In some of the old countries &#151 such as India where I grew up &#151 when you go to a shop or grocery store you are not allowed to access items in the shop directly. Instead, there is a person outside, and you say to the person, "This is what I want." Say I go to buy clothes. I say "I want fur." He will say "What kind of fur?" I would say, "This is my size and I am looking for a farmer's fur." He will bring three or four furs to you, and you look at those and say, "I don't like this, I don't like that, but I like this one." He will then bring four or five more that he thinks you will like, and this process continues until you find something that you really like. This takes place in shopping all over the world. It is not the free shopping mall that you have here in the US and many other countries, where you can enter and you can touch everything, play with everything, you can do all kinds of things. Here, the responsibility is yours to browse through and search. There, they ask you questions &#151 and based on those questions they give you things. </P>
+<P><B>UBIQUITY:</B> Sounds like fun actually. </P>
+<P><B>JAIN:</B> Well it can be fun and it can be frustrating. The main reason they did this is so nothing was stolen there. The fact that the nature of shopping is changing even in old countries and is becoming more like the model of shopping malls suggests that people prefer that mode of shopping. The same thing will happen to information markets. </P>
+<P><B>UBIQUITY:</B> What do you think of online shopping experiences &#151 Amazon or Macy's or whatever? </P>
+<P><B>JAIN:</B> Well, they're good for people who know reasonably well what they want, and they are a lot more orientated towards branded things. I am one of those people who buy quite a few things on the Internet but my wife will never touch it because she wants to feel the merchandise, she wants to do the comparison &#151 and right now the comparison is not that easy. People are trying to make the comparison easy but it's still hard. </P>
+<P><B>UBIQUITY:</B> Will your daughter and granddaughter do it? </P>
+<P><B>JAIN:</B> My daughter does it a little bit. Will my granddaughter do it? I think by that time the technology will be advanced. If it's not I will be disappointed. </P>
+<P><B>UBIQUITY:</B> So what are the next steps? </P>
+<P><B>JAIN:</B> There are all kinds of people studying this problem, including ones coming from audio or video perspectives. So far searching has been limited to text but very soon it's going to involve a lot more audio and video. Cameras now are absolutely everywhere &#151 still cameras and phone cell cameras &#151 so the problem's become very interesting: how do you combine text, audio and video? In fact, if you look at Yahoo and Google and now MSN also, they are all trying to put together all of these techniques. They are trying to put together media search and image search. Right now these things are, as to be expected, in very early stages, but they are putting a lot of effort in those directions. Now who will actually do it? I don't know, but I believe that none of these big companies will do it, because they are heavily invested in text and in the current technology. That's why in order to beat Google, another big company like Google will rise up from the work of some young people who will come up with these things. </P>
+<P><B>UBIQUITY:</B> Presumably from your group at Georgia Tech, right? </P>
+<P><B>JAIN:</B> That would be wonderful. </P>
+<P><B>UBIQUITY:</B> In your recent work you seem to clearly prefer the word "exploration" to "querying"; why is that? </P>
+<P><B>JAIN:</B> In fact, that is very true, and I am excited to use that term in my new white paper, in which I've started arguing that we will soon be prospecting for data and information, and exploration will become part of prospecting. </P>
+<P><B>UBIQUITY:</B> How does the use of sensors add to the dimensions of the search problem? </P>
+<P><B>JAIN:</B> That's a very interesting development. I believe Yahoo search relies mostly on the name of the file for the image &#151 so that if you type in the word "horses," then if the file name also contains the word "horses" the search will pull in the particular thing. But Google analyzes the text from where the picture is also coming. Google possibly goes slightly beyond that because I thought that all the files that Yahoo brings in at that particular time that I put in the keywords. Google doesn't necessarily have that and, because of that, Google's results are sometimes not as good as Yahoo's. Why does that happen? It's very simple. What I am saying is that they are trying to configure the associated text with the name of the file &#151 or you take the speech component in the audio and video and somehow transcribe that, then apply the text with this technique into that.
+That's what they are trying to do and that's not bad, and that will buy you some time. You can make some progress with that but soon you find out that if that was the only case people would not rely on audio and video so much. Because text alone doesn't capture the emotion and they don't capture the experience we get from all kinds of other things that you get when you are listening to something or when you are watching something and you are seeing all the reactions there.
+So how do you get that information? Text is based on well-defined language. We use an alphabet to form words and use those words to express ideas to form the text. Without words, there is no language. We don't have anything equivalent to the alphabet and words in audio, video, images or any other sensor. So we have to develop those things first; there are some efforts like MPEG and things like that, but they are not yet advanced enough. And how will they advance? That's where the interesting results really lie. I don't have the answer to that yet. </P>
+<P><B>UBIQUITY:</B> So some day a system will tell me what's wrong with my grass and why it has yellow spots? </P>
+<P><B>JAIN:</B> Well that's the easy part, they will do that today. There are systems that you can start implementing for these kinds of things. But you'll have a problem if you want to ask whether your lawn is really in excellent condition or if you want to say "I want to see pictures of a nice beach today." The question could mean, "Is the beach beautiful?" or could mean "Is the weather there good today?" or could mean "Are the people there interesting?" The question could mean any or all of those things, and there is no specific visual language right now to distinguish those kinds of meanings in images and video. </P>
+<P><B>UBIQUITY:</B> Would I be wrong in saying that the essence of what you're doing is trying to get beyond language? </P>
+<P><B>JAIN:</B> That's very correct. I think one of my favorite books, which I love and quote a lot, is a famous book by S.I. Hayakawa, "Languages in Thought and Action," in which he makes the point that it's amazing how some arbitrary noises and some scribbles on paper started to make meaning to us. It's amazing that we all agree that some noise is going to be presenting some particular thing or some particular concept. And similarly it's amazing that we agree that such-and-such particular scribbles are going to be representing this and that real thing. Another person who had great insights on these issues is Carl Popper. Popper started talking about word one, word two, and word three. Where word one is the real word, word two is what concepts and what mechanisms you learn and have in your head, and word three is the model you build using word two about word one. And those things become very exciting because what we don't see &#151 which is word two (what we have in our head) &#151 is a lot more complex and sophisticated than our language allows. And that's how we sometimes fail to find the words to represent what we want to say. Language allows us to represent some of the things that become a lot more explicit and a lot clearer. Language is a knowledge representation language. </P>
+<P><B>UBIQUITY:</B> I'm interested in knowing whether you think that your personal history &#151 coming from India and speaking different languages &#151 has influenced much of your thinking on these topics. </P>
+<P><B>JAIN:</B> Oh boy. Now you are asking a difficult question because all of us are products of what we have experienced, so I am sure that it has influenced me. But I am not an expert to tell how it has influenced me that way. I do know that because of that background, I like to experiment with different things, but then I also know that many of my friends from India are completely disinterested in experimenting with anything. So, how did I become different from them? I don't know that. These are the complex problems. </P>
+<P><B>UBIQUITY:</B> Let's move from words to numbers. You've had some thoughts about statistics from baseball and other sports; share them with us, along with related thoughts you've had on the analysis of stock market performance. </P>
+<P><B>JAIN:</B> My basic point is that there is a big difference between information and insights. If I ask how your stock is doing, and you give me one year's worth of numbers, it would take me a long time to go through those numbers and understand what that stock has been doing. But if you show me a chart of stock prices over the last one-year period, it takes me just a second to understand how the stock is doing. And the same thing applies to a baseball player's performance: how the player is performing. The point is that just churning out data doesn't really help too much. The difference between the data and the context is what makes it useful. This is exactly the same as when we were initially talking about the results of Google and I was talking about the holistic picture and trying to put together along the time and the space. The data warehousing people realized this, too, and when they began dealing with large volumes of data using visualization techniques they started calling their work "business insights" or "business insight applications." </P>
+<P><B>UBIQUITY:</B> Insights seem so elusive. Take as a purported insight the anti-war slogan "War is not the answer." Without worrying about the truth or falsity of that slogan, how would any search mechanism deal with it? </P>
+<P><B>JAIN:</B> No search engine can deal with that, and in fact that's very interesting. Let me give you a very interesting example along the same lines. In playing with the various search engines, I tried to determine the popularity of George Bush in India. So I used many different keywords, but there was no way that I could find anything about the popularity of George Bush in India. All it would tell me or give me is articles that had the term "India" and "Bush" in them, and had some terms related to "popular." But it simply did not talk about the popularity of George Bush in India. In the same way, if you write the query "War AND Answer" all you will get is that self-same slogan. </P>
+<P><B>UBIQUITY:</B> Have you looked at AskJeeves? </P>
+<P><B>JAIN:</B> Actually AskJeeves started going in the natural language direction, but they soon realized that natural language understanding is not ready for this. So they now have a combination of people sitting and analyzing and then trying to put the answer. It's a very interesting combination of natural language understanding with case-based reasoning and human-based organization. </P>
+<P><B>UBIQUITY:</B> What's the standing of this field today in academia? </P>
+<P><B>JAIN:</B> It is becoming very interesting and respectable in academia now, and people are paying attention to this. At one time, information retrieval was not as respected a field as it's slowly becoming. If you went to ten years ago, I don't think that computer academics and computer science departments would have considered this as respected a field as they would consider it now. </P>
+<P><B>UBIQUITY:</B> And that changed because of &#151 what? </P>
+<P><B>JAIN:</B> Two things. First it is widely used now so its applicability has been proven. And because it is now becoming a field where you can write a lot of papers. Faculty can get tenure, get promoted based on publications in this area. </P>
+<P><B>UBIQUITY:</B> Do you get back to India much? </P>
+<P><B>JAIN:</B> I go at least once or twice a year. </P>
+<P><B>UBIQUITY:</B> India is in the news a lot these days because of its great success in attracting work outsourced from US and European companies. What's your opinion of the political disagreements about outsourcing? </P>
+<P><B>JAIN:</B> Let me just say that when, for example, IBM Global Services decides to do a big project in India &#151 for the government of India or for Indian Airlines &#151 it is also outsourcing from India to America. So outsourcing goes on not just from America to India. In fact the real debate should be, "What is the business-related policy necessary to accomplish this commercial exchange?" That's what the policy makers should be doing and that's what the real debate should be. The debate is not whether or not to ban outsourcing. It should be about facts, not emotions. </P>
+<P><B>UBIQUITY:</B> As we've discussed, much of your recent work has been focused on search engines. What has been most surprising about what you've found? </P>
+<P><B>JAIN:</B> One thing I've found particularly surprising is that you can find the same thing on a hundred different places on a single site in a response to the same query. I have no idea why they can't very quickly go through the results list and remove those duplicates. So that's certainly been a surprise to me. But there are lots of other puzzles as well. Yet that's the fun part of it &#151 to complain about all of this. I will be furious when those things are no longer there to complain about. </P>
+<P><a href="http://jain.faculty.gatech.edu/">[See http://jain.faculty.gatech.edu/]</A></P>
+</p>
+<div id="layout1" style="">
+<div id="cf_layoutarea14616708131540012" style="overflow:auto;">
+<div id="comments">
+<p class="toggle-comments">
+<strong>COMMENTS</strong>
+</p>
+<a name="discussion"></a>
+<form name="edit_form" id="comment-form" action="postcomment.cfm" method="post" onsubmit="return ColdFusion.Ajax.checkForm(this, _CF_checkedit_form,'cf_layoutarea14616708131540012')">
+<fieldset>
+<legend><strong>POST A COMMENT</strong></legend>
+<br />
+<input id="fp273717FD-E9A9-D531-A6D416C825DB37EA" type="hidden" name="formfield1234567891" class="cffp_mm" value="" />
+<input id="fp273717FE-C7B6-A5C2-B6E1069E7BC5DB8A" type="hidden" name="formfield1234567892" class="cffp_kp" value="" />
+<input id="fp273717FF-051B-E188-FF5EFAFE84F54914" type="hidden" name="formfield1234567893" value="39930415,19742838" />
+<span style="display:none">Leave this field empty <input id="fp27371800-F3B5-1335-2CDEB07072476E71" type="text" name="formfield1234567894" value="" /></span>
+<p>
+<label for="user_name">Your Name (Required)</label>
+<input name="Creator" type="text" size="40" alt="Submitter" title="Name" id="username" class="text" />
+</p>
+<p>
+<label for="user_email">Your E-Mail address (Required)</label>
+<input name="email" id="email" type="text" class="text" size="40" />
+</p>
+<p>
+<label for="comment_body">Comment (Required - HTML syntax is not allowed and will be removed)</label>
+<textarea name="body_text" html="No" class="textarea" id="body_text" cols="40" rows="8"></textarea>
+</p>
+<div class="formControls">
+<input type="Hidden" name="id" value="1029454"> <input name="discussion_reply:method" id="discussion_reply:method" type="submit" value="Post" class="context" />
+</div>
+</fieldset>
+</form>
+</div>
+</div><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19262769-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</div>
+</div>
+<div id="footer">
+<ul class="clearfix">
+<li>
+<a class="first" href="index.cfm">HOME</a></li>
+<li>
+<a href="commentaries.cfm">COMMENTARIES</a></li>
+<li>
+<a href="interviews.cfm?volume=all">INTERVIEWS</a></li>
+<li>
+<a href="aboutcollections.cfm">COLLECTIONS</a></li>
+<li>
+<a href="symposia.cfm">SYMPOSIA</a></li>
+<li>
+<a href="archives.cfm?volume=all">ARCHIVES</a></li>
+<li>
+<a href="http://blog.acm.org/ubiquity" target="_blank">BLOGS</a></li>
+<li>
+<a href="about_ubiquity.cfm">UBIQUITY</a></li>
+<li>
+<a href="contactus.cfm">CONTACT</a></li>
+<li>
+<a href="https://www.acm.org/join" target="_blank">JOIN ACM</a></li>
+</ul>
+<div style="color: #C1C1C1; padding-top: 1em;">ACM &copy; 2019</div>
+</div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

@@ -1,0 +1,63 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1853¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX:attachment; filename=cs122b-2018-winter-mysql-fulltext.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=abcd7301284f5c33f24da6ea; expires=Sat, 04 May 2019 15:12:16 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 15:12:16 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueY== MySQL Full-Text Search Examples =
+ * Creating a Full Text Searchable Table:
+{{{
+DROP TABLE IF EXISTS ft;
+CREATE TABLE ft (
+    entryID INT AUTO_INCREMENT,
+    entry text,
+    PRIMARY KEY (entryID),
+    FULLTEXT (entry)) ENGINE=MyISAM;
+}}}
+
+ * Adding Rows into the table:
+{{{
+INSERT INTO ft 
+VALUES (1,
+        'I was born in michigan in 1980 in a small town called Adrian. 
+         My mother is named Sue, while my father is named Mike.  They 
+         currently live in a small town called East Jordan. On April 
+         27th, 2003 I will graduate from Eastern Michigan University 
+         with a degree in Computer Information Systems.');
+
+
+INSERT INTO ft
+VALUES (2,
+        'While I was at work today I was having some problems with the 
+        RAID array. It seems that we have a rogue cron script that is
+        causing problems. When I find out more info I will post it here.');
+
+INSERT INTO ft
+VALUES (3,
+        'After I graduate I am taking a 2 week vacation. On my 
+        agenda is a trip to Washington DC to see my girlfriend\'s 
+        sister as well as throwing a few discs at the local disc 
+        golf course.');
+}}}
+
+ * Searching for whole words
+{{{
+SELECT entryID FROM ft WHERE MATCH (entry) AGAINST ('golf');
+
+RESULT : entryID : 3
+}}}
+
+ * Prefix Search
+{{{
+SELECT entryID FROM ft WHERE MATCH (entry) AGAINST ('grad*' IN BOOLEAN MODE);
+
+RESULT entryID: 1 and 3
+}}}
+
+
+ * Boolean Searches
+{{{
+SELECT entryID FROM ft WHERE MATCH (entry) AGAINST ('+graduate -michigan' IN BOOLEAN MODE);
+
+# No operator signifies OR operation
+SELECT entryID FROM ft WHERE MATCH (entry) AGAINST ('graduate michigan' IN BOOLEAN MODE);
+}}}
+
+ * References:
+  * http://dev.mysql.com/doc/refman/5.0/en//fulltext-search.html
+  * http://dev.mysql.com/doc/refman/5.0/en//fulltext-boolean.html
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

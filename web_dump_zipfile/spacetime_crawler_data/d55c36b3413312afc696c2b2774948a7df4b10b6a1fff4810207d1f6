@@ -1,0 +1,337 @@
+¦Ifinal_url¢DtypeEvaluex<https://kyotofly.kit.jp/cgi-bin/stocks/password_reminder.cgiLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:23:02 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html;charset=Shift_JIS¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueWApache/2.2.15 (Red Hat)Kraw_content¢DtypeEvalueY5
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>
+Kyoto Stock Center (DGRC), Kyoto Institute of Technology
+</title>
+
+
+<!-- pin info -->
+<meta name="application-name" content="Kyoto Stock Center (DGRC)">
+<meta name="msapplication-starturl" content="/stocks/">
+<!-- icon -->
+<link rel="shortcut icon" href="/stocks/images/favicon.ico">
+
+<style type="text/css">
+body {
+padding-top: 130px;  // for navbar fixed top
+padding-bottom: 40px;
+background-color: #f3f2eb;
+}
+
+
+.container {
+margin: 0 auto;
+max-width: 1000px;
+}
+
+.kyotoflybgcolor {
+background-color: #f3f2eb;
+}
+
+.kyotoflytopcolor {
+background-color: #2f3946;
+}
+
+.navbar-form pull-right{
+color: #ffffff;
+}
+
+/* Custom container */
+
+.container {
+margin: 0 auto;
+}
+.container > hr {
+margin: 60px 0;
+}
+
+.navbar .navbar-inner .brand{
+/*
+  font-weight: bold;
+*/
+  font-size: 18px;
+}
+
+.navbar .navbar-inner {
+padding: 0;
+}
+.navbar .nav {
+margin: 0;
+}
+
+/*
+.navbar .nav li {
+display: table-cell;
+float: none;
+}
+*/
+
+.navbar .nav li a {
+border-left: 1px solid rgba(192,192,192,.75);
+border-right: 0;
+/*
+border-right: 1px solid rgba(192,192,192,.75);
+*/
+text-align: left;
+}
+
+.navbar .nav>li>a{
+  font-size: 14px;
+/*
+  font-weight: bold;
+*/
+}
+
+.navbar .nav .dropdown-menu li a {
+border-left: 0;
+}
+
+/* navbar is table-cell, but dropdown is not table-cell 
+.navbar .nav li .dropdown-menu li
+{
+display: block;
+}
+*/
+
+.lowerpanel, .searchmain {
+background-color: #ffffff;
+border-width: 1px;
+border-color: #e8e6d8;
+border-style: solid;
+}
+
+  </style>
+
+<style type="text/css">
+FONT size setting A:link {
+	COLOR: #145391; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #145391; TEXT-DECORATION: none
+}
+A:active {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+A {
+	TEXT-DECORATION: none
+}
+.jsub {
+	FONT-SIZE: 16px
+}
+.jjjj {
+	FONT-SIZE: 14px
+}
+.jjj {
+	FONT-SIZE: 12px
+}
+.jj {
+	FONT-SIZE: 10px
+}
+.eee {
+	FONT-SIZE: 12px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.jsub {
+	FONT-SIZE: 14px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+</style>
+
+<script language="JavaScript">
+<!--
+function logout(url, uid){
+    var newwin;
+    var que = '?UID=';
+    var out = '&LOGOUT=1'
+    var url2 = url + que + uid + out;
+    newwin = open(url2, "logout", "menubar=no,toolbar=no,resizable=yes");
+}
+function logout_ed(url){
+    var newwin;
+    var out = '?LOGOUT=1'
+    var url2 = url + out;
+    newwin = open(url2, "logout_ed", "menubar=no,toolbar=no,resizable=yes");
+}
+function login(url){
+    var newwin;
+    uid = get_uid();
+    pass = get_pass();
+    var que = '?UID=';
+    var and = '&PASSWD=';
+    var url2 = url + que + uid + and + pass;
+    newwin = open(url2, "login", "menubar=no,toolbar=no,resizable=yes");
+}
+function login_ed(url){
+    var newwin;
+    eid = get_eid();
+    pass = get_pass();
+    var que = '?EID=';
+    var and = '&PASSWD=';
+    var url2 = url + que + eid + and + pass;
+    newwin = open(url2, "login_ed", "menubar=no,toolbar=no,resizable=yes");
+}
+function get_eid(){
+    var eid;
+    eid = document.login_form.EID.value;
+    return eid;
+}
+function get_uid(){
+    var uid;
+    uid = document.login_form.UID.value;
+    return uid;
+}
+function get_pass(){
+    var pass;
+    pass = document.login_form.PASSWD.value;
+    return pass;
+}
+-->
+</script>
+<script language=javascript>
+<!--
+function selfClose(time) {
+        setTimeout('self.close()',time)
+}
+//-->
+</script>
+<!-- Bootstrap -->
+
+
+<link rel="stylesheet" href="/stocks/bootstrap/css/bootstrap.kyotofly.css">
+<link rel="stylesheet" href="/stocks/bootstrap/css/bootstrap-responsive.css">
+<link rel="stylesheet" href="/stocks/bootstrap/css/kyotofly2.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- smart phone -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+<!--       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> -->
+    <![endif]-->
+
+  </head>
+
+<body bgcolor="#f3f2eb" >
+<div class="kyotoflybgcolor">
+
+<!-- Navigation Bar -->
+<div class="navbar">
+ <div class="navbar navbar-fixed-top">
+  <div class="kyotoflybgcolor">
+
+
+<!-- header table end -->
+
+<center>
+
+
+		<table width="90%" border="0" cellspacing="1" cellpadding="4">
+        	<tr>
+	        	<td bgcolor="#b9e2ff" nowrap  class="jsub">
+                	&nbsp;<b><font color="#333333">Password Reminder</font></b>
+                </td>
+	        </tr>
+    	</table>
+        <br>
+    
+		
+        <table width="90%" border="0" cellspacing="1" cellpadding="4" bgcolor="#DCDCDC">
+        	<tr bgcolor="#b9e2ff">
+            	<td>
+                	<b>Please fill in your DGRC User ID and e-mail address and press the "Send" button. </b>
+                </td>
+            </tr>
+
+            <form name="reminder" action="password_reminder.cgi" method="POST">
+        	<tr bgcolor="white">
+				<td align="left">
+				<font color=red><b></b></font>
+				<table><tr><td>
+                	DGRC User ID </td><td><input type="text" name="DGRC_ID" value=""></td><td><font color=red></font></td></tr>
+			<tr><td>E-mail address</td><td><input type="text" name="E_MAIL" value=""></td><td><font color=red></font></td></tr>
+				</table>
+				</td>
+				</td>
+            </tr>
+			<tr bgcolor="#DCDCDC">
+				<td align="center">
+                	<input type="hidden" name='R_FLG' value="1">
+                	<input type="submit" value="Send">
+				</td>
+            </tr>
+            </form>
+    
+
+		</table>
+        <br>
+
+    
+
+        <br>
+        <table width="90%" border="0" cellspacing="1" cellpadding="4">
+        	<tr>
+            	<td bgcolor="white"
+        			<p align="left">
+				<A HREF="javascript:window.close()">CLOSE</a>
+                    </p>
+        		</td>
+            </tr>
+        </table>
+
+    </center>
+
+
+</TD></TR></TBODY></TABLE><!-- main table : contents start -->
+
+
+<footer>
+
+<!-- footer banner table start -->
+<br>
+
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#ebe4d2; background-image:url(/stocks/images/bg-footer.png); background-repeat:no-repeat; background-position:center bottom;">
+  <tbody>
+  <tr style="background-color:#ebe4d2;">
+   <td colspan="4" style="height: 3px;">
+   </td>
+  </tr>
+  <tr style="background-color:#ffffff;">
+   <td colspan="4" style="height:1px;"></td>
+  </tr>
+  <tr>
+   <td align="left" valign="center" width="3%" height="130">&nbsp;</td>
+   <td align="left" valign="center">
+    <font style="color:#b2afa5; font-size:x-small;">
+    <b>Copyright &copy; KYOTO Stock Center (DGRC), Kyoto Institute of Technology<br>All rights reserved</b></font></td>
+    <td nowrap="nowrap" valign="bottom" align="right">
+     KYOTO Stock Center (DGRC)  participates in the 
+     <b><a href="http://www.nbrp.jp/" target="_blank">
+     National BioResource Project "Drosophila"
+     </a></b> <!-- started in 2002. -->
+    </td>
+   <td align="left" valign="center" width="1%">&nbsp;</td>
+  </tr>
+  </tbody>
+</table>
+<!-- footer banner table end -->
+
+</footer>
+
+</div><!-- mybgcolor -->
+
+<!-- Bootstrap -->
+<script src="/stocks/jquery/jquery-1.9.1.min.js"></script>
+<script src="/stocks/bootstrap/js/bootstrap.kyotofly.js"></script>
+
+</body>
+</html>
+
+
+
+    Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

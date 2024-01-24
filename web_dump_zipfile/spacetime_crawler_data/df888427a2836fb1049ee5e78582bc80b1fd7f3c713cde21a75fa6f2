@@ -1,0 +1,131 @@
+¦Ifinal_url¢DtypeEvaluex2http://old-reactions.ics.uci.edu/orbdb/rxnsandbox/Lhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXkcsrftoken=XKKHckZNwbyHoSn1Ea9z4cpm9D1U7BKo; expires=Thu, 06-Feb-2020 21:42:22 GMT; Max-Age=31449600; Path=/¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueFCookie¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueQtimeout=5, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 21:42:22 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
+<head>
+<title>ReactionPredictor | IGB | Reaction Sandbox | RxnWeb Welcome!</title>
+
+
+<link href="/static/admin/css/forms.css" type="text/css" media="all" rel="stylesheet" />
+<script type="text/javascript" src="/static/js/marvinPopup.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18334279-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+
+<body class="">
+
+<!-- Container -->
+<div id="container">
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name">OrbDB Site</h1>
+
+        </div>
+        
+    </div>
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+  <a href="/">Home</a> &rsaquo; 
+  <a href="/orbdb/">OrbDB</a> 
+  
+   &rsaquo; Reaction Sandbox
+  
+</div>
+
+    
+
+        
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        
+<h1>Reaction Sandbox</h1>
+
+<p>Play around with entering reactions here.  
+When you submit, you will see a description of your errors or a visualization of 
+the correctly formed reaction.
+</p>
+
+        
+
+
+
+
+<form action="" method="post" id="reaction_entry_test_form">
+<div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='XKKHckZNwbyHoSn1Ea9z4cpm9D1U7BKo' /></div>
+
+
+
+<fieldset class="module aligned">
+
+<div class="form-row atm_map_reactant_smiles">
+  
+  <div class="field-box">
+    <label for="id_atm_map_reactant_smiles">Atm map reactant smiles</label>
+    <input id="id_atm_map_reactant_smiles" type="text" name="atm_map_reactant_smiles" size="80" /><a href="/orbdb/marvin/pop/" class="smiles-popup" id="pop_id_atm_map_reactant_smiles" onClick="return smilesPopup(this);"><img src="/static/img/edit.gif" style="width: 14; height: 12; border: 0" alt="Draw Structure"/></a>
+  </div>
+</div>
+
+<div class="form-row src_orbital_str">
+  
+  <div class="field-box">
+    <label for="id_src_orbital_str">Source orbital string</label>
+    <input type="text" name="src_orbital_str" id="id_src_orbital_str" />
+  </div>
+</div>
+
+<div class="form-row sink_orbital_str">
+  
+  <div class="field-box">
+    <label for="id_sink_orbital_str">Sink orbital string</label>
+    <input type="text" name="sink_orbital_str" id="id_sink_orbital_str" />
+  </div>
+</div>
+
+
+</fieldset>
+<div class="form-row">
+  <input type="submit" value="Test Reaction"/>
+</div>
+
+
+
+</form>
+
+
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    
+    <div id="footer" align="center">
+      <hr width="40%"/>
+      <p> &copy; 2011 | <a href="http://www.igb.uci.edu/">Institute for Genomics and Bioinformatics</a> | Powered by <a href="https://www.djangoproject.com/">Django</a> </p>
+    </div>
+    
+</div>
+<!-- END Container -->
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

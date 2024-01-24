@@ -1,0 +1,442 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE10132¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 30 Jan 2019 20:15:13 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"2794-580b2914f4c38"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 20:45:14 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY'”
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Informatics 121: Software Design I (Winter 2019)</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2">
+  <tr class="light">
+    <td>
+    <!--#include file="header.html" -->
+    </td>
+  </tr>
+  <tr class="light">
+    <td>
+    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+	  <tr class="light">
+        <!--#include file="left.html" -->
+		<td width="100%" valign="top">
+		<table width="100%" border="0" cellspacing="0" cellpadding="15">
+  		  <tr class="light">
+		    <td>
+			<table width="100%" border="0" cellspacing="0" cellpadding="10">
+ 			  <tr width="100%">
+			    <td>
+				<B class="header">Course Title</B><BR />
+				Informatics 121<BR />
+				Software Design I<BR />
+				Winter 2019<BR />
+				<p>
+				<B class="header">Professor</B><BR />
+				Andr&eacute; van der Hoek<BR />
+				<a href="http://www.ics.uci.edu/~andre" title="URL" class="center">http://www.ics.uci.edu/~andre</a><BR />
+				<a href="mailto:andre@ics.uci.edu" title="e-mail" class="center">andre@ics.uci.edu</a><BR />
+				Office: DBH 5038<BR />
+				Phone: +1 949-824-6326<BR />
+                Office hours: Tuesday 09:00-10:00 ICS1 414
+                <p><strong>Teaching Assistants</strong><br />
+                Adriana Meza Soria<br />
+                <a href="mailto:amezasor@uci.edu" class="center">amezasor@uci.edu</a><br />
+                Office hours: Thursday 11:00-12:00 ICS1 414<br />
+  			    <br />
+ 				Aditya Nair<br />
+                <a href="mailto:adityan1@uci.edu" class="center">adityan1@uci.edu</a><br />
+                Office hours: Wednesday 11:00-12:00 ICS1 414<br />
+                </p>
+                <p>                
+                <p><B class="header">Logistics</B><BR />
+				Location: PSLH 100<BR />
+				Lecture day and time: Tuesday and Thursday 15:30-16:50<BR />
+                Discussion day and time: Friday 12:00-12:50 (HICF 100N); Friday 13:00-13:50 (HICF 100N); Friday 14:00-14:50 (MSTB 122); or Friday 15:00-15:50 (MSTB 120)
+				<p> <strong class="header">Catalogue Description</strong><br />
+				121 Software Design I (4). Introduction to application design: designing the overall functionality of a software application. Topics include general design theory, software design theory, and software architecture. Includes practice in designing and case studies of existing designs.
+				<BR />
+				<BR />
+			    Prerequisites: ICS 33 or CSE43, with a grade of C or better; upper-division standing. </p>
+				<p>
+				<B class="header">Grades</B><BR />
+				All students enrolled in the course will earn a letter grade based upon: 
+				(a) course projects, (b) midterm, (c) final.
+				Grade distribution will be as follows (adjusted by group attendance and participation as need be):
+				<ul type="disc">
+                <li>Projects: 60%</li>
+                <li>Midterm: 15%</li>
+                <li>Final: 25%</li>
+				</ul>		
+				<p>
+				<B class="header">Course Mailing List</B><BR />
+				To send mail: <a href="mailto:36630-w19@classes.uci.edu" title="email" class="center">36630-w19@classes.uci.edu</a><BR />
+				To view the archive: <a href="https://eee.uci.edu/classmail/w19/36630/" title="archive" class="center">https://eee.uci.edu/classmail/w19/36630/</a>
+				<p>
+				<B class="header">Students with Disabilities</B><BR />
+				Any student who feels he or she may need an accommodation based on the 
+				impact of a disability should contact me privately to discuss his or her 
+				specific needs.  Also contact the Disability Services Center at 
+				(949) 824-6272 as soon as possible to better ensure that such 
+				accommodations are implemented in a timely fashion.
+				<p>
+				<B class="header">Schedule</B>
+				<table width="100%" border="1" cellspacing="0" cellpadding="3">
+				  <tr>
+				    <td>
+					<B>Week</B>
+					</td>
+					<td>
+					<B>Date</B>
+					</td>
+					<td>
+					<B>Topic</B>
+					</td>
+					<td>
+					<B>Slides</B>
+					</td>
+					<td>
+					<B>Assignments</B>
+					</td>					
+				  </tr>
+				  <tr>
+				    <td>
+					1
+					</td>
+					<td>
+					January 8
+					</td>
+					<td>
+                    Design
+					</td>
+					<td>
+                    <a href="informatics121w2019/lecture1.pptx" title="lecture1.pptx" class="center">Lecture 1</a>
+					</td>
+					<td>
+					</td>
+                  </tr>
+                  <tr>
+				    <td>
+					</td>
+					<td>
+					January 10
+					</td>
+					<td>
+                    Software design
+					</td>
+					<td>
+					<a href="informatics121w2019/lecture2.pptx" title="lecture2.pptx" class="center">Lecture 2</a>
+                    </td>
+					<td>
+                    </td>
+				  </tr>
+  				  <tr>
+				    <td>
+					2
+					</td>
+					<td>
+					January 15
+					</td>
+					<td>
+                    Design practice
+                    </td>
+					<td>
+					<a href="informatics121w2019/lecture3.pptx" title="lecture3.pptx" class="center">Lecture 3</a>
+					</td>
+					<td>
+					Design studio 1, part 1 out
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					</td>
+					<td>
+					January 17
+					</td>
+					<td>
+                    Design cycle
+					</td>
+					<td>
+					<a href="informatics121w2019/lecture4.pptx" title="lecture4.pptx" class="center">Lecture 4</a>
+                    </td>
+					<td>
+					Design studio 1, part 1 due (Friday)
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					3
+					</td>
+					<td>
+					January 22
+                    </td>
+					<td>
+                    Four types of design
+					</td>
+					<td>
+					<a href="informatics121w2019/lecture5.pptx" title="lecture5.pptx" class="center">Lecture 5</a>
+					</td>
+					<td>
+					Design studio 1, part 2 out (Friday)
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					</td>
+					<td>
+					January 24
+					</td>
+					<td>
+                    Design practice
+					</td>
+					<td>
+					<a href="informatics121w2019/lecture6.pptx" title="lecture6.pptx" class="center">Lecture 6</a>
+					</td>
+					<td>
+                    </td>
+				  </tr>
+				  <tr>
+				    <td>
+					4
+					</td>
+					<td>
+					January 29
+					</td>
+					<td>
+					Design alternatives
+					</td>
+					<td>
+					<a href="informatics121w2019/lecture7.pptx" title="lecture7.pptx" class="center">Lecture 7</a>
+				    </td>
+					<td>
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					</td>
+					<td>
+					January 31
+					</td>
+					<td>
+					Design artifacts
+                    </td>
+					<td>
+					<a href="informatics121w2019/lecture8.pptx" title="lecture8.pptx" class="center">Lecture 8</a>
+					</td>
+					<td>
+                    </td>
+				  </tr>
+				  <tr>
+				    <td>
+					5
+					</td>
+					<td>
+					February 5
+					</td>
+					<td>
+                    Reflection
+					</td>
+                    <td>
+    				</td>
+					<td>
+					Design studio 1, part 2 due<BR />
+					Design studio 2, part 1 out
+	    			</td>
+				  </tr>
+				  <tr>
+				    <td>
+					</td>
+					<td>
+                    February 7
+					</td>
+					<td>
+					Design practice
+					</td>
+					<td>
+					</td>
+					<td>
+                    </td>
+				  </tr>
+				  <tr>
+				    <td>
+					6
+					</td>
+					<td>
+					February 12
+					</td>
+					<td>
+                    Design practice
+                    </td>
+					<td>
+					</td>
+					<td>
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					</td>
+					<td>
+					February 14
+					</td>
+					<td>
+					Midterm
+					</td>
+					<td>
+					</td>
+					<td>
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					7
+					</td>
+					<td>
+					February 19
+					</td>
+					<td>
+					Reflection
+					</td>
+					<td>
+					</td>
+					<td>
+					Design studio 2, part 1 due<BR />
+					Design studio 2, part 2 out
+                    </td>
+				  </tr>
+				  <tr>
+				    <td>
+					</td>
+					<td>
+					February 21
+					</td>
+					<td>
+					Design methods
+                    </td>
+					<td>
+					</td>
+                    <td>
+                    </td>
+				  </tr>
+				  <tr>
+				    <td>
+					8
+					</td>
+					<td>
+					February 26
+					</td>
+					<td>
+					Design methods
+ 					</td>
+					<td>
+					</td>
+					<td>
+					Design studio 2, part 2 due<BR />
+					Design studio 3 out
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					</td>
+					<td>
+					February 28
+					</td>
+					<td>
+					Design methods
+					</td>
+					<td>
+					</td>
+					<td>
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					9
+					</td>
+					<td>
+					March 5
+					</td>
+					<td>
+					Architecture
+					</td>
+					<td>
+					</td>
+					<td>
+    				</td>
+				  </tr>
+				  <tr>
+				    <td>
+					</td>
+				    <td>
+					March 7
+					</td>
+					<td>
+					Design practice
+					</td>
+					<td>
+					</td>
+					<td>
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					10
+					</td>
+					<td>
+					March 12
+					</td>
+					<td>
+					Design practice
+                    </td>
+					<td>
+					</td>
+					<td>
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					</td>
+				    <td>
+					March 14
+					</td>
+					<td>
+					Wrap-up
+					</td>
+					<td>
+					</td>
+					<td>	
+					Design studio 3 due
+					</td>
+				  </tr>
+				  <tr>
+				    <td>
+					Finals week
+					</td>
+					<td>
+					March 19, 16:00 - 18:00
+					</td>
+					<td>
+                    Final
+					</td>
+					<td>
+					</td>
+					<td>
+                    </td>
+				  </tr>
+				</table>
+				</td>
+			  </tr>
+			</table>
+			</td>
+		  </tr>
+		</table>		
+		</td>
+        <!--#include file="right.html" -->
+	  </tr>
+	</table>	
+	</td>
+  </tr>
+</table>
+</body>
+
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

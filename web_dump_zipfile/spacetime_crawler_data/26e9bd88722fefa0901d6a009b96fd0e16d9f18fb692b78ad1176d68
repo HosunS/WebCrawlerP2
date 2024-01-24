@@ -1,0 +1,113 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3819¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 09 Jun 2017 22:22:22 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"eeb-5518e67326586"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:54:23 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYë<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**CS216 Image Understanding**
+	**Instructor: Charless Fowlkes**
+	*Yu Guo (26642334)*
+	*05/01/2017*
+
+# Convolution is associative.
+
+Continuous case:
+\begin{equation*}
+((f\star g)\star h)(t) =\int_0^t(f\star g)(s)h(t-s)\,ds\\
+=\int_{0}^t\left(\int_{0}^sf(u)g(s-u)\,du\right)h(t-s)\,ds\\
+=\int_{s=0}^t\int_{u=0}^sf(u)g(s-u)h(t-s)\,du\,ds\\
+=\int_{u=0}^t\int_{s=u}^tf(u)g(s-u)h(t-s)\,ds\,du\\
+=\int_{u=0}^t\int_{s=0}^{t-u}f(u)g(s)h(t-s-u)\,ds\,du\\
+=\int_{u=0}^tf(u)\left(\int_{s=0}^{t-u}g(s)h(t-u-s)\,ds\right)\,du\\
+=\int_{u=0}^tf(u)(g\star h)(t-u)\,du\\
+=(f\star (g\star h))(t)
+\end{equation*}
+
+Discrete case: 
+\begin{equation*}
+((f\star g)\star h)(n) =\sum_{k=0}^n(f\star g)(k)h(n-k)\\
+=\sum_{k=0}^n\sum_{l=0}^kf(l)g(k-l)h(n-k)\\
+=\sum_{l=0}^n\sum_{k=l}^nf(l)g(k-l)h(n-k)\\
+=\sum_{l=0}^n\sum_{k=0}^{n-l}f(l)g(k)h(n-k-l)\\
+=\sum_{l=0}^nf(l)(g\star h)(n-l)\\
+=(f\star(g\star h))(n)
+\end{equation*}
+
+# Correlation is not associative.
+
+Continuous case:
+\begin{equation*}
+((f\circ g)\circ h)(t) =\int_0^t(f\circ g)(s)h(s+t)\,ds\\
+=\int_{0}^t\left(\int_{0}^sf(u)g(u+s)\,du\right)h(s+t)\,ds\\
+=\int_{s=0}^t\int_{u=0}^sf(u)g(u+s)h(s+t)\,du\,ds\\
+=\int_{u=0}^t\int_{s=u}^tf(u)g(u+s)h(s+t)\,ds\,du\\
+=\int_{u=0}^t\int_{s=0}^{t-u}f(u)g(s+2u)h(s+u+t)\,ds\,du\\
+=\int_{0}^tf(u)\left(\int_{0}^{t-u}g(s+2u)h(s+u+t)\,ds\right)\,du\\
+\end{equation*}
+
+\begin{equation*}
+(f\circ (g\circ h))(t) =\int_0^t f(u)(g\circ h)(u+t)\,du\\
+=\int_0^t f(u)\left(\int_0^{u+t}g(s)h(s+u+t)\,ds\right)\,du\\
+\end{equation*}
+
+# Convolution complexity
+
+Complexity: $(MN)^2(H-M+1)(W-N+1)$
+
+Complexity using FFT: $MNlog(MN)(H-M+1)(W-N+1)$
+
+# Speed up convolution
+
+Since we have
+$g(x,y) = \frac{1}{2\pi \sigma ^2}exp(\frac{-(x^2 + y^2)}{2\sigma^2}) = \frac{1}{\sqrt{2\pi} \sigma_x ^2}exp(\frac{-x^2}{2\sigma_x^2}) \frac{1}{\sqrt{2\pi} \sigma_y ^2}exp(\frac{-y^2}{2\sigma_y^2})$,
+multiplication in frequency domain yields convolution in time domain. Now our linear filter is separated into two subsequent convolutions which is much faster than the big filter.
+
+# DFT
+
+## Compute DFT of the signal and plot the magnitude of the spectrum
+![](results/5-1.png width=\pagewidth)
+![](results/5-2.png width=\pagewidth)
+![](results/5-3.png width=\pagewidth)
+![](results/5-4.png width=\pagewidth)
+![](results/5-5.png width=\pagewidth)
+
+## Compute new image which have the phase from the first image and the mangitude from the second image 
+![](results/5-6.png width=\pagewidth)
+![](results/5-7.png width=\pagewidth)
+![](results/5-8.png width=\pagewidth)
+
+
+
+# Edge detection
+
+## $\sigma = 0.5$
+![](results/6-1.png width=\pagewidth)
+
+## $\sigma = 2$
+![](results/6-2.png width=\pagewidth)
+
+
+# Object detection
+
+## Template image
+![](results/7-1.png width=200)
+
+## Cross-correlation image
+![](results/7-2.png width=\pagewidth)
+
+## Detection results (threshold = 200) 
+![](results/7-3.png width=\pagewidth)
+
+# Object detection (Advance)
+
+## SSD image
+![](results/7-4.png width=\pagewidth)
+
+## Detection results (threshold = 20) 
+![](results/7-5.png width=\pagewidth)
+For each shift position of the small image every pixel in the small image is compared to the corresponding pixel in the large image subsection and SSD from all the pixels is computed. For each pixel, the sum of the differences of each color is computed and added together and the squared difference from all the pixels compared is totaled. The best match occurs where the SSD for that shift position is the smallest.
+
+End.
+
+<!-- Markdeep: -->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style>
+<script src="markdeep.min.js"></script>
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
+<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

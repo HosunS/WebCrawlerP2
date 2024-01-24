@@ -1,0 +1,358 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE13833¢Ak¢DtypeEvaluePContent-LanguageAv¢DtypeEvalueEen-US¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueQApache-Coyote/1.1¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 06:07:59 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=UTF-8Kraw_content¢DtypeEvaluey6	ï»¿<!doctype html>
+<html lang="en-US"> 
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>IEEE Publication Recommender</title>
+
+    <script>
+        var IPRNS = { 
+            isMobile : false,
+            isResults: false
+        };
+    </script>
+    
+    <script src="https://s3-us-west-2.amazonaws.com/ieeeshutpages/gdpr/settings.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+        <script>
+        window.addEventListener("load", function(){
+         window.cookieconsent.initialise(json)
+        });
+    </script>
+
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+<link rel="stylesheet" href="/styles/ipf.css">
+<link rel="stylesheet" href="fonts/fico.css">
+<link rel="stylesheet" href="/libraries/jquery-ui-1.11.4.custom/jquery-ui.min.css">
+<link rel="stylesheet" href="/styles/jquery-ui-overrides.css">
+
+<script src="/libraries/jquery-1.8.3.js"></script>
+<script src="/libraries/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+<script src="/libraries/js.cookie.js"></script>
+<script src="/libraries/jquery.json-2.4.min.js"></script>
+<script src="/libraries/moment.min.js"></script>
+<script src="/scripts/ipf-autocomplete.js"></script>
+<script src="/scripts/ipf.js"></script>
+<script src="/scripts/ipf-modal.js"></script>
+<script src="/scripts/ipf-results.js"></script>
+<script src="/scripts/ipf-analytics.js"></script>
+<!-- reCAPTCHA, email dialogs only -->
+<script src="https://www.google.com/recaptcha/api.js?onload=gRecaptchaRender&render=explicit" async defer></script>
+
+<script>
+/* 
+ * Set file size limit: Replace 1048576 with a Freemarker variable if desired
+ * this will allow a file size limit to be passed in via a config option
+ */
+var fileSizeLimit = 52428800; // 50MB
+if (typeof searchFormController != "undefined") {
+    searchFormController.setFileSizeLimit(fileSizeLimit); 
+}
+</script>
+</head>
+<body class="ipf" id="home">
+
+<p class="JumpLink" id="PageTop"><a href="#content" title="Click here to Skip to main content" accesskey="s">Skip to Main Content</a></p>
+
+<!-- jquery ui dialog box -->
+<div id="emailResultsDialog" style="display: none;" title="Email Results" class="email-modal">
+
+	<form id="emailresultsform" class="bounds" action="emailresults" method="post" enctype="multipart/form-data">
+	    
+        <span id="emailresults-upload-block"></span>
+
+	    <p>
+		<label for="fer-email-results-to">
+        Please enter one or more search result recipients. Please separate multiple recipients with commas, semicolons, or spaces.
+        </label>
+		<textarea class="f-required" name="emailto" id="fer-email-results-to" style="height: 5em;" value=""></textarea>
+	    <span id="fer-email-results-to-msg" class="error-msg"></span>
+        </p>
+
+	    <p>
+		<label for="fer-email-results-from">From:</label>
+		<input class="f-required" type="text" id="fer-email-results-from" name="email-results-from" value="IEEE-PublicationRecommender@ieee.org" disabled="disabled"/>
+	    <span id="fer-email-results-from-msg" class="error-msg"></span>
+	    </p>
+	    
+        <p>
+		<label for="fer-email-results-subject">Subject:</label>
+	    <input class="f-required" type="text" id="fer-email-results-subject" name="email-results-subject" value="IEEE Publication Recommender" />
+	    </p>
+	    
+        <p>
+		<label for="fer-email-results-text" class="align-to-field">Message text:</label>
+		<textarea class="f-required" name="send-message-text" id="fer-email-results-text" style="height: 10em;"></textarea>
+	    </p>
+	    
+	    <div id="recaptcha-container"></div>
+	
+    </form>
+</div>
+
+<!-- Generic Spinner Dialog -->
+<div id="processingSpinner" style="display: none;" title="Processing..." class="dialog-spinner">
+    <p class="spinner">
+        <span id="processingSpinnerText">Processing</span>
+            &nbsp;<span class="icon-spinner20 icon-vm">...</span>
+    </p>
+</div>
+<!-- Generic Alert Dialog -->
+<div id="alertBox" style="display: none;" title="Alert" class="dialog-alert">
+    <p id="alertBoxText">
+        Alert!
+    </p>
+</div>
+
+
+    <div id="modalDetail" style="display: none;">
+        <a href="#" class="icon-b icon-close modal-close">Close</a>
+        <div id="load-this"></div>
+    </div>
+
+<div id="modalWarning" class="simple-modal" style="display: none;">
+    <p>
+        I acknowledge that use of this tool does not result in article submission for publication and does not
+        guarantee publication in IEEE <em>Xplore<sup>&reg;</sup></em>.
+    </p>
+</div>
+
+<div id="modalProceed" class="simple-modal" style="display: none;">
+    <p>
+        You are being redirected to submit your article to be considered for publication.
+    </p>
+</div>
+
+<div id="modalUpload" style="display: none;">
+    <p>
+        File upload
+    </p>
+    <div class="upload-progress-bar-bounds"><div class="upload-progress-bar" id="modalUploadProgressBar"></div></div>
+    <p class="note upload-progress-meter" id="modalUploadProgressMsg"></p>
+    <p class="error-msg" id="modalUploadErrorMsg" style="display: none;">Error.</p>
+</div>
+
+
+<div id="page" class="page-bounds">
+
+<div class="Metanav stats-metanav">
+    <ul class="Menu Menu--horizontal Menu--dividers">
+        <li class="Menu-item stats-extLink"><a href="http://www.ieee.org/" id="u-home" class="ieeeorg" target="_new">IEEE.org</a></li>
+        <li class="Menu-item stats-extLink"><a href="http://ieeexplore.ieee.org" class="top-divider-space" target="_new">IEEE <em>Xplore</em> Digital Library</a></li>
+        <li class="Menu-item stats-extLink"><a href="http://standards.ieee.org/" id="u-standards" class="exitstandardsorg" target="_new">IEEE-SA</a></li>
+        <li class="Menu-item stats-extLink"><a href="http://spectrum.ieee.org/" id="u-spectrum" class="exitspectrum" target="_new">IEEE Spectrum</a></li>
+        <li class="Menu-item stats-extLink menu-item-u-more"><a href="http://www.ieee.org/sitemap.html" id="u-more" class="exitmoreieeesites" target="_new">More Sites</a></li>
+    </ul>
+</div>
+
+
+	<div class="banner-bounds">
+
+<a href="http://www.ieee.org/" class="logo-ieee wai">IEEE</a>
+
+<h1>
+    <a href="/home">IEEE <em>Publication Recommender<sup>&trade;</sup></em></a>
+</h1>
+
+<p class="tagline">
+    Find the best match for your scholarly article
+</p>
+
+
+        <div id="intro">
+
+		
+			<div class="pure-g">
+				<div class="pure-u-11-24">
+					<ul>
+						<li>Search 190+ periodicals and 1800+ conferences</li>
+						<li>Compare critical points such as Impact Factor and Submission-To-Publication Time</li>
+					</ul>
+				</div>
+				<div class="pure-u-13-24">
+					<ul>
+						<li>Get all the key data about IEEE publications at a glance</li>
+						<li>Download the results of your search</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="content" class="content-bounds">
+
+		<div id="searchform">
+		
+
+<form id="f-keyword-search" method="POST" action="pubsearch" enctype="multipart/form-data">
+
+	<input type="hidden" name="periodicalSortOption" value="p-kw" id="f-sort-periodical"/>
+	<input type="hidden" name="conferenceSortOption" value="c-kw" id="f-sort-conference"/>
+	<input type="hidden" name="previouslyUploadedFile" id="f-previously-uploaded-file"/>
+
+    <h2>
+        Choose a search type and let Publication Recommender do the work!
+    </h2>
+
+    <div class="pure-g search-parameters">
+        <div class="pure-u search-left">
+      
+            <p>
+                <input type="radio" name="scope" value="both" id="f-scope-both" 
+                        checked="checked"
+                >
+                <label for="f-scope-both">Both Periodicals and Conferences</label>
+            </p>
+
+            <p>
+                <input type="radio" name="scope" value="periodicals" id="f-scope-periodicals"
+                        
+                >
+                <label for="f-scope-periodicals">Periodicals only</label>
+
+            </p>
+
+            <p>
+
+                <input type="radio" name="scope" value="conferences" id="f-scope-conferences"
+                        
+                >
+                <label for="f-scope-conferences">Conferences only</label>
+            </p>
+
+        </div>
+        <div class="pure-u-1">
+
+            <div class="pure-g search-option-flexbox">
+                <div id="f-keyword-option" class="pure-u search-option-block search-keyword">
+
+                    <p>
+                        <input type="radio" name="searchType" value="keyword" id="f-keyword-enter"
+                        >
+                        <label for="f-keyword-enter">Enter keywords, key phrases, or article title</label>
+                    </p>
+
+                    <div class="search-keyword-entry">
+                            <textarea id="f-keyword-text" title="Enter keywords here" autocomplete="off" name="query"></textarea> 
+                    </div>
+
+                </div>
+                <div id="f-extract-option" class="pure-u search-option-block search-extract">
+
+                    <p>
+                        <input type="radio" name="searchType" value="extract" id="f-keyword-extract"
+                        >
+                        <label for="f-keyword-extract">Extract keywords from your article</label>
+                    </p>
+
+                    <div class="search-dropzone">
+                        <textarea name="text" id="f-dropzone" class="dropzone" title="Enter your abstract, or drop your article file here." placeholder="Enter your abstract, or drop your article file here."></textarea>
+
+                    </div>
+
+                    <p id="f-add-file-container" class="browse-option">
+                        <a href="#" id="f-add-file-remove" class="icon-b icon-close icon-close-remove-file hidden-file-handler">Remove</a>
+                        <span id="f-add-file-feedback" class="add-file-feedback hidden-file-handler"></span>
+                        <span id="f-add-file-filename" class="add-file-filename hidden-file-handler"></span>
+                        <span id="f-uploaded-file-filename" class="add-file-filename hidden-file-handler"></span>
+                        <label for="f-add-file-handler" id="f-add-file" class="label-as-button icon-add">Add Your File</label>
+                        <input type="file" name="upload" id="f-add-file-handler" class="hidden-file-handler">
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="pure-g search-parameters last">
+        <div class="pure-u search-left narrow-by-date-heading">
+
+            <h2>Narrow by date:</h2>
+
+            <p>(Optional)</p>
+
+        </div>
+        <div class="pure-u-5-8 narrow-by-date">
+
+            <p>
+                <label for="f-narrow-by-month">I would like to publish before:</label>
+                <span class="publish-date">
+                    <input id="f-publish-date" name="publishDate" value="">
+                </span>
+                <span id="f-date-options-container" class="search-sub-options hidden-file-handler">
+                    <a href="#" id="f-set-date-remove" class="icon-b icon-close icon-close-clear">Remove</a>
+                </span>
+                <span id="f-publish-date-error" class="error-msg">Error: Date format must be MM/DD/YYYY</span>
+             </p>
+
+        </div>
+        <div class="pure-u-3-8 narrow-by-date-button">
+
+           <button type="submit" id="f-keyword-go">Get Recommendation</button>
+
+        </div>
+    
+    </div>
+
+</form>
+
+
+            <div class="band"></div>
+
+            <form id="f-specific-search">
+				<div class="find-a-specific">
+
+					<h2><label for="f-specific-name">Or, find details for a specific Periodical or Conference:</label></h2>
+					
+                    <input type="hidden" name="searchType" value="title"/>
+					<input name="query" id="f-specific-name" type="text" placeholder="Enter the name of a periodical or conference" autocomplete="off">
+			
+				</div>
+				
+            </form>
+
+		</div>
+
+	</div>
+	
+<div id="footer">
+
+
+    <a href="http://www.ieee.org/index.html?WT.mc_id=hpf_logo" class="logo-ieee-tagged wai">IEEE Advancing Technology for Humanity</a>
+
+
+    <p class="footer-links">
+        <a href="http://www.ieee.org/index.html" target="_new">IEEE.org</a>
+        <!-- remove 5/23/2017 per Paul: don't need since already have More Sites link at top
+        <a href="http://www.ieee.org/sitemap.html?WT.mc_id=hpf_smap" target="">Sitemap</a>
+        -->
+        <a href="http://www.ieee.org/about/contact_center/index.html?WT.mc_id=hpf_contact" target="_new">Contact &amp; Support</a>
+        <a href="http://www.ieee.org/accessibility_statement.html?WT.mc_id=hpf_acc" target="_new">Accessibility<ga>
+        <a href="http://www.ieee.org/p9-26.html?WT.mc_id=hpf_nondis" target="_new">Nondiscrimination Policy</a>
+        <a href="http://www.ieee.org/security_privacy.html?WT.mc_id=hpf_privacy" target="_new">Privacy &amp; Opting Out of Cookies</a>
+        <a href="http://www.ieee.org/about/feedback_ieee_site.html?FromPage=/index.html" target="_new">Feedback</a>
+    </p>
+
+
+    <p class="copyright">
+        &copy; Copyright 2018 IEEE &#150; All rights reserved. Use of this website signifies your agreement to the 
+        <a target="_new" href="http://www.ieee.org/site_terms_conditions.html?WT.mc_id=hpf_terms&utm_source=hp&utm_campaign=hpf_terms&utm_medium=hpf&utm_term=terms%20conditions">IEEE Terms and Conditions</a>.<br> 
+        A not-for-profit organization, IEEE is the world's largest professional association for the advancement of technology.
+    </p>
+
+
+</div>
+
+
+		  
+</div>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

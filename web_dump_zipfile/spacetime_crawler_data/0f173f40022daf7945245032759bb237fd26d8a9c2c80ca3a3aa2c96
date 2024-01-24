@@ -1,0 +1,566 @@
+¦Ifinal_url¢DtypeEvaluexœhttps://transmitter.ieee.org/ieee-fellow-tom-coughlin-on-the-staying-power-of-tech-from-ces-2019/?utm_source=facebook&utm_campaign=ieeeorg&utm_medium=socialLhttp_headers¢DtypeEvalue”¢Ak¢DtypeEvalueCViaAv¢DtypeEvalueX1.1 varnish, 1.1 varnish¢Ak¢DtypeEvalueGX-CacheAv¢DtypeEvalueJMISS, MISS¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQtransfer-encodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueX_STYXKEY-plllanguage=en; expires=Sun, 09-Feb-2020 05:56:12 GMT; Max-Age=31536000; path=/; secure¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueXbytes, bytes, bytes, bytes¢Ak¢DtypeEvalueGX-TimerAv¢DtypeEvalueXS1549691773.763619,VS0,VE779¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueXAccept-Encoding, Cookie, Cookie¢Ak¢DtypeEvalueMX-Styx-Req-IdAv¢DtypeEvalueX%styx-4d1b62662c42405f4c3766b3f2468b9f¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueEnginx¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueKX-Served-ByAv¢DtypeEvalueX%cache-mdw17373-MDW, cache-lax8633-LAX¢Ak¢DtypeEvalueDLinkAv¢DtypeEvalueXy<https://transmitter.ieee.org/wp-json/>; rel="https://api.w.org/", <https://transmitter.ieee.org/?p=10150>; rel=shortlink¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueSpublic, max-age=600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:56:13 GMT¢Ak¢DtypeEvalueLX-Cache-HitsAv¢DtypeEvalueD0, 0¢Ak¢DtypeEvalueXX-Pantheon-Styx-HostnameAv¢DtypeEvalueXstyx-fe3-5c98d77647-vsk6s¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueCAgeAv¢DtypeEvalueJ0, 0, 0, 0¢Ak¢DtypeEvalueJX-PingbackAv¢DtypeEvalueX'https://transmitter.ieee.org/xmlrpc.phpKraw_content¢DtypeEvaluey¯§<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="no-js no-svg">
+<head>
+	<meta charset="UTF-8"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+    
+    <link rel="shortcut icon" type="image/png" href="https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/images/favicon.ico" />
+    <link rel="icon" type="image/png" href="https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/images/ieee-favicon-android-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" type="image/png" href="https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/images/ieee-favicon-apple-180x180.png" sizes="180x180" />
+    	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<title>IEEE Fellow Tom Coughlin on the Staying Power of Tech from CES 2019 - IEEE Transmitter</title>
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	var gtm4wp_datalayer_name = "dataLayer";
+	var dataLayer = dataLayer || [];
+//]]>
+</script>
+<!-- End Google Tag Manager for WordPress by gtm4wp.com -->
+<!-- This site is optimized with the Yoast SEO plugin v9.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://transmitter.ieee.org/ieee-fellow-tom-coughlin-on-the-staying-power-of-tech-from-ces-2019/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="IEEE Fellow Tom Coughlin on the Staying Power of Tech from CES 2019 - IEEE Transmitter" />
+<meta property="og:url" content="https://transmitter.ieee.org/ieee-fellow-tom-coughlin-on-the-staying-power-of-tech-from-ces-2019/" />
+<meta property="og:site_name" content="IEEE Transmitter" />
+<meta property="article:tag" content="CES" />
+<meta property="article:tag" content="Peggy Smedley" />
+<meta property="article:tag" content="Tom Coughlin" />
+<meta property="article:section" content="Consumer Electronics" />
+<meta property="article:published_time" content="2019-01-28T23:11:20+00:00" />
+<meta property="article:modified_time" content="2019-01-29T20:23:19+00:00" />
+<meta property="og:updated_time" content="2019-01-29T20:23:19+00:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="IEEE Fellow Tom Coughlin on the Staying Power of Tech from CES 2019 - IEEE Transmitter" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//transmitter.ieee.org' />
+<link rel='dns-prefetch' href='//sharecdn.social9.com' />
+<link rel='dns-prefetch' href='//code.ionicframework.com' />
+<link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="IEEE Transmitter &raquo; Feed" href="https://transmitter.ieee.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="IEEE Transmitter &raquo; Comments Feed" href="https://transmitter.ieee.org/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="IEEE Transmitter &raquo; IEEE Fellow Tom Coughlin on the Staying Power of Tech from CES 2019 Comments Feed" href="https://transmitter.ieee.org/ieee-fellow-tom-coughlin-on-the-staying-power-of-tech-from-ces-2019/feed/" />
+<meta property="og:image" content="https://transmitter.ieee.org/wp-content/uploads/2019/01/IEEE-Transmitter-Coughlin-CES2019-2-1200x630.png"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:description" content="To some, recent consumer technologies have started to feel unexciting. To others, weâ€™re in an unprecedented time of rapid innovation, [...]"/>
+			<script>
+			var addthis_share =
+			{
+			templates: {
+			twitter: 'IEEE Fellow Tom Coughlin on the Staying Power of Tech from CES 2019 - {{url}}'
+			},
+			url_transforms : {
+			shorten: {
+			twitter: 'bitly'
+			}
+			},
+			shorteners : {
+			bitly : {}
+			}
+			};		
+			</script>
+			<!-- This site uses the Google Analytics by MonsterInsights plugin v7.3.2 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.3.2';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-65663325-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-65663325-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+	__gaTracker( function() {
+  		window.ga = __gaTracker;
+	});
+		__gaTracker('set', 'dimension1', 'post');
+		__gaTracker('require', 'linkid', 'linkid.js');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/transmitter.ieee.org\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.0.2"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='batch_css-css'  href='https://transmitter.ieee.org/wp-content/plugins/batchmove/css/batch.css?ver=5.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='oss-social-sharing-front-css'  href='https://transmitter.ieee.org/wp-content/plugins/simplified-social-share/oss-social-sharing/assets/css/oss-social-sharing-front.css?ver=5.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='oss-share-widget-style-css'  href='https://sharecdn.social9.com/v2/css/os-share-widget-style.css?ver=5.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='easy_load_more-frontend-css'  href='https://transmitter.ieee.org/wp-content/plugins/easy-load-more/assets/css/frontend.css?ver=1.0.0' type='text/css' media='all' />
+<style id='easy_load_more-frontend-inline-css' type='text/css'>
+.elm-button { background: #009FDA; color: #FFFFFF; }
+.elm-button:hover, .elm-button:active, .elm-button:focus { background: #33b2e1; }
+.elm-loading-icon { fill: #FFFFFF; stroke: #FFFFFF; }
+
+</style>
+<link rel='stylesheet' id='sb_instagram_styles-css'  href='https://transmitter.ieee.org/wp-content/plugins/instagram-feed-pro/css/sb-instagram.css?ver=4.0.6' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-lightbox-swipebox-css'  href='https://transmitter.ieee.org/wp-content/plugins/responsive-lightbox/assets/swipebox/css/swipebox.min.css?ver=2.0.5' type='text/css' media='all' />
+<link rel='stylesheet' id='wordpress-popular-posts-css-css'  href='https://transmitter.ieee.org/wp-content/plugins/wordpress-popular-posts/public/css/wpp.css?ver=4.2.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ieee-style-css'  href='https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/style.css?ver=5.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ieee-styles-css'  href='https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/css/site.min.css?ver=1549689944' type='text/css' media='all' />
+<link rel='stylesheet' id='ieee-ionic-css'  href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css?ver=5.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='ieee-fontawesome-css'  href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?ver=5.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-sourcesanspro-css'  href='https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700%2C900&#038;ver=5.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='font-rajdhani-css'  href='https://fonts.googleapis.com/css?family=Rajdhani%3A400%2C600%2C700&#038;ver=5.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpss-style-css'  href='https://transmitter.ieee.org/wp-content/plugins/wordpress-simple-survey/assets/build/css/wpss-pkg.css?ver=5.0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='wpss-custom-db-style-css'  href='https://transmitter.ieee.org/?wpss-routing=custom-css&#038;ver=5.0.2' type='text/css' media='all' />
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/batchmove/js/batch.js?ver=5.0.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"false","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls","inbound_paths":"","home_url":"https:\/\/transmitter.ieee.org","track_download_as":"event","internal_label":"int","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.3.2'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/responsive-lightbox/assets/swipebox/js/jquery.swipebox.min.js?ver=2.0.5'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/responsive-lightbox/assets/infinitescroll/infinite-scroll.pkgd.min.js?ver=5.0.2'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rlArgs = {"script":"swipebox","selector":"lightbox","customEvents":"","activeGalleries":"1","animation":"1","hideCloseButtonOnMobile":"0","removeBarsOnMobile":"0","hideBars":"0","hideBarsDelay":"5000","videoMaxWidth":"1080","useSVG":"1","loopAtEnd":"0","woocommerce_gallery":"0","ajaxurl":"https:\/\/transmitter.ieee.org\/wp-admin\/admin-ajax.php","nonce":"ce5c326a18"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/responsive-lightbox/js/front.js?ver=2.0.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpp_params = {"sampling_active":"0","sampling_rate":"100","ajax_url":"https:\/\/transmitter.ieee.org\/wp-json\/wordpress-popular-posts\/v1\/popular-posts\/","ID":"10150","token":"cf401ecbe4","debug":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/wordpress-popular-posts/public/js/wpp-4.2.0.min.js?ver=4.2.2'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/duracelltomi-google-tag-manager/js/gtm4wp-form-move-tracker.js?ver=1.9'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/js/libs.min.js?ver=1549689944'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/js/site.min.js?ver=1549689944'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/wordpress-simple-survey/assets/build/js/wpss-pkg.js?ver=3.0.0'></script>
+<link rel='https://api.w.org/' href='https://transmitter.ieee.org/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://transmitter.ieee.org/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://transmitter.ieee.org/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.0.2" />
+<link rel='shortlink' href='https://transmitter.ieee.org/?p=10150' />
+<link rel="alternate" type="application/json+oembed" href="https://transmitter.ieee.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftransmitter.ieee.org%2Fieee-fellow-tom-coughlin-on-the-staying-power-of-tech-from-ces-2019%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://transmitter.ieee.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ftransmitter.ieee.org%2Fieee-fellow-tom-coughlin-on-the-staying-power-of-tech-from-ces-2019%2F&#038;format=xml" />
+
+<!-- Google Tag Manager for WordPress by gtm4wp.com -->
+<script data-cfasync="false" type="text/javascript">//<![CDATA[
+	dataLayer.push({"pagePostType":"post","pagePostType2":"single-post","pageCategory":["consumer-electronics"],"pageAttributes":["ces","peggy-smedley","tom-coughlin"],"pagePostAuthor":"IEEEadmin"});//]]>
+</script>
+<script data-cfasync="false">//<![CDATA[
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.'+'js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TT2PPG');//]]>
+</script>
+<!-- End Google Tag Manager -->
+<!-- End Google Tag Manager for WordPress by gtm4wp.com --><link rel="pingback" href="https://transmitter.ieee.org/xmlrpc.php">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+				<script>
+	if(typeof __gaTracker =='undefined')
+	{
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-65663325-1', 'auto');
+	  ga('send', 'pageview');
+	}
+
+	</script>
+	
+	<script src="https://s3-us-west-2.amazonaws.com/ieeeshutpages/gdpr/settings.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+	<script>
+	window.addEventListener("load", function(){
+	window.cookieconsent.initialise(json)
+	});
+	</script>
+
+
+</head>
+
+<body class="post-template-default single single-post postid-10150 single-format-standard">
+
+<div class="main-container">
+
+<div class="page-wrap">
+
+<!-- header -->
+<header class="site-header">
+	<!-- top util bar -->
+	<div class="top-bar">
+		<p class="util-links">
+			<a href="http://www.ieee.org/" target="_blank" >IEEE.org</a>
+			<a href="http://ieeexplore.ieee.org/" target="_blank" >IEEE <em>Xplore</em> Digital Library</a>
+			<a href="http://standards.ieee.org/" target="_blank" >IEEE Standards</a>
+			<a href="http://spectrum.ieee.org/" target="_blank" >IEEE Spectrum</a>
+			<a href="http://www.ieee.org/sitemap.html" target="_blank">More Sites</a>
+		</p>
+		<p class="top-social"><a href="http://www.ieee.org/" class="mobile-pad"><img src="https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/images/ieee-logo-white.png" width="118" height="35" alt="IEEE Transmitter" /></a>
+		    <a href="https://www.facebook.com/IEEE.org/"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/ieeeorg"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/ieeeorg/?hl=en"><i class="fa fa-instagram"></i></a>
+            <a href="https://plus.google.com/110847308612303935604"><i class="fa fa-google-plus"></i></a>
+            <a href="https://www.linkedin.com/company/ieee"><i class="fa fa-linkedin"></i></a>
+            	
+		</p>
+	</div>
+	<!-- homepage banner -->
+
+		<!-- logo, social, search and navigation -->  
+	<div class="navigation">
+		<!-- mobile navigation -->    
+		<div class="mobile-nav" reposition-element-large-prependTo=".navigation" reposition-element-medium-prependTo=".top-bar" reposition-element-small-prependTo=".top-bar" reposition-element><a href="#" class="button"><i class="fa fa-navicon"></i></a></div>
+		<!-- logo -->
+		<div class="logo"><a href="/"><img src="https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/images/logo-2017.svg" width="342" height="30" alt="IEEE Transmitter" /></a></div>
+		<!-- social -->
+		<div class="social">
+            <a href="http://www.ieee.org/"><img src="https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/images/ieee-logo.png" width="118" height="35" alt="IEEE Transmitter" /></a>	
+		</div>
+		<!-- search button -->
+		<div class="main-search-area" reposition-element-large-appendTo=".navigation" reposition-element-medium-appendTo=".top-bar" reposition-element-small-appendTo=".top-bar" reposition-element><a href="#"><i class="fa fa-search"></i></a></div>
+		<!-- search area -->
+		<form action="/" class="main-search"><input name="s" placeholder="Search" id="search" type="text"><input class="submit" value="&#xf00d" type="button"></form>
+	</div>
+	
+	
+	    
+	
+</header>
+
+		<!-- main content --> 
+		<section class="content">
+		    <div class="wrapper">
+		
+<script src="https://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-503d10ca4d6becbe"></script>
+
+<div class="content-social social-after-title" reposition-element-large-insertbefore=".column-center" reposition-element-medium-insertAfter=".blurb" reposition-element-small-insertAfter=".blurb" reposition-element>
+	<div class="sticky">
+		<p>Share This:</p>
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style align-center" id="ht-technology-share">
+        	<p><a href="#" class="addthis_button_facebook facebook"><i class="fa fa-facebook"></i><span><br />Facebook</span></a></p>
+			<p><a href="#" class="addthis_button_twitter twitter"><i class="fa fa-twitter"></i><span><br />Twitter</span></a></p>
+			<p><a href="#" class="addthis_button_compact other"><i class="fa fa-plus"></i><span><br />Other</span></a></p>
+        </div>
+
+
+	</div>
+</div>
+<script>initSocialSticky();</script>
+
+<div class="content-l column-center">
+
+			<div class="banner-inside">
+			<div class=""><div class="img-location"><img src="https://transmitter.ieee.org/wp-content/uploads/2019/01/IEEE-Transmitter-Coughlin-CES2019-2-620x290.png" width="620" height="290" alt="" /></div></div>
+			<div class="blurb">
+				                <h2>IEEE Fellow Tom Coughlin on the Staying Power of Tech from CES 2019</h2>
+							</div>
+		</div>    
+		    
+    <p class="by">
+        Written by IEEE  | January 28, 2019    </p>
+    
+    <p><span style="font-weight: 400;">To some, recent consumer technologies have started to feel unexciting. To others, weâ€™re in an unprecedented time of rapid innovation, where the incredible has become commonplace. So how are we to reconcile the two, given the current cultural context? And where are tech and human achievement headed in the near future?</span></p>
+<p><span style="font-weight: 400;">At CES 2019, Peggy Smedley and IEEE Fellow Tom Coughlin engaged in a fascinating conversation focused on finding an answer. </span></p>
+<p><span style="font-weight: 400;">Watch the video below to see how they picture the interplay of innovation, STEM education, failure, privacy, manufacturing and more when it comes to solving global challenges. Plus, hear how IEEE initiatives are helping support standards and technologists in these endeavors.</span></p>
+<p><div class="embed-container"><iframe src="https://www.youtube.com/embed/fwc6Aac6hKU" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></div></p>
+    
+<div class="article-by">
+    <h4><span></span></h4>
+
+    <div class="article-by-author-support clear">
+
+    </div>
+</div>
+
+
+
+
+
+										
+					
+
+
+</div>
+
+
+ <div class="content-r">
+ 		        <div class="related" reposition-element-large-appendTo=".content-r" reposition-element-medium-appendTo=".content-l" reposition-element-small-appendTo=".content-l" reposition-element>
+	            
+                <h3>Related Stories</h3>
+	            <div class="callouts">
+								<div class="callout">
+				<p class="img-location"><a href="https://transmitter.ieee.org/day-three-of-ces-2019-ascendant-virtual-assistants/" class=""><img src="https://transmitter.ieee.org/wp-content/uploads/2019/01/GettyImages-1080493706_1800x650-310x150.jpg" width="310" height="150" alt="" /></a></p>
+				<h4><span><a href="https://transmitter.ieee.org/category/consumer-electronics/">Consumer Electronics</a></span> | 4 weeks ago</h4>
+				<p><a href="https://transmitter.ieee.org/day-three-of-ces-2019-ascendant-virtual-assistants/">Day Three of CESÂ® 2019: Ascendant Virtual Assistants</a></p>
+			</div>
+						<div class="callout">
+				<p class="img-location"><a href="https://transmitter.ieee.org/day-two-of-ces-2019-transforming-transit-tech/" class=""><img src="https://transmitter.ieee.org/wp-content/uploads/2019/01/Samsung-CES-2019-Booth-Video_Digital-Cockpit_main1-310x150.jpg" width="310" height="150" alt="" /></a></p>
+				<h4><span><a href="https://transmitter.ieee.org/category/consumer-electronics/">Consumer Electronics</a></span> | 4 weeks ago</h4>
+				<p><a href="https://transmitter.ieee.org/day-two-of-ces-2019-transforming-transit-tech/">Day Two of CESÂ® 2019: Transforming Transit Tech</a></p>
+			</div>
+						<div class="callout">
+				<p class="img-location"><a href="https://transmitter.ieee.org/day-one-of-ces-2019-tvs-laptops-take-center-stage/" class=""><img src="https://transmitter.ieee.org/wp-content/uploads/2019/01/B5I6261-1024x683-310x150.jpg" width="310" height="150" alt="" /></a></p>
+				<h4><span><a href="https://transmitter.ieee.org/category/consumer-electronics/">Consumer Electronics</a></span> | 1 month ago</h4>
+				<p><a href="https://transmitter.ieee.org/day-one-of-ces-2019-tvs-laptops-take-center-stage/">Day One of CESÂ® 2019: TVs &#038; Laptops Take Center Stage</a></p>
+			</div>
+						<div class="callout">
+				<p class="img-location"><a href="https://transmitter.ieee.org/tread-easy/" class=""><img src="https://transmitter.ieee.org/wp-content/uploads/2018/01/2018-01-12-1-310x150.jpg" width="310" height="150" alt="" /></a></p>
+				<h4><span><a href="https://transmitter.ieee.org/category/consumer-electronics/">Consumer Electronics</a></span> | 1 year ago</h4>
+				<p><a href="https://transmitter.ieee.org/tread-easy/">Tread Easy</a></p>
+			</div>
+				            </div>
+	        </div>
+ 			    
+ </div>
+
+
+
+                    </div></div>
+
+					
+                    <div class="experiences"><div class="wrapper">
+                        <h3><span>INTERACTIVE EXPERIENCES</span></h3>
+                         
+                        <div class="interactive">
+                        
+							                          <div>
+	                                <p><a href="http://transmitter.ieee.org/ces/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2019/01/Ht-CES2019.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="http://transmitter.ieee.org/ces/" target="_blank">Find us in booth 31506, LVCC South Hall 3 and experience the Technology Moon Walk</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="https://transmitter.ieee.org/interactive-experiences/vr-mr-2018/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2018/10/Bnr-hottopic-thm-ARMR2018.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="https://transmitter.ieee.org/interactive-experiences/vr-mr-2018/" target="_blank">Virtual and Mixed Reality</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="https://transmitter.ieee.org/robotics/ " target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2018/08/Bnr-hottopic-thm-Robotics2018-1.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="https://transmitter.ieee.org/robotics/ " target="_blank">How Robots are Improving our Health</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="https://transmitter.ieee.org/interactive-experiences/robotics-2017/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2018/08/robotics-2017.jpg" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="https://transmitter.ieee.org/interactive-experiences/robotics-2017/" target="_blank">IEEE Experts and the Robots They are Teaching</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="http://transmitter.ieee.org/ai/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2018/06/Bnr-hottopic-thm-GenAI2018.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="http://transmitter.ieee.org/ai/" target="_blank">See how millennial parents around the world see AI impacting the lives of their tech-infused offspring</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="http://transmitter.ieee.org/iot-2018/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2018/04/ht-IOT-2018@2x-1.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="http://transmitter.ieee.org/iot-2018/" target="_blank">Take the journey from farm to table and learn how IoT will help us reach the rising demand for food production</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="/category/cybersecurity/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2018/03/Bnr-hottopic-slider-Cybersec2018-1.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="/category/cybersecurity/" target="_blank">Watch technical experts discuss the latest cyber threats</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="http://transmitter.ieee.org/arvr-2017" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2017/11/2017-11-14.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="http://transmitter.ieee.org/arvr-2017" target="_blank">Explore how researchers, teachers, explorers, healthcare and medical professionals use immersive technologies</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="https://transmitter.ieee.org/ai-2017/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2017/07/ht-GenAI.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="https://transmitter.ieee.org/ai-2017/" target="_blank">Follow the timeline to see how Generation AI will be impacted by technology</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="http://transmitter.ieee.org/iot-2017/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2017/04/ht-iot-bigdata-2017.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="http://transmitter.ieee.org/iot-2017/" target="_blank">Learn how your IoT data can be used by experiencing a day in a connected life</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="/ieee-cyber-security/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2017/03/ht-cybersecurity-.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="/ieee-cyber-security/" target="_blank">Listen to technical experts discuss the biggest security threats today</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="/summergames/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2017/03/ht-games.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="/summergames/" target="_blank">See how tech has influenced and evolved with the Games</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="/iot-2016/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2017/03/ht-iot-smarthome.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="/iot-2016/" target="_blank">Enter our virtual home to explore the IoT (Internet of Things) technologies</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="/robotics-2016/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2017/03/ht-robotics.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="/robotics-2016/" target="_blank">Explore an interactive map  showcasing exciting innovations in robotics</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="http://transmitter.ieee.org/ai-2016/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2017/03/ht-ai.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="http://transmitter.ieee.org/ai-2016/" target="_blank">Interactively explore A.I. in recent Hollywood movies</a></p>
+	                          </div>
+								                          <div>
+	                                <p><a href="/health-tech/" target="_blank"><img src="https://transmitter.ieee.org/wp-content/uploads/2017/03/ht-healthtech.png" width="197" height="131" alt="" /></a></p>
+	                                <p><a href="/health-tech/" target="_blank">Get immersed in technologies that will improve patients' lives</a></p>
+	                          </div>
+							                        </div>
+                        
+                        <script>initInteractiveSlick();</script>
+
+
+                    </div></div>
+
+                </section>
+        </div>
+        
+        <footer class="site-footer">
+            <div class="wrapper">
+              <p class="nav">
+                <a href="/">Home</a>&nbsp;
+                <a href="http://www.ieee.org/sitemap.html" target="_blank" class="ga-processed">Sitemap</a>
+                <a href="http://www.ieee.org/about/contact_center/index.html" target="_blank" class="ga-processed">Contact &amp; Support</a>
+                <a href="http://www.ieee.org/accessibility_statement.html" target="_blank" class="ga-processed">Accessibility</a>
+                <a href="http://www.ieee.org/p9-26.html" target="_blank" class="ga-processed">Nondiscrimination</a>
+                <a href="http://www.ieee.org/security_privacy.html" target="_blank" class="ga-processed">Policy Privacy &amp; Opting Out of Cookies</a>
+                <a href="http://www.ieee.org/about/feedback_ieee_site.html" target="_blank" class="ga-processed">Feedback</a>
+              </p>
+              <p>&copy; Copyright 2019 IEEE - All rights reserved. Use of this website signifies your agreement to the <a href="http://www.ieee.org/site_terms_conditions.html">IEEE Terms and Conditions</a>.
+              <br />A not-for-profit organization, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+              </p>
+            </div>
+        </footer>
+        
+     </div>
+    
+    
+	    <!-- mobile navigation -->
+    <div class="mobile-overlayer"></div>
+    <div class="global-mobile-nav">
+        <div class="global-mobile-bg">
+            <p class="mobile-logo"><a href="/"><img src="https://transmitter.ieee.org/wp-content/themes/wp_IEEE_v2/images/logo-2017.svg" width="342" height="30" alt="IEEE Transmitter" /></a></p>
+            
+            <form action="/">
+                <input type="text" placeholder="Search" name="s" /><input type="submit" value="&#xf002;" />
+            </form>
+            
+            <ul id="menu-main" class="list"><li id="menu-item-6648" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6648"><a href="/">Home</a></li>
+<li id="menu-item-6709" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-6709"><a href="/interactive-experiences/">Interactive Experiences</a></li>
+<li id="menu-item-6859" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6859"><a href="https://transmitter.ieee.org/about/">About this site</a></li>
+<li id="menu-item-6810" class="other menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-6810"><a href="https://transmitter.ieee.org/tag/infographic/">Infographics</a></li>
+<li id="menu-item-6809" class="other menu-item menu-item-type-taxonomy menu-item-object-post_tag menu-item-6809"><a href="https://transmitter.ieee.org/tag/video/">Videos</a></li>
+</ul>            <a href="#" class="x"><i class="ion ion-close"></i></a>
+        </div>
+    </div>
+	
+	<!-- Instagram Feed JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://transmitter.ieee.org/wp-admin/admin-ajax.php";
+</script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TT2PPG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/easy-load-more/assets/js/frontend.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-includes/js/wp-embed.min.js?ver=5.0.2'></script>
+<script type='text/javascript' src='https://transmitter.ieee.org/wp-content/plugins/simplified-social-share/oss-social-sharing/assets/js/oss_share.js?ver=5.0.2'></script>
+<script type='text/javascript' src='https://sharecdn.social9.com/v2/js/opensocialsharedefaulttheme.js?ver=5.0.2'></script>
+<script type='text/javascript' src='https://sharecdn.social9.com/v2/js/opensocialshare.js?ver=5.0.2'></script>
+	<script type="text/javascript">
+		var elm_button_vars = { wrapper: '.posts-list' };
+	</script>
+	
+               <script type="text/javascript">
+        var shareWidget = new OpenSocialShare();
+        shareWidget.init({
+             isEmailContentReadOnly:false,isTotalShare:true,isMobileFriendly:true,isShortenUrl:true,isOpenSingleWindow:false,                 
+            isCounterWidgetTheme: 0, // 0 or 1 - standard themes or counter widget themes
+            isHorizontalCounter: 0, // 0 or 1 - counter on top or counter to right - counter themes only
+            isHorizontalLayout: 1, // 0 or 1 - vertical layout or horizontal layout
+            widgetIconSize: "32", // "16" or "32" - 16px or 32px standard themes only
+                       widgetStyle: "responsive", //"image", "square" or "responsive" - standard themes only
+            
+           
+            providers: {
+                
+                   top: ["Facebook","Twitter","LinkedIn","GooglePlus","Email","Print","Pinterest"]
+                },
+           widgets: {
+                 //all : _private.getAllButtonName(_private.widgetConfig),
+                      top: ["Facebook Like","Twitter Tweet","Google+ Share","Pinterest Pin it","LinkedIn Share"]
+                      },
+                          theme: 'OpenSocialShareDefaultTheme',
+             
+        });
+        shareWidget.injectInterface(".oss_horizontal_share");
+        shareWidget.setWidgetTheme(".oss_horizontal_share");
+    </script>
+            	
+    <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"054b97878e","applicationID":"19376273","transactionName":"NVdaNRRUDxAAUURYWQwdeQISXA4NTkFZX1EOVw==","queueTime":0,"applicationTime":702,"atts":"GRBZQ1xOHB4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

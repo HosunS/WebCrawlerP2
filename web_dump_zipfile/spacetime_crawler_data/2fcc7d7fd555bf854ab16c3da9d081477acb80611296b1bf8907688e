@@ -1,0 +1,78 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2522¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 16 Jun 2017 02:44:48 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"9da-5520ac4cc4ca6"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:49:11 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY	Ú<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**CS295 Realistic Image Synthesis**
+	**Project: Smooth/Rough Dielectrics BSDF**
+	**Instructor: Shuang Zhao**
+	*Yu Guo (26642334)*
+	*06/13/2017*
+
+# Smooth Dielectric BSDF
+
+## Algorithm
+
+![](images/smoothBSDF.png width=\pagewidth)
+
+$$L_s(x,\omega) = F L_i(\omega_{mirroeed}) + (1-F)\frac{\eta_i^2}{\eta_o^2} L_i(\omega_{refracted})$$
+
+## result
+
+![](images/table_path.png width=\pagewidth)
+
+# Rough Dielectric BSDF
+
+## Microfacet Models for Refraction through Rough Surfaces [Walter et al. 2009]
+
+![Micro vs. macro surface](images/roughBSDF1.png width=\pagewidth)
+
+![Shadowing-masking geometry](images/roughBSDF2.png width=\pagewidth)
+
+![Half vector](images/roughBSDF3.png width=\pagewidth) 
+
+$$f_s(i,o,m) = \frac{F(i,h_r)G(i,o,h_r)D(h_r)}{4|i\cdot n||o\cdot n|} + 
+\frac{|i\cdot h_t||o\cdot h_t|}{|i\cdot n||o\cdot n|}\frac{\eta_o^2(1-F(i,h_t))G(i,o,h_t)D(h_t)}{(\eta_i(i\cdot h_t)+\eta_o(o\cdot h_t))^2}$$
+
+## result
+
+![](images/cbox_roughglass_compare.png width=\pagewidth)
+
+# More results
+
+## Rough dielectric
+![](images/veach_roughDieletric.png width=\pagewidth)
+
+## Rough dielectric without direct illumination
+![](images/veach_roughDieletric_noDirect.png width=\pagewidth)
+
+## Rough dielectric without indirect illumination
+![](images/veach_roughDieletric_noIndirect.png width=\pagewidth)
+
+## Smooth dielectric
+![](images/veach_smoothDieletric.png width=\pagewidth)
+
+## Rough dielectric (move glass-board up)
+![](images/veach_roughDieletric_up.png width=\pagewidth)
+
+
+# Future work (Light dispersion)
+
+## Diamonds Without Dispersion
+![](images/DiamondsWithoutDispersion.png width=\pagewidth)
+
+## Diamonds With Dispersion
+![](images/DiamondsWithDispersion.png width=\pagewidth)
+
+End.
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

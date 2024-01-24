@@ -1,0 +1,197 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7843¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 19 Jul 2013 09:02:11 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1ea3-4e1d995030ac0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 17:04:54 GMTKraw_content¢DtypeEvalueY£# weapons.py
+#
+# ICS 33 Summer 2013
+# Code Example
+#
+# This is an implementation of the ammunition-and-firing aspect of weapons in
+# a video game in which a player navigates the world and shoots at three-
+# headed monsters.  There are two kinds of weapons: a "water pistol" and a
+# "trout gun".
+
+import random
+
+
+# We've seen before that this is how to create a new kind of exception.
+# Now that we know more about inheritance, the notation makes more sense:
+# "An OutOfAmmunitionError is an Exception", meaning that anything any
+# other kind of Exception can do, an OutOfAmmunitionError can do.  Since
+# the body of the class is otherwise empty, there's nothing special that
+# OutOfAmmunitionErrors can do; aside from their type, they're the same
+# as any other kind of exception.
+
+class OutOfAmmunitionError(Exception):
+    pass
+
+
+class WeaponBlockedError(Exception):
+    pass
+
+
+
+
+# The Weapon class defines everything that all weapons in our game
+# have in common with one another.  In our game, all weapons have an
+# amount of ammunition in them, they can be reloaded (i.e., new
+# ammunition can be added to them) and they can be fired.
+
+class Weapon:
+    # Initializing a weapon requires passing it an initial amount of
+    # ammunition.  That amount is stored in an attribute, so that it
+    # can be referred to later.
+    def __init__(self, initial_ammunition_count):
+        self._ammunition_count = initial_ammunition_count
+
+
+    # This method returns the number of times the weapon can be fired
+    # before it runs out of ammunition.
+    def ammunition_count(self):
+        return self._ammunition_count
+
+
+    # This method adds additional ammunition to the weapon.  There are
+    # no limits to how much ammunition a weapon can have in our example,
+    # though this is one obvious feature we might add if we were
+    # implementing something like this for real.
+    def reload(self, additional_ammunition_count):
+        self._ammunition_count += additional_ammunition_count
+
+
+    # Firing a weapon might fail for two reasons:
+    #
+    # (1) It is out of ammunition
+    # (2) It is otherwise "blocked" (e.g., it needs to be cleaned,
+    #     have corrosion removed, is broken, or otherwise unable to
+    #     fire).
+    #
+    # This method checks those two cases and raises an exception in
+    # either of them; to be clear, it raises a different exception in
+    # each case.
+    #
+    # If firing the weapon is successful, the ammunition count is
+    # reduced by 1.
+    #
+    # Note that this method contains a call to a method is_blocked(),
+    # which is not implemented in the Weapon class.  Provided that
+    # we only create objects of concrete weapon classes like WaterPistol
+    # or TroutGun, and provided that these classes include an implementation
+    # of the is_blocked() method, the "right thing" will always happen
+    # in every case -- when, for example, the "self" object is really a
+    # TroutGun, it will be TroutGun's version of is_blocked() that is
+    # called.
+    def fire(self):
+        if self._ammunition_count == 0:
+            raise OutOfAmmunitionError()
+        elif self.is_blocked():
+            raise WeaponBlockedError()
+        else:
+            self._ammunition_count -= 1
+
+
+
+
+# The WaterPistol class inherits from Weapon.  Philosophically, this means
+# that "a WaterPistol is a Weapon".  More technically, this means that
+# all of the methods of Weapon apply to WaterPistol objects, as well, but
+# that if the WaterPistol introduces a method that has the same name as
+# one in the Weapon class, the WaterPistol version will take precedence
+# for WaterPistol objects.
+#
+# Water pistols are different from other kinds of weapons in that they
+# "corrode" over time, due to the effect of having water stored in it.
+# After firing the weapon 100,000 times, the weapon is too corroded to
+# fire, until a "decorrosion" is done on it.
+
+class WaterPistol(Weapon):
+
+    # Notice that the __init__ method takes an initial ammunition count,
+    # just like Weapon's __init__ method does.  It's important to understand
+    # the chain of events here:
+    #
+    # * If we construct a WaterPistol object, it will be WaterPistol's
+    #   version of __init__ that's called (because of the way that Python
+    #   looks names up in namespaces).  So we'll end up here.
+    # * But part of the act of initializing a WaterPistol is to initialize
+    #   it as a Weapon.  Rather than copy and paste this code into
+    #   WaterPistol's __init__ method, we instead call Weapon's __init__
+    #   method directly.
+    # * Weapon's __init__ method requires an initial ammunition count
+    #   -- i.e., you can't create a weapon without saying how much ammunition
+    #   is in it -- so we require that parameter in WaterPistol's constructor,
+    #   as well.
+    #
+    # Other than that, we set a count of how many times the weapon has been
+    # fired since the last decorrosion was done on it.  Initially, that's
+    # zero; it'll increase each time the weapon is fired.
+    def __init__(self, initial_ammunition_count):
+        Weapon.__init__(self, initial_ammunition_count)
+        self._fire_count_since_decorrosion = 0
+
+
+    # This version of the fire method takes precedence over the version in
+    # Weapon when called on a WaterPistol object.  Like the __init__ method,
+    # instead of copying and pasting the code that we want to be the same
+    # as other kinds of Weapons, we simply call the Weapon version of the
+    # fire method first.  Provided that it doesn't raise an exception, we
+    # increment the fire count since our last decorrosion.
+    def fire(self):
+        Weapon.fire(self)
+        self._fire_count_since_decorrosion += 1
+
+
+    # A WaterPistol is blocked after 100,000 firings if it hasn't been
+    # decorroded.
+    def is_blocked(self):
+        return self._fire_count_since_decorrosion >= 100000
+
+
+    # This method is used to decorrode a WaterPistol.  This will have the
+    # effect of causing subsequent calls to is_blocked to return True until
+    # it is fired another 100,000 times.
+    def decorrode(self):
+        self._fire_count_since_decorrosion = 0
+
+
+
+
+# TroutGun also inherits from Weapon, but it implements blocking differently.
+# Fish make lousy bullets, so TroutGuns get jammed, on the average, every
+# four times they're fired, because fish have a tendency to explore in the
+# barrel of the gun.  We implement that using random number generation;
+# otherwise, it is similar to the WaterPistol class.
+
+class TroutGun(Weapon):
+    def __init__(self, initial_ammunition_count):
+        Weapon.__init__(self, initial_ammunition_count)
+
+        # Initialize a fresh random number generator for use in this
+        # TroutGun.
+        self._random = random.Random()
+        self._random.seed()
+
+        self._is_jammed = False
+
+
+    def fire(self):
+        # randrange(0, 4) will return a uniformly distributed random
+        # number between 0 and 3 inclusive.  There's a 25% chance of
+        # getting back 0, so this will suffice for allowing our
+        # TroutGun to jam, on the average, one out of every four times
+        # we fire it.
+        #
+        # We'll do this first, so that firing will fail immediately if
+        # the current fish jams the barrel of the gun.  In the case that
+        # the barrel is already jammed, this will be harmless; it can only
+        # set self._is_jammed to True (when it already would be).
+        if self._random.randrange(0, 4) == 0:
+            self._is_jammed = True
+
+        Weapon.fire(self)
+
+
+    def is_blocked(self):
+        return self._is_jammed
+
+    
+    def clean(self):
+        self._is_jammed = False
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

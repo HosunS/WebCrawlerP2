@@ -1,0 +1,68 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1561¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Feb 2006 21:57:54 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"619-40c3b78ac3c80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 18:31:42 GMTKraw_content¢DtypeEvalueY/**
+Name: Cameron Lewis
+Student ID: 16254966
+**/
+
+//class Hourly constructs objects that can be used to print paychecks and
+//personal information about hourly employees
+class Hourly extends Employee
+{
+	//the name of the employee
+	private String name;
+
+	//the integer value of the wage of this employee
+	private int wage;
+
+	//the pay for this employee before the tax
+	private int grossPay;
+
+	//the amount of money subtracted from the grossPay after taxes
+	private int tax;
+
+	//used to calculate how many hours are worked over 40 each week
+	private int overtime;
+
+	//constructs an Hourly object and initializes name and wage
+	public Hourly(String n, int w)
+	{
+		super(n);
+		name = n;
+		wage = w;
+
+	}
+
+	//creates a Paycheck object using @param hoursWorked so that the paycheck can be printed for a specific employee
+	public Paycheck createWeeklyPaycheck(int hoursWorked)
+	{
+		if (hoursWorked <= 40)
+			grossPay = wage * hoursWorked;
+
+		else
+		{
+			overtime = hoursWorked - 40;
+			grossPay = wage * 40;
+			grossPay += (int) (wage * (overtime * 1.5));
+		}
+
+		tax = (grossPay / 5);
+
+		Employee emp = new Hourly(name, wage);
+		Paycheck oneWeek = new Paycheck(emp, hoursWorked, grossPay, tax);
+		return oneWeek;
+	}
+
+	//used to print the information about a specific employee
+	public String toString()
+	{
+		String s = "";
+
+		s += String.format("%-20s", name);
+		s += String.format("%-10s", "Hourly");
+		s += String.format("%-15s: %s\n", "Hourly Wage", CurrencyFormat.format(wage));
+
+		return s;
+
+	}
+}
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,113 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4475¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 31 Oct 2018 16:08:09 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"117b-57988821f0d1f"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 04:54:25 GMTKraw_content¢DtypeEvalueY{#
+# Enclosed is a function called gandr.conv (and others called by it) 
+# This function takes two inputs:
+#        n x m matrix of posterior draws for a single parameter of interest
+#              (n = number of iterations per chain; m = number of chains)
+#        n1 = number of iterations to ignore as transient 
+#             (defaults to 0.5*n if no number supplied)
+# Output contains 3 pieces:
+#      1. an approximate posterior 2.5,50,97.5% points (t-approximation)
+#      2. quantiles obtained by treating (n - n1) x m matrix as samples  
+#         from posterior
+#      3. Gelman and Rubin's convergence measure R and an upper confidence
+#         limit for R (values near 1, say less than 1.1 are desirable)
+#
+gandr.conv <- function(r, n1 = nrow(r)/2){
+#
+#  r: matrix of simulated sequences
+#  n1: length of initial transient to ignore (default = 0.5)
+#
+	alpha <- 0.05	# 95% intervals
+	m <- ncol(r)
+	x <- r[(n1 + 1):nrow(r),  ]	# part of simulated sequences to process
+	n <- nrow(x)	# We compute the following statistics:
+#
+#  xdot:  vector of sequence means
+#  s2:  vector of sequence sample variances (dividing by n-1)
+#  W = mean(s2):  within MS
+#  B = n*var(xdot):  between MS.
+#  muhat = mean(xdot):  grand mean; unbiased under strong stationarity
+#  varW = var(s2)/m:  estimated sampling var of W
+#  varB = B^2 * 2/(m+1):  estimated sampling var of B
+#  covWB = (n/m)*(cov(s2,xdot^2) - 2*muhat*cov(s^2,xdot)):
+#                                               estimated sampling cov(W,B)
+#  sig2hat = ((n-1)/n))*W + (1/n)*B:  estimate of sig2; unbiased under
+#                                               strong stationarity
+#  quantiles:  emipirical quantiles from last half of simulated sequences
+#
+	xdot <- as.vector(col.means(x))
+	s2 <- as.vector(col.vars(x))
+	W <- mean(s2)
+	B <- n * var(xdot)
+	muhat <- mean(xdot)
+	varW <- var(s2)/m
+	varB <- (B^2 * 2)/(m - 1)
+	covWB <- (n/m) * (cov(s2, xdot^2) - 2 * muhat * cov(s2, xdot))
+	sig2hat <- ((n - 1) * W + B)/n
+	quantiles <- quantile(as.vector(x), probs = c(0.025, 0.25, 0.5, 0.75, 
+		0.975))
+	if(W > 1e-08) {
+#
+# non-degenerate case
+# Posterior interval post.range combines all uncertainties
+# in a t interval with center muhat, scale sqrt(postvar), 
+# and postvar.df degrees of freedom.
+#
+#       postvar = sig2hat + B/(mn):  variance for the posterior interval
+#                               The B/(mn) term is there because of the
+#                               sampling variance of muhat.
+#       varpostvar:  estimated sampling variance of postvar
+#
+		postvar <- sig2hat + B/(m * n)
+		varpostvar <- (((n - 1)^2) * varW + (1 + 1/m)^2 * varB + 
+                        2 * (n - 1) * (1 + 1/m) * covWB)/n^2
+		post.df <- chisqdf(postvar, varpostvar)
+		post.range <- muhat + 
+                              sqrt(postvar) * qt(1-alpha/2, post.df) * c(-1,0,1)
+#
+# Estimated potential scale reduction (that would be achieved by
+# continuing simulations forever) has two components:  an estimate and
+# an approx. 97.5% upper bound.
+#
+# confshrink = sqrt(postvar/W), 
+#     multiplied by sqrt(df/(df-2)) as an adjustment for the
+#     width of the t-interval with df degrees of freedom.
+#
+# postvar/W = (n-1)/n + (1+1/m)(1/n)(B/W); we approximate the sampling dist.
+# of (B/W) by an F distribution, with degrees of freedom estimated
+# from the approximate chi-squared sampling dists for B and W.  (The
+# F approximation assumes that the sampling dists of B and W are independent;
+# if they are positively correlated, the approximation is conservative.)
+#
+		varlo.df <- chisqdf(W, varW)
+		confshrink.range <- sqrt((c(postvar/W, (n - 1)/n + (1 + 1/m) * 
+                       (1/n) * (B/W) * qf(0.975, m - 1, varlo.df)) * post.df)/
+                       (post.df - 2))
+		list(post = post.range, quantiles = quantiles, confshrink = 
+			confshrink.range)
+	}
+	else {
+#
+# degenerate case:  all entries in "data matrix" are identical
+#
+		list(post = muhat * c(1, 1, 1), quantiles = quantiles, 
+			confshrink = c(1, 1)) }
+}
+#
+# some functions needed by the above
+#
+col.vars <- function(mat){
+	means <- col.means(mat)
+	col.means(mat * mat) - means * means }
+#
+col.means <- function(mat){
+	ones <- matrix(1, nrow = 1, ncol = nrow(mat))
+	ones %*% mat/nrow(mat) }
+#
+cov <- function(a, b){
+	m <- length(a)
+	((mean((a - mean(a)) * (b - mean(b)))) * m)/(m - 1) }
+#
+chisqdf <- function(A, varA){
+	2 * (A^2/varA) }
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

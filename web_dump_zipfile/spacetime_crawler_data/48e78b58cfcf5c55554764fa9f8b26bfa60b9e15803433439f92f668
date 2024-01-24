@@ -1,0 +1,26 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC465¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 04 Feb 2014 23:44:09 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1d1-4f19d376ea440"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 19:07:49 GMTKraw_content¢DtypeEvalueYÑ
+
+public class TheaterLights {
+	String description;
+	
+	public TheaterLights(String description) {
+		this.description = description;
+	}
+  
+	public void on() {
+		System.out.println(description + " on");
+	}
+  
+	public void off() {
+		System.out.println(description + " off");
+	}
+  
+	public void dim(int level) {
+		System.out.println(description + " dimming to " + level  + "%");
+	}
+   
+        public String toString() {
+                return description;
+        }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

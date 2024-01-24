@@ -1,0 +1,71 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3227¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 05 Feb 2019 21:29:35 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"c9b-5812c4e414dc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 22:58:14 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY›<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC
+ "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../../course.css" type="text/css" />
+
+<title>ICS 32 Winter 2019, Project #3: Jack of All Trades, Example Implementation</title>
+</head>
+
+<body>
+
+<div class="navbar">
+
+<p>
+ICS 32 Winter 2019 |
+<a href="../../index.html">News</a> |
+<a href="../../CourseReference.html">Course Reference</a> |
+<a href="../../Schedule.html">Schedule</a> |
+<a href="../../ProjectGuide">Project Guide</a> |
+<a href="../../Notes">Notes and Examples</a> |
+<a href="http://www.ics.uci.edu/~thornton/">About Alex</a>
+</p>
+
+<hr />
+
+</div>
+
+<div class="header">
+
+<p>ICS 32 Winter 2019<br />
+   Project #3: <i>Jack of All Trades</i><br />
+   Example Implementation</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Background</p>
+
+<p>This example implementation is intended to allow you to experiment with a completed version of the project, so you can see the expected, correct output for a given input.  Using the example implementation is straightforward:</p>
+
+<ul>
+  <li>In the section marked <i>Input</i> below, type your desired input into the text area, then click the <b>Run</b> button below it.</li>
+  <li>If you type correct input &mdash; following the same rules as in the <a href="index.html">project write-up</a> &mdash; then you should see the example implementation begin running, then display an output table.</li>
+  <li>If you type incorrect input, you'll instead see a brief description of what was wrong with it.</li>
+  <li>After you run one input, click the <b>Start Over</b> button that appears at the bottom to try another.</li>
+</ul>
+
+<p>There are a couple of things you should note about this example implementation that make it slightly different from what you're building.</p>
+
+<ul>
+  <li>The example implementation checks for the formatting of the input and attempts to provide error messages when the input is incorrect.  Your project, on the other hand, is not expected to handle incorrectly-formatted input at all; you can do anything you'd like (including program crashes), as we will not be testing invalid inputs.</li>
+  <li>Because the example implementation runs on a web page, it takes advantage of the formatting capabilities provided by web browsers to display the output in a clean, tabular form.  Your program's output may not be so nicely-formatted, since what you're writing is a tab-delimited output &mdash; and since tabs don't guarantee that things "line up" vertically.  What the tables outputted by the example implementation show you is where the tabs should go; your implementation should print a tab character every time the example implementation goes from one table cell to the next (on the same line) and a newline character every time the example implementation goes to the next line.</li>
+</ul>
+
+</div>
+
+<div id="iex32App" />
+
+<script type="text/javascript" src="iex32-1.0.1.js"></script>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

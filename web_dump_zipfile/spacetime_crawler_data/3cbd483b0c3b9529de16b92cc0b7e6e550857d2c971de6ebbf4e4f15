@@ -1,0 +1,509 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE25549¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 30 Aug 2017 18:19:07 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"63cd-557fc903f8ac1"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 23:49:08 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYcÍ<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Report**
+
+# 20170822 "Next-event Fake3dielectric" gives better estimation of "Analog Dielectric"?
+<div class="twentytwenty-container">
+    <img src="0817/cbox_fake3dielectric_nextevent_spp1000.png" alt="Fake3dielectric Next-event">
+    <img src="0821/cbox_dielectric_spp10000.png"" alt="Dielectric Reference">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/simple_fake3dielectric_nextevent_spp1000.png" alt="Fake3dielectric Next-event">
+    <img src="0821/simple_dielectric_spp100000.png"" alt="Dielectric Reference">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/horse_fake3dielectric_nextevent_spp1000.png" alt="Fake3dielectric Next-event">
+    <img src="0821/horse_dielectric_spp100000.png"" alt="Dielectric Reference">    
+</div>
+
+
+# 20170821 Differnt fake dielectric compare with corresponding reference
+## Illustration
+![](0821/figure2.png width=\pagewidth)
+
+## Scene 1
+<div class="twentytwenty-container">
+    <img src="0817/cbox_dielectric_nextevent_spp1000.png" alt="Dielectric Next-event 1000spp">
+    <img src="0821/cbox_dielectric_spp10000.png" alt="Dielectric Reference 10000spp">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/cbox_fake1dielectric_nextevent_spp1000.png" alt="Fake1dielectric Next-event 1000spp">
+    <img src="0821/cbox_fake1dielectric_spp10000.png" alt="Fake1dielectric Reference 10000spp">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/cbox_fake2dielectric_nextevent_spp1000.png" alt="Fake2dielectric Next-event 1000spp">
+    <img src="0821/cbox_fake2dielectric_spp10000.png" alt="Fake2dielectric Reference 10000spp">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/cbox_fake3dielectric_nextevent_spp1000.png" alt="Fake3dielectric Next-event 1000spp">
+    <img src="0821/cbox_fake3dielectric_spp10000.png" alt="Fake3dielectric Reference 10000spp">    
+</div>
+
+## Scene 2
+<div class="twentytwenty-container">
+    <img src="0817/simple_dielectric_nextevent_spp1000.png" alt="Dielectric Next-event 1000spp">
+    <img src="0821/simple_dielectric_spp100000.png" alt="Dielectric Reference 100000spp">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/simple_fake1dielectric_nextevent_spp1000.png" alt="Fake1dielectric Next-event 1000spp">
+    <img src="0821/simple_fake1dielectric_spp100000.png" alt="Fake1dielectric Reference 100000spp">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/simple_fake2dielectric_nextevent_spp1000.png" alt="Fake2dielectric Next-event 1000spp">
+    <img src="0821/simple_fake2dielectric_spp10000.png" alt="Fake2dielectric Reference 10000spp">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/simple_fake3dielectric_nextevent_spp1000.png" alt="Fake3dielectric Next-event 1000spp">
+    <img src="0821/simple_fake3dielectric_spp10000.png" alt="Fake3dielectric Reference 10000spp">    
+</div>
+
+## Scene 3
+<div class="twentytwenty-container">
+    <img src="0817/horse_dielectric_nextevent_spp1000.png" alt="Dielectric Next-event 1000spp">
+    <img src="0821/horse_dielectric_spp100000.png" alt="Dielectric Reference 100000spp">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/horse_fake1dielectric_nextevent_spp1000.png" alt="Fake1dielectric Next-event 1000spp">
+    <img src="0821/horse_fake1dielectric_spp10000.png" alt="Fake1dielectric Reference 10000spp">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/horse_fake2dielectric_nextevent_spp1000.png" alt="Fake2dielectric Next-event 1000spp">
+    <img src="0821/horse_fake2dielectric_spp10000.png" alt="Fake2dielectric Reference 10000spp">    
+</div>
+<div class="twentytwenty-container">
+    <img src="0817/horse_fake3dielectric_nextevent_spp1000.png" alt="Fake2dielectric Next-event 1000spp">
+    <img src="0821/horse_fake3dielectric_spp10000.png" alt="Fake3dielectric Reference 10000spp">    
+</div>
+
+# 20170817 Differnt fake dielectric (Next-event)
+
+## Illustration
+![](0817/figure.png width=\pagewidth)
+
+## Scene 1 (<a href="0821/cbox_dielectric_spp10000.png" target="_blank">Reference</a>)
+![](0817/cbox_dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/cbox_fake1dielectric_nextevent_spp1000.png width=\pagewidth)
+![](0817/cbox_fake2dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/cbox_fake3dielectric_nextevent_spp1000.png width=\pagewidth)
+
+## Scene 2 (<a href="0821/simple_dielectric_spp10000.png" target="_blank">Reference</a>)
+![](0817/simple_dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/simple_fake1dielectric_nextevent_spp1000.png width=\pagewidth)
+![](0817/simple_fake2dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/simple_fake3dielectric_nextevent_spp1000.png width=\pagewidth)
+
+## Scene 3 (<a href="0821/horse_dielectric_spp10000.png" target="_blank">Reference</a>)
+![](0817/horse_dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/horse_fake1dielectric_nextevent_spp1000.png width=\pagewidth)
+![](0817/horse_fake2dielectric_nextevent_spp1000.png width=\pagewidth) ![](0817/horse_fake3dielectric_nextevent_spp1000.png width=\pagewidth)
+
+# 20170810 Fake rough dielectric
+
+## Surface Only
+![$\alpha$ = 0.02](0810/fakeroughdielectric/cbox_0.02.png width=\pagewidth) ![$\alpha$ = 0.2](0810/fakeroughdielectric/cbox_0.2.png width=\pagewidth)
+
+## Medium + Surface
+![Ref](0810/fakeroughdielectric/simple_ref.png width=\pagewidth) ![Next Event](0810/fakeroughdielectric/simple_nextEvent.png width=\pagewidth)
+
+
+# 20170809 Fake smooth dielectric
+
+## Surface Only
+![intIOR = 1.5](0809/fakedielectric/cbox_1.5.png width=\pagewidth) ![intIOR=2.5](0809/fakedielectric/cbox_2.5.png width=\pagewidth)
+
+## Medium + Surface
+![Ref](0809/fakedielectric/simple_ref_spp10000.png width=\pagewidth) ![Next Event](0809/fakedielectric/simple_nextEvent_spp100.png width=\pagewidth)
+
+
+# 20170727
+
+Direct1: Only connect points from medium to light
+
+Direct2: Remove indirect path except the path has any kind of reflection after scattering.
+
+Direct3: Remove indirect path except the path has an external reflection after scattering.
+
+Direct4: Remove indirect path except the path has a non-specular external reflection after scattering.
+
+## special case
+![How to do with this case](0727/specialCase.png width=\pagewidth)
+
+# 20170726
+## with specular sphere
+![Reference:](0726/newSetting/simple_ref.png width=\pagewidth) ![Direct2:](0726/newSetting/simple_v2.png width=\pagewidth) ![Direct3:](0726/newSetting/simple_v3.png width=\pagewidth) ![Direct4:](0727/newSetting/simple_v4.png width=\pagewidth)
+
+## debug 
+![Direct1:](0726/newSetting/simple_debug_v1.png width=\pagewidth) ![Direct2](0726/newSetting/simple_debug_v2.png width=\pagewidth) ![Direct3](0726/newSetting/simple_debug_v3.png width=\pagewidth) ![Direct4](0727/newSetting/simple_debug_v4.png width=\pagewidth)
+
+
+# 20170725
+See "Direct2" an "Direct3" in 20170724 and 20170721. Reasonable results for smooth dielectric. But not for rough dielectric.  
+
+(<font color="red">Indirect illumination when hitting light</font>; <font color="blue">Surface direct illumination</font>; <font color=#ffcc00>Volume direct illumination</font>)
+
+# 20170724 
+
+## Rough Dielectric 
+![Ref:10000spp](0726/original/simple_original_rough_10000.png width=\pagewidth) ![Direct1:100spp](0721/direct/simple_direct_rough_100.png width=\pagewidth) ![Direct2:100spp](0725/direct/simple_directRemove_rough_100.png width=\pagewidth)
+
+## Debug
+![Ref:100spp](0724/original_color/simple_original_rough_100.png width=\pagewidth) ![Direct1:100spp](0724/direct_color/simple_direct_rough_100.png width=\pagewidth) ![Direct2:100spp](0725/direct_color/simple_directRemove_rough_100.png width=\pagewidth)
+
+
+# 20170721 
+
+## Dielectric
+![Ref:10000spp](0726/original/simple_original_specular_10000.png width=\pagewidth) ![Direct1:100spp](0721/direct/simple_direct_specular_100.png width=\pagewidth) ![Direct2:100spp](0725/direct/simple_directRemove_specular_100.png width=\pagewidth) ![Direct3:100spp](0725/direct/simple_directRemove_specular_100_v2.png width=\pagewidth)
+
+## Debug
+![Ref:100spp](0724/original_color/simple_original_specular_100.png width=\pagewidth) ![Direct1:100spp](0724/direct_color/simple_direct_specular_100.png width=\pagewidth) ![Direct2:100spp](0725/direct_color/simple_directRemove_specular_100.png width=\pagewidth) ![Direct3:100spp](0725/direct_color/simple_directRemove_specular_100_v2.png width=\pagewidth) 
+
+
+
+# 20170719
+## direct illumination
+[Comment out]
+<div class="twentytwenty-container">
+    <img src="0719/after1/horse_depth100_sigmaA0.01_sigmaS1.png" alt="Remove blocked surface">
+    <img src="0719/after2/horse_depth100_sigmaA0.01_sigmaS1.png" alt="This is nothing">    
+    <img src="0719/before/horse_depth100_sigmaA0.01_sigmaS1.png" alt="Original">
+</div>
+
+# 20170718
+
+## Roughness: (top: smooth, 0.001, 0.01; bottom: 0.1, 0.5, 1)
+[Comment out]
+<div class="twentytwenty-container">
+    <img src="0718/evalTransmittance/A/horse_depth100_sigmaA0.01_sigmaS1_before.png" alt="Before">
+    <img src="0718/evalTransmittance/A/horse_depth100_sigmaA0.01_sigmaS1_after.png" alt="After">
+    <img src="0718/evalTransmittance/B/horse_depth100_sigmaA0.01_sigmaS1_before.png" alt="Before">
+    <img src="0718/evalTransmittance/B/horse_depth100_sigmaA0.01_sigmaS1_after.png" alt="After">
+</div>
+
+
+## using more samples
+[Comment out]
+<div class="twentytwenty-container">
+    <img src="0718/evalTransmittance/B/horse_depth100_sigmaA0.01_sigmaS1_before.png" alt="Before">
+    <img src="0718/evalTransmittance/B/horse_depth100_sigmaA0.01_sigmaS1_before_moreSample.png" alt="BeforeMoreSample">
+</div>
+
+
+
+# 20170714
+## Parameters testing [Different surface roughness in one image]
+(x: sigmaA = [0.0,0.1,0.5,1,10]; y: sigmaS = [0.1,0.3162,1,3.162,10])
+<center>
+<table>
+<tr>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.0_sigmaS0.1.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.1_sigmaS0.1.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.5_sigmaS0.1.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA1_sigmaS0.1.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA10_sigmaS0.1.png></td>
+</tr>
+<tr>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.0_sigmaS0.3162.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.1_sigmaS0.3162.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.5_sigmaS0.3162.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA1_sigmaS0.3162.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA10_sigmaS0.3162.png></td>
+</tr>
+<tr>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.0_sigmaS1.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.1_sigmaS1.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.5_sigmaS1.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA1_sigmaS1.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA10_sigmaS1.png></td>
+</tr>
+<tr>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.0_sigmaS3.162.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.1_sigmaS3.162.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.5_sigmaS3.162.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA1_sigmaS3.162.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA10_sigmaS3.162.png></td>
+</tr>
+<tr>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.0_sigmaS10.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.1_sigmaS10.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA0.5_sigmaS10.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA1_sigmaS10.png></td>
+<td><img src=0714/parameterTesting/horse_depth100_sigmaA10_sigmaS10.png></td>
+</tr>
+</table>
+</center>
+
+# 20170713
+
+## Rough Dielectric Different Ray tracing Depth
+<center>
+<table>
+<tr>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth1.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth2.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth3.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth4.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth5.png></td>
+</tr>
+<tr>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth6.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth7.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth8.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth9.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth10.png></td>
+</tr>
+<tr>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth11.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth12.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth13.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth14.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth15.png></td>
+</tr>
+<tr>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth16.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth17.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth18.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth19.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth20.png></td>
+</tr>
+<tr>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth21.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth22.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth23.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth24.png></td>
+<td><img src=0713/roughDielectricDepth/bunny_density1_rough0.2_depth25.png></td>
+</tr>
+</table>
+</center> 
+
+
+## Rough Dielectric (top: 256 spp; bottom: 1000 spp)
+<center>
+<table>
+<tr>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.99.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.5.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.2.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.05.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.001.png></td>
+</tr>
+<tr>
+<td><img src=0713/roughDielectricHigRes/bunny_density1_rough0.99.png></td>
+<td><img src=0713/roughDielectricHigRes/bunny_density1_rough0.5.png></td>
+<td><img src=0713/roughDielectricHigRes/bunny_density1_rough0.2.png></td>
+<td><img src=0713/roughDielectricHigRes/bunny_density1_rough0.05.png></td>
+<td><img src=0713/roughDielectricHigRes/bunny_density1_rough0.001.png></td>
+</tr>
+</table>
+</center> 
+
+
+# 20170712
+
+## Thin Dielectric 
+(x: volume density = [0.5,1,5,10,100]; y: intIOR [1.0, 1.1, 1.3, 1.5, 2])
+<center>
+<table>
+<tr>
+<td><img src=0712/thinDielectricCompare/bunny_density0.5_intIOR1.0.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density1_intIOR1.0.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density5_intIOR1.0.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density10_intIOR1.0.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density100_intIOR1.0.png></td>
+</tr>
+<tr>
+<td><img src=0712/thinDielectricCompare/bunny_density0.5_intIOR1.1.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density1_intIOR1.1.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density5_intIOR1.1.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density10_intIOR1.1.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density100_intIOR1.1.png></td>
+</tr>
+<tr>
+<td><img src=0712/thinDielectricCompare/bunny_density0.5_intIOR1.3.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density1_intIOR1.3.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density5_intIOR1.3.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density10_intIOR1.3.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density100_intIOR1.3.png></td>
+</tr>
+<tr>
+<td><img src=0712/thinDielectricCompare/bunny_density0.5_intIOR1.5.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density1_intIOR1.5.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density5_intIOR1.5.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density10_intIOR1.5.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density100_intIOR1.5.png></td>
+</tr>
+<tr>
+<td><img src=0712/thinDielectricCompare/bunny_density0.5_intIOR2.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density1_intIOR2.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density5_intIOR2.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density10_intIOR2.png></td>
+<td><img src=0712/thinDielectricCompare/bunny_density100_intIOR2.png></td>
+</tr>
+</table>
+</center>
+
+## Rough Dielectric 
+(x: volume density [0.5,1,5,10,100]; y: surface roughness [0.99,0.5,0.2,0.05,0.001]; z: intIOR [1.3])
+<center>
+<table>
+<tr>
+<td><img src=0712/roughDielectricCompare/bunny_density0.5_rough0.99.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.99.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density5_rough0.99.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density10_rough0.99.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density100_rough0.99.png></td>
+</tr>
+<tr>
+<td><img src=0712/roughDielectricCompare/bunny_density0.5_rough0.5.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.5.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density5_rough0.5.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density10_rough0.5.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density100_rough0.5.png></td>
+</tr>
+<tr>
+<td><img src=0712/roughDielectricCompare/bunny_density0.5_rough0.2.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.2.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density5_rough0.2.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density10_rough0.2.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density100_rough0.2.png></td>
+</tr>
+<tr>
+<td><img src=0712/roughDielectricCompare/bunny_density0.5_rough0.05.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.05.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density5_rough0.05.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density10_rough0.05.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density100_rough0.05.png></td>
+</tr>
+<tr>
+<td><img src=0712/roughDielectricCompare/bunny_density0.5_rough0.001.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density1_rough0.001.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density5_rough0.001.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density10_rough0.001.png></td>
+<td><img src=0712/roughDielectricCompare/bunny_density100_rough0.001.png></td>
+</tr>
+</table>
+</center>
+
+# 20170711
+
+## Todo:
+
+If using rough dielectric, there're noises inside the volume. Possible solution: simply connect a scattering point inside the object with a light source using a straight line.
+
+If using thin dielectric, the surface is always smooth. Possible solution: write a new plugin to support rough thin dielectric.
+
+## Question: 
+
+### If there're holes at the bottom of bunny, why no caustics when using thin dielectric? 
+
+(Top: rough dielectric; bottom: thin dielectric. both have holes.)
+<center>
+<table>
+<tr>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_rough0.2_hole_surface.png></td>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_rough0.2_hole_volume.png></td>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_rough0.2_hole_all.png></td>
+</tr>
+<tr>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_thin_hole_surface.png></td>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_thin_hole_volume.png></td>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_thin_hole_all.png></td>
+</tr>
+</table>
+</center>
+
+### If using rough dielectric, how do the holes create caustics? 
+
+(Top: with holes; bottom: without holes; both using rough dielectric.)
+<center>
+<table>
+<tr>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_rough0.2_hole_surface.png></td>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_rough0.2_hole_volume.png></td>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_rough0.2_hole_all.png></td>
+</tr>
+<tr>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_rough0.2_noHole_surface.png></td>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_rough0.2_noHole_volume.png></td>
+<td><img src=0712/roughDielectricAboutHole/bunny_density5_rough0.2_noHole_all.png></td>
+</tr>
+</table>
+</center>
+
+
+## Rough dielectric 0.5 (without holes)
+![0.1](0711/roughdielectric0.5_fixhole/bunny_sigma0.1.png width=\pagewidth) ![1](0711/roughdielectric0.5_fixhole/bunny_sigma1.png width=\pagewidth) ![5](0711/roughdielectric0.5_fixhole/bunny_sigma5.png width=\pagewidth) ![10](0711/roughdielectric0.5_fixhole/bunny_sigma10.png width=\pagewidth) ![100](0711/roughdielectric0.5_fixhole/bunny_sigma100.png width=\pagewidth)
+
+## Rough dielectric 0.01 (top: without holes; bottom: with holes)
+<center>
+<table>
+<tr>
+<td><img src=0711/roughdielectric0.01_fixhole/bunny_sigma0.1.png></td>
+<td><img src=0711/roughdielectric0.01_fixhole/bunny_sigma1.png></td>
+<td><img src=0711/roughdielectric0.01_fixhole/bunny_sigma5.png></td>
+<td><img src=0711/roughdielectric0.01_fixhole/bunny_sigma10.png></td>
+<td><img src=0711/roughdielectric0.01_fixhole/bunny_sigma100.png></td>
+</tr>
+<tr>
+<td><img src=0710/med_surface/bunny_sigma0.1.png></td>
+<td><img src=0710/med_surface/bunny_sigma1.png></td>
+<td><img src=0710/med_surface/bunny_sigma5.png></td>
+<td><img src=0710/med_surface/bunny_sigma10.png></td>
+<td><img src=0710/med_surface/bunny_sigma100.png></td>
+</tr>
+</table>
+</center>
+
+## Thin dielectric (top: without holes; bottom: with holes)
+<center>
+<table>
+<tr>
+<td><img src=0711/thindielectric_fixhole/bunny_sigma0.1.png></td>
+<td><img src=0711/thindielectric_fixhole/bunny_sigma1.png></td>
+<td><img src=0711/thindielectric_fixhole/bunny_sigma5.png></td>
+<td><img src=0711/thindielectric_fixhole/bunny_sigma10.png></td>
+<td><img src=0711/thindielectric_fixhole/bunny_sigma100.png></td>
+</tr>
+<tr>
+<td><img src=0710/med_thinsurface/bunny_sigma0.1.png></td>
+<td><img src=0710/med_thinsurface/bunny_sigma1.png></td>
+<td><img src=0710/med_thinsurface/bunny_sigma5.png></td>
+<td><img src=0710/med_thinsurface/bunny_sigma10.png></td>
+<td><img src=0710/med_thinsurface/bunny_sigma100.png></td>
+</tr>
+</table>
+</center>
+
+# 20170710
+## Only Medium
+![0.1](0710/med/bunny_sigma0.1.png width=\pagewidth) ![1](0710/med/bunny_sigma1.png width=\pagewidth) ![5](0710/med/bunny_sigma5.png width=\pagewidth) ![10](0710/med/bunny_sigma10.png width=\pagewidth) ![100](0710/med/bunny_sigma100.png width=\pagewidth)
+
+## HG
+![-1](0710/hg/bunny_hg-1.png width=\pagewidth) ![0](0710/hg/bunny_hg0.png width=\pagewidth) ![1](0710/hg/bunny_hg1.png width=\pagewidth)
+
+## No scattering inside ($\sigma_s = 0$)
+![Med](0710/noscattering/bunny_med.png width=\pagewidth) ![Med+Surface](0710/noscattering/bunny_med_surface.png width=\pagewidth)
+
+# 20170628
+## Small light - smooth surface
+![med](0628/bunny_med.png width=\pagewidth) ![med](0628/bunny_smooth_noMed.png width=\pagewidth) ![med](0628/bunny_smooth_withMed.png width=\pagewidth) 
+
+## Small light - rough surface
+![med](0628/bunny_med.png width=\pagewidth) ![med](0628/bunny_rough_noMed.png width=\pagewidth) ![med](0628/bunny_rough_withMed.png width=\pagewidth) 
+
+## Large light - smooth surface
+![med](0628/bunny_med_largeLight.png width=\pagewidth) ![med](0628/bunny_smooth_noMed_largeLight.png width=\pagewidth) ![med](0628/bunny_smooth_withMed_largeLight.png width=\pagewidth) 
+
+## Large light - rough surface
+![med](0628/bunny_med_largeLight.png width=\pagewidth) ![med](0628/bunny_rough_noMed_largeLight.png width=\pagewidth) ![med](0628/bunny_rough_withMed_largeLight.png width=\pagewidth) 
+
+End.
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

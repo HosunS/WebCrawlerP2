@@ -1,0 +1,896 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE57831¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXWerkzeug/0.14.1 Python/2.7.14¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 06:24:31 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYáç<!DOCTYPE html>
+<html>
+  <head>
+
+
+
+    <title>CircadiOmics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+      href="/static/main.css">
+
+
+
+    <!--[if lt IE 9]>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+      href="/static/main.css">
+
+
+
+  </head>
+  <body>
+    
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a  style="font-size: 16px  !important;" class="navbar-brand" href="/"><font color="#457ab2">C</font>ircadi<font color="orange">O</font>mics</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/about">About</a></li>
+        <li><a href="/datasets">Datasets</a></li>
+        <li><a href="/biocycle">BIO_CYCLE</a></li>
+        <li><a href="/metabolicatlas">Metabolic Atlas</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- 
+        <li><a href="/login">Login</a></li>
+         -->
+        <li><a href="/help">Help</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true">
+    <div class="modal-dialog" role="document" style="width:800px;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="myModalLabel"><b>MOUSE LIVER MASRI 2014 SIRT1-WT</b></h3>
+        </div>
+        <div class="modal-body" id="myModalBody">
+          <span class="paper-title"><a href="http://www.cell.com/cell/fulltext/S0092-8674(14)00884-8">Partitioning Circadian Transcription by SIRT6 Leads to Segregated Control of Cellular Metabolism</a></span><br>
+                        <span class="paper-authors"><b><br>Selma&nbspMasri,&nbspPaul&nbspRigor,&nbspMarlene&nbspCervantes,&nbspNicholas&nbspCeglia,&nbsp<br>Carlos&nbspSebastian,&nbspCuiying&nbspXiao,&nbspManuel&nbspRoqueta-Rivera,&nbspChuxia&nbspDeng,&nbsp<br>Timothy&nbspF.&nbspOsborne,&nbspRaul&nbspMostoslavsky,&nbspPierre&nbspBaldi,&nbspPaolo&nbspSassone-Corsi</b></span><br>
+                        <span class="paper-journal">Cell</span>&nbsp
+                        <span class="paper-extra">158</span>,&nbsp
+                        <span class="paper-extra">(3)</span>,&nbsp
+                        <span class="paper-extra">659-672</span>,&nbsp
+                        <span class="paper-year"><b>2014</b></span>
+                        <br><br> <b>Omic Type:</b> <i>Transcriptome</i><br> <b>Species:</b> <i>Mus musculus</i><br> <b>Tissue: </b> <i>Liver</i><br> <b>Tissue Class:</b> <i>Liver</i><br> <b>Condition: </b> <i>Sirt1-Wild-Type</i><br> <b>Experiment Type:</b> <i>Control</i><br> <b>GEO: </b> <i>GSE57830</i><br><br> <b>Description:</b> <p>Genomic partitioning by two independent sirtuins contributes to differential control of circadian metabolism.</p><br><br> <b>This dataset is part of a collection including: <br><ul id="dropdown-menu-paired"><li><a>MOUSE LIVER MASRI 2014 SIRT1-WT</a></li><li><a>MOUSE LIVER MASRI 2014 SIRT1-KO</a></li></ul><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="main" class="container-fluid">
+  <center>
+  <h1 style="font-size:70px"><font color="#457ab2">C</font>ircadi<font color="orange">O</font>mics</h1>
+  <h4>Web Server for Omic <b>Circadian</b> Data.</h4><br><br>
+  <div class="row">
+  <!-- <div class="col-lg-1">
+  </div> -->
+  <div class="col-lg-2 col-centered" >
+    <h2>Datasets</h2>
+    <hr>
+        <div class="dropdown top-buffer">
+          <button class="btn btn-default btn-md btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b>Filters &#9776;</b></span>
+        </button>
+        <ul id="dropdown-menu-filter" class="dropdown-menu filter-menu">
+          <li><a href="#" class="large" data-value="clear" tabIndex="-1"><b>Clear Filters</b></a></li>
+          <h2 style="font-size: 18px;" class="dropdown-header">Species</h2>
+          
+          <li><a href="#" class="large" data-value="Homo sapiens" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Homo sapiens</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Papio anubis" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Papio anubis</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Mus musculus" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Mus musculus</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Rattus norvegicus" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Rattus norvegicus</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Arabidopsis thaliana" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Arabidopsis thaliana</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Rhesus macaques" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Rhesus macaques</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Anopheles gambiae" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Anopheles gambiae</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Aedes aegypti" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Aedes aegypti</b></a></li>
+          
+          <h2 style="font-size: 18px;" class="dropdown-header">Tissue</h2>
+          
+          <li><a href="#" class="large" data-value="Heart" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Heart</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Plant" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Plant</b></a></li>
+          
+          <li><a href="#" class="large" data-value="SCN" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>SCN</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Eye" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Eye</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Reproductive" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Reproductive</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Glands" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Glands</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Cells" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Cells</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Adipose" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Adipose</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Bladder" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Bladder</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Brain" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Brain</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Digestive" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Digestive</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Lung" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Lung</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Kidney" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Kidney</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Skin" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Skin</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Muscle" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Muscle</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Breast" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Breast</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Serum" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Serum</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Bone" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Bone</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Liver" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Liver</b></a></li>
+          
+          <h2 style="font-size: 18px;" class="dropdown-header">Condition</h2>
+          
+          <li><a href="#" class="large" data-value="Control" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Control</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Cancer" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Cancer</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Drug Treatment" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Drug Treatment</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Disease" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Disease</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Knock-Out" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Knock-Out</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Knock-Down" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Knock-Down</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Diet" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Diet</b></a></li>
+          
+          <li><a href="#" class="large" data-value="Exercise" tabIndex="-1"><input class="cb" type="checkbox"/>&nbsp;<b>Exercise</b></a></li>
+          
+        </ul>
+        </div>
+
+
+    <div class="dropdown top-buffer">
+      <button class="btn btn-default btn-md btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <b>Transcriptome</b> <span class="caret"></span>
+    </button>
+    <ul id="dropdown-menu-trans" class="dropdown-menu">
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING EPIDERMAL ADULT CONTROL-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING EPIDERMAL ADULT RESTRICTED-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING EPIDERMAL AGED AGED</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING EPIDERMAL AGED YOUNG</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING EPIDERMAL NORMAL CONTROL-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING EPIDERMAL NORMAL HIGH-FAT-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING EPIDERMAL NORMAL ND-CONTROL-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING EPIDERMAL NORMAL RESTRICTED-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING SATELLITE ADULT CONTROL-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING SATELLITE ADULT RESTRICTED-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING SATELLITE AGED CONTROL-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING SATELLITE AGED RESTRICTED-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING SATELLITE NORMAL CONTROL-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Skin&#39;, &#39;Diet, Control&#39;)"><a>AGING SATELLITE NORMAL HIGH-FAT-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Arabidopsis thaliana&#39;, &#39;Plant&#39;, &#39;Control&#39;)"><a>ARABIDOPSIS PLANT EDWARDS 2007 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>BABOON ADRENAL CORTEX MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>BABOON ADRENAL MEDULLA MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON AMYGDALA MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Digestive&#39;, &#39;Control&#39;)"><a>BABOON ANTRUM MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Heart&#39;, &#39;Control&#39;)"><a>BABOON AORTA ENDOTHELIUM MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON ARCUATE NUCLEUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Digestive&#39;, &#39;Control&#39;)"><a>BABOON ASCENDING COLON MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON AXILLARY LYMPHONODES MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Bladder&#39;, &#39;Control&#39;)"><a>BABOON BLADDER MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Bone&#39;, &#39;Control&#39;)"><a>BABOON BONE MARROW MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Digestive&#39;, &#39;Control&#39;)"><a>BABOON CECUM MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON CEREBELLUM MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Eye&#39;, &#39;Control&#39;)"><a>BABOON CORNEA MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Digestive&#39;, &#39;Control&#39;)"><a>BABOON DESCENDING COLON MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON DORSOMEDIAL HYPOTHALAMUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Digestive&#39;, &#39;Control&#39;)"><a>BABOON DUODENUM MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON HABENULA MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Heart&#39;, &#39;Control&#39;)"><a>BABOON HEART MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON HIPPOCAMPUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Digestive&#39;, &#39;Control&#39;)"><a>BABOON ILEUM MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Eye&#39;, &#39;Control&#39;)"><a>BABOON IRIS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Kidney&#39;, &#39;Control&#39;)"><a>BABOON KIDNEY CORTEX MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Kidney&#39;, &#39;Control&#39;)"><a>BABOON KIDNEY MEDULLA MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON LATERAL GLOBUS PALLIDUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON LATERAL HYPOTHALAMUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>BABOON LIVER MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Lung&#39;, &#39;Control&#39;)"><a>BABOON LUNG MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON MAMMILARY BOBIES MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON MEDIAL GLOBUS PALLIDUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Bone&#39;, &#39;Control&#39;)"><a>BABOON MESENTERIC LYMPHONODES MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Muscle&#39;, &#39;Control&#39;)"><a>BABOON MUSCLE ABDOMINAL MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Muscle&#39;, &#39;Control&#39;)"><a>BABOON MUSCLE GASTROCNEMIAN MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Digestive&#39;, &#39;Control&#39;)"><a>BABOON OESOPHAGUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON OLFACTORY BULB MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>BABOON OMENTAL FAT MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Eye&#39;, &#39;Control&#39;)"><a>BABOON OPTIC NERVE HEAD MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>BABOON PANCREAS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON PARAVENTRICULAR NUCLEI MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>BABOON PINEAL MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>BABOON PITUITARY MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON PONS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON PREFRONTAL CORTEX MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON PREOPTIC AREA MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>BABOON PROSTATE MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON PUTAMEN MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Eye&#39;, &#39;Control&#39;)"><a>BABOON RETINA MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Eye&#39;, &#39;Control&#39;)"><a>BABOON RETINAL PIGMENT EPITHELIUM MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Skin&#39;, &#39;Control&#39;)"><a>BABOON SKIN MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Muscle&#39;, &#39;Control&#39;)"><a>BABOON SMOOTH MUSCLE MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>BABOON SPLEEN MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Digestive&#39;, &#39;Control&#39;)"><a>BABOON STOMACH FUNDUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON SUBSTANTIA NIGRA MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON SUPRACHIASMATIC NUCLEI MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON SUPRAOPTIC NUCLEUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Reproductive&#39;, &#39;Control&#39;)"><a>BABOON TESTICLES MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON THALAMUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>BABOON THYROID MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON VENTRO MEDIAL HYPOTHALAMUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>BABOON VISUAL CORTEX MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>BABOON WHITE ADIPOSE MESENTERIC MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>BABOON WHITE ADIPOSE PERICARDIAL MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>BABOON WHITE ADIPOSE PERIRENAL MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>BABOON WHITE ADIPOSE RETROPERITONEAL MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Papio anubis&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>BABOON WHITE ADIPOSE SUBCUTANEOUS MURE 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Heart&#39;, &#39;Control&#39;)"><a>EMBRYONIC HEART E10</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Heart&#39;, &#39;Control&#39;)"><a>EMBRYONIC HEART E17</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Heart&#39;, &#39;Control&#39;)"><a>EMBRYONIC HEART YOUNG</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Cells&#39;, &#39;Cancer&#39;)"><a>HUMAN BREAST GUTIERREZ 2016 CANCER</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Cells&#39;, &#39;Control&#39;)"><a>HUMAN FIBROBLAST LIU 2017 MYOGENIC-REPROGRAMMING</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-1</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-10</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-11</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-12</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-2</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-3</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-4</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-5</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-6</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-7</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-8</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Serum&#39;, &#39;Disease&#39;)"><a>HUMAN SERUM NA 2017 TBI-PATIENT-9</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Cells&#39;, &#39;Control&#39;)"><a>HUMAN U2 OS HUGHES 2009 OSTEOSARCOMA</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Rhesus macaques&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>MONKEY ADRENAL GLAND LEMOS 2006 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Anopheles gambiae&#39;, &#39;Embryo&#39;, &#39;Control&#39;)"><a>MOSQUITO EMBRYO GOLTSEV 2009 DEVELOPMENT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Aedes aegypti&#39;, &#39;Head&#39;, &#39;Control&#39;)"><a>MOSQUITO HEAD PTITSYN 2011 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Anopheles gambiae&#39;, &#39;Head&#39;, &#39;Control&#39;)"><a>MOSQUITO HEAD RUND 2011 DARK-DARK</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Anopheles gambiae&#39;, &#39;Larva&#39;, &#39;Control&#39;)"><a>MOSQUITO LARVA KOUTSOS 2007 DEVELOPMENT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Anopheles gambiae&#39;, &#39;Mid-Gut&#39;, &#39;Control&#39;)"><a>MOSQUITO MID GUT MARINOTTI 2006 BLOOD-FED</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Aedes aegypti&#39;, &#39;Thoracic&#39;, &#39;Control&#39;)"><a>MOSQUITO THORAX CHOI 2014 LIVERPOOL-INFECTED</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Aedes aegypti&#39;, &#39;Thoracic&#39;, &#39;Control&#39;)"><a>MOSQUITO THORAX CHOI 2014 RED-INFECTED</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Cells&#39;, &#39;Control&#39;)"><a>MOUSE 3T3 HUGHES 2009 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>MOUSE ADRENAL GLAND NA 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>MOUSE ADRENAL GLAND ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Heart&#39;, &#39;Control&#39;)"><a>MOUSE AORTA RUDIC 2005 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Heart&#39;, &#39;Control&#39;)"><a>MOUSE AORTA ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE BRAIN STEM ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Breast&#39;, &#39;Control&#39;)"><a>MOUSE BREAST YANG 2017 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>MOUSE BROWN FAT ANTERIOR DORSUM ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE CEREBELLUM ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Kidney&#39;, &#39;Control&#39;)"><a>MOUSE CORTICAL COLLECTING DUCT ZUBER 2009 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Digestive&#39;, &#39;Control&#39;)"><a>MOUSE DISTAL COLON HOOGERWERF 2008 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Kidney&#39;, &#39;Control&#39;)"><a>MOUSE DISTAL CONVOLUTED TUBULE ZUBER 2009 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>MOUSE EPIDIDYMAL ADIPOSE ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Cells&#39;, &#39;Knock-Out&#39;)"><a>MOUSE FIBROBLAST GRECO 2018 AHCY-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Cells&#39;, &#39;Knock-Out&#39;)"><a>MOUSE FIBROBLAST GRECO 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Heart&#39;, &#39;Control&#39;)"><a>MOUSE HEART ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE HYPOTHALAMUS ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Digestive&#39;, &#39;Diet&#39;)"><a>MOUSE INTESTINAL EPITHELIA TOGNINI 2017 KETOGENIC-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Digestive&#39;, &#39;Diet&#39;)"><a>MOUSE INTESTINAL EPITHELIA TOGNINI 2017 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Kidney&#39;, &#39;Control&#39;)"><a>MOUSE KIDNEY ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Diet&#39;)"><a>MOUSE LIVER ECKEL-MAHAN 2013 HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Diet&#39;)"><a>MOUSE LIVER ECKEL-MAHAN 2013 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE LIVER GAUCHER 2018 ACUTE-ETOH</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE LIVER GAUCHER 2018 CHRONIC-ETOH</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE LIVER GAUCHER 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE LIVER GAUCHER 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>MOUSE LIVER HUGHES 2009 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Diet&#39;)"><a>MOUSE LIVER KINOUCHI 2018 FASTING</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Diet&#39;)"><a>MOUSE LIVER KINOUCHI 2018 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MASRI 2014 SIRT1-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MASRI 2014 SIRT1-WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MASRI 2014 SIRT6-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MASRI 2014 SIRT6-WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Cancer&#39;)"><a>MOUSE LIVER MASRI 2016 LUNG-WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Cancer&#39;)"><a>MOUSE LIVER MASRI 2016 TUMOR-BEARING-LUNG</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>MOUSE LIVER MILLER 2007 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE LIVER NAN 2018 LIBRAMED-TREATMENT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE LIVER NAN 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>MOUSE LIVER PANDA 2002 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER SASSONE ILLUMINA KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER SASSONE ILLUMINA RE</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER SASSONE ILLUMINA WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER TERAJIMA 2017 ADARB1-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER TERAJIMA 2017 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Diet&#39;)"><a>MOUSE LIVER TOGNINI 2017 KETOGENIC-DIET</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Diet&#39;)"><a>MOUSE LIVER TOGNINI 2017 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>MOUSE LIVER ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Lung&#39;, &#39;Control&#39;)"><a>MOUSE LUNG ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Cells&#39;, &#39;Control&#39;)"><a>MOUSE MACROPHAGES KELLER 2009 DARK</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Control&#39;)"><a>MOUSE MUSCLE ANDREWS 2010 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Control&#39;)"><a>MOUSE MUSCLE GASTROCNEMIUS ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Diet&#39;)"><a>MOUSE MUSCLE KINOUCHI 2018 FASTING</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Diet&#39;)"><a>MOUSE MUSCLE KINOUCHI 2018 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Glands&#39;, &#39;Control&#39;)"><a>MOUSE PITUITARY ZHANG 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;SCN&#39;, &#39;Control&#39;)"><a>MOUSE SCN CONTROL</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE SCN DZNEP</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;SCN&#39;, &#39;Control&#39;)"><a>MOUSE SCN HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE SCN SALINE WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Knock-Out&#39;)"><a>MOUSE SKELETAL MUSCLE NA 2018 SIRT1-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Knock-Out&#39;)"><a>MOUSE SKELETAL MUSCLE NA 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS BALLANCE 2015 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 COCAINE</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 COCAINE-D2R-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 D2R-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Drug Treatment&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS PANDA 2002 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Exercise&#39;)"><a>MOUSE TRANSCRIPTOME EVENING-EXERCISE</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Exercise&#39;)"><a>MOUSE TRANSCRIPTOME EVENING-SEDENTARY</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Exercise&#39;)"><a>MOUSE TRANSCRIPTOME MORNING-EXERCISE</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Exercise&#39;)"><a>MOUSE TRANSCRIPTOME MORNING-SEDENTARY</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Disease&#39;)"><a>MOUSE VENTRAL HIPPOCAMPUS KONRAD 2017 TEMPORAL-LOBE-EPILEPTIC</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Disease&#39;)"><a>MOUSE VENTRAL HIPPOCAMPUS KONRAD 2017 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Rattus norvegicus&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>RAT LIVER ALMON 2008 WT</a></li>
+      
+    </ul>
+    </div>
+    <div class="dropdown top-buffer">
+      <button class="btn btn-default btn-md btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <b>Metabolome</b> <span class="caret"></span>
+    </button>
+    <ul id="dropdown-menu-metab" class="dropdown-menu">
+      
+      <li class="dataset_label" filter-data="(&#39;Homo sapiens&#39;, &#39;Cells&#39;, &#39;Control&#39;)"><a>HUMAN U2 OS KRISHNAIAH 2017 OSTEOSARCOMA</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>MOUSE BROWN ADIPOSE DYAR 2018 HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>MOUSE BROWN ADIPOSE DYAR 2018 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE EXERCISE METABOLOME EVENING-EXERCISE</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE EXERCISE METABOLOME EVENING-SEDENTARY</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE EXERCISE METABOLOME MORNING-EXERCISE</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE EXERCISE METABOLOME MORNING-SEDENTARY</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>MOUSE HEPATOCYTE KRISHNAIAH 2017 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER ECKEL-MAHAN 2011 CLOCK-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER ECKEL-MAHAN 2011 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Down&#39;)"><a>MOUSE LIVER KRISHNAIAH 2017 BMAL1-KD</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Down&#39;)"><a>MOUSE LIVER KRISHNAIAH 2017 CRY1-KD</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Down&#39;)"><a>MOUSE LIVER KRISHNAIAH 2017 CRY2-KD</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Down&#39;)"><a>MOUSE LIVER KRISHNAIAH 2017 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Diet&#39;)"><a>MOUSE LIVER METABOLOME ECKEL-MAHAN 2013 HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Diet&#39;)"><a>MOUSE LIVER METABOLOME ECKEL-MAHAN 2013 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT1-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT1-WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT6-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT6-WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Cancer&#39;)"><a>MOUSE LIVER METABOLOME MASRI 2016 LUNG-WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Cancer&#39;)"><a>MOUSE LIVER METABOLOME MASRI 2016 TUMOR-BEARING-LUNG</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER SASSONE METABOLOME KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER SASSONE METABOLOME RE</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER SASSONE METABOLOME WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Control&#39;)"><a>MOUSE MUSCLE DYAR 2018 HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Control&#39;)"><a>MOUSE MUSCLE DYAR 2018 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Knock-Out&#39;)"><a>MOUSE MUSCLE NA 2018 KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Muscle&#39;, &#39;Knock-Out&#39;)"><a>MOUSE MUSCLE NA 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Diet&#39;)"><a>MOUSE PREFRONTAL CORTEX NA 2018 HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Diet&#39;)"><a>MOUSE PREFRONTAL CORTEX NA 2018 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Serum&#39;, &#39;Diet&#39;)"><a>MOUSE SERUM ABBONDANTE 2016 HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Serum&#39;, &#39;Diet&#39;)"><a>MOUSE SERUM ABBONDANTE 2016 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Reproductive&#39;, &#39;Control&#39;)"><a>MOUSE SPERM DYAR 2018 HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Reproductive&#39;, &#39;Control&#39;)"><a>MOUSE SPERM DYAR 2018 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Diet&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Diet&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 NORMAL-CHOW</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>MOUSE WHITE ADIPOSE DYAR 2018 HIGH-FAT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Adipose&#39;, &#39;Control&#39;)"><a>MOUSE WHITE ADIPOSE DYAR 2018 NORMAL-CHOW</a></li>
+      
+    </ul>
+    </div>
+    <div class="dropdown top-buffer">
+          <button class="btn btn-default btn-md btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <b>Acetylome</b> <span class="caret"></span>
+        </button>
+        <ul id="dropdown-menu-acyl" class="dropdown-menu">
+          
+          <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MASRI 2013 CLOCK-KO</a></li>
+          
+          <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MASRI 2013 WT</a></li>
+          
+          <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MAUVOISIN 2017 BMAL-KO</a></li>
+          
+          <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MAUVOISIN 2017 BMAL-KO-NUCLEAR</a></li>
+          
+          <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MAUVOISIN 2017 CRY-KO</a></li>
+          
+          <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MAUVOISIN 2017 CRY-KO-NUCLEAR</a></li>
+          
+          <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MAUVOISIN 2017 WT</a></li>
+          
+          <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Knock-Out&#39;)"><a>MOUSE LIVER MAUVOISIN 2017 WT-NUCLEAR</a></li>
+          
+        </ul>
+    </div>
+    <div class="dropdown top-buffer">
+      <button class="btn btn-default btn-md btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <b>Proteome</b> <span class="caret"></span>
+    </button>
+    <ul id="dropdown-menu-prot" class="dropdown-menu">
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE CEREBRAL CORTEX GERSTNER 2016 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>MOUSE LIVER NA 2018 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>MOUSE LIVER ROBLES 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Liver&#39;, &#39;Control&#39;)"><a>MOUSE LIVER ROBLES 2014 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS MENDOZA 2017 MIR132-KO</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Control&#39;)"><a>MOUSE SUPRACHIASMATIC NUCLEUS MENDOZA 2017 WT</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Disease&#39;)"><a>MOUSE VENTRAL HIPPOCAMPUS PROTEOME KONRAD 2017 TEMPORAL-LOBE-EPILEPTIC</a></li>
+      
+      <li class="dataset_label" filter-data="(&#39;Mus musculus&#39;, &#39;Brain&#39;, &#39;Disease&#39;)"><a>MOUSE VENTRAL HIPPOCAMPUS PROTEOME KONRAD 2017 WT</a></li>
+      
+    </ul>
+    </div>
+    <h2>Software</h2>
+    <hr>
+    <ul style="width:100%" class="nav nav-pills top-buffer">
+      <li style="width:100%; cursor: pointer;" id="BIOCYCLE" role="presentation" class="active"><a>BIO_CYCLE</a></li>
+      <li style="width:100%; cursor: pointer;" id="JTK" role="presentation"><a>JTK_CYCLE</a></li>
+    </ul>
+    <h2>Normalization</h2>
+    <hr>
+    <ul class="nav nav-pills nav-justified">
+      <li style="cursor: pointer;" id ="NONORM" role="presentation" class="active"><a>Off</a></li>
+      <li style="cursor: pointer;" id = "NORM" role="presentation"><a>On</a></li>
+    </ul>
+  </div>
+  <div class="col-lg-10">
+    <div class="row">
+    <div class="col-lg-11">
+      <table width="100%" cellspacing="10">
+        <tr>
+        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+        <td align="left">
+          <div class="dropdown">
+            <button  class="btn btn-default btn-md btn-block dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <b>Selected Datasets <span id="dcount" class="badge badge-primary">1</span></b>&nbsp&nbsp&nbsp
+            </button>
+            <ul id="dropdown-menu-datasets" class="dropdown-menu datasets-menu">
+            <li width="100%">
+              <div width='100%' class="btn-group" role="group" aria-label="Selected Datasets">
+                <button width='200px' type="button" class="btn btn-sm btn-warning selected-datasets" data-toggle="modal" data-target="#myModal"><b>MOUSE LIVER MASRI 2014 SIRT1-WT</b></button>
+                <button type="button" class="btn btn-sm btn-danger remove-datasets"><i class="glyphicon glyphicon-remove"></i></button>
+              </div>
+            </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+        &nbsp&nbsp
+        <a id="png" class="btn btn-primary" type="button" download="timeseries.png" href="">PNG <i class="glyphicon glyphicon-download"></i></a>&nbsp
+        <a id="svg-download" class="btn btn-primary" type="button" download="timeseries.svg" href="">SVG <i class="glyphicon glyphicon-download"></i></a></td>
+        <td><img height="25px" min-width="25px" id="loading" src="/static/spinner.gif"></td>
+        <td align="right">
+          <div class="input-group">
+            <input style="min-width: 100px;" id="gene-symbol" type="text" class="form-control" value="Arntl" data-provide="typeahead">
+            <span class="input-group-btn">
+              <button  id="add" class="btn btn-default" style="border-width: 2px;" type="button"><b>Display</b></button>
+              <button id="clear-chart" class="btn btn-default" style="border-width: 2px;" type="button"><b>Clear</b></button>
+            </span>
+          </div>
+        </td>
+      </tr>
+    </table>
+    </div>
+    </div>
+    <div class="row">
+      <div style="min-height: 25px" class="col-sm-10"><h3 id="not-found-message"></h3></div>
+    </div>
+    <div class="row row-timeseries">
+        <div class="col-lg-12 col-timeseries">
+            <div id="timeseries" style="width: 90%%; height: 100%;"></div>
+        </div>
+    </div>
+    <div class="row top-buffer row-chart">
+        <div class="col-lg-11">
+            <table id="statistics" style="visibility:hidden" class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Dataset</th>
+                  <th>P-Value</th>
+                  <th>Q-Value</th>
+                  <th>Period</th>
+                  <th>Amplitude</th>
+                  <th>Lag</th>
+                  <th>Software</th>
+                  <th><button id="excel" class="btn btn-warning btn-md" type="button"><b>Excel</b> <i class="glyphicon glyphicon-download"></i></button></th>
+                </tr>
+              </thead>
+              <tbody>
+
+              </tbody>
+          </table>
+      </div>
+    </div>
+  </div>
+
+    </center>
+
+</div>
+
+<footer><center>&copy; 2018 Institute for Genomics and Bioinformatics - University of California, Irvine</center></footer>
+<br>
+<br>
+
+
+    
+<script src="/static/cytoscape.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload=
+{'modules':[{'name':'visualization','version':'1.1','packages':
+['corechart']}]}"></script>
+
+<script src="/static/preloaded.js"></script>
+
+<script src="/static/typeahead.min.js"></script>
+<script src="/static/main.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+var options = [];
+
+$( '.filter-menu a' ).on( 'click', function( event ) {
+    console.log("filtering");
+   var $target = $( event.currentTarget ),
+       val = $target.attr( 'data-value' ),
+       $inp = $target.find( 'input' ),
+       idx;
+
+   if ( ( idx = options.indexOf( val ) ) > -1 ) {
+      options.splice( idx, 1 );
+      setTimeout( function() { $inp.prop( 'checked', false ) }, 0);
+   } else {
+      options.push( val );
+      setTimeout( function() { $inp.prop( 'checked', true ) }, 0);
+   }
+
+
+   console.log( options );
+   if (options.includes("clear")) {
+      options = [];
+      boxes = document.getElementsByClassName("cb");
+      console.log(boxes);
+      $('.cb').each(function(i, obj) {
+          console.log(obj);
+          obj.checked = false;
+      });
+
+   }
+
+   console.log(val);
+   $( event.target ).blur();
+
+   table = document.getElementById("dropdown-menu-trans");
+   lis = table.getElementsByClassName("dataset_label");
+   for (i = 0; i < lis.length; i++) {
+       lis[i].style.display = "";
+       for (j = 0; j < options.length; j++) {
+         if (lis[i].attributes['filter-data'].value.includes(options[j])) {
+           lis[i].style.display = "";
+         } else {
+           lis[i].style.display = "none";
+           console.log("Removing..");
+           break;
+         }
+     }
+   }
+
+   table = document.getElementById("dropdown-menu-metab");
+   lis = table.getElementsByClassName("dataset_label");
+   for (i = 0; i < lis.length; i++) {
+       lis[i].style.display = "";
+       for (j = 0; j < options.length; j++) {
+         if (lis[i].attributes['filter-data'].value.includes(options[j])) {
+           lis[i].style.display = "";
+         } else {
+           lis[i].style.display = "none";
+           console.log("Removing..");
+           break;
+         }
+     }
+   }
+
+   table = document.getElementById("dropdown-menu-acyl");
+   lis = table.getElementsByClassName("dataset_label");
+   for (i = 0; i < lis.length; i++) {
+       lis[i].style.display = "";
+       for (j = 0; j < options.length; j++) {
+         if (lis[i].attributes['filter-data'].value.includes(options[j])) {
+           lis[i].style.display = "";
+         } else {
+           lis[i].style.display = "none";
+           console.log("Removing..");
+           break;
+         }
+     }
+   }
+
+   table = document.getElementById("dropdown-menu-prot");
+   lis = table.getElementsByClassName("dataset_label");
+   for (i = 0; i < lis.length; i++) {
+       lis[i].style.display = "";
+       for (j = 0; j < options.length; j++) {
+         if (lis[i].attributes['filter-data'].value.includes(options[j])) {
+           lis[i].style.display = "";
+         } else {
+           lis[i].style.display = "none";
+           console.log("Removing..");
+           break;
+         }
+     }
+   }
+   return false;
+});
+</script>
+
+
+
+  </body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

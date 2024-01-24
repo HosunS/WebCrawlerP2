@@ -1,0 +1,253 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 19:26:31 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY"‰<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
+<head>
+<title>ReactionPredictor | IGB |  | ReactionPredictor</title>
+
+
+<link rel="stylesheet" type="text/css" href="/static/css/base.css" />
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18334279-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+
+<body class="">
+
+<!-- Container -->
+<div id="container">
+    
+    <!-- Header -->
+    <div id="header">
+        <div id="branding">
+        
+<h1 id="site-name">ReactionPredictor Webserver</h1>
+
+        </div>
+        
+    </div>
+    <!-- END Header -->
+    
+<div class="breadcrumbs">
+  <a href="/">Home</a> 
+  
+  
+&rsaquo; ReactionPredictor Help
+
+</div>
+
+    
+
+        
+
+    <!-- Content -->
+    <div id="content" class="colM">
+        
+        
+<h1>ReactionPredictor Help</h1>
+
+<h2>Contents</h2>
+<ul>
+  <li><a href="#predictors">Predictors</a></li>
+  <li><a href="#background">Background</a></li>
+  <li><a href="#input">Input description</a></li>
+  <li><a href="#output">Output description</a></li>
+  <li><a href="#chemistry">Chemistry covered</a></li>
+  <li><a href="#references">References</a></li>
+  <li><a href="#contact">Contact</a></li>
+</ul>
+<hr/>
+
+        
+<a name="predictors"></a>
+<h2>Predictors</h2>
+<p>
+  There are two modes of operation: Single-step or pathway prediction.
+</p>
+<h3>Single-step prediction</h3>
+<p>
+  Upon entering a set of reactants and a description of reaction conditions, the system returns coarsely filtered reactive sites 
+  and a list of highly ranked mechanistic reactions.   
+</p>
+<h3>Pathway prediction</h3>
+<p>
+  Upon entering a set of reactants, reaction conditions, and a target molecule, the system runs a tree-search using the single-step prediction
+  outlined above at each step for a multi-step reaction prediction.
+</p>
+
+<a name="background"></a>
+<h2>Background</h2>
+<p>
+  Reaction prediction is the problem of predicting 'productive' mechanistic reactions given a set of reactants and conditions.
+  This webserver is an implementation of a novel machine learning approach to reaction prediction first prototyped in 2011 and expanded
+  to radical, pericyclic chemistry in 2012.
+  A manuscript detailing the prototype was published in the Journal of Chemical Information and Modeling. (See the <a href="#references">References</a>).
+</p>
+<p>
+  See the prototype for details, but briefly, the approach is based on a few key ideas:
+</p>
+  <h3>Representation</h3>
+  <p>
+    A reaction is modeled as an interaction between electron filled (source) and electron unfilled (sink)
+    idealized molecular orbitals.  Using this representation, all polar reactions can be enumerated by simply
+    pairing all sources and sinks over a set of reactants.
+  </p>
+  <h3>Data</h3>
+  <p>
+    Using the existing rules-based <a href="http://www.reactionexplorer.com/">Reaction Explorer</a> system and
+    manually curating reactions from graduate level textbooks, we 
+    have developed a database of several thousand known <i>productive</i> reactions.
+  </p>
+  <h3>Reactive Site Filtering</h3>
+  <p>
+    In order to reduce the space of possible reactions, we first coarsely filter source and 
+    sink reactive sites using machine learning techniques.  These filters are trained using 
+    the curated data.
+  </p>
+  <h3>Reaction Ranking</h3>
+  <p>
+    Once the space of reactions has been filtered, we then rank the remaining reactions by productivity using machine learning 
+    ranking techniques.  The ranking models are trained using the curated data.
+  </p>
+
+<hr/>
+
+<a name="input"></a>
+<h2>Input description</h2>
+
+<h3>Reactants</h3>
+  <p>
+    Enter the smiles for up to two reactants.  Reactant size is currently limited to a maximum 75 
+    character smiles string.  
+    See the 
+    <a href="#chemistry">Chemistry covered</a> section for details on what types of chemistry are covered.
+  </p>
+<h3>Target (Multi-step only)</h3>
+  <p>
+    Enter the smiles for one reactant.  Reactant size is currently limited to a maximum 75 
+    character smiles string.  
+    See the 
+    <a href="#chemistry">Chemistry covered</a> section for details on what types of chemistry are covered.
+  </p>
+<h3>Reaction Conditions</h3>
+  <p>
+    Select the reaction reaction conditions you would like to use.  
+    See the Kayala 2011 paper in <a href="#references">References</a> for more details.
+  </p>
+<h3>Number of reactions (Single-step only)</h3>
+  <p>
+    Enter in how many of the top ranked reactions you would like to see returned.  Set 
+    to 0 to see all filtered reactions.
+  </p>
+<h3>Chemistry type</h3>
+  <p>
+    Choose one or more chemistry types to use in the predictor.  For single-step, choosing <em>Predict</em>
+    will make polar, radical, and pericyclic predictions and then use a trained neural network to decide which 
+    one of the three types to use.
+    For the multi-step reaction predictor, if more than one chemistry type is selected, 
+    then the trained neural chemistry type predictor will be used at each step to decide which path to explore.
+  </p>
+
+<hr/>
+
+<a name="output"></a>
+<h2>Output description</h2>
+<h3>Reactive Sites</h3>
+<p>
+  Predicted source and sink reactive sites are represented with atoms mapped to the value 1 in two different depictions.
+  If no image is shown, then no atoms passed the particular filter.  
+</p>
+<h3>Filtered Reactions</h3>
+<p>
+  The top ranked productive reactions are shown in ranked order with the most productive at the top.  The table of these reactions includes an
+  internal score (output by the machine learning ranking model), a depiction of the arrow-pushing mechanism, and a smiles and electron 
+  flow string representation of the reaction.
+  See the Chen &amp; Baldi paper in <a href="#references">References</a> for a detailed explanation
+  of the electron flow string specification.
+</p>
+<h3>Pathway Reactions</h3>
+<p>
+  In the multi-step prediction, if a pathway is discovered, the ordered steps will be shown.
+</p>
+<h3>Note on the images</h3>
+<p>
+  The images for the mechanisms are generated automatically with <a href="http://www.chemaxon.com/products/marvin/">ChemAxon Marvin</a>. 
+  Because of the automatic image generation software, sometimes the arrows in the images are improperly aligned.
+</p>
+
+
+<hr/>
+
+<a name="chemistry"></a>
+<h2>Chemistry covered</h2>
+
+<p>
+The original prototype was limited to polar mechanisms over C, H, N, O, F, Cl, Br, I, and Li.  
+However, the latest version has no atom type restrictions and can predict polar, radical, and pericyclic mechanisms.
+Stereo-specific mechanisms are not proposed.
+Furthermore, reactant stereo-information is not used in the ranking prediction.
+</p>
+
+<hr/>
+
+<a name="references"></a>
+<h2>References</h2>
+
+<ul>
+  <li>
+    Matthew A. Kayala,  Pierre Baldi.  <b>ReactionPredictor: Prediction of Complex Chemical Reactions at the Mechanistic 
+    Level Using Machine Learning</b>, 
+    <i>(In Review)</i>. 
+  </li>
+  <li>
+    Matthew A. Kayala, Chlo&eacute;-Agathe Azencott, Jonathan H. Chen, Pierre Baldi.  <b>Learning to Predict Chemical Reactions</b>, 
+    <i>Journal of Chemical Information and Modeling</i>. EPub. (Aug 7 2011) 
+    (<a href="http://pubs.acs.org/doi/abs/10.1021/ci200207y" target="_blank">ACS</a>) (<a href="/static/docs/Kayala_JCIM_11.pdf" target="_blank">pdf</a>)
+  </li>
+  <li>
+    Jonathan H.Chen, Pierre Baldi.  <b>No Electron Left-Behind: A Rule-based Expert System to Predict Chemical Reactions and 
+    Reaction Mechanisms</b>, <i>Journal of Chemical Information and Modeling.</i> 49(9): 2034-2043, (2009) 
+    (<a href="http://pubs.acs.org/doi/abs/10.1021/ci900157k" target="_blank">ACS</a>)
+  </li>
+</ul>
+
+<hr/>
+
+<a name="contact"></a>
+<h2>Contact</h2>
+
+<p>Email <a href="mailto:matt.kayala@gmail.com?subject=ML Reaction
+Predictor Webserver">Matthew Kayala</a> or
+<a href="mailto:pfbaldi@ics.uci.edu?subject=<L Reaction Predictor
+Webserver">Pierre Baldi</a> with questions, comments, or problems.</p>
+
+<hr/>
+
+
+        
+        <br class="clear" />
+    </div>
+    <!-- END Content -->
+
+    
+    <div id="footer" align="center">
+      <hr width="40%"/>
+      <p> &copy; 2011 | <a href="http://www.igb.uci.edu/">Institute for Genomics and Bioinformatics</a> | Powered by <a href="https://www.djangoproject.com/">Django</a> </p>
+    </div>
+    
+</div>
+<!-- END Container -->
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

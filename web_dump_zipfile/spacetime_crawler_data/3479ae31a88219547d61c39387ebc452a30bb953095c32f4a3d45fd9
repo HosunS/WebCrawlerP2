@@ -1,0 +1,363 @@
+�Ifinal_url�DtypeLhttp_headers�DtypeEvalue��Ak�DtypeEvalueNContent-LengthAv�DtypeEvalueE31106�Ak�DtypeEvalueJSet-CookieAv�DtypeEvalueX�trac_form_token=adeda60a05166be7667eeb76; httponly; Path=/wiki/public, trac_session=122f6ff6e654fb8ff6c15106; expires=Thu, 09 May 2019 01:39:27 GMT; httponly; Path=/wiki/public�Ak�DtypeEvalueGExpiresAv�DtypeEvalueXFri, 01 Jan 1999 00:00:00 GMT�Ak�DtypeEvalueJKeep-AliveAv�DtypeEvalueRtimeout=5, max=100�Ak�DtypeEvalueFServerAv�DtypeEvalueX�Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3�Ak�DtypeEvalueJConnectionAv�DtypeEvalueJKeep-Alive�Ak�DtypeEvalueMCache-ControlAv�DtypeEvalueOmust-revalidate�Ak�DtypeEvalueDDateAv�DtypeEvalueXFri, 08 Feb 2019 01:39:27 GMT�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueWtext/html;charset=utf-8Kraw_content�DtypeEvalueYy�<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+  
+
+
+  <head>
+    <title>
+      cs222p-2017-fall-project1 – Public
+    </title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--[if IE]><script type="text/javascript">
+      if (/^#__msie303:/.test(window.location.hash))
+        window.location.replace(window.location.hash.replace(/^#__msie303:/, '#'));
+    </script><![endif]-->
+        <link rel="search" href="/wiki/public/search" />
+        <link rel="help" href="/wiki/public/wiki/TracGuide" />
+        <link rel="alternate" href="/wiki/public/wiki/cs222p-2017-fall-project1?version=21&amp;format=txt" type="text/x-trac-wiki" title="Plain Text" />
+        <link rel="up" href="/wiki/public/wiki/cs222p-2017-fall-project1" title="View latest version" />
+        <link rel="next" href="/wiki/public/wiki/cs222p-2017-fall-project1?version=22" title="Version 22" />
+        <link rel="start" href="/wiki/public/wiki" />
+        <link rel="stylesheet" href="/wiki/public/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/common/css/wiki.css" type="text/css" /><link rel="stylesheet" href="/wiki/public/chrome/tracwysiwyg/wysiwyg.css" type="text/css" />
+        <link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/common/css/trac.css" /><link rel="tracwysiwyg.stylesheet" href="/wiki/public/chrome/tracwysiwyg/editor.css" />
+        <link rel="tracwysiwyg.base" href="/wiki/public" />
+        <link rel="prev" href="/wiki/public/wiki/cs222p-2017-fall-project1?version=20" title="Version 20" />
+        <link rel="shortcut icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="/wiki/public/chrome/site/favicon.ico" type="image/x-icon" />
+    <style id="trac-noscript" type="text/css">.trac-noscript { display: none !important }</style>
+    <script type="text/javascript">
+      var _tracwysiwyg={};
+    </script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/jquery.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/babel.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/trac.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/search.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/common/js/folding.js"></script>
+      <script type="text/javascript" charset="utf-8" src="/wiki/public/chrome/tracwysiwyg/wysiwyg.js"></script>
+    <script type="text/javascript">
+      jQuery("#trac-noscript").remove();
+      jQuery(document).ready(function($) {
+        $(".trac-autofocus").focus();
+        $(".trac-target-new").attr("target", "_blank");
+        setTimeout(function() { $(".trac-scroll").scrollToTop() }, 1);
+        $(".trac-disable-on-submit").disableOnSubmit();
+      });
+    </script>
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $("#content").find("h1,h2,h3,h4,h5,h6").addAnchor(_("Link to this section"));
+        $("#content").find(".wikianchor").each(function() {
+          $(this).addAnchor(babel.format(_("Link to #%(id)s"), {id: $(this).attr('id')}));
+        });
+        $(".foldable").enableFolding(true, true);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="banner">
+      <div id="header">
+        <a id="logo" href="http://www.ics.uci.edu/"><img src="/wiki/public/chrome/site/ics.jpg" alt="ICS Logo" height="67" width="128" /></a>
+      </div>
+      <form id="search" action="/wiki/public/search" method="get">
+      </form>
+      <div id="metanav" class="nav">
+    <ul>
+      <li class="first"><a href="/wiki/public/login">Login</a></li><li><a href="/wiki/public/prefs">Preferences</a></li><li class="last"><a href="/wiki/public/about">About Trac</a></li>
+    </ul>
+  </div>
+    </div>
+    <div id="mainnav" class="nav">
+  </div>
+    <div id="main">
+      <div id="pagepath" class="noprint">
+  <a class="pathentry first" title="View WikiStart" href="/wiki/public/wiki">wiki:</a><a class="pathentry" href="/wiki/public/wiki/cs222p-2017-fall-project1" title="View cs222p-2017-fall-project1">cs222p-2017-fall-project1</a>
+</div>
+      <div id="ctxtnav" class="nav">
+        <h2>Context Navigation</h2>
+        <ul>
+          <li class="first"><span>&larr; <a class="prev" href="/wiki/public/wiki/cs222p-2017-fall-project1?version=20" title="Version 20">Previous Version</a></span></li><li><a href="/wiki/public/wiki/cs222p-2017-fall-project1" title="View latest version">View Latest Version</a></li><li class="last"><span><a class="next" href="/wiki/public/wiki/cs222p-2017-fall-project1?version=22" title="Version 22">Next Version</a> &rarr;</span></li>
+        </ul>
+        <hr />
+      </div>
+    <div id="content" class="wiki">
+        <br />
+        <table id="info" summary="Revision info">
+          <tr><th scope="row">Version 21 (modified by zuozhi, <a class="timeline" href="/wiki/public/timeline?from=2017-09-27T11%3A54%3A32-07%3A00&amp;precision=second" title="See timeline at Sep 27, 2017 11:54:32 AM">17 months ago</a>)
+             (<a href="/wiki/public/wiki/cs222p-2017-fall-project1?action=diff&amp;version=21">diff</a>)</th></tr>
+          <tr><td class="message">
+            <p>
+--
+</p>
+
+          </td></tr>
+        </table>
+      <div class="wikipage searchable">
+        
+          <div id="wikipage" class="trac-content"><p>
+</p><div class="wiki-toc">
+<ol>
+  <li>
+    <a href="#Project1forCS222P">Project 1 for CS222P</a>
+    <ol>
+      <li>
+        <a href="#Introduction">Introduction</a>
+      </li>
+      <li>
+        <a href="#Goal">Goal</a>
+      </li>
+      <li>
+        <a href="#OverviewofSteps">Overview of Steps</a>
+      </li>
+      <li>
+        <a href="#DetailedInstructions">Detailed Instructions</a>
+      </li>
+      <li>
+        <a href="#SubmissionInstructions">Submission Instructions</a>
+      </li>
+      <li>
+        <a href="#Testing">Testing</a>
+      </li>
+      <li>
+        <a href="#GradingRubrics">Grading Rubrics</a>
+      </li>
+      <li>
+        <a href="#QA">Q &amp; A</a>
+      </li>
+      <li>
+        <a href="#PlatformQA">Platform Q &amp; A</a>
+      </li>
+    </ol>
+  </li>
+</ol>
+</div><p>
+</p>
+<h1 id="Project1forCS222P">Project 1 for CS222P</h1>
+<blockquote>
+<p>
+<strong>Deadline: Tuesday, week 2, Oct 10, 2017, 11:45 pm, on EEE.</strong> <br /><br /><strong>Note that students are required to work individually on project 1.</strong>
+</p>
+</blockquote>
+<h2 id="Introduction">Introduction</h2>
+<p>
+In project 1, you will implement a very simple paged file (PF) manager. It builds up the basic file system required for continuing with projects 2,3 and 4. The PF component provides classes and methods for managing files and pages in files. In addition, you will implement the first few operations for a record-based file (RBF) manager (which you will continue working on in part 2 of the project) on top of your basic paged file system. This document aims at providing you with the necessary information required to start project 1.
+</p>
+<h2 id="Goal">Goal</h2>
+<p>
+The goal of project 1 is threefold:
+</p>
+<ul><li>Get (re)familiar with a C/C++ development environment.
+</li><li>Implement a simple paged file system.
+</li><li>Implement a few operations of a record-oriented (a.k.a. tuple-oriented) file system.
+</li></ul><p>
+The detailed description of the project itself is in <a class="wiki" href="/wiki/public/wiki/cs222p-2017-fall-project1-description">Project 1 Description</a>.
+</p>
+<h2 id="OverviewofSteps">Overview of Steps</h2>
+<ul><li>Set up the development environment.
+</li><li>Download and deploy the codebase of Project 1.
+</li><li>Finish the development of Project 1.
+</li></ul><h2 id="DetailedInstructions">Detailed Instructions</h2>
+<p>
+<strong>1. Set up the development environment</strong>
+</p>
+<ul><li><strong><a href="https://grape.ics.uci.edu/wiki/public/wiki/cs222p-2017-fall-mac-setup-guide">Mac Setup Guide</a></strong>
+</li></ul><ul><li><strong>Windows Setup Guide</strong>
+<ul><li>We don't recommend you to develop directly under Windows because of potential compatibility issues. 
+</li><li>A good alternative is to develop under a Linux Virtual Machine, here's guide to <a class="ext-link" href="https://www.lifewire.com/install-ubuntu-linux-windows-10-steps-2202108"><span class="icon">​</span>install Ubuntu on Windows VirtualBox</a>
+</li><li>If you still want to use Windows, here's guide to <a class="ext-link" href="https://www.ics.uci.edu/~pattis/common/handouts/mingweclipse/mingw.html"><span class="icon">​</span>install MinGW</a> and <a class="ext-link" href="https://www.ics.uci.edu/~pattis/common/handouts/mingweclipse/eclipse.html"><span class="icon">​</span>use eclipse</a>
+</li></ul></li></ul><ul><li><strong>Use Linux environment to test your code</strong>
+</li></ul><blockquote>
+<p>
+You can develop on your own machine with Eclipse or your favorite IDE and other tools, BUT you should make sure you code will work on a Linux Machine (or a Linux virtual machine). The assistants will be using a Linux machine to test and grade the assignment. To this end, students should follow the standard C library and common C++ libraries, e.g., STL, to implement your project, and make sure your code is GCC/G++ compilable. You can also use C++11 features if you wish. Please make sure that you do not call any platform specific functions, such as Windows-specific APIs in your projects. 
+</p>
+</blockquote>
+<blockquote>
+<p>
+Before submitting your code, you <strong>should</strong> test it under a Linux environment. The code that can be compiled on your machine won't always compile and run correctly under Linux. 
+</p>
+</blockquote>
+<blockquote>
+<p>
+The easiest way is to use <a class="ext-link" href="https://www.ics.uci.edu/computing/linux/hosts.php"><span class="icon">​</span>ICS openlab hosts</a>. You can use your <strong>ICS account</strong> to connect to openlab by using "ssh &lt;your ics username&gt;@openlab.ics.uci.edu". For Windows users, you can use <a class="ext-link" href="https://www.ssh.com/ssh/putty/windows/"><span class="icon">​</span>Putty</a>
+</p>
+</blockquote>
+<blockquote>
+<p>
+You can also use Virtual Machines such as <a class="ext-link" href="https://my.vmware.com/web/vmware/free#desktop_end_user_computing/vmware_player/6_0"><span class="icon">​</span>VMware Player</a> , and <a class="ext-link" href="https://www.virtualbox.org/wiki/Downloads"><span class="icon">​</span>VirtualBox</a> . To install Linux on VMWare Player, visit <a class="ext-link" href="http://partnerweb.vmware.com/GOSIG/Ubuntu_16_04_LTS.html"><span class="icon">​</span>http://partnerweb.vmware.com/GOSIG/Ubuntu_16_04_LTS.html</a> . If you would like to use VirtualBox , visit<a class="ext-link" href="http://www.wikihow.com/Install-Ubuntu-on-VirtualBox"><span class="icon">​</span>http://www.wikihow.com/Install-Ubuntu-on-VirtualBox</a> .
+</p>
+</blockquote>
+<p>
+<strong>2. Download and deploy the codebase of Project 1</strong>
+</p>
+<ul><li>Download the <strong><a class="attachment" href="/wiki/public/attachment/wiki/cs222p-2017-fall-project1/codebase.zip" title="Attachment 'codebase.zip' in cs222p-2017-fall-project1">codebase of Project 1</a><a class="trac-rawlink" href="/wiki/public/raw-attachment/wiki/cs222p-2017-fall-project1/codebase.zip" title="Download">​</a></strong>.  Unzip the file.
+</li></ul><blockquote>
+<blockquote>
+<p>
+Please download the  onto your own computer. Unzip the file.
+</p>
+</blockquote>
+</blockquote>
+<ul><li>Follow the <strong><a href="https://grape.ics.uci.edu/wiki/public/wiki/cs222p-2017-fall-project1-create-project">Guide to Deploy the codebase</a></strong> to deploy project1 in Eclipse and run the test cases.
+</li></ul><p>
+<strong>3. Finish the development of Project 1</strong>
+</p>
+<blockquote>
+<p>
+We have seen the results of running the code in codebase. But, since the implementation of the methods is empty, you cannot manage any files yet. Please finish the implementation in pfm.cc as well as the following methods in rbfm.cc (besides the constructor and destructor): 1) insertRecord. 2) readRecord. 3) printRecord. The remaining methods are not required for part 1 of the project; instead you will implement them as part of part 2 of the project. Please write your own test cases to test your code. You are responsible for anticipating other things that might go wrong that we haven't provided public tests for, just as you would be if you were building a DBMS in an industrial setting. <br />
+</p>
+</blockquote>
+<blockquote>
+<p>
+You may find these functions useful: <a class="ext-link" href="http://www.cplusplus.com/reference/clibrary/cstdio/"><span class="icon">​</span>http://www.cplusplus.com/reference/clibrary/cstdio/</a>
+</p>
+</blockquote>
+<h2 id="SubmissionInstructions">Submission Instructions</h2>
+<p>
+The following are requirements on your submission. <strong>Points will likely be deducted if they are not followed.</strong>
+</p>
+<ul><li><strong>Suppress any debug messages that you put in your code. Only the original messages in the test cases should be printed.</strong>
+</li><li>Write a short report to briefly describe the implementation (key design choices) of your paged file and record-based file system layers. Please provide a text file rather than a PDF, Word Document, or other non-text format. Do not use RTF format.
+</li><li>In your report, clearly mention your development environment - operating system and gcc version. (e.g., OS - Ubuntu 16.04 64 bit, GCC - 5.4)
+</li><li>Submit the source code under the "rbf" folder. Make sure you do a "make clean" first, and do NOT include any useless files (such as binary files and data files). You must make sure your makefile runs properly!
+</li><li>Please organize your project according to the following directory hierarchy:
+</li></ul><blockquote>
+<blockquote>
+<p>
+project1-<em> studentID</em> / codebase / {rbf, makefile.inc, readme.txt, project1-report.txt} where the rbf folder includes your source code and the makefile.
+</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>
+(e.g., project1-12345678 / codebase / {rbf, makefile.inc, readme.txt, project1-report.txt})
+</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>
+Your folder structure should look like this picture: <br /><a style="padding:0; border:none" href="/wiki/public/attachment/wiki/cs222p-2017-fall-project1/final_folder_structure_example.jpg"><img src="/wiki/public/raw-attachment/wiki/cs222p-2017-fall-project1/final_folder_structure_example.jpg" /></a>
+</p>
+</blockquote>
+</blockquote>
+<ul><li>Compress project1-<em>studentID</em> into a SINGLE zip file named "project1-<em>studentID</em>.zip" (e.g., project1-12345678.zip).
+</li><li>Put <a class="attachment" href="/wiki/public/attachment/wiki/cs222p-2017-fall-project1/test.sh" title="Attachment 'test.sh' in cs222p-2017-fall-project1">this script</a><a class="trac-rawlink" href="/wiki/public/raw-attachment/wiki/cs222p-2017-fall-project1/test.sh" title="Download">​</a> and the zip file under the same directory. Run it to verify that your project can be properly unzipped and tested (using your own makefile.inc and rbftest.cc when you are testing the script). If the script doesn't work correctly, it's likely that your folder organization doesn't meet the above requirements. Our grading will be done by automatically done by running the script. The usage of the script is:
+</li></ul><pre class="wiki">    ./test.sh ''project1-studentID''
+
+</pre><ul><li><strong>IMPORTANT: Again, you need to make sure that your script works under Linux, as the assistants will use Linux to grade your assignment. Also, suppress any debug messages that you put in your code. Only the original messages in the test cases should be printed.</strong>
+</li><li>Upload the zip file "project1-<em>studentID</em>.zip" to EEE. (e.g., project1-12345678.zip)
+</li></ul><h2 id="Testing">Testing</h2>
+<p>
+Please use the codes inside the codebase. Note that these test cases will be used to grade your project partially, but we also have our own private test cases. This is by no means an exhaustive test suite. You should add more cases to this and test your code thoroughly!
+</p>
+<p>
+Note: Again, this is not the complete suite we will use to test your codebase -- just a sample of it.
+</p>
+<h2 id="GradingRubrics">Grading Rubrics</h2>
+<p>
+Please see the grading rubric <a class="forbidden wiki" title="no permission to view this wiki page">here</a>.
+</p>
+<h2 id="QA">Q &amp; A</h2>
+<ul><li><strong>Q1</strong>: What is the purpose of the make file if the project runs in eclipse? <br /><strong>A</strong>: Eclipse is able to generate a makefile for your project automatically. If you don't specify any makefile to Eclipse, by default it will generate a makefile and use it to build the project. You can find that makefile under "Debug/" folder. We have provided a makefile for students who don't use Eclipse to build their projects. Eclipse users, however, can also configure things to let Eclipse build projects by following the makefile in our codebase. Please read this post for detailed instructions: <a class="ext-link" href="http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.cdt.doc.user/concepts/cdt_c_makefile.htm"><span class="icon">​</span>http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.cdt.doc.user/concepts/cdt_c_makefile.htm</a>. Note that it's OK if you don't build your project in Eclipse by using the makefile provided in our codebase, but you have to make sure that we can build your submitted project in command line by using 'make'. If you don't add any new source files to the project, you shouldn't need many modifications to our makefile. <a class="ext-link" href="http://www.gnu.org/software/make/manual/make.html"><span class="icon">​</span>Here</a> is a tutorial for the 'make' tool. You can refer to it if you do decide to change the makefile.
+</li></ul><ul><li><strong>Q2</strong>: Consider a case where Page 3 of the file is full but Page 2 is partially filled and the user wants to append data? Now, if the size of the data that he or she wants to write is more than the available space on Page 2, what is the expected action to be taken? Do we just fit in whatever data we can and truncate the rest, OR completely disallow the user from making such a write? <br /><strong>A</strong>: AppendPage() always happens to the end of the file, so this scenario can't arise. The number of file bytes affected by each page operation is always PAGE_SIZE. The paged file system layer always deals in pages -- nothing more and nothing less.
+</li></ul><ul><li><strong>Q3</strong>: Is it fine if I do the file handling in C++ using the binary mode of read/write? <br /><strong>A</strong>: You should indeed use the binary mode!
+</li></ul><ul><li><strong>Q4</strong>: Why is the access specifier of the constructor and destructor of the class PagedFileManager set to be "protected"? <br /><strong>A</strong>: The PagedFileManager is a singleton class, which means only ONE instance of PagedFileManager is allowed. You cannot instantiate the class by calling its constructor. Instead you should get an instance of the class by calling the Instance() function of PagedFileManager. The Instance() function has been implemented for you in pfm.cc. The same applies to the RecordBasedFileManager.
+</li></ul><ul><li><strong>Q5</strong>: As for pages, if I understand correctly, the Read/Write/AppendPage functions are operating on these files, and if you want to write the 3rd page (page number: 2) of a file, you'd seek 8K bytes into the file and start writing the data. Is this correct, or am I misunderstanding the concept of pages?<br /><strong>A</strong>:
+<ul><li>Read reads a page that has to already exist<br />
+</li><li>Append adds a new page at the end of the file<br />
+</li><li>Write overwrites a page that has to already exist<br />To write to the 3rd page of a file, the file should already have at least 2 pages (page numbers: 0,1) that contain valid data. Then you can either append data to 3rd page if it doesn't exist, or overwrite the 3rd page if it already exists. Please do not leave "holes" in files by writing past EOF. We won't allow the case of appending garbage pages to happen.
+</li></ul></li></ul><ul><li><strong>Q6</strong>: Since I need to change the path of codebase in makefile.inc to test the project, do I need to change it back when I submit the zip file? <br /><strong>A</strong>: No, you don't need to change back, but you need to instead make sure the path is <strong>relative</strong> so that the test.sh script will also work on another machine.
+</li></ul><ul><li><strong>Q7</strong>: When inserting a tuple, do we only have to consider insertion of the new tuple at the end of the last page? Or do we have to be able to support insertion in whatever free space may exist among all the current pages?<br /><strong>A</strong>: You should first try to insert the record on the last (currently existing) page. If that fails, you should then try to find the first page with sufficient space available (e.g., looking from the beginning of the file). If none exists, then (and only then) should you append a new page to hold the new tuple.
+</li></ul><ul><li><strong>Q8</strong>: What's the data format for data being passed to insertRecord? <br /><strong>A</strong>: The API format for insertRecord is as follows: Suppose you have five fields and their types are varchar(20), integer, varchar(20), real, and string. If a record is ("Tom", 25, "UCIrvine", 3.1415, 100), then the format of the record should be: [1 byte for the null-indicators for the fields: bit 00000000] [4 bytes for the length 3] [3 bytes for the string "Tom"] [4 bytes for the integer value 25] [4 bytes for the length 8] [8 bytes for the string "UCIrvine"] [4 bytes for the float value 3.1415] [4 bytes for the integer value 100]. Note that integer and real type fields do not have an associated length value in front of them; this is because each of these types always occupies 4 bytes.
+</li></ul><blockquote>
+<blockquote>
+<p>
+The first part of the input contains <em>n</em> bytes for passing the null information about each of the incoming record's fields. The value <em>n</em> can be calculated by using this formula: ceil(number of fields in a record / 8). For example, in this case, since there are 5 fields, the size of "n" can be calculated by ceil(5/8) = 1. If there are 20 fields, the size will be ceil(20/8) = 3. The left-most bit in the first byte corresponds to the first field. The right-most bit in the first byte corresponds to the eighth field. If there are more than eight fields, the left-most bit in the second byte corresponds to the ninth field and so on.
+</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>
+If a field value is NULL, the corresponding bit in the null bit vector will be set to 1. For example, if we have a record ("Tom", 25, NULL, NULL, 100) whose third attribute and fourth attribute are NULL, the first part contains <em>00110000</em> as the bit pattern in one byte. The actual byte representation will be: [1 byte for the null-indicators for the fields: 00110000] [4 bytes for the length 3] [3 bytes for the string "Tom"] [4 bytes for the integer value 25] [4 bytes for the integer value 100]. Note that there are no values to represent NULL values in the actual data. You MUST follow this API format!
+</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>
+NOTE: This API data format is just intended for passing data into the insertRecord(). This does not mean that the internal representation of your record should be the same as this format -- in fact, it almost certainly will not be! (On-page record formatting options will be covered in lecture, and your project should make good choices for what it does based on what you learn in class.)
+</p>
+</blockquote>
+</blockquote>
+<ul><li><strong>Q9</strong>: Can we assume that a record can fit on a page (i.e., the size of a record &lt; the predefined page size)? <br /><strong>A</strong>: Yes. You can assume that a record can fit on a page.
+</li></ul><h2 id="PlatformQA">Platform Q &amp; A</h2>
+<ul><li><strong>Q1</strong>: Do I have to use a specific OS platform? <br /><strong>A</strong>: You can implement your code on any operating system where g++ works, such as Windows or Linux. However, you cannot use any platform specific APIs. And once again, note that the assistants will use a Linux machine to grade your code. Please make sure that your code works on Linux!
+</li></ul><ul><li><strong>Q2</strong>: I am a Windows user. How do I test my code on Linux? <br /><strong>A</strong>: First, you could test your code by logging into your ICS account and uploading your code to your home directory. For details, refer to <a class="ext-link" href="http://www.ics.uci.edu/computing/linux/hosts.php"><span class="icon">​</span>http://www.ics.uci.edu/computing/linux/hosts.php</a>. Another way is to install a VM such as VMware Player or VirtualBox on Windows and install the Linux OS in that VM. Refer to the "Try Linux VM to test your code" section in this document.
+</li></ul><ul><li><strong>Q3</strong>: After downloading the codebase and setting it up in Eclipse, I can not execute it. How can I execute it? <br /><strong>A</strong>: On Windows, if you see the error message - "Info: Nothing to build for cs222", then put "g++ -static-libgcc -static-libstdc++" as the value in Command by visiting Project -&gt; Properties -&gt; Tool Settings -&gt; MinGW C++ Linker. <br />On Mac OS X, if you see this error message - "Launch failed, binary not found", check the "Mach-O 64 Parser is selected" option by visiting Project &gt; Properties &gt; C/C++ Build &gt; Settings &gt; Binary Parsers. OR, click "Debug"/"cs222" and click "Run" in case you chose Cross GCC.
+</li></ul><ul><li><strong>Q4</strong>: How do I enable GDB debugging feature on OS X? <br /><strong>A</strong>: It's not a simple process. Refer to this page: <a href="https://grape.ics.uci.edu/wiki/public/wiki/cs222p-2017-fall-mac-setup-guide">https://grape.ics.uci.edu/wiki/public/wiki/cs222p-2017-fall-mac-setup-guide</a>
+</li></ul><ul><li><strong>Q5</strong>: Which gcc version should I use? <br /><strong>A</strong>: The reader(s) will use gcc 5.4 to grade your code. If you use a different version, please write it on your report. Also, note that OS X doesn't provide gcc as the default compiler. Rather, it provides clang as the default compiler. You can check it by executing "gcc --version" command. Please test your code using standard gcc on Linux.
+</li></ul></div>
+          
+          
+        
+        
+      </div>
+      
+    <div id="attachments">
+        <h3 class="foldable">Attachments <span class="trac-count">(5)</span></h3>
+        <div>
+          <ul>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs222p-2017-fall-project1/eclipse_project1_picture.jpg" title="View attachment">eclipse_project1_picture.jpg</a><a href="/wiki/public/raw-attachment/wiki/cs222p-2017-fall-project1/eclipse_project1_picture.jpg" class="trac-rawlink" title="Download">​</a>
+       (<span title="37858 bytes">37.0 KB</span>) -
+      added by <em>zuozhi</em> <a class="timeline" href="/wiki/public/timeline?from=2017-09-27T11%3A14%3A36-07%3A00&amp;precision=second" title="See timeline at Sep 27, 2017 11:14:36 AM">17 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs222p-2017-fall-project1/eclipse_cpp_11.png" title="View attachment">eclipse_cpp_11.png</a><a href="/wiki/public/raw-attachment/wiki/cs222p-2017-fall-project1/eclipse_cpp_11.png" class="trac-rawlink" title="Download">​</a>
+       (<span title="148507 bytes">145.0 KB</span>) -
+      added by <em>zuozhi</em> <a class="timeline" href="/wiki/public/timeline?from=2017-09-27T11%3A36%3A39-07%3A00&amp;precision=second" title="See timeline at Sep 27, 2017 11:36:39 AM">17 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs222p-2017-fall-project1/codebase.zip" title="View attachment">codebase.zip</a><a href="/wiki/public/raw-attachment/wiki/cs222p-2017-fall-project1/codebase.zip" class="trac-rawlink" title="Download">​</a>
+       (<span title="30802 bytes">30.1 KB</span>) -
+      added by <em>zuozhi</em> <a class="timeline" href="/wiki/public/timeline?from=2017-09-27T11%3A50%3A01-07%3A00&amp;precision=second" title="See timeline at Sep 27, 2017 11:50:01 AM">17 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs222p-2017-fall-project1/final_folder_structure_example.jpg" title="View attachment">final_folder_structure_example.jpg</a><a href="/wiki/public/raw-attachment/wiki/cs222p-2017-fall-project1/final_folder_structure_example.jpg" class="trac-rawlink" title="Download">​</a>
+       (<span title="109908 bytes">107.3 KB</span>) -
+      added by <em>zuozhi</em> <a class="timeline" href="/wiki/public/timeline?from=2017-09-27T11%3A52%3A56-07%3A00&amp;precision=second" title="See timeline at Sep 27, 2017 11:52:56 AM">17 months ago</a>.
+              </li>
+              <li>
+    <a href="/wiki/public/attachment/wiki/cs222p-2017-fall-project1/test.sh" title="View attachment">test.sh</a><a href="/wiki/public/raw-attachment/wiki/cs222p-2017-fall-project1/test.sh" class="trac-rawlink" title="Download">​</a>
+       (<span title="665 bytes">665 bytes</span>) -
+      added by <em>zuozhi</em> <a class="timeline" href="/wiki/public/timeline?from=2017-09-27T12%3A52%3A47-07%3A00&amp;precision=second" title="See timeline at Sep 27, 2017 12:52:47 PM">17 months ago</a>.
+              </li>
+          </ul>
+          <p>
+            Download all attachments as: <a rel="nofollow" href="/wiki/public/zip-attachment/wiki/cs222p-2017-fall-project1/">.zip</a>
+          </p>
+        </div>
+    </div>
+
+    </div>
+    <div id="altlinks">
+      <h3>Download in other formats:</h3>
+      <ul>
+        <li class="last first">
+          <a rel="nofollow" href="/wiki/public/wiki/cs222p-2017-fall-project1?version=21&amp;format=txt">Plain Text</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div id="footer" lang="en" xml:lang="en"><hr />
+      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/wiki/public/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
+      <p class="left">Powered by <a href="/wiki/public/about"><strong>Trac 1.0.13</strong></a><br />
+        By <a href="http://www.edgewall.org/">Edgewall Software</a>.</p>
+      <p class="right">Visit the Trac open source project at<br /><a href="http://trac.edgewall.org/">http://trac.edgewall.org/</a></p>
+    </div>
+  </body>
+</html>Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

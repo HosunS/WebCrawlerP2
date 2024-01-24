@@ -1,0 +1,49 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1931¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 05 Jun 1997 00:09:34 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"78b-31323ca99eb80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 21:33:50 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY“
+<HTML>
+
+<HEAD>
+<META HTTP-EQUIV="Context-Type" CONTEXT="text/html;charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>[Full | Partial] [Read | Write] [Lock | Unlock]</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>[Full | Partial] [Read | Write] [Lock | Unlock]</H1> 
+ <P><UL>
+<LI><H2>Requirements
+</H2>
+<UL>
+<LI>Matching Locks with Unlocks
+<LI>Read & Write Locks
+<LI>Entire Entity or Partial
+<LI>As an Independent Action
+</UL></UL><UL>
+<LI><H2>Suggested Implementation - A New Method</H2>
+</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld009.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld011.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld010.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+ <FONT size=4><STRONG> Notes: </FONT></STRONG>
+  <HR SIZE=3> <P> <UL>
+Summarizing Microsoftï¿½s locking needs results in no less than eight different types of locks. I will be providing a full specification of those needs in the next version of the Microsoftï¿½s HTTP Versioning and File Control Requirements Document. Never the less the basic outline of our needs is known and is detailed below.
+<BR></UL><UL>
+1. Unlocks must match Locks.
+</UL><UL>
+2. Multiple clients should be able to take out read locks but only one client can have a write lock on any particular section of the file.
+</UL><UL>
+3. A token must be available to indicate ï¿½lock entire fileï¿½. Partial locks should specify byte ranges. Locks must also be able to go off the end of a file, though they must either contain or be contiguous with the end of the file.
+</UL><UL>
+4. It must be possible to lock and unlock files independently of any other action. A lock method seems the logical choice.</UL> </P> 
+
+</Body>
+</HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

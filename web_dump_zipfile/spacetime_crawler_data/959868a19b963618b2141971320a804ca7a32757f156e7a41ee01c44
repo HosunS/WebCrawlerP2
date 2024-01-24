@@ -1,0 +1,473 @@
+¦Ifinal_url¢DtypeEvaluex#http://cybert.ics.uci.edu/datasets/Lhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:33:03 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYD<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
+<head>
+<title>CyberT Webserver </title>
+
+<link type="text/css" href="/static/css/redmond/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link rel="stylesheet" type="text/css" href="/static/css/jqstyle.css" /> 
+<script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="/static/js/cybert.js"></script>
+<script type="text/javascript" src="/static/js/cybtjqui.js"></script>
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28550269-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body class="">
+<!-- Container -->
+<div id="container">
+  <div id="contact-dialog" title="Cyber-T Contact" style="display:none;">
+    <h4>For bugs and general help:</h4>
+    <p>Contact the Cyber-T Helpdesk: cybert[at]ics.uci.edu Subject=CyberT.</p>
+    <h4>For commercial licenses:</h4>
+    <p>Contact IGB Licenses: igb-license[at]ics.uci.edu Subject=CyberT.</p>
+    <h4>Current maintainer:</h4>
+    <p><a href="http://www.ics.uci.edu/~mkayala/">Matthew Kayala</a></p>
+  </div>
+  <div id="help-dialog" title="Help">
+  </div>
+  <div id="transparent-layer"></div>  
+  
+  <!-- Top Level Menu -->
+  <div id="menu-content-wrapper">
+    <div id="menu-wrapper" class="ui-widget-header">
+      <div class="float-left menu-pad">
+        Cyber-T: Differential analysis of high-throughput data
+      </div>
+      <div id="menu-links" class="menu-pad">
+        <a href="/" class="menu-link" id="home-menu">Home</a> |
+        <a href="/help/" class="menu-link" id="help-menu">Help</a> |
+        <a href="#Contact" class="menu-link" id="contact-menu">Contact</a> 
+        <!--<a href="#Home" class="fg-button fg-button-icon-left ui-state-default ui-corner-all" id="home-menu">
+          <span class="ui-icon ui-icon-home"></span>Home
+        </a> 
+        <a href="#Help" class="fg-button fg-button-icon-left ui-state-default ui-corner-all" id="home-menu">
+          <span class="ui-icon ui-icon-help"></span>Help
+        </a>
+        <a href="#Contact" class="fg-button fg-button-icon-left ui-state-default ui-corner-all" id="home-menu">
+          <span class="ui-icon ui-icon-mail-closed"></span>Contact
+        </a>-->
+      </div>
+    </div>
+  </div>
+  <!-- END Top Level Menu -->
+  
+  <!-- Header -->
+  <div id="header">
+     
+<h1>Example Datasets Download</h1>
+
+  </div>
+  <!-- End Header --> 
+  
+  <!-- Content -->
+  <div id="content" class="colM">
+    
+    
+<div id="main-home-wrapper">
+  <div id="home-wrapper">
+    <p>
+      Here are some example datasets that could be used with Cyber-T.
+      Click on the links to bring you to the relevant analysis pages 
+      with all the parameters filled in.
+    </p>
+    <hr noshade size=3/>
+    <div class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+      <h2 class="ui-widget-header">Unpaired Two Conditions Datasets</h2>
+      <p>These are all control vs. experiment data sets. 
+        <a href="/controlexp/" class="fg-button ui-button">Analyze one!</a></p> 
+      <div class="examples-accordion">
+        
+        <h3><a href="#">DNA Microarray Control + Experimental Data</a></h3>
+        <div>
+          
+<p><a href="/static/sampledata/CyberT_C+E_DataSet">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>
+  This is a toy data set of a small amount of control and experimental data from a DNA Microarray .
+  The data file is comma-delimited.
+  The data has been ln-transformed.  
+  The first row has a '#' so is considered a comment line.
+  The data starts on the first line not beginning with a '#'. 
+  There is one label column, and then there are four control columns and then four experimental columns.
+</p>
+<ul>
+  <li>Delimiter: Commas</li>
+  <li>Row Start: 1</li>
+  <li>Number of label columns: 1</li>
+  <li>Number of first condition columns: 4</li>
+  <li>Number of second condition columns: 4</li>
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a two-sample t-test using the Bayes-regularized variance estimates.
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 4</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard t-test using empirical variances.  
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+
+
+        </div> 
+        
+        
+        <h3><a href="#">Complete P. falciparum Protein Microarray Data</a></h3>
+        <div>
+          
+<p><a href="/static/sampledata/Pf_ProteinArray_CE_Final.csv">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>This data comes from a previously published protein microrray study of  the natural 
+  immune response to <i>Plasmodium falciparum</i> [<a href="/help/#references">10</a>].
+  The array consists of 2,320 probes.  
+  The specific analysis is looking at the sera of children who did (n=29) and did not (n=12)
+  have a clinical malaria episode in the following malaria season.
+</p>
+<p>
+  It has been shown that DNA microarray analysis techniques, like Cyber-T, work well on this type of data 
+  <a href="/help/#references">[13]</a>.
+  The data file is comma-delimited.
+  The data has not been transformed.  
+  It is common to use a <a href="/help/#normalization">VSN</a> normalization for this type of data.
+  There is one header row.
+  There is one label column, and then there are 29 columns for the malaria positive children  and then 
+  12  columns for the malaria negative children.
+</p>
+<ul>
+  <li>Delimiter: Commas</li>
+  <li>Row Start: 2</li>
+  <li>Number of label columns: 1</li>
+  <li>Number of first condition columns: 29</li>
+  <li>Number of second condition columns: 12</li>  
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a two-sample t-test using the Bayes-regularized variance estimates.
+  The data is normalized using VSN.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: VSN</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 1  (We have a lot of data, no need for a lot of prior!)</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard t-test using empirical variances.  
+  The data is normalized using VSN.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: VSN</li>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+        </div> 
+        
+        
+        <h3><a href="#">Quantitative Mass Spec Control + Experimental Data</a></h3>
+        <div>
+          
+<p><a href="/static/sampledata/QMS_dNSAF.txt">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>This data comes from a real unpublished shotgun proteomics experiment 
+  with two control and three bait (experimental) samples.
+  It has been shown that such quantative mass spectrometry data follows a similar error model as 
+  DNA microarray data <a href="/help/#references">[15]</a>, 
+  thus Cyber-T is an appropriate approach for analysis. 
+  The data file is tab-delimited.
+  The data has been pre-processed 
+  with <a href="http://www.ncbi.nlm.nih.gov/pubmed/20166708" target="blank">dNSAF</a> normalization. 
+  NOTE: The Cyber-T webserver does not currently offer this as a normalization option.
+  There is one header row.
+  There is one label column, and then there are two control columns and then three experimental columns.
+</p>
+
+<ul>
+  <li>Delimiter: Commas</li>
+  <li>Row Start: 2</li>
+  <li>Number of label columns: 1</li>
+  <li>Number of first condition columns: 2</li>
+  <li>Number of second condition columns: 3</li>  
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a two-sample t-test using the Bayes-regularized variance estimates.
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 6</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard t-test using empirical variances.  
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+        </div> 
+        
+      </div>
+    </div>
+    <hr noshade size=3/>
+    <div class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+      <h2 class="ui-widget-header">Paired Two Conditions Datasets</h2>
+      <p>All datasets have paired samples.
+        <a href="/pair/" class="fg-button ui-button">Analyze one!</a>
+      </p> 
+      <!-- Link to the help section about the pairs-->
+      <div class="examples-accordion">
+        
+        <h3><a href="#">DNA Microarray Paired Data Raw Measures</a></h3>
+        <div>
+          
+<p><a href="/static/sampledata/Pair_RawMeasure.csv">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>This data comes from a toy DNA microarray data set of paired raw measurements.
+  The data file is comma-delimited.
+  The data has not been transformed.  
+  We want to use VSN normalization for this data.
+  There is one header row.
+  There is one label column, and then there are five condition 1 columns  and then five condition 2 columns.
+</p>
+<ul>
+  <li>Delimiter: Commas</li>
+  <li>Row Start: 2</li>
+  <li>Number of label columns: 1</li>
+  <li>Number of ratio columns: 5</li>
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a two-sample t-test using the Bayes-regularized variance estimates.
+  The data is normalized using VSN.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: VSN</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 3</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard t-test using empirical variances.  
+  The data is normalized using VSN.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+</p>
+<ul>
+  <li>Normalization: VSN</li>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+        </div> 
+        
+      </div>
+    </div>
+    
+    <hr noshade size=3/>
+    <div class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+      <h2 class="ui-widget-header">Multiple Conditions Datasets</h2>
+      <p>These all have more than two conditions. 
+        <a href="/anova/" class="fg-button ui-button">Analyze one!</a>
+      </p>
+      <div class="examples-accordion">
+        
+        <h3><a href="#">DNA Microarray ANOVA Data</a></h3>
+        <div>
+          
+<p><a href="/static/sampledata/CyberT_ANOVA_DataSet">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>
+  This is a toy data set of a small amount of three condition data.
+  The data file is comma-delimited.
+  The data has been ln-transformed, so no normalization is needed.  
+  There is one comment line (beginning with '#') at the top, but then no header row besides.
+  There is one label column, followed by three columns for condition 1, then three columns for condition 2,
+  and finally two columns for condition 3.
+</p>
+<ul>
+  <li>Delimiter: Commas</li>
+  <li>Row Start: 1</li>
+  <li>Number of label columns: 1</li>
+  <li>Data columns for each condition: 3 3 2</li>
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a one-way ANOVA using the Bayes-regularized variance estimates.
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+  TukeyHSD pairwise post-hoc tests are performed between each condition using the 
+  Bayes-regularized variance estimates.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 6</li>
+  <li>Run Pairwise Post-hoc: checked</li>
+  <li>Pairwise Post-hoc Type: TukeyHSD</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard one-way ANOVA using empirical variances.  
+  No normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+  TukeyHSD pairwise post-hoc tests are performed between each condition using the
+  empirical variances.
+</p>
+<ul>
+  <li>Normalization: None</li>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run Pairwise Post-hoc: checked</li>
+  <li>Pairwise Post-hoc Type: TukeyHSD</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+        </div> 
+        
+        
+        <h3><a href="#">Protein Array ANOVA Data</a></h3>
+        <div>
+          
+<p><a href="/static/sampledata/Pf_ProteinArray_ANOVA.csv">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>
+  This data comes from a real <i>Plasmodium falciparum</i> protein microarray data set
+  measuring antibody presence from sera samples of Younger children at three different time points 
+  (C1-C3, n=5 for each conditions) from Kambila, Ghana during the malaria season.
+  It has been shown that DNA microarray analysis techniques, like CyberT, work well on this type of data 
+  <a href="/help/#references">[13]</a>.
+  The data file is comma-delimited.
+  The data has not been transformed.  
+  It is common to use a <a href="/help/#normalization">VSN</a> normalization 
+  for this type of data.
+  There is one header row. 
+  There is one label column, then five columns for condition one, then five columns for condition two, 
+  and finally five columns for condition three.
+</p>
+<ul>
+  <li>Delimiter: Commas</li>
+  <li>Row Start: 1</li>
+  <li>Number of label columns: 1</li>
+  <li>Data columns for each condition: 5 5 5</li>
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a one-way ANOVA using the Bayes-regularized variance estimates.
+  VSN normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+  TukeyHSD pairwise post-hoc tests are performed between each condition using the 
+  Bayes-regularized variance estimates.
+</p>
+<ul>
+  <li>Normalization: VSN</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 3</li>
+  <li>Run Pairwise Post-hoc: checked</li>
+  <li>Pairwise Post-hoc Type: TukeyHSD</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard one-way ANOVA using empirical variances.  
+  VSN normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+  TukeyHSD pairwise post-hoc tests are performed between each condition using the
+  empirical variances.
+</p>
+<ul>
+  <li>Normalization: VSN</li>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run Pairwise Post-hoc: checked</li>
+  <li>Pairwise Post-hoc Type: TukeyHSD</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+        </div> 
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+  <!-- END Content -->
+  
+  <div id="footer">
+    <hr noshade size=3/>
+    <p>	   	
+      <a target="_blank" href="http://www.uci.edu">
+	<img class="logo" src="/static/img/uci_logo.png"/>University of California, Irvine
+      </a> | 
+      <a target="_blank" href="http://www.igb.uci.edu">
+	<img class="logo" src="/static/img/igb_logo.png"/>Institute for Genomics and Bioinformatics
+      </a> | 
+      &copy; 2012
+    </p>
+  </div>
+  
+</div>
+<!-- END Container -->
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

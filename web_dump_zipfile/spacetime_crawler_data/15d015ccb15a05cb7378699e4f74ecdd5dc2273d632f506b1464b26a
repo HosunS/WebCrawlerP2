@@ -1,0 +1,377 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE15907¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 23 Oct 2012 18:03:45 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"22e9fc9b-3e23-4ccbdca7e4240"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 13:33:54 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY>#+--------------------------------------------------------------------+
+|                   QUESTIONNAIRE to Accompany                       |
+|                                                                    |
+|                          KDD-CUP-98                                |
+|                                                                    |
+|          The Second International Knowledge Discovery and          |
+|                 Data Mining Tools Competition                      |
+|                                                                    |
+|                Held in Conjunction with KDD-98                     |
+|                                                                    |
+|          The Fourth International Conference on Knowledge          |
+|                   Discovery and Data Mining                        |
+|                    [www.kdnuggets.com] or                          |
+|                 [www-aig.jpl.nasa.gov/kdd98] or                    |
+|                [www.aaai.org/Conferences/KDD/1998]                 |
+|                                                                    |
+|                       Sponsored by the                             |
+|                                                                    |
+|      American Association for Artificial Intelligence (AAAI)       |
+|                  Epsilon Data Mining Laboratory                    |
+|                Paralyzed Veterans of America (PVA)                 |
++--------------------------------------------------------------------+
+|                                                                    |
+| Created:                7/20/98                                    |
+| Last update:            7/22/98                                    |
+| Deadline to turn it in: 8/19/98                                    |
+| File name: cup98QUE.txt                                            |
+|                                                                    |
++--------------------------------------------------------------------+
+
+[INTRODUCTION]
+
+o Use this questionnaire to summarize in bullet points the knowledge
+  discovery techniques you've applied to the KDD-CUP-98 data set.
+
+o The answers to the questions will not be used as part of the
+  evaluation and are for informational purposes only. They will help us
+  understand what you did to the data and check the consistency of
+  your results.
+
+o For more information about the questions asked below, refer to the
+  [TERMINOLOGY-GLOSSARY] section below and/or to the file
+  <cup98DOC.txt and cup98DIC.txt> distributed with the data set.
+
+o THE DEADLINE TO TURN IN THIS QUESTIONNAIRE IS AUGUST 19, 1998. 
+
+----------------------------------------------------------------------
+
+[TERMINOLOGY-GLOSSARY]
+
+o DATA PREPROCESSING or PREPARATION includes data clean-up,
+  elimination of unusable variables, treating missing values and DATA
+  TRANSFORMATIONS such as adding new variables, performing
+  calculations on existing variables, creating interaction variables,
+  grouping continuous variables into ranges and managing categorical
+  variables in different ways, etc.
+
+o EXPLORATORY DATA ANALYSIS (EDA) provides a preliminary view of the
+  data set in a univariate (one variable at a time), bivariate (two
+  variables at a time) or multivariate sense (more than two variables
+  at a time). EDA, as used below, describes the search for patterns,
+  relationships or functional dependencies that are not attributable
+  to chance.
+
+o DATA MINING is often used as a synonym for KDD. For our purposes,
+  data mining is a step in the overall knowledge discovery process.
+  It refers to a class of methods/algorithms used to extract
+  patterns from data.  
+
+o The process of KNOWLEDGE DISCOVERY and the process of DATA ANALYSIS
+  and MODELING are used synonymously.
+
+o ATTRIBUTE, FIELD, VARIABLE and FEATURE are synonyms.
+
+o RECORDS, CASES, OBSERVATIONS and EXAMPLES are synonyms.
+
+o SPARSE DATA are when the events actually represented in a given
+  datum make only a very small subset of the event space. They become
+  harder to spot and summarize in a pattern. This is sometimes called
+  small volume data.
+
+o NOISY DATA contain errors due to the nature of data collection, data
+  entry or formatting errors.
+
+o MISSING DATA happen when values for some records and attributes are
+  missing because they were not measured, not answered or simply lost.
+
+o A BALANCED DATA SET is a data set which contains a similar number of
+  examples from each class that the algorithm is trying to predict.
+
+o An ARTIFICIALLY EXTENDED or INFLATED DATA SET is when the records
+  that represent the class with a relatively tiny number of examples
+  have been replicated on purpose to balance the data set.
+
+o ANALYSIS FILE, ANALYSIS SAMPLE and, LEARNING AND VALIDATION FILES 
+  COMBINED represent the same entity. 
+
+o ATTRIBUTE or VARIABLE TYPE characterizes the type of values in the
+  set of possible values of an attribute. An attribute can be nominal,
+  ordinal, interval, continuous and so forth.
+
+o CATEGORICAL VARIABLES represent nominal and ordinal variables. 
+
+o FEATURE SUBSET SELECTION and VARIABLE SELECTION are used
+  synonymously.
+
+o FEATURE REDUNDANCY or (MULTI)COLLINEARITY exists when the columns of
+  a data matrix are linearly or very close to being linearly dependent
+  such that it is possible to express some variables as a function of
+  others. This also called FUNCTIONAL RELATION.
+
+o The SCORING CODE is a stand alone C, C++ or other programming
+  language callable program or hard code that carries out all the
+  steps required to implement the learning algorithm outside the model
+  building environment. It is ultimately used in computing the
+  predicted value or output from raw data. In addition to the rules or
+  the numeric values of the weights, the scoring code also includes
+  preprocessing statements for data treatment. For the decision tree
+  algorithms, for example, the data preprocessing code along with
+  the 'if-then-else' rules constitutes the scoring code.
+
+o LIFT TABLES or LIFT CHARTS (a.k.a. gains charts or tables) are used
+  in the field of database marketing to evaluate the performance of
+  predictive models and to make marketing decisions. The term 'lift'
+  implies improvement over random targeting or no targeting at all and
+  computed as follows:
+
+  1. Sort the file representing the market to which the algorithm will
+     be applied by descending order of the predicted probability/score
+     or output.
+
+  2. Split the sorted file into 10 or 20 equally sized groups (in terms
+     of frequency count) based on the number of records. The resulting
+     groups or quantiles are called deciles or demi-deciles,
+     respectively.
+
+  3. Compute the percent of targets in each decile or demi-decile.
+
+  4. The ratio of the percent of targets in each decile or demi-decile
+     to the percent of targets in the file provides the lift. 
+
+  5. The cumulative lift or the cumulative percent of responders is
+     the cumulative count of the responders up to each decile or
+     demi-decile.
+
+  Usually, RMS error, correlation or classification table results are
+  all proportional to the cumulative lift. It is not unusual to have
+  the highest lift not be the highest RMS, correlation or
+  classification rate.
+ 
+  For the calculation of the lift in the case of a continuous target
+  variable, please refer to the Evaluation Rules section of the 
+  KDD-CUP documentation <file name: cup98DOC.txt>.
+
+o RESPONDERS refer to TARGETS.
+
+o NON-REPONDERS refer to NON-TARGETS. 
+
+o TARGET and DEPENDENT VARIABLE are synonyms.
+
+o OUTPUT, PREDICTED PROBABILITY and PREDICTED SCORE are used
+  synonymously.
+
+o INPUTS, INDEPENDENT VARIABLES and PREDICTORS are synonyms.
+
+o WEIGHTS are the same as COEFFICIENTS.
+
+----------------------------------------------------------------------
+
+[QUESTIONNAIRE]  
+
+Name of Software/Product/Tool/
+        Research Prototype......:
+
+Name of Company/Institution.....:
+
+Name of Contact.................:
+E-mail Address..................:
+Phone Number....................:
+Fax Number......................:
+Mailing Address.................:
+
+
+For more information about the words in capital letters, please refer
+to the [TERMINOLOGY-GLOSSARY] section above and/or to the file
+<cup98DOC.txt> distributed with the data set.
+
++--------------------------------------+
+| Data Cleaning, Preprocessing and EDA |
++--------------------------------------+
+
+01) Please list the specifications of the hardware used to carry the
+    data cleaning, PREPROCESSING and EDA experiments: 
+
+    Brand Name of Hardware..........: 
+    CPU Size (in mega hertz)........:
+    Memory Size (in mega bytes).....:     
+    Other Related Specifications....: 
+
+02) Please specify (in minutes) how long (in terms of CPU and people
+    time) it took to complete the data cleaning, PREPROCESSING and EDA
+    tasks. In reporting the people or analyst time involved, the
+    following guidelines should be considered: (1) there are 5
+    business days in a week; (2) there are 8 hours in a business day.
+    For example, if it took you or your analyst 1 week to complete
+    these tasks, you should report the people time as 2400 minutes 
+    (5 days * 8 hours * 60 minutes.) In terms of CPU time, the real
+    time (clock time) should be reported.
+
+    CPU time (in minutes)...........:
+    People time (in minutes)........:
+
+03) Which software tool(s) and programming language(s), if any, were
+    used to carry out data cleaning, PREPROCESSING and EDA tasks? 
+
+04) How did you treat the records and variables containing MISSING
+    VALUES?
+
+    Please specify the corresponding missing value treatment
+    method/technique by ATTRIBUTE TYPE. 
+
+05) Did you create any additional attributes based on DATA
+    TRANSFORMATIONS? Please summarize. 
+
+06) Did you consider treating the outliers?
+
+    If you did, what general rule did you apply in treating the outliers?
+
+07) Prior to the application of the data mining algorithms, did you
+    normalize, scale or standardize the input variables? 
+
+    The target or the dependent variable? 
+
+    The records?
+
+    If you did, which method(s) of scaling have you used? 
+
+    If you have scaled the dependent variable during modeling, which
+    format is it in your submitted results?
+
+08) Did you find REDUNDANT or COLLINEAR FEATURES in the data set? 
+
+    If you did, how did you treat them?
+
+09) Did you implement VARIABLE/FEATURE SELECTION? 
+
+    If you did, how did you implement it? 
+
+
++------------------------------------+
+| Model Development & Implementation |
++------------------------------------+ 
+
+10) Please list the specifications of the hardware used to carry out
+    the data mining tasks: 
+
+    Brand Name of Hardware..........: 
+    CPU Size (in mega hertz)........:
+    Memory Size (in mega bytes).....:     
+    Other Related Specifications....: 
+
+11) Please specify (in minutes) how long (in terms of CPU and people
+    time) it took to complete the data mining tasks. 
+
+    [Please see question #2 for reporting guidelines.]
+
+    CPU time (in minutes)...........:
+    People time (in minutes)........:
+
+12) Which software tool(s) and programming language(s), if any, were
+    used to apply the DATA MINING algorithms?
+
+13) Please consider the learning file you used in generating your results.
+    What was the file size(s) used during learning (total number of records)?
+
+14) During learning and/or validation, did you:
+
+    (a) ARTIFICIALLY EXTEND or INFLATE the data set(s)?
+ 
+    (b) Use a BALANCED data set(s)?
+ 
+    (c) Used a related methodology not specified above? 
+
+    If you answered a 'yes' to any of the above, please specify how
+    and why?
+    _______________________________________________________________
+    _______________________________________________________________
+
+15) Which data mining technique(s) or algorithm(s) did you use in 
+    deriving your results?
+
+    If you considered more than one algorithm, which criteria did you
+    use in selecting among competing algorithms?
+
+16) How did you assess the predictive power/accuracy of your model(s)?
+
+    Did you develop more than one model? 
+
+    If you did, which criteria did you use in selecting among
+    competing models?
+
+17) Were you concerned with overfitting? 
+
+    If you did, how did you safeguard against over-fitting (in other
+    words, make sure that you were getting good generalization)?
+
+18) Could you please list all relevant statistics pertaining to the
+    architecture or complexity of your final model, i.e., number of
+    weights, number of hidden nodes in a layer, number of layers,
+    number of levels and nodes in decision tree, number of rules, etc.
+
+19) How many variables are in your final model? 
+
+    Please list their names (as listed in cup98DOC.txt) and, if
+    relevant, their relationship (positive or negative) with the
+    target variable. If you have a mechanism in determining their
+    importance or impact in the model, please list them by the order
+    of importance and describe your mechanism very briefly. 
+
+    [You can also optionally insert or attach any supporting output or
+    documentation pertaining to the results you've submitted (such as
+    the measures of accuracy (e.g., classification table, RMS error),
+    weights and other statistics, etc.)]
+
+19) Does your software tool generate a SCORING CODE (see glossary for 
+    more information) that can be used to export the model outside the 
+    data mining environment? 
+
+    [Please optionally insert or attach the scoring code.]
+
++-------------------+ 
+| General Questions |
++-------------------+ 
+
+20) What are the end-user requirements for your software tool?
+
+    (a) Marketing/Product/Industry Manager
+    (b) Business Analyst
+    (c) Statistician or data mining specialist
+    (d) Other, please specify:_______
+
+21) Using a scale ranging from 1 to 5, where 1 means that extensive
+    programming effort on the part of the end-user is required to
+    handle the task in question and 5 means that the software tool
+    automatically handles the task with minimal initial input from the
+    user, please indicate the degree of end-user input required to
+    handle each of the tasks listed below. Of course, the majority of
+    the software tools provide a capability some where in between. For
+    example, qualifying attributes to various tasks by pointing and
+    clicking through a graphical user interface, would be, say, a 4 on
+    the automation scale. If the task in question is not applicable to
+    your software tool, please check N/A (not applicable.)
+ 
+    (a) DATA PREPROCESSING:
+
+    (1)------(2)------(3)------(4)-------(5)               N/A
+
+    End-user                             Tool fully-       Not 
+    manually                             automatically     applicable
+    programs                             handles
+
+    (b) Application of the DATA MINING algorithms:
+
+    (1)------(2)------(3)------(4)-------(5)               N/A
+
+    End-user                             Tool fully-       Not 
+    manually                             automatically     applicable
+    programs                             handles
+
+22) Please list your other/additional comments below:
+
+    _______________________________________________________________
+    _______________________________________________________________
+    _______________________________________________________________
+    _______________________________________________________________
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

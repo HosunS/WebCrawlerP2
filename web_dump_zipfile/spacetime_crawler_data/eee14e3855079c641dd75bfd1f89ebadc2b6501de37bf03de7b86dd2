@@ -1,0 +1,35 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3229¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX;attachment; filename=cs222-2018-fall-setup-gdb-on-macos.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=bc4aeaa0c5026a10873677be; expires=Thu, 09 May 2019 20:58:24 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 20:58:24 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueY{{{#!div style="background-color:rgb(237,222,222)"
+
+== Setup GDB on MacOS ==
+This guide details the set up of the GDB debugger on MacOS High Sierra 10.13.6. It works as of Sep 26th, 2018. Please be alerted it is not straightforward to do this. If you spend too much time but still cannot make GDB work properly on your MacOS, an intermediate solution is to install a LinuxVM to do the development.
+
+1. Install homebrew (a package manager for mac). `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+2. Install GDB 8.0.1. Be alerted that the latest GDB version(8.11) cannot work properly with MacOS because of some bugs. Instead, we have to explicitly install an older version of GDB.
+    * `brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/9ec9fb27a33698fc7636afce5c1c16787e9ce3f3/Formula/gdb.rb`[[br]]
+    * `brew pin gdb`
+3. Type `gdb --version`, make sure you find the version is 8.0.1.
+4. Type `echo "set startup-with-shell off" >> ~/.gdbinit`
+5. Certify the installed gdb
+   * Open Keychain Access (an app under Utilities folder)
+   * In menu, open Keychain Access > Certificate Assistant > Create a certificate
+   * Give it a name (e.g. gdb-cert). Identity type: Self Signed Root. Certificate type: Code Signing. Check: let me override defaults.
+   * Continue until "specify a location for..."
+   * Set Keychain location to System
+   * Create certificate and close Certificate Assistant.
+   * Find certificate (e.g., gdb-cert) in System keychain.
+   * Double click the certificate
+   * Expand Trust, set Code signing to always trust
+   * Restart taskgated in terminal: killall taskgated
+   * Codesign gdb using your certificate: `codesign -fs gdb-cert /usr/local/bin/gdb`
+6. Now let's check whether GDB works. Open eclipse, right click your project `cs222`, and click Debug As -> Debug Configurations. Add your main program (one of the test cases), and configure the path of the GDB properly (typically its under /usr/local/bin/gdb, and command file is /Users/username/.gdbinit). Finally click Debug to see if works.
+[[Image(gdb.png, 800px)]]
+
+7. If you see your program stops at the first line of the main function, and you can use Step Into (F5), Step Over (F6) etc. properly, then your GDB is now working properly! Congratulations!
+8. Otherwise, let's try this step to disable the SIP (system integrity projection) of MacOS. Note: disabling SIP could result in security leaks of your system, and you should decide whether to continue based on your own risk!
+  * Shut down your mac and restart in recovery mode (hold down command+R until apple logo appears)
+  * Open terminal window
+  * Modify System Integrity Protection to allow debugging: `csrutil enable --without debug`
+  * Reboot your Mac
+9. Go back to step 6 to try again. It should work now, but it still doesn't work, you can checkout some other materials. [https://stackoverflow.com/questions/49001329/gdb-doesnt-work-on-macos-high-sierra-10-13-3/49104154#49104154 Stackoverflow] [https://gist.github.com/danisfermi/17d6c0078a2fd4c6ee818c954d2de13c Setup GDB on MacOS]. If it still doesn't work, maybe it's better to switch to a linux virtual machine.
+
+}}}Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

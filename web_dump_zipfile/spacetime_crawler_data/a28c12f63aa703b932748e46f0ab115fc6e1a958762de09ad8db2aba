@@ -1,0 +1,630 @@
+¦Ifinal_url¢DtypeEvaluex;https://www.ics.uci.edu/~dechter/courses/ics-276/spring-19/Lhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 11:37:49 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueYuŠ<html lang="en-US">
+   <head>
+      <title> Dr. Rina Dechter @ UCI </title>
+      <link rel=Stylesheet href="/~dechter/basic.css">
+   </head>
+   <body bgcolor="#ffffff" alink="#00aaaa" link="#008080" vlink="#008080">
+       
+    <center>
+   <table width="95%" cellspacing="0" cellpadding="0" border="0">
+      <tr>
+         <td class="title" valign="bottom">
+            <nobr>Dr. Rina Dechter - University of California at Irvine</nobr>
+         </td>
+         <td><img alt="ZOT!" align="right" valign="bottom" src="/~dechter/images/anteater-ics.gif"></td>
+      </tr>
+      <!--
+	  <tr>
+         <td colspan="2"><img height="2" src="/~dechter/images/transp-fill.gif"></td>
+      </tr>
+	  -->
+	  <!--
+      <tr>
+         <td colspan="2"><img width="100%" height="2"  src="/~dechter/images/black-fill.gif"></td>
+      </tr>
+	  -->
+      <tr valign=top>
+         <td>
+		    <!--<font color="ffaa00" size="3">-->
+		    <a href="/~dechter/index.html">home</a> |
+            <a href="/~dechter/publications.html">publications</a> |
+            <a href="/~dechter/books/">book</a> |
+            <a href="/~dechter/courses.html">courses</a> |
+            <a href="/~dechter/research.html">research</a>
+			<!--</font>-->
+         </td>
+         <td align=right>
+            <!--<font color=#008080>-->
+               Revised on
+               
+               Feb. 03, 2019
+            </font>
+         </td>
+      </tr>
+   </table>
+</center>
+	<br>
+<center>
+   <table width="90%" cellspacing="0" cellpadding="0" border="0">
+      <!--
+	  <tr>
+         <td  colspan=2><img height="4" src="/~dechter/images/transp-fill.gif"></td>
+      </tr>-->
+      <tr>
+         <!--<td class=title>CMSC828X Spring 2019, Advanced Topics in Information Processing: Algorithms for Probabilistic and Deterministic Graphical Models</td>-->
+		 <h1>CMSC828X Spring 2019, Advanced Topics in Information Processing:<br> Algorithms for Probabilistic and Deterministic Graphical Models</h1>
+      </tr>
+      <!--
+	  <tr>
+         <td colspan=2><img width="100%" height="2"  src="/~dechter/images/black-fill.gif"></td>
+      </tr>
+	  -->
+	  
+      <tr>
+         <td align=right>
+            <!--<font color="#ffaa00">-->
+			[ <a href="index.shtml">main</a> |
+            <a href="software.shtml">software</a> |
+      <!--      <a href="handouts.html">handouts</a> |-->
+            <a href="readings.shtml">references</a> ]
+         </td>
+      </tr>
+	  
+	  
+   </table>
+</center>
+	  
+      <br><br>
+      <center>
+         <table border=0 cellspacing=0 cellpadding=0 width="90%">
+            <!--
+               <div>
+               <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+                <td>
+                <p class=section>Course Project
+                <p>
+                <li> The project information is available at: <a href="https://docs.google.com/document/d/126ZJLtvJRiXLgOMlNOTFIoNJtgxR0XNPjVwH8E4sn90/edit?usp=sharing"> Project Information </a> 
+                <li> The deadline for proposals is May 21st in class. Also send your proposals by email.<br>
+                <li> Please upload summary of proposals to: <a
+                href="https://docs.google.com/spreadsheets/d/17GMS0pBMtC0lS6ix7fhI3NRoxr_t8-W9a_yWWo6q3cg/edit?usp=sharing"> Proposal
+                Summary (anyone at UCI with the link can edit) </a><br><br>
+                </td>
+                </tr>
+               </div>
+               -->
+<!--            <img border=0 width=100% height=2 src="../../../~dechter/images/black-fill.gif">-->
+            <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes'>
+               <td>
+                  <!--<p class=section>Course Reference</p>-->
+				  <h2>Course Reference</h2>
+               </td>
+            </tr>
+            <tr>
+               <td colspan=2>
+                  <ul type=disc>
+                     <strong>Lecture</strong><br>
+                     Days: Tuesday/Thursday<br>
+                     Time: 3:30 pm - 4:45 pm<br>
+                     Room: CSI 3120<br>
+                     Instructor: Rina Dechter<br>
+                     Office hours: Monday 11:30 am - 12:30 pm
+                  </ul>
+                  
+                  <div style="100%">
+                  <!--<p class=section>Course Description</p>-->
+				  <h2>Course Description</h2>
+                  <div style="width:60%">
+                     <p align="justify">
+                        The objective of this class is to provide an in-depth exposition of representation and reasoning under uncertainty using
+                        the framework of Graphical models. The class focuses on reasoning with uncertainty using directed and undirected
+                        graphical models such as Bayesian networks, Markov networks and constraint networks. These graphical models encode
+                        knowledge as probabilistic relations among variables. The primary reasoning tasks are, given some observations, to find
+                        the most likely scenario over a subset of propositions, or to update the degree of belief (distribution) over a subset
+                        of the variables. The primary algorithms (exact and approximate) using variational message-passing, search and sampling
+                        will be covered, with illustrations from areas such as bioinformatics, diagnosis and planning. Additional topics may
+                        include: causal networks, and dynamic decision networks (Influence diagrams and MDPS), as time permits.
+                     </p>
+                  </div>
+                  
+                  <div>
+                  <!--<p class=section>Requirements</p>-->
+				  <h2>Requirements</h2>
+                  <div style="width:60%">
+                     <p align="justify">
+                        In this class I will teach the algorithmic principles that allow reasoning and learning for graphical models. Students
+                        will have 5 problems set of homeworkâ€™s (50%) and a project (20%) that include presenting recent papers in the area.  There will be a final
+                        (30%).
+                     </p>
+                  </div>
+                  
+                  <div>
+                     <!--<p class=section>Prerequisites</p>-->
+					 <h2>Prerequisites</h2>
+                  </div>
+                  <ul type=disc>
+                     <li>Familiarity with basic concepts of probability theory. </li>
+                     <li>Knowledge of basic computer science, algorithms and programming principles. </li>
+                     <li>Previous exposure to AI is desirable but not essential. </li>
+                  </ul>
+                  
+                  <div>
+                     <!--<p class="section">Course material</p>-->
+					 <h2>Course material</h2>
+                     <p>The course will be based mostly on four sources:</p>
+                     <ul>
+                        <li>[Dechter1] <a href="http://www.morganclaypool.com/doi/abs/10.2200/S00529ED1V01Y201308AIM023">Rina Dechter, "Reasoning with Probabilistic and Deterministic Graphical Models: Exact Algorithms"</a></li>
+                        <li>[Darwiche] <A href="http://www.amazon.com/dp/0521884381/">Adnan Darwiche, "Modeling and Reasoning with Bayesian Networks"</a></li>
+                        <li>[Dechter2] <a href="http://www.ics.uci.edu/~dechter/books/">Rina Dechter, "Constraint Processing"</a></li>
+                        <li>[Pearl] <a href="http://www.amazon.com/dp/1558604790/">Judea Pearl, "Probabilistic Reasoning in Intelligent Systems: Networks of Plausible Inference"</a></li>
+                     </ul>
+                     <p>Additional sources:</p>
+                     <ul>
+                        <li>Russell and Norvig, Artificial Intelligence: A Modern Approach</li>
+                        <li>Daphne Koller and Nir Friedman, <a href="http://www.amazon.com/dp/0262013193/">
+                           Probabilistic Graphical Models: Principles and Techniques</a>
+                        </li>
+                     </ul>
+                     <!--<p>A longer list including <a href="readings.shtml">secondary references</a>.</p>-->
+                     <p>Some links to <a href="software.shtml">software and tools</a>.</p>
+                  </div>
+                  
+                  <div>
+                     <!--<p class=section>Course topics</p>-->
+					 <h2>Course Topics</h2>
+                  </div>
+                  <ul type=disc>
+                     <li>Introduction: Constraint and probabilistic graphical models. </li>
+                     <li>Inference in constraints: Adaptive consistency, constraint propagation, arc-conistency.</li>
+                     <li>Graph properties: induced-width, tree-width, chordal graphs, hypertrees, join-trees. </li>
+                     <li>Bayesian and Markov networks: Representing independencies by graphs.</li>
+                     <li>Building Bayesian networks.</li>
+                     <li>Inference in Probabilistic models: Bucket-elimination (summation and optimization), Tree-decompositions, Join-tree/Junction-tree algorithm.</li>
+                     <li>Search in CSPs: Backtracking, pruning by constraint propagation, backjumping and learning.</li>
+                     <li>Search in Graphical models: AND/OR search Spaces for likelihood, optimization queries.</li>
+                     <li>Approximate Bounded Inference: weighted Mini-bucket, belief-propagation, generalized belief propagation.</li>
+                     <li>Approximation by Sampling: MCMC schemes, Gibbs sampling, Importance sampling.</li>
+                     <li>Causal Inference with causal graphs.</li>
+                  </ul>
+                  
+                  <div>
+                     <!--<p class="section">Schedule</p>-->
+					 <h2>Schedule</h2>
+                  </div>
+                  <table style="width: 1188px; height: 858px;" border="3" cellpadding="8" cellspacing="2">
+                     <!--<table style="width: 100%; height: 858px;" border="3" cellpadding="8" cellspacing="2">-->
+                     <tbody>
+                        <tr>
+                           <td> <strong>Week</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                           <td> <strong>Date</strong> </td>
+                           <td> <strong>Topic</strong></td>
+                           <td ><strong>Readings&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong> </td>
+                           <td> <strong>Slides&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><br> </td>
+                        </tr>
+                        <tr>
+                           <td> Week 1 </td>
+                           <td> 1/29</td>
+                           <td>
+                              <ul>
+                                 <!--                      <li> <b>Introduction</b>: Constraint and probabilistic graphical models</li>-->
+								 canceled due to weather
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--                    Dechter1 ch. 1-2<br>-->
+                           </td>
+                           <td style="text-align: left; vertical-align: top;">
+                              <!--                    <a href="slides/class1-2018.pdf">slides 1</a><br>-->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 1/31 </td>
+                           <td>
+                              <ul>
+                                 <li> <b>Introduction</b>: Constraint and probabilistic graphical models</li>
+                                 </a></li>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+								Dechter1 ch. 1-2<br>
+                           </td>
+                           <td style="text-align: left; vertical-align: top;">
+                              <a href="slides/class1-2019.pdf">slides 1</a><br>
+                                 <!--<a href="hw/hwk1-276-18.pdf">hw 1</a><br>-->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 2 </td>
+                           <td> 2/5 </td>
+                           <td>
+                              <ul>
+                                 <!--                      <li> <b>Inference in constraints</b>: Adaptive consistency, constraint propagation, arc-conistency</li>-->
+                              </ul>
+                           </td>
+                           <td style="text-align: left; vertical-align: top;">
+                              <!--                    Dechter1 ch. 2-3<br> Dechter2 ch. 3-4<br>-->
+                           </td>
+                           <td style="text-align: left; vertical-align: top;">
+                              <!-- <a href="hw/hw2.pdf">Homework 2</a> -->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 2/7 </td>
+                           <td>
+                              <ul>
+                                 <!--                      <li> <b>Graph properties</b>: induced-width, tree-width, chordal graphs, hypertrees, join-trees</li>-->
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--<a href="reading/ch3-PR.pdf">Pearl Ch.3</a>-->
+                           </td>
+                           <td style="text-align: left; vertical-align: top;">
+                              <!--<a href="slides/class3-2017.pdf">Slides 3</a><br>-->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 3 </td>
+                           <td> 2/12 </td>
+                           <td>
+                              <ul>
+                                 <!--                      <li> <b>Bayesian and Markov networks</b>: Representing independencies by graphs </li>-->
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--Darwiche Ch. 5-->
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--                    <a href="slides/class3-2018.pdf">slides 3</a><br>-->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 2/14 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;"> <br>
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--                    <a href="hw/hwk2-276-18.pdf"> hw 2</a>-->
+                              <!--<a href="hw/MeilaJ00.pdf">Mixtures of Trees</a><br>-->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 4 </td>
+                           <td> 2/19 </td>
+                           <td>
+                              <ul>
+                                 <!--                      <li> <b>Probabilistic Inference</b>: Bucket-elimination (summation and optimization)</li>-->
+                              </ul>
+                           <td style="vertical-align: top;">
+                              <!--Dechter Ch. 4, <br> Darwiche Ch. 6-->
+                              <!--                    <a href="reading/Updated-Chapters-4-5.pdf"> Dechter1 ch.4-5 </a> -->
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--                    <a href="slides/class4-2018.pdf">Slides 4</a>-->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 2/21 </td>
+                           <td>
+                              <ul>
+                                 <!--                      <li><b>Probabilistic Inference</b>: Tree-decompositions, Join-tree/Junction-tree algorithm</li>-->
+                              </ul>
+                           </td>
+                           </td>
+                           <td style="vertical-align: top;"> <br>
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!-- <a href="slides/class5b-2017.pdf">Slides 5b</a><br>-->
+                              <!--<a href="hw/hw4.pdf">Homework 4</a><br>-->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 5 </td>
+                           <td> 2/26 </td>
+                           <td>
+                              <ul>
+                                 <!--                      <li> <b>Search</b>: Backtracking search in CSPs; pruning by constraint propagation, <br>backjumping and learning </li>-->
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--Dechter Ch. 5, <br>Darwiche Ch. 7-8--><br>
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--<a href="slides/class5-2018.pdf">Slides 5</a>-->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 2/28 </td>
+                           <td>
+                              <ul>
+                                 <!--                      <li> <b>Search</b>: AND/OR search Spaces for likelihood, optimization queries <br>(Probability of evidence, Partition function, MAP and MPE queries)</li>-->
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--                    <a href="reading/updated-chapter6.pdf"> Dechter1 ch.6 </a> -->
+                           </td>
+                           </td>
+                           <td style="vertical-align: top;">
+                              <!--                    <a href="hw/hwk3-276-18.pdf">hw 3</a><br>-->
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 6 </td>
+                           <td> 3/5 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 3/7 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 7 </td>
+                           <td> 3/12 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 3/14 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 8 </td>
+                           <td> 3/19 </td>
+                           <td>
+                              <ul> <li>Spring break
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 3/21 </td>
+                           <td>
+                              <ul> <li>Spring break
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 9 </td>
+                           <td> 3/26 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 3/28 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 10 </td>
+                           <td> 4/2 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 4/4 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 11 </td>
+                           <td> 4/9 <br> </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 4/11 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 12 </td>
+                           <td> 4/16</td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 4/18 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 13 </td>
+                           <td> 4/23</td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 4/25 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 14 </td>
+                           <td> 4/30</td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 5/2 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 15 </td>
+                           <td> 5/7</td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> &nbsp; </td>
+                           <td> 5/9 </td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 16 </td>
+                           <td> 5/14</td>
+                           <td>
+                              <ul>
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                        <tr>
+                           <td> Week 17 </td>
+                           <td> 5/22</td>
+                           <td>
+                              <ul><li> Final Exam
+                              </ul>
+                           </td>
+                           <td style="vertical-align:top;">
+                           </td>
+                           <td style="vertical-align: top;">
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <br>
+         </table>
+		 
+      <p><a href="https://www.umd.edu/web-accessibility" title="UMD Web Accessibility">Web Accessibility</a></p>		 
+      </center>
+   </body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

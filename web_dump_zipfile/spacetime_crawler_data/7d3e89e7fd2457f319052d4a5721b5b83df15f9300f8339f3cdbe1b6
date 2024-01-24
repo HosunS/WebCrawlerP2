@@ -1,0 +1,597 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE18563¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 03 Jun 2017 04:22:50 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"4883-551069f76c64e"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:18:37 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYHƒ<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Multires 2D Test**
+	*Guo Yu*
+
+**Problem:** When rendering a down-sampled high-resolution volumetric data, the appearance looks different from original high-res data. It will lose intrinsic shadowing structure and brighten the appearance.
+
+**Goal:** Here we are using scattering albedo to control the brightness of appearance. Trying to find the relationship between down-sample parameters (e.g down-sample scales, std of $\sigma_T$, frequency domain of $\sigma_T$) and albedo values ($\alpha$). 
+
+Now we just consider a 2D slice from a 3D volumetric data.
+
+2017.06.02
+===
+
+![Different training data](results0508/plot-all.png width=\pagewidth)
+
+
+2017.05.30
+===
+
+![velvet \& gabardine](results0508/plot-velvet-gabardine.png width=\pagewidth)
+
+
+2017.05.24
+===
+
+![gabardine](results0508/plot-gabardine.png width=\pagewidth)
+
+![felt](results0508/plot-felt.png width=\pagewidth)
+
+
+2017.05.15
+===
+
+![](results0508/plot2.png width=\pagewidth)
+
+![](results0508/plot3.png width=\pagewidth)
+
+![](results0508/nonlinear-Y.PNG width=\pagewidth)
+
+
+2017.05.08
+===
+
+![](results0508/plot.png width=\pagewidth)
+
+
+2017.05.01
+===
+
+![](results0428/plot2.png width=\pagewidth)
+
+Tranining: velvet, 608*9 (10% validation)
+densityMean = [0.4 ~ 8.4]
+
+Testing densityMean = [0.4 ~ 4.4] 
+
+velvet 1:  
+
+Local Optimize (tile100): 0.4435 (0.4546); 16x: 0.5451;
+
+Local Optimize (tile1000): 0.4441 (0.4551); 16x: 0.5457;
+
+Deeplearning Optimize: 0.5155 -> 0.5061 -> 0.4807 -> 0.4732 -> 0.4582 -> 0.4434
+
+
+![](results0428/velvet1.png width=\pagewidth)
+
+velvet 2:  
+
+Local Optimize (tile100): 0.5006 (0.5063); 16x: 0.5581;
+
+Local Optimize (tile1000): 0.5012 (0.5073); 16x: 0.5585;
+
+Deeplearning Optimize: 0.5286 -> 0.5191 -> 0.5001 -> 0.5001 -> 0.5030 -> 0.5122
+
+![](results0428/velvet2.png width=\pagewidth)
+
+velvet 3: 
+
+Local Optimize (tile100): 0.5169 (0.5206); 16x: 0.5596; 
+
+Local Optimize (tile1000): 0.5178 (0.5212); 16x: 0.5603;
+
+Deeplearning Optimize: 0.5326 -> 0.5238 -> 0.5110 -> 0.5142 -> 0.5160 -> 0.5228
+
+![](results0428/velvet3.png width=\pagewidth)
+
+velvet 4: 
+
+Local Optimize (tile100): 0.5271 (0.5298); 16x: 0.5607; 
+
+Local Optimize (tile1000): 0.5281 (0.5305); 16x: 0.5611;
+
+Deeplearning Optimize: 0.5354 -> 0.5275 -> 0.5207 -> 0.5240 -> 0.5266 -> 0.5312
+
+![](results0428/velvet4.png width=\pagewidth)
+
+velvet 5: 
+
+Local Optimize (tile100): 0.5341 (0.5361); 16x: 0.5612; 
+
+Local Optimize (tile1000): 0.5350 (0.5368); 16x: 0.5621; 
+
+Deeplearning Optimize: 0.5380 -> 0.5307 -> 0.5286 -> 0.5316 -> 0.5340 -> 0.5364
+
+![](results0428/velvet5.png width=\pagewidth)
+
+velvet 6: 
+
+Local Optimize (tile100): 0.5392 (0.5403); 16x: 0.5618; 
+
+Local Optimize (tile1000): 0.5397 (0.5412); 16x: 0.5625; 
+
+Deeplearning Optimize: 0.5402 -> 0.5336 -> 0.5355 -> 0.5370 -> 0.5391 -> 0.5410
+
+![](results0428/velvet6.png width=\pagewidth)
+
+velvet 7: 
+
+Local Optimize (tile100): 0.5428 (0.5441); 16x: 0.5620; 
+
+Local Optimize (tile1000): 0.5438 (0.5446); 16x: 0.5631; 
+
+Deeplearning Optimize: 0.5421 -> 0.5358 -> 0.5411 -> 0.5413 -> 0.5433 -> 0.5442
+
+![](results0428/velvet7.png width=\pagewidth)
+
+velvet 8: 
+
+Local Optimize (tile100): 0.5456 (0.5470); 16x: 0.5626; 
+
+Local Optimize (tile1000): 0.5465 (0.5475); 16x: 0.5633; 
+
+Deeplearning Optimize: 0.5436 -> 0.5379 -> 0.5454 -> 0.5446 -> 0.5471 -> 0.5469
+
+![](results0428/velvet8.png width=\pagewidth)
+
+velvet 9:  
+
+Local Optimize (tile100): 0.5483 (0.5490); 16x: 0.5631;
+
+Local Optimize (tile1000): 0.5489 (0.5497); 16x: 0.5637;
+
+Deeplearning Optimize: 0.5452 -> 0.5396 -> 0.5507 -> 0.5493 -> 0.5512 -> 0.5496
+
+![](results0428/velvet.png width=\pagewidth)
+
+
+![](results0428/plot.png width=\pagewidth)
+
+
+
+
+
+
+2017.04.27
+===
+Tranining: velvet, 608*9 (10% validation)
+
+
+Testing:
+
+a) velvet: Reference: 0.5490; 16x: 0.5631; Deeplearned: 0.5485
+![](results0428/velvet.png width=\pagewidth)
+
+b) velvet disorder: Reference: 0.5574; 16x: 0.5653; Deeplearned: 0.5541
+![](results0428/velvet_ruffle.png width=\pagewidth)
+
+c) wool: Reference: 0.56727; 16x: 0.56855; Deeplearned: 0.56500
+![](results0428/wool.png width=\pagewidth)
+
+d-1) velvet 1: 16x: 0.5451; 
+Reference: 0.4546;
+Deeplearned: 0.5201
+
+![](results0428/velvet1.png width=\pagewidth)
+
+d-2) velvet 2: 16x: 0.5581; 
+Reference: 0.5063;
+Deeplearned: 0.5333
+
+![](results0428/velvet2.png width=\pagewidth)
+
+d-3) velvet 3: 16x: 0.5596; 
+Reference: 0.5206; 
+Deeplearned: 0.5372
+
+![](results0428/velvet3.png width=\pagewidth)
+
+d-4) velvet 4: 16x: 0.5607; 
+Reference: 0.5298; 
+Deeplearned: 0.5400
+
+![](results0428/velvet4.png width=\pagewidth)
+
+d-5) velvet 5: 16x: 0.5612; 
+Reference: 0.5361; 
+Deeplearned: 0.5424
+
+![](results0428/velvet5.png width=\pagewidth)
+
+d-6) velvet 6: 16x: 0.5618; 
+Reference: 0.5403; 
+Deeplearned: 0.5439
+
+![](results0428/velvet6.png width=\pagewidth)
+
+d-7) velvet 7: 16x: 0.5620; 
+Reference: 0.5441; 
+Deeplearned: 0.5455
+
+![](results0428/velvet7.png width=\pagewidth)
+
+d-8) velvet 8: 16x: 0.5626; 
+Reference: 0.5470; 
+Deeplearned: 0.5471
+
+![](results0428/velvet8.png width=\pagewidth)
+
+d-9) velvet 9: 16x: 0.5631; 
+Reference: 0.5490; 
+Deeplearned: 0.5485
+
+![](results0428/velvet.png width=\pagewidth)
+
+
+2017.04.20 Velvet 100 0.95
+===
+Reference: 0.5490
+
+16x Downsample: 0.5630
+
+optimization (15x9 blocks, add 3.838 layers): 0.5494
+
+optimization (CNN, all as training data): 0.5471(iter100) 0.5561(iter500)
+
+optimization (CNN, more training data): 0.5484
+
+
+
+2017.04.12 y = albedo scalar factor; x1 = density scale; x2 = albedo
+===
+![](results0412/im000000.png width=\pagewidth) ![](results0412/im000002.png width=\pagewidth) ![](results0412/im000005.png width=\pagewidth) ![](results0412/im000007.png width=\pagewidth) ![](results0412/im000010.png width=\pagewidth) 
+
+![](results0412/im000012.png width=\pagewidth) ![](results0412/im000015.png width=\pagewidth) ![](results0412/im000017.png width=\pagewidth) ![](results0412/im000020.png width=\pagewidth) ![](results0412/im000022.png width=\pagewidth) 
+
+![](results0412/im000025.png width=\pagewidth) ![](results0412/im000027.png width=\pagewidth) ![](results0412/im000030.png width=\pagewidth) ![](results0412/im000032.png width=\pagewidth) ![](results0412/im000035.png width=\pagewidth) 
+
+![](results0412/im000037.png width=\pagewidth) ![](results0412/im000040.png width=\pagewidth) ![](results0412/im000042.png width=\pagewidth) ![](results0412/im000045.png width=\pagewidth) ![](results0412/im000047.png width=\pagewidth) 
+
+
+2017.04.11 y = reflectance; x1 = density scale; x2 = albedo
+===
+<!-- <script type="text/JavaScript">
+
+var picCount=0; // global
+var picArray= ["results0411/im000000.png",
+			   "results0411/im000001.png",
+			   "results0411/im000003.png",
+			   "results0411/im000004.png",
+			   "results0411/im000005.png",
+			   "results0411/im000006.png",
+			   "results0411/im000007.png",
+			   "results0411/im000008.png",
+			   "results0411/im000009.png",
+			   "results0411/im000010.png",
+			   "results0411/im000011.png",
+			   "results0411/im000012.png",
+			   "results0411/im000013.png",
+			   "results0411/im000014.png",
+			   "results0411/im000015.png",
+			   "results0411/im000016.png",
+			   "results0411/im000017.png",
+			   "results0411/im000018.png",
+			   "results0411/im000019.png",
+			   "results0411/im000020.png",
+			   "results0411/im000030.png",
+			   "results0411/im000045.png",
+			   "results0411/im000060.png",
+			   "results0411/im000075.png",
+			   "results0411/im000090.png"]
+//
+// gets next picture in array
+function nextPic()
+{ // check if adding 1 exceeds number of pics in array
+picCount=(picCount+1<picArray.length)? picCount+1 : 0;
+// build the img to write to page using the new pic reference
+var build='<img border="0" src="'+picArray[picCount]+'" width=\pagewidth>';
+document.getElementById("imgHolder").innerHTML=build;
+// repeat this after a puse of 2000ms (2sec).
+setTimeout('nextPic()',1000)
+}
+
+</script>
+
+<body onload="setTimeout('nextPic()',1000)">
+
+<div id="imgHolder">
+<img border="0" src="results0411/im000090.png" width=\pagewidth>
+</div>
+
+</body> -->
+![](results0411/im000000.png width=\pagewidth) ![](results0411/im000001.png width=\pagewidth) ![](results0411/im000002.png width=\pagewidth) ![](results0411/im000003.png width=\pagewidth) ![](results0411/im000004.png width=\pagewidth) 
+
+![](results0411/im000005.png width=\pagewidth) ![](results0411/im000006.png width=\pagewidth) ![](results0411/im000007.png width=\pagewidth) ![](results0411/im000008.png width=\pagewidth) ![](results0411/im000009.png width=\pagewidth) 
+
+![](results0411/im000010.png width=\pagewidth) ![](results0411/im000011.png width=\pagewidth) ![](results0411/im000012.png width=\pagewidth) ![](results0411/im000013.png width=\pagewidth) ![](results0411/im000014.png width=\pagewidth) 
+
+![](results0411/im000015.png width=\pagewidth) ![](results0411/im000016.png width=\pagewidth) ![](results0411/im000017.png width=\pagewidth) ![](results0411/im000018.png width=\pagewidth) ![](results0411/im000019.png width=\pagewidth) 
+
+![](results0411/im000020.png width=\pagewidth) ![](results0411/im000030.png width=\pagewidth) ![](results0411/im000045.png width=\pagewidth) ![](results0411/im000060.png width=\pagewidth) ![](results0411/im000075.png width=\pagewidth)
+
+
+
+2017.04.07 Velvet (9x15) , scale=100, tile=20
+===
+
+compress velvet to very dense is 4.3107 (sum/(15*32)/32), average density is 0.4790. Number of layers need to be added is 4.3170-0.4790=3.838
+
+original: 0.5489
+
+16x downsample: 0.5630
+
+16x downsample (modify albedo): 0.4943
+
+16x downsample (modify albedo; add 1 layer below): 0.5322
+
+16x downsample (modify albedo; add 2 layers below): 0.5415
+
+16x downsample (modify albedo; add 3 layers below): 0.5467
+
+16x downsample (modify albedo; add 4 layers below): 0.5500
+
+16x downsample (modify albedo; add 5 layers below): 0.5522
+
+16x downsample (modify albedo; add 6 layers below): 0.5539
+
+16x downsample (modify albedo; add 7 layers below): 0.5551
+
+16x downsample (modify albedo; add 8 layers below): 0.5563
+
+![](results0407/addLayers.png width=\pagewidth) 
+x: layers added; y: reflectance
+
+
+
+2017.04.01 Velvet
+===
+![](results0401/velvet_0.95_1000_res_VS_refl.png width=\pagewidth) 
+
+
+2017.03.07 (different albedo prediction)
+===
+training albedo = 0.95 and 0.65, validation albedo = 0.8
+---
+![](results0307/diffAlbedo/predictRefl_train_compare.png width=\pagewidth) 
+![](results0307/diffAlbedo/predictRefl_valid_compare.png width=\pagewidth) 
+
+training scale = 10 and 1000, validation scale = 100
+---
+![](results0307/diffScale/predictRefl_train_compare.png width=\pagewidth) 
+![](results0307/diffScale/predictRefl_valid_compare.png width=\pagewidth) 
+
+
+2017.02.28 (Residual input)
+===
+1024 training, 0 validation
+---
+![](results0228/binary10bit_0.95_100_train1024_errhist.png width=\pagewidth) 
+![](results0228/binary10bit_0.95_100_train1024_compare_train.png width=\pagewidth) 
+
+<!-- 512 training, 512 validation
+
+![](results0228/binary10bit_0.95_100_train512_errhist.png width=\pagewidth) 
+![](results0228/binary10bit_0.95_100_train512_compare_train.png width=\pagewidth) 
+![](results0228/binary10bit_0.95_100_train512_compare_test.png width=\pagewidth) 
+ -->
+<!-- Reflectance increment VS. Albedo decrement  
+
+![](results0228/binary10bit_0.95_100_albedo_VS_refl.png width=\pagewidth) 
+ -->
+Residual L2 norm VS. Reflectance increment
+---
+![](results0228/binary10bit_0.95_100_residual_VS_refl.png width=\pagewidth) 
+
+Reflectance increment VS. Residual L2 norm 
+---
+![](results0228/binary10bit_0.95_100_refl_VS_residual.png width=\pagewidth) 
+
+<!-- Residual L2 norm VS. Albedo decrement 
+
+![](results0228/binary10bit_0.95_100_residual_VS_albedo.png width=\pagewidth) 
+ -->
+
+2017.02.27 (Deeplearning)
+===
+1024 training, 0 validation
+---
+![](results0227/binary10bit_0.95_100_train1024_errhist.png width=\pagewidth) 
+![](results0227/binary10bit_0.95_100_train1024_compare_train.png width=\pagewidth) 
+
+512 training, 512 validation
+---
+![](results0227/binary10bit_0.95_100_train512_errhist.png width=\pagewidth) 
+![](results0227/binary10bit_0.95_100_train512_compare_train.png width=\pagewidth) 
+![](results0227/binary10bit_0.95_100_train512_compare_test.png width=\pagewidth) 
+
+256 training, 768 validation
+---
+![](results0227/binary10bit_0.95_100_train256_errhist.png width=\pagewidth) 
+![](results0227/binary10bit_0.95_100_train256_compare_train.png width=\pagewidth) 
+![](results0227/binary10bit_0.95_100_train256_compare_test.png width=\pagewidth) 
+
+<!-- 128 training, 896 validation
+
+![](results0227/binary10bit_0.95_100_train128_errhist.png width=\pagewidth) 
+![](results0227/binary10bit_0.95_100_train128_compare_train.png width=\pagewidth) 
+![](results0227/binary10bit_0.95_100_train128_compare_test.png width=\pagewidth) 
+
+64 training, 960 validation
+
+![](results0227/binary10bit_0.95_100_train64_errhist.png width=\pagewidth) 
+![](results0227/binary10bit_0.95_100_train64_compare_train.png width=\pagewidth) 
+![](results0227/binary10bit_0.95_100_train64_compare_test.png width=\pagewidth) 
+ -->
+
+2017.02.23 (freqency distance VS reflectance change)
+===
+<!-- uniform sample ratio
+
+![](results0223/freq_VS_refl.png width=\pagewidth) 
+ -->
+uniform sample window
+---
+![](results0223/freq_VS_refl2.png width=\pagewidth) 
+
+<!-- sort by reflectance before downsample
+
+![](results0223/freq_VS_refl3.png width=\pagewidth) 
+ -->
+
+FFT of [1 0 0 1 1 1 0 1 0 1]
+---
+a = repmat([1 0 0 1 1 1 0 1 0 1],[10 30]);
+
+b = log(abs(fftshift(fft2(a)))+1);
+
+![](results0223/fft_b.png width=\pagewidth) 
+
+
+
+2017.02.22 (Deeplearning)
+===
+Standard errors
+---
+![](results0223/0.95_100_1024/compare_sort_err.png width=\pagewidth) 
+
+2017.02.20 (Deeplearning)
+===
+1024 train (1 hidden layer(200), same Albedo(0.95) and scale(100))
+---
+![](results0220/0.95_100_1024/compare_sort.png width=\pagewidth) 
+![](results0220/0.95_100_1024/compare_unsort.png width=\pagewidth) 
+![](results0220/0.95_100_1024/Train.png width=\pagewidth) 
+
+
+2017.02.17 (Deeplearning)
+===
+512 train; 512 test (1 hidden layer, same Albedo and scale)
+---
+![](results0217/1/Train.png width=\pagewidth) ![](results0217/1/Test.png width=\pagewidth)
+
+512 train; 512 test (2 hidden layer, same Albedo and scale)
+---
+![](results0217/2/Train.png width=\pagewidth) ![](results0217/2/Test.png width=\pagewidth)
+
+1024 train (1 hidden layer, same Albedo and scale)
+---
+![](results0217/3/Train.png width=\pagewidth)
+
+2048 train; 1024 test (1 hidden layer, different Albedo, same scale)
+---
+![](results0217/4/Train.png width=\pagewidth) ![](results0217/4/Test.png width=\pagewidth)
+
+512 train; 512 test (1 hidden layer(200 nodes), same Albedo and scale)
+---
+![](results0217/5/Train.png width=\pagewidth) ![](results0217/5/Test.png width=\pagewidth)
+
+
+
+2017.01.29 (Why to choose frequency)
+===
+Two Different Albedo with two different $\sigma_T$
+---
+![Left part: $\alpha = 0.95$; right part: $\alpha = 0.65$](results0129/combine2/sigT.png width=\pagewidth)
+![Before optimize](results0129/combine2/refl_each.png width=\pagewidth) ![Reflectance](results0129/combine2/refl_all.png width=\pagewidth)
+![After optimize](results0129/combine2/refl_optimize_each.png width=\pagewidth) ![Albedo changing scale](results0129/combine2/albedo_optimize.png width=\pagewidth)
+
+
+Albedo Clustering
+---
+![High Albedo cluster](results0129/albedoLeft/sigT.png width=\pagewidth) ![Low Albedo cluster](results0129/albedoRight/sigT.png width=\pagewidth)
+
+![Before optimize](results0129/albedoLeft/refl_each.png width=\pagewidth) ![](results0129/albedoRight/refl_each.png width=\pagewidth)
+
+![After optimize](results0129/albedoLeft/refl_optimize_each.png width=\pagewidth) ![](results0129/albedoRight/refl_optimize_each.png width=\pagewidth)
+
+
+Frequency Clustering
+---
+![High frequency cluster](results0129/freqLeft/sigT.png width=\pagewidth) ![Low frequency cluster](results0129/freqRight/sigT.png width=\pagewidth)
+
+![Before optimize](results0129/freqLeft/refl_each.png width=\pagewidth) ![](results0129/freqRight/refl_each.png width=\pagewidth)
+
+![After optimize](results0129/freqLeft/refl_optimize_each.png width=\pagewidth) ![](results0129/freqRight/refl_optimize_each.png width=\pagewidth)
+
+
+2017.01.25 (How Albedo and frequency affect each other)
+===
+
+Similar frequency of $\sigma_T$, same Albedo
+---
+![Albedo = 0.95](results0125/sigT_rand.png width=\pagewidth)
+![](results0125/albedo_same/refl_rand_each.png width=\pagewidth) ![](results0125/albedo_same/refl_rand_all.png width=\pagewidth)
+
+Different frequency of $\sigma_T$, same Albedo
+---
+![Albedo = 0.95](results0125/sigT_combine1.png width=\pagewidth)
+![Blue $\rightarrow$ Red: High $f$ $\rightarrow$ Low $f$](results0125/albedo_same/refl_combine1_each.png width=\pagewidth) ![](results0125/albedo_same/refl_combine1_all.png width=\pagewidth)
+
+Similar frequency of $\sigma_T$, different Albedo
+---
+![Albedo: 0.975 $\rightarrow$ 0.5](results0125/sigT_rand.png width=\pagewidth)
+![Blue $\rightarrow$ Red: Large $\alpha$ $\rightarrow$ small $\alpha$](results0125/albedo_diff/refl_rand_each.png width=\pagewidth) ![](results0125/albedo_diff/refl_rand_all.png width=\pagewidth)
+
+Different frequency of $\sigma_T$, different Albedo
+---
+![Albedo: 0.975 $\rightarrow$ 0.5](results0125/sigT_combine1.png width=\pagewidth)
+![Blue $\rightarrow$ Red: Large $\alpha$ $\rightarrow$ small $\alpha$](results0125/albedo_diff/refl_combine1_each.png width=\pagewidth) ![](results0125/albedo_diff/refl_combine1_all.png width=\pagewidth)
+
+
+2017.01.23 (Compare scattering result w/o Next Event)
+===
+![Red: with Next Event](results0123/rand_moreSample.png width=\pagewidth) 
+
+
+2017.01.03 (Observe rendering issue from downsample data)
+===
+Rand
+---
+![](results0103/rand1.png width=\pagewidth)
+![](results0103/rand2.png width=\pagewidth) ![](results0103/rand3.png width=\pagewidth) 
+
+Wool
+---
+![](results0103/wool1.png width=\pagewidth)
+![](results0103/wool2.png width=\pagewidth) ![](results0103/wool3.png width=\pagewidth)
+
+Silk
+---
+![](results0103/silk1.png width=\pagewidth)
+![](results0103/silk2.png width=\pagewidth) ![](results0103/silk3.png width=\pagewidth) 
+
+
+2017.01.02 (How density scaler and sample numbers affect result)
+===
+[re-generate some results]
+
+
+2016.12.19 (Input data)
+===
+
+Random Barcode 
+---
+![](results/figure1-1.png width=300)
+
+
+Silk
+---
+![](results/figure1-silk3.png width=200)
+
+Wool
+---
+![](results/figure1-wool1.png width=300)
+
+
+
+
+End.
+
+<!-- Markdeep: -->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style>
+<script src="markdeep.min.js"></script>
+<script src="https://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
+<script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

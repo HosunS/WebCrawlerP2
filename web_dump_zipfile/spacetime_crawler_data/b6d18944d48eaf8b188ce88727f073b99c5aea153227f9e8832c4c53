@@ -1,0 +1,95 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1771¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 04 Feb 2014 23:44:08 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"6eb-4f19d375f6200"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 15:10:55 GMTKraw_content¢DtypeEvalueYë
+
+public class HomeTheaterFacade {
+	Amplifier amp;
+	Tuner tuner;
+	DvdPlayer dvd;
+	CdPlayer cd;
+	Projector projector;
+	TheaterLights lights;
+	Screen screen;
+	PopcornPopper popper;
+ 
+	public HomeTheaterFacade(Amplifier amp, 
+				 Tuner tuner, 
+				 DvdPlayer dvd, 
+				 CdPlayer cd, 
+				 Projector projector, 
+				 Screen screen,
+				 TheaterLights lights,
+				 PopcornPopper popper) {
+ 
+		this.amp = amp;
+		this.tuner = tuner;
+		this.dvd = dvd;
+		this.cd = cd;
+		this.projector = projector;
+		this.screen = screen;
+		this.lights = lights;
+		this.popper = popper;
+	}
+ 
+	public void watchMovie(String movie) {
+		System.out.println("Get ready to watch a movie...");
+		popper.on();
+		popper.pop();
+		lights.dim(10);
+		screen.down();
+		projector.on();
+		projector.wideScreenMode();
+		amp.on();
+		amp.setDvd(dvd);
+		amp.setSurroundSound();
+		amp.setVolume(5);
+		dvd.on();
+		dvd.play(movie);
+	}
+ 
+ 
+	public void endMovie() {
+		System.out.println("Shutting movie theater down...");
+		popper.off();
+		lights.on();
+		screen.up();
+		projector.off();
+		amp.off();
+		dvd.stop();
+		dvd.eject();
+		dvd.off();
+	}
+
+	public void listenToCd(String cdTitle) {
+		System.out.println("Get ready for an audiopile experence...");
+		lights.on();
+		amp.on();
+		amp.setVolume(5);
+		amp.setCd(cd);
+		amp.setStereoSound();
+		cd.on();
+		cd.play(cdTitle);
+	}
+
+	public void endCd() {
+		System.out.println("Shutting down CD...");
+		amp.off();
+		amp.setCd(cd);
+		cd.eject();
+		cd.off();
+	}
+
+	public void listenToRadio(double frequency) {
+		System.out.println("Tuning in the airwaves...");
+		tuner.on();
+		tuner.setFrequency(frequency);
+		amp.on();
+		amp.setVolume(5);
+		amp.setTuner(tuner);
+	}
+
+	public void endRadio() {
+		System.out.println("Shutting down the tuner...");
+		tuner.off();
+		amp.off();
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

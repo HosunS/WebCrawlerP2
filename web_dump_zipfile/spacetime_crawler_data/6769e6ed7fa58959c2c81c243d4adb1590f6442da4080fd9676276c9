@@ -1,0 +1,209 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 19:40:29 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYD‹<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Classification</a> <font color=red>(131)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Regression</a></font> <font color=red>(30)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Clustering</a> <font color=red>(24)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Other</a> <font color=red>(12)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=cat&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Categorical</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=num&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Numerical</a> <font color=red>(26)</font><br><a href='datasets.html?format=&task=reg&att=mix&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Mixed</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=mvar&sort=nameUp&view=list'>Multivariate</a> <font color=red>(27)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=uvar&sort=nameUp&view=list'>Univariate</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=seq&sort=nameUp&view=list'>Sequential</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=ts&sort=nameUp&view=list'>Time-Series</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=text&sort=nameUp&view=list'>Text</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=dt&sort=nameUp&view=list'>Domain-Theory</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=other&sort=nameUp&view=list'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=life&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Life Sciences</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=reg&att=&area=phys&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Physical Sciences</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=reg&att=&area=comp&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>CS / Engineering</a> <font color=red>(15)</font><br><a href='datasets.html?format=&task=reg&att=&area=soc&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Social Sciences</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=reg&att=&area=bus&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Business</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=reg&att=&area=game&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=&area=other&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Other</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=less10&numIns=100to1000&type=&sort=nameUp&view=list'>Less than 10</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=10to100&numIns=100to1000&type=&sort=nameUp&view=list'>10 to 100</a> <font color=red>(17)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=100to1000&type=&sort=nameUp&view=list'>Greater than 100</a> <font color=red>(6)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=&type=&sort=nameUp&view=list'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=less100&type=&sort=nameUp&view=list'>Less than 100</a> <font color=red>(6)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>100 to 1000</a></font> <font color=red>(30)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=greater1000&type=&sort=nameUp&view=list'>Greater than 1000</a> <font color=red>(59)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=reg&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Matrix</a> <font color=red>(23)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=list'>Non-Matrix</a> <font color=red>(7)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>30</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=100to1000&type=&sort=nameUp&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Auto+MPG">Auto MPG</a></b>: Revised from CMU StatLib library, data concerns city-cycle fuel consumption</p><p class="normal">2. <b><a href="datasets/Automobile">Automobile</a></b>: From 1985 Ward's Automotive Yearbook</p><p class="normal">3. <b><a href="datasets/Behavior+of+the+urban+traffic+of+the+city+of+Sao+Paulo+in+Brazil">Behavior of the urban traffic of the city of Sao Paulo in Brazil</a></b>: The database was created with records of behavior of the urban traffic of the city of Sao Paulo in Brazil.</p><p class="normal">4. <b><a href="datasets/Breast+Cancer+Wisconsin+%28Prognostic%29">Breast Cancer Wisconsin (Prognostic)</a></b>: Prognostic Wisconsin Breast Cancer Database</p><p class="normal">5. <b><a href="datasets/Computer+Hardware">Computer Hardware</a></b>: Relative CPU Performance Data, described in terms of its cycle time, memory size, etc.</p><p class="normal">6. <b><a href="datasets/Concrete+Slump+Test">Concrete Slump Test</a></b>: Concrete is a highly complex material. The slump flow of concrete is not only determined by the water content, but that is also influenced by other concrete ingredients.</p><p class="normal">7. <b><a href="datasets/CSM+%28Conventional+and+Social+Media+Movies%29+Dataset+2014+and+2015">CSM (Conventional and Social Media Movies) Dataset 2014 and 2015</a></b>: 12 features categorized as conventional and social media features. Both conventional features, collected from movies databases on Web as well as social media features(YouTube,Twitter).</p><p class="normal">8. <b><a href="datasets/DrivFace">DrivFace</a></b>: The DrivFace contains images sequences of subjects while driving in real scenarios. It is composed of 606 samples of 640√ó480, acquired over different days from 4 drivers with several facial features.</p><p class="normal">9. <b><a href="datasets/Early+biomarkers+of+Parkinson%92s+disease+based+on+natural+connected+speech">Early biomarkers of ParkinsonÔøΩs disease based on natural connected speech</a></b>: Predict a pattern of neurodegeneration in the dataset of speech features obtained from patients with early untreated Parkinson‚Äôs disease and patients at high risk developing Parkinson‚Äôs disease.</p><p class="normal">10. <b><a href="datasets/ElectricityLoadDiagrams20112014">ElectricityLoadDiagrams20112014</a></b>: This data set contains electricity consumption of 370 points/clients.
+</p><p class="normal">11. <b><a href="datasets/Energy+efficiency">Energy efficiency</a></b>: This study looked into assessing the heating load and cooling load requirements of buildings (that is, energy efficiency) as a function of building parameters.</p><p class="normal">12. <b><a href="datasets/Facebook+metrics">Facebook metrics</a></b>: Facebook performance metrics of a renowned cosmetic's brand Facebook page.</p><p class="normal">13. <b><a href="datasets/Fertility">Fertility</a></b>: 100 volunteers provide a semen sample analyzed according to the WHO 2010 criteria. Sperm concentration are related to socio-demographic data, environmental factors, health status, and life habits</p><p class="normal">14. <b><a href="datasets/Forest+Fires">Forest Fires</a></b>: This is a difficult regression task, where the aim is to predict the burned area of forest fires, in the northeast region of Portugal, by using meteorological and other data (see details at: http://www.dsi.uminho.pt/~pcortez/forestfires).</p><p class="normal">15. <b><a href="datasets/Gas+sensor+array+exposed+to+turbulent+gas+mixtures">Gas sensor array exposed to turbulent gas mixtures</a></b>: A chemical detection platform composed of 8 chemoresistive gas sensors was exposed to turbulent gas mixtures generated naturally in a wind tunnel. The acquired time series of the sensors are provided.</p><p class="normal">16. <b><a href="datasets/GPS+Trajectories">GPS Trajectories</a></b>: The dataset has been feed by Android app called Go!Track. It is available at Goolge Play Store(https://play.google.com/store/apps/details?id=com.go.router). </p><p class="normal">17. <b><a href="datasets/ISTANBUL+STOCK+EXCHANGE">ISTANBUL STOCK EXCHANGE</a></b>: Data sets includes returns of Istanbul Stock Exchange with seven other international index; SP, DAX, FTSE, NIKKEI, BOVESPA, MSCE_EU, MSCI_EM from Jun 5, 2009 to Feb 22, 2011.</p><p class="normal">18. <b><a href="datasets/Las+Vegas+Strip">Las Vegas Strip</a></b>: This dataset includes quantitative and categorical features from online reviews from 21 hotels located in Las Vegas Strip, extracted from TripAdvisor (http://www.tripadvisor.com).</p><p class="normal">19. <b><a href="datasets/NoisyOffice">NoisyOffice</a></b>: Corpus intended to do cleaning (or binarization) and enhancement of noisy grayscale printed text images using supervised learning methods. Noisy images and their corresponding ground truth provided.</p><p class="normal">20. <b><a href="datasets/Optical+Interconnection+Network+">Optical Interconnection Network </a></b>: This dataset contains 640 performance measurements from a simulation of 2-Dimensional Multiprocessor Optical Interconnection Network. </p><p class="normal">21. <b><a href="datasets/Paper+Reviews">Paper Reviews</a></b>: This sentiment analysis data set contains scientific paper reviews from an international conference on computing and informatics. The task is to predict the orientation or the evaluation of a review.</p><p class="normal">22. <b><a href="datasets/Real+estate+valuation+data+set">Real estate valuation data set</a></b>: The ‚Äúreal estate valuation‚Äù is a regression problem. The market historical data set of real estate valuation are collected from Sindian Dist., New Taipei City, Taiwan. </p><p class="normal">23. <b><a href="datasets/Residential+Building+Data+Set">Residential Building Data Set</a></b>: Data set includes construction cost, sale prices, project variables, and economic variables corresponding to real estate single-family residential apartments in Tehran, Iran. </p><p class="normal">24. <b><a href="datasets/Servo">Servo</a></b>: Data was from a simulation of a servo system</p><p class="normal">25. <b><a href="datasets/Stock+portfolio+performance">Stock portfolio performance</a></b>: The data set of performances of weighted scoring stock portfolios are obtained with mixture design from the US stock market historical database.</p><p class="normal">26. <b><a href="datasets/Student+Performance">Student Performance</a></b>: Predict student performance in secondary education (high school). </p><p class="normal">27. <b><a href="datasets/Tennis+Major+Tournament+Match+Statistics">Tennis Major Tournament Match Statistics</a></b>: This is a collection of 8 files containing the match statistics for both women and men at the four major tennis tournaments of the year 2013. Each file has 42 columns and a minimum of 76 rows.</p><p class="normal">28. <b><a href="datasets/Twin+gas+sensor+arrays">Twin gas sensor arrays</a></b>: 5 replicates of an 8-MOX gas sensor array were exposed to different gas conditions (4 volatiles at 10 concentration levels each).</p><p class="normal">29. <b><a href="datasets/wiki4HE">wiki4HE</a></b>: Survey of faculty members from two Spanish universities on teaching uses of Wikipedia</p><p class="normal">30. <b><a href="datasets/Yacht+Hydrodynamics">Yacht Hydrodynamics</a></b>: Delft data set, used to predict the hydodynamic performance of sailing yachts from dimensions and velocity.</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

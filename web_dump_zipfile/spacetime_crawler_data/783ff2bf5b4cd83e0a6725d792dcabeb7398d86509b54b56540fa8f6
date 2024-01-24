@@ -1,0 +1,26 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC422¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 04 Mar 2010 06:01:20 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1a6-480f353e88c00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:27:34 GMTKraw_content¢DtypeEvalueY¦// MenubaTokenType.java
+//
+// Informatics 102 Winter 2010
+// Assignment #5: Implementing a Domain-Specific Language
+//
+// This enumeration defines the different types of tokens that can appear in
+// a Menuba script.
+
+package inf102.menuba.compiler;
+
+
+public enum MenubaTokenType
+{
+	PACKAGE,
+	MENU,
+	IDENTIFIER,
+	STRING,
+	DOT,
+	LEFT_BRACE,
+	RIGHT_BRACE,
+	ARROW,
+	COLON,
+	SEMICOLON,
+	END_OF_INPUT
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

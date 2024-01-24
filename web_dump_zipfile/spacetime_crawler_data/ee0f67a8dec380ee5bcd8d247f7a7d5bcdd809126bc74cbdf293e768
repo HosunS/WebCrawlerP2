@@ -1,0 +1,127 @@
+¦Ifinal_url¢DtypeEvaluex7https://www.ics.uci.edu/~dechter/publications/r237.htmlLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:06:45 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14Kraw_content¢DtypeEvalueY*<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Dr. Rina Dechter @ UCI</title>
+  <link rel="Stylesheet" href="/%7Edechter/basic.css">
+</head>
+<body alink="#00aaaa" bgcolor="#ffffff" link="#008080" vlink="#008080">
+<!-- Begin Header -->[an error occurred while processing this directive]<!-- End Header --><!-- Begin Body --><br><br><center>
+<table width=90%>
+<tr>
+<td class=title>Publications & Technical Reports</td>
+<tr>
+  <td colspan=2><img width="100%" height="2"  src="/~dechter/images/black-fill.gif"></td>
+</tr>
+</tr>
+</table>
+</center> 
+<center>
+<table border="0" cellpadding="0" cellspacing="0" width="80%">
+  <tbody>
+    <tr valign="top">
+      <td><b>R237</b></td>
+<br>
+      <br>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+      <div class="title"><span style="font-weight: bold;">
+      Advancing Heuristics for Search over Graphical Models
+      </span></div>
+      <span style="font-weight: bold;">
+      William Lam
+      </span><br>
+      <tt></tt></td>
+    </tr>
+  </tbody>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="80%">
+  <tbody>
+    <tr>
+      <td><br>
+      <div class="abstract"><b>Abstract</b><br>
+    	  <div style="text-align: justify;">
+Graphical models are widely used to model complex interactions between 
+variables.
+A graphical model contains many functions over these variables which have an 
+underlying graph structure and represents an overall joint function composed 
+of these functions.
+Examples include Bayesian networks, Markov networks, and weighted constraint 
+satisfaction problems.
+In these, a common query is the optimization query, which is to find a joint 
+configuration of variables that optimizes the objective function defined by 
+the joint function.
+
+<p>
+One of the best frameworks for these queries is the AND/OR search framework, 
+which casts this optimization problem as a heuristic search problem.
+AND/OR Branch-and-Bound (AOBB) and AND/OR Best-First (AOBF) search are both 
+algorithms that search the AND/OR search space, which exploits conditional 
+independencies in a problem.
+The performance of these algorithms are highly dependent on the strength of 
+its heuristics, which is the main focus of this thesis.
+
+<p>
+We first investigate the well-known technique of look-ahead, commonly used in 
+search applications such as games, adapting it to the optimization task in 
+graphical models.
+In particular, we analyze the typically used MBE heuristic within the AND/OR 
+search framework, establishing a connection between the ``bucket error'' of 
+MBE 
+and the residual.
+This connection enables a cost-effective scheme that allows look-ahead to be 
+selectively performed only where it is likely to have a positive impact on 
+the heuristic.
+An extensive empirical evaluation demonstrates that we are able to improve 
+the power of AND/OR Branch-and-Bound.
+
+<p>
+Second, in seeking an anytime scheme for providing lower bounds on the 
+optimal solution, we explore the impact of subproblem ordering on AOBF.
+Our analysis demonstrates that this can significantly impact the performance 
+of AOBF for both exact and anytime solutions.
+We propose heuristics based on the bucket error of MBE and demonstrate their 
+potential.
+
+<p>
+Third, to tackle problems where MBE is known to perform poorly on, we explore 
+dynamic heuristics that are computed during search rather than static 
+heuristics which are pre-computed such as with MBE.
+We adapt the FGLP algorithm, a coordinate-descent method for a linear 
+programming relaxation-based bound on the objective, for use a a heuristic 
+generator for AOBB.
+Through a re-derived update method and a defined update schedule, we 
+demonstrate the advantage of FGLP heuristics on problems known to be 
+difficult when using MBE.
+
+<p>
+Additionally, we extend AND/OR Multi-valued Decision Diagrams, a framework 
+for the compact representation of functions in graphical models.
+We provide a previously missing empirical evaluation of previously introduced 
+methods.
+We also extend the framework to allow for exact bucket elimination to be 
+implemented using AOMDDs, thus pushing the feasibility of bucket elimination 
+on problems that normally require an infeasible amount of memory.
+</div>
+      <br>
+      <a target="blank" href="r237.pdf">
+      <b>[pdf]</b></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<br>
+<!-- End Body-->
+<!--- Begin Footer --><div id="footer"><centeR>
+<A HREF="http://www.ics.uci.edu">School of Information and Computer Science</A>
+<A HREF="http://www.uci.edu">University of California, Irvine, CA 92697-3435</a>
+<A HREF="http://www.ics.uci.edu/~dechter">Dr. Rina Dechter</A>
+
+<A HREF="mailto:dechter_at_ics.uci.edu">dechter at ics.uci.edu</A>
+
+</center></div><!--- End Footer -->
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

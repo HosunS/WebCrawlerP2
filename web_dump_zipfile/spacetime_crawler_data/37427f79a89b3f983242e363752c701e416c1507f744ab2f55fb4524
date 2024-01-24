@@ -1,0 +1,32 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC425¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 28 Feb 1996 00:25:35 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"2f7-2eec20b5afdc0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 15:41:30 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY÷/*
+** line_buffer -- class to provide buffer for line editor
+** David Eppstein / Columbia University / 13 Sep 1987
+*/
+
+#ifndef LINE_BUFFER_H
+#define LINE_BUFFER_H
+
+class line_buffer {
+    char * buffer;		// contents being edited
+    int bufsize;		// dim of array not length of string
+    int buflen;
+
+ public:
+    line_buffer();
+    ~line_buffer();
+
+    void add_char(char c) {	// speed up file read
+	if (buflen + 2 > bufsize) replace(buflen, &c, 1, 0);
+	else {
+	    buffer[buflen++] = c;
+	    buffer[buflen] = '\0';
+	}
+    }
+    virtual int replace(int, const char *, int = -1, int = 0);
+    int set_buffer(const char *s, int n = -1) { return replace(0, s, n, -1); }
+    const char * text() { return buffer; }
+    int textlen() { return buflen; }
+};
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

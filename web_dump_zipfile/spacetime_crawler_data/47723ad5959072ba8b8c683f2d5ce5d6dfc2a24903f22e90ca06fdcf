@@ -1,0 +1,83 @@
+final_urltypeEvaluex/https://www.ics.uci.edu/~baldig/diso_intro.htmlLhttp_headerstypeEvalue嚔AktypeEvalueNContent-LengthAvtypeEvalueD3428ktypeEvalueMAccept-RangesAvtypeEvalueEbytesktypeEvalueFServerAvtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14ktypeEvalueMLast-ModifiedAvtypeEvalueXWed, 24 May 2006 16:56:47 GMTktypeEvalueDETagAvtypeEvalueS"d64-4148b9ef971c0"ktypeEvalueDDateAvtypeEvalueXThu, 07 Feb 2019 16:44:44 GMTktypeEvalueLContent-TypeAvtypeEvalueXtext/html; charset=UTF-8Kraw_contenttypeEvalueYd<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title></title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="jianlincheng@yahoo.com">
+<meta name="generator" content="AceHTML 5 Freeware">
+</head>
+<body"><a href="#2"><a href="#3"></a></a></a>
+<br>
+
+<b><a name="1"></a>Methodology</b>
+<ul type="disc">
+	<li><a href="http://www.ics.uci.edu/~baldig/diso.html"><b>DISpro</b></a> is a web server to predict protein disordered regions using the 1D-Recursive Neural Networks and statistical methods. For the detailed descriptions of the method, please see the reference. 
+	</li>
+</ul>
+
+<b><a name="1"></a>Input Format</b>
+<ul type="disc">
+	<li>Target name, optional, which is used to identify your query.</li>
+	<li>Email address, where the prediction result is sent. 
+	<li>Sequence: a raw text of sequence, white space are ignored.</li>
+</ul>
+
+<b>Output F<a name="2"></a>ormat</b>
+<ul type="disc">
+	<li>Disordered region predictions are presented in CASP format. Here is an example with descriptions:</li>
+</ul>
+<pre>
+         PFRMAT DR
+         TARGET Query-Name 
+         AUTHOR baldi-group-server 
+         REMARK Predictor remarks
+         METHOD Description of methods used
+         METHOD Description of methods used
+         METHOD Description of methods used
+         MODEL  1
+         H D 0.70           # <- Field 1: residue code,
+         L D 0.80           # <- Field 2: order/disorder assignment code (D: disordered, O: ordered),
+         E D 0.80           # <- Field 3: the number specifying the associated
+         G D 0.60           #    confidence level: 0.5 - residue not predicted 
+         S D 0.90           #                     >0.5 - disordered region 
+         I O 0.50           #                     <0.5 - ordered region
+         G O 0.40
+         I O 0.40
+         K O 0.30
+         H O 0.20
+         E O 0.20
+         I O 0.40
+         V O 0.45
+         F D 0.60
+         D D 0.90
+         C D 0.80
+         END
+
+</pre>
+<b>Performa<a name="3"></a>nce</b><br>
+<ul type="disc">
+<li>
+    On a data set of 723 protein chains, the precision and recall of disordered regions is 75.4% and 38.8% respectively. TPR (True Positive Rate) at 5% FPR (False Positive Rate) is 92.8%.  
+</li>
+</ul>
+<br>
+
+<b><a href="#4"></a>Reference<a name="4"></a></b><br><br>
+<ul type="disc">
+<li>
+J. Cheng, M. Sweredoski, P. Baldi, Accurate Prediction of Protein Disordered Regions by Mining Protein Structure Data, Data Mining and Knowledge Discovery, vol. 11, no. 3, pp. 213-222, 2005. <a href="disorder.pdf">[PDF]</a>
+</li>
+<br>
+<li><a href="http://contact.ics.uci.edu/disorder.dataset"><b> Download the dataset used in training DISpro here.</b></a> </li>
+<li><a href="http://contact.ics.uci.edu/download.html"><b> Download DISpro 1.0 (Linux version).</b></a> </li>
+<!--
+	<li><a href="http://www.ics.uci.edu/~jianlinc">Jianlin Cheng</a>, Ph.D candidate, School of Information & Computer Science, University of California, Irvine </li>
+	<li>Michael Sweredoski, Ph.D student, School of Information & Computer Science, University of California, Irvine </li>
+	<li><a href="http://www.ics.uci.edu/~pfbaldi">Pierre Baldi</a>, Professor and director of Institute for Genomics and Bioinformatics, School of Information & Computer Science, University of California Irvine</li>
+-->
+</ul>
+<br>
+</body>
+</html>
+Mis_redirectedtypeEvalue鮅http_codetypeEvalue萉download_completetypeEvalue�

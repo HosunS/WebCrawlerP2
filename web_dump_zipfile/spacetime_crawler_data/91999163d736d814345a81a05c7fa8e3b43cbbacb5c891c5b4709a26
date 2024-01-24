@@ -1,0 +1,81 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2890¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 09 Oct 2018 18:52:24 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"b4a-577d03d0fe326"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:24:25 GMTKraw_content¢DtypeEvalueYJlibrary("rstan") # observe startup messages
+
+# bioassay.x = vector of x values for bioassay (log concentration)
+# bioassay.y = vector of y values for bioassay
+# bioassay.n = vector of n values for bioassay
+bioassay.x <- c(rep(-0.86,5),rep(-0.30,5),rep(-0.05,5), rep(0.73,5))
+bioassay.y <- c(0,0,0,0,0,1,0,0,0,0,1,1,1,0,0,1,1,1,1,1)
+a <- glm(bioassay.y ~ bioassay.x,family="binomial")
+summary(a)
+#
+# 
+# logpost4 is a function to evaluate the log posterior on the 
+#          log(alpha/beta), log(alpha+beta)  parameterization
+logpost <- function(a, b)  { 
+      x <- a*sum(bioassay.y) + b*sum(bioassay.x*bioassay.y);
+      for (j in (1:length(bioassay.x))) x <- x - log(1 + exp(a + b*bioassay.x[j])); 
+      x}
+
+# set up grid
+agrid <- c(-40:80)/20
+bgrid <- c(-50:125)/5
+#agrid <- c(-100:200)/20
+#bgrid <- c(-50:200)/5
+
+# evaluate grid 
+z <- outer(agrid, bgrid, logpost)
+# exponentiate log posterior (set maximum to be one)
+z2 <- exp(z - max(z))
+# contour plot
+contour(agrid,bgrid,z2,levels=c(0.05,0.15,0.25,0.35,0.45,0.55,0.65,0.75,0.85,0.95))
+
+# sample from posterior distn
+z2 <- z2/sum(z2)
+p.a <- apply(z2,1,sum)
+asamp <- sample(agrid,1000,replace=T,prob=p.a)
+
+aid <- (asamp+5.05)*20 
+bsamp <- rep(0,1000)
+for (i in (1:1000)) bsamp[i] <- sample(bgrid,1,prob=z2[aid[i],]/sum(z2[aid[i],]))
+ld50 <- -1*asamp/bsamp
+
+describe(asamp)
+describe(bsamp)
+describe(ld50)
+
+
+
+bioassay.dat <- list(N = 4,
+                     dose = c(-0.86, -0.30,  -0.05, 0.73),
+                     num = c(5, 5, 5, 5),
+                     dead = c(0, 1, 3, 5))
+fit <- stan(file = 'H://HAL//Courses//Stat225//bioassay.stan', data= bioassay.dat,
+            iter = 1000, chains  =4)
+
+# SUMMARIES .... print posterior distn summaries, plot estimates, and show 2-dimensional posterior
+print(fit)
+pairs(fit, pars = c("alpha_star", "beta", "alpha", "LD50", "beta", "lp__"))
+
+# return a list of arrays, 1 per parameter 
+#la <- extract(fit, permuted = TRUE) # return a list of arrays, 1 per parameter 
+#mu <- la$mu     # this pulls out draws for one parameter
+
+#return an array of three dimensions: iterations, chains, parameters 
+#a <- extract(fit, permuted = FALSE) 
+
+# use S3 functions on stanfit objects - creating different R objects from fit
+#a2 <- as.array(fit)     # three-dimensional array (iter, chain, param)
+#m <- as.matrix(fit)     # two-dimensional matrix  (last halves of chains, concatentated)
+#d <- as.data.frame(fit) # data frame
+
+
+
+
+# ALTERNATE DATA SET 
+#beetles_dat <- list(N = 8, 
+#                    conc = c(1.6907, 1.7242, 1.7552, 1.7842, 1.8113, 1.8369, 1.8610, 1.8839),
+#                    num = c(59, 60, 62, 56, 63, 59, 62, 60),
+#                    dead = c(6, 13, 18, 28, 52, 53, 61, 60))
+#fit <- stan(file = 'H://HAL//Courses//Stat225//beetles.stan', data = beetles_dat, 
+#            iter = 1000, chains = 4)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,930 @@
+¦Ifinal_url¢DtypeEvaluexphttps://signin.lexisnexis.com/lnaccess/app/signin?aci=ls&back=https%3A%2F%2Fwww.lexisnexis.com%3A443%2FlawschoolLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueY5AWSALB=9QoaypjYVfkRAYM9NO9jcSTt4CaK0lBa2KMOB3rSAfLptXn6pz8PcaA4ezZY9LLPDIZuyzKnPi87FH1HggbSDUGPrGTf1pF3luYmSlmJlHt5HIgb85qGPKM+lA0n; Expires=Sat, 16 Feb 2019 06:16:57 GMT; Path=/, JSESSIONID=CB1FD691F2BC3CB3387151395345AE94; Path=/lnaccess; HttpOnly, aciCookie=ls; Domain=.lexisnexis.com; Path=/; Secure; HttpOnly, authTokenUserCookie=deleted; Domain=.lexisnexis.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/, UserFRP=deleted; Domain=.lexisnexis.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/, newObFormLoginCookie=rh%3Dhttps%3A%2F%2Fwww.lexisnexis.com%3A443+wu%3D%2Flawschool; Domain=.lexisnexis.com; Path=/; Secure; HttpOnly, UserIDCookie=deleted; Domain=.lexisnexis.com; Expires=Thu, 01-Jan-1970 00:00:10 GMT; Path=/, LNSI=e89d2205-9647-48d1-9fa5-1feef4d03546; Domain=.lexisnexis.com; Path=/; Secure; HttpOnly¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXWed, 31 Dec 1969 23:59:59 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueHno-store¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 06:16:57 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html;charset=ISO-8859-1Kraw_content¢DtypeEvalueytç
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+	<html lang="en">
+		<head>
+			<meta charset="utf-8" />
+			<meta http-equiv="X-UA-Compatible" content="IE=10" >
+			<meta name="viewport" content="initial-scale=1">
+			
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><style>
+			
+			</style>
+			
+			
+				
+				
+					<title>LexisNexis&reg; for Law Schools - Sign In | LexisNexis</title>
+					
+						<meta name="description" content="LexisNexis users sign in here. Click here to login and begin conducting your legal research now.">
+					
+				
+			
+			<link href="/lnaccess/css/global.css?version=9_0" type="text/css" rel="stylesheet" />
+			<link href="/lnaccess/css/wam.css?version=9_0" type="text/css" rel="stylesheet" />
+			<link href="/lnaccess/css/oauth.css?version=9_0" type="text/css" rel="stylesheet" />
+
+			<script type="text/javascript" src="/lnaccess/js/html5shiv.js?version=9_0"></script>
+			<script type="text/javascript" src="/lnaccess/js/common.js?version=9_0"></script>
+			<script type="text/javascript" src="/lnaccess/js/jquery.min.js?version=9_0"></script>
+			<script type="text/javascript" src="/lnaccess/js/validate.js?version=9_0"></script>	
+
+			<style>
+#cookieBannerDisplay
+{
+	background-color:#ffffcc;
+   	display:none;
+   	font-size:13px;
+   	text-align: left;
+   	padding:10px;
+   	padding:10px;"
+}
+#topHeader{
+	position: absolute;
+	display:inline;
+	padding-left:5px;
+	padding-top:5px;
+}
+.divLocaleSelected{
+	display: table-cell;
+	background-color:#2196F3;
+	text-align:center;
+	cursor:pointer;
+	padding:1px;
+	line-height:18px;
+	width:60px;
+	left:5px;
+	top:2px;
+	font-weight:bold;
+}
+.divLocale{
+	display: table-cell;
+	text-align:center;cursor:pointer;
+	width:60px;left:5px;top:2px;padding:1px;line-height:18px;
+}
+.ndcMenu{
+	background-color:#414144;
+	position:relative;
+	color:#fff;
+	display:inline-block;
+ 	border:none;
+	height:41px;
+	padding:5px 15px 0px 15px; 
+	box-shadow:Â 0px 1px 5px 0pxÂ rgba(75, 76, 78, 1);  
+	line-height:Â 30px; 
+	font-size:16px;
+	cursor:pointer;
+	font-family:Helvetica;Â 
+Â 	font-weight:400; 
+	justify-content:flex-end;
+	margin-top: 3px;
+	width : 200px;
+}
+.ndcMenu:focus {
+	background-color : black;
+}
+.ndcMenu:hover {
+	background-color: #6d6e71 !important;
+}
+#topSpan{
+	border-bottom: gray 1px solid; 
+	border-left: gray 1px solid; 
+	line-height: 18px; 
+	border-top: gray 1px solid; 
+	border-right: gray 1px solid;
+	display: inline-block;
+	vertical-align: middle;
+}
+</style>
+<!--[if !IE]>-->
+<style>
+
+@media screen and (max-width: 480px) {
+
+	#globalTopBar header > h1{
+		padding-left:2px;
+		padding-right:2px;
+	}
+
+	#topHeader{
+		padding:0px;
+		padding-top:5px;
+		padding-left:2px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+
+	div.divLocaleSelected{
+		display: flex;
+		width:100%;
+	}
+	div.divLocale{
+		display: flex;
+		width:100%;
+	}
+	#topHeader{
+		padding:0px;
+		padding-left:2px;
+	}
+}
+</style>
+<!--<![endif]-->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript"> 
+
+var WA_HTTP_URI ='http://webanalytics.lexisnexis.com/wa_wam.watag';
+
+var WA_HTTPS_URI = 'https://webanalytics.lexisnexis.com/wa_wam.watag';
+
+var WA_SITEID='ls';
+
+var WA_COOKIE_DOMAIN ='lexisnexis.com';
+
+var pageName='login'; 
+var tipsDomain='http://help.lexisnexis.com/tabula-rasa';
+
+
+function checkBannerCookie(){
+	var cookies = document.cookie.split(";");
+	var isAvailable=false;
+    for (var i in cookies)
+    {
+    	if (cookies[i].indexOf("cookieBanner") >-1){
+        isAvailable = true;
+        }
+    }
+ 
+     if(isAvailable ==false){
+    	$("#cookieBannerDisplay").show();
+    } 
+	
+}
+	
+function generateBannerCookie() {
+	var cookieName = "cookieBanner";
+	var cookievalue = "cookieBanner";
+
+	
+	 var CookieDate = new Date;
+	 CookieDate.setFullYear(CookieDate.getFullYear( ) +20);
+	 var expires = "expires="+CookieDate.toGMTString( );
+	document.cookie = cookieName+"="+cookievalue+"; "+expires+"; path=/; domain =.lexisnexis.com";
+	$("#cookieBannerDisplay").hide();
+	
+}
+</script>
+
+
+	
+<body id="login" onload="checkBannerCookie()" />
+	
+	
+
+		
+
+	<section id="globalTopBar">
+		<header>
+		
+		 
+		
+		
+			<h1><span>LexisNexis<sup>&reg;</sup> for Law Schools</span></h1>			
+		
+		
+		 
+			
+			
+				
+		</header>
+		
+	</section>
+	
+<script>
+	
+function setUserLocale(language)
+{
+	var expiration_date = new Date();
+	expiration_date.setFullYear(expiration_date.getFullYear() + 1);
+	cookievalue=language;
+	document.cookie = "usrLocaleCookie="+cookievalue+";expires=" + expiration_date+"; path=/; domain =.lexisnexis.com";
+	locationHref=window.location.href;
+	
+	var languageCode = cookievalue.substring(0, cookievalue.lastIndexOf('-')).toUpperCase();
+	
+	if(locationHref.indexOf("userLocale")>1) {
+		locationHref = locationHref.replace(/(userLocale=)[^\&]+/, '$1' + languageCode);	
+	} else if(locationHref.indexOf("?")>1) {
+		locationHref = locationHref+"&userLocale="+languageCode;
+	} else {
+		locationHref = locationHref+"?userLocale="+languageCode;
+	}
+	
+	//location.replace(locationHref);
+	//location.reload();
+	window.location=locationHref;
+	
+}
+
+
+</script>
+
+<main role="main" >
+
+	
+
+
+
+
+
+
+
+
+
+
+<style>
+
+div .pwdWithShowWrapper{
+  position: relative;
+  width: calc(90% + 20px);
+  margin-top: 16px;
+}
+
+.showPwdInput{
+  width: calc(100% - 78px);
+  padding-right: 68px;
+  height: 26px;
+}
+
+section#loginArea div .pwdWithShowWrapper input[type="text"], section#loginArea input[type="password"] {
+  width: calc(100% - 78px);
+}
+
+section#loginArea div .pwdWithShowWrapper input[type="text"].error, section#loginArea input[type="password"].error {
+  padding-right: 68px;
+}
+
+.field-icon {
+  font: 10px Lato, Arial;
+  color: #939598;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 3px;
+  margin: 0 0
+}
+
+.field-icon:hover {
+  text-decoration: underline;
+  color: #939598;
+}
+
+.field-icon:focus {
+  text-decoration: underline;
+  color: #939598;
+}
+
+.modal-box {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 57%;
+  background: white;
+  border-bottom: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+}
+
+.modal-box header,
+.modal-box .modal-header {
+  padding: 1.25em 1.5em;
+  border-bottom: 1px solid #ddd;
+}
+
+.modal-box header h3,
+.modal-box header h4,
+.modal-box .modal-header h3,
+.modal-box .modal-header h4 { margin: 0; }
+
+.modal-box .modal-body { padding: 2em 4em; }
+.modal-box .modal-body a { text-decoration: none; }
+
+.modal-box footer,
+.modal-box .modal-footer {
+  padding: 1em;
+  border-top: 1px solid #ddd;
+  #background: rgba(0, 0, 0, 0.02);
+  text-align: right;
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+</style>
+<script>
+
+$(document).ready(function() {
+
+	$('#normalLoginlink').click(function() {
+		 $(this).children('.la-TriangleDown , .la-TriangleUp').toggleClass("la-TriangleDown la-TriangleUp");
+		 $('#normalloginsection').toggle();
+	});
+		
+	$('#signInSbmtBtn').click(function() {
+		
+	});
+
+    $('.toggle-password').click(function() {
+        if($('#password').attr('type') == "password"){
+            $('#password').attr('type', 'text');
+            $('.toggle-password').html("HIDE");
+        } else {
+            $('.toggle-password').html("SHOW");
+            $('#password').attr('type', 'password');
+        }
+    });
+});
+
+	var userLoginId = 'user';
+	
+	function hideButton() {
+
+		    var x = document.getElementById("ListOtherCountries");
+			var y = document.getElementById("MoreLess");
+		    if (x.style.display === "none") {
+		        x.style.display = "block";
+		        y.className ="icon la-TriangleUp";
+				y.innerHTML = "Fewer";
+		    } else {
+		        x.style.display = "none";
+		        y.className ="icon la-TriangleDown";
+				y.innerHTML = "More";
+		    }
+	}
+
+	function delete_cookie(name , path, host ) {
+		var expiration_date = new Date();
+		expiration_date.setFullYear(expiration_date.getFullYear() + 1);
+		document.cookie = name+"=null;"+"expires=" + expiration_date+"; path=/; domain ="+host;
+		return;
+	}
+	
+	function forgotCredential(url) {
+		this.location.href = url;
+	}
+	
+	function closeWindow() {
+		 $('#popup').remove();
+		 $(".modal-overlay").attr("disabled", false);
+		 
+		 var hostname=location.hostname;
+		 var path = "/lnaccess/app/signin";
+		 delete_cookie('ObSSOCookie',path,hostname);
+		 delete_cookie('OAM_ID',path,hostname);
+		 delete_cookie('LoginTypeCookie',path,hostname);
+		 
+		 var signout_form = document.createElement("FORM");
+		 signout_form.setAttribute("name", "signout");
+		 signout_form.setAttribute("method", "GET");
+		 signout_form.setAttribute("action", "/lnaccess/signout?aci=ls");	    
+		    
+		 var param = document.createElement("input");
+		 param.setAttribute("name", "aci");
+		 param.setAttribute("value","ls" );
+		 param.setAttribute("type", "hidden");
+		 signout_form.appendChild(param);
+		 document.body.appendChild(signout_form);
+		 signout_form.submit();
+	}
+	function deleteFedCookie(url) {
+		this.location.href = url;
+	}
+	function trim(s) {
+		return s.replace(/^\s*/, "").replace(/\s*$/, "");
+	}
+	function nullValidation() {
+		var u = $('#userid').val();
+		var p = $('#password').val();
+		if (u == null || u == "") {
+			$('#errorMessageArea').toggle();
+		}
+	}
+	function redirectIDPUrl(url)
+	{
+		this.location.href = url;
+	}
+	function idpProfileLinkUrl(url)
+	{
+		this.location.href = url;
+	}
+	
+	function pushToRoot(url) {
+
+		if(window.top != window.self) {
+		  var myWindow = window.open("",'_parent'); // new tab
+		  myWindow.location = url;
+		}
+	}
+	
+	function updatep() {
+		
+		var requestedResource = "https://signin.lexisnexis.com/lnaccess/updatep?aci=ls";
+		var cookieName = "newObFormLoginCookie";
+ 		var expires = "";
+		document.cookie = cookieName+"="+requestedResource+expires+"; path=/; domain =.lexisnexis.com";
+		document.cookie = "aciCookie=ls; path=/; domain =.lexisnexis.com";
+		
+	    var updatep_form = document.createElement("FORM");
+	    updatep_form.setAttribute("name", "updatepForm");
+	    updatep_form.setAttribute("method", "POST");
+	    updatep_form.setAttribute("action", "/lnaccess/updatep?aci=ls");	    
+	    
+	    var param = document.createElement("input");
+	    param.setAttribute("name", "aci");
+	    param.setAttribute("value","ls" );
+	    param.setAttribute("type", "hidden");
+	    updatep_form.appendChild(param);
+	    
+		document.body.appendChild(updatep_form);
+		updatep_form.submit();
+	}
+	
+	function redirectToReferer(){
+		
+		
+		
+		
+		window.history.go(null);
+	}
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="wrapper">
+
+	<section id="loginArea">
+
+		<header class="clearfix">
+			<h1>
+			   Sign In
+			</h1>
+			<!-- sign in help and options drop down	 -->
+			<div id="helpSection">
+				<button type="button" id="signInHelp" class="drop-down-btn">
+					<span>Help</span> <span
+						class="icon la-TriangleDown"></span>
+				</button>
+				<ul id="helpLinks" class="balloon-box">
+					<li><h2 class="modal-title" tabindex="0">
+							Help
+						</h2>
+						<button type="button" class="close-btn">
+							<span class="icon la-CloseRemove"><span class="hidden">Close
+									Menu</span></span>
+						</button></li>
+					<li><a href="http://help.lexisnexis.com/tabula-rasa/WAM/signintips-field?lbu=US&locale=en_US&audience=all" id="signInTips"
+						onclick="wa_linkTag(this);auth.openHelpWin(this.href);return false;">Tips</a></li>
+					<li><a href="http://help.lexisnexis.com/tabula-rasa/WAM/hardware_ref-reference?lbu=US&locale=en_US&audience=all" id="hardwareHelp"
+						onclick="wa_linkTag(this);auth.openHelpWin(this.href);return false;">What hardware do you need?</a></li>
+					<li><a href="http://help.lexisnexis.com/tabula-rasa/WAM/hardware_ref-reference?lbu=US&locale=en_US&audience=all" id="browserHelp"
+						onclick="wa_linkTag(this);auth.openHelpWin(this.href);return false;">Which browsers are supported?</a></li>
+					<li><a href="#" onclick="updatep(); return false;"
+						id="updateProfile">Update my sign-in profile</a></li>
+				</ul>
+			</div>
+			<!-- 	end sign in help and options drop down	 -->
+		</header>
+
+		<!-- 	Message/Error Area	 -->
+		<!-- 	Error Message Container -->
+		
+
+		<!-- 	authorization error -->
+		
+			
+		
+
+		<!-- exhausted attempts error -->
+		
+			
+		
+
+		<aside id="errorMessageArea" role="region" aria-live="polite">
+			<span class="show icon la-Error"></span>
+			<p id="useridError" class="error">
+				You did not enter an <strong>ID</strong> value.
+			</p>
+			<p id="passwordError" class="error">
+				You did not enter a <strong>Password</strong> value.
+			</p>
+		</aside>
+
+		<!-- 	Message Container -->
+		<aside id="messageArea"></aside>
+		<!-- 	end Message/Error Area	 -->
+
+		<!-- 	remember me sign in form	 -->
+		
+			
+
+			
+				<!-- 	sign in form	 -->
+				<body onLoad="document.loginForm.userid.focus();checkBannerCookie();">
+				<form name="loginForm" id="signInForm" class="validate"
+					action="/lnaccess/Transition?aci=ls" method="post">
+					<input type="hidden" name="rmtoken" size="20" value="dummy" /> <input
+						type="hidden" name="request_id" value="null" /> <input
+						type="hidden" name="OAM_REQ" value="null" />
+					<ul>
+					
+			<!-- changes for UserStory#306985 - changes to show MIP/SSO login link more prominently in the top-->		
+					
+					<li>
+							 
+ 						
+						</li>
+						
+						
+						<!--  R6.2 Sprint6: UserStory#88003 - Sprint6: Member Identity Authentication through Cookie -->
+						
+
+						<!-- END OF R6.2 Sprint6: UserStory#88003 - Sprint6: Member Identity Authentication through Cookie -->
+						
+						<!-- changes for UserStory#306985 - changes to show MIP/SSO login link more prominently in the top-->
+							
+						
+					<div id ="normalloginsection" >
+					
+					
+						<li><label for="userid" style="padding-top:20px;"> ID <span class="error">Please enter a valid ID.</span> <input type="text"
+								name="userid" id="userid" class="major" /> <span
+								class="error icon la-Warning"></span>
+						</label></li>
+						
+						<li>
+						    <label for="password">
+						        Password
+                                <span class="error">
+                                    Please enter a valid password.
+                                </span>
+                                <div class="pwdWithShowWrapper">
+                                    <input type="password" name="password" id="password" class="showPwdInput" />
+                                    <a href="#" class="toggle-password field-icon">
+                                        SHOW
+                                    </a>
+                                </div>
+                                <span class="error icon la-Warning"></span>
+						    </label>
+						</li>
+						<li>
+							<input type="submit" id="signInSbmtBtn"
+										class="primary large-btn float-left js-open-modal" data-modal-id="popup"
+										onclick="_wa_setSITCookie('sit',_wa_timestamp(),'/',WA_COOKIE_DOMAIN);"
+										value="Sign In"/>
+										
+									
+									<input type="hidden" name="rmflag" size="20" value='0' 
+									id="rmflag" /> <label id="rememberMe" for="chkrmflag"
+										class="float-left"> <input type="checkbox"
+											name="chkrmflag" id="chkrmflag" size="20" value="1" 
+											onclick="(document.getElementById('rmflag').value==1)?document.getElementById('rmflag').value=0:document.getElementById('rmflag').value=1;" />
+											Remember Me
+									</label>
+								</li>
+						<li class="link-messages"><a href="#"
+							onclick="forgotCredential('/lnaccess/retrieveCredentials?aci=ls')"> Forgot your ID or password?
+                            </a>
+                            
+                            <span style="position: absolute;margin-left: 10px;">
+                                <img id="arrowimg" class="blink" width="20px" style='display: none' src="/lnaccess/images/highlight_arrow.png" alt="Forgot ID/Password"/>
+                            </span>
+						</li>
+						
+
+						</div>	
+
+						
+						
+							<li>
+							
+								<hr />  Questions? Call Customer Support at 1-800-543-6862
+									
+									</li>
+							<li id="terms">Use of this service is subject to&nbsp;<a
+								href="https://www.lexisnexis.com/terms/general.aspx"
+								onclick="wa_linkTag(this);auth.openHelpWin(this.href);return false;">terms &amp; conditions.</a>
+							</li>
+						
+						
+						
+						
+						
+						
+						<li><input type="hidden" name="aci"
+							value="ls" />
+						
+						</li>
+					</ul>
+				</form>
+				
+				<div id="popup" class="modal-box">  
+				  <header>
+				    <div id="u70" class="ax_paragraph">
+		              <div id="u71" class="text">
+		                <span style="font-size:18px;color:#333333;">Terms &amp; Conditions</span>
+		                <a style="float: right;" class="js-modal-close" href="javascript:void(0)">&#10005;</a>
+		              </div>
+		            </div>
+				  </header>
+				  
+				 <div class="modal-body">
+				  
+				   <!--  <p style="font-size:13px;"><span style="font-size:13px;color:#333333;">&nbsp;</span></p> -->
+				   <p style="padding-bottom:5px;"></p>
+				    <span style="font-size:16px;color:#333333;"><strong>Terms of use</strong></span>
+				    </br></br>
+				    <p style="font-size:13px;max-width:45em;padding-bottom:5px;"><span style="font-size:13px;color:#333333;max-width:43em;">Your use of this service is subject to the
+				    <a target="_blank" href="https://www.lexisnexis.com/terms/general.aspx" id="privacyandcookiepolicies" name="privacyandcookiepolicies">
+				    LexisNexisÂ® Terms &amp; Conditions.</a>
+				 	You must accept these  
+					Terms &amp; Conditions to use the service.</span></p>
+				    <span style="font-size:13px;color:#333333;">Please also review the 		   
+				    <a target="_blank" href="http://www.lexisnexis.com/en-us/terms/privacy-policy.page" id="privacyandpolicies" name="privacyandpolicies">
+				    Privacy &amp; Cookies policy </a></span>
+				    <p style="padding-bottom:40px;"></p>
+				    <form id="frmTandC" method="post" action="/lnaccess/tandc?aci=ls">
+				    	<input type="hidden" name="RequestURL" id="RequestURL" />
+				    	<input type="hidden" name="tcPopUp" id="tcPopUp" value="Y" />
+				    </form>
+				  
+				    
+				    <form id="frmDenied" method="get" action="/lnaccess/tandcdenied">
+						<input type="hidden" id="aci" name="aci" value="ls" />
+						<input type="hidden" name="RequestURLDenied" id="RequestURLDenied" />
+					</form> 
+				    	
+				    <!-- </form> -->
+				  </div>
+				  
+				  <footer>				    
+				    <input type="submit" id="signInBtn"
+										class="primary large-btn js-open-modal"
+										onclick="_wa_setSITCookie('sit',_wa_timestamp(),'/',WA_COOKIE_DOMAIN);"
+										value="Accept"/>
+					
+					
+					<!-- </a> -->
+				  </footer>
+				</div>
+				
+				
+				
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"fe6d31a80d","agent":"","beacon":"bam.nr-data.net","applicationTime":1,"applicationID":"105306441","transactionName":"MgMHYkRZChEDAhALDQtJL2VmFxQDBQQXTQ4KAQxYGFIXEg==","queueTime":0}</script></body>
+				<!-- 	end sign in form	 -->
+			
+		
+	</section>
+	
+		
+		
+		
+			<script>
+				var WA_USERVALUES = new Object();
+				WA_USERVALUES['wa_userAction'] = "Signin Form";
+			</script>
+		
+	
+	<!-- 	marketing area iframe	 -->
+	<aside id="marketingArea">
+		
+			
+			
+				
+				
+                            <iframe src="https://www.lexisnexis.com/en-us/lawschool/portal/sign-on.page"
+                          id="rightSideIframe_marketingAreaLogin" name="rightSideIframe"
+                          longdesc="Right side Iframe in login page" title="rightSideIframe"
+                          scrolling="no" frameborder="0"></iframe>
+                 				
+			
+		
+	</aside>
+
+	
+
+
+
+
+
+</section>
+</main>
+<div class="nav_footer">
+    <footer class="footer" toggleHost toggleClass="expanded">
+	    <div class="pagewrapper">
+            <ul>
+        
+        
+	            
+            
+                <li class="main-logo">
+                    <span class="icon la-JumpToTop" onclick="return toggleTrigger()" toggleTrigger></span>
+                    <a href="https://www.lexisnexis.com/" target="_blank">
+                        <img src="/lnaccess/images/Footer-Logo-Light.png" alt="LexisNexis Logo"/>
+                    </a>
+                </li>
+	        
+        
+		
+        
+        
+	        
+		        
+                    <li><a href="https://www.lexisnexis.com/about-us/" target="_blank">About LexisNexis<sup>&reg;</sup></a></li>
+    	        
+            
+            
+		        
+                    <li><a href="http://www.lexisnexis.com/en-us/terms/privacy-policy.page" target="_blank">Privacy Policy</a></li>
+    	        
+            
+            
+		        
+                    <li><a href="https://www.lexisnexis.com/terms/general.aspx" target="_blank">Terms &amp; Conditions</a></li>
+    	        
+            
+            
+		        
+                    <li><a href="http://www.lexisnexis.com/terms/copyright.aspx" target="_blank">
+                    Copyright &copy;2019&nbsp;LexisNexis.&nbsp;All rights reserved.</a></li>
+    	        
+            
+        
+        
+        
+                <li class="relx-logo"><a href="http://www.relxgroup.com/Pages/Home.aspx" target="_blank"><img src="/lnaccess/images/REFooterLogo-Light.png" alt="LexisNexis Logo"/></a></li>
+        
+	        </ul>
+        </div>
+    </footer>
+</div>
+
+<script src="/lnaccess/js/wa_resource_v20100104.js?version=9_0"></script>
+<script src="/lnaccess/js/jquery.min.js?version=9_0"></script>
+<script src="/lnaccess/js/scripts.js?version=9_0"></script>
+
+</body>
+</html>
+	<script>
+		var marketingAreaLoginException = "";
+		var marketingAreaLogoutException = "";
+		var eaStyle = "";
+		try {
+			marketingAreaLoginException = '';
+		} catch (e) {
+			marketingAreaLoginException = "false";
+		}
+		try {
+			marketingAreaLogoutException = '';
+		} catch (e) {
+			marketingAreaLogoutException = "false";
+		}
+		try {
+			eaStyle = '';
+		} catch (e) {
+			eaStyle = "no";
+		}
+
+		if (marketingAreaLoginException != "false"
+				&& marketingAreaLoginException != ""
+				&& marketingAreaLoginException.indexOf('BAD_CERTIFICATE') == -1) {
+			$("#rightSideIframe_marketingAreaLogin")
+					.css("visibility", "hidden");
+			$("#rightSideIframe_marketingAreaLogin").css("display", "none");
+			$("#footerLogo").css("visibility", "hidden");
+			$("#footerLogo").css("display", "none");
+
+		}
+		if (marketingAreaLogoutException != "false"
+				&& marketingAreaLogoutException != ""
+				&& marketingAreaLogoutException.indexOf('BAD_CERTIFICATE') == -1) {
+			$("#rightSideIframe_marketingAreaLogout").css("visibility",
+					"hidden");
+			$("#rightSideIframe_marketingAreaLogout").css("display", "none");
+			$("#footerLogo").css("visibility", "hidden");
+			$("#footerLogo").css("display", "none");
+		}
+		if (eaStyle == "yes"){
+			$("#signInSbmtBtn").css("margin-right", "15px");
+			$("#signInSbmtBtn").css("margin-bottom", "5px");
+			$("#rightSideIframe_marketingAreaLogin").css("visibility", "hidden");
+			$("#rightSideIframe_marketingAreaLogin").css("display", "none");
+			/*$("#footerLogo").css("visibility", "hidden");
+			$("#footerLogo").css("display", "none");*/
+			$("#rightSideIframe_marketingAreaLogout").css("visibility","hidden");
+			$("#rightSideIframe_marketingAreaLogout").css("display", "none");
+			/*$("#footerLogo").css("visibility", "hidden");
+			$("#footerLogo").css("display", "none");*/
+	}
+	</script>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

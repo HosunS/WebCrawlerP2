@@ -1,0 +1,418 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE18149¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 20:14:47 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueYFå<html>
+<head>
+    <title>Mechanism Explorer</title>
+    <meta charset="utf-8">
+    <!-- Include JQuery for tabs and UI plugins -->
+    <script type="text/javascript" src="/js/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.unserialize.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui-1.8.16.custom.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="/js/chemdb.js"></script>
+    <!-- Include styling -->
+    <link rel="stylesheet" type="text/css" href="stylesReaction.css">
+    <link rel="stylesheet" type="text/css" href="/css/chemdb.css" />
+    <link rel="stylesheet" type="text/css" href="/css/colorbox.css" />
+    <link type="text/css" href="/css/smoothness/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+    <style>
+    .submitButton
+    {
+        width:  200;
+        height: 80;
+        font-size: 12pt;
+        border: outset;
+    }
+    </style>
+
+    <script type="text/javascript" src="../../resource/toolkit.js"></script>
+    <script type="text/javascript" src="toolkitReaction.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            // Init buttons
+            $("input[type=button]").each(function(index,input_button){
+                if($(input_button).hasClass("reactantPlaceholder")){
+                    $(input_button).button();
+                }
+                else{ $(input_button).button(); }
+            });
+        });
+        <!--
+        // Track which steps are unlocked and available to be solved next.
+        // For linear mechanisms, there should usually be one and only one such step,
+        //  but some branching mechanism (e.g., Sn1 vs. E1) may have multiple simultaneous
+        // An empty list indicates no further steps known to be solved
+        var NEXT_STEP_INDEXES = []; // Effectively JSON notation with direct translation of Python list str into JavaScript array notation
+        var iNextStepIndex = 0; // Which of the above next step indexes to display next if requested
+
+        var hasProductSketcher = ('' != '');
+
+        // Prepare for form submission
+        function prepSubmit( theForm )
+        {   // Extract the contents of all sketchers as Marvin XML and
+            //  store them in respective form fields for submission to the server
+
+            // Weird nested conditioning to ensure asynchronous processes complete before final action
+            applySketcherMol
+            (   'arrowSketch','mrv',
+                function(arrowMolStr)
+                {   theForm.arrowSketchXML.value = arrowMolStr;
+
+                    // Extract out the product sketcher as well if it exists
+                    if ( hasProductSketcher )
+                    {
+                        applySketcherMol
+                        (   'productSketch','mrv',
+                            function(productMolStr)
+                            {   theForm.productSketchXML.value = productMolStr;
+                                // Nest actual form submission to ensure asynchronous Promise checks all done
+                                theForm.submit();
+                            }
+                        );
+                    }
+                    else
+                    {   // Nest actual form submission to ensure asynchronous Promise checks all done
+                        theForm.submit();
+                    }
+                }
+            );
+        }
+
+        // Submit form just to change sketcher rendering format, but not trying to
+        //  actually submit any answers
+        function changeSketcherFormat( theForm )
+        {
+            // Clear out sketcher sketcher, because
+            //  this should not appear to submit any anwer.  Just re-rendering.
+            setSketcherMol("arrowSketch","","mol");
+
+            // Click the primary submit button to propagate core execution
+            theForm.submit();
+        }
+
+
+        // Load the given sketcher with the indicated step's reactant
+        function loadSketcherSmilesField( sketcherName, smilesField, stepIndex )
+        {
+            if ( smilesField.length )
+            {   // Looks like a list of multiple steps
+                setSketcherMol( sketcherName, smilesField[stepIndex].value, 'smi');
+            }
+            else
+            {   // Not a list of elements, must be a single step only
+                setSketcherMol( sketcherName, smilesField.value, 'smi');
+            }
+        }
+
+        // Load the image of the expected product for the next expected step
+        function loadExpectedProductImg( theForm, stepIndex )
+        {
+            var imgHolder = document.images['expectedProduct'];
+            var productUrlField = theForm.expectedProductSmiUrl
+            if ( productUrlField.length )
+            {   // Looks like a list of multiple steps
+                imgHolder.src = productUrlField[stepIndex].value;
+            }
+            else
+            {   // Not a list of elements, must be a single step only
+                imgHolder.src = productUrlField.value;
+            }
+        }
+
+        // Figure out what the next unlocked and unsolved step is and load it into the sketcher
+        function loadNextStep( theForm, suppressAlert, showProduct )
+        {
+            if ( NEXT_STEP_INDEXES.length > 0 )
+            {   // Pick one of the next steps to display (usually only 1, but provide option to cycle through multiple)
+                var nextStepIndex = NEXT_STEP_INDEXES[iNextStepIndex];
+                iNextStepIndex = (iNextStepIndex+1) % NEXT_STEP_INDEXES.length; // Increment / cycle to next available step if available
+
+                loadSketcherSmilesField('arrowSketch', theForm.originalReactantSmi, nextStepIndex );
+                if ( showProduct )
+                {
+                    if ( document.productSketch )
+                    {   // Have a product sketcher, reset that to starting reactant
+                        loadSketcherSmilesField('productSketch', theForm.expectedProductSmi, nextStepIndex );
+                    }
+                    else
+                    {   // No sketcher, just fill in view only hint of expected product
+                        loadExpectedProductImg( theForm, nextStepIndex );
+                    }
+                }
+                else
+                {   // Don't show product hint for free, but may still want to reset the sketcher
+                    if ( document.productSketch )
+                    {   // Have a product sketcher, reset that to starting reactant
+                        loadSketcherSmilesField('productSketch', theForm.originalReactantSmi, nextStepIndex );
+                    }
+                }
+            }
+            else
+            {
+                if ( !suppressAlert )
+                {
+                    alert('All steps have already been solved');
+                }
+            }
+        }
+
+        // Show the expected product of the current step
+        function showHint( theForm )
+        {
+            theForm.hint.value = '1';
+            // Reset the reactant side to clean state and
+            //  show the expected product side
+            loadNextStep( theForm, false, true );
+        }
+
+        // Spawn new page with completed solution
+        function viewSolution( theForm )
+        {
+            if ( theForm.reaction_step_id.value == '' )
+            {   // Not a required problem, feel free to look at the solution
+                var willView = true;
+                if ( theForm.mechanismSolved.value != 'true' )
+                {
+                    willView = window.confirm("If you view the solution now, you will not receive credit for subsequently solving this problem.  Are you sure you wish to continue?");
+                }
+                if ( !willView )
+                {
+                    return false;
+                }
+            }
+            else if ( theForm.mechanismSolved.value != 'true' )
+            {   // Required problem.  Only allow viewing of solution if user already solved it
+                alert('Solutions are not offered for required problems until you have successfully solved them.  Try practicing on some randomly generated problems first, or review the material from your text and notes if you need help.');
+                return false;
+            }
+
+            theForm.solutionSeen.value = true;
+            document.forms['solutionForm'].submit();
+            return;
+        }
+
+        // Load the sketcher(s) with the specific SMILES (composite) molecule
+        function loadSketcherSMILES( smiles )
+        {
+            setSketcherMol("arrowSketch", smiles, "smi");
+            if ( hasProductSketcher )
+            {
+                setSketcherMol("productSketch", smiles, "smi");
+            }
+        }
+
+        function challengeReaction( reactionStr )
+        {
+            window.open('FeedbackWeb.py?reactionStr='+reactionStr );
+        }
+
+        /**
+         * Prompt user to fill in their ID and resubmit the
+         * page to get credit for a problem they may have already completed
+         */
+        function userIDFillin()
+        {
+            var userID = window.prompt('Enter your User ID','')
+            if ( userID )
+            {
+                var theForm = document.forms[0];
+                theForm.userID.value = userID;
+                theForm.MechanismExplorerWeb.click();
+            }
+        }
+
+        // -->
+    </script>
+    <style>
+        .reactantPlaceholder
+        {
+            width:300px;
+            height:150px;
+            border:dashed black 1px;
+            background-color:white;
+            font-size:12pt;
+        }
+        .productPlaceholder
+        {
+            width:300px;
+            height:200px;
+            border:dashed black 1px;
+        }
+    </style>
+</head>
+<body>
+<div id="background">
+    <div id="content" style="width:98%;">
+
+        <div id="loadingDiv"><img src="/images/loading.gif" /></div>
+
+        <div class="hide"> </div>
+
+        <form action="MechanismExplorerWeb.py" method=post>
+            <input type="hidden" name="reactionStr" value="">
+            <input type="hidden" name="reagent_id" value="">
+            <input type="hidden" name="ignoreSelfReactions" value="True">
+
+            <input type="hidden" name="reaction_category_id" value="">
+            <input type="hidden" name="reaction_synthesis_id" value="">
+            <input type="hidden" name="reaction_step_id" value="">
+            <input type="hidden" name="userID" value="">
+            <input type="hidden" name="user_class_id" value="">
+            <input type="hidden" name="enableProductSketcher" value="">
+            <input type="hidden" name="hint" value="0">
+            <input type="hidden" name="solutionSeen" value="false">
+            <input type="hidden" name="mechanismSolved" value="false">
+            <input type="hidden" name="startDateTicks" value="">
+            <input type="hidden" name="problem_record_id" value="">
+            <input type="hidden" name="completionSeed" value="39541">
+
+            
+
+            <div class="ui-widget-header">
+                Mechanism Explorer: Sketch and Submission
+                <a class="float-right" href="help/ReactionTutorialHelp.htm#mechanismExplorer" target="help">&nbsp; Help &nbsp;</a>
+                <a class="float-right" href="ReactionTutorialSetupWeb.py">&nbsp; Reaction Explorer &nbsp;</a>
+            </div>
+            <div class="module">
+                <table>
+                    <tr>
+                        <th class="module-sub-header" align=center width="35%">(Intermediate) Reactant</th>
+                        <th></th>
+                        <th class="module-sub-header" align=center width="35%">(Intermediate) Product</th>
+                    </tr>
+                    <tr>
+                        <td align=center>
+                            <input type=hidden name="arrowSketchXML">
+                            
+            <script language="JavaScript" src="../../resource/marvinjs-14.9.29/js/promise-0.1.1.min.js"></script>
+            <script language="JavaScript" src="../../resource/marvinjs-14.9.29/js/marvinjslauncher.js"></script>
+            <script language="JavaScript">
+            function initSketcher_arrowSketch()
+            {
+                MarvinJSUtil.getEditor("#arrowSketch").then
+                (   function(sketcher)
+                    {   var importStr = "";
+                        if ( importStr != "" )
+                        {   var importPromise = sketcher.importStructure("mol", importStr );
+                            importPromise.then( function(result) { }, function(error) { alert(error); } );
+                        }
+                        sketcher.setDisplaySettings({"lonePairsVisible": "true",
+"zoomMode": "fit",
+"extraImageSetting": "amap",
+"height": "400",
+"toolbars": "education",
+"width": "450",
+"atomMapsVisible": false,
+"action": "smi2mol",
+"detach": "",
+"cgibinDir": ".."});
+                    },
+                    function(error) { alert("Error loading MarvinJS sketcher: "+error); }
+                );
+            }
+            </script>
+            <div style="resize: both; overflow: auto; padding: 0px 8px 8px 0px; width: 450px; height: 400px; ">
+            <iframe id="arrowSketch" src="../../resource/marvinjs-14.9.29/editor.html"
+                style="width: 100%; height: 100%; margin: -2px;  padding: 0px;  resize: none;"
+                data-toolbars="education"
+                onLoad="initSketcher_arrowSketch()">
+            </iframe>
+            </div>
+            
+                            <br><i>Tip: Add curved arrows in this sketcher to represent the electron flows for the next mechanism step</i>
+                        </td>
+                        <td align=center>
+                            <input type="hidden" name="MechanismExplorerWeb" value="Generate Product" />
+                            <input type=button class="submitButton" onClick="prepSubmit(this.form);" value="Apply Mechanism">
+                            <br>
+                            <img src="../../resource/ReactionArrow.gif" width=217 height=17>
+                            <br>
+                            <input type=button value="Hint" onClick="showHint(this.form);">
+                            <input type=button value="Solution" onClick="viewSolution(this.form);">
+                            <br>
+                            <!-- Not applicable for MarvinJS version
+                            <input type=checkbox name="detachSketcher" value="checked"  onClick="changeSketcherFormat(this.form);">Resizable sketcher(s)
+                            <br>
+                            -->
+                            
+                        </td>
+                        <td align=center>
+                            <input type=hidden name="productSketchXML" value="">
+                            <img src="../../resource/spacer.gif" class="productPlaceholder" name="expectedProduct" onClick="showHint(document.forms[0]);">
+                            <br><i></i>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="ui-widget-header">Submitted Mechanism Steps</div>
+            <table class="module">
+                <tr>
+                    <th class="module-sub-header" align=center width="35%">(Intermediate) Reactant</th>
+                    <th></th>
+                    <th class="module-sub-header" align=center width="35%">(Intermediate) Product</th>
+                </tr>
+                
+            </table>
+
+            <div class="ui-widget-header">Overall Reaction</div>
+            <table class="module">
+                <tr>
+                    <td align=center width="35%"></td>
+                    <td align=center>
+                        
+                        <br><img src="../../resource/ReactionArrow.gif" width=217 height=17><br>
+                        
+                    </td>
+                    <td align=center width="35%"></td>
+                </tr>
+            </table>
+
+            <div id="warning">
+                <p>
+                    <b>Caution</b>: The steps as depicted below may differ slightly
+                    from how you should normally draw them for examination purposes.
+                </p>
+                <ul>
+                    <li>Not all steps may be implemented and some steps may be skipped (e.g., radical initiation / termination).
+                    <li>Not all steps may be necessary to produce the final products (e.g., reversible acid catalysis or parallel mechanisms).
+                    <li>Stereochemistry is ignored for the purposes of mechanism diagrams.
+                </ul>
+            </div>
+
+            <div class="ui-widget-header">Expected Mechanism Steps</div>
+            <table class="module">
+                <tr>
+                    <th class="module-sub-header" align=center width="35%">(Intermediate) Reactant</th>
+                    <th align=center>Mechanism Step</th>
+                    <th class="module-sub-header" align=center width="35%">(Intermediate) Product</th>
+                </tr>
+                
+            </table>
+
+            <br>
+            (0.000 sec)
+            
+            <a href="MechanismExplorerWeb.py?completionSeed=39541">Link</a>
+        </form>
+
+        <form name="solutionForm" action="../reaction/ReactionStepDetailsWeb.py" target="_blank">
+            <input type="hidden" name="reactionStr" value="">
+            <input type="hidden" name="reagent_id" value="">
+            <input type="hidden" name="ignoreSelfReactions" value="True">
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-3896317-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+
+
+</body>
+</html>
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

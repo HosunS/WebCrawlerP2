@@ -1,0 +1,43 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1734¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:06:27 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"e9a-54c85e1da3435-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:44:49 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYš<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>CompSci 263, Spring 2014, Homework 1</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1>CS 263, Spring 2014, Homework 1</h1>
+<h2>Due at the start of class, Thursday, April 10</h2>
+
+<ol>
+<li>
+[Mitzenmacher and Upfal]
+
+<p>Suppose that you are trying to write a program that takes as input a number <i>x</i> and that outputs the value of the function <i>mystery</i>(<i>x</i>). Here's what you know about this function:</p>
+<ul>
+<li><p>Its inputs and outputs are both integers in the range from 0 to 99.</p></li>
+<li><p>For any two numbers <i>x</i> and <i>y</i> in this range, <i>mystery</i>(<i>x</i>&nbsp;+&nbsp;<i>y</i>&nbsp;mod&nbsp;100) = 
+<i>mystery</i>(<i>x</i>)&nbsp;+&nbsp;mystery</i>(<i>y</i>)&nbsp;mod&nbsp;100.</p>
+<li><p>Your program has access to an array <i>M</i>[<i>x</i>] of length 100 which originally stored the values of the <i>mystery</i> function: that is, at some point in the past, the array values satisfied the equation <i>M</i>[<i>x</i>]&nbsp;=&nbsp;<i>mystery</i>(<i>x</i>).</p></li>
+<li><p>Unfortunately cosmic rays have corrupted up to 20 of the array values, replacing them with incorrect numbers.</p></li>
+</ul>
+<p>Describe how to use this information in a randomized algorithm for computing <i>mystery</i>(<i>x</i>), regardless of whether <i>M</i>[<i>x</i>] is or is not one of the corrupted cells. Your algorithm should guarantee that the probability getting a correct answer is at least 1/2. It should use as few table lookups and as little computation as possible.</p>
+</li>
+
+<li>
+<ol type="a"><li><p>Suppose we have a randomized algorithm R for answering some yes-or-no question. Algorithm R has probability 1/3 of making a wrong answer: that is, if the correct answer is yes, it answers yes with probability 2/3 and no with probability 1/3, and if the correct answer is no, it answers yes with probability 1/3 and no with probability 2/3. If we make three independent runs of algorithm R, and return the majority of the answers it gives, what is the probability that the answer we return is correct?</p></li>
+<li><p>How would the answer to part (a) change if algorithm R instead has probability 1/2 of making a wrong answer?</p></li></ol></li>
+
+<li><p>Freivald's algorithm checks whether a matrix product is correct by testing it against random vectors of 0's and 1's, but the Schwarz et al method for testing whether a polynomial is zero uses random choices from a larger set of values. Define a <i>bad polynomial</i> to be a polynomial that is not zero, but that appears to be zero whenever all of its arguments are zeros or ones (showing that the larger number of choices used by Schwarz et al is necessary for it to work correctly). For instance, the single-variable polynomial <i>x</i><sup>3</sup>&nbsp;&minus;&nbsp;<i>x</i> is bad, because its value is zero no matter whether <i>x</i> is zero or one. Find a three-variable bad polynomial with as small a degree as possible.</p>
+
+<li><p>Suppose that we wish to test whether a given polynomial is zero or not by evaluating it at a small number of points, but we wish to do so deterministically (meaning that we don't use any randomization and the result should always be correct). For two-variable polynomials of degree two, how many points do we need to test? Find a set of that many points that suffice for this problem.</p>
+</ol>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,604 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 01:52:05 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY®´<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Classification</a></font> <font color=red>(38)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Regression</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Clustering</a> <font color=red>(20)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Other</a> <font color=red>(6)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=cat&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Categorical</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=cla&att=num&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Numerical</a> <font color=red>(23)</font><br><a href='datasets.html?format=&task=cla&att=mix&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Mixed</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=&sort=nameDown&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=mvar&sort=nameDown&view=table'>Multivariate</a> <font color=red>(280)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=uvar&sort=nameDown&view=table'>Univariate</a> <font color=red>(19)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=seq&sort=nameDown&view=table'>Sequential</a> <font color=red>(36)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=ts&sort=nameDown&view=table'>Time-Series</a> <font color=red>(65)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Text</a></font> <font color=red>(38)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=dt&sort=nameDown&view=table'>Domain-Theory</a> <font color=red>(11)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=other&sort=nameDown&view=table'>Other</a> <font color=red>(8)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=life&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Life Sciences</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=&area=phys&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Physical Sciences</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=cla&att=&area=comp&numAtt=&numIns=&type=text&sort=nameDown&view=table'>CS / Engineering</a> <font color=red>(18)</font><br><a href='datasets.html?format=&task=cla&att=&area=soc&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Social Sciences</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=&area=bus&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Business</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=cla&att=&area=game&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Other</a> <font color=red>(9)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=less10&numIns=&type=text&sort=nameDown&view=table'>Less than 10</a> <font color=red>(11)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=10to100&numIns=&type=text&sort=nameDown&view=table'>10 to 100</a> <font color=red>(10)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=greater100&numIns=&type=text&sort=nameDown&view=table'>Greater than 100</a> <font color=red>(10)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=less100&type=text&sort=nameDown&view=table'>Less than 100</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=100to1000&type=text&sort=nameDown&view=table'>100 to 1000</a> <font color=red>(9)</font><br><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=greater1000&type=text&sort=nameDown&view=table'>Greater than 1000</a> <font color=red>(26)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Matrix</a> <font color=red>(17)</font><br><a href='datasets.html?format=nonmat&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=nameDown&view=table'>Non-Matrix</a> <font color=red>(21)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>38</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=nameDown&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=taskUp&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=&numIns=&type=text&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/YouTube+Spam+Collection"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/YouTube+Spam+Collection">YouTube Spam Collection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">It is a public set of comments collected for spam research. It has five datasets composed by 1,956 real messages extracted from five videos that were among the 10 most viewed on the collection period.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1956&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/YouTube+Multiview+Video+Games+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/YouTube+Multiview+Video+Games+Dataset">YouTube Multiview Video Games Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains about 120k instances, each described by 13 feature types, with class information, specially useful for exploring multiview topics (cotraining, ensembles, clustering,..).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">120000&nbsp;</p></td>
+			<td><p class="normal">1000000&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/YouTube+Comedy+Slam+Preference+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/YouTube+Comedy+Slam+Preference+Data">YouTube Comedy Slam Preference Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset provides user vote data on which video from a pair of videos is funnier collected on YouTube Comedy Slam. The task is to automatically predict this preference based on video metadata.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1138562&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Victorian+Era+Authorship+Attribution"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Victorian+Era+Authorship+Attribution">Victorian Era Authorship Attribution</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">To create the largest authorship attribution dataset, we extracted works of 50 well-known authors. To have a non-exhaustive learning, in training there are 45 authors whereas, in the testing, it's 50&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">93600&nbsp;</p></td>
+			<td><p class="normal">1000&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/University+of+Tehran+Question+Dataset+2016+%28UTQD.2016%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/University+of+Tehran+Question+Dataset+2016+%28UTQD.2016%29">University of Tehran Question Dataset 2016 (UTQD.2016)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Persian questions gathered from a jeopardy game broadcasted on Iranian national television. &nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1175&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Twitter+Data+set+for+Arabic+Sentiment+Analysis"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Twitter+Data+set+for+Arabic+Sentiment+Analysis">Twitter Data set for Arabic Sentiment Analysis</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This problem of Sentiment Analysis (SA) has been studied well on the English language but not Arabic one. Two main approaches have been devised: corpus-based and lexicon-based. &nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2000&nbsp;</p></td>
+			<td><p class="normal">2&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/TTC-3600%3A+Benchmark+dataset+for+Turkish+text+categorization"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/TTC-3600%3A+Benchmark+dataset+for+Turkish+text+categorization">TTC-3600: Benchmark dataset for Turkish text categorization</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The TTC-3600 data set is a collection of Turkish news and articles including categorized 3,600 documents from 6 well-known portals in Turkey. It has 4 different forms in ARFF Weka format.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">3600&nbsp;</p></td>
+			<td><p class="normal">4814&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Travel+Reviews"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Travel+Reviews">Travel Reviews</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Reviews on destinations in 10 categories mentioned across East Asia. Each traveler rating is mapped as Excellent(4), Very Good(3), Average(2), Poor(1), and Terrible(0) and average rating is used.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">980&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Tarvel+Review+Ratings"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Tarvel+Review+Ratings">Tarvel Review Ratings</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Google reviews on attractions from 24 categories across Europe are considered. Google user rating ranges from 1 to 5 and average user rating per category is calculated.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5456&nbsp;</p></td>
+			<td><p class="normal">25&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Syskill+and+Webert+Web+Page+Ratings"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Syskill+and+Webert+Web+Page+Ratings">Syskill and Webert Web Page Ratings</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This database contains HTML source of web pages plus the ratings of a single user on these web pages. Web pages are on four seperate subjects (Bands- recording artists; Goats; Sheep; and BioMedical)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">332&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Sports+articles+for+objectivity+analysis"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Sports+articles+for+objectivity+analysis">Sports articles for objectivity analysis</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">1000 sports articles were labeled using Amazon Mechanical Turk as objective or subjective. The raw texts, extracted features, and the URLs from which the articles were retrieved are provided.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1000&nbsp;</p></td>
+			<td><p class="normal">59&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/SMS+Spam+Collection"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SMS+Spam+Collection">SMS Spam Collection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The SMS Spam Collection is a public set of SMS labeled messages that have been collected for mobile phone spam research.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5574&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Sentiment+Labelled+Sentences"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Sentiment+Labelled+Sentences">Sentiment Labelled Sentences</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset contains sentences labelled with positive or negative sentiment.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">3000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Sentence+Classification"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Sentence+Classification">Sentence Classification</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Contains sentences from the abstract and introduction of 30 articles annotated with a modified Argumentative Zones annotation scheme. These articles come from biology, machine learning and psychology.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Roman+Urdu+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Roman+Urdu+Data+Set">Roman Urdu Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Roman Urdu (the scripting style for Urdu language) is one of the limited resource languages.A data corpus comprising of more than 20000 records was collected.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">20000&nbsp;</p></td>
+			<td><p class="normal">2&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Reuter_50_50"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Reuter_50_50">Reuter_50_50</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset is used for authorship identification in online Writeprint which is a new research field of pattern recognition. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2500&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Reuters-21578+Text+Categorization+Collection"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Reuters-21578+Text+Categorization+Collection">Reuters-21578 Text Categorization Collection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a collection of documents that appeared on Reuters newswire in 1987. The documents were assembled and indexed with categories.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">21578&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">1997&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Reuters+Transcribed+Subset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Reuters+Transcribed+Subset">Reuters Transcribed Subset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is created by reading out 200 files from the 10 largest Reuters 
+classes and using an Automatic Speech Recognition system to create 
+corresponding transcriptions.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">200&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Paper+Reviews"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Paper+Reviews">Paper Reviews</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This sentiment analysis data set contains scientific paper reviews from an international conference on computing and informatics. The task is to predict the orientation or the evaluation of a review.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">405&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Northix"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Northix">Northix</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Northix is designed to be a schema matching benchmark problem for data integration of two entity relationship databases. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">115&nbsp;</p></td>
+			<td><p class="normal">200&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Multimodal+Damage+Identification+for+Humanitarian+Computing"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Multimodal+Damage+Identification+for+Humanitarian+Computing">Multimodal Damage Identification for Humanitarian Computing</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">5879 captioned images (image and text) from social media related to damage during natural disasters/wars, and belong to 6 classes: Fires, Floods, Natural landscape, Infrastructural, Human, Non-damage.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">5879&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Social&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Miskolc+IIS+Hybrid+IPS"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Miskolc+IIS+Hybrid+IPS">Miskolc IIS Hybrid IPS</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset was created for the comparison and evaluation of hybrid indoor positioning methods. The dataset presented contains data from W-LAN and Bluetooth interfaces, and Magnetometer. &nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering, Causal-Discovery&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1540&nbsp;</p></td>
+			<td><p class="normal">67&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/microblogPCU"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/microblogPCU">microblogPCU</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">MicroblogPCU data is crawled from sina weibo microblog[http://weibo.com/]. This data can be used to study machine learning methods  as well as do some social network research. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Sequential, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Causal-Discovery&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">221579&nbsp;</p></td>
+			<td><p class="normal">20&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Legal+Case+Reports"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Legal+Case+Reports">Legal Case Reports</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">A textual corpus of 4000 legal cases for automatic summarization and citation analysis. For each document we collect catchphrases, citations sentences, citation catchphrases and citation classes.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KEGG+Metabolic+Relation+Network+%28Directed%29">KEGG Metabolic Relation Network (Directed)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KEGG Metabolic pathways modeled as directed relation network. Variety of graphical features presented.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">53414&nbsp;</p></td>
+			<td><p class="normal">24&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KEGG+Metabolic+Reaction+Network+%28Undirected%29">KEGG Metabolic Reaction Network (Undirected)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KEGG Metabolic pathways modeled as un-directed reaction network. Variety of graphical features presented.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">65554&nbsp;</p></td>
+			<td><p class="normal">29&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/KDC-4007+dataset+Collection"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KDC-4007+dataset+Collection">KDC-4007 dataset Collection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">KDC-4007 dataset Collection is the Kurdish Documents Classification text used in categories regarding Kurdish Sorani news and articles.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">4007&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Farm+Ads"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Farm+Ads">Farm Ads</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data was collected from text ads found on twelve websites that deal with various farm animal related topics.  The binary labels are based on whether or not the content owner approves of the ad.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">4143&nbsp;</p></td>
+			<td><p class="normal">54877&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Drug+Review+Dataset+%28Drugs.com%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Drug+Review+Dataset+%28Drugs.com%29">Drug Review Dataset (Drugs.com)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset provides patient reviews on specific drugs along with related conditions and a 10 star patient rating reflecting overall patient satisfaction.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">215063&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Life&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Drug+Review+Dataset+%28Druglib.com%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Drug+Review+Dataset+%28Druglib.com%29">Drug Review Dataset (Druglib.com)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset provides patient reviews on specific drugs along with related conditions. Reviews and ratings are grouped into reports on the three aspects benefits, side effects and overall comment.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression, Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">4143&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Dresses_Attribute_Sales"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dresses_Attribute_Sales">Dresses_Attribute_Sales</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contain Attributes of dresses and their recommendations according to their sales.Sales are monitor on the basis of alternate days. &nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">501&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/DeliciousMIL%3A+A+Data+Set+for+Multi-Label+Multi-Instance+Learning+with+Instance+Labels"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/DeliciousMIL%3A+A+Data+Set+for+Multi-Label+Multi-Instance+Learning+with+Instance+Labels">DeliciousMIL: A Data Set for Multi-Label Multi-Instance Learning with Instance Labels</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset includes 1) 12234 documents (8251 training, 3983 test) extracted from DeliciousT140 dataset, 2) class labels for all documents, 3) labels for a subset of sentences of the test documents.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">12234&nbsp;</p></td>
+			<td><p class="normal">8519&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/DBWorld+e-mails"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/DBWorld+e-mails">DBWorld e-mails</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">It contains 64 e-mails which I have manually collected from DBWorld mailing list. They are classified in: 'announces of conferences' and 'everything else'.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">64&nbsp;</p></td>
+			<td><p class="normal">4702&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/CNAE-9"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/CNAE-9">CNAE-9</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a data set containing 1080 documents of free text business descriptions of Brazilian companies categorized into a
+subset of 9 categories&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1080&nbsp;</p></td>
+			<td><p class="normal">857&nbsp;</p></td>
+			<td><p class="normal">2012&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Burst+Header+Packet+%28BHP%29+flooding+attack+on+Optical+Burst+Switching+%28OBS%29+Network"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Burst+Header+Packet+%28BHP%29+flooding+attack+on+Optical+Burst+Switching+%28OBS%29+Network">Burst Header Packet (BHP) flooding attack on Optical Burst Switching (OBS) Network</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">One of the primary challenges in identifying the risks of the Burst Header Packet (BHP) flood attacks in Optical Burst Switching networks (OBS) is the scarcity of reliable historical data.  &nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">1075&nbsp;</p></td>
+			<td><p class="normal">22&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Computer&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/BuddyMove+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/BuddyMove+Data+Set">BuddyMove Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">User interest information extracted from user reviews published in holidayiq.com about various types of point of interests in South India&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">249&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Badges"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Badges">Badges</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Badges labeled with a "+" or "-" as a function of a person's name&nbsp;</p></td> -->
+			<td><p class="normal">Univariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">294&nbsp;</p></td>
+			<td><p class="normal">1&nbsp;</p></td>
+			<td><p class="normal">1994&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Amazon+Commerce+reviews+set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Amazon+Commerce+reviews+set">Amazon Commerce reviews set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset is used for authorship identification in online Writeprint which is a new research field of pattern recognition. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text, Domain-Theory&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1500&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

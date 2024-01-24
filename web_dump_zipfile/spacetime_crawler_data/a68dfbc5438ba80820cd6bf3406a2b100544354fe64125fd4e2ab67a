@@ -1,0 +1,36 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1299¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 13 Aug 2018 22:39:45 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"513-57358c52a9893"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 00:28:46 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY<!DOCTYPE html>
+<html>
+<head>
+    <title>Knight's Tour</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Nil Mamano">
+    <meta name="description" content="knightstour"
+    <style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </style>
+</head>
+
+
+<body>
+<canvas tabindex='1' id="canvas1" width="5200" height="520">
+    Your browser does not support HTML5 canvas.
+</canvas>
+<label id="turncount" style="position: absolute; top: 380px; left: 580px;">Number of turns: </label>
+<label id="crossingcount" style="position: absolute; top: 420px; left: 580px;">Number of crossings: todo</label>
+
+
+<script src="board.js"></script>
+
+<label>Tour Size (x,y): <textarea style="resize:none" rows="1" cols="8" autofocus maxlength="4" id="toursizex">26</textarea><textarea style="resize:none" rows="1" cols="8" autofocus maxlength="4" id="toursizey">26</textarea></label>
+
+<button type="button" onclick="changeBoardSize()">Display</button>
+<br>
+<br>
+    <label id="about">
+About:<br>
+- This is a new construction to build Knight tours with a small number of turns and crossings.<br>A turn is when the three cells of two consecutive knight moves are not collinear.<br>A crossing is when the lines connecting two knight moves intersect.
+<br>
+</label>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

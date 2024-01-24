@@ -1,0 +1,65 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2243¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Feb 2006 23:20:16 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"8c3-40c3c9f3d2c00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 16:49:18 GMTKraw_content¢DtypeEvalueYÃ
+//NAME: Danish Khan
+//STUDENT ID: 47324012
+//NAME: Adam Su
+//STUDENT ID: 23628358
+
+// Paycheck.java
+//
+// ICS H22 Winter 2006
+// Lab 3: The Price You Pay
+//
+// You will need to complete this class by implementing the constructor, the
+// toString() method, along with any other code you need to complete it.
+
+// This is the class that implements the pay check for the employees. 
+public class Paycheck
+{
+	//These are the products that are printed out by the pay check class
+	int grossPay;
+	Employee e;
+	int tax;
+	int hoursWorked;
+	int netPay;
+	
+	// The constructor takes the information necessary to initialize a
+	// paycheck. In our program, that consists of an employee, the number
+	// of hours worked, the gross pay (in cents), and the tax (in cents).
+	public Paycheck(Employee employee, int hoursWorked, int grossPay, int tax)
+	{
+		this.grossPay = grossPay;
+		this.e = employee;
+		this.tax = tax;
+		this.hoursWorked = hoursWorked;
+		this.netPay = this.grossPay - this.tax;
+	}
+
+
+	// toString() returns a formatted String representation of the paycheck.
+	// An example of the output for this method is a String that looks like
+	// this:
+	//
+	//     Paycheck for John Doe (hourly, $26.50/hr)
+	//
+	//             Hours Worked:          40
+	//                Gross Pay:      $1,060.00
+	//                      Tax:        $212.00
+	//                  Net Pay:        $848.00
+	//
+	// Don't forget that you can use String.format() to do a lot of the
+	// formatting work for you.  Also, the CurrencyFormat.format() method
+	// that I provided will be useful in turning monetary amounts into
+	// representations like "$1,060.00".
+	public String toString()
+	{
+	     String s = "";
+	        s += String.format("%-10s: %s\n", "Paycheck for", e.toString());
+	        s += String.format("%5s%12s: %s\n", "     ", "Hours Worked", this.hoursWorked);
+	        s += String.format("%5s%12s: %4s\n", "    ", "Gross Pay", CurrencyFormat.format(this.grossPay));
+	        s += String.format("%5s%12s: %4s\n", "     ", "Tax", CurrencyFormat.format(this.tax));
+	        s += String.format("%5s%12s: %4s\n", "     ", "Net Pay", CurrencyFormat.format(this.netPay));
+	        
+	        return s;   
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

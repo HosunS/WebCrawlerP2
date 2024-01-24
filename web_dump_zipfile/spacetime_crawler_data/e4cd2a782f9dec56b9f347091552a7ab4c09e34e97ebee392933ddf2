@@ -1,0 +1,269 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:20:25 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYGè
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Reuters-21578 Text Categorization Collection Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Reuters-21578 Text Categorization Collection Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/reuters21578-mld/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/reuters21578-mld/reuters21578.html"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: This is a collection of documents that appeared on Reuters newswire in 1987. The documents were assembled and indexed with categories.</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Text</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">21578</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Categorical</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">5</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">1997-09-26</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">145398</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">David D. Lewis<br>AT&T Labs - Research     <br><u>lewis <b>'@'</b> research.att.com</u><br><br>Documents came from Reuters newswire in 1987.</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">From the original readme file (please consult it for more information):<br>-------------------------<br>The documents in the Reuters-21578 collection appeared on the Reuters newswire in 1987.  The documents were assembled and indexed with categories by personnel from Reuters Ltd. (Sam Dobbins, Mike Topliss, Steve Weinstein) and Carnegie Group, Inc. (Peggy Andersen, Monica Cellio, Phil Hayes, Laura Knecht, Irene Nirenburg) in 1987.  <br><br>In 1990, the documents were made available by Reuters and CGI for research purposes to the Information Retrieval Laboratory (W.  Bruce Croft, Director) of the Computer and Information Science Department at the University of Massachusetts at Amherst.  Formatting of the documents and production of associated data files was done in 1990 by David D.  Lewis and Stephen Harding at the Information Retrieval Laboratory.<br><br>Further formatting and data file production was done in 1991 and 1992 by David D. Lewis and Peter Shoemaker at the Center for Information and Language Studies, University of Chicago.  This version of the data was made available for anonymous FTP as "Reuters-22173, Distribution 1.0" in January 1993. From 1993 through 1996, Distribution 1.0 was hosted at a succession of FTP sites maintained by the Center for Intelligent Information Retrieval (W. Bruce Croft, Director) of the Computer Science Department at the University of Massachusetts at Amherst.<br><br>At the ACM SIGIR '96 conference in August, 1996 a group of text categorization researchers discussed how published results on Reuters-22173 could be made more comparable across studies.  It was decided that a new version of collection should be produced with less ambiguous formatting, and including documentation carefully spelling out standard methods of using the collection.  The opportunity would also be used to correct a variety of typographical and other errors in the categorization and formatting of the collection.<br><br>Steve Finch and David D. Lewis did this cleanup of the collection September through November of 1996, relying heavily on Finch's SGML-tagged version of the collection from an earlier study.  One result of the re-examination of the collection was the removal of 595 documents which were exact duplicates (based on identity of timestamps down to the second) of other documents in the collection. The new collection therefore has only 21,578 documents, and thus is called the Reuters-21578 collection.  This README describes version 1.0 of this new collection, which we refer to as "Reuters-21578, Distribution 1.0".<br><br>In preparing the collection and documentation we have benefited from discussions with Eric Brown, William Cohen, Fred Damerau, Yoram Singer, Amit Singhal, and Yiming Yang, among many others.<br><br>We thank all the people and organizations listed above for their efforts and support, without which this collection would not exist.</p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">Reuters-21578, Distribution 1.0 includes five files (all-exchanges-strings.lc.txt, all-orgs-strings.lc.txt, all-people-strings.lc.txt, all-places-strings.lc.txt, and all-topics-strings.lc.txt) which list the names of *all* legal categories in each set.  A sixth file, cat-descriptions_120396.txt gives some additional information on the category sets.</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Chidanand Apt, Fred Damerau, Sholom M. Weiss. "Automated Learning of Decision Rules for Text Categorization." ACM Transactions on Information Systems, 1994.<br><a href="http://rexa.info/paper/ba826991de0fa3f34edd6c257176f822cfa5e3b0">[Web Link]</a><br><br>Chidanand Apt, Fred Damerau, Sholom M. Weiss, "Toward Language Independent Automated Learning of Text Categorization Models." SIGIR 1994.<br><a href="http://rexa.info/paper/9c0924187e3186fe1fda8ba8e389ea7b0a2ab3a5">[Web Link]</a><br><br>Philip J. Hayes, Peggy M. Anderson, rene B. Nirenburg, Linda M. Schmandt. "TCS: A Shell for Content-Based Text Categorization." IEEE Conference on Artificial Intelligence Applications, 1990.<br><a href="http://rexa.info/paper/fcde99480300c467296bef9d503e7085138e33f3">[Web Link]</a><br><br>Philip J. Hayes and Steven P. Weinstein. "CONSTRUE/TIS: A System for Content-Based Indexing of a Database of News Stories."  Second Annual Conference on Innovative Applications of Artificial Intelligence, 1990.<br><a href="http://rexa.info/paper/ed7c2ca9ab03c2d302b8314dd8dfbdecacdfdb54">[Web Link]</a></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Manuel Oliveira. <a
+href="http://rexa.info/paper/5b07457d7b968260c0c1a712f9120a243bcfbf8c">Library Release Form Name of Author: Stanley Robson de Medeiros Oliveira Title of Thesis: Data Transformation For Privacy-Preserving Data Mining Degree: Doctor of Philosophy Year this Degree Granted</a>. University of Alberta Library. 2005.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#5b07457d7b968260c0c1a712f9120a243bcfbf8c">View Context</a>].<br><br>David Littau and Daniel Boley. <a
+href="http://rexa.info/paper/480c0ae46486d7a7881f88224c5216ea0b7da839">Using Low-Memory Representations to Cluster Very Large Data Sets</a>. SDM. 2003.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#480c0ae46486d7a7881f88224c5216ea0b7da839">View Context</a>].<br><br>Bianca Zadrozny and Charles Elkan. <a
+href="http://rexa.info/paper/4284c9cb6236847cd246f69cfb8e4209c107d18f">Transforming classifier scores into accurate multiclass probability estimates</a>. KDD. 2002.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#4284c9cb6236847cd246f69cfb8e4209c107d18f">View Context</a>].<br><br>Vijay S. Iyengar and Chidanand Apt and Tong Zhang. <a
+href="http://rexa.info/paper/1543ea7033e6a4fc2ab140096210d7821d7018fc">Active learning using adaptive resampling</a>. KDD. 2000.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#1543ea7033e6a4fc2ab140096210d7821d7018fc">View Context</a>].<br><br>Dmitry Pavlov and Jianchang Mao and Byron Dom. <a
+href="http://rexa.info/paper/d6a42d10713c10dbc3efa4b7de53fb7f807caa0b">Scaling-Up Support Vector Machines Using Boosting Algorithm</a>. ICPR. 2000.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#d6a42d10713c10dbc3efa4b7de53fb7f807caa0b">View Context</a>].<br><br>Daphne Koller and Mehran Sahami. <a
+href="http://rexa.info/paper/144fcc2dcfad39ba4047467d4ce38139bc284f01">Toward Optimal Feature Selection</a>. ICML. 1996.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#144fcc2dcfad39ba4047467d4ce38139bc284f01">View Context</a>].<br><br>Thomas T. Osugi and M. S. <a
+href="http://rexa.info/paper/208ec47695794498051a25cd425bc385a9d19602">EXPLORATION-BASED ACTIVE MACHINE LEARNING</a>. Faculty of The Graduate College at the University of Nebraska In Partial Fulfillment of Requirements.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#208ec47695794498051a25cd425bc385a9d19602">View Context</a>].<br><br>Vikas Sindhwani and P. Bhattacharya and Subrata Rakshit. <a
+href="http://rexa.info/paper/7286601416a1cec780621a415323a2bc6c958e11">Information Theoretic Feature Crediting in Multiclass Support Vector Machines</a>.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#7286601416a1cec780621a415323a2bc6c958e11">View Context</a>].<br><br>Omid Madani and David M. Pennock and Gary William Flake. <a
+href="http://rexa.info/paper/03a71aaf988c71c8022be08734da8e376f7fe037">Co-Validation: Using Model Disagreement to Validate Classification Algorithms</a>. Yahoo! Research Labs.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#03a71aaf988c71c8022be08734da8e376f7fe037">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Manuel Oliveira. <a
+href="http://rexa.info/paper/5b07457d7b968260c0c1a712f9120a243bcfbf8c">Library Release Form Name of Author: Stanley Robson de Medeiros Oliveira Title of Thesis: Data Transformation For Privacy-Preserving Data Mining Degree: Doctor of Philosophy Year this Degree Granted</a>. University of Alberta Library. 2005.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#5b07457d7b968260c0c1a712f9120a243bcfbf8c">View Context</a>].<br><br>David Littau and Daniel Boley. <a
+href="http://rexa.info/paper/480c0ae46486d7a7881f88224c5216ea0b7da839">Using Low-Memory Representations to Cluster Very Large Data Sets</a>. SDM. 2003.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#480c0ae46486d7a7881f88224c5216ea0b7da839">View Context</a>].<br><br>Bianca Zadrozny and Charles Elkan. <a
+href="http://rexa.info/paper/4284c9cb6236847cd246f69cfb8e4209c107d18f">Transforming classifier scores into accurate multiclass probability estimates</a>. KDD. 2002.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#4284c9cb6236847cd246f69cfb8e4209c107d18f">View Context</a>].<br><br>Vijay S. Iyengar and Chidanand Apt and Tong Zhang. <a
+href="http://rexa.info/paper/1543ea7033e6a4fc2ab140096210d7821d7018fc">Active learning using adaptive resampling</a>. KDD. 2000.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#1543ea7033e6a4fc2ab140096210d7821d7018fc">View Context</a>].<br><br>Dmitry Pavlov and Jianchang Mao and Byron Dom. <a
+href="http://rexa.info/paper/d6a42d10713c10dbc3efa4b7de53fb7f807caa0b">Scaling-Up Support Vector Machines Using Boosting Algorithm</a>. ICPR. 2000.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#d6a42d10713c10dbc3efa4b7de53fb7f807caa0b">View Context</a>].<br><br>Daphne Koller and Mehran Sahami. <a
+href="http://rexa.info/paper/144fcc2dcfad39ba4047467d4ce38139bc284f01">Toward Optimal Feature Selection</a>. ICML. 1996.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#144fcc2dcfad39ba4047467d4ce38139bc284f01">View Context</a>].<br><br>Thomas T. Osugi and M. S. <a
+href="http://rexa.info/paper/208ec47695794498051a25cd425bc385a9d19602">EXPLORATION-BASED ACTIVE MACHINE LEARNING</a>. Faculty of The Graduate College at the University of Nebraska In Partial Fulfillment of Requirements.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#208ec47695794498051a25cd425bc385a9d19602">View Context</a>].<br><br>Vikas Sindhwani and P. Bhattacharya and Subrata Rakshit. <a
+href="http://rexa.info/paper/7286601416a1cec780621a415323a2bc6c958e11">Information Theoretic Feature Crediting in Multiclass Support Vector Machines</a>.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#7286601416a1cec780621a415323a2bc6c958e11">View Context</a>].<br><br>Omid Madani and David M. Pennock and Gary William Flake. <a
+href="http://rexa.info/paper/03a71aaf988c71c8022be08734da8e376f7fe037">Co-Validation: Using Model Disagreement to Validate Classification Algorithms</a>. Yahoo! Research Labs.  [<a
+href="../support/Reuters-21578+Text+Categorization+Collection#03a71aaf988c71c8022be08734da8e376f7fe037">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">The copyright for the text of newswire articles and Reuters annotations in the Reuters-21578 collection resides with Reuters Ltd. Reuters Ltd. and Carnegie Group, Inc. have agreed to allow the free distribution of this data *for research purposes only*.  <br><br>If you publish results based on this data set, please acknowledge its use, refer to the data set by the name "Reuters-21578, Distribution 1.0", and inform your readers of the current location of the data set (see "Availability & Questions").</p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,378 @@
+¦Ifinal_url¢DtypeEvaluex0https://www.ics.uci.edu/~xhx/courses/ics6n/lab1/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE43740¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 10 Jan 2018 05:06:49 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"aadc-56264ffb2a3cf"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 09:35:19 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYªÜ<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>Lab1</title>
+  </head>
+  <body style="background-color: #ffcc66;">
+    <h1 style="background-color: #ffcc66; text-align: center;">ICS 6N - Winter
+      2018<br>
+      Lab 1: Introduction to MATLAB</h1>
+    <hr>
+    <h3 style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">What
+      to hand in.</h3>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">This
+      lab will introduce you to some of the basic features of MATLAB. You should
+      do the exercises below. As you do each one, copy the relevant input and
+      output from MATLAB and paste it into a Word document. You need only
+      include commands that worked.
+For submission, please turn in hardcopy (printout) of your word document. 
+
+<!-- You will electronically submit your Word
+      document in EEE's dropbox on the day that the lab is due. Make sure and
+      include your name, student ID and which discussion section you are signed
+      up for.
+-->
+</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">You
+      should save your file temporarily on the machine in the lab. You should
+      delete the file from the lab computer before your logout, but don't forget
+      to save a more permanent copy, either by emailing it to yourself or
+      storing it somewhere in the cloud.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><b>Be
+        warned that the future labs will be longer than this lab!</b><span class="Apple-converted-space">&nbsp;</span>Don't
+      wait until the last minute to start.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">The
+      lab assignments will contain descriptions of commands and responses in
+      MATLAB. Typically, the text that is input by the user is in red and the
+      part that is printed by MATLAB is in black.</p>
+    <h3 style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">About
+      MATLAB</h3>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Linear
+      algebra is used in every branch of mathematics and is thus a crucial part
+      of it. Linear algebra also has applications in practically every field of
+      natural and social sciences. Physics, chemistry, biology, computer
+      science, economics, and sociology have all benefited from the advent of
+      linear algebra. In the lab sections this quarter you will see a few
+      applications of linear algebra to some of these areas.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Problems
+      that arise in these fields involve raw data, so professionals in these
+      fields have come to depend on computers as an essential tool. Computer
+      programs such as MATLAB help in performing tedious calculations so that
+      you can spend less time crunching numbers. It turns out that MATLAB is
+      especially well suited for working with matrices and performing various
+      algorithmic routines that come up in linear algebra. In this lab we will
+      start to get acquainted with MATLAB and learn how it handles matrices.</p>
+    <h3 style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Variables
+      in Matlab</h3>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">People
+      like to think of MATLAB as a very powerful calculator you can use on your
+      computer. For our purpose, that is not far from the mark.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">To
+      define variables, simply type in the variable you wish to define, then an
+      equal sign, and finally the value you wish to assign to that variable. So,
+      if we want to assign the value of 5 to the variable x, we type</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">x=5</font></p>
+    <pre style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">x =
+    5
+</pre>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Unless
+      we later redefine x, every time we type "x" MATLAB will replace it with 5
+      when doing a calculation. For example, we can define the following
+      variables by their place in the alphabet:</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">l=12;
+        i=9; n=14; e=5; a=1; r=18; g=7; b=2;</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">We
+      have just assigned specific values to the given letters. (Note: the
+      semicolons in this command suppress the output. If they were not there,
+      once you hit return MATLAB would list the eight variables and their new
+      values.) It is also possible to assign values to more than just single
+      letters using MATLAB. It is sometimes easier to define something with a
+      specific name rather than a single letter. For example, we can define</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">UCIrvine
+        = 92697</font></p>
+    <pre style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">UCIrvine =
+    92697
+</pre>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">92697
+      is the zip code of UCI. Notice that there are no spaces in variable names.
+      (We cannot define a variable called "UC Irvine".) Also, when defining
+      something, MATLAB is case-sensitive so if we accidentally type "laytext"
+      and hit return, we will get an error message as seen here.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">ucrivine</font></p>
+    <pre style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">??? Undefined function or variable 'ucrivine'.
+</pre>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Using
+      the variables we just defined, we can do some calculations and save them
+      as specific names.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">linearalgebra
+        = l+i+n+e+a+r+a+l+g+e+b+r+a</font></p>
+    <pre style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">linearalgebra =
+    105
+</pre>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">angle
+        = a+n+g+l+e</font></p>
+    <pre style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">angle =
+    39
+</pre>
+    <table frame="box" style="font-family: Times; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+      <tbody>
+        <tr>
+          <td><b>Exercise 1.1</b><span class="Apple-converted-space">&nbsp;</span>Define
+            the letters of your first and last name to be the number
+            corresponding to their place in the alphabet. Then set your name,
+            without any spaces, equal to the sum of the letters.</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Hints
+      and Tips</h3>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">MATLAB
+      has some useful features that are worth learning at this point.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">If
+      you ever get stuck or need more info, an excellent way to get help in
+      MATLAB is by entering</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">helpbrowser</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">This
+      will allow you to view the syntax of various commands by reading their
+      help files and to search for keywords.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Our
+      final tip is to become very familiar with the use of the up-arrow key.
+      Indeed at this point bring up the main MATLAB window and try pushing the
+      up-arrow key on the keyboard once. Then push it a few more times. Notice
+      that this is bringing your previously-entered commands back onto the
+      command-line. You can also use the left and right arrow keys to position
+      the cursor in a command in order to edit it. This is a great way to
+      correct a command that had an error in it.</p>
+    <table frame="box" style="font-family: Times; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+      <tbody>
+        <tr>
+          <td><b>Exerxise 1.2</b><span class="Apple-converted-space">&nbsp;</span>Suppose
+            you want to calculate:</td>
+        </tr>
+        <tr>
+          <td><img src="http://latex.codecogs.com/gif.latex?25-%5Cleft%28%20100%20-%207e%5E%7B%285+%5Ccos%7B%5Cleft%28%20%5Cfrac%7B%5Cpi%7D%7B3%7D%5Cright%29%7D%29%7D%20%20%5Cright%29"></td>
+        </tr>
+        <tr>
+          <td>Enter the command:<br>
+            <br>
+            &gt;&gt;&nbsp;&nbsp;<span class="Apple-converted-space">&nbsp;</span><font
+              color="red">z
+              = 25-(100-7exp(5+cos(pi/3))</font></td>
+        </tr>
+        <tr>
+          <td>You will get an error message. Use the up-arrow to bring this line
+            back and then correct the error(s). (Hint: Good things to check are
+            multiplication and parentheses.)</td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Matrices
+      in MATLAB</h3>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">The
+      first thing to learn when dealing with matrices is how to construct a
+      matrix (or vector) using MATLAB.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">To
+      define a matrix using MATLAB, we use the square brackets "[ ]". "[" tells
+      MATLAB we are starting to create a matrix and "]" tells MATLAB that we
+      have finished with our construction. The entries of the matrix should be
+      entered in rows from left to right. To separate entries we can either hit
+      the space bar or insert a comma ",". Once we finish with a given row and
+      want to move to the next, we can either press the return key or use a
+      semicolon ";". (This is not the same as using the semicolon to suppress
+      output.)</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">So,
+      to construct the following matrix</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><img
+        src="http://latex.codecogs.com/gif.latex?A%20=%20%5Cleft[%20%5Cbegin%7Barray%7D%7Bcc%7D2%20&amp;%201%5C%5C4%20&amp;%203%20%5Cend%7Barray%7D%20%5Cright]"
+        <=""
+        p=""></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">here
+      are two possible ways to go about it:</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">A=[2
+        1;4 3]</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">A=[2,1<span
+          class="Apple-converted-space">&nbsp;</span></font>(Return
+      key)</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><font
+        color="red">4,
+        3]</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Both
+      will yield the desired matrix:</p>
+    <pre style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">A =
+
+    2    1
+    4    3
+</pre>
+    <table frame="box" style="font-family: Times; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+      <tbody>
+        <tr>
+          <td><b>Exerxise 1.3</b><span class="Apple-converted-space">&nbsp;</span>Input
+            the following matrix into MATLAB:</td>
+        </tr>
+        <tr>
+          <td><img src="http://latex.codecogs.com/gif.latex?Fibonacci%20=%20%5Cleft[%20%5Cbegin%7Barray%7D%7Bcccc%7D1%20&amp;%201%20&amp;%202%20&amp;%203%5C%5C5%20&amp;%208%20&amp;%2013%20&amp;%2021%5C%5C34%20&amp;%2055%20&amp;%2089%20&amp;%20144%5C%5C233%20&amp;%20377%20&amp;%20610%20&amp;%20987%20%5Cend%7Barray%7D%20%5Cright]"></td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Matrix
+      operations and manipulations</h3>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Sometimes
+      we need to get at certain parts of a matrix only, maybe just a certain row
+      or even a single entry. This is done with regular parentheses, "(" and
+      ")". For example, to see the (1,2) entry of the matrix<span class="Apple-converted-space">&nbsp;</span><b>A</b><span
+        class="Apple-converted-space">&nbsp;</span>above
+      (i.e. the entry in the first row and second column), we use the command</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">A(1,2)</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">We
+      also can use the colon ":" to mean 'all', as in the command</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">A(2,:)</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">which
+      will give us the entire second row of the matrix<span class="Apple-converted-space">&nbsp;</span><b>A</b>.
+      The colon can also be used to represent a range of rows or columns: the
+      command</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">Fibonacci(2:4,1)</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">will
+      give us the entries of<span class="Apple-converted-space">&nbsp;</span><b>Fibonacci</b><span
+        class="Apple-converted-space">&nbsp;</span>from
+      the second through fourth rows in the first column.</p>
+    <table frame="box" style="font-family: Times; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+      <tbody>
+        <tr>
+          <td><b>Exerxise 1.4</b><span class="Apple-converted-space">&nbsp;</span>Using
+            the commands introduced above, construct a new matrix (call it
+            whatever you'd like) from<span class="Apple-converted-space">&nbsp;</span><b>Fibonacci</b><span
+              class="Apple-converted-space">&nbsp;</span>that
+            consists of the last two rows and the two middle columns of<span class="Apple-converted-space">&nbsp;</span><b>Fibonacci</b>.
+            (So it will be a 2x2 matrix.) Be sure to include the command you
+            used and the result output in your Word document.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">A
+      note about matrix operations: two matrices<span class="Apple-converted-space">&nbsp;</span><b>A</b><span
+        class="Apple-converted-space">&nbsp;</span>and<span
+        class="Apple-converted-space">&nbsp;</span><b>B</b><span
+        class="Apple-converted-space">&nbsp;</span>can
+      be added together or subtracted from one another ONLY if they are the same
+      size. (If they are not the same size, MATLAB will produce an error.)</p>
+    <h3 style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Random
+      matrices</h3>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">From
+      time to time, we will be working with random matrices in this class.
+      However, when you are asked to create a random matrix, this does not mean
+      you should just create a matrix using numbers that pop up in your head.
+      Instead, we will let MATLAB do the "thinking".</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">To
+      create random matrices, we use the<span class="Apple-converted-space">&nbsp;</span><font
+        color="red">rand()</font><span
+        class="Apple-converted-space">&nbsp;</span>command.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Notice
+      the parentheses after the command. When using a command that requires some
+      type of input, that input must be put in parentheses. We cannot use square
+      brackets here because when MATLAB sees square brackets, it assumes we are
+      talking about a matrix.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Typing</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">rand(n)</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">and
+      hitting return tells MATLAB to create a random n x n matrix whose entries
+      are decimal values between 0 and 1.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Now
+      if we type</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">RMatrix1=rand(2)</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">we
+      will see the following:</p>
+    <pre style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">RMatrix1=
+
+    0.9501    0.6068
+    0.2311    0.4860
+</pre>
+    <table frame="box" style="font-family: Times; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+      <tbody>
+        <tr>
+          <td><b>Exerxise 1.5</b><span class="Apple-converted-space">&nbsp;</span>Create
+            2 random 4 x 4 matrices<span class="Apple-converted-space">&nbsp;</span><b>A</b><span
+              class="Apple-converted-space">&nbsp;</span>and<span
+              class="Apple-converted-space">&nbsp;</span><b>B</b><span
+              class="Apple-converted-space">&nbsp;</span>and
+            calculate the following values. (You should store each of them in a
+            variable with some name of your choosing.) In theory, do you expect
+            the following matrices to be equal? Are they?
+            <p>A + B</p>
+            <p>B + A</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <h3 style="color: rgb(0, 0, 0); font-family: Times; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">MATLAB's
+      built-in help command</h3>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">While
+      these labs are written to be as self-contained as possible, you may find
+      that you've forgotten what a MATLAB command does or wonder what else
+      MATLAB can do. Fortunately, MATLAB has an extensive built in help system.
+      For instance, suppose we want to know what applying the cumprod command to
+      a vector does. Type</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">help
+        cumprod</font></p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">to
+      bring up the help description.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">There
+      are three parts of note for this decription. The first part gives a brief
+      description of the function and tells us how of the possible ways we can
+      use the function. Note that there are several different options, depending
+      on what is passed to the function. The second part, 'Examples', gives us
+      examples of how to use the function. Often, reading through the examples
+      is the best way to determine how a function works. Finally, the third part
+      gives related commands.</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">For
+      instance, here the first line of the description is "For vectors,
+      CUMPROD(X) is a vector containing the cumulative product of the elements
+      of X" - that is, it multiplies the elements one at a time and stores the
+      cumulative results. For instance,</p>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">&gt;&gt;&nbsp;&nbsp;<span
+        class="Apple-converted-space">&nbsp;</span><font
+        color="red">cumprod([2
+        3 4])</font></p>
+    <pre style="color: rgb(0, 0, 0); font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">ans =
+   2     6    24
+</pre>
+    <p style="color: rgb(0, 0, 0); font-family: Times; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">Looking
+      at the help description, you can see there are many possible uses for the
+      cumproduct command. In general, MATLAB commands have a lot of flexability.</p>
+    <table frame="box" style="font-family: Times; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+      <tbody>
+        <tr>
+          <td><b>Exerxise 1.6</b><span class="Apple-converted-space">&nbsp;</span>How
+            do you find sin<sup>-1</sup>(1) using MATLAB? (Hint: Start by
+            looking at<span class="Apple-converted-space">&nbsp;</span><font color="red">help
+              sin</font>)</td>
+        </tr>
+      </tbody>
+    </table>
+    <br class="Apple-interchange-newline">
+    <hr><em>Acknowledgement</em>: This lab is based upon a series of labs
+    developed by faculty and graduate students at UCSD (<a href="http://www.math.ucsd.edu/%7Emath20f/Fall/MatlabIndex.html">http://www.math.ucsd.edu/~math20f/Fall/MatlabIndex.html</a>)<br>
+  </body>
+</html>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

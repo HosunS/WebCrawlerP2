@@ -1,0 +1,35 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1366¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:06:22 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"ae1-54c85e18cc050-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:43:27 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY
+á<html>
+<head>
+<title>CompSci 163/265, Spring 2015, Homework 4</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1>CompSci 163/265, Spring 2015, Homework 4</h1>
+<ol>
+<li><p>Draw the flow network representing a baseball elimination problem in which</p>
+<ul>
+<li>We wish to know whether the Angels have been eliminated from the American League West; the other teams in the division are the Astros, A's, Mariners, and Rangers.</li>
+<li>There are six games left for the other teams to play, one for each pair of teams.</li>
+<li>If they win all their remaining games, the Angels can afford to let the Astros win at most two games, the Mariners win at most three games, and the A's and Rangers win at most one game.</li>
+</ul>
+<p>(You do not need to find the maximum flow for your network; just show its vertices, edges, and edge capacities.)</p></li>
+<li><p>In the solution to a maximum flow problem, is it always true (for every possible network and every possible maximum flow on that network) that the subset of the edges that have nonzero flow amounts forms a directed acyclic graph? Explain why or find a counterexample.</p></li>
+<li><p>For both of the following parts, you may use the fact that an $n$-vertex directed graph (without multiple edges between the same two vertices) has $O(n^2)$ edges.</p>
+<ol type="a">
+<li><p>Prove that, for some $n$-vertex inputs to the maximum flow problem, every augmenting path algorithm can be forced to use a number of augmenting paths that is proportional to $n^2$.</p></li>
+<li><p>(265 only): Prove that, for every $n$-vertex input to the maximum flow problem, there exists a sequence of augmenting paths with only $O(n^2)$ paths. (Hint: find the maximum flow first and use it to guide your choice of paths. Try to find paths that eliminate at least one edge from the remaining flow.)</p></li>
+</ol></li>
+<li><p>Suppose we are holding a preference ballot with three candidates: Washington, Jefferson, and Hamilton. Each voter can choose one of the six permutations of those candidates, describing which one is their favorite, second favorite, and least favorite. There are 100 voters. Choose how many voters should vote for each of the six permutations, in such a way that that Washington is the Condorcet winner (he would win each one-on-one pairing of two candidates that he participates in) but gets the smallest number of first-place votes (so he would be eliminated first in an instant-runoff election).
+</p></li>
+</ol>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

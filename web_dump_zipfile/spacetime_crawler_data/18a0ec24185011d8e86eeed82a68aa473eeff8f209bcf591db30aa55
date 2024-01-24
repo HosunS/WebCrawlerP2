@@ -1,0 +1,644 @@
+¦Ifinal_url¢DtypeEvaluexhttp://technav.ieee.org/textui/Lhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7258¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueVCookie,Accept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueQtimeout=5, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.22 (Ubuntu)¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueEX-PadAv¢DtypeEvalueQavoid browser bug¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 06:00:48 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvaluey›ä
+
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!-- test -->
+    <title>IEEE Technology Navigator </title>
+
+    
+        <meta name="description" content="Connecting You to the IEEE Universe of Information">
+        <meta name="author" content="">
+
+        <meta property="og:title" content="IEEE Technology Navigator Topics and Topic Areas"/>
+        <meta property="og:url" content="http://technav.ieee.org"/>
+        <meta property="og:host_info" content="http://technav.ieee.org"/>
+        <meta property="og:image" content="http://technav.ieee.org/media/images/sprite-images/technav_banner.png"/>
+        <meta property="og:site_name" content="IEEE Technology Navigator"/>
+        <meta property="og:description" content="Connecting You to the IEEE Universe of Information"/>
+
+        <meta name="viewport" content="width=1130,initial-scale=0.9">
+    
+
+    <link rel="shortcut icon" href="/media/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/media/images/apple-touch-icon.png">
+    
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+    <!-- Use Google CDN jquery script with a fallback of our local copy -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/lib/jquery/jquery-1.7.2.js"><\/script>')</script>
+
+    
+
+    
+
+    <script type="text/javascript" src="/media/caches/js/ca38f5fc833ffe0eec2b200463810131f.js"></script>
+
+    
+        <link rel="stylesheet" type="text/css" href="/media/caches/css/c6bc9719196925fb8d90d6eb39f0b7499.css" />
+
+        <link rel="stylesheet" type="text/css" href="/media/css/style-newui.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/sprites-newui.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/icomoon-style.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/lightbox-newui.css" />
+        <link rel="stylesheet" type="text/css" href="/media/css/nootabs-newui.css" />
+    
+
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="/media/css/style-ie7.css" title="Style for IE7" />
+    <link rel="stylesheet" type="text/css" href="/media/css/vert-center-ie.css" title="Vert Center Style for IE" />
+    <script type="text/javascript" src="/media/js/lte-ie7.js"></script>
+    <![endif]-->
+    
+    
+
+    
+
+    <script src="https://www.google.com/jsapi?key=ABQIAAAAET-l-_pKVFbYTFwkzUZFuxQqXNOgVZsVxxAJPjYxgMwG3sAPmRRUT1Aw1TCcL7OyNBCohYUcq2aExA"></script>
+    <script type="text/javascript">
+  
+        google.load('search', '1');
+  
+        var start, end;
+        var tags_callback = null;
+
+        $(function() {
+
+            // NOTE: .change() doesn't fire in IE till the checkbox loses focus, must use 'propertychange' for IE.
+            $('#show-clusters').bind($.browser.msie ? 'propertychange': 'change', function() {
+                Tags.updateResults();
+                $.cookie('show_clusters', this.checked, { expires: 100 });
+            });
+             
+            $('#show-terms').bind($.browser.msie ? 'propertychange': 'change', function() {
+                Tags.updateResults();
+                $.cookie('show_terms', this.checked, { expires: 100 });
+            });
+             
+            start = new Date();
+            log('Starting at ' + start);
+             
+            var tagGalaxyWidth = $('#tag-galaxy').width();
+             
+            var resizeTagGalaxy = function() {
+                var windowHeight = $(window).height();
+                 
+                // Set heights for galaxy and nav panels
+                $("#tags").css('height', windowHeight - 310);
+                $('div#sectors-tab, div#societies-tab').css('height', windowHeight - 295);
+            };
+             
+            resizeTagGalaxy();
+            $(window).resize(resizeTagGalaxy).resize(resizeLightboxTab);
+            $(document).bind('onShowLightboxTab', resizeLightboxTab);
+             
+            // Attach event to tags-search clear button.
+            $('#textui-tags-search-clear').click(function() {
+                Tags.clearSearchResults();
+                $("#tags-live-search").focus();
+            });
+
+            $('#tags-live-search').focus(function() {
+                $(this).parent().addClass('focus');
+            }).blur(function() {
+                $(this).parent().removeClass('focus');
+            });
+             
+            var show_clusters = $.cookie('show_clusters');
+            if (show_clusters == null) {
+                // Set the default.
+                show_clusters = true;
+                $.cookie('show_clusters', show_clusters, { expires: 100 });
+            } else {
+                show_clusters = (show_clusters == 'true')
+            }
+            $('#show-clusters').attr('checked', show_clusters);
+             
+            var show_terms = $.cookie('show_terms');
+            if (show_terms == null) {
+                // Set the default.
+                show_terms = true;
+                $.cookie('show_terms', show_terms, { expires: 100 });
+            } else {
+                show_terms = (show_terms == 'true')
+            }
+            $('#show-terms').attr('checked', show_terms);
+             
+            Tags.init();             
+        });
+
+    
+    // Starts tour when help button is clicked.
+    function startTour() {
+        if ($.cookie('ShowTour') != "ridden" ) {
+            $("#joyrideTour").joyride({
+                /* Options will go here */
+                'autoStart' : true,
+                'cookieMonster': true,           // true/false for whether cookies are used
+                'cookieName': 'ShowTour'         // choose your own cookie name
+            });
+        }
+    }
+
+    $(window).load(function() {
+        startTour();
+        
+    });
+    
+
+    </script>
+
+    
+    <script>
+    // Google Analytics snippet
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]
+    ||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();
+    a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+    m.parentNode.insertBefore(a,m)})
+    (window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-9482893-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+</head>
+<body >
+    <a name="top"></a>
+    
+    <div id="page-container">
+        <div id="inner-container">
+            
+                <header>
+                    <div id="utility-links">
+    <a href="http://ieee.org/" rel="nofollow">IEEE.org</a>&nbsp;|&nbsp;
+    <a href="http://ieeexplore.ieee.org/" rel="nofollow">IEEE Xplore Digital Library</a>&nbsp;|&nbsp;
+    <a href="http://standards.ieee.org/" rel="nofollow">IEEE Standards Association</a>&nbsp;|&nbsp;
+    <a href="http://spectrum.ieee.org/" rel="nofollow">IEEE Spectrum Online</a>&nbsp;|&nbsp;
+    <a href="http://ieee.org/sitemap.html" rel="nofollow">More IEEE Sites</a>
+</div>
+                    <div id="corner-notch"></div>
+                    
+<div id="header">
+    <div id="header-links">
+        
+        <a id="signinLink" href="/account/signin/" class="lightbox {customClass: 'signin'}" rel="nofollow"><span class="btn account">Sign In</span></a>
+        
+        <a href="http://ieee.org" rel="nofollow" style="float:right"><span class="sm-logo"></span></a>
+        
+        <div class="header-btns"><a href="javascript:void(0)" class="btn startTour" rel="nofollow">Tour</a><a href="https://technav.zendesk.com/" target="_blank" class="btn help" rel="nofollow">Help</a></div>
+    </div>
+    <div id="header-logo">
+        <a href="javascript:Tags.selectSociety(&quot;all&quot;,null,1);" class="home" rel="nofollow"><span class="technav_banner"></span></a>
+        <a href="/tags/all" id="totalTagLink">We cover <span id="totalTagCount">7,262</span> topics </a> &nbsp;&nbsp;
+    </div>
+</div>
+
+                </header>
+            
+
+            <div id="main" role="main">
+                
+    
+<ol id="joyrideTour" style='display:none;'>
+  /* data-id needs to be the same as the parent it will attach to */
+    <li data-id="header-logo" class="firstStop">
+        <strong>Welcome to the IEEE Technology Navigator</strong> &mdash; a new tool that brings together the vast catalog of IEEE resources and organizes it into technology topics &mdash; engineering and science concepts that are relevant to you.
+        <ul>
+            <li>Researching an emerging technology?</li>
+            <li>Looking for a conference to attend?</li>
+            <li>Looking for a technical society you can join?</li>
+        </ul>
+        Technology Navigator puts you just a few clicks away from thousands of valuable IEEE resources.
+    </li>
+    <li data-id="tag-and-cluster-counts">Technology Navigator organizes Engineering, Science &amp; Technology by topics. Multiple related topics are grouped together into topic areas.</li>
+    <li data-id="societySelect">You can search across all of IEEE's organizations, or focus in on any one of them.</li>
+    <li data-id="textui-tags-search">Narrow the results by searching for topics that contain your keyword.</li>
+    <li data-id="sortContainer_outter" class="sortStop" data-options="">Order topics alphabetically, by resource, related topic, or by IEEE organization.</li>
+    <li data-id="textui-tags-search" class="lastStop" data-options="tipLocation:top">
+        Your matching topic areas and topics will appear here. Click on a topic area to see the topics it contains. Click on a topic to see all of its related related IEEE resources:
+        <ul>
+            <li>Technical organizations</li>
+            <li>Conferences</li>
+            <li>Periodicals</li>
+            <li>Standards</li>
+            <li>Educational resources</li>
+            <li>Jobs</li>
+        </ul>
+        And every resource is linked so you can go straight<br/>to it!
+    </li>
+    
+        <li data-id="signinLink" data-button="Okay, got it." class="signinStop">
+            You can easily sign into Technology Navigator with your Google account.
+            Doing so gives you a free Technology Navigator account.
+            With your new account, you can favorite topics and resources.
+            Favoriting items enables you to easily find them later.
+            And in the case of your favorite topics, you'll have the added option of receiving email updates about them.
+        </li>
+    
+</ol>
+  
+<div id="alternate-page" class="new">
+    <div id="tag-tools">
+        <div class="inner">
+            <div id="misc-bar">
+                    <div id="tag-counts"></div>
+                    
+                    <div id="tags-searching-msg" style="display:none"></div>
+                    <div id='center-comp'></div>
+            </div>
+            <div id="narrow-tags">
+                <div id="textui-tags-sort">
+                    <span class="feature_label">sorted by</span>
+                    <div id="sortContainer_outter">
+                        <div id="sortContainer_inner">
+                            <span>&nbsp;</span>
+                            <ul id="sortSelect_options" class="customSelectList">
+                                <li data-value="connectedness"><span>Linkages</span></li>
+                                <li data-value="alphabetical"><span>Alphabetical</span></li>
+                                <li data-value="frequency" ><span>Resources</span></li>
+                                
+                                <li data-value="num_related_tags"><span>Related Topics</span></li>
+                                <li data-value="num_societies"><span>IEEE Organizations</span></li>
+                            </ul>
+                        </div>
+                        <span id="sortSelect" class="customSelectContainer" tabindex="0">
+                            <span aria-hidden="true" class="icon-tab icomoon-icon"></span>
+                            <span class="selected"></span>
+                            <span aria-hidden="true" class="icon-drop-arrow icomoon-icon"></span>
+                        </span>
+                    </div>
+                </div>
+                <div id="textui-society-list">
+                    <span class="feature_label">within</span>
+                    <div id="societyContainer_outter">
+                        <div id="societyContainer_inner">
+                            <span>&nbsp;</span>
+                            <ul id="societySelect_options" class="customSelectList">
+                                <li data-value="all"><span>All IEEE Organizations</span></li>                         
+                                
+                                    <li data-value="1"><span class="auto-truncate-words {length:30, flyover:false}">Aerospace &amp; Electronics Systems</span></li>
+                                
+                                    <li data-value="2"><span class="auto-truncate-words {length:30, flyover:false}">Antennas &amp; Propagation</span></li>
+                                
+                                    <li data-value="3"><span class="auto-truncate-words {length:30, flyover:false}">Biometrics Council</span></li>
+                                
+                                    <li data-value="4"><span class="auto-truncate-words {length:30, flyover:false}">Broadcast Technology</span></li>
+                                
+                                    <li data-value="5"><span class="auto-truncate-words {length:30, flyover:false}">Circuits &amp; Systems</span></li>
+                                
+                                    <li data-value="52"><span class="auto-truncate-words {length:30, flyover:false}">Cloud Computing</span></li>
+                                
+                                    <li data-value="6"><span class="auto-truncate-words {length:30, flyover:false}">Communications</span></li>
+                                
+                                    <li data-value="7"><span class="auto-truncate-words {length:30, flyover:false}">Components, Packaging &amp; Manufacturing Tech</span></li>
+                                
+                                    <li data-value="8"><span class="auto-truncate-words {length:30, flyover:false}">Computational Intelligence</span></li>
+                                
+                                    <li data-value="9"><span class="auto-truncate-words {length:30, flyover:false}">Computer</span></li>
+                                
+                                    <li data-value="10"><span class="auto-truncate-words {length:30, flyover:false}">Consumer Electronics</span></li>
+                                
+                                    <li data-value="11"><span class="auto-truncate-words {length:30, flyover:false}">Control Systems</span></li>
+                                
+                                    <li data-value="14"><span class="auto-truncate-words {length:30, flyover:false}">Dielectrics &amp; Electrical Insulation</span></li>
+                                
+                                    <li data-value="15"><span class="auto-truncate-words {length:30, flyover:false}">Education</span></li>
+                                
+                                    <li data-value="16"><span class="auto-truncate-words {length:30, flyover:false}">Electromagnetic Compatibility</span></li>
+                                
+                                    <li data-value="17"><span class="auto-truncate-words {length:30, flyover:false}">Electron Devices</span></li>
+                                
+                                    <li data-value="12"><span class="auto-truncate-words {length:30, flyover:false}">Electronic Design Automation, Council on</span></li>
+                                
+                                    <li data-value="18"><span class="auto-truncate-words {length:30, flyover:false}">Engineering in Medicine &amp; Biology</span></li>
+                                
+                                    <li data-value="19"><span class="auto-truncate-words {length:30, flyover:false}">Geoscience &amp; Remote Sensing</span></li>
+                                
+                                    <li data-value="20"><span class="auto-truncate-words {length:30, flyover:false}">Industrial Electronics</span></li>
+                                
+                                    <li data-value="21"><span class="auto-truncate-words {length:30, flyover:false}">Industry Applications</span></li>
+                                
+                                    <li data-value="22"><span class="auto-truncate-words {length:30, flyover:false}">Information Theory</span></li>
+                                
+                                    <li data-value="23"><span class="auto-truncate-words {length:30, flyover:false}">Instrumentation &amp; Measurement</span></li>
+                                
+                                    <li data-value="24"><span class="auto-truncate-words {length:30, flyover:false}">Intelligent Transportation Systems</span></li>
+                                
+                                    <li data-value="56"><span class="auto-truncate-words {length:30, flyover:false}">Internet of Things</span></li>
+                                
+                                    <li data-value="54"><span class="auto-truncate-words {length:30, flyover:false}">Life Sciences</span></li>
+                                
+                                    <li data-value="25"><span class="auto-truncate-words {length:30, flyover:false}">Magnetics</span></li>
+                                
+                                    <li data-value="51"><span class="auto-truncate-words {length:30, flyover:false}">Member and Geographic Activities</span></li>
+                                
+                                    <li data-value="26"><span class="auto-truncate-words {length:30, flyover:false}">Microwave Theory &amp; Techniques</span></li>
+                                
+                                    <li data-value="27"><span class="auto-truncate-words {length:30, flyover:false}">Nanotechnology Council</span></li>
+                                
+                                    <li data-value="28"><span class="auto-truncate-words {length:30, flyover:false}">Nuclear &amp; Plasma Science</span></li>
+                                
+                                    <li data-value="29"><span class="auto-truncate-words {length:30, flyover:false}">Oceanic Engineering</span></li>
+                                
+                                    <li data-value="30"><span class="auto-truncate-words {length:30, flyover:false}">Photonics</span></li>
+                                
+                                    <li data-value="32"><span class="auto-truncate-words {length:30, flyover:false}">Power &amp; Energy</span></li>
+                                
+                                    <li data-value="31"><span class="auto-truncate-words {length:30, flyover:false}">Power Electronics</span></li>
+                                
+                                    <li data-value="33"><span class="auto-truncate-words {length:30, flyover:false}">Product Safety Engineering</span></li>
+                                
+                                    <li data-value="34"><span class="auto-truncate-words {length:30, flyover:false}">Professional Communication</span></li>
+                                
+                                    <li data-value="35"><span class="auto-truncate-words {length:30, flyover:false}">Reliability</span></li>
+                                
+                                    <li data-value="45"><span class="auto-truncate-words {length:30, flyover:false}">RFID, Council on</span></li>
+                                
+                                    <li data-value="36"><span class="auto-truncate-words {length:30, flyover:false}">Robotics &amp; Automation</span></li>
+                                
+                                    <li data-value="37"><span class="auto-truncate-words {length:30, flyover:false}">Sensors Council</span></li>
+                                
+                                    <li data-value="38"><span class="auto-truncate-words {length:30, flyover:false}">Signal Processing</span></li>
+                                
+                                    <li data-value="57"><span class="auto-truncate-words {length:30, flyover:false}">Smart Cities</span></li>
+                                
+                                    <li data-value="55"><span class="auto-truncate-words {length:30, flyover:false}">Smart Grid</span></li>
+                                
+                                    <li data-value="39"><span class="auto-truncate-words {length:30, flyover:false}">Social Implications of Technology</span></li>
+                                
+                                    <li data-value="40"><span class="auto-truncate-words {length:30, flyover:false}">Solid State Circuits</span></li>
+                                
+                                    <li data-value="49"><span class="auto-truncate-words {length:30, flyover:false}">Standards Board</span></li>
+                                
+                                    <li data-value="13"><span class="auto-truncate-words {length:30, flyover:false}">Superconductivity, Council on</span></li>
+                                
+                                    <li data-value="41"><span class="auto-truncate-words {length:30, flyover:false}">Systems Council</span></li>
+                                
+                                    <li data-value="42"><span class="auto-truncate-words {length:30, flyover:false}">Systems, Man &amp; Cybernetics</span></li>
+                                
+                                    <li data-value="46"><span class="auto-truncate-words {length:30, flyover:false}">Technology Management Council</span></li>
+                                
+                                    <li data-value="53"><span class="auto-truncate-words {length:30, flyover:false}">Transportation Electrification</span></li>
+                                
+                                    <li data-value="47"><span class="auto-truncate-words {length:30, flyover:false}">Ultrasonics, Ferroelectrics &amp; Frequency Control</span></li>
+                                
+                                    <li data-value="48"><span class="auto-truncate-words {length:30, flyover:false}">Vehicular Technology</span></li>
+                                
+                            </ul>
+                        </div>
+                        <span id="societySelect" class="customSelectContainer" tabindex="0">
+                            <span aria-hidden="true" class="icon-users icomoon-icon"></span>
+                            <span class="selected"></span>
+                            <span aria-hidden="true" class="icon-drop-arrow icomoon-icon"></span>
+                        </span>                        
+                    </div>
+                    
+                </div>
+                <div class="search-container">
+                    <span class="feature_label">matching</span>
+                    <div id="textui-tags-search">
+                        <span aria-hidden="true" class="icon-filter icomoon-icon"></span>
+                        <input id="tags-live-search" type="text" value='Enter term' class="live-search { use_tags_callback: true, search_key_delay: 500, search_on_enter_only: false } live-search-button-disabled" placeholder="Enter term" />
+                        <span id="textui-tags-search-clear" class="live-search-clear icon-cancel">&nbsp;</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tag-container">
+        <div class="inner">
+            <div id="left-column">
+                <span class="feature_label">Navigate by:</span>
+                <div id="left-column-container" class="{ useCookies:false, useHash:false }">
+                    <ul id="galaxy-tabs" class="nootabs-menus">
+                        <li class="both-menu"><a href="" rel="nofollow"><span class="orgIcon"></span> <span style="width: 26px;">IEEE Org</span></a></li>
+                        <li style="display:none;"><a href="" rel="nofollow">&nbsp;</a></li> 
+                    </ul>
+                    <div id="societies-tab" style="height:392px">
+                        <ul id="societies">
+                            <li id="society-list-item-all"><a href="javascript:Tags.selectSociety('all');" rel="nofollow">All IEEE Organizations</a></li>                         
+                            
+                            <li id="society-list-item-1"><a href="javascript:Tags.selectSociety(1);" rel="nofollow">Aerospace &amp; Electronics Systems</a></li>
+                            
+                            <li id="society-list-item-2"><a href="javascript:Tags.selectSociety(2);" rel="nofollow">Antennas &amp; Propagation</a></li>
+                            
+                            <li id="society-list-item-3"><a href="javascript:Tags.selectSociety(3);" rel="nofollow">Biometrics Council</a></li>
+                            
+                            <li id="society-list-item-4"><a href="javascript:Tags.selectSociety(4);" rel="nofollow">Broadcast Technology</a></li>
+                            
+                            <li id="society-list-item-5"><a href="javascript:Tags.selectSociety(5);" rel="nofollow">Circuits &amp; Systems</a></li>
+                            
+                            <li id="society-list-item-52"><a href="javascript:Tags.selectSociety(52);" rel="nofollow">Cloud Computing</a></li>
+                            
+                            <li id="society-list-item-6"><a href="javascript:Tags.selectSociety(6);" rel="nofollow">Communications</a></li>
+                            
+                            <li id="society-list-item-7"><a href="javascript:Tags.selectSociety(7);" rel="nofollow">Components, Packaging &amp; Manufacturing Tech</a></li>
+                            
+                            <li id="society-list-item-8"><a href="javascript:Tags.selectSociety(8);" rel="nofollow">Computational Intelligence</a></li>
+                            
+                            <li id="society-list-item-9"><a href="javascript:Tags.selectSociety(9);" rel="nofollow">Computer</a></li>
+                            
+                            <li id="society-list-item-10"><a href="javascript:Tags.selectSociety(10);" rel="nofollow">Consumer Electronics</a></li>
+                            
+                            <li id="society-list-item-11"><a href="javascript:Tags.selectSociety(11);" rel="nofollow">Control Systems</a></li>
+                            
+                            <li id="society-list-item-14"><a href="javascript:Tags.selectSociety(14);" rel="nofollow">Dielectrics &amp; Electrical Insulation</a></li>
+                            
+                            <li id="society-list-item-15"><a href="javascript:Tags.selectSociety(15);" rel="nofollow">Education</a></li>
+                            
+                            <li id="society-list-item-16"><a href="javascript:Tags.selectSociety(16);" rel="nofollow">Electromagnetic Compatibility</a></li>
+                            
+                            <li id="society-list-item-17"><a href="javascript:Tags.selectSociety(17);" rel="nofollow">Electron Devices</a></li>
+                            
+                            <li id="society-list-item-12"><a href="javascript:Tags.selectSociety(12);" rel="nofollow">Electronic Design Automation, Council on</a></li>
+                            
+                            <li id="society-list-item-18"><a href="javascript:Tags.selectSociety(18);" rel="nofollow">Engineering in Medicine &amp; Biology</a></li>
+                            
+                            <li id="society-list-item-19"><a href="javascript:Tags.selectSociety(19);" rel="nofollow">Geoscience &amp; Remote Sensing</a></li>
+                            
+                            <li id="society-list-item-20"><a href="javascript:Tags.selectSociety(20);" rel="nofollow">Industrial Electronics</a></li>
+                            
+                            <li id="society-list-item-21"><a href="javascript:Tags.selectSociety(21);" rel="nofollow">Industry Applications</a></li>
+                            
+                            <li id="society-list-item-22"><a href="javascript:Tags.selectSociety(22);" rel="nofollow">Information Theory</a></li>
+                            
+                            <li id="society-list-item-23"><a href="javascript:Tags.selectSociety(23);" rel="nofollow">Instrumentation &amp; Measurement</a></li>
+                            
+                            <li id="society-list-item-24"><a href="javascript:Tags.selectSociety(24);" rel="nofollow">Intelligent Transportation Systems</a></li>
+                            
+                            <li id="society-list-item-56"><a href="javascript:Tags.selectSociety(56);" rel="nofollow">Internet of Things</a></li>
+                            
+                            <li id="society-list-item-54"><a href="javascript:Tags.selectSociety(54);" rel="nofollow">Life Sciences</a></li>
+                            
+                            <li id="society-list-item-25"><a href="javascript:Tags.selectSociety(25);" rel="nofollow">Magnetics</a></li>
+                            
+                            <li id="society-list-item-51"><a href="javascript:Tags.selectSociety(51);" rel="nofollow">Member and Geographic Activities</a></li>
+                            
+                            <li id="society-list-item-26"><a href="javascript:Tags.selectSociety(26);" rel="nofollow">Microwave Theory &amp; Techniques</a></li>
+                            
+                            <li id="society-list-item-27"><a href="javascript:Tags.selectSociety(27);" rel="nofollow">Nanotechnology Council</a></li>
+                            
+                            <li id="society-list-item-28"><a href="javascript:Tags.selectSociety(28);" rel="nofollow">Nuclear &amp; Plasma Science</a></li>
+                            
+                            <li id="society-list-item-29"><a href="javascript:Tags.selectSociety(29);" rel="nofollow">Oceanic Engineering</a></li>
+                            
+                            <li id="society-list-item-30"><a href="javascript:Tags.selectSociety(30);" rel="nofollow">Photonics</a></li>
+                            
+                            <li id="society-list-item-32"><a href="javascript:Tags.selectSociety(32);" rel="nofollow">Power &amp; Energy</a></li>
+                            
+                            <li id="society-list-item-31"><a href="javascript:Tags.selectSociety(31);" rel="nofollow">Power Electronics</a></li>
+                            
+                            <li id="society-list-item-33"><a href="javascript:Tags.selectSociety(33);" rel="nofollow">Product Safety Engineering</a></li>
+                            
+                            <li id="society-list-item-34"><a href="javascript:Tags.selectSociety(34);" rel="nofollow">Professional Communication</a></li>
+                            
+                            <li id="society-list-item-35"><a href="javascript:Tags.selectSociety(35);" rel="nofollow">Reliability</a></li>
+                            
+                            <li id="society-list-item-45"><a href="javascript:Tags.selectSociety(45);" rel="nofollow">RFID, Council on</a></li>
+                            
+                            <li id="society-list-item-36"><a href="javascript:Tags.selectSociety(36);" rel="nofollow">Robotics &amp; Automation</a></li>
+                            
+                            <li id="society-list-item-37"><a href="javascript:Tags.selectSociety(37);" rel="nofollow">Sensors Council</a></li>
+                            
+                            <li id="society-list-item-38"><a href="javascript:Tags.selectSociety(38);" rel="nofollow">Signal Processing</a></li>
+                            
+                            <li id="society-list-item-57"><a href="javascript:Tags.selectSociety(57);" rel="nofollow">Smart Cities</a></li>
+                            
+                            <li id="society-list-item-55"><a href="javascript:Tags.selectSociety(55);" rel="nofollow">Smart Grid</a></li>
+                            
+                            <li id="society-list-item-39"><a href="javascript:Tags.selectSociety(39);" rel="nofollow">Social Implications of Technology</a></li>
+                            
+                            <li id="society-list-item-40"><a href="javascript:Tags.selectSociety(40);" rel="nofollow">Solid State Circuits</a></li>
+                            
+                            <li id="society-list-item-49"><a href="javascript:Tags.selectSociety(49);" rel="nofollow">Standards Board</a></li>
+                            
+                            <li id="society-list-item-13"><a href="javascript:Tags.selectSociety(13);" rel="nofollow">Superconductivity, Council on</a></li>
+                            
+                            <li id="society-list-item-41"><a href="javascript:Tags.selectSociety(41);" rel="nofollow">Systems Council</a></li>
+                            
+                            <li id="society-list-item-42"><a href="javascript:Tags.selectSociety(42);" rel="nofollow">Systems, Man &amp; Cybernetics</a></li>
+                            
+                            <li id="society-list-item-46"><a href="javascript:Tags.selectSociety(46);" rel="nofollow">Technology Management Council</a></li>
+                            
+                            <li id="society-list-item-53"><a href="javascript:Tags.selectSociety(53);" rel="nofollow">Transportation Electrification</a></li>
+                            
+                            <li id="society-list-item-47"><a href="javascript:Tags.selectSociety(47);" rel="nofollow">Ultrasonics, Ferroelectrics &amp; Frequency Control</a></li>
+                            
+                            <li id="society-list-item-48"><a href="javascript:Tags.selectSociety(48);" rel="nofollow">Vehicular Technology</a></li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div style="display:none;">
+                        <h2 class="feature_label">View Filters:</h2>
+                        <div class="filters-vert-box alt-box">
+                            <ul id="views">
+                                
+                                <li id="emerging_technologies_highlight" class="filter_background">
+                                    <input id="emerging_technologies" value="emerging_technologies" type="checkbox" onclick="Tags.refresh();" class="filter highlight-checkbox { highlightElem: '#emerging_technologies_highlight' }" checked="checked" />
+                                    <label for="emerging_technologies">Emerging Technologies</label>
+                                </li>
+                                
+                                <li id="foundation_technologies_highlight" class="filter_background">
+                                    <input id="foundation_technologies" value="foundation_technologies" type="checkbox" onclick="Tags.refresh();" class="filter highlight-checkbox { highlightElem: '#foundation_technologies_highlight' }" checked="checked" />
+                                    <label for="foundation_technologies">Foundation Technologies</label>
+                                </li>
+                                
+                                <li id="hot_topics_highlight" class="filter_background">
+                                    <input id="hot_topics" value="hot_topics" type="checkbox" onclick="Tags.refresh();" class="filter highlight-checkbox { highlightElem: '#hot_topics_highlight' }" checked="checked" />
+                                    <label for="hot_topics">Hot Topics</label>
+                                </li>
+                                
+                                <li id="market_areas_highlight" class="filter_background">
+                                    <input id="market_areas" value="market_areas" type="checkbox" onclick="Tags.refresh();" class="filter highlight-checkbox { highlightElem: '#market_areas_highlight' }" checked="checked" />
+                                    <label for="market_areas">Market Areas</label>
+                                </li>
+                                
+                            </ul>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div id="right-column">
+                <div id="tag-galaxy" class="alt-box">
+                    <!-- NOTE: This is only used by javascript to get the default height/padding/margin/etc. -->
+                    <div id="default-height-tag" class="node tag_cluster">
+                        <a href="" rel="nofollow">
+                            <span class="icon_cluster_sm cluster-icon"></span>
+                            Test Node
+                        </a>
+                    </div>
+                    <div id="tags" class="alt-box-pad"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+            </div>
+
+        </div>
+        <footer>
+            <div id="footer">
+    <div id="copyright">
+        &copy; Copyright 2015 <a href="http://ieee.org" title="Visit IEEE Home" id="ieee-home" rel="nofollow">IEEE</a> â€“ All rights reserved. Use of this Web site signifies your agreement to the terms and conditions. <a href="http://www.ieee.org/privacy" id="opt-link">Privacy &amp; Opting Out of Cookies</a>
+        
+         <span id="footer-login">
+            
+                <a href="/admin/login" rel="nofollow">*</a>
+            
+         </span>
+    </div>
+</div>
+
+        </footer>
+    </div>
+
+    <script>
+        // Create global JS variables
+        var INDEX_URL = "/";
+        var MEDIA_URL = "/media/";
+        var TEXTUI_HELP_URL = "/textui_help";
+        var ENABLE_PROGRESSIVE_LOADING = true;
+        var DEBUG = false;
+    </script>
+
+    <script>
+        // Zen support variables, script, and styles
+        var zenbox_params = {};
+        zenbox_params.tab_id = "support";
+        zenbox_params.tab_color = "black";
+        zenbox_params.title = "Technology Navigator";
+        zenbox_params.text = "How may we help you? Please fill in details below, and we'll get back to you as soon as possible.";
+        zenbox_params.tag = "dropbox";
+        zenbox_params.url = "technav.zendesk.com";
+    </script>
+    <style type='text/css'>@import url('//assets0.zendesk.com/external/zenbox/overlay.css');</style>
+    <script src='//assets0.zendesk.com/external/zenbox/overlay.js'></script>
+
+    <script>
+        // IE ActiveX workaround for roamer
+        function writeHTML(a){document.write(a)}
+    </script>
+
+    
+
+    <!--[if lt IE 7]>
+    	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script>
+    	<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+    <![endif]-->
+    
+</body>
+</html>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,58 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueà¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2204¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 20 Feb 2018 22:23:29 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"7b98e14-89c-565ac429a3e43"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 07:53:12 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYú#README
+
+#################################################################
+#								#
+# Multi-Source Social Feedback of Online News Feeds		#
+# Nuno Moniz and Lu√≠s Torgo					#
+# 								#
+# The data set is made available under a CC-BY license		#
+#								#
+#################################################################
+
+##################
+# REFERENCE
+# 
+# Nuno Moniz and Lu√≠s Torgo (2018), ‚ÄúMulti-Source Social Feedback of Online News Feeds‚Äù,
+# CoRR, abs/1801.07055
+#
+# @Article{Moniz2018,
+#   title = {Multi-Source Social Feedback of Online News Feeds},
+#   author = {Nuno Moniz and Lu\‚Äôis Torgo},
+#   year = {2018},
+#   ee = {https://arxiv.org/abs/1801.07055},
+#   volume = {abs/1801.07055},
+#   journal = {CoRR},
+# }
+# 
+##################
+
+##################
+#
+# VARIABLES OF NEWS DATA
+#
+# IDLink (numeric): Unique identifier of news items
+# Title (string): Title of the news item according to the official media sources
+# Headline (string): Headline of the news item according to the official media sources
+# Source (string): Original news outlet that published the news item
+# Topic (string): Query topic used to obtain the items in the official media sources
+# PublishDate (timestamp): Date and time of the news items' publication
+# SentimentTitle (numeric): Sentiment score of the text in the news items' title
+# SentimentHeadline (numeric): Sentiment score of the text in the news items' headline
+# Facebook (numeric): Final value of the news items' popularity according to the social media source Facebook
+# GooglePlus (numeric): Final value of the news items' popularity according to the social media source Google+
+# LinkedIn (numeric): Final value of the news items' popularity according to the social media source LinkedIn
+#
+##################
+
+##################
+#
+# VARIABLES OF SOCIAL FEEDBACK DATA
+#
+# IDLink (numeric): Unique identifier of news items
+# TS1 (numeric): Level of popularity in time slice 1 (0-20 minutes upon publication)
+# TS2 (numeric): Level of popularity in time slice 2 (20-40 minutes upon publication)
+# TS... (numeric): Level of popularity in time slice ...
+# TS144 (numeric): Final level of popularity after 2 days upon publication
+#
+##################
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

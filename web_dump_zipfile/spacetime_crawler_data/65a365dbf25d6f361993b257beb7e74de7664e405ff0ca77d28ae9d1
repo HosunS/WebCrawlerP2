@@ -1,0 +1,574 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueå¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4958¢Ak¢DtypeEvaluePX-xss-protectionAv¢DtypeEvalueM1; mode=block¢Ak¢DtypeEvalueVX-content-type-optionsAv¢DtypeEvalueGnosniff¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXKBugzilla_login_request_cookie=4AiQx1FomZ; path=/bugzilla/; HttpOnly; Secure¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueUApache/2.4.7 (Ubuntu)¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueCViaAv¢DtypeEvalueQ1.1 bz.apache.org¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:59:29 GMT¢Ak¢DtypeEvalueOX-frame-optionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYQ›<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Browse</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="data/assets/5bb8fe6477fd8495276ae4efa49000dd.css?1538602249" rel="stylesheet" type="text/css">
+
+<link href="data/assets/117e56f7b51d43b9b3950693e5dec8a6.css?1538602249" rel="stylesheet" type="text/css">
+
+    
+<script type="text/javascript" src="data/assets/1b4e898422a669ab82b604a2c23edce5.js?1538602460"></script>
+
+    <script type="text/javascript">
+    <!--
+        YAHOO.namespace('bugzilla');
+        YAHOO.util.Event.addListener = function (el, sType, fn, obj, overrideContext) {
+               if ( ("onpagehide" in window || YAHOO.env.ua.gecko) && sType === "unload") { sType = "pagehide"; };
+               var capture = ((sType == "focusin" || sType == "focusout") && !YAHOO.env.ua.ie) ? true : false;
+               return this._addListener(el, this._getType(sType), fn, obj, overrideContext, capture);
+         };
+        if ( "onpagehide" in window || YAHOO.env.ua.gecko) {
+            YAHOO.util.Event._simpleRemove(window, "unload", 
+                                           YAHOO.util.Event._unload);
+        }
+        
+        function unhide_language_selector() { 
+            YAHOO.util.Dom.removeClass(
+                'lang_links_container', 'bz_default_hidden'
+            ); 
+        } 
+        YAHOO.util.Event.onDOMReady(unhide_language_selector);
+
+        
+        var BUGZILLA = {
+            param: {
+                cookiepath: '\/bugzilla\/',
+                maxusermatches: 1000
+            },
+            constant: {
+                COMMENT_COLS: 80
+            },
+            string: {
+                
+
+                attach_desc_required:
+                    "You must enter a Description for this attachment.",
+                component_required:
+                    "You must select a Component for this bug.",
+                description_required:
+                    "You must enter a Description for this bug.",
+                short_desc_required:
+                    "You must enter a Summary for this bug.",
+                version_required:
+                    "You must select a Version for this bug."
+            }
+        };
+
+    // -->
+    </script>
+<script type="text/javascript" src="data/assets/d41d8cd98f00b204e9800998ecf8427e.js?1538602460"></script>
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="ASF Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body 
+        class="bz-apache-org-bugzilla yui-skin-sam">
+
+  <div id="header"><div id="banner">
+  </div>
+
+    <div id="titles">
+      <span id="title">ASF Bugzilla &ndash; Browse</span>
+
+
+    </div>
+
+
+    <div id="common_links"><ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_top" name="no_redirect" value="0">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_top");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_top" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_top"></form>
+  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li></li>
+
+
+  
+    
+      <li id="new_account_container_top">
+        <span class="separator">| </span>
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+      </li>
+
+    <li id="mini_login_container_top">
+  <span class="separator">| </span>
+  <a id="login_link_top" href="describecomponents.cgi?GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_top')">Log In</a>
+
+  <form action="describecomponents.cgi" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_top">
+    <input id="Bugzilla_login_top" required
+           name="Bugzilla_login" class="bz_login"
+        type="email" placeholder="Email Address">
+    <input class="bz_password" name="Bugzilla_password" type="password"
+           id="Bugzilla_password_top" required
+           placeholder="Password">
+      <input type="checkbox" id="Bugzilla_remember_top" 
+             name="Bugzilla_remember" value="on" class="bz_remember"
+             checked>
+      <label for="Bugzilla_remember_top">Remember</label>
+    <input type="hidden" name="Bugzilla_login_token"
+           value="">
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_top">
+    <a href="#" onclick="return hide_mini_login_form('_top')">[x]</a>
+  </form>
+</li>
+
+
+  <li id="forgot_container_top">
+    <span class="separator">| </span>
+    <a id="forgot_link_top" href="describecomponents.cgi?GoAheadAndLogIn=1#forgot"
+       onclick="return show_forgot_form('_top')">Forgot Password</a>
+    <form action="token.cgi" method="post" id="forgot_form_top"
+          class="mini_forgot bz_default_hidden">
+      <label for="login_top">Login:</label>
+      <input name="loginname" size="20" id="login_top" required
+          type="email" placeholder="Your Email Address">
+      <input id="forgot_button_top" value="Reset Password" type="submit">
+      <input type="hidden" name="a" value="reqpw">
+      <input type="hidden" id="token_top" name="token"
+             value="1549789170-CBqQfEyOINNH00GF3bT7JfF4mdk9oVVgZzh7MCuJg9U">
+      <a href="#" onclick="return hide_forgot_form('_top')">[x]</a>
+    </form>
+  </li>
+</ul>
+  </li>
+
+  
+
+
+
+
+  
+</ul>
+    </div>
+  </div>
+
+  <div id="bugzilla-body">
+
+
+<h2>Select a product category to browse:</h2>
+
+<table id="choose_product">
+
+
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=APR">APR</a>:
+      </th>
+
+      <td>Apache Portable Runtime.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Ant">Ant</a>:
+      </th>
+
+      <td>Ant is a Java based build tool.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Apache%20httpd-1.3">Apache httpd-1.3</a>:
+      </th>
+
+      <td>Apache HTTP Server Version 1.3</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Apache%20httpd-2">Apache httpd-2</a>:
+      </th>
+
+      <td>Apache HTTP Server Version 2</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Apache%20httpd-test">Apache httpd-test</a>:
+      </th>
+
+      <td>Test framework and utilities for the Apache HTTP Server</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=BCEL%20-%20Now%20in%20Jira">BCEL - Now in Jira</a>:
+      </th>
+
+      <td>See http://issues.apache.org/jira/browse/BCEL<br>
+
+The Byte Code Engineering Library is intended to give users a convenient possibility to analyze, create, and manipulate Java class files</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Batik%20-%20Now%20in%20Jira">Batik - Now in Jira</a>:
+      </th>
+
+      <td>See https://issues.apache.org/jira/browse/BATIK<br />
+A Java based toolkit for generating, manipulating and viewing
+SVG (Scalable Vector Graphics) content. SVG is an XML grammar
+for 2D graphics.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Crimson">Crimson</a>:
+      </th>
+
+      <td>XML Parser originally from Sun.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Fop%20-%20Now%20in%20Jira">Fop - Now in Jira</a>:
+      </th>
+
+      <td>See https://issues.apache.org/jira/browse/FOP<br />
+Fop is an xsl:fo formatter. It is a Java application that reads a formatting object tree and then turns it into a PDF document.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=JMeter">JMeter</a>:
+      </th>
+
+      <td>Pure Java desktop application designed to load test functional behavior and measure performance</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Lenya">Lenya</a>:
+      </th>
+
+      <td>Lenya was a Content Management System based on XML and XSLT. One of its core components is Apache Cocoon.
+
+Lenya is now a retired project - see attic.apache.org for more info.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Log4j%20-%20Now%20in%20Jira">Log4j - Now in Jira</a>:
+      </th>
+
+      <td>See https://issues.apache.org/jira/browse/LOG4J2
+A reliable, fast and extensible logging library for Java.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=ORO">ORO</a>:
+      </th>
+
+      <td>Set of text-processing Java classes that provide Perl5
+compatible regular expressions, AWK-like regular
+expressions, glob expressions, and utility classes for
+performing substitutions, splits, filtering filenames, etc.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=POI">POI</a>:
+      </th>
+
+      <td>The POI project consists of complete ports of popular productivity office suite file formats.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Regexp">Regexp</a>:
+      </th>
+
+      <td>100% Pure Java Regular Expression package.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Ripple">Ripple</a>:
+      </th>
+
+      <td>Ripple is going to be (in some circles already is) the goto emulator for rapid development of mobile web applications. This will be accomplished by quickly keeping up with the mobile web platforms as they arise (Cordova, Tizen, WAC, WebWorks, etc).</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Rivet">Rivet</a>:
+      </th>
+
+      <td>Apache Rivet is a system for creating dynamic web content via the Tcl programming language integrated with the Apache Web Server.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Security%20-%20Now%20in%20JIRA">Security - Now in JIRA</a>:
+      </th>
+
+      <td>Santuario (previously XML Security Project)</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Slide">Slide</a>:
+      </th>
+
+      <td>WebDAV aware content management system</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Taglibs">Taglibs</a>:
+      </th>
+
+      <td>A collection of JavaServer Pages (JSP) custom tag libraries
+useful in building web applications</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%203">Tomcat 3</a>:
+      </th>
+
+      <td>A Servlet container implementing the Servlet Specification v2.2 and the Java Server Pages (JSP) Specification v1.1.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%204">Tomcat 4</a>:
+      </th>
+
+      <td>A Servlet container implementing the Servlet Specification v2.3 and the Java Server Pages (JSP) Specification v1.2.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%205">Tomcat 5</a>:
+      </th>
+
+      <td>A Servlet container implementing the Servlet Specification v2.4 and the Java Server Pages (JSP) Specification v2.0.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%206">Tomcat 6</a>:
+      </th>
+
+      <td>A Servlet container implementing the Servlet Specification v2.5 and the JavaServer Pages (JSP) Specification v2.1.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%207">Tomcat 7</a>:
+      </th>
+
+      <td>A Servlet container implementing the Servlet Specification v3.0 and the JavaServer Pages (JSP) Specification v2.2.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%208">Tomcat 8</a>:
+      </th>
+
+      <td>A Servlet container implementing the Servlet Specification v3.1, the JavaServer Pages (JSP) Specification v2.3, the Expression Language (EL) Specification v3.0, the WebSocket specification v1.1, and the Java Authentication Service Provider Interface for Containers (JASPIC) Specification v1.1.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%209">Tomcat 9</a>:
+      </th>
+
+      <td>A Servlet container implementing the Servlet Specification v4.0, the JavaServer Pages (JSP) Specification v2.3, the Expression Language (EL) Specification v3.0, the WebSocket Specification v1.1, and the Java Authentication Service Provider Interface for Containers (JASPIC) Specification v1.1.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%20Connectors">Tomcat Connectors</a>:
+      </th>
+
+      <td>Provides integration between Apache Tomcat and a range of web servers</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%20Modules">Tomcat Modules</a>:
+      </th>
+
+      <td>Additional modules for Apache Tomcat. Modules may be for a specific Tomcat version or may work with several. See each module's documentation for details.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Tomcat%20Native">Tomcat Native</a>:
+      </th>
+
+      <td>Provides an APR based native HTTP and AJP connectors for Tomcat</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Watchdog">Watchdog</a>:
+      </th>
+
+      <td>Compatibility tests that check a servlet/JSP container
+implementation of the corresponding specifications</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=WebSH">WebSH</a>:
+      </th>
+
+      <td>webshell is a rapid development environment for building powerful, fast, and reliable web applications. webshell is versatile and handles everything from HTML generation to data-base driven one-to-one page customization.  Websh is based on Tcl.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=XMLGraphicsCommons%20-%20Now%20in%20Jira">XMLGraphicsCommons - Now in Jira</a>:
+      </th>
+
+      <td>See https://issues.apache.org/jira/browse/XGC<br />
+Apache XML Graphics Commons is a library that consists of several reusable components used by Apache Batik and Apache FOP. Many of these components can easily be used separately outside the domains of SVG and XSL-FO. You will find components such as a PDF library, an RTF library, Graphics2D implementations that let you generate PDF & PostScript files, a simple XMP metadata framework and much more.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=XalanJ1">XalanJ1</a>:
+      </th>
+
+      <td>Unsupported previous version of XalanJ, now replaced by XalanJ2.  Bugzilla for XalanJ1 is only provided for existing users to share information; we do not plan to address issues in XalanJ1.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Xerces-J">Xerces-J</a>:
+      </th>
+
+      <td>Xerces Java 1. The Java version of the ASF XML Parser.</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=Xindice">Xindice</a>:
+      </th>
+
+      <td>Native XML database</td>
+    </tr>
+    <tr>
+      <th class="right nowrap">
+        <a href="describecomponents.cgi?product=XmlCommons%20-%20Now%20in%20JIRA">XmlCommons - Now in JIRA</a>:
+      </th>
+
+      <td>xml-commons module - common interfaces for XML processing, used by Xalan, Xerces, Crimson...</td>
+    </tr>
+
+  <tr>
+    <th colspan="2">&nbsp;</th>
+  </tr>
+
+</table>
+</div>
+
+    <div id="footer">
+      <div class="intro"></div>
+
+  This is <b>ASF Bugzilla</b>: the Apache Software Foundation bug system. In case
+  of problems with the functioning of ASF Bugzilla, please contact
+  <a href="mailto:bugzilla-admin@apache.org">bugzilla-admin@apache.org</a>.
+  <b>Please Note:</b> this e-mail address is <b>only</b> for reporting problems
+  with ASF Bugzilla. Mail about any other subject will be silently
+  ignored.
+<ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_bottom" name="no_redirect" value="0">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_bottom");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_bottom" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_bottom"></form>
+  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li></li>
+
+
+  
+    
+      <li id="new_account_container_bottom">
+        <span class="separator">| </span>
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+      </li>
+
+    <li id="mini_login_container_bottom">
+  <span class="separator">| </span>
+  <a id="login_link_bottom" href="describecomponents.cgi?GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_bottom')">Log In</a>
+
+  <form action="describecomponents.cgi" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_bottom">
+    <input id="Bugzilla_login_bottom" required
+           name="Bugzilla_login" class="bz_login"
+        type="email" placeholder="Email Address">
+    <input class="bz_password" name="Bugzilla_password" type="password"
+           id="Bugzilla_password_bottom" required
+           placeholder="Password">
+      <input type="checkbox" id="Bugzilla_remember_bottom" 
+             name="Bugzilla_remember" value="on" class="bz_remember"
+             checked>
+      <label for="Bugzilla_remember_bottom">Remember</label>
+    <input type="hidden" name="Bugzilla_login_token"
+           value="">
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_bottom">
+    <a href="#" onclick="return hide_mini_login_form('_bottom')">[x]</a>
+  </form>
+</li>
+
+
+  <li id="forgot_container_bottom">
+    <span class="separator">| </span>
+    <a id="forgot_link_bottom" href="describecomponents.cgi?GoAheadAndLogIn=1#forgot"
+       onclick="return show_forgot_form('_bottom')">Forgot Password</a>
+    <form action="token.cgi" method="post" id="forgot_form_bottom"
+          class="mini_forgot bz_default_hidden">
+      <label for="login_bottom">Login:</label>
+      <input name="loginname" size="20" id="login_bottom" required
+          type="email" placeholder="Your Email Address">
+      <input id="forgot_button_bottom" value="Reset Password" type="submit">
+      <input type="hidden" name="a" value="reqpw">
+      <input type="hidden" id="token_bottom" name="token"
+             value="1549789170-CBqQfEyOINNH00GF3bT7JfF4mdk9oVVgZzh7MCuJg9U">
+      <a href="#" onclick="return hide_forgot_form('_bottom')">[x]</a>
+    </form>
+  </li>
+</ul>
+  </li>
+
+  
+
+
+
+
+  
+</ul>
+
+      <div class="outro"></div>
+    </div>
+
+  </body>
+</html>Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

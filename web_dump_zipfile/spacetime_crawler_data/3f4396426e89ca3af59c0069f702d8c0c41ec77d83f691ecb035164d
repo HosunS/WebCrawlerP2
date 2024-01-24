@@ -1,0 +1,239 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 05:55:02 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY5O
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Australian Sign Language signs Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Australian Sign Language signs Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/auslan-mld/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/auslan-mld/auslan.data.html"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: This data consists of sample of Auslan (Australian Sign Language) signs. Examples of 95 signs were collected from five signers with a total of 6650 sign samples.</p>
+     </td>
+     <td><img
+src="../assets/MLimages/Large114.jpg"
+hspace=20 vspace=10  /> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate, Time-Series</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">6650</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Categorical, Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">15</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">1999-04-20</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">83727</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Original Owner and Donor:<br><br>Mohammed Waleed Kadous<br>School of Computer Science of Engineering<br>University of New South Wales<br>Sydney NSW 2052 Australia<br><u>waleed <b>'@'</b> cse.unsw.edu.au</u><br></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">The source of the data is the raw measurements from a Nintendo PowerGlove. It was interfaced through a PowerGlove Serial Interface to a Silicon Graphics 4D/35G workstation. <br><br>This glove definitely falls into the category of "cheap and nasty". Position information is calculated on the basis of ultrasound emissions from emitters the glove to a 3-microphone "L-Bar" that sits atop a monitor. There are two emitters on the glove; and three receivers. This allows the calculation of 4 pieces of information: x (left/right), y (up/down), z (backward/forward), and roll (is the palm pointing up or down?). x, y and z are measured with 8 bit accuracy. "x, y, z" should not be taken to be the normal 3-dimensional orthogonal basis. In particular, 1 unit in the z direction is not of similar distance to 1 unit in the x or y directions. These x, y, z positions are relative to a calibration point which is when the palm is resting on the seated signer's thigh. Roll is 4 bits. <br><br>The data is susceptible to occasional "spikes" caused by random ultrasound noise. Median filters have been found to be beneficial in solving this problem. <br><br>Finger bend is generated by conductive bend sensors on the first four fingers. Values vary between 0 (straight) and 3 (fully bent). Accuracy is 2 bits. The gloves automatically apply a hysteresis filter on these bend sensors. At best, these measurements should be treated sceptically. <br><br>See past usage for a more detailed discussion on the data collection methodology. <br><br>The data was collected from five signers: <br> <br>Signer -- Description -- Sessions -- Total samples/sign<br><br> Adam -- Sign linguist - PhD completed in area. -- 2 -- 8<br> Andrew -- Natural signer - signing since youth -- 3 -- 8<br> John -- Professional Auslan interpreter -- 5 -- 18<br> Stephen -- Professional Auslan interpreter -- 4  -- 16<br> Waleed -- The researcher. Novice signer -- 4 -- 20<br><br>Each session was taken at a different time, after a break, etc. <br><br>The "adam" dataset were sampled in a fixed order -- this means that they are subject to fatigue effects, etc. All other datasets were sampled in random order. The "waleed" and "stephen" datasets contain signs that begin with "cal-". These were considered as a means of calibration, but didn't work out too well. <br><br>The data presented is the raw data with no filtering. <br><br>Occasional dropouts in x, y, z values. These can be easily fixed using a median filter. <br><br>Average number of frames per instance is 51, but varies from 30 to 102. <br><br>The data is in a comma separated file containing all of the attributes mentioned above. Each sign sample is stored in a single file. The directory hierarchy is as follows: <br>-Each signer is in a separate directory. <br>-Each session from signer is in a subdirectory. Each session is denoted by a number. <br>-Each sample is in a file named by the sample appended with the number of the sample of that sign. <br><br>The filenames indicate the class. </p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">x:<br>  - Continuous. <br>  - Description: x position between -1 and 1. Units are *approximately* metres. <br>y: <br>  - Continuous. <br>  - Description: y position between -1 and 1. Units are approximately metres. <br>z: <br>  - Continuous. <br>  - Description: z position between -1 and 1. Units are not metres. <br>     This space should not really be treated as linear, although it is safe to<br>     treat it as monotonically increasing. <br>roll:      <br>  - Continuous.<br>  - Description:  roll with 0 meaning "palm down", rotating clcokwise through to a maximum of 1 (not included), which is also "palm down".<br>pitch: <br>   - Has a value of -1, indicating that it is not available for this data. <br>   Should be ignored. <br>yaw: <br>   - Has a value of -1, indicating that it is not available for this data. <br>    Should be ignored. <br>thumb: <br>   - Continuous. <br>   - Description: Thumb bend. has a value of 0 (straight) to 1 (fully bent). <br>fore:<br>   - Continuous. <br>   - Description: Forefinger bend. has a value of 0 (straight) to 1 (fully bent). <br>index:<br>   - Continuous. <br>   - Description: Index finger bend. has a value of 0 (straight) to 1 (fully bent). <br>ring: <br>   - Continuous. <br>   - Description: Ring finger bend. has a value of 0 (straight) to 1 (fully bent). <br>little:      <br>   - In this case, it is a copy of ring bend. Should be ignored. <br>keycode: <br>   - Indicates which key was pressed on the glove. Should be ignored. <br>gs1:      <br>   - glove state 1 Should be ignored. <br>gs2:      <br>   - glove state 2 should be ignored. <br>Receiver values: <br>  - Determines if all receivers received values from all transmitters. A value of 0x3F indicates all receivers received information from all transmitters. Other values indicate this is not the case.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">M. W. Kadous, GRASP: Recognition of Australian Sign Language using Instrumented Gloves, Honours thesis, School of Computer Science and Engineering, University of New South Wales, 1995. <br><a href="http://rexa.info/paper/75d0fad5fa929ac8157a6ac10e4ae14da86d186e">[Web Link]</a></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Mohammed Waleed Kadous and Claude Sammut. <a
+href="http://rexa.info/paper/660eddc9c8a809e94ad8d5837952f89d8997ab92">The University of New South Wales School of Computer Science and Engineering Temporal Classification: Extending the Classification Paradigm to Multivariate Time Series</a>.  [<a
+href="../support/Australian+Sign+Language+signs#660eddc9c8a809e94ad8d5837952f89d8997ab92">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Mohammed Waleed Kadous and Claude Sammut. <a
+href="http://rexa.info/paper/660eddc9c8a809e94ad8d5837952f89d8997ab92">The University of New South Wales School of Computer Science and Engineering Temporal Classification: Extending the Classification Paradigm to Multivariate Time Series</a>.  [<a
+href="../support/Australian+Sign+Language+signs#660eddc9c8a809e94ad8d5837952f89d8997ab92">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">The data may be used provided that: <br>-The source of the data (<a href="http://www.cse.unsw.edu.au/~waleed/tml/data/">[Web Link]</a>) is acknowledged. <br>-If you publish any work using the dataset, please inform the donor. <br>-Use for commercial purposes requires donor permission. </p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

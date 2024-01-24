@@ -1,0 +1,21 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC466¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Jan 2002 01:39:16 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1d2-397c9cf85b900"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 06:50:02 GMTKraw_content¢DtypeEvalueYÒ# Mergesort, using indexing into arrays to run in O(n log n) time
+# David Eppstein, UCI, 16 Jan 2002
+
+def mergesort(L):
+	if len(L) < 2: return L
+	return merge(mergesort(L[:len(L)/2]),mergesort(L[len(L)/2:]))
+
+def merge(A,B):
+	Out = []
+	iA = iB = 0
+	while len(A)+len(B) > iA + iB:
+		if len(B) <= iB or (len(A) > iA and A[iA] < B[iB]):
+			Out.append(A[iA])
+			iA = iA + 1
+		else:
+			Out.append(B[iB])
+			iB = iB + 1
+	return Out
+
+print mergesort([3,4,1,5,9,2,6,5,3,5])
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

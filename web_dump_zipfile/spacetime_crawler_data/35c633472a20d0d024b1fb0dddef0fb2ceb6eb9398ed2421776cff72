@@ -1,0 +1,369 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueé¢Ak¢DtypeEvalueFStatusAv¢DtypeEvalueF200 OK¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE13620¢Ak¢DtypeEvalueCViaAv¢DtypeEvalueK1.1 varnish¢Ak¢DtypeEvalueGX-CacheAv¢DtypeEvalueCHIT¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueXAccept-Encoding, User-Agent¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX$W/"1433b66f167098bc7d7d9b767899a881"¢Ak¢DtypeEvalueOX-UA-CompatibleAv¢DtypeEvaluePIE=Edge,chrome=1¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX#max-age=0, private, must-revalidate¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:22:46 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8¢Ak¢DtypeEvalueCAgeAv¢DtypeEvalueB13Kraw_content¢DtypeEvalueyÎ√
+
+
+
+<!DOCTYPE html>
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"1f4fc87457","applicationID":"304849","transactionName":"Ig1XR0VWWF1XR05ADBUHFlpZXVFJ","queueTime":0,"applicationTime":191,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+    <link href="http://www.microwavejournal.com/" rel="canonical" />
+    <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="QXbA6dt8+uXzqF7PIOf8jWL0RMD3uLXmsBxvpn8nXu0="/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Microwave Journal has been the leading source for information about RF and Microwave technology, design techniques, news, events and educational information for more than 50 years. Microwave Journal reaches 50,000 qualified readers monthly with the print magazine that has a global reach. In 2012, Microwave Journal China started as a 6X publication with more than 10,000 readers. Microwave Journal is the only trade journal to peer review technical features before publication to ensure that they are accurate, timely and useful to the reader.">
+    <meta name="keywords" content="microwave, RF, radio frequency, journal, wireless, mmWave, millimeterwave, 5G, cellular, communications, radar, amplifier, switch, mixer, high frequency, waves, electromagnetic, 4G, Internet of Things, IoT, broadband, test, measurement, EMC, EMI">
+    
+    <link href="http://www.microwavejournal.com/rss/articles" rel="alternate" title="Microwave Journal  RSS Feed" type="application/rss+xml" />
+    
+    
+    <meta content="false" name="has-log-view" />
+    <title>Microwave Journal</title>
+    <link href="/stylesheets/application.css?1549349995" media="screen" rel="stylesheet" type="text/css" />
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|PT+Serif" rel="stylesheet">
+
+
+    <link href="/ext/resources/mwjournal.css" media="screen" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/jade.default.min.js?1549349995" type="text/javascript"></script>
+<script src="/javascripts/application.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-27541563-1']);
+      _gaq.push(['_trackPageview']);
+
+      
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+</script>
+
+    
+    <script>
+  window.epub = window.epub || {};
+
+    window.epub['AD_HISTORY_ENABLED'] = false;
+</script>
+
+      <script type="text/javascript">
+  /* <![CDATA[ */
+  var google_conversion_id = 1068368145;
+  var google_custom_params = window.google_tag_params;
+  var google_remarketing_only = true;
+  /* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+<noscript>
+  <div style="display:inline;">
+    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1068368145/?guid=ON&amp;script=0"/>
+  </div>
+</noscript>
+  <script>
+  var googletag = {
+    cmd: []
+  };
+</script>
+<script src="//www.googletagservices.com/tag/js/gpt.js"></script>
+<script>
+  var targeting = JSON.parse("{\"reg_user\":\"false\",\"page_name\":\"home\"}");
+
+  // Initialize GoogleTagSetup after the menu loads
+  $(function() {
+    require(['bundle/dfp-ads.bundle'], function(GoogleTagSetup) {
+      new GoogleTagSetup.default(targeting, {
+        singleRequest: true,
+        syncRendering: false,
+        addOns: [ 'interstitial' ]
+      });
+    });
+  });
+</script>
+
+  <script src='https://www.google.com/recaptcha/api.js'></script>
+<script>var $hasLogViewMeta = $('meta[name=has-log-view]').attr('content');
+var $logViewUrlMeta = $('meta[name=log-view-url]').attr('content');
+if($hasLogViewMeta === 'true') {
+  var baseLogUrl = typeof $logViewUrlMeta === "undefined" ? window.location.pathname : $logViewUrlMeta
+  var logUrl = baseLogUrl + '/log_view' + window.location.search;
+  if (typeof navigator.sendBeacon === 'function') {
+    navigator.sendBeacon(logUrl);
+  } else {
+    // Gotta love IE
+    $.post(logUrl);
+  }
+}  </script>
+  </head>
+  <body data-action="index" data-article-requires-registration="null" data-article-requires-subscription="null" data-controller="site" data-prestitial-ad="false">
+    
+    
+    <section class="cookie-policy" id="cookie-policy"><div class="cookie-policy__body">We use cookies to provide you with a better experience. By continuing to browse the site you are agreeing to our use of cookies in accordance with our <a href="http://www.microwavejournal.com/privacy" class="ec-cookie-policy__link">Cookie Policy</a>.</div><span class="cookie-policy__close" id="cookie-policy-close"></span></section>
+      <div id="div-gpt-ad-wallpaper" class="ad-wallpaper"></div>
+  <div id="div-gpt-ad-cover" class="ad-cover"></div>
+  <div class="document">
+    <div class="site-wrapper">
+      <div id="div-gpt-ad-top-leaderboard" class="ad-top-leaderboard"></div>
+<header class="main-header">
+  <div class="main-header__row">
+    <a href="#" class="hamburger-nav-link main-header__nav-link" id="hamburger-nav-link"></a>
+
+    <div class="main-header__logo">
+  <a href="http://www.microwavejournal.com/" class="main-header__logo-image">
+    <img alt="Microwave Journal" class="main-header__logo-image-media" src="/images/logo.svg?1549349995" />
+</a></div>
+
+
+      <div class="main-header__custom-links">
+        <a href="http://www.mwjournalchina.com" class="mwj-china-link">
+  MWJ China
+  <img src="/images/global/mwChinaIcon.gif" alt="MWJ China" class="mwj-china-link__icon">
+</a>
+      </div>
+
+    <div id="user-actions" class="main-header__login-nav">
+  <ul class="user-actions main-header__user-actions">
+    <li class="user-actions__signin">
+      <a class="main-header__signin-link" href="/user/login" class="main-header__signin-link">Sign In</a>
+    </li>
+    <li class="user-actions__register">
+      <a href="/user/new" class="main-header__register-link">Subscribe</a>
+    </li>
+    <li class="user-actions__signout">
+      <a href="/user/logout" class="main-header__signout-link">Sign Out</a>
+    </li>
+    <li class="user-actions__account">
+      <a href="/user/profile" class="main-header__account-link">My Account</a>
+    </li>
+  </ul>
+</div>
+
+
+    <div class="main-header__search">
+      <div id="quick-search" class="quick-search">
+  <form id="quick-search-form" class="quick-search__form" action="/search" method="get">
+    <input class="quick-search__search-field" type="search" name="q" placeholder="" tabindex="1">
+    <button class="quick-search__button"></button>
+  </form>
+</div>
+    </div>
+  </div>
+
+    <nav class="main-header__primary-nav main-nav main-nav--horizontal">
+      <div class="main-header__nav-logo-container">
+  <a href="http://www.microwavejournal.com/" class="main-header__nav-logo">
+    <img alt="Microwave Journal" class="main-header__logo-image-media" src="/images/logo.svg?1549349995" />
+</a></div>
+
+      <div class='navigation' id='main-nav'><ul class='level1'><li class='level1-li first '><a href="/articles/topic/3369-industry-news" class="link2" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: News|url: /articles/topic/3369-industry-news" data-eventname="nav-menu-main-nav">News</a></li><li class='level1-li  '><a href="/topics" class="link2" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Channels|url: /topics" data-eventname="nav-menu-main-nav">Channels</a><ul class='level2'><li class='level2-li first '><a href="/taxonomies/3549-MIMO-OTA" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: 5G/Massive MIMO|url: /taxonomies/3549-MIMO-OTA" data-eventname="nav-menu-main-nav">5G/Massive MIMO</a></li><li class='level2-li  '><a href="/taxonomies/3372-aerospace-and-defense" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Aerospace &amp; Defense|url: /taxonomies/3372-aerospace-and-defense" data-eventname="nav-menu-main-nav">Aerospace &amp; Defense</a></li><li class='level2-li  '><a href="/taxonomies/3797" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Broadband|url: /taxonomies/3797" data-eventname="nav-menu-main-nav">Broadband</a></li><li class='level2-li  '><a href="/taxonomies/3521-Cellular-4G-LTE-WiMAX" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Cellular/4G/LTE|url: /taxonomies/3521-Cellular-4G-LTE-WiMAX" data-eventname="nav-menu-main-nav">Cellular/4G/LTE</a></li><li class='level2-li  '><a href="/topics/3794-emc-emi" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: EMC/EMI|url: /topics/3794-emc-emi" data-eventname="nav-menu-main-nav">EMC/EMI</a></li><li class='level2-li  '><a href="/taxonomies/3529-Industrial-Scientific-Medical" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Industrial/Scientific/Medical|url: /taxonomies/3529-Industrial-Scientific-Medical" data-eventname="nav-menu-main-nav">Industrial/Scientific/Medical</a></li><li class='level2-li  '><a href="/taxonomies/3792" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: IoT/M2M/V2V|url: /taxonomies/3792" data-eventname="nav-menu-main-nav">IoT/M2M/V2V</a></li><li class='level2-li  '><a href="/taxonomies/3530-rfid-gps-location" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: RFID/GPS/Location|url: /taxonomies/3530-rfid-gps-location" data-eventname="nav-menu-main-nav">RFID/GPS/Location</a></li><li class='level2-li  '><a href="/taxonomies/3572" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: RFIC|url: /taxonomies/3572" data-eventname="nav-menu-main-nav">RFIC</a></li><li class='level2-li  '><a href="/taxonomies/3519-software-EDA" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Software/EDA|url: /taxonomies/3519-software-EDA" data-eventname="nav-menu-main-nav">Software/EDA</a></li><li class='level2-li  last'><a href="/taxonomies/3449" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Test &amp; Measurement|url: /taxonomies/3449" data-eventname="nav-menu-main-nav">Test &amp; Measurement</a></li></ul></li><li class='level1-li  '><a class="no_link" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: eLearning|url: " data-eventname="nav-menu-main-nav">eLearning</a><ul class='level2'><li class='level2-li first '><a href="/products/19-millimeter-wave-wireless-communications-for-5g" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: 5G mmWave Training Course|url: /products/19-millimeter-wave-wireless-communications-for-5g" data-eventname="nav-menu-main-nav">5G mmWave Training Course</a></li><li class='level2-li  '><a href="/articles/24719" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Acronyms List|url: /articles/24719" data-eventname="nav-menu-main-nav">Acronyms List</a></li><li class='level2-li  '><a href="/topics/3362" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Design Tools|url: /topics/3362" data-eventname="nav-menu-main-nav">Design Tools</a></li><li class='level2-li  '><a href="/articles/29250" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: eBooks|url: /articles/29250" data-eventname="nav-menu-main-nav">eBooks</a></li><li class='level2-li  '><a href="/topics/3848-history-of-microwaves" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: History of Wireless|url: /topics/3848-history-of-microwaves" data-eventname="nav-menu-main-nav">History of Wireless</a></li><li class='level2-li  '><a href="/topics/3845" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Microwave Basics|url: /topics/3845" data-eventname="nav-menu-main-nav">Microwave Basics</a></li><li class='level2-li  '><a href="/events/category/3394-webinars" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Webinars|url: /events/category/3394-webinars" data-eventname="nav-menu-main-nav">Webinars</a></li><li class='level2-li  last'><a href="/topics/3361-white-papers" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: White Papers|url: /topics/3361-white-papers" data-eventname="nav-menu-main-nav">White Papers</a></li></ul></li><li class='level1-li  '><a class="no_link" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Community|url: " data-eventname="nav-menu-main-nav">Community</a><ul class='level2'><li class='level2-li first '><a href="/blogs" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Blogs|url: /blogs" data-eventname="nav-menu-main-nav">Blogs</a></li><li class='level2-li  '><a href="/classifieds" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Classifieds Section|url: /classifieds" data-eventname="nav-menu-main-nav">Classifieds Section</a></li><li class='level2-li  '><a href="/polls" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Polls|url: /polls" data-eventname="nav-menu-main-nav">Polls</a></li><li class='level2-li  '><a href="http://www.linkedin.com/groups?gid=1802673" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: RF &amp; Microwave LinkedIn Group|url: http://www.linkedin.com/groups?gid=1802673" data-eventname="nav-menu-main-nav" target="_blank">RF &amp; Microwave LinkedIn Group</a></li><li class='level2-li  '><a href="http://www.facebook.com/microwavejournal" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Facebook|url: http://www.facebook.com/microwavejournal" data-eventname="nav-menu-main-nav" target="_blank">Facebook</a></li><li class='level2-li  '><a href="/articles/16761" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Twitter|url: /articles/16761" data-eventname="nav-menu-main-nav">Twitter</a></li><li class='level2-li  '><a href="https://www.instagram.com/microwavejournal/" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Instagram|url: https://www.instagram.com/microwavejournal/" data-eventname="nav-menu-main-nav" target="_blank">Instagram</a></li><li class='level2-li  last'><a href="http://www.microwavejournal.com/articles/18744" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Mobile App|url: http://www.microwavejournal.com/articles/18744" data-eventname="nav-menu-main-nav">Mobile App</a></li></ul></li><li class='level1-li  '><a href="/events" class="link2" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Events|url: /events" data-eventname="nav-menu-main-nav">Events</a><ul class='level2'><li class='level2-li first '><a href="/events/category/3394-webinars" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Webinars|url: /events/category/3394-webinars" data-eventname="nav-menu-main-nav">Webinars</a></li><li class='level2-li  '><a href="/events/category/3374-trade-shows" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Trade Shows|url: /events/category/3374-trade-shows" data-eventname="nav-menu-main-nav">Trade Shows</a></li><li class='level2-li  '><a href="/events/category/3550-training-user-meetings" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Training-User Meetings|url: /events/category/3550-training-user-meetings" data-eventname="nav-menu-main-nav">Training-User Meetings</a></li><li class='level2-li  '><a href="http://www.eumweek.com" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: European Microwave Week|url: http://www.eumweek.com" data-eventname="nav-menu-main-nav" target="_blank">European Microwave Week</a></li><li class='level2-li  '><a href="http://www.ediconusa.com" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: EDI CON USA|url: http://www.ediconusa.com" data-eventname="nav-menu-main-nav" target="_blank">EDI CON USA</a></li><li class='level2-li  last'><a href="http://www.ediconchina.com" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: EDI CON China|url: http://www.ediconchina.com" data-eventname="nav-menu-main-nav" target="_blank">EDI CON China</a></li></ul></li><li class='level1-li  '><a href="/directories/3337-buyer-s-guide" class="link2" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Buyers Guide|url: /directories/3337-buyer-s-guide" data-eventname="nav-menu-main-nav">Buyers Guide</a></li><li class='level1-li  '><a href="http://videos.microwavejournal.com" class="link2" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Multimedia|url: http://videos.microwavejournal.com" data-eventname="nav-menu-main-nav">Multimedia</a><ul class='level2'><li class='level2-li first '><a href="/media/photos" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Photo Galleries|url: /media/photos" data-eventname="nav-menu-main-nav">Photo Galleries</a></li><li class='level2-li  last'><a href="http://videos.microwavejournal.com" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Videos|url: http://videos.microwavejournal.com" data-eventname="nav-menu-main-nav">Videos</a></li></ul></li><li class='level1-li  last'><a href="/publications/1" class="link2" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Magazine|url: /publications/1" data-eventname="nav-menu-main-nav">Magazine</a><ul class='level2'><li class='level2-li first '><a href="/publications/1" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Current Issue|url: /publications/1" data-eventname="nav-menu-main-nav">Current Issue</a></li><li class='level2-li  '><a href="/publications/1" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Archives|url: /publications/1" data-eventname="nav-menu-main-nav">Archives</a></li><li class='level2-li  '><a href="/reprints" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Article Reprints|url: /reprints" data-eventname="nav-menu-main-nav">Article Reprints</a></li><li class='level2-li  '><a href="/subscriptions/new" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Subscribe|url: /subscriptions/new" data-eventname="nav-menu-main-nav">Subscribe</a></li><li class='level2-li  last'><a href="/user/renew" class="link1" data-background-image="" data-eventaction="main-nav-link" data-eventcategory="click" data-eventlabel="text: Subscription Renewal|url: /user/renew" data-eventname="nav-menu-main-nav" target="_blank">Subscription Renewal</a></li></ul></li></ul></div>
+    </nav>
+</header>
+
+      <div class="container">
+        
+  <div class="subscribe-now-dropdown">
+  <nav class="subscriptions-nav">
+    <div class='navigation' id='subscriptions'><ul class='level1'><li class='level1-li first last'><a href="/user/new" class="link2" data-background-image="" data-eventaction="subscriptions-link" data-eventcategory="click" data-eventlabel="text: Free Newsletter|url: /user/new" data-eventname="nav-menu-subscriptions" target="_blank">Free Newsletter</a><ul class='level2'><li class='level2-li first last'><a href="/user/new" class="link1" data-background-image="" data-eventaction="subscriptions-link" data-eventcategory="click" data-eventlabel="text: Subscribe Now|url: /user/new" data-eventname="nav-menu-subscriptions" target="_blank">Subscribe Now</a></li></ul></li></ul></div>
+  </nav>
+</div>
+
+
+  <section class="featured-articles"><article class="article-block"><div class="article-block__image-container"><a href="http://www.microwavejournal.com/articles/31748-frequency-matters-feb-7---feb-high-freq-componentspcbs-issue-5g-newsevents" class="article-block__article-image-link"><img alt="Episode_122-featr" class="article-block__image" src="//www.microwavejournal.com/ext/resources/video/FreqMatters/Episode_122-featr.jpg?1549573410" /></a><span class="article-block__topic-tag"><a href="/topics/3818-video" class="article-block__topic-tag-link">Video</a></span></div><div class="article-block__content"><h1 class="article-block__content-title"><a href="http://www.microwavejournal.com/articles/31748-frequency-matters-feb-7---feb-high-freq-componentspcbs-issue-5g-newsevents" class="article-block__content-title-link">Frequency Matters, Feb 7 - Feb High Freq. Components/PCBs issue, 5G news/events</a></h1><span class="article-block__author"></span></div></article><article class="article-block"><div class="article-block__image-container"><a href="http://www.microwavejournal.com/articles/31741-pixus-develops-ruggedized-software-defined-radio-solutions" class="article-block__article-image-link"><img alt="Rx310_angle2-2---copy" class="article-block__image" src="//www.microwavejournal.com/ext/resources/images/Newsletters/2019/RX310_angle2-2---Copy.jpg?1549401311" /></a><span class="article-block__topic-tag"><a href="/topics/3815-industry-news" class="article-block__topic-tag-link">Industry News</a></span></div><div class="article-block__content"><h1 class="article-block__content-title"><a href="http://www.microwavejournal.com/articles/31741-pixus-develops-ruggedized-software-defined-radio-solutions" class="article-block__content-title-link">Pixus Develops Ruggedized Software Defined Radio Solutions</a></h1><span class="article-block__author"></span></div></article><article class="article-block"><div class="article-block__image-container"><a href="http://www.microwavejournal.com/articles/31718-lpkf-offers-glass-foundry-service-for-advanced-ic-and-mems-packaging-solutions" class="article-block__article-image-link"><img alt="Lpkf_glass_wafer" class="article-block__image" src="//www.microwavejournal.com/ext/resources/images/Newsletters/2019/LPKF_Glass_Wafer.jpg?1548799241" /></a><span class="article-block__topic-tag"><a href="/topics/3815-industry-news" class="article-block__topic-tag-link">Industry News</a></span></div><div class="article-block__content"><h1 class="article-block__content-title"><a href="http://www.microwavejournal.com/articles/31718-lpkf-offers-glass-foundry-service-for-advanced-ic-and-mems-packaging-solutions" class="article-block__content-title-link">LPKF Offers Glass Foundry Service for Advanced IC and MEMS Packaging Solutions</a></h1><span class="article-block__author"></span></div></article><article class="article-block"><div class="article-block__image-container"><a href="http://www.microwavejournal.com/articles/31717-hensoldt-delivers-naval-radars-to-norwegian-coast-guard" class="article-block__article-image-link"><img alt="52942_o" class="article-block__image" src="//www.microwavejournal.com/ext/resources/images/Newsletters/2019/52942_O.jpg?1548796897" /></a><span class="article-block__topic-tag"><a href="/topics/3815-industry-news" class="article-block__topic-tag-link">Industry News</a></span></div><div class="article-block__content"><h1 class="article-block__content-title"><a href="http://www.microwavejournal.com/articles/31717-hensoldt-delivers-naval-radars-to-norwegian-coast-guard" class="article-block__content-title-link">HENSOLDT Delivers Naval Radars to Norwegian Coast Guard</a></h1><span class="article-block__author"></span></div></article></section>
+
+  <section class="featured-events " id="featured-events">
+  <h1 class="featured-events__title"><a class="featured-events__title-link" href="/events">Featured Events</a></h1><ul class="featured-events__items">
+    
+<li class="featured-events__item">
+  <div class="featured-events__date"><span class="featured-events__day">13</span><span class="featured-events__month">Feb</span></div><div class="featured-events__content"><h2 class="featured-events__headline"><a href="/events/1834-5g-mmwave-a-challenge-for-device-testing-and-how-to-solve-it">5G mmWave ‚Äì A Challenge For Device Testing and How to Solve It</a></h2><span class="featured-events__location"></span></div>
+</li>  
+<li class="featured-events__item">
+  <div class="featured-events__date"><span class="featured-events__day">13</span><span class="featured-events__month">Feb</span></div><div class="featured-events__content"><h2 class="featured-events__headline"><a href="/events/1837-designing-an-award-winning-mmwave-rfic-experiences-and-insights">Designing an Award-Winning mmWave RFIC: Experiences and Insights</a></h2><span class="featured-events__location"></span></div>
+</li>  
+<li class="featured-events__item">
+  <div class="featured-events__date"><span class="featured-events__day">20</span><span class="featured-events__month">Feb</span></div><div class="featured-events__content"><h2 class="featured-events__headline"><a href="/events/1838-designing-for-ddr4-and-beyond">Designing for DDR4 and Beyond</a></h2><span class="featured-events__location"></span></div>
+</li>  
+
+</ul><a class="featured-events__more-link" href="/events">More Events</a>
+</section>
+
+  <div id="div-gpt-ad-top-sidebar" class="home-ad-top-sidebar"></div>
+
+  
+
+  <section class="featured-topic-articles-list"><h1 class="featured-topic-articles-list__title"><a href="/topics/3532-featured-white-papers" class="featured-topic-articles-list__title-link">Featured White Papers</a></h1><div class="featured-topic-articles-list__content"><article class="article-block"><div class="article-block__image-container"><a href="http://www.microwavejournal.com/articles/31636-designing-for-emi-testing-step-by-step-guide-improve-your-time-to-market-with-oscilloscopes" class="article-block__article-image-link"><img alt="Rs_wpcvr150" class="article-block__image" src="//www.microwavejournal.com/ext/resources/whitepapers/2019/Jan-19/thumb/RS_wpCvr150.jpg?1547566960" /></a></div><div class="article-block__content"><h1 class="article-block__content-title"><a href="http://www.microwavejournal.com/articles/31636-designing-for-emi-testing-step-by-step-guide-improve-your-time-to-market-with-oscilloscopes" class="article-block__content-title-link">Designing for EMI Testing (Step-by-Step Guide): Improve Your Time to Market With Oscilloscopes</a></h1><span class="article-block__author">By <a href="/authors/67-rohde-schwarz">Rohde &amp; Schwarz</a></span></div></article><article class="article-block"><div class="article-block__image-container"><a href="http://www.microwavejournal.com/articles/31645-aperture-tuning-an-essential-technology-in-5g-smartphones" class="article-block__article-image-link"><img alt="Qorvo_cvronly150" class="article-block__image" src="//www.microwavejournal.com/ext/resources/whitepapers/2019/Jan-19/thumb/Qorvo_CvrOnly150.jpg?1547586952" /></a></div><div class="article-block__content"><h1 class="article-block__content-title"><a href="http://www.microwavejournal.com/articles/31645-aperture-tuning-an-essential-technology-in-5g-smartphones" class="article-block__content-title-link">Aperture Tuning: An Essential Technology in 5G Smartphones</a></h1><span class="article-block__author">By <a href="/authors/3801-qorvo-inc-greensboro-n-c">Qorvo Inc., Greensboro, N.C.</a></span></div></article><article class="article-list-article"><h1 class="article-list-article__article-title"><a href="http://www.microwavejournal.com/articles/31514-realizing-the-swap-c-benefits-of-designing-with-positive-gain-slope-mmic-amplifiers" class="article-list-article__title-link">Realizing the SWaP-C Benefits of Designing with Positive Gain Slope MMIC Amplifiers</a></h1><span class="article-list-article__article-author">By <a href="/authors/2704-custom-mmic-chelmsford-mass">Custom MMIC, Chelmsford, Mass.</a></span></article><article class="article-list-article"><h1 class="article-list-article__article-title"><a href="http://www.microwavejournal.com/articles/31360-how-to-right-size-your-wireless-testing" class="article-list-article__title-link">How To Right-Size Your Wireless Testing</a></h1><span class="article-list-article__article-author">By <a href="/authors/1927-jfw-industries-inc-indianapolis-ind">JFW Industries Inc., Indianapolis, Ind.</a></span></article><article class="article-list-article"><h1 class="article-list-article__article-title"><a href="http://www.microwavejournal.com/articles/31357-mm-wave-partial-information-de-embedding-errors-and-sensitivities" class="article-list-article__title-link">MM-wave Partial Information De-embedding: Errors and Sensitivities</a></h1><span class="article-list-article__article-author">By <a href="/authors/842-anritsu-company">Anritsu Company</a></span></article></div><a href="/topics/3532-featured-white-papers" class="featured-topic-articles-list__more-link">More Featured White Papers</a></section>
+
+  
+
+  <section class="sponsored-article"><div class="sponsored-article__wrapper"><div class="sponsored-article__image-container"><a href="http://www.microwavejournal.com/articles/31732-parrot-case-study-wireless-connectivity-testing-for-the-drones-of-the-future" class="sponsored-article__article-image-link"><img alt="Mvg_logo150" class="sponsored-article__image" src="//www.microwavejournal.com/ext/resources/SponsoredContent/2019/MVG/thumb/MVG_logo150.jpg?1549042646" /></a></div><div class="sponsored-article__content"><span class="sponsored-article__sponsored-tag">Sponsored Content</span><h1 class="sponsored-article__title"><a href="http://www.microwavejournal.com/articles/31732-parrot-case-study-wireless-connectivity-testing-for-the-drones-of-the-future" class="sponsored-article__title-link">Parrot Case Study: Wireless Connectivity Testing for the Drones of the Future</a></h1><span class="sponsored-article__author"></span></div></div></section>
+
+  <section class="current-edition"><div class="current-edition__content"><div class="current-edition__text"><h1 class="current-edition__title"><a href="https://www.b2bmediaportal.com/dynamicregister16/register.aspx?fid=MWJF&amp;status=NEW">Subscribe here to receive Microwave Journal</a></h1><article class="current-edition__featured-article"><div class="current-edition__featured-article-wrapper"><h1 class="current-edition__featured-article-title"><a href="http://www.microwavejournal.com/articles/31593-client-software-defined-antennas-improve-link-margins-reduce-interference" class="current-edition__featured-article-title-link">Client Software-Defined Antennas Improve Link Margins, Reduce Interference</a></h1><p class="current-edition__featured-article-author">By <a href="/authors/4523-jeff-shamblin-taoglas-enniscorthy-ireland">Jeff Shamblin, Taoglas, Enniscorthy, Ireland</a></p><a class="button current-edition__featured-article-subscribe" href="/user/new">Subscribe</a></div></article><article class="current-edition__article"><h1 class="current-edition__article-title"><a href="http://www.microwavejournal.com/articles/31594-automotive-radar-and-congested-spectrum-potential-urban-electronic-battlefield" class="current-edition__article-title-link">Automotive Radar and Congested Spectrum: Potential Urban Electronic Battlefield</a></h1><span class="current-edition__article-author">By <a href="/authors/4524-sefa-tanis-analog-devices-inc-norwood-mass">Sefa Tanis, Analog Devices Inc., Norwood, Mass.</a></span></article><article class="current-edition__article"><h1 class="current-edition__article-title"><a href="http://www.microwavejournal.com/articles/31596-chip-antenna-antenna-tuner-combo-cover-lte-bands" class="current-edition__article-title-link">Chip Antenna-Antenna Tuner Combo Cover LTE Bands</a></h1><span class="current-edition__article-author">By <a href="/authors/4533-aurora-andujar-jose-l-leiva-fractus-antennas">Aurora And√∫jar, Jos√© L. Leiva, Fractus Antennas</a>, <a href="/authors/4532-jaume-anguera-fractus-antennas-and-universitat-ramon-llull">Jaume Anguera, Fractus Antennas and Universitat Ramon Llull</a>, and <a href="/authors/4531-cor-schepens-and-roberto-gaddi-cavendish-kinetics">Cor Schepens and Roberto Gaddi, Cavendish Kinetics</a></span></article></div><div class="current-edition__image-container"><a href="/publications/1/editions/250" class="current-edition__image-link"><img alt="January-2019" class="current-edition__image" src="//www.microwavejournal.com/ext/resources/images/magazine-cover-art/2018/January-2019.jpg?1545239953" /></a><div class="current-edition__digital-edition"><a href="http://digital.microwavejournal.com">Digital Edition</a></div><div class="current-edition__online-edition"><a href="/publications/1">Online Edition</a></div></div></div></section>
+
+  <section class="featured-topic-articles-list"><h1 class="featured-topic-articles-list__title"><a href="/topics/13-featured-products" class="featured-topic-articles-list__title-link">Featured Products</a></h1><div class="featured-topic-articles-list__content"><article class="article-block"><div class="article-block__image-container"><a href="http://www.microwavejournal.com/articles/31617-coaxial-dc-pass-rf-surge-protection-gt-series" class="article-block__article-image-link"><img alt="Rgt" class="article-block__image" src="//www.microwavejournal.com/ext/resources/BuyersGuideImg/2019/PolyPhaser/RGT.jpg?1546965653" /></a></div><div class="article-block__content"><h1 class="article-block__content-title"><a href="http://www.microwavejournal.com/articles/31617-coaxial-dc-pass-rf-surge-protection-gt-series" class="article-block__content-title-link">Coaxial DC Pass RF Surge Protection:  GT Series</a></h1><span class="article-block__author">By <a href="/authors/4454-polyphaser-hayden-idaho">PolyPhaser, Hayden, Idaho</a></span></div></article><article class="article-block"><div class="article-block__image-container"><a href="http://www.microwavejournal.com/articles/31709-gan-power-amplifier-module-qpa4501" class="article-block__article-image-link"><img alt="Qpa4501" class="article-block__image" src="//www.microwavejournal.com/ext/resources/BuyersGuideImg/2019/RFMW-Ltd/QPA4501.jpg?1548764658" /></a></div><div class="article-block__content"><h1 class="article-block__content-title"><a href="http://www.microwavejournal.com/articles/31709-gan-power-amplifier-module-qpa4501" class="article-block__content-title-link">GaN Power Amplifier Module:  QPA4501</a></h1><span class="article-block__author">By <a href="/authors/2067-rfmw-ltd">RFMW Ltd.</a></span></div></article><article class="article-list-article"><h1 class="article-list-article__article-title"><a href="http://www.microwavejournal.com/articles/31646-power-handling-0805-xinger-couplers" class="article-list-article__title-link">Power Handling 0805 Xinger‚Ñ¢ Couplers</a></h1><span class="article-list-article__article-author">By <a href="/authors/381-anaren-microwave-inc-e-syracuse-ny">Anaren Microwave Inc., E. Syracuse, NY</a></span></article><article class="article-list-article"><h1 class="article-list-article__article-title"><a href="http://www.microwavejournal.com/articles/31671-high-power-fixed-setting-attenuator-cfadc0430200" class="article-list-article__title-link">High Power Fixed Setting Attenuator: CFADC0430200</a></h1><span class="article-list-article__article-author">By <a href="/authors/3555-cernex-inc">Cernex Inc.</a></span></article></div><a href="/topics/13-featured-products" class="featured-topic-articles-list__more-link">More Featured Products</a></section>
+
+  
+
+  <section class="sponsored-article"><div class="sponsored-article__wrapper"><div class="sponsored-article__image-container"><a href="http://www.microwavejournal.com/articles/31719-new-trends-in-software-defined-spectrum-analysis" class="sponsored-article__article-image-link"><img alt="Thinkrf-jan_cvr150" class="sponsored-article__image" src="//www.microwavejournal.com/ext/resources/SponsoredContent/2019/eBooks/thumb/ThinkRF-JAN_Cvr150.jpg?1548800297" /></a></div><div class="sponsored-article__content"><span class="sponsored-article__sponsored-tag">Sponsored Content</span><h1 class="sponsored-article__title"><a href="http://www.microwavejournal.com/articles/31719-new-trends-in-software-defined-spectrum-analysis" class="sponsored-article__title-link">New Trends in Software Defined Spectrum Analysis</a></h1><span class="sponsored-article__author"></span></div></div></section>
+
+  
+
+  <section class="subscribe-form"><div class="subscribe-form__outer-container"><div class="subscribe-form__inner-container"><h1 class="subscribe-form__header">Sign Up for Microwave Journal Newsletters</h1><span class="subscribe-form__byline"></span><form class="subscribe-form__form" id="subscribe-form"><input class="subscribe-form__input" /><input class="subscribe-form__button" type="submit" value="Subscribe" /></form></div></div></section>
+
+  <section class="mid-content-section">
+    <div class="design-tools"><div class="design-tools__title"><h1 class="design-tools__title-text"><a href="/topics/3362" class="design-tools__title-link">Design Tools</a></h1></div><div class="design-tools__teaser"><p><span class="design-tools__teaser"><a href="/topics/3362"><img alt="Design Tools" src="ext/resources/images/Newsletters/design-tools/video-still-5376172094001.jpg" style="width: 150px; height: 81; float: left;padding-right:20px;" /></a>MWJ Design Tools are a compilation of tools, software, calculators, spreadsheets and more&nbsp;that engineers can utilize or participate in. Check out the listings and let us know if you have any tools to add to the page.</span></p>
+
+<p>Featured:&nbsp;<a href="http://www.microwavejournal.com/articles/29301" target="_blank">Circuit and System Design, Analysis and Simulation</a></p>
+</div></div>
+    <div class="buyers-guide"><div class="buyers-guide__title"><a href="/directories/3337-buyer-s-guide"><h2 class="buyers-guide__title-text">Buyer&#39;s Guide</h2></a></div><a href="/directories/3337-buyer-s-guide/listing/983-altair-engineering-inc-feko" class="buyers-guide__image-link"><img alt="Altair_02-14-18" class="buyers-guide__image" src="http://www.microwavejournal.com/ext/resources/BuyersGuideImg/2018/Altair/Altair_02-14-18.jpg?1518622871" /></a><span class="buyers-guide__description">  <div class="editorial-content buyers-guide-home-text records">
+    
+    <div class="editorial-content__details record">
+      <div class="editorial-content__body body">Click this featured vendor's logo for the latest in RF and microwave article highlights, products and news direct from the company.</div>
+    </div>
+  </div>
+</span><a href="/directories/3337-buyer-s-guide" class="buyers-guide__link">Buyer&#x27;s Guide</a><a href="/directories/3337-buyer-s-guide/tiers" class="buyers-guide__link">Get Listed</a></div>
+    <div id="div-gpt-ad-bottom-sidebar" class="home-ad-bottom-sidebar"></div>
+  </section>
+
+  <section class="sponsored-article"><div class="sponsored-article__wrapper"><div class="sponsored-article__image-container"><a href="http://www.microwavejournal.com/articles/31376-white-paper-how-to-optimize-measurement-and-transactional-speed-of-your-daq" class="sponsored-article__article-image-link"><img alt="Sc_blanca_wp_cover_image150" class="sponsored-article__image" src="//www.microwavejournal.com/ext/resources/SponsoredContent/2018/Keysight/SC_Blanca_WP_cover_image150.jpg?1542830425" /></a></div><div class="sponsored-article__content"><span class="sponsored-article__sponsored-tag">Sponsored Content</span><h1 class="sponsored-article__title"><a href="http://www.microwavejournal.com/articles/31376-white-paper-how-to-optimize-measurement-and-transactional-speed-of-your-daq" class="sponsored-article__title-link">White Paper: How to Optimize Measurement and Transactional Speed of Your DAQ</a></h1><span class="sponsored-article__author"></span></div></div></section>
+
+  <section class="featured-videos-home"><div class="featured-videos-home__wrapper"><div class="featured-videos-home__title"><h1 class="featured-videos-home__title-text"><a href="http://videos.microwavejournal.com" class="featured-videos-home__title-link">Featured Videos</a></h1></div><div class="featured-video"><div class="iframe-embed featured-video__embed" data-height="300" data-width="500"><iframe class="iframe-embed__iframe" src="http://videos.microwavejournal.com/iframe/5bd7565cab86e2514e4090fc?autoplay=false/player?layout&amp;read_more=1"></iframe></div><div class="featured-video__content"><h2 class="featured-video__title"><a href="http://videos.microwavejournal.com/iframe/5bd7565cab86e2514e4090fc?autoplay=false" class="featured-video__title-link" target="_blank">In Phase Technologies After Sales Support</a></h2></div></div>
+
+<div class="featured-video"><div class="iframe-embed featured-video__embed" data-height="300" data-width="500"><iframe class="iframe-embed__iframe" src="http://videos.microwavejournal.com/iframe/5c4247c3617d284aa2c985f0?autoplay=false/player?layout&amp;read_more=1"></iframe></div><div class="featured-video__content"><h2 class="featured-video__title"><a href="http://videos.microwavejournal.com/iframe/5c4247c3617d284aa2c985f0?autoplay=false" class="featured-video__title-link" target="_blank">Distributed Wi-Fi (Wi-Fi Mesh): A Key to Smarter Homes</a></h2></div></div>
+
+<p><!-- This stays at the bottom --><a class="featured-videos-home__more-link" href="http://videos.microwavejournal.com" target="_blank">See More Videos </a></p></div></section>
+
+  
+
+  <section class="featured-poll"><div class="featured-poll__outer-container"><div class="featured-poll__inner-container"><form accept-charset="UTF-8" action="/polls/94/vote" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="oXkxZ+avWhycpPAOsaWcAoXqZe1MvRiOtlkG9hrV+Vo=" /></div><div class="featured-poll__question-container"><h1 class="featured-poll__title">Which 2018 Microwave Journal cover is your favorite?</h1><div class="featured-poll__answers"><div class="featured-poll__answer"><span class="featured-poll__answer-radio"><input id="question_142_answer_692" name="question[142][answer]" type="radio" value="692" /></span><span class="featured-poll__answer-option"><label for="question_142_answer_692"><p><img alt="January 2018 cover" src="/ext/resources/images/magazine-cover-art/2018/January-2018x200.jpg" style="height: 267px; width: 200px;" /></p></label></span></div><div class="featured-poll__answer"><span class="featured-poll__answer-radio"><input id="question_142_answer_693" name="question[142][answer]" type="radio" value="693" /></span><span class="featured-poll__answer-option"><label for="question_142_answer_693"><p><img alt="February 2018 cover" src="/ext/resources/images/magazine-cover-art/2018/February-2018.jpg" style="height: 275px; width: 200px;" /></p></label></span></div><div class="featured-poll__answer"><span class="featured-poll__answer-radio"><input id="question_142_answer_694" name="question[142][answer]" type="radio" value="694" /></span><span class="featured-poll__answer-option"><label for="question_142_answer_694"><p><img alt="May 2018 cover" src="/ext/resources/images/magazine-cover-art/2018/May_2018.jpg" style="height: 265px; width: 200px;" /></p></label></span></div><div class="featured-poll__answer"><span class="featured-poll__answer-radio"><input id="question_142_answer_695" name="question[142][answer]" type="radio" value="695" /></span><span class="featured-poll__answer-option"><label for="question_142_answer_695"><p><img alt="June 2018 cover" src="/ext/resources/images/magazine-cover-art/2018/JUNE-2018.jpg" style="height: 267px; width: 200px;" /></p></label></span></div><div class="featured-poll__answer"><span class="featured-poll__answer-radio"><input id="question_142_answer_696" name="question[142][answer]" type="radio" value="696" /></span><span class="featured-poll__answer-option"><label for="question_142_answer_696"><p><img alt="August 2018 cover" src="/ext/resources/images/magazine-cover-art/2018/August-2018.jpg" style="height: 266px; width: 200px;" /></p></label></span></div><div class="featured-poll__answer"><span class="featured-poll__answer-radio"><input id="question_142_answer_697" name="question[142][answer]" type="radio" value="697" /></span><span class="featured-poll__answer-option"><label for="question_142_answer_697"><p><img alt="November 2018 cover" src="/ext/resources/images/magazine-cover-art/2018/November-2018.jpg" style="height: 269px; width: 200px;" /></p></label></span></div></div></div><input class="featured-poll__submit" name="commit" type="submit" value="Submit" /></form></div></div></section>
+
+  <section class="latest-article"><h1 class="latest-article__title"><a href="/topics/3396-executive-interviews" class="latest-article__title-link">Executive Interviews</a></h1><article class="latest-article__article"><figure class="latest-article__thumbnail"><a href="/articles/31635-executive-interviewkevin-wolf-partner-at-akin-gump-strauss-hauer-feld-llp" class="latest-article__thumbnail-link"><img alt="Kevin Wolf" class="latest-article__thumbnail-media" src="http://www.microwavejournal.com/ext/resources/images/Exectuive_images/Kevin-Wolf-web.jpg?1547429311" /></a></figure><div class="latest-article__content"><h1 class="latest-article__headline"><a href="/articles/31635-executive-interviewkevin-wolf-partner-at-akin-gump-strauss-hauer-feld-llp" class="latest-article__headline-link">Executive Interview: Kevin Wolf, Partner at Akin Gump Strauss Hauer &amp; Feld LLP</a></h1><div class="latest-article__teaser"><p><strong>Kevin Wolf</strong>, a partner at Akin Gump Strauss Hauer & Feld LLP and former U.S. Assistant Secretary of Commerce for Export Administration, discusses the export reform efforts during the Obama and Trump administrations and how recent legislation and export policy are addressing national security concerns about China.</p></div><a href="/articles/31635-executive-interviewkevin-wolf-partner-at-akin-gump-strauss-hauer-feld-llp" class="latest-article__read-more">Read More</a></div></article></section>
+
+
+  
+
+
+      </div>
+      
+<footer class="main-footer" id="main-footer">
+
+  <div id="div-gpt-ad-bottom-leaderboard" class="ad-bottom-leaderboard"></div>
+  <div class="main-footer__top-wrapper">
+    <div class="container">
+      <div id="footer-links-1" class="main-footer__links">
+        <div class='navigation' id='footer.column.1'><ul class='level1'><li class='level1-li first '><a href="http://www.microwavejournal.com" class="link2" data-background-image="" data-eventaction="footer.column.1-link" data-eventcategory="click" data-eventlabel="text: Home|url: http://www.microwavejournal.com" data-eventname="nav-menu-footer.column.1">Home</a></li><li class='level1-li  '><a href="http://www.microwavejournal.com/about" class="link2" data-background-image="" data-eventaction="footer.column.1-link" data-eventcategory="click" data-eventlabel="text: About Us|url: http://www.microwavejournal.com/about" data-eventname="nav-menu-footer.column.1">About Us</a></li><li class='level1-li  '><a href="http://www.microwavejournal.com/contact" class="link2" data-background-image="" data-eventaction="footer.column.1-link" data-eventcategory="click" data-eventlabel="text: Contact Us|url: http://www.microwavejournal.com/contact" data-eventname="nav-menu-footer.column.1">Contact Us</a></li><li class='level1-li  '><a href="http://www.microwavejournal.com/advertising" class="link2" data-background-image="" data-eventaction="footer.column.1-link" data-eventcategory="click" data-eventlabel="text: Advertise With Us|url: http://www.microwavejournal.com/advertising" data-eventname="nav-menu-footer.column.1">Advertise With Us</a></li><li class='level1-li  '><a href="http://www.microwavejournal.com/editorial" class="link2" data-background-image="" data-eventaction="footer.column.1-link" data-eventcategory="click" data-eventlabel="text: Submit An Article|url: http://www.microwavejournal.com/editorial" data-eventname="nav-menu-footer.column.1">Submit An Article</a></li><li class='level1-li  '><a href="/articles/28790" class="link2" data-background-image="" data-eventaction="footer.column.1-link" data-eventcategory="click" data-eventlabel="text: ERB Members|url: /articles/28790" data-eventname="nav-menu-footer.column.1">ERB Members</a></li><li class='level1-li  '><a href="http://www.microwavejournal.com/reprints" class="link2" data-background-image="" data-eventaction="footer.column.1-link" data-eventcategory="click" data-eventlabel="text: Reprints|url: http://www.microwavejournal.com/reprints" data-eventname="nav-menu-footer.column.1">Reprints</a></li><li class='level1-li  last'><a href="http://www.microwavejournal.com/privacy" class="link2" data-background-image="" data-eventaction="footer.column.1-link" data-eventcategory="click" data-eventlabel="text: Privacy|url: http://www.microwavejournal.com/privacy" data-eventname="nav-menu-footer.column.1">Privacy</a></li></ul></div>
+      </div>
+
+      <div id="footer-links-2" class="main-footer__links">
+        
+      </div>
+
+      <div class="main-footer__section">
+        <div class="main-footer__contact-block">
+          <div id="footer-contact">
+              <div class="editorial-content footer-contact-1 records">
+      <h3 class="editorial-content__title editorial-content-title">Microwave <span>Journal</span></h3>
+    
+    <div class="editorial-content__details record">
+      <div class="editorial-content__body body"><p>685 Canton St.<br />
+Norwood, MA 02062 USA<br />
+Tel: (781) 769-9750<br />
+Fax: (781) 769-5037</p>
+
+<p>For&nbsp;<strong>magazine subscriptions and newsletter</strong>&nbsp;customer service:<br />
+<br />
+Tel: 978-671-0449<br />
+Email:&nbsp;<a href="mailto:mwj@e-circ.net">mwj@e-circ.net</a></p></div>
+    </div>
+  </div>
+
+          </div>
+          <div id="footer-social">
+              <div class="editorial-content footer-social-1 records">
+    
+    <div class="editorial-content__details record">
+      <div class="editorial-content__body body"><a href="https://www.facebook.com/microwavejournal/" class="ec-facebook-link"></a>
+<a href="https://www.linkedin.com/groups/8429851" class="ec-linkedin-link"></a>
+<a href="https://twitter.com/@pathindle" class="ec-twitter-link"></a></div>
+    </div>
+  </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="footer-secondary">
+    <div class="container">
+      <div class="footer-secondary__logos">
+          <div class="editorial-content footer-logos-1 records">
+    
+    <div class="editorial-content__details record">
+      <div class="editorial-content__body body"><div class="ec-footer-secondary__logo"><a href="http://www.signalintegrityjournal.com" target="_blank"><img alt="SIJ" src="/ext/resources/article-images/2017/SIJ.jpg" style="width: 200px; height: 55px;" /></a></div>
+
+<div class="ec-footer-secondary__logo"><a href="http://www.ediconusa.com" target="_blank"><img alt="EDI CON 2018 Footer" src="/ext/resources/EDICON/2018/ediconusa2018_sm.jpg" style="width: 150px; height: 41px;" /></a></div>
+
+<div class="ec-footer-secondary__logo"><a href="http://www.horizonhouse.com" target="_blank"><img src="http://www.signalintegrityjournal.com/ext/resources/images/footer_logo_3.png" /></a></div>
+</div>
+    </div>
+  </div>
+
+      </div>
+
+      <div class="footer-secondary__copyright">
+          <div class="editorial-content footer-copyright-name-1 records">
+    
+    <div class="editorial-content__details record">
+      <div class="editorial-content__body body">Microwave Journal</div>
+    </div>
+  </div>
+
+        Copyright &copy;2019. All Rights Reserved
+        <div class="footer-secondary__epub-info">Design, CMS, Hosting &amp; Web Development | <a href="http://www.epublishing.com" target="_blank">ePublishing</a></div>
+      </div>
+    </div>
+  </section>
+</footer>
+
+    </div>
+  </div>
+
+    
+    <script async="async" type="text/javascript">
+//<![CDATA[
+require(['bundle/main.bundle']);
+//]]>
+</script>
+      <!--MV Script-->
+  <script type="text/javascript" src="https://www.cfmediaview.com/js/MVf.js"></script>
+  <script type="text/javascript">
+    var mvID = '96ADE5DB-CA3E-4EDA-AEA7-C5068303BBE1';
+  </script>
+  <script type="text/javascript" src="https://www.cfmediaview.com/js/MV.js">
+  </script>
+  <!--End MV Script-->
+<script>require(['jquery','jquery-cookie'], function($){
+  $(function() {
+    var $cookiePolicy = $('.cookie-policy');
+
+    if(!$.cookie("cookie_policy")){
+      $cookiePolicy.show();
+      $cookiePolicy.on('click', '#cookie-policy-close', function(evt) {
+        evt.preventDefault();
+        $.cookie('cookie_policy', 'true', { expires: 30 });
+        $cookiePolicy.remove();
+      });
+      $(document).on('epub.afterMenu', $cookiePolicy, function() {
+        $cookiePolicy.prependTo($('.mm-page'));
+      });
+    }
+  });
+});</script>
+    <script src="/javascripts/client.js" type="text/javascript"></script>
+    
+
+</body></html>
+
+
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

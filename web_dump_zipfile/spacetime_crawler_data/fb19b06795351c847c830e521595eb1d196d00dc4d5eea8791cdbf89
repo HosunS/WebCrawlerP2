@@ -1,0 +1,100 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD8357¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 18 Jun 2017 22:52:29 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"20a5-55243df793450"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 04:00:08 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY •<meta charset="utf-8" emacsmode="-*- markdown -*-">
+	**Virtual Try-on with Art-style transformation**
+	**CS216 Image Understanding**
+	**Final Project Report**
+	*Yu Guo (26642334)*
+	*Zahra Montazeri (84168407)*
+	*Spring 2017*
+
+# Problem Definition
+In this project, we propose a methodology for transorming a video to an art-style look as well as adding virtual accessories to it. In this study, we only tried eyeglasses but the approach is the same for other objects such as earing, mustache, etc. The reason why we chose this subject is because we were wondering if we can employ what we learnt in this course and make our own version of existing applications like virtual try-on. In our project, we not only explore adding objects in their right position and track them in a video fram, but also we transform the image into cartoony look so in this case, user would get custom styled look from their video as the output of our system. In the next section we discuss our approach in more detail.
+
+# Methodology
+Our aim is to finally apply the system on video, but we start by processing one single image. Below is the high lever pipeline of our approach.
+
+## Eye-glasses virtual try-on
+
+### Eyes detection in video
+In our last homework we implimented a detection function supporting multiscale approach. We used our code as starting for this project. Having several images as training data, and selecting the eye patch manually, we were able to get a robust eyes-detection function. The code is attached to this report. The ourput of this function is the box around the eye patch, regarding to the scale in which the high-score patch is found. Here is an example of the detected eyes patch on a test data.
+
+![](../results/pipeline/face_eyeDetection.png width=\pagewidth)
+
+### Motion smoothening
+Sequencing all frames of the view with the detected patch would give a flicker view of the detected bus during the video because the movement of the box is not consistant and smooth. So we take the position and the size of the rectangle, defining the eyes patch, for each frame of the video and smoothen it. We use two different guassian filter to smooth the position and the scaling of the detected patches. Now playing the video gives us a smooth movement of the detected patch. 
+
+![The thin lines give the smoothed results.](../results/pipeline2/eyeTrackingSmoothing.png width=\pagewidth)
+
+### Add the eyeglasses
+Having the detected position and proper scaling, we now need to place the eyeglasses in the specified position. Note that the eyeglasses is in the proper size with the head thanks to the multiscale detection.
+
+![](../results/pipeline/face_addGlasses.png width=\pagewidth)
+
+## Art-style filtering
+We found a lot of intersting approaches listed in the reference for transforming a photograph into cartoony-look view. In this project we are using the transform domain method which is a edge-aware filtering for smoothing the image. More detail is described in the following (see Zahra's report).
+
+### Edge-aware filter using transform domain
+In order to obtain art-style look from a photograph, one approach is to smooth the image while preserving the edges. The main idea of this paper is transform the image into a new domain, do the selective smoothing and transform the image back to the original space. For the 1D case, it gets a noisy image as an input. Now it checks the high contrast region which are basically the edges of the image. Comparing them with the threshld and decide if this edges is supposed to be preserved or not. If so, it will be expanded in the new domain by some user defined parameters, so that when we smooth the 1D signal, it doesn't get affected a lot since the edge is now distributed into more pixels. Now a regular smoothing filter passes through the whole signal and smooth everythings up. In this case the edge is distributed widely, it doesn't get smoothed but a littel. After having the signal smoothed, we transform back to the original domain by compressing the expanded regions back to their original position in spatial domain. This provides the 1D signal to be smooth while preserving the edges to be still in high contrast. Following are the illustration of 1D-signal example:
+
+![](../results/pipeline/NC.png width=\pagewidth)
+
+and here is the result after applying the filter:
+
+![](../results/pipeline/face_smooth.png width=\pagewidth)
+
+### Stylized look by adding high-contrast edges
+Exploring different approaches for getting cartoony look of the input image, we found the idea of enforcing the edges of the image, a pretty interesting idea. In this step we obtain the edge of the image and change it to some weighting and add it back to the original image. This helps us to produce image with even more stylized look. The following figure is the edge extracted from the input with some user-defined weighting.
+
+![](../results/pipeline/face_edge.png width=\pagewidth)
+
+### Results
+Adding high-contrast edges to edge-aware smoothed image, will give us the art-style result.
+
+![](../results/pipeline/face_final.png width=\pagewidth)
+
+
+# Pipeline
+To sum up our project, here is a pipline shows our methodolgy in one figure:
+
+![](../results/pipeline/pipeline.png width=\pagewidth)
+
+# More results
+To show the final result, we presented a video (<a href="https://www.youtube.com/watch?v=JRn8lE2VCW8" target="_blank">https://www.youtube.com/watch?v=JRn8lE2VCW8</a>) with the virtual eyeglasses in the proper positioning and scaling with the cartoony-look view, therefore for the report we are just illustrating some images (Left: Input; right: art-style with glasses).
+
+<div class="twentytwenty-container">
+    <img src="../data/charless.jpg" alt="Input">
+    <img src="../results/charless_sty.png" alt="Output">
+</div>
+
+<div class="twentytwenty-container">
+    <img src="../data/igravi.jpg" alt="Input">
+    <img src="../results/igravi_sty.png" alt="Output">
+</div>
+
+
+# Authors‚Äô Contribution
+Authors worked on this project together so they can learnt from all parts of the project. However, the project is splitted into two parts and each was in charge of one part. Yu did the virtual try-on section which contains the eyes-detection, motion smoothing and the adding the virtual glasses. Zahra was in charge of art-stly filtering which covers exploring different approaches for transformation of photographs to stylized-look images, Edge-aware filter using transform domain, and Stylized look by adding high-contrast edges. It was a great team work and we learnt a lot from the experience of this project.
+
+# References
+* Viola, Paul and Michael J. Jones, "Rapid Object Detection using a Boosted Cascade of Simple Features", Proceedings of the 2001 IEEE Computer Society Conference on Computer Vision and Pattern Recognition, 2001. Volume: 1, pp.511‚Äì518.
+* Gastal, Eduardo SL, and Manuel M. Oliveira. "Domain transform for edge-aware image and video processing." In ACM Transactions on Graphics (ToG), vol. 30, no. 4, p. 69. ACM, 2011.
+* Xu, Li, Jimmy Ren, Qiong Yan, Renjie Liao, and Jiaya Jia. "Deep edge-aware filters." In Proceedings of the 32nd International Conference on Machine Learning (ICML-15), pp. 1669-1678. 2015.
+* Adams, Andrew, Jongmin Baek, and Myers Abraham Davis. "Fast High‚ÄêDimensional Filtering Using the Permutohedral Lattice." In Computer Graphics Forum, vol. 29, no. 2, pp. 753-762. Blackwell Publishing Ltd, 2010.
+* Paris, Sylvain, Samuel W. Hasinoff, and Jan Kautz. "Local Laplacian filters: Edge-aware image processing with a Laplacian pyramid." ACM Trans. Graph. 30, no. 4 (2011): 68.
+
+
+
+End.
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

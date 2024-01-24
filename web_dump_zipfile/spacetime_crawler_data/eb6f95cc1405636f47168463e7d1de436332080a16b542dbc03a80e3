@@ -1,0 +1,91 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4066¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueXJattachment; filename=cs122b-2018-winter-project1-install-tomcat-on-aws.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=0181a907355469b1e05200e6; expires=Thu, 09 May 2019 16:10:39 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 16:10:39 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueYâThis tutorial introduces how to install tomcat 8.51 on AWS Ubuntu instance 14.04.
+
+== Start your AWS instance, and connect to it using SSH. ==
+For this step, please refer to the previous tutorial on how to use AWS.
+
+== Download Tomcat ==
+You can find latest version of tomcat 8.5.x fromÂ http://tomcat.apache.org/download-80.cgi. For example, the download link for tomcat 8.5.24 isÂ http://apache.mirrors.pair.com/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz
+
+Then use wget on your AWS machine to download it:
+
+{{{
+wget http://apache.mirrors.pair.com/tomcat/tomcat-8/v8.5.24/bin/apache-tomcat-8.5.24.tar.gz
+}}}
+After you download the tar.gz, decompress it to a desired destination (for example, I use /home/ubuntu/tomcat)
+
+{{{
+mkdir /home/ubuntu/tomcat
+}}}
+{{{
+tar xvf apache-tomcat-8.5.24.tar.gz -C /home/ubuntu/tomcat/ --strip-components=1
+}}}
+Now go toÂ /home/ubuntu/tomcat/, and use ls, you show see the following contents:
+
+[[Image(wiki:cs122b-2017-winter-project1-install-tomcat-on-aws:tomcat-dir.jpeg)]]
+
+== Configure Tomcat Memory ==
+By default, the maximum heap available for Tomcat may not be enough for large projects. Thus, we need to change the memory configuration by the following steps.
+
+Go toÂ /home/ubuntu/tomcat/bin/, and create a text file name setenv.sh, which contains the following lines:
+
+{{{
+#!/bin/sh
+env JAVA_OPTS="-Xmx512m -Xms128m"
+}}}
+Xmx means the maximum heap memory available for Tomcat, and Xms means the initial memory available after each garbage collection. You may vary them based on your machine capacity.
+
+== Change Access Setting of host-manager and manager ==
+host-manager and manager are two useful default applications provided by Tomcat to manage the Tomcat server. However, by default they can be accessed by only the machine hosting tomcat, i.e., localhost.
+
+To change this, you need to change /'''home/ubuntu/tomcat/webapps/host-manager/META-INF/context.xml''' and '''/home/ubuntu/tomcat/webapps/manager/META-INF/context.xml''' by deleting the following lines:
+
+{{{
+<Valve className="org.apache.catalina.valves.RemoteAddrValve"Â 
+
+      allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+}}}
+== Create a Tomcat User ==
+Now, create a tomcat user so that you can manage the tomcat server remotely.
+
+Edit /home/ubuntu/tomcat/conf/tomcat-users.xml, and add the following line:
+
+{{{
+<user username="tomcat" password="123456" roles="manager-gui,admin-gui"/>
+}}}
+[[Image(wiki:cs122b-2017-winter-project1-install-tomcat-on-aws:tomcat-users.jpeg)]]
+
+By doing so, you've created a user named "tomcat", and its password is "123456". You've also granted two roles "manager-gui" and "admin-gui" to it.
+
+== Start Tomcat ==
+Now you are ready to start tomcat by executing the following command:
+
+{{{
+/home/ubuntu/tomcat/bin/startup.sh
+}}}
+If you see this, then it means your tomcat has started properly.
+
+== Open port for AWS ==
+If you do the above steps on your local machine, then you should be able to accessÂ http://localhost:8080Â from your browser to access tomcat.
+
+However, on AWS, the port 8080 is not opened to public by default. Thus, you need to open it as follows.
+
+Go to your AWS console, and click the item under "'''Security Groups'''" for your instance.
+
+[[Image(wiki:cs122b-2017-winter-project1-install-tomcat-on-aws:security_group.jpeg)]]
+
+Click "Edit" to add more inbound rules:
+
+[[Image(wiki:cs122b-2017-winter-project1-install-tomcat-on-aws:add-rule.jpeg)]]
+
+== Access Tomcat ==
+Now you should be able to access your tomcat server usingÂ http://public_ip:8080, and you should be able to see the following page:
+
+[[Image(wiki:cs122b-2017-winter-project1-install-tomcat-on-aws:tomcat.jpeg)]]
+
+If you want to access manager or host-manager, just click the button on the right, and type the username/password you've set in the tomcat-users.xml file.
+
+[[Image(wiki:cs122b-2017-winter-project1-install-tomcat-on-aws:manager-pwd.jpeg)]]
+
+[[Image(wiki:cs122b-2017-winter-project1-install-tomcat-on-aws:manager.jpeg)]]
+
+>Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

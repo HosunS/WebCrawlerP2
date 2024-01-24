@@ -1,0 +1,53 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1657¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:39:33 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"679-3158ecb734340"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:56:23 GMTKraw_content¢DtypeEvalueYy// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 20 Apr 1997
+//
+// Multi-fragment TSP application
+//
+// Call by creating a MultiFragmentDistance from your original point set
+// and passing it with the other appropriate parameters to MultiFragment.
+// MultiFragment's behavior is undefined if not given a MultiFragmentDistance.
+
+#include "MultiFragment.h"
+#include "Error.h"
+#include <float.h>
+#include <iostream.h>
+
+double MultiFragment(unsigned long np, PointSet & ps, ClosestPairs & cp)
+{
+	double total = 0.0;
+	MultiFragmentDistance & mfd = (MultiFragmentDistance &) ps;
+	point a, b, left, right;
+	while (np > 2) {
+		total += cp(a,b);
+		left = mfd.partners[a];	// find other endpoints of frags
+		right = mfd.partners[b];
+		mfd.interact(left,right);		// merge frags keeping other endpts
+		if (left != a) { cp -= a; np--; }	// drop old endpts that now...
+		if (right != b) { cp -= b; np--; }	// ...are inside new fragment
+		cp.UpdateDistance(left,right);	// tell closest pairs about changed frags
+	}
+	// now down to one fragment with two endpoints.
+	// form tour by adding one more edge
+	total += mfd.base(left,right);
+	return total;
+}
+
+MultiFragmentDistance::MultiFragmentDistance(unsigned long npoints, PointSet & b)
+	: PointSet(npoints), base(b), partners(new point[npoints])
+{
+	if (partners == 0) error("MultiFragmentDistance: can't create partners");
+	for (long i = 0; i < npoints; i++)
+		partners[i] = i;
+}
+
+double MultiFragmentDistance::operator() (point i, point j)
+{
+	if (i == partners[j]) return MAX_DISTANCE;
+	else return base(i,j);
+}
+
+void MultiFragmentDistance::interact(point i, point j)
+{
+	partners[i] = j;
+	partners[j] = i;
+}Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,110 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3321¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:53:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"cf9-4da84bfb9b680"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 10:49:20 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYù/*
+  $Id: clusters.h 4034 2008-10-03 01:17:40Z rares $
+
+  Copyright (C) 2007 by The Regents of the University of California
+
+  Redistribution of this file is permitted under the terms of the 
+  BSD license
+
+  Date: 01/14/2006
+  Author: Rares Vernica <rares (at) ics.uci.edu>
+*/
+
+#ifndef _clusters_h_
+#define _clusters_h_
+
+#include "sample.h"
+#include "ppdtable/ppdtable.h"
+#include "cluster.h"
+
+typedef enum {LEXIC, MEDOIDS, MEDOIDS_IMP} ClusterType;
+
+typedef enum {ALL_RAND, CLOSE_LEX, CLOSE_RAND, CLOSE_UNIQUE} SampleType;
+
+class QueryVect
+{
+public:
+  unsigned query;
+  SimVect vect;
+  QueryVect() {}
+  QueryVect(unsigned query, SimVect vect): query(query), vect(vect) {}
+
+  bool operator==(const QueryVect &q) const {
+    return this == &q || query == q.query && vect == q.vect; }
+
+  friend ostream& operator<<(ostream& out, const QueryVect& qv);
+  friend istream& operator>>(istream& in, QueryVect& qv);
+};
+
+typedef multimap<unsigned, QueryVect> ContQueryPivot;
+
+class Clusters 
+{
+protected:
+  const vector<string> *data;
+  const unsigned clusterNo;
+  const SampleType sampleType;
+  const unsigned samplePer;
+  const unsigned queueSize, uniqueNo;
+  VectCluster *clusters;
+  PPDTable *ppdtable;
+  ContQueryPivot *queryPivot;
+
+public:
+  Clusters(const vector<string> *d, unsigned clusterNo, 
+           SampleType sampleType, unsigned samplePer,
+           unsigned queueSize, unsigned uniqueNo);
+
+  virtual void buildClusters() {};
+  void buildFTables();
+  void buildPPDtable();
+
+  void readClusters(const string &filename);
+  void writeClusters(const string &filename) const;
+
+  void readPPDtable(const string &filename);
+  void writePPDtable(const string &filename) const;
+
+  Clusters(const Clusters &cs);
+  virtual ~Clusters();
+
+  Clusters& operator=(const Clusters &cs);
+  bool operator==(const Clusters &c) const;
+
+  const size_t sizeCluster() const { return clusters->size(); }
+  const size_t sizeEntries() const;
+  const Cluster& getCluster(unsigned i) const { return (*clusters)[i]; }
+  PPDTable& getPPDtable() const { return *ppdtable; }
+  ContQueryPivot& getQueryPivot() const { return *queryPivot; }
+
+  void push_backCluster(const Cluster &c) { this->clusters->push_back(c); }
+
+  const VectClusterIt beginCluster() const { return clusters->begin(); }
+  const VectClusterIt endCluster() const { return clusters->end(); }
+
+  const ContPPDEntryIt beginPPDtable() const { return ppdtable->beginTable(); }
+  const ContPPDEntryIt endPPDtable() const { return ppdtable->endTable(); }
+  const ContPPDEntryIt findPPDtable(const PPDEntry &e) const { 
+    return ppdtable->findTable(e); }
+  const ContPPDEntryIt lower_boundPPDtable(const PPDEntry &e) const {
+    return ppdtable->lower_boundTable(e); }
+  const ContPPDEntryIt upper_boundPPDtable(const PPDEntry &e) const {
+    return ppdtable->upper_boundTable(e); }
+
+  bool isPivot(unsigned idx) const;
+  void insert(unsigned idx);
+  void erase(unsigned idx);
+
+  void hist(ostream &out, const vector<string> &data) const;
+  void stat(ostream &out, const vector<string> &data) const;
+  ostream& info(ostream &out);
+
+  friend ostream& operator<<(ostream &out, const Clusters &cs);
+  friend istream& operator>>(istream &in, Clusters &cs);
+};
+
+ostream& operator<<(ostream &out, const ContQueryPivot &cont);
+istream& operator>>(istream &in, ContQueryPivot &cont);
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

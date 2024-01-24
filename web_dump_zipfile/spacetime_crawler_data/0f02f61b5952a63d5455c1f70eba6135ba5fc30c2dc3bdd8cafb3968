@@ -1,0 +1,235 @@
+¶Ifinal_url¢DtypeEvaluex,https://www.ics.uci.edu/~eppstein/forbidden/Lhttp_headers¢DtypeEvalueâ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5126¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 12 Jan 2019 18:37:07 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"2e9e-57f471948e0b8-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:01:42 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY.û<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Forbidden Configurations in Discrete Geometry</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML" async>
+    </script>
+</head>
+
+<body>
+
+<h1 style="text-align:center" id="forbidden-configurations-in-discrete-geometry"><em>Forbidden Configurations in Discrete Geometry</em></h1>
+
+<h2 style="text-align:center" id="david-eppstein">David Eppstein</h2>
+
+<p style="text-align:center"><img src="cover.png" alt="Book cover: Forbidden Configurations in Discrete Geometry" /></p>
+
+<p><a href="https://www.cambridge.org/eppstein/">Published in 2018 by
+Cambridge University Press</a>, this book surveys many famous problems
+in the geometry of finite point sets in the plane, unifying them under
+the framework of properties that depend only on how triples of points
+are oriented and that behave monotonically as points are removed, and
+covering both mathematical and computational aspects of the subject. It
+is aimed at a range of readers from advanced undergraduates in
+mathematics and computer science to research professionals.</p>
+
+<h2 id="reviews">Reviews:</h2>
+
+<ul>
+  <li><a href="https://www.maa.org/press/maa-reviews/forbidden-configurations-in-discrete-geometry">Darren
+Glass, <em>MAA Reviews</em>, July 2018</a>: ‚ÄúThere is a lot to like about
+this book, as Eppstein does a good job of introducing the material to
+his readers. I will note that I think many mathematicians will find
+certain aspects of Eppstein‚Äôs writing style and notational conventions
+to be different from what we are used to, and while I found his choice
+of topics interesting I know that the book made me think of many more
+questions that he did not address. A reader who sticks with Eppstein
+will learn a lot about this exciting area that lies on the border of
+mathematics and computer science.‚Äù</li>
+</ul>
+
+<p style="text-align:center"><a href="https://11011110.github.io/blog/2018/05/17/book-arrival.html"><img src="http://www.ics.uci.edu/~eppstein/pix/forbidden-configurations/forbidden-configurations-m.jpg" alt="Forbidden Configurations in Discrete Geometry surrounded by geometric objects" width="80%" /></a></p>
+
+<h2 id="updates-and-errata">Updates and errata:</h2>
+
+<ul>
+  <li>
+    <p>Open Problem 3.14 (the maximum number of halving partitions) should have
+been credited to the paper that introduced this problem:</p>
+
+    <p class="ref">Erd≈ës, Paul, Lov√°sz, L√°szl√≥; Simmons, A., and Straus, Ernst
+G. 1973. <a href="https://users.renyi.hu/~p_erdos/1973-07.pdf">Dissection graphs of planar point
+sets</a>. Pages 139‚Äì149 of: <em>A
+survey of combinatorial theory (Proc. Internat. Sympos., Colorado State
+Univ., Fort Collins, Colo., 1971)</em>. Amsterdam: North-Holland.</p>
+  </li>
+  <li>
+    <p>Section 6.5 (property testing) should have credited the following paper, where the model of property testing used here originates:</p>
+
+    <p class="ref">Czumaj, Artur, Sohler, Christian, and Ziegler, Martin.
+2000. <a href="https://doi.org/10.1007/3-540-45253-2_15">Property testing in computational
+geometry</a>. Pages 155‚Äì166
+of: <em>8th European Symposium on Algorithms (ESA 2000)</em>. Lecture Notes
+in Computer Science, vol. 1879, Berlin: Springer.</p>
+  </li>
+  <li>
+    <p>Theorem 7.3 states that, under the <a href="https://en.wikipedia.org/wiki/Exponential_time_hypothesis">exponential time
+hypothesis</a>,
+no algorithm with running time $n^{o(\sqrt{k})}$ can test whether a
+configuration of size $k$ is a subconfiguration of an input of size $n$.
+The proof uses convex embedding to reduce from finding cliques in
+graphs. The conclusion can be strengthened to running time $n^{o(k/\log
+k)}$ using a similar reduction from labeled subgraph isomorphism (this
+problem is described e.g. in Eppstein and Lokshtanov 2018).</p>
+  </li>
+  <li>
+    <p>Open problem 7.6 (the existence of a finite set of obstacles such that
+finding a $k$-point set avoiding the obstacles is not fixed-parameter
+tractable) has been solved by the following paper:</p>
+
+    <p class="ref">Eppstein, David, and Lokshtanov, Daniel. 2018. <a href="https://arxiv.org/abs/1808.02162">The
+parameterized complexity of finding point sets with hereditary
+properties</a>. Pages 11:1‚Äì11:14 of:
+<em>13th International Symposium on Parameterized and Exact Computation
+(IPEC 2018)</em>. Leibniz International Proceedings in Informatics,
+Dagstuhl: Leibniz-Zentrum f√ºr Informatik, to appear.</p>
+
+    <p>It shows that under standard complexity-theoretic
+assumptions there is no FPT algorithm for this general problem: for the
+three obstacles below, this problem is $\mathsf{W}[1]$-hard,
+and no algorithm can solve the problem in time $n^{o(k/\log k)}$ unless the
+<a href="https://en.wikipedia.org/wiki/Exponential_time_hypothesis">exponential time hypothesis</a>
+fails.</p>
+
+    <p style="text-align:center"><img src="three-obstacles.svg" alt="Three obstacles for a hard property" /></p>
+  </li>
+  <li>
+    <p>Theorem 9.3 states in part that finding the largest general-position
+subset is $\mathsf{NP}$-hard and $\mathsf{APX}$-hard, and Theorem 9.5 states that it is
+fixed-parameter tractable in the size of the subset. The same results
+are proven in:</p>
+
+    <p class="ref">Froese, Vincent, Kanj, Iyad, Nichterlein, Andr√©, and Niedermeier, Rolf.
+2017. <a href="https://doi.org/10.1142/S021819591750008X">Finding points in general
+position</a>. <em>Int. J. Comput.
+Geom. Appl.</em> 27(4), 277‚Äì296.</p>
+  </li>
+  <li>
+    <p>Theorem 9.13 of Payne and Wood implies that every $n$-point set has
+a subset of size $\Omega(\sqrt{n/\log n})$ that is either collinear
+or in general position. A new result of Hajnal and Szemer√©di
+improves this to $\Omega(\sqrt{n\log\log n/\log n})$:</p>
+
+    <p class="ref">Hajnal, P√©ter, and Szemer√©di, Endre. 2018. <a href="https://doi.org/10.1007/978-3-662-57413-3_8">Two geometrical applications
+of the semi-random method</a>.
+Pages 188‚Äì199 of: <em>New Trends in Intuitive Geometry</em>. Bolyai Society
+Mathematical Studies, vol. 27, Berlin: Springer.</p>
+  </li>
+  <li>
+    <p>Theorem 10.12 on point sets with no four in line and no general-position
+subset larger than $O(n^{5/6+\epsilon})$ is credited to a 2017 preprint
+by Balogh and Solymosi. Their paper has now been published. It is:</p>
+
+    <p class="ref">Balogh, Jozsef, and Solymosi, Jozsef. 2018. <a href="https://doi.org/10.19086/da.4438">On the number of points in
+general position in the plane</a>.
+<em>Discrete Analysis</em> 2018(16), 20pp.</p>
+  </li>
+  <li>
+    <p>Observation 11.7 gives asymptotic bounds on the largest convex polygon
+in a grid, and figure 11.3 gives an example of the largest polygon
+in a $5\times 5$ grid. More precise asymptotic bounds for the square grid
+were given by</p>
+
+    <p class="ref">Acketa, Dragan M. and ≈Ωuniƒá, Jovi≈°a D. 1995.
+<a href="https://doi.org/10.1016/0097-3165(95)90058-6">On the maximal number of edges of convex digital polygons included into an
+$m\times m$-grid</a>.
+<em>J. Combin. Theory Ser. A</em> 69(2), 358‚Äì368.</p>
+
+    <p>Exact values were determined by</p>
+
+    <p class="ref">Kisman,  Derek, Guy, Richard, and Fink, Alex. 2009.
+<a href="http://www.maths.qmul.ac.uk/~fink/polygon6.pdf">Patulous pegboard polygons</a>.
+Pages 59‚Äì68 of: <em>Mathematical Wizardry for a Gardner</em>.
+Wellesley, MA: A K Peters.</p>
+
+    <p>The following paper considers similar problems for other shapes than squares:</p>
+
+    <p class="ref">B√°r√°ny, Imre and Prodromou, Maria. 2006.
+<a href="https://doi.org/10.1007/BF02773612">On maximal convex lattice polygons inscribed in a plane convex
+set</a>. 
+<em>Israel J. Math.</em> 154, 337‚Äì360.</p>
+
+    <p>See also my blog post ‚Äú<a href="https://11011110.github.io/blog/2018/09/05/big-convex-polygons.html">big convex polygons in
+grids</a>‚Äù
+for more on this topic.</p>
+  </li>
+  <li>
+    <p>Open problem 11.10 (the sample size for property testing convex
+position) was already answered by Czumaj, Sohler, and Ziegler (2000). The
+optimal sample size is $\Theta(n^{2/3})$.</p>
+
+    <p>One proof of this (not the one they give) is to consider any point $p$
+of high Tukey depth, observe that logarithmically many samples are
+enough to have high probability of enclosing $p$, and consider the
+nonconvex quadruples of points formed by $p$ and three given points. If
+linearly many quadruples are disjoint (except for $p$) then one is
+likely to be found by the remaining sample points; otherwise, deleting
+all of the points in a maximal disjoint family of quadruples shows that
+the input is near-convex.</p>
+  </li>
+  <li>
+    <p>Footnotes 6 and 7 of section 13.4 give two references for sets of seven
+points in the plane, all at integer distances, with no three on a line
+and no four on a circle. Many more such sets with the additional property
+that all coordinates are integers (including the set with the smallest
+possible diameter) were found by:</p>
+
+    <p class="ref">Kurz, Sascha, Noll, Landon Curt, Rathbun, Randall, and Simmons,
+Chuck. 2014. <a href="https://arxiv.org/abs/1312.2318">Constructing 7-clusters</a>.
+<em>Serdica J. Comput.</em> 8(1), 47‚Äì70.</p>
+
+    <p>Their paper provides several additional references to earlier work
+on this problem.</p>
+  </li>
+  <li>
+    <p>Footnote 4 at the start of Section 16.3 lists three papers on linear
+lower bounds for universal point sets. A new fourth paper improves
+them, but the bound is still linear:</p>
+
+    <p class="ref">Scheucher, Manfred, Schrezenmaier, Hendrik, and Steiner, Raphael. 2018.
+A note on universal point sets for planar graphs. Electronic preprint
+<a href="https://arxiv.org/abs/1811.06482">https://arxiv.org/abs/1811.06482</a>.</p>
+  </li>
+  <li>
+    <p>The proof of Theorem 16.13 (universal point sets cannot be covered by
+few lines) used the fact that certain graphs, the Apollonian networks,
+cannot be drawn with their points on a bounded number of lines. This was
+already known for a different class of planar graphs, the maximal planar
+graphs of small dual <a href="https://en.wikipedia.org/wiki/Shortness_exponent">shortness
+exponent</a>. See the
+following two papers:</p>
+
+    <p class="ref">Ravsky, Alexander, and Verbitsky, Oleg. 2011. <a href="https://doi.org/10.1007/978-3-642-25870-1_27">On collinear sets in
+straight-line drawings</a>.
+Pages 295‚Äì306 of: <em>37th International Workshop on Graph-Theoretic
+Concepts in Computer Science (WG 2011)</em>. Lecture Notes in Computer
+Science, vol. 6986, Berlin: Springer.</p>
+
+    <p class="ref">Chaplick, Steven, Fleszar, Krzysztof, Lipp, Fabian, Verbitsky, Oleg, and
+Wolff, Alexander. 2016. <a href="https://doi.org/10.1007/978-3-319-50106-2_14">Drawing graphs on few lines and few
+planes</a>. Pages 166‚Äì180 of:
+<em>24th International Symposium on Graph Drawing and Network
+Visualization</em>. Lecture Notes in Computer Science, vol. 9801, Berlin:
+Springer.</p>
+  </li>
+  <li>
+    <p>In the references and index, the paper ‚ÄúPoint sets with many $k$-sets‚Äù
+(<em>Discrete Comput. Geom.</em> 2001) is credited to Gabor T√≥th. The correct
+author of the paper is Geza T√≥th.</p>
+  </li>
+</ul>
+
+<p style="text-align:center"><a href="https://mathstodon.xyz/@11011110/101402305412043483"><img src="https://www.ics.uci.edu/~eppstein/pix/soda-books/books-m.jpg" alt="The Cambridge University Press display table at SODA 2019" width="80%" /></a></p>
+
+<p style="text-align:center"><a href="https://www.ics.uci.edu/~eppstein/" rel="me">David Eppstein</a> ‚Äì <a href="https://11011110.github.io/blog/" rel="me">0xDE</a> ‚Äì <a href="https://mathstodon.xyz/@11011110" rel="me">@11011110</a></p>
+
+
+</body></html>
+Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

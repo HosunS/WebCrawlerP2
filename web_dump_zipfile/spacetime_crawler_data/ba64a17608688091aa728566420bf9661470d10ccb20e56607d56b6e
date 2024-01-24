@@ -1,0 +1,311 @@
+�Ifinal_url�DtypeLhttp_headers�DtypeEvalue��Ak�DtypeEvalueNContent-LengthAv�DtypeEvalueD3036�Ak�DtypeEvalueMLast-ModifiedAv�DtypeEvalueXThu, 10 Jan 2019 11:02:02 GMT�Ak�DtypeEvalueXAccess-Control-Allow-OriginAv�DtypeEvalueA*�Ak�DtypeEvalueXAli-Swift-Global-SavetimeAv�DtypeEvalueJ1549541451�Ak�DtypeEvalueKContent-MD5Av�DtypeEvalueXlumx5dgJAy1KbK9SmEG7uw==�Ak�DtypeEvalueQx-oss-server-timeAv�DtypeEvalueB10�Ak�DtypeEvaluePx-oss-request-idAv�DtypeEvalueX5C5E65FCDB95D7BB10F696BD�Ak�DtypeEvalueDDateAv�DtypeEvalueXSat, 09 Feb 2019 05:32:44 GMT�Ak�DtypeEvalueCAgeAv�DtypeEvalueA0�Ak�DtypeEvalueTx-oss-hash-crc64ecmaAv�DtypeEvalueS1825254728165771734�Ak�DtypeEvalueGX-CacheAv�DtypeEvalueX%HIT TCP_REFRESH_HIT dirn:11:424309262�Ak�DtypeEvalueMAccept-RangesAv�DtypeEvalueEbytes�Ak�DtypeEvalueGEagleIdAv�DtypeEvalueX2ff6179815496903632498294e�Ak�DtypeEvalueSx-oss-storage-classAv�DtypeEvalueHStandard�Ak�DtypeEvalueFServerAv�DtypeEvalueGTengine�Ak�DtypeEvalueQx-oss-object-typeAv�DtypeEvalueFNormal�Ak�DtypeEvaluePX-Swift-SaveTimeAv�DtypeEvalueXSat, 09 Feb 2019 05:32:44 GMT�Ak�DtypeEvalueXAccess-Control-Allow-MethodsAv�DtypeEvalueRGET, POST, OPTIONS�Ak�DtypeEvalueCViaAv�DtypeEvalueXbcache25.l2ot7-1[394,304-0,H], cache16.l2ot7-1[842,0], cache6.us10[849,200-0,H], cache4.us10[854,0]�Ak�DtypeEvalueQX-Swift-CacheTimeAv�DtypeEvalueD3600�Ak�DtypeEvaluePContent-EncodingAv�DtypeEvalueDgzip�Ak�DtypeEvalueDVaryAv�DtypeEvalueOAccept-Encoding�Ak�DtypeEvalueJConnectionAv�DtypeEvalueJkeep-alive�Ak�DtypeEvalueDETagAv�DtypeEvalueX""96E9B1E5D809032D4A6CAF529841BBBB"�Ak�DtypeEvalueXAccess-Control-Allow-HeadersAv�DtypeEvalueX.Origin, X-Requested-With, Content-Type, Accept�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueXtext/html; charset=utf-8�Ak�DtypeEvalueSTiming-Allow-OriginAv�DtypeEvalueA*Kraw_content�DtypeEvalueY1Y<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>会议专题页</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge"/>
+    <link rel="shortcut icon" href="//cdn.smarket.net.cn/images/logo.ico" />
+    <link rel="stylesheet" href="../css/tool.css">
+</head>
+<body class="gray-bg" style="overflow: hidden">
+<!--监控开始-->
+<script src="//cdn.smarket.net.cn/js/templateMonitor.js"></script>
+<!--监控结束-->
+
+<div class="loading_box"></div>
+
+<div class="header-box">
+    <div class="g-header">
+        <div class="g-container">
+            <a href="javascript:void(0);" class="logo">
+                <img src="" data-bind="attr: {alt: title}"
+                     data-smarket="logo" data-smarket-name="logo" data-smarket-scope="图片设置"/>
+            </a>
+            <!-- ko if: !isLogin() && isOpenMember() != '0' -->
+            <div class="user">
+                <a data-bind="attr: {href: loginUrl()}" class="link-login" ><i class="icon-l-login"></i>登录 </a>
+                <a data-bind="attr: {href: registerUrl()}" class="link-register"><i class="icon-l-register"></i>注册</a>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: isLogin() && isOpenMember() != '0' -->
+            <div class="user">
+                <a href="javascript:;" class="user-info">
+                    <!--<i class="icon-l-login"></i>-->
+                    <img data-bind="attr: { src: !memberInfo().headImg ? '../images/img-head-default.jpg' : memberInfo().headImg}">
+                    <span data-bind="text: memberInfo().name ? memberInfo().name : ''"></span>
+                </a>
+                <a href="javascript:;" data-bind="click: logout"><i class="icon-l-logout"></i>退出</a>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+
+<div class="g-banner ban-03">
+    <div class="banner" style=""
+         data-smarket="banner" data-smarket-name="KV图" data-smarket-scope="图片设置">
+        <div class="meeting-title">
+            <div class="meeting-title-con" data-bind="text: title"  style=""
+                 data-smarket="title" data-smarket-name="会议标题" data-smarket-scope="标题设置">
+            </div>
+        </div>
+        <div class="event-time">
+            <!-- ko if: !!startTime() -->
+            <div class="pdiv" style=""
+                 data-smarket="time" data-smarket-name="会议时间" data-smarket-scope="标题设置">
+                <i class="icon-time"></i>
+                <span data-bind="text: startTime() ? new Date(startTime()*1000).Format('yyyy年MM月dd日 HH:mm') : ''"></span>
+            </div>
+            <!-- /ko -->
+            <!-- ko if: !!startTime() && address() != '' -->
+            <span class="line"></span>
+            <!--/ko -->
+            <!-- ko if:  address() != '' -->
+            <div class="pdiv" style=""
+                 data-smarket="area" data-smarket-name="会议地点" data-smarket-scope="标题设置">
+                <i class="icon-address"></i>
+                <span data-bind="text: address"></span>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+
+<!--会议状态 start-->
+<div class="event-state">
+    <div class="g-container">
+        <!-- ko if: diffDay() > 0 -->
+        <p>距大会开幕还有<strong data-bind="html: setDiffNum(diffDay())"></strong>天</p>
+        <!-- /ko -->
+        <!-- ko if: !isFrozen() -->
+        <div class="btn-signin">
+            <!-- ko if: signUpStatus() == 0 && !isEnd() && signUpUrl  -->
+            <!-- ko if: !isLogin() && isOpenMember() != '0' -->
+            <a data-bind="attr: {href: loginUrl},visible:!isEnd()" class="event-signin">我要报名</a>
+            <!-- /ko -->
+            <!-- ko if: isLogin() || isOpenMember() == '0' -->
+            <a data-bind="attr: {href: signUpUrl},visible:!isEnd()" class="event-signin">我要报名</a>
+            <!-- /ko-->
+            <!-- /ko -->
+            <!-- ko if: signUpStatus() == 1 && !isEnd() -->
+            <a data-bind="attr: {href: signUpUrl}"  class="event-signin audit">审核中…</a>
+            <!-- /ko -->
+            <!-- ko if: (signUpStatus() == 2 || signUpStatus() == 3) && !isEnd() -->
+            <a data-bind="attr: {href: signUpUrl}" class="event-signin registered">报名成功</a>
+            <!-- /ko -->
+            <!-- ko if: signUpStatus() == 4 && !isEnd() -->
+            <a data-bind="attr: {href: signUpUrl}" class="event-signin refuse">已拒绝</a>
+            <!-- /ko -->
+            <!-- ko if: isEnd() -->
+            <a href="javascript:;" data-bind="visible:!isEnd()" class="event-signin registered">会议已结束</a>
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
+</div>
+<!--会议状态 end-->
+
+<!--模块标题 start-->
+<div class="module-title">
+    <div class="g-container">
+        <div class="title active" id="tit-event" data-smarket="infobox" data-smarket-name="会议详情" data-smarket-scope="栏目设置">
+            <p data-smarket="info" data-smarket-name="会议简介标题" data-smarket-scope="栏目设置"></p>
+        </div>
+        <div class="title" id="tit-guest" data-smarket="guestbox" data-smarket-name="会议嘉宾" data-smarket-scope="栏目设置">
+            <p data-smarket="guest" data-smarket-name="嘉宾标题" data-smarket-scope="栏目设置"></p>
+        </div>
+        <div class="title" id="tit-agenda" data-smarket="angndebox" data-smarket-name="会议日程" data-smarket-scope="栏目设置">
+            <p data-smarket="angnde" data-smarket-name="日程标题" data-smarket-scope="栏目设置"></p>
+        </div>
+    </div>
+</div>
+<!--模块标题 end-->
+
+<!--简介 start-->
+<div class="g-main bg_white" id="event" data-smarket="infobox" data-smarket-name="会议详情" data-smarket-scope="栏目设置">
+    <div class="g-con enent-introduce">
+        <div class="enent-introduce-l"><img src="../images/icon-yinhao1.png" alt=""/></div>
+        <div class="enent-introduce-m">
+            <!-- ko if: desc != "" -->
+            <p data-bind="html: desc"></p>
+            <!-- /ko -->
+            <p data-bind="if: desc() == ''">暂无简介</p>
+        </div>
+        <div class="enent-introduce-r"><img src="../images/icon-yinhao2.png" alt=""/></div>
+    </div>
+</div>
+<!--简介 end-->
+
+<!--嘉宾 start-->
+<div class="g-main enent-guest" id="guest" data-smarket="guestbox" data-smarket-name="会议嘉宾" data-smarket-scope="栏目设置">
+    <div class="g-container">
+        <div class="swiper-box">
+            <div class="swiper-container">
+                <p class="nodata" data-bind="if: guests().length == 0">暂无数据</p>
+                <!-- ko if: guests().length > 0 -->
+                <ul class="guest-list swiper-wrapper">
+                    <!-- ko foreach: guests -->
+                    <li class="swiper-slide active">
+                        <div class="guest-img"><img data-bind="attr: {src: getImageByMapId($data.imageMapId), alt:$data.name}"/></div>
+                        <div class="guest-info">
+                            <div class="guest-name" data-bind="text: $data.name"></div>
+                            <p data-bind="text: $data.enterprise"></p>
+                            <p data-bind="text: $data.duty"></p>
+                        </div>
+                    </li>
+                    <!-- /ko -->
+                </ul>
+                <!-- /ko -->
+            </div>
+            <!-- ko if: guests().length > 3 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <!-- /ko -->
+        </div>
+
+    </div>
+</div>
+<!--嘉宾 end-->
+
+<!--日程 start-->
+<div class="g-main" id="agenda" data-smarket="angndebox" data-smarket-name="会议日程" data-smarket-scope="栏目设置">
+    <!-- ko foreach: agendas -->
+    <div class="g-con enent-agenda">
+        <!-- ko if: $data.showSubAgenda -->
+        <strong class="agenda-date" data-bind="text:new Date(agendaDate*1000).Format('M月dd日');"></strong>
+        <!-- /ko -->
+        <!-- ko if: items.length > 0 -->
+        <table>
+            <thead>
+            <tr>
+                <th class="w212">时间</th>
+                <th class="w695">主题</th>
+                <th class="w189">主讲人</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- ko foreach: items -->
+            <tr>
+                <td class="fbig" data-bind="text:new Date(startTime*1000).Format('HH:mm')+'-'+new Date(endTime*1000).Format('HH:mm')"></td>
+                <td class="left" data-bind="text:name"></td>
+                <td class="light">
+                    <!-- ko foreach: guests -->
+                    <span data-bind="text: $data.name"></span>
+                    <!-- /ko -->
+                </td>
+            </tr>
+            <!-- /ko -->
+            </tbody>
+        </table>
+        <!-- /ko -->
+        <!-- ko foreach: itemsSubSeminar -->
+        <div class="subtempsrt" style=""
+             data-smarket="subseminar" data-smarket-name="分会场日程" data-smarket-scope="栏目设置">
+            <strong class="agenda-sub">
+                <span data-bind="text:subSeminarName"></span>
+                <small data-bind="text:subSeminarAddress"></small>
+            </strong>
+            <table>
+                <thead>
+                <tr>
+                    <th class="w212">时间</th>
+                    <th class="w695">主题</th>
+                    <th class="w189">主讲人</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- ko foreach: items -->
+                <tr>
+                    <td class="fbig" data-bind="text:new Date(startTime*1000).Format('HH:mm')+'-'+new Date(endTime*1000).Format('HH:mm')"></td>
+                    <td class="left" data-bind="text:name"></td>
+                    <td class="light">
+                        <!-- ko foreach: guests -->
+                        <span data-bind="text: name"></span>
+                        <!-- /ko -->
+                    </td>
+                </tr>
+                <!-- /ko -->
+                <!-- ko if: items.length==0 -->
+                <tr>
+                    <td class="nodata" colspan="3">暂无日程</td>
+                </tr>
+                <!-- /ko -->
+
+                </tbody>
+            </table>
+        </div>
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+</div>
+<!--日程 end-->
+
+<div class="g-footer">
+    ©2015 Sinobase Marketing Technology Corporation. All Rights Reserved.
+</div>
+
+<!-- ko if: !isFrozen() -->
+<div class="qr-code">
+    <!-- ko if: signUpQrCodeState() -->
+    <div>
+        <p id="signUpQrCode"></p>
+        <div>扫码立即报名</div>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: isShowWeChatQR() -->
+    <div>
+        <img data-bind="attr: {src: weChatQR() }">
+        <div>扫码关注微信</div>
+    </div>
+    <!-- /ko -->
+</div>
+<!-- /ko -->
+
+<script src="//cdn.smarket.net.cn/javascript/SmarketComponents/CommonScript/s2Config.js"></script>
+<script src="//cdn.smarket.net.cn/javascript/SmarketComponents/CommonScript/templateConfig.js"></script>
+<script src="../javascript/app.js"></script>
+<script src="//cdn.smarket.net.cn/js/interact.js"></script>
+<script>
+  activeRecord.on('compatible');
+</script>
+<script src="../javascript/eventDetail.js"></script>
+<script>
+    $(function () {
+        var titTop = $(".module-title").offset().top,
+            titH = $(".module-title").innerHeight();
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > (titTop)) {
+                $(".module-title").css({position: 'fixed', top: '0', left: '0'});
+            } else {
+                $(".module-title").css({position: 'static'});
+            }
+        })
+
+        //锚点链接
+        $(".title").click(function () {
+            $(".title").removeClass('active');
+            $(this).addClass('active');
+            var _target = $(this).attr('id').substr(4);
+            if ($(".module-title").css("position") == "fixed") {
+                var rollTop = $('#' + _target).offset().top - titH;
+                $("html,body").animate( {scrollTop: rollTop}, 300);
+            } else {
+                var rollTop = $('#' + _target).offset().top - 2 * titH;
+                $("html,body").animate({scrollTop: rollTop}, 300);
+            }
+        })
+
+    });
+    //获取会议logo
+    function getImageByMapId(mapId) {
+        if (mapId) {
+            return window.configs["sbaseUrl"] + "?mappingId=" + mapId;
+        } else {
+            return '../images/default.jpg';
+        }
+    }
+
+</script>
+</body>
+</html>Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

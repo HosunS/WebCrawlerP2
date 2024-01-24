@@ -1,0 +1,49 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1394¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 25 Jan 2006 20:13:04 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"572-40b347dd29400"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 22:31:05 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYr<html>
+<head>
+<title>Code Fragment</title>
+</head>
+
+<body text=#000000>
+<center>
+</center><br><br><dl><dd><pre>
+
+<font color=#ff0080>/**
+ * Geometric Progression
+ */</font>
+<font color=#ff8000>class</font> <font color=#8000a0>GeomProgression </font><font color=#ff8000>extends</font> Progression {
+
+  <font color = #ff0080>/** Base. */</font>
+  <font color=#8000a0><font color=#8000a0>protected</font> </font>long base;
+
+  <font color=#ff0080>// Inherits variables first and cur.</font>
+
+  <font color = #ff0080>/** Default constructor setting base 2. */</font>
+  <font color=#0000ff>GeomProgression</font>() {
+    <font color=#ff8000>this</font><font color=#0000ff></font>(2);
+  }
+
+  <font color=#ff0080>/** Parametric constructor providing the base.
+   *
+   * @param b base of the progression.
+   */</font>
+  <font color=#0000ff>GeomProgression</font>(long b) {
+    base = b;
+    first = 1;
+    cur = first;
+  }
+
+  <font color=#ff0080>/** Advances the progression by multiplying the base with the current value.
+   * 
+   * @return next value of the progression
+   */</font>
+  <font color=#8000a0><font color=#8000a0>protected</font> </font>long <font color=#0000ff>nextValue</font>() {
+    cur *= base;
+    <font color=#8000a0><font color=#ff8000>return</font> </font>cur;
+  }
+
+  <font color=#ff0080>//  Inherits methods firstValue() and printProgression(int).</font>
+}
+</dl>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

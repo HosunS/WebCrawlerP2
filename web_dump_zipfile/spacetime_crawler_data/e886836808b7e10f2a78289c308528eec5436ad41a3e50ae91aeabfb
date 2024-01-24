@@ -1,0 +1,55 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1605¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 27 Sep 2012 08:02:18 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"645-4caaa5baa9680"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 05:09:40 GMTKraw_content¢DtypeEvalueYE// GuessNumberGame.java
+//
+// ICS 22 / CSE 22 Fall 2012
+// In-Lab Assignment #0
+//
+// This class implements the "engine" for the "guess a number" game.
+// The engine is in charge of choosing a random number, comparing the
+// user's guesses to the target number, and responding accordingly.
+//
+// Notice that this class does not perform input/output.  This is by
+// design.  I've separated the user interface and the "engine" into
+// two classes, for a very good reason: it allows the user interface
+// to be changed without affecting the engine at all.  This may seem
+// silly in a program as small as this one, but I'd like you to see
+// the idea, as early as possible, that the name of the game is
+// writing relatively simple components that do single, targeted
+// jobs and know as little as possible about one another.  As it
+// stands now, GuessNumberGame doesn't rely on the fact that this
+// program's user interface uses the console.  That means that we
+// could replace the user interface with a graphical one without
+// making any modifications to GuessNumberGame.
+
+import java.util.Random;
+
+
+public class GuessNumberGame
+{
+	private static Random r = new Random();
+
+	private int targetNumber;
+	
+	
+	public GuessNumberGame(int range)
+	{
+		targetNumber = r.nextInt(range) + 1;
+	}
+
+
+	public GuessResponse checkGuess(int guess)
+	{
+		if (targetNumber < guess)
+		{
+			return GuessResponse.TARGET_IS_SMALLER;
+		}
+		else if (targetNumber > guess)
+		{
+			return GuessResponse.TARGET_IS_LARGER;
+		}
+		else
+		{
+			return GuessResponse.CORRECT;
+		}
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

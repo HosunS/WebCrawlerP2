@@ -1,0 +1,37 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC861¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 29 Jan 2014 01:00:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"35d-4f111783f6040"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 21:08:41 GMTKraw_content¢DtypeEvalueY]import java.util.*;
+
+public class DuckSimulator {
+	
+	public static void processDucks(List<Duck> ducks) {
+		for (Duck d : ducks) {
+			System.out.println("--------------------");
+			System.out.println("Name: " + d.getClass().getName());
+			d.display();
+			d.performQuack();
+			d.performFly();
+			d.swim();
+		}
+		System.out.println("Done processing ducks\n");
+	}
+	
+	public static void main(String[] args) {
+		List<Duck> ducks = new LinkedList<Duck>();
+		
+		Duck myDuck = new RubberDuck();
+		
+		ducks.add(new MallardDuck());
+		ducks.add(new DecoyDuck());
+		ducks.add(new RedheadDuck());
+		ducks.add(myDuck);
+		
+		processDucks(ducks);
+		
+		// change my ducks' behavior dynamically to make a rubber
+		// duck that can fly rocket powered and speak
+		myDuck.setFlyBehavior(new FlyRocketPowered());
+		myDuck.setQuackBehavior(new Speak());
+		
+		processDucks(ducks);
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

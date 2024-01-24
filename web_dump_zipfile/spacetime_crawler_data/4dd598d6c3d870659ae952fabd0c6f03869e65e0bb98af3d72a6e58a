@@ -1,0 +1,238 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueä¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2758¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 10 Feb 2019 02:40:54 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 01 Jul 2010 15:37:05 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"1fa5-48a553e110a40-gzip"¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueMmax-age=21600¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:40:54 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvaluey•<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang='en' xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for Linux (vers 6 November 2007), see www.w3.org" />
+
+  <title>XML Processing Model WG -- 01 Jul 2010</title>
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/StyleSheets/base.css" />
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/StyleSheets/public.css" />
+  <link type="text/css" rel="STYLESHEET" href=
+  "http://www.w3.org/2004/02/minutes-style.css" />
+  <meta content="XML Processing Model WG" name="Title" />
+  <meta content="text/html; charset=utf-8" http-equiv=
+  "Content-Type" />
+</head>
+
+<body>
+  <p><a href="http://www.w3.org/"><img src=
+  "http://www.w3.org/Icons/w3c_home" alt="W3C" border="0" height=
+  "48" width="72" /></a></p>
+
+  <h1>- DRAFT -</h1>
+
+  <h1>XML Processing Model WG</h1>
+
+  <h2>Meeting 176, 01 Jul 2010</h2>
+
+  <p><a href=
+  'http://www.w3.org/XML/XProc/2010/07/01-agenda'>Agenda</a></p>
+
+  <p>See also: <a href="http://www.w3.org/2010/07/01-xproc-irc">IRC
+  log</a></p>
+
+  <h2><a name="attendees" id="attendees">Attendees</a></h2>
+
+  <div class="intro">
+    <dl>
+      <dt>Present</dt>
+
+      <dd>Norm, Henry, Vojtech, Paul</dd>
+
+      <dt>Regrets</dt>
+
+      <dd>Mohamed, Alex</dd>
+
+      <dt>Chair</dt>
+
+      <dd>Norm</dd>
+
+      <dt>Scribe</dt>
+
+      <dd>Norm</dd>
+    </dl>
+  </div>
+
+  <h2>Contents</h2>
+
+  <ul>
+    <li>
+      <a href="#agenda">Topics</a>
+
+      <ol>
+        <li><a href="#item01">Accept this agenda?</a></li>
+
+        <li><a href="#item02">Accept minutes from the previous
+        meeting?</a></li>
+
+        <li><a href="#item03">Next meeting: telcon, 8 July
+        2010?</a></li>
+
+        <li><a href="#item04">XProc Errata</a></li>
+
+        <li><a href="#item05">Editor's draft of XML Processor
+        Profiles</a></li>
+
+        <li><a href="#item06">Any other business</a></li>
+      </ol>
+    </li>
+
+    <li><a href="#ActionSummary">Summary of Action Items</a></li>
+  </ul>
+  <hr />
+
+  <div class="meeting">
+    <h3 id="item01">Accept this agenda?</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/2010/07/01-agenda">http://www.w3.org/XML/XProc/2010/07/01-agenda</a></p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item02">Accept minutes from the previous meeting?</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/2010/06/24-minutes">http://www.w3.org/XML/XProc/2010/06/24-minutes</a></p>
+
+    <p class='phone'>Accepted.</p>
+
+    <h3 id="item03">Next meeting: telcon, 8 July 2010?</h3>
+
+    <p class='phone'>Paul and Vojtech give regrets</p>
+
+    <h3 id="item04">XProc Errata</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/docs/xproc-proposed-errata">http://www.w3.org/XML/XProc/docs/xproc-proposed-errata</a></p>
+
+    <p class='phone'><cite>Norm:</cite> Anyone have any questions
+    or comments about E01 and/or E02?<br />
+    ... Hearing none, I propose that we accept them.</p>
+
+    <p class='phone'>Accepted.</p>
+
+    <p class='phone'>Some discussion of what to do next; updating
+    the errata document is the answer.</p><a name="action01" id=
+    "action01"></a>
+
+    <p class='irc'>&lt;<cite>scribe</cite>&gt;
+    <strong>ACTION:</strong> Norm to construct an update to the
+    errata document pointed to from the spec and pass it off to
+    someone who can update it. [recorded in <a href=
+    "http://www.w3.org/2010/07/01-xproc-minutes.html#action01">http://www.w3.org/2010/07/01-xproc-minutes.html#action01</a>]</p>
+
+    <p class='phone'><cite>Norm:</cite> Vojtech, you had a question
+    about namespace bindings.</p>
+
+    <p class='phone'><cite>Vojtech:</cite> Yes, in 5.7.5, in the
+    first list, there are rules about how to construct namespace
+    bindings.<br />
+    ... The way I understand it now, if an XPath expression returns
+    a sequence of nodes, then we use the in-scope namespace
+    bindings off the first node if the expression returns a node
+    set.</p>
+
+    <p class='phone'><cite>Norm:</cite> I think that exists so that
+    if an expression selects a QName in content, the right
+    namespace bindings are carried forward.</p>
+
+    <p class='phone'>General agreement that everything is ok.</p>
+
+    <h3 id="item05">Editor's draft of XML Processor Profiles</h3>
+
+    <p class='phone'>-&gt; <a href=
+    "http://www.w3.org/XML/XProc/docs/xml-proc-profiles">http://www.w3.org/XML/XProc/docs/xml-proc-profiles</a></p>
+
+    <p class='phone'>Some discussion of Paul's comment</p>
+
+    <p class='phone'>-&gt; <a href=
+    "http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2010Jun/0026.html">
+    http://lists.w3.org/Archives/Public/public-xml-processing-model-wg/2010Jun/0026.html</a></p>
+
+    <p class='phone'><cite>Henry:</cite> I think this would be
+    clearer if we changed "conformant processor" to "conformant
+    XProc processor" in that sentence.</p>
+
+    <p class='phone'><cite>Paul:</cite> I think that could be
+    clearer.<br />
+    ... I'm happy to leave the improvements to the editor.</p>
+
+    <p class='phone'><cite>Norm:</cite> Paul also asks about a
+    profile that's smaller than "minimum". I don't feel strongly
+    about the names.<br />
+    ... How about "minimum", "basic", "modest", and
+    "recommended"</p>
+
+    <p class='phone'><cite>Paul:</cite> That sounds good.</p>
+
+    <p class='phone'><cite>Norm:</cite> Anyone have concerns about
+    these names?</p>
+
+    <p class='phone'>None heard.</p>
+
+    <p class='phone'><cite>Norm:</cite> Paul's last comment is
+    mostly editorial, but I agree.</p>
+
+    <p class='phone'>General agreement that it should read "reading
+    and processing" as Paul suggests.</p>
+
+    <p class='phone'><cite>Henry:</cite> Perhaps I should report on
+    my action to add something about invariants<br />
+    ... I've started. Looking over the XML Spec again, it's not
+    going to be as nice as I'd like.<br />
+    ... The best I can do for the first two profiles (which don't
+    read any external markup) is to say things in two parts.<br />
+    ... For documents which are, or should be, standalone=yes and
+    for documents which are standalone=no<br />
+    ... Because for documents which are standalone=no, if you don't
+    read the external subset there isn't much you can say.<br />
+    ... You aren't gauranteed to get much at all.<br />
+    ... The most you can say is that you'll get the document
+    element name and attributes (provided they don't contain entity
+    references)<br />
+    ... But almost no one bothers with standalone="yes" and the
+    default is standalone="no", so it'll be tricky to get
+    right.<br />
+    ... Especially since processors aren't required to report
+    unexpanded entities.<br />
+    ... But the other two are easier and I think we can get
+    somewhere with them.<br />
+    ... The scope for variation is reduced after the external
+    subset has been read and processed.</p>
+
+    <p class='phone'>Norm summarizes the state of the issues list,
+    not much progress to be made today</p>
+
+    <h3 id="item06">Any other business</h3>
+
+    <p class='phone'>Adjourned</p>
+
+    <p class='phone'>rrsagent draft minutes</p>
+  </div>
+
+  <h2><a name="ActionSummary" id="ActionSummary">Summary of Action
+  Items</a></h2><!-- Action Items -->
+  <strong>[NEW]</strong> <strong>ACTION:</strong> Norm to construct
+  an update to the errata document pointed to from the spec and
+  pass it off to someone who can update it. [recorded in <a href=
+  "http://www.w3.org/2010/07/01-xproc-minutes.html#action01">http://www.w3.org/2010/07/01-xproc-minutes.html#action01</a>]<br />
+
+  &nbsp;<br />
+  [End of minutes]<br />
+  <hr />
+
+  <address>
+    Minutes formatted by David Booth's <a href=
+    "http://dev.w3.org/cvsweb/~checkout~/2002/scribe/scribedoc.htm">
+    scribe.perl</a> version 1.135 (<a href=
+    "http://dev.w3.org/cvsweb/2002/scribe/">CVS log</a>)<br />
+    $Date: 2010/07/01 15:37:05 $
+  </address>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

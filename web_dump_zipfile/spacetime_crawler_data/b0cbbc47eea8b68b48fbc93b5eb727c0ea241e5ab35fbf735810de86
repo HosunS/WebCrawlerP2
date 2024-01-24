@@ -1,0 +1,85 @@
+¦Ifinal_url¢DtypeEvaluex7https://www.ics.uci.edu/~kay/courses/i141/hw/asst4.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD8058¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 15 Feb 2015 22:55:09 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1f7a-50f285c86cd40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 05:51:06 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYz<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<HTML>
+<HEAD>
+<TITLE>Information Retrieval Assignments</TITLE>
+<link href="http://www.ics.uci.edu/~kay/courses/31/mainstyle.css" rel="stylesheet" type="text/css" />
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<p><FONT size="2"  >INFX 141 / CS 121</FONT><FONT size="2"  > &bull; DAVID G. KAY &bull; UC IRVINE &bull; WINTER 2015</FONT></p>
+<p><FONT   SIZE=6>Assignment #4<br /><B>Text Analysis and Indexing</B></FONT>
+</p>
+<!-- <p>[Still subject to clarifying changes]</p> -->
+<p>In this assignment you will be exploring a corpus of Email messages about the Enron scandal. The corpus consists of the messages that were sent by or to Enron executives in the months preceding the scandal. It's a 400+MB file, tarred and gzipped, that you can download from <a href="https://www.cs.cmu.edu/~./enron/enron_mail_20110402.tgz"> <code>https://www.cs.cmu.edu/~./enron/enron_mail_20110402.tgz</code></a>. A description of the data is available at <a href="https://www.cs.cmu.edu/~./enron/"><code>https://www.cs.cmu.edu/~./enron/</code></a>. You are going to play the role of a data analyst hired to examine the evidence by doing some simple fact-finding and data processing.</p>
+<p><b>General specifications:</b>
+<ul>
+  <li>You may do this assignment individually or in groups of 2 or 3. As before, the expectations of each size group are the same; shared labor is offset by communication and coordination costs. All group members receive the same score except in truly extraordinary circumstances.</li>
+  <li>We know there is great diversity in programming skill among class members. Moreover, we recognize that not everyone in the class is in a major or has a career goal that involves significant software development. Thus, Part 3 of this assignment has two alternative options that we'll call "Developer" and "Analyst." Your group may choose either. The Developer option is for students who are secure in their programming ability. The Analyst option is for those whose programming skills are less strong. We caution you that "Analyst" does not mean "easy," as you will see.</li>
+  <li>You may use Java, Python, or Scheme/Racket to write the tools you need for your analysis.</li>
+  <li>Use Piazza for general questions whose answers can benefit everybody.</li>
+</ul>
+</p>
+<p><b>Part 1. Context</b> (20 points)</p>
+<p>Find out about the Enron scandal, for example by finding documentaries on YouTube or text articles online. (One good one, called &quot;The Smartest Guys in the Room,&quot; is reportedly available on Netflix.)</p>
+<p>Create PDF document named <code>context.pdf</code> that includes:
+<ol 1>
+  <li>A concise summary of the scandal (maximum half a page)</li>
+  <li>A list of each main player with their organizational affiliation, title (if any), and role in the scandal</li>
+  <li>The year in which the main events unfolded</li>
+</ol>
+<p><b>Part 2. Quantify the data</b> (40 points)</p>
+<p>Unzip and untar the data file; if you don't know how to do this, find out. Then quantify the evidence by finding the answers to these questions (keeping notes on the steps you take):</p>
+<ol>
+  <li>Create a PDF file called <code>quant.pdf</code> that includes answers to those questions and, for each, a description of the process you followed to find those answers. If you used scripts or programs for this part, include them in a zipped folder called<code> part2</code>.</li>
+<li>How many people are targeted in this data set? (We're just asking about the folder structure, not about the people mentioned in the emails themselves.)</li>
+<li>How many individual data files are we dealing with?</li>
+<li>How many messages were sent by these people in total? (Explain how you're interpreting the term "sent.")</li>
+<li>How many messages were sitting in these people's Inboxes in total? (Explain how you're determining what counts as an "inbox.")
+</li>
+<li>Who are the 10 people with the largest number of data files?</li>
+</ol>
+<p><b>Part 3 [Developer]. Index the data</b> (40 points)</p>
+<p>Create inverted indices for the entire set of data files in the manner explained below. Here are some general notes about these indices:
+<ul>
+<li>
+For the purposes of this homework, create these indices as ASCII (<code>.txt</code>) files so the TA can read them directly.
+</li><li>
+Filter out email header words.
+</li><li>Filter out English stop words (see <a href="http://www.ranks.nl/resources/stopwords.html "> <code>http://www.ranks.nl/resources/stopwords.html</code></a>).
+</li><li>  Use the Porter Stemming algorithm to "normalize"the terms (see
+<a href="http://tartarus.org/martin/PorterStemmer/"><code>http://tartarus.org/martin/PorterStemmer/</code></a>).
+</li><li> Place each posting on a separate line.
+</li>
+<li> Create each posting to follow this format (where <code>\t</code> is a tab character): 
+  <pre><font face='AGaramond'>&lt;term&gt;</font><code>[\t</code><font face='AGaramond'>&lt;doc&gt;</font><code>:</code><font face='AGaramond'>&lt;frequency&gt;</font><code>:</code><font face='AGaramond'>&lt;position&gt;</font><code>[,</code><font face='AGaramond'>&lt;position&gt;</font><code>]*]+</code></pre>
+</li><li>  Order terms alphabetically in the index file.
+</li><li>  Within each posting, order document lists alphabetically.
+</li>
+</ul>
+<ol 1>
+  <li>(Required)  Create an index that uses human-readable terms and document identifiers. For example:
+    <pre><code>amendment   allen-p/_sent_mail/465.:1:34    stclair-c/sent/993.:5:45,60,76,84,100</code></pre>
+    Call this index file <code>index_plain.txt</code>.</li><br />
+<li>
+(Extra credit, maximum 10 points) Create a second index that uses some encoding of, at least, terms and document identifiers in a way that decreases the size of the index file significantly (at least 20%). You may also compress the position information.  Call this index file <code>index_compressed.txt</code>.  [You can create this second index by parsing the files again or create it from the first index.]
+</li></ol>
+<p><b>Part 3 [Analyst]. Estimation</b> (40 points)</p>
+<p>Create a PDF document called <code>estimation.pdf</code> that includes responses to the following:<ol 1><li>
+Find all documents that have the terms "conflict of interest", independent of capitalization. Explain what you did to get your answer.</li>
+<li>Estimate how many distinct terms are in this data set. Explain the reasoning behind your estimate. If you used scripts or programs, explain what they do.</li>
+<li>With respect to the <code>index_plain.txt</code> file described in Part 3 [Developer] above, estimate the size of that file in megabytes. State all of your assumptions and your calculations. You may use scripts, programs, or other tools to help create your estimate, but of course you must disclose what you used.</li>
+</ol>
+<p><b>Submitting your assignment:</b> Your will submit your work via Checkmate. For groups of two or three, <em>just one of you</em> should submit all parts of the assignment; the names of all group members must appear near the top of every submitted file. <br />
+First, submit your <code>context.pdf</code> file from Part 1. <br />
+Second, submit your <code>quant.pdf</code> file and your zipped <code>part2</code> folder from Part 2. <br />
+Third, for Part 3 [Developer], submit your <code>index_plain.txt</code> file, optionally your <code>index_compressed.txt</code> file, a zipped folder called <code>programs</code> containing your program(s),
+and optionally (for those who do part 2) a fille called <code>encoding.pdf</code> that explains your encoding.<br />
+Third, for Part 3 [Analyst], submit your <code>estimation.pdf</code> file and optionally a zipped folder called <code>programs</code> containing any [non-mainstream, non-public] code you wrote or used for this part.
+</p>
+<HR />
+<FONT  ><A HREF="http://www.ics.uci.edu/~kay/">David G. Kay</A>, <a href=mailto:kay@uci.edu>kay@uci.edu</A> </FONT><span><br />
+<font size="2"  >
+<!-- #BeginDate format:fcAm1a -->Sunday, February 15, 2015 2:55 PM<!-- #EndDate -->
+</font></span>
+</BODY>
+</HTML>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

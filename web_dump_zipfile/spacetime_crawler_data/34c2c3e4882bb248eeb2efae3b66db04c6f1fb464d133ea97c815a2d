@@ -1,0 +1,438 @@
+¶Ifinal_url¢DtypeEvaluex8http://www.w3.org/TR/2004/WD-rdf-sparql-XMLres-20041221/Lhttp_headers¢DtypeEvalueé¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5858¢Ak¢DtypeEvaluePContent-LocationAv¢DtypeEvalueMOverview.html¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 09 Feb 2020 20:44:44 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueX)Accept-Encoding,upgrade-insecure-requests¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 09 Oct 2018 13:30:05 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"4976-577cbbc505140-gzip"¢Ak¢DtypeEvalueDLinkAv¢DtypeEvalueX›<https://www.w3.org/TR/rdf-sparql-XMLres/>;rel="canonical", <https://timetravel.mementoweb.org/w3c/timegate/http://www.w3.org/TR/rdf-sparql-XMLres/>;rel="timegate", <http://www.w3.org/TR/rdf-sparql-XMLres/>;rel="original"¢Ak¢DtypeEvaluePMemento-DatetimeAv¢DtypeEvalueXTue, 09 Oct 2018 13:30:05 GMT¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvaluePmax-age=31536000¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:44:44 GMT¢Ak¢DtypeEvalueXAccess-Control-Allow-OriginAv¢DtypeEvalueA*¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueyIv<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>SPARQL Variable Binding Results XML Format</title>
+<style type="text/css">
+/*<![CDATA[*/
+span.cvs-id     {color: gray; font-size:80%}
+
+.toc {
+    text-indent: 0;
+}
+DIV.toc UL UL, DIV.toc OL OL {margin-left: 0}
+DIV.toc UL UL UL, DIV.toc OL OL OL {margin-left: 1em}
+DIV.toc UL UL UL UL, DIV.toc OL OL OL OL {margin-left: 0}
+LI.tocline1 {font-weight: bold}
+LI.tocline2 {font-weight: normal}
+LI.tocline4 {font-style: italic}
+/* DIV.subtoc UL, DIV.subtoc OL {list-style: none} */
+/* The border in the following rule crashes NN4 on fonts.html :-(
+DIV.subtoc {padding: 1em; border: solid black thin; margin: 1em 0;
+    background: #ddd}
+*/
+DIV.toc, UL.index, DT {
+    text-align: left
+}
+
+PRE.xmlresult {
+  margin: 1em 4em 1em 4em;
+  color: black;
+  background-color: #eee;
+  padding: 0.5em;
+  border-color: #006;
+  border-width: 1px;
+  border-style: dotted;
+}
+
+/*]]>*/
+</style>
+<!-- <link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/base.css" /> -->
+<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/W3C-WD.css" />
+</head>
+<body>
+
+  <div class="head">
+    <p><a href="http://www.w3.org/"><img src=
+    "http://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width=
+    "72" /></a></p>
+
+    <h1 id="main">SPARQL Variable Binding Results XML Format</h1>
+
+    <h2 id="main_what">W3C Working Draft 21 December 2004</h2>
+
+    <dl>
+<!--
+      <dt>This version:</dt>
+        <dd><span class="cvs-id">$Revision: 1.7 $ 
+      of $Date: 2018/10/09 13:30:05 $</span></dd>
+-->
+     <dt>This version:</dt>
+        <dd><a href="http://www.w3.org/TR/2004/WD-rdf-sparql-XMLres-20041221/">http://www.w3.org/TR/2004/WD-rdf-sparql-XMLres-20041221/</a></dd>
+<!--
+      <dt>Previous version:</dt>
+        <dd>None</dd>
+-->
+
+      <dt>Latest version:</dt>
+        <dd><a href="http://www.w3.org/TR/rdf-sparql-XMLres/">http://www.w3.org/TR/rdf-sparql-XMLres/</a></dd>
+      <dt>Editor:</dt>
+	<dd><a href="http://purl.org/net/dajobe/">Dave Beckett</a>, <a href="http://www.ilrt.bris.ac.uk/">ILRT</a> <a href="http://www.bristol.ac.uk/">University of Bristol</a></dd>
+    </dl>
+
+<p class="copyright"><a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">  Copyright</a> &#xa9;2004 <a href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>&#xae;</sup>  (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.org/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>  and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
+
+  </div>
+
+  <hr title="Separator for header" />
+
+  <div>
+    <h2 class="notoc"><a id="abstract" name=
+    "abstract">Abstract</a></h2>
+
+    <p>RDF is a flexible, extensible way to represent information
+    about World Wide Web resources. It is used to represent, among
+    other things, personal information, social networks, metadata
+    about digital artifacts like music and images, as well as
+    provide a means of integration over disparate sources of
+    information.  A standardized query language for RDF data with
+    multiple implementations offers developers and end users a way
+    to write and to consume the results of queries across this wide
+    range of information.</p>
+
+    <p>This document describes an XML format for the variable binding
+    results format provided by the
+    <acronym title="Simple Protocol And RDF Query Language">SPARQL</acronym>
+    query language for RDF, developed by the
+    <a href="http://www.w3.org/2001/sw/DataAccess/">W3C RDF Data Access
+    Working Group</a> (DAWG), part of the
+    <a href="http://www.w3.org/2001/sw/">Semantic Web Activity</a>
+    as described in the 
+    <a href="http://www.w3.org/2001/sw/Activity">activity statement</a> .</p>
+
+  </div>
+
+  <div>
+    <h2><a id="status" name="status">Status of this Document</a></h2>
+
+    <p><em>This section describes the status of this document at the time of its publication. Other documents may supersede this document. A list of current W3C publications and the latest revision of this technical report can be found in the <a href="http://www.w3.org/TR/">W3C technical reports index</a> at http://www.w3.org/TR/.</em></p>
+
+    <p>This is a first Public Working Draft of the
+    SPARQL Variable Binding Results XML Format produced by the
+   <a href="http://www.w3.org/2001/sw/DataAccess/">RDF Data Access Working Group</a>,
+   (part of the <a href="http://www.w3.org/2001/sw/">Semantic Web Activity</a>)
+   for review by W3C Members and other interested parties.
+
+It reflects the best effort of the editors
+to reflect implementation experience and incorporate input from
+various members of the WG, but is not yet endorsed by the WG as a
+whole. 
+
+   Please send comments to the public
+   <a href="mailto:public-rdf-dawg-comments@w3.org">public-rdf-dawg-comments@w3.org</a>, a mailing list with a <a href="http://lists.w3.org/Archives/Public/public-rdf-dawg-comments/">public archive</a>.
+
+ The query result format defined by this document is intended
+to make RDF query results conveniently available to XML applications.
+The working group would appreciate feedback and suggestions from
+developers of XPath and SAX applications.   </p>
+
+
+    <p><em>Publication as a Working Draft does not imply endorsement
+    by the W3C Membership.  This is a draft document and may be
+    updated, replaced or obsoleted by other documents at any time.
+    It is inappropriate to cite this document as other than work in
+    progress.</em></p>
+
+    <p><em>This document was produced under the <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5
+    February 2004 W3C Patent Policy</a>. The Working Group
+    maintains a <a rel="disclosure" href="http://www.w3.org/2001/sw/DataAccess/Disclosures">public list
+    of patent disclosures</a> relevant to this document; that page
+    also includes instructions for disclosing [and excluding] a
+    patent. An individual who has actual knowledge of a patent
+    which the individual believes contains Essential Claim(s) with
+    respect to this specification should disclose the information
+    in accordance with <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">
+    section 6 of the W3C Patent Policy</a>.</em></p>
+
+    <p><em>Per <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Exclusion">section
+    4 of the W3C Patent Policy</a>, Working Group participants have
+    150 days from the title page date of this document to exclude
+    essential claims from the W3C RF licensing requirements with
+    respect to this document series. Exclusions are with respect to
+    the exclusion reference document, defined by the W3C Patent Policy
+    to be the latest version of a document in this series that is
+    published no later than 90 days after the title page date of this
+    document.</em></p>
+
+  </div>
+  <hr />
+
+  <div class="toc">
+    <h2><a id="contents" name="contents">Table of Contents</a></h2>
+
+    <ul class="toc">
+      <li class="tocline1">
+        <a href="#introduction" class="tocxref">1 Introduction</a>
+      </li>
+      <li class="tocline1">
+        <a href="#definition" class="tocxref">2 Definition</a>
+      </li>
+      <li class="tocline1">
+        <a href="#examples" class="tocxref">3 Examples</a>
+      </li>
+      <li class="tocline1">
+        <a href="#schemas" class="tocxref">4 XML Schemas</a>
+      </li>
+      <li class="tocline1">
+        <a href="#references" class="tocxref">5 References</a>
+      </li>
+      <li class="tocline1">
+        <a href="#changes" class="tocxref">A Changes</a>
+      </li>
+    </ul>
+  </div>
+
+  <h2>1 <a id="introduction" name="introduction">Introduction</a></h2>
+
+  <p>This document defines a format for encoding variable binding results
+  made by the
+<cite><a href="http://www.w3.org/TR/2004/WD-rdf-sparql-query-20041012/">SPARQL Query Language for RDF</a></cite>
+<a href="#ref-sparql-query">[SPARQL-QUERY]</a>
+ in
+<cite><a href="http://www.w3.org/TR/2004/REC-xml-20040204/">XML</a></cite>
+<a href="#ref-xml">[XML]</a>.
+ </p>
+
+
+  <h2><a id="definition" name="definition">2. Definition</a></h2>
+
+<p>SPARQL Query defines several query result forms
+(<a href="http://www.w3.org/TR/2004/WD-rdf-sparql-query-20041012/#QueryForms">SPARQL Query section 10</a>)
+and this document defines an XML serialisation for the SELECT
+form of results, a <em>Query Results</em>
+(<a href="http://www.w3.org/TR/2004/WD-rdf-sparql-query-20041012/#MultipleMatches">SPARQL Query section 2.5</a>).
+</p>
+
+  <h3><a id="docElement" name="docElement">2.1. Document Element</a></h3>
+
+<p>The XML format has document element <code>sparql</code> element in the
+<code>http://www.w3.org/2001/sw/DataAccess/rf1/result</code> namespace,
+written as follows:</p>
+
+<pre class="xmlresult">
+&lt;?xml version="1.0"?&gt;
+&lt;sparql xmlns="http://www.w3.org/2001/sw/DataAccess/rf1/result"&gt;
+ ...
+&lt;/sparql&gt;
+</pre>
+
+<p>Inside the <code>sparql</code> element are two sub-elements,
+<code>head</code> and <code>results</code> which must appear in
+that order.
+</p>
+
+  <h3><a id="head" name="head">2.2. Header</a></h3>
+
+<p>The <code>head</code> element is the first child element
+of <code>sparql</code> and contains a sequence of
+elements describing the set of <em>Query Variable</em>
+(<a href="http://www.w3.org/TR/2004/WD-rdf-sparql-query-20041012/#GraphPatterns">SPARQL Query section 2.2</a>)
+names in the <em>Query Results</em>.  The order chosen to serialize
+the set of variable names into a sequence of elements is not
+significant, but the order used inside <code>head</code> must be
+the same as that used in the <code>result</code> elements, described
+below.</p>
+ 
+<p>Inside the <code>head</code> element, the ordered sequence of
+variable names chosen are used to create empty child elements
+<code>variable</code> with the variable name as the value of an
+attribute <code>name</code> giving a document like this:</p>
+
+<pre class="xmlresult">
+&lt;?xml version="1.0"?&gt;
+&lt;sparql xmlns="http://www.w3.org/2001/sw/DataAccess/rf1/result"&gt;
+
+  &lt;head&gt;
+    &lt;variable name="x"/&gt;
+    &lt;variable name="hpage"/&gt;
+    &lt;variable name="name"/&gt;
+    &lt;variable name="mbox"/&gt;
+    &lt;variable name="blurb"/&gt;
+  &lt;/head&gt;
+...
+&lt;/sparql&gt;
+</pre>
+
+
+  <h3><a id="results" name="results">2.3. Query Results</a></h3>
+
+<p>The <code>results</code> element is the second child-element of
+<code>sparql</code> and must appear after <code>head</code>.
+It is written even if the <em>Query Results</em> is empty.</p>
+
+<p>For each  Query Solution
+(<a href="http://www.w3.org/TR/2004/WD-rdf-sparql-query-20041012/#MultipleMatches">SPARQL Query section 2.5</a>)
+in the <em>Query Results</em>, a <code>result</code>
+child-element of <code>results</code> is added giving
+a document something like:</p>
+
+<pre class="xmlresult">
+&lt;?xml version="1.0"?&gt;
+&lt;sparql xmlns="http://www.w3.org/2001/sw/DataAccess/rf1/result"&gt;
+  ...  head ...
+
+  &lt;results&gt;
+    &lt;result&gt;
+    &lt;/result&gt;
+    &lt;result&gt;
+    &lt;/result&gt;
+    ...
+  &lt;/results&gt;
+
+&lt;/sparql&gt;
+</pre>
+
+<p>Each <code>result</code> element corresponds to one <em>Query
+Solution</em> in the result set, and contains child elements for each
+<em>Query Variable</em> that appears in the solution (ordered the
+same as the <code>variable</code> child elements of
+<code>head</code>) and recording the <em>RDF Term</em>
+(<a href="http://www.w3.org/TR/2004/WD-rdf-sparql-query-20041012/#GraphPatterns">SPARQL Query section 2.2</a>)
+value of the Query Variable.</p>
+
+<p>The <em>RDF Term</em> encoding in XML for a variable named <em>var</em>
+in the solution is as follows:</p>
+
+<dl>
+<dt>No binding<br /></dt>
+<dd><code>&lt;</code><em>var</em><code> bound="false"/&gt;</code></dd>
+
+<dt>RDF URI Reference <em>U</em><br /></dt>
+<dd><code>&lt;</code><em>var</em><code> uri="</code><em>U</em><code>"/&gt;</code></dd>
+
+<dt>RDF Literal <em>S</em><br /></dt>
+<dd><code>&lt;</code><em>var</em><code>&gt;</code><em>S</em><code>&lt;/</code><em>var</em><code>&gt;</code></dd>
+
+<dt>RDF Literal <em>S</em> with language <em>L</em><br /></dt>
+<dd><code>&lt;</code><em>var</em><code> xml:lang="</code><em>L</em><code>"&gt;</code><em>S</em><code>&lt;/</code><em>var</em><code>&gt;</code></dd>
+
+<dt>RDF Literal <em>S</em> with datatype URI <em>D</em><br /></dt>
+<dd><code>&lt;</code><em>var</em><code> datatype="</code><em>D</em><code>"&gt;</code><em>S</em><code>&lt;/</code><em>var</em><code>&gt;</code></dd>
+
+<dt>Blank Node label <em>I</em><br /></dt>
+<dd><code>&lt;</code><em>var</em><code> bnodeid="</code><em>I</em><code>"/&gt;</code></dd>
+
+</dl>
+
+<p><strong>Note:</strong> The blank node label <em>I</em> is scoped
+to the result set XML document and does not have any association to
+the the blank node label for that RDF Term in the query graph.</p>
+
+<p>A query solution encoded in this format could look something like
+the following:</p>
+
+<pre class="xmlresult">
+&lt;?xml version="1.0"?&gt;
+&lt;sparql xmlns="http://www.w3.org/2001/sw/DataAccess/rf1/result"&gt;
+  ...  head ...
+
+  &lt;results&gt;
+
+    &lt;result&gt;
+      &lt;x bnodeid="r2"/&gt;
+      &lt;hpage uri="http://work.example.org/bob/"/&gt;
+      &lt;name xml:lang="en"&gt;Bob&lt;/name&gt;
+      &lt;mbox uri="mailto:bob@work"/&gt;
+      &lt;age datatype="http://www.w3.org/2001/XMLSchema#integer"&gt;30&lt;/age&gt; 
+      &lt;blurb bound="false"/&gt;
+      &lt;friend bnodeid="r1"/&gt;
+   &lt;/result&gt;
+
+    ...
+  &lt;/results&gt;
+
+&lt;/sparql&gt;
+</pre>
+
+
+
+  <h2><a id="examples" name="examples">3. Examples</a></h2>
+
+  <p>An example SPARQL Query in
+  <a href="example.rq">example.rq</a> operating
+  on query graph Turtle/N3 data in <a href="data.n3">data.n3</a>
+  provides query results in XML <a href="output.xml">output.xml</a>.
+  following the definition in <a href="#definition">section 2</a>
+  </p>
+
+  <p>This XML can be transformed into XHTML using the
+  sample XML Query script <a href="result-to-html.xq">result-to-html.xq</a>
+  giving <a href="output-xquery.html">output-xquery.html</a> or with
+  XSLT sheet <a href="result-to-html.xsl">result-to-html.xsl</a>
+  giving <a href="output-xslt.html">output-xslt.html</a></p>
+
+
+  <h2><a id="schemas" name="schemas">4. XML Schemas</a></h2>
+
+  <p>There are XML schemas for this format in the following formats:</p>
+
+   <ul>
+   <li>RELAX NG<a href="#ref-relaxng">[RELAXNG]</a> Compact<a href="#ref-relaxng-nx">[RELAXNG-COMPACT]</a> in <a href="result.rnc">result.rnc</a></li>
+   <li>RELAX NG XML in <a href="result.rng">result.rng</a></li>
+   <li>W3C XML Schema in <a href="result.xsd">result.xsd</a> (generated from the RELAX NG)</li>
+   </ul>
+
+  <p>These schemas are for information only.</p>
+
+<blockquote>
+      <p><a name="issue4"><strong>ISSUE:</strong></a> Normativeness of the XML schemas. Pick one?</p>
+</blockquote>
+
+  <h2><a id="references" name="references">5. References</a></h2>
+
+  <dl>
+
+  <dt>
+  <a id="ref-xml" name="ref-xml">[XML]</a>
+  </dt>
+  <dd>
+  <cite><a href="http://www.w3.org/TR/2004/REC-xml-20040204/">Extensible Markup Language (XML) 1.0, Third Edition</a></cite>, T. Bray, J. Paoli, C.M. Sperberg-McQueen, E. Maler, F. yergeau, Editors.  World Wide Web Consortium.  4 February 2004. This version is http://www.w3.org/TR/2004/REC-xml-20040204.  The <a href="http://www.w3.org/TR/REC-xml/">latest version of XML</a> is available at http://www.w3.org/TR/REC-xml.
+  </dd>
+
+  <dt>
+  <a id="ref-sparql-query" name="ref-sparql-query">[SPARQL-QUERY]</a>
+  </dt>
+  <dd>
+  <cite><a href="http://www.w3.org/TR/2004/WD-rdf-sparql-query-20041012/">SPARQL Query Language for RDF</a></cite>, E. Prud'hommeaux, A. Seaborne, Editors. World Wide Web Consortium.  12 October 2004.  Work in progress. This version is http://www.w3.org/TR/2004/WD-rdf-sparql-query-20041012/.  The <a href="http://www.w3.org/TR/rdf-sparql-query/">latest version of SPARQL Query Language for RDF</a> is available at http://www.w3.org/TR/rdf-sparql-query/.
+  </dd>
+
+  <dt>
+    <a id="ref-relaxng" name="ref-relaxng">[RELAXNG]</a>
+  </dt>
+  <dd><cite><a href="http://www.oasis-open.org/committees/relax-ng/spec-20011203.html">RELAX NG Specification</a></cite>, James Clark and MURATA Makoto, Editors, OASIS Committee Specification, 3 December 2001.  This version of RELAX&#160;NG is http://www.oasis-open.org/committees/relax-ng/spec-20011203.html.  The <a href="http://www.oasis-open.org/committees/relax-ng/spec.html">latest version of the RELAX NG Specification</a> is at http://www.oasis-open.org/committees/relax-ng/spec.html.</dd>
+
+  <dt>
+    <a id="ref-relaxng-nx" name="ref-relaxng-nx">[RELAXNG-COMPACT]</a>
+  </dt>
+  <dd><cite><a href="http://www.oasis-open.org/committees/relax-ng/compact-20021121.html">RELAX NG Compact Syntax</a></cite>, James Clark, Editor. OASIS Committee Specification, 21 November 2002.  This document is http://www.oasis-open.org/committees/relax-ng/compact-20021121.html.</dd>
+
+
+  </dl>
+
+
+  <h2><a id="changes" name="changes">A. Changes</a></h2>
+
+   <p>2004-12-20 <code>variables</code> element renamed to <code>head</code><br />
+    Replaced <code>variables</code> child elements <code>&lt;foo/&gt;</code> with <code>&lt;variable name="foo"/&gt;</code><br />
+    Made unbound variables appear as <code>&lt;var bound="false"/&gt;</code>
+   </p>
+
+   <p>2004-12-15 Document element now &lt;sparql&gt;<br />
+    Attribute <code>id</code> now <code>bnodeid</code><br />
+    Unbound query variables are omitted from a solution.<br />
+    Noted that bnodeid values are scoped to the XML result document.
+   </p>
+
+  <p>2004-12-13 Added definitions section<br />
+    Switched href to uri as 
+   <a href="http://lists.w3.org/Archives/Public/public-rdf-dawg/2004JulSep/0588.html">agreed 2004-09-29</a>
+  </p>
+
+  <p>2004-12-08 Initial version.  Based on
+  <a href="http://lists.w3.org/Archives/Public/public-rdf-dawg/2004OctDec/0364.html">Updated DAWG variable binding results XML format</a>, 2004-11-26 and
+  <a href="http://lists.w3.org/Archives/Public/public-rdf-dawg/2004JulSep/0556.html">draft XML query results format spec</a>, 2004-09.28</p>
+    
+<script type="application/javascript" src="https://www.w3.org/scripts/TR/fixup.js"></script></body>
+</html>
+Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

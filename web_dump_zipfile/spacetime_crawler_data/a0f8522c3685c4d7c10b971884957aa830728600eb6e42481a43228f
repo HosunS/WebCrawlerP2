@@ -1,0 +1,82 @@
+¦Ifinal_url¢DtypeEvaluexPhttps://www.ics.uci.edu/~jacobson/cs122b/Project/06-Phase3SuppSW/testFunctions.cLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2366¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Sep 2008 15:42:45 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"93e-4571951cc8740"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 06:35:09 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY	>/*
+ * PostgreSQL example C functions.
+ */
+
+/* Based on examples in the postgreSQL 8.3 manual, modified to work under
+ * Windows. Code from here to END REDEFINITION OF PG MACROS is,
+ * with minor revisions, from  example posted to the postgres pgsql-general
+ * mailing list on 5 May 2008 by Craig Ringer
+ */
+
+/* Use 32-bit timer (provided header file uses 64-bit timer, not
+ * compatible with Windows postgreSQL versions */
+#define _USE_32BIT_TIME_T
+
+/* Ensure that Pg_module_function and friends are declared __declspec(dllexport) */
+#ifndef BUILDING_MODULE
+  #define BUILDING_MODULE
+#endif
+
+#include "postgres.h"
+#include "fmgr.h"
+
+/*--------------- BEGIN REDEFINITION OF PG MACROS -------------------
+ *
+ * These rewritten versions of PG_MODULE_MAGIC and PG_FUNCTION_INFO_V1
+ * declare the module functions as __declspec(dllexport) when building
+ * a module. They also provide PGMODULEEXPORT for exporting functions
+ * in user DLLs.
+ */
+#undef PG_MODULE_MAGIC
+#undef PG_FUNCTION_INFO_V1
+
+#define PGMODULEEXPORT __declspec (dllexport)
+
+#define PG_MODULE_MAGIC \
+PGMODULEEXPORT const Pg_magic_struct * \
+PG_MAGIC_FUNCTION_NAME(void) \
+{ \
+	static const Pg_magic_struct Pg_magic_data = PG_MODULE_MAGIC_DATA; \
+	return &Pg_magic_data; \
+} \
+extern int no_such_variable
+
+#define PG_FUNCTION_INFO_V1(funcname) \
+PGMODULEEXPORT const Pg_finfo_record *  \
+CppConcat(pg_finfo_,funcname) (void) \
+{ \
+	static const Pg_finfo_record my_finfo = { 1 }; \
+	return &my_finfo; \
+} \
+extern int no_such_variable
+
+/*--------------- END REDEFINITION OF PG MACROS -------------------*/
+
+
+PG_MODULE_MAGIC;
+
+PG_FUNCTION_INFO_V1(add_one);
+
+PGMODULEEXPORT Datum add_one(PG_FUNCTION_ARGS)
+{
+    int32 arg = PG_GETARG_INT32(0);
+    PG_RETURN_INT32(arg + 1);
+}
+
+
+PG_FUNCTION_INFO_V1(concat_text);
+
+PGMODULEEXPORT Datum concat_text(PG_FUNCTION_ARGS)
+{
+    text  *arg1 = PG_GETARG_TEXT_P(0);
+    text  *arg2 = PG_GETARG_TEXT_P(1);
+    int32 new_text_size = VARSIZE(arg1) + VARSIZE(arg2) - VARHDRSZ;
+    text *new_text = (text *) palloc(new_text_size);
+
+    SET_VARSIZE(new_text, new_text_size);
+    memcpy(VARDATA(new_text), VARDATA(arg1), VARSIZE(arg1) - VARHDRSZ);
+    memcpy(VARDATA(new_text) + (VARSIZE(arg1) - VARHDRSZ),
+           VARDATA(arg2), VARSIZE(arg2) - VARHDRSZ);
+    PG_RETURN_TEXT_P(new_text);
+}
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

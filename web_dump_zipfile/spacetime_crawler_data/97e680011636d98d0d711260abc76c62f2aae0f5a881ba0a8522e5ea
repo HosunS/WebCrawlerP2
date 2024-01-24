@@ -1,0 +1,23 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC654¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 02 Jul 1998 21:10:54 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"28e-332031b461380"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 20:40:03 GMTKraw_content¢DtypeEvalueYŽ// Game of Fanorona
+// David Eppstein, UC Irvine, 11 Jun 1997
+//
+// Keep track of the results of searching
+// We just store text and reset it when the game is reset; the search engine
+// is responsible for determining what to put here.
+
+import java.util.*;
+import java.awt.*;
+import gui.*;
+
+class SearchLog extends TextPane implements Observer {
+	// initialize, tell game to update us when it changes
+	SearchLog(Game g) { g.addObserver(this); }
+		
+	// whenever game is reset, clear the log
+	public void update(Observable g, Object o) {
+		if (g instanceof Game) {
+			Game game = (Game) g;
+			if (game.getBoard().previousPosition == null) clear();
+		}
+	}
+}Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

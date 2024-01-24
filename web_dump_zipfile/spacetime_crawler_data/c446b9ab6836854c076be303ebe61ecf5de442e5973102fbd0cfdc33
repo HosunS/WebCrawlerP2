@@ -1,0 +1,59 @@
+¦Ifinal_url¢DtypeEvaluex1http://cybert.ics.uci.edu/dataset-help/PfANOVADS/Lhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 19:36:20 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY	;
+<p><a href="/static/sampledata/Pf_ProteinArray_ANOVA.csv">Download this dataset</a></p>
+<h4>Basic file input parameters</h4>
+<p>
+  This data comes from a real <i>Plasmodium falciparum</i> protein microarray data set
+  measuring antibody presence from sera samples of Younger children at three different time points 
+  (C1-C3, n=5 for each conditions) from Kambila, Ghana during the malaria season.
+  It has been shown that DNA microarray analysis techniques, like CyberT, work well on this type of data 
+  <a href="/help/#references">[13]</a>.
+  The data file is comma-delimited.
+  The data has not been transformed.  
+  It is common to use a <a href="/help/#normalization">VSN</a> normalization 
+  for this type of data.
+  There is one header row. 
+  There is one label column, then five columns for condition one, then five columns for condition two, 
+  and finally five columns for condition three.
+</p>
+<ul>
+  <li>Delimiter: Commas</li>
+  <li>Row Start: 1</li>
+  <li>Number of label columns: 1</li>
+  <li>Data columns for each condition: 5 5 5</li>
+</ul>
+
+<h4>Bayes-regularized Analysis Parameters</h4>
+<p>
+  This performs a one-way ANOVA using the Bayes-regularized variance estimates.
+  VSN normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+  TukeyHSD pairwise post-hoc tests are performed between each condition using the 
+  Bayes-regularized variance estimates.
+</p>
+<ul>
+  <li>Normalization: VSN</li>
+  <li>Bayes Sliding Window: 101</li>
+  <li>Bayes Confidence: 3</li>
+  <li>Run Pairwise Post-hoc: checked</li>
+  <li>Pairwise Post-hoc Type: TukeyHSD</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+
+<h4>Non Bayes-regularized Analysis Parameters</h4>
+<p>
+  This is equivalent to a standard one-way ANOVA using empirical variances.  
+  VSN normalization is performed.
+  PPDE analysis and multiple hypothesis testing correction are performed on the p-values.
+  TukeyHSD pairwise post-hoc tests are performed between each condition using the
+  empirical variances.
+</p>
+<ul>
+  <li>Normalization: VSN</li>
+  <li>Bayes Confidence: BLANK (Default)</li>
+  <li>Run Pairwise Post-hoc: checked</li>
+  <li>Pairwise Post-hoc Type: TukeyHSD</li>
+  <li>Run PPDE: checked</li>
+  <li>Run Multiple Hypothesis Testing Correction: checked</li>
+</ul>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,78 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2219¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 16 Nov 2017 15:07:13 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"8ab-55e1af99b1c96"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 20:10:41 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY«	  How ModularCounter method calls work with Inheritance
+
+(nf)   : (not found), check higher base class in inheritance hierarchy
+self/m : self parameter in method name (actually bound to m)
+
+------------------------------------------------------------------------------
+
+
+m = Modular_Counter(2,10)
+
+Call		m.reset()
+FEOOP		Modular_Counter.reset(m)
+(nf)Inheritance	Counter.reset(m)
+Method Body		self/m._value = 0
+
+m._value is now 0
+
+------------------------------------------------------------------------------
+
+m = Modular_Counter(2,10)  # inc calls Counter.inc
+
+Call		m.inc()
+FEOOP		Modular_Counter.inc(m)
+Method Body (if test)   self/m.value_of()
+FEOOP			Modular_Counter.value_of(self/m)
+(nf) Inheritance	Counter.value_of(self/m)
+Method Body			return self/m._value (2)
+Method Body (if)	compares (2) == self._modulus -1 (False, in if)
+Body if (False part)	Counter.inc(self/m)
+Method Body	 		self/m._value += 1
+
+m._value is now 3
+
+------------------------------------------------------------------------------
+
+m = Modular_Counter(9,10) # inc calls reset
+
+Call		m.inc()
+FEOOP		Modular_Counter.inc(m)
+Method Body (if)        self/m.value_of()
+FEOOP			Modular_Counter.value_of(self/m)
+(nf) Inheritance	Counter.value_of(self/m)
+Method Body			return self/m._value (9)
+Method Body (if)        compares (9) == self._modulus -1 (True, in if)
+Body of if (True part)	self/m.reset()
+FEOOP			Modular_Counter.reset(self/m)
+(nf) Inheritance	Counter.reset(self/m)
+Method Body			self/m._value = 0
+
+m._value is now 0
+
+------------------------------------------------------------------------------
+
+Just the "interesting parts" (used above) of these classes.
+See lecture note for all details.
+
+class Counter:
+    ...
+
+    def reset(self):		# NOT overridden in Modular_Counter
+        self._value = 0
+        
+    def inc(self):		# Overridden
+        self._value += 1
+        
+    def value_of(self):         # NOT overridden in Modular_Counter
+        return self._value
+    
+    
+class Modular_Counter(Counter):
+    ...
+
+    def inc(self):
+        if self.value_of() == self._modulus - 1:
+            self.reset()
+        else:
+            Counter.inc(self)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

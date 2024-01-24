@@ -1,0 +1,68 @@
+¦Ifinal_url¢DtypeEvaluexQhttps://www.ics.uci.edu/~jacobson/ics45J/CodeSamples/MouseApplicationAdapter.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1795¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 10 Sep 2012 23:46:48 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"703-4c9619228ca00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 04:36:14 GMTKraw_content¢DtypeEvalueY// MouseApplicationAdapter.java GUI Application for move a rectangle 
+//  around a panel via mouse clicks 
+//  Employs use of the Mouse adapter
+
+// Written for ICS 45J by Norman Jacobson, August 2012
+// Adapted from MouseApplicationAdapter.java and MouseApllet0.java
+//  from ICS 21 3/09 versions
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+
+public class MouseApplicationAdapter
+{
+	public static void main(String[] args)
+	{
+		// Make a panel with the rectangle in it
+		RectanglePanel rectPanel = new RectanglePanel();
+
+		// Make a frame that
+		// ...closes on exit
+		// ...has rectPanel as its content pane (pane that holds all the UI components)
+		// ...pack it so the frame is just the right size to hold the rectangle panel
+		// Then display the pane
+		JFrame appFrame = new JFrame();
+		appFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		appFrame.setContentPane(rectPanel);
+		appFrame.pack();
+		appFrame.setVisible(true);
+	}
+
+}
+
+// Make and paint a panel that contains a rectangle
+class RectanglePanel extends JPanel
+{
+	private Rectangle box;
+
+	public RectanglePanel()
+	{
+		// Override the adapter's mousePressed
+		// method to move and redisplay rectangle
+		// when mouse pressed
+		class MouseHandler extends MouseAdapter
+		{
+			public void mousePressed(MouseEvent event)
+			{
+				int x = event.getX();
+				int y = event.getY();
+				box.setLocation(x,y);
+				repaint();
+			}
+		}
+
+		addMouseListener(new MouseHandler());
+		setPreferredSize(new Dimension(300,300));
+		box = new Rectangle(100,100,20,30);
+	}
+
+	// This is an overridden method from SWING to paint the panel
+	public void paintComponent(Graphics g)
+	{
+		super.paintComponent(g);
+		Graphics2D g2 = (Graphics2D)g;
+		g2.draw(box);
+	}
+}Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

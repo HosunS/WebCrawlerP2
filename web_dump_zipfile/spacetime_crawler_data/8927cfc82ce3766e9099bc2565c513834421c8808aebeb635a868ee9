@@ -1,0 +1,45 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC959¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Feb 2006 21:37:40 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"3bf-40c3b30501100"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 15:20:36 GMTKraw_content¢DtypeEvalueY¿// NAME: Liane Nakamura
+// STUDENT ID: 25806927
+
+
+// Salary Employee subclass of Employee
+
+public class EmployeeSalary extends Employee 
+{
+    String name;
+    int salary;
+   
+    public EmployeeSalary (String name) 
+    {
+        super(name);
+    }
+   
+    public EmployeeSalary (String name, int salary) 
+    {
+        super(name);
+        this.salary = salary;
+    }
+   
+    public String getName() {
+        return super.getName();
+    }
+    
+    public Paycheck createWeeklyPaycheck(int hoursWorked) 
+    {
+        double taxRate = .2;
+        Paycheck check;
+        
+        int grossPay = salary / 52;
+        int tax = (int) (grossPay * taxRate);
+        check = new Paycheck(this, hoursWorked, grossPay, tax);
+        return check;
+    }
+    
+    public String toString() 
+    {
+        String s = getName();
+        s += " (salary, " + CurrencyFormat.format(salary) + "/year)";
+        return s;
+    }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

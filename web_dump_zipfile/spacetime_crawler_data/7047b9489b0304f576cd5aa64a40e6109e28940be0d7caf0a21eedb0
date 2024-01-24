@@ -1,0 +1,403 @@
+¦Ifinal_url¢DtypeEvaluex?https://www.ics.uci.edu/~thornton/ics32a/ProjectGuide/Project3/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE38559¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 09 Nov 2017 22:46:34 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"969f-55d949374c680"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:58:12 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY–Ÿ<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC
+ "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../../course.css" type="text/css" />
+
+<title>ICS 32A Fall 2017, Project #3: Ride Across the River</title>
+</head>
+
+<body>
+
+<div class="navbar">
+
+<p>
+ICS 32A Fall 2017 |
+<a href="../../index.html">News</a> |
+<a href="../../CourseReference.html">Course Reference</a> |
+<a href="../../Schedule.html">Schedule</a> |
+<a href="../../ProjectGuide">Project Guide</a> |
+<a href="../../Notes">Notes and Examples</a> |
+<a href="http://www.ics.uci.edu/~thornton/">About Alex</a>
+</p>
+
+<hr />
+
+</div>
+
+<div class="header">
+
+<p>ICS 32A Fall 2017<br />
+   Project #3: <i>Ride Across the River</i></p>
+
+</div>
+
+<div class="section">
+
+<p class="center"><b>Due date and time:</b> <i>Monday, November 20, 11:59pm</i></p>
+
+<p class="center"><i>This project is to be done individually</i></p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Background</p>
+
+<p>We saw in the previous project that our Python programs are capable of connecting to the "outside world" around them &mdash; to other programs running on the same machine, or even to other programs running on different machines in faraway places.  This is a powerful thing for a program to be able to do, because it is no longer limited to taking its input from a user or from a file stored locally; its input is now potentially anything that's accessible via the Internet, making it possible to solve a vast array of new problems and process a much broader collection of information.  Once you have the ability to connect your programs to others, a whole new world opens up.  Suddenly, the idea that you should be able to write a program that combines, say, Google search queries, the Internet Movie Database, and your favorite social network to find people who like movies similar to the ones you like doesn't seem so far-fetched.</p>
+
+<p>But we also saw that getting programs to share information is tricky, for (at least) two reasons.  Firstly, there's a software engineering problem: A protocol has to be designed that both programs can use to have their conversation.  Secondly, there's a social problem: If the same person (or group of people) isn't writing both programs, it's necessary for them to agree on the protocol ahead of time, then to implement it.  This second problem has a potentially catastrophic effect on our ability to make things work &mdash; how could you ever convince Google to agree to use your protocol just to communicate with you?</p>
+
+<p>In practice, both of these problems are largely solved by the presence of <i>standards</i>, such as those defined by the <a href="http://www.w3.org/">World Wide Web Consortium</a> and the <a href="https://www.ietf.org/">Internet Engineering Task Force</a>.  Standards help by providing detailed communication protocols whose details have already been hammered out, with the intention of handling the most common set of needs that will arise in programs.  This eliminates the need to design one's own protocol (where the standard protocols will suffice, which is more often than you might think) and allows programs to be combined in arbitrary ways; as long as they support the protocol, they've taken a big step toward being able to interoperate with each other.  What's more, standard protocols often have standard implementations, so that you won't have to code up the details yourself as you did in the previous project.  For example, Python has built-in support for a number of standard Internet protocols, including HTTP (HyperText Transfer Protocol, the protocol that your browser uses to download web pages) among others.</p>
+
+<p>At first blush, HTTP doesn't seem all that important.  It appears to be a protocol that will allow you to write programs that download web pages (i.e., that allow you to write programs that play the same role that web browsers do).  But it turns out that HTTP is a lot more important than that, since it is the protocol that underlies a much wider variety of traffic on the Internet than you might first imagine.  This is not limited only to the conversation that your browser has with a web server in order to download a web page, though that conversation most often uses HTTP (or its more secure variant, HTTPS).  HTTP also underlies a growing variety of program-to-program communications using web protocols, where web sites or other software systems communicate directly with what are broadly called <i>web services</i>, fetching data and also making changes to it.  This is why you can post tweets to Twitter using either their web site, a client application on your laptop, or a smartphone app; all of these applications use the same protocol to communicate with the Twitter service, differing only in the form of user interface they provide.</p>
+
+<p>Fortunately, since HTTP support is built directly into Python, we can write 
+programs that use these web services without having to handle low-level details 
+of the protocol, though there are some details that you'll need to be familiar 
+with if you want to use the provided implementation effectively.  We'll be 
+discussing some of these details in lecture soon, and these will be accompanied 
+by a <a href="../../Notes">code example</a>, which will give you some background 
+in the tools you'll need to solve these kinds of problems in Python.</p>
+
+<p>This project gives you the opportunity to explore a small part of the vast sea of possibilities presented by web APIs and web services.  You'll likely find that you spend a lot of your time in this project understanding the web API you'll need &mdash; being able to navigate technical documentation and gradually build an understanding of another system is a vital skill in building real software &mdash; and that the amount of code you need isn't nearly what you might expect when you first read the project write-up.  As always, work incrementally rather than trying to work on the entire project all at once.  When you're done, you'll have taken a valuable step toward being able to build Python programs that interact with web services, which opens up your ability to write programs for yourself that are real and useful.</p>
+
+<p>Additionally, you'll get what might be your first experience with writing classes in Python, which will broaden your ability to write clean, expressive Python programs, a topic we'll continue revisiting and refining throughout the rest of this course.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Reminder: Do not select a partner</p>
+
+<p>Unlike the previous projects, which offered you the option of using the pair programming technique, this project <i>requires that you work individually</i>.  So you will not be selecting a partner and you will not be doing pair programming this time; each student is responsible for his or her own submission for this project.  While we do believe that pair programming offers a lot of benefits, you'll also need to build your skills at working on your own, as future coursework (and possibly future employment) will depend on them.</p>
+
+<p class="subtitle">Reusing your own work from a previous quarter</p>
+
+<p>Unlike on work done with a partner, you are permitted to reuse your own work if you took this course previously.  We recommend doing the projects again from a clean slate, anyway, because there are likely some significant things that you didn't understand if you've failed this course previously.  Still, it is not plagiarism to use code that was solely yours to begin with.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">The problem, in general</p>
+
+<p>In your work on this project, you'll write a program that is capable of displaying information about a trip from one location to another (e.g., driving directions between two street addresses).  For example, you might display turn-by-turn directions, an estimate of how long it might take to get from one location to another, and so on.  You'll use real-world map data &mdash; real cities, real streets &mdash; to solve your problem.  So, when you're done, your program will be a very simple navigation system, not entirely unlike the ones you see on some smartphones or in some cars.  If you want to know how to drive from Bren Hall at UCI to Staples Center in Los Angeles, your program will be able to tell you.</p>
+
+<p>That may sound like something that is well beyond your current skill level and/or time you have available, that you're being asked to build a complete, professional system that would ordinarily be written by a large team of people over a period of months.  And, indeed, if you had to write the entire system from scratch, that would certainly be true; it would take even a seasoned professional a lot longer than the time allotted to complete a task like that, and would require skills well beyond what's been taught in your coursework to date.</p>
+
+<p>But there is good news here: We operate in an interconnected world, where information of all kinds is available to us in web browsers, smartphone applications, and so on.  And we're fortunate that a lot of that information is available for free, not just in a way that lets us view it in a web browser, but in a way that makes it available to the programs we write.  Provided that we can find an online service that provides the information we need, and provided that we're licensed to use it &mdash; either because it's free and we meet the terms of use, or because we're willing to pay for the privilege &mdash; we can use it to solve our problem.</p>
+
+<p>As it turns out, the information we need to solve this particular problem is available online, in a form that can be consumed by a Python program, and licensed in a way that lets us use it (because it is free for non-commercial use).  The only trick is figuring out how to get the information into our program.  Luckily for us, the service that provides this information uses standard protocols and formats that are common on the Internet; even better, all of these protocols and formats are implemented already in Python's standard library, so the low-level details will not be our concern, and we can focus on the more interesting parts of the problem.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">The MapQuest Open Data APIs</p>
+
+<p>MapQuest is a company that is in the business of providing online services for displaying maps, providing directions, reporting on current traffic conditions, and other related services.  While they're a for-profit company, some of their services are provided free of charge for non-commercial use.  As long as you're not building a product from which you'll be trying to make money, you can use MapQuest's free services, with the one additional caveat that you have to follow the rules laid out in their license.  These kinds of license restrictions are no joke, so we'll spend a little time to be sure we're taking them seriously.</p>
+
+<p>For our work on this project, you'll be concerned with two parts of the Open MapQuest API, provided by a company called MapQuest; we'll need both the Open Directions Service and the Open Elevation Service.  Both of these are web-based APIs, similar to the one we used in the <a href="../../Notes">code example</a> in which we downloaded and displayed information about YouTube videos.  Like YouTube's API, the Open MapQuest API uses HTTP, with queries described using a URL, and with responses returned in JSON format.  Fortunately, all of these technologies are supported in Python's standard library, so most of the details are things that will be handled for us automatically, but, as we saw in the YouTube example, there are some things we need to get right, and not all of the details wil be the same in the MapQuest example as they were in the YouTube example, so it'll be vital for you to understand <i>why</i> we did the things we did in the <a href="../../Notes">code example</a>, so you can know whether and where the same techniques apply.</p>
+
+<p>The two APIs you'll need are described in detail at the links below.  You certainly won't need to read all of the documentation, but you'll want to take a look around and familiarize yourself with what the API can do, because part of your goal in this project is to decide what parts of the API you'll need to solve your problem.</p>
+
+<ul>
+  <li><a href="http://open.mapquestapi.com/directions/">MapQuest Open Directions Service documentation</a></li>
+  <li><a href="http://open.mapquestapi.com/elevation/">MapQuest Open Elevation Service documentation</a></li>
+</ul>
+
+<p class="subtitle">Creating an account and getting an API Key</p>
+
+<p>Like YouTube's API that we saw in class, MapQuest's API requires an <i>API Key</i>, which links your usage of the API to an account and authorizes you to use the API.  Before you can make use of the API, you'll need to obtain your own API Key &mdash; and due to usage restrictions, we won't all be able to share the same key, so each of you will need to take this step.  <i>Do not share your API Key with other students!</i>  You'll only need to do this once, and you'll be able to use your API Key for all of your work on this project once it's been created.  And, don't worry, obtaining the API Key is free for non-commercial uses like ours.</p>
+
+<ul>
+  <li>Visit the <a href="https://developer.mapquest.com/">MapQuest Developer</a> site in your browser.</li>
+  <li>Part of the way down the page, you'll see a button that says <b>Get Your Free API Key</b>.  Click that button.  (Note that their page sometimes changes from time to time &mdash; it shows a few different things and rotates between them &mdash; so if the button isn't there, wait a little while and it'll be back.)</li>
+  <li>A form will be displayed, in which you can choose a username, a password, and so on.  Fill in the necessary information, and be sure to use an email address that you have access to; you'll need to receive emails from MapQuest along the way.</li>
+  <li>Once you've created your account, you'll be logged in and presented with some choices, one of which is <b>Manage Keys</b>.  Click that.</li>
+  <li>You'll then see a button that says <b>Create a New Key</b>.  Click that, because you're going to be needing an API Key that allows you to use the Open MapQuest APIs.</li>
+  <li>When asked, supply an <b>App Name</b> (maybe <i>ICS 32A Project 3</i> would be a good choice).  The <b>Callback URL</b> is not important for us, since we're not building a web application, so you can specify the URL of my Project 3 web page: <b>http://www.ics.uci.edu/~thornton/ics32a/ProjectGuide/Project3/</b></li>
+  <li>Now that your key has been created within your MapQuest Developer profile, you will be able to obtain your API key.  Click the name of your application, which you should now see on the page, which will reveal more information about it.  Make a note of both the <b>Consumer Key</b> and <b>Consumer Secret</b> somewhere; you'll need these later.  Notice, too, that there is a limit on the number of times you can use the API each month &mdash; currently 15,000 transactions per month &mdash; and that you can see in this same area of the MapQuest Developer web site how many of these transactions you've used at any given time.  The limit should be plenty for our use, but you may nonetheless want to keep an eye on it.</li>
+</ul>
+
+<p>After you've completed this process, your MapQuest API Key will have been created, though it should be noted that it might take a little bit of time for it to become active, so don't panic if you're not able to use it right away.</p>
+
+<p class="subtitle">Testing your API Key</p>
+
+<p>Wait a little while after creating your API Key, then it's time to test that it's working.  Open your favorite web browser; enter a URL in the following format into the browser's address bar and press Enter, replacing <b><i>APIKEY</i></b> with the <b>Consumer Key</b> part of the API key that you created in the previous step.</p>
+
+<blockquote><pre>
+http://open.mapquestapi.com/directions/v2/route?key=<b><i>APIKEY</i></b>&from=Irvine%2CCA&to=Los+Angeles%2CCA
+</pre></blockquote>
+
+<p>If successful, you should receive a result that looks roughly like this (though you'll get a lot more output than this):</p>
+
+<blockquote><pre>
+{"route":{"hasTollRoad":false,"computedWaypoints":[],"fuelUsed":1.93,"hasUnpaved":false,"hasHighway":true,"realTime":-1,
+"boundingBox":{"ul":{"lng":-118.244476,"lat":34.057094},"lr":{"lng":-117.794593,"lat":33.6847}},"distance":40.675,"time":2518,
+"locationSequence":[0,1],"hasSeasonalClosure":false,"sessionId":"545ca8d0-03c3-001e-02b7-7cb8-00163edfa317",
+"locations":[{"latLng":{"lng":-117.825982,"lat":33.685697},"adminArea4":"Orange County","adminArea5Type":"City",
+"adminArea4Type":"County","adminArea5":"Irvine","street":"","adminArea1":"US","adminArea3":"CA","type":"s",
+"displayLatLng":{"lng":-117.825981,"lat":33.685695},"linkId":44589954,"postalCode":"","sideOfStreet":"N",
+"dragPoint":false,"adminArea1Type":"Country","geocodeQuality":"CITY","geocodeQualityCode":"A5XCX","adminArea3Type":"State"},
+
+...
+</pre></blockquote>
+
+<p>You may recognize from lecture that this format is JSON (JavaScript Object Notation), which is a common format of information returned from web APIs like this one.  Unfortunately, it's not presented in a way that's particularly readable for us &mdash; though, in general, that's not a problem for our program, because our program doesn't have the same aesthetic needs that we do.  To take your first look at what's being returned, you might find it useful to copy all of the text returned to you, then visit <a href="http://jsonprettyprint.com/">jsonprettyprint.com</a> and paste the text and ask for it to be "pretty-printed".  You'll now see the same text, but spaced in a way that will make its structure more obvious to a human reader.</p>
+
+<p>Once it's "pretty-printed," take a look through MapQuest's response &mdash; don't worry if you don't understand every detail, but start to get a rough sense of what kind of information is available and how it's organized.  When you want to know the details, the API documentation will explain everything you need, and you'll find that you can discover a lot of the details through additional experimentation.  But it's important that you allow yourself to build an understanding gradually; this is not something you'll necessarily be able to figure out right away, but a lot of the information won't turn out to be relevant in this project, anyway.  One characteristic that distinguishes real-world work from the often-sanitized kinds of projects you do in courses like this is the need to find small nuggets of information you need amongst large amounts of documentation that is largely irrelevant to the problem you want to solve; I want you to start building those skills (and alleviate your fears about this kind of thing) now, so you can start working on your own programs that are more "real" and, thus, more exciting.</p>
+
+<p class="subtitle">Respecting MapQuest's license</p>
+
+<p>Being the owner of the service, MapQuest has a license that describes the conditions under which you're permitted to use it.  For the curious, the license (a "Terms of Use" document) for MapQuest's "open" platform (the parts it doesn't sell) is available at the link below.  If you've never looked at the license for a software product, take a minute or two to see what one looks like; when you build software that depends on other software, what you can and can't do with the other software will generally be described in a license like this one.
+
+<ul>
+  <li><a href="https://developer.mapquest.com/legal">MapQuest Terms and Conditions</a></li>
+  <li><a href="http://hello.mapquest.com/terms-of-use">Open MapQuest Terms of Use</a></li>
+</ul>
+
+<p>Don't feel like you need to read the whole thing in detail, but at least spend a little time getting familiar with what a license like this looks like; if you want to work in technology, it won't be the last one of these you'll see.  I'm certainly not a lawyer, but I do know how to skim through a license to see whether there are obvious red flags that suggest that I won't be able to use a product in the way I plan to.  And for the parts I'm less sure about, I can seek legal counsel &mdash; and sometimes my employers will require (and provide) legal oversight, but it helps if I understand the basics of the license first.</p>
+
+<p>Don't panic when you see that the Terms and Conditions refers to things like overage charges and credit cards.  We'll be using only the Open MapQuest APIs, which do not require payment (nor do they require a credit card to sign up).</p>
+
+<p>In general, what we care about in MapQuest's license are a few things:</p>
+
+<ul>
+  <li>You can't disrupt their services &mdash; intentionally flooding it with requests, for example.</li>
+  <li>You can't use their services in a commercial application without establishing a commercial relationship with MapQuest (and, notably, <i>paying them</i>).  Since you won't be selling your project, this is no problem.</li>
+  <li>You can't make more than 15,000 requests to MapQuest's API using your API Key in any given month.  This is not likely to impact your work, but it is worth being aware of this restriction.  Note that this is one of the reasons why sharing your API Key with other students can be problematic.  If multiple students use the same API Key, there exists the very real possibility that this limit will be reached while you work &mdash; or while we grade the projects! &mdash; even though 15,000 requests per month is plenty for one person.</li>
+  <li>The Open MapQuest APIs provide map data that actually belongs to another organization called OpenStreetMap.  Their license requires that we print a copyright message in our output, so we'll be sure to do that.</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">The program, in detail</p>
+
+<p>Your program will describe a trip taken between a sequence of locations, the goal being to travel from the first location to the second, then from the second location to the third, and so on, until reaching the last location.  Based on the user's input, it will show different information about the trip, such as turn-by-turn directions, distances and times, etc.</p>
+
+<p class="subtitle">The input</p>
+
+<p>Your program will take input in the following format.  It should not prompt the user in any way; it should simply read whatever input is typed into the console, and you should assume that your user knows the precise input format.</p>
+
+<ul>
+  <li>An integer whose value is at least 2, alone on a line, that specifies how many <i>locations</i> the trip will consist of.</li>
+  <li>If there are <i>n</i> locations, the next <i>n</i> lines of input will each describe one location.  Each location can be a city such as <b>Irvine, CA</b>, an address such as <b>4545 Campus Dr, Irvine, CA</b>, or anything that the Open MapQuest API will accept as a location.  (The details of what is acceptable as a location is described <a href="http://open.mapquestapi.com/common/locations.html">here</a>.  Your program won't need to validate this input, but you'll need to expect that you might not get a valid response if you use something that MapQuest won't accept; you'll need to experiment with the Open MapQuest API's to see how they respond to invalid locations.)</li>
+  <li>A positive integer (i.e., whose value is at least 1), alone on a line, that specifies how many <i>outputs</i> will need to be generated.</li>
+  <li>If there are <i>m</i> outputs, the next <i>m</i> lines of input will each describe one output.  Each output can be one of the following:
+    <ul>
+      <li><b>STEPS</b> for step-by-step directions, meaning a brief description of each maneuver (e.g., a turn, entering or exiting a freeway, etc.) you would have to make to drive from one location to another</li>
+      <li><b>TOTALDISTANCE</b> for the total distance traveled if completing the entire trip</li>
+      <li><b>TOTALTIME</b> for the total estimated time to complete the entire trip</li>
+      <li><b>LATLONG</b> for the latitude and longitude of each of the locations specified in the input</li>
+      <li><b>ELEVATION</b> for the elevation, in feet, of each of the locations specified in the input</li>
+    </ul>
+  </li>
+</ul>
+
+<p>You can feel free to assume that the input will match the format described above; we will not be testing cases where it doesn't, so you can do anything you'd like &mdash; up to and including crashing &mdash; in such cases.</p>
+
+<p class="subtitle">The output (when a route was found by MapQuest)</p>
+
+<p>After reading the input and processing it &mdash; downloading information from the MapQuest API, etc. &mdash; your program will generate the specified outputs in the forms described below.  Each output must be preceded by a blank line, to set each one off from the others.  The outputs must be written in the order that they were specified in the input (e.g., if the input said <b>TOTALDISTANCE</b>, then <b>LATLONG</b>, then <b>TOTALTIME</b>, the outputs must be shown in that order).</p>
+
+<ul>
+  <li>The <b>STEPS</b> output should begin with the word <b>DIRECTIONS</b> alone on a line, followed by one line of output for each maneuver that needs to be made along the path from the first location to the last.</li>
+  <li>The <b>TOTALDISTANCE</b> output should be the words <b>TOTAL DISTANCE</b>, followed by a colon and a space, followed by the total distance (in an integer number of miles, rounded to the nearest mile) for the entire trip.</li>
+  <li>The <b>TOTALTIME</b> output should be the words <b>TOTAL TIME</b>, followed by a colon and a space, followed by the total time (in an integer number of minutes, rounded to the nearest minute) that would be required to take the entire trip.</li>
+  <li>The <b>LATLONG</b> output should be the word <b>LATLONGS</b> alone on a line, followed bby a latitude and longitude, one of each per line, for each of the locations specified in the input, in the order specified in the input.  The latitude should come first, followed by a space, followed by the longitude.
+    <ul>
+      <li>The latitude's format is a number of degrees (formatted to two decimal places) followed by either <b>N</b> for north or <b>S</b> for south.</li>
+      <li>The longitude's format is a number of degrees (formatted to two decimal places) followed by either <b>W</b> for west or <b>E</b> for east.</li>
+    </ul>
+  </li>
+  <li>The <b>ELEVATION</b> output should be the word <b>ELEVATIONS</b> alone on a line, followed by an integer number of feet of elevation, one per line, for each of the locations specified in the input, in the order specified in the input.  If MapQuest reports the elevation with a decimal part, round to the nearest integer.</li>
+</ul>
+
+<p>After the last output, print a blank line, and then the following copyright statement, alone on a line: <b>Directions Courtesy of MapQuest; Map Data Copyright OpenStreetMap Contributors</b>.</p>
+
+<p class="subtitle">The output (when no route was found by MapQuest)</p>
+
+<p>When no route was found by MapQuest &mdash; e.g., if you look for driving directions from <b>Irvine, CA</b> to <b>Lisbon, Portugal</b>, you won't find any &mdash; the program should simply output a blank line, followed by <b>NO ROUTE FOUND</b> alone on a line.  This also includes the scenario where one or more of the locations was not valid (e.g., you looked for driving directions between locations that MapQuest did not recognize).</p>
+
+<p class="subtitle">The output (when MapQuest returns some other kind of error)</p>
+
+<p>When MapQuest returns another kind of error, other than a route not being found (e.g., the AppKey was invalid, you have no network connectivity, or MapQuest was down), the program should simply output a blank line, followed by <b>MAPQUEST ERROR</b> alone on a line.</p>
+
+<p class="subtitle">An example of the program's execution</p>
+
+<p>The following is an example of the program's execution, as it should be.  Boldfaced, italicized text indicates input, while normal text indicates output.<b><i>Note that the map data (the maneuvers, latitudes and longitudes, etc.) are hypothetical</i></b>; I haven't taken them directly from MapQuest, since the goal of this example is to demonstrate the format.</p>
+
+<blockquote><pre>
+<b><i>3
+4533 Campus Dr, Irvine, CA
+1111 Figueroa St, Los Angeles, CA
+3799 S Las Vegas Blvd, Las Vegas, NV
+5
+LATLONG
+STEPS
+TOTALTIME
+TOTALDISTANCE
+ELEVATION</i></b>
+
+LATLONGS
+33.68N 117.77W
+34.02N 118.41W
+36.11N 115.17W
+
+DIRECTIONS
+West on Campus Dr.
+Right on Bristol
+CA-73 North
+Transition to I-405 North
+Transition to I-110 North
+Exit 9th Street
+South on S Figueroa St.
+Left on W 18th St.
+Enter I-10 East from W 18th St.
+Transition to I-15 North
+Exit S Las Vegas Blvd.
+
+TOTAL TIME: 317 minutes
+
+TOTAL DISTANCE: 365 miles
+
+ELEVATIONS
+542
+211
+2001
+
+Directions Courtesy of MapQuest; Map Data Copyright OpenStreetMap Contributors
+</pre></blockquote>
+
+</div>
+
+<!--
+<div class="section">
+
+<hr />
+
+<p class="title">Wait... what kind of crazy user interface is this?</p>
+
+<p>Unlike programs you may have written in the past, this program has no graphical user interface, or even an attempt at a "user-friendly" console interface.  There are no prompts asking for particular input; we just assume that the program's user knows precisely what to do.  It's a fair question to wonder why there isn't any kind of user interface.  Not all programs require the user-friendly interfaces that are important in application software like Microsoft Word or iTunes, for the simple reason that humans aren't the primary users of all software.  Just as MapQuest's API responds only to properly-formatted HTTP requests &mdash; with no prompting that asks a human user for input and a relatively unfriendly approach to dealing with incorrect input &mdash; your program will similarly presume that its input will be given in the format required.</p>
+
+<p>Now consider again the requirements of the program you're being asked to write for this project.  It waits for requests to be sent in via the console &mdash; though they could almost as easily be sent across the Internet, if we preferred &mdash; in a predefined format, then responds using another predefined format.  Our program, in essence, can be thought of in the same way as a web server; it's the engine on top of which lots of other interesting software could be built.  When an attempt in being made to charge to a card, that could be coming from a web form filled out by a user.  When a card's balance is queried, that could be a result of a user logging into the card issuer's web site and asking for it, or dialing into a phone-based system instead.</p>
+
+<p>While we won't be building these other interesting parts, suffice it to say that there's a place for software with no meaningful user interface; it can serve as the foundation upon which other software can be built.  You can think of your program as that foundation.</p>
+
+<p>Additionally, we're using a strategy like this one to assist us in automating the grading of the correctness of your project.  Since everyone's input and output have to be formatted in the same way, we will be able to grade your output without manually looking at every line.</p>
+
+</div>
+-->
+
+<div class="section">
+
+<hr />
+
+<p class="title">An example implementation</p>
+
+<p>If you'd like to experiment with a completely implemented example of this program, which demonstrates the output you are required to generate based on the input your program receives, a version is available at the link below, which you can run directly within your browser.</p>
+
+<ul>
+  <li><a href="example.html">Example Implementation</a></li>
+</ul>
+
+<p>Note that you'll need your MapQuest API Key before you can experiment with the example implementation, so if you haven't created that yet, do that before proceeding.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Design requirements and advice</p>
+
+<p>As with the previous project, you'll be required to write your program using multiple Python modules (i.e., multiple <b>.py</b> files), each encapsulating a different major part of the program.  The following modules would be a good way to break this problem down into component parts:</p>
+
+<ul>
+  <li>A module that interacts with the Open MapQuest APIs.  This is where you should do things like building URLs, making HTTP requests, and parsing JSON responses.</li>
+  <li>A module that implements the various outputs.  Each kind of output that can be generated by the program must be implemented as a separate <i>class</i>; see below.</li> 
+  <li>A module that reads the input and constructs the objects that will generate the program's output.  This is the only module that should have an <b>if __name__ == '__main__'</b> block to make it executable; you would execute this module to run your program.</li>
+</ul>
+
+<p class="subtitle">Output generators as classes</p>
+
+<p>Each of the different kinds of outputs that your program can generate is required to be implemented as a Python <i>class</i>, which contains attributes that configure it and a method that generates the output given the response from the Open MapQuest APIs.</p>
+
+<p>All of these classes must have a method with the same signature (i.e., the same name, the same parameters, and the same type of return value) that is used to generate one kind of output, so that your main module can create a list of output generators of various types, then generate all of its output by simply looping through them and asking each to generate its output.</p>
+
+<p>(This is one key benefit in using classes in Python; we can treat different kinds of objects with similar capabilities the same way, which avoids us having to use <b>if</b> statements to differentiate.  We'll see an example of this technique, which is sometimes called <i>duck typing</i>, in lecture.)</p>
+
+<p class="subtitle">Where should I start?</p>
+
+<p>There are lots of ways to start this project, but your goal, as always, is to find stable ground as early and often as possible.  One problem you know you'll need to solve is reading the input; I'd consider starting with that, even if all you do is read the input and print something back to the console that demonstrates that you read it correctly.  You can test this from the Python interpreter before proceeding, and then you're on stable ground.</p>
+
+<p>After that, choose another slice of functionality &mdash; something small that you understand &mdash; and work on that.  For example, you might write a function that builds the URLs that you'll use to call into one of the Open MapQuest APIs.  Call that function from the Python interpreter, then take its output and try to use a web browser to open the URL; if you get back a JSON response, that tells you that you're on the right track, and you're on stable ground again.</p>
+
+<p>Continue in this fashion, choosing some small problem to work on.  Don't worry if you sometimes go down a dark path that turns out to be a dead end; you won't always make the right decision every time.  But you'll gradually build confidence and you'll gradually build your understanding of the problem you're working on.  Maintaining forward momentum is the key to avoiding the feeling of being overwhelmed by a problem that seems larger than you're used to.</p>
+
+<p>If you work incrementally and gradually, you'll find yourself completing this project, and will hopefully be excited by the outcome.  Even if maps and directions aren't things that interest you, there's a good chance you can find a web API that serves up information that you are excited about, and that you might be able to write an interesting program around.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">A word about the use of outside resources</p>
+
+<p>Because the Open MapQuest APIs are fairly well-known online services, it is entirely possible that you would find Python modules online that have already been written and that know how to communicate with it.  However, you are not permitted to download these and submit them as your own, in whole or in part, and you are not permitted to use them as any kind of basis for your own work.  While you can use the Python standard library, you otherwise are expected to write this program entirely on your own.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Deliverables</p>
+
+<p>Put your name and student ID in a comment at the top of each of your <b>.py</b> files, then submit all of the files to Checkmate.  Take a moment to be sure that you've submitted all of your files.</p>
+
+<p>Follow <a href="../SubmittingProjects.html">this link</a> for a discussion of how to submit your project via Checkmate.  Be aware that I'll be holding you to all of the rules specified in that document, including the one that says that you're responsible for submitting the version of the project that you want graded.  We won't regrade a project simply because you submitted the wrong version accidentally.</p>
+
+<p class="subtitle">Can I submit after the deadline?</p>
+
+<p>Yes, it is possible, subject to the late work policy for this course, which is described in the section titled <i>Late work</i> at <a href="../index.html">this link</a>.</p>
+
+</div>
+
+<div class="history">
+
+<hr />
+
+<ul class="nomarker">
+  <li>More clarifications and updates related to recent MapQuest changes by Alex Thornton, Winter 2017.</li>
+  <li>Updated to support recent MapQuest changes by Alex Thornton, Fall 2015.</li>
+  <li>A few additional requirements, plus a number of clarifications by Alex Thornton, Spring 2015.</li>
+  <li>Multiple tweaks and clarifications, along with an example web-based implementation, added by Alex Thornton, Winter 2015.</li>
+  <li>Originally written by Alex Thornton, Fall 2014.</li>
+</ul>
+
+</div>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

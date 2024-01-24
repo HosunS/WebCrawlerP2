@@ -1,0 +1,1254 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueñ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE12609¢Ak¢DtypeEvaluePTWC-Device-ClassAv¢DtypeEvalueGdesktop¢Ak¢DtypeEvalueXAccess-Control-Allow-OriginAv¢DtypeEvalueXhttp://www.wunderground.com¢Ak¢DtypeEvaluePTWC-Locale-GroupAv¢DtypeEvalueBUS¢Ak¢DtypeEvalueKTWC-PrivacyAv¢DtypeEvalueFexempt¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSat, 09 Feb 2019 03:22:08 GMT¢Ak¢DtypeEvalueQTWC-GeoIP-CountryAv¢DtypeEvalueBUS¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 03:22:08 GMT¢Ak¢DtypeEvalueNX-CreationTimeAv¢DtypeEvalueE0.005¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueYÅDT=1549682528:8882:ip-10-226-235-63; path=/; expires=Fri, 01-Jan-2020 00:00:00 GMT; domain=.wunderground.com, Prefs=FAVS:1|WXSN:1|PWSOBS:1|WPHO:1|PHOT:1|RADC:0|RADALL:0|HIST0:NULL|GIFT:1|PHOTOTHUMBS:50|; path=/; expires=Fri, 01-Jan-2020 00:00:00 GMT; domain=.wunderground.com, speedpin=4G; expires=Sat, 09-Feb-2019 03:52:08 GMT; path=/; domain=.wunderground.com; secure, ci=TWC-Connection-Speed=4G&TWC-Locale-Group=US&TWC-Device-Class=desktop&X-Origin-Hint=dna&TWC-Network-Type=wifi&TWC-GeoIP-Country=US&TWC-GeoIP-Lat=33.6880&TWC-GeoIP-Long=-117.7988&Akamai-Connection-Speed=1000+&TWC-Privacy=exempt; path=/; domain=.wunderground.com; secure¢Ak¢DtypeEvalueX Access-Control-Allow-CredentialsAv¢DtypeEvalueDtrue¢Ak¢DtypeEvalueTTWC-Connection-SpeedAv¢DtypeEvalueB4G¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueKProperty-idAv¢DtypeEvalueKdrupal-prod¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueOX-RequestSourceAv¢DtypeEvalueX!AkamaiProdProxy, AkamaiDefaultDNA¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueQTWC-GeoIP-LatLongAv¢DtypeEvalueQ33.6880,-117.7988¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX"private, no-cache, must-revalidate¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYµÕ
+<!DOCTYPE html>
+<!--[if IE 9]><html class="no-js ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js "> <!--<![endif]-->
+	<head>
+		<title>Find Your Nearest PWS | Weather Underground | Weather Underground</title>
+		<link href="//icons.wxug.com/" rel="dns-prefetch" />
+		<link href="//api-ak.wunderground.com/" rel="dns-prefetch" />
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+<meta http-equiv="cleartype" content="on">
+		<meta name="description" content="Weather Underground provides local & long range Weather Forecast, weather reports, maps & tropical weather conditions for locations worldwide." />
+		<meta name="keywords" content="Weather, Weather Underground, Find Your Nearest PWS | Weather Underground, forecasts, current conditions, rain, snow, hurricane, tornado, storm, thunderstorm, tropical storm, wundermap, ski conditions, ski report, surfing, marine, aviation, photographs, photos, severe weather" />
+<meta name="apple-itunes-app" content="app-id=486154808, affiliate-data=at=1010lrYB&ct=website_wu" />
+<meta name="fb-app-id" content="325331260891611" />
+<meta name="fb-channel-url" content="//www.wunderground.com/php/lib/fb_sdk/channel.php" />
+<meta name="wui-member-logged-in" content="false" />
+<meta name="com.silverpop.brandeddomains" content="www.pages02.net,www.wunderground.com" />
+		<link rel="canonical" href="https://www.wunderground.com/monthlyweather/" />
+	<link rel="apple-touch-icon" href="//icons.wxug.com/favicon.png"/>
+	<link rel="shortcut icon" type="image/png" href="//icons.wxug.com/favicon.png"/>
+	<link rel="stylesheet" href="//icons.wxug.com/css/wu4/core.css?v=2017041301">
+	<link rel="stylesheet" href="//icons.wxug.com/css/wu4/omnibus.css?v=2018082001">
+	<link rel="stylesheet" href="//icons.wxug.com/css/wu4/pwsdashboard.css?v=2017030201" />
+	<link rel="stylesheet" href="//icons.wxug.com/css/wu4/history.css?v=2015100201" />
+	<script src="//icons.wxug.com/scripts/modernizr/2.8.2/modernizr.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script src="//icons.wxug.com/scripts/wui-js/2.0.3/wui.min.js"></script>
+		<script src="//icons.wxug.com/scripts/wui.login.min.js?v=1.3.18"></script>
+	</head>
+	<body class="paid History-MonthlyWeather city-page  ">
+		<div id="content-wrap" class="relative right-side-nav">
+		<nav id="feature-menu-mobile" class="sidebar">
+  <div class="sidebar-wrapper">
+  <ul class="side-main-nav nav-bar">
+  <li>
+  <a href="/login.asp">Log in</a>
+  </li>
+  <li>
+  <a href="/member/registration">Join</a>
+  </li>
+  </a>
+  <ul class="sideSubNav">
+  <li class="sideGoBack"><a href="javascript:void(0);"></a></li>
+  <li class="sidebar-heading no-link">
+	 Bonjour &#33;
+</li>
+<li><a href="/member/membersettings.html">Member Settings</a></li>
+<li><a href="/email/mainmenu.php">My Email Alerts</a></li>
+<li><a href="/webcams/signup.html" class="brBot3">My Webcams</a></li>
+<li><a href="/email/logout.php">Sign Out</a></li>
+  </ul>
+  </li>
+  <li class="gotMore">
+  <a href="#">
+  <i class="fi-widget sidebar-icon"></i> Settings
+  </a>
+  <ul class="sideSubNav">
+  <li class="sideGoBack"><a href="javascript:void(0);">Settings</a></li>
+  <ul class="button-group toggle radius">
+  <li><a onclick="wui.SetUnitToEnglish()" title="Switch to English" class="button selected">&deg;F</a></li>
+  <li><a onclick="wui.SetUnitToMetric()" title="Switch to Metric" class="button ">&deg;C</a></li>
+</ul>
+  <li><a class="privacy-preferences-link" style="display: none;">Privacy preferences</a></li>
+  </ul>
+  </li>
+  <li class="gotMore">
+  <a href="javascript:void(0);" class="wunder-r">Sensor Network</a>
+  <ul class="sideSubNav">
+  <li class="sideGoBack"><a href="javascript:void(0);">Sensor Network</a></li>
+  <li><a href="/weatherstation/overview.asp">Weather Station Network</a></li>
+  <li><a href="/weatherstation/buyingguide.asp">PWS Buying Guide</a></li>
+  <li><a href="/personal-weather-station/mypws">Connect a Weather Station</a></li>
+  <li><a href="/webcams/signup.html">Connect a Webcam</a></li>
+  </ul>
+  </li>
+  <li class="gotMore">
+  <a href="javascript:void(0);" class="wunder-o">Maps &amp; Radar</a>
+  <ul class="sideSubNav">
+  <li class="sideGoBack"><a href="javascript:void(0);">Maps &amp; Radar</a></li>
+  <li><a href="/wundermap" title="WunderMap">WunderMap</a></li>
+  <li><a href="/wundermap/?rad=1&amp;rad.num=1&amp;rad.spd=25&amp;rad.opa=81&amp;rad.type=00Q&amp;rad.type2=&amp;rad.smo=1&amp;rad.stm=0&amp;sat=0&amp;stormreports=0&amp;svr=0&amp;pix=0&amp;cams=0&amp;tor=0&amp;riv=0&amp;wxsn=0&amp;ski=0&amp;tfk=0&amp;mm=0&amp;ndfd=0&amp;fire=0&amp;firewfas=0&amp;extremes=0&amp;hurrevac=0&amp;sst=0&amp;livesurge=0&amp;femaflood=0&amp;tsunami=0&amp;seismicrisk=0&amp;fault=0&amp;fissures=0&amp;fronts=0&amp;dir=1&amp;dir.mode=driving&amp;hur=0" title="Interactive Radar">Interactive Radar</a></li>
+  <li><a href="/wundermap/?zoom=5&amp;type=&amp;tl.play=0&amp;tl.spd=2&amp;extremes=0&amp;fault=0&amp;femaflood=0&amp;fire=0&amp;firewfas=0&amp;fissures=0&amp;fronts=0&amp;hurrevac=0&amp;hur=0&amp;lightning=0&amp;livesurge=0&amp;mm=0&amp;ndfd=0&amp;rad=0&amp;dir=1&amp;dir.mode=driving&amp;sst=0&amp;sat=1&amp;sat.num=1&amp;sat.spd=25&amp;sat.opa=87&amp;sat.gtt1=108&amp;sat.gtt2=108&amp;sat.type=IR4&amp;seismicrisk=0&amp;svr=0&amp;ski=0&amp;snowfall=0&amp;stormreports=0&amp;tor=0&amp;tfk=0&amp;tsunami=0&amp;riv=0&amp;wxsn=0&amp;cams=0&amp;pix=0" title="Interactive Satellite">Interactive Satellite</a></li>
+  <li><a href="/weather-radar/" title="Radar Maps">Radar Maps</a></li>
+  <li><a href="/ndfdimage/viewimage/" title="Forecast Maps">Forecast Maps</a></li>
+  <li><a href="/maps" title="Full Maps Catalog">Full Maps Catalog</a></li>
+  </ul>
+  </li>
+  <li class="gotMore">
+  <a href="javascript:void(0);" class="wunder-y">Severe Weather</a>
+  <ul class="sideSubNav">
+  <li class="sideGoBack"><a href="javascript:void(0);">Severe Weather</a></li>
+  <li><a href="/hurricane" title="Hurricane &amp; Tropical Cyclones">Hurricane &amp; Tropical Cyclones</a></li>
+  <li><a href="/wundermap?zoom=5&lat=37.80307138624724&lon=-90.50826873347978&wxstn=0&wxstnmode=tw&radar=0&radaropa=0.7&satellite=0&satelliteopa=0.8&insertHurricaneNameHere=false&goes16opa=&severe=1&severeopa=0.9&sst=0&sstopa=0.8&sstanom=0&sstanomopa=0.8&cam=0&fronts=0&hur=0&models=0&modelsmodel=ecmwf&modelsopa=0.8&modelstype=SURPRE&lightning=0&fire=0&fireopa=0.9&rep=0&surge=0&tor=0" title="U.S. Severe Weather Map">U.S. Severe Weather Map</a></li>
+  <li><a href="/severeconvective.asp" title="Convective Outlook">Convective Outlook</a></li>
+  <li><a href="/wundermap?zoom=5&lat=37.80307138624724&lon=-90.50826873347978&wxstn=0&wxstnmode=tw&radar=0&radaropa=0.7&satellite=0&satelliteopa=0.8&insertHurricaneNameHere=false&goes16opa=0&severe=0&severeopa=0.9&sst=0&sstopa=0.8&sstanom=0&sstanomopa=0.8&cam=0&fronts=0&hur=0&models=0&modelsmodel=ecmwf&modelsopa=0.8&modelstype=SURPRE&lightning=0&fire=1&fireopa=0.9&rep=0&surge=0&tor=0" title="Wildfires">Wildfires</a></li>
+  <li><a href="/prepare" title="Preparedness">Preparedness</a></li>
+  <li><a href="/weather-alerts/" title="Email Alerts">Email Alerts</a></li>
+  </ul>
+  </li>
+  <li class="gotMore">
+  <a href="javascript:void(0);" class="wunder-g">News &amp; Blogs</a>
+  <ul class="sideSubNav">
+  <li class="sideGoBack"><a href="javascript:void(0);">News &amp; Blogs</a></li>
+  <li><a href="/cat6" title="Category 6">Category 6</a></li>
+  <li><a href="/news" title="News Stories">News Stories</a></li>
+  <li><a href="/video" title="Videos">Videos</a></li>
+  <li><a href="/weather-infographics" title="Weather Infographics">Weather Infographics</a></li>
+  <li><a href="/weather-posters" title="Weather Posters">Weather Posters</a></li>
+  <li><a href="/wutv" title="WUTV">WUTV</a></li>
+  <li><a href="/blog" title="Blog Archive">Blog Archive</a></li>
+  </ul>
+  </li>
+  <li class="gotMore">
+  <a href="javascript:void(0);" class="wunder-b">Apps</a>
+  <ul class="sideSubNav">
+  <li class="sideGoBack"><a href="javascript:void(0);">Apps</a></li>
+  <li><a href="https://app.appsflyer.com/id486154808?pid=Web&c=AppPage" target="new">Weather Underground for iOS</a></li>
+  <li><a href="https://app.appsflyer.com/com.wunderground.android.weather?pid=Web&c=AppPage" target="new">Weather Underground for Android</a></li>
+  <li><a href="https://itunes.apple.com/us/app/wunderstation-weather-from/id906099986?ls=1&mt=8" target="new">WunderStation for iPad</a></li>
+  <li><a href="/download">All Mobile Apps</a></li>
+  </ul>
+  </li>
+  </ul>
+  </div>
+</nav>
+		<nav class="topbar">
+	<div id="global-header" class="new-wu">
+		<a href="javascript:void(0);" id="sidebarButton" class="right-off-canvas-toggle"><span class="fi-list-wrap"><i class="fi-list"></i></span></a>
+		<a href="/" id="header-logo" class="logo" title="Weather Underground (10.226.227.92)"></a>
+		<nav id="feature-menu" class="feature-menu">
+  <ul class="menu-list">
+  <li>
+  <label class="wunder-r">Sensor Network</label>
+  <ul class="menu-list">
+  <li><a href="/weatherstation/overview.asp">Weather Station Network</a></li>
+  <li><a href="/weatherstation/buyingguide.asp">PWS Buying Guide</a></li>
+  <li><a href="/personal-weather-station/mypws">Connect a Weather Station</a></li>
+  <li><a href="/webcams/signup.html">Connect a Webcam</a></li>
+  </ul>
+  </li>
+  <li>
+  <label class="wunder-o">Maps &amp; Radar</label>
+  <ul class="menu-list">
+  <li><a href="/wundermap" title="WunderMap">WunderMap</a></li>
+  <li><a href="/wundermap/?units=english&amp;rad=1&amp;rad.num=1&amp;rad.spd=25&amp;rad.opa=81&amp;rad.type=00Q&amp;rad.type2=&amp;rad.smo=1&amp;rad.stm=0&amp;sat=0&amp;stormreports=0&amp;svr=0&amp;pix=0&amp;cams=0&amp;tor=0&amp;riv=0&amp;wxsn=0&amp;ski=0&amp;tfk=0&amp;mm=0&amp;ndfd=0&amp;fire=0&amp;firewfas=0&amp;extremes=0&amp;hurrevac=0&amp;sst=0&amp;livesurge=0&amp;femaflood=0&amp;tsunami=0&amp;seismicrisk=0&amp;fault=0&amp;fissures=0&amp;fronts=0&amp;dir=1&amp;dir.mode=driving&amp;hur=0" title="Interactive Radar">Interactive Radar</a></li>
+  <li><a href="/wundermap/?zoom=5&amp;type=&amp;tl.play=0&amp;tl.spd=2&amp;extremes=0&amp;fault=0&amp;femaflood=0&amp;fire=0&amp;firewfas=0&amp;fissures=0&amp;fronts=0&amp;hurrevac=0&amp;hur=0&amp;lightning=0&amp;livesurge=0&amp;mm=0&amp;ndfd=0&amp;rad=0&amp;dir=1&amp;dir.mode=driving&amp;sst=0&amp;sat=1&amp;sat.num=1&amp;sat.spd=25&amp;sat.opa=87&amp;sat.gtt1=108&amp;sat.gtt2=108&amp;sat.type=IR4&amp;seismicrisk=0&amp;svr=0&amp;ski=0&amp;snowfall=0&amp;stormreports=0&amp;tor=0&amp;tfk=0&amp;tsunami=0&amp;riv=0&amp;wxsn=0&amp;cams=0&amp;pix=0" title="Interactive Satellite">Interactive Satellite</a></li>
+  <li><a href="/weather-radar/" title="Radar Maps">Radar Maps</a></li>
+  <li><a href="/ndfdimage/viewimage/" title="Forecast Maps">Forecast Maps</a></li>
+  <li><a href="/maps" title="Maps Catalog">Full Maps Catalog</a></li>
+  </ul>
+  </li>
+  <li>
+  <label class="wunder-y">Severe Weather</label>
+  <ul class="menu-list">
+  <li><a href="/hurricane" title="Hurricane &amp; Tropical Cyclones">Hurricane &amp; Tropical Cyclones</a></li>
+  <li><a href="/wundermap?zoom=5&lat=37.80307138624724&lon=-90.50826873347978&wxstn=0&wxstnmode=tw&radar=0&radaropa=0.7&satellite=0&satelliteopa=0.8&insertHurricaneNameHere=false&goes16opa=&severe=1&severeopa=0.9&sst=0&sstopa=0.8&sstanom=0&sstanomopa=0.8&cam=0&fronts=0&hur=0&models=0&modelsmodel=ecmwf&modelsopa=0.8&modelstype=SURPRE&lightning=0&fire=0&fireopa=0.9&rep=0&surge=0&tor=0" title="U.S. Severe Weather Map">U.S. Severe Weather Map</a></li>
+  <li><a href="/severeconvective.asp" title="Convective Outlook">Convective Outlook</a></li>
+  <li><a href="/wundermap?zoom=5&lat=37.80307138624724&lon=-90.50826873347978&wxstn=0&wxstnmode=tw&radar=0&radaropa=0.7&satellite=0&satelliteopa=0.8&insertHurricaneNameHere=false&goes16opa=0&severe=0&severeopa=0.9&sst=0&sstopa=0.8&sstanom=0&sstanomopa=0.8&cam=0&fronts=0&hur=0&models=0&modelsmodel=ecmwf&modelsopa=0.8&modelstype=SURPRE&lightning=0&fire=1&fireopa=0.9&rep=0&surge=0&tor=0" title="Wildfires">Wildfires</a></li>
+  <li><a href="/prepare" title="Preparedness">Preparedness</a></li>
+  <li><a href="/weather-alerts/" title="Email Alerts">Email Alerts</a></li>
+  </ul>
+  </li>
+  <li>
+  <label class="wunder-g">News &amp; Blogs</label>
+  <ul class="menu-list">
+  <li><a href="/cat6" title="Category 6">Category 6</a></li>
+  <li><a href="/news" title="News Stories">News Stories</a></li>
+  <li><a href="/video" title="Videos">Videos</a></li>
+  <li><a href="/weather-infographics" title="Weather Infographics">Weather Infographics</a></li>
+  <li><a href="/weather-posters" title="Weather Posters">Weather Posters</a></li>
+  <li><a href="/wutv" title="WUTV">WUTV</a></li>
+  <li><a href="/blog" title="Blog Archive">Blog Archive</a></li>
+  </ul>
+  </li>
+  <li>
+  <label class="wunder-b">Mobile Apps</label>
+  <ul class="menu-list">
+  <li><a href="https://app.appsflyer.com/id486154808?pid=Web&c=AppPage" target="new">Weather Underground for iOS</a></li>
+  <li><a href="https://app.appsflyer.com/com.wunderground.android.weather?pid=Web&c=AppPage" target="new">Weather Underground for Android</a></li>
+  <li><a href="https://itunes.apple.com/us/app/wunderstation-weather-from/id906099986?ls=1&mt=8" target="new">WunderStation for iPad</a></li>
+  <li><a href="/download">All Mobile Apps</a></li>
+  </ul>
+  </li>
+	 <li><a href="/history/">Historical Weather</a></li>
+  <li><a href="/forecast-flyer">Daily Forecast Flyer</a></li>
+  </ul>
+</nav>
+		<div id="wuForm-contain" class="wu-form-contain">
+		<form action="/cgi-bin/findweather/getForecast" name="wxsearch" id="wuForm" class="wu-form ui-front">
+		<div id="wuSearch-contain" class="wu-search-contain">
+		<input type="search" name="query" value="" id="wuSearch" class="wu-search" placeholder="Search Locations" data-autoinitialize="true" />
+		<span class="close-search">
+		<i class="fi-x-circle"></i>
+		</span>
+		<span class="geolocate-wrap">
+		<i class="fi-target-two"></i>
+		</span>
+		</div>
+		</form>
+		</div>
+		<div class="hide-for-small">
+		<p class="wu-account" id="wuAccount"><a id="wu-member" href="/login.asp">Log in</a> | <a id="wu-member" href="/member/registration">Join</a></p>
+		</a>
+		<a href="#" data-dropdown="wuSettings-quick" id="wuSettings" class="wu-settings">
+		<i class="fi-widget"></i>
+		</a>
+		</div>
+		<div id="wuSettings-quick" data-dropdown-content class="wu-settings-quick f-dropdown content" >
+		<ul class="button-group toggle radius">
+  <li><a onclick="wui.SetUnitToEnglish()" title="Switch to English" class="button selected">&deg;F</a></li>
+  <li><a onclick="wui.SetUnitToMetric()" title="Switch to Metric" class="button ">&deg;C</a></li>
+</ul>
+		<a href="/member/membersettings.html?page=prefs" id="wuSettings-more" class="wu-settings-more">More Settings</a>
+		<a class="privacy-preferences-link wu-settings-more" style="display: none;">Privacy preferences</a>
+		</div>
+	</div>
+</nav>
+<script type="text/template" id="autocomplete_item_template">
+	<% var defcon = (item.condition && item.condition.defcon) || 0; %>
+	<% if (item.task=='geolocate') { %>
+		<li class="geolocate-button"><div class="mimic-a"><span class="location-icon"><i class="fi-target-two"></i></span><%= item.name %></div></li>
+	<% } else if (item.task=='headerGeolocate') { %>
+		<li class="ui-autocomplete-geolocate"><div class="mimic-a menu-geolocate"><i class="fi-target-two"></i><%= item.name %></div></li>
+	<% } else { %>
+		<li class="needsclick needsfocus <% if (isCity) { %>is-city<% } %><% if (isFav) { %> is-fav<% } %><% if (hasConds && item.condition.severe) { %> is-severe defcon-<%= defcon %><% } %><% if (hasConds) { %> has-conds<% } %>">
+		<a class="needsclick needsfocus">
+		<% if (item.label) { %><span class="needsclick needsfocus city-name"><%= item.label %> <i class="needsclick needsfocus fi-<% if (defcon > 4) { %>info<% } else { %>alert<% } %>"></i></span><% } %>
+		<% if (hasConds) { %>
+		<span class="needsclick needsfocus city-conds">
+		<%= item.condition.temperature %> &deg;F <%= item.condition.condition %>
+		</span>
+		<span class="needsclick needsfocus cond-icon-touch cond-set-<%= item.condition.iconPref %> cond-<%= item.condition.icon %>"></span>
+		<% } %>
+		<% if (isCity) { %><span class="needsclick needsfocus city-star" title="<% if (isFav) { %>Remove From<% } else { %>Add To<% } %> Favorite Cities"></span><% } %>
+		</a>
+		</li>
+	<% } %>
+</script>
+		<div id="inner-wrap">
+		<div id="header-alert-bar" class="loading-bar"></div>
+		<div class="favs-wrapper">
+	<div id="favorites" class="favorites ">
+		<div class="favorites-bar"></div>
+		<input type="button" class="favorites-list-toggle" value="&#x25BC;" data-dropdown="favorites-list" />
+		<div class="favorites-list f-dropdown" data-dropdown-content id="favorites-list"></div>
+	</div>
+</div>
+<script type="text/template" id="favorites-city-template">
+	<%
+		var options = options || {};
+		var isCity = true;
+		var isFav = wui.favorites.is(city.zmw);
+		var isHome = ''==city.zmw?true:false;
+		//hasConds: (options.showConditions && !!(item.condition))
+		var hasConds = !!(city.condition);
+		var defcon = hasConds && city.condition.defcon ? city.condition.defcon : 5;
+	%>
+	<% if (city.zmw) { %>
+		<li class="<% if (isCity) { %>is-city<% } %><% if (isFav) { %> is-fav<% } %><% if (hasConds && city.condition.severe) { %> is-severe defcon-<%= defcon %><% } %><% if (hasConds) { %> has-conds<% } %>" <% if (isCity) { %>data-zmw="<%= city.zmw %>" data-cityName="<%= city.name %>" <% } %>>
+		<% if (options.label) { %><label><%= options.label %></label><% } %>
+		<a href="<%= city.url %><% if (city.zip != 00000) { %>/<%= city.zip %><% } %>">
+		<span class="city-name"><%= city.name %> <i class="fi-<% if (defcon > 4) { %>info<% } else { %>alert<% } %>"></i></span>
+		<% if (hasConds) { %>
+		<span class="city-conds">
+		<%= city.condition.temperature %> &deg;F <%= city.condition.condition %>
+		</span>
+		<span class="cond-icon-touch cond-set-<%= city.condition.iconPref %> cond-<%= city.condition.icon %>"></span>
+		<% } %>
+		<% if (isCity) { %><span class="city-star" title="<% if (isFav) { %>Remove From<% } else { %>Add To<% } %> Favorite Cities"></span><% } %>
+		<%
+					//removing home button from list now that we have location management on the page - dxf
+					if (isCity && 0) {
+				%><span class="city-home <% if (isHome) { %> active <% }  %>" title="Set this as your Home City"</span><% } %>
+	 </a>
+		</li>
+	<% } %>
+</script>
+<script type="text/template" id="favorites-bar-template">
+	<ul class="no-bullet">
+		<li><a href="/member/membersettings.html?page=favorites" title="Manage Favorites"><i class="fi-star"></i></a></li>
+		<%
+			if(favorites.length > 0) {
+		_.each(favorites, function(city) {
+		print(templateCity({
+		city: city
+		}));
+		});
+		} else {
+		try {
+		if(favCityList) {
+		%>
+		<li><a>Loading favorites...</a></li>
+		<%
+				}} catch(e) {}
+			} %>
+		<%
+			if(favorites.length == 0) {
+			%>
+		<li class="popularCities-label">Popular <br/>Cities</li>
+		<%
+				_.each(popular, function(city, i) {
+					print(templateCity({
+						city: city,
+					}));
+				});
+			}
+			%>
+	</ul>
+</script>
+<script type="text/template" id="favorites-list-template">
+	<label>Popular Cities</label>
+	<ul class="list-recents">
+		<% _.each(popular, function(city) {
+			print(templateCity({
+				city: city
+			}));
+		}); %>
+	</ul>
+</script>
+		<section id="inner-content" class="inner-content" role="main">
+		<!-- modal for twc crosslinking -->
+<div id="twc-cross-link" class="modal fade-in">
+  <a class="modal-close">&#215;</a>
+  <p id="current_city">See Monthly data for <a id="current-city-state"><strong>Irvine, CA</strong></a></p>
+  <p id="or_line">or</p>
+  <p id="loc_text">Enter Your Location</p>
+  <form id="searchform" onsubmit="return false;">
+  <input id="pws-search-box" type="text" placeholder="e.g., Irvine, CA or Zip Code" >
+  </br>
+  <a id="searchbutton" class="button small radius">search</a>
+  <div id="states-wrapper">
+  <ol id="states_list">
+  </ol>
+  </div>
+  </form>
+</div>
+<div id="finding-data">
+  <img src="//icons.wxug.com/i/o/logo-new.png"/>
+  <h3><strong>Welcome to Weather Underground</strong></h3>
+	<p>Finding Yesterday's data<span class="ellipses" id="e1"> .</span><span class="ellipses" id="e2"> .</span><span class="ellipses" id="e3"> .</span></p>
+	<img src="//icons.wxug.com/i/o/welcome/claude_V2.gif" alt="Smarter Icon">
+</div>
+		</section>
+		<footer class="primary">
+	<div class="row">
+		<div class="small-12 large-6 large-centered columns">
+		<div class="row">
+  <div class="small-12 medium-4 columns">
+  <ul class="no-bullet">
+  <li>
+  <a href="/about/our-company" title="About Weather Underground">About</a>
+  </li>
+  <li>
+  <a href="/about/contact-us" title="Contact Weather Underground">Contact</a>
+  </li>
+  <li>
+  <a href="https://careers.weather.com/search/?q=&locationsearch=san+francsico?utm_source=careersite&utm_campaign=wunderground" target="_blank" title="Weather Underground Employment Opportunities">Jobs</a>
+  </li>
+  <li>
+  <a href="http://help.wunderground.com/" target="_blank" title="Customer Feedback for Weather Underground">Feedback</a>
+  </li>
+  </ul>
+  </div>
+  <div class="small-12 medium-4 columns">
+  <ul class="no-bullet">
+  <li>
+  <a href="/download" title="Weather Underground Mobile Apps">Our Apps</a>
+  </li>
+  <li>
+  <a href="/weather/api" title="The Weather API">Weather API</a>
+  </li>
+  <li>
+  <a href="/fullscreenweather" title="Experience Full Screen Weather">Full Screen Weather</a>
+  </li>
+  <li>
+  <a href="/weatherstation/" title="Personal Weather Station Network">Personal Weather Stations</a>
+  </li>
+  <li>
+  <a href="/sitemap/" id="site-map-link" class="link-hidden" title="Weather Underground Site Map">Site Map</a>
+  </li>
+  </ul>
+  </div>
+  <div class="small-12 medium-4 columns">
+  <ul class="no-bullet">
+  <li>
+  <a href="/sitemap/" id="site-map-old-link" title="Weather Underground Site Map">Site Map</a>
+  </li>
+  <li>
+  <a href="/company/legal">Terms of Use</a>
+  </li>
+  <li>
+  <a href="/company/privacy-policy">NEW Privacy Policy</a>
+  </li>
+  <li>
+  <a href="/company/ad-choices">AdChoices</a>
+  </li>
+  <li>
+  <a href="" id="privacy-settings-link" class="link-hidden">Privacy Settings</a>
+  </li>
+  <li>
+  <a href="/privacy-settings" id="data-rights-link" class="link-hidden">Data Rights</a>
+  </li>
+  </ul>
+  </div>
+		</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="columns copyright-wrap">
+		<p class="copyright">
+		&copy; Copyright TWC Product and Technology LLC 2014, 2019
+		</p>
+		</div>
+	</div>
+</footer>
+<a class="exit-off-canvas"></a>
+<style  type="text/css">
+  .link-hidden {
+  display: none;
+  }
+</style>
+		</div>
+		</div>
+		<script type="text/javascript">
+  (function() {
+  var footer = document.querySelector('footer');
+  if (footer) {
+  var div = document.createElement('div');
+  div.id = 'dpr-manager';
+  footer.appendChild(div);
+  }
+  })();
+</script>
+<script>
+  if (typeof Object.assign != 'function') {
+  Object.assign = function(target, varArgs) { // .length of function is 2
+  'use strict';
+  if (target == null) { // TypeError if undefined or null
+  throw new TypeError('Cannot convert undefined or null to object');
+  }
+  var to = Object(target);
+  for (var index = 1; index < arguments.length; index++) {
+        var nextSource = arguments[index];
+
+        if (nextSource != null) { // Skip over if undefined or null
+          for (var nextKey in nextSource) {
+            // Avoid bugs when hasOwnProperty is shadowed
+            if (Object.prototype.hasOwnProperty.call(nextSource, nextKey)) {
+              to[nextKey] = nextSource[nextKey];
+            }
+          }
+        }
+      }
+      return to;
+    };
+  }
+</script>
+<script src="//cdn.jsdelivr.net/bluebird/3.5.0/bluebird.js"></script>
+<script src="//www.wunderground.com/static/scripts/dpr-sdk/1.4.16/index.js"></script>
+<script type="text/javascript">
+  (function() {
+  var dprSettings = {};
+  // Callback handlers.
+  function getPrivacyRegime() {
+  return new Promise(function(resolve, reject) {
+  // Defaults regime to "exempt".
+  var regime = 'exempt';
+  // Try to get the regime from the ci cookie.
+  if (parsedCiCookie && parsedCiCookie['TWC-Privacy']) {
+  regime = parsedCiCookie['TWC-Privacy'];
+  }
+  resolve(regime);
+  });
+  }
+  function getUserId() {
+  return isUserLoggedIn() ? getAuthUserId() : getAnonUserId();
+  }
+  function isUserLoggedIn() {
+  var emailAuth = getCookie('EmailAuth');
+  var emailCookie = getCookie('EmailCookie');
+  if (!emailAuth || !emailCookie) {
+  return false;
+  }
+  if (emailAuth === '' || emailAuth !== emailCookie) {
+  return false;
+  }
+  return true;
+  }
+  function getAnonUserId() {
+  removeDataLocally('wu.userId');
+  var userId = getDataLocally('wu.anonId');
+  var userIdReady;
+  if (!userId) {
+  userIdReady = new Promise(function(resolve, reject) {
+  userId = uuidGenenerator();
+  storeDataLocally('wu.anonId', userId);
+  resolve(userId);
+  });
+  }
+  else {
+  userIdReady = Promise.resolve(userId);
+  }
+  return userIdReady;
+  }
+  function getAuthUserId() {
+  var userId = getDataLocally('wu.userId');
+  if (!userId) {
+  userIdReady = new Promise(function(resolve, reject) {
+  var upsProfile = 'https://profile.wunderground.com/p';
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', upsProfile, true);
+  xhr.withCredentials = true;
+  xhr.setRequestHeader('content-type', 'application/json');
+  xhr.send();
+  xhr.onreadystatechange = function() {
+  if (this.readyState !== 4 || this.status !== 200) {
+  resolve('auth_undefined');
+  } else {
+  var response = JSON.parse(xhr.responseText);
+  userId = response.userId;
+  storeDataLocally('wu.userId', userId);
+  resolve(userId);
+  }
+  }
+  });
+  }
+  else {
+  var userIdReady = Promise.resolve(userId);
+  }
+  return userIdReady;
+  }
+  //from @twc/uuid package
+  function uuidGenenerator(a) {
+  return a
+  ? // if a placeholder was passed, return a random number from 0 to 15
+  // unless uuid is 8, in which case return a random number from 8 to 11 in
+  // hexadecimal
+  (a ^ ((Math.random() * 16) >> (a / 4))).toString(16)
+  : // or otherwise return a concatenated string:
+  // 10000000 +
+  // -1000 +
+  // -4000 +
+  // -8000 +
+  // -10000000000,
+  // replacing 0s with 1s and 8s with random hex
+  ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, uuidGenenerator);
+  }
+  function getGeoIPCountryCode() {
+  return new Promise(function(resolve, reject) {
+  var countryCode = '';
+  // Try to get the country code from the ci cookie.
+  if (parsedCiCookie && parsedCiCookie['TWC-GeoIP-Country']) {
+  countryCode = parsedCiCookie['TWC-GeoIP-Country'];
+  }
+  resolve(countryCode);
+  });
+  }
+  function getApplicationInfo() {
+  return new Promise(function(resolve, reject) {
+  const appData = {
+  id: 'weather.com',
+  version: '1.0.0',
+  };
+  resolve(appData);
+  });
+  }
+  function getUserData() {
+  return new Promise(function(resolve, reject) {
+  resolve(getDataLocally("dpr/consents"));
+  });
+  }
+  function setUserData(userData, featureFlags) {
+  userData.featureFlags = featureFlags;
+  setDprSettings(userData);
+  return new Promise(function(resolve, reject) {
+  storeDataLocally("dpr/consents", JSON.stringify(userData));
+  resolve();
+  });
+  }
+  function setDprSettings(userData) {
+  dprSettings = userData.featureFlags;
+  }
+  function logUserConsent(message) {
+  return new Promise(function(resolve, reject) {
+  if (message && message.user && message.user.id === 'auth_undefined') {
+  return resolve();
+  }
+  var sqsBeaconUrl = 'https://weather.com/api/v1/p/p/pmq';
+  var request = createPostRequest(sqsBeaconUrl);
+  var sqsBeaconPaylod = getSqsBeaconPaylod(message);
+  request.onload = function() {
+  if (request.status >= 200 && request.status < 400) {
+            resolve();
+          } else {
+            reject();
+          }
+        };
+
+        request.send(sqsBeaconPaylod);
+      });
+    }
+
+    function storeDataLocally(key, value) {
+      window.localStorage.setItem(key, value);
+    }
+
+    function getDataLocally(key) {
+      var value = window.localStorage.getItem(key);
+      try {
+        value = JSON.parse(value);
+      } catch (e) {}
+
+      return value;
+    }
+
+    function removeDataLocally(key) {
+      return window.localStorage.removeItem(key)
+    }
+
+    // Helpers.
+    function parseCiCookie() {
+      var ci = getCookie('ci_test') || getCookie("ci") || "";
+      var parsedCiCookie = {};
+      ci.split('&').forEach(function(data) {
+        var dataParts = data.split('=');
+        parsedCiCookie[dataParts[0]] = dataParts[1];
+      });
+
+      return parsedCiCookie;
+    }
+
+    function getCookie(cookieName) {
+      var matches = document.cookie.match(new RegExp(
+        "(?:^|; )" + cookieName.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+      ));
+      return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+
+    function createPostRequest(url) {
+      var shouldBeAsync = true;
+      var request = new XMLHttpRequest();
+
+      request.onload = function () {
+        // Do we really want to do something in case of success or failure?
+        // If so, put that here.
+        console.log(request);
+      }
+
+      request.open('POST', url, shouldBeAsync);
+
+      // request.setRequestHeader('Content-Type', 'application/json');
+      // request.setRequestHeader('Cache-Control', 'no-cache');
+
+      return request;
+    }
+
+    function getSqsBeaconPaylod(message) {
+      // We need to fix this data here for now.
+      var paylod = {
+        type: 'sqs',
+        config: {
+          accessKey: 'AKIAIGA436NL5XWDIPTA',
+          secretKey: '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',
+          account: '747624766027',
+          queue: 'events_profile_change_web'
+        },
+        doc: message
+      };
+
+      return JSON.stringify(paylod);
+    }
+
+    var parsedCiCookie = parseCiCookie();
+
+    window.dprManager = window.dprManager || {};
+    window.dprManager.locale = 'en-US';
+    window.dprManager.appId = 'wu-web';
+
+    if (window.dprManager.dpr) {
+      window.dprManager.getCookie = getCookie;
+      var sdkSettings = {
+        getPrivacyRegime: getPrivacyRegime,
+        getUserId: getUserId,
+        getGeoIPCountryCode: getGeoIPCountryCode,
+        getApplicationInfo: getApplicationInfo,
+        getStoredUserData: getUserData,
+        setStoredUserData: setUserData,
+        logUserConsent: logUserConsent,
+        // getConsentConfig: getConsentConfig
+      }
+      var dprReady = new Promise(function(resolve, reject) {
+        window.dprManager.dpr(sdkSettings).then(function() {
+          return resolve(dprSettings);
+        });
+      });
+      var dprShow = window.dprManager.openConsentManager || function() {};
+    }
+    else {
+      // Use an auto-resolved promise with default dpr settings.
+      var defaultDprSettings = {
+        allowAGOF: true,
+        allowBurdaAdEngine: true,
+        allowBurdaHeaderBidders: true,
+        allowColombia: true,
+        allowComscore: true,
+        allowFindMe: true,
+        allowGPT: true,
+        allowGPTPii: true,
+        allowGeoIP: true,
+        allowGoogleAnalytics: true,
+        allowHeaderBidders: true,
+        allowLigatus: true,
+        allowMarketingPixel: true,
+        allowNielsen: true,
+        allowOCW: false,
+        allowOutbrain: true,
+        allowPrismaGPT: true,
+        allowRogersAdUtil: true,
+        allowSocialLinksFooter: false,
+        allowSocialSharing: false,
+        allowTaboola: true,
+        allowTwitterFeed: false,
+        allowUPS: false,
+        type: "default",
+        useHeaderBidderWhitelist: false
+      };
+      var dprReady = Promise.resolve(defaultDprSettings);
+      var dprShow = function() {};
+    }
+
+    // Share in window the dpr ready promise so other stuff consuming data
+    // set by the dpr process will know when it is safe to start its logic.
+    window.dprReady = dprReady;
+    window.dprShow = dprShow;
+
+  })();
+</script>
+<script type="text/javascript">
+  var privacyPreferencesLinkArr = document.getElementsByClassName("privacy-preferences-link");
+  var privacyPolicyContent = document.querySelector(".privacy-policy-content");
+  if(window.dprReady) {
+  window.dprReady
+  .then(
+  function(dprSettings) {
+  if (dprSettings.type !== 'exempt') {
+  for (var i=0; i < privacyPreferencesLinkArr.length; i++) {
+              privacyPreferencesLinkArr[i].style.display = 'block';
+              privacyPreferencesLinkArr[i].addEventListener("click", function (event) {
+                event.preventDefault();
+                if (window.dprShow) {
+                  window.dprShow();
+                }
+              })
+            }
+            if (privacyPolicyContent) {
+              privacyPolicyContent.style.display = 'block';
+            }
+          }
+        }
+      )
+  }
+
+</script>
+<script>
+  var dprConsents = window.localStorage.getItem('dpr/consents');
+  if (dprConsents) {
+  var dprConsentsParsed = JSON.parse(dprConsents);
+  var geoIpAllowed = dprConsentsParsed.featureFlags.allowGeoIP;
+  if(!geoIpAllowed){
+  var findMeButtonsArr = document.querySelectorAll('.geolocate-wrap');
+  for (var i=0; i < findMeButtonsArr.length; i++) {
+        findMeButtonsArr[i].style.display = 'none';
+      }
+    }
+    // Hiding login
+    var UPSConsent = dprConsentsParsed.featureFlags.allowUPS_PWS || true;
+    if (!UPSConsent) {
+      document.getElementById('wuAccount').style.display = 'none';
+    }
+
+  }
+</script>
+<script type="text/javascript">
+  /**
+  * Footer links functionality
+  */
+  (function() {
+  var privacySettingsLink = document.getElementById('privacy-settings-link');
+  var dataRightsLink = document.getElementById('data-rights-link');
+  var siteMapLink = document.getElementById('site-map-link');
+  var siteMapOldLink = document.getElementById('site-map-old-link');
+  siteMapLink.className = siteMapLink.className.replace(/\blink-hidden\b/g, "");
+  siteMapOldLink.className += " link-hidden";
+  dataRightsLink.className = dataRightsLink.className.replace(/\blink-hidden\b/g, "");
+  if (window.dprReady) {
+  window.dprReady.then(function(dprSettings) {
+  if (dprSettings.type !== 'exempt') {
+  privacySettingsLink.addEventListener('click', function(event) {
+  event.preventDefault();
+  if (window.dprShow) {
+  window.dprShow();
+  }
+  });
+  privacySettingsLink.className = privacySettingsLink.className.replace(/\blink-hidden\b/g, "");
+  }
+  });
+  }
+  })();
+</script>
+<script type="text/javascript">
+  /**
+  * GDPR Toast functionality
+  */
+  (function() {
+  var TOAST_FLAG = 'wu.gdpr-toast-viewed';
+  var DSX_API_QUERY = 'q=assetName:$in(%27/' + window.dprManager.locale +
+  '/lite-msg%27);tags.keyword:$in(%27' + window.dprManager.appId +
+  '%27);tags.keyword:$in(%27gdpr%27)';
+  var showPrivacyPolicyToast = window.localStorage.getItem(TOAST_FLAG);
+  if (showPrivacyPolicyToast !== 'true') {
+  var body = document.querySelector('body');
+  if (!body) {
+  return;
+  }
+  var toast = document.createElement('div');
+  toast.id = 'privacy-policy-toast';
+  body.insertBefore(toast, body.firstChild);
+  var url = 'https://dsx.weather.com/cms/v4/assets/(' +
+  window.dprManager.locale.replace("-", "_") +
+  ')?api=7bb1c920-7027-4289-9c96-ae5e263980bc&' + DSX_API_QUERY;
+  var request = new XMLHttpRequest();
+  request.open('GET', url, true);
+  request.onload = function() {
+  if (request.status >= 200 && request.status < 400) {
+          window.toast = window.toast || {};
+          window.toast.close = function() {
+            toast.style.display = 'none';
+            window.localStorage.setItem(TOAST_FLAG, 'true');
+          };
+          var dataParse = JSON.parse(request.responseText);
+          var toastBody = '';
+          if (dataParse && dataParse[0] && dataParse[0].doc && dataParse[0].doc[0] && dataParse[0].doc[0].body) {
+            toastBody = dataParse[0].doc[0].body;
+          }
+          toast.innerHTML = toastBody;
+        }
+
+      };
+      request.send();
+    }
+
+  })();
+</script>
+<script>
+	wui.bootstrapped = {
+		iconPath: "i/c/v4",
+		"localtime": {
+  "epoch": null,
+  "pretty": null,
+  "rfc822": null,
+  "iso8601": null,
+  "year": null,
+  "month": null,
+  "day": null,
+  "yday": null,
+  "hour": null,
+  "min": null,
+  "sec": null,
+  "monthname": null,
+  "monthname_short": null,
+  "weekday": null,
+  "weekday_short": null,
+  "ampm": null,
+  "tz_short": null,
+  "tz_long": null,
+  "tz_offset_text": null,
+  "tz_offset_hours": null
+},
+		"usertime": {
+  "epoch": 1549682528,
+  "pretty": "3:22 AM GMT on February 09, 2019",
+  "rfc822": "Sat, 09 Feb 2019 03:22:08 +0000",
+  "iso8601": "2019-02-09T03:22:08+0000",
+  "year": 2019,
+  "month": 2,
+  "day": 9,
+  "yday": 39,
+  "hour": 3,
+  "min": "22",
+  "sec": 8,
+  "monthname": "February",
+  "monthname_short": "Feb",
+  "weekday": "Saturday",
+  "weekday_short": "Sat",
+  "ampm": "AM",
+  "tz_short": "GMT",
+  "tz_long": "UTC",
+  "tz_offset_text": "+0000",
+  "tz_offset_hours": 0.00
+},
+		search: "", //Used for Wundermap autocomplete initialization
+		async: false,
+		https: false,
+		smurfs: true,
+		showUstreamTDU: false,
+		showDailyDownpourTDU: false,
+		showSurveyBanner: false,
+		showVoteHook: false,
+		daysToElection: "0",
+	 showPrivacyBanner: false,
+		dailyDownpourText: '',
+		showBOM: false,
+		//These scripts are interacted with via scriptUsher.js, located in wui-js
+		scripts: {
+		'amp.premier': {
+		url: '/amp.premier/amp.premier.min.js',
+		done: function() {
+		akamai.amp.AMP.loadDefaults('/amp.premier/amp.premier.xml');
+		}
+		},
+		googlemaps: {
+		url: "//maps.googleapis.com/maps/api/js?sensor=false&client=gme-theweatherchannel&channel=CityPage&libraries=geometry&" +
+		"callback=wui.bootstrapped.scripts.googlemaps.callback",
+		promise: null,
+		callback: function() {
+		wui.bootstrapped.scripts.googlemaps.promise.resolve();
+		}
+		},
+		mapbox: {
+		url: "//api.mapbox.com/mapbox.js/v2.2.2/mapbox.js?",
+		promise: null
+		},
+		mosaicmap: {
+		//url: "//icons.wxug.com/wxmapsdk/1.1.2/wx.js?apiKey=abcdefghijklmnopqrstuvwxyz0123456789&",
+		url: "//icons.wxug.com/scripts/wxmapsdk/1.5.0/wx.js",
+		promise: null
+		},
+		mosaicwundermap: {
+  url: "//icons.wxug.com/scripts/mosaicmap/1.2.2/wui.mosaicmap.min.js",
+		promise: null
+		},
+		infobox: {
+		url: "/scripts/wundermap/src/wu4/stable/gmap_util_lib/infobox_packed.js?v=3.5.20",
+		promise: null
+		},
+		'jquery-cookie': {
+		url: "//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js",
+		promise: null
+		},
+		wundermap: {
+		// SHH TODO: Update SERVERCONFIG, then reference SERVERCONFIG.WunderMap.Version.release
+		url: "//icons.wxug.com/scripts/wundermap/release/8.1.2/wundermap.min.js?v=1.3",
+		promise: null
+		},
+		angularStationselect: {
+		url: '//icons.wxug.com/scripts/angular/1.3.1/angular.min.js',
+  promise: null,
+		done: function() {
+  var stationselect_promise = null;
+  stationselect_promise = wui.usher.loadScript('stationselect');
+		}
+		},
+		stationselect: {
+		url: "//icons.wxug.com/scripts/wui-station-select/0.0.6/wui.ngstationselect.min.js",
+		promise: null,
+  done: function() {
+  var temp = angular.bootstrap(document, ["wu_station_select"]);
+  var count = 0;
+  var timeout = setInterval(function() {
+  count++;
+  if(count>10){
+  clearInterval(timeout);
+  }
+  else if (temp) {
+  angular.element('#station-select-button-ng').triggerHandler('click');
+  clearInterval(timeout);
+  }
+  }, 1000);
+  }
+		},
+		}
+	};
+</script>
+  <script>
+wui.bootstrapped.pwsdashboard = {
+  crossLinkingVars:{
+  histType: "yesterday",
+  locid: "USCA1170:1:US"
+  },
+  radarCamVars:{
+  stationid: "",
+  units: "english",
+  nwo: true,
+  sda: false,
+  cam: false,
+  nim: false,
+  pws_bootstrap:
+{
+	"response": {
+		"version": null,
+		"units": "english",
+		"termsofService": "https://www.wunderground.com/weather/api/d/terms.html",
+		"attribution": {
+		"image":"//icons.wxug.com/graphics/wu2/logo_130x80.png",
+		"title":"Weather Underground",
+		"link":"http://www.wunderground.com"
+		},
+		"features": {
+		}
+	}
+}
+,
+  country: "",
+  mapTypeId: "",
+  lat: "",
+  lon: "",
+  isRecent: "",
+  lastUpdateEpoch: "",
+  units: "",
+  mode: "tw",
+  scrollTo: null
+  },
+};
+</script>
+<script>
+	wui.bootstrapped.scripts.wundermap.promise = jQuery.Deferred().resolve();
+	wui.bootstrapped.scripts.googlemaps.promise = jQuery.Deferred().resolve();
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/js/foundation.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.0/backbone-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/flot/0.8.2/jquery.flot.time.min.js"></script>
+<script src="//icons.wxug.com/scripts/backbone-nested/1.1.2/backbone-nested.min.js"></script>
+<script src="//icons.wxug.com/scripts/foundation/5.2.2-patch/foundation.equalizer.min.js"></script>
+<script src="//icons.wxug.com/scripts/responsive-tables.js?v=2"></script>
+	<script src="//icons.wxug.com/scripts/wui-sitewide/2.2.2/wui.sitewide.min.js"></script>
+	<script src="//icons.wxug.com/scripts/wui-backbone/1.7.6/wui.backbone.min.js"></script>
+		<script src="//icons.wxug.com/scripts/wui-monthlyweather/0.0.8/wui.monthlyweather.min.js"></script>
+<script>
+wui.bootstrapped.prefs = {
+	'selected_pws': "",
+	'CP_FCTTAB': null,
+	'CP_VAR_dp': null,
+	'CP_VAR_fl': null,
+	'CP_VAR_temp': null,
+	'CP_VAR_cc': null,
+	'CP_VAR_pop': null,
+	'CP_VAR_h': null,
+	'CP_VAR_p': null,
+	'CP_VAR_wspd': null,
+	'CP_VAR_qpf': null,
+	'CP_VAR_precip': null,
+	'EXPFCT': "1",
+	'RADARBOX': null,
+	'RADARBOX_WEBCAM': null,
+	'GMAPTYPE': '',
+	'GMAPUNITS': '',
+	'iconset': '',
+	'LangCode': 'EN',
+	'BrowserCode': 'en_US',
+	'Units': 'english',
+	'raw_string': '',
+  'fodqa' : false,
+	'rapidfire': '10'
+};
+</script>
+<script>
+wui.bootstrapped.ajax_favorites = true; //added for wundermap favorites layer loading
+wui.bootstrapped.citylist = "";
+//wui.bootstrapped.citylist = "";
+</script>
+<script>
+wui.bootstrapped.recents = [];
+</script>
+<script>
+wui.bootstrapped.popular=[
+	{
+	url: "///",
+	"lat": null,
+	"lon": null,
+	"name": "New York, NY",
+	"type": "popular",
+	"zmw": "10001.11.99999"
+		},
+	{
+	url: "///",
+	"lat": null,
+	"lon": null,
+	"name": "London, UK",
+	"type": "popular",
+	"zmw": "00000.40.03779"
+		},
+	{
+	url: "///",
+	"lat": null,
+	"lon": null,
+	"name": "Chicago, IL",
+	"type": "popular",
+	"zmw": "60290.1.99999"
+		},
+	{
+	url: "///",
+	"lat": null,
+	"lon": null,
+	"name": "Boston, MA",
+	"type": "popular",
+	"zmw": "02101.1.99999"
+		},
+	{
+	url: "///",
+	"lat": null,
+	"lon": null,
+	"name": "Houston, TX",
+	"type": "popular",
+	"zmw": "77001.1.99999"
+		},
+	{
+	url: "///",
+	"lat": null,
+	"lon": null,
+	"name": "San Francisco, CA",
+	"type": "popular",
+	"zmw": "94101.1.99999"
+		},
+	];
+if(!wui.bootstrapped.favorites) {
+	wui.bootstrapped.popularcities = ["94102.1.99999","10001.11.99999","60290.1.99999","02108.1.99999","77001.1.99999","00000.40.03779"];
+}
+</script>
+<script>
+wui.bootstrapped.ads = {
+	interval: 310000,
+	enableAdRefresh: 1,
+	ugc: false
+};
+</script>
+<script>
+	var pwidget_config = {
+  clean: true,
+  copypaste: false,
+  shareQuote: false,
+		defaults: {
+		afterShare: false,
+  afterShareText: false,
+  shareAgain: false
+		}
+  };
+</script>
+		<!-- Adobe Analytics -->
+	<script type="text/javascript" src="//www.wunderground.com/static/scripts/metrics/omniture-appmeasurement.js"></script>
+	<script type="text/javascript">
+		function getOmnitureValue(value) {
+		var dprObject = JSON.parse(window.localStorage.getItem('dpr/consents') || '{}');
+		if (!!(dprObject && dprObject.featureFlags && dprObject.featureFlags.allowOmniture)) {
+		return value;
+		}
+		return "";
+		}
+		function blockOmnitureValue(value) {
+		var dprObject = JSON.parse(window.localStorage.getItem('dpr/consents') || '{}');
+		if (!!(dprObject && dprObject.featureFlags && dprObject.featureFlags.allowOmniture)) {
+		return "";
+		}
+		return value;
+		}
+		function getConsentOptIns() {
+		var dprObject = JSON.parse(window.localStorage.getItem('dpr/consents') || '{}');
+		if (dprObject && dprObject.consentOptIns) {
+		return dprObject.consentOptIns;
+		}
+		return "";
+		}
+		function getCookie(name) {
+		var value = null;
+		var cookies = document.cookie ? document.cookie.split(";") : [];
+		cookies.forEach(function(cookie) {
+		if (cookie) {
+		var cookieParts = cookie.split("=");
+		var cookieName = cookieParts[0].trim();
+		if (cookieName === name) {
+		// Handles multi value cookies.
+		var cookieValue = cookieParts.slice(1).join("=");
+		value = cookieValue;
+		}
+		}
+		});
+		return value;
+		}
+		s.pageName = "MonthlyWeather - Yesterday: No DFP (Pages/WeatherStation/MonthlyWeather.cst)";
+		s.channel = "History";
+		s.prop5 = getOmnitureValue("Other Content");
+		s.prop2 = getOmnitureValue("History > MonthlyWeather");
+		s.eVar86 = getConsentOptIns();
+		s.pageName = blockOmnitureValue("gdpr_opt_out");
+		s.campaign = blockOmnitureValue("gdpr_opt_out");
+		s.referrer = blockOmnitureValue("gdpr_opt_out");
+		s.pageURL = blockOmnitureValue("gdpr_opt_out");
+		s.pageType = blockOmnitureValue("gdpr_opt_out");
+		s.state = blockOmnitureValue("gdpr_opt_out");
+		s.zip = blockOmnitureValue("gdpr_opt_out");
+		s.city = blockOmnitureValue("gdpr_opt_out");
+		// Server
+		s.server = "www.wunderground.com";
+		// Events
+		s.events = "event15";
+		// Campaigns
+		s.campaign = "";
+		var s_code=s.t();if(s_code)document.write(s_code);
+	</script>
+<!-- End Adobe Analytics -->
+<!-- Begin comScore Tag -->
+	<script>
+	 var _comscore = _comscore || [];
+	 _comscore.push({ c1: "2", c2: "6164429" });
+	 (function() {
+	 var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+	 s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+	 el.parentNode.insertBefore(s, el);
+	 })();
+	</script>
+	<noscript>
+	 <img src="https://b.scorecardresearch.com/p?c1=2&c2=6164429&cv=2.0&cj=1" style="display:none;" />
+	</noscript>
+<!-- End comScore Tag -->
+		<div id="fb-root"></div>
+	<script>
+		window.fbAsyncInit = function() {
+		FB.init({
+		appId : wui.facebook.app_id,
+		channelUrl : wui.facebook.channel_url,
+		status : true,
+		cookie : true,
+		xfbml : true,
+		version : 'v2.0'
+		});
+		wui.facebook.on_load_trigger();
+		};
+		(function(d){
+		var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement('script'); js.id = id; js.async = true;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		ref.parentNode.insertBefore(js, ref);
+		}(document));
+	</script>
+	</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

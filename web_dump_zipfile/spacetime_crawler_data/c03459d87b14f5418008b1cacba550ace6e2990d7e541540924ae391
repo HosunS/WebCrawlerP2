@@ -1,0 +1,41 @@
+¦Ifinal_url¢DtypeEvaluex/https://www.ics.uci.edu/~theory/269/101015.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1737¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:08:50 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"6c9-54c85ea6b1162"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:42:16 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYÉ<!DOCTYPE html PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+<title>Theory Seminar, 15 Oct 2010</title>
+</head>
+<body>
+<a href="/~theory/"><img src="http://www.ics.uci.edu/~theory/logo/CATOC2.jpg"></a>
+<h2><a href="/~theory/269/">CS 269S, Fall 2010: Theory Seminar</a>
+
+<hr>
+15 Oct 2010:</h2>
+<h1>A Dynamic Data Structure for Approximate Range Searching</h1>
+<h2>Joe Simons</h2>
+
+<p>In this paper, we introduce a simple, randomized dynamic
+data structure for storing multidimensional point sets, called
+a quadtreap. This data structure is a randomized, balanced
+variant of a quadtree data structure. In particular, it defines
+a hierarchical decomposition of space into cells, which
+are based on hyperrectangles of bounded aspect ratio, each
+of constant combinatorial complexity. It can be viewed as a
+multidimensional generalization of the treap data structure
+of Seidel and Aragon. When inserted, points are assigned
+random priorities, and the tree is restructured through rotations
+as if the points had been inserted in priority order.
+In any fixed dimension <i>d</i>, we show it is possible to store a
+set of <i>n</i> points in a quadtreap of space O(<i>n</i>). The height
+<i>h</i> of
+the tree is O(log <i>n</i>) with high probability. It supports point
+insertion in time O(<i>h</i>). It supports point deletion in worstcase
+time O(<i>h</i><sup>2</sup>) and expected-case time O(<i>h</i>), averaged over
+the points of the tree. It can answer &epsilon;-approximate spherical
+range counting queries over groups and approximate nearest
+neighbor queries in time O(<i>h</i>&nbsp;+&nbsp;(1/&epsilon;)<sup><i>d</i>&nbsp;&minus;&nbsp;1</sup>).</p>
+
+<p>(Based on a paper by David Mount and Eunhui Park at SoCG 2010.)</p>
+
+</body>
+</html>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

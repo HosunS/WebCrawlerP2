@@ -1,0 +1,264 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4656¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Jan 2019 21:54:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"34e4-57fc28ee9a27c-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:34:50 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY4ä<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head>
+<title>David Eppstein - Publications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<h1>David Eppstein - Publications</h1>
+<hr><p>
+<h2>
+Publications with
+<a href="//michaeljbannister.com/">
+Michael J. Bannister
+</a>
+</h2>
+<ul>
+<li><b>Hardness of approximate compaction for nonplanar orthogonal graph
+drawings</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a> and
+D. Eppstein.<br>
+<i>Proc. 19th Int. Symp. Graph Drawing</i>, Eindhoven, The Netherlands, 2011.<br>
+Springer, <i>Lecture Notes in Comp. Sci.</i> 7034, 2012, pp. 367&ndash;378.
+<p>
+We show that, for several variants of the problem of compacting a grid
+drawing of a graph to use the minimum number of rows or minimum area,
+no good approximation algorithm is possible. We also develop
+fixed-parameter tractable algorithms and approximation algorithms
+showing that some of our inapproximability bounds are tight.
+See the journal
+version, "<a href="p-inapprox-compact.html">Inapproximability of
+orthogonal compaction</a>",
+for some improvements and corrections.
+<p>
+<li><b>Randomized speedup of the Bellman&ndash;Ford algorithm</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a> and
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1111.5414">arXiv:1111.5414</a>.<br>
+<a href="//siam.omnibooksonline.com/2012ANALCO/data/papers/005.pdf"><i>Analytic Algorithmics and Combinatorics (ANALCO12)</i>, Kyoto, Japan, 2012, pp. 41&ndash;47</a>.
+<p>
+The Bellman&ndash;Ford algorithm for single-source shortest paths in graphs
+that may have negatively weighted edges but no negative cycles can be
+sped up by a technique of Yen in which the graph is partitioned into two
+directed acyclic subgraphs and edge relaxations alternate between these
+two subgraphs. We show that choosing this partition randomly gains an
+additional factor of 2/3 in running time.
+<p>
+<li><b>Inapproximability of orthogonal compaction</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+D. Eppstein, and
+<a href="//www.ics.uci.edu/~jsimons/">J. Simons</a>.<br>
+<a href="//arxiv.org/abs/1108.4705">arXiv:1108.4705</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00263"><i>J. Graph Algorithms and Applications</i> 16 (3): 651&ndash;673, 2012</a>. (Special issue for GD 2011.)
+<p>
+This is the journal version of "<a href="p-hard-compact.html">Hardness
+of approximate compaction for nonplanar orthogonal graph drawings</a>". 
+It has stronger inapproximability bounds, and more variations of the
+compaction problem that are hard to approximate. In addition it includes
+a retraction of a buggy approximation algorithm from the conference version.
+<p>
+<li><b>Force-directed graph drawing using social gravity and scaling</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>, and
+<a href="//www.ics.uci.edu/~ltrott/">L. Trott</a>.<br>
+<a href="//arxiv.org/abs/1209.0748">arXiv:1209.0748</a>.<br>
+<i>20th Int. Symp. Graph Drawing</i>, Redmond, Washington, 2012.<br>
+<a href="//doi.org/10.1007/978-3-642-36763-2_37">Springer, <i>Lecture Notes in Comp. Sci.</i> 7704, 2013, pp. 414&ndash;425</a>.<br>
+<p>
+We extend force-directed methods of graph drawing by adding a force that
+pulls vertices towards the center of the drawing, with a strength
+proportional to the centrality of the vertex. Gradually scaling up this
+force helps avoid the tangling that would otherwise result from its use.
+<p>
+<li><b>Windows into relational events: data structures for contiguous
+subsequences of edges</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+<a href="//www.ics.uci.edu/~duboisc/">C. DuBois</a>,
+D. Eppstein, and
+<a href="//www.ics.uci.edu/~smyth/">P. Smyth</a>.<br>
+<i>NIPS 2012 Workshop on Algorithmic and Statistical Approaches for Large
+Social Networks</i>, South Lake Tahoe, California, 2012 (poster and invited talk).<br>
+<a href="//knowledgecenter.siam.org/0236-000078"><i>24th ACM-SIAM
+Symp. Discrete Algorithms</i>, New Orleans, Louisiana, 2013,
+pp. 856&ndash;864.<br>
+<a href="//arxiv.org/abs/1209.5791">arXiv:1209.5791</a>.
+<p>
+We study relational event data in which a collection of actors in a
+social network have a sequence of pairwise interactions. Contiguous
+subsequences of these interactions form graphs, and we develop efficient
+data structures for querying the parameters of these graphs.
+<p>
+<li><b>Parameterized complexity of 1-planarity</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+<a href="//www.fmf.uni-lj.si/~cabello/">S. Cabello</a>,
+and D. Eppstein.<br>
+<a href="//arxiv.org/abs/1304.5591">arXiv:1304.5591</a>.<br>
+13th Int. Symp. Algorithms and Data Structures (WADS 2013), London, Ontario<br>
+<a href="//doi.org/10.1007/978-3-642-40104-6_9">Springer, <i>Lecture Notes in Comp. Sci. 8037</i>, 2013, pp. 97&ndash;108</a>.<br>
+<a href="//doi.org/10.7155/jgaa.00457"><i>J. Graph Algorithms and
+Applications</i> 22 (1): 23&ndash;49, 2018</a>. (Special issue on Graph
+Drawing Beyond Planarity.)<br>
+<p>
+We show that testing whether a graph is 1-planar (drawable with at most
+one crossing per edge) may be performed in polynomial and
+fixed-parameter tractable time for graphs of bounded circuit rank,
+vertex cover number, or tree-depth. However, it is NP-complete for
+graphs of bounded treewidth, pathwidth, or bandwidth.
+<p>
+(<a href="BanCabEpp-WADS-13-slides.pdf">Slides</a>)
+<p>
+<li><b>Fixed parameter tractability of crossing minimization of almost-trees</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+D. Eppstein, and
+<a href="//www.ics.uci.edu/~jsimons/">J. Simons</a>.<br>
+<a href="//arxiv.org/abs/1308.5741">arXiv:1308.5741</a>.<br>
+<i>21st Int. Symp. Graph Drawing</i>, Bordeaux, France, 2013.<br>
+<a href="//doi.org/10.1007/978-3-319-03841-4_30">Springer, <i>Lecture Notes in Comp. Sci.</i> 8242, 2013, pp. 340&ndash;351</a>.<br>
+<p>
+Many real-world graphs are k-almost-trees for small values of k: graphs
+in which, in every biconnected component, removing a spanning tree
+leaves at most k edges. We use kernelization methods to show that in
+such graphs, the 1-page and 2-page crossing numbers can be computed quickly.
+<p>
+<li><b>Superpatterns and universal point sets</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+Z. Cheng,
+<a href="//www.ics.uci.edu/~wdevanny/">W. E. Devanny</a>, and
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1308.0403">arXiv:1308.0403</a>.<br>
+<i>21st Int. Symp. Graph Drawing</i>, Bordeaux, France, 2013.<br>
+<a href="//doi.org/10.1007/978-3-319-03841-4_19">Springer, <i>Lecture Notes in Comp. Sci.</i> 8242, 2013, pp. 208&ndash;219</a>.<br>
+Bannister's talk on this paper won the GD2013 best presentation award.<br>
+<a href="//doi.org/10.7155/jgaa.00318"><i>J. Graph Algorithms & Applications</i> 18 (2): 177&ndash;209, 2014<a> (special issue for GD'13).
+<p>
+A superpattern of a set of permutations is a permutation that contains
+as a pattern every permutation in the set. Previously superpatterns had
+been considered for all permutations of a given length; we generalize this
+to sets of permutations defined by forbidden patterns; we show that
+the 213-avoiding permutations have superpatterns half the length of the
+known bound for all permutations, and that any proper permutation
+subclass of the 213-avoiding permutations has near-linear superpatterns.
+We apply these results to the construction of universal point sets, sets
+of points that can be used as the vertices of drawings of all n-vertex
+planar graphs. We use our 213-avoiding superpatterns to construct
+universal sets of size approximately <i>n</i><sup>2</sup>/4,
+and we also construct near-linear universal sets for graphs of bounded
+pathwidth.
+<p>
+<li><b>Small superpatterns for dominance drawing</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+<a href="//www.ics.uci.edu/~wdevanny/">W. E. Devanny</a>, and
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1310.3770">arXiv:1310.3770</a>.<br>
+<i>Analytic Algorithmics and Combinatorics (ANALCO14)</i>, Portland,
+Oregon, 2014, pp. 92&ndash;103</a>.
+<p>
+We construct small universal point sets for dominance drawings of
+classes of acyclic graphs, by finding forbidden patterns in the
+permutations determined by these drawings and proving the existence
+of small superpatterns for the permutations with these patterns forbidden.
+In particular, dominance drawings of the Hasse diagrams of width-2
+partial orders have universal point sets of size
+O(<i>n</i><sup>3/2</sup>), derived from superpatterns of the same size
+for the 321-avoiding permutations, and dominance drawings of st-planar
+graphs have universal point sets of size
+O(<i>n</i>&nbsp;log&nbsp;<i>n</i>), derived from superpatterns for
+riffle shuffles.
+<p>
+<li><b>The Galois complexity of graph drawing: why numerical solutions are
+ubiquitous for force-directed, spectral, and circle packing drawings</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+<a href="//www.ics.uci.edu/~wdevanny/">W. E. Devanny</a>,
+D. Eppstein, and
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>.<br>
+<a href="//arxiv.org/abs/1408.1422">arXiv:1408.1422</a>.<br>
+<i>22nd Int. Symp. Graph Drawing</i>, W&uuml;rzburg, Germany, 2014<br>
+<a href="//doi.org/10.1007/10.1007/978-3-662-45803-7_13">Springer, <i>Lecture
+Notes in Comp. Sci.</i> 8871, 2014, pp. 149&ndash;161.</a><br>
+<a href="//doi.org/10.7155/jgaa.00349"><i>J. Graph Algorithms &
+Applications</i> 19 (2): 619&ndash;656, 2015</a>.
+<p>
+We show that many standard graph drawing methods have algebraic
+solutions described by polynomials that can have unsolvable Galois groups,
+and that can have Galois groups whose order is divisible by large prime
+numbers. As a consequence certain models of exact algebraic computation
+are unable to construct these drawings.
+<p>
+<li><b>Crossing minimization for 1-page and 2-page drawings of graphs
+with bounded treewidth</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a> and
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1408.6321">arXiv:1408.6321</a>.<br>
+<i>22nd Int. Symp. Graph Drawing</i>, W&uuml;rzburg, Germany, 2014.<br>
+<a href="//doi.org/10.1007/10.1007/978-3-662-45803-7_18">Springer, <i>Lecture
+Notes in Comp. Sci.</i> 8871, 2014, pp. 210&ndash;221.</a><br>
+<a href="//doi.org/10.7155/jgaa.00479"><i>J. Graph Algorithms &
+Applications</i> 22 (4): 577&ndash;606, 2018</a>.
+<p>
+We show how to express in monadic second-order logic the problems of
+drawing a graph with a fixed
+number of crossings on a one or two page book layout.
+By applying Courcelle's theorem, we obtain fixed-parameter tractable
+algorithms for these problems, parameterized by treewidth.
+<p>
+<li><b>ERGMs are hard</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+<a href="//www.ics.uci.edu/~wdevanny/">W. E. Devanny</a>, and
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1412.1787">arXiv:1412.1787</a>.<br>
+<p>
+ERGMs (exponential random graph models) are used in social science to
+describe probability distributions on graphs that are supposed to mimic
+real-world social networks. However, we show that (with features that
+are standard in the social science application) the distributions given
+by these models can be computationally infeasible to sample from or
+to approximate the probability of seeing a given graph.
+<p>
+<li><b>Track layouts, layered path decompositions, and leveled
+planarity</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+<a href="//www.ics.uci.edu/~wdevanny/">W. E. Devanny</a>, and
+<a href="//engineering.uottawa.ca/eecs/people/dujmovic-vida">V. Dujmovi&#263;</a>,
+D. Eppstein, and
+<a href="//users.monash.edu.au/~davidwo/">D. R. Wood</a>.<br>
+<a href="//arxiv.org/abs/1506.09145">arXiv:1506.09145</a>.<br>
+<i>24th Int. Symp. Graph Drawing</i>, Athens, Greece, 2016.<br>
+<a href="//doi.org/10.1007/978-3-319-50106-2_38">Springer, <i>Lecture Notes in Comp. Sci.</i> 9801 (2016), pp. 499&ndash;510</a>.<br>
+<a href="//doi.org/10.1007/s00453-018-0487-5"><i>Algorithmica</i>, to
+appear</a>.
+<p>
+We introduce the concept of a layered path decomposition, and show that
+the layered pathwidth can be used to characterize the leveled planar
+graphs. As a consequence we show that finding the minimum number of
+tracks in a track layout of a given graph is NP-complete.
+The GD version includes only the parts concerning track layout,
+and uses the title "Track Layout is Hard".
+<p>
+<li><b>Confluent orthogonal drawings of syntax diagrams</b>.<br>
+<a href="//michaeljbannister.com/">M. J. Bannister</a>,
+D. A. Brown, and
+D. Eppstein.<br>
+<a href="//arxiv.org/abs/1509.00818">arXiv:1509.00818</a>.<br>
+<i>23rd Int. Symp. Graph Drawing</i>, Los Angeles, California, 2015.<br>
+<a href="//doi.org/10.1007/978-3-319-27261-0_22">Springer, <i>Lecture
+Notes in Comp. Sci.</i> 9411 (2015), pp. 260&ndash;271</a>.
+<p>
+We describe a system for transforming context-free grammars into
+human-readable syntax diagrams, including optimizations that change the
+structure of the grammar to make it more readable without affecting the
+language described by the grammar.
+<p>
+</ul>
+
+<hr><p>
+<a href="auth.html">Co-authors</a> &ndash;
+<a href="/~eppstein/pubs/">Publications</a> &ndash;
+<a href="/~eppstein/">David Eppstein</a> &ndash;
+<a href="/~theory/">Theory Group</a> &ndash;
+<a href="/">Inf. &amp; Comp. Sci.</a> &ndash;
+<a href="//www.uci.edu/">UC Irvine</a>
+<p>
+<small>Semi-automatically <a href="filter.html">filtered</a>
+from a common source file.</small>
+</body></html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

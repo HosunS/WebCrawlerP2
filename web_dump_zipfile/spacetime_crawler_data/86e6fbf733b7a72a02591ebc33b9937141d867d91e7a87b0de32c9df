@@ -1,0 +1,37 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC807¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 10 Oct 2018 14:20:35 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"327-577e08ec82c20"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:13:31 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY'#include <stdio.h>
+#include <stdlib.h>
+int main() {
+  struct sandwish{
+    int bread_size;
+    char content;
+    unsigned char taste;
+  };
+
+  struct sandwish s0;
+  struct sandwish* ptrSan;
+  /*
+    Recomendation of no casting:
+    https://stackoverflow.com/questions/605845/do-i-cast-the-result-of-malloc
+    ptrSan = malloc(sizeof(struct sandwish));
+
+    However, I will leave the version seen in the class.
+  */
+  ptrSan = (struct sandwish*) malloc(sizeof(struct sandwish));
+  
+  s0.bread_size = 4;
+  s0.content = 'H';
+  s0.taste = 167;
+  
+  ptrSan->bread_size = 3;
+  ptrSan->content = 'C';
+  ptrSan->taste = 192;
+
+  printf("direct     : %d, %c, %d\n",\
+	 s0.bread_size, s0.content,s0.taste);
+  
+  printf("through ptr: %d, %d, %d",\
+	 ptrSan->bread_size,\
+	 ptrSan->content, ptrSan->taste);
+  return 0;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,56 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1814¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 25 Jan 2006 06:33:02 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"716-40b290927a380"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 19:01:42 GMTKraw_content¢DtypeEvalueY//********************************************************************
+//  Hourly.java       Author: Lewis/Loftus
+//
+//  Represents an employee that gets paid by the hour.
+//********************************************************************
+
+public class Hourly extends Employee
+{
+   private int hoursWorked;
+
+   //-----------------------------------------------------------------
+   //  Constructor: Sets up this hourly employee using the specified
+   //  information.
+   //-----------------------------------------------------------------
+   public Hourly (String eName, String eAddress, String ePhone,
+                  String socSecNumber, double rate)
+   {
+      super (eName, eAddress, ePhone, socSecNumber, rate);
+
+      hoursWorked = 0;
+   }
+
+   //-----------------------------------------------------------------
+   //  Adds the specified number of hours to this employee's
+   //  accumulated hours.
+   //-----------------------------------------------------------------
+   public void addHours (int moreHours)
+   {
+      hoursWorked += moreHours;
+   }
+
+   //-----------------------------------------------------------------
+   //  Computes and returns the pay for this hourly employee.
+   //-----------------------------------------------------------------
+   public double pay()
+   {
+      double payment = payRate * hoursWorked;
+
+      hoursWorked = 0;
+
+      return payment;
+   }
+
+   //-----------------------------------------------------------------
+   //  Returns information about this hourly employee as a string.
+   //-----------------------------------------------------------------
+   public String toString()
+   {
+      String result = super.toString();
+
+      result += "\nCurrent hours: " + hoursWorked;
+
+      return result;
+   }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

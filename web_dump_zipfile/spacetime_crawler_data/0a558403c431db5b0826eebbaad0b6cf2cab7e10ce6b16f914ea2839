@@ -1,0 +1,155 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 19:22:24 GMT¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD6579¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY³
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Automobile Data Set: Support</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" 
+alt="Home"><img src="../assets/logo.gif" 
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Automobile Data Set</b></span>
+
+		
+		<img src="../assets/MLimages/Large10.jpg" hspace=20 vspace=10 align=right />		<p class="normal">Below are papers that cite this data set, with context shown.
+		Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info">Rexa.info</a>.</p>
+		<img src="../assets/rexa.jpg" />
+		<p class="normal"><a href="/ml/datasets/Automobile">Return to Automobile data set page</a>.
+		<hr><p class="normal"><a name="e746c17201da2dd72583f7b9b0c2a6ba310412f4"></a><i>Geraldine E. Rosario and Elke A. Rundensteiner and David C. Brown and Matthew O. Ward. <a href="http://rexa.info/paper/e746c17201da2dd72583f7b9b0c2a6ba310412f4">Mapping Nominal Values to Numbers for Effective Visualization</a>. INFOVIS. 2003. </i><br><br>strength of association between two nominal variables)? In general, which quantification do you feel is better (easier to understand, more believable ordering and spacing)? 7.5.1 <b>Automobile</b> Data Set Case Study We chose the Automobile Data Set because it is easy to interpret. The variables we analyzed are make, fuel type, aspiration, number of doors, body type, wheels, engine location, engine<br></p><hr><p class="normal"><a name="ccde1df96c7ca5add43e1578b912d95bb86da659"></a><i>Wai Lam and Kin Keung and Charles X. Ling. <a href="http://rexa.info/paper/ccde1df96c7ca5add43e1578b912d95bb86da659">PR 1527</a>. Department of Systems Engineering and Engineering Management, The Chinese University of Hong Kong. 2001. </i><br><br>find that the abstraction method reduces the average data retention rate of RT3 from 14.2% to 6.6% with a 43 UNCORRECTED PROOF PR1527 W.Lam et al./ Pattern Recognition 000 (2001) 000--000 9 Table 1 Data sets and their codes Data set Code <b>Automobile</b> Ab Auto-Mpg Am Audiology Au Balance-scale Ba Breast-cancer-w Bc Car Ca Credit screening Cs Ecoli Ec Glass1 Gl Hepati He Ionosphere Io Iris Ir Letter Le<br></p><hr><p class="normal"><a name="1b37a079312a4d90da6e76dc5d18023c57d0d935"></a><i>Yongge Wang. <a href="http://rexa.info/paper/1b37a079312a4d90da6e76dc5d18023c57d0d935">A New Approach to Fitting Linear Models in High Dimensional Spaces</a>. Alastair Scott (Department of Statistics, University of Auckland). </i><br><br>together with the number of observations # and the number of variables D in each dataset. The datasets Autos  <b>Automobile</b> , Cpu (Computer Hardware), and Cleveland (Heart Disease---Processed Cleveland) 141 Autos Bankbill Bodyfat Cholesterol Cleveland Cpu n / k 159 / 16 71 / 16 252 / 15<br></p>
+
+
+	</td></tr></table>
+
+
+
+<hr>
+
+<p class="normal"><a href="/datasets/Automobile">Return to Automobile data set page</a>.
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

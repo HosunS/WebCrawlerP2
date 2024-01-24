@@ -1,0 +1,109 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3035¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:54:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"bdb-4da84c34d3d80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 10:24:34 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÛ/*
+  $Id: example.cc 4056 2008-10-10 22:01:51Z abehm $
+
+  Copyright (C) 2007 by The Regents of the University of California
+	
+  Redistribution of this file is permitted under
+  the terms of the BSD license
+    
+  Date: 09/19/2007
+  Author: Alexander Behm <abehm (at) ics.uci.edu>
+*/
+
+#include "wrappers.h"
+
+StringContainerVector strContainer;
+void initStringContainer();
+
+// EXAMPLES
+void wrapperSimpleExample();
+
+int main() {
+  
+  initStringContainer();
+  
+  wrapperSimpleExample();
+  
+  return 0;
+}
+
+void initStringContainer() {
+  vector<string> prefixes;
+  prefixes.push_back("string");
+  prefixes.push_back("example");  
+  prefixes.push_back("test");
+  prefixes.push_back("hello");
+  prefixes.push_back("world");
+  prefixes.push_back("foo");
+  prefixes.push_back("bar");
+
+  vector<string> suffixes;
+  suffixes.push_back("1");
+  suffixes.push_back("10");
+  suffixes.push_back("100");
+  suffixes.push_back("2");
+  suffixes.push_back("20");
+  suffixes.push_back("200");
+  suffixes.push_back("3");
+  suffixes.push_back("30");
+  suffixes.push_back("300");
+
+  cout << "---------------------------------------" << endl;
+  cout << "STRING DICTIONARY:" << endl;
+  for(unsigned j = 0; j < prefixes.size(); j++)
+    for(unsigned i = 0; i < suffixes.size(); i++) {
+      string ins = prefixes.at(j) + suffixes.at(i);
+      strContainer.insertString(ins);
+      cout << ins << endl;
+    }
+  cout << "---------------------------------------" << endl << endl;
+}
+
+// USAGE OF WRAPPERS FOR SIMPLE INDEXES
+// List of Wrappers:
+// WrapperSimpleEd - uses edit distance
+// WrapperSimpleEdNorm - uses noralized edit distance
+// WrapperSimpleJacc - uses jaccard similarity
+// WrapperSimpleCos - uses cosine similarity
+// WrapperSimpleDice - uses dice similarity
+// see typedefs in wrappersimple.h
+// ALSO POSSIBLE TO SPECIFY SIMMETRIC AS TEMPLATE PARAMETER: WrapperSimple<SimilarityMetric>
+void wrapperSimpleExample() {
+  cout << "----- EXAMPLE: WrapperSimpleEd -----" << endl;
+
+  // create wrapper and build index
+  // gramLength is 3 and use pre and postfixing of the string
+  WrapperSimpleEd wrapper(&strContainer, 3, false);
+  wrapper.buildIndex();
+
+  // perform search
+  float editDistance = 2.0f;
+  string queryString = "xample";
+  vector<unsigned> resultStringIDs;
+  wrapper.search(queryString, editDistance, resultStringIDs);
+  cout << "SIMILAR STRINGS: " << endl;
+  for(unsigned i = 0; i < resultStringIDs.size(); i++) {
+    string tmp;
+    strContainer.retrieveString(tmp, resultStringIDs.at(i));
+    cout << tmp << endl;
+  }
+
+  // save index
+  wrapper.saveIndex("wrapperIndex.ix");
+
+  // load index
+  wrapper.loadIndex("wrapperIndex.ix");
+
+  // perform search on loaded index
+  resultStringIDs.clear();
+  wrapper.search(queryString, editDistance, resultStringIDs);
+  cout << "SIMILAR STRINGS: " << endl;
+  for(unsigned i = 0; i < resultStringIDs.size(); i++) {
+    string tmp;
+    strContainer.retrieveString(tmp, resultStringIDs.at(i));
+    cout << tmp << endl;
+  }
+
+  cout << "-----------------------------------------" << endl << endl;  
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

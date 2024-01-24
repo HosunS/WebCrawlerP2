@@ -1,0 +1,46 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2045¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 15 Nov 2018 23:58:08 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"7fd-57abcd2892611"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 13:34:35 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYý<!DOCTYPE html>
+<html>
+<head>
+<title>Theory Seminar, November 16, 2018</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<a href="/~theory/"><img src="http://www.ics.uci.edu/~theory/logo/CATOC2.jpg"
+alt="Center for Algorithms and Theory of Computation"></a>
+<h2><a href="/~theory/269/">CS 269S, Fall 2018: Theory Seminar</a><br>
+Bren Hall, Room 1423, 1pm</h2>
+<hr />
+<h2>November 16, 2018:</h2>
+<h1>Tracking Paths</h1>
+<h2>Pedro Matias</h2>
+
+<p>We consider several problems dealing with tracking of moving objects
+(e.g., vehicles) in networks. Given a graph $G=(V,E)$ and two vertices
+$s,t \in V$, a set of vertices $T \subseteq V$ is a tracking set for $G$
+(with respect to paths from $s$ to $t$), if one can distinguish between
+any two paths from $s$ to $t$ by the order in which the vertices of $T$
+appear (or do not appear) in them. We prove that the problem of finding
+a minimum-cardinality tracking set with respect to shortest paths from
+$s$ to $t$ is $\mathsf{NP}$-hard and even $\mathsf{APX}$-hard. On the
+other hand, for the common case where $G$ is planar, we present a
+$2$-approximation algorithm for this problem. We also consider the
+following related problem: Given a graph $G$, two vertices $s$ and $t$,
+and a set of forbidden vertices $V_F \subseteq V\setminus\{s,t\}$, find a
+minimum-cardinality set of trackers $V^* \subset V$, such that a
+shortest path $P$ from $s$ to $t$ passes through a forbidden vertex if
+and only if it passes through a vertex of $V^âˆ—$. We present a
+polynomial-time (exact) algorithm for this problem.</p>
+
+<p>(Based on <a href="https://doi.org/10.1007/978-3-319-57586-5_7">a
+paper by Banik, Katz, Packer, and Simakov at CIAC 2017</a>.)</p>
+
+</body></html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

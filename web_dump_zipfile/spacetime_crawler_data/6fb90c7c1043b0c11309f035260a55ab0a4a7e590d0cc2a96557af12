@@ -1,0 +1,441 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 15:39:18 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYté<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=cla&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Classification</a> <font color=red>(16)</font><br><a href='datasets.html?format=mat&task=reg&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Regression</a> <font color=red>(5)</font><br><a href='datasets.html?format=mat&task=clu&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Clustering</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=other&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Other</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b>  - <a href='datasets.html?format=mat&task=&att=&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=cat&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Categorical</a> <font color=red>(1)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Numerical</a></font> <font color=red>(22)</font><br><a href='datasets.html?format=mat&task=&att=mix&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Mixed</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=mvar&sort=nameUp&view=table'>Multivariate</a> <font color=red>(19)</font><br><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=uvar&sort=nameUp&view=table'>Univariate</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=seq&sort=nameUp&view=table'>Sequential</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=ts&sort=nameUp&view=table'>Time-Series</a> <font color=red>(4)</font><br><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=text&sort=nameUp&view=table'>Text</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=dt&sort=nameUp&view=table'>Domain-Theory</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=other&sort=nameUp&view=table'>Other</a> <font color=red>(2)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b> - <a href='datasets.html?format=mat&task=&att=num&area=&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=num&area=life&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Life Sciences</a> <font color=red>(24)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Physical Sciences</a></font> <font color=red>(22)</font><br><a href='datasets.html?format=mat&task=&att=num&area=comp&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>CS / Engineering</a> <font color=red>(36)</font><br><a href='datasets.html?format=mat&task=&att=num&area=soc&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Social Sciences</a> <font color=red>(3)</font><br><a href='datasets.html?format=mat&task=&att=num&area=bus&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Business</a> <font color=red>(12)</font><br><a href='datasets.html?format=mat&task=&att=num&area=game&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Game</a> <font color=red>(1)</font><br><a href='datasets.html?format=mat&task=&att=num&area=other&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Other</a> <font color=red>(17)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b> - <a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=&numIns=&type=&sort=nameUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=less10&numIns=&type=&sort=nameUp&view=table'>Less than 10</a> <font color=red>(7)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>10 to 100</a></font> <font color=red>(22)</font><br><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=greater100&numIns=&type=&sort=nameUp&view=table'>Greater than 100</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=less100&type=&sort=nameUp&view=table'>Less than 100</a> <font color=red>(0)</font><br><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=100to1000&type=&sort=nameUp&view=table'>100 to 1000</a> <font color=red>(7)</font><br><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=greater1000&type=&sort=nameUp&view=table'>Greater than 1000</a> <font color=red>(15)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b> - <a href='datasets.html?format=&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Matrix</a></font> <font color=red>(22)</font><br><a href='datasets.html?format=nonmat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=table'>Non-Matrix</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>22</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=nameDown&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=taskUp&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=mat&task=&att=num&area=phys&numAtt=10to100&numIns=&type=&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/Beijing+PM2.5+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Beijing+PM2.5+Data">Beijing PM2.5 Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This hourly data set contains the PM2.5 data of US Embassy in Beijing. Meanwhile, meteorological data from Beijing Capital International Airport are also included. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">43824&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Climate+Model+Simulation+Crashes"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Climate+Model+Simulation+Crashes">Climate Model Simulation Crashes</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Given Latin hypercube samples of 18 climate model input parameter values, predict climate model simulation crashes and determine the parameter value combinations that cause the failures.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">540&nbsp;</p></td>
+			<td><p class="normal">18&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Cloud"><img src="assets/MLimages/SmallLarge155.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cloud">Cloud</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Little Documentation&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1024&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Connectionist+Bench+%28Sonar%2C+Mines+vs.+Rocks%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Connectionist+Bench+%28Sonar%2C+Mines+vs.+Rocks%29">Connectionist Bench (Sonar, Mines vs. Rocks)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The task is to train a network to discriminate between sonar signals bounced off a metal cylinder and those bounced off a roughly cylindrical rock.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">208&nbsp;</p></td>
+			<td><p class="normal">60&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Electrical+Grid+Stability+Simulated+Data+"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Electrical+Grid+Stability+Simulated+Data+">Electrical Grid Stability Simulated Data </a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The local stability analysis of the 4-node star system (electricity producer is in the center) implementing Decentral Smart Grid Control concept. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">14&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Forest+Fires"><img src="assets/MLimages/SmallLarge162.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Forest+Fires">Forest Fires</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a difficult regression task, where the aim is to predict the burned area of forest fires, in the northeast region of Portugal, by using meteorological and other data (see details at: http://www.dsi.uminho.pt/~pcortez/forestfires).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">517&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Glass+Identification"><img src="assets/MLimages/SmallLarge42.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Glass+Identification">Glass Identification</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">From USA Forensic Science Service; 6 types of glass; defined in terms of their oxide content (i.e. Na, Fe, K, etc)&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">214&nbsp;</p></td>
+			<td><p class="normal">10&nbsp;</p></td>
+			<td><p class="normal">1987&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/HEPMASS"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/HEPMASS">HEPMASS</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The search for exotic particles requires sorting through a large number of collisions to find the events of interest. This data set challenges one to detect a new particle of unknown mass.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">10500000&nbsp;</p></td>
+			<td><p class="normal">28&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/HIGGS"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/HIGGS">HIGGS</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a classification problem to distinguish between a signal process which produces Higgs bosons and a background process which does not. &nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">11000000&nbsp;</p></td>
+			<td><p class="normal">28&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Ionosphere"><img src="assets/MLimages/SmallLarge52.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Ionosphere">Ionosphere</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Classification of radar returns from the ionosphere&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">351&nbsp;</p></td>
+			<td><p class="normal">34&nbsp;</p></td>
+			<td><p class="normal">1989&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/MAGIC+Gamma+Telescope"><img src="assets/MLimages/SmallLarge159.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/MAGIC+Gamma+Telescope">MAGIC Gamma Telescope</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data are MC generated to simulate registration of high energy gamma particles in an atmospheric Cherenkov telescope&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">19020&nbsp;</p></td>
+			<td><p class="normal">11&nbsp;</p></td>
+			<td><p class="normal">2007&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/MiniBooNE+particle+identification"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/MiniBooNE+particle+identification">MiniBooNE particle identification</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is taken from the MiniBooNE experiment and is used to distinguish electron neutrinos (signal) from muon neutrinos (background).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">130065&nbsp;</p></td>
+			<td><p class="normal">50&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Ozone+Level+Detection"><img src="assets/MLimages/SmallLarge172.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Ozone+Level+Detection">Ozone Level Detection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two ground ozone level data sets are included in this collection. One is the eight hour peak set (eighthr.data), the other is the one hour peak set (onehr.data). Those data were collected from 1998 to 2004 at the Houston, Galveston and Brazoria area.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2536&nbsp;</p></td>
+			<td><p class="normal">73&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/PM2.5+Data+of+Five+Chinese+Cities"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/PM2.5+Data+of+Five+Chinese+Cities">PM2.5 Data of Five Chinese Cities</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This hourly data set contains the PM2.5 data in Beijing, Shanghai, Guangzhou, Chengdu and Shenyang. Meanwhile, meteorological data for each city are also included.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">52854&nbsp;</p></td>
+			<td><p class="normal">86&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Statlog+%28Landsat+Satellite%29"><img src="assets/MLimages/SmallLarge146.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28Landsat+Satellite%29">Statlog (Landsat Satellite)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Multi-spectral values of pixels in 3x3 neighbourhoods in a satellite image, and the classification associated with the central pixel in each neighbourhood&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">6435&nbsp;</p></td>
+			<td><p class="normal">36&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Superconductivty+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Superconductivty+Data">Superconductivty Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two file s contain data on 21263 superconductors and their relevant features.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">21263&nbsp;</p></td>
+			<td><p class="normal">81&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/SUSY"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/SUSY">SUSY</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a classification problem to distinguish between a signal process which produces supersymmetric particles and a background process which does not.&nbsp;</p></td> -->
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5000000&nbsp;</p></td>
+			<td><p class="normal">18&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Vicon+Physical+Action+Data+Set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Vicon+Physical+Action+Data+Set">Vicon Physical Action Data Set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The Physical Action Data Set includes 10 normal and 10 aggressive physical actions that measure the human activity. The data have been collected by 10 subjects using the Vicon 3D tracker.&nbsp;</p></td> -->
+			<td><p class="normal">Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">3000&nbsp;</p></td>
+			<td><p class="normal">27&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Water+Treatment+Plant"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Water+Treatment+Plant">Water Treatment Plant</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Multiple classes predict plant state&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">527&nbsp;</p></td>
+			<td><p class="normal">38&nbsp;</p></td>
+			<td><p class="normal">1993&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Waveform+Database+Generator+%28Version+1%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Waveform+Database+Generator+%28Version+1%29">Waveform Database Generator (Version 1)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">CART book's waveform domains&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Data-Generator&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5000&nbsp;</p></td>
+			<td><p class="normal">21&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Waveform+Database+Generator+%28Version+2%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Waveform+Database+Generator+%28Version+2%29">Waveform Database Generator (Version 2)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">CART book's waveform domains&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Data-Generator&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5000&nbsp;</p></td>
+			<td><p class="normal">40&nbsp;</p></td>
+			<td><p class="normal">1988&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Wine"><img src="assets/MLimages/SmallLarge109.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Wine">Wine</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Using chemical analysis determine the origin of wines&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">178&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">1991&nbsp;</p></td>
+			<!-- <td><p class="normal">Physical&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,16 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC319¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 31 Jan 2014 01:04:27 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"13f-4f139c1669cc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 12:51:56 GMTKraw_content¢DtypeEvalueY?
+public abstract class PizzaStore {
+ 
+	protected abstract Pizza createPizza(String item);
+ 
+	public Pizza orderPizza(String type) {
+		Pizza pizza = createPizza(type);
+		System.out.println("--- Making a " + pizza.getName() + " ---");
+		pizza.prepare();
+		pizza.bake();
+		pizza.cut();
+		pizza.box();
+		return pizza;
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

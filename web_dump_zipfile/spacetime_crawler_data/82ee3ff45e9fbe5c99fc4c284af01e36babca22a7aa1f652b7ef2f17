@@ -1,0 +1,1442 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueå¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD9895¢Ak¢DtypeEvaluePX-xss-protectionAv¢DtypeEvalueM1; mode=block¢Ak¢DtypeEvalueVX-content-type-optionsAv¢DtypeEvalueGnosniff¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXKBugzilla_login_request_cookie=36hvJbkcnt; path=/bugzilla/; HttpOnly; Secure¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueUApache/2.4.7 (Ubuntu)¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueCViaAv¢DtypeEvalueQ1.1 bz.apache.org¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:58:37 GMT¢Ak¢DtypeEvalueOX-frame-optionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYß£<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>45392 &ndash; No OCSP support for client SSL verification</title>
+
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="data/assets/d2dc72eaec8a65ba2f1cc98ad8a98a4d.css?1538602249" rel="stylesheet" type="text/css">
+
+<link href="data/assets/117e56f7b51d43b9b3950693e5dec8a6.css?1538602249" rel="stylesheet" type="text/css">
+
+    
+<script type="text/javascript" src="data/assets/a7c2f3a028f17a9aa60f56dc9d6e732d.js?1538602249"></script>
+
+    <script type="text/javascript">
+    <!--
+        YAHOO.namespace('bugzilla');
+        YAHOO.util.Event.addListener = function (el, sType, fn, obj, overrideContext) {
+               if ( ("onpagehide" in window || YAHOO.env.ua.gecko) && sType === "unload") { sType = "pagehide"; };
+               var capture = ((sType == "focusin" || sType == "focusout") && !YAHOO.env.ua.ie) ? true : false;
+               return this._addListener(el, this._getType(sType), fn, obj, overrideContext, capture);
+         };
+        if ( "onpagehide" in window || YAHOO.env.ua.gecko) {
+            YAHOO.util.Event._simpleRemove(window, "unload", 
+                                           YAHOO.util.Event._unload);
+        }
+        
+        function unhide_language_selector() { 
+            YAHOO.util.Dom.removeClass(
+                'lang_links_container', 'bz_default_hidden'
+            ); 
+        } 
+        YAHOO.util.Event.onDOMReady(unhide_language_selector);
+
+        
+        var BUGZILLA = {
+            param: {
+                cookiepath: '\/bugzilla\/',
+                maxusermatches: 1000
+            },
+            constant: {
+                COMMENT_COLS: 80
+            },
+            string: {
+                
+
+                attach_desc_required:
+                    "You must enter a Description for this attachment.",
+                component_required:
+                    "You must select a Component for this bug.",
+                description_required:
+                    "You must enter a Description for this bug.",
+                short_desc_required:
+                    "You must enter a Summary for this bug.",
+                version_required:
+                    "You must select a Version for this bug."
+            }
+              , api_token: ''
+        };
+
+    if (history && history.replaceState) {
+      if(!document.location.href.match(/show_bug\.cgi/)) {
+        history.replaceState( null,
+                             "45392 ‚Äì No OCSP support for client SSL verification",
+                             "show_bug.cgi?id=45392" );
+        document.title = "45392 ‚Äì No OCSP support for client SSL verification";
+      }
+      if (document.location.href.match(/show_bug\.cgi\?.*list_id=/)) {
+        var href = document.location.href;
+        href = href.replace(/[\?&]+list_id=(\d+|cookie)/, '');
+        history.replaceState(null, "45392 ‚Äì No OCSP support for client SSL verification", href);
+      }
+    }
+    YAHOO.util.Event.onDOMReady(function() {
+      initDirtyFieldTracking();
+
+    });
+    // -->
+    </script>
+<script type="text/javascript" src="data/assets/daf5e0fb6826e6a35280e622913f0c4a.js?1538602249"></script>
+
+    
+
+    
+    <link rel="search" type="application/opensearchdescription+xml"
+                       title="ASF Bugzilla" href="./search_plugin.cgi">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body 
+        class="bz-apache-org-bugzilla
+                 bz_bug
+                 bz_status_RESOLVED
+                 bz_product_Tomcat_Native
+                 bz_component_Library
+                 bz_bug_45392 yui-skin-sam">
+
+  <div id="header"><div id="banner">
+  </div>
+
+    <div id="titles">
+      <span id="title">ASF Bugzilla &ndash; Bug&nbsp;45392</span>
+
+        <span id="subtitle" class="subheader">No OCSP support for client SSL verification</span>
+
+        <span id="information" class="header_addl_info">Last modified: 2013-01-24 09:40:25 UTC</span>
+    </div>
+
+
+    <div id="common_links"><ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_top" name="no_redirect" value="0">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_top");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_top" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_top"></form>
+  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li></li>
+
+
+  <li>
+        <span class="separator">| </span>
+        <a href="https://bugzilla.readthedocs.org/en/5.0/using/understanding.html" target="_blank">Help</a>
+      </li>
+    
+      <li id="new_account_container_top">
+        <span class="separator">| </span>
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+      </li>
+
+    <li id="mini_login_container_top">
+  <span class="separator">| </span>
+  <a id="login_link_top" href="show_bug.cgi?id=45392&amp;GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_top')">Log In</a>
+
+  <form action="show_bug.cgi?id=45392" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_top">
+    <input id="Bugzilla_login_top" required
+           name="Bugzilla_login" class="bz_login"
+        type="email" placeholder="Email Address">
+    <input class="bz_password" name="Bugzilla_password" type="password"
+           id="Bugzilla_password_top" required
+           placeholder="Password">
+      <input type="checkbox" id="Bugzilla_remember_top" 
+             name="Bugzilla_remember" value="on" class="bz_remember"
+             checked>
+      <label for="Bugzilla_remember_top">Remember</label>
+    <input type="hidden" name="Bugzilla_login_token"
+           value="">
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_top">
+    <a href="#" onclick="return hide_mini_login_form('_top')">[x]</a>
+  </form>
+</li>
+
+
+  <li id="forgot_container_top">
+    <span class="separator">| </span>
+    <a id="forgot_link_top" href="show_bug.cgi?id=45392&amp;GoAheadAndLogIn=1#forgot"
+       onclick="return show_forgot_form('_top')">Forgot Password</a>
+    <form action="token.cgi" method="post" id="forgot_form_top"
+          class="mini_forgot bz_default_hidden">
+      <label for="login_top">Login:</label>
+      <input name="loginname" size="20" id="login_top" required
+          type="email" placeholder="Your Email Address">
+      <input id="forgot_button_top" value="Reset Password" type="submit">
+      <input type="hidden" name="a" value="reqpw">
+      <input type="hidden" id="token_top" name="token"
+             value="1549789118-HwgNtAySjPnUxuS3NU4WeYxbf3K2GSmb3GWX5U3aAj8">
+      <a href="#" onclick="return hide_forgot_form('_top')">[x]</a>
+    </form>
+  </li>
+</ul>
+  </li>
+
+  
+
+
+
+
+  
+</ul>
+    </div>
+  </div>
+
+  <div id="bugzilla-body">
+
+
+<script type="text/javascript">
+<!--
+
+//-->
+</script>
+
+<form name="changeform" id="changeform" method="post" action="process_bug.cgi">
+
+  <input type="hidden" name="delta_ts" value="2013-01-24 09:40:25">
+  <input type="hidden" name="id" value="45392">
+  <input type="hidden" name="token" value="1549789118-qTKspqOfsO4kfqkdrzwsDCJv6kapybY7nPEXskEbNGA">
+<div class="bz_short_desc_container edit_form">
+     <a href="show_bug.cgi?id=45392"><b>Bug&nbsp;45392</b></a> <span id="summary_container" class="bz_default_hidden">
+      - <span id="short_desc_nonedit_display">No OCSP support for client SSL verification</span>
+     </span>
+
+    <div id="summary_input"><span class="field_label "
+    id="field_label_short_desc">
+
+
+  <a 
+      title="The bug summary is a short sentence which succinctly describes what the bug is about."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#short_desc"
+  >Summary:</a>
+
+</span>No OCSP support for client SSL verification
+    </div>
+  </div>
+  <script type="text/javascript">
+    hideEditableField('summary_container',
+                      'summary_input',
+                      'summary_edit_action',
+                      'short_desc',
+                      'No OCSP support for client SSL verification' );
+  </script>
+  <table class="edit_form">
+    <tr>
+      
+      <td id="bz_show_bug_column_1" class="bz_show_bug_column">     
+        <table>
+          <tr>
+    <th class="field_label">
+      <a href="page.cgi?id=fields.html#bug_status">Status</a>:
+    </th>
+    <td id="bz_field_status">
+      <span id="static_bug_status">RESOLVED
+          FIXED
+      </span>
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_alias">
+
+
+  <a 
+      title="A short, unique name assigned to a bug in order to assist with looking it up and referring to it in other places in Bugzilla."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#alias"
+  >Alias:</a>
+
+</th>
+    <td>
+        None
+    </td>
+  </tr>
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+<tr><th class="field_label "
+    id="field_label_product">
+
+
+  <a 
+      title="Bugs are categorised into Products and Components."
+      class="field_help_link"
+      href="describecomponents.cgi"
+  >Product:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_product" >Tomcat Native
+
+</td>
+    </tr>
+
+    
+    <tr class="bz_default_hidden"><th class="field_label "
+    id="field_label_classification">
+
+
+  <a 
+      title="Bugs are categorised into Classifications, Products and Components. classifications is the top-level categorisation."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#classification"
+  >Classification:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_classification" >Unclassified
+
+</td>
+    </tr>
+        
+    
+    
+    <tr><th class="field_label "
+    id="field_label_component">
+
+
+  <a 
+      title="Components are second-level categories; each belongs to a particular Product. Select a Product to narrow down this list."
+      class="field_help_link"
+      href="describecomponents.cgi?product=Tomcat Native"
+  >Component:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_component" >Library
+
+  (<a href="buglist.cgi?component=Library&amp;product=Tomcat%20Native&amp;bug_status=__open__"
+      target="_blank">show other bugs</a>)
+</td>
+    </tr>
+    <tr><th class="field_label "
+    id="field_label_version">
+
+
+  <a 
+      title="The version field defines the version of the software the bug was found in."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#version"
+  >Version:</a>
+
+</th>
+<td>unspecified
+  </td>
+    </tr>
+        
+    
+        
+    <tr><th class="field_label "
+    id="field_label_rep_platform">
+
+
+  <a 
+      title="The hardware platform the bug was observed on. Note: When searching, selecting the option &quot;All&quot; only finds bugs whose value for this field is literally the word &quot;All&quot;."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#rep_platform"
+  >Hardware:</a>
+
+</th>
+      <td class="field_value">All
+        All
+      </td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          
+          <tr>
+      <th class="field_label">
+        <label  accesskey="i">
+          <a href="page.cgi?id=fields.html#importance"><u>I</u>mportance</a></label>:
+      </th>
+      <td>P2
+       normal<span id="votes_container">
+    (<a href="page.cgi?id=voting/user.html&amp;bug_id=45392#vote_45392">vote</a>)
+  </span>
+      </td>
+    </tr>
+
+      <tr><th class="field_label "
+    id="field_label_target_milestone">
+
+
+  <a 
+      title="The Target Milestone field is used to define when the engineer the bug is assigned to expects to fix it."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#target_milestone"
+  >Target Milestone:</a>
+
+</th><td>---
+  </td>
+      </tr>
+          
+          <tr><th class="field_label "
+    id="field_label_assigned_to">
+
+
+  <a 
+      title="The person in charge of resolving the bug."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#assigned_to"
+  >Assignee:</a>
+
+</th>
+      <td><span class="vcard"><span class="fn">Tomcat Developers Mailing List</span>
+</span>
+      </td>
+    </tr>
+
+    <script type="text/javascript">
+      assignToDefaultOnChange(['product', 'component'],
+        'dev\x40tomcat.apache.org',
+        '');
+    </script>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+          <tr><th class="field_label "
+    id="field_label_bug_file_loc">
+
+
+  <a 
+      title="Bugs can have a URL associated with them - for example, a pointer to a web site where the problem is seen."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#bug_file_loc"
+  >URL:</a>
+
+</th>
+    <td>
+      <span id="bz_url_input_area">
+      </span>
+    </td>
+  </tr>
+
+
+    <tr><th class="field_label "
+    id="field_label_keywords">
+
+
+  <a 
+      title="You can add keywords from a defined list to bugs, in order to easily identify and group them."
+      class="field_help_link"
+      href="describekeywords.cgi"
+  >Keywords:</a>
+
+</th>
+  <td class="field_value "
+      id="field_container_keywords" >PatchAvailable
+
+</td>
+    </tr>
+          <tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+          
+<tr><th class="field_label "
+    id="field_label_dependson">
+
+
+  <a 
+      title="The bugs listed here must be resolved before this bug can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#dependson"
+  >Depends on:</a>
+
+</th>
+
+  <td>
+    <span id="dependson_input_area">
+    </span>
+
+  </td>
+  </tr>
+  
+  <tr><th class="field_label "
+    id="field_label_blocked">
+
+
+  <a 
+      title="This bug must be resolved before the bugs listed in this field can be resolved."
+      class="field_help_link"
+      href="page.cgi?id=fields.html#blocked"
+  >Blocks:</a>
+
+</th>
+
+  <td>
+    <span id="blocked_input_area">
+    </span>
+
+  </td>
+  </tr>
+          
+        </table>
+      </td>
+      <td>
+        <div class="bz_column_spacer">&nbsp;</div>
+      </td>
+      
+      <td id="bz_show_bug_column_2" class="bz_show_bug_column">
+        <table>
+        <tr>
+    <th class="field_label">
+      Reported:
+    </th>
+    <td>2008-07-14 03:33 UTC by <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+    </td>
+  </tr>
+  
+  <tr>
+    <th class="field_label">
+      Modified:
+    </th>
+    <td>2013-01-24 09:40 UTC
+      (<a href="show_activity.cgi?id=45392">History</a>)
+    </td>
+  
+  </tr>
+<tr>
+      <th class="field_label">
+        <label  accesskey="a">
+          CC List:
+        </label>
+      </th>
+      <td>1 
+          user
+          <span id="cc_edit_area_showhide_container" class="bz_default_hidden">
+            (<a href="#" id="cc_edit_area_showhide">show</a>)
+          </span>
+        <div id="cc_edit_area">
+          <br>
+            <select id="cc" multiple="multiple" size="5" >
+                <option value="jfclere">jfclere</option>
+            </select>
+        </div>
+          <script type="text/javascript">
+            hideEditableField( 'cc_edit_area_showhide_container', 
+                               'cc_edit_area', 
+                               'cc_edit_area_showhide', 
+                               '', 
+                               '');  
+          </script>
+      </td>
+    </tr>
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+ 
+
+<tr>
+    <td colspan="2" class="bz_section_spacer"></td>
+  </tr>
+
+
+
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+          <hr id="bz_top_half_spacer">
+      </td>
+    </tr>
+  </table>
+
+  <table id="bz_big_form_parts">
+  <tr>
+  <td>
+
+    
+<script type="text/javascript">
+<!--
+function toggle_display(link) {
+    var table = document.getElementById("attachment_table");
+    var view_all = document.getElementById("view_all");
+    var hide_obsolete_url_parameter = "&hide_obsolete=1";
+    // Store current height for scrolling later
+    var originalHeight = table.offsetHeight;
+    var rows = YAHOO.util.Dom.getElementsByClassName(
+        'bz_tr_obsolete', 'tr', table);
+
+    for (var i = 0; i < rows.length; i++) {
+        bz_toggleClass(rows[i], 'bz_default_hidden');
+    }
+
+    if (YAHOO.util.Dom.hasClass(rows[0], 'bz_default_hidden')) {
+        link.innerHTML = "Show Obsolete";
+        view_all.href = view_all.href + hide_obsolete_url_parameter 
+    }
+    else {
+        link.innerHTML = "Hide Obsolete";
+        view_all.href = view_all.href.replace(hide_obsolete_url_parameter,"");
+    }
+
+    var newHeight = table.offsetHeight;
+    // This scrolling makes the window appear to not move at all.
+    window.scrollBy(0, newHeight - originalHeight);
+
+    return false;
+}
+//-->
+</script>
+
+<br>
+<table id="attachment_table">
+  <tr id="a0">
+    <th colspan="2" class="left">
+      Attachments
+    </th>
+  </tr>
+
+
+      <tr id="a1" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden">
+        <td>
+            <a href="attachment.cgi?id=22251"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">patch to add basic support for OCSP</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (12.99 KB,
+                patch)
+
+            <br>
+            <a href="#attach_22251"
+               title="Go to the comment associated with the attachment">2008-07-14 03:33 UTC</a>,
+
+            <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+          </span>
+        </td>
+
+
+        <td>
+          <a href="attachment.cgi?id=22251&amp;action=edit">Details</a>
+            | <a href="attachment.cgi?id=22251&amp;action=diff">Diff</a>
+        </td>
+      </tr>
+      <tr id="a2" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden">
+        <td>
+            <a href="attachment.cgi?id=22252"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">patch to add basic support for OCSP for tomcat-native 1.1.14</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (12.81 KB,
+                patch)
+
+            <br>
+            <a href="#attach_22252"
+               title="Go to the comment associated with the attachment">2008-07-14 03:35 UTC</a>,
+
+            <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+          </span>
+        </td>
+
+
+        <td>
+          <a href="attachment.cgi?id=22252&amp;action=edit">Details</a>
+            | <a href="attachment.cgi?id=22252&amp;action=diff">Diff</a>
+        </td>
+      </tr>
+      <tr id="a3" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden">
+        <td>
+            <a href="attachment.cgi?id=22253"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">OCSP support for apache tomcat</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (15.52 KB,
+                patch)
+
+            <br>
+            <a href="#attach_22253"
+               title="Go to the comment associated with the attachment">2008-07-14 07:01 UTC</a>,
+
+            <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+          </span>
+        </td>
+
+
+        <td>
+          <a href="attachment.cgi?id=22253&amp;action=edit">Details</a>
+            | <a href="attachment.cgi?id=22253&amp;action=diff">Diff</a>
+        </td>
+      </tr>
+      <tr id="a4" class="bz_contenttype_text_plain bz_patch bz_tr_obsolete bz_default_hidden">
+        <td>
+            <a href="attachment.cgi?id=22272"
+               title="View the content of the attachment">
+          <b><span class="bz_obsolete">OCSP support for apache tomcat</span></b></a>
+
+          <span class="bz_attach_extra_info">
+              (20.21 KB,
+                patch)
+
+            <br>
+            <a href="#attach_22272"
+               title="Go to the comment associated with the attachment">2008-07-17 07:52 UTC</a>,
+
+            <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+          </span>
+        </td>
+
+
+        <td>
+          <a href="attachment.cgi?id=22272&amp;action=edit">Details</a>
+            | <a href="attachment.cgi?id=22272&amp;action=diff">Diff</a>
+        </td>
+      </tr>
+      <tr id="a5" class="bz_contenttype_text_plain bz_patch">
+        <td>
+            <a href="attachment.cgi?id=22594"
+               title="View the content of the attachment">
+          <b>OCSP support for apache tomcat</b></a>
+
+          <span class="bz_attach_extra_info">
+              (17.78 KB,
+                patch)
+
+            <br>
+            <a href="#attach_22594"
+               title="Go to the comment associated with the attachment">2008-09-16 04:39 UTC</a>,
+
+            <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+          </span>
+        </td>
+
+
+        <td>
+          <a href="attachment.cgi?id=22594&amp;action=edit">Details</a>
+            | <a href="attachment.cgi?id=22594&amp;action=diff">Diff</a>
+        </td>
+      </tr>
+      <tr id="a6" class="bz_contenttype_text_plain bz_patch">
+        <td>
+            <a href="attachment.cgi?id=22611"
+               title="View the content of the attachment">
+          <b>OCSP support for apache tomcat</b></a>
+
+          <span class="bz_attach_extra_info">
+              (17.98 KB,
+                patch)
+
+            <br>
+            <a href="#attach_22611"
+               title="Go to the comment associated with the attachment">2008-09-19 07:13 UTC</a>,
+
+            <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+          </span>
+        </td>
+
+
+        <td>
+          <a href="attachment.cgi?id=22611&amp;action=edit">Details</a>
+            | <a href="attachment.cgi?id=22611&amp;action=diff">Diff</a>
+        </td>
+      </tr>
+
+  <tr class="bz_attach_footer">
+    <td colspan="2">
+        <span class="bz_attach_view_hide">
+            <a href="#a0" onclick="return toggle_display(this);">Show
+              Obsolete</a> (4)
+            <a id="view_all" href="attachment.cgi?bugid=45392&amp;action=viewall&amp;hide_obsolete=1">View All</a>
+        </span>
+        <a href="attachment.cgi?bugid=45392&amp;action=enter">Add an attachment</a>
+        (proposed patch, testcase, etc.)
+    </td>
+  </tr>
+</table>
+<br>
+<div id="add_comment" class="bz_section_additional_comments">
+      <table>
+        <tr>
+          <td>
+            <fieldset>
+              <legend>Note</legend>
+              You need to
+              <a href="show_bug.cgi?id=45392&amp;GoAheadAndLogIn=1">log in</a>
+              before you can comment on or make changes to this bug.
+            </fieldset>
+          </td>
+        </tr> 
+      </table>
+  </div>
+  </td>
+  <td>
+  </td>
+  </tr></table>
+
+  
+  <div id="comments"><script src="js/comments.js?1474742097" type="text/javascript">
+</script>
+
+<script type="text/javascript">
+<!--
+  /* Adds the reply text to the 'comment' textarea */
+  function replyToComment(id, real_id, name) {
+      var prefix = "(In reply to " + name + " from comment #" + id + ")\n";
+      var replytext = "";
+        /* pre id="comment_name_N" */
+        var text_elem = document.getElementById('comment_text_'+id);
+        var text = getText(text_elem);
+        replytext = prefix + wrapReplyText(text);
+
+
+      /* <textarea id="comment"> */
+      var textarea = document.getElementById('comment');
+      if (textarea.value != replytext) {
+          textarea.value += replytext;
+      }
+
+      textarea.focus();
+  } 
+//-->
+</script>
+
+
+<!-- This auto-sizes the comments and positions the collapse/expand links 
+     to the right. -->
+<table class="bz_comment_table">
+<tr>
+<td>
+<div id="c0" class="bz_comment bz_first_comment">
+
+      <div class="bz_first_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c0">Description</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-07-14 03:33:40 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=22251&amp;action=diff" name="attach_22251" title="patch to add basic support for OCSP">attachment 22251</a> <a href="attachment.cgi?id=22251&amp;action=edit" title="patch to add basic support for OCSP">[details]</a></span>
+patch to add basic support for OCSP
+
+Standalone tocmat (tomcat6) with apr support (tcnative 1.1.13) has no support for OCSP checking in the certificates even if the certificates have OCSP information. This permits clients with revoked certificates to use them as authentication method. The following patch that is attached adds basic functionality for OCSP support to prevent this type of attack. (patch made against tomcat native 1.1.13).
+
+More info <a href="http://email.uoa.gr/projects/misc/tomcat-ocsp/">http://email.uoa.gr/projects/misc/tomcat-ocsp/</a></pre>
+    </div>
+
+    <div id="c1" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c1">Comment 1</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-07-14 03:35:16 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=22252&amp;action=diff" name="attach_22252" title="patch to add basic support for OCSP for tomcat-native 1.1.14">attachment 22252</a> <a href="attachment.cgi?id=22252&amp;action=edit" title="patch to add basic support for OCSP for tomcat-native 1.1.14">[details]</a></span>
+patch to add basic support for OCSP for tomcat-native 1.1.14
+
+patch for tomcat native 1.1.14</pre>
+    </div>
+
+    <div id="c2" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c2">Comment 2</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Mladen Turk</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-07-14 03:54:15 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Few things, about the patch.
+1. Please use 4 spaces instead TAB
+2. New files must have ASL 2.0 license header at the top.
+
+Please make the patch against the svn trunk.
+Some documentation would be great if additional setup is required.
+
+
+Other then that, the patch is pretty promissing.
+It would be nice to use the APR for make_socket, but that can be done later.
+
+Regards</pre>
+    </div>
+
+    <div id="c3" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c3">Comment 3</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Remy Maucherat</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-07-14 04:45:36 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">-1. Please do not add zillions of random features to the Tomcat native code. If APR supports it, then it's ok, otherwise I don't think this is a good idea.</pre>
+    </div>
+
+    <div id="c4" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c4">Comment 4</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-07-14 05:13:52 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=45392#c3">comment #3</a>)
+<span class="quote">&gt; -1. Please do not add zillions of random features to the Tomcat native code. If
+&gt; APR supports it, then it's ok, otherwise I don't think this is a good idea.
+&gt; </span >
+
+Plz correct me if I'm wrong on this, but tomcat using APR in order to have the openSSL functionality makes callbacks to tha native code that exists within apache tomcat. So actually for client authentication the function that is used to verify the certs is in sslutils.c :
+/*
+ * This OpenSSL callback function is called when OpenSSL
+ * does client authentication and verifies the certificate chain.
+ */
+
+
+int SSL_callback_SSL_verify(int ok, X509_STORE_CTX *ctx)
+
+
+ So i believe this part is responsibility of tomcat (or perhaps i'm getting something totally wrong) (at least the code resides on this branch)
+
+ On the side note, i don't think this is a random feature for tomcat, since i haven't found a proper way of reloading the CRL (besides restarting the service) and permitting clients connecting with revoked certificates in not the best case scenario (from a security point of view there must be a good reason for a certificate to be revoked).</pre>
+    </div>
+
+    <div id="c5" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c5">Comment 5</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-07-14 05:18:15 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">(In reply to <a href="show_bug.cgi?id=45392#c2">comment #2</a>)
+<span class="quote">&gt; Few things, about the patch.
+&gt; 1. Please use 4 spaces instead TAB
+&gt; 2. New files must have ASL 2.0 license header at the top.
+&gt; 
+&gt; Please make the patch against the svn trunk.</span >
+
+  I'll fix these issues, create a new patch and upload it here. 
+
+<span class="quote">&gt; Some documentation would be great if additional setup is required.
+&gt; </span >
+
+  Actually at this time since the patch uses the ocsp server info found in the certificates no further setup is required. If extra functionality is to be introduced (i.e having a default ocsp server) perhaps some additional setup must be made.
+
+<span class="quote">&gt; 
+&gt; Other then that, the patch is pretty promissing.
+&gt; It would be nice to use the APR for make_socket, but that can be done later.
+&gt; </span >
+
+  I have to find some documentation and/or look on some code on how to use APR for the socket.
+
+ Thanks :)
+
+</pre>
+    </div>
+
+    <div id="c6" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c6">Comment 6</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-07-14 07:01:58 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=22253&amp;action=diff" name="attach_22253" title="OCSP support for apache tomcat">attachment 22253</a> <a href="attachment.cgi?id=22253&amp;action=edit" title="OCSP support for apache tomcat">[details]</a></span>
+OCSP support for apache tomcat
+
+The patch created using trunk (14/10/2008 at 16:20 ) adding the licence in the new files and changing the identation to 4 spaces only 
+(Hopefully no mistakes :) )</pre>
+    </div>
+
+    <div id="c7" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c7">Comment 7</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Mladen Turk</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-07-14 07:13:29 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">OK, thanks for the patch.
+However this won't be acceptable until you resolve portability
+issues. The &lt;sys/socket.h, netinet/in.h, etc... are not present on
+all platforms or their functionallity is inside different headers,
+so the APR needs to be used instead.
+
+BTW, the RFC2560 is a cool thing especially cause it's integral part
+of mod_ssl and supported by OpenSSL. Think that APR-zing the needed
+stuff won't be that hard. 
+
+Regards</pre>
+    </div>
+
+    <div id="c8" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c8">Comment 8</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-07-17 07:52:26 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class="bz_obsolete"><a href="attachment.cgi?id=22272&amp;action=diff" name="attach_22272" title="OCSP support for apache tomcat">attachment 22272</a> <a href="attachment.cgi?id=22272&amp;action=edit" title="OCSP support for apache tomcat">[details]</a></span>
+OCSP support for apache tomcat
+
+Added the APR support. (for the socket communication). Hopefully things are setting into place :)</pre>
+    </div>
+
+    <div id="c9" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c9">Comment 9</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">jfclere</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-08-27 00:59:47 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">apr has a pool for memory allocation.
+Couldn't the malloc,realloc,free be changed to the apr corresponding ones?</pre>
+    </div>
+
+    <div id="c10" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c10">Comment 10</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-09-16 04:39:09 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class=""><a href="attachment.cgi?id=22594&amp;action=diff" name="attach_22594" title="OCSP support for apache tomcat">attachment 22594</a> <a href="attachment.cgi?id=22594&amp;action=edit" title="OCSP support for apache tomcat">[details]</a></span>
+OCSP support for apache tomcat
+
+This is a new version of the patch. Everything went to sslutils.c (as asked) and everything is in #ifdef HAVE_OCSP_SSL so that this can be made as compile time option. (i haven't touched anything that has to do with the building procedure).</pre>
+    </div>
+
+    <div id="c11" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c11">Comment 11</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2008-09-19 07:13:04 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Created <span class=""><a href="attachment.cgi?id=22611&amp;action=diff" name="attach_22611" title="OCSP support for apache tomcat">attachment 22611</a> <a href="attachment.cgi?id=22611&amp;action=edit" title="OCSP support for apache tomcat">[details]</a></span>
+OCSP support for apache tomcat
+
+A new version of the patch. Removed the malloc/realloc/free calls and replaced them with apr_ calls. For some tests i did it didn't seem to break anything, but i'm not so familliar with APR either :) (I also think that it wasn's such a heavy usage of malloc and free, since it was mainly used for string manipulation).</pre>
+    </div>
+
+    <div id="c12" class="bz_comment">
+
+      <div class="bz_comment_head">
+
+
+        <span class="bz_comment_number">
+          <a 
+             href="show_bug.cgi?id=45392#c12">Comment 12</a>
+        </span>
+
+        <span class="bz_comment_user">
+          <span class="vcard"><span class="fn">Aristotelis</span>
+</span>
+        </span>
+
+        <span class="bz_comment_user_images">
+        </span>
+
+        <span class="bz_comment_time">
+          2012-09-26 16:30:06 UTC
+        </span>
+
+      </div>
+
+
+
+
+<pre class="bz_comment_text">Since this feature has been added to apache tomcat 1.1.23 shouldn't this bug be closed??</pre>
+    </div>
+
+
+  
+
+</td>
+<td>
+</td>
+</tr></table>
+  </div>
+        
+
+</form>
+
+<hr>
+<ul class="related_actions">
+    <li><a href="show_bug.cgi?format=multiple&amp;id=45392">Format For Printing</a></li>
+    <li>&nbsp;-&nbsp;<a href="show_bug.cgi?ctype=xml&amp;id=45392">XML</a></li>
+    <li>&nbsp;-&nbsp;<a href="enter_bug.cgi?cloned_bug_id=45392">Clone This Bug</a></li>
+    
+    <li>&nbsp;-&nbsp;<a href="#">Top of page </a></li>
+    </ul>
+
+<br>
+</div>
+
+    <div id="footer">
+      <div class="intro"></div>
+
+  This is <b>ASF Bugzilla</b>: the Apache Software Foundation bug system. In case
+  of problems with the functioning of ASF Bugzilla, please contact
+  <a href="mailto:bugzilla-admin@apache.org">bugzilla-admin@apache.org</a>.
+  <b>Please Note:</b> this e-mail address is <b>only</b> for reporting problems
+  with ASF Bugzilla. Mail about any other subject will be silently
+  ignored.
+<ul id="useful-links">
+  <li id="links-actions"><ul class="links">
+  <li><a href="./">Home</a></li>
+  <li><span class="separator">| </span><a href="enter_bug.cgi">New</a></li>
+  <li><span class="separator">| </span><a href="describecomponents.cgi">Browse</a></li>
+  <li><span class="separator">| </span><a href="query.cgi">Search</a></li>
+
+  <li class="form">
+    <span class="separator">| </span>
+    <form action="buglist.cgi" method="get"
+        onsubmit="if (this.quicksearch.value == '')
+                  { alert('Please enter one or more search terms first.');
+                    return false; } return true;">
+    <input type="hidden" id="no_redirect_bottom" name="no_redirect" value="0">
+    <script type="text/javascript">
+      if (history && history.replaceState) {
+        var no_redirect = document.getElementById("no_redirect_bottom");
+        no_redirect.value = 1;
+      }
+    </script>
+    <input class="txt" type="text" id="quicksearch_bottom" name="quicksearch" 
+           title="Quick Search" value="">
+    <input class="btn" type="submit" value="Search" 
+           id="find_bottom"></form>
+  <a href="page.cgi?id=quicksearch.html" title="Quicksearch Help">[?]</a></li>
+
+  <li><span class="separator">| </span><a href="report.cgi">Reports</a></li>
+
+  <li></li>
+
+
+  <li>
+        <span class="separator">| </span>
+        <a href="https://bugzilla.readthedocs.org/en/5.0/using/understanding.html" target="_blank">Help</a>
+      </li>
+    
+      <li id="new_account_container_bottom">
+        <span class="separator">| </span>
+        <a href="createaccount.cgi">New&nbsp;Account</a>
+      </li>
+
+    <li id="mini_login_container_bottom">
+  <span class="separator">| </span>
+  <a id="login_link_bottom" href="show_bug.cgi?id=45392&amp;GoAheadAndLogIn=1"
+     onclick="return show_mini_login_form('_bottom')">Log In</a>
+
+  <form action="show_bug.cgi?id=45392" method="POST"
+        class="mini_login bz_default_hidden"
+        id="mini_login_bottom">
+    <input id="Bugzilla_login_bottom" required
+           name="Bugzilla_login" class="bz_login"
+        type="email" placeholder="Email Address">
+    <input class="bz_password" name="Bugzilla_password" type="password"
+           id="Bugzilla_password_bottom" required
+           placeholder="Password">
+      <input type="checkbox" id="Bugzilla_remember_bottom" 
+             name="Bugzilla_remember" value="on" class="bz_remember"
+             checked>
+      <label for="Bugzilla_remember_bottom">Remember</label>
+    <input type="hidden" name="Bugzilla_login_token"
+           value="">
+    <input type="submit" name="GoAheadAndLogIn" value="Log in"
+            id="log_in_bottom">
+    <a href="#" onclick="return hide_mini_login_form('_bottom')">[x]</a>
+  </form>
+</li>
+
+
+  <li id="forgot_container_bottom">
+    <span class="separator">| </span>
+    <a id="forgot_link_bottom" href="show_bug.cgi?id=45392&amp;GoAheadAndLogIn=1#forgot"
+       onclick="return show_forgot_form('_bottom')">Forgot Password</a>
+    <form action="token.cgi" method="post" id="forgot_form_bottom"
+          class="mini_forgot bz_default_hidden">
+      <label for="login_bottom">Login:</label>
+      <input name="loginname" size="20" id="login_bottom" required
+          type="email" placeholder="Your Email Address">
+      <input id="forgot_button_bottom" value="Reset Password" type="submit">
+      <input type="hidden" name="a" value="reqpw">
+      <input type="hidden" id="token_bottom" name="token"
+             value="1549789118-HwgNtAySjPnUxuS3NU4WeYxbf3K2GSmb3GWX5U3aAj8">
+      <a href="#" onclick="return hide_forgot_form('_bottom')">[x]</a>
+    </form>
+  </li>
+</ul>
+  </li>
+
+  
+
+
+
+
+  
+</ul>
+
+      <div class="outro"></div>
+    </div>
+
+  </body>
+</html>Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

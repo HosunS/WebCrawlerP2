@@ -1,0 +1,432 @@
+¦Ifinal_url¢DtypeEvaluexhttp://www.rddl.org/natures/Lhttp_headers¢DtypeEvalue‹¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4064¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=15, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.11 (Ubuntu)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 12 Nov 2009 03:10:11 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX!"23024d9-4f33-47823e19a0ac0"-gzip¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 20:37:00 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueyO3<!--<!DOCTYPE html PUBLIC "-//XML-DEV//DTD XHTML RDDL 1.0//EN" "rddl-xhtml.dtd">-->
+<html 	xmlns="http://www.w3.org/1999/xhtml" 
+		xmlns:xlink="http://www.w3.org/1999/xlink"
+		xmlns:rddl="http://www.rddl.org/"
+		xml:base="http://www.rddl.org/natures">
+<head>
+	<title>Well Known Resource Directory Description Natures</title>
+	<link rel="stylesheet" type="text/css" href="../xrd.css" />
+</head>
+
+<body>
+<h1>URIs For Common Natures of Resources</h1>
+<h2>Natures</h2>
+<rddl:resource
+	id="nature"
+	xlink:title="Term"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:role="http://www.rddl.org/#resource"
+	xlink:href="#nature"
+>
+	<div class="resource">
+		<p>The <code>nature</code> of a referenced resource is a property of the referenced resource itself, whereas the <code>purpose</code>
+		 	is a property of the link. In many cases the <a href="http://www.rddl.org/purposes">purpose</a> of a referenced resource can be inferred from its <code>nature</code>.
+			All resources have a nature, and when not 
+specified the implicit value is 
+<code>http://www.rddl.org/#resource</code>.  
+		</p>
+		<p>
+			When a referenced resource is XML and its <code>nature</code> can be inferred from the namespace URI of the root element, this namespace URI is the
+			<code>nature</code> of the referenced resource. When a referenced resource is not XML and its <code>nature</code> can be inferred from its MIME <code>content-type</code>, 
+			the nature of the referenced resource is obtained by appending the content-type to the prefix <code>http://www.isi.edu/in-notes/iana/assignments/media-types/</code>.
+		</p>
+	</div>
+</rddl:resource>
+<rddl:resource
+	id="term"
+	xlink:title="Term"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:role="http://www.rddl.org/natures#term"
+	xlink:href="#term"
+>
+	<div class="resource">
+		<p>The <code>nature</code> of a resource can be as simple as being a defined <code>term</code>.</p>
+	</div>
+</rddl:resource>
+<!-- note: below we define the id= as a subtype of the xlink:href= -->
+<div id="CSS" class="resource">
+<h2>CSS</h2>
+<rddl:resource
+	xlink:title="CSS Specification"
+	xlink:role="http://www.w3.org/TR/html4/"
+	xlink:arcrole="http://www.rddl.org/purposes#specification"
+	xlink:href="http://www.w3.org/TR/REC-CSS1"
+	>
+		<h3>CSS Specification</h3>
+		<p>From <a href="http://www.w3.org/TR/REC-CSS1">W3C CSS1</a>: <cite>CSS1 is a simple style sheet mechanism that allows authors and readers to attach style (e.g. fonts, colors and spacing) to HTML documents. The CSS1 language is human readable and writable, and expresses style in common desktop publishing terminology.</cite> </p>
+	</div>
+</rddl:resource>
+<rddl:resource
+	xlink:title="CSS Nature"
+	xlink:role="http://www.isi.edu/in-notes/iana/assignments/media-types/text/plain"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:href="http://www.isi.edu/in-notes/iana/assignments/media-types/text/css"
+	><div class="resource">
+		<h3>The Nature of CSS</h3>
+		<p>The URI <code>http://www.isi.edu/in-notes/iana/assignments/media-types/text/css</code> is well-known URI for CSS.
+		This URI is a well-known URI for the content-type <code>text/css</code> and is used as the <code>nature</code> of CSS. This URI
+		itself resolves to a <code>text/plain</code> document.</p>
+	</div>
+</rddl:resource>
+</div>
+<div id="DTD" class="resource">
+<h2>DTD</h2>
+<rddl:resource
+	xlink:title="Document Type Definition"
+	xlink:href="http://www.w3.org/TR/REC-xml#dt-doctype"
+	xlink:role="http://www.w3.org/TR/html4/"
+	xlink:arcrole="http://www.rddl.org/purposes#specification"
+	>
+		<p>From <a href="http://www.w3.org/TR/REC-xml">XML 1.0</a>: <cite>The XML document type declaration contains or points to markup declarations that provide a grammar for a class of documents. This grammar is known as a document type definition, or DTD. The document type declaration can point to an external subset (a special kind of external entity) containing markup declarations, or can contain the markup declarations directly in an internal subset, or can do both. The DTD for a document consists of both subsets taken together.
+		</cite>[<a href="http://www.w3.org/TR/REC-xml#dt-doctype">1</a>]</p>
+</rddl:resource>
+<rddl:resource
+	xlink:title="Document Type Definition"
+	xlink:href="http://www.isi.edu/in-notes/iana/assignments/media-types/application/xml-dtd"
+	xlink:role="http://www.rddl.org/natures#nature"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	>
+	<h3>The Nature of a DTD</h3>
+	<p>A URI which describes the <code>nature</code> of a DTD is <code>http://www.isi.edu/in-notes/iana/assignments/media-types/application/xml-dtd</code>.
+	This is the <code>content-type</code> of a DTD according to <a href="http://www.isi.edu/in-notes/rfc3023.txt">RFC 3023</a>.</p>
+</rddl:resource>
+</div>
+<rddl:resource
+	id="mailbox"
+	xlink:title="Mailbox"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:role="http://www.rddl.org/natures#term"
+	xlink:href="#mailbox"
+	><div class="resource"><h2>The Nature of a Mailbox</h2>
+		<p>A URI which can be used to describe the nature of a mailbox is <code>http://www.rddl.org/natures#mailbox</code>.</p>
+	 </div>
+	</rddl:resource>
+<div id="HTML">
+	<h2>The Nature of HTML</h2>
+	<p>HTML provides an interesting case study for the discussion of natures given its range of incarnations.<p>
+	<rddl:resource
+		xml:base="http://www.isi.edu/in-notes/iana/assignments/media-types/text/html"
+		xlink:title="Generic HTML"
+		xlink:role="http://www.rddl.org/natures#nature"
+		xlink:arcrole="http://www.rddl.org/purposes#definition"
+		xlink:href="http://www.isi.edu/in-notes/iana/assignments/media-types/text/sgml"
+	>
+	<div class="resource">
+		<h3>Generic HTML</h3>
+		<p>The MIME content-type <code>text/html</code> denotes the most general or generic type of HTML. It could be
+		HTML 1,2,3,4 or XHTML and can be strict, transitional, frameset etc. Its nature derives from <code>text/sgml</code> and is refered to by the
+		canonical URI for <code>text/html</code> namely <a href="http://www.isi.edu/in-notes/iana/assignments/media-types/text/html">http://www.isi.edu/in-notes/iana/assignments/media-types/text/html</a></p>
+	</div>
+	</rddl:resource>
+	<rddl:resource
+		xml:base="http://www.w3.org/TR/html4/"
+		xlink:title="HTML 4.01"
+		xlink:role="http://www.rddl.org/natures#nature"
+		xlink:arcrole="http://www.rddl.org/purposes#definition"
+		xlink:href="http://www.isi.edu/in-notes/iana/assignments/media-types/text/html"
+	><div class="resource">
+		<h3>HTML 4</h3>
+		<p>The nature of HTML 4 is <a href="http://www.w3.org/TR/html4/">http://www.w3.org/TR/html4/</a>. This URI also refers to the HTML 4 specification.
+		   The nature of something is not typically the specification, but this URI is also the root URI for the DTDs which define HTML 4 Strict, Transitional and Frameset.
+		</p>
+	 </div>
+	</rddl:resource>
+	<rddl:resource
+		xml:base="http://www.w3.org/TR/html4/strict"
+		xlink:title="HTML 4.01 Strict"
+		xlink:role="http://www.rddl.org/natures#nature"
+		xlink:arcrole="http://www.rddl.org/purposes#definition"
+		xlink:href="http://www.w3.org/TR/html4/"
+	><div class="resource">
+		<h3>HTML 4 Strict</h3>
+		<p>The nature of HTML 4 Strict is <a href="http://www.w3.org/TR/html4/strict">http://www.w3.org/TR/html4/strict</a>. This URI resolves to the DTD for HTML 4 Strict.
+		 Here we define this nature to derive from the nature of HTML 4.
+		</p>
+	 </div>
+	</rddl:resource>
+	<rddl:resource
+		xml:base="http://www.w3.org/TR/html4/transitional"
+		xlink:title="HTML 4.01 Transitional"
+		xlink:role="http://www.rddl.org/natures#nature"
+		xlink:arcrole="http://www.rddl.org/purposes#definition"
+		xlink:href="http://www.w3.org/TR/html4/"
+	><div class="resource">
+		<h3>HTML 4 Transitional</h3>
+		<p>The nature of HTML 4 Transitional is <a href="http://www.w3.org/TR/html4/transitional">http://www.w3.org/TR/html4/transitional</a>. This URI resolves to the DTD for HTML 4 Transitional.
+		  Here we define this nature to derive from the nature of HTML 4.
+		</p>
+	 </div>
+	</rddl:resource>
+	<rddl:resource
+		xml:base="http://www.w3.org/TR/html4/frameset"
+		xlink:title="HTML 4.01 Frameset"
+		xlink:role="http://www.rddl.org/natures#nature"
+		xlink:arcrole="http://www.rddl.org/purposes#definition"
+		xlink:href="http://www.w3.org/TR/html4/"
+	><div class="resource">
+		<h3>HTML 4 Frameset</h3>
+		<p>The nature of HTML 4 Frameset is <a href="http://www.w3.org/TR/html4/frameset">http://www.w3.org/TR/html4/frameset</a>. This URI resolves to the DTD for HTML 4 Frameset.
+		  Here we define this nature to derive from the nature of HTML 4.
+		</p>
+	 </div>
+	</rddl:resource>
+	<rddl:resource
+		xml:base="http://www.w3.org/1999/xhtml"
+		xlink:title="XHTML"
+		xlink:role="http://www.rddl.org/natures#nature"
+		xlink:arcrole="http://www.rddl.org/purposes#definition"
+		xlink:href="http://www.w3.org/TR/html4/"
+	><div class="resource">
+		<h3>XHTML</h3>
+		<p>The nature of XHTML is <a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>. This URI is the namespace of XHTML.
+		  Here we define this nature to derive from the nature of HTML 4.
+		</p>
+	 </div>
+	</rddl:resource>
+	<rddl:resource
+		xml:base="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict"
+		xlink:title="XHTML 1.0 Strict"
+		xlink:role="http://www.rddl.org/natures#nature"
+		xlink:arcrole="http://www.rddl.org/purposes#definition"
+		xlink:href="http://www.w3.org/1999/xhtml"
+	><div class="resource">
+		<h3>XHTML 1.0 Strict</h3>
+		<p>The nature of XHTML 1.0 Strict is <a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict">http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict</a>. This URI resolves to the DTD for XHTML 1.0 Strict.
+		  Here we define this nature to derive from the nature of XHTML.
+		</p>
+	 </div>
+	</rddl:resource>
+	<rddl:resource
+		xml:base="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional"
+		xlink:title="XHTML 1.0 Transitional"
+		xlink:role="http://www.rddl.org/natures#nature"
+		xlink:arcrole="http://www.rddl.org/purposes#definition"
+		xlink:href="http://www.w3.org/1999/xhtml"
+	><div class="resource">
+		<h3>XHTML 1.0 Transitional</h3>
+		<p>The nature of XHTML 1.0 Transitional is <a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional</a>. This URI resolves to the DTD for XHTML 1.0 Transitional.
+		  Here we define this nature to derive from the nature of XHTML.
+		</p>
+	 </div>
+	</rddl:resource>
+
+</div>
+<h2>Schema related Natures</h2>
+<div id="RDFS" class="resource">
+<h2>RDF Schema</h2>		
+<p>An <a href="http://www.w3.org/TR/rdf-schema/">RDF Schema</a> is a language which describes vocabularies using the
+<a href="http://www.w3.org/TR/REC-rdf-syntax/">Resource Description Framework</a>.</p>
+<rddl:resource
+	xlink:title="RDF Schema URI"
+	xlink:role="http://www.w3.org/2000/01/rdf-schema#"
+	xlink:arcrole="http://www.rddl.org/purposes#specification"
+	xlink:href="http://www.w3.org/2000/01/rdf-schema#"
+	>
+		<h3>The Nature of RDF Schema</h3>
+		<p>The <a href="http://www.w3.org/TR/rdf-schema/">RDF Schema</a> namespace URI is <code>http://www.w3.org/2000/01/rdf-schema#</code>. The <code>nature</code>
+		of an RDF Schema is <a href="http://www.w3.org/2000/01/rdf-schema#"><code>http://www.w3.org/2000/01/rdf-schema#</code></a></p>
+</rddl:resource>
+<rddl:resource
+	xlink:title="RDF Schema Specification"
+	xlink:role="http://www.w3.org/TR/html4/"
+	xlink:arcrole="http://www.rddl.org/purposes#specification"
+	xlink:href="http://www.w3.org/TR/rdf-schema/"
+	>
+		<h3>RDF Schema specification</h3>
+		<p>The <a href="http://www.w3.org/TR/rdf-schema/">RDF Schema</a> specification is a W3C Candidate Recommendation.</p>
+</rddl:resource>
+</div>
+<div id="RELAX" class="resource">
+<h2>RELAX Schema</h2>
+<p><a href="http://www.xml.gr.jp/relax/">RELAX</a>: Regular Language Description for XML, is <cite>An XML Structure Validation Language using
+Patterns in Trees</cite></p> 
+<rddl:resource
+	xlink:title="RELAX Schema Specification"
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes#specification"
+	xlink:href="http://www.xml.gr.jp/relax"
+	>
+		<h3>Specification</h3>
+		<p>The RELAX specification is available at <a href="http://www.xml.gr.jp/relax">http://www.xml.gr.jp/relax</a>.</p>
+</rddl:resource>
+<rddl:resource
+	xlink:title="RELAX Core"
+	xlink:role="http://www.rddl.org/natures#nature"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:href="http://www.xml.gr.jp/xmlns/relaxCore"
+	>
+		<h3>RELAX Core</h3>
+		<p><code>http://www.xml.gr.jp/xmlns/relaxCore</code> is the URI which is used as the <code>nature</code> of a RELAX Core grammar.
+		This is the namespace URI of a RELAX core <code>grammar</code>.</p>
+</rddl:resource>
+<rddl:resource
+	xlink:title="RELAX Namespace"
+	xlink:role="http://www.rddl.org/natures#nature"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:href="http://www.xml.gr.jp/xmlns/relaxNamespace"
+	>
+		<h3>RELAX Namespace</h3>
+		<p><code>http://www.xml.gr.jp/xmlns/relaxNamespace</code> is the URI which is used as the <code>nature</code> of a RELAX Namespace grammar.
+		This is the namespace URI of a RELAX namespace <code>grammar</code>.</p>
+</rddl:resource>
+</div>
+<div id="Schematron" class="resource">
+<h2>Schematron Schema</h2>
+<p><a href="http://www.ascc.net/xml/schematron">Schematron</a> is <cite>An XML Structure Validation Language using
+Patterns in Trees</cite>.</p>
+<rddl:resource
+	xlink:title="Schematron Schema"
+	xlink:role="http://www.w3.org/1999/xhtml"
+	xlink:arcrole="http://www.rddl.org/purposes#specification"
+	xlink:href="http://www.ascc.net/xml/schematron/1.3/Schematron2000.html"
+	>
+	<h3>Schematron specification</h3>
+	<p>The schematron <a href="http://www.ascc.net/xml/schematron/1.3/Schematron2000.html">spec</a></p>
+</rddl:resource>
+<rddl:resource
+	xlink:title="Schematron Schema"
+	xlink:role="http://www.rddl.org/"
+	xlink:arcrole="http://www.rddl.org/purposes#nature"
+	xlink:href="http://www.ascc.net/xml/schematron"
+	>
+	<h3>The Nature of Schematron</h3>
+	<p>The well known URI for Schematron is <a href="http://www.ascc.net/xml/schematron">http://www.ascc.net/xml/schematron</a>. This URI is the namespace URI for the root
+	element of a Schematron schema. This URI resolves to a RDDL document which describes the Schematron namespace. This URI is used as the <code>nature</code> of a Schematron schema.
+	</p>
+</rddl:resource>
+</div>
+<rddl:resource
+	id="SOCAT"
+	xlink:title="OASIS Open Catalog"
+	xlink:role="http://www.rddl.org/#resource"
+	xlink:arcrole="http://www.rddl.org/purposes#specification"
+	xlink:href="http://www.oasis-open.org/html/a401.htm"
+	><div class="resource">
+		<h2>OASIS Open Catalog</h2>
+		<p>An OASIS Open Catalog Format document mapps Public Identifiers to System Identifiers.
+		The URI <code>http://www.rddl.org/natures#SOCAT</code> can be used as a well known URI for an OASIS Open Catalog.
+		</p>
+	</div>
+</rddl:resource>
+<div id="XSD" class="resource">
+<h2>XML Schema</h2>
+<p>The XML Schema Definition Language is a formal language for which to describe XML grammars.</p>
+<ul>
+<rddl:resource
+	xlink:title="XML Schema Primer"
+	xlink:role="http://www.w3.org/TR/html4/"
+	xlink:arcrole="http://www.rddl.org/purposes#non-normative-specification"
+	xlink:href="http://www.w3.org/TR/xmlschema-0/"
+	>
+<li>The <a href="http://www.w3.org/TR/xmlschema-0/">Primer</a> is a non-normative introduction.</li>	
+</rddl:resource>
+<rddl:resource
+	xlink:title="XML Schema Structures"
+	xlink:role="http://www.w3.org/TR/html4/"
+	xlink:arcrole="http://www.rddl.org/purposes#normative-specification"
+	xlink:href="http://www.w3.org/TR/xmlschema-1/"
+	>
+<li>The <a href="http://www.w3.org/TR/xmlschema-1/">Structures specification</a> is a normative specification.</li>	
+</rddl:resource>
+<rddl:resource
+	xlink:title="XML Schema Datatypes"
+	xlink:role="http://www.w3.org/TR/html4/"
+	xlink:arcrole="http://www.rddl.org/purposes#normative-specification"
+	xlink:href="http://www.w3.org/TR/xmlschema-2/"
+	>
+<li>The <a href="http://www.w3.org/TR/xmlschema-2/">Datatypes specification</a> is a normative specification.</li>	
+</rddl:resource>
+</ul>	
+<rddl:resource
+	xlink:title="XML Schema"
+	xlink:role="http://www.rddl.org/natures#nature"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:href="http://www.w3.org/2001/XMLSchema"
+	>
+	<h3>Well known URI</h3>
+	<p>The well known URI for XSD is: <code>http://www.w3.org/2001/XMLSchema</code> which defines the 
+<code>nature</code> of an XML Schema
+	module. This is the namespace URI of the root element of an XSD <code>schema</code>.</p>
+</rddl:resource>
+</div>
+<div id="encodings">
+<h2>Natures Related to Text</h2>
+<rddl:resource
+	id="chardata"
+	xlink:title="XML Character Data"
+	xlink:role="http://www.rddl.org/natures#term"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:href="http://www.w3.org/TR/REC-xml.html#dt-chardata"
+	>
+	<div class="resource">
+	<h3>XML Character Data</h3>
+	<p>The URI <code><a href="http://www.w3.org/TR/REC-xml.html#dt-chardata">http://www.w3.org/TR/REC-xml.html#dt-chardata</a></code>. From XML 1.0 <cite>[Definition: All text that is not markup constitutes the character data of the document.]</cite></p>
+	</div>
+</rddl:resource>
+<rddl:resource
+	id="escaped"
+	xlink:title="XML Escaped"
+	xlink:role="http://www.rddl.org/natures#term"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:href="http://www.w3.org/TR/REC-xml.html#dt-escape"
+	>
+	<div class="resource">
+	<h3>XML Escaped</h3>
+	<p>The URI <code><a href="http://www.w3.org/TR/REC-xml.html#dt-escape">http://www.w3.org/TR/REC-xml.html#dt-escape</a></code>. From XML 1.0 <cite>[Definition: Entity and character references can both be used to escape the left angle bracket, ampersand, and other delimiters. A set of general entities (amp, lt, gt, apos, quot) is specified for this purpose. Numeric character references may also be used; they are expanded immediately when recognized and must be treated as character data, so the numeric character references "&amp;#60;" and "&amp;#38;" may be used to escape &lt; and &amp; when they occur in character data.]</cite></p>
+	</div>
+</rddl:resource>
+<rddl:resource
+	id="unparsed-entity"
+	xlink:title="XML Unparsed Entity"
+	xlink:role="http://www.rddl.org/natures#term"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:href="http://www.w3.org/TR/REC-xml.html#dt-unparsed"
+	>
+	<div class="resource">
+	<h3>XML Unparsed Entity</h3>
+	<p>The URI <code><a href="http://www.w3.org/TR/REC-xml.html#dt-unparsed">http://www.w3.org/TR/REC-xml.html#dt-unparsed</a></code>. From XML 1.0 <cite>[Definition: An unparsed entity is a resource whose contents may or may not be text, and if text, may be other than XML. Each unparsed entity has an associated notation, identified by name. Beyond a requirement that an XML processor make the identifiers for the entity and notation available to the application, XML places no constraints on the contents of unparsed entities.]</cite></p>
+	</div>
+</rddl:resource>
+</div>
+<h2>Software related Natures</h2>
+<rddl:resource
+        xlink:title="RDDL Subdirectories"
+        xlink:role="http://www.rddl.org/"
+        xlink:arcrole="http://www.rddl.org/purposes#directory"
+        xlink:href="http://www.rddl.org/natures/software"
+>
+	<div class="resource">
+		<p>A RDDL directory can be referenced from within a RDDL directory. 
+		This RDDL <a href="software">document</a> describes the nature of software related resources.</p>
+	</div>
+</rddl:resource>
+<div id="specifications">
+<h2>Specification and Standards related Natures</h2>
+<rddl:resource
+	id="RFC"
+	xlink:title="IETF RFC"
+	xlink:role="http://www.rddl.org/natures#term"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:href="http://www.ietf.org/rfc/rfc2026.txt"
+	>
+	<div class="resource">
+	<h3>IETF RFC</h3>
+	<p>An IETF RFC is known by the URI <code><a href="http://www.ietf.org/rfc/rfc2026.txt">http://www.ietf.org/rfc/rfc2026.txt</a></code>. </p>
+	</div>
+</rddl:resource>
+<rddl:resource
+	id="ISO"
+	xlink:title="ISO Standard"
+	xlink:role="http://www.rddl.org/natures#term"
+	xlink:arcrole="http://www.rddl.org/purposes#definition"
+	xlink:href="http://www.iso.ch/"
+	>
+	<div class="resource">
+	<h3>ISO Standard</h3>
+	<p>An ISO standard is known by the URI <code><a href="http://www.iso.ch/">http://www.iso.ch/</a></code>. </p>
+	</div>
+</rddl:resource>
+</div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

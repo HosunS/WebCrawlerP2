@@ -1,0 +1,20 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC299¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 27 Jan 2015 19:23:19 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"12b-50da72ff777c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 17:09:43 GMTKraw_content¢DtypeEvalueY+CC=gcc
+CFLAGS = -g 
+# uncomment this for SunOS
+# LIBS = -lsocket -lnsl
+
+all: client server
+
+client: client.o 
+	$(CC) -o client client.o $(LIBS)
+
+server: server.o 
+	$(CC) -o server server.o $(LIBS)
+
+client.o: client.c port.h
+
+server.o: server.c port.h
+
+clean:
+	rm -f client server client.o server.o 
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

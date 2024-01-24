@@ -1,0 +1,39 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1894¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX<attachment; filename=cs122b-2019-winter-project1-logging.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=397623fad35b227d396a4753; expires=Thu, 09 May 2019 20:09:41 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 20:09:41 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueYf= Logging =
+
+----
+= 1. Apache Tomcat Logging: =
+* After Eclipse starts, go to the '''Servers''' view, then double-click the Tomcat server you're running. You will find a window like the image below:
+[[Image(wiki:cs122b-2019-winter-project1-logging:eclipse-server-overview.png)]]
+
+* Click on the blue link: '''Open launch configuration''' and you will find a dialog window like the image below.
+[[Image(wiki:cs122b-2019-winter-project1-logging:launch-configuration.png)]]
+
+* Click on '''Arguments''' section. Log files are stored in the path: {{{-Dcatalina.base/logs}}}.
+
+* Change to the directory where log files are stored in. Then, run command : {{{tail -f log_file_name}}} to view log files. E.g. {{{tail -f localhost_access_log.2019-01-14.txt}}}
+
+= 2. MySQL Logging: =
+For MySQL (version > 5.6), to enable logging, you can add the following block to MySQL's configuration file: `/etc/my.cnf`.
+
+{{{
+# Edit MySQL configuration file and update following setting under [mysqld].
+[mysqld]
+
+# To enable general logs in MySQL or to change location of general log files.
+# This file contains all general logs of mysql server for eg: queries, user connect or disconnect etc.
+general_log_file   = /var/log/mysql/mysql.log
+general_log        = 1
+
+# To Enable MySQL error log or change MySQL error log location.
+# This file contains error generated in MySQL server.
+log_error = /var/log/mysql/error.log
+
+# To enable or change file path of MySQL slow query logs.
+# This file contains logs of those queries which is taking more time to complete.
+# Which queries taking time more than defined as long_query_time are logged.
+#log_slow_queries    = /var/log/mysql/mysql-slow.log
+#long_query_time     = 2
+}}}
+
+After making any of the above changes in MySQL configuration, You must have to '''restart MySQL services''' to apply changes: {{{sudo service mysql restart}}}.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

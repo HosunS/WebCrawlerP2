@@ -1,0 +1,201 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueUtimeout=1000, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:33:01 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYñ<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
+<head>
+<title>CyberT Webserver </title>
+
+<link type="text/css" href="/static/css/redmond/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link rel="stylesheet" type="text/css" href="/static/css/jqstyle.css" /> 
+<script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="/static/js/cybert.js"></script>
+<script type="text/javascript" src="/static/js/cybtjqui.js"></script>
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28550269-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body class="">
+<!-- Container -->
+<div id="container">
+  <div id="contact-dialog" title="Cyber-T Contact" style="display:none;">
+    <h4>For bugs and general help:</h4>
+    <p>Contact the Cyber-T Helpdesk: cybert[at]ics.uci.edu Subject=CyberT.</p>
+    <h4>For commercial licenses:</h4>
+    <p>Contact IGB Licenses: igb-license[at]ics.uci.edu Subject=CyberT.</p>
+    <h4>Current maintainer:</h4>
+    <p><a href="http://www.ics.uci.edu/~mkayala/">Matthew Kayala</a></p>
+  </div>
+  <div id="help-dialog" title="Help">
+  </div>
+  <div id="transparent-layer"></div>  
+  
+  <!-- Top Level Menu -->
+  <div id="menu-content-wrapper">
+    <div id="menu-wrapper" class="ui-widget-header">
+      <div class="float-left menu-pad">
+        Cyber-T: Differential analysis of high-throughput data
+      </div>
+      <div id="menu-links" class="menu-pad">
+        <a href="/" class="menu-link" id="home-menu">Home</a> |
+        <a href="/help/" class="menu-link" id="help-menu">Help</a> |
+        <a href="#Contact" class="menu-link" id="contact-menu">Contact</a> 
+        <!--<a href="#Home" class="fg-button fg-button-icon-left ui-state-default ui-corner-all" id="home-menu">
+          <span class="ui-icon ui-icon-home"></span>Home
+        </a> 
+        <a href="#Help" class="fg-button fg-button-icon-left ui-state-default ui-corner-all" id="home-menu">
+          <span class="ui-icon ui-icon-help"></span>Help
+        </a>
+        <a href="#Contact" class="fg-button fg-button-icon-left ui-state-default ui-corner-all" id="home-menu">
+          <span class="ui-icon ui-icon-mail-closed"></span>Contact
+        </a>-->
+      </div>
+    </div>
+  </div>
+  <!-- END Top Level Menu -->
+  
+  <!-- Header -->
+  <div id="header">
+     
+<h1> Welcome to Cyber-T </h1>
+
+  </div>
+  <!-- End Header --> 
+  
+  <!-- Content -->
+  <div id="content" class="colM">
+    
+    
+<div id="main-home-wrapper">
+  <div id="home-wrapper" >
+    <p id="intro">
+      Cyber-T provides differential analysis tools for high-throughput
+      data.  The system handles many types of data, from DNA and Protein 
+      microarrays, to Next Generation Sequencing, to Quantitative Mass
+      Spectrometry.  
+    </p>
+    <div class="home-section-wrapper ui-widget ui-widget-content ui-corner-all">
+      <h2 class="ui-widget-header">Getting Started</h2>
+      <div class="home-subsection-wrapper">  
+        <p>Click on the link below corresponding to the type of data you would 
+          like to analyze:
+        </p>
+        <p>
+          <div class="bold-small-label">
+            <a href="/controlexp/">
+              Unpaired Two Conditions Data
+            </a> 
+          </div>
+          Data from unpaired experiments, e.g., separate control and experimental
+          samples.  <br/>
+          (Standard t-test and Bayes-regularized t-test).
+        </p>
+        <p>
+          <div class="bold-small-label">
+            <a href="/pair/">
+              Paired Two Conditions Data
+            </a> 
+          </div>
+          Data from paired experiments, e.g., before treatment vs. after treatment
+          on the same biological samples. <br/>
+          (Paired t-test and Bayes-regularized paired t-test).
+        </p>
+        <p>
+          <div class="bold-small-label">
+            <a href="/anova/">
+              Multiple Conditions Data
+            </a> 
+          </div>
+          Data from experiments with more than two conditions, e.g., 
+          treatment A, treatment B, and treatment C<br/>
+          (One-way ANOVA and Bayes-regularized one-way ANOVA).
+        </p>
+      </div>
+    </div>
+    <div class="home-section-wrapper ui-widget ui-widget-content ui-corner-all">
+      <h2 class="ui-widget-header">Downloads</h2>
+      <div class="home-subsection-wrapper">  
+        <p>
+          <div class="bold-small-label">
+            <a href="/download/">
+              R-Source Code
+            </a> 
+          </div>
+          Download the R source code to run Cyber-T on your own computer.
+        </p>
+        <p>
+          <div class="bold-small-label">
+            <a href="/datasets/">
+              Example Datasets
+            </a> 
+          </div>
+          Download and explore different example high-throughput datasets.
+        </p>
+      </div>
+    </div>
+   <!--  <div class="home-section-wrapper ui-widget ui-widget-content ui-corner-all">
+      <h2 class="ui-widget-header">Help</h2>
+      <div class="home-subsection-wrapper">  
+        <p>
+          <div class="bold-small-label">
+            <a href="/help/">
+              Cyber-T Help Section
+            </a> 
+          </div>
+          Comprehensive help for running Cyber-T, includes
+          background information and references.
+        </p>
+      </div>
+    </div> -->
+    <div class="home-section-wrapper ui-widget ui-widget-content ui-corner-all">
+      <h2 class="ui-widget-header">Citing Cyber-T</h2>
+      <div class="home-subsection-wrapper">  
+        <p>Please cite the following papers when you use Cyber-T in your work:</p>
+        <p>
+          Kayala, M.A. and Baldi, P., 
+          &quot;Cyber-T web server: differential analysis of high-throughput data&quot;, Nucleic Acids Research, 
+          40 (W1): W553-W559, (2012).
+          [<a href="http://www.ncbi.nlm.nih.gov/pubmed/22600740">Pubmed</a>]
+        </p>
+        <p>
+          Baldi, P. and Long, A.D.,  &quot;A Bayesian Framework for the Analysis
+          of Microarray Expression Data: Regularized t-Test and
+          Statistical Inferences of Gene Changes&quot;, Bioinformatics, 17,
+          6, 509-519, (2001). 
+          [<a href="http://www.ncbi.nlm.nih.gov/pubmed/11395427">Pubmed</a>]
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+  </div>
+  <!-- END Content -->
+  
+  <div id="footer">
+    <hr noshade size=3/>
+    <p>	   	
+      <a target="_blank" href="http://www.uci.edu">
+	<img class="logo" src="/static/img/uci_logo.png"/>University of California, Irvine
+      </a> | 
+      <a target="_blank" href="http://www.igb.uci.edu">
+	<img class="logo" src="/static/img/igb_logo.png"/>Institute for Genomics and Bioinformatics
+      </a> | 
+      &copy; 2012
+    </p>
+  </div>
+  
+</div>
+<!-- END Container -->
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

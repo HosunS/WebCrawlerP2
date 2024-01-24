@@ -1,0 +1,113 @@
+¦Ifinal_url¢DtypeEvaluex(https://www.ics.uci.edu/~skong2/PAG.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5186¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 09 Nov 2018 17:49:12 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1442-57a3ef81bafb9"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 29 Jan 2019 10:03:59 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYB<html>
+<head>
+<title>Pixel-wise Attentional Gating for Parsimonious Pixel Labeling - Shu Kong (Aimery) - UC Irvine - Computer Vision</title>
+<link rel="icon" href="image/SMMMSG.png" type="img/jpg">
+<style>
+h1 { padding : 0; margin : 0; }
+body { padding : 0; font-family : Arial; font-size : 16px; background-color : #EFEFEF; } /* background-image : url('bg.png');}*/
+#container { width : 1024px; margin : 20px auto;  background-color : #fff; padding : 50px; border : 1px solid #ccc; }
+#me { border : 0 solid black; margin-bottom : 0;}
+#sidebar { margin-left : 25px; border : 0 solid black; float : right; margin-bottom : 0;}
+#content { display : block; margin-right : 260px;}
+a { text-decoration : none; }
+a:hover { text-decoration : underline; }
+a:visited { color : blue; }
+a.invisible { color : inherit; text-decoration : inherit; }
+.publogo { margin-right : 10px; height: 50px; width: 50px; float : left; border : 0;}
+.publication { clear : left; padding-bottom : 0px;}
+.publication p { height : 60px; }
+.codelogo { margin-right : 10px; float : left; border : 0;}
+.code { clear : left; padding-bottom : 10px; vertical-align :middle;}
+.code .download a { display : block; margin : 0 15px; float : left;}
+<!-- #simpsons { margin : 5px auto; text-align : center; color : #B7B7B7; } -->
+<!-- 	#erdos { color : #999; text-align : center; font-size : 12px; } -->
+</style>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-26193351-1']);
+	_gaq.push(['_trackPageview']);
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</head>
+
+<body>
+<div id="container">
+<div id="sidebar">
+<figure>
+<img src="http://www.ics.uci.edu/~skong2/image/icon_PAG.png" id="me" width="200">
+<figcaption>parsimonious pixel inference</figcaption>
+</figure>
+<br>
+</div>
+
+<div id="content">
+<h1 align="center">Pixel-wise Attentional Gating for Scene Parsing</h1>
+
+
+<p align="center">
+          <a href="http://www.ics.uci.edu/~skong2/" target="_blank">Shu Kong</a>, 
+          <a href="http://www.ics.uci.edu/~fowlkes/" target="_blank">Charless Fowlkes</a>
+</p>
+
+
+<p>
+<font color="red">Last update: June 27, 2018.</font>
+</p>
+
+To achieve parsimonious inference in per-pixel labeling tasks with a limited computational budget, we propose a Pixel-wise Attentional Gating unit (PAG) that learns to selectively process a subset of spatial locations at each layer of a deep convolutional network. PAG is a generic, architecture-independent, problem-agnostic mechanism that can be readily ``plugged in'' to an existing model with fine-tuning. We utilize PAG in two ways: 1) learning spatially varying pooling fields that improve model performance without the extra computation cost associated with multi-scale pooling, and 2) learning a dynamic computation policy for each pixel to decrease total computation while maintaining accuracy.
+
+We extensively evaluate PAG on a variety of per-pixel labeling tasks, including semantic segmentation, boundary detection, monocular depth and surface normal estimation. We demonstrate that PAG allows competitive or state-of-the-art performance on these tasks. Our experiments show that PAG learns dynamic spatial allocation of computation over the input image which provides better performance trade-offs compared to related approaches (e.g., truncating deep models or dynamically skipping whole layers). Generally, we observe PAG can reduce computation by 10% without noticeable loss in accuracy and performance degrades gracefully when imposing stronger computational constraints.
+
+
+
+<p>
+<b>keywords</b>: 
+spatial Attention, Dynamic Computation, Per-Pixel Labeling, Semantic Segmentation, Monocular Depth, Surface Normal, Boundary Detection.
+
+<ul>
+<li>
+<div class="publication">
+<p> <b>S. Kong</b>, C. Fowlkes, "<font color=#AF7817>Pixel-wise Attentional Gating for Scene Parsing</font>", <a href="http://wacv19.wacv.net/">WACV</a>, 2019.
+<br>
+[<a href="PAG.html">project page</a>]
+[<a href="https://arxiv.org/abs/1805.01556">paper</a>]
+[<a href="https://github.com/aimerykong/Pixel-Attentional-Gating">github</a>]
+[<a href="https://www.ics.uci.edu/~skong2/slides/20180514_AIML_UCI.pdf">slides</a>]
+[<a href="http://www.robustvision.net/leaderboard.php?benchmark=depth">ROB Challenge Entry of Depth</a>]
+[<a href="http://www.robustvision.net/leaderboard.php?benchmark=semantic">ROB Challenge Entry of Semantic Segmentation</a>]
+
+<!--[<a href="https://github.com/aimerykong/Pixel-Attentional-Gating">demo</a>]
+[<a href="http://www.ics.uci.edu/~skong2/PAG.html">models</a>]
+[<a href="http://www.ics.uci.edu/~skong2/PAG.html">slides</a>]
+[<a href="http://www.ics.uci.edu/~skong2/PAG.html">slides</a>] -->
+</p>
+</div>
+</li>
+</ul>
+
+<div id="content">
+<br><br>
+	    <center>
+	      <img src="http://www.ics.uci.edu/~skong2/image/PAG_splashFigure.png" alt="[lng_lat_ecef]" width="1000" />
+	    </center>
+<br><br>
+</div>
+</ul>
+
+
+
+<br clear="both">
+</div>
+</div>
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

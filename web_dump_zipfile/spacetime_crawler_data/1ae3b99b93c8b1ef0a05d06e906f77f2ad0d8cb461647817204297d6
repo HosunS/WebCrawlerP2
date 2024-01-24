@@ -1,0 +1,65 @@
+¦Ifinal_url¢DtypeEvaluex0https://www.ics.uci.edu/~theory/269/170609a.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2112¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 07 Jun 2017 05:16:24 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"840-55157d6642e8d"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:39:02 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY@<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Theory Seminar, June 9, 2017</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<p><a href="/~theory/"><img src="/~theory/logo/CATOC2.jpg" 
+alt="ICS Theory Group"></a></p>
+
+<h2><a href="/~theory/269/">Spring 2017: Theory Seminar</a><br>
+Bren Hall, Room 1423, 1:00pm</h2>
+
+<hr>
+
+<h2>June 9, 2017:</h2>
+<h1>
+2-3 Cuckoo Filters for Faster Triangle Listing and Set Intersection
+</h1>
+<h2>
+Grady Yu
+</h2>
+
+<p>
+<b>Abstract:</b>
+We introduce new dynamic set intersection data structures,
+which we call 2-3 cuckoo filters and hash tables. These
+structures differ from the standard cuckoo hash tables and
+cuckoo filters in that they choose two out of three locations
+to store each item, instead of one out of two, ensuring
+that any item in an intersection of two structures will
+have at least one common location in both structures. We
+demonstrate the utility of these structures by using them
+in improved algorithms for listing triangles and answering
+set intersection queries in internal or external memory. For
+a graph G of n vertices and m edges, our internal-memory
+triangle listing algorithm runs in O(m(Î±(G) log w)/w + k)
+expected time, where Î±(G) is the arboricity of G, w is the
+number of bits in a machine word, and k is the number
+of output triangles. Our external-memory algorithm uses
+O(sort(n Î±(G)) + sort(m(Î±(G) log w)/w) + sort(k)) expected
+number of I/Os.
+</p>
+
+<p>
+<a href="http://dl.acm.org/authorize.cfm?key=N37877">PODS
+Conference paper</a>, by
+David Eppstein, Michael T. Goodrich, Michael Mitzenmacher, and Manuel R. Torres.
+</p>
+
+</body>
+</html>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

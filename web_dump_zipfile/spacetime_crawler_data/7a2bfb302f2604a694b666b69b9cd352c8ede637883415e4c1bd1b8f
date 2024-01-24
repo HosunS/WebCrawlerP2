@@ -1,0 +1,140 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4389¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 02 Nov 2015 23:00:49 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1125-52396bf884a40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 22:20:23 GMTKraw_content¢DtypeEvalueY%package connectK;
+
+import java.io.File;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+import java.net.URL;
+import java.net.URLClassLoader;
+
+public class CKPlayerFactory {
+	public static final String cppPrefix = "cpp:";
+	public static final String cppPostfix = "exe";
+	public static final int JAVA = 0;
+	public static final int CPLUSPLUS = 1;
+	int playerType;
+	File aiProgram = null;
+	Class<? extends CKPlayer> playerClass;
+	
+//	
+//	CKPlayerFactory(Class<? extends CKPlayer> cls){
+//		playerClass = cls;
+//		playerType = JAVA;
+//		try {
+//			Constructor<? extends CKPlayer> c = playerClass.getConstructor(Byte.TYPE, BoardModel.class);
+//			c.newInstance((byte) 1, BoardModel.defaultBoard());
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			throw new IllegalArgumentException();
+//		}
+//	}
+	
+	CKPlayerFactory(int playerType, File aiFile){
+		this.playerType = playerType;
+		try {
+			switch(playerType){
+			case JAVA:
+				if(aiFile.getParent() == null)
+					aiFile = new File(new File(".").getAbsoluteFile(), aiFile.getName());
+				ClassLoader cl = URLClassLoader.newInstance(new URL[] {aiFile.getParentFile().toURI().toURL()});
+				Class<?> cls = Class.forName(aiFile.getName().split(".class")[0], true, cl);
+				if(CKPlayer.class.isAssignableFrom(cls)){
+					playerClass = (Class<? extends CKPlayer>) cls;
+					Constructor<? extends CKPlayer> c = playerClass.getConstructor(Byte.TYPE, BoardModel.class);
+					c.newInstance((byte) 1, BoardModel.defaultBoard());//test that it can be instantiated
+				} else {
+					throw new IllegalArgumentException();
+				}
+				break;
+			case CPLUSPLUS:
+				File cppFile = aiFile;//new File(cpp);
+				if(!cppFile.exists())
+					throw new IllegalArgumentException("No such file.");
+				this.playerType = CPLUSPLUS;
+				this.aiProgram = cppFile;
+				new CPlusPlusPlayer((byte) 1, BoardModel.defaultBoard(), aiProgram.getPath());
+				break;
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			throw new IllegalArgumentException();
+		}
+	}
+	
+	CKPlayerFactory(String arg){
+		try {
+			if (arg.startsWith(cppPrefix)){ //C++ AI
+				String cpp = arg.substring(cppPrefix.length());
+				File cppFile = new File(cpp);
+				if(cppFile.getParent() == null)
+					cppFile = new File(new File(".").getAbsoluteFile(), cpp);
+				if(!cppFile.exists())
+					throw new IllegalArgumentException("No such file.");
+				this.playerType = CPLUSPLUS;
+				this.aiProgram = cppFile;
+				new CPlusPlusPlayer((byte) 1, BoardModel.defaultBoard(), aiProgram.getPath());
+			} else{ //Java AI
+				File classFile = new File(arg);
+				if(classFile.getParent() == null)
+					classFile = new File(new File(".").getAbsoluteFile(), classFile.getName());
+				ClassLoader cl = URLClassLoader.newInstance(new URL[] {classFile.getParentFile().toURI().toURL()});
+				Class<?> cls = Class.forName(classFile.getName().split(".class")[0], true, cl);
+				if(CKPlayer.class.isAssignableFrom(cls)){
+					playerType = JAVA;
+					playerClass = (Class<? extends CKPlayer>) cls;
+					Constructor<? extends CKPlayer> c = playerClass.getConstructor(Byte.TYPE, BoardModel.class);
+					c.newInstance((byte) 1, BoardModel.defaultBoard());//test that it can be instantiated
+				} else {
+					throw new IllegalArgumentException();
+				}
+			}
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new IllegalArgumentException();
+        }
+	}
+	
+	CKPlayer getPlayer(byte playerNumber, BoardModel model){
+		CKPlayer player = null;
+		try {
+			switch(playerType){
+			case JAVA:	
+				Constructor<? extends CKPlayer> c = (Constructor<? extends CKPlayer>) playerClass.getConstructor(Byte.TYPE, BoardModel.class);
+				player = c.newInstance(playerNumber, model);
+				break;
+			case CPLUSPLUS:
+				player = new CPlusPlusPlayer(playerNumber, BoardModel.defaultBoard(), aiProgram.getPath());
+				break;
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return player;
+	}
+	
+	@Override
+	public String toString(){
+		String rs;
+		if(playerClass == null)
+			System.out.println("null playerClass");
+		switch(playerType){
+		case JAVA:
+			rs = playerClass.getName();
+			break;
+		case CPLUSPLUS:
+			rs = aiProgram.getName();
+			break;
+		default:
+			rs = "error";
+		}
+		return rs;
+	}
+	
+//	public static void main(String[] argv){
+//		
+//		System.out.println("cppShell.exe".startsWith("cpp"));
+//		
+//	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

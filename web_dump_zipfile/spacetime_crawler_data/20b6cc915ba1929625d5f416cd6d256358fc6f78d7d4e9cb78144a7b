@@ -1,0 +1,66 @@
+¦Ifinal_url¢DtypeEvaluex*http://cybert.ics.uci.edu/dialog/bayesian/Lhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:33:15 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY&
+
+<p><a href="/help/" class"fg-button ui-state-default ui-corner-all">View Complete Help</a></p>
+
+
+
+
+
+<div class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+  <h2 class="ui-widget-header">Parameters for the Bayesian Standard Deviation Estimation (Optional)</h2>
+  <p>
+    In calculating the Bayesian estimate of the standard deviation there are two different parameters that the user must 
+    set. These 2 parameters relate to setting the Bayesian estimate of variance derived from the observed population. 
+    The t-test is used to detect significant differences between the means of two groups relative to the observed variance 
+    within groups. In a perfect world, all micro-array experiments would be highly replicated within each experimental 
+    treatment. Such replication would allow accurate estimates of the variance within experimental treatments to be 
+    obtained and the t-test would then perform well. Microarray experiments are expensive and time consuming to carry out, 
+    and there is the possibility that both control and experimental tissues will be limiting. As a result, the level of 
+    replication within experimental treatments is often low. This results in poor estimates of within-treatment variance 
+    and a corresponding poor performance of the t-test itself. This problem can be solved addressed using a Bayesian 
+    statistical approach that incorporates prior information in the estimation of within gene within treatment variances. 
+  </p>
+  <p>
+    Although in terms of strong inference there is really no substitute for proper experimental replication, in the case of 
+    microarrays many parallel pseudo-replicated experiments are carried out on any given microarray (i.e., one experiment 
+    for each gene). In particular, it is possible to use estimates of within-treatment variance from a number of genes of 
+    similar expression level to stabilize estimates of variance for any given gene. More precisely, the variance within any 
+    given treatment is estimated by the weighted average of a prior estimate of the variance for that gene (obtained from 
+    of local weighted average of the variance of other genes) and the experimental estimate of the variance for that gene. 
+    This weighting factor is controlled by the experimenter and will depend on how confident the experimenter is that the 
+    background variance of a closely related set of genes approximates the variance of the gene under consideration. 
+  </p>
+  <p>
+    An important property of this Bayesian approach to consider is that in the two limiting cases of complete confidence in 
+    the prior and zero confidence in the prior, the Bayesian approach is equivalent to simply looking at fold change and 
+    testing differences between treatments using the simple t-test respectively. In the Bayesian approach the weight given 
+    to the within gene variance estimate is a function of the number of observations contributing to that value. This leads 
+    to the desirable property of the Bayesian approach converging to the t-test as the experimenter carries out additional 
+    replications and thus becomes more confident of the observed estimate of within treatment variance for any given gene. 
+  </p>
+  <h4>1. Sliding Window Size</h4>
+  <p>
+    Indicates how wide you want the window surrrounding the point under consideration to be. This sample of the data 
+    provides an estimate of the average variability of gene expression for those genes that show a similar expression 
+    level.  It is important to estimate this average from a wide enough level that it is accurate, but not so wide of a 
+    window so as to average in genes with too different of average expression level. A sliding window of 101 genes has been 
+    shown to be quite accurate when analyzing 2000 or more genes, with only 1000 genes a window of 51 genes may work 
+    better.
+  </p>
+  <h4>2. Bayes Confidence Estimate Value</h4>
+  <p>
+    This is a number from 0 to infinity that indicates the weight give to the Bayesian prior estimate of within-treatment 
+    variance. Larger weights indicate greater confidence in the Bayesian prior; smaller weights 
+    indicate more confidence in the experimentally observed variance.  We have observed reasonable performance with the 
+    following rule of thumb:  set the confidence such that the number of experimental observations plus the confidence is greater 
+    than 8.
+  </p>
+  <p>
+    If the confidence is left blank or zero, then a simple classical t-test is performed.  
+    If there is only a single replicate in a given condition, then the standard deviation estimates are completely 
+    determined by the prior, and a warning is issued to the user.  If the confidence is set to zero and there is only a 
+    single replicate, we set a default confidence of 5 and issue a warning to the user.
+  </p>
+</div>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

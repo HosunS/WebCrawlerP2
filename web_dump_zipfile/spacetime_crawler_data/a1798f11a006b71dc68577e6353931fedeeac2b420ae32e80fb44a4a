@@ -1,0 +1,278 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 05:23:47 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY@ï
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: ISOLET Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>ISOLET Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/isolet/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/isolet/isolet.info"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>:  Goal: Predict which letter-name was spoken--a simple classification task.</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">7797</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Computer</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">617</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">1994-09-12</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">No</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">104356</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">96%</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Creators: <br><br>Ron Cole and Mark Fanty<br>Department of Computer Science and Engineering,<br>Oregon Graduate Institute, Beaverton, OR 97006.<br><u>cole <b>'@'</b> cse.ogi.edu</u>, <u>fanty <b>'@'</b> cse.ogi.edu</u><br><br>Donor: <br><br>Tom Dietterich<br>Department of Computer Science<br>Oregon State University, Corvallis, OR 97331<br><u>tgd <b>'@'</b> cs.orst.edu</u></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">This data set was generated as follows. 150 subjects spoke the name of each letter of the alphabet twice. Hence, we have 52 training examples from each speaker. The speakers are grouped into sets of 30 speakers each, and are referred to as isolet1, isolet2, isolet3, isolet4, and isolet5. The data appears in isolet1+2+3+4.data in sequential order, first the speakers from isolet1, then isolet2, and so on.  The test set, isolet5, is a separate file.<br><br>You will note that 3 examples are missing.  I believe they were dropped due to difficulties in recording.<br><br>I believe this is a good domain for a noisy, perceptual task.  It is also a very good domain for testing the scaling abilities of algorithms. For example, C4.5 on this domain is slower than backpropagation!<br><br>I have formatted the data for C4.5 and provided a C4.5-style names file as well.</p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">The features are described in the paper by Cole and Fanty cited above.  The features include spectral coefficients; contour features, sonorant features, pre-sonorant features, and post-sonorant features.  Exact order of appearance of the features is not known.</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Fanty, M., Cole, R. (1991).  Spoken letter recognition.  In Lippman, R. P., Moody, J., and Touretzky, D. S. (Eds). Advances in Neural Information Processing Systems 3.  San Mateo, CA: Morgan Kaufmann.<br><a href="http://rexa.info/paper/bee6de062d0d168c5c5b5290b11cd6b12ca8472e">[Web Link]</a><br><br>Dietterich, T. G., Bakiri, G. (1991)  Error-correcting output codes: A general method for improving multiclass inductive learning programs.  Proceedings of the Ninth National Conference on Artificial Intelligence (AAAI-91), Anaheim, CA: AAAI Press.<br><a href="http://rexa.info/paper/7204f897813fe60bd8db373e5f1afe35475bb48e">[Web Link]</a><br><br>Dietterich, T. G., Bakiri, G. (1994) Solving Multiclass Learning Problems via Error-Correcting Output Codes. Available as URL: <a href="ftp://ftp.cs.orst.edu/pub/tgd/papers/tr-ecoc.ps.gz">[Web Link]</a><br><a href="http://rexa.info/paper/019c2f2e77588b6e654cc5c4c27ae643d3bd0f62">[Web Link]</a><br></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">Vassilis Athitsos and Stan Sclaroff. <a
+href="http://rexa.info/paper/692880d7b3356df64bfa0f06a683f89e4ce6955b">Boosting Nearest Neighbor Classifiers for Multiclass Recognition</a>. Boston University Computer Science Tech. Report No, 2004-006. 2004.  [<a
+href="../support/ISOLET#692880d7b3356df64bfa0f06a683f89e4ce6955b">View Context</a>].<br><br>Jaakko Peltonen and Samuel Kaski. <a
+href="http://rexa.info/paper/4f52834d0595282e8454f617706fbec7589c8de6">Discriminative Components of Data</a>. IEEE. 2004.  [<a
+href="../support/ISOLET#4f52834d0595282e8454f617706fbec7589c8de6">View Context</a>].<br><br>David Littau and Daniel Boley. <a
+href="http://rexa.info/paper/480c0ae46486d7a7881f88224c5216ea0b7da839">Using Low-Memory Representations to Cluster Very Large Data Sets</a>. SDM. 2003.  [<a
+href="../support/ISOLET#480c0ae46486d7a7881f88224c5216ea0b7da839">View Context</a>].<br><br>Inderjit S. Dhillon and Dharmendra S. Modha and W. Scott Spangler. <a
+href="http://rexa.info/paper/9acaa3dfebccac9d79abb08f7eced65482be1631">Class visualization of high-dimensional data with applications</a>. Department of Computer Sciences, University of Texas. 2002.  [<a
+href="../support/ISOLET#9acaa3dfebccac9d79abb08f7eced65482be1631">View Context</a>].<br><br>Erin L. Allwein and Robert E. Schapire and Yoram Singer. <a
+href="http://rexa.info/paper/80b881ba423bc64d836bde049f1e5def83c1d5f8">Reducing Multiclass to Binary: A Unifying Approach for Margin Classifiers</a>. ICML. 2000.  [<a
+href="../support/ISOLET#80b881ba423bc64d836bde049f1e5def83c1d5f8">View Context</a>].<br><br>Khaled A. Alsabti and Sanjay Ranka and Vineet Singh. <a
+href="http://rexa.info/paper/44326d77510f1b8976c3d73c224e9a1cb80ecc3c">CLOUDS: A Decision Tree Classifier for Large Datasets</a>. KDD. 1998.  [<a
+href="../support/ISOLET#44326d77510f1b8976c3d73c224e9a1cb80ecc3c">View Context</a>].<br><br>Hiroshi Shimodaira and Jun Okui and Mitsuru Nakai. <a
+href="http://rexa.info/paper/df61ac3ab404fccb23262b177e5475d1f4c236de">Modified Minimum Classification Error Learning and Its Application to Neural Networks</a>. SSPR/SPR. 1998.  [<a
+href="../support/ISOLET#df61ac3ab404fccb23262b177e5475d1f4c236de">View Context</a>].<br><br>Thomas G. Dietterich and Ghulum Bakiri. <a
+href="http://rexa.info/paper/019c2f2e77588b6e654cc5c4c27ae643d3bd0f62">Solving Multiclass Learning Problems via Error-Correcting Output Codes</a>. CoRR, csAI/9501101. 1995.  [<a
+href="../support/ISOLET#019c2f2e77588b6e654cc5c4c27ae643d3bd0f62">View Context</a>].<br><br>Shlomo Dubnov and Ran El and Yaniv Technion and Yoram Gdalyahu and Elad Schneidman and Naftali Tishby and Golan Yona. <a
+href="http://rexa.info/paper/9fe9e6630b7b953504726b9b36281c4f738b964e">Clustering By Friends : A New Nonparametric Pairwise Distance Based Clustering Algorithm</a>. Ben Gurion University.  [<a
+href="../support/ISOLET#9fe9e6630b7b953504726b9b36281c4f738b964e">View Context</a>].<br><br>Jakub Zavrel. <a
+href="http://rexa.info/paper/b2b8b059c73bebbf92cb80f2c45ca3ed56c3d971">An Empirical Re-Examination of Weighted Voting for k-NN</a>. Computational Linguistics.  [<a
+href="../support/ISOLET#b2b8b059c73bebbf92cb80f2c45ca3ed56c3d971">View Context</a>].<br><br>Hiroshi Shimodaira and Jun Okui and Mitsuru Nakai. <a
+href="http://rexa.info/paper/ece9c7ce7e687a5cd309737e5358873e424f7fb4">IMPROVING THE GENERALIZATION PERFORMANCE OF THE MCE/GPD LEARNING</a>. School of Information Science Japan Advanced Institute of Science and Technology Tatsunokuchi, Ishikawa.  [<a
+href="../support/ISOLET#ece9c7ce7e687a5cd309737e5358873e424f7fb4">View Context</a>].<br><br></p>
+
+-->
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" /><p class="normal">Vassilis Athitsos and Stan Sclaroff. <a
+href="http://rexa.info/paper/692880d7b3356df64bfa0f06a683f89e4ce6955b">Boosting Nearest Neighbor Classifiers for Multiclass Recognition</a>. Boston University Computer Science Tech. Report No, 2004-006. 2004.  [<a
+href="../support/ISOLET#692880d7b3356df64bfa0f06a683f89e4ce6955b">View Context</a>].<br><br>Jaakko Peltonen and Samuel Kaski. <a
+href="http://rexa.info/paper/4f52834d0595282e8454f617706fbec7589c8de6">Discriminative Components of Data</a>. IEEE. 2004.  [<a
+href="../support/ISOLET#4f52834d0595282e8454f617706fbec7589c8de6">View Context</a>].<br><br>David Littau and Daniel Boley. <a
+href="http://rexa.info/paper/480c0ae46486d7a7881f88224c5216ea0b7da839">Using Low-Memory Representations to Cluster Very Large Data Sets</a>. SDM. 2003.  [<a
+href="../support/ISOLET#480c0ae46486d7a7881f88224c5216ea0b7da839">View Context</a>].<br><br>Inderjit S. Dhillon and Dharmendra S. Modha and W. Scott Spangler. <a
+href="http://rexa.info/paper/9acaa3dfebccac9d79abb08f7eced65482be1631">Class visualization of high-dimensional data with applications</a>. Department of Computer Sciences, University of Texas. 2002.  [<a
+href="../support/ISOLET#9acaa3dfebccac9d79abb08f7eced65482be1631">View Context</a>].<br><br>Erin L. Allwein and Robert E. Schapire and Yoram Singer. <a
+href="http://rexa.info/paper/80b881ba423bc64d836bde049f1e5def83c1d5f8">Reducing Multiclass to Binary: A Unifying Approach for Margin Classifiers</a>. ICML. 2000.  [<a
+href="../support/ISOLET#80b881ba423bc64d836bde049f1e5def83c1d5f8">View Context</a>].<br><br>Khaled A. Alsabti and Sanjay Ranka and Vineet Singh. <a
+href="http://rexa.info/paper/44326d77510f1b8976c3d73c224e9a1cb80ecc3c">CLOUDS: A Decision Tree Classifier for Large Datasets</a>. KDD. 1998.  [<a
+href="../support/ISOLET#44326d77510f1b8976c3d73c224e9a1cb80ecc3c">View Context</a>].<br><br>Hiroshi Shimodaira and Jun Okui and Mitsuru Nakai. <a
+href="http://rexa.info/paper/df61ac3ab404fccb23262b177e5475d1f4c236de">Modified Minimum Classification Error Learning and Its Application to Neural Networks</a>. SSPR/SPR. 1998.  [<a
+href="../support/ISOLET#df61ac3ab404fccb23262b177e5475d1f4c236de">View Context</a>].<br><br>Thomas G. Dietterich and Ghulum Bakiri. <a
+href="http://rexa.info/paper/019c2f2e77588b6e654cc5c4c27ae643d3bd0f62">Solving Multiclass Learning Problems via Error-Correcting Output Codes</a>. CoRR, csAI/9501101. 1995.  [<a
+href="../support/ISOLET#019c2f2e77588b6e654cc5c4c27ae643d3bd0f62">View Context</a>].<br><br>Shlomo Dubnov and Ran El and Yaniv Technion and Yoram Gdalyahu and Elad Schneidman and Naftali Tishby and Golan Yona. <a
+href="http://rexa.info/paper/9fe9e6630b7b953504726b9b36281c4f738b964e">Clustering By Friends : A New Nonparametric Pairwise Distance Based Clustering Algorithm</a>. Ben Gurion University.  [<a
+href="../support/ISOLET#9fe9e6630b7b953504726b9b36281c4f738b964e">View Context</a>].<br><br>Jakub Zavrel. <a
+href="http://rexa.info/paper/b2b8b059c73bebbf92cb80f2c45ca3ed56c3d971">An Empirical Re-Examination of Weighted Voting for k-NN</a>. Computational Linguistics.  [<a
+href="../support/ISOLET#b2b8b059c73bebbf92cb80f2c45ca3ed56c3d971">View Context</a>].<br><br>Hiroshi Shimodaira and Jun Okui and Mitsuru Nakai. <a
+href="http://rexa.info/paper/ece9c7ce7e687a5cd309737e5358873e424f7fb4">IMPROVING THE GENERALIZATION PERFORMANCE OF THE MCE/GPD LEARNING</a>. School of Information Science Japan Advanced Institute of Science and Technology Tatsunokuchi, Ishikawa.  [<a
+href="../support/ISOLET#ece9c7ce7e687a5cd309737e5358873e424f7fb4">View Context</a>].<br><br></p>
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please refer to the Machine Learning
+Repository's <a href="../citation_policy.html">citation policy</a></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
+with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

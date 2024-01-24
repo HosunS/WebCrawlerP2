@@ -1,0 +1,47 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC943¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 24 Aug 2013 09:27:46 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"3af-4e4ae22cac880"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 12:29:09 GMTKraw_content¢DtypeEvalueY¯from queue33 import *
+from linkedlist33 import *
+import unittest
+
+
+
+class QueueSanityCheckTests(unittest.TestCase):
+    def test_queues_can_be_constructed(self):
+        Queue()
+
+
+    def test_queue_does_not_inherit_from_LinkedList(self):
+        self.assertFalse(LinkedList in Queue.__bases__)
+
+
+    def test_can_enqueue(self):
+        q = Queue()
+        q.enqueue(3)
+
+
+    def test_can_dequeue(self):
+        q = self._build_queue_with_elements()
+        q.dequeue()
+
+
+    def test_can_front(self):
+        q = self._build_queue_with_elements()
+        q.front()
+
+
+    def test_iteration_is_supported(self):
+        q = self._build_queue_with_elements()
+        i = iter(q)
+        next(i)
+
+
+    def _build_queue_with_elements(self):
+        x = Queue()
+        for i in range(10):
+            x.enqueue(i)
+        return x
+        
+
+
+if __name__ == '__main__':
+    unittest.main(exit = False)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

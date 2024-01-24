@@ -1,0 +1,247 @@
+¦Ifinal_url¢DtypeEvaluexChttps://www.ics.uci.edu/~thornton/ics45c/Notes/FunctionsAndLambdas/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE14912¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 26 Jan 2019 00:45:18 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"3a40-58051c1f02380"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:04:43 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY:@<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC
+ "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../../course.css" type="text/css" />
+
+<title>ICS 45C Winter 2019, Notes and Examples: Functions and Lambdas</title>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<p>
+ICS 45C Winter 2019 |
+<a href="../../index.html">News</a> |
+<a href="../../CourseReference.html">Course Reference</a> |
+<a href="../../Schedule.html">Schedule</a> |
+<a href="../../ProjectGuide">Project Guide</a> |
+<a href="../../Notes">Notes and Examples</a> |
+<a href="http://www.ics.uci.edu/~thornton/">About Alex</a>
+</p>
+
+<hr />
+
+</div>
+
+<div class="header">
+
+<p>ICS 45C Winter 2019<br />
+   Notes and Examples: Functions and Lambdas</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Background</p>
+
+<p>When we first learn a new programming language, but before we've seen anything resembling the complete picture of how the language works, we develop a set of principles that guide how we think about that language.  Some of those principles are explicitly stated to us; other times, we discover them on our own (sometimes subconsciously, based on the subset of the language we've seen).  And, of course, when we discover these principles on our own, they sometimes turn out to be simplifications of reality, and as we learn more, we discover things that invalidate some of our previous assumptions, then we refine our understanding of the language to take these new details into account.</p>
+
+<p>Depending on what other programming languages you've seen previously, you may or may not have developed an idea that functions are completely distinct from the objects that they operate on &mdash; that objects are one kind of thing and functions are something else entirely, and that you can't substitute one for the other.  After all, syntactically, they look different:</p>
+
+<blockquote><pre>
+// Declaring and defining a variable to store an integer object
+int i;
+
+// Declaring and defining a function
+std::string duplicate(const std::string& s)
+{
+    return s + s;
+}
+</pre></blockquote>
+
+<p>and they're used differently:</p>
+
+<blockquote><pre>
+// We access an object stored in a variable by using its name
+std::cout &lt;&lt; i &lt;&lt; std::endl;
+
+// We call a function by following it with parentheses and passing it
+// an optional set of parameters
+std::cout &lt;&lt; duplicate("Boo") &lt;&lt; std::endl;
+</pre></blockquote>
+
+<p>As we've seen, though, C++ uses a looser definition of the word <i>object</i> than you might recognize from Python or Java.  As far as C++ is concerned, <i>everything</i> is an object, from simple types like <b>int</b> and <b>bool</b> to complex ones like <b>std::map&lt;std::string, unsigned int&gt;</b>.</p>
+
+<p>So where do functions fit into that mix?  Are they objects?  The answer is murkier than you might realize until you stop and think about it a bit.  This example is a brief exploration of the topic.</p>
+
+<p class="subtitle">Function objects</p>
+
+<p>In C++, an object is called a <i>function object</i> if it can be called like a function (i.e., its name can be followed by parentheses surrounding a list of arguments separated by commas).  The functions we write, of course, can be treated this way, so we can treat functions as function objects.</p>
+
+<p>Suppose we have this simple C++ function:</p>
+
+<blockquote><pre>
+int square(int n)
+{
+    return n * n;
+}
+</pre></blockquote>
+
+<p>If that function has been declared previously, we can, of course, call it by writing the expression <b>square(3)</b>.  Since we passed the function an <b>int</b> argument and its signature says it returns an <b>int</b>, the type of the expression <b>square(3)</b> is <b>int</b>.</p>
+
+<p>But what happens if we write the expression <b>square</b>, without writing parentheses and parameters after it?  This turns out to be legal in C++, and the result is a function object &mdash; technically, a pointer to the function (which you can think of as the address where that function's compiled code begins), though this turns out to be less important in C++11 than it was in older versions of C++.</p>
+
+<p>Of course, if there are function objects, there must also be a way to do the same kinds of things to them that we expect to be able to do to other objects, such as these:</p>
+
+<ul>
+  <li>Store them in variables</li>
+  <li>Pass them as arguments to other functions</li>
+  <li>Return them as the result of other functions</li>
+  <li>Store them in member variables of a class and initialize them in a constructor</li>
+</ul>
+
+<p>In order to be able to do those things, though, we need a way to describe their type.  For that purpose, C++ includes a type in its standard library called <b>std::function</b>.  (There are also ways in C++, inherited from its C lineage, to declare function pointer types, though they're less useful now that C++ includes <b>std::function</b>, which is not only simpler, but covers a fair number of scenarios that function pointers don't.)</p>
+
+<p class="subtitle">The std::function type</p>
+
+<p><b>std::function</b> comprises the set of types that describe function objects in C++.  Unlike most of the types we've seen to date, though, the name <b>std::function</b> isn't enough; if you want to use a function, you need to know not only that it's a function, but also what kinds of parameters it accepts and what kind of result it returns.  We wouldn't reasonably expect a single variable to be able to store either the <b>square</b> function or the <b>duplicate</b> function we wrote above, because these functions are fundamentally incompatible with each other &mdash; they accept different kinds of parameters and return a different kind of result.</p>
+
+<p>For this reason, <b>std::function</b> is what is called a <i>template</i> type, meaning that the type itself takes parameters that refine its meaning.    When different parameters are passed to the <b>std::function</b> template type, the types described are considered different.  (We'll see this same technique show up elsewhere in the C++ Standard Library, and we'll even learn how to write our own templates later this quarter.)</p>
+
+<p>The type parameter passed to <b>std::function</b> is a description of the function's desired signature: a return type and the types of its parameters.  Syntactically, it looks very much like a function signature, except with the name of the function and the names of the parameters left out.  For example, a <b>std::function</b> type suitable for storing our <b>square</b> function above would look like this: <b>std::function&lt;int(int)&gt;</b>.  Given a variable of type <b>std::function&lt;int(int)&gt;</b>, we could store <i>any</i> function in it, as long as that function had a compatible signature (i.e., it could be called with an <b>int</b> argument and return an <b>int</b> result).</p>
+
+<blockquote><pre>
+int square(int n)
+{
+    return n * n;
+}
+
+// This is how you assign a function into a std::function variable.  Note
+// that there are no parentheses and parameters after "square".  This is
+// intentional, because the goal here is to assign the function itself into
+// "f", not the result of *calling* the function into "f".
+std::function&lt;int(int)&gt; f = square;
+
+// This is how we would call the function object held by a std::function
+// variable.  Note that the syntax is identical to how you would call any
+// other function!  A function object can be treated like a function.
+std::cout &lt;&lt; f(3) &lt;&lt; std::endl;
+</pre></blockquote>
+
+<p>So what can you do with a <b>std::function&lt;int(int)&gt;</b> variable?  Lots of things!  For example:</p>
+
+<ul>
+  <li>Copy its value into another <b>std::function</b> variable of the same type (i.e., with the same signature)</li>
+  <li>Call the function it stores (by following its name with parentheses and arguments) and get back a result</li>
+  <li>Pass it as an argument to some other function</li>
+  <li>Return it as a result from another function</li>
+  <li>Store it in a member variable of an object of a class</li>
+</ul>
+
+<p>For example, consider the following function:</p>
+
+<blockquote><pre>
+void transform(int* a, unsigned int size, std::function&lt;int(int)&gt; f)
+{
+    for (unsigned int i = 0; i &lt; size; i++)
+    {
+        a[i] = f(a[i]);
+    }
+}
+</pre></blockquote>
+
+<p>This function takes an array of integers (and its size), along with a function that takes an integer and returns an integer.  It then iterates through the array and replaces each value with the result of calling the function with that value.  So, for example, given our <b>square</b> function above, we could do something like this:</p>
+
+<blockquote><pre>
+int a[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+// Square all the elements of a
+transform(a, 10, square);
+</pre></blockquote>
+
+<p>And, of course, if we had other functions that take an integer argument and return an integer result, we could use them with our <b>transform</b> function, as well.</p>
+
+<blockquote><pre>
+int cube(int n)
+{
+    return n * n * n;
+}
+
+// Cube all the elements of a
+transform(a, 10, cube);
+</pre></blockquote>
+
+<p>This makes <b>transform</b> an amazingly powerful function.  Instead of being a function that does only a particular thing to every element, it's instead a more abstract function that can do <i>any</i> particular thing to every element, and you get to tell it what that particular thing is each time you call it!</p>
+
+<p class="subtitle">Lambda expressions</p>
+
+<p>Languages that allow you to treat functions this way &mdash; that consider functions to be data, in the sense that you can pass them as arguments, store them in variables, return them as results, etc. &mdash; are said to (at least partially) support <i>functional programming</i>.  (This is only part of what is technically called "functional programming," but a useful part, even in a language that doesn't support the rest.)</p>
+
+<p>In languages that support functional programming, it's quite common to be able to create new functions without having to give them names &mdash; i.e., to be able to write <i>function literals</i> the way we can write <i>integer literals</i> like <b>3</b> or <i>string literals</i> like <b>"Boo"</b>.  Expressions that are used to build functions without naming them are quite often called <i>lambda expressions</i> (so named because they originally come from a branch of mathematics called <i>lambda calculus</i>, which studies the behavior of functions).</p>
+
+<p>C++ supports lambda expressions, though the syntax is a bit cumbersome.  It helps to start with an example, so here's an example:</p>
+
+<blockquote><pre>
+transform(a, 10, [](int i) { return i + i; });
+</pre></blockquote>
+
+<p>A pair of brackets at the beginning of an expression indicates that the following will be a lambda expression (i.e., a function literal).  This is followed by parameters listed in parentheses, which is, in turn, followed by a body for the function.  This particular lambda expression builds a function that takes an integer and returns the result of adding that integer to itself (i.e., doubling it).</p>
+
+<p>There are a couple of things to note here:</p>
+
+<ul>
+  <li>The return type does not need to be specified, since C++ is able to determine its type based on the body of the function.  In this case, for example, since the body of the function adds <i>i</i> to itself and then returns the result, C++ can determine definitively that the return type is <b>int</b>.  (There are some more complex cases where the return type can't be determined, and C++ provides a syntax for specifying it in those cases where you need to.)</li>
+  <li>The brackets actually serve as more than just a way for the compiler to detect the beginning of a lambda expression.  Additionally, you can specify how variables from the lambda's surrounding scope should be treated.  For example, in the example below, the <b>=</b> says "Make a copy of any variables from outside the function that are used in the function."  Not surprisingly, you can also use an <b>&</b>, which means "Variables from outside the function that are used in the function should be treated as references to the variables outside the function."
+    <blockquote><pre>
+int x = 3;
+transform(a, 10, [=](int i) { return i + x; });</pre></blockquote>
+  You might think, at first, that this distinction isn't important, but there are at least a couple of reasons you might need to have control over it:
+   <ul>
+     <li>The act of copying something can be expensive.  In the case above, it's not something we'd be concerned about, since <b>int</b>s are cheap to copy, anyway; but there are plenty of cases where the cost of copying an object isn't one you're going to want to bear.</li>
+     <li>Particularly if you aren't going to be calling the function until much later &mdash; most notably, after the surrounding scope has already been destroyed &mdash; then accessing variables from the surrounding scope by reference is potentially dangerous, because those variables might already be dead by the time the function is called.</li>
+   </ul>
+</li>
+</ul>
+
+<p class="subtitle">How member functions are different from other functions</p>
+
+<p>We've talked before about how member functions in classes are different from other functions.  For example, consider this class:</p>
+
+<blockquote><pre>
+class Person
+{
+public:
+    ...
+    void setFirstName(const std::string& newFirstName);
+    ...
+};
+</pre></blockquote>
+
+<p>It's important to note that the type of <b>setFirstName</b> is <i>not</i> <b>std::function&lt;void(const std::string&)&gt;</b>, because <b>setFirstName</b> actually takes two parameters:</p>
+
+<ul>
+  <li>The implicit <b>this</b> parameter that is the first parameter of every member function.  (In this case, the type of <b>this</b> would be <b>Person*</b>, a pointer to the <b>Person</b> object on which the function is being called.</li>
+  <li>The string parameter <b>newFirstName</b>.</li>
+</ul>
+
+<p>However, it does turn out that <b>setFirstName</b> has a type: it's <b>std::function&lt;void(Person*, const std::string&)&gt;</b>.</p>
+
+<p>For a member function that's const, such as this one:</p>
+
+<blockquote><pre>
+class Person
+{
+public:
+    ...
+    std::string getFirstName() const;
+    ...
+};
+</pre></blockquote>
+
+<p>the <b>const</b> would affect the type of that <b>this</b> parameter, so <b>getFirstName</b> would have the type <b>std::function&lt;std::string(const Person*)&gt;</b>.</p>
+
+</div>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,44 @@
+¦Ifinal_url¢DtypeEvaluexDhttps://www.ics.uci.edu/~jacobson/cs122b/Project/05-DateServlet.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1125¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 25 Sep 2007 18:16:26 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"465-43af9bc399280"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 06:48:31 GMTKraw_content¢DtypeEvalueYe// From "Big Java" (1st edition) by Cay Horstmann, Wiley & Sons
+// Chapter 25
+
+
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.util.Date;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/**
+   This servlet prints out the current date and time.
+*/
+public class DateServlet extends HttpServlet
+{
+   public void doGet(HttpServletRequest request,
+      HttpServletResponse response)
+      throws ServletException, IOException
+   {
+      // get information
+      String now = new Date().toString();
+
+      // set content type to HTML
+      response.setContentType("text/html");
+
+      // print formatted information
+      PrintWriter out = response.getWriter();
+
+      String title = "Date Servlet";
+      out.println("<html><head><title>");
+      out.println(title);
+      out.println("</title></head><body><h1>");
+      out.print(title);
+      out.println("</h1><p>The current time is: ");
+      out.println(now);
+      out.println("</p></body></html>");
+
+      out.close();
+   }
+}
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

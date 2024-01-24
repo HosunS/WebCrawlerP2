@@ -1,0 +1,433 @@
+¦Ifinal_url¢DtypeEvaluexEhttps://www.ics.uci.edu/~thornton/ics46/Notes/ContractsAndExceptions/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE39701¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 03 Apr 2018 20:41:43 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"9b15-568f7bbf39c34"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 10:55:17 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY›<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC
+ "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="../../course.css" type="text/css" />
+
+<title>ICS 46 Spring 2018, Notes and Examples: Contracts and Exceptions</title>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+<p>
+ICS 46 Spring 2018 |
+<a href="../../index.html">News</a> |
+<a href="../../CourseReference.html">Course Reference</a> |
+<a href="../../Schedule.html">Schedule</a> |
+<a href="../../ProjectGuide">Project Guide</a> |
+<a href="../../Notes">Notes and Examples</a> |
+<a href="http://www.ics.uci.edu/~thornton/">About Alex</a>
+</p>
+
+<hr />
+
+</div>
+
+<div class="header">
+
+<p>ICS 46 Spring 2018<br />
+   Notes and Examples: Contracts and Exceptions</p>
+
+</div>
+
+<div class="section">
+
+<p class="center"><i>Includes a code example with the moniker <b>ContractsAndExceptions</b></i></p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Background</p>
+
+<p>When we write functions or classes in C++, there are two things we need to think about: the actual code we're writing and the assumptions that underlie that code.  Some programming languages allow or even require us to explicitly state more of these assumptions in our code than others.  For example, C++ requires us to specify types in a lot of places and checks them at compile time, while Python lets us leave them out and fails at run time when we don't meet our own implicit assumptions.</p>
+
+<p>But the assumptions are there whether we've stated them explicitly or not, and not all of the assumptions can be stated formally, even in a language like C++ where types are specified.  A function that calculates a square root can probably only be given numeric input, and perhaps that numeric input would need to be non-negative in order to get a real result.  In Python, you might start writing the function this way:</p>
+
+<blockquote><pre>
+def sqrt(n):
+    '''Returns the square root of n, which must be a non-negative number'''
+</pre></blockquote>
+
+<p>with no type information specified formally, but a docstring that makes the unstated assumptions clear.  Meanwhile, in C++, we might start it this way instead:</p>
+
+<blockquote><pre>
+// Returns the square root of n, which must be non-negative
+double sqrt(double n)
+</pre></blockquote>
+
+<p>with a slightly shorter comment, since the signature of the function makes explicit the assumption that the input and output have type <b>double</b>, but nonetheless we still have to document the assumption that <b>n</b> is non-negative, since the type system does not allow us to encode that assumption directly.  (Note that it would be possible to state this assumption for an integer type, since we could use <b>unsigned int</b>, but there is no analogous unsigned floating-point type.)</p>
+
+<p>One of the things that separates better programmers from lesser ones is that they're thinking about the things they're not writing explicitly in code, in addition to the things that they are; even better, they're documenting the unwritten assumptions when they aren't obvious (or, even better, making it impossible for users of the function to do the wrong thing, by finding ways to make the assumptions explicit instead).  There's value in deciding on good names for the functions you write, but a good name is not necessarily enough; if you can't explain to yourself what kinds of input a function can take, what kinds of outputs it gives for various inputs, and in what ways it might fail, you haven't thought the function's design all the way through.</p>
+
+<p>Below are details about what kinds of things you ought to be thinking about when you design a function or a class, focusing at least partly on what to do about the fact that functions can fail.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Contracts</p>
+
+<p>To formalize what it means to "think a function's design all the way through," we can say that functions (including member functions of classes) have a <i>contract</i> associated with them.  Part of that contract is specified formally as the function's signature; in C++, that signature lists the name of the function, the names and types of its parameters, and the type of its result.  But a contract is more than a signature; to understand a function's contract, you have to finish your thought about its design.  A function's contract consists, additionally, of (at least) the following:</p>
+
+<ul>
+  <li><i>Preconditions</i>, which are the things that must be true before you can call the function and see it succeed.  Some of these preconditions might be the values of its parameter (e.g., the <b>sqrt</b> function might require its parameter to be non-negative).  Some of them might require other things to be true (e.g., other functions have been called successfully or, in the case of member functions, the object's member variables have to have certain values already).</li>
+  <li><i>Postconditions</i>, which are the things that will be true once the function has completed successfully, assuming that the preconditions were all true.  In the case of the <b>sqrt</b> function, we would expect to get a return value of type <b>double</b> if the preconditions pass; we would also expect that if we squared that value, we would get a result very close to the parameter's value (allowing some tolerance for the imprecision of <b>double</b>s).</li>
+  <li><i>Side effects</i>, which are the things that happen <i>other than</i> the function computing and returning a result.  Examples include dynamically allocating or deallocating memory, writing output to the console or to a file, establishing a connection across a network, popping up a GUI window, and so on.</li>
+</ul>
+
+<p>Classes, too, have a contract associated with them.  As with functions' contracts, the contract of a class is partly made up of what's written in the class declaration, as well as the contract associated with each member function.  But, additionally, there is one other thing that is included:</p>
+
+<ul>
+  <li><i>Class invariants</i>, which are the things that must always be true about the members of a class after each member function has completed successfully, above and beyond what's specified in the class declaration.</li>
+</ul>
+
+<p>The ArrayList class that I wrote in the <a href="http://www.ics.uci.edu/~thornton/ics45c/Notes/WellBehavedClasses">Well-Behaved Classes</a> example from ICS 45C has a couple of invariants, beyond just the types specified in the declaration:</p>
+
+<ul>
+  <li>An ArrayList's capacity will always be at least as large as its size.</li>
+  <li>The capacity of an ArrayList will always match the number of elements in its underlying array.</li>
+</ul>
+
+<p>Note that there's one other thing we could say: An ArrayList's size and capacity must always be non-negative.  But since we declared them as <b>unsigned int</b>s, this is clear already.</p>
+
+<p class="subtitle">A proposed syntax for implementing contracts</p>
+
+<p>Sadly, while we can reason about preconditions, postconditions, and class invariants, there is no syntax in C++ that allows you to write them as part of your program.  It should be noted, though, that there have been proposals to add such a syntax to the language, and it's entirely possible that this ability will be added to C++ someday in the future.  There would be two benefits if we could encode this information in C++, rather than in comments:</p>
+
+<ul>
+  <li>Specifying things like preconditions, postconditions, and class invariants in code instead of in a natural language like English would leave them less open to the ambiguity of natural language, which would improve a human reader's understanding of a program.</li>
+  <li>Being able to write actual C++ code that describes preconditions, postconditions, and class invariants would allow a compiler to perform some checking at compile time &mdash; though, in reality, there would be relatively few such violations that a compiler could reasonably catch &mdash; and also to (optionally) generate code that performs the checks at run-time.  For example, a call to a function where the preconditions aren't met could simply cause the function to fail with a meaningful error message, rather than trying to muddle through with bad input.</li>
+</ul>
+
+<p>The most recent proposal under consideration, as of this writing, is one numbered <a href="http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4415.pdf">N4415</a> &mdash; proposals to change the C++ standard are numbered &mdash; suggests a syntax roughly like this, though I've taken some liberties with it.  Our <b>sqrt</b> function might be declared this way:</p>
+
+<blockquote><pre>
+double sqrt(double n)
+    [[expects: n >= 0.0]]
+    [[ensures: sqrt(n) >= 0.0 && (sqrt(n) * sqrt(n) - n) < 0.0001]];
+</pre></blockquote>
+
+<p>Notice that we've explicitly specified that the parameter <b>n</b> has to be non-negative; the <b>expects</b> attribute is suggested as a way to specify preconditions.  Meanwhile, we've specified that the result of calling the function, assuming that the preconditions are met, will be non-negative, and that the square of the result will be very nearly equal to the parameter <b>n</b>; the <b>ensures</b> attribute is intended as a way to specify postconditions.</p>
+
+<p>The proposal includes nothing specifically about class invariants, but you could certainly imagine such a syntax.  For example, our ArrayList class might be declared this way:</p>
+
+<blockquote><pre>
+class ArrayList
+{
+    // ...
+
+private:
+    std::string* items;
+    unsigned int sz;
+    unsigned int cap;
+}
+[[ensures: items != nullptr && cap >= sz]];
+</pre></blockquote>
+
+<p>where an <b>ensures</b> attribute on the class could be interpreted as a class invariant.  (Why I chose the <b>ensures</b> syntax is that a class invariant can be thought of as a postcondition of <i>all</i> member functions.)</p>
+
+<p>Of course, it's not possible to write these kinds of things today in C++, but even though there is no syntax to support it, we have to be thinking about these things either way.  Whether your language lets you encode these things explicitly or not, functions have preconditions, postconditions, and side effects; classes have invariants.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Exceptions</p>
+
+<p>In any programming language, when you call a function (or the equivalent), you're asking that function to do a job for you, given a set of parameters that configure that job.  There are two possible outcomes:</p>
+
+<ul>
+  <li>The function succeeds and returns some kind of result and/or has some kind of side effect.</li>
+  <li>The function fails to complete its job, in which case it needs to inform you of the failure in some way.</li>
+</ul>
+
+<p>There are different mechanisms for reporting failure in different programming languages, and there is not steadfast agreement in the programming language design community about how best to approach this problem, but one common approach &mdash; which appears not just in C++, but in a number of other programming languages, as well &mdash; is called an <i>exception</i>.</p>
+
+<p>In C++, the notion of failure is handled separately from success; functions that fail don't return a value at all, but instead <i>throw an exception</i>.  (If you've previously programmed in Python, this idea will sound familiar, as it is more or less the same as <i>raising an exception</i> in Python.)  How you handle an exception is entirely different from how you handle the return value of a function.  The basic model works this way:</p>
+
+<ul>
+  <li>Functions either return successfully (and give back a return value, unless their return type is <b>void</b>) or they fail.  When they fail, they do so by throwing an exception.  The function has no return value in this case; failure is a completely separate mechanism.</li>
+  <li>C++ guarantees that any local variables in a function that have been initialized will be destroyed when a function ends by throwing an exception.  So one large part of ensuring that exceptions don't cause memory or other resource leaks is to favor static allocation over dynamic allocation.  If the local variables are pointers, they will be deallocated like any other local variables, but the objects they point to will not.</li>
+  <li>When a function fails with an exception, its caller will either handle the exception by <i>catching</i> it, or it will fail, too, in which case its caller's caller will have the same choice, and so on.  If every function on the call stack, including <b>main()</b>, fails to catch the exception, the program will terminate.  (We don't generally want programs to crash, but note that, as a practical matter, there are many fewer places where you'll catch exceptions than throw them; it's much more often the case that the failure of a function also implies the failure of its caller, though there are usually some places in a program where handling the exception can be done appropriately.)</li>
+  <li>Exceptions are objects and, in C++, they do not have to be particularly special.  Any kind of object, including those of the built-in types like <b>int</b> or a pointer, can be thrown.  By and large, we don't end up throwing built-in values like that very often, though; better to throw objects that capture the notion of what kind of failure happened and, if necessary, carry more information about the failure with them.  The C++ Standard Library even provides base classes such as <b>std::exception</b> that you can inherit from, which can give all exceptions a handful of shared characteristics, such as a (C-style) string containing an error message.</li>
+  <li>Exceptions are caught on the basis of their type.  A function doesn't just say "I know how to handle any error!"  Instead, it says "I know how to handle <i>this particular kind</i> of error!"  This is why it's important to give an exception a meaningful type; the type is how we distinguish one kind of failure from another.</li>
+</ul>
+
+<p class="subtitle">Exception syntax</p>
+
+<p>Syntactically, there are two things you will need to be able to do to use exceptions in a C++ program: throw them and catch them.</p>
+
+<p>Throwing an exception is best done by simply creating an object of the exception's type and using it as the argument in a <b>throw</b> statement.  For example, if you had a class called MyException that had a default constructor, we could throw a MyException this way:</p>
+
+<blockquote><pre>
+throw MyException{};
+</pre></blockquote>
+
+<p>(Aside: If you've never seen curly braces used syntactically this way, to denote initialization, this is something that was added to C++ within the last ten years or so, but hasn't always been permitted.  In short, curly braces are an alternative way to invoke some kind of initialization &mdash; such as calling a constructor &mdash; that makes initialization <i>look different</i> from everything else.  I could have also said <b>throw MyException();</b> and it would have meant the same thing.  There's more to the story, as it turns out, but that's enough for now.)</p>
+
+<p>Note that we're best off allocating the object statically.  If we allocated it dynamically using the <b>new</b> operator, what we'd actually be throwing is a <i>pointer</i> to that object, and, even worse, we'd also be obligating the code that handles the exception to delete it.</p>
+
+<p>Catching an exception is done by specifying a block of code in which you expect an exception may occur, along with an indication of what should happen if it does.  This is done with a <b>try</b> block, which, structurally, looks like this:</p>
+
+<blockquote><pre>
+try
+{
+    functionThatThrowsMyExceptionSometimes();
+}
+catch (MyException&amp;)
+{
+    std::cout &lt;&lt; "Doh!" &lt;&lt; std::endl;
+}
+</pre></blockquote>
+
+<p>(It should be noted that "<b>try</b> block" is technically the name used to describe the whole construct, including the <b>catch</b> handlers, though some people also sometimes use that to refer only to the area within the <b>try</b>; for clarity, I'll call that the "<b>try</b> part".)</p>
+
+<p>A <b>try</b> block is executed as follows:</p>
+
+<ul>
+  <li>The <b>try</b> part is executed first.  If no exceptions are thrown, that's it; it completes normally, and the <b>catch</b> handlers are skipped.</li>
+  <li>If an exception is thrown within the <b>try</b> part, the <b>try</b> block is abandoned immediately.  Any of its local variables that have been initialized will be destroyed, just like when we exit any other scope.  The <b>catch</b> handlers are then interrogated one by one &mdash; there can be as many as you'd like, differentiated by type &mdash; in the order specified, until a match is found (where a match is on the basis of type compatibility, just like the arguments to a function).  The first match found is executed, after which point the exception is considered handled and control moves just beyond the end of the entire <b>try</b> block.
+    <ul>
+      <li>Note that exceptions are objects, which means you can interact with them (e.g., by calling member functions or using operators on them).  If you need to interact with an exception object, you can give it a name in your <b>catch</b> declaration, then use that name within the <b>catch</b> block whenever you want to refer to the exception that was caught.  For example, if the MyException class had a <b>reason()</b> member function that returns a <b>std::string</b>, you could do something like this:
+<blockquote><pre>
+catch (MyException&amp; e)
+{
+    std::cout &lt;&lt; e.reason() &lt;&lt; std::endl;
+}
+</pre></blockquote>
+      </li>
+    </ul>
+  </li>
+  <li>If an exception is thrown in a <b>catch</b>, it's just like any other exception being thrown.  Unless there is a <b>try</b> block inside the <b>catch</b>, the exception will be handled by a surrounding <b>try</b> block, or the call stack will be unwound as usual.</li>
+  <li>Exceptions can be re-thrown in a <b>catch</b> by simply issuing the statement <b>throw;</b>, which is a way to say "I did some work, but this exception isn't completely handled yet; I just wanted to clean some things up before I failed, too."  This is actually not all that uncommon, especially in code that has to do a lot of manual clean-up; this technique is sometimes called <i>catch-and-rethrow</i>.  (Simplfying this is one of the reasons we should want to less of that kind of clean-up in the first place; we'll have more to say about that a little later in this course.)</li>
+  <li>It is possible to write a <b>catch</b> handler that is capable of catching anything.  You would write it this way:
+<blockquote><pre>
+catch (...)
+{
+    // Do anything you'd like here
+}
+</pre></blockquote>
+  It's important to note, though, that you will not have access to the exception object itself in the <b>catch</b> handler, because it hasn't been given a name, and because there is no single type that encompasses all possible exceptions that might be thrown.  Where this technique is primarily of value is when using the "catch-and-rethrow" technique:</li> 
+<blockquote><pre>
+catch (...)
+{
+    // Do cleanup because of the exception, then rethrow it to be handled by the caller
+
+    throw;
+}
+</pre></blockquote></li>
+</ul>
+
+<p>You may have noticed that, in the examples above, exceptions are being caught by reference.  This is the typical practice in C++, as it addresses two problems:</p>
+
+<ul>
+  <li>It avoids copies of the exception being made, which can be a performance drag if those copies are expensive to make.</li>
+  <li>More importantly, it allows us to catch exceptions of derived types without them being "sliced."  It's not uncommon for exception types to be specified as an inheritance hierarchy, with less specific types of exceptions acting as the base classes for more specific ones (e.g., something less specific like <b>IOException</b> being the base class for a more specific <b>FileNotFoundException</b>) so the ability to catch a broader type of exception, but still have it behave polymorphically if you call a virtual function on it, is very useful indeed.</li>
+</ul>
+
+<p>Some people also advocate catching exceptions by <b>const</b> reference, like this:</p>
+
+<blockquote><pre>
+catch (const MyException&amp; e)
+</pre></blockquote>
+
+<p>which makes clear that you won't be modifying the exception within the <b>catch</b> handler.  I haven't picked up that style myself, but I can see at least some benefit to it.</p>
+
+<p class="subtitle">Why destructors should never throw exceptions, and why that makes our life simpler</p>
+
+<p>As we've seen, throwing an exception sets into motion a sequence of events that includes the destruction of a potentially large number of variables &mdash; every local variable in the entire chain of functions that have failed, up until we reach a function where the exception is caught.  The destruction of these variables is fully automatic and doesn't otherwise affect the process of exception propagation; it's simply a consequence of the natural unwinding of the stack.</p>
+
+<p>But this does bring up an interesting question.  What happens if an exception is thrown, a local variable is destroyed automatically (which means that its destructor will be called), and its destructor throws an exception?  We now have two exceptions that have occurred: the one we were propagating before, as well as the additional one thrown by some destructor in the process of propagating the first one.  While the details here can be subtle, the usual outcome in this case is that the program terminates immediately.</p>
+
+<p>The moral of that story is that we should never throw exceptions in destructors, because destructors can be called in circumstances (such as the stack unwinding that happens while exceptions propagate) that will cause a program to crash immediately if the destructor throws an exception.</p>
+
+<p>Why this fact makes our life simpler is that we can make a basic assumption: If we use the <b>delete</b> or <b>delete[ ]</b> operators, it's safe to assume that they won't throw an exception.  This can make it easier to design code that handles exceptions correctly and safely.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">Exception safety</p>
+
+<p>If you've programmed in languages like Python or Java before, a lot of this will look quite familiar; the keywords might be different (e.g., Python has a <b>try</b>..<b>except</b> statement), but the ideas are pretty similar.  However, exceptions are a little thornier than they are in a lot of languages, because C++ requires manual management of resources (e.g., memory, open files, and so on).  More care needs to be taken to ensure that, for example, an exception being thrown does not cause a memory leak or leave a dangling pointer in its wake.</p>
+
+<p>Furthermore, once we start thinking in terms of contracts, we realize that even less complex languages like Python or Java still require us to be sure that we don't break contracts when we throw exceptions.  Do the appropriate side effects happen (or are they avoided) when a function throws an exception midway through its execution?  If a member function of a class fails before it ends normally, are all class invariants still preserved?  We say that <i>exception safety</i> is the principle of ensuring that we have reasonable outcomes in cases when exceptions are thrown.</p>
+
+<p>This can be an overwhelming thing to think about if you've never considered it before, but, particularly in the case of member functions of classes, the C++ Standard Library provides a good mental model of how to think about these kinds of issues.  Member functions of classes like <b>std::vector</b> are documented to make one of the following four <i>guarantees</i> about what happens when an exception is thrown.  (The guarantees get progressively stronger as you read further down the list.)</p>
+
+<ul>
+  <li><i>No guarantee</i>, which means that if a member function throws an exception, all bets are off.  Class invariants may no longer hold, memory may have leaked or been corrupted arbitrarily, and so on.  It may be a good idea for the program to attempt the most graceful exit possible at this point, since there is no way to know the extent of the damage that might have been done.</li>
+  <li>The <i>basic guarantee</i>, which means that if a member function throws an exception, the object that the member function was called on will be left in a consistent state (i.e., all of its class invariants will be met), though the object may have been altered.  Furthermore, if an exception is thrown, memory and other resources will not have leaked.</li>
+  <li>The <i>strong guarantee</i>, which means that if a member function throws an exception, the object's state will be identical to what it was before the function was called.  (This is also sometimes called the <i>rollback guarantee</i>.)  As with the basic guarantee, memory and other resources will not have leaked.  In general, this is a better guarantee to make than the basic guarantee, but is sometimes impractical because of cost.</li>
+  <li>The <i>nothrow guarantee</i>, which means that the member function guarantees that it can never throw an exception.  It is unavoidable for some functions to throw exceptions sometimes &mdash; e.g., any function that dynamically allocates memory might throw a <b>std::bad_alloc</b> if that allocation fails &mdash; but plenty of functions (like the <b>ArrayList::size</b> member function in the ArrayList example from the <a href="http://www.ics.uci.edu/~thornton/ics45c/Notes/WellBehavedClasses">Well-Behaved Classes</a> notes from ICS 45C) can be written in a way that guarantees they won't.</li>
+</ul>
+
+<p>Ideally, our goal should be to provide the strongest of these guarantees that we can, provided that it's possible and that the cost doesn't outweigh the benefit.</p>
+
+<ul>
+  <li>The nothrow guarantee is clearly not something we can provide all the time.  A lot of functions, even perfectly-written ones, throw exceptions in some cases, because, for example, they may rely on external resources like heap memory, files, networks, and so on.</li>
+  <li>The strong guarantee can be an expensive guarantee to provide, sometimes resulting in an operation that has different complexity characteristics (e.g., <i>O</i>(<i>n</i>) instead of <i>O</i>(1) running time, or <i>O</i>(<i>n</i>) instead of <i>O</i>(1) memory).  In a case like that, it's usually better not to provide the guarantee, but instead to design a way that the guarantee can be obtained when needed (e.g., by copying a data structure, modifying the copy, then swapping it back into place with the original one if everything succeeded).</li>
+  <li>We should always endeavor to provide the basic guarantee, though.  There are few excuses for giving up on this one, because the alternative is unpredictable or undefined behavior or even program crashes in the event that an exception is thrown.  Exceptions happen, whether we like it or not, so best not to have them mushroom into much bigger problems that are more difficult to diagnose and fix.</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">The noexcept specifier</p>
+
+<p>You've likely seen before that each function has a <i>signature</i>, which explicitly defines certain aspects of the contract between the function and its caller.  Very early in your travels when learning C++, you'll have seen that a large part of a function's signature are the types of its parameters and its return value.  However, you've probably also seen that types don't make up the whole of a function's signature.  The keyword <b>const</b>, when used at the end of a member function's signature, implies that the member function does not (and cannot) alter the "meaning" of the object; it's safe to call a <b>const</b> member function on an object and know that it will look the same afterward.  The keyword <b>virtual</b>, when used at the beginning of a member function's signature, specifies that the run-time type of an object is used to determine whose version of that member function is called, even in cases where the type of the object differs from the type of the pointer or reference used to obtain access to it.</p>
+
+<p>In addition to these things, the <b>noexcept</b> specifier can also be included in a function's signature &mdash; both free functions (i.e., those that exist outside of classes) as well as member functions.  In its simplest form, the <b>noexcept</b> specifier is made up of just a single keyword: <b>noexcept</b>.</p>
+
+<blockquote><pre>
+double booPerfectionLevel() noexcept
+{
+    // The infinity() function being called below does what it sounds like.
+    // It returns a double value representing positive infinity, which is
+    // exactly how perfect Boo is.
+
+    return std::numeric_limits&lt;double&gt;::infinity();
+}
+</pre></blockquote>
+
+<p>When used alone at the end of a function's signature, what <b>noexcept</b> tells us is that we do not intend for it to be possible for this function to be able to throw an exception.  Note that the way I worded this is important: I used the word "intend" for a reason.  The <b>noexcept</b> specifier does not imply any kind of checking at compile time; the penalty for being wrong about this (i.e., if the function actually <i>does</i> throw an exception in some circumstance) is actually a run-time one, in which case the <b>std::terminate()</b> function is called and the program terminates immediately.  So, generally, you want to be <i>really</i> sure you're right about <b>noexcept</b>, and it's important to realize that a lot of seemingly-innocuous things &mdash; including dynamic memory allocation using <b>new</b> &mdash; are capable of throwing exceptions.  If you use a relatively recent version of it (as you'll find on the ICS 46 VM), the C++ Standard Library functions are pretty good these days about specifying their <b>noexcept</b> status correctly, as well.</p>
+
+<p>When you don't say that a function is <b>noexcept</b>, you've said that it can potentially throw an exception; with the exception of destructors, that's always the default in C++ for any function you declare.  Why you might like to specify functions that <i>can't</i> throw them is twofold:</p>
+
+<ul>
+  <li>Specifying that a function can't throw an exception helps callers of that function to understand how to use it better.  In particular, it helps them to know that they don't have to be concerned about the possibility of failure &mdash; any function that only calls <b>noexcept</b> functions is one that can't itself fail with an exception.</li>
+  <li>When the compiler knows that certain functions will never throw exceptions, certain performance optimizations are enabled that are problematic or impossible otherwise.  These aren't necessarily in the "save a few nanoseconds" category, either; these are sometimes constant-time implementations of library functions that can be used to replace linear-time implementations, in cases where the underlying functionality they depend on is <b>noexcept</b>.  There are big performance wins to be had by specifying this kind of thing carefully.</li>
+</ul>
+
+<p class="subtitle">Conditional noexcept specifiers</p>
+
+<p>You can also specify <b>noexcept</b> conditionally, by following it with a pair of parentheses in which an expression that calculates a boolean result at compile time is written.  The simplest example of such an expression is a boolean constant, so this signature would be equivalent to the one above:</p>
+
+<blockquote><pre>
+double booPerfectionLevel() noexcept(true)
+</pre></blockquote>
+
+<p>But <b>noexcept(true)</b> doesn't say anything that <b>noexcept</b> doesn't already say, so best not to bother with that.  You can also use that same technique to specify that a function <i>can</i> throw an exception (i.e., that it is not true that it does not throw).</p>
+
+<blockquote><pre>
+char* allocate(int charCount) noexcept(false)
+</pre></blockquote>
+
+<p>Though this, too, is meaningless, for the most part, since it's also the default in almost every circumstance when you simply say nothing about exceptions at all.  (There is at least one counterexample: destructors, which are <b>noexcept</b> by default.  But you would never actually want to write destructors that throw exceptions, for the reasons we talked about before.)</p>
+
+<p>Where <b>noexcept(<i>some_expression</i>)</b> gets more interesting is when we start writing function templates, where we write a single block of code that can be used to generate (at compile time) a potentially large set of different functions that can behave differently depending on circumstance.  In that case, being able to say in which of those circumstances the function is <b>noexcept</b> leads to the same benefits we talked about already: clarity of design and allowing for performance optimization.  We'll need to wait until we talk more about templates before we can see some examples of this in action.</p>
+
+<p class="subtitle">There's a noexcept operator, too</p>
+
+<p>There's one more detail that we won't need right away, but it's worth knowing a little bit about.  There is also a <b>noexcept</b> operator in C++, which determines (at compile-time) whether or not an expression is specifically declared not to throw exceptions.  The operator returns <b>true</b> if the expression cannot (by its declaration) throw an exception, or <b>false</b> if it is not declared that way.  It's that simple.</p>
+
+<blockquote><pre>
+double booPerfectionLevel() noexcept
+{
+    return std::numeric_limits<double>::infinity();
+}
+
+// ...
+
+bool b = noexcept(booPerfectionLevel());   // b will be true
+</pre></blockquote>
+
+<p>At first blush, this feature might seem like a strange thing to put into a language &mdash; can't we just look at the code and see? &mdash; but is a feature that gets a lot more interesting (as the <b>noexcept</b> specifier does) when we add a couple of additional features alongside it:</p>
+
+<ul>
+  <li>Templates, where a single block of code can be used to describe a whole set of functions or classes with radically different behavior depending on circumstances that can be determined at compile-time.</li>
+  <li>The <b>constexpr</b> keyword, which can be used to describe expressions or even entire functions whose value can be determined at compile-time.</li>
+</ul>
+
+<p>We'll see those features in action later in the quarter.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">A side note about Google Test</p>
+
+<p>You may or may not have ever written unit tests in C++ using Google Test, but that will play a role in our work this quarter.  This code example includes not only an implementation of a complete example, but also a small set of Google Test unit tests for it, so you can see a short example of what Google Test unit tests look like, though there's more to them than I'm showing in this example.</p>
+
+<p>If you need to know more about Google Test, your best bet is to check out their documentation, most especially their Primer, which is here:</p>
+
+<ul>
+  <li><a href="https://github.com/google/googletest/blob/master/googletest/docs/Primer.md">Google Test 1.8.0 Primer</a></li>
+  <li><a href="https://github.com/google/googletest/tree/master/googletest/docs">All of the Google Test 1.8.0 Documentation (and also previous versions)</a></li>
+</ul>
+
+<p>You can also read through the <a href="http://www.ics.uci.edu/~thornton/ics45c/Notes/UnitTesting/">Unit Testing</a> notes from my most recent offering of ICS 45C.</p>
+
+<p>I'm not making the assumption that you've used Google Test before, but I am making the assumption that you'll be able to learn how to do it mostly on your own.  Their documentation is at least as complete as what I could write, so that's the best place to go if you're not sure how some part of it works.</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p class="title">The code</p>
+
+<p>Some of the <a href="../../Notes">Notes and Examples</a> pages this quarter will include a code example that you download and use on your ICS 46 VM.  These code examples include not only code but comments that explain what it's doing and why, so they can be instructive in understanding the concepts that we're learning about.</p>
+
+<p>When there is a code example, it will have an official <i>moniker</i>, a name that uniquely identifies it and hooks into some automation tools in the ICS 46 VM; that moniker will be listed at the top of the page.  The official moniker of this one is <b>ContractsAndExceptions</b>.</p>
+
+<p class="subtitle">Downloading code examples for use on the ICS 46 VM</p>
+
+<p>If you want to view, compile, and run the code examples on the ICS 46 VM, I've set up some automated tools to make that job easier.</p>
+
+<p>You will already have a project template called <b>example</b>, which includes a script called <b>download</b> that can be used to download a code example from the course web site and install it into your project automatically.  Choose a name for your new project, then issue the following commands to start a new project and download the code example into it.</p>
+
+<blockquote><pre>
+ics46 start <b><i>YOUR_CHOSEN_PROJECT_NAME</i></b> example
+cd ~/projects/<b><i>YOUR_CHOSEN_PROJECT_NAME</i></b>
+./download ContractsAndExceptions
+</pre></blockquote>
+
+<p>Having issued these three commands, the <b>app</b>, <b>core</b>, <b>exp</b>, and <b>gtest</b> directories in your new project directory should contain all of the header and source files that comprise the code example.  You can use the <b>./build</b> and <b>./run</b> scripts, as usual, to compile and run the example program, and you can use any editor to view it.</p>
+
+<p>Alternatively, I'll provide a link that will let you download the code example manually, if you'd prefer to view it outside of the ICS 46 VM.  The complete, commented code for this example can be downloaded by clicking the link to the tarball below:</p>
+
+<ul>
+  <li><a href="ContractsAndExceptions.tar.gz">ContractsAndExceptions.tar.gz</a></li>
+</ul>
+
+<p class="subtitle">Downloading code examples from ICS 45C into the ICS 46 VM</p>
+
+<p>If you're looking over any of the Notes and Examples from my most recent offering of ICS 45C, you'll find that many of them also include code examples.  You can download these into the ICS 46 VM in a similar way, though you'll need to issue one additional parameter to the <b>./download</b> script.  For example, if you wanted to download the code example from the <a href="http://www.ics.uci.edu/~thornton/ics45c/Notes/SeparateCompilation">Separate Compilation</a> notes from ICS 45C, you would do this:</p>
+
+<blockquote><pre>
+ics46 start <b><i>YOUR_CHOSEN_PROJECT_NAME</i></b> example
+cd ~/projects/<b><i>YOUR_CHOSEN_PROJECT_NAME</i></b>
+./download SeparateCompilation 45C
+</pre></blockquote>
+
+<p>Note, too, that this code example makes use of a class template, something that is described in more detail in the <a href="../Templates">Templates</a> notes, which will be covered a bit later in the course.</p>
+
+</div>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

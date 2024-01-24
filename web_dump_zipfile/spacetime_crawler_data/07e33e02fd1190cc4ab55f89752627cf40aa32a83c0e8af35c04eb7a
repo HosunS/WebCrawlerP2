@@ -1,0 +1,217 @@
+¦Ifinal_url¢DtypeEvaluex/http://sprout.ics.uci.edu/projects/thermanator/Lhttp_headers¢DtypeEvalue‹¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3625¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueQtimeout=5, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueUApache/2.4.7 (Ubuntu)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 10 Dec 2018 08:16:33 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"3c1f-57ca6953d1b7b-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 07:23:46 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueY<<!DOCTYPE html>
+<!-- saved from url=(0064)https://getbootstrap.com/docs/4.0/examples/sticky-footer-navbar/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="thermanator_files/favicon.ico">
+
+  <title>Thermanator: Thermal Residue-Based Post Factum Attacks On Keyboard Password Entry</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./thermanator_files/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="./thermanator_files/sticky-footer-navbar.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="http://sprout.ics.uci.edu">SPROUT Home</a>
+      <a class="">
+      </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="container">
+      <h1 class="mt-5">Thermanator: Thermal Residue-Based Post Factum Attacks On Keyboard Password Entry</h1>
+      <p class="lead mt-5"><strong>Thermanator</strong> is a post factum thermal imaging attack that allows an adversary recover <em>full password key sets</em> up to <code class="lead">30 seconds</code> and <em>partial password key sets</em> up to <code class="lead">1 minute</code> <strong>after</strong> password entry. The attack uses a mid-range thermal imaging camera.</p>
+
+      <p class="lead">Full paper available on <a href = "https://arxiv.org/abs/1806.10189">arxiv</a>.</p>
+
+
+      <h4 class="mt-5">Recent News</h4>
+      <p class="lead mt-3"><strong>Thermanator</strong> was presented at the Black Hat Europe 2018. <a href="https://www.blackhat.com/eu-18/briefings/schedule/#thermanator-and-the-thermal-residue-attack-12273">Abstract</a> and <a href="http://i.blackhat.com/eu-18/Thu-Dec-6/eu-18-Ozturk-Thermanator-and-the-Thermal-Residue-Attack.pdf">presentation</a> available.</p>
+      <p class="lead mt-3">Recent articles covering Black Hat Europe 2018 and our work:</p>
+      	<ul>
+      		<li><p class="lead mt-3">"The best hacks from Black Hat Europe 2018", <a href="https://portswigger.net/daily-swig/the-best-hacks-from-black-hat-europe-2018">https://portswigger.net/daily-swig/the-best-hacks-from-black-hat-europe-2018</a></p></li>
+      		<li><p class="lead mt-3">"14 Hot Sessions at Black Hat Europe 2018", <a href="https://www.bankinfosecurity.com/blogs/14-hot-sessions-at-black-hat-europe-2018-p-2691">https://www.bankinfosecurity.com/blogs/14-hot-sessions-at-black-hat-europe-2018-p-2691</a></p></li>
+      	</ul>
+
+      <h3 class="mt-5"> Thermal Timelapse</h3>
+
+      <div class="row col-md-12 col-xs-12 mt-3">
+        <figure>
+          <img src="thermanator_files/passw0rd_timelapse.png" class= "image-fluid" width="100%">
+          <figcaption class="figure-caption text-center"><h5>Password "passw0rd" thermal residue <code class="lead">0</code>, <code class="lead">15</code>,<br> <code class="lead">30</code>, <code class="lead">45</code> and <code class="lead">60</code> seconds after entry, left to right.</h5></figcaption>
+        </figure>
+      </div>
+
+      <div class="row col-md-12 col-xs-12">
+        <h3 class="mt-3"> Example attack scenario </h3>
+        <img src="thermanator_files/attack.png">
+      </div>
+
+      <h3 class="mt-5">Authors</h3>
+
+        <a href="http://sprout.ics.uci.edu/people/tkaczmar/index.html"><span class="lead">Tyler Kaczmarek</span></a><br>
+        <a href="http://sprout.ics.uci.edu/people/ercan/"><span class="lead">Ercan Ozturk</span></a><br>
+        <a href="https://www.ics.uci.edu/~gts/"><span class="lead">Gene Tsudik</span></a>
+
+      <h3 class="mt-3"> 
+        <h3 class="mt-5">Media Coverage</h3>
+        <ul class="list-group lead col-md-12 col-xs-12" width="100%">
+          <li class="list-group-item">
+            UC, Irvine ICS and CS<br>
+            <a href="https://www.ics.uci.edu/community/news/view_news?id=1388">https://www.ics.uci.edu/community/news/view_news?id=1388</a><br>
+            <a href="http://www.cs.uci.edu/ics-researchers-introduce-thermanator-revealing-a-new-threat-to-using-keyboards-to-enter-passwords-and-other-sensitive-information/">http://www.cs.uci.edu/ics-researchers-introduce-thermanator-revealing-a-new-threat-to-using-keyboards-to-enter-passwords-and-other-sensitive-information/</a>
+          </li>
+
+          <li class="list-group-item mt-3">
+            Schneier on Security<br> <a href="https://www.schneier.com/blog/archives/2018/07/recovering_keyb.html">https://www.schneier.com/blog/archives/2018/07/recovering_keyb.html</a>
+          </li>
+          <li class="list-group-item">
+            THE TIMES<br> <a href="https://www.thetimes.co.uk/article/thermal-imaging-lets-hackers-read-what-you-ve-typed-cxmqtt3rm">https://www.thetimes.co.uk/article/thermal-imaging-lets-hackers-read-what-you-ve-typed-cxmqtt3rm</a>
+          </li>
+          <li class="list-group-item">
+            DailyMail<br> <a href="http://www.dailymail.co.uk/sciencetech/article-5925865/Criminals-steal-bank-details-recording-HEAT-left-keyboard-fingers.html">http://www.dailymail.co.uk/sciencetech/article-5925865/Criminals-steal-bank-details-recording-HEAT-left-keyboard-fingers.html</a>
+          </li>
+          <li class="list-group-item">
+            BLEEPINGCOMPUTER<br> <a href="https://www.bleepingcomputer.com/news/security/thermanator-attack-steals-passwords-by-reading-thermal-residue-on-keyboards/">https://www.bleepingcomputer.com/news/security/thermanator-attack-steals-passwords-by-reading-thermal-residue-on-keyboards/</a>
+          </li>
+          <li class="list-group-item">
+            Mirror<br>
+            <a href="https://www.mirror.co.uk/tech/hackers-can-steal-your-computer-12858680">https://www.mirror.co.uk/tech/hackers-can-steal-your-computer-12858680</a>
+          </li>
+          <li class="list-group-item">
+            SECURITY BOULEVARD<br>
+            <a href="https://securityboulevard.com/2018/07/thermanator-attack-uses-thermal-residue-from-keyboards-to-steal-your-passwords/">https://securityboulevard.com/2018/07/thermanator-attack-uses-thermal-residue-from-keyboards-to-steal-your-passwords/</a><br>
+            <a href="https://securityboulevard.com/2018/07/recovering-keyboard-inputs-through-thermal-imaging/">https://securityboulevard.com/2018/07/recovering-keyboard-inputs-through-thermal-imaging/</a><br>
+          </li>
+          <li class="list-group-item">
+            techradar<br>
+            <a href="https://www.techradar.com/news/creative-keyboard-attack-allows-passwords-to-be-stolen-using-the-heat-from-your-fingers">https://www.techradar.com/news/creative-keyboard-attack-allows-passwords-to-be-stolen-using-the-heat-from-your-fingers</a>
+          </li>
+          <li class="list-group-item">
+            GIZMODO<br>
+            <a href="https://gizmodo.com/scientists-discover-hottest-most-improbable-way-to-ste-1827396066">https://gizmodo.com/scientists-discover-hottest-most-improbable-way-to-ste-1827396066</a>
+          </li>
+          <li class="list-group-item">
+            ZDNet<br>
+            <a href="https://www.zdnet.com/article/this-attack-steals-your-passwords-by-reading-keyboard-heat/">https://www.zdnet.com/article/this-attack-steals-your-passwords-by-reading-keyboard-heat/</a>
+          </li>
+          <li class="list-group-item">
+            KSWO<br>
+            <a href="http://www.kswo.com/story/38581557/your-body-heat-can-help-attackers-steal-your-password-in-new-attack">http://www.kswo.com/story/38581557/your-body-heat-can-help-attackers-steal-your-password-in-new-attack</a>
+          </li>
+          <li class="list-group-item">
+            TechRepublic<br>
+            <a href="https://www.techrepublic.com/article/how-hackers-can-steal-your-password-with-an-infrared-photo-of-your-keyboard/">https://www.techrepublic.com/article/how-hackers-can-steal-your-password-with-an-infrared-photo-of-your-keyboard/</a>
+          </li>
+          <li class="list-group-item">
+            STORYPICK.<br>
+            <a href="https://www.storypick.com/thermanator-cyber-attack-fingertips/">https://www.storypick.com/thermanator-cyber-attack-fingertips//</a>
+          </li>
+          <li class="list-group-item">
+            GBHackers<br>
+            <a href="https://gbhackers.com/thermanator-attack-password-keyboards/">https://gbhackers.com/thermanator-attack-password-keyboards/</a>
+          </li>
+          <li class="list-group-item">
+            FOSSBYTES<br>
+            <a href="https://fossbytes.com/keyboard-attack-thermanator-steal-password-using-body-heat/">https://fossbytes.com/keyboard-attack-thermanator-steal-password-using-body-heat/</a>
+          </li>
+          <li class="list-group-item">
+            welivesecurity<br>
+            <a href="https://www.welivesecurity.com/2018/07/06/thermanator-attackers-heat-keyboard-password/">https://www.welivesecurity.com/2018/07/06/thermanator-attackers-heat-keyboard-password/</a>
+          </li>
+          <li class="list-group-item">
+            CYWARE<br>
+            <a href="https://cyware.com/news/thermanator-hackers-could-steal-passwords-by-analyzing-thermal-residue-on-keyboards-df15f4c5">https://cyware.com/news/thermanator-hackers-could-steal-passwords-by-analyzing-thermal-residue-on-keyboards-df15f4c5</a>
+          </li>
+          <li class="list-group-item">
+            WFMJ<br>
+            <a href="http://www.wfmj.com/story/38581557/your-body-heat-can-help-attackers-steal-your-password-in-new-attack">http://www.wfmj.com/story/38581557/your-body-heat-can-help-attackers-steal-your-password-in-new-attack</a>
+          </li>
+          <li class="list-group-item">
+            THREAT BRIEF<br>
+            <a href="https://threatbrief.com/this-keyboard-attack-steals-passwords-by-reading-heat-from-your-fingers/">https://threatbrief.com/this-keyboard-attack-steals-passwords-by-reading-heat-from-your-fingers/</a>
+          </li>
+          <li class="list-group-item">
+            WLOX<br>
+            <a href="http://www.wlox.com/story/38581557/your-body-heat-can-help-attackers-steal-your-password-in-new-attack">http://www.wlox.com/story/38581557/your-body-heat-can-help-attackers-steal-your-password-in-new-attack</a>
+          </li>
+          <li class="list-group-item">
+            mycomputerlessons<br>
+            <a href="https://mycomputerlessons.com/thermanator-attack-steals-passwords-by-reading-thermal-residue-on-keyboards/">https://mycomputerlessons.com/thermanator-attack-steals-passwords-by-reading-thermal-residue-on-keyboards/</a>
+          </li>
+          <li class="list-group-item">
+            Academy Hacker<br>
+            <a href="http://hackwolrdwide.com/thermanator-attack-attackers-can-steal-password-and-pins-typed-on-keyboards/tranning-it-hacking/2018/">http://hackwolrdwide.com/thermanator-attack-attackers-can-steal-password-and-pins-typed-on-keyboards/tranning-it-hacking/2018/</a>
+          </li>
+          <li class="list-group-item">
+            MALWARETIPS<br>
+            <a href="https://malwaretips.com/threads/thermanator-attack-steals-passwords-by-reading-thermal-residue-on-keyboards-up-to-one-minute-after-input.84900/">https://malwaretips.com/threads/thermanator-attack-steals-passwords-by-reading-thermal-residue-on-keyboards-up-to-one-minute-after-input.84900/</a>
+          </li>
+          <li class="list-group-item">
+            SENSORS TECH FORUM<br>
+            <a href="https://sensorstechforum.com/thermanator-thermal-residue-passwords/">https://sensorstechforum.com/thermanator-thermal-residue-passwords/</a>
+          </li>
+          <li class="list-group-item">
+            Warehouse Discounts<br>
+            <a href="https://warehousediscounts.co.uk/2018/07/this-keyboard-attack-steals-passwords-by-reading-heat-from-your-fingers/">https://warehousediscounts.co.uk/2018/07/this-keyboard-attack-steals-passwords-by-reading-heat-from-your-fingers/</a>
+          </li>
+          <li class="list-group-item">
+            JOURNALPOSTS<br>
+            <a href="https://www.journalposts.com/new-insider-attack-steals-passwords-by-reading-thermal-energy-from-keyboards/">https://www.journalposts.com/new-insider-attack-steals-passwords-by-reading-thermal-energy-from-keyboards/</a>
+          </li>
+          <li class="list-group-item">
+            MogazNewsEn<br>
+            <a href="https://en.mogaznews.com/Technology/958064/Criminals-can-steal-your-bank-details-by-recording-the-HEAT-left-on-a-keyboard-.html">https://en.mogaznews.com/Technology/958064/Criminals-can-steal-your-bank-details-by-recording-the-HEAT-left-on-a-keyboard-.html</a>
+          </li>
+          <li class="list-group-item">
+            LENTA.RU<br>
+            <a href="https://lenta.ru/news/2018/07/05/fingers/">https://lenta.ru/news/2018/07/05/fingers/</a>
+          </li>
+          <li class="list-group-item">
+            RTL.fr<br>
+            <a href="https://www.rtl.fr/actu/futur/il-est-possible-de-voler-un-mot-de-passe-en-filmant-un-clavier-avec-une-camera-thermique-7794077571">https://www.rtl.fr/actu/futur/il-est-possible-de-voler-un-mot-de-passe-en-filmant-un-clavier-avec-une-camera-thermique-7794077571</a>
+          </li>
+          <li class="list-group-item">
+            iaftnews<br>
+            <a href="https://traders-union.ru/iaftnews/kriptorinok/news/327373/">https://traders-union.ru/iaftnews/kriptorinok/news/327373/</a>
+          </li>
+          <li class="list-group-item">
+            THE TIMES OF INDIA<br>
+            <a href="https://blogs.timesofindia.indiatimes.com/Outraged/had-it-up-to-here-with-hackers/">https://blogs.timesofindia.indiatimes.com/Outraged/had-it-up-to-here-with-hackers/</a>
+          </li>
+          <li class="list-group-item">
+            Total Security Daily Advisor<br>
+            <a href="https://totalsecuritydailyadvisor.blr.com/emerging-issues-in-security/novel-attack-allows-internal-threat-actors-access-password-using-thermal-imaging/">https://totalsecuritydailyadvisor.blr.com/emerging-issues-in-security/novel-attack-allows-internal-threat-actors-access-password-using-thermal-imaging/</a>
+          </li>
+          <li class="list-group-item">
+            ITWire<br>
+            <a href="https://www.itwire.com/security/83527-researchers-use-thermail-imaging-to-guess-passwords-from-keyboards.html">https://www.itwire.com/security/83527-researchers-use-thermail-imaging-to-guess-passwords-from-keyboards.html</a>
+          </li>
+        </ul>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <span class="text-muted"></span>
+        </div>
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script src="./thermanator_files/jquery-3.2.1.slim.min.js.download" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script src="./thermanator_files/popper.min.js.download"></script>
+      <script src="./thermanator_files/bootstrap.min.js.download"></script>
+
+
+    </body></html>Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

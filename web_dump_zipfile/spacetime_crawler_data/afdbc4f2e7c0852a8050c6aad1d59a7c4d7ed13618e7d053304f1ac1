@@ -1,0 +1,56 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC846¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Aug 2000 19:06:43 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"759-36f240fb296c0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:32:22 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYY<HR><PRE>
+<B>From:</B>           <A HREF="mailto:jeffe@duke.cs.duke.edu">jeffe@duke.cs.duke.edu</A>
+<B>Subject:</B>        The last mesh generation problem
+<B>To:</B>             David Eppstein &lt;<A HREF="mailto:eppstein@ICS.UCI.EDU">eppstein@ICS.UCI.EDU</A>&gt;
+<B>Date:</B>           Thu, 10 Apr 1997 18:53:13 -0400 (EDT)
+</PRE><HR><PRE>
+David --
+
+I just found your list of problems for your mesh generation class.
+Stuff is known about optimal convex decompositions of simple polygons.
+If Steiner points are not allowed, an algorithm of Keil runs in time
+O(r^2 n log n).  If Steiner points are allowed, an algorithm of
+Chazelle -- from his PhD thesis -- runs in time O(n + r^3).  As you
+guessed, both are dynamic programming algorithms.
+
+Sounds like a fun seminar.
+
+				-- Jeff
+
+@article{k-dpsc-85
+, author =      "J. M. Keil"
+, title =       "Decomposing a polygon into simpler components"
+, journal =     "SIAM J. Comput."
+, volume =      14
+, year =        1985
+, pages =       "799--817"
+, keywords =    "dynamic programming, convex, polygons, star-shaped,
+		 partition, decomposition"
+}
+
+@incollection{ks-mdpo-85
+, author =      "J. M. Keil and J.-R. Sack"
+, title =       "Minimum decompositions of polygonal objects"
+, editor =      "G. T. Toussaint"
+, booktitle =   "Computational Geometry"
+, publisher =   "North-Holland"
+, address =     "Amsterdam, Netherlands"
+, year =        1985
+, pages =       "197--216"
+, keywords =    "survey paper, convex, polygons, star-shaped,
+		 partition, decomposition, covering"
+}
+
+@incollection{cd-ocd-85
+, author =      "B. Chazelle and D. P. Dobkin"
+, title =       "Optimal convex decompositions"
+, editor =      "G. T. Toussaint"
+, booktitle =   "Computational Geometry"
+, publisher =   "North-Holland"
+, address =     "Amsterdam, Netherlands"
+, year =        1985
+, pages =       "63--133"
+, succeeds =    "cd-dpicp-79"
+}
+</PRE>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

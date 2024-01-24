@@ -1,0 +1,46 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1371¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 18 Mar 2018 05:22:49 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"c1b-567a908472507-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:44:55 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY<!DOCTYPE html>
+<html>
+<head>
+<title>CompSci 261, Winter 2018, Homework 7</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1>CompSci 261, Winter 2018, Homework 7</h1>
+<ol>
+
+<li><p>Construct a Cartesian tree for the sequence 10 3 9 2 8 6 1 5 4.</p>
+
+<p style="color:#bc1e47;background-color"#fff">Solution:</p>
+
+<pre style="color:#bc1e47;background-color"#fff">         1
+        / \
+       /   \
+      2     \
+     / \     \
+    /   \     \
+   3     6     4
+  / \   /     /
+10   9 8     5</pre></li>
+
+<li><p>Give the sequence of depths in the Euler tour for the Cartesian tree from your answer to question 1. If we wished to find the minimum value in the subsequence 3 9 2 8 (from the second to fifth positions in the original sequence) which subsequence of the Euler tour depth sequence would this query translate to?</p>
+
+<p style="color:#bc1e47;background-color"#fff">Solution: 1 2 3 4 3 4 3 2 3 4 3 2 1 2 3 2 1. If we number the positions of this solution sequence starting with 0, then the first position of node 3 in the Cartesian tree is at index 2, and the first position of node 8 is at index 9, so the subsequence of the depth sequence would be between those positions: 3 4 3 4 3 2 3 4. The minimum depth in this subsequence, 2, is the depth of node 2 in the Cartesian tree.</p></li>
+
+<li><p>In an unrooted tree (a connected undirected graph with no cycles) the median $m(a,b,c)$ of three vertices $a$, $b$, and $c$ is the unique tree vertex that lies on each of the three shortest paths between the three pairs of nodes. Describe how to use lowest common ancestors to design a data structure that can represent an unrooted tree in $O(n)$ space and answer median queries in $O(1)$ time.</p>
+
+<p style="color:#bc1e47;background-color"#fff">Solution: There are two possibilities. If $\mathrm{LCA}(a,b)=\mathrm{LCA}(b,c)=\mathrm{LCA}(a,c)$ (all three LCA's are the same) then that is also the median. Otherwise, two of the LCA's will be equal and one will be different than the other two. The median is the one that is different. (If the nodes are represented as index numbers then you could take their bitwise exclusive or but most programming languages won't let you do that with other kinds of data.)</p></li>
+
+<li><p>Suppose that you wish to perform lowest common ancestor queries in rooted tree $T$, but that it has been stored in a data structure that can only answer level ancestor queries (given as arguments a vertex of $T$ and a depth $d$ of the ancestor to be found) in time $O(1)$ per query. Describe how to answer a lowest common ancestor query using $O(\log n)$ level ancestor queries.</p>
+
+<p style="color:#bc1e47;background-color"#fff">Solution: Binary search for the largest $d$ such that both arguments to the LCA query have equal level ancestors at depth $d$.</p></li>
+
+</ol>
+</body>
+</html>Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,189 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD6407¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 28 Jan 2019 05:31:39 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1907-5807dfdb49eb7"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 22:56:44 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=US-ASCII">
+<TITLE>250P Computer Systems Architecture</TITLE>
+<LINK HREF="./css/main.css" TYPE="text/css" REL="stylesheet">
+<META NAME="Description" CONTENT="cs250P Computer Systems Architecture (Anton Burtsev)">
+<META NAME="Keywords" CONTENT="Anton Burtsev, Burtsev, Anton, cs250P">
+<SCRIPT SRC="./scripts/image_switcher.js" LANGUAGE="JavaScript"></SCRIPT>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" LEFTMARGIN="0" TOPMARGIN="0" MARGINWIDTH="0" MARGINHEIGHT="0">
+	<TABLE  ID="text" ALIGN="CENTER" WIDTH="600" BORDER="0" CELLPADDING="0" CELLSPACING="0">
+	<TR>
+		<TD ALIGN="LEFT" BGCOLOR="#FFFFFF"><!-- top margin --> 
+			<IMG SRC="./images/spacer.gif" WIDTH="100%" HEIGHT="15" ALT="" BORDER="0"/>
+		</TD>
+	</TR>
+	<TR>
+	<TD>
+		<DIV ID="tech_nav">
+			<A HREF="../index.html">Home</A>
+			<IMG SRC="./images/spacer.gif" WIDTH="100%" HEIGHT="30" ALT="" BORDER="0"/>
+		</DIV>
+	</TD>
+	</TR>	
+	<TR>
+	<TD COLSPAN="4" ALIGN="LEFT" BGCOLOR="#FFFFFF">
+
+
+
+		<P>
+<h1>HW1: Power, Energy and Performance</h1>
+
+<p>
+  <b>Note:</b>
+  Make reasonable assumptions where necessary and clearly state them.
+  Feel free to discuss problems with classmates, but the only written material
+  that you may consult while writing your solutions are the textbook, lecture
+  notes, and lecture slides.
+
+<h3>Problem 1: Power</h3>
+
+For a processor running at 100% utilization at 100 W,
+20% of the power is attributed to leakage.  What is the
+total power dissipation when the processor is running at
+10% utilization?
+
+
+
+<h3>Problem 2: DFS and DVFS</h3>
+
+
+Consider a processor that runs at 3 GHz and 1 Volt.  When running a given
+CPU-bound program, the processor consumes 100 W, of which 20 W is leakage.
+The program takes 20 seconds to execute.  The processor is capable of
+running at different voltages and frequencies.  Can you compute the
+following values: (i) The smallest time it takes to execute the program.
+(ii) The lowest power to execute the program. (iii) The lowest energy to
+execute the program.  Assumptions: The processor is capable of
+executing safely at voltages between 0.8 V to 1.2 V.  Voltage and frequency
+follow a linear relationship (i.e., if voltage doubles, frequency doubles
+as well).
+
+<h3>Problem 3: Performance Equation  </h3>
+
+My new laptop has a clock speed that is 20% higher than my old laptop.  I
+run the same three binaries on both machines.  Each binary runs for roughly
+the same number of cycles on each machine.  The IPCs of the binaries are
+listed in the table below.  What is the <b> performance improvement </b>
+provided by my new laptop?
+
+<p>
+
+<table cellpadding="2" cellspacing="2" border="1" width="50%">
+  <tbody>
+    <tr align="center">
+      <th align="center" width="40%"> <font color="blue"> </font> </th>
+      <th align="center" width="18%"> <font color="blue"> Program A </font> </th>
+      <th align="center" width="8%"> <font color="blue"> B </font> </th>
+      <th align="center" width="8%"> <font color="blue"> C </font> </th>
+    </tr>
+
+    <tr align="left">
+      <td align="left"> IPCs on old laptop </td>
+      <td align="center"> 1.0 </td>
+      <td align="center"> 0.4 </td>
+      <td align="center"> 1.4 </td>
+    </tr>
+
+    <tr align="left">
+      <td align="left"> IPCs on new laptop </td>
+      <td align="center"> 0.9 </td>
+      <td align="center"> 0.3 </td>
+      <td align="center"> 1.5 </td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+<h3>Problem 4: Sum of Execution Times</h3> 
+
+  A 4-program benchmark suite has execution times as listed below for 3
+  different systems.  Assume that System-A is the reference machine.
+  How does the performance of system-C compare against that of system-B?
+  Show this comparison for all three metrics (sum of execution times,
+  sum of weighted execution times, and GM of execution times).
+  Report the comparison in terms of <b> speedup. </b>
+
+<p>
+
+<table cellpadding="2" cellspacing="2" border="1" width="90%">
+  <tbody>
+    <tr align="center">
+      <th align="center" width="40%"> <font color="blue"> </font> </th>
+      <th align="center" width="15%"> <font color="blue"> Program A </font> </th>
+      <th align="center" width="15%"> <font color="blue"> Program B </font> </th>
+      <th align="center" width="15%"> <font color="blue"> Program C </font> </th>
+      <th align="center" width="15%"> <font color="blue"> Program D </font> </th>
+    </tr>
+
+    <tr align="left">
+      <td align="left"> Exec times on System-A (seconds) </td>
+      <td align="center"> 100 </td>
+      <td align="center"> 300 </td>
+      <td align="center"> 150 </td>
+      <td align="center"> 50 </td>
+    </tr>
+
+    <tr align="left">
+      <td align="left"> Exec times on System-B (seconds) </td>
+      <td align="center"> 50 </td>
+      <td align="center"> 400 </td>
+      <td align="center"> 200 </td>
+      <td align="center"> 60 </td>
+    </tr>
+
+    <tr align="left">
+      <td align="left"> Exec times on System-C (seconds) </td>
+      <td align="center"> 75 </td>
+      <td align="center"> 450 </td>
+      <td align="center"> 100 </td>
+      <td align="center"> 40 </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<h3>Problem 5: Power and Energy</h3>
+
+You have a large inventory of Intel processors that run at 3 GHz and 1 Volt,
+and consume 100 W (of which, 20 W is leakage) when running a given CPU-bound
+application.  This application finishes in 100 seconds on this processor.
+The processor is
+capable of DFS and DVFS, but cannot reduce its voltage under 0.9 V.  A
+customer places an order for motherboards that have inexpensive cooling and
+power delivery that can only handle a processor that runs at 40 W.  How
+will you configure your Intel processor so that it meets these specifications
+and consumes as little energy as possible for the same CPU-bound application?
+How much energy does the processor consume to finish this application on
+this new system?
+
+
+<h2>Submit your work</h2>
+
+<p>Submit your solution through Gradescope <a href="https://www.gradescope.com/courses/39177">HW1</a>
+(as a PDF file (please mark which parts of the PDF are used for each question (this can be done 
+through Gradescope)). 
+
+
+
+
+	</TD>			
+	</TR>
+	<TR>
+		<TD ALIGN="LEFT" BGCOLOR="#FFFFFF"><!-- top margin --> 
+			<IMG SRC="./images/spacer.gif" WIDTH="100%" HEIGHT="15" ALT="" BORDER="0"/>
+		</TD>
+	</TR>
+	<TR>
+	<TD COLSPAN="4">
+		<DIV ID="tech">Updated: January, 2019</DIV>
+	</TD>
+	</TR>
+	</TABLE>
+</BODY>
+</HTML>
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

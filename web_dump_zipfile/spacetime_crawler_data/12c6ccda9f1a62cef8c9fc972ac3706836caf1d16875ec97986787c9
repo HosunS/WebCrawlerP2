@@ -1,0 +1,167 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5581¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 29 Dec 2018 16:38:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"15cd-57e2bd09a5d96"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 20:13:03 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYÍ<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+  <title>Python Download and Installation Instructions</title>
+</head>
+
+<body BGCOLOR="white">
+
+<center>
+<h1>Python Download and Installation Instructions</h1>
+<p>
+</center>
+<hr align="left" width="100%">
+<p>
+
+You may want to print these instructions before proceeding, so that you can
+  refer to them while downloading and installing Python.
+Or, just keep this document in your browser.
+You should read each step completely before performing the action that it
+  describes.
+<p>
+This document shows downloading and installing Python 3.7.0 on Windows 7 in
+  Summer 2018.
+<b>You should download and install the latest version of Python.</b>
+The current latest (as of Winter 2019) is Python 3.7.2.
+<p>
+Remember that you must install Java, Python, and Eclipse as all 32-bit or
+  all 64-bit.
+I recommend using the 32-bit verisons for each.
+<p>
+
+<hr align="left" width="100%">
+
+<h2>Python: Version 3.7.0</h2>
+<p>
+
+The Python download requires about 25 Mb of disk space; keep it on your machine,
+  in case you need to re-install Python.
+When installed, Python requires about an additional 90 Mb of disk space.
+<p>
+<h3>Downloading</h3>
+<ol>
+<p>
+<li>Click
+    <a href="https://www.python.org/downloads/" target = "_blank">
+      Python Download</a>.
+    <p>
+    The following page will appear in your browser.
+    <p>
+    <img src="images/python/pythondownloadpage.jpg">
+    <p>
+
+<li>Click the <b>Download Python 3.7.0</b> button.
+    <p>
+    The file named <b>python-3.7.0.exe</b> should start downloading into your
+      standard download folder.
+    This file is about 30 Mb so it might take a while to download fully if you
+      are on a slow internet connection (it took me about 10 seconds over a
+      cable modem).
+    <p>
+    The file should appear as
+    <p>
+    <img src="images/python/exefile.jpg">
+
+<p>
+<li>Move this file to a more permanent location, so that you can install Python
+      (and reinstall it easily later, if necessary).
+<p>
+<li>Feel free to explore this webpage further; if you want to just continue
+  the installation, you can terminate the tab browsing this webpage.
+
+<p>
+<li>Start the <b>Installing</b> instructions directly below.
+</ol>
+<p>
+
+<hr align="left" width="33%">
+
+<h3>Installing</h3>
+<ol>
+<li>Double-click the icon labeling the file <b>python-3.7.0.exe</b>.
+    <p>
+    An <b>Open File - Security Warning</b> pop-up window will appear.
+    <p>
+    <img src="images/python/openfilesecuritywarning.jpg">
+
+<p>
+<li>Click <b>Run</b>.
+    <p>
+    A <b>Python 3.7.0 (32-bit) Setup</b> pop-up window will appear.
+    <p>
+    <img src="images/python/pythonsetup.jpg">
+    <p>
+    Ensure that the <b>Install launcher for all users (recommended)</b> and the
+       <b>Add Python 3.7 to PATH</b> checkboxes at the bottom are checked.
+    <p>
+    If the Python Installer finds an earlier version of Python installed on
+      your computer, the <b>Install Now</b> message may instead appear as
+      <b>Upgrade Now</b> (and the checkboxes will not appear).
+
+<p>
+<li>Highlight the <b>Install Now</b> (or <b>Upgrade Now</b>) message, and then
+    click it.
+    <p>
+
+    A <b>User Account Conrol</b> pop-up window will appear, posing the question
+      <b>Do you want the allow the following program to make changes to this
+      computer?</b>
+    <p>
+    <img src="images/python/useraccountcontrol.jpg">
+<p>
+
+<li>Click the <b>Yes</b> button.
+    <p>
+    A new <b>Python 3.7.0 (32-bit) Setup</b> pop-up window will appear with
+      a <b>Setup Progress</b> message and a progress bar.
+    <p>
+    <img src="images/python/pythonsetup2new.jpg">
+    <p>
+    During installation, it will show the various components it is installing
+      and move the progress bar towards completion.
+    Soon, a new <b>Python 3.7.0 (32-bit) Setup</b> pop-up window will appear
+      with a <b>Setup was successfuly</b> message.
+    <p>
+    <img src="images/python/pythonsetupsuccessful.jpg">
+
+<p>
+<li>Click the <b>Close</b> button.
+</ol>
+<p>
+Python should now be installed.
+
+<h3>Verifying</h3>
+To try to verify installation,
+<ol>
+<li>Navigate to the directory
+    <b>C:\Users\Pattis\AppData\Local\Programs\Python\Python37-32</b>
+   (or to whatever directory Python was installed: see the pop-up window
+   for Installing step 3).
+<p>
+
+<li>Double-click the icon/file <b>python.exe</b>.
+<p>
+The following pop-up window will appear.
+    <p>
+    <img src="images/python/pythonrunning.jpg">
+    <p>
+A pop-up window with the title
+  <b>C:\Users\Pattis\AppData\Local\Programs\Python\Python37-32</b>
+  appears, and inside the window; on the first line is the text
+   <b>Python 3.7.0 ...</b> (notice that it should also say 32 bit).
+Inside the window, at the bottom left, is the prompt <b>&gt;&gt;&gt;</b>: type
+  <b>exit()</b> to this prompt and press <b>enter</b> to terminate Python.
+<p>
+You should keep the file <b>python-3.7.0.exe</b> somewhere on your computer in
+   case you need to reinstall Python (not likely necessary).
+<p>
+You may now follow the instructions to download and install Java (you should
+  have already installed Java, but if you haven't, it is OK to do so now, so
+  long as you install both Python and Java before you install Eclipse), and
+  then follows the instruction to download and install the Eclipse IDE.
+Note: you you need to download/install Java even if you are using Eclipse only
+  for Python)
+<p>
+<hr align="left" width="100%">
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,390 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueå¢Ak¢DtypeEvalueIExpect-CTAv¢DtypeEvalueXWmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueY-__cfduid=d085eda8560990fbf69731a2eeaeaeeb21549689993; expires=Sun, 09-Feb-20 05:26:33 GMT; path=/; domain=.acm.org; HttpOnly, JSESSIONID=6748DD1991C20715E32618512DB3BB5A.mags; Path=/; Secure; HttpOnly, CFID=18115992; Path=/, CFTOKEN=d8062af0162c4cd6%2D27373206%2DF37F%2D08D9%2DEA47D1961CCE9A0D; Path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 01 Jan 1970 00:00:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueJcloudflare¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX.no-cache, no-store, must-revalidate, max-age=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:26:33 GMT¢Ak¢DtypeEvalueFCF-RAYAv¢DtypeEvalueT4a63ebf84f4f76fa-LAX¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=utf-8Kraw_content¢DtypeEvalueYD÷<!DOCTYPE html>
+<html>
+<head><script type="text/javascript">/* <![CDATA[ */_cf_loadingtexthtml="<img alt=' ' src='/cf_scripts/scripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/cf_scripts/scripts/ajax";
+_cf_jsonprefix='//';
+_cf_websocket_port=0;
+_cf_flash_policy_port=0;
+_cf_clientid='E8F7866E811C6021C12D2C9760599463';/* ]]> */</script><script type="text/javascript" src="/cf_scripts/scripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/ajax/package/cfajax.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/cfform.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/masks.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/cfformhistory.js"></script>
+<meta charset="UTF-8">
+<title></title>
+<meta name="keywords" content="" />
+<meta name="article_id" content="81100132467" />
+<meta property="og:title" content="Ubiquity: " />
+<meta property="og:description" content="Ubiquity, information everywhere" />
+<meta property="og:image" content="https://ubiquity.acm.org/siteimages/fb_ubiquity_logo.jpg" />
+<link href="https://ubiquity.acm.org/primarytemplatefiles/style.css" rel="stylesheet" type="text/css" />
+<link href="https://ubiquitydev.acm.org/primarytemplatefiles/print.css" type="text/css" rel="stylesheet" media="print" />
+<script language="javascript">
+  function addbookmark(){
+		
+	if (document.all) {
+		window.external.AddFavorite(window.location.href,document.title);
+	} 
+	else {
+		alert("Use CTRL-D to add a bookmark in your Browser.");
+	}
+}
+</script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js-common/base.js" type="text/javascript" language="javascript"></script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js-common/utility.js" type="text/javascript" language="javascript"></script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js/cssmenus.js" type="text/javascript" language="javascript"></script>
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/css/horizontal.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/skins/TopNav/menus.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">/* <![CDATA[ */
+			ColdFusion.Ajax.importTag('CFFORM');
+		/* ]]> */</script>
+<script type="text/javascript">/* <![CDATA[ */
+			if (window.ColdFusion) ColdFusion.required['add_email']=true;
+		/* ]]> */</script>
+<script type="text/javascript">
+<!--
+    _CF_checkCFForm_1 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element add_email required check
+        if( _CF_hasValue(_CF_this['add_email'], "TEXT", false ) )
+        {
+            //form element add_email 'EMAIL' validation checks
+            if (!_CF_checkEmail(_CF_this['add_email'].value, true))
+            {
+                _CF_onError(_CF_this, "add_email", _CF_this['add_email'].value, "Please enter a properly formatted E-mail address");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "add_email", _CF_this['add_email'].value, "Please enter a properly formatted E-mail address");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/css/vertical.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/skins/ubiquityleft/menus.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div class="outer-container">
+<div id="masthead">
+<a class="home" href="/"><img src="/siteimages/acm_logo.png" alt="acm - an acm publication" /></a>
+<input type="text" class="st-default-search-input">
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','jqznesdyZkdNbMyHJYXG','2.0.0');
+</script>
+</div>
+<div id="nav-wrapper">
+<div id="nav-container">
+<div class="ktcssmenu savvynav_TopNav"><div class="kthorizontal ktopts_showtimeout_100 ktopts_hidetimeout_100 ktopts_imgreplace_no ktopts_imgreplacestyle_img ktopts_imgdir_ ktopts_imgnames_">
+<ul class='lev1 clearfix'><li class="lev1 pos1 lev1_pos1 first lev1_first"><a href="/index.cfm" class="lev1 pos1 lev1_pos1 first lev1_first" target="_self">HOME</a></li>
+<li class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren"><a href="/about_ubiquity.cfm" class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren" target="_self">OVERVIEW</a><ul class='lev2'><li class="lev2 pos1 lev2_pos1 first lev2_first"><a href="/about_ubiquity.cfm" class="lev2 pos1 lev2_pos1 first lev2_first" target="_self">ABOUT UBIQUITY</a></li>
+<li class="lev2 pos2 lev2_pos2"><a href="/topic_areas.cfm" class="lev2 pos2 lev2_pos2" target="_self">TOPIC AREAS</a></li>
+<li class="lev2 pos3 lev2_pos3"><a href="/meet_the_editors.cfm" class="lev2 pos3 lev2_pos3" target="_self">EDITORIAL BOARD</a></li>
+<li class="lev2 pos4 lev2_pos4"><a href="/submissions.cfm" class="lev2 pos4 lev2_pos4" target="_self">CONTRIBUTE TO UBIQUITY</a></li>
+<li class="lev2 pos5 lev2_pos5"><a href="/organizesymposium.cfm" class="lev2 pos5 lev2_pos5" target="_self">ORGANIZE A SYMPOSIUM</a></li>
+<li class="lev2 pos6 lev2_pos6"><a href="/becomeaneditor.cfm" class="lev2 pos6 lev2_pos6" target="_self">BECOME AN EDITOR</a></li>
+<li class="lev2 pos7 lev2_pos7"><a href="/permissions.cfm" class="lev2 pos7 lev2_pos7" target="_self">PERMISSIONS</a></li>
+<li class="lev2 pos8 lev2_pos8"><a href="/contactus.cfm" class="lev2 pos8 lev2_pos8" target="_self">CONTACT US</a></li>
+<li class="lev2 pos9 lev2_pos9 last lev2_last"><a href="https://www.acm.org" class="lev2 pos9 lev2_pos9 last lev2_last" target="_new">ABOUT ACM</a></li>
+</ul></li>
+<li class="lev1 pos3 lev1_pos3"><a href="https://blog.ubiquity.acm.org/" class="lev1 pos3 lev1_pos3" target="_new"><span class="__cf_email__" data-cfemail="57151b18101702151e06021e030e">[email&#160;protected]</span></a></li>
+<li class="lev1 pos4 lev1_pos4"><a href="/symposia.cfm" class="lev1 pos4 lev1_pos4" target="_self">SYMPOSIA</a></li>
+<li class="lev1 pos5 lev1_pos5"><a href="/leaders.cfm" class="lev1 pos5 lev1_pos5" target="_self">INNOVATORS</a></li>
+<li class="lev1 pos6 lev1_pos6"><a href="/communication.cfm" class="lev1 pos6 lev1_pos6" target="_self">COMMUNICATION</a></li>
+<li class="lev1 pos7 lev1_pos7"><a href="/pitch.cfm" class="lev1 pos7 lev1_pos7" target="_self">MAKE A PITCH</a></li>
+<li class="lev1 pos8 lev1_pos8 haschildren lev1_haschildren"><a href="/archives.cfm?volume=all" class="lev1 pos8 lev1_pos8 haschildren lev1_haschildren" target="_self">PAST ISSUES</a><ul class='lev2'><li class="lev2 pos10 lev2_pos10"><a href="/interviews.cfm" class="lev2 pos10 lev2_pos10" target="_self">INTERVIEWS</a></li>
+<li class="lev2 pos11 lev2_pos11 last lev2_last"><a href="/commentaries.cfm" class="lev2 pos11 lev2_pos11 last lev2_last" target="_self">COMMENTARIES</a></li>
+</ul></li>
+</ul></div></div>
+</div> </div>
+<div id="content-container">
+<div class="col1" id="leftcolumn">
+<div class="email-alerts">
+<div id="layoutsu" style="">
+<div id="cf_layoutarea14616709943085496" style="overflow:hidden;">
+<div id="emailsignup">
+<strong>EMAIL ALERTS</strong><br />
+Receive email notification of new articles by entering your email address here:
+<form id="email-alerts-signup" action="newssignup.cfm" method="post" target="_blank" onsubmit="return ColdFusion.Ajax.checkForm(this, _CF_checkCFForm_1,'cf_layoutarea14616709943085496')">
+<fieldset>
+<input name="add_email" type="text" class="text" id="add_email" />
+<input class="text" id="list_name" name="list_name" type="hidden" value="UBIQUITY" />
+<button type="submit" value="Sign Up" class="submit">
+<span>SIGN UP</span>
+</button>
+</fieldset>
+<input type='text' style='display:none' /></form>
+</div>
+</div>
+</div>
+</div> <div class="ktcssmenu savvynav_ubiquityleft"><div class="ktvertical ktopts_showtimeout_100 ktopts_hidetimeout_100 ktopts_imgreplace_no ktopts_imgreplacestyle_img ktopts_imgdir_ ktopts_imgnames_">
+<ul class='lev1 clearfix'><li class="lev1 pos1 lev1_pos1 first lev1_first"><a href="https://ubiquity.acm.org/submissions.cfm" class="lev1 pos1 lev1_pos1 first lev1_first" target="_new">CALL FOR CONTRIBUTIONS</a></li>
+<li class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren"><a href="/index.cfm" class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren" target="_self">BROWSE BY...</a><ul class='lev2'><li class="lev2 pos1 lev2_pos1 first lev2_first"><a href="/archives.cfm" class="lev2 pos1 lev2_pos1 first lev2_first" target="_self">VOLUME</a></li>
+<li class="lev2 pos2 lev2_pos2"><a href="/authors.cfm" class="lev2 pos2 lev2_pos2" target="_self">AUTHOR</a></li>
+<li class="lev2 pos3 lev2_pos3"><a href="/commentaries.cfm" class="lev2 pos3 lev2_pos3" target="_self">COMMENTARIES</a></li>
+<li class="lev2 pos4 lev2_pos4"><a href="/interviews.cfm" class="lev2 pos4 lev2_pos4" target="_self">INTERVIEWS</a></li>
+<li class="lev2 pos5 lev2_pos5 haschildren lev2_haschildren"><a href="/collections.cfm" class="lev2 pos5 lev2_pos5 haschildren lev2_haschildren" target="_self">COLLECTIONS</a><ul class='lev3'><li class="lev3 pos1 lev3_pos1 first lev3_first"><a href="/collections.cfm?id=81337494686" class="lev3 pos1 lev3_pos1 first lev3_first" target="_self">PHILIP YAFEE</a></li>
+<li class="lev3 selected pos2 lev3_pos2"><a href="/collections.cfm?id=81100132467" class="lev3 selected pos2 lev3_pos2" target="_self">JOHN STUCKEY</a></li>
+<li class="lev3 pos3 lev3_pos3"><a href="/collections.cfm?id=81100570644" class="lev3 pos3 lev3_pos3" target="_self">ESPEN ANDERSEN</a></li>
+<li class="lev3 pos4 lev3_pos4"><a href="/collections.cfm?id=81100311898" class="lev3 pos4 lev3_pos4" target="_self">GOUTAM KUMAR SAHA</a></li>
+<li class="lev3 pos5 lev3_pos5 last lev3_last"><a href="/aboutcollections.cfm" class="lev3 pos5 lev3_pos5 last lev3_last" target="_self">ABOUT COLLECTIONS</a></li>
+</ul></li></ul></li>
+<li class="lev1 pos3 lev1_pos3 last lev1_last"><a href="https://www.acm.org/publications" class="lev1 pos3 lev1_pos3 last lev1_last" target="_new">BROWSE OTHER ACM PUBLICATIONS</a></li>
+</ul></div></div>
+<ul id="user-actions" class="clearfix">
+<li class="first"><a class="add-website" href="javascript:addbookmark()" )>ADD THIS WEBSITE</a></li>
+<li><a class="rss" href="/feeds/latestitems.xml" target="_blank">RSS FEED</a></li>
+<li><a class="feedback" href="contactus.cfm">SEND US FEEDBACK</a></li>
+<li><a class="print" href="javascript:window.print()">PRINT THIS PAGE</a></li>
+</ul>
+</div>
+<div id="main-content" class="col2">
+<div id="articleListing">
+<div class="excerpt">
+<div class="subheader"><h2>John Stuckey Collection</h2></div>
+</div>
+<div id="currentissue">
+<ul>
+<li>
+<a href="article.cfm?id=1459230">Information, DNA, and Change Through the Prism of a Great City</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+August 2008
+</div>
+<div>
+After retiring from a career in academic/IT management at Carnegie-Mellon, Northeastern, and Washington and Lee Universities, John Stuckey is serving as Acting Chief Technology Officer at the American University in Cairo. This is the third of his reports to Ubiquity from Egypt.
+<a href="index.cfm?page=article&id=1459230">
+<a href="article.cfm?id=1459230">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1348480">How many Americans does it take to change a light bulb?</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+January 2008
+</div>
+<div>
+I changed a light bulb yesterday. Or, rather, I had the thing changed. I told an Egyptian friend I had a couple of bulbs burnt out and was assuming I could pick some up at one of the larger new supermarkets. He looked at me with barely concealed pity for my ignorance. No, he said. They don't carry light bulbs in a market. Later, in e-mail, he would spell it "light pulp," which is an image I find quite intriguing. Where's Einstein when you need him? Might light pulp be what glows inside the glass, I wonder?
+<a href="index.cfm?page=article&id=1348480">
+<a href="article.cfm?id=1348480">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1348479">About english: On the other hand</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+January 2008
+</div>
+<div>
+I read Philip Yaffe's two recent Ubiquity pieces with interest, all the more so because I myself have plunged back into an international experience after sampling the delights of retirement for a year.
+<a href="index.cfm?page=article&id=1348479">
+<a href="article.cfm?id=1348479">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1295284">Why the heck does higher ED need chief information/technology officers?</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+August 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1295284">
+<a href="article.cfm?id=1295284">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1217807">Fortran days</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+December 2006
+</div>
+<div>
+<a href="index.cfm?page=article&id=1217807">
+<a href="article.cfm?id=1217807">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1140630">Critical thinking for the google generation</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+May 2006
+</div>
+<div>
+<a href="index.cfm?page=article&id=1140630">
+<a href="article.cfm?id=1140630">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1052130">Review of 'Einstein's Dreams': Book by Alan Lightman, Pantheon Books, Random House, NYC, NY, 1994</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+January 2005
+</div>
+<div>
+John Stuckey reviews the book 'Einstein's Dreams,' by Alan Lightman: Warner Books Edition, Pantheon Books, Random House, NYC, NY, 1994.
+<a href="index.cfm?page=article&id=1052130">
+<a href="article.cfm?id=1052130">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1041060">Review of "The medici effect: Breakthrough insights at the intersection of ideas, concepts & cultures" by Frans Johansson, Harvard Business School Press , Boston, 2004</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+November 2004
+</div>
+<div>
+<a href="index.cfm?page=article&id=1041060">
+<a href="article.cfm?id=1041060">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1029381">Review of "The mobile connection: The cell phone's impact on society" by Rich Ling, (The Morgan Kaufmann series in interactive technologies), Morgan Kaufman publishers, an imprint of Elsevier, San Francisco</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+September 2004
+</div>
+<div>
+<a href="index.cfm?page=article&id=1029381">
+<a href="article.cfm?id=1029381">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1022349">Review of "Does it matter? Information technology and the corrosion of competitive advantage" by Nicholas G. Carr, Harvard Business School Press, 2004, Boston, Massachusetts</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+June 2004
+</div>
+<div>
+<a href="index.cfm?page=article&id=1022349">
+<a href="article.cfm?id=1022349">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=367875">The dynamics of E-commerce</a><br />
+<div class="by_line">
+by
+John Stuckey
+<br>
+March 2001
+</div>
+<div>
+<a href="index.cfm?page=article&id=367875">
+<a href="article.cfm?id=367875">...</a>
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19262769-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</div>
+</div>
+<div id="footer">
+<ul class="clearfix">
+<li>
+<a class="first" href="index.cfm">HOME</a></li>
+<li>
+<a href="commentaries.cfm">COMMENTARIES</a></li>
+<li>
+<a href="interviews.cfm?volume=all">INTERVIEWS</a></li>
+<li>
+<a href="aboutcollections.cfm">COLLECTIONS</a></li>
+<li>
+<a href="symposia.cfm">SYMPOSIA</a></li>
+<li>
+<a href="archives.cfm?volume=all">ARCHIVES</a></li>
+<li>
+<a href="http://blog.acm.org/ubiquity" target="_blank">BLOGS</a></li>
+<li>
+<a href="about_ubiquity.cfm">UBIQUITY</a></li>
+<li>
+<a href="contactus.cfm">CONTACT</a></li>
+<li>
+<a href="https://www.acm.org/join" target="_blank">JOIN ACM</a></li>
+</ul>
+<div style="color: #C1C1C1; padding-top: 1em;">ACM &copy; 2019</div>
+</div>
+</div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

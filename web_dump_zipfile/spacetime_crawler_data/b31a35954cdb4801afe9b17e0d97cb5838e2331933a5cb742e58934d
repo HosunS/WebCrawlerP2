@@ -1,0 +1,211 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 03:21:37 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY><!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Classification</a> <font color=red>(17)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Regression</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Clustering</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Other</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=cat&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Categorical</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=&att=num&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Numerical</a> <font color=red>(16)</font><br><a href='datasets.html?format=&task=&att=mix&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Mixed</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=&sort=nameDown&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=mvar&sort=nameDown&view=list'>Multivariate</a> <font color=red>(186)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=uvar&sort=nameDown&view=list'>Univariate</a> <font color=red>(5)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Sequential</a></font> <font color=red>(19)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=ts&sort=nameDown&view=list'>Time-Series</a> <font color=red>(36)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=text&sort=nameDown&view=list'>Text</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=dt&sort=nameDown&view=list'>Domain-Theory</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=other&sort=nameDown&view=list'>Other</a> <font color=red>(7)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=life&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Life Sciences</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=&att=&area=phys&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Physical Sciences</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=&att=&area=comp&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>CS / Engineering</a> <font color=red>(11)</font><br><a href='datasets.html?format=&task=&att=&area=soc&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Social Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=&att=&area=bus&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Business</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=&att=&area=game&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Other</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=&type=seq&sort=nameDown&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=&numAtt=less10&numIns=&type=seq&sort=nameDown&view=list'>Less than 10</a> <font color=red>(13)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>10 to 100</a></font> <font color=red>(19)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=greater100&numIns=&type=seq&sort=nameDown&view=list'>Greater than 100</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=less100&type=seq&sort=nameDown&view=list'>Less than 100</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=100to1000&type=seq&sort=nameDown&view=list'>100 to 1000</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=greater1000&type=seq&sort=nameDown&view=list'>Greater than 1000</a> <font color=red>(16)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Matrix</a> <font color=red>(15)</font><br><a href='datasets.html?format=nonmat&task=&att=&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=list'>Non-Matrix</a> <font color=red>(4)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>19</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=&att=&area=&numAtt=10to100&numIns=&type=seq&sort=nameDown&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Wearable+Computing%3A+Classification+of+Body+Postures+and+Movements+%28PUC-Rio%29">Wearable Computing: Classification of Body Postures and Movements (PUC-Rio)</a></b>: A dataset with 5 classes (sitting-down, standing-up, standing, walking, and sitting) collected on 8 hours of activities of 4 healthy subjects. We also established a baseline performance index.</p><p class="normal">2. <b><a href="datasets/Wall-Following+Robot+Navigation+Data">Wall-Following Robot Navigation Data</a></b>: The data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for 4 rounds, using 24 ultrasound sensors arranged circularly around its 'waist'.</p><p class="normal">3. <b><a href="datasets/UJIIndoorLoc-Mag">UJIIndoorLoc-Mag</a></b>: The UJIIndoorLoc-Mag is an indoor localization database to test Indoor Positioning System that rely on Earth's magnetic field variations.</p><p class="normal">4. <b><a href="datasets/SML2010">SML2010</a></b>: This dataset is collected from a monitor system mounted in a domotic house. It corresponds to approximately 40 days of monitoring data.</p><p class="normal">5. <b><a href="datasets/Predict+keywords+activities+in+a+online+social+media">Predict keywords activities in a online social media</a></b>: The data from Twitter was collected during 360 consecutive days. It was done by querying 1497 English keywords sampled from Wikipedia. This dataset is proposed in a Learning to rank setting.</p><p class="normal">6. <b><a href="datasets/Ozone+Level+Detection">Ozone Level Detection</a></b>: Two ground ozone level data sets are included in this collection. One is the eight hour peak set (eighthr.data), the other is the one hour peak set (onehr.data). Those data were collected from 1998 to 2004 at the Houston, Galveston and Brazoria area.</p><p class="normal">7. <b><a href="datasets/Molecular+Biology+%28Splice-junction+Gene+Sequences%29">Molecular Biology (Splice-junction Gene Sequences)</a></b>: Primate splice-junction gene sequences (DNA) with associated imperfect domain theory</p><p class="normal">8. <b><a href="datasets/Molecular+Biology+%28Promoter+Gene+Sequences%29">Molecular Biology (Promoter Gene Sequences)</a></b>: E. Coli promoter gene sequences (DNA) with partial domain theory</p><p class="normal">9. <b><a href="datasets/microblogPCU">microblogPCU</a></b>: MicroblogPCU data is crawled from sina weibo microblog[http://weibo.com/]. This data can be used to study machine learning methods  as well as do some social network research. </p><p class="normal">10. <b><a href="datasets/Libras+Movement">Libras Movement</a></b>: The data set contains 15 classes of 24 instances each. Each class references to a hand movement type in LIBRAS (Portuguese
+name 'LÔøΩngua BRAsileira de Sinais', oficial brazilian signal language).</p><p class="normal">11. <b><a href="datasets/Hybrid+Indoor+Positioning+Dataset+from+WiFi+RSSI%2C+Bluetooth+and+magnetometer">Hybrid Indoor Positioning Dataset from WiFi RSSI, Bluetooth and magnetometer</a></b>: The dataset was created for the comparison and evaluation of hybrid indoor positioning methods. The dataset presented contains data from W-LAN and Bluetooth interfaces, and Magnetometer. </p><p class="normal">12. <b><a href="datasets/Grammatical+Facial+Expressions">Grammatical Facial Expressions</a></b>: This dataset supports the development of models that make possible to interpret Grammatical Facial Expressions from Brazilian Sign Language (Libras).</p><p class="normal">13. <b><a href="datasets/Gesture+Phase+Segmentation">Gesture Phase Segmentation</a></b>: The dataset is composed by features extracted from 7 videos with people gesticulating, aiming at studying Gesture Phase Segmentation. It contains 50 attributes divided into two files for each video.</p><p class="normal">14. <b><a href="datasets/Geo-Magnetic+field+and+WLAN+dataset+for+indoor+localisation+from+wristband+and+smartphone">Geo-Magnetic field and WLAN dataset for indoor localisation from wristband and smartphone</a></b>: A multisource and multivariate dataset for indoor localisation methods based on WLAN and Geo-Magnetic Ô¨Åeld Ô¨Ångerprinting</p><p class="normal">15. <b><a href="datasets/EEG+Eye+State">EEG Eye State</a></b>: The data set consists of 14 EEG values and a value indicating the eye state.</p><p class="normal">16. <b><a href="datasets/Educational+Process+Mining+%28EPM%29%3A+A+Learning+Analytics+Data+Set">Educational Process Mining (EPM): A Learning Analytics Data Set</a></b>: Educational Process Mining data set is built from the recordings of 115 subjects' activities through a logging application while learning with an educational simulator.</p><p class="normal">17. <b><a href="datasets/Cargo+2000+Freight+Tracking+and+Tracing">Cargo 2000 Freight Tracking and Tracing</a></b>: Sanitized and anonymized Cargo 2000 (C2K) airfreight tracking and tracing events, covering five months of business execution (3,942 process instances, 7,932 transport legs, 56,082 activities). </p><p class="normal">18. <b><a href="datasets/BLE+RSSI+Dataset+for+Indoor+localization+and+Navigation">BLE RSSI Dataset for Indoor localization and Navigation</a></b>: This dataset contains RSSI readings gathered from an array of Bluetooth Low Energy (BLE) iBeacons in a real-world and operational indoor environment for localization and navigation purposes.</p><p class="normal">19. <b><a href="datasets/Bach+Choral+Harmony">Bach Choral Harmony</a></b>: The data set is composed of 60 chorales (5665 events) by J.S. Bach (1675-1750).
+Each event of each chorale is labelled using 1 among 101 chord labels and described
+through 14 features.</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

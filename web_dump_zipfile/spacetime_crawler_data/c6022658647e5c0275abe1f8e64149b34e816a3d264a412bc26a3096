@@ -1,0 +1,167 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD9890¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueOgunicorn/19.7.1¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 11:08:59 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY&¢<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="shortcut icon" type="image/x-icon" href="static/favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>MotifMap-RNA</title>
+<link rel="stylesheet" href="/static/foundation.min.css">
+<style>
+.searcher {
+  color: transparent;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  border: 4px solid transparent;
+  border-image: linear-gradient(45deg, orange, skyblue);
+  border-image-slice: 1;
+  background: linear-gradient(45deg, orange, skyblue);
+  background-clip: border-box;
+  transition: all 0.2s ease; }
+  .searcher:hover {
+    border-image: linear-gradient(45deg, #2ecc71, orange);
+    background: linear-gradient(45deg, #2ecc71, orange); }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+<div class="row">
+<div class="top-bar-left">
+<ul class="dropdown menu" data-dropdown-menu>
+<li class="menu-text">MotifMap-RNA Documentation</li>
+<li><a href="/">Back to Main</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<br>
+<div class="row">
+    <h1>Usage Guide</h1>
+<h2>Main Functions</h2>
+<ul>
+<li>Selecting entry point</li>
+</ul>
+<p>Select any of the sections to view the results of the corresponding data. There are two main modes of querying regardless of the data source you select: 
+<strong>motif</strong> based query (or source query) and <strong>gene/target-id</strong> based query (target query).</p>
+<p>One result of a source having a score in one of the target regions is called a <em>hit</em>.</p>
+<p>The data source determines what kind of hits you will be querying and which species or region of genome those hits come from.</p>
+<ul>
+<li>Motif based query</li>
+</ul>
+<p>In this mode, you can select a source, be it a motif for MotifMap based results or a TF for ChIPSeq, and then find its targets across the genome. </p>
+<p>You can select a variety of filtering parameters to narrow down your search. The details on the parameters are explained below in their corresponding section.</p>
+<p>In most cases, you will be able to select a row from a table of motifs/TFs and conduct your search based on that motif. This table, along with all the other tables from this site, is fully interactive.
+You can sort, search by keyword and download results into xls format.</p>
+<p>Once you determine the motif and the parameter. Press the button to show target results. In some cases, if you select any row from the output, you can utilize a link below the table to view extra annotations for that row.
+Doing so will open a new window.</p>
+<ul>
+<li>Target (gene) based query</li>
+</ul>
+<p>In this mode, you can select a target, be it a gene or a miRNA or a UTR region, and then query the database for all sources (motifs etc) that have hits within the target region.</p>
+<p>You can again use a variety of filtering parameters to narrow down your search.</p>
+<p>The results are presented in a similar way as motif based queries and you can sometimes view additional annotations in the same way.</p>
+<p>Together these two methods provides you a powerful toolset for discovering potential binding relationships between regulating factors and their target regions.</p>
+<h2>MotifMap-RNA</h2>
+<p><strong> Motif Selection in Motif Search </strong></p>
+<p>In the Motif Search mode, there is an interactive table containing all the motifs from MotifMap-RNA. You can select a row, see additional
+annotations from CISBP or RBPDB by clicking the corresponding buttons, or start a search using the specified filtering parameters. This table
+contains the following columns: <strong>ID</strong>, this is the ID used by MotifMap-RNA, <strong>CISBP-ID</strong> this is the ID of the corresponding CISBP motif, if such exists,
+<strong>RBPDB-ID</strong> this is the ID of the RBPDB motif, if such exists. Note that ID matches either of these two and whichever it matches is the source of 
+this motif. <strong>Name</strong> and <strong>Original Species</strong> contain basic annotations for the selected motif.</p>
+<p>Additionally, when you click on a motif (row), you will see a motif LOGO if it exists. Some motifs may be very short and degenerate, 
+and as a result the hits are not as reliable as those from a longer, more specific motif. In these cases you may want to increase the filtering
+thresholds, and especially take advantage of genomic distance filtering to localize potential hits. Aggregate z-scores and BBLS may also 
+indicate more reliable hits.</p>
+<p>If you have questions on the quality or origin of the motif, you can check the annotations from CISBP or RBPDB, which typically include the publication
+that the motif is derived from.</p>
+<p><strong> Filtering parameters: </strong></p>
+<ol>
+<li>
+<p><strong>z-score</strong> is the main indicator of the strength of predicted binding. It is specific to the binding motif (in PWM form) and the target sequence of the exact site. </p>
+</li>
+<li>
+<p><strong>Weighted z-score</strong> is a form of meta z-scores that has exponentially decaying weight based on the local ranking of <em>z-score</em>s of the hits. It compensates the main <em>z-score</em> by considering the potential
+local clustering of binding sites. It will always be higher than <em>z-score</em>. 
+One effective method of filtering strategy is to filter based on a relatively low <em>z-score</em> but a high <em>Weighted z-score</em>. </p>
+</li>
+<li>
+<p><strong>BBLS</strong> is Bayesian Branch Length Score, which is a measure of how conserved the binding site is across the phylogentic tree near the targetted species. It is proven to be an effective indicator of 
+conservativity of hits. However, in the case of RBP hits, sometimes it is absent for strong hits and may not be the best primary filtering parameters. However, you can sort the results by it in the results table.</p>
+</li>
+<li>
+<p><strong>Upstream</strong> and <strong>Downstream</strong> indicates the distances in bp from the transcription start site (TSS) of the target gene or the closest gene. In some cases this is highly effective as a filtering parameter while in others
+it will be meaningless. Note: in the case of intronic data, this parameter filters for the distance relative to the intron start site.</p>
+</li>
+</ol>
+<p><strong>When counting distances, the strandity of the hit and the target gene are always considered. However, in presenting the genomic location in the form of genome coordinates, we never use negative connotations. All positions
+are based on the positive strand. </strong></p>
+<p><strong>Results intepretation:</strong></p>
+<ol>
+<li>
+<p><strong>SeqID</strong> is the assigned sequence ID for the hit. Usually this is generated by MotifMap-RNA but for LNC we keep the NONCODE ID. </p>
+</li>
+<li>
+<p><strong>Chr</strong>, <strong>Start</strong> and <strong>Stop</strong> show the genome coordinate of the hit, always on the positive strand.
+<strong>Strand</strong> indicates the actual strandity of the hit. We provide both the strand of the hit (as <strong>Strand</strong>) and the strand of the closest genomic annotation (<strong>ClosestGeneStrand</strong>),
+in many cases if the two differ the hit is not very relevant. Since the strand of the reference is always the same, you can sort by hit strand to easily see all hits on that same strand.</p>
+</li>
+<li>
+<p><strong>ZScore</strong> is the main factor indicating the strength of potential binding. Please note that in the case of short motifs there can exist many hits with max ZScores.</p>
+</li>
+<li>
+<p><strong>WeightedZ</strong> is an aggregate ZScore exponentially weighted by ranks. It is similar to StoufferZ which is linearly weighted by rank.
+These two scores indicate local clustering of strong hits and are more scalable than ZScores. If you find many hits with the same max ZScores they will help you identify those with more strong hits in its vicinity. </p>
+</li>
+<li>
+<p><strong>BBLS</strong> indicates conservativity of the hit, a score of 1 is significant while 4 is very strongly conserved. <strong>Edges</strong> indicates in how many phylogenetic neightbor does the hit likely exist. </p>
+</li>
+<li>
+<p><strong>ClosestGene</strong> indicates the closest gene to the hit, regardless of the type of 
+hit. The distances to CDS and TSS are presented as well. </p>
+</li>
+<li>
+<p>In the case of a gene search, the gene information is replaced by motif information. Additional links to CISBP or RBPDB is are also provided when you click on a row.</p>
+</li>
+</ol>
+<h2>MotifMap-DNA</h2>
+<p>MotifMap documentation is currently available at <a href="http://motifmap.ics.uci.edu">MotifMap website</a></p>
+<h2>ChIP-Seq</h2>
+<p>We house ChIP-Seq data derived from ENCODE or GEO public data. More information pending.</p>
+</div>
+<div class="row column">
+<ul class="menu">
+<li class="float-right">Copyright 2016</li>
+</ul>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="/static/foundation.js"></script>
+<script>
+      $(document).foundation();
+      function post(path, params, method) {
+          method = method || "post"; // Set method to post by default if not specified.
+
+          // The rest of this code assumes you are not using a library.
+          // It can be made less wordy if you use one.
+          var form = document.createElement("form");
+          form.setAttribute("method", method);
+          form.setAttribute("action", path);
+
+          for(var key in params) {
+              if(params.hasOwnProperty(key)) {
+                  var hiddenField = document.createElement("input");
+                  hiddenField.setAttribute("type", "hidden");
+                  hiddenField.setAttribute("name", key);
+                  hiddenField.setAttribute("value", params[key]);
+
+                  form.appendChild(hiddenField);
+               }
+          }
+
+          document.body.appendChild(form);
+          form.submit();
+      }
+</script>
+</body>
+</html>Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

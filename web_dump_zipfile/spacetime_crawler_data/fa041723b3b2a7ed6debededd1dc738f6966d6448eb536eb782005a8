@@ -1,0 +1,576 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 19:53:23 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY b<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Classification</a> <font color=red>(21)</font><br><a href='datasets.html?format=&task=reg&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Regression</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=clu&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Clustering</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=other&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Other</a> <font color=red>(9)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=cat&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Categorical</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=&att=num&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Numerical</a> <font color=red>(17)</font><br><a href='datasets.html?format=&task=&att=mix&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Mixed</a> <font color=red>(4)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=mvar&sort=typeUp&view=table'>Multivariate</a> <font color=red>(26)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=uvar&sort=typeUp&view=table'>Univariate</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=seq&sort=typeUp&view=table'>Sequential</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=ts&sort=typeUp&view=table'>Time-Series</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=text&sort=typeUp&view=table'>Text</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=dt&sort=typeUp&view=table'>Domain-Theory</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=other&sort=typeUp&view=table'>Other</a> <font color=red>(1)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=life&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Life Sciences</a> <font color=red>(38)</font><br><a href='datasets.html?format=&task=&att=&area=phys&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Physical Sciences</a> <font color=red>(29)</font><br><a href='datasets.html?format=&task=&att=&area=comp&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>CS / Engineering</a> <font color=red>(108)</font><br><a href='datasets.html?format=&task=&att=&area=soc&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Social Sciences</a> <font color=red>(15)</font><br><a href='datasets.html?format=&task=&att=&area=bus&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Business</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=&att=&area=game&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Game</a> <font color=red>(6)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Other</a></font> <font color=red>(35)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=&att=&area=other&numAtt=less10&numIns=greater1000&type=&sort=typeUp&view=table'>Less than 10</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=10to100&numIns=greater1000&type=&sort=typeUp&view=table'>10 to 100</a> <font color=red>(18)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=greater100&numIns=greater1000&type=&sort=typeUp&view=table'>Greater than 100</a> <font color=red>(4)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b> - <a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=&type=&sort=typeUp&view=table'>Undo</a></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=less100&type=&sort=typeUp&view=table'>Less than 100</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=100to1000&type=&sort=typeUp&view=table'>100 to 1000</a> <font color=red>(25)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Greater than 1000</a></font> <font color=red>(35)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Matrix</a> <font color=red>(24)</font><br><a href='datasets.html?format=nonmat&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=table'>Non-Matrix</a> <font color=red>(11)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>35</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=typeDown&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=taskUp&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=instUp&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=&att=&area=other&numAtt=&numIns=greater1000&type=&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/Turkiye+Student+Evaluation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Turkiye+Student+Evaluation">Turkiye Student Evaluation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains a total 5820 evaluation scores provided by students from Gazi University in Ankara (Turkey). There is a total of 28 course specific questions and additional 5 attributes.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">5820&nbsp;</p></td>
+			<td><p class="normal">33&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/seismic-bumps"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/seismic-bumps">seismic-bumps</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data describe the problem of high energy (higher than 10^4 J) seismic bumps forecasting in a coal 
+mine. Data come from two of longwalls located in a Polish coal mine.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2584&nbsp;</p></td>
+			<td><p class="normal">19&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Car+Evaluation"><img src="assets/MLimages/SmallLarge19.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Car+Evaluation">Car Evaluation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Derived from simple hierarchical decision model, this database may be useful for testing constructive induction and structure discovery methods.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">1728&nbsp;</p></td>
+			<td><p class="normal">6&nbsp;</p></td>
+			<td><p class="normal">1997&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Image+Segmentation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Image+Segmentation">Image Segmentation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Image data described by high-level numeric-valued attributes, 7 classes&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2310&nbsp;</p></td>
+			<td><p class="normal">19&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Geographical+Original+of+Music"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Geographical+Original+of+Music">Geographical Original of Music</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Instances in this dataset contain audio features extracted from 1059 wave files. The task associated with the data is to predict the geographical origin of music.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">1059&nbsp;</p></td>
+			<td><p class="normal">68&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Firm-Teacher_Clave-Direction_Classification"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Firm-Teacher_Clave-Direction_Classification">Firm-Teacher_Clave-Direction_Classification</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data are binary attack-point vectors and their clave-direction class(es) according to the partido-alto-based paradigm.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">10800&nbsp;</p></td>
+			<td><p class="normal">20&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/News+Aggregator"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/News+Aggregator">News Aggregator</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">References to news pages collected from an web aggregator in the period from 10-March-2014 to 10-August-2014. The resources are grouped into clusters that represent pages discussing the same story.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">422937&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Facebook+Comment+Volume+Dataset"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Facebook+Comment+Volume+Dataset">Facebook Comment Volume Dataset</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Instances in this dataset contain features extracted from facebook posts. The task associated with the data is to predict how many comments the post will receive.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">40949&nbsp;</p></td>
+			<td><p class="normal">54&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Corel+Image+Features"><img src="assets/MLimages/SmallLarge119.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Corel+Image+Features">Corel Image Features</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains image features extracted from a Corel image collection. Four sets of features are available based on the color histogram, color histogram layout, color moments, and co-occurence&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">68040&nbsp;</p></td>
+			<td><p class="normal">89&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/KDD+Cup+1998+Data"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/KDD+Cup+1998+Data">KDD Cup 1998 Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is the data set used for The Second International Knowledge Discovery and Data Mining Tools Competition, which was held in conjunction with KDD-98&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">191779&nbsp;</p></td>
+			<td><p class="normal">481&nbsp;</p></td>
+			<td><p class="normal">1998&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Statlog+%28Image+Segmentation%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Statlog+%28Image+Segmentation%29">Statlog (Image Segmentation)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset is an image segmentation database similar to a database already present in the repository (Image segmentation database) but in a slightly different form.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2310&nbsp;</p></td>
+			<td><p class="normal">19&nbsp;</p></td>
+			<td><p class="normal">1990&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Connectionist+Bench+%28Nettalk+Corpus%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Connectionist+Bench+%28Nettalk+Corpus%29">Connectionist Bench (Nettalk Corpus)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The file "nettalk.data" contains a list of 20,008 English words, along with a phonetic transcription for each word. The task is to train a network to produce the proper phonemes&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">20008&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Dexter"><img src="assets/MLimages/SmallLarge168.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dexter">Dexter</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">DEXTER is a text classification problem in a bag-of-word representation. This is a two-class classification problem with sparse continuous input variables. This dataset is one of five datasets of the NIPS 2003 feature selection challenge.
+&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">2600&nbsp;</p></td>
+			<td><p class="normal">20000&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Madelon"><img src="assets/MLimages/SmallLarge171.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Madelon">Madelon</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">MADELON is an artificial dataset, which was part of the NIPS 2003 feature selection challenge. This is a two-class classification problem with continuous input variables. The difficulty is that the problem is multivariate and highly non-linear. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">4400&nbsp;</p></td>
+			<td><p class="normal">500&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/YearPredictionMSD"><img src="assets/MLimages/SmallLarge203.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/YearPredictionMSD">YearPredictionMSD</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Prediction of the release year of a song from audio features. Songs are mostly western, commercial tracks ranging from 1922 to 2011, with a peak in the year 2000s.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">515345&nbsp;</p></td>
+			<td><p class="normal">90&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Record+Linkage+Comparison+Patterns"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Record+Linkage+Comparison+Patterns">Record Linkage Comparison Patterns</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Element-wise comparison of records with personal data from a record linkage setting. The task is to decide from a comparison pattern whether the underlying records belong to one person.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5749132&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">2011&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/QSAR+biodegradation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/QSAR+biodegradation">QSAR biodegradation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data set containing values for 41 attributes (molecular descriptors) used to classify 1055 chemicals into 2 classes (ready and not ready biodegradable).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">1055&nbsp;</p></td>
+			<td><p class="normal">41&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Movie"><img src="assets/MLimages/SmallLarge132.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Movie">Movie</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains a list of over 10000 films including many older, odd, and cult films. There is information on actors, casts, directors, producers, studios, etc.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Relational&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">10000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Gesture+Phase+Segmentation"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Gesture+Phase+Segmentation">Gesture Phase Segmentation</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset is composed by features extracted from 7 videos with people gesticulating, aiming at studying Gesture Phase Segmentation. It contains 50 attributes divided into two files for each video.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">9900&nbsp;</p></td>
+			<td><p class="normal">50&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Tarvel+Review+Ratings"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Tarvel+Review+Ratings">Tarvel Review Ratings</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Google reviews on attractions from 24 categories across Europe are considered. Google user rating ranges from 1 to 5 and average user rating per category is calculated.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Text&nbsp;</p></td>
+			<td><p class="normal">Classification, Clustering&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">5456&nbsp;</p></td>
+			<td><p class="normal">25&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Australian+Sign+Language+signs"><img src="assets/MLimages/SmallLarge114.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Australian+Sign+Language+signs">Australian Sign Language signs</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of sample of Auslan (Australian Sign Language) signs. Examples of 95 signs were collected from five signers with a total of 6650 sign samples.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical, Real&nbsp;</p></td>
+			<td><p class="normal">6650&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Australian+Sign+Language+signs+%28High+Quality%29"><img src="assets/MLimages/SmallLarge114.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Australian+Sign+Language+signs+%28High+Quality%29">Australian Sign Language signs (High Quality)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data consists of sample of Auslan (Australian Sign Language) signs. 27 examples of each of 95 Auslan signs were captured from a native signer using high-quality position trackers&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">2565&nbsp;</p></td>
+			<td><p class="normal">22&nbsp;</p></td>
+			<td><p class="normal">2002&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Air+quality"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Air+quality">Air quality</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal"> Contains the responses of a gas multisensor device deployed on the field in an Italian city. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">9358&nbsp;</p></td>
+			<td><p class="normal">15&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/CalIt2+Building+People+Counts"><img src="assets/MLimages/SmallLarge156.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/CalIt2+Building+People+Counts">CalIt2 Building People Counts</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data comes from the main door of the CalIt2 building at UCI.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">10080&nbsp;</p></td>
+			<td><p class="normal">4&nbsp;</p></td>
+			<td><p class="normal">2006&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Dodgers+Loop+Sensor"><img src="assets/MLimages/SmallLarge157.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Dodgers+Loop+Sensor">Dodgers Loop Sensor</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Loop sensor data was collected for the Glendale on ramp for the 101 North freeway in Los Angeles&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">Categorical, Integer&nbsp;</p></td>
+			<td><p class="normal">50400&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">2006&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Spoken+Arabic+Digit"><img src="assets/MLimages/SmallLarge195.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Spoken+Arabic+Digit">Spoken Arabic Digit</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset contains timeseries of mel-frequency cepstrum coefficients (MFCCs) corresponding to spoken Arabic digits.  Includes data from 44 male and 44 female native Arabic speakers.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">8800&nbsp;</p></td>
+			<td><p class="normal">13&nbsp;</p></td>
+			<td><p class="normal">2010&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Bach+Choral+Harmony"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Bach+Choral+Harmony">Bach Choral Harmony</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set is composed of 60 chorales (5665 events) by J.S. Bach (1675-1750).
+Each event of each chorale is labelled using 1 among 101 chord labels and described
+through 14 features.&nbsp;</p></td> -->
+			<td><p class="normal">Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">5665&nbsp;</p></td>
+			<td><p class="normal">17&nbsp;</p></td>
+			<td><p class="normal">2014&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Sentiment+Labelled+Sentences"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Sentiment+Labelled+Sentences">Sentiment Labelled Sentences</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The dataset contains sentences labelled with positive or negative sentiment.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">3000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Twenty+Newsgroups"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Twenty+Newsgroups">Twenty Newsgroups</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set consists of 20000 messages taken from 20 newsgroups.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">20000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/NSF+Research+Award+Abstracts+1990-2003"><img src="assets/MLimages/SmallLarge134.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/NSF+Research+Award+Abstracts+1990-2003">NSF Research Award Abstracts 1990-2003</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set consists of (a) 129,000 abstracts describing NSF awards for basic research, (b) bag-of-word data files extracted from the abstracts, (c) a list of words used for indexing the bag-of-word&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">129000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2003&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Reuters-21578+Text+Categorization+Collection"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Reuters-21578+Text+Categorization+Collection">Reuters-21578 Text Categorization Collection</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This is a collection of documents that appeared on Reuters newswire in 1987. The documents were assembled and indexed with categories.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">21578&nbsp;</p></td>
+			<td><p class="normal">5&nbsp;</p></td>
+			<td><p class="normal">1997&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Bag+of+Words"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Bag+of+Words">Bag of Words</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set contains five text collections in the form of bags-of-words.&nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Clustering&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">8000000&nbsp;</p></td>
+			<td><p class="normal">100000&nbsp;</p></td>
+			<td><p class="normal">2008&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/University+of+Tehran+Question+Dataset+2016+%28UTQD.2016%29"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/University+of+Tehran+Question+Dataset+2016+%28UTQD.2016%29">University of Tehran Question Dataset 2016 (UTQD.2016)</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Persian questions gathered from a jeopardy game broadcasted on Iranian national television. &nbsp;</p></td> -->
+			<td><p class="normal">Text&nbsp;</p></td>
+			<td><p class="normal">Classification&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1175&nbsp;</p></td>
+			<td><p class="normal">3&nbsp;</p></td>
+			<td><p class="normal">2017&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Entree+Chicago+Recommendation+Data"><img src="assets/MLimages/SmallLarge123.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Entree+Chicago+Recommendation+Data">Entree Chicago Recommendation Data</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data contains a record of user interactions with the Entree Chicago restaurant recommendation system.&nbsp;</p></td> -->
+			<td><p class="normal">Transactional, Sequential&nbsp;</p></td>
+			<td><p class="normal">Recommender-Systems&nbsp;</p></td>
+			<td><p class="normal">Categorical&nbsp;</p></td>
+			<td><p class="normal">50672&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">2000&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Pseudo+Periodic+Synthetic+Time+Series"><img src="assets/MLimages/SmallLarge136.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Pseudo+Periodic+Synthetic+Time+Series">Pseudo Periodic Synthetic Time Series</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This data set is designed for testing indexing schemes in time series databases. The data appears highly periodic, but never exactly repeats itself.&nbsp;</p></td> -->
+			<td><p class="normal">Univariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">100000&nbsp;</p></td>
+			<td><p class="normal">&nbsp;</p></td>
+			<td><p class="normal">1999&nbsp;</p></td>
+			<!-- <td><p class="normal">Other&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

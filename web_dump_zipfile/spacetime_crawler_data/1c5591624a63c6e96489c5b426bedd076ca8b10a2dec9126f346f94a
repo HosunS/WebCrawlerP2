@@ -1,0 +1,57 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 17:29:31 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=ISO-8859-1Kraw_content¢DtypeEvalueY’<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+<title>Compare maize genome colinear regions from different genetic maps</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+<body bgcolor="white">
+<h1>Compare maize genome colinear regions from different genetic maps</h1><FORM action="/cgi-bin/aoife/closeup_plot_maize_cma.pl" method="POST">
+<INPUT TYPE=RADIO NAME="alldata" VALUE="pair" CHECKED> Compare results from:
+<SELECT NAME="data1">
+<OPTION>`closeup`.`pio99_closeup
+<OPTION>`closeup`.`pio99_fast2
+</SELECT> max run: <INPUT NAME="d1_max" TYPE=TEXT VALUE="no_limit" SIZE=8>  <B>TO</b>  <SELECT NAME="data2">
+<OPTION>`closeup`.`pio99_closeup
+<OPTION>`closeup`.`pio99_fast2
+</SELECT> max run: <INPUT NAME='d2_max' TYPE=TEXT VALUE='no_limit' SIZE=8>
+ <BR><B> <FONT COLOR=RED>OR </FONT></B><BR> <INPUT TYPE=RADIO NAME="alldata" VALUE="alldata" > Compare alldata <P>
+<INPUT TYPE=RADIO NAME="alldata" VALUE="maps" > Compare maps <P>
+<INPUT TYPE=RADIO NAME="alldata" VALUE="methods" > Compare methods <P>
+<BR>
+<BR>Select a maize chromosome:
+<SELECT NAME="ref_chr">
+<OPTION SELECTED>1
+<OPTION>2
+<OPTION>3
+<OPTION>4
+<OPTION>5
+<OPTION>6
+<OPTION>7
+<OPTION>8
+<OPTION>9
+<OPTION>10
+</SELECT>
+<BR>
+<BR>
+Only show regions significant at <INPUT NAME="sig" TYPE=TEXT VALUE="1" SIZE=5>
+% level (100% includes all regions)
+<BR>
+<BR>
+Minimum size of a run (in number of markers)
+<BR>
+<INPUT NAME="min_block" TYPE=TEXT VALUE="3" SIZE=5>
+<BR>
+<BR>
+<input type=submit name="submit" value="Submit"><BR>
+</FORM>
+
+        <BR>
+        <HR>
+        <address>automatically generated on Mon Feb  4 09:29:32 2019
+        <BR>for questions or remarks mail <A HREF="mailto:jdhayes@ics.uci.edu">jdhayes@ics.uci.edu</A>
+        </address>
+        </BODY>
+        </HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

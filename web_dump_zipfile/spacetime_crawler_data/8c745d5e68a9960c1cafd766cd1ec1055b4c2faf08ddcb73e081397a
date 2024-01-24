@@ -1,0 +1,519 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE14773¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 20 May 2018 17:21:46 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"39b5-56ca66b697e80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 03:24:23 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY9µ<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC
+ "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="course.css" type="text/css" />
+
+<title>ICS 46 Spring 2018, Schedule</title>
+</head>
+
+<body>
+
+<div class="navbar">
+
+<p>
+ICS 46 Spring 2018 |
+<a href="index.html">News</a> |
+<a href="CourseReference.html">Course Reference</a> |
+<a href="Schedule.html">Schedule</a> |
+<a href="ProjectGuide">Project Guide</a> |
+<a href="Notes">Notes and Examples</a> |
+<a href="http://www.ics.uci.edu/~thornton/">About Alex</a>
+</p>
+
+<hr />
+
+</div>
+
+<div class="header">
+
+<p>ICS 46 Spring 2018<br />
+   Schedule</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p>Assigned readings are a combination of pages from this web site (presented as links to those pages) and notes and examples from lecture (presented as links preceded by <b>N:</b>).  It is a good idea to skim the assigned reading <i>before</i> the lecture for the main ideas, attend lecture, and then to go through the assigned reading again to fill in the details that you missed, both in your initial skim of the reading and in the lecture.</p>
+
+<table class="normal">
+  <tr class="top">
+    <td>Date</td>
+    <td>Lecture Topics</td>
+    <td>Readings</td>
+    <td>Project Work</td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 1</td>
+  </tr>
+  <tr>
+    <td>Tu 4/3</td>
+    <td>
+      <ul class="nomarker">
+        <li>Course introduction and goals</li>
+        <li>Virtualization: Running more than one operating system simultaneously</li>
+        <li>Quick overview of the <i>ICS 46 VM</i> development environment</li>
+        <li>Exceptions</li>
+        <li>Throwing and catching exceptions</li>
+        <li>Why exceptions profoundly affect design in C++</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/CourseIntroduction">N: Course Introduction</a></li>
+        <li><a href="Notes/ContractsAndExceptions">N: Contracts and Exceptions</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 4/5</td>
+    <td>
+      <ul class="nomarker">
+        <li>Contracts</li>
+        <li>Preconditions and postconditions</li>
+        <li>Class invariants</li>
+        <li>Writing classes more carefully</li>
+        <li>Exception safety</li>
+        <li>The <b>noexcept</b> keyword</li>
+        <li>Class templates</li>
+        <li>Separating interface from implementation, even in header files</li>
+        <li>Member function templates</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/ContractsAndExceptions">N: Contracts and Exceptions</a></li>
+        <li><a href="Notes/Templates">N: Templates</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 2</td>
+  </tr>
+  <tr>
+    <td>Tu 4/10</td>
+    <td>
+      <ul class="nomarker">
+        <li>Randomness</li>
+        <li>Entropy and pseudorandomness</li>
+        <li>Generating sequences of random values in C++</li>
+        <li>The "resource acquisition is initialization" (RAII) technique in C++</li>
+        <li>Automating the release of resources, even when exceptions are thrown, using RAII</li>
+        <li>Ownership of dynamically-allocated objects</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/Randomness">N: Randomness</a></li>
+        <li><a href="Notes/SmartPointers">N: Smart Pointers</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>W 4/11</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project0">Project #0</a> due 11:59pm</td>
+  </tr>
+  <tr>
+    <td>Th 4/12</td>
+    <td>
+      <ul class="nomarker">
+        <li>Smart pointers (as an RAII technique for memory management)</li>
+        <li>Unique ownership and <b>std::unique_ptr</b></li>
+        <li>Shared ownership and <b>std::shared_ptr</b></li>
+        <li>Why not all pointers can be smart pointers</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/SmartPointers">N: Smart Pointers</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 3</td>
+  </tr>
+  <tr>
+    <td>Tu 4/17</td>
+    <td>
+      <ul class="nomarker">
+        <li>An in-depth look at <a href="ProjectGuide/Project1">Project #1</a></li>
+        <li>Multidimensional arrays (briefly)</li>
+        <li>Options for storing multidimensional data in C++</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/MultidimensionalData">N: Multidimensional Data</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 4/19</td>
+    <td>
+      <ul class="nomarker">
+        <li>Moving, as opposed to copying, in C++</li>
+        <li>Move semantics in C++</li>
+        <li>Rvalue references</li>
+        <li>Move constructors</li>
+        <li>Move assignment operators</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/MoveSemantics">N: Move Semantics</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 4</td>
+  </tr>
+  <tr>
+    <td>M 4/23</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project1">Project #1</a> due 11:59pm</td>
+  </tr>
+  <tr>
+    <td>Tu 4/24</td>
+    <td>
+      <ul class="nomarker">
+        <li>Asymptotic analysis: <i>O-</i>, &Omega;-, and &Theta;-notation</li>
+        <li>Best-, worst-, and average-case analysis</li>
+        <li>Variations on linked lists</li>
+        <li>Analyzing linked list variations using <i>O-</i>, &Omega;-, and &Theta;-notation</li>
+        <li>Stacks, queues, and deques</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/AsymptoticAnalysis">N: Asymptotic Analysis</a></li>
+        <li><a href="Notes/LinkedLists">N: Linked List Variations</a></li>
+        <li><a href="Notes/StacksQueuesDeques">N: Stacks, Queues, and Deques</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 4/26</td>
+    <td>
+      <ul class="nomarker">
+        <li>"Alternative" forms of algorithm analysis</li>
+        <li>Amortized analysis (briefly)</li>
+        <li>Why <b>std::vector</b>'s reallocations aren't as bad as you think</li>
+        <li>Analyzing the performance of recursion</li>
+        <li>Recurrences</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/AmortizedAnalysis">N: Amortized Analysis</a></li>
+        <li><a href="Notes/AnalyzingRecursion">N: Asymptotic Analysis of Recursion</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 5</td>
+  </tr>
+  <tr>
+    <td>Tu 5/1</td>
+    <td>
+      <ul class="nomarker">
+        <li>General trees</li>
+        <li>General tree implementation<li>
+        <li>Breadth-first tree traversals</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/GeneralTrees">N: General Trees</a></li>
+        <li><a href="Notes/TreeTraversals">N: Tree Traversals</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 5/3</td>
+    <td>
+      <ul class="nomarker">
+        <li>Depth-first tree traversals (preorder and postorder)</li>
+        <li>Comparing the performance (time and memory) of tree traversals</li>
+        <li>N-ary and binary trees</li>
+        <li>Internal vs. external nodes</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/TreeTraversals">N: Tree Traversals</a></li>
+        <li><a href="Notes/NaryBinaryTrees">N: N-ary and Binary Trees</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>F 5/4</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project2">Project #2</a> due 11:59pm</td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 6</td>
+  </tr>
+  <tr>
+    <td>Tu 5/8</td>
+    <td>
+      <ul class="nomarker">
+        <li>Background on <a href="ProjectGuide/Project3">Project #3</a></li>
+        <li>Binary search trees</li>
+        <li>The importance of logarithms in computer science</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/BinarySearchTrees">N: Binary Search Trees</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 5/10</td>
+    <td>
+      <ul class="nomarker">
+        <li><b>MIDTERM &mdash; regular lecture time and location</b></li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 7</td>
+  </tr>
+  <tr>
+    <td>Tu 5/15</td>
+    <td>
+      <ul class="nomarker">
+        <li>The importance of keeping binary search trees balanced</li>
+        <li>What is a "good" balance condition?</li>
+        <li>AVL trees</li>
+        <li>Skip lists</li>
+        <li>Probabilistic analysis (briefly)</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/AVLTrees">N: AVL Trees</a></li>
+        <li><a href="Notes/SkipLists">N: Skip Lists</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 5/17</td>
+    <td>
+      <ul class="nomarker">
+        <li>Hashing and hash tables</li>
+        <li>Separate chaining</li>
+        <li>"Good" hash functions</li>
+        <li>Open addressing</li>
+        <li>Linear probing</li>
+        <li>Hashing objects other than numbers</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/HashTables">N: Hash Tables</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>F 5/18</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project3">Project #3</a> due 11:59pm</td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 8</td>
+  </tr>
+  <tr>
+    <td>Tu 5/22</td>
+    <td>
+      <ul class="nomarker">
+        <li>Priority queues</li>
+        <li>Implementing a priority queue using a min heap or max heap</li>
+        <li>Graphs: definition and terminology</li>
+        <li>Directed graphs</li>
+        <li>Directed acyclic graphs (DAGs)</li>
+        <li>Undirected graphs</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/PriorityQueues">N: Priority Queues</a></li>
+        <li><a href="Notes/Graphs">N: Graphs</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 5/24</td>
+    <td>
+      <ul class="nomarker">
+        <li>Graph implementation trade-offs</li>
+        <li>Adjacency lists vs. adjacency matrix implementations</li>
+        <li>Depth-first graph traversal</li>
+        <li>Breadth-first graph traversal</li>
+        <li>Why connectedness is an important factor in a graph</li>
+        <li>Connectedness of a graph</li>
+        <li>Strong connectedness vs. weak connectedness</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/GraphTraversals">N: Graph Traversals</a></li>
+        <li><a href="Notes/GraphConnectedness">N: Graph Connectedness</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 9</td>
+  </tr>
+  <tr>
+    <td>M 5/28</td>
+    <td>
+      <ul class="nomarker">
+        <li><b>University Holiday: Presidents' Day &mdash; NO LABS TODAY</b></li>
+      </ul>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Tu 5/29</td>
+    <td>
+      <ul class="nomarker">
+        <li>Testing graphs for connectedness</li>
+        <li>Dijkstra's shortest path algorithm</li>
+        <li>Topological ordering of a DAG</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/GraphConnectedness">N: Graph Connectedness</a></li>
+        <li><a href="Notes/ShortestPaths">N: Graphs: Shortest Paths</a></li>
+        <li><a href="Notes/TopologicalOrdering">N: Graphs: Topological Ordering</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>W 5/30</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project4">Project #4</a> due 11:59pm</td>
+  </tr>
+  <tr>
+    <td>Th 5/31</td>
+    <td>
+      <ul class="nomarker">
+        <li>The sorting problem</li>
+        <li>What can and cannot be sorted</li>
+        <li>Sorting in <i>O</i>(<i>n</i><sup><small>2</small></sup>) time</li>
+        <li>Insertion sort</li>
+        <li>Selection sort</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/ComparisonBasedSorting">N: Comparison-Based Sorting</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 10</td>
+  </tr>
+  <tr>
+    <td>Tu 6/5</td>
+    <td>
+      <ul class="nomarker">
+        <li>Sorting in <i>O</i>(<i>n</i> log <i>n</i>) time</li>
+        <li>Treesort</li>
+        <li>Heapsort</li>
+        <li>Divide and conquer algorithms (briefly)</li>
+        <li>Quicksort</li>
+        <li>Mergesort</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/ComparisonBasedSorting">N: Comparison-Based Sorting</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 6/7</td>
+    <td>
+      <ul class="nomarker">
+        <li>A lower bound for comparison-based sorting</li>
+        <li>Modeling comparison-based sorts using decision trees</li>
+        <li>How to sort in linear time by using techniques other than comparisons</li>
+        <li>Counting sort</li>
+        <li>Radix sort</li>
+        <li>Why radix sort can run in linear time (i.e., linear with respect to what?)</li>
+        <li>Conclusion</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/LinearTimeSorting">N: Linear-Time Sorting</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>F 6/8</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project5">Project #5</a> due 11:59pm</td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Finals Week</td>
+  </tr>
+  <tr>
+    <td>Tu 6/12</td>
+    <td>
+      <ul class="nomarker">
+        <li><b>FINAL EXAM: 7:00pm-9:00pm, HSLH 100A</b></li>
+      </ul>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+</div>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

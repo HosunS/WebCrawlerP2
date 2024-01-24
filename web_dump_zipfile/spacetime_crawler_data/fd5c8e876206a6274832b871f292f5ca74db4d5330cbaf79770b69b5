@@ -1,0 +1,118 @@
+¦Ifinal_url¢DtypeEvaluex,http://seal.ics.uci.edu/projects/letterbomb/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5689¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 10 Jul 2017 10:15:59 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1639-553f3de945dbf"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 06:14:52 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY9<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SEAL - LetterBomb</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Reply-to" content="malek at uci dot edu">
+<meta http-equiv="Owner" content="Sam Malek">
+<meta name="Author" content="Sam Malek">
+<meta name="Generator" content="Emacs">
+<link rev="MADE" href="mailto:malek at uci dot edu">
+<link href="../../seal.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrapper">
+    
+<!-- *************** Beginning of content ****************** -->
+
+<h2>LetterBomb: Automatic Generation of Inter-Component Communication Exploits for Android Applications</h2>
+
+<p>
+Although a wide variety of approaches identify vulnerabilities in
+Android apps, none attempt to determine exploitability of those
+vulnerabilities. Exploitability can aid in reducing false positives of
+vulnerability analysis, and can help engineers triage
+bugs. Specifically, one of the main attack vectors of Android apps is
+their inter-component communication (ICC) interface, where apps may
+receive messages called Intents. In this paper, we provide the first
+approach for automatically generating exploits for Android apps,
+called LetterBomb, relying on a combined path-sensitive symbolic
+execution-based static analysis, and the use of software
+instrumentation and test oracles. We run LetterBomb on 10,000 Android
+apps from Google Play, where we identify 181 exploits from 835
+vulnerable apps. Compared to a state-of-the-art detection approach for
+three ICC-based vulnerabilities, LetterBomb obtains 33%-60% more
+vulnerabilities at a 6.66 to 7 times faster speed.
+</p>
+
+<h3>Approach Overview</h3>
+<img ALT="[LetterBomb Approach Overview]" height="250" src=./approach_overview_cropped.png>
+
+<p>
+To automatically generate exploits for Android apps, LetterBomb (1)
+models the Android framework, especially the ICC interface of Android
+apps; (2) provides test input generation, whose goal is to construct
+an ICC input that actually exploits a vulnerability; and (3) includes
+software test oracles that determine if a test input successfully
+exploits a particular vulnerability type. Specifically, we focus on
+three types of vulnerabilities---inter-process denial of service,
+cross application scripting, and Fragment injection---where each
+vulnerability corresponds to a single oracle type. Each oracle is
+realized as a combination of instrumentation at either the app or
+framework level, and the check of a property to determine if
+exploitation was successful. As a result, even though each
+vulnerability requires an oracle designed specifically for it,
+construction of each oracle only needs to be performed once, either as
+an algorithm that automatically instruments an app, or a one-time
+modification to the Android framework. Thereafter, the oracle may be
+continually reused.
+</p>
+
+<p>
+Given that test input generation is critical for AEG at the ICC
+interface of Android apps and their constituent components, LetterBomb
+relies upon a path-sensitive analysis of Android apps along the
+message-based Android ICC interface, i.e., Intents. Determining
+exploitability of a vulnerability at a particular statement is
+dependent on assessing the different program paths that may reach a
+statement. Certain paths may reach a statement without exploiting the
+vulnerability residing at that statement---or there may be more than
+one path in a program that may exploit a vulnerable program
+statement. As a result, it is important for our analysis to be
+path-sensitive to minimize the possibility of missing exploitable
+vulnerabilities. At the same time, path-sensitive analyses face the
+problem of path explosion, as the program grows, due to the
+potentially exponential number of program paths to be analyzed. To
+address this problem, our approach analyzes program paths beginning
+from the points in the program that may be vulnerable, and utilizes
+information about the Android framework to reduce the
+information that needs to be considered for the analysis.
+</p>
+
+<h3>Implementation</h3>
+
+LetterBomb generates exploits for vulnerabilities in Android apps and
+thus can be readily used for malicious purposes. To ensure that
+LetterBomb does not fall into the hands of a malicious agent, access
+to an implementation of LetterBomb can be obtained by
+contacting <a href="http://jgarcia.ics.uci.edu">Joshua Garcia</a>
+and <a href="http://sites.uci.edu/hammadm/about-me/">Mahmoud Hammad</a>. In your email
+message, please use an email address of your organization (e.g., a
+university or company email address). If you are a student, please CC
+the principal investigator (i.e., professor or researcher) you are
+working with, and include in the message any links to websites that
+can help confirm your affiliation (e.g., your research website).
+
+<h3>Publications</h3>
+
+<ul class="paperlist">
+    <li><b>Automatic Generation of Inter-Component Communication Exploits for Android Applications</b><br> 
+    Joshua Garcia, Mahmoud Hammad, Negar Ghorbani, and Sam Malek<br>
+    <i>11th joint meeting of the European Software Engineering Conference and ACM SIGSOFT Symposium on the Foundations of Software Engineering (ESEC/FSE 2017), Paderborn, Germany, September 2017.</i>
+    <br>[<a href="./letterbomb.pdf">PDF</a>]
+    </li> 
+</ul>
+
+
+<!-- ***************** End of content ****************** -->
+<br><br>
+<div style="float:left">
+            <a href="http://www.ics.uci.edu/~seal/"><img ALT="[seal's logo]" height="200" src=../../seal.png></a>
+</div>
+<div style="float:right">
+            <a href="http://www.ics.uci.edu"><img ALT="[uci's logo]" style="padding-top: 40px" height="100" src=../../uci.jpg></a>
+</div>
+</div>
+</body>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

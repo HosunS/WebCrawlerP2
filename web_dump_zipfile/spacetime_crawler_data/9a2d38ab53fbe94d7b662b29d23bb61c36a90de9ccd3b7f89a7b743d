@@ -1,0 +1,125 @@
+¦Ifinal_url¢DtypeEvaluex6https://www.ics.uci.edu/~eppstein/pubs/a-barequet.htmlLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2610¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 18 Jan 2019 21:54:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"17d3-57fc28ee9e0f8-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 10:54:08 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYÓ<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html><head>
+<title>David Eppstein - Publications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<h1>David Eppstein - Publications</h1>
+<hr><p>
+<h2>
+Publications with
+<a href="//www.cs.technion.ac.il/~barequet/">
+Gill Barequet
+</a>
+</h2>
+<ul>
+<li><b>On triangulating three-dimensional polygons</b>.<br>
+<a href="//www.cs.technion.ac.il/~barequet/">G. Barequet</a>, 
+<a href="//www.middlebury.edu/~dickerso/">M. Dickerson</a>,
+and D. Eppstein.<br>
+<a href="//portal.acm.org/citation.cfm?id=237234">
+<i>12th ACM Symp. Comp. Geom.,</i> Philadelphia, 1996, pp. 38&ndash;47</a>.<br>
+<a href="//doi.org/10.1016/S0925-7721(98)00005-4">
+<i>Comp. Geom. Theory &amp; Applications</i> 10: 155&ndash;170, 1998</a>.
+<p>
+It is NP-complete, given a simple polygon in 3-space,
+to find a triangulated simply-connected surface (without extra vertices)
+spanning that polygon.  If extra vertices are allowed,
+or the surface may be curved,
+such a surface exists if and only if the polygon is unknotted;
+the complexity of testing knottedness remains open.
+Snoeyink has shown that exponentially many extra vertices may be
+required for a triangulated spanning disk.
+<p>(<a href="/~eppstein/bibs/eppstein.html#On triangulating three-dimensional polygons">BibTeX</a> &ndash;
+<a href="ftp://ftp.cs.technion.ac.il/pub/barequet/papers/3dt-socg96.ps.gz">SCG paper</a> &ndash;
+<a href="ftp://ftp.cs.technion.ac.il/pub/barequet/papers/3dt-cgta.ps.gz">Full paper</a> &ndash;
+<a href="//fano.ics.uci.edu/cites/Document/On-triangulating-three-dimensional-polygons.html">Citations</a> &ndash;
+<a href="//citeseer.ist.psu.edu/barequet96triangulating.html">CiteSeer</a> &ndash;
+<a href="//portal.acm.org/citation.cfm?id=292813">ACM DL</a>)
+<p>
+<li><b>Application Challenges to Computational Geometry</b>.<br>
+The
+<a href="a-cgitf.html">
+Computational Geometry Impact Task Force
+</a>
+Report.<br>
+<a href="//ncstrl.cs.princeton.edu/expand.php3?id=TR-521-96">Tech.
+Rep. TR-521-96</a>, Princeton University, April 1996.<br>
+Advances in Discrete and Computational Geometry &ndash; Proc. 1996 AMS-IMS-SIAM
+Joint Summer Research Conf. Discrete and Computational Geometry: Ten
+Years Later, Contemporary Mathematics 223, Amer. Math. Soc., 1999, pp. 407&ndash;423.
+<p>(<a href="//fano.ics.uci.edu/cites/Document/Application-challenges-to-computational-geometry.html">Citations</a>)
+<p>
+<li><b>Straight skeletons of three-dimensional polyhedra</b>.<br>
+<a href="//www.cs.technion.ac.il/~barequet/">G. Barequet</a>,
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>, and
+<a href="//www.cs.technion.ac.il/people/avaxman/">A. Vaxman</a>.<br>
+<a href="//arxiv.org/abs/0805.0022">arXiv:0805.0022</a>.<br>
+<i>Proc. 16th European Symp. Algorithms</i>, Karlsruhe, Germany,
+2008.<br>
+<a href="//doi.org/10.1007/978-3-540-87744-8_13">Springer, <i>Lecture Notes in Comp. Sci.</i> 5193, 2008, pp. 148&ndash;160.</a>
+<p>
+A <a href="geom-ss.html">straight skeleton</a> is defined by the locus of points crossed by the
+edges and vertices of a polyhedron as it undergoes a continuous
+shrinking process in which the faces move inwards at constant speed. We
+resolve some ambiguities in the definition of these shapes, define
+efficient algorithms for polyhedra with axis-parallel faces, show that
+arbitrary polyhedra have strictly more complicated straight skeletons,
+and report on results from an implementation of our algorithm for
+arbitrary polyhedra.
+<p>
+<li><b>On 2-site Voronoi diagrams under geometric distance functions</b>.<br>
+<a href="//www.cs.technion.ac.il/~barequet/">G. Barequet</a>,
+<a href="//www.middlebury.edu/~dickerso/">M. Dickerson</a>,
+D. Eppstein,
+D. Hodorkovsky, and
+K. Vyatkina.<br>
+<a href="//eurocg11.inf.ethz.ch/abstracts/14.pdf"><i>27th Eur. Worksh. Comp. Geom.</i>, Antoniushaus Morschach,
+Switzerland, 2011, pp. 59&ndash;62</a>.<br>
+<a href="//doi.org/10.1109/ISVD.2011.13"><i>Proc. 8th Int. Symp. Voronoi Diagrams in Science and
+Engineering</i>, Qing Dao, China, 2011, pp. 31&ndash;38</a>.<br>
+<a href="//arxiv.org/abs/1105.4130">arXiv:1105.4130</a>.<br>
+<a href="//doi.org/10.1007/s11390-013-1328-2"><i>J. Computer Science and Technology</i> 28 (2): 267&ndash;277, 2013</a>.
+<p>
+We study the combinatorial complexity of generalized Voronoi diagrams
+that determine the closest two point sites to a query point, where the
+distance from the query point to a pair of sites is a combination of the
+individual distances to the sites and the distance from one site in the
+pair to the other.
+<p>
+<li><b>Stable-matching Voronoi diagrams:
+combinatorial complexity and algorithms</b>.<br>
+<a href="//www.cs.technion.ac.il/~barequet/">G. Barequet</a>,
+D. Eppstein,
+<a href="//www.ics.uci.edu/~goodrich/">M. T. Goodrich</a>, and
+N. Mamano.<br>
+<a href="//arxiv.org/abs/1804.09411">arXiv:1804.09411</a><br>
+<i>Proc. 45th International Colloquium on Automata, Languages, and
+Programming (ICALP 2018)</i>, Prague.<br>
+<a href="//doi.org/10.4230/LIPIcs.ICALP.2018.89">Leibniz International
+Proceedings in Informatics (LIPIcs) 107, pp. 89:1&ndash;89:14</a>.<br>
+<p>
+The stable-matching Voronoi diagram of a collection of point sites in
+the plane, each with a specified area, is a collection of disjoint
+regions of the plane, one for each site and having the specified area,
+so that no pair of a point and a site are closer to each other than to
+the farthest other site and point that they may be matched to.
+We prove nearly-matching upper and lower bounds on the combinatorial
+complexity of these diagrams and provide algorithms that can compute them
+in a polynomial number of primitive steps.
+<p>
+</ul>
+
+<hr><p>
+<a href="auth.html">Co-authors</a> &ndash;
+<a href="/~eppstein/pubs/">Publications</a> &ndash;
+<a href="/~eppstein/">David Eppstein</a> &ndash;
+<a href="/~theory/">Theory Group</a> &ndash;
+<a href="/">Inf. &amp; Comp. Sci.</a> &ndash;
+<a href="//www.uci.edu/">UC Irvine</a>
+<p>
+<small>Semi-automatically <a href="filter.html">filtered</a>
+from a common source file.</small>
+</body></html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

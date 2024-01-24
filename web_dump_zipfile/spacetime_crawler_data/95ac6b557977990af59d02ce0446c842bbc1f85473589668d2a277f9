@@ -1,0 +1,112 @@
+¦Ifinal_url¢DtypeEvaluex,https://www.ics.uci.edu/~sternh/courses/210/Lhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5747¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 20 Dec 2018 20:57:11 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1673-57d7a5fd85187"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 06:29:57 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYs
+<HTML>
+<TITLE>Statistics 210 -- Fall 2018</TITLE>
+
+<PRE>
+<h2>STATISTICS 210 - STATISTICAL METHODS I: LINEAR MODELS
+
+Fall Quarter 2018</h2>
+<h3>Lecture:    Tu Th  9:30am-10:50am in DBH 1300
+
+Discussion: W 1:00pm-1:50pm in DBH 1300
+
+    instructor: <a href="http://www.ics.uci.edu/~sternh">Hal Stern</a>
+        office: 2216 Bren Hall
+         phone: 949-824-1568
+         email: sternh@uci.edu
+  office hours: W 2:00-3:00pm  </h3>
+<hr>
+
+<b>Course documents will be made available here:</b>
+
+<A href="syll210_18.pdf">Syllabus</A>
+<a href="InstallingRandRStudio.pdf">Handout on installing R and RStudio</a>
+Two-sample example (essay creativity/reward) (9/27/18) (<a href="essay.csv">data</a>, <a href="essay.R">R code</a>)
+Example used in R demonstration (10/3/18) (<a href="chicinsur.csv">data</a>, <a href="chicinsur.R">R code</a>)
+<a href="szexample.txt">Paired t-test example (schizophrenia data)</a>
+<a href="senic_anova.R">ANOVA example (SENIC data from HW 2)</a>
+<a href="markdowndemo.Rmd">Sample R Markdown command file (.Rmd)</a>, the <a href="senic.csv">SENIC data</a> it uses and the <a href="markdowndemo.html">results</a>
+<a href="rndmblock.R">Randomized block ANOVA example</a> and the <a href="auditortraining.csv">auditor training data</a> it uses
+<a href="univadmit_regr.R">Simple regression example</a> and the <a href="univadmit.csv">university admissions data</a> it uses
+<a href="oreghomes.R">Multiple regression example</a> and the <a href="homesoreg.csv">Oregon home price data</a> it uses
+<a href="oreghomes.html">Multiple regression example</a> expanded to include code (e.g., simpleanova function) and output
+<a href="realestate.R">Multiple regression coefficient/diagnostics R code</a> and <a href="realestate.csv">real estate data</a> (Appendix C.7 in the text)
+<a href="creatinine_nonlin.R">Nonlinearity example</a> and <a href="creatinine.csv">creatinine clearance data</a>
+<a href="realestate_wls.R">Weighted least squares example</a> (uses <a href="realestate.csv">real estate data</a>)
+<a href="money_corr.R">Correlated errors example</a> and <a href="money.csv">money data</a>
+<a href="copier_lav.R">Non-normal errors (outliers) example</a> and <a href="copier.csv">copier data</a>
+<a href="paragraphdata.R">Two-factor factorial example</a> and <a href="paragraphdata.csv">paragraph memory study data</a> (from HW 9)
+
+
+<b>Homeworks:</b>
+
+<a href="hw1.pdf">Homework 1</a> (assigned 9/27, due 10/4)
+		<a href="ASAStatement.pdf">ASA Statement on p-values</a>
+		<a href="hw1sol.pdf">Solutions to HW 1</a> (posted 10/11)
+<a href="hw2_2018.pdf">Homework 2</a> (assigned 10/4, due 10/11) 
+		<a href="senic.csv">SENIC data (question 4)</a>
+		<a href="hw2sol.pdf">Solutions to HW 2</a> (posted 10/18)
+<a href="hw3_fall2018.pdf">Homework 3</a> (assigned 10/11, due 10/18)
+		<a href="prostate.csv">Prostate data (question 4)</a>
+		<a href="hw3sol.pdf">Solutions to HW 3</a> (posted 10/25)
+<a href="hw4.pdf">Homework 4</a> (assigned 10/18, due 10/25)
+		<a href="weedctrl.csv">Weed Control data (question 2)</a>
+		<a href="hw4sol.pdf">Solutions to HW 4</a> (posted 11/1)
+<a href="hw5.pdf">Homework 5</a> (assigned 10/25, due 11/1)
+		<a href="ischemic.csv">Ischemic disease data (question 2)</a>
+		<a href="hw5sol.pdf">Solutions to HW 5</a> (posted 11/4)
+<a href="hw6.pdf">Homework 6</a> (assigned 11/1, due 11/15)
+		Note 1: Uses same data as HW 5
+		Note 2: Problems 1 & 2 are relevant to 11/6 midterm
+		<a href="hw6sol.pdf">Solutions to HW 6</a> (posted 11/29)
+<a href="hw7.pdf">Homework 7</a> (assigned 11/15, due 11/29)
+		<a href="navdorm.csv">Navy dormitory data (question 3)</a>
+		<a href="hw7sol.pdf">Solutions to HW 7</a> (posted 12/6)
+<a href="hw8.pdf">Homework 8</a> (assigned 11/29, due 12/6)
+		<a href="sexdisc.csv">Salary discrimination data (question 4)</a>
+		<a href="hw8sol.pdf">Solutions to HW 8</a> (posted 12/9)
+<a href="hw9.pdf">Homework 9</a> (posted 12/6 with solutions)
+		<a href="paragraphdata.csv">Paragraph memory study data (question 1)</a>
+		<a href="hw9sol.pdf">Solutions to HW 9</a> (posted 12/6)
+		
+
+<b>Exams:</b>
+
+<a href="oldmt2009.pdf">Sample midterm</a> (from 2009) -- FIGURE CORRECTED
+		<a href="oldmtsol2009.pdf">Solutions</a> to sample midterm (from 2009)
+		<a href="tables.pdf">Tables</a> that I have given out for exams in the past
+
+<a href="mt.pdf">2018 Midterm Exam</a> 
+		<a href="mtsol.pdf">solutions</a>
+		(Note: There were multiple versions of midterm. Same questions on each but the order varied.) 
+
+<a href="oldfinal_da.pdf">Sample final exam - data analysis</a> (from 2007)
+<a href="oldfinal.pdf">Sample final exam</a> (from 2007)
+		<a href="oldfinal_out.pdf">Output accompanying final</a>
+		<a href="oldfinal_sol.pdf">Solutions to sample final</a> (includes some comments on data analysis)
+
+<a href="finda.pdf">2018 Final Exam - data analysis question</a> (handed out 12/6, due 12/13 at 8am)
+		<a href="lung.csv">Smoking and lung function data</a>
+		Note: First column variable name has been modified to Ident for technical reasons.
+<a href="fin.pdf">2018 Final Exam - in-class questions</a> 
+		with <a href="finoutput.pdf">accompanying output</a> 
+		and <a href="finsol.pdf">solutions (including data analysis comments)</a>
+
+
+<b>Lecture Notes:</b>
+
+<A HREF="slides1new.pdf">Initial lecture notes (thru approx 10/18) </A> 
+<A href="slides2new.pdf">Lecture notes - part II (thru approx 11/27) </a>
+<A href="slides3new.pdf">Lecture notes - part III (with bonus material!!) </a>
+
+<hr>
+
+
+
+Return to <A HREF="http://www.ics.uci.edu/~sternh">Hal Stern's homepage</A>
+Return to <A HREF="http://www.stat.uci.edu">UCI Statistics page</A>
+
+
+Last updated December 20, 2018
+</PRE>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

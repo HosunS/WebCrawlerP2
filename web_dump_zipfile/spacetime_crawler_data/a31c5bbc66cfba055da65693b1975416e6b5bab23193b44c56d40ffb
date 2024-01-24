@@ -1,0 +1,90 @@
+¦Ifinal_url¢DtypeEvaluexchttps://account.webofknowledge.com/enwservices/forgottenpassword/index.jsp?product=wok&locale=en_USLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2926¢Ak¢DtypeEvaluePContent-LanguageAv¢DtypeEvalueEen-US¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX)Apache/2.4.25 (Unix) ESTI-Router/4.9.0.11¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:26:27 GMT¢Ak¢DtypeEvalueCP3PAv¢DtypeEvalueX CP="We do not have a p3p policy"¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=UTF-8Kraw_content¢DtypeEvalueYn<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Reset your password</title>
+	<link rel="icon" href="common/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="common/images/favicon.ico" type="image/x-icon" />
+	<link href="common/css/password.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="common/javascript/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="common/javascript/respond.min.js"></script>
+</head>
+<body>
+		<div id="banner">
+		<span id="wosLogo" alt="Web of Science" title="Web of Science">Web of Science</span>
+	    <img id="trLogo" src="common/images/trlogo.png" alt="Clarivate Analytics" title="Clarivate Analytics"/>
+	  </div>
+
+<script>
+			function verificationEmail(){
+
+					var email= document.getElementById("emailAddress").value;
+
+							if(email == null || email == ""){
+
+									alert('Please enter a value for the "E-mail Address" field.');
+									return false;
+							}
+							else {
+									var re = /^(.)+@(.)+(\..+)+$/;
+								    var s1 = new String(email);
+								    if (!s1.match(re)) {
+								        alert("Please enter a complete e-mail address in the form: yourname@yourdomain.com");
+								    	return false;
+								    }
+								}
+								return true;    
+					}
+
+</script>
+<div class="container">
+
+  <div id="pageTitle">
+
+	<h3>Reset your password</h3>
+
+	  <p>Please provide the email address that you used when you signed up for your Clarivate Analytics <a href="http://wokinfo.com/about/productregistration/" target="_blank">product or service.</a></p>
+
+	  <p>We will send you an email that will allow you to reset your password.</p>
+
+	</div>
+
+	
+
+  <div id="form-element">
+
+	    <form action="index.jsp?authToken=&amp;locale=en_US&amp;product=wok" method="post" novalidate>
+
+		<p>
+
+		  	<label id="emailLabel" for="emailAddress">Email address</label>
+
+			<br>	 
+
+		  	<input name="emailAddress" id="emailAddress" type="email" size="40"  maxlength="255" style="display: inline;" />
+
+		  </p>
+
+		  	<input type="hidden" name="actionType" value="requestEmail">
+
+		  <p><input class="button" value="Send verification email" type="Submit" onclick= "return verificationEmail();"/></p>
+
+		 </form>
+
+		 <a id="supportLink" href="https://support.clarivate.com/s/?prodname=Web of Science" target="_blank">Problems resetting your password?</a>
+
+		 	</div>
+
+  </div><div id="foot">
+		<a class="footer-entry" href=https://clarivate.com/ target="_blank">&copy; 2019 Clarivate Analytics</a>
+		
+		<a  class="footer-entry" href=http://wokinfo.com/terms target="_blank">Terms of Use</a>
+		<a  class="footer-entry-last" href=http://ips.clarivate.com/privacy/ target="_blank">Privacy Policy</a>
+		
+	</div>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

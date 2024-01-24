@@ -1,0 +1,90 @@
+�Ifinal_url�DtypeEvaluexchttps://account.webofknowledge.com/enwservices/forgottenpassword/index.jsp?product=wok&locale=zh_TWLhttp_headers�DtypeEvalue��Ak�DtypeEvalueNContent-LengthAv�DtypeEvalueD2894�Ak�DtypeEvaluePContent-LanguageAv�DtypeEvalueEzh-TW�Ak�DtypeEvalueFServerAv�DtypeEvalueX)Apache/2.4.25 (Unix) ESTI-Router/4.9.0.11�Ak�DtypeEvalueJConnectionAv�DtypeEvalueJkeep-alive�Ak�DtypeEvalueDDateAv�DtypeEvalueXSun, 10 Feb 2019 08:25:25 GMT�Ak�DtypeEvalueCP3PAv�DtypeEvalueX CP="We do not have a p3p policy"�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueWtext/html;charset=UTF-8Kraw_content�DtypeEvalueYN<!DOCTYPE html>
+<html>
+	<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=9" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>重設您的密碼</title>
+	<link rel="icon" href="common/images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="common/images/favicon.ico" type="image/x-icon" />
+	<link href="common/css/password.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="common/javascript/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="common/javascript/respond.min.js"></script>
+</head>
+<body>
+		<div id="banner">
+		<span id="wosLogo" alt="Web of Science" title="Web of Science">Web of Science</span>
+	    <img id="trLogo" src="common/images/trlogo.png" alt="Clarivate Analytics" title="Clarivate Analytics"/>
+	  </div>
+
+<script>
+			function verificationEmail(){
+
+					var email= document.getElementById("emailAddress").value;
+
+							if(email == null || email == ""){
+
+									alert('請輸入有效的電子郵件地址。');
+									return false;
+							}
+							else {
+									var re = /^(.)+@(.)+(\..+)+$/;
+								    var s1 = new String(email);
+								    if (!s1.match(re)) {
+								        alert("Please enter a complete e-mail address in the form: yourname@yourdomain.com");
+								    	return false;
+								    }
+								}
+								return true;    
+					}
+
+</script>
+<div class="container">
+
+  <div id="pageTitle">
+
+	<h3>重設您的密碼</h3>
+
+	  <p>請提供您註冊 Clarivate Analytics <a href="http://wokinfo.com/about/productregistration/" target="_blank">產品或服務時所用的電子郵件地址。</a></p>
+
+	  <p>我們將傳送一封電子郵件給您，可讓您重設您的密碼。</p>
+
+	</div>
+
+	
+
+  <div id="form-element">
+
+	    <form action="index.jsp?authToken=&amp;locale=zh_TW&amp;product=wok" method="post" novalidate>
+
+		<p>
+
+		  	<label id="emailLabel" for="emailAddress">電子郵件地址</label>
+
+			<br>	 
+
+		  	<input name="emailAddress" id="emailAddress" type="email" size="40"  maxlength="255" style="display: inline;" />
+
+		  </p>
+
+		  	<input type="hidden" name="actionType" value="requestEmail">
+
+		  <p><input class="button" value="傳送驗證電子郵件" type="Submit" onclick= "return verificationEmail();"/></p>
+
+		 </form>
+
+		 <a id="supportLink" href="https://support.clarivate.com/s/?prodname=Web of Science" target="_blank">重設您的密碼發生問題？</a>
+
+		 	</div>
+
+  </div><div id="foot">
+		<a class="footer-entry" href=https://clarivate.com/ target="_blank">&copy; 2019 Clarivate Analytics</a>
+		
+		<a  class="footer-entry" href=http://wokinfo.com/terms target="_blank">使用規定</a>
+		<a  class="footer-entry-last" href=http://ips.clarivate.com/privacy/ target="_blank">隱私權政策</a>
+		
+	</div>
+
+</body>
+</html>
+Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

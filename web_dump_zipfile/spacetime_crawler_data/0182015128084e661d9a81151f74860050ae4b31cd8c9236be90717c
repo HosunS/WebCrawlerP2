@@ -1,0 +1,69 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC938¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 06 Mar 1998 17:39:53 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"a53-328ba67584c40-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:59:19 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY
+S<HTML>
+<HEAD>
+<TITLE>ICS 1F, Homework 5</TITLE>
+</HEAD>
+<BODY>
+<CENTER>
+<H1>ICS 1F, Homework 5</H1>
+<B>Due Friday, March 6</B>
+</CENTER>
+
+<OL>
+<P><LI>Suppose we have defined two Turing machines, M1 and M2, both of 
+which take input strings composed of the characters "0" and "1".
+M1 accepts strings that match the regular expression 0*1* and that have 
+equal numbers of zeros and ones; for instance, it accepts the empty string, 
+and the strings 01, 0011, 000111, and 00001111.  M2 accepts any string 
+which is a palindrome (reads the same forwards and backwards);
+for instance, it accepts the empty string, and the strings 0, 1, 00, 11,
+000, 010, 101, 111, 0000, 0110, 1001, and 1111.
+
+<P>(a) Show how to translate strings of zeros and ones with a finite state 
+machine, so that M1 accepts a string s if and only if M2 accepts the 
+translation of s.
+
+<P>(b) Does the existence of this translation show that M1 can simulate 
+M2, or that M2 can simulate M1?
+
+<P>(c) Do you think you can find a similar translation in the opposite 
+direction, so that M2 accepts a string s if and only if M1 accepts the 
+translation of s?  Why or why not?
+
+<P>(d) If the reverse translation does not exist, what would that imply 
+about the possibility that M1 or M2 might be universal?
+
+<P><LI>For each of the following sets of pairs of strings,
+either solve the Post correspondence problem or explain why no solution 
+exists.  (Recall that a solution is a sequence of 
+pairs such that the concatenation of the top strings in the pairs is equal 
+to the concatenation of the bottom strings.)
+
+<P><TABLE CELLPADDING=0 CELLSPACING=0>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD ROWSPAN=2>(a)&nbsp;&nbsp;&nbsp;{&nbsp;</TD><TD>11</TD><TD 
+ROWSPAN=2>,&nbsp;&nbsp;&nbsp;&nbsp;</TD><TD>11</TD><TD 
+ROWSPAN=2>,&nbsp;&nbsp;&nbsp;&nbsp;</TD><TD>110</TD><TD ROWSPAN=2>&nbsp;}</TR>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>101</TD><TD>11011</TD><TD>1</TD></TR></TABLE>
+
+<P><TABLE CELLPADDING=0 CELLSPACING=0>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD ROWSPAN=2>(b)&nbsp;&nbsp;&nbsp;{&nbsp;</TD><TD>10</TD><TD 
+ROWSPAN=2>,&nbsp;&nbsp;&nbsp;&nbsp;</TD><TD>10</TD><TD 
+ROWSPAN=2>,&nbsp;&nbsp;&nbsp;&nbsp;</TD><TD>01</TD><TD 
+ROWSPAN=2>,&nbsp;&nbsp;&nbsp;&nbsp;</TD><TD>0</TD><TD ROWSPAN=2>&nbsp;}</TR>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>1</TD><TD>01</TD><TD>10</TD><TD>10</TD></TR></TABLE>
+
+<P><TABLE CELLPADDING=0 CELLSPACING=0>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD ROWSPAN=2>(c)&nbsp;&nbsp;&nbsp;{&nbsp;</TD><TD>1110</TD><TD 
+ROWSPAN=2>,&nbsp;&nbsp;&nbsp;&nbsp;</TD><TD>1</TD><TD ROWSPAN=2>&nbsp;}</TR>
+<TR ALIGN=CENTER VALIGN=CENTER>
+<TD>1</TD><TD>0111</TD></TR></TABLE>
+
+</OL>
+</BODY>
+</HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

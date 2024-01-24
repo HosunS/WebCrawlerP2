@@ -1,0 +1,251 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXI79eed619ece9b34315b1b9f5af9f028a=82bb8766aa94444c0e60201025df5e0c; path=/¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:47:29 GMT¢Ak¢DtypeEvalueCP3PAv¢DtypeEvalueX2CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY5ƒ<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb" dir="ltr" >
+<head>
+  <base href="http://tutors.ics.uci.edu/index.php/79-python-resources/107-while-basics" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="author" content="Super User" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>While loop basics</title>
+  <link href="/templates/beez_20/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/beez_20/css/position.css" type="text/css" media="screen,projection"  />
+  <link rel="stylesheet" href="/templates/beez_20/css/layout.css" type="text/css" media="screen,projection"  />
+  <link rel="stylesheet" href="/templates/beez_20/css/print.css" type="text/css" media="print"  />
+  <link rel="stylesheet" href="/templates/beez_20/css/general.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/beez_20/css/personal.css" type="text/css" />
+  <script src="/media/system/js/mootools-core.js" type="text/javascript"></script>
+  <script src="/media/system/js/core.js" type="text/javascript"></script>
+  <script src="/media/system/js/caption.js" type="text/javascript"></script>
+  <script src="/media/system/js/mootools-more.js" type="text/javascript"></script>
+  <script src="/templates/beez_20/javascript/md_stylechanger.js" type="text/javascript"></script>
+  <script src="/templates/beez_20/javascript/hide.js" type="text/javascript"></script>
+  <script type="text/javascript">
+window.addEvent('load', function() {
+				new JCaption('img.caption');
+			});
+  </script>
+
+
+<!--[if lte IE 6]>
+<link href="/templates/beez_20/css/ieonly.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+#line {
+  width:98% ;
+}
+.logoheader {
+  height:200px;
+}
+#header ul.menu {
+  display:block !important;
+  width:98.2% ;
+}
+</style>
+<![endif]-->
+
+<!--[if IE 7]>
+<link href="/templates/beez_20/css/ie7only.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--<script type="text/javascript">
+  var big ='72%';
+  var small='53%';
+  var altopen='is open';
+  var altclose='is closed';
+  var bildauf='/templates/beez_20/images/plus.png';
+  var bildzu='/templates/beez_20/images/minus.png';
+  var rightopen='Open info';
+  var rightclose='Close info';
+  var fontSizeTitle='Font size';
+  var bigger='Bigger';
+  var reset='Reset';
+  var smaller='Smaller';
+  var biggerTitle='Increase size';
+  var resetTitle='Revert styles to default';
+  var smallerTitle='Decrease size';
+</script>-->
+
+</head>
+
+<body>
+
+<div id="all">
+        <div id="back">
+                <div id="header">
+                                <div class="logoheader">
+                                        <h1 id="logo">
+
+                                                                                                                                                                                                        <span class="header1">
+                                                                                </span></h1>
+                                </div><!-- end logoheader -->
+                                        <ul class="skiplinks">
+                                                <li><a href="#main" class="u2">Skip to content</a></li>
+                                                <li><a href="#nav" class="u2">Jump to main navigation and login</a></li>
+                                                                                    </ul>
+                                        <!--<h2 class="unseen">Nav view search</h2>-->
+                                        <h3 class="unseen">Navigation</h3>
+                                        
+<ul class="menu">
+<li class="item-464 active"><a href="/" >Home</a></li><li class="item-469"><a href="/index.php/becoming-a-tutor" >Becoming a Tutor</a></li><li class="item-470"><a href="/index.php/tutor-resources" >Learning Resources</a></li><li class="item-477"><a href="/index.php/tutor-coordinators" >Tutor Coordinators</a></li><li class="item-476"><a href="/index.php/contact" >Contact Us</a></li></ul>
+
+                                        <div id="line">
+                                        <!-- <div id="fontsize"></div> -->
+                                        <!--<h3 class="unseen">Search</h3> -->
+                                        
+                                        </div> <!-- end line -->
+
+
+                        </div><!-- end header -->
+                        <div id="contentarea">
+                                        <div id="breadcrumbs">
+
+                                                        
+
+                                        </div>
+
+                                        
+
+                                                        <div class="left1 leftbigger" id="nav">
+                                                   <div class="moduletable_menu">
+ <h3><span
+	class="backh"><span class="backh2"><span class="backh3">This Site</span></span></span></h3>
+ 
+<ul class="menu">
+<li class="item-464 active"><a href="/" >Home</a></li><li class="item-469"><a href="/index.php/becoming-a-tutor" >Becoming a Tutor</a></li><li class="item-470"><a href="/index.php/tutor-resources" >Learning Resources</a></li><li class="item-477"><a href="/index.php/tutor-coordinators" >Tutor Coordinators</a></li><li class="item-476"><a href="/index.php/contact" >Contact Us</a></li></ul>
+</div>
+
+                                                                
+                                                                
+
+
+                                                        </div><!-- end navi -->
+               
+                                        <div id="wrapper2" >
+
+                                                <div id="main">
+
+                                                
+                                                        
+<div id="system-message-container">
+</div>
+                                                        <div class="item-page">
+
+	<h2>
+			<a href="/index.php/79-python-resources/107-while-basics">
+		While loop basics</a>
+		</h2>
+
+
+
+
+
+
+
+
+<p><strong>By Huy Pham</strong></p>
+<p>A basic introduction to while loops</p>
+<p>*************************************</p>
+<p style="text-align: justify;">One type of loop you may have encountered in programming</p>
+<p style="text-align: justify;">thus far is the 'while' loop. This loop allows for code</p>
+<p style="text-align: justify;">to be repeatedly excecuted infinitely, until specifically</p>
+<p style="text-align: justify;">told to stop, or if an error occurs. In technical terms, a</p>
+<p style="text-align: justify;">'while' loop is a type of control flow statement that acts as</p>
+<p style="text-align: justify;">a repetitive 'if' conditional statement. Let's take a look at a</p>
+<p style="text-align: justify;">simple 'while' loop, and break down its parts.</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;p&gt;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;pre&gt;&lt;code&gt;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;Stop = False</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;count = 0</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;while Stop == False:</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; count += 1</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; if count = 20:</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print("count is at 20")</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; elif count = 100:</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;print("count is at 100")</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;Stop = True</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;print('Loop has completed at: ', count)</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;/code&gt;&lt;/pre&gt;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;/p&gt;</p>
+<p style="text-align: justify;">This is the basic structure of a 'while' loop. At the top, we</p>
+<p style="text-align: justify;">have defined the variable 'Stop' as 'False', and the variable</p>
+<p style="text-align: justify;">'count' as '0'. Next we initialize a 'while' loop followed by an</p>
+<p style="text-align: justify;">Boolean statement. As long as the Boolean statement 'Stop == False'</p>
+<p style="text-align: justify;">returns 'True', the 'while' loop will continue to execute.</p>
+<p style="text-align: justify;">Next we have the body of the 'while' loop, or the actual code that</p>
+<p style="text-align: justify;">we want to be executed continuously. The first line under the 'while'</p>
+<p style="text-align: justify;">loop simply adds 1 to the variable 'count' each time the loop is</p>
+<p style="text-align: justify;">executed. Following that is a simple 'if', 'elif' conditional statement</p>
+<p style="text-align: justify;">that performs certain actions when the conditions are met.</p>
+<p style="text-align: justify;">Under the 'elif' condition, we print the 'count' and change our</p>
+<p style="text-align: justify;">variable 'Stop' to equal 'True'. This breaks the 'while' loop by</p>
+<p style="text-align: justify;">negating our initial Boolean condition. The code then continues to</p>
+<p style="text-align: justify;">the next line after the end of the 'while' loop.</p>
+<p style="text-align: justify;">Now imagine a 'while' loop whose initial Boolean condition is always</p>
+<p style="text-align: justify;">satisfied. For example:</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;p&gt;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;pre&gt;&lt;code&gt;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;count = 0</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;while True:&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;# 'while True:' will loop continuously</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;# until an error occurs or it is explicitly</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; count += 1&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;# told to stop.</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; print('Line:', count)</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;print('Complete')</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;/code&gt;&lt;/pre&gt;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;/p&gt;</p>
+<p style="text-align: justify;">This code will continuously execute, and there is no variable we can</p>
+<p style="text-align: justify;">change in order to break the initial Boolean condition. Instead, if we</p>
+<p style="text-align: justify;">wanted to remove ourselves from this loop we would have to indicate a</p>
+<p style="text-align: justify;">condition within the loop, wait until that condition is satified, and</p>
+<p style="text-align: justify;">then use a 'break' line.</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;p&gt;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;pre&gt;&lt;code&gt;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;count = 0</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;while True:</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; count += 1</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; print('Line:', count)</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; if count == 50:&nbsp;&nbsp; &nbsp;# Inserting a condition to be met here</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;break&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;# follwed by the breaking of the loop</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;print('Complete')</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;/code&gt;&lt;/pre&gt;</p>
+<p style="text-align: justify;">&nbsp;&nbsp; &nbsp;&lt;/p&gt;</p>
+<p style="text-align: justify;">Once our condition within the loop ('if' statement) is satisfied, Python</p>
+<p style="text-align: justify;">will 'break' our loop, and then continue onto the code after our 'while'</p>
+<p style="text-align: justify;">loop.</p>
+<p style="text-align: justify;">&nbsp;</p> 
+	
+</div>
+
+
+                                                </div><!-- end main -->
+
+                                        </div><!-- end wrapper -->
+
+                                
+                        
+                                <div class="wrap"></div>
+
+                                </div> <!-- end contentarea -->
+
+                        </div><!-- back -->
+
+                </div><!-- all -->
+
+                <div id="footer-outer">
+                        
+                        <div id="footer-sub">
+
+
+                                <div id="footer">
+
+                                        
+                                        
+
+                                </div><!-- end footer -->
+
+                        </div>
+
+                </div>
+        
+        </body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,119 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3215¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:54:19 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"c8f-4da84c39988c0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 11:59:06 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYè/*
+    $Id: duplicate.cc 1107 2007-04-16 23:59:13Z rvernica $
+
+    Copyright (C) 2007 by The Regents of the University of California
+
+    Redistribution of this file is permitted under the terms of the
+    GNU Public License (GPL).
+
+    Date: 01/14/2006
+    Author: Rares Vernica <rvernica@ics.uci.edu>
+*/
+
+#include "duplicate.h"
+
+#include <iostream>
+#include <fstream>
+
+#include "util/ed.h"
+
+using namespace std;
+
+string trim(const string &s)
+{
+  if (s.length()==0)
+    return s;
+  size_t b=s.find_first_not_of(" \t");
+  size_t e=s.find_last_not_of(" \t");
+
+  if (b==string::npos) // No non-spaces
+    return "";
+  return string(s, b, e-b+1);
+}
+
+void EditDistModif(string &sDup, unsigned noChanges)
+{
+  for (unsigned j = 0; j < noChanges && trim(sDup).length() > 2; j++) {
+    // make one change to sDup
+    const unsigned change = rand() % 3;
+    /* change:
+       0 -> inseriton
+       1 -> deletion
+       2 -> substitution
+    */
+    string::size_type pos;
+    switch (change) {
+    case 0: // insertion
+      pos=rand()%sDup.length();
+      sDup.insert(pos, 1, 'a' + static_cast<char>(rand() % ('z'-'a'+1)));
+      break;
+    case 1: // deletion
+      pos=rand()%sDup.length();
+      sDup.erase(pos, 1);
+      break;
+    case 2: // substitutiion
+      pos=rand() % sDup.length();
+      string::size_type pos2 = rand() % sDup.length();
+      // the positons might be equal!
+      const char posChar = sDup[pos];
+      const char pos2Char = sDup[pos2];
+      sDup.replace(pos, 1, 1, pos2Char);
+      sDup.replace(pos2, 1, 1, posChar);
+      break;
+    }
+  }
+}
+
+void insertDuplicates()
+{
+  const unsigned dataSetSize = 100000;
+  const unsigned startSetSize =  5000;
+  int percentDup = 100;
+  // this is not const and not int in order not to 
+  // generate a warining in if bellow
+  const unsigned maxDup = 40; // # of duplicates is from 1 to maxDup
+  const unsigned maxChanges = 4; // # nr of changes if form 1 to maxChanges
+
+  string
+    finName  = "/extra/rvernica0/projects/datasets/imdb/actors.name.100k.txt",
+    foutName = "/extra/rvernica0/projects/datasets/imdb/actors.name.dup.100k.txt";
+
+  ifstream fin(finName.c_str()); 
+  if (!fin) { 
+    cerr << "can't open input file \"" << finName << "\"" << endl;
+    exit(EXIT_FAILURE);
+  }
+  
+  ofstream fout(foutName.c_str());
+  if (!fout) { 
+    cerr << "can't open output file \"" << foutName << "\"" << endl;
+    exit(EXIT_FAILURE);
+  }
+
+  srand(static_cast<unsigned>(time(NULL)));
+
+  cout << "reading records form file \"" << finName << "\"..." << endl;
+  cout << "writing records to   file \"" << foutName << "\"..." << endl;
+  string s;
+  while (getline(fin, s)) {
+    if (rand() % 1000 < 
+        static_cast<int>(static_cast<float>(startSetSize) / 
+                         dataSetSize * 1000)) {
+      // the current string is selected
+      fout << s << endl;
+      // should it be duplicated
+      if (percentDup == 100 ||
+          rand() % 100 < percentDup) {
+        // now generate duplicates
+        const unsigned noDup = 1 + rand() % maxDup;
+        for (unsigned i = 0; i < noDup; i++) {
+          string sDup = s;
+          EditDistModif(sDup, 1 + rand() % maxChanges);
+          fout << trim(sDup) << endl;
+        }
+      }
+    }
+  }
+}
+
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

@@ -1,0 +1,402 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE17568¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXWerkzeug/0.14.1 Python/2.7.14¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 06:24:34 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYD <!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Circadiomics</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+      href="/static/main.css">
+
+
+
+    <!--[if lt IE 9]>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+          <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    <!-- Bootstrap -->
+    <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet"
+      href="/static/main.css">
+
+
+
+  </head>
+  <body>
+    
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="font-size: 16px  !important;"  class="navbar-brand" href="/"><font color="#457ab2">C</font>ircadi<font color="orange">O</font>mics</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="/about">About</a></li>
+        <li><a href="/datasets">Datasets</a></li>
+        <li><a href="/biocycle">BIO_CYCLE</a></li>
+        <li><a href="/biocycle">Metabolic Atlas</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li><a href="/login">Login</a></li>
+        
+        <li><a href="/help">Help</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    
+<div class="container-fluid">
+  <center>
+  <h1 style="font-size:70px"><font color="#457ab2">M</font>etabolic <font color="orange">A</font>tlas</h1>
+  </center>
+  <div class="row top-buffer">
+
+    <div class="col-lg-1 col-network">
+    </div>
+
+  <div class="col-lg-5">
+    <center>
+    <h3>Select a Dataset</h3>
+    <div class="input-group">
+      <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-width: 1px;">Dataset <span class="caret"></span></button>
+              <ul id="dropdown-menu-network" class="dropdown-menu">
+                
+                <li><a>HUMAN U2 OS KRISHNAIAH 2017 OSTEOSARCOMA</a></li>
+                
+                <li><a>MOUSE BROWN ADIPOSE DYAR 2018 HIGH-FAT</a></li>
+                
+                <li><a>MOUSE BROWN ADIPOSE DYAR 2018 NORMAL-CHOW</a></li>
+                
+                <li><a>MOUSE EXERCISE METABOLOME EVENING-EXERCISE</a></li>
+                
+                <li><a>MOUSE EXERCISE METABOLOME EVENING-SEDENTARY</a></li>
+                
+                <li><a>MOUSE EXERCISE METABOLOME MORNING-EXERCISE</a></li>
+                
+                <li><a>MOUSE EXERCISE METABOLOME MORNING-SEDENTARY</a></li>
+                
+                <li><a>MOUSE HEPATOCYTE KRISHNAIAH 2017 WT</a></li>
+                
+                <li><a>MOUSE LIVER ECKEL-MAHAN 2011 CLOCK-KO</a></li>
+                
+                <li><a>MOUSE LIVER ECKEL-MAHAN 2011 WT</a></li>
+                
+                <li><a>MOUSE LIVER KRISHNAIAH 2017 BMAL1-KD</a></li>
+                
+                <li><a>MOUSE LIVER KRISHNAIAH 2017 CRY1-KD</a></li>
+                
+                <li><a>MOUSE LIVER KRISHNAIAH 2017 CRY2-KD</a></li>
+                
+                <li><a>MOUSE LIVER KRISHNAIAH 2017 WT</a></li>
+                
+                <li><a>MOUSE LIVER METABOLOME ECKEL-MAHAN 2013 HIGH-FAT</a></li>
+                
+                <li><a>MOUSE LIVER METABOLOME ECKEL-MAHAN 2013 NORMAL-CHOW</a></li>
+                
+                <li><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT1-KO</a></li>
+                
+                <li><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT1-WT</a></li>
+                
+                <li><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT6-KO</a></li>
+                
+                <li><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT6-WT</a></li>
+                
+                <li><a>MOUSE LIVER METABOLOME MASRI 2016 LUNG-WT</a></li>
+                
+                <li><a>MOUSE LIVER METABOLOME MASRI 2016 TUMOR-BEARING-LUNG</a></li>
+                
+                <li><a>MOUSE LIVER SASSONE METABOLOME KO</a></li>
+                
+                <li><a>MOUSE LIVER SASSONE METABOLOME RE</a></li>
+                
+                <li><a>MOUSE LIVER SASSONE METABOLOME WT</a></li>
+                
+                <li><a>MOUSE MUSCLE DYAR 2018 HIGH-FAT</a></li>
+                
+                <li><a>MOUSE MUSCLE DYAR 2018 NORMAL-CHOW</a></li>
+                
+                <li><a>MOUSE MUSCLE NA 2018 KO</a></li>
+                
+                <li><a>MOUSE MUSCLE NA 2018 WT</a></li>
+                
+                <li><a>MOUSE PREFRONTAL CORTEX NA 2018 HIGH-FAT</a></li>
+                
+                <li><a>MOUSE PREFRONTAL CORTEX NA 2018 NORMAL-CHOW</a></li>
+                
+                <li><a>MOUSE SERUM ABBONDANTE 2016 HIGH-FAT</a></li>
+                
+                <li><a>MOUSE SERUM ABBONDANTE 2016 WT</a></li>
+                
+                <li><a>MOUSE SPERM DYAR 2018 HIGH-FAT</a></li>
+                
+                <li><a>MOUSE SPERM DYAR 2018 NORMAL-CHOW</a></li>
+                
+                <li><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 HIGH-FAT</a></li>
+                
+                <li><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 NORMAL-CHOW</a></li>
+                
+                <li><a>MOUSE WHITE ADIPOSE DYAR 2018 HIGH-FAT</a></li>
+                
+                <li><a>MOUSE WHITE ADIPOSE DYAR 2018 NORMAL-CHOW</a></li>
+                
+              </ul>
+            </div>
+      <input id="selected-metabolome-network" type="text" class="form-control" placeholder="Metabolome Dataset" readonly>
+    </div>
+  </center>
+  </div>
+
+    <!-- <div class="col-lg-4">
+    <h3>Source</h3>
+    <div class="input-group">
+      <div class="input-group-btn">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Source <span class="caret"></span></button>
+              <ul id="dropdown-menu-source" class="dropdown-menu">
+                <li><a>Motifmap</a></li>
+                <li><a>CHiPSeq</a></li>
+                <li><a>RNA-Binding Protein</a></li>
+                <li><a>Combined</a></li>
+              </ul>
+            </div>
+      <input id="selected-source" type="text" class="form-control" placeholder="Motifmap" readonly>
+    </div>
+  </div> -->
+
+  <div class="col-lg-5">
+    <center>
+    <h3>Search by Biochemical Name</h3>
+    <div class="input-group">
+      <input id="metabolite-symbol-network" type="text" class="form-control" placeholder="Compound name" data-provide="typeahead">
+      <span class="input-group-btn">
+        <button id="network-search" class="btn btn-default" type="button" style="border-width: 1px;">Add</button>
+        <button id="reset-graph" class="btn btn-default" type="button" style="border-width: 1px;">Reset</button>
+      </span>
+    </div><!-- /input-group -->
+  </center>
+  </div><!-- /.col-lg-6 -->
+  <div class="col-lg-1 col-network">
+  </div>
+
+</div><!-- /.row -->
+
+<!-- <div class="row top-buffer">
+    <div class="col-lg-12">
+      <center>
+        <button id="only-tfs" class="btn btn-default" type="button">Select Transcription Factors</button>
+        <button id="generate-report" class="btn btn-default" type="button">Print Image</button>
+        <p><font color="#a7e041">In-Phase</font>&#09&#9679&#09<font color="#ad85fc">Anti-Phase</font>&#09&#9679&#09<font color="#272822">Transcription Factor</font>&#09&#9679&#09<font color="#6bd9ee">RNA-Binding Protein</font></p>
+      </center>
+    </div>
+</div> -->
+
+<div class="row top-buffer">
+  <center>
+  <div style="min-height: 25px" class="col-sm-12"><img height="25px" width="25px" id="loading" src="/static/spinner.gif"></div>
+  </center>
+</div>
+
+</div>
+
+
+<div class="container-fluid">
+<div class="row row-network top-buffer">
+    <div class="col-lg-1 col-network">
+    </div>
+    <div class="col-lg-7 col-network">
+    <!-- graph : start -->
+      <div id="network-view"></div>
+    <!-- graph : end -->
+    </div>
+    <div class="col-lg-3">
+        <h3 id="selected-metabolite"></h3>
+        <h5 id="selected-dataset"></h5>
+        <div id="timeseries" style="width: 100%; height: 35%;"></div>
+        <button id="png" class="btn btn-default btn-xs" type="button" style="display: none;">Download</button>
+        <h4 id="metabolite-pvalue"></h4>
+        <h4 id="metabolite-qvalue"></h4>
+        <h4 id="metabolite-amp"></h4>
+        <h4 id="metabolite-period"></h4>
+        <h4 id="metabolite-lag"></h4>
+        <h4 id="metabolite-pathways"></h4>
+        <span id="atlas-toolkit" class="input-group-btn"  style="display: none;">
+          <h3><b>Add Edge</b></h3>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Edge types">
+          <button  id="phase-metabolites" class="btn btn-primary" type="button"><b>Phase</b></button>
+          <button  id="pearson-metabolites" class="btn btn-primary" type="button"><b>Pearson</b></button>
+          <button  id="spearman-metabolites" class="btn btn-primary" type="button"><b>Spearman</b></button>
+          <button  id="dtw-metabolites" class="btn btn-primary" type="button"><b>DTW</b></button>
+          <button  id="dtw-metabolites" class="btn btn-primary" type="button"><b>Pathway</b></button>
+          <button  id="dtw-metabolites" class="btn btn-primary" type="button"><b>Reaction</b></button>
+          </div>
+        </span>
+        <br>
+        <h3 id="edge-toolkit" style="display: none;"><b>Edge Parameters</b></h3>
+        <br>
+        <div id="comparison-drop-down" class="input-group" style="display: none;">
+          <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-width: 1px;">Dataset <span class="caret"></span></button>
+                  <ul id="dropdown-menu-network-comparison" class="dropdown-menu">
+                    
+                    <li><a>HUMAN U2 OS KRISHNAIAH 2017 OSTEOSARCOMA</a></li>
+                    
+                    <li><a>MOUSE BROWN ADIPOSE DYAR 2018 HIGH-FAT</a></li>
+                    
+                    <li><a>MOUSE BROWN ADIPOSE DYAR 2018 NORMAL-CHOW</a></li>
+                    
+                    <li><a>MOUSE EXERCISE METABOLOME EVENING-EXERCISE</a></li>
+                    
+                    <li><a>MOUSE EXERCISE METABOLOME EVENING-SEDENTARY</a></li>
+                    
+                    <li><a>MOUSE EXERCISE METABOLOME MORNING-EXERCISE</a></li>
+                    
+                    <li><a>MOUSE EXERCISE METABOLOME MORNING-SEDENTARY</a></li>
+                    
+                    <li><a>MOUSE HEPATOCYTE KRISHNAIAH 2017 WT</a></li>
+                    
+                    <li><a>MOUSE LIVER ECKEL-MAHAN 2011 CLOCK-KO</a></li>
+                    
+                    <li><a>MOUSE LIVER ECKEL-MAHAN 2011 WT</a></li>
+                    
+                    <li><a>MOUSE LIVER KRISHNAIAH 2017 BMAL1-KD</a></li>
+                    
+                    <li><a>MOUSE LIVER KRISHNAIAH 2017 CRY1-KD</a></li>
+                    
+                    <li><a>MOUSE LIVER KRISHNAIAH 2017 CRY2-KD</a></li>
+                    
+                    <li><a>MOUSE LIVER KRISHNAIAH 2017 WT</a></li>
+                    
+                    <li><a>MOUSE LIVER METABOLOME ECKEL-MAHAN 2013 HIGH-FAT</a></li>
+                    
+                    <li><a>MOUSE LIVER METABOLOME ECKEL-MAHAN 2013 NORMAL-CHOW</a></li>
+                    
+                    <li><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT1-KO</a></li>
+                    
+                    <li><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT1-WT</a></li>
+                    
+                    <li><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT6-KO</a></li>
+                    
+                    <li><a>MOUSE LIVER METABOLOME MASRI 2014 SIRT6-WT</a></li>
+                    
+                    <li><a>MOUSE LIVER METABOLOME MASRI 2016 LUNG-WT</a></li>
+                    
+                    <li><a>MOUSE LIVER METABOLOME MASRI 2016 TUMOR-BEARING-LUNG</a></li>
+                    
+                    <li><a>MOUSE LIVER SASSONE METABOLOME KO</a></li>
+                    
+                    <li><a>MOUSE LIVER SASSONE METABOLOME RE</a></li>
+                    
+                    <li><a>MOUSE LIVER SASSONE METABOLOME WT</a></li>
+                    
+                    <li><a>MOUSE MUSCLE DYAR 2018 HIGH-FAT</a></li>
+                    
+                    <li><a>MOUSE MUSCLE DYAR 2018 NORMAL-CHOW</a></li>
+                    
+                    <li><a>MOUSE MUSCLE NA 2018 KO</a></li>
+                    
+                    <li><a>MOUSE MUSCLE NA 2018 WT</a></li>
+                    
+                    <li><a>MOUSE PREFRONTAL CORTEX NA 2018 HIGH-FAT</a></li>
+                    
+                    <li><a>MOUSE PREFRONTAL CORTEX NA 2018 NORMAL-CHOW</a></li>
+                    
+                    <li><a>MOUSE SERUM ABBONDANTE 2016 HIGH-FAT</a></li>
+                    
+                    <li><a>MOUSE SERUM ABBONDANTE 2016 WT</a></li>
+                    
+                    <li><a>MOUSE SPERM DYAR 2018 HIGH-FAT</a></li>
+                    
+                    <li><a>MOUSE SPERM DYAR 2018 NORMAL-CHOW</a></li>
+                    
+                    <li><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 HIGH-FAT</a></li>
+                    
+                    <li><a>MOUSE SUPRACHIASMATIC NUCLEUS NA 2018 NORMAL-CHOW</a></li>
+                    
+                    <li><a>MOUSE WHITE ADIPOSE DYAR 2018 HIGH-FAT</a></li>
+                    
+                    <li><a>MOUSE WHITE ADIPOSE DYAR 2018 NORMAL-CHOW</a></li>
+                    
+                  </ul>
+                </div>
+          <input id="selected-metabolome-network-comparison" type="text" class="form-control" placeholder="Comparison Dataset" readonly>
+        </div>
+        <br>
+        <div id="comparison-drop-down-pvalue" class="input-group" style="display: none;">
+          <div class="input-group-btn">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border-width: 1px;">P-Value <span class="caret"></span></button>
+                  <ul id="dropdown-menu-pvalue" class="dropdown-menu">
+                    <li><a>0.05</a></li>
+                    <li><a>0.01</a></li>
+                    <li><a>0.001</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+          <input id="atlas-pvalue" type="text" class="form-control" value="0.05" readonly>
+        </div><!-- /input-group -->
+        <br>
+        <div id="comparison-dtw-threshold" class="input-group" style="display: none">
+          <span class="input-group-addon">DTW Threshold</span>
+          <input type="text" class="form-control" value="0.65" aria-label="dtw threshold">
+        </div>
+
+
+        <br>
+        <h5 id="edge-toolkit-desc" style="display: none;"></h5>
+        <span id="display-toolkit" class="input-group-btn"  style="display: none;">
+          <h3><b>Display Tools</b></h3>
+          <div class="btn-group btn-group-sm" role="group" aria-label="Edge types">
+          <a id="download-png" class="btn btn-primary" type="button" download="metabolomic-network.png">PNG</a>
+          <a id="download-jpg" class="btn btn-primary" type="button" download="metabolomic-network.jpg">JPEG</a>
+          </div>
+        </span>
+
+<!--         <span id="atlas-download" class="input-group-btn"  style="display: none;">
+          <h5>Download </h5>
+          <button id="download-png" class="btn btn-default" style="border-width: 1px;" type="button">PNG</button>
+          <button id="download-jpeg" class="btn btn-default" style="border-width: 1px;" type="button">JPEG</button>
+          <button id="download-json" class="btn btn-default" style="border-width: 1px;" type="button">JSON</button>
+        </span>
+ -->
+    </div>
+    <div class="col-lg-1 col-network">
+    </div>
+</div>
+</div>
+<br><br>
+
+<footer><center>&copy; 2018 Institute for Genomics and Bioinformatics - University of California, Irvine</center></footer>
+<br>
+<br>
+
+
+
+    
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="/static/typeahead.min.js"></script>
+<script src="/static/cytoscape.min.js"></script>
+<script src="/static/network.js"></script>
+<script src="/static/main.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

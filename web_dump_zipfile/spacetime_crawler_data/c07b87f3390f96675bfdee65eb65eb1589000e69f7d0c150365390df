@@ -1,0 +1,22 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC438¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 28 Feb 1996 00:25:36 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"2fc-2eec20b6a4000-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 15:14:44 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYü// match - linear time string match algorithm
+// David Eppstein / Columbia University / 29 Jan 1988
+//
+// Only performs exact matches, not comparisons.
+// Caller is responsible for case sensitivity or lack thereof.
+
+class string_match {
+    const char * target;	// string we are looking for
+    int index;			// index into target; how much matched so far
+    int * retarget;		// what to set match to when mismatch found
+
+ public:
+    string_match(const char *, int = -1);
+	// set up to start matching target string given in first arg
+	// second arg is length of string, default whole string up to null
+
+    ~string_match() { delete target; delete retarget; }
+
+    void reset() { index = 0; }
+    int match(char c);		// adds c to match; returns nz if all matched
+};
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

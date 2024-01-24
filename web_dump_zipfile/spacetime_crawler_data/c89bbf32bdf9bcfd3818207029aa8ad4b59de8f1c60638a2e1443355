@@ -1,0 +1,96 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2836¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:40:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"b14-3158ecde4df80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:56:28 GMTKraw_content¢DtypeEvalueY// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// "Tron"-like motorcycle-crashing ray-intersection diagram
+
+#include "Tron.h"
+#include "Random.h"
+#include "Error.h"
+#include <math.h>
+
+static void RandomCircle(double & x, double & y)
+{
+	double arg = RandomDouble() * 3.1415926535898;
+	x = cos(arg);
+	y = sin(arg);
+}
+
+Tron::Tron(unsigned long npoints) : PointSet(npoints), points(new ray[npoints])
+{
+	if (points == 0) error("RayDiagram: unable to allocate points");
+	for (unsigned long i = 0; i < npoints; i++) {
+		RandomCircle(points[i].x, points[i].y);
+		RandomCircle(points[i].dx, points[i].dy);
+		double rate = RandomDouble();
+		points[i].dx /= rate;
+		points[i].dy /= rate;
+		points[i].t = MAX_DISTANCE;
+	}
+}
+
+// find crossing of two rays, return LATER of two crossing times
+// (that's when the crash happens: the second ray crashes into the first).
+double Tron::operator() (point i, point j) {
+	gDistances++;
+	double ti, tj;
+	cross(i,j,ti,tj);
+	if (ti > tj) return ti;
+	else return tj;
+}
+
+// determine time parameter where two lines cross
+// and test whether it corresponds to an actual ray-ray or ray-seg intersection
+void Tron::cross(point i, point j, double & ti, double & tj)
+{
+	// solve system of equations
+	// p[i].x + ti p[i].dx = p[j].x + tj p[j].dx
+	// p[j].y + ti p[i].dy = p[j].y + tj p[j].dy
+	// then test if ti, tj in range [0,p[].t], if not use MAX_DIST
+	double d = points[i].dx * points[j].dy - points[j].dx * points[i].dy;
+	if (d == 0) ti = tj = MAX_DISTANCE;		// parallel rays
+	else {
+		ti = (points[j].dy * (points[j].x - points[i].x) -
+			  points[j].dx * (points[j].y - points[i].y)) / d;
+		tj = (points[i].dy * (points[j].x - points[i].x) -
+			  points[i].dx * (points[j].y - points[i].y)) / d;
+
+		// make sure in range to be a collision
+		if (ti < 0.0 || ti > points[i].t || tj < 0.0 || tj > points[j].t)
+			ti = tj = MAX_DISTANCE;
+		
+		// make sure we don't crash the same motorcycle twice
+		if ((ti >= tj && points[i].t < MAX_DISTANCE) ||
+			(tj >= ti && points[j].t < MAX_DISTANCE)) ti = tj = MAX_DISTANCE;
+	}
+}
+
+// cut ray off at intersection
+void Tron::TerminateRays(point a, point b, ClosestPairs & cp)
+{
+	double ta,tb;
+	cross(a,b,ta,tb);		// find when each ray crosses pt of collision
+	if (ta >= tb) {			// cut short last ray to cross
+		points[a].t = ta;
+		cp.UpdatePoint(a);
+		gDeletions++;
+	}
+	if (tb >= ta) {
+		points[b].t = tb;
+		cp.UpdatePoint(b);
+		gDeletions++;
+	}
+}
+
+double RayDiagram(unsigned long np, PointSet & ps, ClosestPairs & cp)
+{
+	Tron & t = * (Tron *) &ps;
+	double total = 0.0;
+	point a, b;
+	for (;;) {
+		double d = cp(a,b);	// find time of next collision
+		if (d == MAX_DISTANCE) return total;	// no more collisions, return
+		total = d;			// else remember time of last collision for retval
+		t.TerminateRays(a, b, cp);	// turn rays into segments
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

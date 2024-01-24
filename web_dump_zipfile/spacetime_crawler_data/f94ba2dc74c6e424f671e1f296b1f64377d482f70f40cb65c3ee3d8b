@@ -1,0 +1,729 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueå¢Ak¢DtypeEvalueIExpect-CTAv¢DtypeEvalueXWmax-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueY-__cfduid=d5f7bff19ec49e001204cc64f2fc815891549785827; expires=Mon, 10-Feb-20 08:03:47 GMT; path=/; domain=.acm.org; HttpOnly, JSESSIONID=767D6319C394ADC3B25C7F9208A6CBD1.mags; Path=/; Secure; HttpOnly, CFID=18137244; Path=/, CFTOKEN=9fce3b28daedd235%2D60566B43%2D063A%2D3A19%2D1184061AE99B1305; Path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 01 Jan 1970 00:00:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueJcloudflare¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX.no-cache, no-store, must-revalidate, max-age=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:03:48 GMT¢Ak¢DtypeEvalueFCF-RAYAv¢DtypeEvalueT4a6d0faf6e78965c-SJC¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=utf-8Kraw_content¢DtypeEvalueYÄ<!DOCTYPE html>
+<html>
+<head><script type="text/javascript">/* <![CDATA[ */_cf_loadingtexthtml="<img alt=' ' src='/cf_scripts/scripts/ajax/resources/cf/images/loading.gif'/>";
+_cf_contextpath="";
+_cf_ajaxscriptsrc="/cf_scripts/scripts/ajax";
+_cf_jsonprefix='//';
+_cf_websocket_port=0;
+_cf_flash_policy_port=0;
+_cf_clientid='D91F4FBEAAE027E1E671AD27AF2C478F';/* ]]> */</script><script type="text/javascript" src="/cf_scripts/scripts/ajax/messages/cfmessage.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/ajax/package/cfajax.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/cfform.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/masks.js"></script>
+<script type="text/javascript" src="/cf_scripts/scripts/cfformhistory.js"></script>
+<meta charset="UTF-8">
+<title></title>
+<meta name="keywords" content="" />
+<meta name="article_id" content="81337494686" />
+<meta property="og:title" content="Ubiquity: " />
+<meta property="og:description" content="Ubiquity, information everywhere" />
+<meta property="og:image" content="https://ubiquity.acm.org/siteimages/fb_ubiquity_logo.jpg" />
+<link href="https://ubiquity.acm.org/primarytemplatefiles/style.css" rel="stylesheet" type="text/css" />
+<link href="https://ubiquitydev.acm.org/primarytemplatefiles/print.css" type="text/css" rel="stylesheet" media="print" />
+<script language="javascript">
+  function addbookmark(){
+		
+	if (document.all) {
+		window.external.AddFavorite(window.location.href,document.title);
+	} 
+	else {
+		alert("Use CTRL-D to add a bookmark in your Browser.");
+	}
+}
+</script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js-common/base.js" type="text/javascript" language="javascript"></script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js-common/utility.js" type="text/javascript" language="javascript"></script>
+<script src="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/js/cssmenus.js" type="text/javascript" language="javascript"></script>
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/css/horizontal.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/skins/TopNav/menus.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript">/* <![CDATA[ */
+			ColdFusion.Ajax.importTag('CFFORM');
+		/* ]]> */</script>
+<script type="text/javascript">/* <![CDATA[ */
+			if (window.ColdFusion) ColdFusion.required['add_email']=true;
+		/* ]]> */</script>
+<script type="text/javascript">
+<!--
+    _CF_checkCFForm_1 = function(_CF_this)
+    {
+        //reset on submit
+        _CF_error_exists = false;
+        _CF_error_messages = new Array();
+        _CF_error_fields = new Object();
+        _CF_FirstErrorField = null;
+
+        //form element add_email required check
+        if( _CF_hasValue(_CF_this['add_email'], "TEXT", false ) )
+        {
+            //form element add_email 'EMAIL' validation checks
+            if (!_CF_checkEmail(_CF_this['add_email'].value, true))
+            {
+                _CF_onError(_CF_this, "add_email", _CF_this['add_email'].value, "Please enter a properly formatted E-mail address");
+                _CF_error_exists = true;
+            }
+
+        }else {
+            _CF_onError(_CF_this, "add_email", _CF_this['add_email'].value, "Please enter a properly formatted E-mail address");
+            _CF_error_exists = true;
+        }
+
+
+        //display error messages and return success
+        if( _CF_error_exists )
+        {
+            if( _CF_error_messages.length > 0 )
+            {
+                // show alert() message
+                _CF_onErrorAlert(_CF_error_messages);
+                // set focus to first form error, if the field supports js focus().
+                if( _CF_this[_CF_FirstErrorField].type == "text" )
+                { _CF_this[_CF_FirstErrorField].focus(); }
+
+            }
+            return false;
+        }else {
+            return true;
+        }
+    }
+//-->
+</script>
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/css/vertical.css" rel="stylesheet" type="text/css" media="screen" />
+<link href="https://ubiquity.acm.org/actionfiles/dnav/cssmenus/skins/ubiquityleft/menus.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div class="outer-container">
+<div id="masthead">
+<a class="home" href="/"><img src="/siteimages/acm_logo.png" alt="acm - an acm publication" /></a>
+<input type="text" class="st-default-search-input">
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+  
+  _st('install','jqznesdyZkdNbMyHJYXG','2.0.0');
+</script>
+</div>
+<div id="nav-wrapper">
+<div id="nav-container">
+<div class="ktcssmenu savvynav_TopNav"><div class="kthorizontal ktopts_showtimeout_100 ktopts_hidetimeout_100 ktopts_imgreplace_no ktopts_imgreplacestyle_img ktopts_imgdir_ ktopts_imgnames_">
+<ul class='lev1 clearfix'><li class="lev1 pos1 lev1_pos1 first lev1_first"><a href="/index.cfm" class="lev1 pos1 lev1_pos1 first lev1_first" target="_self">HOME</a></li>
+<li class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren"><a href="/about_ubiquity.cfm" class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren" target="_self">OVERVIEW</a><ul class='lev2'><li class="lev2 pos1 lev2_pos1 first lev2_first"><a href="/about_ubiquity.cfm" class="lev2 pos1 lev2_pos1 first lev2_first" target="_self">ABOUT UBIQUITY</a></li>
+<li class="lev2 pos2 lev2_pos2"><a href="/topic_areas.cfm" class="lev2 pos2 lev2_pos2" target="_self">TOPIC AREAS</a></li>
+<li class="lev2 pos3 lev2_pos3"><a href="/meet_the_editors.cfm" class="lev2 pos3 lev2_pos3" target="_self">EDITORIAL BOARD</a></li>
+<li class="lev2 pos4 lev2_pos4"><a href="/submissions.cfm" class="lev2 pos4 lev2_pos4" target="_self">CONTRIBUTE TO UBIQUITY</a></li>
+<li class="lev2 pos5 lev2_pos5"><a href="/organizesymposium.cfm" class="lev2 pos5 lev2_pos5" target="_self">ORGANIZE A SYMPOSIUM</a></li>
+<li class="lev2 pos6 lev2_pos6"><a href="/becomeaneditor.cfm" class="lev2 pos6 lev2_pos6" target="_self">BECOME AN EDITOR</a></li>
+<li class="lev2 pos7 lev2_pos7"><a href="/permissions.cfm" class="lev2 pos7 lev2_pos7" target="_self">PERMISSIONS</a></li>
+<li class="lev2 pos8 lev2_pos8"><a href="/contactus.cfm" class="lev2 pos8 lev2_pos8" target="_self">CONTACT US</a></li>
+<li class="lev2 pos9 lev2_pos9 last lev2_last"><a href="https://www.acm.org" class="lev2 pos9 lev2_pos9 last lev2_last" target="_new">ABOUT ACM</a></li>
+</ul></li>
+<li class="lev1 pos3 lev1_pos3"><a href="https://blog.ubiquity.acm.org/" class="lev1 pos3 lev1_pos3" target="_new"><span class="__cf_email__" data-cfemail="bffdf3f0f8ffeafdf6eeeaf6ebe6">[email&#160;protected]</span></a></li>
+<li class="lev1 pos4 lev1_pos4"><a href="/symposia.cfm" class="lev1 pos4 lev1_pos4" target="_self">SYMPOSIA</a></li>
+<li class="lev1 pos5 lev1_pos5"><a href="/leaders.cfm" class="lev1 pos5 lev1_pos5" target="_self">INNOVATORS</a></li>
+<li class="lev1 pos6 lev1_pos6"><a href="/communication.cfm" class="lev1 pos6 lev1_pos6" target="_self">COMMUNICATION</a></li>
+<li class="lev1 pos7 lev1_pos7"><a href="/pitch.cfm" class="lev1 pos7 lev1_pos7" target="_self">MAKE A PITCH</a></li>
+<li class="lev1 pos8 lev1_pos8 haschildren lev1_haschildren"><a href="/archives.cfm?volume=all" class="lev1 pos8 lev1_pos8 haschildren lev1_haschildren" target="_self">PAST ISSUES</a><ul class='lev2'><li class="lev2 pos10 lev2_pos10"><a href="/interviews.cfm" class="lev2 pos10 lev2_pos10" target="_self">INTERVIEWS</a></li>
+<li class="lev2 pos11 lev2_pos11 last lev2_last"><a href="/commentaries.cfm" class="lev2 pos11 lev2_pos11 last lev2_last" target="_self">COMMENTARIES</a></li>
+</ul></li>
+</ul></div></div>
+</div> </div>
+<div id="content-container">
+<div class="col1" id="leftcolumn">
+<div class="email-alerts">
+<div id="layoutsu" style="">
+<div id="cf_layoutarea14712544696988608" style="overflow:hidden;">
+<div id="emailsignup">
+<strong>EMAIL ALERTS</strong><br />
+Receive email notification of new articles by entering your email address here:
+<form id="email-alerts-signup" action="newssignup.cfm" method="post" target="_blank" onsubmit="return ColdFusion.Ajax.checkForm(this, _CF_checkCFForm_1,'cf_layoutarea14712544696988608')">
+<fieldset>
+<input name="add_email" type="text" class="text" id="add_email" />
+<input class="text" id="list_name" name="list_name" type="hidden" value="UBIQUITY" />
+<button type="submit" value="Sign Up" class="submit">
+<span>SIGN UP</span>
+</button>
+</fieldset>
+<input type='text' style='display:none' /></form>
+</div>
+</div>
+</div>
+</div> <div class="ktcssmenu savvynav_ubiquityleft"><div class="ktvertical ktopts_showtimeout_100 ktopts_hidetimeout_100 ktopts_imgreplace_no ktopts_imgreplacestyle_img ktopts_imgdir_ ktopts_imgnames_">
+<ul class='lev1 clearfix'><li class="lev1 pos1 lev1_pos1 first lev1_first"><a href="https://ubiquity.acm.org/submissions.cfm" class="lev1 pos1 lev1_pos1 first lev1_first" target="_new">CALL FOR CONTRIBUTIONS</a></li>
+<li class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren"><a href="/index.cfm" class="lev1 pos2 lev1_pos2 haschildren lev1_haschildren" target="_self">BROWSE BY...</a><ul class='lev2'><li class="lev2 pos1 lev2_pos1 first lev2_first"><a href="/archives.cfm" class="lev2 pos1 lev2_pos1 first lev2_first" target="_self">VOLUME</a></li>
+<li class="lev2 pos2 lev2_pos2"><a href="/authors.cfm" class="lev2 pos2 lev2_pos2" target="_self">AUTHOR</a></li>
+<li class="lev2 pos3 lev2_pos3"><a href="/commentaries.cfm" class="lev2 pos3 lev2_pos3" target="_self">COMMENTARIES</a></li>
+<li class="lev2 pos4 lev2_pos4"><a href="/interviews.cfm" class="lev2 pos4 lev2_pos4" target="_self">INTERVIEWS</a></li>
+<li class="lev2 pos5 lev2_pos5 haschildren lev2_haschildren"><a href="/collections.cfm" class="lev2 pos5 lev2_pos5 haschildren lev2_haschildren" target="_self">COLLECTIONS</a><ul class='lev3'><li class="lev3 selected pos1 lev3_pos1 first lev3_first"><a href="/collections.cfm?id=81337494686" class="lev3 selected pos1 lev3_pos1 first lev3_first" target="_self">PHILIP YAFEE</a></li>
+<li class="lev3 pos2 lev3_pos2"><a href="/collections.cfm?id=81100132467" class="lev3 pos2 lev3_pos2" target="_self">JOHN STUCKEY</a></li>
+<li class="lev3 pos3 lev3_pos3"><a href="/collections.cfm?id=81100570644" class="lev3 pos3 lev3_pos3" target="_self">ESPEN ANDERSEN</a></li>
+<li class="lev3 pos4 lev3_pos4"><a href="/collections.cfm?id=81100311898" class="lev3 pos4 lev3_pos4" target="_self">GOUTAM KUMAR SAHA</a></li>
+<li class="lev3 pos5 lev3_pos5 last lev3_last"><a href="/aboutcollections.cfm" class="lev3 pos5 lev3_pos5 last lev3_last" target="_self">ABOUT COLLECTIONS</a></li>
+</ul></li></ul></li>
+<li class="lev1 pos3 lev1_pos3 last lev1_last"><a href="https://www.acm.org/publications" class="lev1 pos3 lev1_pos3 last lev1_last" target="_new">BROWSE OTHER ACM PUBLICATIONS</a></li>
+</ul></div></div>
+<ul id="user-actions" class="clearfix">
+<li class="first"><a class="add-website" href="javascript:addbookmark()" )>ADD THIS WEBSITE</a></li>
+<li><a class="rss" href="/feeds/latestitems.xml" target="_blank">RSS FEED</a></li>
+<li><a class="feedback" href="contactus.cfm">SEND US FEEDBACK</a></li>
+<li><a class="print" href="javascript:window.print()">PRINT THIS PAGE</a></li>
+</ul>
+</div>
+<div id="main-content" class="col2">
+<div id="articleListing">
+<div class="excerpt">
+<div class="subheader"><h2>Philip Yaffe Collection</h2></div>
+</div>
+<div id="currentissue">
+<ul>
+<li>
+<a href="article.cfm?id=3310318">Silence is golden, especially when you need to say something important</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+February 2019
+</div>
+<div>
+<p>Each "Communication Corner" essay is self-contained; however, they build on each other. For best results, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay.</p> <p>How well you speak will always be an indicator of how well you know the subject at hand. And while nerves can often lead novice speakers to resort to distracting sounds and placeholders, a second or two of silence will help focus you as well as your audience. In this installment, Philip Yaffe reminds us that silence is golden.</p>
+<a href="index.cfm?page=article&id=3310318">
+<a href="article.cfm?id=3310318">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3298983">How to untie your tongue</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+December 2018
+</div>
+<div>
+<p>Each "Communication Corner" essay is self-contained; however, they build on each other. For best results, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay.</p> <p>Communication is not only the written word. In this installment, Philip Yaffe shares tips and exercises that will help improve your skills in both writing and speaking.</p>
+<a href="index.cfm?page=article&id=3298983">
+<a href="article.cfm?id=3298983">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3289281">The 7% rule revisited</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+October 2018
+</div>
+<div>
+<p>Each "Communication Corner" essay is self-contained; however, they build on each other. For best results, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay.</p> <p>In this installment, Philip Yaffe debunks the myth of verbal versus non-verbal communication.</p>
+<a href="index.cfm?page=article&id=3289281">
+<a href="article.cfm?id=3289281">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3281453">Banishing the fear of public speaking</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+October 2018
+</div>
+<div>
+<p><i>Each "Communication Corner" essay is self-contained; however, they build on each other. For best results, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay.</i></p> <p><i>In this installment, Philip Yaffe explores how speak to a crowd.</i></p>
+<a href="index.cfm?page=article&id=3281453">
+<a href="article.cfm?id=3281453">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3232014">How to make dull information exciting</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+June 2018
+</div>
+<div>
+<p>Each "Communication Corner" essay is self-contained; however, they build on each other. For best results, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay.</p> <p>In this installment, Philip Yaffe explains how to give the reader what they want.</p>
+<a href="index.cfm?page=article&id=3232014">
+<a href="article.cfm?id=3232014">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3209658">First write like you speak, then write like you write</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+April 2018
+</div>
+<div>
+<p>Each "Communication Corner" essay is self-contained; however, they build on each other. For best results, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay.</p> <p>In this installment, Philip Yaffe introduces a two-step plan to create well-written text that will not only impress the reader, but also engage the reader to digest and comprehend new ideas or concepts with ease.</p>
+<a href="index.cfm?page=article&id=3209658">
+<a href="article.cfm?id=3209658">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3178861">Why putting yourself in the mind of your reader is easier---and more challenging---than you might have imagined</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+January 2018
+</div>
+<div>
+<p>Each "Communication Corner" essay is self-contained; however, they build on each other. For best results, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay.</p>
+<a href="index.cfm?page=article&id=3178861">
+<a href="article.cfm?id=3178861">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3152340">How to say what you mean and mean what you say</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+October 2017
+</div>
+<div>
+<p>Each "Communication Corner" essay is self-contained; this week learn how to construct truly effective sentences. For best results, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay.</p>
+<a href="index.cfm?page=article&id=3152340">
+<a href="article.cfm?id=3152340">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3130328">Why writing short sentences may be short-changing your reader</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+August 2017
+</div>
+<div>
+<p>Each "Communication Corner" essay is self-contained; however, they build on each other. For best results, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay.</p>
+<a href="index.cfm?page=article&id=3130328">
+<a href="article.cfm?id=3130328">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3105919">How to improve your writing by standing on your head</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+June 2017
+</div>
+<div>
+<p>Newspapers provide the best examples of clear, concise writing you can find anywhere. Learning how journalists work their magic can help you write better, and it all begins with the "inverted pyramid."</p>
+<a href="index.cfm?page=article&id=3105919">
+<a href="article.cfm?id=3105919">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3063715">The three acid tests of persuasive writing</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+March 2017
+</div>
+<div>
+<p>Each Communication Corner essay is self-contained; however, they build on each other. For best results, if you have not already done so, before reading this essay and doing the exercise, go to the first essay "How an Ugly Duckling Became a Swan," then read each succeeding essay sequentially.</p>
+<a href="index.cfm?page=article&id=3063715">
+<a href="article.cfm?id=3063715">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=3019074">How an Ugly Duckling Became a Swan</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+December 2016
+</div>
+<div>
+<p>The thrust of the Communication Corner is to offer step-by-step advice to help you become a better writer and speaker. This first essay explains how Phillip Yaffe went from being a very poor writer and speaker to being a recognizably good one, almost despite himself.</p>
+<a href="index.cfm?page=article&id=3019074">
+<a href="article.cfm?id=3019074">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=2886415">Science, Reason, and Robots</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+March 2016
+</div>
+<div>
+<p>Science depends on logical reasoning. However, the conclusions one comes to intimately depend on the explicit, or more often implicit, assumptions on which the reasoning is based. Here is an example of how logical reasoning based on different assumptions can lead to diametrically opposite conclusions.</p>
+<a href="index.cfm?page=article&id=2886415">
+<a href="article.cfm?id=2886415">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=2447479">Ubiquity symposium: The science in computer science: the sixteen character traits of science</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+March 2013
+</div>
+<div>
+<p>Phil Yaffe has provided numerous commentaries on various aspects of professional communication, which have helped readers more effectively articulate their own ideas about the future of computing. Here he tells us about how scientists see the world---the "scientific approach," he calls it---because he thinks many non-scientists see the world in a similar way. This realization can lower barriers of communication with scientists.</p>
+<a href="index.cfm?page=article&id=2447479">
+<a href="article.cfm?id=2447479">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=2043156">The 7% rule: fact, fiction, or misunderstanding</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+October 2011
+</div>
+<div>
+<p>In 1971, Albert Mehrabian published a book<i> Silent Messages</i>, in which he discussed his research on non-verbal communication. He concluded that prospects based their assessments of credibility on factors other than the words the salesperson spoke---the prospects studied assigned 55 percent of their weight to the speaker's body language and another 38 percent to the tone and music of their voice. They assigned only 7 percent of their credibility assessment to the salesperson's actual words. Over the years, this limited experiment evolved to a belief that movement and voice coaches would be more valuable to teaching successful communication than speechwriters. In fact, in 2007 Allen Weiner published<i> So Smart But&hellip;</i> discussing how to put this principle to work in organizations.</p>
+<a href="index.cfm?page=article&id=2043156">
+<a href="article.cfm?id=2043156">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1972563">Resurrecting the bullet point: the return of an old and valued friend</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+April 2011
+</div>
+<div>
+<p>PowerPoint has come under attack in recent years. Well known figures such as Edward Tufte have castigated PowerPoint for corrupting minds and numbing thought. Some sociologists have condemned it for luring people away from listening to each other and communicating effectively. Scott Adams (author of Dilbert) often depicts PowerPoint as a facilitator of office dysfunction. From all this, you might think PowerPoint has badly wounded us and our society with its barrage of bullet points.</p>
+<a href="index.cfm?page=article&id=1972563">
+<a href="article.cfm?id=1972563">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1576102">How to Rapidly Improve Speaking Skills</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+March 2009
+</div>
+<div>
+Even as written communication is important, spoken communication has been assuming an increasing role. We are called on to speak in such media as videos, teleconferences, and podcasts. Our ability to speak clearly is as important as our ability to formulate our arguments concisely and clearly. Phil Yaffe, who has provided advice to Ubiquity readers on how to write clearly and concisely, offers advice on how to speak clearly.
+<a href="index.cfm?page=article&id=1576102">
+<a href="article.cfm?id=1576102">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1569802">How to Generate Reader Interest in What You Write</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+June 2009
+</div>
+<div>
+Who has not discovered to their dismay that no one wants to read their most carefully crafted, meritorious, compelling, and passionate writings? Think of all the proposals you have written that no one is interested in. Or the web pages, the blog posts, or the company brochures. Chances are, your failures are linked to an inability to connect with what your readers would be interested in reading. Our intrepid writer about writing, Phil Yaffe, offers some valuable insight into how to get people to read your stuff. He says you need to adopt the "expository writing challenge": that no one is interested in what you are inclined to write, therefore you must discover what they want to read. Only then you can get started, and only then you can succeed.
+<a href="index.cfm?page=article&id=1569802">
+<a href="article.cfm?id=1569802">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1499293">How Crafty Word Order Can Instantly Improve Your Writing</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+January 2009
+</div>
+<div>
+I am usually very reticent about offering writing tips. Unless they are linked to the absolute, inescapable fundamental principles of good writing, such tips are too often poorly applied or misapplied. There is really only a handful of fundamental writing principles. Before this extraordinary tip can be properly revealed, we need to review three of them: 1) clarity, 2) conciseness, and 3) density.
+<a href="index.cfm?page=article&id=1499293">
+<a href="article.cfm?id=1499293">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1459234">The Three Acid Tests of Persuasive Writing</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+September 2008
+</div>
+<div>
+If there are still scientists toiling away with little regard for what others may think of their efforts, it's time to drag them kicking and screaming into the 21st century. In today's interconnected world, what scientists do is of vital concern to the wider public. And vice versa. Just consider the controversies surrounding nuclear energy, genetic engineering, telephone antennas, global warming -- and even the effects of computers on education and individual liberty (surveillance society).
+<a href="index.cfm?page=article&id=1459234">
+<a href="article.cfm?id=1459234">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1455706">Why Does Time Go Faster As We Get Older?</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+October 2008
+</div>
+<div>
+Persons in every age group wonder why time seems to move so much faster than it did in their pasts. It seems as if there is never enough time to get everything done and that the situation only gets worse. Many explanations have been offered for this, but few seem to hit the target as well as Phil Yaffe's explanation. We hope you enjoy and find it provocative. Phil has been a writer and journalist for over four decades and is able to write eloquently about his personal experience with accelerating time.
+<a href="index.cfm?page=article&id=1455706">
+<a href="article.cfm?id=1455706">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1399622">Can Learning Languages Help You Better Understand Science and Technology?</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+July 2008
+</div>
+<div>
+"I was 24 years old when I first began thinking and speaking in a foreign language. It was like being released from prison. I saw my cell door swinging open and my mind flying free. That was over 40 years ago, but the picture is as fresh now as if it had just happened."
+<a href="index.cfm?page=article&id=1399622">
+<a href="article.cfm?id=1399622">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1386855">Making sense of nonsense: writing advice from Lewis Carroll and the Jabberwocky</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+May 2008
+</div>
+<div>
+The absolute, unalterable, incontestable hallmark of a good expository (non-fiction) text is its clarity. Whatever other attributes it may have, if it isn't clear, it isn't good, Likewise, if it isn't good, it isn't clear.
+<a href="index.cfm?page=article&id=1386855">
+<a href="article.cfm?id=1386855">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1378361">Software Columbo: What can a bumbling, inarticulate Los Angeles cop teach us about effective communication?</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+May 2008
+</div>
+<div>
+Decade after decade, perhaps the most popular type of television program has been the detective story, the traditional "who dun it?", presumably because people enjoy being held in suspense. It is therefore instructive to note that one of the most popular TV detective shows of all time has no suspense to it whatsoever.
+<a href="index.cfm?page=article&id=1378361">
+<a href="article.cfm?id=1378361">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1366316">Why visual aids need to be less visual</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+March 2008
+</div>
+<div>
+I was recently invited to a presentation by an accomplished speaker. Needless to say, his speech was well structured, his manner relaxed and confident, his eye contact and body language excellent, etc. He normally spoke without slides, but this time he felt they would reinforce and illuminate his message. They didnt. In fact, they were more of a hindrance than a help.
+<a href="index.cfm?page=article&id=1366316">
+<a href="article.cfm?id=1366316">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1366326">How to use presentation slides to best effect</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+April 2008
+</div>
+<div>
+How often have you attended a presentation where great attention apparently went into designing the slides - and apparently none into how they were used? Or the speaker played with the slides as if to entertain rather than edify?
+<a href="index.cfm?page=article&id=1366326">
+<a href="article.cfm?id=1366326">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1353569">Is a worldwide common language just over the horizon?</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+March 2008
+</div>
+<div>
+I am an American living in Belgium since 1974. Ever since arriving here, I have been hearing the mantra To be a good European, you should learn several languages. Almost from the very beginning, I suggested going the other way: To be a good European, everyone should learn a single common language.
+<a href="index.cfm?page=article&id=1353569">
+<a href="article.cfm?id=1353569">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1345074">Should English be declared the world's official common language?</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+December 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1345074">
+<a href="article.cfm?id=1345074">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1331967">Techniques of persuasive communication: old wisdom in a new package</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+December 2007
+</div>
+<div>
+What you are about to read will probably sound familiar. Indeed, it has been said many times before. However, I believe this formulation is original and may help you better apply it in your marketing communication. I immodestly call it Yaffes Law.
+<a href="index.cfm?page=article&id=1331967">
+<a href="article.cfm?id=1331967">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1295292">Fast-tracking foreign languages: how to meet the linguistic challenges of working abroad</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+September 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1295292">
+<a href="article.cfm?id=1295292">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1295286">How to improve your writing by standing on your head</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+August 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1295286">
+<a href="article.cfm?id=1295286">...</a>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<a href="article.cfm?id=1286954">The mathematics of persuasive communication</a><br />
+<div class="by_line">
+by
+Philip Yaffe
+<br>
+July 2007
+</div>
+<div>
+<a href="index.cfm?page=article&id=1286954">
+<a href="article.cfm?id=1286954">...</a>
+</div>
+</li>
+</ul>
+</div>
+
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-19262769-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</div>
+</div>
+<div id="footer">
+<ul class="clearfix">
+<li>
+<a class="first" href="index.cfm">HOME</a></li>
+<li>
+<a href="commentaries.cfm">COMMENTARIES</a></li>
+<li>
+<a href="interviews.cfm?volume=all">INTERVIEWS</a></li>
+<li>
+<a href="aboutcollections.cfm">COLLECTIONS</a></li>
+<li>
+<a href="symposia.cfm">SYMPOSIA</a></li>
+<li>
+<a href="archives.cfm?volume=all">ARCHIVES</a></li>
+<li>
+<a href="http://blog.acm.org/ubiquity" target="_blank">BLOGS</a></li>
+<li>
+<a href="about_ubiquity.cfm">UBIQUITY</a></li>
+<li>
+<a href="contactus.cfm">CONTACT</a></li>
+<li>
+<a href="https://www.acm.org/join" target="_blank">JOIN ACM</a></li>
+</ul>
+<div style="color: #C1C1C1; padding-top: 1em;">ACM &copy; 2019</div>
+</div>
+</div>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

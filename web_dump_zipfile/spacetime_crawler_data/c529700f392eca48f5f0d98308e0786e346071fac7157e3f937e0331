@@ -1,0 +1,71 @@
+¦Ifinal_url¢DtypeEvaluex&http://cybert.ics.uci.edu/dialog/ppde/Lhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 14:45:55 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueY¼
+
+<p><a href="/help/" class"fg-button ui-state-default ui-corner-all">View Complete Help</a></p>
+
+
+
+
+
+<div class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+  <h2 class="ui-widget-header">Posterior Probability of Differential Expression (Optional)</h2>
+  <p>
+    To interpret the results of a high-throughput data experiments, it
+    is necessary to determine the global false positive and negative
+    levels inherent in the data set being analyzed. We have implemented
+    a mixture-model based method described by Allison <i>et
+    al.</i> <a href="/help/#references">[13]</a> for the
+    computation of the global false positive and negative levels
+    inherent in a DNA microarray experiment <a href="/help/#references">[6,8]</a>.  
+    The basic idea is to consider
+    the <i>p-</i>values as a new data set and to build a probabilistic
+    model for these new data. When control data sets are compared to one
+    another (i.e. no differential gene expression) it is easy to see
+    that the <i>p-</i>values ought to have a uniform distribution
+    between zero and one. In contrast, when data sets from different
+    genotypes or treatment conditions are compared to one another, a
+    non-uniform distribution will be observed in which <i>p-</i>values
+    will tend to cluster more closely to zero than one.
+  </p>
+  <img src="/static/img/p-value.jpg" />
+  <p>
+    <b>Distribution of the <i>p-</i>values from the <i>lrp+</i> vs.
+      <i>lrp-</i> data from Hung et al. </b>
+    <a href="/help/#references">[7]</a>
+  </p>
+  <p>
+    The <i>p-</i>values, based on a regularized t-test distribution, of
+    the 2,758 genes (<i>lrp+</i> vs. <i>lrp-</i>) expressed at value
+    above background in all replicate experiments grouped into 100 bins
+    and plotted against the number of genes in each bin. The dotted line
+    indicates the uniform distribution of <i>p-</i>values under
+    conditions of no differential expression. The fitted model (dashed
+    curve) is a mixture of a beta and the uniform distribution (dotted
+    line).
+  </p>
+  <p>
+    That is, there will be a subset of differentially expressed genes
+    with &quot;significant&quot; <i>p-</i>values.  The computational
+    method of Allison <a href="/help/#references">[13]</a>
+    is used to model this mixture of uniform and non-uniform
+    distributions to determine the probability, PPDE(p) ranging from 0
+    to 1, that any gene at any given <i>p-</i>value is differentially
+    expressed; that is, that it is a member of the uniform (not
+    differentially expressed) or the non-uniform (differentially
+    expressed) distribution. With this method, we can estimate the rates
+    of false positives and false negatives as well as true positives and
+    true negatives at any given <i>p-</i>value threshold,
+    PPDE(&lt;p). In other words, we can obtain a posterior probability
+    of differential expression PPDE(p) value for each gene measurement
+    and a PPDE(&lt;p) value at any given <i>p-</i>value threshold based
+    on the experiment-wide global false positive level and
+    the <i>p-</i>value exhibited by that gene
+    <a href="/help/#references">[6,8]</a>. It should also
+    be emphasized that this information allows us to infer the
+    genome-wide number of genes that are differentially expressed; that
+    is, the fraction of genes in the non-uniform distribution
+    (differentially expressed) and the fraction of genes in the uniform
+    distribution (not differentially expressed).
+  </p>
+</div>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,105 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4168¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 28 Dec 2017 21:49:02 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1048-5616d7bed9f55"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 19:26:46 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYH<meta charset="utf-8" emacsmode="-*- markdown -*-">
+
+	**Update: Next-event estimation on translucent object rendering**
+
+
+# 2017.12.28
+## coating
+![](1228/spoon.png width=\pagewidth) 
+
+## window ice
+![inside](1228/cbox_inside.png width=\pagewidth) ![outside](1228/cbox_outside.png width=\pagewidth) 
+
+
+# 2017.12.25
+## normalmap
+![normalmap](1228/normal_zhaoyun.png width=728) ![](1225/zhaoyun_normal_f.png width=\pagewidth) ![](1225/zhaoyun_normal_b.png width=\pagewidth) 
+
+![](1228/zhaoyun.mp4)
+
+
+# 2017.12.22
+## MIS (pdf = min(pdf_top,pdf_bottom))
+![w/o MIS](1222/mi_layerednormal.png width=\pagewidth) ![MIS in Eval()](1222/mi_layerednormalMIS.png width=\pagewidth) 
+
+## 2 layers
+<!-- ![1 [2 3]](1222/plane_layered.png width=\pagewidth) ![[1 2] 3](1222/plane_layered_switch.png width=\pagewidth)  -->
+![1 [2 3]](1228/plane_layered.png width=\pagewidth) ![[1 2] 3](1228/plane_layered_switch.png width=\pagewidth) 
+
+## normalmap
+![](1222/normal_convex.png width=\pagewidth) ![](1222/normal_concave.png width=\pagewidth) 
+![Ours(20spp)](1222/plane_layered_convex.png width=\pagewidth) ![](1222/plane_layered_concave.png width=\pagewidth) 
+![Mitsuba(2000spp)](1225/plane_medium_convex.png width=\pagewidth) ![](1225/plane_medium_concave.png width=\pagewidth) 
+![Mitsuba_modified(2000spp)](1228/plane_medium_convex_gy.png width=\pagewidth) ![](1228/plane_medium_concave_gy.png width=\pagewidth) 
+
+
+
+# 2017.12.21
+## Zhaoyun (Albedo perturbation)
+![](1221/zhaoyun6.png width=\pagewidth) ![](1221/zhaoyun8.png width=\pagewidth) 
+
+## MIS (pdf = max(pdf_top,pdf_bottom))
+![w/o MIS](1221/mi_layerednormal.png width=\pagewidth) ![MIS in Eval()](1221/mi_layerednormalMIS.png width=\pagewidth) 
+
+
+# 2017.12.19
+## Zhaoyun
+![Front light](1219/zhaoyun4.png width=\pagewidth) ![Back light](1219/zhaoyun5.png width=\pagewidth) 
+
+## normal shading
+![Normalmap](1219/normal.png width=\pagewidth) ![Reference](1219/plane_medium.png width=\pagewidth) ![Ours](1219/plane_layered.png width=\pagewidth) 
+
+
+# 2017.12.07
+## Change shading normal
+
+![](1207/shadingnormal2.mp4)
+
+## Shading normal on top surface
+![](1207/mi_layerednormalmap_top.png width=\pagewidth) ![](1207/normal.jpg width=200) 
+
+
+## Shading normal on bottom surface
+![](1207/mi_layerednormalmap_bottom.png width=\pagewidth) ![](1207/normal.jpg width=200) 
+
+# 2017.12.04
+## Texture mapping for $\alpha_t$,$\alpha_b$,$\sigma_t$,$albedo$,$g$ 
+![](1207/mi_layeredtexture_leaf.png width=\pagewidth) 
+
+# 2017.11.29
+## Texture interpolation
+![](1129/mi_layeredbitmap.png width=\pagewidth) ![](1129/mi_layeredtexture.png width=\pagewidth) 
+
+# 2017.11.13
+## Transmittance validation
+![Ref:100spp](1114/plane_medium_spp100.png width=\pagewidth) ![Ref:10000spp](1114/plane_medium_spp10000.png width=\pagewidth) ![Layered:100spp](1114/plane_layered_spp100.png width=\pagewidth)
+
+# 2017.10.31 
+## Reflectance validation
+![Ref:100spp](1031/plane_medium_spp100.png width=\pagewidth) ![Ref:10000spp](1031/plane_medium_spp10000.png width=\pagewidth) ![Layered:100spp](1031/plane_layered_spp100.png width=\pagewidth)
+
+
+
+End.
+
+<a href="report.html" target="_blank">Report</a>
+
+<a href="update_20170830.html" target="_blank">Old Doc1</a>
+
+<a href="update_20170915.html" target="_blank">Old Doc2</a>
+
+<a href="update_20171219.html" target="_blank">Old Doc3</a>
+
+<!--- 
+  Markdeep & image comparison library - probably no need to change anything below
+-->
+<style class="fallback">body{visibility:hidden;white-space:pre;font-family:monospace}</style><script src="resources/markdeep.min.js"></script><script>window.alreadyProcessedMarkdeep||(document.body.style.visibility="visible")</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="resources/jquery.event.move.js"></script>
+<script src="resources/jquery.twentytwenty.js"></script>
+<link href="resources/offcanvas.css" rel="stylesheet">
+<link href="resources/twentytwenty.css" rel="stylesheet" type="text/css" />
+<script>
+$(window).load(function(){$(".twentytwenty-container").twentytwenty({default_offset_pct: 0.5});});
+</script>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

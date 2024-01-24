@@ -1,0 +1,26 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC533¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 02 Nov 2015 23:00:48 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"215-52396bf790800"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 20:02:47 GMTKraw_content¢DtypeEvalueYimport connectK.CKPlayer;
+import connectK.BoardModel;
+import java.awt.Point;
+
+public class DummyAI extends CKPlayer {
+
+	public DummyAI(byte player, BoardModel state) {
+		super(player, state);
+		teamName = "DummyAI";
+	}
+
+	@Override
+	public Point getMove(BoardModel state) {
+		for(int i=0; i<state.getWidth(); ++i)
+			for(int j=0; j<state.getHeight(); ++j)
+				if(state.getSpace(i, j) == 0)
+					return new Point(i,j);
+		return null;
+	}
+
+	@Override
+	public Point getMove(BoardModel state, int deadline) {
+		return getMove(state);
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

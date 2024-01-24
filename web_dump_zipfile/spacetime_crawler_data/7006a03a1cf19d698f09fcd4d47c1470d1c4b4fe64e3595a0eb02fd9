@@ -1,0 +1,109 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4003¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 12 Nov 2018 23:16:25 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"fa3-57a7fe3d51c93"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 01:02:16 GMTKraw_content¢DtypeEvalueY£
+library(tidyverse)
+datainput <- read_csv("H://HAL/Courses/Stat210//realestate.csv")
+homes <- data.frame(datainput)
+
+# id_num = id number of house
+# price = list/sale price (in 000s)
+# sqft = area of house in sq ft
+# bedrms = number of bedrooms
+# baths = number of bathrooms (1/2 bath = 0.1)
+# ac = 1 if house has air conditioning
+# garage = capacity of garage
+# pool = 1 if swimming pool
+# year = year of construction
+# quality = measure of quality on 3 point scale (1 is best)
+# house style = qualitative indicator of architectural style
+# lotsize = lot size in sq ft
+# highway = 1 if near highway
+
+# plot data
+plot(homes$sqft, homes$price, type="p")
+plot(homes$lotsize, homes$price, type="p")
+plot(homes$baths, homes$price, type="p")
+plot(homes$bedrms, homes$price, type="p")
+plot(homes$ac, homes$price, type="p")
+plot(homes$garage, homes$price, type="p")
+plot(homes$pool, homes$price, type="p")
+plot(homes$year, homes$price, type="p")
+plot(homes$quality, homes$price, type="p")
+plot(homes$style, homes$price, type="p")
+plot(homes$highway, homes$price, type="p")
+
+t(apply(homes,2,describe))
+round(cor(homes[,2:12]),2)
+
+# fit regression
+homes_reg <- lm(price ~ sqft + lotsize + baths + bedrms + ac + garage + pool + quality + highway + year, data=homes)
+anova(homes_reg)
+simpleanova(homes_reg)
+summary(homes_reg)
+# obtain and save standardized residuals and other diagnostics
+homes_reg$stdres <- rstandard(homes_reg)
+homes_reg$dffits <- dffits(homes_reg)
+homes_reg$cooksd <- cooks.distance(homes_reg)
+homes_reg$hat <- hatvalues(homes_reg)
+homes_reg$studentr <- rstudent(homes_reg)
+
+
+# check assumptions - residuals vs x, residuals vs fitted values
+ggplot() +
+  geom_point(data=homes, mapping=aes(x=homes_reg$fitted.values, y=homes_reg$stdres)) 
+
+# check assumptions - normality
+qqnorm(homes_reg$stdres)
+
+# redo with log(price)
+homes$logprice <- log(homes$price)
+plot(homes$sqft, homes$logprice, type="p")
+plot(homes$lotsize, homes$logprice, type="p")
+plot(homes$baths, homes$logprice, type="p")
+plot(homes$bedrms, homes$logprice, type="p")
+plot(homes$ac, homes$logprice, type="p")
+plot(homes$garage, homes$logprice, type="p")
+plot(homes$pool, homes$logprice, type="p")
+plot(homes$year, homes$logprice, type="p")
+plot(homes$quality, homes$logprice, type="p")
+plot(homes$style, homes$logprice, type="p")
+plot(homes$highway, homes$logprice, type="p")
+
+t(apply(homes,2,describe))
+round(cor(homes[,c(2,14,3:13)]),2)
+
+# fit regression
+homes_reg <- lm(logprice ~ sqft + bedrms + baths + ac + garage + pool + year + quality + lotsize + highway, data=homes)
+anova(homes_reg)
+simpleanova(homes_reg)
+summary(homes_reg)
+
+# obtain and save standardized residuals and other diagnostics
+homes_reg$stdres <- rstandard(homes_reg)
+homes_reg$dffits <- dffits(homes_reg)
+homes_reg$cooksd <- cooks.distance(homes_reg)
+homes_reg$hat <- hatvalues(homes_reg)
+homes_reg$studentr <- rstudent(homes_reg)
+
+# check assumptions - residuals vs x, residuals vs fitted values
+ggplot() +
+  geom_point(data=homes, mapping=aes(x=homes_reg$fitted.values, y=homes_reg$stdres)) 
+
+# check assumptions - normality
+qqnorm(homes_reg$stdres)
+
+# identify and examine cases with interesting diagnostic values
+diagnostics <- cbind(homes$logprice,homes_reg$fitted.values,homes_reg$residuals,homes_reg$stdres,homes_reg$studentr,homes_reg$cooksd,homes_reg$hat)
+dimnames(diagnostics)[[2]] <- c("y","yhat","resid","stdres","studentr","cooksd","hat")
+diagnostics[1:5,]
+diagnostics[c(11,24,104,58,59,63,64,65,66,68,81),]
+homes[c(11,24,104,58,59,63,64,65,66,68,81),]
+
+# examine standardized coefficients
+sdx <- sqrt(apply(homes,2,var))[c(3:10,12:13)]
+homes_reg$stdcoeff <- homes_reg$coefficients[-1]*sdx/sqrt(var(homes$logprice))
+cbind(homes_reg$coefficients[-1],homes_reg$stdcoeff)
+
+# understanding marginal correlations vs regression coefficients
+cor(homes$logprice, homes$bedrms)
+sum(homes_reg$stdcoeff*cor(homes$bedrms,homes[,c(3:10,12:13)]))
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

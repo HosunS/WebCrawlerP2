@@ -1,0 +1,64 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2056¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 18 Oct 2018 16:17:18 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"808-578831ee87615"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 21:11:36 GMTKraw_content¢DtypeEvalueY#  SAMPLE R PROGRAM FOR SAT COACHING STUDY COMPUTATIONS
+#  (for more details on the approach see 
+#   Section 5.5 of Bayesian Data Analysis - Gelman et al)
+
+# real data
+n <- 8
+y <- c(28, 8, -3, 7, -1, 1, 18, 12)
+sd <- c(15, 10, 16, 11, 9, 11, 10, 18)
+v <- sd*sd
+
+# set up grid for tau
+tau <- c(0:2500)/50
+tausq <- tau*tau
+
+ptau.y <- rep(0,2501)
+vmu <- rep(0,2501)
+muhat <- rep(0,2501)
+
+# compute p(tau | y) for grid
+for (i in (1:2501)) {
+vmu[i] <- 1 / sum(1/(tausq[i] + v))
+muhat[i] <- vmu[i] * sum(y/(tausq[i] + v)) 
+
+ptau.y[i] <- sqrt(vmu[i]*prod(1/(tausq[i] + v)))*prod(exp(-0.5*(y-muhat[i])*
+          (y-muhat[i])/(tausq[i]+v))) 
+}
+
+# sample taus
+ptau.y <- ptau.y/(sum(ptau.y))
+tausamp <- sample(tau,1000,replace=T,prob=ptau.y)
+tausamp <- sort(tausamp)
+tauid <- tausamp*50 + 1
+
+# generate mu's and then theta's from normal distributions
+x <- matrix(rnorm((n+2)*1000,0,1),1000,n+2)
+dimnames(x)[[2]] <- c("tau","mu",rep("theta",n))
+x[,1] <- tausamp
+x[,2] <- muhat[tauid] + sqrt(vmu[tauid])*x[,2]
+for (j in (1:n)) {
+     thmean <- (y[j]*x[,1]*x[,1] + v[j]*x[,2]) / (v[j] + x[,1]*x[,1])
+     thsd <- sqrt(v[j]*x[,1]*x[,1] / (v[j] + x[,1]*x[,1]))
+     x[,j+2] <- thmean + thsd*x[,j+2]
+     }
+
+# make plots (as in handout)
+plot(tau,ptau.y,type="l",main="p(tau | y) = marginal posterior density of tau")
+hist(x[,2],breaks=c(-30:40),xlab="mu",yaxt="n",
+main="Posterior distribution of mu (1000 draws)")
+
+apply(x,2,describe)
+
+# plots of posterior means and standard deviations
+plot(c(0,50),c(-10,30),type="n",xlab="tau",ylab="estimated treatment effect")
+for (j in (1:n)) {lines(tau,(y[j]*tau*tau + v[j]*muhat)/(tau*tau + v[j]),type="l")}
+
+plot(c(0,50),c(0,20),type="n",xlab="tau",ylab="posterior std deviation")
+for (j in (1:n)) {lines(tau,sqrt(v[j]*tau*tau / (v[j]+ tau*tau)))}
+       
+# R stan computation    
+library(rstan)         
+schools.dat <- list(J=n, y=y, sigma=sd)
+stan_fit <- stan(file="H://HAL//Courses//Stat225//normnorm.stan", data=schools.dat ,iter=1000,chains=4)
+print(stan_fit)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,28 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC554¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 18 Oct 2018 22:06:24 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"22a-57887ff645de1"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:49:43 GMTKraw_content¢DtypeEvalueY*// informative prior (beta for mu; logn for eta)
+data {
+    int<lower=0> N;
+    int<lower=0> n[N];
+    int<lower=0> y[N];
+    real<lower=0> a;
+    real<lower=0> b;
+    real<lower=0> v;
+    real m;
+}
+parameters {
+    real<lower=0,upper=1> mu;
+    real<lower=0> eta;
+    real<lower=0,upper=1> theta[N];
+}
+transformed parameters {
+    real<lower=0> alpha;
+    real<lower=0> beta;
+    alpha = eta*mu;
+    beta = eta*(1-mu);
+}
+model {
+  mu ~ beta(a,b);
+  eta ~ lognormal(m,v);
+  theta ~ beta(alpha,beta);
+  y ~ binomial(n,theta);
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

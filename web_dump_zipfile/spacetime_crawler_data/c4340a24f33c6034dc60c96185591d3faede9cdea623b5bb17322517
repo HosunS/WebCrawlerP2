@@ -1,0 +1,293 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE11878¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 May 2013 12:51:10 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"2e66-4dc2045812b80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 20:37:34 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY.f			Useful Functions/Methods
+
+
+This turns out to be an abbreviated lecture in which we will cover some odds
+and ends about functions (and methods, which are just functions called a
+special way), ending a new way (lambda) to define new/simple functions.
+
+------------------------------------------------------------------------------
+
+min and max
+
+I mentioned when I wrote the min function that the builtins class defines the
+min and max functions to operate on any numeric types, and they can have any
+number of parameters. So, we can call min(a,b,c,d) to compute the minimum of
+these for values. When we learn about tuples (right after lists) we will learn
+that these functions are defined similiarly, as follows (notice the different
+operators in the if statement):
+
+def min(*args):	     	 	      def max(*args):
+    answer = args[0]		          answer = args[0]
+    for x in args[1:]:			  for x in args[1:]:
+        if x < answer:			      if x > answer:
+            answer = x			          answer = x
+    return answer    			  return answer
+
+type
+
+Calling type(object) returns a reference to the type of the object (we can
+specify the object as a literal, variable, or more complicated expression.
+Of what use is knowing the type of something? One simple use is to check whether
+the type of the argument bound to a parameter is correct. For example, in the
+factorial function we might check the type and value of the parameter, to
+ensure is it a positive integer by the following assertions.
+
+def factorial(n)
+    assert type(n) is int, 'factorial: n is wrong type"' + str(type(n))
+    assert n >= 0, 'factorial: n('+str(n)+') is negative
+    ....
+
+Recall that the "is" operator means the same object as (a stronger version of
+==). So we are checking whether the type(n) is the same object as int. Recall
+that the names of the types are objects, just as values of specific types are
+object. With the type function we can compute the type of an an object.
+
+We can combine these into one assertion
+
+    assert type(n) is int and n>=0, 'factorial: n('+str(n)+') is illegal
+
+When we print type(...) it prints as follows (although typically we don't print
+these results: we check them with "is"):
+
+print(type('a'))  	     <class 'str'>
+print(type(1))		     <class 'int'>
+print(type(1.))		     <class 'float'>
+print(type(True))	     <class 'bool'>
+
+
+eval and exec
+
+We features eval and exec in the previouis lecture. Both have arguments that
+are strings that should represent a valid expression/statement respectively.
+Calling eval returns the result of the expression, calling exec executes the
+statement. Simple examples are
+
+exec('x = 1')
+print(eval('x'))
+
+which prints 1. These functions are powerful when the strings are external to
+the program: when we prompt the user for this information or read the
+information froma file.
+
+------------------------------------------------------------------------------
+
+String Formatting and the .format method
+
+There is a format method that we can use simply as follows:
+
+'For {scores} students: average = {percent}%'.format(scores=10,percent=83)
+
+which evaluates to the following string (which we can bind to a name or print)
+
+'For 10 students: average = 83%'
+
+So primarily, the format method creates a new string from an old one, by
+replacing the names in {} with the string representations for the values named
+as parameters in the () following the method name: format.
+
+It is easy to exxperiment in the Python interpreter with this method. For
+example, what if the name in the {} does not appear as a parameter in the (),
+either we omit it or misspell it.
+
+'Trying {foo}'.format(fo=2)
+
+Python raises the KeyError exception, saying it cannot find foo. But,
+
+'Trying {foo}'.format(foo=2,more=3)
+
+works without any errors (producing 'Trying 2') so having missing parameters is
+an error, but having extra ones in the format method call is not.
+
+The real power of the format method comes with other information that we can
+put inside {}. First we will show some examples, and then the complete form of
+all possibilities. If we write a : after the name in the {}, the information
+that comes after it, in the {}, specifies information about how to turn the
+value into the replacment string. First lets look at some information for
+replacing integers.
+
+'A{a: >5d}Z'.format(a=100) is 'A  100Z'
+   After the : space (for fill)
+               >     (for align, to right)
+               5     (for width)
+	       d     (for type, decimal integer)
+
+Because the width is 5 and the number is 3 digits, is puts 2 spaces (the fill)
+before the number aligning it to the right, to get a width of 5. Instead we
+could write
+
+'A{a: <5d}Z'.format(a=100) is 'A100  Z'
+   After the : space (for fill)
+               <     (for align, to left)
+               5     (for width)
+	       d     (for type, decimal integer)
+
+Here the alignment is to the left. We can change the alignment back to right,
+and change the fill to a X
+
+'A{a:X>5d}Z'.format(a=100) is 'AXX100Z'
+   After the : 0     (for fill)
+               >     (for align, to right)
+               5     (for width)
+	       d     (for type, decimal integer)
+
+Now instead of two spaces in front of the right aligned number, it uses a fill
+of X and puts two Xs before the number.
+
+Note that we can omit the fill (the default is space) and the align (default is
+right for numbers), and the width (the default is the number of characters it
+takes) and simplify the above to
+
+'A{a:d}Z'.format(a=100) is 'A100Z'
+
+In fact, we can default everything, which for an int has the following effect.
+
+'A{a}Z'.format(a=100) is 'A100Z'
+
+For printing big numbers if we can omit the width (it will take as much space
+as it needs) and instead put a comma after where the width specification would
+go (right before the d).
+
+'A{a:,d}Z'.format(a=1000000000) is 'A1,000,000,000Z'
+
+or write this just as
+
+'A{a:,}Z'.format(a=1000000000) is 'A1,000,000,000Z'
+
+So, we can specify what we need and default the rest. Sometime adding the
+information explicitly, instead of defaulting, makes for easier reading,
+sometimes not. Examine the EBNF below and experiment with formatting integer
+and strings.
+
+Now lets look at information for replacing floats. Most is the same, but after
+the width we can specify the precision: how many decimal digits to print.
+Remember that printing a decimal point takes up one space in the width.
+
+'A{a: >8.2f}Z'.format(a=100.12345) is 'A  100.12Z'
+   After the : space (for fill)
+               >     (for align, to right)
+               8     (for width)
+               2     (for precision)
+               f     (for type, float)
+
+Note that the float takes up a width of 6 charaters total: 100 (3 characters)
+. (1 character), 12 (2 characters) so two chacaters in the width are filled in
+with a space.
+
+Note that we can omit the fill (the default is space) and the align (default is
+right for numbers) and simplify the above to.
+
+'A{a:8.2f}Z'.format(a=100.12345) is 'A  100.12Z'
+
+If we omit the width, as with integers it uses the smallest width with no fill.
+
+ 'A{a:.2f}Z'.format(a=100.12345) is 'A100.12Z'
+
+Formating is useful for separating the form of the resulting string from all
+the values that get substituted into it. When we print float values, we often
+want to control the number of digits after the decimal point. You will need to
+use format to nicely print the float values in the tennis program. Finally,
+just like all function calls with named parameters, their arguments can be
+arbirary expressions.
+
+score_sum      = 7543
+student_count  =   87
+'Average = {avg:5.2f}'.format(avg=score_sum/student_count*100)
+  is 'Average = 86.70'
+
+Here is the full EBNF for using format, from Python documentation. Notice the
+most common replacement_field looks like
+
+  {field_name:format_spec}
+
+and format_spec has many options (many of which we discussed above), with each
+having a reasonable default value if omitted.
+
+EBNF for the .format method:
+
+replacement_field ::=  "{" [field_name] ["!" conversion] [":" format_spec] "}"
+field_name        ::=  arg_name ("." attribute_name | "[" element_index "]")*
+arg_name          ::=  [identifier | integer]
+attribute_name    ::=  identifier
+element_index     ::=  integer | index_string
+index_string      ::=  <any source character except "]"> +
+conversion        ::=  "r" | "s" | "a"
+format_spec       ::=  <described in the next section>
+
+format_spec ::=  [[fill]align][sign][#][0][width][,][.precision][type]
+fill        ::=  <a character other than '{' or '}'>
+align       ::=  "<" | ">" | "=" | "^"
+sign        ::=  "+" | "-" | " "
+width       ::=  integer
+precision   ::=  integer
+type        ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" | "o" | "s" | "x" | "X" | "%"
+
+fill	    : one character to use as fill
+align	    : < (left), > (right), = (after sign), ^ (center)
+sign	    : + (all signed), - (negative signed), space (space for +)
+#	    : Alternative form (different for different types)
+0	    : equivalent to fill 0, alignment =
+width	    : width of field for value
+,	    : use comma separators in big numbers
+.precision  : digits displayed after decimal point
+type	    : d (...integer), f/e (...fixed/exponent) floating point
+
+------------------------------------------------------------------------------
+
+lambda
+
+There are times when it is useful to write a tiny function and not even name
+it. For example, suppose we want to prompt for numbers that are at least 10.
+We can write the function
+
+def at_least_ten(x):
+    return x >= 10
+
+and then pass this function as an argument when we call prompt.for_int.
+
+x = prompt.for_int('Enter x', is_legal=at_least_ten)
+
+Now the prompt.for_int function will keep prompting until the user enters a
+value 10 or bigger.
+
+So, given our ability to write our own functions, we can now write functions
+that work with all the prompt methods, to "tell them" which values to allow.
+The functions that prompt.for_int expects to use must have one int parameter
+and return a bool value, as does the function at_leat_ten we wrote above.
+
+If functions we write for this purpose are really useful, we might put them in
+a library (like the predicate.py module). But the above function doesn't seem
+so useful. We will now learn a simpler way to write and use such simple
+functions. Lambda  is a Greek letter, used in work done by mathematicians in the
+1930, having to do with the logical foundations of mathematics, but which became
+very important when computers were invented.
+
+Instead of the call above, we can rewrite it as
+
+x = prompt.for_int('Enter x', is_legal=(lambda x : x >= 10)
+
+So, we don't have to write a function at all; we can use a lambda to specify
+a function. We will see more uses of lambda periodically throughout the 30s
+series. For now we'll just say that we can write a lambda where-ever we might
+write the name of a function. Lambdas look like
+
+  lambda parameters: expression-using-parameters
+
+which I often write (as I did for conditional expressions)
+
+  (lambda parameters: expression-using-parameters)
+
+to show its beginning and end easily. Note that these are no return statements
+in lambdas, only an expression. There is an implicit return inside each lambda,
+so we we cannot write complicated statements (i.e., control structures) inside
+lambdas. So, they are useful for only simple functions. In fact, writing
+
+f = (lambda parameters: expression-using-parameters)
+
+is equivalent to writing
+
+def f(parameters):
+    return expression-using-parameters
+
+But in the case of calling prompt.for_int, we do not even have to name the
+lambda, we just pass it along to the is_legal.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,11 @@
+¦Ifinal_url¢DtypeEvaluex;https://www.ics.uci.edu/~wjohnson/BIDA/Ch9/DugongWBcode.txtLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC268¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Sep 2010 01:22:06 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"10c-48fa1399deb80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 30 Jan 2019 23:19:54 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYmodel{
+  for(i in 1:n){
+   y[i] ~ dnorm(theta[i], tau)
+   theta[i] <- beta[1] - exp(beta[2] + beta[3]*xstd[i])
+  }
+  beta[1:3] ~ dmnorm(beta0[1:3],prec0[1:3,1:3])
+  tau ~ dgamma(a,b)
+  for(i in 1:K){
+   thetastar[i] <- beta[1] - exp(beta[2] + beta[3]*xstar[i])
+  }
+ } Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

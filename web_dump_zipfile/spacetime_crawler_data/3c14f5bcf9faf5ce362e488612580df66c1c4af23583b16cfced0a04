@@ -1,0 +1,210 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7675¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 25 Oct 2001 23:51:05 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1dfb-3912e81f56c40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 20:54:39 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYû<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 2.0 Mac">
+  <TITLE>announcements</TITLE>
+</HEAD>
+<BODY>
+
+<H1 ALIGN=CENTER>Announcements</H1>
+<UL>
+
+<H3>Announcement 10: 10/25/01</H3>
+
+The midterm will be in class on Monday Oct. 29th at 12noon. 
+Exam will be 1h:20min and covers material in lectures 1-3 and labs 1 - 3 only.
+Closed book, 2 sheets of notes, double sided, any font size and density.
+<br>
+Review session is on Friday from 2-3 in rm CS 180.
+<br>
+<H3>Announcement 9: 10/9/01</H3>
+
+The following errors were found in the lab notes:
+<br>
+<LI> page10:show running config  should be changed to "show running-config"
+<LI> page13:Router1# ip route 10.0.1.0 255.255.255.0 10.0.2.1 should be changed
+to "Router1# ip route 10.0.1.0 255.255.255.0 10.0.2.22"
+<LI> page15:
+<br>
+route add -net 10.0.3.0 netmask 255.255.255.0 gw 10.0.2.61 should be changed to
+" route add -net 10.0.3.0 netmask 255.255.255.0 gw 10.0.1.61"
+<br>
+route add -net 10.0.0.0 netmask 255.255.0.0   gw 10.0.2.71 should be changed to
+" route add -net 10.0.0.0 netmask 255.255.0.0   gw 10.0.1.71"
+<br>
+route add -host 10.0.3.9 gw 10.0.2.81 should be changed to " route add -host 10.
+0.3.9 gw 10.0.1.81"
+</LI>
+<br>
+Here is some additional information related to using floppies (that will be incl
+uded in future lab notes).
+
+<LI>If you are working on different hosts collecting data, you can save locally
+and then ftp the data to the machine that has the floppy installed in it. this c
+an also be used to get around the floppy drive problem, if one machine has a bro
+ken floppy drive, then just use another machine's floppy drive and ftp the files
+ over when you are done.
+<br>
+<LI> besides using mtools you can also mount the floppy drive:
+<br>
+Mounting a Floppy:
+<br>
+In order to use floppy disks, insert an MS-DOS formatted floppy disk into the fl
+oppy disk drive. Then mount the floppy using the commands:
+<br>
+mount  /mnt/floppy
+<br>
+This command will mount a floppy disk under the directory: /mnt. Then use /mnt/f
+loppy to refer to your floppy, e.g.:
+<br>
+ls /mnt/floppy
+<br>
+To manipulate the files in the floppy disk, use the same Unix commands as usual
+(e.g. to copy a file into the floppy disk,
+<br>
+cp file_name    /mnt/floppy
+<br>
+When you are done, you need to un mount the floppy using the following command:
+<br>
+umount  /mnt/floppy
+<br>
+This will un mount the floppy. If you eject before un mounting you will crash the machine!
+</LI>
+</UL>
+<br>
+
+<H3>Announcement 1: 9/24/01</H3>
+
+<UL>
+Welcome to ICS 243B. I hope you enjoy this course and learn alot! If you have any problems please feel free to come and talk to me. If my office hours are not convenient to meet then send me an email to schedule a time that you are available. Always remember to check this page for important announcements. 
+</UL>
+
+<H3>Announcement 2: 9/24/01</H3>
+
+
+<UL>
+<LI>Class Room has been changed from ET 204 -> CS 180
+<LI>Class Hours: 12noon - 2:50pm
+<LI>Course Text: Should be available in bookstore. Text has been placed on reserve in library.
+</LI>
+</UL>
+<H3>Announcement 3: 9/24/01</H3>
+
+<UL>
+I have made some changes to the Lab Notes and posted the new corrected version. If you follow the link you will get the updated notes. Note one important change:
+http://www.tcpip-lab.net/links/man.cgi was changed to:
+http://www.tcpip-lab.net/links/manual.html  <br>
+Also, Part 1 exercise 2, the cross over cables are not working with all the 
+PC interface cards. So please skip the cross over cable exercise and just 
+connect all hosts using the hub  only.
+
+</UL>
+
+<H3>Announcement 4: </H3>
+
+<UL>
+I just wanted to inform you of the following schedule so that you can plan your
+quarter accordingly:
+
+<LI>Sept 24th Week 1: Intro, lab due Oct 1st
+<LI>Oct 1st, Week 2: Single Segment Networks, lab due Oct 8th
+<LI>Oct 8th, Week 3: Multi Segment Networks (1/2), lab due Oct 15th
+<LI>Oct 15th, Week 4: Multi Segment Networks (2/2), lab due Oct 22nd
+<LI>Oct 22nd, Week 5: Dynamic Routing, lab due Nov 5th
+<LI>Oct 29th, Week 6: Midterm (covers lab 1,2, and 3 only)
+<LI>Nov 5th, Week 7: Link Layer Switching, lab due Nov 19th
+<LI>Nov 12th, Week 8: day off
+<LI>Nov 19th, Week 9: Transport Layer, lab due Nov 26th
+<LI>Nov 26th, Week 10: Review
+<LI>Dec 3rd, Finals week: Final (covers lab 1,2,3,4,5,6)
+</LI>
+<br>
+Veterans day is on Nov 11th and we have the 12th off. I will teach all you need
+to know for the lab on link layer switching on Nov 5th and you have two weeks to
+ complete the lab.
+<br>
+If you have any questions, please get back to me.
+Remember that this coming monday is the last day for dropping the course.
+I will add students on Tuesday, I will need the emails of all students
+on the waiting list that are still interested in adding the course.
+Please give me your email on monday during class time
+(either morning or afternoon).
+<br>
+Note that the file /etc/sysconfig/static-routes may not exist or maybe empty.
+It depends on the way the machine was congfigured.
+<br>
+Also note that if you reboot, the mouse may not work, if that happens, pullout
+the cable and plug it back in again.
+<br>
+Floppy drives on Host1 station2, station3, station4 and station5 are not working
+.
+Floppy drive on Host4 station5 is not working either.
+Floppy drive on Host2 station1 is not working either.
+These will be replaced soon. Please report any other h/w problems to myself and
+Koji.
+<br>
+You also need to use one of the available editors: vi, emacs, pico or kedit to
+open files on the PCs for copying and pasting.
+<br>
+Copying files to your floppy, note that you need to specify the drive name - a:
+<br>
+e.g. mcopy sourcefile a:newfile
+<br>
+</UL>
+<H3>Announcement 5: 9/28/01 </H3>
+
+<UL>
+The notes for lab2 are on the web and a copy was given to the engineering copy c
+enter.
+<br>
+Please skip Exercise
+5 Lab Report question #3. I have not covered that and should have removed it fro
+m the notes. Sorry for that. If you have included it that is OK, I will accept w
+hatever anwers you provided.
+<br>
+</UL>
+<UL>
+
+<H3>Announcement 6: 10/2/01 </H3>
+
+There were some errors with URLs in prelab and I clarified some exercises based
+on feedback I got from some of your colleagues. Had mostly to do with resetting
+the interfaces at the end of the exercises when IP addresses/netmasks were chang
+ed during the exercise. Also, in exercise 9, for the lab report, the login and p
+asswd are in different packets not in the same packet. The sentence in the lab r
+eport is not clear on that.
+<br>
+</UL>
+<UL>
+
+<H3>Announcement 7: 10/3/01 </H3>
+
+I placed a handout version of the lecture notes on the website. Please go to the bottom of the outline page to find the URL for the handouts. 6 slides per page.
+<br>
+</UL>
+<UL>
+
+<H3>Announcement 8: 10/8/01 </H3>
+
+<LI> You only need to do part 1 of lab3 this week. The lab report is required bu
+t the prelab is optional this week. You will have to hand the prelab in the foll
+owing week if you do not get it in this week. In otherwords, we need to get a Pr
+e Lab for lab 3 from you, attach it to either this week's lab report (part 1) or
+ next week's lab report (parts 2-5).
+<LI> Please include only the necessary output, do not print (ie save) "Details"
+for your Ethereal output if not needed. Only include parts of the output in your
+ report that are relevant to the questions that are being asked, and if it is sa
+ys include output make sure you have captured only what is needed and not more.
+
+<LI> For lab 2 we will ignore this since I did not specify it more clearly, but
+for the remaining labs I will ask the graders to penalize excessive output.
+<LI> From now on, new announcements will be placed at the top of this page.
+</LI>
+<br>
+</UL>
+<UL>
+<BR>
+<BR>
+</UL>
+</BODY>
+</HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

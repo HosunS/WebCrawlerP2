@@ -1,0 +1,120 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4220¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX0Apache/2.2.3 (CentOS) mod_perl/2.0.4 Perl/v5.8.8¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 12 Feb 2018 21:26:58 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"58f4a26-107c-5650a89b56c80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 03:31:14 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueY|<html>
+<head>
+<title>
+IGB@UCI :: SELECTpro Overview
+</title>
+</head>
+<body>
+<div align="left">
+  <TABLE width="100%" summary=title>
+    <TBODY>
+    <TD width="53%" height="59"><div align="left">
+          <h1><div align="left"><font color="#0000AA">SELECTpro</font></div></h1>
+          <h3><font color="#0000AA">
+          effective protein model selection using a structure-based energy function resistant to blunders
+          </font></h3>
+          </div>
+      </TD>
+    <TD width="47%">
+    <div align="center">
+    <a href="http://www.igb.uci.edu/"><img src="NewIGB_logo.gif" border=0></A>
+        </div></TD>
+  </TABLE>
+</div>
+<hr>
+<table width = "100%">
+<tr>
+<td width = "25%" align="center"><a href="index.html">Submission Page</a></td>
+<td width = "25%" align="center"><a href="selectpro_overview.html">Overview</a></td>
+<td width = "25%" align="center"><a href="selectpro_help.html">Help/Example</a></td>
+<td width = "25%" align="center"><a href="selectpro_download.html">Download</a></td>
+</tr>
+</table>
+<hr>
+<!-- header only above here-->
+<h3>SELECTpro Overview</h3>
+SELECTpro takes the amino acid sequence of a protein and the backbone coordinates of
+a corresponding model as input and calculates a total pseudo-energy. This value is
+normalized to the 0.0 to 1.0 confidence scale. Higher scores indicate higher relative
+model confidence.
+
+<h3>Individual Energy Terms</h3>
+The SELECTpro energy function is a linear combination of independently calculated energy terms.
+The abbreviations for the energy terms used here are also used in the results email.
+<br><br>
+
+<b><i>Reduced Representation Energy Terms</i></b><br>
+The following terms are calculated from the backbone plus centroid representation of the protein structure.
+<ul>
+<li>
+<b>PRED-SS_h:</b> Residues predicted as helical by SSpro are penalized if they do not helical in the model.
+</li>
+<li>
+<b>PRED-SS_s:</b> Residues predicted as beta by SSpro are penalized if they are not beta in the model.
+</li>
+<li>
+<b>PRED-ACC:</b> Residues predicted as buried by ACCpro are penalized if they are exposed in the model, and residues predicted as exposed are penalized if they are buried.
+</li>
+<li>
+<b>PRED-CM_fn:</b> Pairs of residues predicted to be in contact by CMAPpro are penalized if they are not in contact in the model.
+</li>
+<li>
+<b>PRED-CM_fp:</b> Pairs of residues predicted not to be in contact by CMAPpro are penalized if they are in contact in the model.
+</li>
+<li>
+<b>BETA:</b> Residues of beta-strands predicted by SSpro are penalized if they do not pair with other beta residues.
+</li>
+<li>
+<b>BB-REP:</b> Repulsive term for explicitly represented atoms in model.
+</li>
+<li>
+<b>CT-REP:</b> Repulsive term for side-chain centroids.
+</li>
+<li>
+<b>STAT-ENV:</b> Statistical term for burial/exposure of residue side-chains.
+</li>
+<li>
+<b>STAT-PW-CI:</b> Context independent statistical term for pairwise interactions.
+</li>
+<li>
+<b>STAT-PW-CD:</b> Context dependent statistical term for pairwise interactions.
+</li>
+<li>
+<b>ROG:</b> Models with radius of gyration higher than the value estimated from the sequence length are penalized.
+</li>
+</ul>
+<b><i>All-Heavy Atom Representation Energy Terms</i></b><br>
+The following terms are calculated from the all-heavy atom model respresentation.
+<ul>
+<li>
+<b>SC-HB:</b> Side-chain donor and acceptor atoms that are at least partially buried are penalized if they fail to make hydrogen bonds.
+</li>
+<li>
+<b>LEN-JONES:</b> van der Waals forces with a damped repulsive effect.
+</li>
+<li>
+<b>SOLVATION:</b> Implicit solvation model.
+</li>
+<li>
+<b>ELECTRO:</b> Repulsion and attraction of charged groups.
+</li>
+</ul>
+
+
+<!-- footer only below here-->
+<hr>
+	<br>
+Contact SELECTpro Administrator:<a href="mailto:cmagnan@ics.uci.edu"><i>cmagnan@ics.uci.edu</a></i><br>
+	<br>
+      <i><a href="http://www.igb.uci.edu/">Institute for Genomics and Bioinformatics</a></i><br>
+	  <i><a href="http://www.ics.uci.edu">School of Information & Computer Science</a></i><br>
+      <i><a href="http://www.uci.edu/">University of California Irvine</a></i> </i></i>
+	<br> <br>
+
+
+</body>
+</html>
+
+
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

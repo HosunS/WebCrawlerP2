@@ -1,0 +1,152 @@
+¦Ifinal_url¢DtypeEvaluexDhttps://www.ics.uci.edu/~jacobson/ics45J/CodeSamples/ChatClient.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD6282¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 10 Sep 2012 23:46:46 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"188a-4c961920a4580"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 08:27:14 GMTKraw_content¢DtypeEvalueYŠ// ChatClient.java
+// Code Example: A Simple Socket Client and Server
+//
+// Written by Alex Thornton for Informatics 45 Spring 2010
+// Minor revisions by Norman Jacobson for ICS 45J Spring 2012 
+
+// This is client program. It first asks the user to
+// specify the address and port of the server that it 
+// should connect to. It then establishes a connection 
+// and begins participating in our simple protocol.  Each 
+// time it needs to send a message, it asks the user to
+// specify that message.
+//
+// This program makes no realistic attempt to handle any 
+// of the problems that might arise while it runs (for 
+// example, what to do if a connection cannot be made). It 
+// just lets any input/output exception be thrown, which will 
+// cause the program to throw and exception and exit. This is 
+// obviously not the way to write a robust program, but it 
+// does let us provide a simple demonstration of using sockets
+// without obscuring the basics with all the "clutter" needed
+// for a program that would actually be used. (And, yes, there
+// are other ways to do this, using different methods from the
+// Socket and other, related libraries.)
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.util.Scanner;
+
+
+public class ChatClient
+{
+	public static void main(String[] args)
+	throws IOException
+	{
+		// We'll need a scanner so that we can read input from the
+		// keyboard, which Java knows as System.in:
+		Scanner consoleIn = new Scanner(System.in);
+
+		// WAsk the user to specify the address and port that this
+		// client should connect to; notice we assume the user
+		// makes no typing mistakes--again, unrealistic for a 
+		// "real" program
+		System.out.print("Address: ");
+		String address = consoleIn.nextLine();
+		
+		System.out.print("Port: ");
+		int port = Integer.parseInt(consoleIn.nextLine());
+
+		System.out.println("Connecting");
+
+		// When you create a Socket object and specify its address (a string)
+		// and port (an integer), it immediately attempts to establish a
+		// connection to that location.  Note that this operation, as well as
+		// any other that uses the socket, may block indefinitely -- your
+		// program has no control over how long it will take to establish
+		// the connection, and it will just sit and wait until the connection
+		// is made.  (It may eventually give up -- or "time out," as it's more
+		// commonly called.  But it may be a while.)  This can be a problem,
+		// especially for programs with a graphical user interface that needs
+		// to remain responsive.  There are ways to handle this problem, but
+		// again, to keep this example simple, we don't handle here.
+		Socket socket = new Socket(address, port);
+		System.out.println("Connected to port " + port + " at " + address);
+
+		// We're connected!  That means we now have an "input stream",
+		// where data from the other machine will arrive, and an "output
+		// stream", where we'll put data that we want to be sent to the
+		// other machine.
+		//
+		// To make the streams simpler to use, since our protocol is all
+		// based on text, we'll wrap them with objects that let us
+		// handle text input and output simply.  Note that these are the
+		// same kinds of objects (Scanners and PrintWriters) that you can
+		// use to simplify reading and writing text to and from files:  
+		// A nice thing about Scanners and PrintWriters is that they
+		// don't care where they get their input or where they write their
+		// output; this makes them flexible enough to use in many scenarios,
+		// including this one.
+		//
+		// One important little detail here: When we create the PrintWriter,
+		// we give it two parameters: the stream (which it will "wrap,"
+		// by sending any data to it when it's written) and a boolean
+		// "true" value.  The second parameter is called "autoFlush"
+		// and "true" turns it on. When data is written to a PrintWriter
+		// it is ordinarily "buffered," which means that it's held in
+		// memory until there's a whole bunch of it; only then is it
+		// written out to the target (say, a file). This is wise, because
+		// writing output is slow. Unfortunately, this will play havoc
+		// with our protocol, because we want to be absolutely sure that
+		// any data we place into the PrintWriter is immediately placed
+		// into the socket's output stream, so that it will immediately
+		// be sent to the server. (This is important: remember that the
+		// server is sitting and waiting -- indefinitely! -- for our data
+		// to show up.)
+		Scanner socketIn = new Scanner(socket.getInputStream());
+		PrintWriter socketOut = new PrintWriter(socket.getOutputStream(), true);
+		
+		System.out.println("Input and output streams established");
+
+		// Each time through the loop, we're reading a message from the console
+		// and sending it to the server, then reading the response from the
+		// socket and printing it to the console.  The ends when one side
+		// sends an empty message or response, in which case we send an
+		// empty string to the other side (to make sure that it also knows
+		// to stop) and then bail out of this loop.
+		
+		boolean done = false;
+		do
+		{
+			// Ask for a message; we're done if none is given
+			System.out.print("Message: ");
+
+			String message = consoleIn.nextLine();
+			
+			if (message.length() == 0)
+			{
+				System.out.println("Ending conversation");
+				socketOut.println("");
+				done = true;
+			}
+			
+			if (!done)
+			{
+				// THere was a message; send it to the server
+				socketOut.println(message);
+
+				// At this point, the program will pause indefinitely, waiting for
+				// the response to arrive from the server.
+
+				String response = socketIn.nextLine();
+			
+				// We got a response. If it's non-empty, go back
+				// and get another message; if it is empty, we're done
+				if (response.length() != 0)
+					System.out.println("Response: " + response);
+				else
+				{
+					System.out.println("Server ended conversation");
+					done = true;
+				}
+			}
+		} while (!done);
+		
+		System.out.println("Closing connection");
+
+		// It's important that we close the socket when we're done with it.
+		socket.close();
+	}
+}
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

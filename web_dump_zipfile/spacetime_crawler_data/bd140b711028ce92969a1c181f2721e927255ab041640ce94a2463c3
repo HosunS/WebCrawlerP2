@@ -1,0 +1,231 @@
+�Ifinal_url�DtypeLhttp_headers�DtypeEvalue��Ak�DtypeEvalueDDateAv�DtypeEvalueXThu, 07 Feb 2019 05:03:32 GMT�Ak�DtypeEvalueQTransfer-EncodingAv�DtypeEvalueGchunked�Ak�DtypeEvalueJConnectionAv�DtypeEvalueEclose�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueXtext/html; charset=UTF-8�Ak�DtypeEvalueFServerAv�DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content�DtypeEvalueYN�
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Gas sensor arrays in open sampling settings Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Gas sensor arrays in open sampling settings Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/00251/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="#"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: The dataset contains 18000 time-series recordings from a chemical detection platform at six different locations in a wind tunnel facility in response to ten high-priority chemical gaseous substances</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate, Time-Series</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">18000</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Computer</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">1950000</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2013-06-05</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">35333</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Creators:<br>Alexander Vergara (<u>vergara <b>'@'</b> ucsd.edu</u>)<br>BioCircutis Institute<br>University of California San Diego<br>San Diego, California, USA<br><br>Donors of the Dataset:<br>Alexander Vergara (<u>vergara <b>'@'</b> ucsd.edu</u>)<br>Jordi Fonollosa (<u>fonollosa <b>'@'</b> ucsd.edu</u>)<br>Marco Trincavelli (<u>marco.trincavelli <b>'@'</b> oru.se</u>)<br>Nikolai F. Rulkov (<u>nrulkov <b>'@'</b> ucsd.edu</u>)<br>Ramon Huerta (<u>rhuerta <b>'@'</b> ucsd.edu</u>)</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">Number of instances:<br>18000 times-series measurements recorded from a 72 metal-oxide gas sensor array-based chemical detection platform.<br><br>Number of attributes (features):<br>Every measurement contains 72 time-series recorded during 260 seconds, each collected at a sample rate of 100 Hz (samples per second).<br>The dataset also contains time, temperature, and relative humidity information.<br>The resulting dataset ultimately includes 75-time series composed of 26000 points.<br><br><br>This archive contains 18000 time-series measurement recordings collected from an array of 72 metal-oxide gas sensors composing our sensing platform utilized in the detection and identification of potentially-dangerous chemical gaseous substances under complex environmental conditions, as reported in the related manuscript below. Our primary purpose is to make our dataset freely accessible on-line to the chemo-sensing research and machine-learning communities, as well as other interested communities, to develop alternative competitive solutions relevant to gas-sensing discrimination tasks in open sampling settings, such as the one pursued here, and/or navigation. The dataset can be used exclusively for research purposes. Commercial purposes are fully excluded.<br>The dataset was gathered from December 2010 to April 2012 (16 months) in a 2.5 m Ã— 1.2 m Ã— 0.4 m wind tunnel research test-bed facility situated at the BioCircuits Institute, University of California San Diego. Specifically, our customized research facility, endowed with a computer-supervised mass flow controller-based continuous flow gas delivery system, operates in a propulsion open-cycle mode, by continuously drawing external turbulent air into and throughout the tunnel and exhausting it back to the outside, thereby creating a relatively less-turbulent airflow moving downstream towards the end of the test field, which is particularly suitable for applications pursued here that require injecting chemical poisonous agents or explosive mixtures because it prevents saturation. Being operated by a fully computerized environment â€”controlled by a player/stage robot server software programmed on C++ on a PC fitted with the appropriate serial cardsâ€” and with minimum human intervention, the designed wind tunnel test-bed facility provides versatility for releasing the chemical substances of interest at the desired concentrations with high accuracy and in a highly reproducible manner during the entire experiment and simultaneously in preserving the appropriate environmental conditions to generate chemical gas plumes exhibiting turbulent patterns. A graphical illustration of the designed wind tunnel test-bed facility considered in this study along with the characteristics of the geometry of the problem as well as the exact locations of the chemical analyte source and chemo-sensory platform is presented in Figure 2 of the manuscript cited below. Actual pictures of the designed wind tunnel are also presented in the Supplementary Material, Figure S.1 of the accompanying manuscript.<br>The resulting dataset induces a ten-class gas discrimination problem, comprising recordings from ten distinct pure chemical gases, namely Acetone, Acetaldehyde, Ammonia, Butanol, Ethylene, Methane, Methanol, Carbon Monoxide, Benzene, and Toluene. The goal is to identify and discriminate the mentioned chemical hazards at relevant concentrations regardless of the location of the sensory system platform within the annotated wind tunnel research facility as well as the environmental and parametric conditions induced in the setting (Please see manuscript for more details). See Table 1 on Vergara et a. 2013 (manuscript below) for specifics on the identity of chemical analyte hazards as well as their nominal concentration values at the outlet of the gas source in parts-per-million by volume (ppmv). Please refer to the manuscript below for a more details of the wind tunnel test-bed facility as well as for specifics on the collection procedure followed and the operating and environmental parameters utilized during the creation of the aforementioned dataset.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">The response of the sensor platform is read-out in the form of the resistance across the active sensitive film of each of the 72 gas sensors integrating the sensor array; hence, each measurement produced a 72-channel time series, each of which represented by a 260-second time series collected at a sample rate of 100 samples per second (Hz), reflecting all the environmental changes in the evaluated scenario. For a more detailed analysis and discussion on the processing of the time series as well as a graphical illustration of them please refer to Sections 2 and 3 and Figure 4, respectively, of the manuscript below.<br>For manipulation purposes, the data is organized into eleven folders, each containing the number of measurements per chemical class identity and nominal concentration indicated above and described in the Table 2 of the manuscript. For example the folder named â€œToluene_200â€ means the name of the gas identity is Toluene, which has been dosed at 200 ppmv. Each folder contains 6 folders, each representing the line location within the test area of the wind tunnel (location 1, L1, to location 6, L6, being L1 the closest point to the gas source) from which the set of time-series were recorded. In each of these folders there are 300 files, each of which corresponding to the number of measurements recorded at each location in the tunnel. The name of each file contains the exact log information of each of the measurements performed during the entire experiment, which is organized as follows. The first 12 digits of the file name (e.g., 201106060617) indicate the date and time at which each specific measurement was collected, starting from the year, month, day, and time. The last 4 digits in the following 19 characters of the name file, (e.g., board_setPoint_500V), indicate the fixed operating temperature value, represented by a voltage value applied to the embedded heating element in the chemical sensor, applied to the entire sensing platform, which can adopt nominal values from 4 to 6 V with an resolution value of 0.5 V. Note that the value 500V in the example is a graphical representation of the 5V value applied to the sensorâ€™s heater. For more details on the operating principles of the chemical sensors utilized in our platform please refer to Section 2 of the manuscript. The last 3 digits in the following 16 characters of the file name (e.g., fan_setPoint_060) indicates the set-point value of the nominal rotational speeds of the multiple-step motor-driven exhaust fan utilized to induce the distinct artificial airflows speed in the wind tunnel. Only three values were adopted in this condition: the value â€œ000â€ in the file name, which indicates the slowest rotational speed (1500 rpm), the value â€œ060â€, indicating the mid-point rotational speed value of the fan (3900rpm), and the value â€œ100â€, which refers to the fastest induced speed of the fan, 5500 rpm. The last 14 characters of the following string of 27 characters (e.g., mfc_setPoint_Toluene_200ppm) describe the analyte identity and concentration value for each particular measurement. Thus, the just mentioned example represents the class corresponding to the chemical analyte identity â€œTolueneâ€ dosed at the nominal concentration value of 200 ppm. Finally, the last 2 or 3 digits in the name (e.g., â€œp7â€) describe the line point location at which the chemo-sensory platform was located in the wind tunnel. Note that there is a shift of two numbers in the value of this position, i.e., the value p7 in actuality represents the line location 4 illustrated in Figure 2 of the cited manuscript. For example, in<br>201106060617_board_setPoint_500V_fan_setPoint_060_mfc_setPoint_Toluene_200ppm_p7<br>the entire text line stands for a stand-alone measurement of the chemo-sensory platform located at the line location L4 and in response to 200 ppm of Toluene collected on June 06 of 2011, at 06:17 am (PST), with an operating voltage applied to the heater of 5V and a nominal rotational speed of the exhaust fan of 3900 rpm.<br><br>Having described the naming configuration adopted in the generated dataset, we describe the organization of the information in each of the attached files of the dataset. The data format encloses information relevant to each measurement file, containing all the time series indicated above (9 portable modules Ã— 8 sensors, temperature and humidity values (oC and %, respectively), exhaust fan set-point and reading values, mass flow controller set-point and actual reading values (%), and reading time (ms)), which is organized as follows:<br>Reading time (ms) fan_set_point fan_reading* mcf1_setpoint mcf2_setpoint mcf3_setpoint mcf1_read mcf2_read mcf3_read T RH 1 board1(Ã— 8 chemical sensors) 1 board2(Ã— 8 chemical sensors) 1 .... 1 board9(Ã— 8 chemical sensors)<br><br>where: â€œReading time (ms)â€ is the time step for each recording (in ms, at a sample rate of 100 Hz), â€œfan_set_pointâ€ and â€œfan_readingâ€, is the set-point and actual reading of the exhaust fan, respectively, â€œmcf1_setpointâ€ to â€œmcf3_setpointâ€ are the opening degree set-point values given to the mass flow controllers 1 to 3 during the experiment, respectively, â€œmcf1_readâ€ to â€œmcf1_readâ€ are the measured opening degree of mass flow controllers 1 to 3, respectively, â€œTâ€ and â€œRâ€ are the temperature and relative humidity values (in oC and %, respectively) during the entire experiment, and â€œboard1(Ã— 8 chemical sensors)â€ to â€œboard9(Ã— 8 chemical sensors)â€ are the 72 time series collected as a function of time from the 8 gas sensors (in KÎ©) integrating modules 1 to 9 in each location, respectively, each separated by the number â€œ1â€ that stands as indicator label, forming thus the 72 time-series chemical sensor responses that is fetched to the classifier for training as described in the study. Note that there is a blank space between and among each column in the dataset.<br><br>Thus, for example, in<br><br>line1:<br>22250    0    0    100    100    100    103    103    105    22.22    63.43    1    476    555    803    497    775    885    873    843    1    346    545    635    616    571    552    773    745    1    397    509    660    638    755    744    745    657    1    420    510    525    531    504    650    719    715    1    2201    449    652    1228    847    654    850    737    1    370    459    650    445    756    773    847    803    1    345    457    587    554    757    704    769    818    1    354    407    499    696    786    686    757    733    1    339    418    547    567    653    573    773    84<br><br>The number â€œ22250â€ stands for the recording made at time 22.25s, the following two numbers stand for the set-point and measured value of the fan speed, the following 6 numbers indicate the set-point (in this case, 100) and actual measured values of the MFC (103, 103, 105), the numbers â€œ22.22â€ and â€œ63.43â€ stand for the temperature and humidity values at that specific time recording, whereas the remaining 80 columns list the actual time series values for each measurement recording organized as described above, and in which the number â€œ1â€ indicates the boundary between each sensor module board. The first and ninth boards correspond to the positions closer to the walls, whereas the board 5 is located in the main line orthogonal to the gas plume. For the exact location of each board, please refer to Figure 2 of the mentioned Journal article.<br>*: we found out that the exhaust fan actual reading value registered on each file is not completely accurate, showing a â€œ0â€ or other random values for some of the measurement recordings. Please discard this information value and utilize only the set point information for processing purposes; The value is accurate.<br>Finally, to make the results presented in the associated article reproducible for the user of this read-me file, please use the hyper-parameter values described in the manuscript for the training task.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Provide references to papers that have cited this data set in the past (if any).</p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please cite:<br>Alexander Vergara, Jordi Fonollosa, Jonas Mahiques, Marco Trincavelli, Nikolai Rulkov, RamÃ³n Huerta, On the performance of gas sensor arrays in open sampling systems using Inhibitory Support Vector Machines, Sensors and Actuators B: Chemical, Available online 18 May 2013, ISSN 0925-4005, 10.1016/j.snb.2013.05.027. (<a href="http://www.sciencedirect.com/science/article/pii/S092540051300590X">[Web Link]</a>)<br></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

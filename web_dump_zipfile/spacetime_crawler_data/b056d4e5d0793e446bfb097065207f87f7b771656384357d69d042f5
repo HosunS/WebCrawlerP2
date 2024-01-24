@@ -1,0 +1,106 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD3095¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueXjApache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Apr 2013 01:54:14 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"c17-4da84c34d3d80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 16:47:00 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY/*
+  $Id: ftsearchermem.h 4025 2008-10-01 00:01:14Z abehm $
+
+  Copyright (C) 2007 by The Regents of the University of California
+	
+  Redistribution of this file is permitted under
+  the terms of the BSD license
+    
+  Date: 09/17/2007
+  Author: Alexander Behm <abehm (at) ics.uci.edu>
+*/
+
+#ifndef _ftsearchermem_h_
+#define _ftsearchermem_h_
+
+#include "ftsearcherabs.h"
+#include "ftindexersimple.h"
+#include "listmerger/divideskipmerger.h"
+
+template <class FtIndexer, class Merger>
+class FtSearcherMem;
+
+template <class TFtIndexer, class TMerger>
+struct FtSearcherTraits<FtSearcherMem<TFtIndexer, TMerger> > {
+  typedef TFtIndexer FtIndexer;
+  typedef TMerger Merger;
+};
+
+template <class FtIndexer = FtIndexerSimple<>, class Merger = DivideSkipMerger<> >
+class FtSearcherMem 
+  : public FtSearcherAbs<FtSearcherMem<FtIndexer, Merger> > {
+  
+public:
+  typedef FtIndexerTraits<FtIndexer> IndexerTraitsType;
+  typedef typename IndexerTraitsType::InvList InvList;
+  
+protected:
+  typedef FtSearcherAbs<FtSearcherMem<FtIndexer, Merger> > SuperClass;
+
+ public:
+  FtSearcherMem(Merger* m, FtIndexer* indexer = NULL) : SuperClass(m, indexer) {} 
+
+  void processLeaves_Impl(const vector<FilterTreeNode<InvList>*>& leaves,
+			  const Query& query,
+			  const vector<unsigned>& queryGramCodes,
+			  vector<unsigned>& resultStringIDs,
+			  StatsUtil* sutil);
+};
+
+template<class FtIndexer, class Merger>
+void 
+FtSearcherMem<FtIndexer, Merger>::
+processLeaves_Impl(const vector<FilterTreeNode<InvList>*>& leaves,
+		   const Query& query,
+		   const vector<unsigned>& queryGramCodes,
+		   vector<unsigned>& resultStringIDs,
+		   StatsUtil* sutil) {
+
+  // Step 0: Check for panic
+  if((signed)this->mergeThreshold <= 0) {
+    for(unsigned i = 0; i < leaves.size(); i++)
+      this->searchLeafNodePanic(leaves.at(i), query, resultStringIDs, sutil);
+    return;
+  } 
+  
+  if(sutil) {
+    for(unsigned i = 0; i < leaves.size(); i++) {      
+      vector<unsigned> candidates;  
+
+      // Step 1: Preprocess
+      sutil->startTimeMeasurement();
+      vector<InvList*> lists;
+      leaves.at(i)->getInvertedLists(queryGramCodes, lists);
+      sutil->stopTimeMeasurement();
+      sutil->searchStats.preprocessTime += sutil->getTimeMeasurement();
+      
+      // Step 2.1: Merge
+      sutil->startTimeMeasurement();
+      this->merger->merge(lists, this->mergeThreshold, candidates);
+      sutil->stopTimeMeasurement();
+      sutil->searchStats.candidateStrings += candidates.size();
+      sutil->searchStats.mergeTime += sutil->getTimeMeasurement();
+
+      // Step 2.2: Postprocess
+      this->postProcess(query, candidates, resultStringIDs, sutil);      
+    }
+  }
+  else {
+    for(unsigned i = 0; i < leaves.size(); i++) {
+      vector<unsigned> candidates;  
+
+      // Step 1: Preprocess
+      vector<InvList*> lists;
+      leaves.at(i)->getInvertedLists(queryGramCodes, lists);
+      
+      // Step 2.1: Merge
+      this->merger->merge(lists, this->mergeThreshold, candidates); 
+
+      // Step 2.2: Postprocess
+      this->postProcess(query, candidates, resultStringIDs, sutil);            
+    }   
+  }
+}
+
+#endif
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

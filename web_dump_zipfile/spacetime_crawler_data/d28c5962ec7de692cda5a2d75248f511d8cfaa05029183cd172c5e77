@@ -1,0 +1,26 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC875¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 10 Oct 2018 14:20:35 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"36b-577e08ec81c7f"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 02:48:58 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYk#include <stdio.h>
+
+
+int main() {
+  char* chPt = "hgfedcba";    // char chPt[3] = {'c','b','a'};
+  long chPt2Int = (int) chPt; //convertion loss
+  int lett = (int) *chPt;
+  int x = (int) *((int*)chPt);
+  int y = (int) *((int*)chPt + 1);
+  
+  printf("chPt     = %p               \n",chPt);
+  printf("chPt2Int = %p               \n",chPt2Int);
+  printf("lett     = %p ('%c')        \n",lett,lett);
+  printf("x        = %p               \n", x);
+  printf("y        = %p             \n\n", y);
+  
+  printf("size of a char:    %ld bytes   \n",sizeof(char));
+  printf("size of an int:    %ld bytes   \n",sizeof(int));
+  printf("size of a double:  %ld bytes \n\n",sizeof(double));
+  
+  printf("size of a char*:   %ld bytes   \n",sizeof(char*));
+  printf("size of an int*:   %ld bytes   \n",sizeof(int*));
+  printf("size of a double*: %ld bytes   \n",sizeof(double*));
+  return 0;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

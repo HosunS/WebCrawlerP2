@@ -1,0 +1,231 @@
+�Ifinal_url�DtypeLhttp_headers�DtypeEvalue��Ak�DtypeEvalueDDateAv�DtypeEvalueXThu, 07 Feb 2019 05:22:11 GMT�Ak�DtypeEvalueQTransfer-EncodingAv�DtypeEvalueGchunked�Ak�DtypeEvalueJConnectionAv�DtypeEvalueEclose�Ak�DtypeEvalueLContent-TypeAv�DtypeEvalueXtext/html; charset=UTF-8�Ak�DtypeEvalueFServerAv�DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content�DtypeEvalueY=j
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Gas Sensor Array Drift Dataset Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Gas Sensor Array Drift Dataset Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/00224/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="#"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: This archive contains 13910 measurements from 16 chemical sensors utilized in simulations for drift compensation in a discrimination task of 6 gases at various levels of concentrations.</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">13910</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Computer</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">128</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2012-04-25</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">121467</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Creators: 		Alexander Vergara (<u>vergara <b>'@'</b> ucsd.edu</u>)<br>			BioCircutis Institute<br>			University of California San Diego<br>			San Diego, California, USA<br>Donors of the Dataset:	Alexander Vergara (<u>vergara <b>'@'</b> ucsd.edu</u>)<br>			Ramon Huerta (<u>rhuerta <b>'@'</b> ucsd.edu</u>)<br></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">This archive contains 13910 measurements from 16 chemical sensors utilized in simulations for drift compensation in a discrimination task of 6 gases at various levels of concentrations. The goal is to achieve good performance (or as low degradation as possible) over time, as reported in the paper mentioned below in Section 2: Data collection. The primary purpose of providing this dataset is to make it freely accessible on-line to the chemo-sensor research community and artificial intelligence to develop strategies to cope with sensor/concept drift. The dataset can be used exclusively for research purposes. Commercial purposes are fully excluded.<br>The dataset was gathered within January 2007 to February 2011 (36 months) in a gas delivery platform facility situated at the ChemoSignals Laboratory in the BioCircuits Institute, University of California San Diego. Being completely operated by a fully computerized environment â€”controlled by a LabVIEWâ€“National Instruments software on a PC fitted with the appropriate serial data acquisition boards. The measurement system platform provides versatility for obtaining the desired concentrations of the chemical substances of interest with high accuracy and in a highly reproducible manner, minimizing thereby the common mistakes caused by human intervention and making it possible to exclusively concentrate on the chemical sensors for compensating real drift.<br>The resulting dataset comprises recordings from six distinct pure gaseous substances, namely Ammonia, Acetaldehyde, Acetone, Ethylene, Ethanol, and Toluene, each dosed at a wide variety of concentration values ranging from 5 to 1000 ppmv. See Tables 1 and 2 of the below cited manuscript for details on the gas identity name, concentration values, and time distribution sequence of the measurement recordings considered in this dataset.<br><br>Batch10.dat was updated on 10/14/2013 to correct some corrupted values in the last 120 lines of the file.<br><br>An extension of this dataset with the concentration values is available at Gas Sensor Array Drift Dataset at Different Concentrations Data Set <a href="http://archive.ics.uci.edu/ml/datasets/Gas+Sensor+Array+Drift+Dataset+at+Different+Concentrations">[Web Link]</a></p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">The response of the said sensors is read-out in the form of the resistance across the active layer of each sensor; hence each measurement produced a 16-channel time series, each of which represented by an aggregate of features reflecting all the dynamic processes occurring at the sensor surface in reaction to the chemical substance being evaluated. In particular, two distinct types of features were considered in the creation of this dataset: (i) The so-called steady-state feature (Î”R), defined as the difference of the maximal resistance change and the baseline and its normalized version expressed by the ratio of the maximal resistance and the baseline values when the chemical vapor is present in the test chamber. And (ii), an aggregate of features reflecting the sensor dynamics of the increasing/decaying transient portion of the sensor response during the entire measurement procedure under controlled conditions, namely the exponential moving average (emaÎ±). These aggregate of features is a transform, borrowed from the field of econometrics originally introduced to the chemo-sensing community by Muezzinoglu et al. (2009), that converts the said transient portion into a real scalar,  by estimating the maximum value â€”minimum for the decaying portion of the sensor responseâ€” of its exponential moving average (emaÎ±), with an initial condition set to zero and a scalar smoothing parameter of the operator, Î±, that defines both the quality of the feature and the time of its occurrence along the time series the scalar, set to range between 0 and 1. In particular, three different values for Î± were set to obtain three different feature values from the pre-recorded rising portion of the sensor response  and three additional features with the same Î± values but for the decaying portion of the sensor response, covering thus the entire sensor response dynamics. For a more detailed analysis and discussion on these features as well as a graphical illustration of them please refer to Section 2.3 and Figure 2, respectively of the annotated manuscript.<br>Once the abovementioned features are calculated, one is to form a feature vector containing the 8 features extracted from each particular sensor multiplied by the 16 sensors considered here. In the end, the resulting 128-dimensional feature vector containing all the features indicated above (8 features Ã— 16 sensors) is organized as follows:<br>Î”R_1, |Î”R|_1, EMAi0.001_1, EMAi0.01_1, EMAi0.1_1, EMAd0.001_1, EMAd0.01_1, EMAd0.1_1, Î”R_2, |Î”R|_2, EMAi0.001_2, EMAi0.01_2, EMAi0.1_2, EMAd0.001_2, EMAd0.01_2, EMAd0.1_2,..., Î”R_16, |Î”R|_16, EMAi0.001_16, EMAi0.01_16, EMAi0.1_16, EMAd0.001_16, EMAd0.01_16, EMAd0.1_16,<br><br>where: â€œÎ”R_1â€ and â€œ|Î”R|_1â€ is the Î”R and the normalized Î”R feature, respectively, â€œEMAi0.001_1â€, â€œEMAi0.01_1â€, and â€œEMAi0.1_1â€, the emaÎ± of the rising transient portion of the sensor response for Î± equals to 0.001, 0.01, and 0.1, respectively, and â€œEMAd0.001_1â€, â€œEMAd0.01_1â€, and â€œEMAd0.1_1â€, the emaÎ± of the decaying transient portion of the sensor response for Î± equals to 0.001, 0.01, and 0.1, respectively, all corresponding to sensor # 1; â€œÎ”R_2â€ and â€œ|Î”R|_2â€ is the Î”R and the normalized Î”R feature, respectively, â€œEMAi0.001_2â€, â€œEMAi0.01_2â€, and â€œEMAi0.1_2â€, the emaÎ± of the rising transient portion of the sensor response for Î± equals to 0.001, 0.01, and 0.1, respectively, and â€œEMAd0.001_2â€, â€œEMAd0.01_2â€, and â€œEMAd0.1_2â€, the emaÎ± of the decaying transient portion of the sensor response for Î± equals to 0.001, 0.01, and 0.1, respectively, all corresponding to sensor # 2; and so forth up until sensor # 16, forming thus the 128-dimensional feature vector that is to be fetched to the classifiers for training.<br>For processing purposes, the data is organized into ten batches, each containing the number of measurements per class and month indicated in the table below. This reorganization of data was done to ensure having a sufficient and as uniformly distributed as possible number of experiments in each class and month when training the classifier.<br><br>Dataset organization details. Each row corresponds to months that were combined to form a batch:<br>Batch ID	Month IDs<br>Batch 1	        Months 1 and 2<br>Batch 2	        Months 3, 4, 8, 9 and 10<br>Batch 3	        Months 11, 12, and 13<br>Batch 4	        Months 14 and 15<br>Batch 5	        Month 16<br>Batch 6	        Months 17, 18, 19, and 20<br>Batch 7	        Month 21<br>Batch 8	        Months 22 and 23<br>Batch 9	        Months 24 and 30<br>Batch 10	Month 36<br><br>The data format follows the same coding style as in libsvm, in which one indicates the class each data point belongs to (1: Ethanol; 2: Ethylene; 3:Ammonia; 4: Acetaldehyde; 5: Acetone; 6: Toluene), and, then, the collection of features in a format x:v, where x stands for the feature number and v for the actual value of the feature. For example, in <br><br>1 1:15596.162100 2:1.868245 3:2.371604 4:2.803678 5:7.512213 â€¦ 128:-2.654529 <br><br>The number â€œ1â€ stands for the class number (in this case Ethanol), whereas the remaining 128 columns list the actual feature values for each measurement recording organized as described above. <br>Finally, to make the results presented in the associated article reproducible for the reader, please use the following parameter values in the training task:<br>â€¢	folds: 10<br>â€¢	log2c = -5, 10, 1<br>â€¢	log2g = -10, 5, 1<br>â€¢	Scale the features in the training set appropriately to lie between -1 and +1.<br>â€¢	And use the following cross validation parameters:<br><br>Batch	C	Gamma (É¤)	Rate<br>1	256.0	0.03125	        98.8764<br>2	64.0	0.00390625	99.7588<br>3	128.0	0.03125	        100.0<br>4	1.0	0.25	        100.0<br>5	2.0	0.015625	99.4924<br>6	256.0	0.0009765625	99.5217<br>7	64.0	0.0625	        99.9723<br>8	1024.0	0.0078125	99.6599<br>9	2.0	0.00390625	100.0<br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">N/A</p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Please cite:<br>Alexander Vergara and Shankar Vembu and Tuba Ayhan and Margaret A. Ryan and Margie L. Homer and RamÃ³n Huerta, Chemical gas sensor drift compensation using classifier ensembles, Sensors and Actuators B: Chemical (2012) doi: 10.1016/j.snb.2012.01.074.<br></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected�DtypeEvalue�Ihttp_code�DtypeEvalue�Qdownload_complete�DtypeEvalue�

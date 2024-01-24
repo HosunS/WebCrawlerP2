@@ -1,0 +1,210 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 13:01:06 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY2æ<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Classification</a> <font color=red>(20)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Regression</a></font> <font color=red>(9)</font><br><a href='datasets.html?format=&task=clu&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Clustering</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=other&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Other</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b> 	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=cat&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Categorical</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=num&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Numerical</a> <font color=red>(8)</font><br><a href='datasets.html?format=&task=reg&att=mix&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Mixed</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=&sort=taskDown&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=mvar&sort=taskDown&view=list'>Multivariate</a> <font color=red>(15)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=uvar&sort=taskDown&view=list'>Univariate</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=seq&sort=taskDown&view=list'>Sequential</a> <font color=red>(0)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Time-Series</a></font> <font color=red>(9)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=text&sort=taskDown&view=list'>Text</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=dt&sort=taskDown&view=list'>Domain-Theory</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=other&sort=taskDown&view=list'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=life&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Life Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=&area=phys&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Physical Sciences</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=&area=comp&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>CS / Engineering</a> <font color=red>(7)</font><br><a href='datasets.html?format=&task=reg&att=&area=soc&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Social Sciences</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=&area=bus&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Business</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=&area=game&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Game</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=&area=other&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Other</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b> - <a href='datasets.html?format=&task=reg&att=&area=&numAtt=&numIns=&type=ts&sort=taskDown&view=list'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=less10&numIns=&type=ts&sort=taskDown&view=list'>Less than 10</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=10to100&numIns=&type=ts&sort=taskDown&view=list'>10 to 100</a> <font color=red>(16)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Greater than 100</a></font> <font color=red>(9)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=less100&type=ts&sort=taskDown&view=list'>Less than 100</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=100to1000&type=ts&sort=taskDown&view=list'>100 to 1000</a> <font color=red>(3)</font><br><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=greater1000&type=ts&sort=taskDown&view=list'>Greater than 1000</a> <font color=red>(5)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=reg&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Matrix</a> <font color=red>(6)</font><br><a href='datasets.html?format=nonmat&task=reg&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=list'>Non-Matrix</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>9</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><a href='datasets.html?format=&task=reg&att=&area=&numAtt=greater100&numIns=&type=ts&sort=taskDown&view=table'>Table View</a>&nbsp;&nbsp;<font color=gray>List View</font></p></td>
+		</tr>
+	</table><table cellpadding=3><tr><td><hr><p class="normal">1. <b><a href="datasets/Amazon+Access+Samples">Amazon Access Samples</a></b>: Amazon's InfoSec is getting smarter about the way Access data is leveraged. This is an anonymized sample of access provisioned within the company.</p><p class="normal">2. <b><a href="datasets/ElectricityLoadDiagrams20112014">ElectricityLoadDiagrams20112014</a></b>: This data set contains electricity consumption of 370 points/clients.
+</p><p class="normal">3. <b><a href="datasets/Greenhouse+Gas+Observing+Network">Greenhouse Gas Observing Network</a></b>: Design an observing network to monitor emissions of a greenhouse gas (GHG) in California given time series of synthetic observations and tracers from weather model simulations.
+</p><p class="normal">4. <b><a href="datasets/Gas+Sensor+Array+Drift+Dataset+at+Different+Concentrations">Gas Sensor Array Drift Dataset at Different Concentrations</a></b>: This archive contains 13910 measurements from 16 chemical sensors exposed to 6 different gases at various concentration levels.</p><p class="normal">5. <b><a href="datasets/Gas+sensor+array+under+flow+modulation">Gas sensor array under flow modulation</a></b>: The data set contains 58 time series acquired from 16 chemical sensors under gas flow modulation conditions. The sensors were exposed to different gaseous binary mixtures of acetone and ethanol.</p><p class="normal">6. <b><a href="datasets/Gas+sensor+array+exposed+to+turbulent+gas+mixtures">Gas sensor array exposed to turbulent gas mixtures</a></b>: A chemical detection platform composed of 8 chemoresistive gas sensors was exposed to turbulent gas mixtures generated naturally in a wind tunnel. The acquired time series of the sensors are provided.</p><p class="normal">7. <b><a href="datasets/Twin+gas+sensor+arrays">Twin gas sensor arrays</a></b>: 5 replicates of an 8-MOX gas sensor array were exposed to different gas conditions (4 volatiles at 10 concentration levels each).</p><p class="normal">8. <b><a href="datasets/Dynamic+Features+of+VirusShare+Executables">Dynamic Features of VirusShare Executables</a></b>: This dataset contains the dynamic features of 107,888 executables, collected by VirusShare from Nov/2010 to Jul/2014.</p><p class="normal">9. <b><a href="datasets/Condition+monitoring+of+hydraulic+systems">Condition monitoring of hydraulic systems</a></b>: The data set addresses the condition assessment of a hydraulic test rig based on multi sensor data. Four fault types are superimposed with several severity grades impeding selective quantification.</p></tr></td></table><hr>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

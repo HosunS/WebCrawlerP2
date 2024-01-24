@@ -1,0 +1,18 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC439¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 31 Jan 2014 01:04:26 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1b7-4f139c1575a80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 10:21:57 GMTKraw_content¢DtypeEvaluey·
+public class ClamPizza extends Pizza {
+	
+	PizzaIngredientFactory ingredientFactory;
+ 
+	public ClamPizza(PizzaIngredientFactory ingredientFactory) {
+		this.ingredientFactory = ingredientFactory;
+	}
+ 
+	void prepare() {
+		System.out.println("Preparing " + name);
+		dough = ingredientFactory.createDough();
+		sauce = ingredientFactory.createSauce();
+		cheese = ingredientFactory.createCheese();
+		clam = ingredientFactory.createClams();
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

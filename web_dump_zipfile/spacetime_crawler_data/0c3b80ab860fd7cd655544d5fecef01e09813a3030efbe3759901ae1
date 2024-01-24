@@ -1,0 +1,94 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD4141¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 30 Nov 1999 18:46:17 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"102d-35a8d3c331040"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 05:31:02 GMTKraw_content¢DtypeEvalueY-Description:
+  la general                                                                    
+Samples Selected:
+  1970 Form 2 Metro ("15%" County Group)        Regular
+  1980 1% Metro (B Sample)                      Regular
+  1990 1% Unweighted                            Regular
+File Type          : Rectangular
+Compression        : Yes
+Case Selection     : None
+  Across Variables : AND
+ 
+  variable   columns len 1970 1980 1990   doc
+  YEAR         1-  2   2   X    X    X    C-2
+  GQ           3-  3   1   X    X    X   C-75
+  GQTYPE   g   4-  4   1   X    X    X   C-77
+  FARM         5-  5   1   X    X    X   C-82
+  OWNERSHP g   6-  6   1   X    X    X   C-84
+  VALUE        7- 12   6   X    X    X   C-88
+  RENT        13- 16   4   X    X    X  C-106
+  FTOTINC     17- 22   6   X    X    X  C-118
+  NFAMS       23- 24   2   X    X    X  C-176
+  NCOUPLES    25- 25   1   X    X    X  C-178
+  NMOTHERS    26- 26   1   X    X    X  C-179
+  NFATHERS    27- 27   1   X    X    X  C-180
+  MOMLOC      28- 29   2   X    X    X    D-8
+  STEPMOM     30- 30   1   X    X    X    D-9
+  MOMRULE     31- 31   1   X    X    X   D-10
+  POPLOC      32- 33   2   X    X    X   D-12
+  STEPPOP     34- 34   1   X    X    X   D-13
+  POPRULE     35- 35   1   X    X    X   D-14
+  SPLOC       36- 37   2   X    X    X   D-16
+  SPRULE      38- 38   1   X    X    X   D-17
+  FAMSIZE     39- 40   2   X    X    X   D-19
+  NCHILD      41- 41   1   X    X    X   D-21
+  NCHLT5      42- 42   1   X    X    X   D-22
+  FAMUNIT     43- 44   2   X    X    X   D-23
+  ELDCH       45- 46   2   X    X    X   D-25
+  YNGCH       47- 48   2   X    X    X   D-25
+  NSIBS       49- 49   1   X    X    X   D-26
+  RELATE   g  50- 51   2   X    X    X   D-27
+  AGE         52- 54   3   X    X    X   D-34
+  SEX         55- 55   1   X    X    X   D-38
+  RACE     g  56- 56   1   X    X    X   D-39
+  MARST       57- 57   1   X    X    X   D-44
+  CHBORN      58- 59   2   X    X    X   D-53
+  BPL      g  60- 62   3   X    X    X   D-57
+  SCHOOL      63- 63   1  F2    X    X  D-166
+  EDUCREC     64- 64   1   X    X    X  D-169
+  SCHLTYPE    65- 65   1  F2    X    X  D-178
+  EMPSTAT  g  66- 66   1   X    X    X  D-181
+  LABFORCE    67- 67   1   X    X    X  D-181
+  OCC1950     68- 70   3   X    X    X  D-187
+  OCCSCORE    71- 72   2   X    X    X  D-200
+  SEI         73- 74   2   X    X    X  D-201
+  IND1950     75- 77   3   X    X    X  D-203
+  CLASSWKR g  78- 78   1   X    X    X  D-211
+  WKSWORK2    79- 79   1   X    X    X  D-217
+  HRSWORK2    80- 80   1   X    X    X  D-219
+  YRLASTWK    81- 82   2   X    X    X  D-225
+  WORKEDYR    83- 83   1   X    X    X  D-232
+  INCTOT      84- 89   6   X    X    X  D-238
+  INCWAGE     90- 95   6   X    X    X  D-239
+  INCBUS      96-101   6   X    X    X  D-241
+  INCFARM    102-107   6   X    X    X  D-242
+  INCSS      108-112   5   X    X    X  D-244
+  INCWELFR   113-117   5   X    X    X  D-245
+  INCOTHER   118-122   5   X    X    X  D-248
+  POVERTY    123-125   3   X    X    X  D-251
+  MIGRATE5 g 126-126   1  F2    X    X  D-256
+  MIGPLAC5   127-129   3   X    X    X  D-262
+  MOVEDIN    130-130   1  F2    X    X  D-293
+  VETSTAT    131-131   1  F2    X    X  D-315
+  TRANWORK   132-133   2  F2    X    X  D-341
+ 
+      Variable Availability Key
+All Years  X - available in this sample
+All Years  . - not available in this sample
+1970      F1 - available in the Form 1 samples (5%)
+1970      F2 - available in the Form 2 samples (15%)
+1970       S - available in the state samples
+1970       M - available in the metro samples (county group)
+1970       N - available in the neighborhood samples
+1980       S - available in the state sample ("A" or 5% state)
+1980       M - available in the metro sample ("B" or 1% county group)
+1980      UR - available in the urban/rural sample ("C" or 1% urban/rural)
+1990       S - available in the state sample
+1990       M - available in the metro sample
+1990       E - available in the elderly sample
+ 
+Case Selections:
+None
+H STATEFIP 06         California                                        
+H METAREA  4480       Los Angeles-Long Beach, CA                        
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

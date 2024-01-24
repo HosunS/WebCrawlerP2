@@ -1,0 +1,598 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE16238¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 14 Dec 2017 19:58:41 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"3f6e-560524f811e40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:05:36 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY?n<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC
+ "-//W3C//DTD XHTML 1.1//EN"
+ "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="course.css" type="text/css" />
+
+<title>ICS 32A Fall 2017, Schedule</title>
+</head>
+
+<body>
+
+<div class="navbar">
+
+<p>
+ICS 32A Fall 2017 |
+<a href="index.html">News</a> |
+<a href="CourseReference.html">Course Reference</a> |
+<a href="Schedule.html">Schedule</a> |
+<a href="ProjectGuide">Project Guide</a> |
+<a href="Notes">Notes and Examples</a> |
+<a href="http://www.ics.uci.edu/~thornton/">About Alex</a>
+</p>
+
+<hr />
+
+</div>
+
+<div class="header">
+
+<p>ICS 32A Fall 2017<br />
+   Schedule</p>
+
+</div>
+
+<div class="section">
+
+<hr />
+
+<p>In lieu of a course textbook, assigned readings are mainly the <a href="Notes">Notes and Examples</a> from lecture, which I'll try to keep posted ahead of where we are in lecture at any given time.  It is a good idea to skim the assigned reading <i>before</i> the lecture for the main ideas, attend lecture, and then to go through the assigned reading again to fill in the details that you missed, both in your initial skim of the reading and in the lecture.</p>
+
+<table class="normal">
+  <tr class="top">
+    <td>Date</td>
+    <td>Lecture Topics</td>
+    <td>Readings</td>
+    <td>Project Work</td>
+  </tr>
+  <tr>
+  <tr class="divider">
+    <td colspan="5">Week 0</td>
+  </tr>
+  <tr>
+    <td>Th 9/28</td>
+    <td>
+      <ul class="nomarker">
+        <li>Course introduction</li>
+        <li>What is Python?</li>
+        <li>What are software libraries?</li>
+        <li>Designing and writing larger programs (briefly)</li>
+        <li>Launching a Python shell</li>
+        <li>Expressions and evaluation</li>
+        <li>Types, objects, numbers, and operators</li>
+        <li>Variables</li>
+        <li>Values have types; variables do not</li>
+        <li>Naming conventions</li>
+        <li>Statements</li>
+        <li>Booleans</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/CourseIntroduction">N: Course Introduction</a></li>
+        <li><a href="Notes/PythonBasics">N: Python Basics</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 1</td>
+  </tr>
+  <tr>
+    <td>M 10/2</td>
+    <td></td>
+    <td></td>
+    <td>
+      <ul class="nomarker">
+        <li><b>Lab sections begin meeting today</b></li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Tu 10/3</td>
+    <td>
+      <ul class="nomarker">
+        <li>Writing Python scripts</li>
+        <li>Printing output and reading input</li>
+        <li>Strings</li>
+        <li>Conversions between types</li>
+        <li>Conditionality using the <b>if</b> statement</li>
+        <li>Truth testing and "truthiness"</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/PythonBasics">N: Python Basics</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>W 10/4</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project0A">Project #0A</a> due 11:59pm</td>
+  </tr>
+  <tr>
+    <td>Th 10/5</td>
+    <td>
+      <ul class="nomarker">
+        <li>Repetition using the <b>while</b> loop</li>
+        <li>Ranges</li>
+        <li>Iteration using the <b>for</b> loop</li>
+        <li>Abstraction</li>
+        <li>Writing functions</li>
+        <li>Parameters and arguments</li>
+        <li>Type checking and type errors</li>
+        <li>Scope and scoping rules</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/PythonBasics">N: Python Basics</a></li>
+        <li><a href="Notes/Functions">N: Functions</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 2</td>
+  </tr>
+  <tr>
+    <td>M 10/9</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project0B">Project #0B</a> due 11:59pm</td>
+  </tr>
+  <tr>
+    <td>Tu 10/10</td>
+    <td>
+      <ul class="nomarker">
+        <li>Built-in data structures in Python</li>
+        <li>Tuples</li>
+        <li>Lists</li>
+        <li>Type annotations (briefly)</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/TuplesAndLists">N: Tuples and Lists</a></li>
+        <li><a href="Notes/TypeAnnotations">N: Type Annotations</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 10/12</td>
+    <td>
+      <ul class="nomarker">
+        <li>Files and the built-in <b>open</b> function</li>
+        <li>Why it's important to close files</li>
+        <li>Higher-level file access</li>
+        <li>File systems and related modules in Python's standard library</li>
+        <li>Paths</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/FileSystems">N: Files, Paths, and File Sytems</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>F 10/13</td>
+    <td></td>
+    <td></td>
+    <td>
+      <ul class="nomarker">
+        <li>Optionally, choose a partner for <a href="ProjectGuide/Project1">Project #1</a> today</li>
+      </ul>
+    </td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 3</td>
+  </tr>
+  <tr>
+    <td>Tu 10/17</td>
+    <td>
+      <ul class="nomarker">
+        <li>Exceptions and exception handling</li>
+        <li><b>try</b> statements</li>
+        <li><b>try</b>, <b>except</b>, <b>else</b>, and <b>finally</b> clauses</li>
+        <li>Recursive data structures</li>
+        <li>File systems as a recursive data structure</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/Exceptions">N: Exceptions</a></li>
+        <li><a href="Notes/Recursion">N: Recursion</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 10/19</td>
+    <td>
+      <ul class="nomarker">
+        <li>Recursive functions</li>
+        <li>When recursion is &mdash; and is not &mdash; appropriate in Python</li>
+        <li>Python programs that span multiple files</li>
+        <li>Modules and the <b>import</b> statement</li>
+        <li>Namespaces (briefly)</li>
+        <li><b>if __name__ == '__main__'</b></li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/Recursion">N: Recursion</a></li>
+        <li><a href="Notes/Modules">N: Modules</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 4</td>
+  </tr>
+  <tr>
+    <td>M 10/23</td>
+    <td></td>
+    <td></td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="ProjectGuide/Project1">Project #1</a> due 11:59pm</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Tu 10/24</td>
+    <td>
+      <ul class="nomarker">
+        <li>Overview of computer networks (briefly)</li>
+        <li>Network input and output</li>
+        <li>Some necessary background on how the Internet works</li>
+        <li>IP addresses, ports, packets, routers, etc.</li>
+        <li>Sockets</li>
+        <li>A socket's input and output streams</li>
+        <li>Servers and clients</li>
+        <li>Using sockets in Python</li>
+        <li>Bytes vs. strings (briefly)</li>
+        <li>An example Python socket "echo" client</li>
+        <li>Using "pseudo-file" objects to treat socket input/output as text</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/Sockets">N: Networks and Sockets</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>W 10/25</td>
+    <td></td>
+    <td></td>
+    <td>
+      <ul class="nomarker">
+        <li>Optionally, choose a partner for <a href="ProjectGuide/Project2">Project #2</a> today</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td>Th 10/26</td>
+    <td>
+      <ul class="nomarker">
+        <li>Network protocols</li>
+        <li>The importance of knowing who and what to trust</li>
+        <li>Public and private functions in a module</li>
+        <li>Implementing a custom text-based protocol in Python</li>
+        <li>Namedtuples</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/Namedtuples">N: Namedtuples</a></li>
+        <li><a href="Notes/Protocols">N: Protocols</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 5</td>
+  </tr>
+  <tr>
+    <td>Tu 10/31</td>
+    <td>
+      <ul class="nomarker">
+        <li>Implementing a custom text-based protocol in Python (continued)</li>
+        <li>Namespaces and name resolution (briefly)</li>
+        <li>More details about <b>import</b> and multiple modules</li>
+        <li>Naming conventions for modules</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/Protocols">N: Protocols</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 11/2</td>
+    <td>
+      <ul class="nomarker">
+        <li><b>MIDTERM &mdash; regular lecture time and location</b></li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 6</td>
+  </tr>
+  <tr>
+    <td>M 11/6</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project2">Project #2</a> due 11:59pm</td>
+  </tr>
+  <tr>
+    <td>Tu 11/7</td>
+    <td>
+      <ul class="nomarker">
+        <li>Why namedtuples are a limited way to create new kinds of objects</li>
+        <li>Classes</li>
+        <li>Objects and their attributes</li>
+        <li>Constructors, initialization, methods, and the <b>self</b> parameter</li>
+        <li>The difference between method calls and function calls</li>
+        <li>Why we specify some parts of a class as public and others as private</li>
+        <li>Naming conventions for classes</li>
+        <li>Sets (briefly)</li>
+        <li>Dictionaries (briefly)</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/Classes">N: Classes</a></li>
+        <li><a href="Notes/SetsAndDictionaries">N: Sets and Dictionaries</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 11/9</td>
+    <td>
+      <ul class="nomarker">
+        <li>Pushing out the boundaries even further: the web</li>
+        <li>URLs</li>
+        <li>HTTP</li>
+        <li>GET requests</li>
+        <li>Why standards are so important on the Internet</li>
+        <li>Why HTTP is for more than just web browsers</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/HTTP">N: URLs and HTTP</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>F 11/10</td>
+    <td>
+      <ul class="nomarker">
+        <li><b>UNIVERSITY HOLIDAY: Veterans' Day &mdash; NO LABS TODAY</b></li>
+      </ul>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 7</td>
+  </tr>
+  <tr>
+    <td>Tu 11/14</td>
+    <td>
+      <ul class="nomarker">
+        <li>Web APIs</li>
+        <li>URLs with query parameters</li>
+        <li>URL encoding (briefly)</li>
+        <li>JSON (JavaScript Object Notation), and why it matters even if you're not writing JavaScript</li>
+        <li>Using Python's standard library to access web APIs</li>
+        <li>More about classes</li>
+        <li>Duck typing</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/WebAPIs">N: Web APIs</a></li>
+        <li><a href="Notes/DuckTyping">N: Duck Typing and Interfaces</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 11/16</td>
+    <td>
+      <ul class="nomarker">
+        <li>Duck typing (continued)</li>
+        <li>Interfaces</li>
+        <li>Consistently designing multiple similar classes</li>
+        <li>Using objects of multiple similar classes without explicitly knowing their types</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/DuckTyping">N: Duck Typing and Interfaces</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 8</td>
+  </tr>
+  <tr>
+    <td>M 11/20</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project3">Project #3</a> due 11:59pm</td>
+  </tr>
+  <tr>
+    <td>Tu 11/21</td>
+    <td>
+      <ul class="nomarker">
+        <li>When Python's standard library falls short</li>
+        <li>Why we need third-party libraries</li>
+        <li>Installing third-party libraries</li>
+        <li>Virtual environments</li>
+        <li>Writing a visual game in Python</li>
+        <li>Getting started with PyGame</li>
+        <li>Displays and surfaces</li>
+        <li>The game loop</li>
+        <li>Events</li>
+        <li>Colors</li>
+        <li>Drawing and animation</li>
+        <li>Clocks</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/ThirdPartyLibraries">N: Third-Party Libraries</a></li>
+        <li><a href="Notes/PyGameBasics">N: PyGame Basics</a></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 11/23</td>
+    <td>
+      <ul class="nomarker">
+        <li><b>UNIVERSITY HOLIDAY: Thanksgiving &mdash; NO LECTURE TODAY</b></li>
+      </ul>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>F 11/24</td>
+    <td>
+      <ul class="nomarker">
+        <li><b>UNIVERSITY HOLIDAY: Thanksgiving &mdash; NO LABS TODAY</b></li>
+      </ul>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 9</td>
+  </tr>
+  <tr>
+    <td>Tu 11/28</td>
+    <td>
+      <ul class="nomarker">
+        <li>The "Spots" game, using PyGame</li>
+        <li>Models and views</li>
+        <li>Keeping model and view code separate</li>
+        <li>Handling additional kinds of events</li>
+        <li>Using modules and classes to improve our design</li>
+        <li>The fractional coordinate system</li>
+        <li>Two-way coordinate conversions</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/PyGameSpots">N: The "Spots" Game</a>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 11/30</td>
+    <td>
+      <ul class="nomarker">
+        <li>The "Spots" game (continued)</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><a href="Notes/PyGameSpots">N: The "Spots" Game</a>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>F 12/1</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project4">Project #4</a> due 11:59pm</td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Week 10</td>
+  </tr>
+  <tr>
+    <td>Tu 12/5</td>
+    <td>
+      <ul class="nomarker">
+        <li>Augmenting our game with additional features</li>
+        <li>Two ways of handling keyboard input</li>
+        <li>Mixers and generating sound</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+        <li><i>N: Inputs and Sounds</i></li>
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Th 12/7</td>
+    <td>
+      <ul class="nomarker">
+        <li>Putting it all together</li>
+        <li>Implementing a classic video game using PyGame</li>
+        <li>Conclusion</li>
+      </ul>
+    </td>
+    <td>
+      <ul class="nomarker">
+      </ul>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>F 12/8</td>
+    <td></td>
+    <td></td>
+    <td><a href="ProjectGuide/Project5">Project #5</a> due 11:59pm</td>
+  </tr>
+  <tr class="divider">
+    <td colspan="5">Finals Week</td>
+  </tr>
+  <tr>
+    <td>Th 12/14</td>
+    <td>
+      <ul class="nomarker">
+        <li><b>FINAL EXAM: 7:00pm-9:00pm, HSLH 100A</b></li>
+      </ul>
+    </td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+</div>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

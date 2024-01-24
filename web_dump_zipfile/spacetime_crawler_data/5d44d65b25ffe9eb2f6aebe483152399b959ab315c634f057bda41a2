@@ -1,0 +1,1249 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE54718¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 01 Feb 2019 20:35:05 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"d5be-580db13fe8a86"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 20:37:40 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÕ¾      Generator Functions (and yield): Functions that Return Iterators
+
+
+Python includes a special kind of function called a generator function that
+returns an iterator when it is called. With generator functions, we can easily
+(almost trivially) write many different kinds of iterators, although it takes a
+new way of thinking to understand how. In this lecture we will first study
+generator functions by themselves, to understand their syntax and semantics
+(form and meaning), and then we will illustrate how to use them to write a
+variety of iterators easily. I believe that the concept of a generator function
+is one of the most intuitively easy to understand features in Python (and
+powerful to boot), so I think you will enjoy reading this lecture. As always,
+there are always a few subtleties that we will explore more deeply.
+
+From now on, this lectue will use the term "generator" to stand for "generator
+function". For example, "We call generators like functions; when we call a
+generator, it returns an iterator: something we can call the next function on."
+
+Generators are defined almost exactly like regular functions; the one difference
+is that generators include one or more "yield" statements. In fact, if we look
+at a definition and want to know whether or not it is a generator, we look for
+at least one yield statement in its body: if there is one or more yield, then
+it defines a generator: that is how Python determines whether it is a generator
+too. Just like functions, generators can also include "return" statements (and
+there is an implicit return at the end of every generator). Let's explore the
+difference between a yield and return statement in a generator.
+
+A basic yield statement has the same form as a return statement: each keyword is
+followed by an expression that is evaluated, stopping the code (but in different
+ways: see below) resulting in a value. The key difference is that the code in a
+generator's body can be RESTARTED after executing a yield statement -and it
+restarts exactly where it left off in the computation: in the same state, from
+the next line. Python remembers this information when executing generators,
+unlike regular functions: once the body of a regular function executes a return
+statement, it can be restarted only from the beginning, by calling the function
+again. In fact, when a generator executes a return statement, it also signals
+that it is truely finished executing and cannot be restarted unless it is called
+again: Python translates the return into raising a StopIteration exception.
+
+Now, let's look at the difference between functions and generators more closely.
+
+When we call a FUNCTION, Python evaluates its arguments and binds its parameters
+to their matching arguments, and then executes its body. When it executes a
+return statement, the specified value is computed/returned (or the value None
+is automatically returned if the last statement of a function body is executed
+without ever executing a return). When a function returns this value, it is
+finished and Python forgets the states of its parameters and local variables;
+it forgets from where it executed the return statement: when called again, a 
+function always starts at the beginning.
+
+When we call a GENERATOR FUNCTION, likewise Python evaluates its arguments and
+binds its parameters to their matching arguments, but Python DOES NOT START
+EXECUTING its body yet. Instead, the generator immediately "suspends" by
+returning an iterator representing the code in the generators's body. To start
+or later re-execute this code, Python must call "next" on the iterator returned
+by the generator. So calling a generator is similar to calling iter(...) on an
+object that supports iteration: both result in an iterator: an object on which
+next(...) can be called. In fact, we often use generators to specify for loops,
+which  automatically call iter(...) on the result returned by the generator:
+recall that when Python executes iter(...) on an iterator, it typically just
+returns the same iterator object (we programmed our prange_iter class, and
+others, to behave this way).
+
+Each time next is called on this iterator, the generator's body resumes
+execution from where it was suspended (initally, it suspends BEFORE EXECUTING
+ANY STATEMENTS IN ITS BODY), further executing its body. When it executes a
+yield statement, the specified value is returned from the call to next. When a
+generator yields a value, it then suspends itself again (again remembering the
+state of its parameters, local variables, and its execution point). When Python
+calls next(...) on it again, it resumes exactly where it left off. A common and
+simple use for generator is being called to start a for loop: the call to the
+generator function creates an iterator; the call to iter passes along this
+iterator to _hidden (in the while-loop translation), and Python repeatedly
+calls next on _hidden (the result returned by calling the generator function)
+as it executes the for loop.
+
+A generator's body can also return; doing so ignores the returned value (if it
+is specified) and just raises the StopIteration exception: a generator function
+can do this explicitly by executing a return statement or implicitly, if it
+runs out of statments to execute in its body. Once it has raised StopIteration,
+calling next again reraises the StopIteration exception. Stopped means stopped
+forever.
+
+-----
+***Starting in Python 3.5, the only correct way for a generator to terminate
+***when exhausted is by executing an explicit or implicit return. We
+***should adopt this convention, whether using Python 3.5 or any earlier
+***version of Python -as we will in all the examples below.
+
+***Starting in Python 3.5, if a generator explicitly raises the StopIteration
+***exception (one that is not caught inside a try/except in the generator's
+***body), Python will actually raise the RuntimeError exception instead. So
+***EXPLICITLY raising the StopIteration exception now signals a RuntimeError,
+***not just normal termination. So, executing a return will still raise the
+***StopIteration exception, correctly signalling normal termination of a
+**generator's body.
+
+***In earlier Python versions, executing return or raise StopIteration were
+***equivalent: both terminated the generator's body normally.
+
+***Now, normal termination of the generator function is signalled by executing
+***an explicit or implicit return; now, raising StopIteration (which is
+***translated into raising RuntimeError), signals an abnormal termination.
+-----
+
+Now it is time for a concrete example that we will study, going back to apply
+the general rules stated above in particular cases. In the generator below, the
+while loop is infinite (if max == None) or finite (p will get no bigger than
+max if max != None). Each iteration checks whether the current p is a prime and
+yields p's value if so; otherwise it increments p and checks if it is prime
+(unless p has surpassed a non-None max). So primes is a generator that
+yields/produces only prime numbers: either a finite number of them or primes
+without limits (there are an infinite number of primes, so there is always
+another one to produce).
+
+Aside: So here one a big difference between iterating over a data object (like
+a list) and iterating over a generator object: iterating over a list will
+produce a finite number of values, but we cannot guarantee that for a generator.
+While it makes sense to call the len function on a list, in general it makes
+no sense to call len on an arbitrary generator object.
+
+from predicate import is_prime      # Could use other predicates just as easily
+def primes(max = None):
+    p = 2                           # 2 is the first prime; so start there
+    while max == None or p <= max:  # Short-circuit evaluation is critical here!
+        if is_prime(p):
+            yield p
+        p += 1 
+
+Quick note: this while's test uses the short-circuit property of "or": if
+max == None is True, then the entire expression is True, so Python does not
+have to evaluate the right operand; if Python did evaluate the right operatnd,
+it would raise an exception because Python cannot compare p (an int value) to
+max (if max is equal to None); instead it would raise the exception: TypeError:
+unorderable types: int() <= NoneType(). Of course we might want to assert that
+type(max) is either NoneType or int, but I want to focus purely on generator
+functions here so I have omitted this extra code.
+
+Before looking at an example in detail that uses this generator, it is easy to
+determine what it does: it yields only prime numbers, either without limit or
+whose values are limited to be <= max if max is not None. The code is
+straightford and does the obvious thing: to most programmers its mechanism,
+suspending and resuming execution, is easy/intuitive to understand and use to
+write generators. If it helps, think about yield like a print statement
+(discussed in more detail below): this function yields/prints all the required
+primes.
+
+Let us determine what happens if we execute the following Python code, which
+first binds the name i to the result of calling the primes generator (which 
+returns an iterator: something w can call next on); it then continues to print
+the values returned by calling next(i) repeatedly. 
+
+i = primes(10) # calling this genereator returns an iterator
+print(i)       # generator object is the same as iterator
+print(next(i)) # can call next on the iterator/generator object
+print(next(i))
+print(next(i))
+print(next(i))
+print(next(i))
+
+When Python executes this script, it produces the following results. An
+explanation of these results follows.
+
+  <generator object primes at 0x029C5850>
+  2
+  3
+  5
+  7
+  Traceback (most recent call last):
+    File "C:\Users\Pattis\workspace\zexperiment\experiment.py", line 12, in <module>
+      print(next(i))
+  StopIteration
+
+When we call primes(10), this generator binds its parameter max to 10 and then
+immediately returns an iterator representing prime's SUSPENDED BODY (before
+executing any of the statements in its body). It doesn't run, so it doesn't
+yield any values yet: but it will yield values when we call next on it, so it is
+similar to what calling iter(...) does, returning an iterator.
+
+Generators print much like functions, indicating they are a generator object
+(a special kind of iterator), named primes, and stored at some memory location
+(a value we are unconcerned with knowing, other than to find that if we executed
+i1 = primes(10) followed by i2 = primes(10) followed by print(i1,i2) the
+locations of i1 and i2 are DIFFERENT. Two calls to prime have produed two
+different iterator objects. This is like the fact that calling iter(...) twice
+on a range objects produces two different objects that we can iterate over
+independently.
+
+The first call of next(i) resumes the suspended execution of the generator,
+which starts by binding p to 2 and then begins executing the while loop. Since
+max != None it will continue to loop so long as p <= 10. It executes the body
+of the loop and the if statement checks whether p (now 2) is prime; it is, so
+it yields the value 2 (returning it from the call to next and suspending the
+generator for further use). Python prints 2.
+
+The second call of next(i) resumes the suspended execution of the generator
+after the yield, which increments p to 3 and then re-executes the while loop's
+body (p is <= 10). The if statement checks whether p (now 3) is prime; it is,
+so it yields the value 3 (returning it from the call to next and suspending the
+generator). Python prints 3.
+
+The third call of next(i) resumes the suspended execution of the generator
+after the yield, which increments p to 4 and then re-executes the while loop's
+body (p is <= 10). The if statement checks whether p (now 4) is prime; it
+isn't, so Python increments p to 5 and  re-executes the while loop's body
+(p <= 10). The if statement checks whether p (now 5) is prime; it is, so, it
+yields the value 5 (returning it from the call to next and suspending the
+generator). Python prints 5 (by skipping/not yielding the value 4).
+
+The fourth call of next(i) resumes the suspended execution of the generator
+after the yield, which increments p to 6 and then re-executes the while loop's
+body (p is <= 10). The if statement checks whether p (now 6) is prime; it
+isn't, so Python increments p to 7 and re-executes the while loop's body
+(p <= 10). The if statement checks whether p (now 7) is prime; it is, so, it
+yields the value 7 (returning it from the call to next and suspending the
+generator). Python prints 7 (by skipping/not yielding the value 6).
+
+The fifth call of next(i) resumes the suspended execution of the generator,
+after the yield, which increments p to 8 and then re-executes the while loop's
+body (p is <= 10). The if statement checks whether p (now 8) is prime; it
+isn't, so Python increments p to 9 and re-executes the while loop's body
+(p <= 10). The if statment checks whether p (now 9) is prime; it isn't so
+Python increments p to 10 and re-executes the while loop's body (p <= 10). The
+if statment checks whether p (now 10) is prime; it isn't, so Python increments
+p to 11 but terminates the loop (does not re-execute its body), because p > 10.
+
+Because there are no more statements to execute in the generator, it implicitly
+executes a return, which inside an generator automatically raises the
+StopIteration exception, which is not handled in any try/except block in its
+code, so it propagates to Python, which prints it and then terminates execution
+of the script.
+
+Note what happens if we reset i to a new call of primes(10)
+
+i = primes(10)
+
+print(next(i))
+print(next(i))
+print(next(i))
+
+i = primes(10)
+
+print(next(i))
+print(next(i))
+
+Python would print
+
+  2
+  3
+  5
+  2
+  3
+
+because calling primes(10) create a new generator object which will yield 2
+the first time it is called. We bind i to the new object, starting it over. If
+we wrote the script
+
+i1 = primes(10)
+i2 = primes(10)
+print(next(i1))
+print(next(i2))
+print(next(i1))
+print(next(i2))
+print(next(i1))
+print(next(i2))
+
+Python would print
+
+  2
+  2
+  3
+  3
+  5
+  5
+
+because we now have two different generator objects, and each works
+independently of the other. So each time we call a generator, it constructs a
+new object to return and later iterate over.
+
+Constrast this with
+
+i1 = primes(10)
+i2 = i1
+print(next(i1))
+print(next(i2))
+print(next(i1))
+print(next(i2))
+
+for which Python would print
+
+  2
+  3
+  5
+  7
+
+because now both i1 and i2 alias (refer to) the same iterator/generator object.
+Another call to next would raise the StopIteration exception
+
+----------
+Function/Generators Aside: Terminology, Predicates, iter function
+
+The module named inspect in Python (see the 29.12 in the Python Library) has
+has many functions, including the predicates isfunction, isgeneratorfunction,
+an isgenerator, which respectively return whether or not their arguments are a
+function, generator function, or generator object (an object returned by calling
+a generator function). Assume we import these by executing
+
+  from inspect import isfunction, isgenerator
+
+Then isfunction(primes) and isgeneratorfunction(primes) both return True:
+Python considers primes both function and more specifically a generatorfunction.
+Also isgenerator(primes) returns False, but isgenerator(primes()) returns True.
+So technically, primes is a generator FUNCTION that when called returns a
+GENERATOR object (really an iterator: something that we can call next on).
+
+If we call type(primes()) it prints as the string <class 'generator'> but I
+do not know how to refer to the name of the generator class explicitly, only
+how to call the isgenerator predicate, to determine whether or not an object is
+a generator. So, while we write type(x) is int to determine whether or not x is
+an integer,  we call inspect.isgenerator(x) to determine whether or not x is a
+generator.
+
+With these concepts we can write an even more accurate verison of iter as
+follows. In this version, we illustrate that calling iter on a generator just
+returns that generator itself; otherwise, it calls __iter__ on its argument and
+returns that value, so long as Python can call next on that value (checked in
+both the namespace of the object and the namespace of the class from which the
+object was constructed).
+
+def iter(i):
+    if isgenerator(i):
+        return i
+
+    x = i.__iter__()
+    if '__next__' not in x.__dict__ and '__next__' not in type(x).__dict__:
+        raise TypeError('iter() returned non-iterator of type '+type_as_str(x))
+
+    return x
+
+
+So, technically when translating the following for loop into a while loop,
+
+    for i in primes(10):
+        print(i)
+
+Python executes _hidden = iter(primes(10)). In this case the primes generator
+function is called and returns a generator object (like an iterator); when iter
+is called on the generator object it immediately returns that same object (on
+which it will automatically call next in the translation of the body of the for
+loop). 
+
+We had this same problem in the previous lecture, solving it by writing an
+__iter__ method in the nested iterator class, which just returned self. In this
+way, calling iter on an iterable just returned that iterable.
+
+Here are a few other predicates we can call after importing from inspect:
+ismodule, isclass, and ismethod. It also defines way to get interesting
+information about objects. For example, if we define the f function on line 1
+of a module
+
+1  def f(x):
+2     return x;
+
+getsourcelines(f) returns
+
+(['def f(x):\n', '    return x\n'], 1)
+
+A tuple whose first index is a list of the lines in the function's definintion
+and whose second index is the line in the file on which the function starts.
+
+getsource(f) returns the function as one large string: its str is
+
+def f(x):
+    return x
+
+and its repr is
+
+'def f(x):\n    return x\n'
+
+The concept of "introspection" allows a running program to examine information
+about itself. In Program #4, we will see introspection about the parameter
+structure of a function, and the binding of arguments to parameters when a
+funciton is called, using functions in the inspect module. We can introspect
+about all this information in a Python function.
+----------
+
+Finally, although we have been slogging around with explicit calls to
+next(...), which we can do with generators, as we did with iterators, they are
+most simple to use in the typical contexts in which we use iterators: "for"
+loops. The script
+
+for i in primes(50):
+    print(i,end=' ')
+
+would print all the primes <= 50: 2 3 5 7 11 13 17 19 23 29 31 37 41 43 47
+
+And the script
+
+for i in primes():
+    print(i)
+
+binds the parameter max to None (its default value) so the while loop would
+be infinite, and it would keep printing primes forever: so the primes generator
+can either be a definite (bounded) or indefinite (unbounded) generator of
+primes (because there are an infinite number of primes).
+
+We could alter the meaning of primes to bound not the VALUE of the prime
+produced, but to bound the NUMBER of primes produced. Here is the code for this
+task
+
+from predicate import is_prime
+def primes(max_number_to_return = None):
+    p = 2
+    while max_number_to_return == None or max_number_to_return > 0:
+        if is_prime(p):
+            if max_number_to_return != None:
+                max_number_to_return -= 1
+            yield p
+        p += 1 
+
+for i in primes(20):
+    print(i,end=' ')
+
+This script produces not primes up to 20, but 20 primes. When run it prints
+
+  2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53 59 61 67 71
+
+Which loop is easier to understand: the one above or 
+
+    while True:
+        if max_number_to_return != None and max_number_to_return == 0:
+            return
+        ...
+
+Note that we could have also written this primes generator to create a finite
+list of max_to_return primes and return that eniter list, which the for loop
+above could iterate over. But the advantage of the generator above is two-fold:
+it can produce an infinite number of primes (not useful in the loop shown above,
+but useful in other examples), and the space it occupies is fixed (always a few
+local variable names, none of which bind to a complicated data structure: not a
+tuple/list/set/dict) no matter how many primes it must generate (unlike a
+primes function that returns a list, whose space would grow with the value of
+its parameters). Generators commmonly have this "can be infinite" and "use
+little fixed space" properties, when compared to functions that return many
+values all at once (e.g., putting all of the values in a list).
+
+That finishes our discussion of generators unto themselves. The next sections
+discuss how to use generators to implement the __iter__/__next__ protocol of
+iterators for classes, and how to write iterator decorators.
+
+------------------------------------------------------------------------------
+
+Generators for implementing __iter__/__next__ in classes
+
+In the previous lecture, I wrote the __iter__ method as follows. I could have
+just returned iter(list(self.histogram)) using the standard list iterator, but
+I wanted to show how to write an iterator that did its own indexing of the list
+(as the list iterator actually, does, to show you how to do it).
+
+    # standard __iter__: defines a class with __init__/__next__ and returns
+    #   an object from that class
+    def __iter__(self):
+        class PH_iter:
+            def __init__(self,histogram):
+	        # make copy here, so iteration not affected by mutation
+                self.histogram = list(histogram)
+                self.next = 0
+
+            def __next__(self):
+                if self.next == 10:
+                    raise StopIteration
+                answer = self.histogram[self.next]
+                self.next += 1
+                return answer
+
+            def __iter__(self):
+                return self
+
+        return PH_iter(self.histogram)
+ 
+Using generators, we can rewrite this method much more simply. First we will
+use a class function _gen: the leading _ indicates that this is a helper method
+in the class and only methods inside the class (like the __iter__ method)
+should call it. It still uses indexes to iterate over the list; it still does
+not use the list iterator.
+
+    @staticmethod
+    def _gen(bins)
+        for i in range(10):
+            yield bins[i]
+                
+    def __iter__(self):
+        # copy so iteration not affected by mutation (e.g., clear/tally method)
+        return Percent_Histogram._gen(list(self.histogram))
+
+Similarly to how we defined a class in an __iter__ method, we can define the
+gen generator inside __iter__ method as well; hiding this helper inside __iter__
+makes it more difficult to ever call it outside of __iter__, so I'm now calling
+it just gen.
+
+    def __iter__(self):     #1: Correct
+        def gen(bins):
+            for i in range(10):
+                yield bins[i]
+                
+        # copy so iteration not affected by mutation (e.g., clear/tally method)
+        return gen(list(self.histogram))
+
+In fact, we can ALMOST further simplfy this code to just a single method that
+IS a generator, which uses a local variable to store a copy of the histogram
+list. BUT THIS IS WRONG!
+
+    def __iter__(self):     #2: WRONG!
+         hist_copy = list(self.histogram)
+         for i in range(10):
+            yield hist_copy[i]
+
+__iter__ itself now becomes a generator. Calling it (as with any generator)
+returns an iterator, which can be called by next in the future, to yield its
+values (which is, after all, the purpose of __iter__).
+
+BUT, THERE IS A SUBTLE DIFFERENCE between these two code fragments; the copy of
+self.histogram in #1 is made when the ITERATOR IS CALLED. The copy in #2 is made
+when next() is CALLED THE FIRST TIME. Recall that executing #2 (which is itself
+a generator function) suspends as soon as it is called (it binds the parameters
+but executes no code in its body). Its body is executed only when "next" is
+called on the suspended generator. So the copying the list DOES NOT occur at the
+time when __iter__ is called. We can see different behaviors concretely using
+the following code.
+
+p1 = Percent_Histogram() #1 version	    p2 = Percent_Histogram() #2 version
+i1 = iter(p1)		    		    i2 = iter(p2)
+p1.tally(0)				    p2.tally(0)
+print(next(i1))				    print(next(i2))
+
+The code for version #1 prints 0 (for the first histogram bin) because....
+When the iter(p1) function is called it makes a copy of the self.histogram list,
+which then has all 0s and then calls and returns the _gen generator, whose
+parameter is bound to that list copy and whose body does not yet execute.
+Calling p1.tally(0) updates self.histogram, but does not affect the copy that
+is bound to _gen's parameter. Calling print(next(i1)) starts executing the body
+of the _gen generator, whose first iteration returns the first value in that
+copied self.histogram which has remained 0.
+
+The code for version #2 prints 1 (for the first histogram bin) because....
+When the iter(p1) generator is called it returns a generator but its body does
+not yet execute: the copy is NOT made yet. Calling p1.tally(0) updates
+self.histogram. Calling print(next(i1)) starts executing the body
+of the __iter__ generator, whose first statement copies self.historam which has
+ALREADY BEEN UPDATED to tally the value 0. It continues executing the body
+of the __iter__ generator, whose first iteration returns the first value in that
+now copied self.histogram which stores 1.
+
+The two codes produce the same results only whenever the first call to next
+comes immediately after the construction of the iterator, before any call that
+mutates it (which doesn't happen above: the p1.tally(0) method call occurs
+between them). So, any for loop would get translated into a while loop that
+calls next immediately after iter, so these two versions of the __iter__ code
+produce the same result when used with a for loop.
+
+Version #2 would be not be correct if we wanted the meaning of iterating over a
+Percent_Histogram object to "see" all the mutations made to it during iteration
+over it. That is because it will see only the first change (but then copy the
+object it is iterating over).
+
+The bottom line for this discussion is that writing an __iter__ function with a
+nested generator allows the programmer full control over copying/not copying.
+
+As a final simplification, if we did want to iterate over the histogram (and
+not a copy, so we iterate over the mutation), we can share this object by smply
+writing
+
+    def __iter__(self):
+         for i in range(10):
+            yield self.histogram[i]
+ 
+which is the same as writing
+
+   def __iter__(self):
+        def gen(bins):
+            for i in range(10):
+                yield bins[i]
+                
+        # No copy so iteration affected by mutation (e.g., clear/tally method)
+        return gen(self.histogram)
+
+It doesn't copy self.histogram in either case, but uses it directly. So in
+this case the meanings of the two __iter__ methods are the same: the top
+__iter__ is a generator function itself; he bottom __iter__ is a method
+that returns a called generator function. In both cases we can call "next" on
+the result returned by calling __iter__.
+
+
+Why is it easier to write generators that implement iterators, compared to
+writing __iter__ and __next__ methods explicitly? Generally, an iterator must
+remember its state; it must know what value to return when __ next__ is called;
+and when it is called, it must update its state so that when __next__ is called
+again, it returns a different value, sequencing through all the values it must
+return. Remember that __next__ is typically called repeated/automatically, in
+the while-loop translation of a Python for-loop.
+
+Functions don't retain state in their local variables when they return. So
+instead, we must store the state of an iterator as attributes in an object,
+on which __next__ is called repeatedly. We saw that we typically store such
+state in an object constructed from a class defined/nested inside __iter__.
+In prange an prange_iter object stores three attributes: self.n, self.stop,
+and self.step.
+
+But generators DO RETAIN THEIR STATE AFTER THEY YIELD A VALUE (and remember
+what statement they are executing too). When next is called on them, they
+continuing executing, starting with the statement after the yield (or the first
+statement in the generator, when next is called the first time). So it is often
+easier to use local variables and simple control structures to write a
+generator that yields the values that the iterator produces.
+
+------------------------------------------------------------------------------
+
+IMPORTANT HINT for writing Generators:
+
+To those new to writing generators: if you want a GENERATOR to YIELD a sequence
+of values, first think about/write a FUNCTION that simply PRINTS that same
+sequence of values. Then change every PRINT statement into a YIELD statement.
+Now in the generator, when next is called multiple times, will instead yield
+each of the values it printed. 
+
+Using this idea makes generators easier to think about, write, and debug. There
+can still be some subtleties involved, but this will work for simple generators
+and get you off to a good start for complicated ones. Always think about the
+meaning of what you write.
+
+Here is a simple function where something interesting happens because of
+mutation. Its generator equivalent (with print replaced by yield) will have
+the same problem.
+
+def strange(n):
+    l = ['?']
+    for v in range(n):
+        l[0] = v
+        print(l)
+
+The call strange(3) prints the results
+  [0]
+  [1]
+  [2]
+
+If we change print(i) to yield, then the code
+
+for i in strange(3):
+    print(i)     
+
+prints the results
+  [0]
+  [1]
+  [2]
+
+Yet the code
+
+print( [r for r in strange(3)] )
+
+prints the result
+
+[[2], [2], [2]]  
+
+You should hand simulate it this function generatore, drawing pictures of its
+execution, to understand why it produces this last result. Then modify the code
+so that the first second loop/call prints the same, while the last one prints
+
+[[0], [1], [2]]  
+
+------------------------------------------------------------------------------
+
+Iterable Decorators: Generators (which are Iterable) that use Iterable Arguments
+
+In the previous lecture I wrote a few classes that implemented decorators for
+iterables: each of which took an iterable argument (and possibly some other
+arguments) and resulted in an object that was also iterable. We called such
+classes decorators (for iterables; we will see decorators for functions next
+week).
+
+These classes were not huge (about a dozen lines: __init__, __iter__, and inside
+__iter__ an embedded class with __init__ and __next__: that is a lot of
+infrastructure), but each can be written almost trivially using generators in
+just a few lines: code not split across interconnected __init__, __iter__, and
+__next__ methods, but instead code all in one generator.
+
+Note the term decorator means that the thing created is the "same kind" of thing
+that is its argument (but decorated: with a change in behavior). So all these
+generators take some iterable as an argument, and because they are generators
+the result they return is also iterable: they iterate in a slightly different
+way than their argument, decorating their argument. Therefore we can compose
+iterable on top of iterable on top of iterable (see the last example in this
+section) using these decorators.
+
+Here are the classes from the previous lecture rewritten as generators, and
+dramatically simplfied.
+
+1) Repeatedly produce values from an iterable (over and over again)
+
+def repeat(iterable):
+    while True:
+        for i in iterable:
+            yield i
+
+Again, the way to understand this generator is to think about what it would
+print if the generator were changed to a function that printed i instead of
+yielding it: it would repeatedly print everything in the iterable. Understand
+the other generators (below) using the same idea.
+
+Every time the inner for-loop finishes, it is restarted by the outer while
+loop. I generalized this generator as follows, allowing a limit to the
+repetitions, with the default None (which operates like repeat above).
+
+def repeat(iterable, max_times = None):
+    while max_times == None or max_times > 0:
+        for i in iterable:
+            yield i
+        if max_times != None:
+            max_times -= 1
+
+
+2) Produce unique values (never the same one twice)
+
+def unique(iterable):
+    iterated = set()
+    for i in iterable:
+        if i not in iterated:
+            iterated.add(i)
+            yield i
+
+Here the iterated set remembers every value yielded: only values not appearing
+in this set are yielded (and such values are immediately put into the set so
+they won't be yielded again). I generalized this generator as follows, allowing
+a value to be repeated a certain number of times (with a default of 1, which
+operates like unique above).
+
+from collections import defaultdict  
+
+def unique(iterable, max_times = 1):
+    times = defaultdict(int)
+    for i in iterable:
+        if times[i] < max_times:
+            times[i] += 1
+            yield i
+
+This generator uses a defaultdict to remember how many times a value has been
+yielded, ensuring that is is skipped (not yielded) if it has been yielded over
+the maximum allowed number of times.
+
+Questions: if we reversed the order of the two statements in the if statement
+above, would the function still work correctly?
+
+
+3) Filter an iterable, producing only values for which predicate p returns True
+(called pfilter because there is a filter function supplied in itertools).
+
+def pfilter(iterable, p):
+    for i in iterable:
+        if p(i):
+            yield i
+
+So writing 
+
+  for i in pfilter(primes(1000), lambda x: x%10 == 3):
+      print(i)
+
+would print all the primes <= 1000 which end in the digit 3: 3, 13, 23, 43,
+53, 73, 83, 103, 113, ...
+
+
+4) The enumerate generator: how to write this Python built-in function
+
+def enumerate(iterable, counter = 0):
+    for value in iterable:
+        yield (counter, value)
+        counter += 1
+
+
+5) Produce values in a sorted sequence, according to key/reverse
+(called gen_sorted because there is a sorted function that returns
+a list of all the values gen_sorted yields).
+
+def gen_sorted(iterable,key=None,reverse=False):
+    l = list(iterable)
+    l.sort(key=key,reverse=reverse)
+    for i in l:
+        yield i
+
+By making a local copy of the list, we can sort it without mutating the list
+passed as an argument. Also, changes to the original list will not be seen by
+the iterator (unless those change mutate values in the list). Note here we
+must know all of the values before we can yield the first/smallest one. We
+cannot call this decorator on a general infinite generator.
+
+We can easily test generators on strings, which are iterable (returning the
+individual characters). E.g., the following example prints only the vowels, in
+sorted order, uniquely, that are in my name: 'a', 'e', 'i'
+
+for i in pfilter(gen_sorted(unique('richardepattis')), lambda x : x in 'aeiou'):
+    print(i,end='')
+
+Let's now return to the original primes generator at the start of this lecture.
+We now have some tools that we can use to simplify (actually avoid) this
+generator. The general component below generates a sequence of integers, either
+bound or unbounded (unlike range, which is always bounded) either ascending or
+descending
+
+def ints(start, limit = None, step = 1):
+    i = start
+    while limit==None or (step>=1 and i<limit) or (step<=-1 and i>limit):
+        yield i
+        i += step
+
+Note that unlike range, we cannot call len or other range methods on ints. Also,
+unlike range, supplying one argument binds it to start, not limit. It would take
+more complicated code to duplicate the parameter structure of range (as we
+showed using *args in a previous lecture).
+
+Now, instead of calling primes we would call pfilter(ints(2),is_prime) to
+represent the same iterator. And if we defined any other predicates, we could
+supply them to pfilter to generate only values that satisfied those predicates.
+
+What do you think the difference is between the following three functions: all
+attempt to find the nth prime (so nth_prime(1_000_000_000) returns the billionth
+number that is prime)? Which ones work, which ones don't? Why?
+
+def nth_prime(nth):
+    for n,p in enumerate( pfilter(ints(2),is_prime), 1 ):
+    	if n == nth:
+            return p
+
+def nth_prime(nth):
+    primes = [i for i in ints(2) if is_prime(i)]
+    for n,p in enumerate( primes, 1 ):
+    	if n == nth:
+            return p
+
+def nth_prime(nth):
+    primes = (i for i in ints(2) if is_prime(i))
+    for n,p in enumerate( primes, 1 ):
+    	if n == nth:
+            return p
+
+Python has a module called itertools (see the library documentation) which
+define many iterator decorators, whose composition allows for powerful
+iteration in Python. We will return to looking at the itertools module more
+deeply later in the quarter.
+
+------------------------------------------------------------------------------
+
+A problem using explicit calls to iter/next in a generator function
+  and a simple fix (useful for various parts of Quiz #4)
+
+Suppose that we need to write an iterable decorator that produces the 1st, 3rd,
+5th, ... (the odd values) of the iterable. Here is one simple way to do it using
+a for loop:
+
+def odds(iterable):
+    is_odd = true
+    for i in iterable:
+        if is_odd:
+            yield i
+        is_odd = not is_odd
+
+Hand simulate this code to understand why it works. It seems like we should be
+able to "simplify" this function by calling iter/next explicitly.
+
+def odds(iterable):
+    iterator = iter(iterable)
+    while True:
+        yield next(iterator)  # Yield an odd one (or raise StopIteration)
+        next(iterator)        # Skip the next/even one (or raise StopIteration)
+
+The problem is that one of the next calls will eventually raise the
+StopIteration exception, which we hope will  progagate out of this generator
+to finish it. But we really need to execute a return statement to do that
+(after Python 3.5). If you enter this code and run it by calling say
+
+for i in odds("abcd"):
+    print(i)
+
+It prints
+
+a
+c
+Traceback (most recent call last):
+  File "C:\Users\pattis\workspacepython\33quiz3\misspelling.py", line 4, in odds
+    yield next(iterator)  # Yield an odd one (or raise StopIteration)
+StopIteration
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\pattis\workspacepython\33quiz3\misspelling.py", line 8, in <module>
+    for i in odds("abcd"):
+RuntimeError: generator raised StopIteration
+
+You might see this same error in code that you write.
+
+The problem is that we should not attempt to terminate the odds generator by
+having next raise StopIteration. Instead, we need to handle the StopIteration
+exception and then instead execute a return statemeint.
+
+So, we can rewrite odds as
+
+def odds(iterable):
+    iterator = iter(iterable)
+    while True:
+        try:
+            yield next(iterator)# Yield an odd one (or raise StopIteration)
+            next(iterator)      # Skip the next/even one (or raise StopIteration)
+        except StopIteration:
+            return
+
+In fact, this code will execute equivalently to 
+
+def odds(iterable):
+    iterator = iter(iterable)
+    try:
+        while True:
+            yield next(iterator)# Yield an odd one (or raise StopIteration)
+            next(iterator)      # Skip the next/even one (or raise StopIteration)
+    except StopIteration:
+        return                  # Could also be pass
+
+and even
+
+def odds(iterable):
+    try:
+        iterator = iter(iterable)
+        while True:
+            yield next(iterator)# Yield an odd one (or raise StopIteration)
+            next(iterator)      # Skip the next/even one (or raise StopIteration)
+    except StopIteration:
+        return                  # Could also be pass
+
+So, generally we can take the conceptually simpler explicit iterator, but we
+must write a try/except statement in it to handle the StopIteration raised by
+explicitly calling next(...) and then turn it into a return.
+
+------------------------------------------------------------------------------
+
+Space Efficiency
+
+Note that generators embody a small amount of code and often don't store any
+large data structures (unique and gen_sorted above did use extra space in a
+set/dict and list). Generators store/produce one value at a time, unlike, say,
+most comprehensions, which produce an entire list/set/dict of values that must
+all be stored at the same time; but generators are like tuple comprehensions,
+which we saw are a bit different: like generators we can examine the sequence
+of values produced one at a time with a for loop, or call a constructor to put
+all the values in a data structure.
+
+-----
+Recall, tuple comprehensions in Python produce generators objects! Try
+
+  a = (i for i in range(10))
+  print(a)
+  t1 = tuple(a)
+  print(t1)
+  t2 = tuple(a)
+  print(t2)
+
+  l = [i for i in range(10)]
+  print(l)
+
+----
+
+So when writing generators, we should always try to avoid storing a large
+number of values in a data structure. It might make writing the generator more
+difficult, but few generators need to store large amounts of data to work
+correctly.
+
+Although, for some applicatons (like reversed and sorted), Python must look at
+all the iterated values before deciding what to yield first, so they typically
+work by first storing all the values iterated over in some data structure (a
+tuple or list: see gen_sorted above and gen_reversed below and then process
+values in the tuple/list) which we hope is not huge.
+
+from goody import irange
+
+def gen_reversed(iterable):
+    l = list(iterable)                # Put all values in a list or tupel
+    for i in irange(len(l)-1,-1,-1):  # Iterate the list backwards, 0 included
+        yield l[i]
+
+In fact, there is a clever way to generate reversed values without ever storing
+the iterable in a list! But the time is takes (in its doubly nested loop) can
+be huge; so for choosing the implementation we want, we have to make a
+choice whether time or space is more important: maybe we should define two
+generators: reversed_save_time (same as gen_reversed) and reversed_save_space
+(defined below)
+
+def reversed_save_space(iterable):
+    # compute the length of the iterable once;
+    # it stores no values in a data structure, just computes the length
+    length = 0;
+    for i in iterable:               # iterate once to compute its length
+        length += 1
+
+    for c in range(length-1,-1,-1):  # c indexes last, second to last, ... first
+        temp = iter(iterable)        #   restart iteration on iterable
+        for i in range(c):           #   skip c-1 values from front
+            next(temp)               #     ...call next, but ignore values
+        yield next(temp)             #   yield the cth value: after skipping c-1
+
+Observe it working by calling
+
+for i in reversed_save_space("abcd"):
+    print(i)
+        
+While this seems very fast for small lists it can very run slowly for large
+lists, because it is repeatedly skipping large numbers of values in the inner
+loop for each single yield in the outer loop. For a list with 1,000 values, it
+goes through all to find the length, then 999 to yield the value at the end,
+then 998 to yield the value two from the end, then 997 to yield the value three
+from the end... Eventually it skips 500,500 values: 1009*1001/2)
+
+Also, it requires being able to start over iterable: by calling iter(iterable).
+This doesn't always work: if iterable is the result returned by a generate 
+function, then calling iter(iterable) produces the same object. Once exhaused,
+it CANNOT RESTART at the beginning. 
+
+------------------------------------------------------------------------------
+
+YOU CAN SKIP READING THIS SECTION: IT HAS MORE DETAILS THAN WE USE IN ICS-33
+
+Coroutines: Sending Information into Generators (after calling them)
+
+At present, we have seen how to use generators in only a limited (although very
+useful/powerful) way: once a generator is called (we send information to its
+parameters), we repeatedly call next on the iterator which produces information.
+But, we have not yet seen how to send more information into a generator, after
+it starts executing. In this section, we explore the details of generators
+further, showing how we can send new information into a running generator, to
+affect its behavior.
+
+First, we will generalize the next function by using the send function. Assume
+that g = some_generator(...); we can think of  calling next(g) as equivalent to
+calling g.next(). We will soon learn about the send function, which generalizes
+restarting a generator by allowing us to pass it arbitrary information: calling
+g.send(None) is equivalent to calling next either way.
+
+Apart from introducing the send function itself, most of the new information
+about generators concerns what yield does. In our previous understanding of
+yield, it is a statement that yields a value. We will now learn that yield
+actually is an expression that performs two jobs. When executed in a generator,
+yield
+
+  (a) yields a value to where next/send is called on the generator
+
+  (b) returns a value: the argument to the call of send that restarts the
+                       generator (if restarted by next, which is equivalent to
+                       send(None) yield returns None)
+
+So, we will see yield used both ways, in code like
+
+   rv = yield yv
+
+When executing this statement, Python yields the value stored in yv; when the
+generator is restarted by a call to .send(v1) then yield returns the value v1
+and also stores this value into rv. The generator might use this new value in
+rv to affect its behavior. So, we have a way to send information to a generator
+at the time it suspends; when it resumes the generator can use that information
+to affect its continued execution.
+
+Finally, the FIRST time the body of a generator is executed, it must be with
+either a call to next or to send(None), which are equivalent. Otherwise Python
+will raise a TypeError exception:
+
+  TypeError: can't send non-None value to a just-started generator
+
+Why is calling next on the generator the first time different? Because the
+generator's body has hasn't suspended at a yield -it hasn't evenstarted
+executing yet, so there no way to store any sent value.
+
+Let us look in depth at the following example
+
+# get_primes yields all prime numbers starting at number (if restarted by next)
+# if get_primes is restarted by send (with a non-None argument), it continues
+#   yielding primes by checking numbers starting at send's argument
+
+def get_primes(number):
+    while True:
+        if is_prime(number):
+            sent = yield number
+            if sent != None:
+                number = sent-1
+        number += 1
+
+So calling
+  g = get_primes(5)
+  print(next(g), next(g), next(g))
+
+prints: 5 7 11
+
+Here, yield always returns None (because the generator is restated using next,
+which translates to send(None)), storing it in sent, so number is never set to
+sent-1.
+
+The same result would come from calling
+
+  g = get_primes(5)
+  print(g.send(None), g.send(None), g.send(None))
+
+But calling
+  g = get_primes(5)
+  p1 = next(g)
+  p2 = g.send(p1+10)
+  p3 = g.send(p2+10)
+  print(p1, p2, p3)
+
+prints: 5 17 29
+
+0) The call to get_primes(5) binds get_prime's paramenter number to 5. Recall
+   that the body is not yet executed.
+
+1) The call to next(g) starts executing the body of the generator. Because
+   5 is prime, it yields that value, which is stored into p1. Recall the
+   that the first time the body of the generator is executed, it must be with
+   either a call to next or to send(None), which it is here. This makes sense
+   because it is starting from the beginning, not starting from a yield that
+   can return a useful value.
+
+2) The call to g.send(p1+10) restarts executing the body of the generator. The
+   yield expression returns 15 (p1+10 = 5+10 = 15) and stores it into sent;
+   because sent is != None, number is reset to sent-1=14; number is incremented
+   to 15, which is not prime, so number is incremented to 16, which is not
+   prime, so number is incremented to 17, which is prime, so it yields 17 which
+   is stored into p2.
+
+3) The call to g.send(p2+10) restarts executing the body of the generator. The
+    yield expression returns 27 (p2+10 = 17+10 = 17) and stores it into sent;
+   because sent is != None, number is reset to send-1=26; number is incremented
+   to 27, which is not prime, so number is incremented to 28, which is not
+   prime, so number is incremented to 29, which is prime, so it yields 29 which
+   is stored into p2.
+
+4) The values stored in p1, p2, and p3 are printed.
+
+You can instrument this code with calls to print (or single step it -using step
+over and step into- in thedebugger) to get a better idea of what is happening.
+The main point to remember is that whenever the generator yields a value, the
+generator can be restarted with a new non-None value passed to it via an
+argument to send, which is returned from yield as the first step in restarting
+the code.
+
+Actually, when a generator returns, it raises the StopIteration exception; the
+.value attribute of the raised exception is whatever the returned value is.
+Using this information, here is an example of how to write a generator that
+accepts values to average, and returns the average whenever it is sent None.
+
+def averager():
+    count,total = 0,0
+    while True:
+        new = yield
+        if new == None:
+            return total/count
+        count,total = count+1, total+new
+
+Notice the yield has no expression on its right side; it is designed to just
+receive information, which it locally accumulates, returning the average when
+it is sent None. To average the value 10, 20, and 30, we would write the code
+
+a = averager()
+next(a)                      # Start generator (suspends at yield)
+a.send(10)                   # afterward update, count is 1, total is 10
+a.send(20)		     # afterward update, count is 2, total is 30
+a.send(30)		     # afterward update, count is 3, total is 60
+try:
+    a.send(None)             # Force return, raising StopIteration exception
+except StopIteration as exc:
+    print(exc.value)         # exc.value is value of raised exception.
+
+What is interesting about this use of generators, is that we can start averaging
+without knowing all the things that are going to be averaged. We can compute a
+running average of the values we know, and in the future either get finish
+averaging, or continue supplying more values to average.
+
+Finally, to allow generators to act more like function calls, we can invoke one
+generator inside another more easily by using the "yield from" statement. So,
+if generator f wants to yield all the values yielded from generator g
+(before f continues to yield more of its own values), we can write in f:
+
+  yield from g(...)
+
+which is equivalent to writing
+
+  for i in g(...):
+      yield i
+
+The truth is more complex, but this information suffices for the following
+example.
+
+When we discuss trees, we will examine a generator that yields binary tree nodes
+in a preorder traversal by using recursion and "yield from" as follows:
+
+def generator_pre_order(atree):
+    yield atree.value
+    for c in atree.children:
+        yield from generator_pre_order(c)
+
+------------------------------------------------------------------------------
+
+1) Define a generator named match_indexes that takes a pattern string and a
+text string as parameters. It yields every index in text which matches
+pattern (compare the pattern to a slice in the tet). For example.
+
+for i in match_indexes ('ab','aabbaabacab'):
+    print(i,end='')
+
+prints: 1 5 9
+
+Upgrade your match_indexes generator to match a pattern string that is a
+regular expression.
+
+2) Using a generator executing a while loop, rewrite the prange_iterator
+similarly to how the Percent_Histogram iterator was writen above.
+
+3) Define a decorator for iterables  named take_starting using at generator;
+it takes an iterable and predicate as arguments, and produces all values in
+the iterator starting with the first one for which the predicate is true.
+
+4) Define a decorator for iterables named product using a generator; it
+takes two iterables as arguments, and produces all tuples with one value
+taken from the first iterable and one taken from the second. For example, if
+we wanted to generate a hand of playing cards (a list of 2-tuples, whose
+first values are 1-13 (for ace-king) and whose second values are a suit (either
+'H', 'C', 'D', or 'S' for heart, club diamond, or spade) we could call
+product(irange(1,13),'HCDS') to produce this list.
+
+5) Define a decorator for iterables named transform using a generator; it
+takes an iterable and a function (whose domain is the iterable) as arguments,
+and produces a transformed value for each value the iterable produces by
+calling the function.
+
+6) Using the definition of get_primes above (unchanged), write a generator that
+easily yields the first one digit prime, the first two digit prime, etc. up
+until the first n digit parmameter. Every time it yields a prime, it restarts
+the generator looking at a higher number of digits. Note that
+
+    n = 5
+    for i in range(n):
+        print(10**i,sep=' ')
+
+prints: 1 10 100 1000 10000
+
+These are the smallest 1 digit, 2 digit, 3 digit, 4 digit, and 5 digit numbers.
+The following are the first primes 1 to 5 digits: 2, 11, 101, 1009, and 10007.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

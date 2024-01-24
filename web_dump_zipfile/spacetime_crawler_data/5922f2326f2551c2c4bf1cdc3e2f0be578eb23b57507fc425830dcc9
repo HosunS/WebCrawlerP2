@@ -1,0 +1,631 @@
+¶Ifinal_url¢DtypeEvaluex6https://kyotofly.kit.jp/cgi-bin/stocks/data_search.cgiLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:22:58 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html;charset=Shift_JIS¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueWApache/2.2.15 (Red Hat)Kraw_content¢DtypeEvalueYLê
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>
+Kyoto Stock Center (DGRC), Kyoto Institute of Technology
+</title>
+
+
+<!-- pin info -->
+<meta name="application-name" content="Kyoto Stock Center (DGRC)">
+<meta name="msapplication-starturl" content="/stocks/">
+<!-- icon -->
+<link rel="shortcut icon" href="/stocks/images/favicon.ico">
+
+<style type="text/css">
+body {
+padding-top: 130px;  // for navbar fixed top
+padding-bottom: 40px;
+background-color: #f3f2eb;
+}
+
+
+.container {
+margin: 0 auto;
+max-width: 1000px;
+}
+
+.kyotoflybgcolor {
+background-color: #f3f2eb;
+}
+
+.kyotoflytopcolor {
+background-color: #2f3946;
+}
+
+.navbar-form pull-right{
+color: #ffffff;
+}
+
+/* Custom container */
+
+.container {
+margin: 0 auto;
+}
+.container > hr {
+margin: 60px 0;
+}
+
+.navbar .navbar-inner .brand{
+/*
+  font-weight: bold;
+*/
+  font-size: 18px;
+}
+
+.navbar .navbar-inner {
+padding: 0;
+}
+.navbar .nav {
+margin: 0;
+}
+
+/*
+.navbar .nav li {
+display: table-cell;
+float: none;
+}
+*/
+
+.navbar .nav li a {
+border-left: 1px solid rgba(192,192,192,.75);
+border-right: 0;
+/*
+border-right: 1px solid rgba(192,192,192,.75);
+*/
+text-align: left;
+}
+
+.navbar .nav>li>a{
+  font-size: 14px;
+/*
+  font-weight: bold;
+*/
+}
+
+.navbar .nav .dropdown-menu li a {
+border-left: 0;
+}
+
+/* navbar is table-cell, but dropdown is not table-cell 
+.navbar .nav li .dropdown-menu li
+{
+display: block;
+}
+*/
+
+.lowerpanel, .searchmain {
+background-color: #ffffff;
+border-width: 1px;
+border-color: #e8e6d8;
+border-style: solid;
+}
+
+  </style>
+
+<style type="text/css">
+FONT size setting A:link {
+	COLOR: #145391; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #145391; TEXT-DECORATION: none
+}
+A:active {
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+A {
+	TEXT-DECORATION: none
+}
+.jsub {
+	FONT-SIZE: 16px
+}
+.jjjj {
+	FONT-SIZE: 14px
+}
+.jjj {
+	FONT-SIZE: 12px
+}
+.jj {
+	FONT-SIZE: 10px
+}
+.eee {
+	FONT-SIZE: 12px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+.jsub {
+	FONT-SIZE: 14px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"
+}
+</style>
+
+<script language="JavaScript">
+<!--
+function logout(url, uid){
+    var newwin;
+    var que = '?UID=';
+    var out = '&LOGOUT=1'
+    var url2 = url + que + uid + out;
+    newwin = open(url2, "logout", "menubar=no,toolbar=no,resizable=yes");
+}
+function logout_ed(url){
+    var newwin;
+    var out = '?LOGOUT=1'
+    var url2 = url + out;
+    newwin = open(url2, "logout_ed", "menubar=no,toolbar=no,resizable=yes");
+}
+function login(url){
+    var newwin;
+    uid = get_uid();
+    pass = get_pass();
+    var que = '?UID=';
+    var and = '&PASSWD=';
+    var url2 = url + que + uid + and + pass;
+    newwin = open(url2, "login", "menubar=no,toolbar=no,resizable=yes");
+}
+function login_ed(url){
+    var newwin;
+    eid = get_eid();
+    pass = get_pass();
+    var que = '?EID=';
+    var and = '&PASSWD=';
+    var url2 = url + que + eid + and + pass;
+    newwin = open(url2, "login_ed", "menubar=no,toolbar=no,resizable=yes");
+}
+function get_eid(){
+    var eid;
+    eid = document.login_form.EID.value;
+    return eid;
+}
+function get_uid(){
+    var uid;
+    uid = document.login_form.UID.value;
+    return uid;
+}
+function get_pass(){
+    var pass;
+    pass = document.login_form.PASSWD.value;
+    return pass;
+}
+-->
+</script>
+
+<!-- Bootstrap -->
+
+
+<link rel="stylesheet" href="/stocks/bootstrap/css/bootstrap.kyotofly.css">
+<link rel="stylesheet" href="/stocks/bootstrap/css/bootstrap-responsive.css">
+<link rel="stylesheet" href="/stocks/bootstrap/css/kyotofly2.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- smart phone -->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+<!--       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> -->
+    <![endif]-->
+
+  </head>
+
+<body bgcolor="#f3f2eb">
+<div class="kyotoflybgcolor">
+
+<!-- Navigation Bar -->
+<div class="navbar">
+ <div class="navbar navbar-fixed-top">
+  <div class="kyotoflybgcolor">
+
+
+<table style="border-collapse: separate;border-spacing: 0px; width:100%;">
+ <tr>
+  <td>
+   <a href="http://kyotofly.kit.jp/stocks/"><img src="/stocks/images/kyotofly-logo.png"><img src="/stocks/images/kyoto-kyoto.png"></a>
+  </td>
+  <td style="text-align: center;">
+   <img src="/stocks/images/kyoto-dgrc-houses-large.png">
+  </td>
+  <td align="right" valign="bottom">
+<!--   <td style="text&#45;align: right;"> -->
+   <form method="POST" name="login_form" action="https://kyotofly.kit.jp/cgi-bin/stocks/usrmenu.cgi"  target="_blank">
+   <table style="border-collapse: separate;border-spacing: 0px;">
+   <font style="color:#777777;">
+    <tr>
+     <td align="left">
+
+
+		
+
+      ID
+     </td>
+     <td>
+      <input class="input-mini" name="UID" maxlength="4" placeholder="DGRC ID" type="text">
+     </td>
+    </tr>
+    <tr>
+     <td align="left">
+      PWD
+     </td>
+     <td>
+      <input class="input-mini" name="PASSWD" placeholder="Password" type="password">
+     </td>
+    </tr>
+    <tr>
+     <td>
+     </td>
+     <td align="left">
+      <input value="Login" onclick="login('/cgi-bin/stocks/user_regist.cgi')" class="btn" type="button">
+		
+         </td>
+    </tr>
+   </font>
+   </table>
+   </form>
+  </td>
+ </tr>
+   </table>
+
+   <div class="navbar-inner">
+    <div class="container">
+
+   <a class="brand" href="http://www.dgrc.kit.ac.jp/">Kyoto DGGR</a>
+
+   <ul class="nav">
+    <li>	 
+	 <a href="http://kyotofly.kit.jp/stocks/">&nbsp;HOME&nbsp;</a>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-search icon-white"></i>
+	 Advanced Search
+	 </a>
+      <ul class="dropdown-menu">
+       <li><a href="http://kyotofly.kit.jp/cgi-bin/stocks/data_search.cgi">Search Form</a></li>
+       <li class="divider"></li>
+       <li> <a href="/cgi-bin/stocks/search_res_dl.cgi">Download All Stock List</a></li> 
+      </ul>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-check icon-white"></i>
+	 Getting Started
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://kyotofly.kit.jp/stocks/howtoregister.html">Registration</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/guidance.html#payment">Fees and Payment</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/import_permit.html">Import Permit</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/guidance.html#shipping_schedule">Shipping Schedule</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/guidance.html">Guidance</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/dgrcqandae.php">Qs &amp; As</a></li>
+
+	  <li class="divider"></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/documents/AcquisitionPolicy_E.html">Acquisition Policy</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/documents/HowToDonateStocks_E.html">How to Donate Stocks</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/documents/AcquisitionPolicy_J.html">Acquisition Policy (J)</a></li>
+	  <li><a href="http://kyotofly.kit.jp/stocks/documents/HowToDonateStocks_J.html">How to Donate Stocks (J)</a></li>
+	  <li class="divider"></li>
+
+
+	  <li><a href="http://kyotofly.kit.jp/stocks/disclaimer.html">Disclaimer</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://kyotofly.kit.jp/cgi-bin/stocks/password_reminder.cgi">Get a Password Again</a></li>
+	 </ul>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-leaf icon-white"></i>
+	 NBRP Drosophila
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://fruitfly.jp/fly/flystock/physicalMap/chromosomeList.jsp" target="_blank">Genome Viewer</a></li>
+	  <li><a href="http://www.shigen.nig.ac.jp/fly/nigfly/" target="_blank">NIG-Fly</a></li>
+	  <li><a href="http://kyotofly.kit.jp/ehime/" target="_blank">Ehime-Fly</a></li>
+	  <li><a href="http://www.shigen.nig.ac.jp/fly/kyorin/" target="_blank">Kyorin-Fly</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://www.nbrp.jp/" target="_blank">National BioResource Project</a></li>
+	 </ul>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-star  icon-white"></i>
+<!-- 	 <i class="icon&#45;star&#45;empty"></i> -->
+	 Other Links
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://flystocks.bio.indiana.edu/" target="_blank">Bloomington Drosophila Stock Center</a></li>
+	  <li><a href="http://flybase.org/" target="_blank">FlyBase</a></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/%7Ejdd/" target="_blank">JDD</a></li>
+	 </ul>
+    </li>
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-pencil icon-white"></i>
+	 Contact Us
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href="http://kyotofly.kit.jp/cgi-bin/stocks/webmail_usr.cgi">Send a Message</a></li>
+	  <li><a href="http://rrc.nbrp.jp/gatewayAction.do?speciesId=5&target=Entry" target="_blank">Reference Feedback (RRC)</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/about/">About Us</a></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/research/">Research</a></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/news/news-en/">News</a></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/contact/">Maps &amp; Directions</a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://www.dgrc.kit.ac.jp/en/" target="_blank">Department of Drosophila Genomics and Genetic Resources</a></li>
+	  <li><a href="http://www.kit.ac.jp/english/" target="_blank">Kyoto Instiute of Technology</a></li>
+	 </ul>
+    </li>
+    <li class="dropdown">
+	 <a>&nbsp;</a> <!-- dummy -->
+    </li>
+   </ul>
+
+   <ul class="nav pull-right">
+    <li class="dropdown">
+	 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	 <i class="icon-info-sign icon-white"></i>
+	 </a>
+	 <ul class="dropdown-menu">
+	  <li><a href=""><i class="icon-exclamation-sign"></i>&nbsp;
+	       DGRC ID: Issued 4-digit number, as 1111</a></li>
+	  <li><a href=""><i class="icon-exclamation-sign"></i>&nbsp;
+	       Password (PWD): Issued,
+	       consisted of random characters and numbers,
+	       not easy to memorize
+	       </a></li>
+	  <li class="divider"></li>
+	  <li><a href="http://kyotofly.kit.jp/cgi-bin/stocks/password_reminder.cgi">Get a Password Again</a></li>
+	 </ul>
+	 </li>
+   </ul>
+   
+
+
+   </div><!-- /.navbar-inner -->
+  </div><!-- /.container -->
+ </div><!-- /.kyotoflybgcolor -->
+ </div><!-- /.navbar navbar-fixed-top -->
+</div><!-- /.navbar -->
+
+
+<!-- End of Navigation Bar -->
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+<!-- main table : contents start -->
+<TABLE cellSpacing=0 cellPadding=0 width="93%" align=center border=0>
+  <TBODY>
+  <TR vAlign=top align=middle>
+    <TD width="100%">
+    
+
+    <table width="90%" border="0" cellpadding="5" cellspacing="0">
+     <tr>
+      <!-- main table : title start -->
+      <td class="jsub" bgcolor="#b9e2ff"
+       nowrap="nowrap">&nbsp;<b><font color="#333333">Advanced
+       Search</font></b></td>
+      <td class="jsub" bgcolor="#b9e2ff" nowrap="nowrap" align="right">
+       <a href="http://kyotofly.kit.jp/stocks/guidance.html"
+       target="_blank">Guidance</a></td>
+      <!-- main table : title end --> 
+     </tr>
+
+    </table>
+   </td>
+  </tr>
+
+  <!-- predifined subsets start -->
+  
+  <tr align="center" valign="top">
+    <td>
+
+      <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody><tr>
+
+          <td align="center">
+
+            <form name="strain_search" action="search_res_list.cgi" method="post">
+              <br><br>
+              <a name="StrainSearchForm">
+                  </a><table bgcolor="#d3d3d3" border="0" cellpadding="6" cellspacing="1" width="90%">
+                <tbody><tr bgcolor="#b9e2ff">
+		 <td colspan="9"><b><font color="#333333">Strain Search Form</font></b></td>
+                  <td colspan="2" align="right"><a href="http://kyotofly.kit.jp/stocks/help.html" target="_blank">Help</a></td>
+                  <td align="right">&nbsp;</td>
+                </tr>
+
+                <tr bgcolor="#d3d3d3">
+                  <td colspan="3" bgcolor="#F0FFFF" nowrap="nowrap" width="25%"><b>DGRC Stock Number</b>
+<br>
+Use 6 digit numbers only (example 123456)<br>
+Separate numbers by a space, comma, semicolon or new line
+</td>
+                  <td colspan="3" bgcolor="#fffff4">
+<textarea name="DG_NUM" cols=20 rows=3></textarea>
+</td>
+                  <td colspan="6" align="center" bgcolor="#F0FFFF" nowrap="nowrap" width="50%"><b>Expression/Phenotype</b></td>
+                </tr>
+                <tr bgcolor="#d3d3d3">
+                  <td colspan="3" bgcolor="#F0FFFF" nowrap="nowrap" width="25%"><b>Original Number</b></td>
+                  <td colspan="3" bgcolor="#fffff4"><input name="OR_NUM"></td>
+                  <td colspan="3" bgcolor="#F0FFF0" nowrap="nowrap" width="25%"><b>Embryo</b></td>
+                  <td colspan="3" bgcolor="#fffff4" width="25%"><input name="EMBRYO"></td>
+                </tr>
+
+				
+                <tr bgcolor="#d3d3d3">
+                  <td colspan="3" bgcolor="#F0FFFF" nowrap="nowrap" width="25%"><b>P element insertion site</b>(cytological region)<!--&nbsp;<font color=red>Under Construction</font>--></td>
+                  <td colspan="3" bgcolor="#fffff4"><input name="P__FRM" size="2">&nbsp;-&nbsp;<input name="P___TO" size="2"></td>
+                  <td colspan="3" bgcolor="#F0FFF0" nowrap="nowrap" width="25%"><b>Larvae</b></td>
+                  <td colspan="3" bgcolor="#fffff4" width="25%"><input name="LARVAE"></td>
+                </tr>
+		
+                <tr bgcolor="#d3d3d3">
+                  <td colspan="3" bgcolor="#F0FFFF" nowrap="nowrap" width="25%"><b>Cytolocation</b><!--&nbsp;<font color=red>Under Construction</font>--></td>
+
+                  <td colspan="3" bgcolor="#fffff4"><input name="CL_FRM" size="2">&nbsp;-&nbsp;<input name="CL__TO" size="2"></td>
+                  <td colspan="3" bgcolor="#F0FFF0" nowrap="nowrap" width="25%"><b>Adult</b></td>
+                  <td colspan="3" bgcolor="#fffff4" width="25%"><input name="ADU_LT"></td>
+
+                </tr>
+		
+                <tr bgcolor="#d3d3d3">
+                  <td colspan="3" bgcolor="#F0FFFF" nowrap="nowrap" width="25%"><b>Related Gene</b>(partial match, case-sensitive)</td>
+                  <td colspan="3" bgcolor="#fffff4"><input name="RE_GEN"></td>
+                  <td colspan="3" bgcolor="#F0FFF0" nowrap="nowrap" width="25%"><b>Lethality</b></td>
+                  <td colspan="3" bgcolor="#fffff4">
+					<select name="LETHAL">
+						<option value="" selected="selected">---Select--</option>
+						<option value="S">Semi-lethal</option>
+						<option value="L">lethal</option>
+					</select>
+					</td>
+                </tr>
+				
+                <tr bgcolor="#d3d3d3">
+                  <td colspan="3" bgcolor="#F0FFFF" nowrap="nowrap" width="25%"><b>Chromosome</b></td>
+                  <td colspan="3" bgcolor="#fffff4"><input name="CHROMO"></td>
+                  <td rowspan="2" colspan="3" bgcolor="#F0FFF0" nowrap="nowrap" width="25%"><b>Photo Exist</b></td>
+                  <td rowspan="2" colspan="3" bgcolor="#fffff4">
+                  	<input name="PHOTOE" value="1" type="checkbox">Embryo<br>
+                  	<input name="PHOTOL" value="1" type="checkbox">Larval<br>
+                  	<input name="PHOTOA" value="1" type="checkbox">Adult
+                  </td>
+
+		</tr>
+
+
+                <tr bgcolor="#d3d3d3">
+
+                  <td colspan="3" bgcolor="#F0FFFF" nowrap="nowrap" width="25%"><b>Gene Symbol</b>(case-sensitive)</td>
+                  <td colspan="3" bgcolor="#fffff4"><input name="GE_SYM">
+<br>
+                        Exclude<input name="GENOTWORD" size="12">
+</td>
+                </tr>
+				
+                <tr bgcolor="#d3d3d3">
+                  <td colspan="3" bgcolor="#F0FFFF" nowrap="nowrap" width="25%"><b>Keyword</b></td>
+                  <td colspan="9" bgcolor="#fffff4" nowrap="nowrap">
+                  	<table> 
+                  	<tbody><tr><td><input name="KEYWOD" size="48"></td>
+                  	<td nowrap="nowrap"><input name="KEYWOD" type="checkbox">case-sensitive  &nbsp; / &nbsp;  Exclude &nbsp; <input name="NOTWORD" size="32">
+</td></tr></tbody></table>
+                  </td>
+                </tr>
+
+				
+                <tr bgcolor="#d3d3d3">
+                  <td colspan="2" bgcolor="#F0FFFF" nowrap="nowrap">
+			                  <b>Results/page</b></td>
+                  <td colspan="2" bgcolor="#fffff4">
+                    <select name="FORMAT">
+                      <option value="10">10
+                      </option><option value="25" selected="selected">25
+                      </option><option value="80">80
+                      </option><option value="ALL">ALL</option>
+                    </select>
+
+                     </td>
+
+                  <td colspan="2" bgcolor="#F0FFFF" nowrap="nowrap"><b>Start Page</b></td>
+                  <td colspan="2" bgcolor="#fffff4"><input value="1" name="STARTP" size="2"></td>
+
+                  <td colspan="2" bgcolor="#F0FFFF" nowrap="nowrap"><b>Search Method</b></td>
+                  <td colspan="2" bgcolor="#fffff4">
+					<select name="SRC_TP">
+
+                    	<option value="AND" selected="selected">AND</option>
+                        <option value="OR">OR</option>
+                  </select></td>
+                </tr>
+
+              <input value="dgrc_number" name="SORT_O" type="hidden">
+                <tr bgcolor="#d3d3d3">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td align="right">
+                    <input value="search" name="submit" class="eee" type="submit">
+				</td>
+				<td align="left">
+                    <input value="reset" name="reset" class="eee" type="reset">
+                  </td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+
+                </tr>
+              </tbody></table><a name="StrainSearchForm">
+            
+	  <!-- main table : form end -->
+          </a></form></td>
+
+        </tr>
+</tbody></table>			
+          </td>
+
+        </tr>
+
+
+    
+
+    
+
+</TD></TR></TBODY></TABLE><!-- main table : contents start -->
+
+
+<footer>
+
+<!-- footer banner table start -->
+<br>
+
+<table width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="background-color:#ebe4d2; background-image:url(/stocks/images/bg-footer.png); background-repeat:no-repeat; background-position:center bottom;">
+  <tbody>
+  <tr style="background-color:#ebe4d2;">
+   <td colspan="4" style="height: 3px;">
+   </td>
+  </tr>
+  <tr style="background-color:#ffffff;">
+   <td colspan="4" style="height:1px;"></td>
+  </tr>
+  <tr>
+   <td align="left" valign="center" width="3%" height="130">&nbsp;</td>
+   <td align="left" valign="center">
+    <font style="color:#b2afa5; font-size:x-small;">
+    <b>Copyright &copy; KYOTO Stock Center (DGRC), Kyoto Institute of Technology<br>All rights reserved</b></font></td>
+    <td nowrap="nowrap" valign="bottom" align="right">
+     KYOTO Stock Center (DGRC)  participates in the 
+     <b><a href="http://www.nbrp.jp/" target="_blank">
+     National BioResource Project "Drosophila"
+     </a></b> <!-- started in 2002. -->
+    </td>
+   <td align="left" valign="center" width="1%">&nbsp;</td>
+  </tr>
+  </tbody>
+</table>
+<!-- footer banner table end -->
+
+</footer>
+
+</div><!-- mybgcolor -->
+
+<!-- Bootstrap -->
+<script src="/stocks/jquery/jquery-1.9.1.min.js"></script>
+<script src="/stocks/bootstrap/js/bootstrap.kyotofly.js"></script>
+
+</body>
+</html>
+
+
+
+    Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

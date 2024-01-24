@@ -1,0 +1,16 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC505¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 31 Jan 2014 01:04:34 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1f9-4f139c1d16c80"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 10:46:01 GMTKraw_content¢DtypeEvalueyù
+public class ChicagoPizzaStore extends PizzaStore {
+
+	Pizza createPizza(String item) {
+        	if (item.equals("cheese")) {
+            		return new ChicagoStyleCheesePizza();
+        	} else if (item.equals("veggie")) {
+        	    	return new ChicagoStyleVeggiePizza();
+        	} else if (item.equals("clam")) {
+        	    	return new ChicagoStyleClamPizza();
+        	} else if (item.equals("pepperoni")) {
+            		return new ChicagoStylePepperoniPizza();
+        	} else return null;
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

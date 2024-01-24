@@ -1,0 +1,69 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1584¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 31 Jan 2014 01:04:27 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"630-4f139c1669cc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 12:51:48 GMTKraw_content¢DtypeEvalueY0
+public abstract class Pizza {
+    String name;
+
+    Dough dough;
+    Sauce sauce;
+    Veggie veggies[];
+    Cheese cheese;
+    Pepperoni pepperoni;
+    Clams clam;
+
+    abstract void prepare();
+
+    void bake() {
+        System.out.println("Bake for 25 minutes at 350");
+    }
+
+    void cut() {
+        System.out.println("Cutting the pizza into diagonal slices");
+    }
+
+    void box() {
+        System.out.println("Place pizza in official PizzaStore box");
+    }
+
+    void setName(String name) {
+        this.name = name;
+    }
+
+    String getName() {
+        return name;
+    }
+
+    public String toString() {
+        StringBuffer result = new StringBuffer();
+        result.append("---- " + name + " ----\n");
+        if (dough != null) {
+            result.append(dough);
+            result.append("\n");
+        }
+        if (sauce != null) {
+            result.append(sauce);
+            result.append("\n");
+        }
+        if (cheese != null) {
+            result.append(cheese);
+            result.append("\n");
+        }
+        if (veggies != null) {
+            for (int i = 0; i < veggies.length; i++) {
+                result.append(veggies[i]);
+                if (i < veggies.length-1) {
+                    result.append(", ");
+                }
+            }
+            result.append("\n");
+        }
+        if (clam != null) {
+            result.append(clam);
+            result.append("\n");
+        }
+        if (pepperoni != null) {
+            result.append(pepperoni);
+            result.append("\n");
+        }
+        return result.toString();
+    }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

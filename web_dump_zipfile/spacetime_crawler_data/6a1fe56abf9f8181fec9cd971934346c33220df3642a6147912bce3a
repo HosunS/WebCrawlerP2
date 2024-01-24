@@ -1,0 +1,105 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE10846¢Ak¢DtypeEvalueSContent-DispositionAv¢DtypeEvalueX4attachment; filename=cs122b-2017-winter-project4.txt¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXitrac_session=004fa87583c312f0a261fba6; expires=Thu, 09 May 2019 19:06:41 GMT; httponly; Path=/wiki/public¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 19:06:41 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain;charset=utf-8Kraw_content¢DtypeEvalueY*^
+[[PageOutline]]
+
+= CS122B Project 4 =
+'''Due: March 8th, 2017, Wednesday, 11:45 pm Submit on EEE.'''[[BR]] Notice that we use 1 day after the official deadline as the submission cut-off time on EEE to allow you to use the 24-hour grace period if you chose so. After that, EEE will no longer accept submissions.
+
+= Tasks =
+
+ 1. [#AJAX Improving the GUI by using AJAX]
+
+ 1. [#Android  Developing an Android Application for Fabflix]
+
+ 1. [#UDF Fuzzy Searching Using User Defined Functions]
+
+----
+[[Span(id=AJAX)]]
+
+== Task 1: Improving the GUI by using AJAX ==
+Consider our Project 2, in which we implemented two functionalities: search and movie list page. A user had to click on a search button after typing some keywords in order to see the search results. Also, on each movie list page, a user had to click on a movie in order to see its details. We will improve these two features with AJAX.
+
+ * '''Autocompletion Search:''' where you get search results while you type. Implement a search interface in your project with a single input box. When a user types in keywords character by character, your browser should send a query to the backend, which tokenizes the string into keywords. The last keyword should be treated as a prefix condition. Use MySQL full-text indexes to find movies with a title matching ALL these keywords (i.e., using the "AND semantics"). For example, the following is an (old) snapshot of the Netflix interface that supports autocompletion on movie titles. The user has typed in the keywords "'''`good u`'''", and the system found movies with titles that have the keyword "'''`good`'''" and a keyword with "'''`u`'''" as a prefix, such as "'''`The Good, The Bad and the Ugly`'''". We want such a feature on our web site!
+
+  [[Image(wiki:cs122b-2017-winter-project4:netflix.jpg)]]
+
+ * '''Auto popup window for each movie:''' On each page with a list of movies returned from a search query in project 2, implement the following feature on each returned movie of a search query. For each movie on the list, when the user hovers the mouse over the title of the movie, there will be a small window that shows the movie details, such as its banner, stars, and release year. To implement this feature, you need to implement a separate servlet that accepts a movie ID as the input, and replies with the required details in an HTML format. At the client side, you should place this HTML in the appropriate DIV tags and display it to the user. A similar example is GMAIL: when you hover your mouse over one user on your contact list, GMAIL shows you details of this user, such as his/her picture, email address, name, etc. We want such a feature on our web site!
+
+  [[Image(wiki:cs122b-2017-winter-project4:gmail.png)]]
+
+[[Span(id=AjaxExample)]]
+
+As a simple Ajax example, we have provided a Java-Servlet-based server program in this [attachment:AjaxTest.war  Ajax Example]. Deploy the war file to your Tomcat server. Point your browser to the link http://localhost:8080/AjaxTest/order.html. The example uses the "onChange" javascript event to trigger an Ajax communication. Type in anything in the "Item Name" input box, and move the cursor to "Time" input box, which should show the current time. Here is a [http://www.w3schools.com/TAGS/ref_eventattributes.asp complete list of Javascript events] supported by most browsers. Take a look at [http://www.w3schools.com/js/js_htmldom_events.asp this page] to learn more about how to use such events. (This example is based on the following [http://www.tizag.com/ajaxTutorial/index.php link].)
+
+----
+[[Span(id=Android)]]
+
+== Task 2:  Developing an Android App for Fabflix ==
+In this task you will implement an Android app as a new frontend for Fabflix.
+
+'''Steps:'''
+
+The following guidelines are based on this [http://developer.android.com/training/basics/firstapp/index.html Android programming tutorial].
+
+'''Step 1''': [http://developer.android.com/sdk/index.html Download] and install the Android Studio IDE.
+
+'''Step 2''': Read the page of [http://developer.android.com/tools/help/sdk-manager.html SDK manager] on how to start the SDK Manager and get all the recommended packages.
+
+'''Step 3''': Use the page of [http://developer.android.com/training/basics/firstapp/creating-project.html Android basics] to familiarize yourself with an Android project. Particularly, make sure to read about activities, layouts, and the directory structure used in an Android project.
+
+'''Step 4''': Read the page of [http://developer.android.com/training/basics/firstapp/running-app.html running an app] on the emulator. (Warning: it can be very slow!)
+
+'''Step 5''': Read the page of [http://developer.android.com/training/basics/firstapp/building-ui.html Android UI] for the basics of building a user interface.
+
+'''Step 6''': Read the page of [http://developer.android.com/training/basics/firstapp/starting-activity.html activities] to learn how to navigate between two pages (i.e., activities).
+
+'''Step 7''': Download and use the provided [attachment:wiki:cs122b-2017-winter-project4:FabflixMobile.zip sample Android app] to get more familiar with Android programming. It has three activities called Red, Blue, and Green, as well as buttons for navigating between the activities, and text boxes for sending messages to other pages.  The red page contains a button that sends an HTTP request, receives the response, and shows the response on the screen.
+
+'''Step 8 (main task)''': Develop a Fabflix Android app, which supports a subset of the features of the main Fabflix website. You are not allowed to use the Android !WebView. The following capabilities are required:
+
+ * Login page, which should behave like the website login page, ''without'' the reCAPTCHA feature.
+ * A search box that supports full-text search on the movie "title" attribute. The search results page can be as simple as a list of movie titles.
+ * Your app should continue to work correctly (e.g., by keeping the content in those input boxes) after the following events:
+   * Pressing the home and the back buttons, and
+   * Turning the screen on and off.
+
+----
+[[Span(id=UDF)]]
+
+== Task 3 (Optional): Fuzzy Searching Using User Defined Functions ==
+Currently, when a !FabFlix  customer is searching for a movie by its title, director or (one of)  its stars (that is, searching via a "key" value), the user must spell  that key correctly; otherwise, the desired movie will not be retrieved.  For example, some stars' names, such as "Schwarzenegger," are  sufficiently difficult to spell that customers are likely to spell them  incorrectly--and so perhaps believe we do not stock the Terminator  movies when, in fact, we do!
+
+To make it more likely that customers  find the movies they desire--and thus increase our likelihood of making  sales--the exact string matching in !FabFlix for key searches is to be replaced with a fuzzy matching, one that returns a movie whose value is close to the key's value.
+
+The designers have decided that using the SQL LIKE command combined with an  Levenshtein (Edit Distance) Algorithm (LEDA) is the approach to take.
+
+The  LEDA algorithm, to be implemented as a dynamic function in C or C++, is  to be accessed using the interface SIMILARTO. SIMILARTO takes three  parameters: the first is the key as a string, the second the string  against which the key is being compared, the third the maximum distance  he two strings can differ and still be considered similar to each other.  Take the union of the results from LIKE and SIMILARTO.
+
+lastName LIKE '%Schwarseneger%' OR SIMILARTO(lastName, 'Schwarseneger', 2)
+
+Add  the fuzzy search feature in the web application of project 2. The user  should be able to search with either the LIKE operator or the SIMILARTO  operator with a given edit distance.
+
+'''We will give you 10 points  as extra credits for successfully implementing this feature.  Although  we have made this feature work successfully on Linux (Ubuntu) (check an  example [http://flamingo.ics.uci.edu/toolkit/ here]),  we found that MySQL UDFs on Windows (cygwin) and Mac are much harder to  implement.  Be prepared that you *might* need to install the source  code of MySQL, compile it, and create a project (unix makefile or  Microsoft Visual Studio) in order to make UDFs work.'''
+
+'''Since  we provided an example for Linux (Ubuntu), in order to get the extra  credits, you need to implement the function as a UDF in MySQL in a  "non-Linux" environment, such as Windows and Mac.'''
+
+----
+=  =
+= Preparing the Package for Submission =
+ 1. Please keep your AWS instance running until the grading is finished, and open your AWS instance ports SSH/port 22, HTTP/port 8080, and HTTPS/port 8443 to this IPs:
+
+- 128.195.52.56
+- 128.195.52.58
+
+ 1. Add __all related files__ to your project's root directory (i.e., which is usually `/var/lib/tomcat7/webapps/fabflix/`)
+ 1. Provide necessary instructions for compiling and running your programs to be accessible at http://public_ip:8080/fabflix/reports/readme.
+ 1. Make sure that there is no more changes to be made '''anywhere''' under your project's root directory.[[BR]]'''Note:''' You can use another clone of your codebase for working on the next project. Do not change the content of the fabflix Tomcat application, until we announce it open again.
+ 1. In addition to EEE submission, a live instance of your website should be accessible using the link [http://YOUR_PUBLIC_IP:8080/fabflix http://public_ip:8080/fabflix]. For example, if your public IP is `1.1.1.1`, the only URL that will be tried to grade your project will be http://1.1.1.1:8080/fabflix.
+ 1. You should take the following steps to prepare your package for submission. When prepared, submit the package to EEE (i.e., one submission per team).
+   1. Create a directory, called `"project4_[GROUP ID]"` on your local machine. You are required to include three files in this directory: `"fabflix.apk"`, `"fabflix_app_project.zip"`, and `"fabflix_webapp.war"`. Follow the next three steps to create these files.
+   1. Use Android Studio to build an `APK` package, named `"fabflix.apk"`,  of your Fabflix Android app. Make sure to include both the source files  and the binary files. For grading, your .apk file will be loaded into  an emulator running on a machine using an IP in the range 128.195.0.0/16, and the app features will be tested. Compress the Android Studio project directory into a file called `"fabflix_app_project.zip"`.
+   1. Create a .war file of the `fabflix`  Tomcat webapp . This .war file must be called `"fabflix_webapp.war"`.
+   1. Compress the `"project4_[GROUP ID]"` directory to a file called `"project4_[GROUP ID].zip"` and upload it to EEE.
+
+If your project does not compile/run, it will get a very low score.
+
+â€”â€”Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

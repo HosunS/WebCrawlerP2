@@ -1,0 +1,780 @@
+¦Ifinal_url¢DtypeEvaluex,http://cloudberry.ics.uci.edu/documentation/Lhttp_headers¢DtypeEvalueŠ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE10440¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueQtimeout=5, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.4.18 (Ubuntu)¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDLinkAv¢DtypeEvalueXx<http://cloudberry.ics.uci.edu/wp-json/>; rel="https://api.w.org/", <http://cloudberry.ics.uci.edu/?p=12>; rel=shortlink¢Ak¢DtypeEvalueOX-UA-CompatibleAv¢DtypeEvalueGIE=edge¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 07:01:31 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY˜|
+<!DOCTYPE html>
+<html lang="en-US" itemscope itemtype="http://schema.org/WebPage">
+<head>
+	<meta charset="UTF-8">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+
+	<title>Documentation &#8211; Cloudberry</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Cloudberry &raquo; Feed" href="http://cloudberry.ics.uci.edu/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Cloudberry &raquo; Comments Feed" href="http://cloudberry.ics.uci.edu/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.4\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/cloudberry.ics.uci.edu\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.5"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='estilo-css'  href='http://cloudberry.ics.uci.edu/wp-content/plugins/simple-code-highlighter/estilo.css?ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='http://cloudberry.ics.uci.edu/wp-content/themes/oceanwp/assets/css/third/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='simple-line-icons-css'  href='http://cloudberry.ics.uci.edu/wp-content/themes/oceanwp/assets/css/third/simple-line-icons.min.css?ver=2.4.0' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-css'  href='http://cloudberry.ics.uci.edu/wp-content/themes/oceanwp/assets/css/third/magnific-popup.min.css?ver=1.0.0' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-style-css'  href='http://cloudberry.ics.uci.edu/wp-content/themes/oceanwp/assets/css/style.min.css?ver=1.5.10' type='text/css' media='all' />
+<link rel='stylesheet' id='oceanwp-google-font-walter-turncoat-css'  href='//fonts.googleapis.com/css?family=Walter+Turncoat%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900%2C100i%2C200i%2C300i%2C400i%2C500i%2C600i%2C700i%2C800i%2C900i&#038;subset=latin&#038;ver=4.9.5' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-markdown-prettify-css'  href='http://cloudberry.ics.uci.edu/wp-content/plugins/wp-markdown/css/prettify.css?ver=1.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='enlighter-local-css'  href='http://cloudberry.ics.uci.edu/wp-content/plugins/enlighter/resources/EnlighterJS.min.css?ver=3.5' type='text/css' media='all' />
+<link rel='stylesheet' id='oe-widgets-style-css'  href='http://cloudberry.ics.uci.edu/wp-content/plugins/ocean-extra/assets/css/widgets.css?ver=4.9.5' type='text/css' media='all' />
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<link rel='https://api.w.org/' href='http://cloudberry.ics.uci.edu/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://cloudberry.ics.uci.edu/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://cloudberry.ics.uci.edu/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.9.5" />
+<link rel="canonical" href="http://cloudberry.ics.uci.edu/documentation/" />
+<link rel='shortlink' href='http://cloudberry.ics.uci.edu/?p=12' />
+<link rel="alternate" type="application/json+oembed" href="http://cloudberry.ics.uci.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcloudberry.ics.uci.edu%2Fdocumentation%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://cloudberry.ics.uci.edu/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcloudberry.ics.uci.edu%2Fdocumentation%2F&#038;format=xml" />
+		<style type="text/css" id="wp-custom-css">
+			/* --- Tables --- */table{padding:0}table tr{border-top:1px solid #cccccc;background-color:#ffffff;margin:0;padding:0}table tr:nth-child(2n){background-color:#f8f8f8}table tr th{font-weight:bold;border:1px solid #cccccc;text-align:left;margin:0;padding:6px 13px}table tr td{border:1px solid #cccccc;text-align:left;margin:0;padding:6px 13px}table tr th :first-child,table tr td :first-child{margin-top:0}table tr th :last-child,table tr td :last-child{margin-bottom:0}/* --- Code blocks --- */pre{Â font-size:40 pt;line-height:2em}pre code{white-space:pre;font-size:40 pt}pre.highlight,.highlight >pre,td.code pre{background:#FAFAFA;background-image:linear-gradient(#F9F9F9 50%,#FDFDFD 50%);background-repeat:repeat;background-size:3em 3em;background-position:0 10px;border-left:7px solid #444}code table,code table td,code table th,code table tbody,code table tr,td.gutter pre{padding:0;border:none;background-color:#fff}.highlight >pre{padding:0}td.code pre{border-width:0 0 0 2px;border-style:solid;border-color:#444;border-radius:0}td.gutter{padding-top:3px}.site-header{position:fixed;width:100%;z-index:1000}		</style>
+	<!-- OceanWP CSS -->
+<style type="text/css">
+/* General CSS */body{background-image:url(http://cloudberry.ics.uci.edu/wp-content/uploads/2018/04/notebook-1.png)}a{color:#008aff}a:hover{color:#0085a1}/* Header CSS */#site-logo #site-logo-inner,.oceanwp-social-menu .social-menu-inner,#site-header.full_screen-header .menu-bar-inner,.after-header-content .after-header-content-inner{height:69px}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,.after-header-content-inner >a{line-height:69px}#site-header.transparent-header{background-color:rgba(0,0,0,0.75)}#site-header.has-header-media .overlay-header-media{background-color:rgba(0,0,0,0.5)}#site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-width:50px}#site-header #site-logo #site-logo-inner a img,#site-header.center-header #site-navigation-wrap .middle-site-logo a img{max-height:50px}#site-logo a.site-logo-text{color:#ffffff}#site-logo a.site-logo-text:hover{color:#ffd306}.effect-one #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-three #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-five #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-nine #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after{background-color:#ffd306}.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:before,.effect-four #site-navigation-wrap .dropdown-menu >li >a.menu-link >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{color:#ffd306}.effect-seven #site-navigation-wrap .dropdown-menu >li >a.menu-link:hover >span:after,.effect-seven #site-navigation-wrap .dropdown-menu >li.sfHover >a.menu-link >span:after{text-shadow:10px 0 #ffd306,-10px 0 #ffd306}#site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a,#searchform-header-replace-close{color:#ffffff}#site-navigation-wrap .dropdown-menu >li >a:hover,.oceanwp-mobile-menu-icon a:hover,#searchform-header-replace-close:hover{color:#ffd306}#site-navigation-wrap .dropdown-menu >li >a:hover,#site-navigation-wrap .dropdown-menu >li.sfHover >a{background-color:#000000}.dropdown-menu .sub-menu,#searchform-dropdown,.current-shop-items-dropdown{border-color:#ffd306}.navigation li.mega-cat .mega-cat-title{background-color:#ffffff}/* Sidebar CSS */.widget-title{border-color:#efd700}.widget-title{margin-bottom:28px}/* Typography CSS */body{font-weight:400;font-size:20px;color:#2d2d2d;line-height:2;letter-spacing:.4px}h1{color:#000000}#site-logo a.site-logo-text{font-family:Walter Turncoat;font-size:36px;line-height:1.2;letter-spacing:2px;text-transform:uppercase}#site-navigation-wrap .dropdown-menu >li >a,#site-header.full_screen-header .fs-dropdown-menu >li >a,#site-header.top-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.center-header #site-navigation-wrap .dropdown-menu >li >a,#site-header.medium-header #site-navigation-wrap .dropdown-menu >li >a,.oceanwp-mobile-menu-icon a{font-size:16px;letter-spacing:2.4px;text-transform:uppercase}
+</style></head>
+
+<body class="page-template-default page page-id-12 oceanwp-theme sidebar-mobile content-full-width content-max-width has-transparent-header no-header-border default-breakpoint has-breadcrumbs has-fixed-footer elementor-default">
+
+	
+	<div id="outer-wrap" class="site clr">
+
+		
+		<div id="wrap" class="clr">
+
+						
+				
+					<div id="transparent-header-wrap" class="clr">
+
+<header id="site-header" class="transparent-header clr" data-height="69" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+
+	
+		
+		<div id="site-header-inner" class="clr container">
+
+			
+			
+
+<div id="site-logo" class="clr" itemscope itemtype="http://schema.org/Brand">
+
+	
+	<div id="site-logo-inner" class="clr">
+
+		
+			<a href="http://cloudberry.ics.uci.edu/" rel="home" class="site-title site-logo-text">Cloudberry</a>
+
+		
+	</div><!-- #site-logo-inner -->
+
+	
+	
+</div><!-- #site-logo -->
+
+			<div id="site-navigation-wrap" class="clr">
+		
+			
+			
+			<nav id="site-navigation" class="navigation main-navigation clr" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+
+				<ul id="menu-main-menu" class="main-menu dropdown-menu sf-menu"><li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-21"><a href="http://cloudberry.ics.uci.edu" class="menu-link"><span class="text-wrap">Home</span></a></li><li id="menu-item-39" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children dropdown menu-item-39 nav-no-click"><a href="http://cloudberry.ics.uci.edu/category/uncategorized/" class="menu-link"><span class="text-wrap">Demo <span class="nav-arrow fa fa-angle-down"></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23"><a href="http://cloudberry.ics.uci.edu/apps/twittermap" class="menu-link"><span class="text-wrap">TwitterMap</span></a></li></ul>
+</li><li id="menu-item-40" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-ancestor current-menu-parent menu-item-has-children dropdown menu-item-40 nav-no-click"><a href="http://cloudberry.ics.uci.edu/category/uncategorized/" class="menu-link"><span class="text-wrap">Resources <span class="nav-arrow fa fa-angle-down"></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="http://cloudberry.ics.uci.edu/quick-start/" class="menu-link"><span class="text-wrap">Quick Start</span></a></li>	<li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-12 current_page_item menu-item-25"><a href="http://cloudberry.ics.uci.edu/documentation/" class="menu-link"><span class="text-wrap">Documentation</span></a></li>	<li id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-26"><a href="https://github.com/ISG-ICS/cloudberry" class="menu-link"><span class="text-wrap">Github</span></a></li></ul>
+</li><li id="menu-item-29" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29"><a href="http://cloudberry.ics.uci.edu/pubs/" class="menu-link"><span class="text-wrap">Pubs</span></a></li><li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-28"><a href="http://cloudberry.ics.uci.edu/news/" class="menu-link"><span class="text-wrap">News</span></a></li><li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-27"><a href="http://cloudberry.ics.uci.edu/about/" class="menu-link"><span class="text-wrap">About</span></a></li></ul>
+			</nav><!-- #site-navigation -->
+
+			
+			
+					</div><!-- #site-navigation-wrap -->
+		
+		
+	
+			
+	<div class="oceanwp-mobile-menu-icon clr mobile-right">
+
+		
+		
+		
+		<a href="#" class="mobile-menu">
+							<i class="fa fa-bars"></i>
+							<span class="oceanwp-text">Menu</span>
+
+						</a>
+
+		
+		
+		
+	</div><!-- #oceanwp-mobile-menu-navbar -->
+
+
+		</div><!-- #site-header-inner -->
+
+		
+		
+	
+	
+</header><!-- #site-header -->
+
+	</div>
+
+			
+						
+			<main id="main" class="site-main clr" >
+
+				
+
+<header class="page-header">
+
+	
+	<div class="container clr page-header-inner">
+
+		
+			<h1 class="page-header-title clr" itemprop="headline">Documentation</h1>
+
+			
+		
+		<nav role="navigation" aria-label="Breadcrumbs" class="site-breadcrumbs clr" itemprop="breadcrumb"><ul class="trail-items" itemscope itemtype="http://schema.org/BreadcrumbList"><meta name="numberOfItems" content="2" /><meta name="itemListOrder" content="Ascending" /><li class="trail-item trail-begin" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="http://cloudberry.ics.uci.edu" rel="home"><span itemprop="name"><span class="icon-home"></span><span style="display: none;">Home</span></span></a><meta content="1" itemprop="position" /></li><li class="trail-item trail-end" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><span itemprop="name">Documentation</span><meta content="2" itemprop="position" /></li></ul></nav>
+	</div><!-- .page-header-inner -->
+
+	
+	
+</header><!-- .page-header -->
+
+
+	
+	<div id="content-wrap" class="container clr">
+
+		
+		<div id="primary" class="content-area clr">
+
+			
+			<div id="content" class="site-content clr">
+
+				
+				
+<article class="single-page-article clr">
+
+	
+<div class="entry clr" itemprop="text">
+		<h1><em><strong>Concepts</strong></em></h1>
+<p>The Cloudberry system provides an optimization framework to speed up visualization-oriented OLAP queries on <a href="http://asterixdb.apache.org">AsterixDB</a>.</p>
+<p>The following document uses an already ingested AsterixDB Twitter dataset to illustrate how to set up the Cloudberry system on the dataset.</p>
+<pre class="prettyprint">create type typeUser if not exists as open {
+   id: int64,
+   name: string,
+   screen_name : string,
+   lang : string
+}
+
+create type typeGeoTag if not exists as open {
+   stateID: int32,
+   countyID: int32,
+   cityID: int32?
+}
+
+create type typeTweet if not exists as open{
+   create_at : datetime,
+   id: int64,
+   coordinate: point?,
+   "text": string,
+   favorite_count : int64,
+   retweet_count : int64,
+   lang : string,
+   hashtags : { {string } } ?,
+   user_mentions : { { int64 } } ? ,
+   user : typeUser,
+   geo_tag: typeGeoTag
+}</pre>
+<h1>Data Schema</h1>
+<p>Front-end developers need to tell Cloudberry which dataset to query and how the dataset looks like so that it can utilize the Cloudberry optimization techniques.</p>
+<p>The data set schema declaration is composed of five distinct components.</p>
+<ul>
+<li><strong>Dataset name and its type</strong> : the data set name to access AsterixDB.</li>
+<li><strong>Dimensions</strong> : the columns to do &#8220;group by&#8221; on. They are usually the x-axis in a visualization figure.</li>
+<li><strong>Measurements</strong> : the columns to apply the aggregation functions on, such as <code>count()</code>, <code>min()</code>, <code>max()</code>. They can also be used to filter the data but they should not be used as &#8220;group by&#8221; keys.</li>
+<li><strong>Primary key</strong> : the primary column name.</li>
+<li><strong>Time field</strong> : the time column name.</li>
+</ul>
+<p>The following JSON request can be used to register the Twitter dataset inside AsterixDB to the middleware.</p>
+<pre class="prettyprint">{
+  "dataset":"twitter.ds_tweet",
+  "schema":{
+  	"typeName":"twitter.typeTweet",
+    "dimension":[
+      {"name":"create_at","isOptional":false,"datatype":"Time"},
+      {"name":"id","isOptional":false,"datatype":"Number"},
+      {"name":"coordinate","isOptional":false,"datatype":"Point"},
+      {"name":"lang","isOptional":false,"datatype":"String"},
+      {"name":"is_retweet","isOptional":false,"datatype":"Boolean"},
+      {"name":"hashtags","isOptional":true,"datatype":"Bag","innerType":"String"},
+      {"name":"user_mentions","isOptional":true,"datatype":"Bag","innerType":"Number"},
+      {"name":"user.id","isOptional":false,"datatype":"Number"},
+      {"name":"geo_tag.stateID","isOptional":false,"datatype":"Number"},
+      {"name":"geo_tag.countyID","isOptional":false,"datatype":"Number"},
+      {"name":"geo_tag.cityID","isOptional":false,"datatype":"Number"},
+      {"name":"geo","isOptional":false,"datatype":"Hierarchy","innerType":"Number",
+        "levels":[
+          {"level":"state","field":"geo_tag.stateID"},
+          {"level":"county","field":"geo_tag.countyID"},
+          {"level":"city","field":"geo_tag.cityID"}]}
+    ],
+    "measurement":[
+      {"name":"text","isOptional":false,"datatype":"Text"},
+      {"name":"in_reply_to_status","isOptional":false,"datatype":"Number"},
+      {"name":"in_reply_to_user","isOptional":false,"datatype":"Number"},
+      {"name":"favorite_count","isOptional":false,"datatype":"Number"},
+      {"name":"retweet_count","isOptional":false,"datatype":"Number"},
+      {"name":"user.status_count","isOptional":false,"datatype":"Number"}
+    ],
+    "primaryKey":["id"],
+    "timeField":"create_at"
+  }
+}</pre>
+<p>The front-end application can send the ddl JSON file to Cloudberry <code>/admin/register</code> path by using <code>POST</code> HTTP method.<br />
+E.g., we can register the previous ddl using the following command line:</p>
+<pre class="prettyprint">curl -XPOST -d @JSON_FILE_NAME http://localhost:9000/admin/register</pre>
+<p><em>Note</em>:<br />
+Fields that are not relevant to the visualization queries are not required to appear in the schema declaration.</p>
+<h3></h3>
+<h1>Data Types</h1>
+<p>Cloudberry supports the following data types:</p>
+<ul>
+<li><strong>Boolean</strong> : the same <code>Boolean</code> type as in AsterixDB.</li>
+<li><strong>Number</strong> : a superset to include all <code>int8</code>, <code>int32</code>, <code>int64</code>, <code>float</code>, <code>double</code> datatypes in AsterixDB.</li>
+<li><strong>Point</strong> : the same <code>point</code> type as in AsterixDB. Currently, we only support geo-location points.</li>
+<li><strong>Time</strong> : the same <code>datetime</code> type as in AsterixDB.</li>
+<li><strong>String</strong> : same as the <code>string</code> type in AsterixDB. It usually is an identity name which is used to do filtering and &#8220;group by&#8221;.</li>
+<li><strong>Text</strong> : it is the <code>string</code> type as in AsterixDB. The attribute has to be a <code>measurement</code> and can only be used to do filtering by a full-text search. Usually, it implies there is an inverted-index built on the field.</li>
+<li><strong>Bag</strong> : the same <code>set</code> type as in AsterixDB.</li>
+<li><strong>Hierarchy</strong> : A synthetic field that defines hierarchical relationships between the existing fields.</li>
+</ul>
+<h4>Pre-defined functions</h4>
+<table>
+<thead>
+<tr>
+<th align="left">Datatype</th>
+<th align="center">Filter</th>
+<th align="center">Groupby</th>
+<th align="right">Aggregation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Boolean</td>
+<td align="center">isTrue, isFalse</td>
+<td align="center">self</td>
+<td align="right">distinct-count</td>
+</tr>
+<tr>
+<td align="left">Number</td>
+<td align="center">&lt;, &gt;, ==, in, inRange</td>
+<td align="center">bin(scale)</td>
+<td align="right">count, sum, min, max, avg</td>
+</tr>
+<tr>
+<td align="left">Point</td>
+<td align="center">inRange</td>
+<td align="center">cell(scale)</td>
+<td align="right">count</td>
+</tr>
+<tr>
+<td align="left">Time</td>
+<td align="center">&lt;, &gt;, ==, inRange</td>
+<td align="center">interval(x hour)</td>
+<td align="right">count</td>
+</tr>
+<tr>
+<td align="left">String</td>
+<td align="center">contains, matchs, ~=</td>
+<td align="center">self</td>
+<td align="right">distinct-count, topK</td>
+</tr>
+<tr>
+<td align="left">Text</td>
+<td align="center">contains</td>
+<td align="center"></td>
+<td align="right">distinct-count, topK (on word-token result)</td>
+</tr>
+<tr>
+<td align="left">Bag</td>
+<td align="center">contains</td>
+<td align="center"></td>
+<td align="right">distinct-count, topK (on internal data)</td>
+</tr>
+<tr>
+<td align="left">Hierarchy</td>
+<td align="center"></td>
+<td align="center">rollup</td>
+<td align="right"></td>
+</tr>
+</tbody>
+</table>
+<h1>Cloudberry Request Format</h1>
+<p>After defining the dataset, the front-end can <code>POST</code> a JSON request to <code>/berry</code> path to ask for results. E.g., for the<br />
+illustration purpose, clients can use the <code>curl</code> command to send the JSON file as following.</p>
+<pre class="prettyprint">curl -XPOST -d @JSON_FILE http://localhost:9000/berry</pre>
+<p>In the production system, the front-end application can send the request by JavaScripts to the <code>/berry</code> path.<br />
+We also provide the websocket connection at <code>ws://cloudberry_host_name/ws</code>. You can let the front-end to directly talk<br />
+to Cloudberry server in Javascript as following:</p>
+<pre class="prettyprint">var ws = new WebSocket("ws://localhost:9000/ws"");</pre>
+<p>It will return the same result as HTTP POST requests.</p>
+<p>A request is composed of the following parameters:</p>
+<ul>
+<li><strong>Dataset</strong> : the dataset to query on.</li>
+<li><strong>Unnest</strong> : to flatten a record based on the nested <code>Bag</code> attribute to generate multiple records.</li>
+<li><strong>Filter</strong> : a set of selection predicates.</li>
+<li><strong>Group</strong> :
+<ul>
+<li><strong>by</strong> : to specify the &#8220;group by&#8221; fields.</li>
+<li><strong>aggregate</strong>: to specify the aggregation functions to apply, such as <code>min</code> and <code>max</code>.</li>
+</ul>
+</li>
+<li><strong>Select</strong>: to provide <em>order</em> or <em>project</em> options. It should be mainly used for sampling purposes. A <code>limit</code> field should be given. A <code>offset</code> field enables pagination.</li>
+</ul>
+<h2>Examples</h2>
+<ul>
+<li>Get the per-state and per-hour count of tweets that contain &#8220;zika&#8221; and &#8220;virus&#8221; in 2016.</li>
+</ul>
+<pre class="prettyprint">{
+  "dataset": "twitter.ds_tweet",
+  "filter": [
+    {
+      "field": "create_at",
+      "relation": "inRange",
+      "values": [ "2016-01-01T00:00:00.000Z", "2016-12-31T00:00:00.000Z"]
+    },
+    {
+      "field": "text",
+      "relation": "contains",
+      "values": [ "zika", "virus" ]
+    }
+  ],
+  "group": {
+    "by": [
+        {
+          "field": "geo_tag.stateID",
+          "as": "state"
+        },
+        {
+          "field": "create_at",
+          "apply": {
+            "name": "interval",
+            "args": {
+              "unit": "hour"
+            }
+          },
+          "as": "hour"
+        }
+      ],
+    "aggregate": [
+      {
+        "field": "*",
+        "apply": {
+          "name": "count"
+        },
+        "as": "count"
+      }
+      ]
+  }
+}</pre>
+<p>You can test the query by putting the above JSON record into a file and using <code>curl</code> command to send it to Cloudberry.</p>
+<pre class="prettyprint">curl -XPOST -d @JSON_FILE http://localhost:9000/berry</pre>
+<p>You should see the following responses:</p>
+<pre class="prettyprint">[[
+    {"state":6,"hour":"2016-04-09T10:00:00.000Z","count":1},
+    {"state":6,"hour":"2016-08-05T10:00:00.000Z","count":1},
+    {"state":12,"hour":"2016-07-26T10:00:00.000Z","count":1},
+    {"state":12,"hour":"2016-10-04T10:00:00.000Z","count":1}
+    ...
+]]</pre>
+<ul>
+<li>Get the top-10 related hashtags for tweets that mention &#8220;zika&#8221;.</li>
+</ul>
+<pre class="prettyprint">{
+  "dataset": "twitter.ds_tweet",
+  "filter": [
+  {
+    "field": "text",
+    "relation": "contains",
+    "values": [ "zika"]
+  }
+  ],
+  "unnest" : [{ "hashtags": "tag"}],
+  "group": {
+    "by": [
+      { "field": "tag" }
+    ],
+    "aggregate": [
+      {
+        "field" : "*",
+        "apply" : {
+          "name": "count"
+        },
+        "as" : "count"
+      }
+    ]
+  },
+  "select" : {
+    "order" : [ "-count"],
+    "limit": 10,
+    "offset" : 0
+  }
+}</pre>
+<p>The expected results are as following:</p>
+<pre class="prettyprint">[[
+  {"tag":"Zika","count":6},
+  {"tag":"trndnl","count":6},
+  {"tag":"ColdWater","count":1},
+  ...
+]]</pre>
+<ul>
+<li>Get 100 latest sample tweets that mention &#8220;zika&#8221;.</li>
+</ul>
+<pre class="prettyprint">{
+  "dataset": "twitter.ds_tweet",
+  "filter": [{
+    "field": "text",
+    "relation": "contains",
+    "values": [ "zika"]
+  }],
+  "select" : {
+    "order" : [ "-create_at"],
+    "limit": 100,
+    "offset" : 0,
+    "field": ["create_at", "id"]
+  }
+}</pre>
+<p>The expected results are as following:</p>
+<h3></h3>
+<pre class="prettyprint">[[
+ {"create_at":"2016-10-04T10:00:17.000Z","id":783351045829357568},
+ {"create_at":"2016-09-09T10:00:28.000Z","id":774291393749643264},
+ {"create_at":"2016-09-09T10:00:08.000Z","id":774291307858722820},
+ ...
+]]</pre>
+<h3>Request options</h3>
+<p>Cloudberry supports automatic query-slicing on the <code>timeField</code>. The front-end can specify a response time limit for each<br />
+&#8220;small query&#8221; to get the results progressively.</p>
+<pre class="prettyprint">{
+ ...
+ "option":{
+   "sliceMillis": 2000  
+ }
+}</pre>
+<p>For example, the following query asks the top-10 hashtags with an option to accept an updated results every 200ms.</p>
+<pre class="prettyprint">{
+    "dataset": "twitter.ds_tweet",
+    "filter": [{
+        "field": "text",
+        "relation": "contains",
+        "values": ["zika"]
+    }],
+    "unnest": [{
+        "hashtags": "tag"
+    }],
+    "group": {
+        "by": [{
+            "field": "tag"
+        }],
+        "aggregate": [{
+            "field": "*",
+            "apply": {
+                "name": "count"
+            },
+            "as": "count"
+        }]
+    },
+    "select": {
+        "order": ["-count"],
+        "limit": 10,
+        "offset": 0
+    },
+    "option": {
+        "sliceMillis": 200
+    }
+}</pre>
+<p>There will be a stream of results return from Cloudberry as following:</p>
+<h4></h4>
+<pre class="prettyprint">[[{"tag":"Zika","count":3},{"tag":"ColdWater","count":1},{"tag":"Croatia","count":1}, ... ]]
+[[{"tag":"Zika","count":4},{"tag":"Croatia","count":1},{"tag":"OperativoNU","count":1}, ... ]]
+[[{"tag":"trndnl","count":6},{"tag":"Zika","count":4},{"tag":"ProjectHomeLouisDay","count":1}, ... ]]
+...</pre>
+<h4></h4>
+<h4>Format of multiple requests</h4>
+<p>Sometimes the front-end wants to slice multiple queries simultaneously so that it can show multiple consistent results.<br />
+In this case, it can wrap the queries inside the <code>batch</code> field and specify only one <code>option</code> field.</p>
+<pre class="prettyprint">{
+  "batch" : [
+    { request1 },
+    { request2 }
+  ],
+  "option" : {
+    "sliceMillis": 2000  
+  }
+}</pre>
+<p>E.g., the following query shows an <code>batch</code> example that asks the by-state count and the top-10 hashtags and these two<br />
+queries should be sliced synchronized.</p>
+<pre class="prettyprint">{
+    "batch": [{
+        "dataset": "twitter.ds_tweet",
+        "filter": [{
+            "field": "create_at",
+            "relation": "inRange",
+            "values": ["2016-01-01T00:00:00.000Z", "2016-12-31T00:00:00.000Z"]
+        }, {
+            "field": "text",
+            "relation": "contains",
+            "values": ["zika", "virus"]
+        }],
+        "group": {
+            "by": [{
+                "field": "geo_tag.stateID",
+                "as": "state"
+            }, {
+                "field": "create_at",
+                "apply": {
+                    "name": "interval",
+                    "args": {
+                        "unit": "hour"
+                    }
+                },
+                "as": "hour"
+            }],
+            "aggregate": [{
+                "field": "*",
+                "apply": {
+                    "name": "count"
+                },
+                "as": "count"
+            }]
+        }
+    }, {
+        "dataset": "twitter.ds_tweet",
+        "filter": [{
+            "field": "text",
+            "relation": "contains",
+            "values": ["zika"]
+        }],
+        "unnest": [{
+            "hashtags": "tag"
+        }],
+        "group": {
+            "by": [{
+                "field": "tag"
+            }],
+            "aggregate": [{
+                "field": "*",
+                "apply": {
+                    "name": "count"
+                },
+                "as": "count"
+            }]
+        },
+        "select": {
+            "order": ["-count"],
+            "limit": 10,
+            "offset": 0
+        }
+    }],
+    "option": {
+        "sliceMillis": 200
+    }
+}</pre>
+<p>The response is as following:</p>
+<pre class="prettyprint">[
+  [ {"state":6,"hour":"2016-08-05T10:00:00.000Z","count":1}, {"state":12,"hour":"2016-07-26T10:00:00.000Z","count":1}, ...],
+  [ {"tag":"trndnl","count":6},{"tag":"Zika","count":5},{"tag":"ColdWater","count":1}, ...]
+]
+[
+  [ {"state":72,"hour":"2016-05-06T10:00:00.000Z","count":1},{"state":48,"hour":"2016-09-09T10:00:00.000Z","count":2}, ...],
+  [ {"tag":"trndnl","count":6},{"tag":"Zika","count":6},{"tag":"Croatia","count":1}, ...]
+]
+...</pre>
+<h4>Â Transform response format</h4>
+<p>The front end can <strong>optionally</strong> add a &#8220;transform&#8221; operation in JSON request to define the post-processing operations.<br />
+For example, front-ends can define a <code>wrap</code> operation to wrap the whole response in a key-value pair JSON object in which the <code>key</code> is pre-defined. The following request asks the Cloudberry to wrap the result in the value with the key of <code>sample</code>:</p>
+<pre class="prettyprint">{
+  "dataset": "twitter.ds_tweet",
+  "filter": [{
+    "field": "text",
+    "relation": "contains",
+    "values": [ "zika"]
+  }],
+  "select" : {
+    "order" : [ "-create_at"],
+    "limit": 100,
+    "offset" : 0,
+    "field": ["create_at", "id"]
+  }
+  "transform" : {
+    "warp": {
+      "key": "sample"
+    }
+  }
+}</pre>
+<p>&nbsp;</p>
+<p>The response is as below:</p>
+<pre class="prettyprint">{
+  "key":"sample",
+  "value":[[
+    {"create_at":"2016-10-04T10:00:17.000Z","id":783351045829357568,"user.id":439304013},
+    {"create_at":"2016-09-09T10:00:28.000Z","id":774291393749643264,"user.id":2870762297},
+    {"create_at":"2016-09-09T10:00:08.000Z","id":774291307858722820,"user.id":2870783428},
+    {"create_at":"2016-09-07T10:00:15.000Z","id":773566563895042049,"user.id":2870762297},
+    {"create_at":"2016-09-06T10:39:19.000Z","id":773214008237318144,"user.id":3783815248},
+    {"create_at":"2016-08-31T10:00:24.000Z","id":771029887025090560,"user.id":2866011003},
+    {"create_at":"2016-08-25T10:00:07.000Z","id":768855489073455104,"user.id":115230811},
+    {"create_at":"2016-08-19T10:00:36.000Z","id":766681282453594112,"user.id":254059750},
+    {"create_at":"2016-08-09T10:00:35.000Z","id":763057397464043521,"user.id":383512034},
+    {"create_at":"2016-08-08T10:00:29.000Z","id":762694985355436032,"user.id":518129224}
+  ]]
+}</pre>
+<p><code>wrap</code> transformation is often preferable when the front-end send many different requests in the same WebSocket interface.</p>
+<h3>Deregister Dataset</h3>
+<p>You may also deregister a dataset from Cloudberry. To do so, you can send the JSON record as following to the <code>/admin/deregister</code> path.</p>
+<pre class="prettyprint">{
+    "dataset": "twitter.dsCountyPopulation"
+}<code>
+</code></pre>
+	</div> 
+</article>
+				
+			</div><!-- #content -->
+
+			
+		</div><!-- #primary -->
+
+		
+		
+	</div><!-- #content-wrap -->
+
+	
+
+        </main><!-- #main -->
+
+        
+        
+        
+            
+<footer id="footer" class="site-footer" itemscope="itemscope" itemtype="http://schema.org/WPFooter">
+
+    
+    <div id="footer-inner" class="clr">
+
+        
+
+<div id="footer-widgets" class="oceanwp-row clr">
+
+	
+	<div class="footer-widgets-inner container">
+
+        			<div class="footer-box span_1_of_4 col col-1">
+							</div><!-- .footer-one-box -->
+
+							<div class="footer-box span_1_of_4 col col-2">
+									</div><!-- .footer-one-box -->
+						
+							<div class="footer-box span_1_of_4 col col-3 ">
+									</div><!-- .footer-one-box -->
+			
+							<div class="footer-box span_1_of_4 col col-4">
+									</div><!-- .footer-box -->
+			
+		
+	</div><!-- .container -->
+
+	
+</div><!-- #footer-widgets -->
+
+
+
+<div id="footer-bottom" class="clr no-footer-nav">
+
+	
+	<div id="footer-bottom-inner" class="container clr">
+
+		
+		
+			<div id="copyright" class="clr" role="contentinfo">
+				Cloudberry  â€¢  2018  â€¢  cloudberry.ics.uci.edu			</div><!-- #copyright -->
+
+		
+	</div><!-- #footer-bottom-inner -->
+
+	
+</div><!-- #footer-bottom -->
+
+        
+    </div><!-- #footer-inner -->
+
+    
+</footer><!-- #footer -->            
+        
+                        
+    </div><!-- #wrap -->
+
+    
+</div><!-- #outer-wrap -->
+
+
+
+<a id="scroll-top" href="#"><span class="fa fa-arrow-up"></span></a>
+
+
+<div id="sidr-close">
+	<a href="#" class="toggle-sidr-close">
+		<i class="icon icon-close"></i><span class="close-text">Close Menu</span>
+	</a>
+</div>
+    
+    
+<div id="mobile-menu-search" class="clr">
+	<form method="get" action="http://cloudberry.ics.uci.edu/" class="mobile-searchform">
+		<input type="search" name="s" autocomplete="off" placeholder="Search" />
+		<button type="submit" class="searchform-submit">
+			<i class="icon icon-magnifier"></i>
+		</button>
+			</form>
+</div><!-- .mobile-menu-search -->
+
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-content/plugins/simple-code-highlighter/js/pretty.js?ver=4.9.5'></script>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-includes/js/imagesloaded.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-content/themes/oceanwp/assets/js/third/magnific-popup.min.js?ver=1.5.10'></script>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-content/themes/oceanwp/assets/js/third/lightbox.min.js?ver=1.5.10'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var oceanwpLocalize = {"isRTL":"","menuSearchStyle":"disabled","sidrSource":"#sidr-close, #site-navigation, #mobile-menu-search","sidrDisplace":"1","sidrSide":"left","sidrDropdownTarget":"icon","verticalHeaderTarget":"icon","customSelects":".woocommerce-ordering .orderby, #dropdown_product_cat, .widget_categories select, .widget_archive select, .single-product .variations_form .variations select"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-content/themes/oceanwp/assets/js/main.min.js?ver=1.5.10'></script>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-content/plugins/wp-markdown/js/prettify.min.js?ver=1.6.1'></script>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-content/plugins/enlighter/resources/mootools-core-yc.js?ver=3.5'></script>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-content/plugins/enlighter/resources/EnlighterJS.min.js?ver=3.5'></script>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-includes/js/wp-embed.min.js?ver=4.9.5'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='http://cloudberry.ics.uci.edu/wp-content/themes/oceanwp/assets/js//third/html5.min.js?ver=1.5.10'></script>
+<![endif]-->
+<script type="text/javascript">/* <![CDATA[ */EnlighterJS_Config = {"selector":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"language":"generic","theme":"enlighter","indent":2,"hover":"hoverEnabled","showLinenumbers":true,"rawButton":true,"infoButton":true,"windowButton":true,"rawcodeDoubleclick":false,"grouping":true,"cryptex":{"enabled":false,"email":"mail@example.tld"}};!function(){var a=function(a){var b="Enlighter Error: ";console.error?console.error(b+a):console.log&&console.log(b+a)};return window.addEvent?"undefined"==typeof EnlighterJS?void a("Javascript Resources not loaded yet!"):"undefined"==typeof EnlighterJS_Config?void a("Configuration not loaded yet!"):void window.addEvent("domready",function(){EnlighterJS.Util.Init(EnlighterJS_Config.selector.block,EnlighterJS_Config.selector.inline,EnlighterJS_Config)}):void a("MooTools Framework not loaded yet!")}();;/* ]]> */</script></body>
+</html>Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

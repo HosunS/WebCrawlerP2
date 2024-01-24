@@ -1,0 +1,21 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC231¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 27 Sep 2018 00:51:21 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueR"e7-576cfbcd33fb7"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 02:29:57 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueXç#include <stdio.h>
+
+void func_a(void){
+    printf("func_a\n");
+    return;
+}
+
+void func_b(void){
+    printf("func_b\n");
+    return;
+}
+
+int main(int ac, char **av)
+{
+    void (*fp)(void); 
+
+    fp = func_b;
+    fp();
+    return;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

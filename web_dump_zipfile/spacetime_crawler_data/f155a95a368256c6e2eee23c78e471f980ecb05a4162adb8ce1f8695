@@ -1,0 +1,231 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:10:15 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY4ã
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Restaurant & consumer data Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Restaurant & consumer data Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/00232/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="#"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: The dataset was obtained from a recommender system prototype. The task was to generate a top-n list of restaurants according to the consumer preferences. </p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">138</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Computer</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">47</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2012-08-04</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">Yes</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">110752</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal">Creators: <br>Rafael Ponce MedellÃƒÂ­n and Juan Gabriel GonzÃƒÂ¡lez Serna<br><u>rafaponce <b>'@'</b> cenidet.edu.mx</u>, <u>gabriel <b>'@'</b> cenidet.edu.mx</u><br>Department of Computer Science.<br>National Center for Research and Technological Development CENIDET, MÃƒÂ©xico<br>Donors of database:<br>Blanca Vargas-Govea and Juan Gabriel GonzÃƒÂ¡lez Serna<br><u>blanca.vargas <b>'@'</b> cenidet.edu.</u><a href="mx/blanca.vg">mx/blanca.vg</a>@gmail.com, <u>gabriel <b>'@'</b> cenidet.edu.mx</u><br>Department of Computer Science.<br>National Center for Research and Technological Development CENIDET, MÃƒÂ©xico</p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal">Two approaches were tested: a collaborative filter technique and a contextual approach.<br>   (i) The collaborative filter technique used only one file i.e., rating_final.csv that comprises the user, item and rating attributes.  <br>   (ii) The contextual approach generated the recommendations using the remaining eight data files.</p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal">Files, instances and attributes<br>Number of Files: 9<br><br>Restaurants<br>1 chefmozaccepts.csv<br>2 chefmozcuisine.csv<br>3 chefmozhours4.csv<br>4 chefmozparking.csv<br>5 geoplaces2.csv<br><br>Consumers<br>6 usercuisine.csv<br>7 userpayment.csv<br>8 userprofile.csv<br><br>User-Item-Rating<br>9 rating_final.csv<br><br>%--- Description format<br>File name<br>Number of instances<br>Number of attributes<br>attribute: Type, Number of missing values (if any), Number of values [list of values]<br>%--- <br><br>1 chefmozaccepts.csv<br>Instances: 1314<br>Attributes: 2<br>placeID: Nominal<br>Rpayment: Nominal, 12 [cash,VISA,MasterCard-Eurocard,American_Express,bank_debit_cards,checks,Discover,Carte_Blanche,Diners_Club,Visa,Japan_Credit_Bureau,gift_certificates]<br><br>2 chefmozcuisine.csv<br>Instances: 916<br>Attributes: 2<br>placeID: Nominal<br>Rcuisine: Nominal, 59 [Afghan,African,American,Armenian,Asian,Bagels,Bakery,Bar,Bar_Pub_Brewery,Barbecue,Brazilian,Breakfast-Brunch,Burgers,Cafe-Coffee_Shop,			Cafeteria,California,Caribbean,Chinese,Contemporary,Continental-European,Deli-Sandwiches,Dessert-Ice_Cream,Diner,Dutch-Belgian,Eastern_European,Ethiopian,Family,Fast_Food,Fine_Dining,French,,Game,German,Greek,Hot_Dogs,			International,Italian,Japanese,Juice,Korean,Latin_American,Mediterranean,Mexican,Mongolian,Organic-Healthy,Persian,			Pizzeria,Polish,Regional,Seafood,Soup,Southern,Southwestern,Spanish,Steaks,Sushi,Thai,Turkish,Vegetarian,Vietnamese]<br><br>3 chefmozhours4.csv<br>Instances: 2339<br>Attributes: 3<br>placeID: Nominal<br>hours: Nominal, Range:00:00-23:30<br>days:Nominal, 7 [Mon;Tue;Wed;Thu;Fri;Sat;Sun]<br><br>4 chefmozparking.csv<br>Instances: 702<br>Attributes: 2<br>placeID: Nominal<br>parking_lot:Nominal, 7[public,none,yes,valet_parking,free,street,validated_parking]<br><br>5 geoplaces2.csv<br>Instances: 130<br>Attributes: 21<br>placeID: Nominal<br>latitude: Numeric<br>longitude: Numeric<br>the_geom_meter: Nominal (Geospatial)<br>name: Nominal<br>address: Nominal,Missing: 27<br>city: Nominal, Missing: 18<br>state: Nominal, Missing: 18<br>country: Nominal, Missing: 28<br>fax: Numeric, Missing: 130<br>zip: Nominal,Missing: 74<br>alcohol: Nominal, Values: 3 [No_Alcohol_Served,Wine_Beer,Full_Bar]<br>smoking_area: Nominal, 5 [none,only_at_bar,permitted,section,not_permitted]<br>dress_code:	Nominal, 3 [informal,casual,formal]<br>accessibility: Nominal, 3 [no_accessibility,completely,partially]<br>price: Nominal, 3 [medium,low,high]<br>url: Nominal, Missing: 116<br>Rambience: Nominal, 2 [familiar,quiet]<br>franchise: Nominal, 2 [t,f]<br>area: Nominal, 2 [open,closed]<br>other_services:	Nominal, 3 [none,internet,variety]<br><br>6 rating_final.csv<br>Instances: 1161<br>Attributes: 5<br>userID: Nominal<br>placeID: Nominal<br>rating: Numeric, 3 [0,1,2]<br>food_rating: Numeric, 3 [0,1,2]<br>service_rating:	Numeric, 3 [0,1,2]<br><br>7 usercuisine.csv<br>Instances: 330<br>Attributes: 2<br>userID: Nominal<br>Rcuisine: Nominal, 103 [Afghan,African,American,Armenian,Asian,Australian,Austrian,Bagels,Bakery,Bar,Bar_Pub_Brewery,Barbecue,Basque,Brazilian,Breakfast-Brunch,British,Burgers,Burmese,Cafe-Coffee_Shop,Cafeteria,Cajun-Creole,California,Cambodian,Canadian,Caribbean,Chilean,Chinese,Contemporary,Continental-European,Cuban,Deli-Sandwiches,Dessert-Ice_Cream,Dim_Sum,Diner,Doughnuts,Dutch-Belgian,Eastern_European,Eclectic,Ethiopian,Family,Fast_Food,Filipino,Fine_Dining,French,Fusion,Game,German,Greek,Hawaiian,Hot_Dogs,Hungarian,Indian-Pakistani,Indigenous,Indonesian,International,Irish,Israeli,Italian,Jamaican,Japanese,Juice,Korean,Kosher,Latin_American,Lebanese,Malaysian,Mediterranean,Mexican,Middle_Eastern,Mongolian,Moroccan,North_African,Organic-Healthy,Pacific_Northwest,Pacific_Rim,Persian,Peruvian,Pizzeria,Polish,Polynesian,Portuguese,Regional,Romanian,Russian-Ukrainian,Scandinavian,Seafood,Soup,Southeast_Asian,Southern,Southwestern,Spanish,Steaks,Sushi,Swiss,Tapas,Tea_House,Tex-Mex,Thai,Tibetan,Tunisian,Turkish,Vegetarian,Vietnamese]<br><br>8 userpayment.csv<br>Instances: 177<br>Attributes: 2<br>userID: Nominal<br>Upayment: Nominal, 5 [cash,bank_debit_cards,MasterCard-Eurocard,VISA,American_Express]<br><br>9 userprofile<br>Instances: 138<br>Attributes: 19<br>userID: Nominal<br>latitude: Numeric<br>longitude: Numeric<br>the_geom_meter: Nominal (Geospatial)<br>smoker: Nominal, Missing: 3, 2 [false,true]<br>drink_level: Nominal, 3 [abstemious,social drinker,casual drinker]<br>dress_preference:Nominal, Missing: 5, 4 [informal,formal,no preference,elegant]<br>ambience: Nominal, Missing: 6, 3 [family,friends,solitary]<br>transport: Nominal, Missing: 7, 3 [on foot,public,car owner]<br>marital_status:	Nominal, Missing: 4, 3 [single,married,widow]<br>hijos: Nominal, Missing: 11, 3 [independent,kids,dependent]<br>birth_year:	Nominal<br>interest: Nominal, 5 [variety,technology,none,retro,eco-friendly]<br>personality: Nominal, 4 [thrifty-protector,hunter-ostentatious,hard-worker,conformist]<br>religion: Nominal, 5 [none,Catholic,Christian,Mormon,Jewish]<br>activity: Nominal, Missing: 7, 4 [student,professional,unemployed,working-class]<br>color: Nominal, 8 [black,red,blue,green,purple,orange,yellow,white]<br>weight: Numeric<br>budget: Nominal, Missing: 7, 3 [medium,low,high]<br>height: Numeric</p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal">Blanca Vargas-Govea, Juan Gabriel GonzÃƒÂ¡lez-Serna, Rafael Ponce-MedellÃƒÂ­n. Effects of relevant contextual features in the performance of a restaurant recommender system. In RecSysÃ¢â‚¬â„¢11: Workshop on Context Aware Recommender Systems (CARS-2011), Chicago, IL, USA, October 23, 2011.</p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal">Blanca Vargas-Govea, Juan Gabriel GonzÃƒÂ¡lez-Serna, Rafael Ponce-MedellÃƒÂ­n. Effects of relevant contextual features in the performance of a restaurant recommender system. In RecSysÃ¢â‚¬â„¢11: Workshop on Context Aware Recommender Systems (CARS-2011), Chicago, IL, USA, October 23, 2011.</p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

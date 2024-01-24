@@ -1,0 +1,485 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE17491¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 29 Dec 2018 16:39:23 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"4453-57e2bd2794c0d"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:41:00 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYDS<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html>
+
+<head>
+  <title>Eclipse Download and Installation Instructions</title>
+</head>
+
+<body BGCOLOR="white">
+
+<center>
+<h1>Eclipse Download and Installation<br>(for Python) Instructions<br>
+    </h1>
+<p>
+</center>
+<hr align="left" width="100%">
+<p>
+<b>Install Python and Java before installing Eclipse.</b>
+<p>
+You may want to print these instructions before proceeding, so that you can
+  refer to them while downloading and installing Eclipse.
+Or, just keep this document in your browser.
+You should read each step completely before performing the action that it
+  describes.
+<p>
+This document shows downloading and installing Eclipse (Photon) on Windows 7
+  in Summer 2018.
+<b>You should download and install the latest version of Eclipse.</b>
+The current latest (as of Winter 2019) is Eclipse 2018-12.
+<p>
+Remember that you must install Java, Python, and Eclipse as all 32-bit or
+  all 64-bit.
+I recommend using the 32-bit verisons for each.
+<p>
+<hr align="left" width="100%">
+
+
+<h2>Eclipse: (Photon)</h2>
+<p>
+
+The Eclipse download requires about 320 MB of disk space; keep it on your
+  machine, in case you need to re-install Eclipse.
+When installed, Eclipse requires an additional 350 MB of disk space.
+<p>
+
+<h3>Downloading</h3>
+<ol>
+<li>Click
+    <a href="http://www.eclipse.org/downloads/packages" target="_blank">
+      Eclipse</a><p>
+    The following page will appear in your browser.
+    In this handout we will download <b>Eclipse IDE for Eclipse Committers</b>
+      for Windows 32 Bit; if your computer uses Windows, continue below;
+      otherwise choose either <b>Mac Cocoa</b> or <b>Linux</b> instead.
+    <p>
+    <img src="images/eclipsephoton/eclipsedownloadpage.jpg">
+    <p>
+    It is critical that Java, Python, and Eclipse are either all 32 Bit or are
+       all 64 Bit (and the, only if your Machine/OS supports 64 Bit): I think
+       it easiest to use 32 Bit for everything.
+
+<p>
+<li>Click the <b>32-Bit</b> (after Windows) to the right of the
+      <b>Eclipse IDE for Eclipse Committers</b>; this version may appear on the
+      top of the list, or may appear further down.
+    <p>
+    You will see the following page (don't worry about the name of the
+      institution underneath the orange <b>DOWNLOAD</b> button).
+    <p>
+    <img src="images/eclipsephoton/mirror.jpg">
+     
+<p>
+<li>Click the orange <b>DOWNLOAD</b> button.
+    The site named here, beneath the button:
+      <b>United States - OSU Opoen Source Lab (http)</b>
+      is the random one chosen by the download page this time; yours may differ.
+    <p>
+    This file should start downloading in your standard download folder, while
+      showing a splash screen about donating to Eclipse.
+    This file is about 320 Mb so it might take a while to download fully if you
+      are on a slow internet connection (it took me about 5 minutes over a
+      cable modem).
+    Don't worry about the exact time as long as the download continues to make
+      steady progress.
+    In Chrome progress is shown on the bottom-left of the window, via the icon
+    <p>
+    <img src="images/eclipsephoton/downloadprogress.jpg">
+    <p>
+    The file should appear as
+    <p>
+    <img src="images/eclipsephoton/downloadfile.jpg">
+    <p>
+    Terminate the tab browsing this webpage.
+
+<p>
+<li>Move this file to a more permanent location, so that you can install Eclipse
+      (and reinstall it later, if necessary).
+<p>
+<li>Start the <b>Installing</b> instructions directly below.
+</ol>
+
+<p>
+<hr align="left" width="33%">
+
+<h3>Installing (for Python)</h3>
+
+<b>Python and Java should be installed before installing Eclipse</b>
+<p>
+<ol>
+<li>Unzip <b>eclipse-committers-photon-win32.zip</b>, the file that you just
+     downloaded and moved.
+    <br>
+    On my machine (running Windows 7), I can
+    <ul>
+    <li>Right-click the file.
+    <li>Hover over the <b>IZArc</b> command from the menu of options.
+    <li>Click <b>Extract Here</b>
+    </ul>
+    <p>
+    <img src="images/eclipsephoton/izarc.jpg">
+    <p>
+    If you do not have IZArc or an equivalent unzipping program, here is the
+      web site to download a free copy of
+      <a href="http://izarc.org/downloads" target="_blank">IZarc</a>.
+    <p>
+
+    <p>
+    Unzipping this file creates a folder named <b>eclipse</b>; unzipping
+      250 MB can take a few minutes.
+    You can leave this folder here or move it elsewhere on your hard disk.
+    I recommend putting the downloaded file and resulting folder in the
+       <b>C:\Program Files\</b> directory.
+
+<p>
+<li>Create a shortcut on your desktop to the <b>eclipse.exe</b> file in
+      this <b>eclipse</b> folder: <img src="images/eclipse/eclipseexe.jpg">
+    <br>
+    On most Windows machines, you can
+    <ul>
+    <li>Right-press the file <b>eclipse.exe</b>
+    <li>Drag it to the desktop.
+    <li>Release the right button.
+    <li>Click <b>Create shortcut here</b>
+    </ul>
+    <p>
+    Now you are ready to perform a <b>one-time only</b> setup of Eclipse on
+      your machine.
+
+<p>
+<li>Double-click the shortcut to Eclipse that you just created above.
+    <p>
+<!---
+    If the following <b>Security Warning</b> window appears
+    <p>
+    <img src="images/eclipse/securitywarning.jpg">
+    <p>
+    <ul>
+      <li>Uncheck the <b>Always ask before opening this file</b> checkbox
+      <li>Click <b>Run</b>
+    </ul>
+    <p>
+--->
+    The following splash screen will appear
+    <p>
+    <img src="images/eclipsephoton/splash.jpg">
+    <p>
+    and then an <b>Eclipse Launcher</b> pop-up window will appear.
+    <p>
+    <img src="images/eclipsephoton/workspacelauncher.jpg">
+    <p>
+    In the <b>Workspace</b> text box, your name should appear between
+      <b>C:\Users\</b> and <b>\eclipse-workspace</b>, instead of <b>Pattis</b>.
+    <p>
+    Leave <b>unchecked</b> the 
+      <b>Use this as the default and do not ask again</b> box.
+    Although you will use this same workspace for the entire quarter (checking
+      projects in and out of it), it is best to see this
+      <b>Workspace Launcher</b> pop-up window each time you start Eclipse, to
+      remind you where your workspace is located.
+    <p>
+    In fact, it is a good idea to create on your desktop a shortcut to your
+      workspace folder; but you must click <b>OK</b> (see below) before
+      Eclipse creates this folder and you can create a shortcut to it.
+    <p>
+
+<li>Click <b>Launch</b>.
+    <p>
+    If you have an older version of Eclipse installed, the following pop-up
+      window will apperar.
+    <p>
+    <img src="images/eclipsephoton/olderworkspaceversion.jpg">
+    <p>
+    In this pop-up window appears, click <b>Continue</b> to update the
+      workspace for the newer version of Eclipse.
+    <p>
+    Progress bars will appear as Eclipse loads.
+    <p>
+    Eventually the Eclipse workbench will appear with a <b>Welcome</b> tab
+      covering it.
+    <p>
+    <img src="images/eclipsephoton/welcome.jpg">
+
+<p>
+<li>Terminate (click <b>X</b> on) the <b>Welcome</b> tab.
+    <p>
+    You will not see the <b>Welcome</b> tab when you start Eclipse again, after
+      this first time.
+
+<p>
+<li>Click <b>Help</b> (on the far right of the line below this window's blue
+      title <b>eclipse-workspace - Eclipse</b>) and then click
+      <b>Install New Software...</b> in its pull-down menu, as shown below.
+    <p>
+    <img src="images/eclipsephoton/installnewsoftware.jpg">
+    <p>
+    The <b>Install</b> pop-up window will appear.
+    <p>
+    <img src="images/eclipsephoton/install.jpg">
+
+<p>
+<li>Enter the text (or cut/paste from this document)
+      <b>http://pydev.org/updates</b> into the <b>Work with</b> text box and
+      press <b>Enter</b> (if that doesn't work, try
+      <b>http://www.pydev.org/updates</b>).
+    <p>
+    In a few seconds the information under <b>Name</b> should change from<br>
+    <b>There is no site selected</b> to <b>Pending</b> to
+    <p>
+    <img src="images/eclipsephoton/pydev.jpg">
+    <p>
+    Select only the top <b>PyDev</b> checkbox; do <b>NOT</b> select the 
+      <b>PyDev Mylyn Integration (optional)</b> box.<br>
+    Check before proceeding that the <b>Install</b> pop-up window appears as
+    <p>
+    <img src="images/eclipsephoton/installdone.jpg">
+
+<p>
+<li>Click <b>Next &gt;</b>
+    <p>
+    A new <b>Install</b> pop-up window will appear.
+    <p>
+    <img src="images/eclipsephoton/review.jpg">
+
+<p>
+<li>Click <b>Next &gt;</b>
+    <p>
+    A new <b>Install</b> pop-up window will appear.
+    <p>
+    Select the <b>I accept the terms of the license agreement</b> radio button,
+      so the window appears as
+    <p>
+    <img src="images/eclipsephoton/reviewlicense.jpg">
+
+<p>
+<li>Click <b>Finish</b>
+    <p>
+    The lower right-hand corner of the <b>eclipse-workspace - Eclipse</b>
+      window will show the various operations it is performing and a progress
+      bar for each one.
+    <p>
+    <img src="images/eclipsephoton/installingsoftwareprogress.jpg">
+    <p>
+    Because the installer is fetching various files online, this process might
+      take a few minutes.
+    <p>
+    If you see a <b>Security Warning</b> pop-up window
+    <p>
+    <img src="images/eclipsephoton/securitywarning2.jpg">
+    <p>
+    Click <b>Install anyway</b>.
+    <p>
+    The installation will finish (the progress bar will disappear).
+    <p>
+    A <b>Software Updates</b> pop-up window will appear.
+    <p>
+    <img src="images/eclipsephoton/restart.jpg">
+
+<!---
+    <p>
+    The installation will pause, and  a <b>Selection Needed</b> pop-up window
+      appears.
+<p>
+<li>Check the box labeled <b>Brainwy Software; Pydev; Brainwy</b>.
+    <p>
+    Check before proceeding that the <b>Install</b> pop-up window appears as
+    <p>
+    <img src="images/eclipsephoton/selection.jpg">
+
+<p>
+<li>Click <b>OK</b>
+    <p>
+    The installation will finish (showing the final progress bars).
+    <p>
+    A <b>Software Updates</b> pop-up window will appear.
+    <p>
+    <img src="images/eclipsephoton/restart.jpg">
+--->
+
+<p>
+<li>Click <b>Restart Now</b>
+    <p>
+    Eclipse will terminate and restart.
+    As you did in step 4, terminate (click <b>OK</b> on) the
+      <b>Welcome Tab</b>.
+
+<p>
+<li>Click <b>Window</b> (to the left of <b>Help</b> on the far right of the 
+      line below this window's blue title <b>eclipse-workspace - Eclipse</b>)
+      and then click <b>Preferences</b>  in its pull-down menu, as shown below.
+    <p>
+    <img src="images/eclipsephoton/preferences.jpg">
+
+<p>
+<li>Drill down to select the interpreter:
+    <ul>
+      <li>Disclose <b>PyDev</b> by clicking the <b>+</b> in front of
+             <b>PyDev</b> or double-clicking  <b>PyDev</b> (after the +); the
+              <b>+</b> changes to a <b>-</b>.
+      <li>Disclose <b>Interpreters</b> by clicking the <b>+</b> in front of
+             <b>Interpreters</b> or double-clicking <b>Interpreters</b>
+             (after the +); the <b>+</b> changes to a <b>-</b>.
+      <li>Select/Click <b>Python - Interpreter</b>.<br>
+    </ul>
+    The <b>Preferences</b> pop-up window should appear as follows
+    <p>
+    <img src="images/eclipsephoton/disclosepydev.jpg">
+
+<p>
+<li>Click <b>New...</b> at the top-right of the top window</b>
+    <p>
+    A <b>Select Interpreter</b> pop-up window appears.
+    <p>
+    <img src="images/eclipsephoton/selectinterpreter.jpg">
+    <p>
+    Click <b>Browse</b> and the <b>Open</b> pop-up window should show you
+      the folder in which Python was installed (here Python 37-32).
+    If it doesn't, navigate to that folder.
+    <p>
+    <img src="images/eclipsephoton/selectinterpreter1.jpg">
+    <p>
+    Double-click <b>python.exe</b> (or select it and click <b>Open</b>).
+    <p>
+    Change the <b>Interpreter Name</b> in the <b>Select Interpreter</b> pop-up
+      window to be simply <b>Python37</b>
+      (or whatever the latest version of Python you have installed).
+    The <b>Select Interpreter</b> pop-up window should appear as
+    <p>
+    <img src="images/eclipsephoton/selectinterpreter2.jpg">
+    <p>
+<!---
+    Type <b>Python34</b> in the <b>Interpreter Name</b> text box.<br>
+    Type (or cut/paste) <b>C:\Python34\python.exe</b> in the
+      <b>Interpreter Executable</b> text box (or browse to this file).<br>
+    The <b>Select Interpreter</b> pop-up window should appear as
+    <p>
+    <img src="images/eclipse/selectinterpreter.jpg">
+    <p>
+--->
+<p>
+<li> Click <b>OK</b>.
+    <p>
+    A <b>Selection needed</b> pop-up window will appear.
+    <p>
+    <img src="images/eclipsephoton/selectionneeded.jpg">
+    <p>
+    Your window should have all four of these checkboxes checked.
+
+<p>
+<li>Click <b>OK</b>.
+    <p>
+    Click the <b>Libraries</b> tab  (2nd one) above the lower pane.
+    The <b>Preferences</b> pop-up window will appear as
+    <p>
+    <img src="images/eclipsephoton/preferencespython2.jpg">
+    <p>
+    Actually, on my system I had to first enlarge the <b>Location</b> tab, so
+      that I could see the entire path to the Python interpreter.
+
+<p>
+<li>Click <b>Apply and Close</b>.
+    <p>
+    A <b>Progress Information</b> pop-up window will appear.
+    <p>
+    <img src="images/eclipsephoton/progress.jpg">
+    <p>
+    During installation, it will show the various operations it is
+      performing and a progress bar for each one.
+    Eventually the installation will terminate.
+    <p>
+    If the following pop-up window appears
+    <p>
+    <img src="images/eclipsephoton/firewall.jpg">
+    <p>
+    Ensure the <b>"Public networks, such as those in airports...."</b>
+      checkbox is <b>NOT checked</b>, and then click <b>Allow Access</b>.
+<p>
+
+<li>Click <b>Window</b> (to the left of <b>Help</b> on the far right of the 
+      line below this window's blue title <b>eclipse-workspace - Eclipse</b>),
+      hover over <b>Perspective</b> then <b>Open Perspective</b> in the
+      pull-down menu and then click
+      <b>Other...</b> in the next pull-down menu.
+    <p>
+    <img src="images/eclipsephoton/perspective.jpg">
+    <p>
+    The <b>Open Perspective</b> pop-up window will appear.
+    <p>
+    <img src="images/eclipsephoton/openperspective.jpg">
+
+<p>
+<li>Double-click <b>PyDev</b> (fourth from the bottom)
+    <p>
+    The <b>Package Explorer</b> in the upper-left tab will change to
+       <b>PyDev Package Explorer</b>, and a <b>Python</b> icon will appear to
+       the right of the <b>Java</b> icon (on the far right).
+    <p>
+    <img src="images/eclipsephoton/pydevready.jpg">
+   
+<p>
+<li>Right-click the <b>Java</b> icon to the left of the <b>PyDev</b> icon
+      and select <b>close</b>
+    <p>
+    <img src="images/eclipsephoton/closejava.jpg">
+    <p>
+    The Eclipse workbench will now have only the <b>PyDev</b> icon here and 
+      will look like
+    <p>
+    <img src="images/eclipsephoton/workbench.jpg">
+<p>
+
+<li>Locate the workspace folder created in step 3
+      (see <b>C:\Users\<i>yourname</i>\eclipse-workspace</b>)
+      and download the
+        <a href="../../modules/courselib.zip"</b>courselib.zip</a>
+      file into this workspace and unzip it there, producing the
+      <b>courselib</b> folder; it should should contain a bunch of Python
+      module files (ending in <b>.py</b>).
+    From time to time you may be asked to put other course-specific Python
+      module files into this <b>courselib</b> folder; these modules will be
+      usable (via <b>import</b>) in all Python projects in Eclipse.
+<p>
+
+<li>Inform Eclipse to use the <b>courselib</b> folder in all Python projects.
+<ul>
+  <li>Select <b>Window | Preferences</b>.
+  <li>Disclose <b>PyDev</b> by clicking the <b>+</b> in front of
+             <b>PyDev</b> or double-clicking  <b>PyDev</b> (after the +); the
+              <b>+</b> changes to a <b>-</b>.
+  <li>Disclose <b>Interpreters</b> by clicking the <b>+</b> in front of
+             <b>Interpreters</b> or double-clicking <b>Interpreters</b>
+             (after the +); the <b>+</b> changes to a <b>-</b>.
+  <li>Select <b>Python - Interpreter</b>.
+    <li>Click the <b>Libraries</b> tab (2nd above the bottom pane).<br>
+
+    <p>
+    <img src="images/eclipsephoton/preferencespython2.jpg">
+    <p>
+    <li>Click the <b>New Folder</b> button (topmost, right of the bottom pane).
+    <li>Browse to the <b>courselib</b> folder (added above) in the
+          <b>Browse for Folder</b> pop-up window
+         (<b>C:\Users\<i>yourname</i>\eclipse-workspace\courselib</b>).
+    <li>Click the <b>courselib</b> folder selected, and then click <b>SelectFolder</b>.<br>
+        Notice a fifth entry
+          (<b>C:\Users\<i>yourname</i>\eclipse-workspace\courselib></b>)
+        appears in the bottom-right pane named
+           <b>System PYTHONPATH. Reorder with Drag & Drop</b>.
+    <li>Click <b>Apply</b> (you will see some progress bars).<br>
+    The <b<Preferences</b> pop-up window should now appear as
+    <p>
+    <img src="images/eclipsephoton/preferenceswithcourselib.jpg">
+    <p>
+    <li>Cick <b>Apply and Close.</b>
+</ul>
+
+<p>
+<li>Terminate (click <b>X</b> on) the Eclipse window.
+</ol>
+Eclipse is now installed for Python.
+<p>
+<hr align="left" width="100%">
+<p>
+
+</body>
+</html>
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

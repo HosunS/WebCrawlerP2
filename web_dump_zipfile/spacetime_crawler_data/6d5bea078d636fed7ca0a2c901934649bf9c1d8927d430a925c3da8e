@@ -1,0 +1,653 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueç¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD7311¢Ak¢DtypeEvalueCViaAv¢DtypeEvalueX@1.1 1b17e6a7d55c5e3bd52c3149d2fe2b95.cloudfront.net (CloudFront)¢Ak¢DtypeEvalueGX-CacheAv¢DtypeEvalueTMiss from cloudfront¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXSun, 10 Feb 2019 05:22:44 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueHX-layoutAv¢DtypeEvalueJ<nolayout>¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueKX-Amz-Cf-IdAv¢DtypeEvalueX8KaG8XRskVgVaFizaYIhRc2ZUWwCIr07vru0KpIlJYvVlnYsMBXpnDA==¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueMmax-age=86400¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:22:44 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueEnginx¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=UTF-8Kraw_content¢DtypeEvalueY{√<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+
+<meta charset="utf-8">
+<script type="text/javascript" src="/js/jquery/jquery.min.js?FB2015_02"></script>
+<script type="text/javascript" src="/js/bootstrap3/bootstrap.min.js?FB2015_02"></script>
+<script type="text/javascript" src="/js/typeahead/typeahead.jquery.js"></script>
+<script type="text/javascript" src="/js/flybase_autocomplete.js"></script>
+<script src="/js/simpleStorage/simpleStorage.js" type="text/javascript" ></script>
+<script src="/js/FBsession.js" type="text/javascript" ></script>
+<script src="/js/j2g.js" type="text/javascript" ></script>
+<link href="/css/bootstrap3/bootstrap.min.css?FB2015_02" rel="stylesheet" media="screen" type="text/css" />
+<link href="/css/bootstrap2flybase.css?FB2015_02" rel="stylesheet" media="screen" type="text/css" />
+<link href="/css/global.css?FB2015_02" rel="stylesheet" media="screen" type="text/css" />
+<link rel="stylesheet" href="/css/font-awesome/font-awesome.min.css?FB2015_02" type="text/css">
+
+</head>
+
+<body>
+
+<!-- begin header.tx -->
+    <div class="navbar-wrapper">
+
+      <div class="container-fluid">
+
+        <!--
+            <a href="http://fb2017_05.flybase.org">FlyBase FB2017_05</a>
+        <div class="row">
+          <div class="col-xs-12 text-center" style="background-color:gold;">
+            <h5>The FlyBase archive server is out of order.</h5>
+          </div>
+        </div>
+        -->
+
+        <div class="row">
+          <div class="col-xs-12 nopadding grey" style="height:72px">
+
+            <div id="logo" style="float:left">
+              <a href="/">
+                <img width="294" height="72" alt="FlyBase Logo" src="/images/fly_logo.png?FB2018_02" />
+              </a>
+            </div>
+
+            <div id="titlecontainer" class="hidden-xs">
+              <div id="release_notice" class="text-error text-center text-danger small">
+                  FB2018_06, released Dec 21, 2018
+                  &emsp;<!-- don't forget; there are two of these (other one below) -->
+                  <span style="background-color:gold; white-space:nowrap;">
+                    <i class="fa fa-exclamation-triangle"></i>
+                    All FlyBase archives from FB2014_04 until FB2018_05 are temporarily unavailable.
+                    <i class="fa fa-exclamation-triangle"></i>
+                  </span>
+              </div>
+              <p id="headertitle" class="lead text-center">
+                Interactions Browser
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row visible-xs-block">
+          <div id="titlecontainer" class="col-xs-12 grey">
+
+            <div id="release_notice" class="text-error text-center text-danger small">
+                FB2018_06, released Dec 21, 2018
+                  <span style="background-color:gold; white-space:nowrap;">
+                    <i class="fa fa-exclamation-triangle"></i>
+                    All FlyBase archives from FB2014_04 until FB2018_05 are temporarily unavailable.
+                    <i class="fa fa-exclamation-triangle"></i>
+                  </span>
+            </div>
+            <p id="headertitle" class="lead text-center" style="line-height:1em">
+              Interactions Browser
+            </p>
+
+          </div>
+        </div>
+        <!-- begin navbar.tx -->
+        <nav class="row navbar navbar-inverse" style="border-radius: 0 0 4px 4px; min-height:auto; ">
+
+          <style> @media (min-width: 768px) { .navbar-collapse.collapse { display:inline-block !important; } } </style>
+
+          <div class="container-fluid" style="padding:0">
+
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand visible-xs-block" href="#">Menu</a>
+            </div>
+
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed within .navbar-collapse.collapse. -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+              <ul class="nav navbar-nav">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/wiki/FlyBase:Tools_Overview">Tools Overview &amp; Help</a></li>
+                    <li class="dropdown-submenu">
+                      <a href="#">Query&nbsp;by&nbsp;symbols/IDs</a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="/batchdownload" title="Retrieve tabular data for your list of IDs&#10; from FlyBase reports or precomputed files">Batch Download</a></li>
+                        <li><a href="/download/sequence/batch">Sequence Downloader</a></li>
+                        <li><a href="/convert/id">Upload/Convert IDs</a></li>
+                        <!--<li><a href="/batch">Update / Convert Identifiers</a></li>-->
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a href="#">Search/Browse&nbsp;Portals</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/#searchbox" title="Return to FlyBase home page to use the QuickSearch form">QuickSearch</a></li>
+                        <li><a href="/vocabularies" title="Search by controlled vocabulary / ontology terms (e.g. GO terms)">Vocabularies</a></li>
+                        <li><a href="/cgi-bin/qb.pl" title="Build powerful custom queries of FlyBase data">QueryBuilder</a></li>
+                        <li><a href="/cytosearch" title="Retrieve genes, insertions and aberrations mapped to a specified sequence region&#10; (which can be determined from a given gene symbol or ID)">CytoSearch</a></li>
+                        <li><a href="/cgi-bin/get_interactions.pl">Interactions Browser</a></li>
+                        <li><a href="/cgi-bin/get_static_page.pl?file=imagebrowser10.html&title=ImageBrowse">ImageBrowse</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="#">Genomics Tools</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/blast/">BLAST</a></li>
+                        <li><a href="/cgi-bin/gbrowse2/dmel/">GBrowse</a></li>
+                        <li><a href="/jbrowse/?data=data/json/dmel">JBrowse</a></li>
+                        <li><a href="/cytosearch" title="Retrieve genes, insertions and aberrations mapped to a specified sequence region&#10; (which can be determined from a given gene symbol or ID)">CytoSearch</a></li>
+                        <li><a href="/featuremapper">Feature Mapper</a></li>
+                        <li><a href="/maps/chromosomes/maps">Chromosome Maps</a></li>
+                        <li><a href="/convert/coordinates">Coordinates Converter</a></li>
+                        <li><a href="/download/sequence/region">Sequence Downloader</a></li>
+                        <li class="dropdown-submenu"><a href="#">RNA-Seq Search</a>
+                          <ul class="dropdown-menu">
+                            <li><a href="/wiki/FlyBase:RNA-Seq_Overview">Overview</a></li>
+                            <li><a href="/rnaseq/simsearch" title="Search for genes with RNA-seq expression patterns similar to that of a gene you specify">RNA-Seq Similarity</a></li>
+                            <li><a href="/rnaseq/profile_search" title="Search for genes by defining an RNA-seq expression profile&#10; (in developmental stages, tissues, treatments, cell lines, or combinations)">RNA-Seq Profile</a></li>
+                            <li><a href="/rnaseq/region" title="Browse RNA-seq expression in a specified region of the fly genome">RNA-Seq By Region</a></li>
+                            <!-- open RNA-seq tracks in *Browse? -->
+                            <li><a href="/cgi-bin/gbrowse2/dmel/">GBrowse</a></li>
+                            <li><a href="/jbrowse/?data=data/json/dmel">JBrowse</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a href="#">Submit&nbsp;Data</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/submission/publication/">Fast-Track Your Paper</a></li>
+                        <li><a href="/contact/email?subject=comm">Submit Personal Communication</a></li> 
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu"><a href="#">Researcher Directory</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="/community/find">Find A Person</a></li>
+                        <li><a href="/community/join">Add A New Person</a></li>
+                        <li><a href="/community/update">Update Person Info</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">Downloads</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/wiki/FlyBase:Downloads_Overview">Overview</a></li>
+                    <li><a href="/cgi-bin/get_static_page.pl?file=bulkdata7.html&title=Current%20Release">Current Release</a></li>
+                    <li><a href="/downloads/archivedata">Archived Releases</a></li>
+                    <li><a href="/mediawiki/images/a/a6/DmelMapTable.160615c.xlsx">Map Conversion</a></li>
+                    <li class="nav-header">FTP Site:</li>
+                    <li><a href="ftp://ftp.flybase.net/releases/">Releases (FTP)</a></li>
+                    <li><a href="ftp://ftp.flybase.net/genomes/">Genomes (FTP)</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">Links</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/wiki/FlyBase:External_Resources" class="normalspace">External Resources</a></li>
+                    <li class="dropdown-submenu">
+                      <a href="/wiki/FlyBase:Model_Organism_Databases">Model Organisms (MODs)</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="http://www.alliancegenome.org/">Alliance of Genome Resources</a></li>
+                        <li><a href="http://hymenopteragenome.org/beebase/" title="Honey Bee">BeeBase</a></li>
+                        <li><a href="http://dictybase.org/" title="Soil Amoeba">DictyBase</a></li>
+                        <li><a href="http://ecocyc.org/" title="Bacteria">EcoCyc</a></li>
+                        <li><a href="http://www.gramene.org/" title="Grasses">Gramene</a></li>
+                        <li><a href="http://www.informatics.jax.org/" title="Mouse">MGI</a></li>
+                        <li><a href="http://www.pombase.org//" title="Fission Yeast">PomBase</a></li>
+                        <li><a href="http://rgd.mcw.edu/" title="Rat">RGD</a></li>
+                        <li><a href="http://www.yeastgenome.org//" title="Budding Yeast">SGD</a></li>
+                        <li><a href="http://www.arabidopsis.org/" title="Mouse-ear Cress">TAIR</a></li>
+                        <li><a href="http://www.vectorbase.org/index.php" title="Mosquitos and Deer Tick">VectorBase</a></li>
+                        <li><a href="http://www.wormbase.org/" title="Round Worms">WormBase</a></li>
+                        <li><a href="http://www.xenbase.org/" title="Frogs">Xenbase</a></li>
+                        <li><a href="http://zfin.org/" title="Zebrafish">ZFIN</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a href="/wiki/FlyBase:Stocks">Stock Collections</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="https://bdsc.indiana.edu/">Bloomington Drosophila Stock Center (BDSC)</a></li>
+                        <li><a href="https://kyotofly.kit.jp/cgi-bin/stocks/index.cgi">Kyoto Stock Center</a></li>
+                        <li><a href="https://drosophila.med.harvard.edu/">Exelixis</a></li>
+                        <li><a href="http://flyorf.ch/">FlyORF</a></li>
+                        <li><a href="http://www.shigen.nig.ac.jp/fly/nigfly/">NIG-FLY</a></li>
+                        <li><a href="http://fly.redbux.cn/index.php?lang=en">Tsinghua Fly Center (THFC)</a></li>
+                        <li><a href="http://stockcenter.vdrc.at/control/main">Vienna Drosophila RNAi Center (VDRC)</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/static/funding">Funding</a></li>
+                    <li><a href="http://www.fruitfly.org/">BDGP</a></li>
+                    <li><a href="http://dgrc.cgb.indiana.edu/">DGRC</a></li>
+                    <li><a href="http://www.ou.edu/journals/dis/byissue.html">DIS by issue</a></li>
+                    <li><a href="http://www.genetics.org/content/flybook">FlyBook</a></li>
+                    <li><a href="http://www.flyexpress.net/">FlyExpress</a></li>
+                    <li><a href="http://www.sdbonline.org/fly/aimain/1aahome.htm">Interactive Fly</a></li>
+                    <li><a href="http://www.modencode.org/">modENCODE</a></li>
+                    <li><a href="http://www.textpresso.org/fly/">Textpresso for Fly</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/community">FlyBase&nbsp;Community</a></li>
+                    <li><a href="/submission/publication/">Fast-Track Your Paper</a></li>
+                    <li><a href="/wiki/FlyBase:Community_Advisory_Group">FlyBase&nbsp;Community<br />&nbsp;Advisory&nbsp;Group</a></li>
+                    <li><a href="/wiki/FlyBase:Gene_Snapshots">Gene Snapshots</a></li>
+                    <li><a href="https://groups.google.com/d/forum/flybase">FlyBase Forum</a></li>
+                    <li><a href="/community/find">Find A Person</a></li>
+                    <li><a href="/community/newsletter">Newsletter</a></li>
+                    <li><a href="http://www.bio.net/hypermail/dros/">bionet.dros</a></li>
+                    <li><a href="/wiki/Category:Genes">FlyGene Wiki</a></li>
+                    <li><a href="http://twitter.com/FlyBaseDotOrg">Twitter</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Species</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/wiki/FlyBase:Phylogeny">Phylogeny</a></li>
+                    <li><a href="/static/sequenced_species">Sequenced Species</a></li>
+                    <li><a href="/maps/synteny">Synteny Table</a></li>
+                    <li><a href="/static/Drosophilidae">Color Illustrations</a></li>
+                    <li><a href="/wiki/FlyBase:Abbreviations">Abbreviations</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/cgi-bin/get_static_page.pl?file=release_notes.html&title=Release%20Notes">Release&nbsp;Notes</a></li>
+                    <li><a href="/static/new-this-release">New In This Release</a></li>
+                    <li><a href="/static/release_schedule">Release Schedule</a></li>
+                    <li><a href="/wiki/FlyBase:FlyBase_Positions">FlyBase Positions</a></li>
+                    <li><a href="/wiki/FlyBase:About#Citing_FlyBase">Citing FlyBase</a></li>
+                    <li><a href="/wiki/FlyBase:About#FlyBase_Consortium">FlyBase Consortium</a></li>
+                    <li><a href="/wiki/FlyBase:About#FlyBase_Publications">FlyBase&nbsp;Publications</a></li>
+                    <li><a href="/wiki/FlyBase:FlyBase_Guides:_Pamphlets,_Powerpoints,_and_Posters">FlyBase Presentations</a></li>
+                    <li><a href="/wiki/FlyBase:About#FlyBase_Support">FlyBase Support</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">Help</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://www.youtube.com/c/FlyBaseTV">Video Tutorials <i class="fa fa-external-link"></i></a></li>
+                    <li><a href="/wiki/FlyBase:FlyBase_Help_Index#Tools_and_Downloads_Documentation">Tool help</a></li>
+                    <li><a href="/wiki/FlyBase:FlyBase_Help_Index#Report_Help">Report help</a></li>
+                    <li class="dropdown-submenu">
+                      <a href="#">Info for Authors</a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="/wiki/FlyBase:Author_Guidelines">Author guidelines</a></li>
+                        <li><a href="/wiki/FlyBase:About#Citing_FlyBase">Citing FlyBase</a></li>
+                        <li><a href="/submission/publication/">Fast-Track Your Paper</a></li>
+                        <li><a href="/wiki/FlyBase:Gene_Snapshots">Gene Snapshots</a></li>
+                        <li><a href="/wiki/FlyBase:Personal_communications_to_FlyBase">Personal&nbsp;communications</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/wiki/FlyBase:Links_to_and_from_FlyBase">Linking to/from FlyBase</a></li>
+                    <li><a href="/wiki/FlyBase:Nomenclature">Nomenclature</a></li>
+                    <li class="dropdown-submenu">
+                      <a href="#">Curation documentation</a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="/wiki/FlyBase:Controlled_vocabularies_used_by_FlyBase">Controlled Vocabularies in FlyBase</a></li>
+                        <li><a href="/wiki/FlyBase:Gene_Model_Annotation_Guidelines">Gene Model Annotation</a></li>
+                        <li><a href="/wiki/FlyBase:Gene_Ontology_(GO)_Annotation">Gene Ontology (GO) Annotation</a></li>
+                        <li><a href="/wiki/FlyBase:Nontraditional_alleles">Nontraditional alleles</a></li>
+                        <li><a href="/wiki/FlyBase:Vectors_and_Constructs">Vectors &amp; Constructs</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="/wiki/FlyBase:New_to_Flies%3F">New to Flies</a></li>
+                    <li><a href="/wiki/FlyBase:FlyBase_Help_Index">Help Index</a></li>
+                    <li><a href="/contact/email">Contact FlyBase</a></li> 
+                    <!--
+                    <li><a href="/wiki/FlyBase:FAQ">FAQs</a></li>
+                    <li><a href="/wiki/FlyBase:RefMan_F.">Links to and&nbsp;from FlyBase</a></li>
+                    -->
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="" class="dropdown-toggle" data-toggle="dropdown">Archives</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="http://flybase.org/previous_site/">Prior Release</a></li>
+                    <li><a href="/downloads/archivedata">Other Archives</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div><!--/.nav-collapse -->
+
+            <form class="navbar-form navbar-right" id="j2g_search_form" method="post" action="/cgi-bin/uniquery.pl"
+                  style="padding-right:0; margin:2px;" role="search" enctype="multipart/form-data">
+              <div class="form-group">
+                <input type="hidden" name="caller" value="genejump" /><!-- used by uniquery -->
+                <input type="hidden" name="species" value="Dmel" />
+                <input type="hidden" name="query" id="query" value="" /><!-- used by /search/ -->
+                <div class="input-group">
+                  <div class="input-group-btn">
+                    <button type="button" id="GeneSearchSlct" class="btn btn-default form-control dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="width:auto; height:inherit; padding:0 4px;">
+                      &emsp;&emsp;&emsp; <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li role="presentation"><a href="#" role="menuitem" onclick="j2gSearchSelector('j2g')" title="Go directly to gene, etc. report (or a hitlist if no unique matches are found)">Jump to Gene</a></li>
+                      <li role="presentation"><a href="#" role="menuitem" onclick="j2gSearchSelector('sch')" title="Search text in all FlyBase data classes">Search FlyBase</a></li>
+                    </ul>
+                  </div>
+                  <input name="context" id="GeneSearch"        type="text"   class="form-control" placeholder="Jump to Gene" style="width:auto; height:22px; padding:0 4px;" />
+                  <button               id="GeneSearch_submit" type="submit" class="btn btn-info form-control"               style="width:auto; height:inherit; padding:0 4px;">Go</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+
+        </nav>
+        <!-- </div> /.navbar -->
+        <!-- end navbar.tx -->
+
+      </div> <!-- /.container -->
+
+    </div><!-- /.navbar-wrapper -->
+<script type="text/javascript" src="/js/fb1/wz_jsgraphics.js"></script>
+<script type="text/javascript" src="/js/fb1/overlib/overlib.js"></script>
+<script type="text/javascript" src="/js/fb1/dojo.js"></script>
+<script type="text/javascript" charset="utf-8">dojo.require("dojo.io.*");</script>
+<script type="text/javascript" charset="utf-8">
+	var wanted_id= 'none', retrieved_id= '0', displayed_id= '0', cursor_in= "0", retrieved_data= "", xxval, yyval;
+	var highlightedACV= 0;
+  ol_texts= new Array();
+  ol_caps= new Array();
+  function showsumm(fbid) {
+	 cursor_in= fbid;
+	 wanted_id= fbid;
+	 if( retrieved_id != fbid ) {
+		var kw= {
+			url: "/cgi-bin/get_summary.pl?"+fbid,
+			load: function(type,data,evt){ 
+				if( data!="" ) { 
+					retrieved_id= fbid; retrieved_data= data;
+					displaysumm(fbid); 
+					return true; } 
+				},
+			mimetype: "text/html"
+			};
+		dojo.io.bind(kw);
+		}
+	 else {
+		displaysumm(fbid);
+		}
+	 return true;
+	}
+  function showdata(fbid) {
+	 cursor_in= fbid;
+	 wanted_id= fbid;
+	 if( retrieved_id != fbid ) {
+		var kw= {
+			url: "/cgi-bin/get_interactions.pl?"+fbid,
+			load: function(type,data,evt){ 
+				if( data!="" ) { 
+					retrieved_id= fbid; retrieved_data= data;
+					displaysumm(fbid); 
+					return true; } 
+				},
+			mimetype: "text/html"
+			};
+		dojo.io.bind(kw);
+		}
+	 else {
+		displaysumm(fbid);
+		}
+	 return true;
+	}
+  function displaysumm(fbid) {
+	 if( wanted_id !=fbid ) return false;
+	 if( cursor_in !=fbid ) return false;
+		ol_bgcolor= '#000000';
+		ol_fgcolor= '#ffffee';
+		overlib(retrieved_data,FULLHTML,WRAP,NOCLOSE,OFFSETX,2,OFFSETY,10,VAUTO,HAUTO,DELAY,500); 
+	 return true;
+	}
+  function delsumm() {
+		cursor_in= "0";
+		nd();
+	 return true;
+	}
+ function getRealLeft(el) {
+	xPos = el.offsetLeft;
+	tempEl = el.offsetParent;
+	while (tempEl != null) {
+		xPos += tempEl.offsetLeft;
+		tempEl = tempEl.offsetParent;
+		}
+	return xPos;
+ }
+
+ function getRealTop(el) {
+	yPos = el.offsetTop;
+	tempEl = el.offsetParent;
+	while (tempEl != null) {
+		yPos += tempEl.offsetTop;
+		tempEl = tempEl.offsetParent;
+		}
+	return yPos;
+ }
+	function getCSSElementByID(elem) {
+         var theElement;
+         if (document.getElementById) { theElement = document.getElementById(elem); }
+         else { if (document.all) { theElement = document.elem; } }
+         return(theElement);
+   }
+	function showhide(a) { return; }
+ function  checkEvt(evt,thisForm,ffield) {
+	if( displayed_id != '0' ) {
+		evt= (evt) ? evt : event;
+		var charCode= (evt.charCode) ? evt.charCode : ((evt.which) ? evt.which : evt.keyCode);
+		if( charCode==13 ) showDict(evt,thisForm,ffield);
+		}
+	return true;
+	}
+ function showDict(evt,thisForm,ffield) {
+	if( displayed_id != '0' ) {
+		acvobj= document.getElementById('nACvalues');
+		var nmax= acvobj.value;
+		evt= (evt) ? evt : event;
+		var charCode= (evt.charCode) ? evt.charCode : ((evt.which) ? evt.which : evt.keyCode);
+		switch( charCode ) {
+			case 40: // arrow down
+				if( highlightedACV<nmax ) { 
+					highlightedACV= highlightedACV+1;  
+					}
+				else { highlightedACV= 1; }
+				highlightACV(highlightedACV);
+				return(true);
+			case 38: // arrow up
+				if( highlightedACV>1 ) { 
+					highlightedACV= highlightedACV-1;  
+					}
+				else { highlightedACV= nmax; }
+				highlightACV(highlightedACV);
+				return(true);
+			case 13: // enter
+				var acvid= 'ACV' + highlightedACV;
+				acvobj= document.getElementById(acvid);
+				useACValue(acvobj,acvobj.title);
+				deldict_overlib();
+				return(false);
+			}
+		}
+	deldict_overlib();
+	xxval= getRealLeft(ffield);
+	yyval= getRealTop(ffield)+10;
+	var scripturl= '/cgi-bin/get_dict.pl?format=html&';
+	var db= 'fbgn';
+	var context= ffield.value;
+	if( context.indexOf('[')>0 ) db= 'fbal';
+	var fieldn= 'SYMBOL';
+	var fbid= 'caller=IB&fld='+db+'-'+fieldn+'&context='+ffield.value+'&species=Dmel';
+	if( retrieved_id != fbid ) {
+		nd();
+		wanted_id= fbid;
+		retrieved_id= '0'; 
+		retrieved_data= "";
+		var kw= {
+			url: scripturl+fbid,
+			load: function(type,data,evt){ 
+				if( data!="" ) { 
+					retrieved_id= fbid; retrieved_data= data;
+					displaydict_overlib(fbid); 
+					return true; } 
+				},
+			mimetype: "text/html"
+			};
+		dojo.io.bind(kw);
+		}
+	else {
+		displaydict_overlib(fbid);
+		}
+	return true;
+	}
+ function useACValue(acvobj,ttt) {
+	//var ttt= acvobj.title;
+	var aa= ttt.split('=');
+	var target= aa[0];
+	if( target=='IB.items' ) {
+		document.IB.items.value= unescape(aa[1]);
+		//document.editor.submit(); 
+		}
+	return true;
+	}
+ function highlightACV(num) {
+	var nn= 0;
+	var acvid;
+	for( nn=0; nn++<20; ) { 
+		acvid= 'ACV' + nn;
+		acvobj= document.getElementById(acvid);
+		if( acvobj ) {
+			if( nn==num ) {
+				acvobj.style.background= '#cccccc';
+				acvobj.style.fontWeight= 'bold';
+				highlightedACV= num;
+				}
+			else {
+				acvobj.style.background= '#f8f8f8';
+				acvobj.style.fontWeight= 'normal';
+				}
+			}
+		else { nn=100; }
+		}
+	return true;
+	}
+ function displaydict_overlib(fbid) {
+	if( wanted_id !=fbid ) return true;
+		ol_bgcolor= '#000000';
+		ol_fgcolor= '#ffffee';
+		//overlib(retrieved_data,FULLHTML,WRAP,STICKY,NOCLOSE,TIMEOUT,4000,FIXX,xxval,FIXY,yyval); 
+		overlib(retrieved_data,FULLHTML,WRAP,STICKY,NOCLOSE,FIXX,xxval,FIXY,yyval); 
+		displayed_id= fbid;
+	return true;
+	}
+ function deldict_overlib() {
+	if( displayed_id != '0' ) {
+		displayed_id= '0';
+		highlightedACV= 0;
+		nd();
+		}
+	return true;
+	}
+ </script>
+<!-- printSearchForm output -->
+<script> $(document).ready( function() { activate_autocomplete("IB_form","items",["db","fld","species"] ); } ) </script>
+
+<div class="container-fluid" style="margin-top:1em;">
+
+<style>
+    #IB_form span.twitter-typeahead { width: 100%; display: inline !important; }
+    #IB_form span.twitter-typeahead input { vertical-align: middle !important; }
+    hr { margin: 0 0 10px; }
+</style>
+
+<div class="row">
+<div class="col-sm-12 col-md-offset-1 col-md-10">
+<form id="IB_form" name="IB_form" method="post" class="form" style="margin:0;" action="/cgi-bin/get_interactions.pl">
+  <input type="hidden" id="fld" name="fld" value="fbgn-SYMBOL" />
+  <input type="hidden" id="species" name="species" value="Dmel" />
+  <input type="hidden" id="caller" name="caller" value="IB" />
+  <input type="hidden" id="db" name="db" value="fbgn" />
+  <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <label>Gene/Allele Symbol or FBid</label>
+        <input id="items" name="items" value="" autocomplete="off" type="text" data-provide="typeahead tt-query" type="text" class="form-control" />
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <label>Interaction Type</label>
+        <select name="mode" class="form-control">
+          <option value="ppi" >Protein&nbsp;Interactions</option>
+          <option value="sup" >Suppression</option>
+          <option value="enh-sup" selected="selected">Enhancement&nbsp;&plus;&nbsp;Suppression</option>
+          <option value="enh" >Enhancement</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <div class="row">
+          <label class="col-xs-12">Tree Depth</label>
+          <div class="col-xs-8">
+            <select name="depth" class="form-control" >
+              <option value="1" >1 interaction</option>
+              <option value="auto" selected="selected">Auto</option>
+            </select>
+          </div>
+          <div class="col-sm-4 text-right">
+            <a id="helpButtonS" class="btn btn-success" href="/static_pages/newhelp/interactions_browser_help.html">Help</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <label>Include</label>
+        <div class="form-inline" style="height:28px; margin-top:6px">
+          <div class="checkbox">
+            <label><input type="checkbox" id="ff1" name="keepforeign" value="yes"  /> Foreign&nbsp;Genes</label>&emsp;
+            <label><input type="checkbox" id="ff2" name="keepfusion"  value="yes"  />  Fusion&nbsp;Genes</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <label>Limit to</label>
+        <select name="reqft" class="form-control">
+          <option value="" selected="selected">no restrictions</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-4">
+      <div class="form-group">
+        <div class="row">
+          <label class="hidden-xs col-sm-12">&nbsp;</label>
+          <div class="col-xs-6">
+            <div class="form-inline" style="white-space:nowrap;">
+              At
+              <select name="rotate" class="form-control" style="display:inline-block; padding: 6px 4px; width:65px;">
+                <option value="-120" >-120&deg;</option>
+                <option value="-90" >-90&deg;</option>
+                <option value="-60" >-60&deg;</option>
+                <option value="-45" >-45&deg;</option>
+                <option value="0" selected="selected">0&deg;</option>
+                <option value="45" >45&deg;</option>
+                <option value="60" >60&deg;</option>
+                <option value="90" >90&deg;</option>
+                <option value="120" >120&deg;</option>
+                <option value="180" >180&deg;</option>
+              </select>
+              rotation
+            </div>
+          </div>
+          <div class="col-xs-6 text-right">
+            <input type="submit" value="Show Interactions" class="btn btn-info" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- .row -->
+</form>
+</div><!-- col-sm-12 col-md-offset-1 col-md-10 -->
+</div><!-- .row -->
+
+
+</div><!-- .container-fluid -->
+<!-- end printSearchForm output -->
+
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

@@ -1,0 +1,43 @@
+¦Ifinal_url¢DtypeEvaluexLhttps://www.ics.uci.edu/~jacobson/ics21/CodeSamples/MouseAppletListener.javaLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC907¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 04 Dec 2009 05:55:32 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"38b-479e0c172bd00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:24:33 GMTKraw_content¢DtypeEvalueY‹// MouseApplet.java applet for ICS21/80J
+
+// By N. Jacobson 11/02 to demonstrate event handling via listeners
+
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+
+public class MouseAppletListner extends Applet
+{
+	Rectangle box;
+
+	public MouseApplet()
+	{
+		box = new Rectangle(100,100,20,30);
+	}
+
+	public void init()
+	{
+		class MouseHandler implements MouseListener
+		{
+			public void mousePressed(MouseEvent event)
+			{
+				int x = event.getX();
+				int y = event.getY();
+				box.setLocation(x,y);
+				repaint();
+			}
+			public void mouseReleased(MouseEvent event) {}
+			public void mouseClicked(MouseEvent event) {}
+			public void mouseEntered(MouseEvent event) {}
+			public void mouseExited(MouseEvent event) {}
+		}
+
+		addMouseListener(new MouseHandler());
+	}
+
+	public void paint(Graphics g)
+	{
+		Graphics2D g2 = (Graphics2D)g;
+		g2.draw(box);
+	}
+}Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

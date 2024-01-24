@@ -1,0 +1,298 @@
+¦Ifinal_url¢DtypeEvaluex.https://directory.uci.edu/index.php?uid=hombaoLhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueLX-Powered-ByAv¢DtypeEvalueJPHP/7.1.24¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueRtimeout=5, max=100¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX Apache/2.4.6 (CentOS) PHP/7.1.24¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 01:34:57 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueDDENY¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY0<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  
+<head>
+<!-- 9-80 -->
+ 
+	  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	  <title>UCI Campus Directory</title>
+	  <link href="directory.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript">
+			<!--
+			function denc( str, mt )
+			{
+				if (str == "&nbsp;")
+					return "&nbsp;";
+				
+				var tpyrcne = '#0425813&;976';
+				var fixed = '&#;0987654321';	
+				var decoded = ''; 
+				
+				for (i=0; i<str.length; i++) {
+					decoded += tpyrcne.charAt(fixed.indexOf(str.charAt(i)))
+				}
+				
+				if (mt)
+				{
+				 return "<a href='&#109;&#97;&#105;&#108;&#116;&#111;&#58;" + decoded + "'>" + decoded + "</a>";	
+				} else {
+					return decoded ;
+				}
+				
+			}
+			
+			function clearAdvancedForm()
+			{
+				document.getElementById( "form_fname" ).value = "";
+				document.getElementById( "form_lname" ).value = "";
+				document.getElementById( "form_email" ).value = "";
+				document.getElementById( "form_ucinetid" ).value = "";
+				document.getElementById( "form_phone" ).value = "";
+				document.getElementById( "form_department" ).value = "";
+				
+				document.getElementById( "fname_default" ).selected = true;
+				document.getElementById( "lname_default" ).selected = true;
+				document.getElementById( "email_default" ).selected = true;
+				document.getElementById( "ucinetid_default" ).selected = true;
+				document.getElementById( "department_default" ).selected = true;
+				
+				document.getElementById( "searchgroup_default" ).selected = true;				
+			}
+			
+			function flipDeliveryPoint()
+			{
+				dp = document.getElementById("deliveryPoint");
+				dp_msg = document.getElementById("dp_message");
+				if (dp.style.display == 'none') 
+				{ 
+					dp.style.display = 'block'
+					dp_msg.innerHTML = '[Hide Delivery Point]'; 
+				} else { 
+					dp.style.display = 'none'
+					dp_msg.innerHTML = '[Show Delivery Point]';
+				}
+			}
+			
+			function load()
+			{
+				document.getElementById('basic_keywords').focus();
+			}
+			-->
+		</script>
+  </head>
+  <body onload="load();">
+		<div id="container">
+			<div id="header">
+				<div class="header-text">
+					<div class="date">Friday, February 8th, 2019</div>
+					<div class="global-links"><a href="http://www.uci.edu/campusmap/">Campus Maps</a> : <a href="http://today.uci.edu/">UC Irvine Today</a></div>	
+				</div><br/>
+				<div class="header-bg"><a href="http://www.uci.edu"><img src="images/banner2.jpg" alt="UC Irvine, Campus Directory" border="0" /></a></div>
+				<!-- <div class="rotating-images"><img src="images/rotate/image11.jpg" alt="Fac/Staff Picture 1" class="left" 
+									/><img src="images/rotate/image12.jpg" alt="Fac/Staff Picture 2" class="mid" 
+									/><img src="images/rotate/image10.jpg" alt="Fact/Staff Picture 3" class="right" 
+				/></div> -->
+					<!-- <img src="images/rotate/image75.jpg" alt="Fac/Staff Picture 3" width="49" height="60" />
+					<img src="images/rotate/image91.jpg" alt="Fac/Staff Picture 4" width="49" height="60" />
+					<img src="images/rotate/image89.jpg" alt="Fac/Staff Picture 5" width="49" height="60" />
+					<img src="images/rotate/image39.jpg" alt="Fac/Staff Picture 6" width="49" height="60" />
+					<img src="images/rotate/image73.jpg" alt="Fac/Staff Picture 7" width="49" height="60" />
+					<img src="images/rotate/image36.jpg" alt="Fac/Staff Picture 8" width="49" height="60" />
+					<img src="images/rotate/image22.jpg" alt="Fac/Staff Picture 9" width="49" height="60" />
+					<img src="images/rotate/image65.jpg" alt="Fac/Staff Picture 10" width="49" height="60" />
+					<img src="images/rotate/image15.jpg" alt="Fac/Staff Picture 11" width="49" height="60" />
+					<img src="images/rotate/image1.jpg" alt="Fac/Staff Picture 12" width="49" height="60" />
+					<img src="images/rotate/image59.jpg" alt="Fac/Staff Picture 13" width="49" height="60" />
+					<img src="images/rotate/image100.jpg" alt="Fac/Staff Picture 14" width="49" height="60" />
+					<img src="images/rotate/image83.jpg" alt="Fac/Staff Picture 15" width="49" height="60" /> -->
+			</div>
+			<div id="wrapper">
+				<div id="leftcolumn">
+			  	<ul>
+			  		<li><a href="/index.php?action=update_directory">How to Update Directory Information</a></li>
+			      <li><a href="/index.php?action=search_tips&amp;form_type=basic_search">Search Tips</a></li>
+			      <li><a href="/index.php?action=about_directory">About the UCI Directory</a> </li>
+			      <li class="redtext"><a href=" https://portal.uci.edu/uPortal/viewXmlFile.jsp?cmsUri=public/MainMenuEmergencyManagement.xml">UCI Preparedness &amp; Emergency Response </a></li>
+		        <li class="operator"><strong>Campus Operator<br />
+				  	        (949) 824-5011</strong></li>
+			      <li><a href="/index.php?action=ucdirectories">UC Directories</a> </li>
+			    	<li><a href="http://psearch.ics.uci.edu">Search the directory using ICS's powerful search technology: <br/><br/><img src="images/psearch.png" alt="PSearch Logo" border="0"/></a></li>
+					</ul>
+					<div class="sideimage">Maintained by the<br/>
+					<a href="http://www.oit.uci.edu"><img src="images/OIT-Logo-150.png" alt="Office of Information Technology" style="border: 0px; margin-left: -10px;" /></a>
+			    </div>
+			  </div> 
+			
+			<!-- left column ends -->	  	
+				
+				<div id="centercolumn">
+					
+			    
+			    <h1>Search for People &amp; Departments</h1>
+			    <form id="basic_search" name="basic_search" method="get" action="" class="simplesearch">
+			    	<label class="hiddenLabel" for="basic_keywords">Search Terms</label>
+			      <input name="basic_keywords" id="basic_keywords" onload="focus();" maxlength="60" type="text" accesskey="1" tabindex="1" size="30" value="" />
+						<label class="hiddenLabel" for="modifier">Search Type</label>
+						<select name="modifier" accesskey="2" tabindex="2" id="modifier">
+							<option >Exact Match</option>
+							<option SELECTED>Starts With</option>
+						</select>
+			      <input name="basic_submit" type="submit" id="Search" accesskey="3" tabindex="3" value="Search" />
+			      <br />
+			      <span class="smallsearchtext">Enter a name, phone number, UCInetID, or department.
+			           [ <a href="/index.php?form_type=advanced_search">Advanced Search</a> ] </span> 
+						<br /><br />
+										Find Only:  
+										<input type="checkbox" accesskey="4" tabindex="4" name="checkbox_employees" id="cbx_emp" value="Employees" CHECKED> <label for="cbx_emp">Faculty and Staff</label>&nbsp;&nbsp;
+										<input type="checkbox" accesskey="5" tabindex="5" name="checkbox_students" id="cbx_stu" value="Students" CHECKED>  <label for="cbx_stu">Students</label>&nbsp;&nbsp;
+										<input type="checkbox" accesskey="6" tabindex="6" name="checkbox_departments" id="cbx_dep" value="Departments" CHECKED> <label for="cbx_dep">Departments</label>&nbsp;&nbsp;
+			      <input type="hidden" name="form_type" value="basic_search" />
+			    </form>
+					<p> &nbsp; </p>
+			    
+			    
+			    
+			    <hr />
+			    <div id="search-details">
+			      	      
+						<div id="detail-fields">
+			        
+							
+			        
+			        <p><span class="label">Name</span><span class="resultData">Hernando Ombao</span></p>
+			        
+			        
+							
+			        <p><span class="label">UCInetID</span><span class="resultData">hombao</span></p>
+							
+			        
+							<br />
+							<p><span class="label">Phone</span><span class="resultData">(949) 824-5679</span></p>
+			        
+			        
+			        <p><span class="label">Fax</span><span class="resultData">(949) 824-9863</span></p>
+			        
+
+							
+							
+							
+							<TABLE class="dual_appointments">
+								
+								<TR>
+									
+									<TD class="positioning_cell"><span class="table_label">Title</span></TD>
+									<TD><span class="table_data">Professor</span></TD>
+									
+									
+								</TR>
+								
+								<!-- BEGIN appointment_department -->
+								<TR>
+									
+									<TD class="positioning_cell"><span class="table_label">Department</span></TD>
+									<TD><span class="table_data">Statistics</span></TD>
+									
+									
+								</TR>
+								<!-- END appointmentdepartment -->
+								
+								<TR>
+									
+									<TD class="positioning_cell"><span class="table_label">Address</span></TD>
+									<TD><span class="table_data">2206 Bren Hall</span></TD>
+									
+									
+								</TR>
+								
+							</TABLE>
+							
+							
+							
+			        <p><span class="label">ZOT Code</span><span class="resultData">0</span></p>
+							<br/>
+			        
+			        
+			        
+			        
+			        
+			        
+			        
+
+			        
+		         	<p>	
+				<span class="label">Email</span>
+	        		<span class="resultData">
+	        			<script type="text/javascript">
+	        			document.write(denc('5&7#;45&77745&7#345&3845&3245&77745&1;45&77245&3345&7#945&;145&7#745&7##45&7724', 1));
+								</script><br/>
+								<a href="javascript:flipDeliveryPoint();" class="deliveryPointToggle" id="dp_message">[Show Delivery Point]</a>
+							</span>
+				</p>
+			        
+							
+			        <p id="deliveryPoint" style="display: none;">
+			        	<span class="label">Delivery Point</span>
+								<span class="resultData">
+			        		<script type="text/javascript">
+		        				document.write(denc('5&7#;45&7#745&77;45&77#45&3245&77#45&7##45&77745&;145&77745&7#345&3845&3245&77745&1;45&7#645&7#345&3245&7#945&7#845&;145&3345&77745&7#34', 0));
+									</script>
+								</span>
+							</p>
+							
+							
+							<p><span class="label">vCard</span><span class="resultData"><a href='/index.php?uid=hombao&form_type=vcard'>Add to your Address Book</a></span></p>
+							<br/>
+							
+						
+							
+			        
+			        
+			        
+			        
+			        
+			        
+			        <div id="mailingAddress">
+				        <p><strong>U.S. Mailing Address</strong><br/>
+				        University of California, Irvine<br/>
+				        <br/>
+				        Irvine, CA 92697-0</p>
+			        </div>
+			        
+							
+							<p style="margin-top: 10px;text-align: center;"><a href="/index.php?uid=hombao&form_type=plaintext" target="_blank"
+							onClick="popup = window.open('/index.php?uid=hombao&form_type=plaintext', 'Plaintext Data', 'height=500,width=450,scrollbars=yes,resizeable=yes'); return false">Click here for a simple text version of this record</a></p>
+							
+
+						  
+			      </div>
+			    </div>
+			    
+		      
+	        		
+	        
+	        
+	        
+	        
+	        
+	        
+		
+					
+					
+					<div class="notices">
+						<a href="/index.php?action=update_directory">Update Data in the Directory</a> |
+						<a href="http://www.oit.uci.edu/contact-us/">Site Feedback</a>
+					</div>
+					
+		      
+		      
+			    <hr />
+		  	  <div class="privacynotice">
+		    	  <p><strong>Privacy Notice:</strong>
+                            <br>
+                            This directory has been compiled for the use and convenience of the faculty, staff, students, and affiliates of the University of California, Irvine and others dealing with UC Irvine. It is the property of the Regents of the University of California. In accordance with the California Information Practices Act, neither this directory nor the information contained herein may be used, rented, distributed, or sold for commercial purposes. Compilation or redistribution of information from this directory is strictly forbidden. Upon using this directory, you submit to these terms of use.  For more details, please see the <a href='http://policy.ucop.edu/doc/7020469/BFB-RMP-12'> University guidelines for assuring privacy of personal information in mailing lists and telephone directories.</a>
+                          </p>
+                          <p><strong>Note:</strong>
+                            <br>
+                            Directory information provided here should not be used as a verification of UCI employment.
+                          </p>
+                          <p align='center'> 
+                            ~ Directory data is updated daily ~
+                          </p>
+			  </div>
+			  
+		  	</div> <!-- center column end -->
+			</div> <!-- wrapper end -->
+		</div> <!-- container end -->
+	</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

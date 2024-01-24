@@ -1,0 +1,42 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1314¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:06:22 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"a93-54c85e18ca8e0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 04:58:41 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY
+“<html>
+<head>
+<title>CompSci 163/265, Spring 2015, Homework 3</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+</head>
+<body>
+<h1>CompSci 163/265, Spring 2015, Homework 3</h1>
+<ol>
+<li><p>Suppose we wish to compute shortest paths in a complete directed graph (a directed graph in which there exists an edge in each direction between every two vertices), with positive edge weights (so that Dijkstra's algorithm may be used). But rather than using a complicated priority queue data structure, we use an unsorted list $L$ of the vertices that have not yet been processed. That is, the simplified version of Dijkstra's algorithm performs the following steps:</p>
+<pre>    initialize the D and P information used by the relaxation algorithms for
+    single source shortest paths
+
+    initialize L to be a list of all the vertices in the graph
+
+    while L is not empty:
+        look at all of the vertices in L to find the vertex v with
+        the minimum value of D[v]
+
+        remove v from L
+
+        for each edge v->w
+            relax(v->w)</pre>
+<p>You may assume that looking at all vertices in $L$ takes time proportional to the number of vertices examined, and that removing $v$ from $L$ takes constant time.</p>
+<ol type="a">
+<li><p>What is the running time of this algorithm, using $O$-notation, as a function of the number $n$ of vertices in the input graph?</p></li>
+<li><p>Would this algorithm be a better or worse choice than the more usual form of Dijkstra's algorithm using a binary heap, for this type of graph? Explain your answer.</p></li>
+</ol></li>
+<li><p>Suppose that a directed graph $G$ has the property that every shortest path from the starting vertex $s$ to every other vertex has at most four edges. What would this fact imply about the running time of the Bellman&ndash;Ford algorithm for finding shortest paths starting from $s$ in $G$?</p></li>
+<li><p>Let $G$ be a directed path with six vertices and five edges, each of which has length $-1$. Show the values of $h(v)$ for each vertex $v$, and of the new edge weights for each edge, that would be calculated by Johnson's algorithm on this graph.</p></li>
+<li><p>Suppose you are given a directed graph (containing cycles) in which all edges have weight $1$. Name an algorithm that can solve the single-source shortest path problem in this graph in linear time, without using a priority queue data structure.</p></li>
+</ol>
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

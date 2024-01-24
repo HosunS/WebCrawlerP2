@@ -1,0 +1,32 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC777¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Feb 2006 22:59:02 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"309-40c3c534d7980"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 15:29:46 GMTKraw_content¢DtypeEvalueY	
+//NAME: Danish Khan
+//STUDENT ID: 47324012
+//NAME: Adam Su
+//STUDENT ID: 23628358
+
+// CurrencyFormat.java
+//
+// ICS H22 Winter 2006
+// Lab 3: The Price You Pay
+//
+// This class is provided as-is for use in your program.  It formats
+// a currency amount (say, 355 cents) with a dollar sign, two digits
+// after the decimal point, etc., returning the result as a String.
+//
+// Examples:
+//
+//     CurrencyFormat.format(1000) => "$10.00"
+//     CurrencyFormat.format(50000000) => $500,000.00"
+//
+// This class also provides an example of the use of the String.format
+// method for formatting Strings.
+
+
+public class CurrencyFormat
+{
+	public static String format(int cents)
+	{
+		return String.format("$%,d.%02d", (cents / 100), (cents % 100));
+	}
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

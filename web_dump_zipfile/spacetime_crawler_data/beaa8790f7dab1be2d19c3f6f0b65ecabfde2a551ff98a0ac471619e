@@ -1,0 +1,47 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC876¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSun, 24 Apr 2011 04:32:37 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"785-4a1a2949e0340-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 04:55:11 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY…1. (a) One possible example has four vertices s, x, y, t, and four edges: s->x with length 1, s->y with length 2, y->x with length -2, and x->t with length zero. The start vertex is s. Dijkstra's algorithm first pulls x out of the priority queue, with tentative distance 1, and then pulls t out and sets its tentative distance to 1. Finally it pulls y out; when processing y it might change the tentative distance to x (depending on how we implement Dijkstra; we might or might not allow tentative distances to change for vertices that are no longer in the priority queue) but it is too late to fix the distance to t. So it calculates the distance from s to t as 1, when it should be 0.
+
+(b) Just make a graph with two vertices and one negative edge from one to the other. Make the start vertex be the vertex that the edge goes out of.
+
+
+2. Run one round of the Bellman-Ford algorithm and check whether any of the distances change.
+
+
+3.
+
+(a)
+
+s
+|
+| 0
+|
+a
+|
+| -2
+|
+b
+|
+| -1
+|
+c
+|
+| -3
+|
+d
+
+(or it could go directly from b to d: there are two equally short paths from s to d.)
+
+(b)
+
+The numbers pv to use for each vertex (distances from s) are:
+a: 0
+b: -2
+c: -3
+d: -6
+
+With these potential values, the reweighted edge from c to a has its new weight 5 + -3 - 0 = 2. The reweighted edge from d to a has its new weight 9 + -6 + 0 = 3. All the other edges get weight zero.
+
+
+4. (a) Dijkstra's algorithm would remove the center vertex first (with priority zero), then its four neighbors (with priority one), then the four corners (with priority two). So by the time it gets to the target corner it will have removed at least six and at most nine vertices.
+
+(b) A* would remove the center vertex first (with priority sqrt(2)), then one or both of the two southeast neighbors (with priority two), then the southeast corner (also with priority two). So it will remove either three or four vertices before getting to the target corner.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

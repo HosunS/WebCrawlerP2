@@ -1,0 +1,34 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÜ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1168¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 09 May 2012 21:10:53 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"490-4bfa0f03c5140"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 21:01:22 GMTKraw_content¢DtypeEvalueYê"""LexBFS.py
+
+Lexicographic breadth-first-search traversal of a graph, as described
+in Habib, McConnell, Paul, and Viennot, "Lex-BFS and Partition Refinement,
+with Applications to Transitive Orientation, Interval Graph Recognition,
+and Consecutive Ones Testing", Theor. Comput. Sci. 234:59-84 (2000),
+http://www.cs.colostate.edu/~rmm/lexbfs.ps
+
+D. Eppstein, November 2003.
+"""
+
+from PartitionRefinement import PartitionRefinement
+from Sequence import Sequence
+from Util import arbitrary_item
+
+def LexBFS(G):
+    """Find lexicographic breadth-first-search traversal order of a graph.
+    G should be represented in such a way that "for v in G" loops through
+    the vertices, and "G[v]" produces a sequence of the neighbors of v; for
+    instance, G may be a dictionary mapping each vertex to its neighbor set.
+    Running time is O(n+m) and additional space usage over G is O(n).
+    """
+    P = PartitionRefinement(G)
+    S = Sequence(P, key=id)
+    while S:
+        set = S[0]
+        v = arbitrary_item(set)
+        yield v
+        P.remove(v)
+        if not set:
+            S.remove(set)
+        for new,old in P.refine(G[v]):
+            S.insertBefore(old,new)
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

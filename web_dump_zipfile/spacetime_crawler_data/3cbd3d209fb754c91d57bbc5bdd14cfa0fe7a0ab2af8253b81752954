@@ -1,0 +1,63 @@
+¦Ifinal_url¢DtypeEvaluex/https://www.ics.uci.edu/~theory/269/170310.htmlLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2508¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 06 Apr 2017 21:08:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"9cc-54c85ea7e4f22"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 00:05:25 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY	Ì<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
+<head>
+<title>Theory Seminar, March 10, 2017</title>
+<link rel="stylesheet" href="../stylesheet.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<p><a href="/~theory/"><img src="/~theory/logo/CATOC2.jpg" 
+alt="ICS Theory Group"></a></p>
+
+<h2><a href="/~theory/269/">Winter 2017: Theory Seminar</a><br>
+Bren Hall, Room 1300, 1:00pm</h2>
+
+<hr>
+
+<h2>March 10, 2017:</h2>
+<h1>
+Anti-persistence: History Independent Data Structures
+</h1>
+<h2>
+Pedro Matias
+</h2>
+
+<p>Many data structures give away much more information than they were
+  intended to. Whenever privacy is important, we need to be concerned
+  that it might be possible to infer information from the memory
+  representation of a data structure that is not available through its
+  &ldquo;legitimate&rdquo; interface. Word processors that quietly maintain old
+  versions of a document are merely the most egregious example of a
+  general problem.  We deal with data structures whose current memory
+  representation does not reveal their history. We focus on
+  dictionaries, where this means revealing nothing about the order of
+  insertions or deletions. Our first algorithm is a hash table based on
+  open addressing, allowing $O(1)$ insertion and search. We also present a
+  history independent dynamic perfect hash table that uses space linear
+  in the number of elements inserted and has expected amortized
+  insertion and deletion time $O(1)$. To solve the dynamic perfect hashing
+  problem we devise a general scheme for history independent memory
+  allocation. For fixed-size records this is quite efficient, with
+  insertion and deletion both linear in the size of the record. Our
+  variable-size record scheme is efficient enough for dynamic perfect
+  hashing but not for general use. The main open problem we leave is
+  whether it is possible to implement a variable-size record scheme with
+  low overhead.</p>
+
+<p>(Based on <a href="http://theory.stanford.edu/~vteague/STOC01.pdf">a
+paper by Moni Naor and Vanessa Teague</a> from STOC '01)
+
+</body>
+</html>
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

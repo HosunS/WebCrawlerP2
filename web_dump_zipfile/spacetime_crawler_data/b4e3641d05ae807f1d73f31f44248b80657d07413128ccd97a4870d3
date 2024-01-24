@@ -1,0 +1,244 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue’¢Ak¢DtypeEvalueFStatusAv¢DtypeEvalueF200 OK¢Ak¢DtypeEvalueLX-Request-IdAv¢DtypeEvalueX$8c9a9ffd-2067-40e5-9945-06edd53bfa28¢Ak¢DtypeEvaluePX-XSS-ProtectionAv¢DtypeEvalueM1; mode=block¢Ak¢DtypeEvalueVX-Content-Type-OptionsAv¢DtypeEvalueGnosniff¢Ak¢DtypeEvalueRX-Download-OptionsAv¢DtypeEvalueFnoopen¢Ak¢DtypeEvalueLX-Powered-ByAv¢DtypeEvalueWPhusion Passenger 5.3.3¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXûXSRF-TOKEN=zpBiLLusQi2GB81MIBKLbp%2FsmilA%2FPHo6nwcq0dlTdqo0dzNx9kGB5tSDAS8wTvTc5GZlM1cZj6tqQx%2BN50wog%3D%3D; path=/; secure; SameSite=Strict, _recruit_session_20160421_2.3.4=85d3076e883866f0c26f6cfc44b46e6e; path=/; HttpOnly; secure; SameSite=Strict¢Ak¢DtypeEvalueXStrict-Transport-SecurityAv¢DtypeEvalueX-max-age=631139040; includeSubdomains; preload¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueE19746¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueIX-RuntimeAv¢DtypeEvalueH0.174504¢Ak¢DtypeEvalueX!X-Permitted-Cross-Domain-PoliciesAv¢DtypeEvalueDnone¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueQprivate, no-cache¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXWed, 06 Feb 2019 09:12:14 GMT¢Ak¢DtypeEvalueOX-Frame-OptionsAv¢DtypeEvalueJSAMEORIGIN¢Ak¢DtypeEvalueOReferrer-PolicyAv¢DtypeEvalueXorigin-when-cross-origin¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYM"<!DOCTYPE html>
+<html lang="en" class='no-js uci recruit-uci-production production-area apply show stylesheet-modern shadowbox' prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"c5bf3f27bd","applicationID":"558310","transactionName":"cFkKFxFYXA5UR05QSUNaHUwQX18V","queueTime":0,"applicationTime":162,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="University of California, Irvine Online Faculty Recruitment" />
+<meta name="keywords" content="University of California, Irvine, UCI, Online, Faculty, Recruitment" />
+<meta name="support-email" content="recruit@uci.edu" />
+<title>Postdoctoral Scholar Pool Ad (JPF04621) - UCI - Recruit</title>
+<link rel="stylesheet" media="all" href="https://recruit.ap.uci.edu/assets/modern-30a5bd322d8bc5fe979432eb1d9d42fe9f18f29444e1970437c321958fac5707.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,900">
+
+  <!--[if lte IE 9]><link rel="stylesheet" media="all" href="https://recruit.ap.uci.edu/assets/modern2-fd4c6062fca04753e44c40068f26d414.css" /><![endif]-->
+<script src="https://recruit.ap.uci.edu/packs/application-2aafeedc8f5177f0893b.js"></script>
+<script src="https://recruit.ap.uci.edu/packs/cosmopolitan-72c16766f376a98367d2.js"></script>
+<link rel="stylesheet" media="screen" href="https://recruit.ap.uci.edu/packs/application-5c642d37c834f9f2c64aa80a13ad56f9.css" />
+<script src="https://recruit.ap.uci.edu/assets/application-09afc12a9a056d9164ecb31c2c749961476d056ed3cb5044bebbb55c5de29fa0.js"></script>
+<script src="https://recruit.ap.uci.edu/assets/bootstrap-0c0f91dc9056dfb29456f65b77c6b1dce7f47be07928b428cc3c418701abab9c.js"></script>
+
+<link rel="shortcut icon" href="https://recruit.ap.uci.edu/assets/favicons/uci-b45ca8a34e61d0b8066df21f7df77b2146e3adf25cc29f59d93bd52020dc651e.ico" type="image/x-icon">
+  <script type="text/javascript">
+  
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32621778-15']);
+    _gaq.push(['_trackPageview']);
+  
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    
+    $(document).data('ga-trackers', {"site":"UA-32621778-7"});
+  </script>
+
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="IJurUPTZXlgwrjhoIePLIbZ19U/cHJNjxwxKByQ7CING2hWxiKwaci37+SC9MHucWgj28lG8BLWA2VrSVMN1+w==" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@UCIrvine">
+  
+    <meta name="twitter:label1" content="Apply by">
+    <meta name="twitter:data1" content="Jun 30, 2019">
+    <meta name="twitter:label2" content="Department">
+    <meta name="twitter:data2" content="Pediatrics - School of Medicine">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://recruit.ap.uci.edu/JPF04621">
+  <meta property="og:title" content="Postdoctoral Scholar Pool Ad">
+  <meta property="og:description" content="University of California, Irvine is hiring. Apply now!">
+  <meta property="og:image" content="https://recruit.ap.uci.edu/assets/uci/main/aerial-w-27d4aa34a43521dcf1ad5724eef18a67bb635d6c31ff657e5342c8ab80995300.jpg">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-32621778-7"></script>
+  <script>
+//<![CDATA[
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-32621778-7';
+
+//]]>
+</script>
+
+  </head>
+  <body data-cosmopolitan=''>
+    <a tabindex="1" class="skip-nav" href="#content">Skip to main content</a>
+
+    
+    
+    <header id='header' class='uci_logo' role='banner'>
+  <div class='menu'>
+    <div class="logo">
+      <a href="/"><img src="https://recruit.ap.uci.edu/assets/uci/logo-a2ab281f90b5d5d55c08d8a397b408baa6009bf4d6608abfcc880fda114c537f.svg" alt="Logo" /></a>
+    </div>
+    <div class="recruit ">
+      <h1><a href="/">Recruit</a></h1>
+    </div>
+    
+  </div>
+</header>
+
+    
+    <div id="where-am-i">
+  <ol id='breadcrumbs' class='breadcrumb'>
+    <li class=''><a href="/">Home</a></li><li class=''><a href="/apply">Open Recruitments</a></li><li class='active'>Postdoctoral Scholar Pool Ad (JPF04621)</li>
+  </ol>
+
+  
+</div>
+
+    
+    
+
+
+    
+    <main id='content'>
+      <aside id='flash'></aside>
+
+      
+
+  <script type="application/ld+json">
+  {"@context":"http://schema.org","@type":"JobPosting","title":"Postdoctoral Scholar Pool Ad","identifier":"JPF04621","description":"\u003cp\u003eThe Department of Pediatrics in the School of Medicine, University of California, Irvine is anticipating openings for Postdoctoral Scholars to work in the following divisions and programs:\u003c/p\u003e\n\n\u003cp\u003eAdolescent Medicine*Genetics/Metabolic Disorders\u003cbr\u003e\nPediatric Neurology*Allergy/Immunology\u003cbr\u003e\nHematology/Oncology*Child/Adolescent Psychiatry\u003cbr\u003e\nCardiology*Infectious Diseases\u003cbr\u003e\nPulmonary*Child Development Center\u003cbr\u003e\nNeonatal/Perinatal Medicine*Pediatric Surgery\u003cbr\u003e\nEndocrinology*Nephrology\u003cbr\u003e\nPediatric Urology*General Pediatrics\u003c/p\u003e\n\n\u003cp\u003eRequirements:\u003cbr\u003e\nApplications are being sought from recent M.D. or PhD. graduates with training in one or more of the department's disciplines. Laboratory experience is a must and a publication history is desirable.\u003c/p\u003e\n\n\u003cp\u003eThis is an on-going recruitment. Positions are dependent upon extramural funding. Rank will be determined based on qualifications and experience. Salary is commensurate with experience and qualifications.\u003c/p\u003e\n\n\u003cp\u003eApplication Procedure: Interested candidates should post their curriculum vitae and three references on UC Irvine's recruitment website: \u003cbr\u003e\n\u003ca href=\"https://recruit.ap.uci.edu/apply/JPF04621\" rel=\"nofollow\"\u003ehttps://recruit.ap.uci.edu/apply/JPF04621\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003eFor additional information about this position you may contact the department: \u003cbr\u003e\nHeather Alibert, Academic Affairs Manager\u003cbr\u003e\nDepartment of Pediatrics \u003cbr\u003e\n101 The City Drive\u003cbr\u003e\nOrange, CA 92868-4482\u003cbr\u003e\nE-mail: \u003ca href=\"mailto:halibert@uci.edu\" rel=\"nofollow\"\u003ehalibert@uci.edu\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003eThe University of California, Irvine is an Equal Opportunity/Affirmative Action Employer advancing inclusive excellence. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, age, protected veteran status, or other protected categories covered by the UC nondiscrimination policy.\u003c/p\u003e\n","datePosted":"2018-07-01T00:00:00-07:00","validThrough":"2019-06-30T23:59:59-07:00","industry":"Higher Education","hiringOrganization":{"@type":"Organization","name":"University of California, Irvine","sameAs":"http://www.uci.edu/","department":{"@type":"Organization","name":"School of Medicine","department":{"@type":"Organization","name":"Pediatrics"}}},"employmentType":["OTHER"],"jobLocation":{"@type":"Place","address":{"@type":"PostalAddress","name":"Irvine, CA"}}}
+  </script>
+
+
+<header class='recruitment'>
+  <h2>
+    <span class='name'>Postdoctoral Scholar Pool Ad</span>
+      <span class='apply'><form action="/JPF04621/apply" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><button class="btn btn-lg btn-primary">Apply now<span class="sr-only"> to Postdoctoral Scholar Pool Ad</span></button></form></span>
+  </h2>
+  <div class="metadata">
+    Job #JPF04621
+    <ul>
+        <li>
+          School of Medicine - Pediatrics
+        </li>
+    </ul>
+  </div>
+</header>
+
+<div class='body'>
+  
+    <h3 id="recruitment-period">
+      Recruitment Period
+    </h3>
+    <div class='section'>
+        <div>Open July 1st, 2018 through June 30th, 2019</div>
+          <small>If you apply to this recruitment by June 30th, 2019, you will have until July 13th, 2019 to complete your application.</small>
+    </div>
+
+    <h3 id="description">Description</h3>
+    <div class='section'><p>The Department of Pediatrics in the School of Medicine, University of California, Irvine is anticipating openings for Postdoctoral Scholars to work in the following divisions and programs:</p>
+
+<p>Adolescent Medicine*Genetics/Metabolic Disorders<br>
+Pediatric Neurology*Allergy/Immunology<br>
+Hematology/Oncology*Child/Adolescent Psychiatry<br>
+Cardiology*Infectious Diseases<br>
+Pulmonary*Child Development Center<br>
+Neonatal/Perinatal Medicine*Pediatric Surgery<br>
+Endocrinology*Nephrology<br>
+Pediatric Urology*General Pediatrics</p>
+
+<p>Requirements:<br>
+Applications are being sought from recent M.D. or PhD. graduates with training in one or more of the department's disciplines. Laboratory experience is a must and a publication history is desirable.</p>
+
+<p>This is an on-going recruitment. Positions are dependent upon extramural funding. Rank will be determined based on qualifications and experience. Salary is commensurate with experience and qualifications.</p>
+
+<p>Application Procedure: Interested candidates should post their curriculum vitae and three references on UC Irvine's recruitment website: <br>
+<a href="https://recruit.ap.uci.edu/apply/JPF04621" rel="nofollow">https://recruit.ap.uci.edu/apply/JPF04621</a></p>
+
+<p>For additional information about this position you may contact the department: <br>
+Heather Alibert, Academic Affairs Manager<br>
+Department of Pediatrics <br>
+101 The City Drive<br>
+Orange, CA 92868-4482<br>
+E-mail: <a href="mailto:halibert@uci.edu" rel="nofollow">halibert@uci.edu</a></p>
+
+<p>The University of California, Irvine is an Equal Opportunity/Affirmative Action Employer advancing inclusive excellence. All qualified applicants will receive consideration for employment without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, age, protected veteran status, or other protected categories covered by the UC nondiscrimination policy.</p>
+</div>
+    <h3 id="job-location">Job location</h3>
+    <div class='section'>Irvine, CA</div>
+
+    <h3 id="requirements">Requirements</h3>
+
+      <div class='recruitment-level'>
+
+          <div class='documents'>
+            <strong>Document requirements</strong>
+            <ul><li><p>Curriculum Vitae -  Your most recently updated C.V. </p>
+</li><li><p>Cover Letter (Optional)</p>
+</li><li><p>Statement of Research (Optional)</p>
+</li><li><p>Statement of Teaching -  See our <a href="http://dtei.uci.edu/the-reflective-teaching-statement/">guidance for writing a reflective teaching statement</a>. <br>
+ (Optional)</p>
+</li><li><p>Statement of Contributions to Diversity -  Statement addressing how past and/or potential contributions to diversity will advance <a href="http://www.uci.edu/diversity/">UCI's Commitment to Inclusive Excellence</a>. <br>
+ (Optional)</p>
+</li><li><p>Misc / Additional (Optional)</p>
+</li></ul>
+          </div>
+
+          <div class='references'><strong>Reference requirements</strong></div>
+          <ul>
+            <li>3-5 required (contact information only)</li>
+          </ul>
+      </div>
+
+    <h3 id="apply-online">How to apply</h3>
+    <ol>
+      <li>Create an ApplicantID</li>
+      <li>Provide required information and documents</li>
+        <li>If any, provide required reference information</li>
+    </ol>
+    <div class='section'><strong>Get started: press Apply Now</strong></div>
+</div>
+
+<footer class="how-to-apply">
+      <form action="/JPF04621/apply" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" /><button class="btn btn-lg btn-primary">Apply now<span class="sr-only"> to Postdoctoral Scholar Pool Ad</span></button></form>
+    <br/><small>Questions? <a href="/JPF04621/question">Contact the hiring department</a></small>
+    <br/><small>Already applied? <a href="/apply/login">Log in to your application</a></small>
+  <p class='smaller'>
+    The University of California, Irvine is an Equal Opportunity/Affirmative Action Employer. You have <a href="http://www1.eeoc.gov/employers/upload/eeoc_self_print_poster.pdf">the right to an equal employment opportunity</a>.<br/>
+    For more information about your rights, see the <a href="http://www.dol.gov/ofccp/regs/compliance/posters/pdf/OFCCP_EEO_Supplement_Final_JRF_QA_508c.pdf">EEO is the Law Supplement</a>.<br/>
+    The University of California, Irvine is committed to providing <a href="<span class=&quot;translation_missing&quot; title=&quot;translation missing: uci.apply.details.footer.legal.disability_accomodations_link_url&quot;>Disability Accomodations Link Url</span>">reasonable accommodations to applicants with disabilities</a>.<br/>
+    See our Jeanne Clery Disclosure of Campus Security Policy and Campus Crime Statistics Act <a href="http://www.ucop.edu/ethics-compliance-audit-services/compliance/clery-act/clery-act-details.html">Annual Security Reports</a>.<br/>
+  </p>
+</footer>
+
+    </main>
+    
+    
+    <div class='quintain--post'>
+      
+    </div>
+    
+    
+    
+    <footer id="site-footer" role='contentinfo'>
+  <div class="help-links">
+    Academic Personnel Recruit<br />
+University of California, Irvine
+
+  </div>
+
+  <ul class="global-links">
+  <li><a class="iconic-link" href="/accessibility"><span class="iconic fa fa-universal-access"></span>Accessibility</a></li>
+  <li><a class="iconic-link" href="/about"><span class="iconic fa fa-history"></span>About</a></li>
+  <li id="ux-volunteer-link"></li>
+  <li class="privacy">
+    <span class="iconic fa fa-user-secret"></span> <a target="_blank" href="http://www.uci.edu/privacy">Campus privacy policy</a> | <a target="_blank" href="/privacy/gdpr">GDPR statement</a>
+  </li>
+</ul>
+
+  <div class="copyright">
+  &copy; 2007-2019 The Regents of the University of California. All rights reserved.
+</div>
+
+</footer>
+
+  </body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

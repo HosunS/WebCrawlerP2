@@ -1,0 +1,79 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1246¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 24 Nov 1998 06:03:38 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"4de-33d5b55a00280"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 02:57:43 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYà
+<HTML>
+
+<HEAD>
+
+<meta name="GENERATOR" content="Microsoft Internet Assistant for PowerPoint 97">
+ <TITLE>ADL Specification Example</TITLE> 
+</HEAD>
+
+<BODY     >
+
+ <H1>ADL Specification Example</H1> 
+ <P><UL>
+Instruction set information:
+</UL><UL>
+
+</UL><UL>
+(OP_GROUP mult_ops
+</UL><UL>
+	(OPCODE mpy mpyi mpysp mpydp
+</UL><UL>
+		(OPERANDS src1 src2 dst)
+</UL><UL>
+		(SEMANTIC dst=src1*src2))
+</UL><UL>
+(VAR_GROUPS
+</UL><UL>
+	(src1 : RF1 | RF2)
+</UL><UL>
+	(src2 : RF2)
+</UL><UL>
+	(dst : RF2))
+</UL><UL>
+(INSTRUCTION
+</UL><UL>
+	(FU_SLOT_LIST 
+</UL><UL>
+		(UNIT ALU1) 
+</UL><UL>
+		(UNIT MULT)
+</UL><UL>
+		(UNIT ALU2)))
+</UL><UL>
+...</UL></P>
+<P><UL>
+Net-list information:
+</UL><UL>
+
+</UL><UL>
+(FUnit MULT 
+</UL><UL>
+	(OPCODES mult_ops)
+</UL><UL>
+	(CONNECTIONS c1 c2 c3))
+</UL><UL>
+(RegFile RF2
+</UL><UL>
+	(CONNECTIONS c2 c3 c4 c5 ï¿½.))
+</UL><UL>
+(RegFile RF1
+</UL><UL>
+	...
+</UL></P>
+<P></P> 
+<P>
+<TABLE>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld021.htm">Previous slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=100> <A HREF="tsld023.htm">Next slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="tsld001.htm">Back to first slide</A> </TD>
+  <TD HEIGHT=100 WIDTH=150> <A HREF="sld022.htm">View graphic version</A> </TD>
+</TABLE>
+<BR>
+</P>
+
+
+
+</Body>
+</HTML>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,19 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC448¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 21 May 2014 22:10:36 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"1c0-4f9f0440ccf00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 08 Feb 2019 20:07:26 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÀ#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+ 
+int main (int argc, char **argv)
+{
+  printf("Please enter your name: ");
+
+  //it seems as though these buffers need to be the same size or Linux will
+  //allocate them in such a way that it notices the buffer overflow
+  char buffer[16];
+  char program_to_run[16] = "pwd";
+
+  gets(buffer);
+  printf("Hi, %s!  You are in directory ", buffer);
+  fflush(stdout);
+  system(program_to_run);
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,50 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2822¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 17 Nov 2015 02:25:58 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"b06-524b33efbf980"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 22:27:28 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYFound boardWidth = 9
+Found boardHeight = 7
+Found gravity = true
+Found winningRun = 5
+Found GUI = false
+Found onlyTeam = 1
+Starting tournament with 2 teams.
+Game 0, 1, player 1: ./Files/pnpatel2_Patel_pnpatel2_HorizonEffect/src/main.exe, player 2: ./testAIs/PoorAI/PoorAI.class
+java.lang.RuntimeException: problem communicating with the process: null because Cannot run program "././Files/pnpatel2_Patel_pnpatel2_HorizonEffect/src/main.exe": error=13, Permission denied
+	at ProcessPlayer.getMove(ProcessPlayer.java:65)
+	at connectK.PlayerThread.run(ConnectK.java:99)
+Caused by: java.io.IOException: Cannot run program "././Files/pnpatel2_Patel_pnpatel2_HorizonEffect/src/main.exe": error=13, Permission denied
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1047)
+	at ProcessPlayer.startProcess(ProcessPlayer.java:79)
+	at ProcessPlayer.getMove(ProcessPlayer.java:57)
+	... 1 more
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:187)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1028)
+	... 3 more
+Player 1 returned a bad move null or went over time (28).
+Game 0, 1, Loser: ./Files/pnpatel2_Patel_pnpatel2_HorizonEffect/src/main.exe, Winner: ./testAIs/PoorAI/PoorAI.class
+java.lang.NullPointerException
+	at ProcessPlayer.cleanup(ProcessPlayer.java:40)
+	at Tournament.main(Tournament.java:162)
+Game 1, 0, player 1: ./testAIs/PoorAI/PoorAI.class, player 2: ./Files/pnpatel2_Patel_pnpatel2_HorizonEffect/src/main.exe
+
+Player 1 returns move 4, 0.
+java.lang.RuntimeException: problem communicating with the process: null because Cannot run program "././Files/pnpatel2_Patel_pnpatel2_HorizonEffect/src/main.exe": error=13, Permission denied
+	at ProcessPlayer.getMove(ProcessPlayer.java:65)
+	at connectK.PlayerThread.run(ConnectK.java:99)
+Caused by: java.io.IOException: Cannot run program "././Files/pnpatel2_Patel_pnpatel2_HorizonEffect/src/main.exe": error=13, Permission denied
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1047)
+	at ProcessPlayer.startProcess(ProcessPlayer.java:79)
+	at ProcessPlayer.getMove(ProcessPlayer.java:57)
+	... 1 more
+Caused by: java.io.IOException: error=13, Permission denied
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:187)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1028)
+	... 3 more
+Player 2 returned a bad move null or went over time (6).
+Game 1, 0, Winner: ./testAIs/PoorAI/PoorAI.class, Loser: ./Files/pnpatel2_Patel_pnpatel2_HorizonEffect/src/main.exe
+java.lang.NullPointerException
+	at ProcessPlayer.cleanup(ProcessPlayer.java:40)
+	at Tournament.main(Tournament.java:167)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

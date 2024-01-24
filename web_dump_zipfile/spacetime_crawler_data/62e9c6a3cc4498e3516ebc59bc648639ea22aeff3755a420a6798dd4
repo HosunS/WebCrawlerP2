@@ -1,0 +1,43 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1186¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Oct 2018 18:32:59 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"4a2-57870e653ba10"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 01:03:02 GMTKraw_content¢DtypeEvalueY¢---
+title: "senic - infection rates by region"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document.
+The first step in the analysis is to load the tidyverse library and read in the data.  I also created a categorical variable for region.
+
+```{r input data and load tidyverse}
+library(tidyverse)
+datainput <- read_csv("H://HAL//Courses//Stat210/senic.csv")
+senic <- data.frame(datainput)
+senic$region <- factor(senic$r)
+```
+
+The next step is to carry out some exploratory analysis.  I've create summary statistics for each region 
+and several plots
+
+```{r summary statistics and plots}
+describe <- function(x){c(n=length(x),mn=mean(x),sd=sqrt(var(x)),quantile(x,probs=c(0.025,.25,.50,.75,.975)))}
+tapply(senic$inf,senic$region, describe)
+qqnorm(senic$inf[senic$region==1])
+qqnorm(senic$inf[senic$region==2])
+qqnorm(senic$inf[senic$region==3])
+qqnorm(senic$inf[senic$region==4])
+boxplot(senic$inf ~ senic$region)
+```
+
+And then I carried out the analysis of variance. 
+
+```{r ANOVA}
+reg.aov <- aov(senic$inf ~senic$region)
+summary(reg.aov)
+coef(reg.aov)
+```
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

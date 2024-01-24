@@ -1,0 +1,232 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:58:06 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY1
+
+
+
+<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Daphnet Freezing of Gait Data Set</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
+border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="../about.html">About</a>&nbsp;
+		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="../contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
+ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+
+<br />
+<table width=100% border=0 cellpadding=2><tr><td>
+
+   <table><tr>
+     <td valign=top>
+	<p>
+	<span class="heading"><b>Daphnet Freezing of Gait Data Set</b></span>
+	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/00245/"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="#"><font
+style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
+
+	<p class="normal"><b>Abstract</b>: This dataset contains the annotated readings of 3 acceleration sensors at the hip and leg of Parkinson's disease patients that experience freezing of gait (FoG) during walking tasks.
+</p>
+     </td>
+     <td> </td>
+   </tr></table>
+
+<table border=1 cellpadding=6>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">Multivariate, Time-Series</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
+		<td><p class="normal">237</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
+		<td><p class="normal">Life</p></td>
+	</tr>
+
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
+		<td><p class="normal">Real</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
+		<td><p class="normal">9</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
+		<td><p class="normal">2013-03-07</p></td>
+	</tr>
+	<tr>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
+		<td><p class="normal">Classification</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
+		<td><p class="normal">N/A</p></td>
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
+		<td><p class="normal">54059</p></td>
+	</tr>
+	<!--
+	<tr>
+
+		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
+		<td><p class="normal">N/A</p></td>
+	</tr>
+	-->
+</table>
+
+
+<br />
+
+<p class="small-heading"><b>Source:</b></p>
+<p class="normal"><br>Daniel Roggen, University of Newcastle Upon Tyne, UK, <u>daniel.roggen <b>'@'</b> ieee.org</u><br>Meir Plotnik,  Sheba Medical Center, IL, <u>meir.plotnikPeleg <b>'@'</b> sheba.health.gov.il</u><br>Jeff Hausdorff, Tel Aviv Sourasky Medical Center, <u>jhausdor <b>'@'</b> tlvmc.gov.il</u><br><br>This dataset was collected as part of the EU FP6 project Daphnet, grant number 018474-2.<br>Additional effort to publish this dataset was supported in part by the EU FP7 project CuPiD, grant number 288516.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Data Set Information:</b></p>
+<p class="normal"><br>The Daphnet Freezing of Gait Dataset is a dataset devised to benchmark automatic methods to recognize gait freeze from wearable acceleration sensors placed on legs and hip.<br><br>The dataset was recorded in the lab with emphasis on generating many freeze events. Users performed there kinds of tasks: straight line walking, walking with numerous turns, and finally a more realistic activity of daily living (ADL) task, where users went into different rooms while fetching coffee, opening doors, etc.<br><br>This dataset is the result of a collaboration between the Laboratory for Gait and Neurodynamics, Tel Aviv Sourasky Medical Center, Israel and the Wearable Computing Laboratory, ETH Zurich, Switzerland. Recordings were run at the Tel Aviv Sourasky Medical Center in 2008. The study was approved by the local Human Subjects Review Committee, and was performed in accordance with the ethical standards of the Declaration of Helsinki.<br></p>
+
+<br />
+
+<p class="small-heading"><b>Attribute Information:</b></p>
+<p class="normal"><br>Each file comprises the data in a matrix format, with one line per sample, and one column per channel. The channels are as follows:<br>    Time of sample in millisecond<br>    Ankle (shank) acceleration - horizontal forward acceleration [mg]<br>    Ankle (shank) acceleration - vertical [mg]<br>    Ankle (shank) acceleration - horizontal lateral [mg]<br>    Upper leg (thigh) acceleration - horizontal forward acceleration [mg]<br>    Upper leg (thigh) acceleration - vertical [mg]<br>    Upper leg (thigh) acceleration - horizontal lateral [mg]<br>    Trunk acceleration - horizontal forward acceleration [mg]<br>    Trunk acceleration - vertical [mg]<br>    Trunk acceleration - horizontal lateral [mg]<br>    Annotation [0, 1, or 2]<br><br>The meaning of the annotations are as follows:<br>    0: not part of the experiment. For instance the sensors are installed on the user or the user is performing activities unrelated to the experimental protocol, such as debriefing<br>    1: experiment, no freeze (can be any of stand, walk, turn)<br>    2: freeze<br></p>
+
+<br />
+
+<p class="small-heading"><b>Relevant Papers:</b></p>
+<p class="normal"><br>[1] Marc BÃƒÂ¤chlin, Meir Plotnik, Daniel Roggen, Nir Giladi, Jeffrey M Hausdorff and Gerhard TrÃƒÂ¶ster, A Wearable System to Assist Walking of Parkinson's Disease Patients.Methods of Information in Medicine, 49:1(88-95), 2010<br>[2] Meir Plotnik, Marc BÃƒÂ¤chlin, Inbal Maidan, Daniel Roggen, Gerhard TrÃƒÂ¶ster, Nir Giladi and Jeffrey M Hausdorff, Automated biofeedback assistance for freezing of gait in patients with Parkinson's disease. Proceedings of the International Society for Posture and Gait Research (ISPGR), Bologna, Italy, 2009<br>[3] Meir Plotnik, Marc BÃƒÂ¤chlin, Daniel Roggen, Noit Inbar, Inbal Maidan, Talia Herman, Marina Brozgol, Eliya Shaviv, Gerhard TrÃƒÂ¶ster and Jeffrey M Hausdorff, Automated treatment of freezing of gait in Parkinson's disease using a wearable device that automatically detects freezing. Annual meeting of the Israeli Neurological Society, Israel, pages 63, 2009<br>[4] Marc BÃƒÂ¤chlin, Daniel Roggen, Meir Plotnik, Jeffrey M Hausdorff, Nir Giladi and Gerhard TrÃƒÂ¶ster, Online Detection of Freezing of Gait in Parkinson's Disease Patients: A Performance Characterization. Proceedings of the 4th International Conference on Body Area Networks, 2009<br>[5] Marc BÃƒÂ¤chlin, Meir Plotnik, Daniel Roggen, Noit Inbar, Nir Giladi, Jeffrey M Hausdorff and Gerhard TrÃƒÂ¶ster. Parkinson patients' perspective on context aware wearable technology for auditive assistance. Proceedings of the 3rd International Conference on Pervasive Computing Technologies for Healthcare, 2009<br>[6] Marc BÃƒÂ¤chlin, Daniel Roggen, Meir Plotnik, Noit Inbar, Inbal Maidan, Talia Herman, Marina Brozgol, Eliya Shaviv, Nir Giladi, Jeffrey M Hausdorff and Gerhard TrÃƒÂ¶ster,<br>Potentials of enhanced context awareness in wearable assistants for ParkinsonÃ¢â‚¬â„¢s disease patients with freezing of gait syndrome. Proceedings of the 13th International Symposium on Wearable Computers (ISWC), pages 123-130, 2009<br>[7] Sinziana Mazilu, Michael Hardegger, Zack Zhu, Daniel Roggen, Gerhard TrÃƒÂ¶ster, Meir Plotnik, Jeff Hausdorff. Online Detection of Freezing of Gait with Smartphones and Machine Learning Techniques. Proc 6th Int Conf on Pervasive Computing Technologies for Healthcare, 2012<br></p>
+
+<br />
+
+
+<!-- OLD CODE:
+
+<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
+<img src="../assets/rexa.jpg" />
+<p class="normal">N/A</p>
+
+-->
+
+
+
+<br />
+
+<p class="small-heading"><b>Citation Request:</b></p>
+<p class="normal"><br>Use of this dataset in publications must be acknowledged by referencing the following publication:<br><br>Marc BÃƒÂ¤chlin, Meir Plotnik, Daniel Roggen, Inbal Maidan, Jeffrey M. Hausdorff, Nir Giladi, and Gerhard TrÃƒÂ¶ster, Wearable Assistant for Parkinson's Disease Patients With the Freezing of Gait Symptom. IEEE Transactions on Information Technology in Biomedicine, 14(2), March 2010, pages 436-446<br><br>This paper describes the dataset in details. It explain the data acquisition protocol, the kind of sensor used and their placement, and the nature of the data acquired. It also provides baseline results for the automated detection of freezing of gait, against which newer methods can be benchmarked. In particular it describes detection sensitivity/specificity for 3 sensor placements and 4 kinds of derived sensor signals, it analyzes detection latency, and provides first insight into user specific v.s. user independent performance.<br><br>We also appreciate if you inform us (<u>daniel.roggen <b>'@'</b> ieee.org</u>) of any publication using this dataset for cross-referencing purposes.<br></p>
+
+</td></tr></table>
+
+
+<hr>
+
+<!-- OLD CODE:
+<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
+-->
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="../assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="../assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+
+
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

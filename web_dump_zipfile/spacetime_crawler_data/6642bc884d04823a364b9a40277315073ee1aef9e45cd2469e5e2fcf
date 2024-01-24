@@ -1,0 +1,584 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueTnginx/1.4.6 (Ubuntu)¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXFri, 25 Jan 2019 07:17:37 GMT¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXMon, 04 Feb 2019 06:53:23 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueItext/htmlKraw_content¢DtypeEvalueYbﬁ
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Tippers website">
+    <meta name="author" content="Primal">
+
+    <title>TIPPERS  </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- <script language="JavaScript">
+        function getParameterByName(name, url) {
+            if(!url) {
+                url = window.location.href;
+            }
+
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+            if (! results) return null;
+            if (! results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var email = getParameterByName('email');
+        sessionStorage.setItem('email', email);
+        console.log('email')
+    
+    </script> -->
+   
+
+
+</head>
+
+
+<body>
+
+<!-- Button for top -->
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="#">TIPPERS</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                   <!-- <li>
+                        <a href="#about">About</a>
+                    </li> -->
+                    <li>
+                        <a href="#applications">TPortal</a>
+                    </li>
+                    <li>
+                        <a href="#Research">Publications</a>
+                    </li>
+                    <li>
+                        <a href=" ">Team</a>
+                    </li>
+					<li>
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="home"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>TIPPERS</h1>
+                        <h3>Testbed for IoT-based Privacy-Preserving PERvasive Spaces</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="#applications" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-zoom-in"></i> <span class="network-name">TPortal</span></a>
+                            </li>
+                            <li>
+                                <a href="#Research" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-user"></i> <span class="network-name">Research</span></a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="btn btn-default btn-lg"><i class="glyphicon glyphicon-eye-open"></i> <span class="network-name">Team</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.cmntainer -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+<!--
+            <a  name="tippers"></a>
+
+    <div class="content-section-a">
+        <a  name="tippers"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Tippers</h2>
+                    <p class="lead">An experimental research system  with plug-n-play potential to support privacy technologies. Designed ground up to embody √¢¬Ä¬úprivacy by design√¢¬Ä¬ù principle. Customizable to multiple usage scenarios.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+-->
+
+            <a  name="applications"></a>
+
+<!--    <div class="content-section-a">
+        <a  name="t-panel"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"><a target="_blank" href="http://tippersweb.ics.uci.edu/tpanel/index.html">T-Panel</a></h2>
+                    <p class="lead">Demonstration of various sensor subsystems installed in bren hall along with with analysis of the data as well as potential privacy concerns. </p>
+                </div>
+                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/tpanel.png" alt="">
+                </div>
+            </div>
+
+        </div> -->
+        <!-- /.container -->
+
+    <!-- </div> -->
+    <!-- /.content-section-a -->
+
+    <div class="content-section-b">
+        <a  name="concierge"></a>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"><a href = "http://tippersweb.ics.uci.edu/tportal/login/index.html" style = "cursor: pointer;">TPortal</a><br></h2>
+                    <p class="lead">TPortal gives you an access to the smart building.</p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/tportal.png" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+
+    
+
+
+    
+
+
+
+
+
+
+
+
+    <a  name="Research"></a>
+
+        <div class="content-section-a">
+        <a  name="t-panel"></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12"> <!-- col-sm-6">-->
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Publications</h2>
+                    
+                    <!-- <div> -->
+                    <p class="lead">
+                    <ul class ="lead">
+
+					<h3><B><font color="FF6600">2019</font></B></h3>
+					
+							<li><b><a href="research/19-smart_home_privacy_CODASPY.pdf">Verifiable Round-Robin Scheme for Smart Homes</a></b> <BR>
+                                    Nisha Panwar, Shantanu Sharma, Guoxi Wang, Sharad Mehrotra, and Nalini Venkatasubramanian<BR>
+                                    ACM Conference on Data and Application Security and Privacy (CODASPY), 2019. <BR><BR>
+                            </li>
+							
+							<li><b><a href="research/19-partition_computation_ICDE_paper.pdf">Partitioned Data Security on Outsourced Sensitive</a></b> <b><a href="research/19-partition_computation_full_version.pdf"><font color="0000FF">[Full Version]</font></a></b> <BR>
+                                    Sharad Mehrotra, Shantanu Sharma, Jeffrey D. Ullman, and Anurag Mishra<BR>
+                                    IEEE International Conference on Data Engineering (ICDE), 2019.<BR><BR>
+							</li>
+
+							<li><b><a href="research/19-partition_computation_CODASPY.pdf">Scaling Cryptographic Techniques by Exploiting Data
+Sensitivity at a Public Cloud</a></b> <b><a href="research/19-codaspy_poster.pdf"><font color="0000FF">[Poster Download]</font></a></b><BR>
+                                    Sharad Mehrotra, Shantanu Sharma, and Jeffrey D. Ullman<BR>
+                                    ACM Conference on Data and Application Security and Privacy (CODASPY), 2019. <BR><BR>
+                            </li>
+
+							
+					<h3><B><font color="FF6600">2018</font></B></h3>
+					
+
+							<li><b><a href="research/18-Trustworthy_Sensing.pdf">Trustworthy Sensing in Untrustworthy Environments</a></b> <b><a href="research/18-Trustworthy_Sensing_poster.pdf"><font color="0000FF">[Poster Download]</font></a></b><BR>
+                                    Mamadou H. Diallo, Nisha Panwar, Sharad Mehrotra, and Ardalan Amiri Sani<BR>
+                                    IEEE International Conference on Pervasive Computing and Communication Work in Progress (PerCom-WiP), 2018. <BR><BR>
+                            </li> 
+
+
+
+							<li><b><a href="research/18-Trustworthy_Privacy_Policy.pdf">Trustworthy Privacy Policy Translation in Untrusted IoT Environments</a></b><BR>
+                                    Mamadou H. Diallo, Nisha Panwar, Roberto Yus, and Sharad Mehrotra<BR>
+                                    3rd International Conference on Internet of Things, Big Data and Security (IoTBDS), 2018. <BR><BR>
+                            </li> 
+							
+							
+							
+							<li><b><a href="research/18-IoT-Detective.pdf">IoT-Detective: Analyzing IoT Data Under Differential Privacy</a></b> <b><a href="research/18-IoT-Detective_poster.pdf"> <font color="0000FF">[Poster Download]</font></a></b><BR> 
+                                    Sameera Ghayyur, Yan Chen, Roberto Yus, Ashwin Machanavajjhala, Michael Hay, Gerome Miklau, and Sharad Mehrotra <BR>
+                                    International Conference on Management of Data (SIGMOD), 2018. <BR><BR>
+                            </li> 
+
+							
+							
+					
+					<h3><B><font color="FF6600">2017</font></B></h3>
+                            <li><b><a href="research/SORTaki.pdf">SORTaki: A Framework to Integrate Sorting with Differential Private Algorithms</a></b><BR>
+                                    Stylianos Doudalis and Sharad Mehrotra <BR>
+                                    15th IEEE Conference on Privacy, Security and Trust Conference (PST), 2017. <BR><BR>
+                            </li> 
+
+
+                            <li> <b><a href="research/17-ditio.pdf">Ditio: Trustworthy Auditing of Sensor Activities in Mobile & IoT Devices</a></b><br>
+                                    Saeed Mirzamohammadi, Justin A. Chen, Ardalan Amiri Sani, Sharad Mehrotra, and Gene Tsudik<br>
+                                    15th ACM Conference on Embedded Networked Sensor Systems (SenSys), 2017. <BR><BR>
+                            </li> 
+
+
+                            <li><b><a href="research/fairness.pdf">Exploring Fairness in Participatory Thermal Comfort Control in Smart Buildings</a></b><br>
+                                    Eun-Jeong Shin, Roberto Yus, Sharad Mehrotra, and Nalini Venkatasubramanian<br>
+                                    4th ACM International Conference on Systems for Energy-Efficient Built Environments (BuildSys), 2017.<BR><BR>
+                                    
+                                    
+                            </li>
+
+                            <li><b>One Sided Privacy</b><br>
+                                   Stylianos Doudalis, Ios Kotsogiannis, Ashwin Machanavajjhala, and Sharad Mehrotra<br>
+                                   Theory and Practice of Differential Privacy (TPDP) in conjunction with ACM Conference on Computer and Communications Security (CCS), 2017. <BR><BR>
+                                   
+                            </li>    
+
+                            <li> <b><a href="research/secure_efficient_query_processing.pdf">Secure and Efficient Query Processing over Hybrid Clouds</a></b><br>
+                                    Kerim Yasin Oktay, Murat Kantarcioglu, and Sharad Mehrotra<BR>
+                                    IEEE International Conference on Data Engineering (ICDE), 2017.<BR><BR>
+        
+
+                            </li>
+
+                            <li> <b><a href="research/towards_privacy.pdf">Towards Privacy-Aware Smart Buildings: Capturing, Communicating, and Enforcing Privacy Policies and Preferences </a></b><br>
+                                    Primal Pappachan, Martin Degeling, Roberto Yus, Anupam Das, Sruti Bhagavatula, William Melicher, Pardis Emami Naeini, Shikun Zhang, Lujo Bauer, Alfred Kobsa, Sharad Mehrotra, Norman Sadeh, and Nalini Venkatasubramanian<BR>
+                                    International Workshop on the Internet of Things Computing and Applications (IoTCA) in conjunction with 37th IEEE International Conference on Distributed Computing Systems (ICDCS), 2017.<br><BR>
+                            </li>
+
+					<h3><B><font color="FF6600">2016</font></B></h3>
+
+                            <li> <b><a href="research/releasing_true_data_formal.pdf"> Releasing True Data with Formal Privacy Guarantees </a></b><br>
+                                    Stylianos Doudalis, Sharad Mehrotra, Samuel Haney, and Ashwin Machanavajjhala <BR>
+                                    Privacy-Preserving IR Workshop at SIGIR, 2016<BR><BR>
+                            </li> 
+                
+                            <li><b><a href="research/a_privacy_based_cognizant_IOT_environment.pdf">TIPPERS: A Privacy Based Cognizant IOT Environment</a></b><br>
+                                Sharad Mehrotra, Alfred Kobsa, Nalini Venkatasubramanium, and Siva Raj Rajgopalan <BR>
+                                IEEE International Workshop on Security, Privacy and Trust in the Internet of Things (SPT-IoT) in conjunction with IEEE International Conference on Pervasive Computing and Communication (PerCom), 2016. <BR><BR>
+                            </li>
+							
+							<li><b><a href="research/16-Message_of_interest.pdf">Message of interest: A framework of location-aware messaging for an indoor environment</a></b><br>
+                                Eun-Jeong Shin, Dhrubajyoti Ghosh, Apoorva Gupta, Gurinder Pal Singh, Navneet Joshi, and Alfred Kobsa <BR>
+                                IEEE International Conference on Pervasive Computing and Communication Workshops (PerCom-Workshops), 2016. <BR><BR>
+                            </li>
+
+                            <li> <b><a href="research/configuration_based_beacon_tracking.pdf">uBeacon: Configuration Based Beacon Tracking</a></b><br>
+                                    Prateek Jain, Sanket Subhash Khanwalkar, Rohit Malhotra, Ajey Dheenrajappa, Gaurav Gupta, and Alfred Kobsa <BR> 
+                                    IEEE International Conference on Pervasive Computing and Communication Workshops (PerCom-Workshops), 2016.<br><BR>
+                            </li>
+
+                            <!--<li> <h4> Darpa Meeting Slides </h4>
+                            
+                                    For DARPA Meeting  <BR>
+                                    Authors: Sharad Mehrotra <BR>
+                                    Download here <a href="research/Sharad_darpa_meeting.pptx" download> link     </a> 
+                                    
+                            </li>--> 
+							
+						<h3><B><font color="FF6600">2015</font></B></h3>
+
+                            <li> <b> <a href="research/SEMROD.pdf">SEMROD: Secure and Efficient MapReduce Over HybriD Clouds</a> </b><br>
+                                    Kerim Yasin Oktay, Sharad Mehrotra, Vaibhav Khadilkar, Murat Kantarcioglu<br>
+                                    2015 ACM SIGMOD International Conference on Management of Data, 2015.<BR><BR>
+                            </li>
+
+                            <li> <b><a href="research/mobipedia.pdf"> Mobipedia: Mobile Applications Linked Data</a></b><br>
+                                    Primal Pappachan, Roberto Yus, Prajit Kumar Das, Sharad Mehrotra, Tim Finin, and Anupam Joshi<br>
+                                    International Semantic Web Conference (Posters & Demos), 2015. <BR><BR>
+                            </li>
+
+                            <li> <b><a href="research/building_mobile.pdf"> Building a Mobile Applications Knowledge Base for the Linked Data Cloud </a></b><br>
+                                Primal Pappachan, Roberto Yus, Prajit Kumar Das, Sharad Mehrotra, Tim Finin, and Anupam Joshi<br>
+                                    1st International Workshop on Mobile Deployment of Semantic Technologies (MoDeST) co-located with 14th International Semantic Web Conference (ISWC), 2015.<BR><BR>
+                            </li>
+                        </ul>
+                    </p>
+                        <!-- </div> -->
+                </div>
+
+                <div>
+
+
+                <!-- <div class="col-lg-5 col-lg-offset-2 col-sm-6">
+                    <img class="img-responsive" src="img/tpanel.png" alt="">
+                </div> -->
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    
+
+
+
+        <!-- /.container -->
+
+
+
+
+
+    <div class="banner">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2><B><center>Brandeis Team</center></B></h2>
+                </div>
+            </div>
+			
+            <div class="col-lg-12" align="center" >
+                <ul class="list-inline" align="center">
+                    <li>
+                        <a href ="http://www.darpa.mil/program/brandeis">
+                        <img src="img/darpalogo.png" alt = "Darpa image" height = "200" width="200">
+                        </a>
+                    </li>
+					<li>
+						<a href ="http://www.uci.edu/">
+                        <img src="img/UCI-Logo.png" alt = "UCI image" height = "180" width="550">
+                        </a>
+                    </li>
+			</div>		
+					
+            
+			<div class="col-lg-12">
+                <ul class="list-inline banner-social-buttons">			
+					<!--<li>
+                            <a href="http://www.calit2.net/">
+                            <img src="img/calit2.jpg" alt = "Calit2 image" height = "80" width = "100">
+                            </a>
+                        </li>-->
+                        <li>
+                            <a href="http://www.honeywell.com/">
+                            <img src="img/honeywell.png" alt="Honeywell" height ="50" width = "150">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.cmu.edu/">
+                            <img src="img/cmu.png" alt="CMU" height ="60" width = "300">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://duke.edu/">
+                            <img src="img/duke.png" alt = "DUKE" height ="55" width = "125">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.umass.edu/">
+                            <img src="img/umass.png" alt = "UMASS"  height = "70" width = "70" >
+                            </a>
+                        </li>
+                        <li>
+                            <a href="http://www.colgate.edu/">
+                            <img src="img/colgate.png" alt = "Colgate" height ="80" width = "86">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://cyber.ee/en/about-us/">
+                            <img src="img/cybernetica.png" alt = "cybertnetica" height= "60" width = "190">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://galois.com/">
+                            <img src="img/galois.png" alt = "galois" height= "60" width = "80">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+		</div>	
+
+        </div>
+        <!-- /.container  end here -->
+
+    </div>
+	<!--banner end here -->
+	
+    <!-- Footer---starts here -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#about">About</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#applications">TPortal</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#team">Team</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; University of California Irvine 2018. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+<!-- Scroll script --begin here -->
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+<!-- Scroll script --end here -->
+
+    function foo(url, eml) {
+        var form = document.createElement("form");
+        form.action= url;
+        form.method = "post";
+        var input = document.createElement("textarea");
+        input.name = "email";
+        input.value = eml;
+        form.appendChild(input);
+        
+        form.style.display = 'none';
+        document.body.appendChild(form);
+
+        form.submit();
+
+
+
+    }
+
+    function open_selfawareness()
+        {
+            var email_push = sessionStorage.getItem("email");
+            if (typeof email_push == 'undefined' || email_push == null || email_push == 'null' || email_push == ''){
+                
+                    alert("You need to be logged in to view these apps");
+                    window.open("http://sensoria.ics.uci.edu:1084");
+                    return
+            }
+            foo("http://tippersweb.ics.uci.edu/self_awareness/pages/index.php", sessionStorage.getItem("email"));
+        }
+    
+    function open_concierge()
+        {
+            var email_push = sessionStorage.getItem("email");
+            if (typeof email_push == 'undefined' || email_push == null || email_push == 'null' || email_push == ''){
+                
+                    alert("You need to be logged in to view these apps");
+                    window.open("http://sensoria.ics.uci.edu:1084");
+                    return
+                }
+            foo("http://tippersweb.ics.uci.edu/concierge/concierge.php", sessionStorage.getItem("email"));
+ 
+        }
+
+    function open_noodle()
+    {
+            var email_push = sessionStorage.getItem("email");
+            if (typeof email_push == 'undefined' || email_push == null || email_push == 'null' || email_push == ''){
+                
+                    alert("You need to be logged in to view these apps");
+                    window.open("http://sensoria.ics.uci.edu:1084");
+                    return
+                }
+            foo("http://tippersweb.ics.uci.edu:8069/index.html", sessionStorage.getItem("email"));
+ 
+        }
+
+		
+		
+
+        
+
+
+</script>
+
+
+
+</body>
+    
+
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

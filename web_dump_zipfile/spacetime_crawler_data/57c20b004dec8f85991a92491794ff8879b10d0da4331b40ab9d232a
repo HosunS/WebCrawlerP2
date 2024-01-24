@@ -1,0 +1,481 @@
+¦Ifinal_url¢DtypeEvaluex%http://cybert.ics.uci.edu/controlexp/Lhttp_headers¢DtypeEvalueˆ¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueXkcsrftoken=1ymV5A8s6OnfXsiXUVNu4cHReaezGNJs; expires=Tue, 04-Feb-2020 09:33:09 GMT; Max-Age=31449600; Path=/¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueFCookie¢Ak¢DtypeEvalueJKeep-AliveAv¢DtypeEvalueTtimeout=1000, max=99¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueFApache¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJKeep-Alive¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:33:09 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=utf-8Kraw_content¢DtypeEvalueYH·<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us" >
+<head>
+<title>CyberT Webserver </title>
+
+<link type="text/css" href="/static/css/redmond/jquery-ui-1.8.17.custom.css" rel="stylesheet" />	
+<link rel="stylesheet" type="text/css" href="/static/css/jqstyle.css" /> 
+<script type="text/javascript" src="/static/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/static/js/jquery-ui-1.8.17.custom.min.js"></script>
+<script type="text/javascript" src="/static/js/cybert.js"></script>
+<script type="text/javascript" src="/static/js/cybtjqui.js"></script>
+
+<meta name="robots" content="NONE,NOARCHIVE" />
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-28550269-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body class="">
+<!-- Container -->
+<div id="container">
+  <div id="contact-dialog" title="Cyber-T Contact" style="display:none;">
+    <h4>For bugs and general help:</h4>
+    <p>Contact the Cyber-T Helpdesk: cybert[at]ics.uci.edu Subject=CyberT.</p>
+    <h4>For commercial licenses:</h4>
+    <p>Contact IGB Licenses: igb-license[at]ics.uci.edu Subject=CyberT.</p>
+    <h4>Current maintainer:</h4>
+    <p><a href="http://www.ics.uci.edu/~mkayala/">Matthew Kayala</a></p>
+  </div>
+  <div id="help-dialog" title="Help">
+  </div>
+  <div id="transparent-layer"></div>  
+  
+  <!-- Top Level Menu -->
+  <div id="menu-content-wrapper">
+    <div id="menu-wrapper" class="ui-widget-header">
+      <div class="float-left menu-pad">
+        Cyber-T: Differential analysis of high-throughput data
+      </div>
+      <div id="menu-links" class="menu-pad">
+        <a href="/" class="menu-link" id="home-menu">Home</a> |
+        <a href="/help/" class="menu-link" id="help-menu">Help</a> |
+        <a href="#Contact" class="menu-link" id="contact-menu">Contact</a> 
+        <!--<a href="#Home" class="fg-button fg-button-icon-left ui-state-default ui-corner-all" id="home-menu">
+          <span class="ui-icon ui-icon-home"></span>Home
+        </a> 
+        <a href="#Help" class="fg-button fg-button-icon-left ui-state-default ui-corner-all" id="home-menu">
+          <span class="ui-icon ui-icon-help"></span>Help
+        </a>
+        <a href="#Contact" class="fg-button fg-button-icon-left ui-state-default ui-corner-all" id="home-menu">
+          <span class="ui-icon ui-icon-mail-closed"></span>Contact
+        </a>-->
+      </div>
+    </div>
+  </div>
+  <!-- END Top Level Menu -->
+  
+  <!-- Header -->
+  <div id="header">
+     
+<h1> Unpaired Two-Conditions Data Analysis  </h1>
+
+  </div>
+  <!-- End Header --> 
+  
+  <!-- Content -->
+  <div id="content" class="colM">
+    
+    
+
+
+
+<!--  
+<p class="centered">
+  Example data sets are found at the <a href="#examples">bottom</a> of the page.
+</p>
+-->
+<div id="main-home-wrapper">
+  <div id="home-wrapper">
+
+
+
+
+
+    <div id="examples-wrapper" class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+      <h2 class="ui-widget-header">Example Datasets (Optional)</h2>
+      <p>Use one of the datasets and parameter settings below to understand how to run Cyber-T:</p>
+      <div class="examples-accordion">
+        
+        <h3><a href="#">DNA Microarray Control + Experimental Data</a></h3>
+        <div class="ex-param-section">
+          <div class="section-label-wrapper">
+            <div class="section-label">Help and Download</div> 
+            <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dataset-help/CEDS/" title="DNA Microarray Control + Experimental Data">
+              <span class="ui-icon ui-icon-help"></span>
+            </a>
+          </div>
+          <!-- <div class="break"></div>-->
+          <!-- <p><a href="/help/#CEDS" class="helplink">Help on this dataset</a></p>
+               <p><a href="/static/sampledata/CyberT_C+E_DataSet" class="datalink">Download this dataset</a></p>
+               -->
+          <div class="param-button-wrapper">
+            <input class="examplebutton" type="button" 
+                                             name="CE.Bayes"
+                                             value="Bayes-regularized Analysis Parameters">
+              <input class="examplebutton" type="button" name="CE.Std"
+                     value="Non Bayes-regularized Analysis Parameters">
+              
+          </div>
+        </div> 
+        
+        <h3><a href="#">Quantitative Mass Spec Control + Experimental Data</a></h3>
+        <div class="ex-param-section">
+          <div class="section-label-wrapper">
+            <div class="section-label">Help and Download</div> 
+            <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dataset-help/QMSDS/" title="Quantitative Mass Spec Control + Experimental Data">
+              <span class="ui-icon ui-icon-help"></span>
+            </a>
+          </div>
+          <!-- <div class="break"></div>-->
+          <!-- <p><a href="/help/#QMSDS" class="helplink">Help on this dataset</a></p>
+               <p><a href="/static/sampledata/QMS_dNSAF.txt" class="datalink">Download this dataset</a></p>
+               -->
+          <div class="param-button-wrapper">
+            <input class="examplebutton" type="button" 
+                                             name="QMS.Bayes"
+                                             value="Bayes-regularized Analysis Parameters">
+              <input class="examplebutton" type="button" name="QMS.Std"
+                     value="Non Bayes-regularized Analysis Parameters">
+              
+          </div>
+        </div> 
+        
+        <h3><a href="#">Complete P. falciparum Protein Microarray Data</a></h3>
+        <div class="ex-param-section">
+          <div class="section-label-wrapper">
+            <div class="section-label">Help and Download</div> 
+            <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dataset-help/PfCEDSLarge/" title="Complete P. falciparum Protein Microarray Data">
+              <span class="ui-icon ui-icon-help"></span>
+            </a>
+          </div>
+          <!-- <div class="break"></div>-->
+          <!-- <p><a href="/help/#PfCEDSLarge" class="helplink">Help on this dataset</a></p>
+               <p><a href="/static/sampledata/Pf_ProteinArray_CE_Final.csv" class="datalink">Download this dataset</a></p>
+               -->
+          <div class="param-button-wrapper">
+            <input class="examplebutton" type="button" 
+                                             name="PfCELarge.Bayes"
+                                             value="Bayes-regularized Analysis Parameters">
+              <input class="examplebutton" type="button" name="PfCELarge.Std"
+                     value="Non Bayes-regularized Analysis Parameters">
+              
+          </div>
+        </div> 
+        
+        <h3><a href="#">Low-replicate P. falciparum Protein Microarray Data</a></h3>
+        <div class="ex-param-section">
+          <div class="section-label-wrapper">
+            <div class="section-label">Help and Download</div> 
+            <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dataset-help/PfCEDSLowRep/" title="Low-replicate P. falciparum Protein Microarray Data">
+              <span class="ui-icon ui-icon-help"></span>
+            </a>
+          </div>
+          <!-- <div class="break"></div>-->
+          <!-- <p><a href="/help/#PfCEDSLowRep" class="helplink">Help on this dataset</a></p>
+               <p><a href="/static/sampledata/Pf_LowRep_ProteinArray.csv" class="datalink">Download this dataset</a></p>
+               -->
+          <div class="param-button-wrapper">
+            <input class="examplebutton" type="button" 
+                                             name="PfCELowRep.Bayes"
+                                             value="Bayes-regularized Analysis Parameters">
+              <input class="examplebutton" type="button" name="PfCELowRep.Std"
+                     value="Non Bayes-regularized Analysis Parameters">
+              
+          </div>
+        </div> 
+        
+        <h3><a href="#">Example RNA-Seq ENCODE Dataset</a></h3>
+        <div class="ex-param-section">
+          <div class="section-label-wrapper">
+            <div class="section-label">Help and Download</div> 
+            <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dataset-help/CEENCODE/" title="Example RNA-Seq ENCODE Dataset">
+              <span class="ui-icon ui-icon-help"></span>
+            </a>
+          </div>
+          <!-- <div class="break"></div>-->
+          <!-- <p><a href="/help/#CEENCODE" class="helplink">Help on this dataset</a></p>
+               <p><a href="/static/sampledata/SubEncodeNonZero.fpkm" class="datalink">Download this dataset</a></p>
+               -->
+          <div class="param-button-wrapper">
+            <input class="examplebutton" type="button" 
+                                             name="CEENCODE.Bayes"
+                                             value="Bayes-regularized Analysis Parameters">
+              <input class="examplebutton" type="button" name="CEENCODE.Std"
+                     value="Non Bayes-regularized Analysis Parameters">
+              
+          </div>
+        </div> 
+        
+      </div>
+    </div>
+    
+
+<hr noshade size=3/>
+<div id="form-container">
+  <form id="cyb-form" method="post" action="" enctype="multipart/form-data">
+    <div style='display:none'><input type='hidden' name='csrfmiddlewaretoken' value='1ymV5A8s6OnfXsiXUVNu4cHReaezGNJs' /></div>
+    
+    
+    <input type="hidden" name="analysis_type" value="CE" id="id_analysis_type" />
+    
+    <input type="hidden" name="test_data_file" id="id_test_data_file" />
+    
+    
+    
+
+<div class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+  <h2 class="ui-widget-header">Input File</h2>
+  <div class="section-label-wrapper">
+    <div class="section-label">File Format</div> 
+    <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dialog/file_format/">
+      <span class="ui-icon ui-icon-help"></span>
+    </a>
+  </div>
+  <table class="main">
+    <tr>
+      <td class="formdescr">File to upload
+        
+      </td>
+      <td class="forminput">
+        <input type="file" name="input_file" id="id_input_file" />
+        <div class="alert" id="testdatadisplay"> 
+          <p>Note: Using the <span id="testdatadisplname"></span>.</p>
+          <p>
+            <a class="ui-button" href="#" id="resetlink">Reset</a>
+          </p>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">Fields delimited by</td>
+      <td class="forminput"><select name="delimiter" id="id_delimiter">
+<option value="0">spaces</option>
+<option value="1" selected="selected">tabs</option>
+<option value="2">spaces+tabs</option>
+<option value="3">commas</option>
+</select>
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">Delete rows with no label</td>
+      <td class="forminput"><input type="checkbox" name="delete_nulls" id="id_delete_nulls" />
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">Data row start</td>
+      <td class="forminput"><input type="text" name="row_start" value="1" id="id_row_start" />
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">Number of label columns</td>
+      <td class="forminput"><input type="text" name="label_columns" value="1" id="id_label_columns" />
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">Number of first condition columns<br/>
+<span class="smaller">(e.g. number of control samples)</span></td>
+      <td class="forminput"><input type="text" name="number_control_cols" id="id_number_control_cols" />
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">Number of second condition columns<br/>
+<span class="smaller">(e.g. number of experimental samples)</span></td>
+      <td class="forminput"><input type="text" name="number_exper_cols" id="id_number_exper_cols" />
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr bold-small-label" >Trouble uploading</td>
+      <td class="forminput">
+        <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dialog/upload_problems/">
+          <span class="ui-icon ui-icon-help"></span>
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+  <h2 class="ui-widget-header">Pre-Processing</h2>
+  <div class="section-label-wrapper">
+    <div class="section-label">Low Value Handling </div> 
+    <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dialog/normalization/">
+      <span class="ui-icon ui-icon-help"></span>
+    </a>
+  </div>
+  
+  <table class="main">
+<tr>
+      <td class="formdescr">
+        Do nothing for low values
+      </td>
+      <td class="forminput">
+        <input type="radio" checked name="low_val_choice" value="None"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">
+        Set values less than 
+        <input type="text" name="truncate_thres" value="0.0" id="id_truncate_thres" />
+        to <strong>0</strong>
+        
+      </td>
+      <td class="forminput">
+        <input type="radio" name="low_val_choice" value="Truncate"/>
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">
+        Offset the values by the lowest value
+      </td>
+      <td class="forminput">
+        <input type="radio" name="low_val_choice" value="Offset"/>
+      </td>
+    </tr>
+  </table>
+  <div class="section-label-wrapper">
+    <div class="section-label">Normalization </div> 
+    <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dialog/normalization/">
+      <span class="ui-icon ui-icon-help"></span>
+    </a>
+  </div>
+  <table class="main">
+    <tr>
+      <td class="formdescr">Normalization procedure
+      </td>
+      <td class="forminput"><select name="normalization" id="id_normalization">
+<option value="None" selected="selected">None</option>
+<option value="Log">Log</option>
+<option value="VSN">VSN</option>
+</select>      
+      </td>
+    </tr>
+  </table>
+</div>  
+<div class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+  <h2 class="ui-widget-header">Bayesian Standard Deviation</h2>
+  <div class="section-label-wrapper">
+    <div class="section-label">Bayesian Analysis Parameters </div> 
+    <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dialog/bayesian/">
+      <span class="ui-icon ui-icon-help"></span>
+    </a>
+  </div>
+  <table class="main">
+    <tr>
+      <td class="formdescr">Sliding window size
+      </td>
+      <td class="forminput"><select name="window_size" id="id_window_size">
+<option value="5">5</option>
+<option value="7">7</option>
+<option value="9">9</option>
+<option value="11">11</option>
+<option value="21">21</option>
+<option value="41">61</option>
+<option value="81">81</option>
+<option value="101" selected="selected">101</option>
+<option value="121">121</option>
+<option value="141">161</option>
+<option value="201">201</option>
+<option value="251">251</option>
+<option value="301">301</option>
+</select>
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">Bayesian confidence value<br/><span class="smaller">Blank or 0 gives non-Bayes regularized tests</span>  
+      </td>
+      <td class="forminput"><input type="text" name="bayes_confidence" id="id_bayes_confidence" />
+      </td>
+    </tr>
+  </table>
+</div>
+<div id="data-input-wrapper" class="form-section-wrapper ui-widget ui-widget-content ui-corner-all">
+  <h2 class="ui-widget-header">Post-Processing</h2>
+   <div class="section-label-wrapper">
+    <div class="section-label">Posterior Probability of Differential Expression</div> 
+    <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dialog/ppde/">
+      <span class="ui-icon ui-icon-help"></span>
+    </a>
+  </div>
+  <table class="main">
+    <tr>
+      <td class="formdescr">Compute PPDE
+      </td>
+      <td class="forminput"><input type="checkbox" name="do_ppde" id="id_do_ppde" />
+      </td>
+    </tr>
+
+  </table>
+  <div class="section-label-wrapper">
+    <div class="section-label">Standard Multiple Hypothesis Testing Corrections</div> 
+    <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dialog/multtest/">
+      <span class="ui-icon ui-icon-help"></span>
+    </a>
+  </div>
+  <table class="main">
+    <tr>
+      <td class="formdescr">Compute multiple test corrections
+        
+      </td>
+      <td class="forminput"><input checked="checked" type="checkbox" name="mult_testing" id="id_mult_testing" />
+      </td>
+    </tr>
+  </table>
+  
+  <div class="section-label-wrapper">
+    <div class="section-label">Plotting Options</div> 
+    <a class="ui-state-default ui-corner-all help-icon dialog-link" href="/dialog/plot_results/">
+      <span class="ui-icon ui-icon-help"></span>
+    </a>
+  </div>
+  <table class="main">
+    <tr>
+      <td class="formdescr">Plot with density estimate smoothing
+        
+      </td>
+      <td class="forminput"><input checked="checked" type="checkbox" name="smoothing" id="id_smoothing" />
+      </td>
+    </tr>
+    <tr>
+      <td class="formdescr">Remove outliers before plotting
+        
+      </td>
+      <td class="forminput"><input checked="checked" type="checkbox" name="outliers" id="id_outliers" />
+      </td>
+    </tr>
+  </table>
+
+</div>
+
+    
+    <hr noshade size=3/>
+    <p>
+      This analysis may take SEVERAL MINUTES to run, 
+      depending on the server speed, load, and number of data points analyzed.
+    </p>
+    <hr noshade size=3/>
+    <input type=reset id="RESET" name="RESET" value="Reset" size="20" /> 
+    <input type=submit id="SUBMIT" name="SUBMIT" value="Submit" size="20" /> 
+    
+  </form>
+</div>
+  </div>
+</div>
+
+    
+  </div>
+  <!-- END Content -->
+  
+  <div id="footer">
+    <hr noshade size=3/>
+    <p>	   	
+      <a target="_blank" href="http://www.uci.edu">
+	<img class="logo" src="/static/img/uci_logo.png"/>University of California, Irvine
+      </a> | 
+      <a target="_blank" href="http://www.igb.uci.edu">
+	<img class="logo" src="/static/img/igb_logo.png"/>Institute for Genomics and Bioinformatics
+      </a> | 
+      &copy; 2012
+    </p>
+  </div>
+  
+</div>
+<!-- END Container -->
+</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

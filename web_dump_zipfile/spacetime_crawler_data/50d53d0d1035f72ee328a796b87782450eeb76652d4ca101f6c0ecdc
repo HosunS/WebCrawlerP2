@@ -1,0 +1,175 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD6438¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 30 Nov 1999 18:46:05 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueT"1926-35a8d3b7bf540"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 02:36:50 GMTKraw_content¢DtypeEvalueY&Guidelines for Documenting Data Sets: DATA SET INFORMATION
+
+The purpose of this page is to provide detailed information on a particular
+data set to enable other researchers to use the data for a variety of analysis 
+tasks. For example, a data page might describe census data which could then be
+used for different analysis tasks such as classification or clustering.
+
+When filling out this form, simply place your answer after the point indicated
+by '>'. We will then process the form to ensure that all documentation files 
+follow a common format.
+
+
+1. Title of Data Set
+   -- Indicate the central topic of the domain.
+>
+
+2. Data Type
+   -- Indicate the type of data: multivariate, relational, time seris, 
+      sequential, images, spatial, text, time series, transactional, web data
+   -- If the data is heterogenous, list all relevant types.
+>
+
+3. Abstract
+   -- A short one or two sentence description of the data (for use in summary 
+      pages).
+>
+
+4. Sources
+   (a) Original owners of database (name/snail address/phone/email/homepage)
+>
+   (b) Donor of database (name/snail address/phone/email/homepage)
+>
+
+5. Data Characteristics
+   -- Describe how and why the data was collected.
+   -- Provide the date and location of the data collection.
+        -- distinguish between single and multiple times/locations 
+   -- Describe the nature of the measurements. For example, are the
+      data physical measurements, derived variables, from an opinion
+      poll, etc.
+   -- Are there any known systematic biases in the measurements? (e.g.,
+      camera characteristics for image data)
+   -- Are there any known characteristics of random variation? (e.g., is
+      there a model for instrument noise?)
+   -- Did the data arise from:
+        (i) observational data (i.e. data collected routinely)
+       (ii) designed experiment
+      (iii) designed sampling strategy
+       (iv) census, (i.e. the data collected on all individuals/objects)
+        (v) other, (please describe)
+   -- Was the data preprocessed? if so, describe the preprocessing.
+        --  e.g. was a dimensionality reduction technique like PCA applied? 
+                 was feature selection applied?
+                 were missing values imputed?
+                 were the temporal or spatial aspects removed?
+   -- Include any other information that you believe is important.
+>
+
+   -- Depending on the data type, also describe the following:
+
+   All Types:
+     (a) Missing Values:
+         -- where possible describe why the values are missing
+         -- missing at random, missing not at random, not applicable,
+            unknown, don't cares 
+>
+     (b) Censored data: indicate if any of the data has been censored.
+>
+     (c) Cost Information: (if applicable/available)
+         -- e.g. cost to measure a variable (feature,attribute,field)
+>
+     (d) Dependencies: are there any known dependencies between cases. For 
+         example, do instances represent the same object viewed from different 
+         angles.
+>
+
+   Multivariate:
+     (a) for each variable (feature/attribute/field):
+           (i) give a name 
+          (ii) provide typing information (i.e. is the variable categorical
+               (ordered, unordered) or continuous).
+               -- Be careful to distinguish categorical values that have been
+                  encoded numerically.
+         (iii) if the variable is categorical, list and describe the possible 
+               values it may take on.
+>
+
+   Time Series/Sequences:
+     (a) multivariate vs. univariate
+>
+     (b) annotated: are the data annotated and if so with what information?
+>
+     (c) anomalies: saturation, drop outs, missing values...
+>
+     (d) other: e.g. sampling rates, uniform or non-uniform sampling, etc.
+>
+
+   Text:
+     (a) language: (e.g. english, french, spanish,...)
+>
+     (b) annotated: are the data annotated and if so with what information?
+>
+     (c) structured: is the text structured in any manner (e.g. is the
+         text html, or email) 
+>
+     (d) preprocessing: case, punctuation, stoplisted
+>
+
+   Image or Spatial:
+     (a) information depth (e.g. 8 bits per pixel/point)
+>
+     (b) annotated: are the data annotated and if so with what information?
+>
+     (c) resolution or grid size
+>
+     (d) for 3D data (e.g. MRIS) resolutions in all dimensions
+>
+
+
+6. Other Relevant Information
+   -- Include any additional information about the data that the researcher 
+      may find useful. (Note there is a separate document for including
+      task specific information.) For example:
+
+      Prior Knowledge
+        -- Describe the types of prior knowledge that could be used, 
+           (provide references if possible). For example:  
+           (i) transformations of the data
+           (ii) class hierarchies
+           (iii) known relevant and irrelevant variables
+           (iv) constraints: e.g. variables could be positive or restricted
+                to a certain range.
+>
+
+7. Data Format
+   -- Describe how the data is stored in the archive. List the files, their
+      contents, and their format (if not in plain text).
+   -- Please describe thoroughly any data formats used which are unlikely
+      to be known by non specialists. If necessary, use a separate file
+      to describe the format.
+   -- If there are different versions of the data, please describe the
+      differences. For example, are there specific training and test
+      sets that commonly used in the literature. 
+>
+
+8. Past Usage
+    -- Include references that discuss the data itself and how it was 
+       collected. These references could be either classic and widely
+       cited papers that were the first to announce the data and its 
+       characteristics, or possibly a domain specific web site.
+>
+   
+
+9. Acknowledgements, Copyright Information, and Availability 
+  (a) copyright information
+>
+  (b) usage restrictions (e.g. for reseach only)
+>
+  (c) citation requests
+>
+  (d) acknowledgements
+>
+
+10. References & Further Information
+  -- Include here references to additional information that describes the
+     data itself. (Note there is another document for references that describe
+     analyses of the data).
+  (a) pointers to tutorial/background information on the domain
+  (b) other useful web sites (parent archives, domain specific sites)
+  (c) where to get more data (if this is a subsample)
+  (e) other relevant publications
+  (f) any additional comments on this dataset
+>
+
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

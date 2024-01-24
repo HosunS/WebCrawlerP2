@@ -1,0 +1,55 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1297¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:40:07 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"511-3158ecd7a0fc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:56:25 GMTKraw_content¢DtypeEvalueY// Test of closest pair algorithms
+// David Eppstein, UC Irvine, 19 Apr 1997
+//
+// Generate points in generalized Sierpinski tetrahedron
+
+#include "Sierpinski.h"
+#include "Random.h"
+#include "Error.h"
+
+#define DBL_MAXUL (256.0 * 256.0 * 256.0 * 256.0 - 1.0)
+
+static inline double DoubleAbs(double a)
+{
+	if (a < 0) return -a;
+	else return a;
+}
+
+SierpinskiTetrahedron::SierpinskiTetrahedron(unsigned long npoints, int dd)
+	: PointSet(npoints), points(new double[dd*npoints]), d(dd)
+{
+	unsigned long * p = new unsigned long[d+1];
+	if (points == 0) error("SierpinskiTetrahedron: unable to create points");
+	for (long i = 0; i < npoints; i++) {
+		unsigned long xx;
+		int t;
+		p[0] = 0;
+		for (int j = 1; j <= d; j++) {
+			if ((j & (j-1)) == 0) {
+				xx = RandomLong();	// 2^k? reset xx
+				t = j;				// and remember power of two
+			}
+			p[j] = p[j-t] ^ xx;
+			points[d*i+(j-1)] = (double) p[j] / DBL_MAXUL;
+		}
+	}
+	delete p;
+}
+
+double SierpinskiTetrahedron::operator() (point i, point j)
+{
+	gDistances++;
+	double total = 0;
+	for (int k = 0; k < d; k++) {
+		double diff = points[d*i+k] - points[d*j+k];
+		total += diff*diff;
+	}
+	return total;
+}
+
+void SierpinskiTetrahedron::interact(point i, point j)
+{
+	for (int k = 0; k < d; k++)
+		points[i*d+k] = points[j*d+k] = (points[i*d+k] + points[j*d+k])/2;
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,0 +1,291 @@
+¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÖ¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 05:27:46 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueYFM<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
+<html>
+<head>
+<title>UCI Machine Learning Repository: Data Sets</title>
+
+<!-- Stylesheet link -->
+<link rel="stylesheet" type="text/css" href="assets/ml.css" />
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function checkform ( form )
+{
+  // see http://www.thesitewizard.com/archive/validation.shtml
+  // for an explanation of this script and how to use it on your
+  // own website
+
+  // ** START **
+  if (form.q.value == "")
+  {
+    alert( "Please enter search terms." );
+    form.q.focus();
+    return false ;
+  }
+
+  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
+  {
+    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
+  }
+
+  // ** END **
+  return true ;
+}
+
+// return the value of the radio button that is checked
+// return an empty string if none are checked, or
+// there are no radio buttons
+function getCheckedValue(radioObj) {
+	if(!radioObj)
+		return "";
+	var radioLength = radioObj.length;
+	if(radioLength == undefined)
+		if(radioObj.checked)
+			return radioObj.value;
+		else
+			return "";
+	for(var i = 0; i < radioLength; i++) {
+		if(radioObj[i].checked) {
+			return radioObj[i].value;
+		}
+	}
+	return "";
+}
+
+
+
+
+
+//-->
+</script>
+
+</head>
+
+<body>
+
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
+
+<table width=100% bgcolor="#003366">
+<tr>
+	<td>
+		<span class="normal"><a href="index.html" alt="Home"><img src="assets/logo.gif" border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
+	</td>
+	<td width=100% valign=top align="right">
+		<span class="whitetext">
+		<a href="about.html">About</a>&nbsp;
+		<a href="citation_policy.html">Citation Policy</a>&nbsp;
+		<a href="donation_policy.html">Donate a Data Set</a>&nbsp;
+		<a href="contact.html">Contact</a>
+		</span>
+
+		<br>
+		<br>
+		<!-- Search Google -->
+
+		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
+		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
+		<INPUT type=submit name=sa VALUE="Search">
+		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
+		<input type=hidden name=domains value="ics.uci.edu">
+		<br>
+		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
+		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
+		<br>
+		</FORM>
+		<!-- Search Google -->
+
+
+		<span class="whitetext"><a href="datasets.html"><font size="3" color="#FFDD33"><b>View ALL Data Sets</b></font></a></span>
+		<br>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<table cellpadding=3>
+	<tr>
+		<td valign="top">
+
+			<table><tr><td><p class="big" align=center>Browse Through:</p></td></tr></table>
+
+
+
+<table border=2 cellpadding=2 width=150>
+		<tr> <td bgcolor="#003366"><p class="whitetext"><b>Default Task</b> - <a href='datasets.html?format=&task=&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=cla&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Classification</a> <font color=red>(13)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Regression</a></font> <font color=red>(7)</font><br><a href='datasets.html?format=&task=clu&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Clustering</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=other&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Other</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Attribute Type</b>  - <a href='datasets.html?format=&task=reg&att=&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=cat&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Categorical</a> <font color=red>(0)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Numerical</a></font> <font color=red>(7)</font><br><a href='datasets.html?format=&task=reg&att=mix&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Mixed</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr> <td bgcolor="#003366"><p class="whitetext"><b>Data Type</b>  - <a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=&sort=instUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Multivariate</a></font> <font color=red>(7)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=uvar&sort=instUp&view=table'>Univariate</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=seq&sort=instUp&view=table'>Sequential</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=ts&sort=instUp&view=table'>Time-Series</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=text&sort=instUp&view=table'>Text</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=dt&sort=instUp&view=table'>Domain-Theory</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=other&sort=instUp&view=table'>Other</a> <font color=red>(0)</font><br>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Area</b> - <a href='datasets.html?format=&task=reg&att=num&area=&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Undo</a>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=num&area=life&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Life Sciences</a> <font color=red>(12)</font><br><a href='datasets.html?format=&task=reg&att=num&area=phys&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Physical Sciences</a> <font color=red>(11)</font><br><a href='datasets.html?format=&task=reg&att=num&area=comp&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>CS / Engineering</a> <font color=red>(38)</font><br><a href='datasets.html?format=&task=reg&att=num&area=soc&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Social Sciences</a> <font color=red>(4)</font><br><font style="BACKGROUND-COLOR: yellow"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Business</a></font> <font color=red>(7)</font><br><a href='datasets.html?format=&task=reg&att=num&area=game&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Game</a> <font color=red>(1)</font><br><a href='datasets.html?format=&task=reg&att=num&area=other&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Other</a> <font color=red>(5)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Attributes</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=less10&numIns=&type=mvar&sort=instUp&view=table'>Less than 10</a> <font color=red>(2)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=10to100&numIns=&type=mvar&sort=instUp&view=table'>10 to 100</a> <font color=red>(5)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=greater100&numIns=&type=mvar&sort=instUp&view=table'>Greater than 100</a> <font color=red>(0)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b># Instances</b></p></td>
+		</tr>
+
+		<tr>
+			<td valign=top><p class="normal">
+		<a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=less100&type=mvar&sort=instUp&view=table'>Less than 100</a> <font color=red>(0)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=100to1000&type=mvar&sort=instUp&view=table'>100 to 1000</a> <font color=red>(4)</font><br><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=greater1000&type=mvar&sort=instUp&view=table'>Greater than 1000</a> <font color=red>(3)</font>	</p>
+		</td>
+	</tr>
+	<tr><td bgcolor="#003366"><p class="whitetext"><b>Format Type</b>	</p>
+		</td>
+	</tr>
+	<tr>
+		<td valign=top><p class="normal"><a href='datasets.html?format=mat&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Matrix</a> <font color=red>(6)</font><br><a href='datasets.html?format=nonmat&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=table'>Non-Matrix</a> <font color=red>(1)</font>	</p>
+		</td>
+	</tr></table>
+	</td>
+
+	<td valign=top>
+
+<table width=100%>
+		<tr>
+			<td><p class="big"><b>7</b> Data Sets</p></td>
+			<td align="right"><p class="normal"><font color=gray>Table View</font>&nbsp;&nbsp;<a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instUp&view=list'>List View</a></p></td>
+		</tr>
+	</table><table border = 1 cellpadding = 5><tr bgcolor="#003366">
+		<td class="normal, whitetext"><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=nameUp&view=table'><b>Name</b></a></p></td>
+		<!-- <td><p class="normal, whitetext"><b>Abstract</b></p></td> -->
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=typeUp&view=table'><b>Data Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=taskUp&view=table'><b>Default Task</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=attTypeUp&view=table'><b>Attribute Types</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=instDown&view=table'><b># Instances</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=attUp&view=table'><b># Attributes</b></a></p></td>
+		<td><p class="normal, whitetext"><a href='datasets.html?format=&task=reg&att=num&area=bus&numAtt=&numIns=&type=mvar&sort=dateUp&view=table'><b>Year</b></a></p></td>
+
+		<!-- <td><p class="normal, whitetext"><b>Area</b></p></td> -->
+
+
+		</tr><tr>
+			<td><table><tr><td><a href="datasets/Stock+portfolio+performance"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Stock+portfolio+performance">Stock portfolio performance</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The data set of performances of weighted scoring stock portfolios are obtained with mixture design from the US stock market historical database.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">315&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Real+estate+valuation+data+set"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Real+estate+valuation+data+set">Real estate valuation data set</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">The ‚Äúreal estate valuation‚Äù is a regression problem. The market historical data set of real estate valuation are collected from Sindian Dist., New Taipei City, Taiwan. &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">414&nbsp;</p></td>
+			<td><p class="normal">7&nbsp;</p></td>
+			<td><p class="normal">2018&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Facebook+metrics"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Facebook+metrics">Facebook metrics</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Facebook performance metrics of a renowned cosmetic's brand Facebook page.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">500&nbsp;</p></td>
+			<td><p class="normal">19&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/ISTANBUL+STOCK+EXCHANGE"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/ISTANBUL+STOCK+EXCHANGE">ISTANBUL STOCK EXCHANGE</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Data sets includes returns of Istanbul Stock Exchange with seven other international index; SP, DAX, FTSE, NIKKEI, BOVESPA, MSCE_EU, MSCI_EM from Jun 5, 2009 to Feb 22, 2011.&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Univariate, Time-Series&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">536&nbsp;</p></td>
+			<td><p class="normal">8&nbsp;</p></td>
+			<td><p class="normal">2013&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Cargo+2000+Freight+Tracking+and+Tracing"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Cargo+2000+Freight+Tracking+and+Tracing">Cargo 2000 Freight Tracking and Tracing</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Sanitized and anonymized Cargo 2000 (C2K) airfreight tracking and tracing events, covering five months of business execution (3,942 process instances, 7,932 transport legs, 56,082 activities). &nbsp;</p></td> -->
+			<td><p class="normal">Multivariate, Sequential&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer&nbsp;</p></td>
+			<td><p class="normal">3942&nbsp;</p></td>
+			<td><p class="normal">98&nbsp;</p></td>
+			<td><p class="normal">2016&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr bgcolor="DDEEFF">
+			<td><table><tr><td><a href="datasets/Wine+Quality"><img src="assets/MLimages/SmallLarge186.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Wine+Quality">Wine Quality</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">Two datasets are included, related to red and white vinho verde wine samples, from the north of Portugal. The goal is to model wine quality based on physicochemical tests (see [Cortez et al., 2009], http://www3.dsi.uminho.pt/pcortez/wine/).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Real&nbsp;</p></td>
+			<td><p class="normal">4898&nbsp;</p></td>
+			<td><p class="normal">12&nbsp;</p></td>
+			<td><p class="normal">2009&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr><tr>
+			<td><table><tr><td><a href="datasets/Online+News+Popularity"><img src="assets/MLimages/SmallLargedefault.jpg" border=1 /></a>&nbsp;</td><td><p class="normal"><b><a href="datasets/Online+News+Popularity">Online News Popularity</a></b></p></td></tr></table></td>
+			<!-- <td><p class="normal">This dataset summarizes a heterogeneous set of features about articles published by Mashable in a period of two years. The goal is to predict the number of shares in social networks (popularity).&nbsp;</p></td> -->
+			<td><p class="normal">Multivariate&nbsp;</p></td>
+			<td><p class="normal">Classification, Regression&nbsp;</p></td>
+			<td><p class="normal">Integer, Real&nbsp;</p></td>
+			<td><p class="normal">39797&nbsp;</p></td>
+			<td><p class="normal">61&nbsp;</p></td>
+			<td><p class="normal">2015&nbsp;</p></td>
+			<!-- <td><p class="normal">Business&nbsp;</p></td> -->
+			</tr></table>
+	</td>
+</tr>
+</table>
+
+	</td>
+</tr>
+</table>
+
+
+
+<table cellpadding=5 align=center><tr valign=center>
+		<td><p class="normal">Supported By:</p></td>
+        <td><img src="assets/nsfe.gif" height=60 /> </td>
+        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
+        <td><img src="assets/rexaSmall.jpg" /></td>
+</tr></table>
+
+<center>
+<span class="normal">
+<a href="about.html">About</a>&nbsp;&nbsp;||&nbsp;
+<a href="citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
+<a href="contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
+<a href="http://cml.ics.uci.edu">CML</a>
+</span>
+</center>
+
+</body>
+</html>
+Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

@@ -1,0 +1,267 @@
+¦Ifinal_url¢DtypeEvaluex1https://netreg.ics.uci.edu/index.php?r=site/loginLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD5199¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX„Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14 mod_wsgi/3.4 Python/2.7.5 Phusion_Passenger/4.0.53 mod_perl/2.0.10 Perl/v5.16.3¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX>no-store, no-cache, must-revalidate, post-check=0, pre-check=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 07:27:12 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueYO<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="language" content="en" />
+
+	<!-- blueprint CSS framework -->
+	<!--
+	<link rel="stylesheet" type="text/css" href="/css/screen.css" media="screen, projection" />
+	<link rel="stylesheet" type="text/css" href="/css/print.css" media="print" />
+	-->
+	<!--[if lt IE 8]>
+	<!--
+	<link rel="stylesheet" type="text/css" href="/css/ie.css" media="screen, projection" />
+	-->
+	<![endif]-->
+
+	<!--
+	<link rel="stylesheet" type="text/css" href="/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="/css/form.css" />
+	-->
+
+
+
+
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+   <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
+
+
+
+
+
+	<title>ICS NetReg - Login</title>
+</head>
+
+
+
+
+
+<body   style='background-color: #f8f8f8; '   >
+
+
+
+
+
+<div class="container" id="page"   style='padding: 0; background-color: white; '   >
+
+
+
+
+
+	<div id="header"   style='display: none; '>
+		<div id="logo">ICS NetReg</div>
+	</div><!-- header -->
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-sm NOTbg-primary navbar-dark"   style='background-color: #0064a4; '   >
+  <!-- Brand -->
+  <a class="navbar-brand" href=".">ICS NetReg</a>
+
+
+
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+
+  <!-- Links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+
+  <ul class="navbar-nav">
+
+
+    
+    <li class="nav-item">
+      <a class="nav-link" href="/index.php?r=request/index&username=Guest">List My Hosts</a>
+    </li>
+
+    
+
+    <li class="nav-item mr-auto">
+      <a class='nav-link' href='/index.php?r=site/login'>Login</a>     </li>
+
+
+
+  </ul>
+
+  </div>
+
+</nav>
+
+
+
+
+
+
+
+
+
+
+	<!-- breadcrumbs -->
+
+
+
+
+
+	<div id="content" class="container"   style='padding: 1em; '   >
+
+
+   
+<script type='text/javascript'>
+    $(document).ready(function(){
+        $("#LoginForm_username").focus();
+    });
+
+</script>
+
+
+
+   <style>
+
+      .errorMessage  { font-size: 80%; color: #e00; }
+
+   </style>
+
+
+
+<div class='row col-lg-6 col-md-12   mx-auto   '>
+
+
+
+<h3>Login</h3>
+
+
+<p>Please fill out the following form with your <b><u>ICS login credentials</u></b>:</p>
+
+
+
+<div class="form mt-4">
+
+<form id="login-form" action="/index.php?r=site/login" method="post">
+
+
+
+    <div class='form-row pb-4'>
+		<label class="control-label col-sm-3 required" for="LoginForm_username">Username <span class="required">*</span></label>		<div class='col-sm-9'>
+           <input size="60" maxlength="80" class="form-control" name="LoginForm[username]" id="LoginForm_username" type="text" />		   		</div>
+	</div>
+
+
+    <div class='form-row pb-4'>
+		<label class="control-label col-sm-3 required" for="LoginForm_password">Password <span class="required">*</span></label>		<div class='col-sm-9'>
+           <input size="60" maxlength="80" class="form-control" name="LoginForm[password]" id="LoginForm_password" type="password" />		   		</div>
+	</div>
+
+
+
+    <div class='pb-4 text-center'>
+		<button type="submit" formmethod="post" class="btn   btn-primary   ">Login</button>
+	</div>
+
+
+
+
+</form></div><!-- form -->
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div><!-- page -->
+
+
+
+
+
+	<div class="footer">
+	   <div class="container">
+		   Copyright &copy; 2019 by My Company.<br/>
+		   All Rights Reserved.<br/>
+		   Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a>.       </div>
+	</div><!-- footer -->
+
+
+
+<style>
+
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    //height: 60px;
+    //line-height: 60px;
+    background-color: #f5f5f5;
+
+    display: none;
+
+}
+
+
+//.navbar-nav .nav-item  { margin: 0 1em; }
+
+
+</style>
+
+
+
+
+
+
+
+
+
+
+<div style='position: absolute; left: 0; bottom: 0; background-color: #f2f4f6;   display: none;   '   class='border p-3 rounded'   ><p class='p-1 m-1'>Yii::app()-&gt;user-&gt;name = Guest<p class='p-1 m-1'> isAdmin?  <b></b></div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

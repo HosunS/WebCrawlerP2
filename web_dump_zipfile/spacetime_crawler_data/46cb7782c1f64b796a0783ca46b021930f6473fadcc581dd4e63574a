@@ -1,0 +1,28 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC706¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 17 Oct 2018 18:30:43 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2c2-57870de3caa5f"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 10:54:56 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYÂ#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+
+#define MSG1 "quick"
+#define MSG2 "brown"
+#define MSG3 "fox"
+
+//giving the number of params is optional.
+static char* text_array[3]= {MSG1, MSG2, MSG3};
+
+int main(int argc, char *argv[]){
+
+ printf("%c\n",*(text_array[0]+6));//prints char at address + 6: there is a null character after each string occupying a cell.
+
+ printf("%p\n",text_array[0]);//prints the first element of text_array (an address) --> this address changes with every run.
+
+ return 0;
+}
+
+/***REFERENCES***/
+/*
+1. main function specification
+https://en.cppreference.com/w/cpp/language/main_function
+2. printf format specifiers 
+http://www.cplusplus.com/reference/cstdio/printf/
+*/
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

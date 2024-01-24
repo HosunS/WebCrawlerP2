@@ -1,0 +1,113 @@
+¦Ifinal_url¢DtypeEvaluex$https://signin.aaas.org/oxauth/loginLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 10 Feb 2019 08:16:35 GMT¢Ak¢DtypeEvalueXAccess-Control-Allow-OriginAv¢DtypeEvalueA*¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueJkeep-alive¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueWtext/html;charset=UTF-8¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD6637Kraw_content¢DtypeEvalueYí<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:s="http://jboss.com/products/seam/taglib">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>oxAuth - Login</title>
+        <link href="//cloud.webtype.com/css/0d2390c1-3843-46e7-ac6d-64d282ed73a7.css" rel="stylesheet" type="text/css" />
+        <link type="text/css" rel="stylesheet" href="/oxauth/stylesheet/bootstrap.min.css" />
+        <link type="text/css" rel="stylesheet" href="/oxauth/stylesheet/theme.css" />
+    </head>
+    <body>
+    <div id="topCall">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-left">
+        <a href="http://www.aaas.org" title="AAAS Home" class="logo logo--aaas"><object type="image/svg+xml" height="58" width="211" data="/oxauth/img/logo_footer.svg"><img src="/oxauth/img/logo_footer.png" height="57" width="211" alt="AAAS" /></object></a>
+        <a href="http://sciencemag.org" title="Science Magazine" class="logo">
+          <object type="image/svg+xml" height="58" width="211" data="/oxauth/img/logo-science.svg"><img src="/oxauth/img/logo-science.png" height="58" width="211" alt="Science" /></object>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div id="secondaryCall">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center-to-left">
+        <p><strong>New Login!</strong> Please use your new AAAS/Science login. <a href="https://account.aaas.org/Identity/Lookup">Don't have one?</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="body">
+        <div class="container"><div class="row"><div id="messages"></div>
+        </div></div>
+        <div class="container">
+<form id="loginForm" name="loginForm" method="post" action="/oxauth/login" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="loginForm" value="loginForm" />
+
+                <s:token></s:token>
+                    <div class="login-panel">
+                        <div class="login-panel-body">
+
+                            <div class="row"><div class="col-sm-12 col-md-10 col-lg-8">
+                            <div class="dialog">
+
+                                <div class="form-group"><label for="loginForm:username">AAAS ID (email address)</label><input id="loginForm:username" type="text" name="loginForm:username" autocomplete="off" class="form-control" />
+                                </div>
+
+
+                                <div class="form-group"><label for="loginForm:password">Password</label><input id="loginForm:password" type="password" name="loginForm:password" autocomplete="off" value="" class="form-control" />
+                                </div>
+                            </div>
+
+                            <div class="actionButtons">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6"><input id="loginForm:loginButton" type="submit" name="loginForm:loginButton" value="Login" class="btn btn-primary" />
+                                        <s:div id="registerId" style="display: none;"><input id="loginForm:registerButton" type="submit" name="loginForm:registerButton" value="Register" />
+                                        </s:div>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6">
+                                        <p class="hidden-sm hidden-md hidden-lg">Â </p>
+                                        <p>
+                                            <a href="https://account.aaas.org/Identity/Lookup">Don't have a AAAS Account ID yet?</a><br />
+                                            <a href="https://account.aaas.org/Password/Reset">Forgot password?</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            </div></div>
+                        </div>
+                    </div><input type="hidden" name="javax.faces.ViewState" id="javax.faces.ViewState" value="8gn0oiYXHorRwUb8Lrm/0yGDNFP5UXJ0qvoX/zOQxT5uQ9XHKMRTKXaG1W3L1jrcCVnOExl35PvHegba0U1Arb2mRIulLdMjbCqzaDzy4k4U7Orrv9VrozUH4dxD8vBkwFjwqVsourXYxazEGLd6QCbiEXcMUCHRy4ngQs7HD2GE1NE3AGfUUfkPUQ2AYuHThSk8sH3l0SbpLGLXQ+6Ranc5GlFWJ1h7CAwIxx8JbyrlKZ40MJ6wAMm/hm0W8Eo8/hdMm2cl+8rY8dXQxWH08ipq1dPx4glj73YhW6r2uUqAsNioOQw8hWNM30uVkxSjKEi9WFIscCurG/MWqvr9tJifhkYbbeaico67n4E2Sfz6SYYRi1dqMLJpFT7jXMS2a3xHyZDPbRrGRh62kR65FA==" autocomplete="off" />
+</form>
+<!--           
+ &lt;p style="padding-top: 1em; max-width:100%;text-align: center;font-weight:bold;font-size:large;color:#cf142b;"&gt;SYSTEM MAINTENANCE: This site will be unavailable from Wednesday, June 29th 9:00 AM EDT through Wednesday, June 29th at 9:30 AM EDT.&lt;/p&gt;
+-->  
+      </div>
+        <script type="text/javascript">
+            window.onload = function() {
+                document.getElementById("loginForm:username").focus();
+
+                var displayRegister = false;
+                if (displayRegister) {
+                    document.getElementById("loginForm:registerId").style.display = 'inline';
+                }
+            };
+        </script>
+    </div>
+    <s:fragment>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="copyright">Â© 2018 American Association for the Advancement of Science</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div>1200 New York Ave NW, Washington, DC</div>
+                        <!-- &lt;div id="smGroup"&gt;
+                            &lt;div class="address"&gt;1200 New York Ave NW, Washington, DC&lt;/div&gt;
+                            &lt;div class="phone"&gt;202 326 6400&lt;/div&gt;
+                        &lt;/div&gt; -->
+                    </div>
+                    <div class="col-sm-2">
+                        <div>202 326 6400</div>
+                        <!-- &lt;div class="logoFooter"&gt;&lt;a href="http://www.aaas.org" title="AAAS Home" class="logo"&gt;&lt;object type="image/svg+xml" data="/oxauth/img/logo_footer.svg" width="211" height="58"&gt;&lt;img src="/oxauth/img/logo_footer.png" alt="AAAS" width="211" height="57" /&gt;&lt;/object&gt;&lt;/a&gt;&lt;/div&gt; -->
+                    </div>
+
+    </div>
+    </div>
+  </footer>        
+    </s:fragment>
+    </body>
+</html>Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

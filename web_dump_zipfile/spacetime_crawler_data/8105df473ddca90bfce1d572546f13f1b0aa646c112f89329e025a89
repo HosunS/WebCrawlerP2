@@ -1,0 +1,42 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1272¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 25 Oct 2018 18:10:38 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"4f8-5791185198380"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 01:04:28 GMTKraw_content¢DtypeEvalueYø
+library(tidyverse)
+datainput <- read_csv("G://Stat210//univadmit.csv")
+admit <- data.frame(datainput)
+
+# plot data
+ggplot() +
+  geom_point(data=admit, mapping=aes(x=act, y=gpa)) + 
+  xlab("ACT") +
+  ylab("GPA") 
+ggplot() +
+  geom_point(data=admit, mapping=aes(x=rank, y=gpa)) + 
+  xlab("Rank") +
+  ylab("GPA") 
+
+# fit regression
+admit_reg <- lm(gpa ~ act, data=admit)
+summary(admit_reg)
+anova(admit_reg)
+
+# check assumptions - residuals vs x, residuals vs fitted values 
+# (note these are the same picture in simple regression)
+ggplot() +
+  geom_point(data=admit, mapping=aes(x=act, y=admit_reg$residuals)) 
+ggplot() +
+  geom_point(data=admit, mapping=aes(x=admit_reg$fitted.values, y=admit_reg$residuals))
+
+# obtain and save standardized residuals
+admit_reg$stdres <- rstandard(admit_reg)
+# check assumptions - standardized residuals vs fitted values 
+ggplot() +
+  geom_point(data=admit, mapping=aes(x=admit_reg$fitted.values, y=admit_reg$stdres)) 
+
+# check assumptions - normality
+qqnorm(admit_reg$residuals)
+qqnorm(admit_reg$stdres)
+
+# regression predictions at new values
+preddata <- data.frame(act=c(30,36))
+predict(admit_reg,newdata=preddata,interval="confidence")
+predict(admit_reg,newdata=preddata,interval="prediction") 
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

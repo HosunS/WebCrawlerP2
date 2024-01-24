@@ -1,0 +1,101 @@
+¦Ifinal_url¢DtypeEvaluexhttp://sparcfire.ics.uci.edu/Lhttp_headers¢DtypeEvalue‹¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1761¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueJSet-CookieAv¢DtypeEvalueX2PHPSESSID=ac0de0591bee1739dbd02b988569b821; path=/¢Ak¢DtypeEvalueGExpiresAv¢DtypeEvalueXThu, 19 Nov 1981 08:52:00 GMT¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueXUser-Agent,Accept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueFPragmaAv¢DtypeEvalueHno-cache¢Ak¢DtypeEvalueMCache-ControlAv¢DtypeEvalueX>no-store, no-cache, must-revalidate, post-check=0, pre-check=0¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 05:04:20 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8Kraw_content¢DtypeEvalueY©
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>SpArcFiRe Web Interface</title>
+
+
+<link rel="stylesheet" href="/css/app.css" type="text/css"/>
+
+<script src="/bower_components/modernizr/modernizr.js"></script>		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118994911-1"></script>
+			<script>
+  				window.dataLayer = window.dataLayer || [];
+  				function gtag(){dataLayer.push(arguments);}
+  				gtag('js', new Date());
+
+				 gtag('config', 'UA-118994911-1');
+			</script>
+
+		
+	</head>
+	<body>
+		
+		<div id="page-nav" class="sticky">
+	<nav class="top-bar" data-topbar role="navigation">
+		<ul class="title-area">
+			<li class="name">
+				<h1>
+					<a href="http://sparcfire.ics.uci.edu">
+						<img src="http://sparcfire.ics.uci.edu/img/sparcfire-logo-white.png" alt="SpArcFiRe logo" />
+						<span>SpArcFiRe Web Interface</span>
+					</a>
+				</h1>
+			</li>
+			<li class="toggle-topbar menu-icon">
+				<a href="#">
+					<span></span>
+				</a>
+			</li>
+		</ul>
+		
+		<section class="top-bar-section">
+			<ul class="right">
+				<li id="query">
+					<a href="http://sparcfire.ics.uci.edu/query">Submit New Job</a>
+				</li>
+				<li id="results">
+					<a href="http://sparcfire.ics.uci.edu/results">Lookup Previous Job</a>
+				</li>
+			</ul>
+		</section>
+	</nav>
+</div>
+		
+		<div id="home-page-content" class="page-content">
+			<div class="page-content-wrapper">
+				<p>SpArcFiRe stands for <i><b>SP</b>iral <b>ARC</b> <b>FI</b>nder and
+	<b>RE</b>porter</i>. Our software takes as input an image of a galaxy, identifies spiral arms, and outputs a series of images like the following...</p>
+				<img src="http://sparcfire.ics.uci.edu/img/sparcfire-demo-output.jpg" alt="SpArcFiRe demo output" />
+				<p><a href="http://www.ics.uci.edu/~wayne/SpArcFiRe/DavisHayes2014-SpArcFiRe.pdf">See our paper here</a> for details about SpArcFiRe. Features are continually being added to the SpArcFiRe engine as well as to this web interface.</p>
+				<p>There is also a <a href="https://www.ics.uci.edu/~wschallo/sparcfire/getting-started.html">SpArcFiRe virtual machine avaliable here</a>.</p>	
+			<div id="home-page-buttons">
+					<a class="button radius" href="http://sparcfire.ics.uci.edu/query">Submit New Job</a>
+					<a class="button radius" href="http://sparcfire.ics.uci.edu/results">Lookup Previous Job</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<footer id="page-footer">
+	<!--		/n class="page-footer-heading">SpArcFiRe web interface</span>
+/Don't turn on until sparcfire server support galfit (needs GLIBC 2.14+)
+			//["generateFitQuality", "checkbox", true, "Estimate quality of fit?", "Estimates how well SpArcFiRe has fit the arcs to the input image using two indepedent methods. fitQualityPCC finds the Pearson Correlation between the thresholded input image and the cluster mask. fitQualityF1 uses GALFIT to generate an artifical model of the galaxy using SpArcFiRe output, and computes the F1 precision/recall measure by comparing the thresholded input image and the model/input residual image subtraction."]
+	-->
+	<span class="page-footer-heading">SpArcFiRe software</span>
+	<span>Written by Darren R. Davis under the supervision of <a href="mailto:whayes@uci.edu">Wayne B. Hayes</a> at U.C. Irvine.</span>
+	<span>Last updated: May 04, 2018</span>	<hr>
+	<span class="page-footer-heading">SpArcFiRe web interface</span>
+	<span>Original developer: <a href="mailto:wdomingo@uci.edu">Wilmer R. Domingo</a></span>
+	<span>Current developer: <a href="mailto:wschallo@uci.edu">William R. Schallock</a></span>
+	<span>Last updated: December 22, 2018</span>
+	<hr>
+	<span class="page-footer-heading">SpArcFiRe Virtual Machine</span>
+	<span>Current developer: <a href="mailto:wschallo@uci.edu">William R. Schallock</a></span>
+	<span>Last Updated: December 22, 2018</span>
+	<hr>
+	<span>Please contact the current developer above and/or Wayne B. Hayes for questions, comments, or bugs.</span>
+</footer>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/foundation/js/foundation.min.js"></script>
+<script src="/js/app.js"></script>
+
+		
+	</body>
+</html>
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

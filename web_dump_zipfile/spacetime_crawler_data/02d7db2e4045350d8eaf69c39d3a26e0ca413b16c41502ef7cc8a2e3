@@ -1,0 +1,77 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD2300¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 27 Oct 2003 22:35:49 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"8fc-3cab2c89f3b40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:46:41 GMTKraw_content¢DtypeEvalueYüAugmenting Binary Search Trees
+
+
+Dynamic statistical aggregation of data:
+  - mean: easy
+  - variance: easy
+  - median: ?
+  - median queries: ?
+
+Augment binary search tree with subtree size
+(maybe known already e.g. for BB[alpha] tree)
+
+insert, delete -> update sizes along path to root
+rotate -> recompute sizes at rotated nodes
+
+Binary search for median -> compare sizes not keys
+O(log n) time
+
+
+Range searching problems:
+ - find out about all items within a given range of values
+ - listing, counting, average, max-priority
+
+Listing: binary search for range boundaries,
+   traverse all subtrees within range
+
+"Decomposable": associative aggregation operation
+Maintain aggregate value at each tree node
+Update on insert/delete/rotate as before
+ => any can maintain any decomposable quantity in O(log n) ags/op
+
+
+Multidimensional range queries
+ - e.g. all points in rectangle
+
+
+Warm-up: three-sided queries
+Priority search tree:
+    each item has two numbers associated with it:
+	x, y or value, priority
+    store two items at each node:
+	max priority item in that subtree
+	median value item (or near middle in case of dynamic trees)
+    left subtree has all remaining items earlier than median
+    right subtree has all remaining items later than median
+
+Three-sided query:
+    if max prio too small: stop
+    else if root not in range:
+        recurse on only one side
+    else: recurse on both sides
+
+    shape of search frontier...O(log n + k)
+
+Maintaining balance in priority search tree?
+Rotations don't work -- how to rotate max priority items?
+BB[alpha] trees do work
+
+
+Four-sided queries
+Recursive queries: apply range query y to all points in range query x
+
+Idea: go back to augmenting usual binary search tree for x values
+    so items in range search for x => O(log n) subtrees
+    augment each bst node with range search data struc for y
+	so rectangle query => O(log n) y-structure queries
+
+Query time: O(log^2 n)
+Space (for balanced outer tree): O(n log n) [each item in O(log n) inner]
+Maintain dynamically:
+    again rotations no good
+    BB[alpha] trees:
+        when rebuilding subtree of outer tree, also rebuild inner structures
+	inner structures can all be rebuilt in O(n) time
+		[recover sorted order from previous version of structures]
+	so amortized time per update O(log n)
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

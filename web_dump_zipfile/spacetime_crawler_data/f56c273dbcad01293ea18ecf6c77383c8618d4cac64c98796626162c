@@ -1,0 +1,35 @@
+¦Ifinal_url¢DtypeEvaluex7https://www.ics.uci.edu/~wjohnson/BIDA/Ch3/RcodeCh3.txtLhttp_headers¢DtypeEvalue‡¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC592¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Sep 2010 01:20:07 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"250-48fa132861fc0"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 27 Jan 2019 07:50:09 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYPBayes Book
+Chapter 3
+R code
+Adam Branscum
+1-14-2010
+
+
+
+
+Section 3.5:  Posterior Computations in R
+
+y=7
+n=10
+a=1
+b=1
+posta=a+y
+postb=b+n-y
+MC=10000
+posterioriterates=rbeta(MC,posta,postb)
+postmean=mean(posterioriterates)
+postsd=sd(posterioriterates)
+postmed=median(posterioriterates)
+postPI=quantile(posterioriterates,c(0.025,0.975))
+print(c(postmean,postsd,postmed,postPI))
+
+
+
+postmean1=posta/(posta+postb)
+postsd1=sqrt(posta*postb / ((posta+postb)^2*(posta+postb+1)))
+postmed1=qbeta(0.50, posta,postb)
+postPI1=qbeta(c(0.025,0.975),posta,postb)
+print(c(postmean1,postsd1,postmed1,postPI1))
+
+
+Mis_redirected¢DtypeEvalueõIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

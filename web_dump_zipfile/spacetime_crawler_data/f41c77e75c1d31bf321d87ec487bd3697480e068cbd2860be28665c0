@@ -1,0 +1,46 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC807¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 24 May 2010 03:07:11 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"7bd-4874e563ed5c0-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 07:34:46 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY½Divide a square into four smaller squares, and let G be the graph formed
+by the 9 corners and 12 edges of this subdivided square. That is, G has
+the vertices a, b, c, d, e, f, g, h, and i, and the following edges:
+- an edge from a to b with cost 11
+- an edge from b to c with cost 13
+- an edge from a to d with cost 22
+- an edge from b to e with cost 15
+- an edge from c to f with cost 9
+- an edge from d to e with cost 17
+- an edge from e to f with cost 14
+- an edge from d to g with cost 18
+- an edge from e to h with cost 25
+- an edge from f to i with cost 31
+- an edge from g to h with cost 21
+- an edge from h to i with cost 24
+
+(1) Does G have a cycle or path that visits each edge exactly once
+(allowing repeated vertices)? Why or why not?
+
+(2) What is the length of a shortest cycle that visits each edge of G at
+least once? As we described in class, this can be found by:
+
+- Making a graph H that has as its vertices only the odd-degree vertices
+  in G
+- Connecting every pair of vertices in H by an edge with length equal to
+  the shortest-path distance between the same vertices in G
+- Finding a minimum-cost perfect matching in H
+- Doubling the edges of G that form the shortest paths between matched
+  pairs of vertices
+- Finding an Euler tour of the modified version of G.
+
+Show the steps of this algorithm.
+
+(3) What tour, with what length, is given by the heuristic for the
+traveling salesman problem that doubles every edge of the minimum
+spanning tree and finds an Euler tour of the resulting graph?
+
+(4) What tour, with what length, is given by Christofides' heuristic for
+the traveling salesman problem? This algorithm
+- makes a graph H as in problem (2) for the vertices that have odd
+  degree in the minimum spanning tree
+- finds the minimum cost perfect matching in H,
+- forms a graph with even degrees by combining the minimum spanning tree
+  with the paths connecting the matched pairs of vertices
+- finds an Euler tour in the resulting even-degree graph.
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

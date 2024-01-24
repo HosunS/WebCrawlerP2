@@ -1,0 +1,45 @@
+¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC321¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXWed, 31 Jul 1996 20:52:13 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"280-2faed21b31940-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSun, 03 Feb 2019 00:58:18 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY€/* put or take a prime */
+
+isprime(x)
+{
+    int y = 3;
+    if ((x & 1) == 0) return 0;
+    for (;;) {
+	if (y * y > x) return 1;
+	if ((x / y) * y == x) return 0;
+	y += 2;
+    }
+}
+
+bigprime(x)
+{
+    while (!isprime(x)) x--;
+    return x;
+}
+
+P(x)
+{
+    int y;
+    if (x == 0 || x == 1) return 1;
+    y = bigprime(x);
+    return (!P(x - y) && !P(x + y));
+}
+
+main(ac,av)
+char **av;
+{
+    int x = atoi(av[1]);
+    int y;
+    while (x > 1) {
+	y = bigprime(x);
+	if (P(x - y)) {
+	    printf("%d:%d\n", x, x-y);
+	    x -= y;
+	} else {
+	    if (P(x+y)) printf("%d:%d\n", x, x+y);
+	    else printf("%d:(%d,%d)\n", x, x-y, x+y);
+	    x += y;
+	}
+    }
+}
+Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ
