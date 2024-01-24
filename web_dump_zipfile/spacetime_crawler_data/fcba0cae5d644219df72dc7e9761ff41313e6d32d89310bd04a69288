@@ -1,234 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 09:08:47 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY#á
-
-
-
-<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
-<html>
-<head>
-<title>UCI Machine Learning Repository: Coil 1999 Competition Data Data Set</title>
-
-<!-- Stylesheet link -->
-<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
-
-<script language="JavaScript" type="text/javascript">
-<!--
-function checkform ( form )
-{
-  // see http://www.thesitewizard.com/archive/validation.shtml
-  // for an explanation of this script and how to use it on your
-  // own website
-
-  // ** START **
-  if (form.q.value == "")
-  {
-    alert( "Please enter search terms." );
-    form.q.focus();
-    return false ;
-  }
-
-  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
-  {
-    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
-  }
-
-  // ** END **
-  return true ;
-}
-
-// return the value of the radio button that is checked
-// return an empty string if none are checked, or
-// there are no radio buttons
-function getCheckedValue(radioObj) {
-	if(!radioObj)
-		return "";
-	var radioLength = radioObj.length;
-	if(radioLength == undefined)
-		if(radioObj.checked)
-			return radioObj.value;
-		else
-			return "";
-	for(var i = 0; i < radioLength; i++) {
-		if(radioObj[i].checked) {
-			return radioObj[i].value;
-		}
-	}
-	return "";
-}
-//-->
-</script>
-
-</head>
-
-<body>
-
-
-<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
-
-<table width=100% bgcolor="#003366">
-<tr>
-	<td>
-		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
-border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
-	</td>
-	<td width=100% valign=top align="right">
-		<span class="whitetext">
-		<a href="../about.html">About</a>&nbsp;
-		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
-		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
-		<a href="../contact.html">Contact</a>
-		</span>
-
-		<br>
-		<br>
-		<!-- Search Google -->
-
-		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
-		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
-		<INPUT type=submit name=sa VALUE="Search">
-		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
-		<input type=hidden name=domains value="ics.uci.edu">
-		<br>
-		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
-		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
-		<br>
-		</FORM>
-		<!-- Search Google -->
-
-
-		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
-ALL Data Sets</b></font></a></span>
-		<br>
-	</td>
-</tr>
-</table>
-
-
-<br />
-<table width=100% border=0 cellpadding=2><tr><td>
-
-   <table><tr>
-     <td valign=top>
-	<p>
-	<span class="heading"><b>Coil 1999 Competition Data Data Set</b></span>
-	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/coil-mld/"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/coil-mld/coil.data.html"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
-
-	<p class="normal"><b>Abstract</b>: This data set is from the 1999 Computational Intelligence and Learning (COIL) competition. The data contains measurements of river chemical concentrations and algae densities.</p>
-     </td>
-     <td><img
-src="../assets/MLimages/Large118.jpg"
-hspace=20 vspace=10  /> </td>
-   </tr></table>
-
-<table border=1 cellpadding=6>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">Multivariate</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
-		<td><p class="normal">340</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
-		<td><p class="normal">Physical</p></td>
-	</tr>
-
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
-		<td><p class="normal">Categorical, Real</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
-		<td><p class="normal">17</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
-		<td><p class="normal">1999-09-09</p></td>
-	</tr>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
-		<td><p class="normal">N/A</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
-		<td><p class="normal">No</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
-		<td><p class="normal">41735</p></td>
-	</tr>
-	<!--
-	<tr>
-
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">N/A</p></td>
-	</tr>
-	-->
-</table>
-
-
-<br />
-
-<p class="small-heading"><b>Source:</b></p>
-<p class="normal">Original Owner:<br><br>ERUDIT<br>European Network for Fuzzy Logic and Uncertainty Modelling in Information Technology<br><a href="http://www.erudit.de/">http://www.erudit.de/</a><br><br>Donor:<br><br>Jens Strackeljan<br>Technical University Clausthal<br>Institute of Applied Mechanics<br>Graupenstr. 3, 38678 Clausthal-Zellerfeld, Germany<br><u>tmjs <b>'@'</b> itm.tu-clausthal.de</u><br><br></p>
-
-<br />
-
-<p class="small-heading"><b>Data Set Information:</b></p>
-<p class="normal">This data comes from a water quality study where samples were taken from sites on different European rivers of a period of approximately one year. These samples were analyzed for various chemical substances including: nitrogen in the form of nitrates, nitrites and ammonia, phosphate, pH, oxygen, chloride. In parallel, algae samples were collected to determine the algae population distributions. <br><br>The competition involved the prediction of algal frequency distributions on the basis of the measured concentrations of the chemical substances and the global information concerning the season when the sample was taken, the river size and its flow velocity. The competition instructions contain additional information on the prediction task: <a href="http://kdd.ics.uci.edu/databases/coil/instructions.txt">[Web Link]</a><br><br></p>
-
-<br />
-
-<p class="small-heading"><b>Attribute Information:</b></p>
-<p class="normal">There are a total of 340 examples each containing 17 values. The first 11 values of each data set are the season, the river size, the fluid velocity and 8 chemical concentrations which should be relevant for the algae population distribution. The last 8 values of each example are the distribution of different kinds of algae. These 8 kinds are only a very small part of the whole community, but for the competition we limited the number to 7. The value 0.0 means that the frequency is very low. The data set also contains some empty fields which are labeled with the string XXXXX. <br><br>The training data are saved in the file: analysis.data (ASCII format).<br><br>Table 1: Structure of the file analysis.data<br><br>A ... K  a ... g<br>CC1,1  ... CC1,11  AG1,1 ... AG1,7 <br>... <br>CC200,1 ... CC200,11  AG200,1 ... AG200,7 <br> <br><br>Explanation:<br>CCi,j: Chemical concentration or river characteristic<br>AGi,j: Algal frequency<br><br>The chemical parameters are labeled as A, ..., K. The columns of the algaes are labeled as a, ..,g. <br></p>
-
-<br />
-
-<p class="small-heading"><b>Relevant Papers:</b></p>
-<p class="normal">N/A</p>
-
-<br />
-
-
-<!-- OLD CODE:
-
-<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
-<img src="../assets/rexa.jpg" />
-<p class="normal">N/A</p>
-
--->
-
-
-
-<br />
-
-<p class="small-heading"><b>Citation Request:</b></p>
-<p class="normal">Please refer to the Machine Learning
-Repository's <a href="../citation_policy.html">citation policy</a></p>
-
-</td></tr></table>
-
-
-<hr>
-
-<!-- OLD CODE:
-<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
--->
-
-
-
-<table cellpadding=5 align=center><tr valign=center>
-		<td><p class="normal">Supported By:</p></td>
-        <td><img src="../assets/nsfe.gif" height=60 /> </td>
-        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
-        <td><img src="../assets/rexaSmall.jpg" /></td>
-</tr></table>
-
-<center>
-<span class="normal">
-<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
-<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
-<a href="http://cml.ics.uci.edu">CML</a>
-</span>
-</center>
-
-
-
-
-</body>
-</html>
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

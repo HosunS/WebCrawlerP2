@@ -1,234 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 09 Feb 2019 13:32:03 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY$ß
-
-
-
-<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
-<html>
-<head>
-<title>UCI Machine Learning Repository: Function Finding Data Set</title>
-
-<!-- Stylesheet link -->
-<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
-
-<script language="JavaScript" type="text/javascript">
-<!--
-function checkform ( form )
-{
-  // see http://www.thesitewizard.com/archive/validation.shtml
-  // for an explanation of this script and how to use it on your
-  // own website
-
-  // ** START **
-  if (form.q.value == "")
-  {
-    alert( "Please enter search terms." );
-    form.q.focus();
-    return false ;
-  }
-
-  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
-  {
-    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
-  }
-
-  // ** END **
-  return true ;
-}
-
-// return the value of the radio button that is checked
-// return an empty string if none are checked, or
-// there are no radio buttons
-function getCheckedValue(radioObj) {
-	if(!radioObj)
-		return "";
-	var radioLength = radioObj.length;
-	if(radioLength == undefined)
-		if(radioObj.checked)
-			return radioObj.value;
-		else
-			return "";
-	for(var i = 0; i < radioLength; i++) {
-		if(radioObj[i].checked) {
-			return radioObj[i].value;
-		}
-	}
-	return "";
-}
-//-->
-</script>
-
-</head>
-
-<body>
-
-
-<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
-
-<table width=100% bgcolor="#003366">
-<tr>
-	<td>
-		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
-border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
-	</td>
-	<td width=100% valign=top align="right">
-		<span class="whitetext">
-		<a href="../about.html">About</a>&nbsp;
-		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
-		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
-		<a href="../contact.html">Contact</a>
-		</span>
-
-		<br>
-		<br>
-		<!-- Search Google -->
-
-		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
-		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
-		<INPUT type=submit name=sa VALUE="Search">
-		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
-		<input type=hidden name=domains value="ics.uci.edu">
-		<br>
-		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
-		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
-		<br>
-		</FORM>
-		<!-- Search Google -->
-
-
-		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
-ALL Data Sets</b></font></a></span>
-		<br>
-	</td>
-</tr>
-</table>
-
-
-<br />
-<table width=100% border=0 cellpadding=2><tr><td>
-
-   <table><tr>
-     <td valign=top>
-	<p>
-	<span class="heading"><b>Function Finding Data Set</b></span>
-	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/function-finding/"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/function-finding/function-finding.names"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
-
-	<p class="normal"><b>Abstract</b>: Cases collected mostly from investigations in physical science; intention is to evaluate function-finding algorithms</p>
-     </td>
-     <td><img
-src="../assets/MLimages/Large41.jpg"
-hspace=20 vspace=10  /> </td>
-   </tr></table>
-
-<table border=1 cellpadding=6>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">N/A</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
-		<td><p class="normal">352</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
-		<td><p class="normal">Physical</p></td>
-	</tr>
-
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
-		<td><p class="normal">Real</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
-		<td><p class="normal">N/A</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
-		<td><p class="normal">1990-09-01</p></td>
-	</tr>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
-		<td><p class="normal">Function-Learning</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
-		<td><p class="normal">No</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
-		<td><p class="normal">43718</p></td>
-	</tr>
-	<!--
-	<tr>
-
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">N/A</p></td>
-	</tr>
-	-->
-</table>
-
-
-<br />
-
-<p class="small-heading"><b>Source:</b></p>
-<p class="normal">Donor: <br><br>Cullen Schaffer<br>Department of Computer Science<br>Rutgers University<br>New Brunswick, NJ  08903<br><u>schaffer <b>'@'</b> paul.rutgers.edu</u><br><br>Source: <br><br>Cullen Schaffer, Domain-Independent Scientific Function Finding.  <br>PhD Thesis, Department of Computer Science, Rutgers University, 1990 (Technical Report LCSR-TR-149).</p>
-
-<br />
-
-<p class="small-heading"><b>Data Set Information:</b></p>
-<p class="normal">[Please note the use of Latex format here for algebraic expressions. See Leslie Lamport, Latex: A Document Preparation System, Addison-Wesley, 1986 for details.]<br><br>This database contains 352 bivariate numeric data sets collected from diverse sources and resulting, with a few exceptions, from investigations in physical science. For each data set, the collection includes:<br><br>1. Source: Bibliographic information for the source of the data.<br>2. Description: Identification of the variables $x$ and $y$.  Except in a few clearly identified instances, the abbreviated format $y$ vs. $x$ is employed.  An entry of the form<br><br>Description: Force vs. separation.<br>  <br>indicates that $x$ is a separation and $y$ is a force.  In some cases--when the information was readily available--the description also includes the units in which the data was originally reported.<br>     <br>3. Reference relation: The functional relationship proposed by the reporting scientist in the original source.<br><br>4. Comments (optional): Additional information pertaining to the case.<br><br>In recording reference relations, the database often omits details of parameter values.  If a scientist proposes $y=23.1x-.0014$, the reference relation may be given as just $y=k_{1}x+k_{2}$.  Also, since algebraic transformations have been employed freely, the same relation might be given as $y/x=k_{2}/x+k_{1}$.<br><br>In general, data collected here is given in full as it appeared in the original source.  Fractions have been converted to decimals, numbers have been freely translated to and from scientific notation and zeros have sometimes been added to decimal numbers to facilitate tabulation. Any additional deviations from verbatim transcription are noted in the Comments entry of the associated case.  Note in particular that, in a few clearly identified cases, apparent typographical errors have been corrected and that, in others, data points identified by the reporting scientist as *not* conforming to the proposed relationship have been omitted.</p>
-
-<br />
-
-<p class="small-heading"><b>Attribute Information:</b></p>
-<p class="normal">N/A</p>
-
-<br />
-
-<p class="small-heading"><b>Relevant Papers:</b></p>
-<p class="normal">Cullen Schaffer, "A Proven Domain-Independent Scientific Function-Finding Algorithm," in AAAI-90.<br><a href="http://rexa.info/paper/2e142445dafcc45bf5817dc166c90af15c2d9618">[Web Link]</a><br></p>
-
-<br />
-
-
-<!-- OLD CODE:
-
-<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
-<img src="../assets/rexa.jpg" />
-<p class="normal">N/A</p>
-
--->
-
-
-
-<br />
-
-<p class="small-heading"><b>Citation Request:</b></p>
-<p class="normal">Please refer to the Machine Learning
-Repository's <a href="../citation_policy.html">citation policy</a></p>
-
-</td></tr></table>
-
-
-<hr>
-
-<!-- OLD CODE:
-<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
--->
-
-
-
-<table cellpadding=5 align=center><tr valign=center>
-		<td><p class="normal">Supported By:</p></td>
-        <td><img src="../assets/nsfe.gif" height=60 /> </td>
-        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
-        <td><img src="../assets/rexaSmall.jpg" /></td>
-</tr></table>
-
-<center>
-<span class="normal">
-<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
-<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
-<a href="http://cml.ics.uci.edu">CML</a>
-</span>
-</center>
-
-
-
-
-</body>
-</html>
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

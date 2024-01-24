@@ -1,246 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 05:02:50 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY,B
-
-
-
-<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
-<html>
-<head>
-<title>UCI Machine Learning Repository: Page Blocks Classification Data Set</title>
-
-<!-- Stylesheet link -->
-<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
-
-<script language="JavaScript" type="text/javascript">
-<!--
-function checkform ( form )
-{
-  // see http://www.thesitewizard.com/archive/validation.shtml
-  // for an explanation of this script and how to use it on your
-  // own website
-
-  // ** START **
-  if (form.q.value == "")
-  {
-    alert( "Please enter search terms." );
-    form.q.focus();
-    return false ;
-  }
-
-  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
-  {
-    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
-  }
-
-  // ** END **
-  return true ;
-}
-
-// return the value of the radio button that is checked
-// return an empty string if none are checked, or
-// there are no radio buttons
-function getCheckedValue(radioObj) {
-	if(!radioObj)
-		return "";
-	var radioLength = radioObj.length;
-	if(radioLength == undefined)
-		if(radioObj.checked)
-			return radioObj.value;
-		else
-			return "";
-	for(var i = 0; i < radioLength; i++) {
-		if(radioObj[i].checked) {
-			return radioObj[i].value;
-		}
-	}
-	return "";
-}
-//-->
-</script>
-
-</head>
-
-<body>
-
-
-<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
-
-<table width=100% bgcolor="#003366">
-<tr>
-	<td>
-		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
-border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
-	</td>
-	<td width=100% valign=top align="right">
-		<span class="whitetext">
-		<a href="../about.html">About</a>&nbsp;
-		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
-		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
-		<a href="../contact.html">Contact</a>
-		</span>
-
-		<br>
-		<br>
-		<!-- Search Google -->
-
-		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
-		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
-		<INPUT type=submit name=sa VALUE="Search">
-		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
-		<input type=hidden name=domains value="ics.uci.edu">
-		<br>
-		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
-		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
-		<br>
-		</FORM>
-		<!-- Search Google -->
-
-
-		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
-ALL Data Sets</b></font></a></span>
-		<br>
-	</td>
-</tr>
-</table>
-
-
-<br />
-<table width=100% border=0 cellpadding=2><tr><td>
-
-   <table><tr>
-     <td valign=top>
-	<p>
-	<span class="heading"><b>Page Blocks Classification Data Set</b></span>
-	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/page-blocks/"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/page-blocks/page-blocks.names"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
-
-	<p class="normal"><b>Abstract</b>: The problem consists of classifying all the blocks of the page layout of a document that has been detected by a segmentation process.</p>
-     </td>
-     <td> </td>
-   </tr></table>
-
-<table border=1 cellpadding=6>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">Multivariate</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
-		<td><p class="normal">5473</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
-		<td><p class="normal">Computer</p></td>
-	</tr>
-
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
-		<td><p class="normal">Integer, Real</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
-		<td><p class="normal">10</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
-		<td><p class="normal">1995-07-01</p></td>
-	</tr>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
-		<td><p class="normal">Classification</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
-		<td><p class="normal">No</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
-		<td><p class="normal">81341</p></td>
-	</tr>
-	<!--
-	<tr>
-
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">N/A</p></td>
-	</tr>
-	-->
-</table>
-
-
-<br />
-
-<p class="small-heading"><b>Source:</b></p>
-<p class="normal">Original Owner:<br><br>Donato Malerba<br>Dipartimento di Informatica<br>University of Bari<br>via Orabona 4<br>70126 Bari - Italy<br>phone: +39 - 80 - 5443269<br>fax: +39 - 80 - 5443196<br><u>malerbad <b>'@'</b> vm.csata.it</u><br><br>Donor: <br><br>Donato Malerba</p>
-
-<br />
-
-<p class="small-heading"><b>Data Set Information:</b></p>
-<p class="normal">The 5473 examples comes from 54 distinct documents. Each observation concerns one block. All attributes are numeric. Data are in a format readable by C4.5.</p>
-
-<br />
-
-<p class="small-heading"><b>Attribute Information:</b></p>
-<p class="normal">   height:   integer.         | Height of the block.<br>   lenght:   integer.     | Length of the block. <br>   area:     integer.    | Area of the block (height * lenght);<br>   eccen:    continuous.  | Eccentricity of the block (lenght / height);<br>   p_black:  continuous.  | Percentage of black pixels within the block (blackpix / area);<br>   p_and:    continuous.        | Percentage of black pixels after the application of the Run Length Smoothing Algorithm (RLSA) (blackand / area);<br>   mean_tr:  continuous.      | Mean number of white-black transitions (blackpix / wb_trans);<br>   blackpix: integer.    | Total number of black pixels in the original bitmap of the block.<br>   blackand: integer.        | Total number of black pixels in the bitmap of the block after the RLSA.<br>   wb_trans: integer.          | Number of white-black transitions in the original bitmap of the block.</p>
-
-<br />
-
-<p class="small-heading"><b>Relevant Papers:</b></p>
-<p class="normal">Malerba, D., Esposito, F., and Semeraro, G. "A Further Comparison of Simplification Methods for Decision-Tree Induction." In D. Fisher and H. Lenz (Eds.), "Learning  from Data: Artificial Intelligence and Statistics V", Lecture Notes in Statistics, Springer Verlag, Berlin, 1995.<br><a href="http://rexa.info/paper/f33d7b5fb1093839e17943ac944c74bdd79a91a4">[Web Link]</a><br><br>Esposito F., Malerba D., & Semeraro G. Multistrategy Learning for Document Recognition. Applied Artificial Intelligence, 8, pp. 33-84, 1994<br><a href="http://rexa.info/paper/b0720de1fb5b2586a298d305caa788c78a1d6160">[Web Link]</a><br></p>
-
-<br />
-
-
-<!-- OLD CODE:
-
-<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
-<img src="../assets/rexa.jpg" />
-<p class="normal">Steven Eschrich and Nitesh V. Chawla and Lawrence O. Hall. <a
-href="http://rexa.info/paper/1b69a36a9cff9bb19b533eff75b2a9924e4a73b2">Generalization Methods in Bioinformatics</a>. BIOKDD. 2002.  [<a
-href="../support/Page+Blocks+Classification#1b69a36a9cff9bb19b533eff75b2a9924e4a73b2">View Context</a>].<br><br>Adil M. Bagirov and Julien Ugon. <a
-href="http://rexa.info/paper/69547b69d3133bba06b4ce74e67e2f3a6366a2f6">An algorithm for computation of piecewise linear function separating two sets</a>. CIAO, School of Information Technology and Mathematical Sciences, The University of Ballarat.  [<a
-href="../support/Page+Blocks+Classification#69547b69d3133bba06b4ce74e67e2f3a6366a2f6">View Context</a>].<br><br>C. Titus Brown and Harry W. Bullen and Sean P. Kelly and Robert K. Xiao and Steven G. Satterfield and John G. Hagedorn and Judith E. Devaney. <a
-href="http://rexa.info/paper/48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">Visualization and Data Mining in an 3D Immersive Environment: Summer Project 2003</a>.  [<a
-href="../support/Page+Blocks+Classification#48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">View Context</a>].<br><br></p>
-
--->
-
-<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
-<img src="../assets/rexa.jpg" /><p class="normal">Steven Eschrich and Nitesh V. Chawla and Lawrence O. Hall. <a
-href="http://rexa.info/paper/1b69a36a9cff9bb19b533eff75b2a9924e4a73b2">Generalization Methods in Bioinformatics</a>. BIOKDD. 2002.  [<a
-href="../support/Page+Blocks+Classification#1b69a36a9cff9bb19b533eff75b2a9924e4a73b2">View Context</a>].<br><br>Adil M. Bagirov and Julien Ugon. <a
-href="http://rexa.info/paper/69547b69d3133bba06b4ce74e67e2f3a6366a2f6">An algorithm for computation of piecewise linear function separating two sets</a>. CIAO, School of Information Technology and Mathematical Sciences, The University of Ballarat.  [<a
-href="../support/Page+Blocks+Classification#69547b69d3133bba06b4ce74e67e2f3a6366a2f6">View Context</a>].<br><br>C. Titus Brown and Harry W. Bullen and Sean P. Kelly and Robert K. Xiao and Steven G. Satterfield and John G. Hagedorn and Judith E. Devaney. <a
-href="http://rexa.info/paper/48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">Visualization and Data Mining in an 3D Immersive Environment: Summer Project 2003</a>.  [<a
-href="../support/Page+Blocks+Classification#48d6beec2a36a87d9d88b6de85dd85a75e5ed24d">View Context</a>].<br><br></p>
-
-<br />
-
-<p class="small-heading"><b>Citation Request:</b></p>
-<p class="normal">Please refer to the Machine Learning
-Repository's <a href="../citation_policy.html">citation policy</a></p>
-
-</td></tr></table>
-
-
-<hr>
-
-<!-- OLD CODE:
-<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
--->
-
-<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
-with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
-
-<table cellpadding=5 align=center><tr valign=center>
-		<td><p class="normal">Supported By:</p></td>
-        <td><img src="../assets/nsfe.gif" height=60 /> </td>
-        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
-        <td><img src="../assets/rexaSmall.jpg" /></td>
-</tr></table>
-
-<center>
-<span class="normal">
-<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
-<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
-<a href="http://cml.ics.uci.edu">CML</a>
-</span>
-</center>
-
-
-
-
-</body>
-</html>
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,263 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 05:43:43 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY?P
-
-
-
-<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
-<html>
-<head>
-<title>UCI Machine Learning Repository: E. Coli Genes Data Set</title>
-
-<!-- Stylesheet link -->
-<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
-
-<script language="JavaScript" type="text/javascript">
-<!--
-function checkform ( form )
-{
-  // see http://www.thesitewizard.com/archive/validation.shtml
-  // for an explanation of this script and how to use it on your
-  // own website
-
-  // ** START **
-  if (form.q.value == "")
-  {
-    alert( "Please enter search terms." );
-    form.q.focus();
-    return false ;
-  }
-
-  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
-  {
-    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
-  }
-
-  // ** END **
-  return true ;
-}
-
-// return the value of the radio button that is checked
-// return an empty string if none are checked, or
-// there are no radio buttons
-function getCheckedValue(radioObj) {
-	if(!radioObj)
-		return "";
-	var radioLength = radioObj.length;
-	if(radioLength == undefined)
-		if(radioObj.checked)
-			return radioObj.value;
-		else
-			return "";
-	for(var i = 0; i < radioLength; i++) {
-		if(radioObj[i].checked) {
-			return radioObj[i].value;
-		}
-	}
-	return "";
-}
-//-->
-</script>
-
-</head>
-
-<body>
-
-
-<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
-
-<table width=100% bgcolor="#003366">
-<tr>
-	<td>
-		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
-border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
-	</td>
-	<td width=100% valign=top align="right">
-		<span class="whitetext">
-		<a href="../about.html">About</a>&nbsp;
-		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
-		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
-		<a href="../contact.html">Contact</a>
-		</span>
-
-		<br>
-		<br>
-		<!-- Search Google -->
-
-		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
-		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
-		<INPUT type=submit name=sa VALUE="Search">
-		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
-		<input type=hidden name=domains value="ics.uci.edu">
-		<br>
-		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
-		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
-		<br>
-		</FORM>
-		<!-- Search Google -->
-
-
-		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
-ALL Data Sets</b></font></a></span>
-		<br>
-	</td>
-</tr>
-</table>
-
-
-<br />
-<table width=100% border=0 cellpadding=2><tr><td>
-
-   <table><tr>
-     <td valign=top>
-	<p>
-	<span class="heading"><b>E. Coli Genes Data Set</b></span>
-	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/ecoli-mld/"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/ecoli-mld/ecoli.data.html"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
-
-	<p class="normal"><b>Abstract</b>: Data giving characteristics of each ORF (potential gene) in the E. coli genome. Sequence, homology (similarity to other genes) and structural information, and function (if known) are provided.</p>
-     </td>
-     <td><img
-src="../assets/MLimages/Large120.jpg"
-hspace=20 vspace=10  /> </td>
-   </tr></table>
-
-<table border=1 cellpadding=6>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">Relational</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
-		<td><p class="normal">N/A</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
-		<td><p class="normal">Life</p></td>
-	</tr>
-
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
-		<td><p class="normal">N/A</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
-		<td><p class="normal">N/A</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
-		<td><p class="normal">2001-07-14</p></td>
-	</tr>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
-		<td><p class="normal">N/A</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
-		<td><p class="normal">Yes</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
-		<td><p class="normal">40940</p></td>
-	</tr>
-	<!--
-	<tr>
-
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">N/A</p></td>
-	</tr>
-	-->
-</table>
-
-
-<br />
-
-<p class="small-heading"><b>Source:</b></p>
-<p class="normal">Original Owner and Donor:<br><br>  Ross D. King<br>  Department of Computer Science, <br>  University of Wales Aberystwyth, <br>  SY23 3DB, Wales<br>  <u>rdk <b>'@'</b> aber.ac.uk</u><br><a href="http://users.aber.ac.uk/rdk">http://users.aber.ac.uk/rdk</a><br></p>
-
-<br />
-
-<p class="small-heading"><b>Data Set Information:</b></p>
-<p class="normal">The data was collected from several sources, including GenProtEC (<a href="http://genprotec.mbl.edu/start">[Web Link]</a>) and SWISSPROT (<a href="http://www.expasy.ch/sprot/sprot-top.html">[Web Link]</a>). Structure prediction was made by PROF (<a href="http://www.aber.ac.uk/~phiwww/prof/index.html">[Web Link]</a>). Homology search was provided by PSI-BLAST (<a href="http://www.ncbi.nlm.nih.gov/BLAST/">[Web Link]</a>). <br><br>The data is in Datalog format. Missing values are not explicit, but some genes have more relationships than others. <br><br>E. coli genes (ORFs) are related to each other by the predicate ecoli_to_ecoli(EcoliNumber,E-value,Psi-blast_iteration). They are related to other (SWISSPROT) proteins by the predicate e_val(AccNo,E-value). All the data for a single gene (ORF) is enclosed between delimiters of the form: <br><br>begin(model(EcoliNumber)).<br>end(model(EcoliNumber)). <br><br>The gene functional classes are in a hierarchy. See <a href="http://genprotec.mbl.edu/start">[Web Link]</a> (note: the classes may have changed since original data collection). <br><br>There are two datalog files: ecoli_data.pl and ecoli_functions.pl <br><br>1. ecoli_functions.pl<br><br>Lists classes and ORF functions. Lines are of the following form: <br><br>   class(5,1,1,'Colicin-related functions').<br>   class(5,1,'Laterally acquirred elements').<br>   class(5,'Extrachromosomal'). <br><br>Arguments are up to 3 numbers (describing class at up to 3 different levels), followed by a string class description. For example: <br><br>   function(ecoli210,7,0,0,'b0217','putative aminopeptidase').<br><br>Arguments are ORF number, exactly 3 class numbers, gene name (or blattner number if no gene name), ORF description. <br><br>2. ecoli_data.pl<br><br>Data for each ORF (gene) is delimited by <br><br>   begin(model(ecoliX)).<br>   end(model(ecoliX)).<br><br>where X is the ORF number. Other predicates are as follows (examples): <br>   ecoli_orf(ecoliX).    % X is ORF number<br>   ecoli_mol_wt(176624.1).  % float<br>   ecoli_theo_pI(5.81).     %float<br>   ecoli_atomic_comp(c,7940).   % {c,h,n,o,s} , int<br>   ecoli_aliphatic_index(69.57). % float<br>   ecoli_hydro(-0.549).          % float<br>   sec_struc(1,c,2).           % int (start), {a,b,c}, int (length)<br>   sec_struc_coil(1,2).        % int (start), int (length)<br>   sec_struc_beta(1,5).        % int (start), int (length)<br>   sec_struc_alpha(1,7).       % int (start), int (length)<br>   sequence_length(255).       % int<br>   amino_acid_ratio(a,8.9).    % amino_acid_char, float<br>   amino_acids(ecoli3013,a,70). % ORF_num, amino_acid_char, int<br>   amino_acid_pair_ratio(a,a,9.0). % amino_acid_char, amino_acid_char, float<br>   amino_acid_pairs(a,a,7).    % amino_acid_char, amino_acid_char, int<br>   ecoli_to_ecoli(1170,1.0e-105,5).  % ORF_num, double (e-value), int (iteration) <br>   e_val(o42893,2.0e-99).  % accession_number, double (e-value)<br>   psi_iter(o42893,5).     % accession_number, int (iteration)<br>   species(p52494,'candida_albicans__yeast_').  % accession_number, string<br>   mol_wt(p52494,104022). % accession_number, int <br>   classification(p52494,candida).  % accession_number, name<br>   keyword(p25195,'plasmid').   % accession_number, string<br><br></p>
-
-<br />
-
-<p class="small-heading"><b>Attribute Information:</b></p>
-<p class="normal">N/A</p>
-
-<br />
-
-<p class="small-heading"><b>Relevant Papers:</b></p>
-<p class="normal">King, R. and Karwath, A. and Clare, A. and Dehaspe, L. (2001). The Utility of Different Representations of Protein Sequence for Predicting Functional Class, Bioinformatics, 17(5), pages 445--454. <br><a href="http://rexa.info/paper/71daf4ae1ed7ca4980f883fe6cc8bce888912af5">[Web Link]</a></p>
-
-<br />
-
-
-<!-- OLD CODE:
-
-<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
-<img src="../assets/rexa.jpg" />
-<p class="normal">Aik Choon Tan and David Gilbert. <a
-href="http://rexa.info/paper/9b1e690eee045665891881f050354585bd20bd54">An Empirical Comparison of Supervised Machine Learning Techniques in Bioinformatics</a>. APBC. 2003.  [<a
-href="../support/E.+Coli+Genes#9b1e690eee045665891881f050354585bd20bd54">View Context</a>].<br><br>Mukund Deshpande and George Karypis. <a
-href="http://rexa.info/paper/f006e50cdba5e00538e2b48452e1d0bab8ed02b9">Evaluation of Techniques for Classifying Biological Sequences</a>. PAKDD. 2002.  [<a
-href="../support/E.+Coli+Genes#f006e50cdba5e00538e2b48452e1d0bab8ed02b9">View Context</a>].<br><br>Mark A. Hall. <a
-href="http://rexa.info/paper/cd11168bb19fd462bc59beefbe670bc4eb31e3eb">Department of Computer Science Hamilton, NewZealand Correlation-based Feature Selection for Machine Learning</a>. Doctor of Philosophy at The University of Waikato. 1999.  [<a
-href="../support/E.+Coli+Genes#cd11168bb19fd462bc59beefbe670bc4eb31e3eb">View Context</a>].<br><br>. <a
-href="http://rexa.info/paper/b0009a0081cc5fbfbae758def55cfd5b3256623b">Prototype Selection for Composite Nearest Neighbor Classifiers</a>. Department of Computer Science University of Massachusetts. 1997.  [<a
-href="../support/E.+Coli+Genes#b0009a0081cc5fbfbae758def55cfd5b3256623b">View Context</a>].<br><br>Paul Horton and Kenta Nakai. <a
-href="http://rexa.info/paper/985a564327523fe48327882fdbb7869ef7c35d9f">Better Prediction of Protein Cellular Localization Sites with the it k Nearest Neighbors Classifier</a>. ISMB. 1997.  [<a
-href="../support/E.+Coli+Genes#985a564327523fe48327882fdbb7869ef7c35d9f">View Context</a>].<br><br>Andrew Watkins and Jon Timmis and Lois C. Boggess. <a
-href="http://rexa.info/paper/b4b7ea88c807c5c8746bf3067f13b1d07899bcc9">Artificial Immune Recognition System (AIRS): An ImmuneInspired Supervised Learning Algorithm</a>. (abw5,jt6@kent.ac.uk) Computing Laboratory, University of Kent.  [<a
-href="../support/E.+Coli+Genes#b4b7ea88c807c5c8746bf3067f13b1d07899bcc9">View Context</a>].<br><br>Gaurav Marwah and Lois C. Boggess. <a
-href="http://rexa.info/paper/4487f47affc309f0d984645b44cdc8e1f42c2472">Artificial Immune Systems for Classification : Some Issues</a>. Department of Computer Science Mississippi State University.  [<a
-href="../support/E.+Coli+Genes#4487f47affc309f0d984645b44cdc8e1f42c2472">View Context</a>].<br><br></p>
-
--->
-
-<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
-<img src="../assets/rexa.jpg" /><p class="normal">Aik Choon Tan and David Gilbert. <a
-href="http://rexa.info/paper/9b1e690eee045665891881f050354585bd20bd54">An Empirical Comparison of Supervised Machine Learning Techniques in Bioinformatics</a>. APBC. 2003.  [<a
-href="../support/E.+Coli+Genes#9b1e690eee045665891881f050354585bd20bd54">View Context</a>].<br><br>Mukund Deshpande and George Karypis. <a
-href="http://rexa.info/paper/f006e50cdba5e00538e2b48452e1d0bab8ed02b9">Evaluation of Techniques for Classifying Biological Sequences</a>. PAKDD. 2002.  [<a
-href="../support/E.+Coli+Genes#f006e50cdba5e00538e2b48452e1d0bab8ed02b9">View Context</a>].<br><br>Mark A. Hall. <a
-href="http://rexa.info/paper/cd11168bb19fd462bc59beefbe670bc4eb31e3eb">Department of Computer Science Hamilton, NewZealand Correlation-based Feature Selection for Machine Learning</a>. Doctor of Philosophy at The University of Waikato. 1999.  [<a
-href="../support/E.+Coli+Genes#cd11168bb19fd462bc59beefbe670bc4eb31e3eb">View Context</a>].<br><br>. <a
-href="http://rexa.info/paper/b0009a0081cc5fbfbae758def55cfd5b3256623b">Prototype Selection for Composite Nearest Neighbor Classifiers</a>. Department of Computer Science University of Massachusetts. 1997.  [<a
-href="../support/E.+Coli+Genes#b0009a0081cc5fbfbae758def55cfd5b3256623b">View Context</a>].<br><br>Paul Horton and Kenta Nakai. <a
-href="http://rexa.info/paper/985a564327523fe48327882fdbb7869ef7c35d9f">Better Prediction of Protein Cellular Localization Sites with the it k Nearest Neighbors Classifier</a>. ISMB. 1997.  [<a
-href="../support/E.+Coli+Genes#985a564327523fe48327882fdbb7869ef7c35d9f">View Context</a>].<br><br>Andrew Watkins and Jon Timmis and Lois C. Boggess. <a
-href="http://rexa.info/paper/b4b7ea88c807c5c8746bf3067f13b1d07899bcc9">Artificial Immune Recognition System (AIRS): An ImmuneInspired Supervised Learning Algorithm</a>. (abw5,jt6@kent.ac.uk) Computing Laboratory, University of Kent.  [<a
-href="../support/E.+Coli+Genes#b4b7ea88c807c5c8746bf3067f13b1d07899bcc9">View Context</a>].<br><br>Gaurav Marwah and Lois C. Boggess. <a
-href="http://rexa.info/paper/4487f47affc309f0d984645b44cdc8e1f42c2472">Artificial Immune Systems for Classification : Some Issues</a>. Department of Computer Science Mississippi State University.  [<a
-href="../support/E.+Coli+Genes#4487f47affc309f0d984645b44cdc8e1f42c2472">View Context</a>].<br><br></p>
-
-<br />
-
-<p class="small-heading"><b>Citation Request:</b></p>
-<p class="normal">Usage Restrictions:<br>Copyright 2000 by R. D. King, A. Karwath, A. Clare, L. Dehaspe <br><br>There are no restrictions data usage. This data is provided "as is" and without any express or implied warranties, including, without limitation, the implied warranties of merchantibility and fitness for a particular purpose. <br><br>Citation Requests:<br>Please cite King et al. (2000). <br><br>Acknowledgements:<br>This work was supported by the following grants: G78/6609, BIF08765, GR/L62849 and by PharmaDM, Ambachtenlaan, 54/D, B-3001 Leuven, Belgium <br></p>
-
-</td></tr></table>
-
-
-<hr>
-
-<!-- OLD CODE:
-<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
--->
-
-<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration
-with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
-
-<table cellpadding=5 align=center><tr valign=center>
-		<td><p class="normal">Supported By:</p></td>
-        <td><img src="../assets/nsfe.gif" height=60 /> </td>
-        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
-        <td><img src="../assets/rexaSmall.jpg" /></td>
-</tr></table>
-
-<center>
-<span class="normal">
-<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
-<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
-<a href="http://cml.ics.uci.edu">CML</a>
-</span>
-</center>
-
-
-
-
-</body>
-</html>
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

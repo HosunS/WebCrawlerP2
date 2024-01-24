@@ -1,232 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue…¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 07 Feb 2019 03:47:03 GMT¢Ak¢DtypeEvalueQTransfer-EncodingAv¢DtypeEvalueGchunked¢Ak¢DtypeEvalueJConnectionAv¢DtypeEvalueEclose¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/html; charset=UTF-8¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueVApache/2.2.15 (CentOS)Kraw_content¢DtypeEvalueY)Å
-
-
-
-<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\">
-<html>
-<head>
-<title>UCI Machine Learning Repository: Water Treatment Plant Data Set</title>
-
-<!-- Stylesheet link -->
-<link rel="stylesheet" type="text/css" href="../assets/ml.css" />
-
-<script language="JavaScript" type="text/javascript">
-<!--
-function checkform ( form )
-{
-  // see http://www.thesitewizard.com/archive/validation.shtml
-  // for an explanation of this script and how to use it on your
-  // own website
-
-  // ** START **
-  if (form.q.value == "")
-  {
-    alert( "Please enter search terms." );
-    form.q.focus();
-    return false ;
-  }
-
-  if (getCheckedValue(form.sitesearch) == "ics.uci.edu" && form.q.value.indexOf("site:archive.ics.uci.edu/ml") == -1)
-  {
-    form.q.value = form.q.value + " site:archive.ics.uci.edu/ml";
-  }
-
-  // ** END **
-  return true ;
-}
-
-// return the value of the radio button that is checked
-// return an empty string if none are checked, or
-// there are no radio buttons
-function getCheckedValue(radioObj) {
-	if(!radioObj)
-		return "";
-	var radioLength = radioObj.length;
-	if(radioLength == undefined)
-		if(radioObj.checked)
-			return radioObj.value;
-		else
-			return "";
-	for(var i = 0; i < radioLength; i++) {
-		if(radioObj[i].checked) {
-			return radioObj[i].value;
-		}
-	}
-	return "";
-}
-//-->
-</script>
-
-</head>
-
-<body>
-
-
-<!-- SITE HEADER (INCLUDES LOGO AND SEARCH BOX) -->
-
-<table width=100% bgcolor="#003366">
-<tr>
-	<td>
-		<span class="normal"><a href="../index.html" alt="Home"><img src="../assets/logo.gif"
-border=0></img></a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://cml.ics.uci.edu"><font color="FFDD33">Center for Machine Learning and Intelligent Systems</font></a></span>
-	</td>
-	<td width=100% valign=top align="right">
-		<span class="whitetext">
-		<a href="../about.html">About</a>&nbsp;
-		<a href="../citation_policy.html">Citation Policy</a>&nbsp;
-		<a href="../donation_policy.html">Donate a Data Set</a>&nbsp;
-		<a href="../contact.html">Contact</a>
-		</span>
-
-		<br>
-		<br>
-		<!-- Search Google -->
-
-		<FORM method=GET action=http://www.google.com/custom onsubmit="return checkform(this);">
-		<INPUT TYPE=text name=q size=30 maxlength=255 value="">
-		<INPUT type=submit name=sa VALUE="Search">
-		<INPUT type=hidden name=cof VALUE="AH:center;LH:130;L:http://archive.ics.uci.edu/assets/logo.gif;LW:384;AWFID:869c0b2eaa8d518e;">
-		<input type=hidden name=domains value="ics.uci.edu">
-		<br>
-		<input type=radio name=sitesearch value="ics.uci.edu" checked> <span class="whitetext"><font size="1">Repository</font></span>
-		<input type=radio name=sitesearch value=""> <span class="whitetext"><font size="1">Web</font></span>
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<A HREF=http://www.google.com/search><IMG SRC=http://www.google.com/logos/Logo_25blk.gif border=0 ALT=Google align=middle height=27></A>
-		<br>
-		</FORM>
-		<!-- Search Google -->
-
-
-		<span class="whitetext"><a href="../datasets.html"><font size="3" color="#FFDD33"><b>View
-ALL Data Sets</b></font></a></span>
-		<br>
-	</td>
-</tr>
-</table>
-
-
-<br />
-<table width=100% border=0 cellpadding=2><tr><td>
-
-   <table><tr>
-     <td valign=top>
-	<p>
-	<span class="heading"><b>Water Treatment Plant Data Set</b></span>
-	<br><span class="normal"><i><font size=4 >Download</font></i>: <a href="../machine-learning-databases/water-treatment/"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Folder</font></a>, <a href="../machine-learning-databases/water-treatment/water-treatment.names"><font
-style="BACKGROUND-COLOR: #FFFFAA" size=4>Data Set Description</font></a></span></p>
-
-	<p class="normal"><b>Abstract</b>: Multiple classes predict plant state</p>
-     </td>
-     <td> </td>
-   </tr></table>
-
-<table border=1 cellpadding=6>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Data Set Characteristics:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">Multivariate</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Instances:</b></p></td>
-		<td><p class="normal">527</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Area:</b></p></td>
-		<td><p class="normal">Physical</p></td>
-	</tr>
-
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Attribute Characteristics:</b></p></td>
-		<td><p class="normal">Integer, Real</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Attributes:</b></p></td>
-		<td><p class="normal">38</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Date Donated</b></p></td>
-		<td><p class="normal">1993-06-01</p></td>
-	</tr>
-	<tr>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Associated Tasks:</b></p></td>
-		<td><p class="normal">Clustering</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Missing Values?</b></p></td>
-		<td><p class="normal">N/A</p></td>
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Number of Web Hits:</b></p></td>
-		<td><p class="normal">118127</p></td>
-	</tr>
-	<!--
-	<tr>
-
-		<td bgcolor="#DDEEFF"><p class="normal"><b>Highest Percentage Achieved:&nbsp;&nbsp;</b></p></td>
-		<td><p class="normal">N/A</p></td>
-	</tr>
-	-->
-</table>
-
-
-<br />
-
-<p class="small-heading"><b>Source:</b></p>
-<p class="normal">Creators: <br><br>Manel Poch (<u>igte2 <b>'@'</b> cc.uab.es</u>)<br>Unitat d'Enginyeria Quimica<br>Universitat Autonoma de Barcelona. Bellaterra. Barcelona; Spain<br><br>Donor: <br><br>Javier Bejar and Ulises Cortes (<u>bejar <b>'@'</b> lsi.upc.es</u>)<br>Dept. Llenguatges i Sistemes Informatics;<br>Universitat Politecnica de Catalunya. Barcelona; Spain</p>
-
-<br />
-
-<p class="small-heading"><b>Data Set Information:</b></p>
-<p class="normal">This dataset comes from the daily measures of sensors in a urban waste water treatment plant. The objective is to classify the operational state of the plant in order to predict faults through the state variables of the plant at each of the stages of the treatment process.  This domain has been stated as an ill-structured domain. </p>
-
-<br />
-
-<p class="small-heading"><b>Attribute Information:</b></p>
-<p class="normal"> All atrributes are numeric and continuous<br><br>N.  Attrib.    <br> 1  Q-E        (input flow to plant)  <br> 2  ZN-E       (input Zinc to plant)<br> 3  PH-E       (input pH to plant) <br> 4  DBO-E      (input Biological demand of oxygen to plant) <br> 5  DQO-E      (input chemical demand of oxygen to plant)<br> 6  SS-E       (input suspended solids to plant)  <br> 7  SSV-E      (input volatile supended solids to plant)<br> 8  SED-E      (input sediments to plant) <br> 9  COND-E     (input conductivity to plant) <br>10  PH-P       (input pH to primary settler)<br>11  DBO-P      (input Biological demand of oxygen to primary settler)<br>12  SS-P       (input suspended solids to primary settler)<br>13  SSV-P      (input volatile supended solids to primary settler)<br>14  SED-P      (input sediments to primary settler) <br>15  COND-P     (input conductivity to primary settler)<br>16  PH-D       (input pH to secondary settler) <br>17  DBO-D      (input Biological demand of oxygen to secondary settler)<br>18  DQO-D      (input chemical demand of oxygen to secondary settler)<br>19  SS-D       (input suspended solids to secondary settler)<br>20  SSV-D      (input volatile supended solids to secondary settler)<br>21  SED-D      (input sediments to secondary settler)  <br>22  COND-D     (input conductivity to secondary settler) <br>23  PH-S       (output pH)   <br>24  DBO-S      (output Biological demand of oxygen)<br>25  DQO-S      (output chemical demand of oxygen)<br>26  SS-S       (output suspended solids)<br>27  SSV-S      (output volatile supended solids) <br>28  SED-S      (output sediments) <br>29  COND-S     (output conductivity)<br>30  RD-DBO-P   (performance input Biological demand of oxygen in primary settler)<br>31  RD-SS-P    (performance input suspended solids to primary settler)<br>32  RD-SED-P   (performance input sediments to primary settler)<br>33  RD-DBO-S   (performance input Biological demand of oxygen to secondary settler)<br>34  RD-DQO-S   (performance input chemical demand of oxygen to secondary settler)<br>35  RD-DBO-G   (global performance input Biological demand of oxygen)<br>36  RD-DQO-G   (global performance input chemical demand of oxygen)<br>37  RD-SS-G    (global performance input suspended solids) <br>38  RD-SED-G   (global performance input sediments)<br></p>
-
-<br />
-
-<p class="small-heading"><b>Relevant Papers:</b></p>
-<p class="normal">J. De Gracia. ``Avaluacio de tecniques de classificacio per a la gestio de Bioprocessos: Aplicacio a un reactor de fangs activats'' Master Thesis. Dept. de Quimica. Unitat d'Enginyeria Quimica. Universitat Autonoma de Barcelona. Bellaterra (Barcelona). 1993.<br><br>J. Bejar, U. Cort\'es and M. Poch. "LINNEO+: A Classification Methodology for Ill-structured Domains''.  Research report RT-93-10-R. Dept. Llenguatges i Sistemes Informatics. Barcelona. 1993.<br><a href="http://rexa.info/paper/09a01364b8f691e7e489754913e1784de236d6ad">[Web Link]</a><br><br>Ll. Belanche, U. Cortes and M. S\`anchez. "A knowledge-based system for the diagnosis of waste-water treatment plant''. Proceedings of the 5th international conference of industrial and engineering applications of AI and Expert Systems IEA/AIE-92. Ed Springer-Verlag. Paderborn, Germany, June 92.<br><a href="http://rexa.info/paper/de467e14197a12e38e59d1252d9822435dc2b8bd">[Web Link]</a></p>
-
-<br />
-
-
-<!-- OLD CODE:
-
-<p class="small-heading"><b>Papers That Cite This Data Set<sup>1</sup>:</b></p>
-<img src="../assets/rexa.jpg" />
-<p class="normal">N/A</p>
-
--->
-
-
-
-<br />
-
-<p class="small-heading"><b>Citation Request:</b></p>
-<p class="normal">Please refer to the Machine Learning
-Repository's <a href="../citation_policy.html">citation policy</a></p>
-
-</td></tr></table>
-
-
-<hr>
-
-<!-- OLD CODE:
-<p class="normal"><font size=1>[1] Papers were automatically harvested and associated with this data set, in collaboration with <a href="http://rexa.info"><font size=1>Rexa.info</font></a></font></p>
--->
-
-
-
-<table cellpadding=5 align=center><tr valign=center>
-		<td><p class="normal">Supported By:</p></td>
-        <td><img src="../assets/nsfe.gif" height=60 /> </td>
-        <td><p class="normal">&nbsp;In Collaboration With:</p></td>
-        <td><img src="../assets/rexaSmall.jpg" /></td>
-</tr></table>
-
-<center>
-<span class="normal">
-<a href="../about.html">About</a>&nbsp;&nbsp;||&nbsp;
-<a href="../citation_policy.html">Citation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../donation_policy.html">Donation Policy</a>&nbsp;&nbsp;||&nbsp;
-<a href="../contact.html">Contact</a>&nbsp;&nbsp;||&nbsp;
-<a href="http://cml.ics.uci.edu">CML</a>
-</span>
-</center>
-
-
-
-
-</body>
-</html>
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

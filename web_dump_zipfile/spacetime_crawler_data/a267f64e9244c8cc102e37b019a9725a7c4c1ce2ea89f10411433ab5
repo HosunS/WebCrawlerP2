@@ -1,29 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC679¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 19 May 1997 20:07:33 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"2a7-311de8b9f0b40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXTue, 05 Feb 2019 22:00:30 GMTKraw_content¢DtypeEvalueY§// "Clear" button for ray diagram
-// David Eppstein, UC Irvine, 18 May 1997
-//
-// implemented as a separate button so it can be placed more freely
-
-import java.applet.*;
-import java.awt.*;
-
-public class ClearRayDiag extends Applet
-{
-	private Button button;
-	public void init() {
-		setBackground(Color.white);
-		button = new Button("Clear");
-		button.setForeground(Color.black);
-		button.setBackground(Color.lightGray);
-		add(button);
-	}
-	
-	public boolean action(Event ev, Object arg) {
-		if (ev.target == button) {
-			RayDiagram rayDiagram = (RayDiagram) getAppletContext().getApplet("RayDiagram");
-			rayDiagram.clear();
-			return true;
-		}
-		return super.action(ev, arg);
-	}
-}
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

@@ -1,32 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueD1719¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 18 Oct 2018 19:03:04 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"6b7-578856fc2fca7"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 01:02:12 GMTKraw_content¢DtypeEvalueY·# Auditor training data
-# 10 blocks (levels 1 to 10 with higher levels corresponding to more professional experience
-# 3 treatments = training programs (train at home, train at a local regional center, train at national headquarters
-# response is score on a final exam
-
-# load library and read in data
-library(tidyverse)
-datainput <- read_csv("H://HAL/Courses/Stat210//auditortraining.csv")
-training <- data.frame(datainput)
-training$Experience <- as.factor(training$Experience)
-# plot data with each block in a different color; connect points with lines
-ggplot() +
-  geom_point(data=training, mapping=aes(x=Method, y=Score, color=Experience)) + 
-  geom_line(data=training, mapping=aes(x=Method, y=Score, color=Experience, group=Experience)) +
-  scale_x_discrete(name="Treatment",labels=c("Home","Local","National")) +
-  ylab("Score")
-# fit randomized block analysis of variance and obtain summary table
-training_rndmblock <- aov(training$Score ~ training$Experience + training$Method)
-summary(training_rndmblock)
-# check assumptions - residuals vs treatment
-ggplot() +
-  geom_point(data=training, mapping=aes(x=Method, y=training_rndmblock$residuals), position = position_jitter(width = 0.1, height = 0.0)) 
-tapply(training_rndmblock$residuals, training$Method, describe)
-# check assumptions - residuals vs block
-ggplot() +
-  geom_point(data=training, mapping=aes(x=Experience, y=training_rndmblock$residuals), position = position_jitter(width=0.1))
-tapply(training_rndmblock$residuals, training$Experience, describe)
-# check assumptions - normality
-qqnorm(training_rndmblock$residuals)
-# obtain treatment means for subsequent analysis 
-tapply(training$Score, training$Method, describe)
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

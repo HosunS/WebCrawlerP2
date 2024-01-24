@@ -1,13 +1,0 @@
-¶Ifinal_url¢DtypeEvaluex7https://www.ics.uci.edu/~wjohnson/BIDA/Ch4/Ch4Rcode.txtLhttp_headers¢DtypeEvalueá¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC239¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 07 Sep 2010 01:20:09 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueR"ef-48fa132a4a440"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 09:36:56 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueXÔBayes Book
-Ch 4:  Fundamental Ideas II
-R code
-
-
-# Figure 4.1
-y <- 2
-n <- 10
-theta <- seq(0,1,0.001)
-lik <-choose(n,y)*theta^y*(1-theta)^(n-y)
-plot(theta,lik,type="l",lwd=2,xlab=expression(theta),ylab=expression(paste("L(",theta," |y)")))
-
-Mis_redirected¢DtypeEvalueıIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

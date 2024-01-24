@@ -1,25 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC480¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXSat, 05 Jul 1997 18:40:08 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"329-3158ecd895200-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:56:21 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueY)// Test of closest pair algorithms
-// David Eppstein, UC Irvine, 19 Apr 1997
-//
-// Generate points in generalized Sierpinski tetrahedron
-//
-// Each point is generated from some set S of k random binary numbers
-// by taking exclusive ors of each of the 2^(k-1)-1 nonempty subsets of S.
-// For k=2, d=3 this produces the well-known fractal Sierpinski tetrahedron.
-// For higher k this should again produce well-structured point sets.
-//
-// Distance is measured using (squared) Euclidean distance
-
-#include "PointSet.h"
-
-class SierpinskiTetrahedron : public PointSet {
-	double * points;		// n*d array of 3d coordinates
-	int d;
-
- public:
- 	SierpinskiTetrahedron(unsigned long npoints, int d);
- 	~SierpinskiTetrahedron() { delete points; }
- 	double operator() (point i, point j);
- 	void interact(point, point);
-};
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

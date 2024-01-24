@@ -1,36 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue†¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC836¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXThu, 02 Jul 1998 21:10:52 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"344-332031b278f00"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXSat, 02 Feb 2019 21:57:54 GMTKraw_content¢DtypeEvalueYD// David Eppstein, UC Irvine, 11 Jun 1997
-//
-// Component for containing an image, including automatic tracking
-
-import java.awt.*;
-
-class ImageUnavailable extends RuntimeException { }
-
-public class ImageComponent extends Canvas 
-{
-	Image image;
-	boolean tracked = false;
-
-	void trackImage(Image i) {
-		if (tracked) return;
-		MediaTracker tracker = new MediaTracker(this);
-		tracker.addImage(i,0);
-		try {
-			tracker.waitForID(0);
-		} catch (InterruptedException e) {
-			throw new ImageUnavailable();
-		}
-	}
-
-	public ImageComponent(Image i) { image = i; }
-	public void paint(Graphics g) {
-		trackImage(image);
-		g.drawImage(image, 0, 0, this);
-	}
-	public Dimension minimumSize() {
-		trackImage(image);
-		return new Dimension(image.getWidth(this), image.getHeight(this));
-	}
-	public Dimension preferredSize() { return minimumSize(); }
-}
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ

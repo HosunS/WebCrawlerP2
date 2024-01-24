@@ -1,18 +1,0 @@
-¶Ifinal_url°DtypeLhttp_headers¢DtypeEvalueÜ¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC656¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXMon, 31 Jul 2006 18:38:13 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueS"290-419e4f6efef40"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXThu, 31 Jan 2019 01:31:53 GMTKraw_content¢DtypeEvalueYêdef calculateSequenceSimilarity(s1, s2, match, mismatch, gap):
-    matrix = {}
-
-    for col in range(0, len(s1)+1):
-        matrix[0, col] = col * gap
-
-    for row in range(1, len(s2)+1):
-        matrix[row, 0] = row * gap
-
-    for row in range(1, len(s2)+1):
-        for col in range(1, len(s1)+1):
-            if s1[col-1] == s2[row-1]:
-                matrix[row, col] = max(matrix[row-1, col-1] + match, matrix[row, col-1] + gap, matrix[row-1, col] + gap)
-            else:
-                matrix[row, col] = max(matrix[row-1, col-1] + mismatch, matrix[row, col-1] + gap, matrix[row-1, col] + gap)
-
-    return matrix[len(s2), len(s1)]
-Mis_redirected¢DtypeEvalueÙIhttp_code¢DtypeEvalue»Qdownload_complete¢DtypeEvalueı

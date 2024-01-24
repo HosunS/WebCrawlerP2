@@ -1,19 +1,0 @@
-¦Ifinal_url¡DtypeLhttp_headers¢DtypeEvalue‰¢Ak¢DtypeEvalueNContent-LengthAv¢DtypeEvalueC596¢Ak¢DtypeEvaluePContent-EncodingAv¢DtypeEvalueDgzip¢Ak¢DtypeEvalueMAccept-RangesAv¢DtypeEvalueEbytes¢Ak¢DtypeEvalueDVaryAv¢DtypeEvalueOAccept-Encoding¢Ak¢DtypeEvalueFServerAv¢DtypeEvalueX4Apache/2.4.6 (CentOS) OpenSSL/1.0.2k-fips SVN/1.7.14¢Ak¢DtypeEvalueMLast-ModifiedAv¢DtypeEvalueXTue, 08 Mar 2011 01:11:53 GMT¢Ak¢DtypeEvalueDETagAv¢DtypeEvalueX"646-49dee4c328840-gzip"¢Ak¢DtypeEvalueDDateAv¢DtypeEvalueXFri, 01 Feb 2019 17:45:49 GMT¢Ak¢DtypeEvalueLContent-TypeAv¢DtypeEvalueXtext/plain; charset=UTF-8Kraw_content¢DtypeEvalueYF1. Suppose that we wish to make the dynamic range-sum data structure (in which we build a complete binary tree having the given sequence of numbers at its leaves, and store in each tree node the sum of its leaf descendants) into a partially persistent data structure.
-
-(a) What would be the amount of time and space used per update, and what would be the time to find the sum of the numbers in a query range, if we made the structure persistent using the node copying technique?
-
-(b) What would be the amoun of time and space used per update, and what would be the time to find the sum of the numbers in a query range, if we made the structure persistent using the fat node technique?
-
-
-
-2. Would it make sense to make a priority queue partially persistent? Why or why not?
-
-
-3. Suppose that we are using partially persistent binary search trees to solve the nearest neighbor problem; recall that the solution involves making O(n) updates to the search tree.
-
-(a) What would be the amount of space used to store the nearest neighbor data structure if we use the fat node technique together with AVL trees (http://en.wikipedia.org/wiki/AVL_tree)? Recall that an AVL tree may make O(log n) changes to nodes per update.
-
-(b) What would be the amount of space used to store the nearest neighbor
-data structure if we use the fat node technique together with red-black
-trees (http://en.wikipedia.org/wiki/Red-black_tree)? Recall that a red-black tree may make O(1) changes to nodes per update, if we don't count the changes to the colors of the nodes which do not need to be made persistent in this application.
-Mis_redirected¢DtypeEvalueôIhttp_code¢DtypeEvalueÈQdownload_complete¢DtypeEvalueõ
