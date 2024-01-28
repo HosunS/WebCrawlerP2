@@ -13,7 +13,20 @@ class Crawler:
     def __init__(self, frontier, corpus):
         self.frontier = frontier
         self.corpus = corpus
-
+        
+        #keep track of subdomains it has visited and how many URLs it has processed from each of them
+        self.subdomain_count = {}
+        ##of links that ARE valid on a particular webpage
+        self.most_outlinks = {"url":None, "count": 0}
+        #List of the downloaded_urls
+        self.download_urls = []
+        #List of traps we have identified
+        self.identified_traps = []
+        #longest page in terms of words (not counting HTML markup)
+        self.longest_page = {"url":None, "count": 0}
+        #keeps track of word count (no stop words) in order for us to rank the top 50 most common words in the whole set
+        self.word_count = {}
+        
     def start_crawling(self):
         """
         This method starts the crawling process which is scraping urls from the next available link in frontier and adding
@@ -89,6 +102,8 @@ class Crawler:
         filter out crawler traps. Duplicated urls will be taken care of by frontier. You don't need to check for duplication
         in this method
         """
+        if '[' in url or ']' in url:
+            return False
         parsed = urlparse(url)
         if parsed.scheme not in set(["http", "https"]):
             return False
