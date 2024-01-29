@@ -53,21 +53,25 @@ class Crawler:
 
         Suggested library: lxml
         """
-
-
-
+        
         # list to hold the absolute URL's
         outputLinks = []  
 
         if url_data["content"] and url_data["http_code"] == 200:
-            htmlFile = html.fromstring(url_data["content"])
-            htmlFile.make_links_absolute(url_data["url"])
-            urls = list(htmlFile.iterlinks())
-            outputLinks = [link[2] for link in urls]
-
-
-
-
+            try:
+                #decode binary content to a string
+                content = url_data["content"].decode('utf-8')
+                
+                #parse HTML content
+                htmlFile = html.fromstring(content)
+                htmlFile.make_links_absolute(url_data["url"])
+                
+                #extract URLS
+                urls = list(htmlFile.iterlinks())
+                outputLinks = [link[2] for link in urls]
+            except Exception as e:
+                logger.error(f"error parsing content from {url_data['url']}: {e}")
+                
         #check to see if the content and http code has has a successful response
         # if url_data["content"] and url_data["http_code"] == 200:
         #     try:
