@@ -1,6 +1,7 @@
 import logging
 import re
 from urllib.parse import urlparse
+from lxml import etree, html
 
 logger = logging.getLogger(__name__)
 
@@ -52,46 +53,59 @@ class Crawler:
 
         Suggested library: lxml
         """
+
+
+
         # list to hold the absolute URL's
         outputLinks = []  
-        #check to see if the content and http code has has a successful response
+
         if url_data["content"] and url_data["http_code"] == 200:
-            try:
-                # decode the binary content using UTF-8 encoding
-                content = url_data["content"].decode("utf-8")
-                # attempts to capture within content, all of the anchor tags in the HTML content in both single and double quotes
-                # ["\'] -> opening single or double quote, (.*?) -> capturing group that matches any character sequence except a 
-                # newline and will be zero or more occurrences , ["\"] -> closing single or double quote
-                urls = re.findall(r'href=["\'](.*?)["\']', content)
-                #loop through each link we obtained from the webpage
-                for href in urls:
-                    #parse the base url into components
-                    # scheme, netloc, path, params, query, fragment
-                    parsed_base = urlparse(url_data["url"])
+            htmlFile = html.fromstring(url_data["content"])
+            htmlFile.make_links_absolute(url_data["url"])
+            urls = list(htmlFile.iterlinks())
+            outputLinks = [link[2] for link in urls]
+
+
+
+
+        #check to see if the content and http code has has a successful response
+        # if url_data["content"] and url_data["http_code"] == 200:
+        #     try:
+        #         # decode the binary content using UTF-8 encoding
+        #         content = url_data["content"].decode("utf-8")
+        #         # attempts to capture within content, all of the anchor tags in the HTML content in both single and double quotes
+        #         # ["\'] -> opening single or double quote, (.*?) -> capturing group that matches any character sequence except a 
+        #         # newline and will be zero or more occurrences , ["\"] -> closing single or double quote
+        #         urls = re.findall(r'href=["\'](.*?)["\']', content)
+        #         #loop through each link we obtained from the webpage
+        #         for href in urls:
+        #             #parse the base url into components
+        #             # scheme, netloc, path, params, query, fragment
+        #             parsed_base = urlparse(url_data["url"])
                     
-                    #scheme - relative URL (prefixed with the scheme of the base URL)
-                    if href.startswith('//'):
-                        absolute_url =  parsed_base.scheme + ':' + href
+        #             #scheme - relative URL (prefixed with the scheme of the base URL)
+        #             if href.startswith('//'):
+        #                 absolute_url =  parsed_base.scheme + ':' + href
                         
-                    #root - relative URL (combined with the scheme and netloc of the base URL)
-                    elif href.startswith('/'):
-                        absolute_url = parsed_base.scheme + '://' + parsed_base.netloc + href
+        #             #root - relative URL (combined with the scheme and netloc of the base URL)
+        #             elif href.startswith('/'):
+        #                 absolute_url = parsed_base.scheme + '://' + parsed_base.netloc + href
                         
-                    #path - relative URL (path is constructed from the base URL and appended to the href)
-                    elif not href.startswith(('http://', 'https://')):
-                        #break into path components and split the first element of the split
-                        path = parsed_base.path.rsplit('/', 1)[0] + '/'
-                        absolute_url = parsed_base.scheme + '://' + parsed_base.netloc + path + href
+        #             #path - relative URL (path is constructed from the base URL and appended to the href)
+        #             elif not href.startswith(('http://', 'https://')):
+        #                 #break into path components and split the first element of the split
+        #                 path = parsed_base.path.rsplit('/', 1)[0] + '/'
+        #                 absolute_url = parsed_base.scheme + '://' + parsed_base.netloc + path + href
                         
-                    #already an absolute URL
-                    else:
-                        absolute_url = href
+        #             #already an absolute URL
+        #             else:
+        #                 absolute_url = href
                         
-                    #append the absolute_url to outputLinks    
-                    outputLinks.append(absolute_url)  
+        #             #append the absolute_url to outputLinks    
+        #             outputLinks.append(absolute_url)  
                       
-            except Exception as e:
-                logging.error(f"error extracting links: {e}")
+        #     except Exception as e:
+        #         logging.error(f"error extracting links: {e}")
                 
         return outputLinks
 
