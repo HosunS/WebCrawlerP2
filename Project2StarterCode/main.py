@@ -25,4 +25,5 @@ if __name__ == "__main__":
     # Instantiates a crawler object and starts crawling
     crawler = Crawler(frontier, corpus)
     crawler.start_crawling()
+    crawler.write_analytics_report_to_file("my_crawler_report.txt")
 

@@ -1,6 +1,6 @@
 import logging
 import re
-from urllib.parse import urlparse
+from urllib.parse import urlparse, parse_qs
 from lxml import etree, html
 
 logger = logging.getLogger(__name__)
@@ -43,6 +43,29 @@ class Crawler:
                     if self.corpus.get_file_name(next_link) is not None:
                         self.frontier.add_url(next_link)
 
+
+
+    def generate_analytics_report(self):
+        report = {}
+    
+        report['subdomain_count'] = self.subdomain_count
+        report['most_outlinks'] = self.most_outlinks
+        report['downloaded_urls_count'] = len(self.download_urls)
+        report['identified_traps'] = self.identified_traps
+        report['longest_page'] = self.longest_page
+    
+        sorted_word_count = sorted(self.word_count.items(), key=lambda x: x[1], reverse=True)
+        report['top_50_words'] = sorted_word_count[:50]
+
+        return report
+    
+    def write_analytics_report_to_file(self, file_name="crawler_analytics_report.txt"):
+        report = self.generate_analytics_report()
+        with open(file_name, "w") as file:
+            for key, value in report.items():
+                file.write(f"{key}: {value}\n")
+            file.write("\n")
+            
     def extract_next_links(self, url_data):
         """
         The url_data coming from the fetch_url method will be given as a parameter to this method. url_data contains the
@@ -53,6 +76,8 @@ class Crawler:
 
         Suggested library: lxml
         """
+        #tracks highest outlinks count
+        outlinks_count = 0
         
         # list to hold the absolute URL's
         outputLinks = []  
@@ -66,9 +91,36 @@ class Crawler:
                 htmlFile = html.fromstring(content)
                 htmlFile.make_links_absolute(url_data["url"])
                 
-                #extract URLS
+                #update word counts
+                #still need to update the stop words being filtered out
+                text = etree.tostring(htmlFile,method='text',encoding='utf-8').decode('utf-8')
+                words = text.split()
+                for word in words:
+                    self.word_count[word] = self.word_count.get(word,0) + 1
+                    
+                    
+                #extract URLS , temporary could probably implement the incrementing in is_valid
                 urls = list(htmlFile.iterlinks())
-                outputLinks = [link[2] for link in urls]
+                for link in urls:
+                    absolute_url = link[2]
+                    if self.is_valid(absolute_url):
+                        outputLinks.append(absolute_url)
+                        outlinks_count+=1
+                    else:
+                #also could implement the identified traps in is_valid
+                        self.identified_traps.append(absolute_url)
+                # outputLinks = [link[2] for link in urls]
+               
+                #update most_outlinks
+                if outlinks_count > self.most_outlinks["count"]:
+                     self.most_outlinks = {'url': url_data['url'],"count":outlinks_count}
+                  
+                #updates subdomain count
+                parsed_url = urlparse(url_data['url'])
+                subdomain = parsed_url.hostname
+                self.subdomain_count[subdomain] = self.subdomain_count.get(subdomain,0) + 1   
+
+                
             except Exception as e:
                 logger.error(f"error parsing content from {url_data['url']}: {e}")
                 
@@ -110,7 +162,7 @@ class Crawler:
                       
         #     except Exception as e:
         #         logging.error(f"error extracting links: {e}")
-                
+        
         return outputLinks
 
 
@@ -120,9 +172,14 @@ class Crawler:
         filter out crawler traps. Duplicated urls will be taken care of by frontier. You don't need to check for duplication
         in this method
         """
-        if '[' in url or ']' in url:
+        max_length = 150
+        
+        #keeps track of length of URL if it gets too long don't fetch
+        if len(url) > max_length:
             return False
+        
         parsed = urlparse(url)
+        
         if parsed.scheme not in set(["http", "https"]):
             return False
         try:
@@ -136,4 +193,3 @@ class Crawler:
         except TypeError:
             print("TypeError for ", parsed)
             return False
-
