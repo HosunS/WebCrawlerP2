@@ -28,6 +28,9 @@ class Crawler:
         self.longest_page = {"url":None, "count": 0}
         #keeps track of word count (no stop words) in order for us to rank the top 50 most common words in the whole set
         self.word_count = {}
+        #set to keep track of lengths pages we've fetched we are on
+        self.content_lengths = set()
+        
         
     def start_crawling(self):
         """
@@ -151,44 +154,7 @@ class Crawler:
             except Exception as e:
                 logger.error(f"error parsing content from {url_data['url']}: {e}")
                 
-        #check to see if the content and http code has has a successful response
-        # if url_data["content"] and url_data["http_code"] == 200:
-        #     try:
-        #         # decode the binary content using UTF-8 encoding
-        #         content = url_data["content"].decode("utf-8")
-        #         # attempts to capture within content, all of the anchor tags in the HTML content in both single and double quotes
-        #         # ["\'] -> opening single or double quote, (.*?) -> capturing group that matches any character sequence except a 
-        #         # newline and will be zero or more occurrences , ["\"] -> closing single or double quote
-        #         urls = re.findall(r'href=["\'](.*?)["\']', content)
-        #         #loop through each link we obtained from the webpage
-        #         for href in urls:
-        #             #parse the base url into components
-        #             # scheme, netloc, path, params, query, fragment
-        #             parsed_base = urlparse(url_data["url"])
-                    
-        #             #scheme - relative URL (prefixed with the scheme of the base URL)
-        #             if href.startswith('//'):
-        #                 absolute_url =  parsed_base.scheme + ':' + href
-                        
-        #             #root - relative URL (combined with the scheme and netloc of the base URL)
-        #             elif href.startswith('/'):
-        #                 absolute_url = parsed_base.scheme + '://' + parsed_base.netloc + href
-                        
-        #             #path - relative URL (path is constructed from the base URL and appended to the href)
-        #             elif not href.startswith(('http://', 'https://')):
-        #                 #break into path components and split the first element of the split
-        #                 path = parsed_base.path.rsplit('/', 1)[0] + '/'
-        #                 absolute_url = parsed_base.scheme + '://' + parsed_base.netloc + path + href
-                        
-        #             #already an absolute URL
-        #             else:
-        #                 absolute_url = href
-                        
-        #             #append the absolute_url to outputLinks    
-        #             outputLinks.append(absolute_url)  
-                      
-        #     except Exception as e:
-        #         logging.error(f"error extracting links: {e}")
+
         
         return outputLinks
 
@@ -200,16 +166,26 @@ class Crawler:
         in this method
         """
         max_length = 150
-        
+        max_query_parameters = 5
         #keeps track of length of URL if it gets too long don't fetch
         if len(url) > max_length:
             return False
         
         parsed = urlparse(url)
         
+        #check for repeated patterns, r = raw string, (/.+?/) -> capture group, checks for regex with '/' at the beginning and end, and .+? matches 
+        # one or more of any character, \1+ compares the last regex with the current regex
+        if re.search(r'(/.+?/)\1+', url):
+            return False
+        
+        #check for recursion by checking for queries
+        if len(parse_qs(parsed.query)) > max_query_parameters:
+            return False
+        
         if parsed.scheme not in set(["http", "https"]):
             return False
         try:
+            
             return ".ics.uci.edu" in parsed.hostname \
                    and not re.match(".*\.(css|js|bmp|gif|jpe?g|ico" + "|png|tiff?|mid|mp2|mp3|mp4" \
                                     + "|wav|avi|mov|mpeg|ram|m4v|mkv|ogg|ogv|pdf" \
