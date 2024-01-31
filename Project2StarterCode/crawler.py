@@ -2,6 +2,7 @@ import logging
 import re
 from urllib.parse import urlparse, parse_qs
 from lxml import etree, html
+from collections import defaultdict
 
 logger = logging.getLogger(__name__)
 
@@ -65,6 +66,27 @@ class Crawler:
             for key, value in report.items():
                 file.write(f"{key}: {value}\n")
             file.write("\n")
+
+    def word_token_count(self, text):
+        tokenList = []
+        new = True
+
+        for char in text:     
+            if not char: 
+                break
+            if char.isalnum() is False or char.isascii() is False: 
+                try:
+                    tokenList[-1] = tokenList[-1].lower()
+                except:
+                    pass   
+                new = True
+            elif new:
+                tokenList.append(char)
+                new = False
+            else:
+                tokenList[-1] = tokenList[-1]+char
+        return tokenList
+        
             
     def extract_next_links(self, url_data):
         """
@@ -82,7 +104,7 @@ class Crawler:
         # list to hold the absolute URL's
         outputLinks = []  
 
-        if url_data["content"] and url_data["http_code"] == 200:
+        if url_data["content"] and url_data["http_code"] != 404:
             try:
                 #decode binary content to a string
                 content = url_data["content"].decode('utf-8')
@@ -91,25 +113,30 @@ class Crawler:
                 htmlFile = html.fromstring(content)
                 htmlFile.make_links_absolute(url_data["url"])
                 
-                #update word counts
+                #update word counts excluding html markup
                 #still need to update the stop words being filtered out
-                text = etree.tostring(htmlFile,method='text',encoding='utf-8').decode('utf-8')
-                words = text.split()
-                for word in words:
-                    self.word_count[word] = self.word_count.get(word,0) + 1
+                
+                text = htmlFile.text_content()
+                token_list = self.word_token_count(text)
+                for token in token_list:
+                    self.word_count[token] = self.word_count.get(token,0) + 1
+
+
+                #text = etree.tostring(htmlFile,method='text',encoding='utf-8').decode('utf-8')
+                # words = text.split()
+                # for word in words:
+                #     self.word_count[word] = self.word_count.get(word,0) + 1
                     
                     
                 #extract URLS , temporary could probably implement the incrementing in is_valid
                 urls = list(htmlFile.iterlinks())
                 for link in urls:
                     absolute_url = link[2]
-                    if self.is_valid(absolute_url):
-                        outputLinks.append(absolute_url)
-                        outlinks_count+=1
-                    else:
+                    outputLinks.append(absolute_url)
+                    outlinks_count+=1
+                else:
                 #also could implement the identified traps in is_valid
-                        self.identified_traps.append(absolute_url)
-                # outputLinks = [link[2] for link in urls]
+                    self.identified_traps.append(absolute_url)
                
                 #update most_outlinks
                 if outlinks_count > self.most_outlinks["count"]:
