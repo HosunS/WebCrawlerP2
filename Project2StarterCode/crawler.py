@@ -41,6 +41,8 @@ class Crawler:
             logger.info("Fetching URL %s ... Fetched: %s, Queue size: %s", url, self.frontier.fetched, len(self.frontier))
             url_data = self.corpus.fetch_url(url)
 
+            self.download_urls.append(url)
+            
             for next_link in self.extract_next_links(url_data):
                 #pass in content, to keep track of page size
                 if self.is_valid(next_link):
@@ -111,10 +113,11 @@ class Crawler:
             try:
                 #decode binary content to a string
                 content = url_data["content"].decode('utf-8')
-                
                 #parse HTML content
                 htmlFile = html.fromstring(content)
                 htmlFile.make_links_absolute(url_data["url"])
+                
+            
                 
                 #update word counts excluding html markup
                 #still need to update the stop words being filtered out
@@ -125,6 +128,8 @@ class Crawler:
                     if token not in self.STOP_WORDS:
                         self.word_count[token] = self.word_count.get(token,0) + 1
 
+                if len(token_list) > self.longest_page["count"]:
+                    self.longest_page = {"url": url_data['url'],"count":len(token_list)}
 
                 #text = etree.tostring(htmlFile,method='text',encoding='utf-8').decode('utf-8')
                 # words = text.split()
@@ -138,9 +143,6 @@ class Crawler:
                     absolute_url = link[2]
                     outputLinks.append(absolute_url)
                     outlinks_count+=1
-                else:
-                #also could implement the identified traps in is_valid
-                    self.identified_traps.append(absolute_url)
                
                 #update most_outlinks
                 if outlinks_count > self.most_outlinks["count"]:
@@ -170,6 +172,7 @@ class Crawler:
         max_query_parameters = 5
         #keeps track of length of URL if it gets too long don't fetch
         if len(url) > max_length:
+            self.identified_traps.append(url)
             return False
         
         parsed = urlparse(url)
@@ -177,14 +180,17 @@ class Crawler:
         #check for repeated patterns, r = raw string, (/.+?/) -> capture group, checks for regex with '/' at the beginning and end, and .+? matches 
         # one or more of any character, \1+ compares the last regex with the current regex
         if re.search(r'(/.+?/)\1+', url):
+            self.identified_traps.append(url)
             return False
         
         #check for recursion by checking for queries
         if len(parse_qs(parsed.query)) > max_query_parameters:
+            self.identified_traps.append(url)
             return False
             
         #check if the URL contains a fragment (#)
         if parsed.fragment:
+            self.identified_traps.append(url)
             return False
         
         if parsed.scheme not in set(["http", "https"]):
