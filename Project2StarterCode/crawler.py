@@ -29,8 +29,6 @@ class Crawler:
         self.longest_page = {"url":None, "count": 0}
         #keeps track of word count (no stop words) in order for us to rank the top 50 most common words in the whole set
         self.word_count = {}
-        #set to keep track of lengths pages we've fetched we are on
-        self.content_lengths = set()
         
         
     def start_crawling(self):
@@ -184,16 +182,10 @@ class Crawler:
         #check for recursion by checking for queries
         if len(parse_qs(parsed.query)) > max_query_parameters:
             return False
-        
-        #check if the lengths of the pages are the same so we can avoid traps where its the same page
-        if content:
-            content_length = len(content)
             
-            if content_length in self.content_lengths:
-                return False
-            else:
-                self.content_lengths.add(content_length)
-            
+        #check if the URL contains a fragment (#)
+        if parsed.fragment:
+            return False
         
         if parsed.scheme not in set(["http", "https"]):
             return False
