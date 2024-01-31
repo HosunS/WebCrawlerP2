@@ -44,7 +44,8 @@ class Crawler:
             url_data = self.corpus.fetch_url(url)
 
             for next_link in self.extract_next_links(url_data):
-                if self.is_valid(next_link,url_data["content"]):
+                #pass in content, to keep track of page size
+                if self.is_valid(next_link):
                     if self.corpus.get_file_name(next_link) is not None:
                         self.frontier.add_url(next_link)
 
