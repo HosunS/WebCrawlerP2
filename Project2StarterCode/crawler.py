@@ -169,12 +169,13 @@ class Crawler:
                         urls.append(link)
 
                 
+                current_url_parse = urlparse(url_data["url"])
                 for link in urls:
                     # self.write_to_file("crawler_links.txt",link[2]+"\n")
                     absolute_url = link[2]
 
                     outgoing_url_parse = urlparse(absolute_url)
-                    current_url_parse = urlparse(url_data["url"])
+                    
 
                     # if link contains fragment and has the same base url leading upto the fragment, add to trap list
                     if ((outgoing_url_parse.fragment) and (urlunparse(outgoing_url_parse._replace(fragment='')) == urlunparse(current_url_parse._replace(fragment='')))):
@@ -190,7 +191,13 @@ class Crawler:
 
                 
             except Exception as e:
-                logger.error(f"error parsing content from {url_data['url']}: {e}")
+                logger.error(f"error parsing content from {url_data['url']}: {e}")\
+                
+                #TEMPORARY
+                #write errors to a file
+                with open('errorList.txt','a', encoding ='utf-8') as file:
+                    file.write(str(e)+" current url: "+ url_data["url"] +"\n")
+
                 
 
         
