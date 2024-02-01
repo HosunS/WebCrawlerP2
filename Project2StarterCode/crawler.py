@@ -49,7 +49,11 @@ class Crawler:
                     if self.corpus.get_file_name(next_link) is not None:
                         self.frontier.add_url(next_link)
 
-
+    def write_to_file(self,filename,text):
+        with open(filename,'a') as file:
+            file.write(text)
+            
+        
 
     def generate_analytics_report(self):
         report = {}
@@ -139,7 +143,9 @@ class Crawler:
                     
                 #extract URLS , temporary could probably implement the incrementing in is_valid
                 urls = list(htmlFile.iterlinks())
+                
                 for link in urls:
+                    self.write_to_file("crawler_links.txt",link[2]+"\n")
                     absolute_url = link[2]
                     outputLinks.append(absolute_url)
                     outlinks_count+=1
