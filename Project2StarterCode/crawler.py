@@ -63,15 +63,15 @@ class Crawler:
                  
             outlinks_count = 0
         
-        self.write_to_file("fragment_links.txt",url + '\n')
+    #     self.write_to_file("fragment_links.txt",url + '\n')
 
 
 
-    def write_to_file(self,filename,text):
-        with open(filename,'a', encoding ='utf-8') as file:
-            file.write(text)
-            for i in self.fragment_url:
-                file.write(i + "\n")
+    # def write_to_file(self,filename,text):
+    #     with open(filename,'a', encoding ='utf-8') as file:
+    #         file.write(text)
+    #         for i in self.fragment_url:
+    #             file.write(i + "\n")
             
         
 
@@ -162,6 +162,7 @@ class Crawler:
                 urls = list()
                 for link in htmlFile.iterlinks():
                     if (link[0].tag == 'meta' and 'refresh' in link[0].get('http-equiv', '').lower()):
+                        url_data["final_url"] = link
                         if(url_data["is_redirected"]):
                             self.identified_traps.append(link)
                         else:
