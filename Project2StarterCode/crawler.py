@@ -230,35 +230,35 @@ class Crawler:
         """
         max_length = 150
         max_query_parameters = 5
-        #keeps track of length of URL if it gets too long don't fetch
-        if len(url) > max_length:
-            self.identified_traps.append(url)
-            return False
-        
         parsed = urlparse(url)
         
-        #check for repeated patterns, r = raw string, (/.+?/) -> capture group, checks for regex with '/' at the beginning and end, and .+? matches 
-        # one or more of any character, \1+ compares the last regex with the current regex
-        # if re.search(r'(/.+?/)\1+', url):
+        # #keeps track of length of URL if it gets too long don't fetch
+        # if len(url) > max_length:
         #     self.identified_traps.append(url)
         #     return False
+    
         
         #non-consecutive repeating patterns
         # path_segments = [segment for segment in parsed.path.split('/') if segment]
         # if len(path_segments) != len(set(path_segments)):
         #     return False
         
-        query_params =parse_qs(parsed.query)
+        query_params = parse_qs(parsed.query)
+        param_terms = {"week" , "day" , "date"}
         for param, values in query_params.items():
             if len(values) != len(set(values)):
                 return False
+            if any(param_terms in param.lower() for param_terms in param_terms):
+                self.identified_traps.append(url)
+                return False
             
         
-        #check for dynamic links  by checking for # of &(parameters) in the query
-        if len(query_params) > max_query_parameters:
-            self.identified_traps.append(url)
-            return False
-            
+        # #check for dynamic links  by checking for # of &(parameters) in the query
+        # if len(query_params) > max_query_parameters:
+        #     self.identified_traps.append(url)
+        #     return False
+        
+        ########################################### functions we tried and adjusted 
         # #check if the URL contains a fragment (#)
         # if parsed.fragment:
         #     #adds the url without the fragment to the set
@@ -267,6 +267,12 @@ class Crawler:
         #     if urlunparse(parsed._replace(fragment=''))+'#' in self.fragment_url:
         #         self.identified_traps.append(url)
         #         return False
+        
+        #check for repeated patterns, r = raw string, (/.+?/) -> capture group, checks for regex with '/' at the beginning and end, and .+? matches 
+        # one or more of any character, \1+ compares the last regex with the current regex
+        # if re.search(r'(/.+?/)\1+', url):
+        #     self.identified_traps.append(url)
+        #     return False
         
         if parsed.scheme not in set(["http", "https"]):
             return False
