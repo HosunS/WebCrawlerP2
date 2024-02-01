@@ -78,6 +78,8 @@ class Crawler:
         report['subdomain_count'] = self.subdomain_count
         report['most_outlinks'] = self.most_outlinks
         report['downloaded_urls_count'] = len(self.download_urls)
+        report['downloaded_urls'] = (self.download_urls)
+        report['identified_traps_count'] = len(self.identified_traps)
         report['identified_traps'] = self.identified_traps
         report['longest_page'] = self.longest_page
     
