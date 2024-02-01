@@ -1,6 +1,6 @@
 import logging
 import re
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs , urlunparse
 from lxml import etree, html
 from collections import defaultdict
 
@@ -29,6 +29,8 @@ class Crawler:
         self.longest_page = {"url":None, "count": 0}
         #keeps track of word count (no stop words) in order for us to rank the top 50 most common words in the whole set
         self.word_count = {}
+        #keep track of urls with fragments
+        self.fragment_url = set()
         
         
     def start_crawling(self):
@@ -50,7 +52,7 @@ class Crawler:
                         self.frontier.add_url(next_link)
 
     def write_to_file(self,filename,text):
-        with open(filename,'a') as file:
+        with open(filename,'a', encoding='utf-8') as file:
             file.write(text)
             
         
@@ -145,7 +147,7 @@ class Crawler:
                 urls = list(htmlFile.iterlinks())
                 
                 for link in urls:
-                    self.write_to_file("crawler_links.txt",link[2]+"\n")
+                    # self.write_to_file("crawler_links.txt",link[2]+"\n")
                     absolute_url = link[2]
                     outputLinks.append(absolute_url)
                     outlinks_count+=1
@@ -189,27 +191,34 @@ class Crawler:
             self.identified_traps.append(url)
             return False
         
-        #check for recursion by checking for queries
+        #check for dynamic links  by checking for # of &(parameters) in the query
         if len(parse_qs(parsed.query)) > max_query_parameters:
             self.identified_traps.append(url)
             return False
             
+        #self.write_to_file("crawler_links.txt",url + "\n")
         #check if the URL contains a fragment (#)
         if parsed.fragment:
-            self.identified_traps.append(url)
-            return False
+            #adds the url without the fragment to the set
+            self.fragment_url.add(urlunparse(parsed._replace(fragment=''))+'#')
+            #if the url before the fragment exists in the set, don't visit
+            if urlunparse(parsed._replace(fragment=''))+'#' in self.fragment_url:
+                self.identified_traps.append(url)
+                return False
         
         if parsed.scheme not in set(["http", "https"]):
             return False
+        
+        self.write_to_file("crawler_links.txt",url + '\n')
         try:
-            
             return ".ics.uci.edu" in parsed.hostname \
                    and not re.match(".*\.(css|js|bmp|gif|jpe?g|ico" + "|png|tiff?|mid|mp2|mp3|mp4" \
                                     + "|wav|avi|mov|mpeg|ram|m4v|mkv|ogg|ogv|pdf" \
                                     + "|ps|eps|tex|ppt|pptx|doc|docx|xls|xlsx|names|data|dat|exe|bz2|tar|msi|bin|7z|psd|dmg|iso|epub|dll|cnf|tgz|sha1" \
                                     + "|thmx|mso|arff|rtf|jar|csv" \
                                     + "|rm|smil|wmv|swf|wma|zip|rar|gz|pdf)$", parsed.path.lower())
-
+            
         except TypeError:
             print("TypeError for ", parsed)
             return False
+        
