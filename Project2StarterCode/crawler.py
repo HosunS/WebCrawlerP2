@@ -38,6 +38,8 @@ class Crawler:
         This method starts the crawling process which is scraping urls from the next available link in frontier and adding
         the scraped links to the frontier
         """
+        outlinks_count = 0
+        
         while self.frontier.has_next_url():
             url = self.frontier.get_next_url()
             logger.info("Fetching URL %s ... Fetched: %s, Queue size: %s", url, self.frontier.fetched, len(self.frontier))
@@ -48,12 +50,25 @@ class Crawler:
             for next_link in self.extract_next_links(url_data):
                 #pass in content, to keep track of page size
                 if self.is_valid(next_link):
+                    outlinks_count+=1
                     if self.corpus.get_file_name(next_link) is not None:
                         self.frontier.add_url(next_link)
+                        
+            #update most_outlinks
+            if outlinks_count > self.most_outlinks["count"]:
+                 self.most_outlinks = {'url': url_data['url'],"count":outlinks_count}
+                 
+            outlinks_count = 0
+        
+        self.write_to_file("fragment_links.txt",url + '\n')
+
+
 
     def write_to_file(self,filename,text):
-        with open(filename,'a', encoding='utf-8') as file:
+        with open(filename,'a', encoding ='utf-8') as file:
             file.write(text)
+            for i in self.fragment_url:
+                file.write(i + "\n")
             
         
 
@@ -75,7 +90,7 @@ class Crawler:
         report = self.generate_analytics_report()
         with open(file_name, "w") as file:
             for key, value in report.items():
-                file.write(f"{key}: {value}\n")
+                file.write(f"{key}: {value}\n\n\n")
             file.write("\n")
 
     def word_token_count(self, text):
@@ -123,8 +138,6 @@ class Crawler:
                 htmlFile = html.fromstring(content)
                 htmlFile.make_links_absolute(url_data["url"])
                 
-            
-                
                 #update word counts excluding html markup
                 #still need to update the stop words being filtered out
                 
@@ -150,11 +163,6 @@ class Crawler:
                     # self.write_to_file("crawler_links.txt",link[2]+"\n")
                     absolute_url = link[2]
                     outputLinks.append(absolute_url)
-                    outlinks_count+=1
-               
-                #update most_outlinks
-                if outlinks_count > self.most_outlinks["count"]:
-                     self.most_outlinks = {'url': url_data['url'],"count":outlinks_count}
                   
                 #updates subdomain count
                 parsed_url = urlparse(url_data['url'])
@@ -187,16 +195,15 @@ class Crawler:
         
         #check for repeated patterns, r = raw string, (/.+?/) -> capture group, checks for regex with '/' at the beginning and end, and .+? matches 
         # one or more of any character, \1+ compares the last regex with the current regex
-        if re.search(r'(/.+?/)\1+', url):
-            self.identified_traps.append(url)
-            return False
+        # if re.search(r'(/.+?/)\1+', url):
+        #     self.identified_traps.append(url)
+        #     return False
         
         #check for dynamic links  by checking for # of &(parameters) in the query
         if len(parse_qs(parsed.query)) > max_query_parameters:
             self.identified_traps.append(url)
             return False
             
-        #self.write_to_file("crawler_links.txt",url + "\n")
         #check if the URL contains a fragment (#)
         if parsed.fragment:
             #adds the url without the fragment to the set
@@ -209,7 +216,7 @@ class Crawler:
         if parsed.scheme not in set(["http", "https"]):
             return False
         
-        self.write_to_file("crawler_links.txt",url + '\n')
+        # self.write_to_file("crawler_links.txt",url + '\n')
         try:
             return ".ics.uci.edu" in parsed.hostname \
                    and not re.match(".*\.(css|js|bmp|gif|jpe?g|ico" + "|png|tiff?|mid|mp2|mp3|mp4" \
