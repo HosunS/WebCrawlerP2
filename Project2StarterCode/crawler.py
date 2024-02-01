@@ -137,16 +137,29 @@ class Crawler:
 
         if url_data["content"] and url_data["http_code"] != 404:
             try:
-
-                #decode binary content to a string
-                content = url_data["content"].decode('utf-8')
+                content = url_data["content"]
+                content_type = url_data.get("content_type",'')
+                if isinstance(content, tuple):
+                    content, content_type = content
+                
+                if isinstance(content,bytes):
+                    encoding = 'utf-8'
+                    if 'charset=' in content_type:
+                        encoding = content_type.split('charset')[-1].split(';')[0].strip()
+                        #decode binary content to a string
+                    content = content.decode(encoding) 
+                if isinstance(content,str):
+                    pass
+                
+                
+                # #decode binary content to a string
+                # content = url_data["content"].decode(encoding)
                 #parse HTML content
                 htmlFile = html.fromstring(content)
                 htmlFile.make_links_absolute(url_data["url"])
-                
+            
                 #update word counts excluding html markup
                 #still need to update the stop words being filtered out
-                
                 text = htmlFile.text_content()
                 token_list = self.word_token_count(text)
                 for token in token_list:
@@ -171,8 +184,9 @@ class Crawler:
                             redirect_url_dict["is_redirected"] = True
                     else:
                         urls.append(link)
-
                 
+                
+
                 current_url_parse = urlparse(url_data["url"])
                 for link in urls:
                     # self.write_to_file("crawler_links.txt",link[2]+"\n")
@@ -230,9 +244,10 @@ class Crawler:
         #     return False
         
         #non-consecutive repeating patterns
-        path_segments = [segment for segment in parsed.path.split('/') if segment]
-        if len(path_segments) != len(set(path_segments)):
-            return False
+        # path_segments = [segment for segment in parsed.path.split('/') if segment]
+        # if len(path_segments) != len(set(path_segments)):
+        #     return False
+        
         query_params =parse_qs(parsed.query)
         for param, values in query_params.items():
             if len(values) != len(set(values)):
