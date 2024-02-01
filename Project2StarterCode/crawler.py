@@ -29,8 +29,11 @@ class Crawler:
         self.longest_page = {"url":None, "count": 0}
         #keeps track of word count (no stop words) in order for us to rank the top 50 most common words in the whole set
         self.word_count = {}
-        #keep track of urls with fragments
-        self.fragment_url = set()
+
+
+
+        # #keep track of urls with fragments
+        # self.fragment_url = set()
         
         
     def start_crawling(self):
@@ -151,25 +154,38 @@ class Crawler:
 
                 if len(token_list) > self.longest_page["count"]:
                     self.longest_page = {"url": url_data['url'],"count":len(token_list)}
-
-                #text = etree.tostring(htmlFile,method='text',encoding='utf-8').decode('utf-8')
-                # words = text.split()
-                # for word in words:
-                #     self.word_count[word] = self.word_count.get(word,0) + 1
                     
                     
-                #extract URLS , temporary could probably implement the incrementing in is_valid
+                #extract URLS that aren't redirect final urls
+                #if final url, update dictionary, add to trap list, and remove from list of outgoing links
                 # urls = list(htmlFile.iterlinks())
-                urls = [link for link in htmlFile.iterlinks() if not (link[0].tag == 'meta' and 'refresh' in link[0].get('http-equiv', '').lower())]
+                urls = list()
+                for link in htmlFile.iterlinks():
+                    if (link[0].tag == 'meta' and 'refresh' in link[0].get('http-equiv', '').lower()):
+                        redirect_url_dict = self.corpus.fetch_url(link)
+                        redirect_url_dict["is_redirected"] = True
+                        self.identified_trap.append(link)
+                    else:
+                        urls.append(link)
+
                 
                 for link in urls:
                     # self.write_to_file("crawler_links.txt",link[2]+"\n")
                     absolute_url = link[2]
-                    outputLinks.append(absolute_url)
-                  
+
+                    outgoing_url_parse = urlparse(absolute_url)
+                    current_url_parse = urlparse(url_data["url"])
+
+                    # if link contains fragment and has the same base url leading upto the fragment, add to trap list
+                    if ((outgoing_url_parse.fragment) and (urlunparse(outgoing_url_parse._replace(fragment='')) == current_url_parse._replace(fragment=''))):
+                            self.identified_trap.append(link)
+                    
+                    # else add to output link
+                    else:
+                        outputLinks.append(absolute_url)
+
                 #updates subdomain count
-                parsed_url = urlparse(url_data['url'])
-                subdomain = parsed_url.hostname
+                subdomain = current_url_parse.hostname
                 self.subdomain_count[subdomain] = self.subdomain_count.get(subdomain,0) + 1   
 
                 
@@ -217,14 +233,14 @@ class Crawler:
             self.identified_traps.append(url)
             return False
             
-        #check if the URL contains a fragment (#)
-        if parsed.fragment:
-            #adds the url without the fragment to the set
-            self.fragment_url.add(urlunparse(parsed._replace(fragment=''))+'#')
-            #if the url before the fragment exists in the set, don't visit
-            if urlunparse(parsed._replace(fragment=''))+'#' in self.fragment_url:
-                self.identified_traps.append(url)
-                return False
+        # #check if the URL contains a fragment (#)
+        # if parsed.fragment:
+        #     #adds the url without the fragment to the set
+        #     self.fragment_url.add(urlunparse(parsed._replace(fragment=''))+'#')
+        #     #if the url before the fragment exists in the set, don't visit
+        #     if urlunparse(parsed._replace(fragment=''))+'#' in self.fragment_url:
+        #         self.identified_traps.append(url)
+        #         return False
         
         if parsed.scheme not in set(["http", "https"]):
             return False
