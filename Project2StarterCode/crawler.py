@@ -137,6 +137,7 @@ class Crawler:
 
         if url_data["content"] and url_data["http_code"] != 404:
             try:
+
                 #decode binary content to a string
                 content = url_data["content"].decode('utf-8')
                 #parse HTML content
@@ -156,15 +157,17 @@ class Crawler:
                     self.longest_page = {"url": url_data['url'],"count":len(token_list)}
                     
                     
-                #extract URLS that aren't redirect final urls
-                #if final url, update dictionary, add to trap list, and remove from list of outgoing links
-                # urls = list(htmlFile.iterlinks())
+                #mark redirects as redirected in dictionary
+                #if current url is already a redirect, remove any outgoing redirects
                 urls = list()
                 for link in htmlFile.iterlinks():
                     if (link[0].tag == 'meta' and 'refresh' in link[0].get('http-equiv', '').lower()):
-                        redirect_url_dict = self.corpus.fetch_url(link)
-                        redirect_url_dict["is_redirected"] = True
-                        self.identified_traps.append(link)
+                        if(url_data["is_redirected"]):
+                            self.identified_traps.append(link)
+                        else:
+                            urls.append(link)
+                            redirect_url_dict = self.corpus.fetch_url(link)
+                            redirect_url_dict["is_redirected"] = True
                     else:
                         urls.append(link)
 
