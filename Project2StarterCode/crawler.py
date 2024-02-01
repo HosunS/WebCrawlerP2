@@ -67,8 +67,8 @@ class Crawler:
     def write_to_file(self,filename,text):
         with open(filename,'a', encoding ='utf-8') as file:
             file.write(text)
-            # for i in self.fragment_url:
-            #     file.write(i + "\n")
+            for i in self.fragment_url:
+                file.write(i + "\n")
             
         
 
@@ -159,7 +159,8 @@ class Crawler:
                     
                     
                 #extract URLS , temporary could probably implement the incrementing in is_valid
-                urls = list(htmlFile.iterlinks())
+                # urls = list(htmlFile.iterlinks())
+                urls = [link for link in htmlFile.iterlinks() if not (link[0].tag == 'meta' and 'refresh' in link[0].get('http-equiv', '').lower())]
                 
                 for link in urls:
                     # self.write_to_file("crawler_links.txt",link[2]+"\n")
@@ -201,8 +202,18 @@ class Crawler:
         #     self.identified_traps.append(url)
         #     return False
         
+        #non-consecutive repeating patterns
+        path_segments = [segment for segment in parsed.path.split('/') if segment]
+        if len(path_segments) != len(set(path_segments)):
+            return False
+        query_params =parse_qs(parsed.query)
+        for param, values in query_params.items():
+            if len(values) != len(set(values)):
+                return False
+            
+        
         #check for dynamic links  by checking for # of &(parameters) in the query
-        if len(parse_qs(parsed.query)) > max_query_parameters:
+        if len(query_params) > max_query_parameters:
             self.identified_traps.append(url)
             return False
             
