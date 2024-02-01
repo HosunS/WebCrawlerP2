@@ -164,7 +164,7 @@ class Crawler:
                     if (link[0].tag == 'meta' and 'refresh' in link[0].get('http-equiv', '').lower()):
                         redirect_url_dict = self.corpus.fetch_url(link)
                         redirect_url_dict["is_redirected"] = True
-                        self.identified_trap.append(link)
+                        self.identified_traps.append(link)
                     else:
                         urls.append(link)
 
@@ -177,8 +177,8 @@ class Crawler:
                     current_url_parse = urlparse(url_data["url"])
 
                     # if link contains fragment and has the same base url leading upto the fragment, add to trap list
-                    if ((outgoing_url_parse.fragment) and (urlunparse(outgoing_url_parse._replace(fragment='')) == current_url_parse._replace(fragment=''))):
-                            self.identified_trap.append(link)
+                    if ((outgoing_url_parse.fragment) and (urlunparse(outgoing_url_parse._replace(fragment='')) == urlunparse(current_url_parse._replace(fragment='')))):
+                            self.identified_traps.append(link)
                     
                     # else add to output link
                     else:
