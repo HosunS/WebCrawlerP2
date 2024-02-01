@@ -67,8 +67,8 @@ class Crawler:
     def write_to_file(self,filename,text):
         with open(filename,'a', encoding ='utf-8') as file:
             file.write(text)
-            for i in self.fragment_url:
-                file.write(i + "\n")
+            # for i in self.fragment_url:
+            #     file.write(i + "\n")
             
         
 
