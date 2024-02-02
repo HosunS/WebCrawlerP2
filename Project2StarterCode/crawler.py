@@ -164,7 +164,6 @@ class Crawler:
                 htmlFile.make_links_absolute(url_data["url"])
             
                 #update word counts excluding html markup
-                #still need to update the stop words being filtered out
                 text = htmlFile.text_content()
                 token_list = self.word_token_count(text)
                 for token in token_list:
@@ -175,39 +174,26 @@ class Crawler:
                     self.longest_page = {"url": url_data['url'],"count":len(token_list)}
                     
                     
-                #mark redirects as redirected in dictionary
-                #if current url is already a redirect, remove any outgoing redirects
-                urls = list()
+                
+                current_url_parse = urlparse(url_data["url"])
                 for link in htmlFile.iterlinks():
+                    #update redirect and final url information in dictionary
                     if (link[0].tag == 'meta' and 'refresh' in link[0].get('http-equiv', '').lower()):
                         url_data["final_url"] = link
-                        if(url_data["is_redirected"]):
-                            self.add_to_recent_traps(link)
-                            self.identified_traps.append(link)
-                        else:
-                            urls.append(link)
-                            redirect_url_dict = self.corpus.fetch_url(link)
-                            redirect_url_dict["is_redirected"] = True
-                    else:
-                        urls.append(link)
-                
-                
+                        redirect_url_dict = self.corpus.fetch_url(link)
+                        redirect_url_dict["is_redirected"] = True
 
-                current_url_parse = urlparse(url_data["url"])
-                for link in urls:
-                    # self.write_to_file("crawler_links.txt",link[2]+"\n")
                     absolute_url = link[2]
-
                     outgoing_url_parse = urlparse(absolute_url)
-                    
-
                     # if link contains fragment and has the same base url leading upto the fragment, add to trap list
                     if ((outgoing_url_parse.fragment) and (urlunparse(outgoing_url_parse._replace(fragment='')) == urlunparse(current_url_parse._replace(fragment='')))):
-                            self.identified_traps.append(link)
-                            self.add_to_recent_traps(link)
+                            self.identified_traps.append(link[2])
+                            self.add_to_recent_traps(link[2])
                     # else add to output link
                     else:
                         outputLinks.append(absolute_url)
+                
+
 
                 #updates subdomain count
                 subdomain = current_url_parse.hostname
