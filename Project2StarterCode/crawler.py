@@ -29,7 +29,8 @@ class Crawler:
         self.longest_page = {"url":None, "count": 0}
         #keeps track of word count (no stop words) in order for us to rank the top 50 most common words in the whole set
         self.word_count = {}
-
+        self.recent_traps = []
+        self.max_recent_traps = 20
 
 
         # #keep track of urls with fragments
@@ -73,7 +74,11 @@ class Crawler:
     #         for i in self.fragment_url:
     #             file.write(i + "\n")
             
-        
+    def add_to_recent_traps(self,url):
+        self.recent_traps.append(url)
+        if len(self.recent_traps) > self.max_recent_traps:
+            self.recent_traps.pop(0)  
+
 
     def generate_analytics_report(self):
         report = {}
@@ -177,6 +182,7 @@ class Crawler:
                     if (link[0].tag == 'meta' and 'refresh' in link[0].get('http-equiv', '').lower()):
                         url_data["final_url"] = link
                         if(url_data["is_redirected"]):
+                            self.add_to_recent_traps(link)
                             self.identified_traps.append(link)
                         else:
                             urls.append(link)
@@ -198,7 +204,7 @@ class Crawler:
                     # if link contains fragment and has the same base url leading upto the fragment, add to trap list
                     if ((outgoing_url_parse.fragment) and (urlunparse(outgoing_url_parse._replace(fragment='')) == urlunparse(current_url_parse._replace(fragment='')))):
                             self.identified_traps.append(link)
-                    
+                            self.add_to_recent_traps(link)
                     # else add to output link
                     else:
                         outputLinks.append(absolute_url)
@@ -228,20 +234,31 @@ class Crawler:
         filter out crawler traps. Duplicated urls will be taken care of by frontier. You don't need to check for duplication
         in this method
         """
-        max_length = 150
+        max_length = 200
         max_query_parameters = 5
+        similarity_threshold = 4
         parsed = urlparse(url)
         
-        # #keeps track of length of URL if it gets too long don't fetch
-        # if len(url) > max_length:
-        #     self.identified_traps.append(url)
-        #     return False
+        for trap_url in self.recent_traps:
+            differences = sum(c1 != c2 for c1, c2 in zip(url,trap_url)) + abs(len(url) - len(trap_url))
+            if differences <= similarity_threshold:
+                self.identified_traps.append(url)
+                self.add_to_recent_traps(url)
+                return False
+        
+        #keeps track of length of URL if it gets too long don't fetch
+        if len(url) > max_length:
+            self.identified_traps.append(url)
+            self.add_to_recent_traps(url)
+            return False
     
         
-        #non-consecutive repeating patterns
-        # path_segments = [segment for segment in parsed.path.split('/') if segment]
-        # if len(path_segments) != len(set(path_segments)):
-        #     return False
+        # non-consecutive repeating patterns
+        path_segments = [segment for segment in parsed.path.split('/') if segment]
+        if len(path_segments) != len(set(path_segments)):
+            self.identified_traps.append(url)
+            self.add_to_recent_traps(url)
+            return False
         
         query_params = parse_qs(parsed.query)
         param_terms = {"week" , "day" , "date"}
@@ -250,13 +267,15 @@ class Crawler:
                 return False
             if any(param_terms in param.lower() for param_terms in param_terms):
                 self.identified_traps.append(url)
+                self.add_to_recent_traps(url)
                 return False
             
         
-        # #check for dynamic links  by checking for # of &(parameters) in the query
-        # if len(query_params) > max_query_parameters:
-        #     self.identified_traps.append(url)
-        #     return False
+        #check for dynamic links  by checking for # of &(parameters) in the query
+        if len(query_params) > max_query_parameters:
+            self.identified_traps.append(url)
+            self.add_to_recent_traps(url)
+            return False
         
         ########################################### functions we tried and adjusted 
         # #check if the URL contains a fragment (#)
